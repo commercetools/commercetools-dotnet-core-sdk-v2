@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Models", "commercetools.Api.Models\commercetools.Api.Models.csproj", "{4C42D30A-E02E-46ED-B347-B6D521BE1D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Client", "commercetools.Api.Client\commercetools.Api.Client.csproj", "{CCEF2ED7-8BE9-403D-88B5-021FF3AE106A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.IntegrationTests", "commercetools.Api.IntegrationTests\commercetools.Api.IntegrationTests.csproj", "{566A2907-C944-492C-A6FB-A8D9D14D39EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Tests", "commercetools.Api.Tests\commercetools.Api.Tests.csproj", "{8C432924-1FC8-4907-B947-277EAE433883}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C42D30A-E02E-46ED-B347-B6D521BE1D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C42D30A-E02E-46ED-B347-B6D521BE1D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C42D30A-E02E-46ED-B347-B6D521BE1D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C42D30A-E02E-46ED-B347-B6D521BE1D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEF2ED7-8BE9-403D-88B5-021FF3AE106A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEF2ED7-8BE9-403D-88B5-021FF3AE106A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEF2ED7-8BE9-403D-88B5-021FF3AE106A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEF2ED7-8BE9-403D-88B5-021FF3AE106A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566A2907-C944-492C-A6FB-A8D9D14D39EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566A2907-C944-492C-A6FB-A8D9D14D39EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566A2907-C944-492C-A6FB-A8D9D14D39EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566A2907-C944-492C-A6FB-A8D9D14D39EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C432924-1FC8-4907-B947-277EAE433883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C432924-1FC8-4907-B947-277EAE433883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C432924-1FC8-4907-B947-277EAE433883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C432924-1FC8-4907-B947-277EAE433883}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

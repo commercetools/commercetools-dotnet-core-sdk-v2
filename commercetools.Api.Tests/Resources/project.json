@@ -1,0 +1,22 @@
+{
+  "key": "key",
+  "name": "name",
+  "countries": [
+    "DE"
+  ],
+  "currencies": [
+    "EUR"
+  ],
+  "languages": [
+    "en"
+  ],
+  "createdAt": "2019-01-09T10:41:27.308Z",
+  "messages": {
+    "enabled": true,
+    "deleteDaysAfterCreation": 15
+  },
+  "version": 2,
+  "shippingRateInputType": {
+    "type": "CartScore"
+  }
+}
