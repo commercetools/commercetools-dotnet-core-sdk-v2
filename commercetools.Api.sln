@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Tests", "commercetools.Api.Tests\commercetools.Api.Tests.csproj", "{8C432924-1FC8-4907-B947-277EAE433883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.DependencyInjection", "commercetools.Api.DependencyInjection\commercetools.Api.DependencyInjection.csproj", "{F2D0C13C-2B01-4CA8-AD1C-10DC58E7F34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Serialization", "commercetools.Api.Serialization\commercetools.Api.Serialization.csproj", "{C8513BEC-C8A2-4AFC-B4D6-E0F5A21FB1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Registration", "commercetools.Api.Registration\commercetools.Api.Registration.csproj", "{088B0001-9BB9-4CF3-B8A9-694D552D4C85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +37,17 @@ Global
 		{8C432924-1FC8-4907-B947-277EAE433883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C432924-1FC8-4907-B947-277EAE433883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C432924-1FC8-4907-B947-277EAE433883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D0C13C-2B01-4CA8-AD1C-10DC58E7F34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D0C13C-2B01-4CA8-AD1C-10DC58E7F34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D0C13C-2B01-4CA8-AD1C-10DC58E7F34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D0C13C-2B01-4CA8-AD1C-10DC58E7F34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8513BEC-C8A2-4AFC-B4D6-E0F5A21FB1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8513BEC-C8A2-4AFC-B4D6-E0F5A21FB1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8513BEC-C8A2-4AFC-B4D6-E0F5A21FB1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8513BEC-C8A2-4AFC-B4D6-E0F5A21FB1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088B0001-9BB9-4CF3-B8A9-694D552D4C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088B0001-9BB9-4CF3-B8A9-694D552D4C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088B0001-9BB9-4CF3-B8A9-694D552D4C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088B0001-9BB9-4CF3-B8A9-694D552D4C85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,26 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
-
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IsPackable>false</IsPackable>
+        <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="commercetools.Sdk.Client" Version="1.0.0.261-dev" />
-        <PackageReference Include="commercetools.Sdk.DependencyInjection" Version="1.0.0.261-dev" />
-        <PackageReference Include="commercetools.Sdk.HttpApi" Version="1.0.0.261-dev" />
-        <PackageReference Include="commercetools.Sdk.Registration" Version="1.0.0.261-dev" />
-        <PackageReference Include="commercetools.Sdk.Serialization" Version="1.0.0.261-dev" />
-        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-preview5.19227.9" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-        <PackageReference Include="xunit" Version="2.4.0" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.8" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Categories\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\commercetools.Api.Client\commercetools.Api.Client.csproj" />
+      <ProjectReference Include="..\commercetools.Api.Models\commercetools.Api.Models.csproj" />
+      <ProjectReference Include="..\commercetools.Api.Serialization\commercetools.Api.Serialization.csproj" />
+      <ProjectReference Include="..\commercetools.Api.DependencyInjection\commercetools.Api.DependencyInjection.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="appsettings.test.Development.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
 </Project>

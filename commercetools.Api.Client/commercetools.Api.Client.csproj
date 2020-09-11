@@ -9,12 +9,21 @@
     <Folder Include="DelegatingHandlers\" />
     <Folder Include="RequestBuilders\Categories\" />
     <Folder Include="RequestBuilders\Channels\" />
+    <Folder Include="Defaultconfig\" />
+    <Folder Include="Tokens\" />
+    <Folder Include="Domain\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.7" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\commercetools.Api.Models\commercetools.Api.Models.csproj" />
+    <ProjectReference Include="..\commercetools.Api.Serialization\commercetools.Api.Serialization.csproj" />
+    <ProjectReference Include="..\commercetools.Api.Registration\commercetools.Api.Registration.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ApiException.cs" />
   </ItemGroup>
 </Project>

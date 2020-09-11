@@ -3,7 +3,7 @@ using System.Text.Json;
 using Xunit;
 using commercetools.Api.Models.Projects;
 
-namespace CodeGenerated.Tests
+namespace commercetools.Api.Tests
 {
     public class ProjectTests
     {

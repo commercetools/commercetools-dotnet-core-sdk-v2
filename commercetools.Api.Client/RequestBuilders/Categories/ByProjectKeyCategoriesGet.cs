@@ -8,7 +8,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
 {
     public class ByProjectKeyCategoriesGet : ApiMethod<ByProjectKeyCategoriesGet>
     {
-        public HttpClient ApiHttpClient { get; }
+        public IClient ApiHttpClient { get; }
 
         public string ProjectKey { get; }
 
@@ -17,7 +17,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
         public override HttpMethod Method => HttpMethod.Get;
 
 
-        public ByProjectKeyCategoriesGet(HttpClient apiHttpClient,string projectKey)
+        public ByProjectKeyCategoriesGet(IClient apiHttpClient,string projectKey)
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
@@ -74,9 +74,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
         public async Task<CategoryPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            var result = await ApiHttpClient.SendAsync(requestMessage).ConfigureAwait(false);
-            var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
-            return JsonSerializer.Deserialize<CategoryPagedQueryResponse>(content);
+            return await ApiHttpClient.ExecuteAsync<CategoryPagedQueryResponse>(requestMessage);
         }
     }
 }

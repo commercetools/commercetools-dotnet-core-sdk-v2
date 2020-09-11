@@ -6,11 +6,11 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
 {
     public class ByProjectKeyCategoriesRequestBuilder
     {
-        public HttpClient ApiHttpClient { get; }
+        public IClient ApiHttpClient { get; }
 
         public string ProjectKey { get;}
 
-        public ByProjectKeyCategoriesRequestBuilder(HttpClient apiHttpClient,string projectKey)
+        public ByProjectKeyCategoriesRequestBuilder(IClient apiHttpClient,string projectKey)
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;

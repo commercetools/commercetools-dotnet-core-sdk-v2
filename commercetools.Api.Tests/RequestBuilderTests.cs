@@ -6,6 +6,7 @@ using commercetools.Api.Models.Categorys;
 using commercetools.Api.Models.Common;
 using System.Text.Json;
 using System.Net;
+using commercetools.Api.Client.Defaultconfig;
 
 namespace commercetools.Api.Tests
 {
@@ -20,7 +21,7 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot();
+            var apiRoot = new ApiRoot(null);
 
             //act
             var request = apiRoot
@@ -32,7 +33,7 @@ namespace commercetools.Api.Tests
                             .WithExpand(expand2)
                             .AddQueryParam(additionalParam.Key, additionalParam.Value)
                             .Build();
-
+            
 
             var expectedRequestUrl = $"/{projectKey}/categories/{categoryId}?" +
                 $"expand={expand1}&expand={expand2}&{additionalParam.Key}={additionalParam.Value}";
@@ -54,7 +55,7 @@ namespace commercetools.Api.Tests
             var where = $"name = \"food\"";
             
 
-            var apiRoot = new ApiRoot();
+            var apiRoot = new ApiRoot(null);
 
             //act
             var request = apiRoot
@@ -88,7 +89,7 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot();
+            var apiRoot = new ApiRoot(null);
 
             //act
             var request = apiRoot
@@ -134,7 +135,7 @@ namespace commercetools.Api.Tests
             };
 
            
-            var apiRoot = new ApiRoot();
+            var apiRoot = new ApiRoot(null);
 
             //act
             var request = apiRoot
@@ -171,7 +172,7 @@ namespace commercetools.Api.Tests
             };
 
 
-            var apiRoot = new ApiRoot();
+            var apiRoot = new ApiRoot(null);
 
             //act
             var request = apiRoot
