@@ -19,5 +19,7 @@ namespace commercetools.Api.Client
 
         
         Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage);
+        
+        Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage);
     }
 }

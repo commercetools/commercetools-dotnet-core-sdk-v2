@@ -1,6 +1,6 @@
 ﻿using commercetools.Api.Client.RequestBuilders;
 
-namespace commercetools.Api.Client.Defaultconfig
+namespace commercetools.Api.Client
 {
     public class ApiFactory
     { 

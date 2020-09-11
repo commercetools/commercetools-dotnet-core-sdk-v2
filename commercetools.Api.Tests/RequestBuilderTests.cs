@@ -4,9 +4,6 @@ using System.Net.Http;
 using System.Collections.Generic;
 using commercetools.Api.Models.Categorys;
 using commercetools.Api.Models.Common;
-using System.Text.Json;
-using System.Net;
-using commercetools.Api.Client.Defaultconfig;
 
 namespace commercetools.Api.Tests
 {

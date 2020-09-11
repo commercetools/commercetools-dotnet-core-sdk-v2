@@ -41,11 +41,17 @@ namespace commercetools.Api.Client
 
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
         {
+            var content = await ExecuteAsJsonAsync(requestMessage);
+            return this.serializerService.Deserialize<T>(content);   
+        }
+        
+        public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)
+        {
             var result = await this.HttpClient.SendAsync(requestMessage).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (result.IsSuccessStatusCode)
             {
-                return this.serializerService.Deserialize<T>(content);
+                return content;
             }
 
             // it will not reach this because either it will success and return the deserialized object or fail and handled by ErrorHandler which will throw it using the right exception type

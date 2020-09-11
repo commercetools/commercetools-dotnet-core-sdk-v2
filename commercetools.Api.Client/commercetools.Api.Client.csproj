@@ -9,7 +9,6 @@
     <Folder Include="DelegatingHandlers\" />
     <Folder Include="RequestBuilders\Categories\" />
     <Folder Include="RequestBuilders\Channels\" />
-    <Folder Include="Defaultconfig\" />
     <Folder Include="Tokens\" />
     <Folder Include="Domain\" />
   </ItemGroup>
