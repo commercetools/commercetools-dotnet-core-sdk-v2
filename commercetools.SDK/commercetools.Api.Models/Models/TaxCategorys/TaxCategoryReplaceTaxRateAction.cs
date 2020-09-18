@@ -1,0 +1,17 @@
+using commercetools.Api.Models.TaxCategorys;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using commercetools.Api.Serialization.CustomAttributes;
+
+
+namespace commercetools.Api.Models.TaxCategorys
+{
+    [DiscriminatorValue("replaceTaxRate")]
+    public class TaxCategoryReplaceTaxRateAction : TaxCategoryUpdateAction
+    {
+        public string TaxRateId { get; set;}
+        
+        public TaxRateDraft TaxRate { get; set;}
+    }
+}

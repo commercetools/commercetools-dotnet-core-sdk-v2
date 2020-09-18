@@ -1,0 +1,49 @@
+{
+  "id": "7806c94b-bd59-47e0-b4b4-fd32ecd2f93d",
+  "version": 1,
+  "name": "ShippingMethod_494595636",
+  "taxCategory": {
+    "typeId": "tax-category",
+    "id": "3d018013-b53d-422a-933c-7294cf114323",
+    "obj": {
+      "id": "3d018013-b53d-422a-933c-7294cf114323"
+    }
+  },
+  "zoneRates": [
+    {
+      "zone": {
+        "typeId": "zone",
+        "id": "e1d4a212-3db7-4694-bc22-1b7423f75acc"
+      },
+      "shippingRates": [
+        {
+          "price": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 1200,
+            "fractionDigits": 2
+          },
+          "freeAbove": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 12000,
+            "fractionDigits": 2
+          },
+          "tiers": []
+        }
+      ]
+    }
+  ],
+  "isDefault": false,
+  "createdAt": "2020-02-12T13:05:07.595Z",
+  "lastModifiedAt": "2020-02-12T13:05:07.595Z",
+  "key": "Key_494595636",
+  "lastModifiedBy": {
+    "clientId": "kdlz",
+    "isPlatformClient": false
+  },
+  "createdBy": {
+    "clientId": "kdlz",
+    "isPlatformClient": false
+  }
+}

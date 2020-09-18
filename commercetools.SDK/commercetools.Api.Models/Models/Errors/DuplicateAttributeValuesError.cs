@@ -1,0 +1,17 @@
+using commercetools.Api.Models.Errors;
+using commercetools.Api.Models.Products;
+using Attribute = commercetools.Api.Models.Products.Attribute;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using commercetools.Api.Serialization.CustomAttributes;
+
+
+namespace commercetools.Api.Models.Errors
+{
+    [DiscriminatorValue("DuplicateAttributeValues")]
+    public class DuplicateAttributeValuesError : ErrorObject
+    {
+        public List<Attribute> Attributes { get; set;}
+    }
+}

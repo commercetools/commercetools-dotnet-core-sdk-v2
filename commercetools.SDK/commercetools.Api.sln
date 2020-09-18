@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Models", "commercetools.Api.Models\commercetools.Api.Models.csproj", "{853EBE22-C82B-41C9-8E84-3451ABB0D424}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D4A429AE-8B66-4936-B91F-7226BF78B82A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.IntegrationTests", "commercetools.Api.IntegrationTests\commercetools.Api.IntegrationTests.csproj", "{0BE26648-8480-4F6C-A353-76D03266B0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Client", "commercetools.Api.Client\commercetools.Api.Client.csproj", "{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.DependencyInjection", "commercetools.Api.DependencyInjection\commercetools.Api.DependencyInjection.csproj", "{46B0CCB3-E6ED-4431-B87A-52B80CC9CA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Registration", "commercetools.Api.Registration\commercetools.Api.Registration.csproj", "{ABDCF97B-C7FC-4D1C-A203-BF7E7A22F49B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Serialization", "commercetools.Api.Serialization\commercetools.Api.Serialization.csproj", "{19C3CBC4-07EB-482F-9FCE-6CA081173123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Client.Tests", "Tests\commercetools.Api.Client.Tests\commercetools.Api.Client.Tests.csproj", "{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Tests", "commercetools.Api.Tests\commercetools.Api.Tests.csproj", "{E918B709-7029-4AC9-801C-3E39BA7C8774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Serialization.Tests", "Tests\commercetools.Api.Serialization.Tests\commercetools.Api.Serialization.Tests.csproj", "{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{853EBE22-C82B-41C9-8E84-3451ABB0D424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853EBE22-C82B-41C9-8E84-3451ABB0D424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853EBE22-C82B-41C9-8E84-3451ABB0D424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853EBE22-C82B-41C9-8E84-3451ABB0D424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE26648-8480-4F6C-A353-76D03266B0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE26648-8480-4F6C-A353-76D03266B0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE26648-8480-4F6C-A353-76D03266B0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE26648-8480-4F6C-A353-76D03266B0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B0CCB3-E6ED-4431-B87A-52B80CC9CA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B0CCB3-E6ED-4431-B87A-52B80CC9CA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B0CCB3-E6ED-4431-B87A-52B80CC9CA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B0CCB3-E6ED-4431-B87A-52B80CC9CA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDCF97B-C7FC-4D1C-A203-BF7E7A22F49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDCF97B-C7FC-4D1C-A203-BF7E7A22F49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDCF97B-C7FC-4D1C-A203-BF7E7A22F49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDCF97B-C7FC-4D1C-A203-BF7E7A22F49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E918B709-7029-4AC9-801C-3E39BA7C8774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E918B709-7029-4AC9-801C-3E39BA7C8774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E918B709-7029-4AC9-801C-3E39BA7C8774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E918B709-7029-4AC9-801C-3E39BA7C8774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BE26648-8480-4F6C-A353-76D03266B0C3} = {C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}
+		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
+		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
+	EndGlobalSection
+EndGlobal

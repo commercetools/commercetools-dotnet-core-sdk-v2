@@ -1,0 +1,18 @@
+using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using commercetools.Api.Serialization.CustomAttributes;
+
+
+namespace commercetools.Api.Models.Types
+{
+    [DiscriminatorValue("changeLabel")]
+    public class TypeChangeLabelAction : TypeUpdateAction
+    {
+        public string FieldName { get; set;}
+        
+        public LocalizedString Label { get; set;}
+    }
+}
