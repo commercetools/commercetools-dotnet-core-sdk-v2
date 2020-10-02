@@ -2,13 +2,14 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("SQS")]
-    public class SqsDestination : Destination
+    public partial class SqsDestination : Destination
     {
         public string AccessKey { get; set;}
         
@@ -17,5 +18,9 @@ namespace commercetools.Api.Models.Subscriptions
         public string QueueUrl { get; set;}
         
         public string Region { get; set;}
+        public SqsDestination()
+        { 
+           this.Type = "SQS";
+        }
     }
 }

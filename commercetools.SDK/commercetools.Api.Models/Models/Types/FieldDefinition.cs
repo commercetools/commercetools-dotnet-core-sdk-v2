@@ -3,12 +3,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
-    public class FieldDefinition 
+    public partial class FieldDefinition 
     {
         public FieldType Type { get; set;}
         
@@ -20,6 +21,7 @@ namespace commercetools.Api.Models.Types
         
         public string InputHint { get; set;}
         
+        [JsonIgnore]
         public TypeTextInputHint InputHintAsEnum => this.InputHint.GetEnum<TypeTextInputHint>();
     }
 }

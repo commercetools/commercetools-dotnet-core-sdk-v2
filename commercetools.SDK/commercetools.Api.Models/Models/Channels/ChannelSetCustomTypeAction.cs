@@ -3,16 +3,21 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Channels
 {
     [DiscriminatorValue("setCustomType")]
-    public class ChannelSetCustomTypeAction : ChannelUpdateAction
+    public partial class ChannelSetCustomTypeAction : ChannelUpdateAction
     {
         public TypeResourceIdentifier Type { get; set;}
         
         public FieldContainer Fields { get; set;}
+        public ChannelSetCustomTypeAction()
+        { 
+           this.Action = "setCustomType";
+        }
     }
 }

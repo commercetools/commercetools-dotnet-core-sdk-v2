@@ -2,13 +2,14 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("DiscountCodeNonApplicable")]
-    public class DiscountCodeNonApplicableError : ErrorObject
+    public partial class DiscountCodeNonApplicableError : ErrorObject
     {
         public string DiscountCode { get; set;}
         
@@ -21,5 +22,9 @@ namespace commercetools.Api.Models.Errors
         public DateTime ValidUntil { get; set;}
         
         public DateTime ValidityCheckTime { get; set;}
+        public DiscountCodeNonApplicableError()
+        { 
+           this.Code = "DiscountCodeNonApplicable";
+        }
     }
 }

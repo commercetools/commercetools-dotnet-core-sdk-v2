@@ -3,14 +3,19 @@ using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
     [DiscriminatorValue("addPayment")]
-    public class OrderAddPaymentAction : OrderUpdateAction
+    public partial class OrderAddPaymentAction : OrderUpdateAction
     {
         public PaymentResourceIdentifier Payment { get; set;}
+        public OrderAddPaymentAction()
+        { 
+           this.Action = "addPayment";
+        }
     }
 }

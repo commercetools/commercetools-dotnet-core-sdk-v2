@@ -2,14 +2,19 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("CloudEvents")]
-    public class DeliveryCloudEventsFormat : DeliveryFormat
+    public partial class DeliveryCloudEventsFormat : DeliveryFormat
     {
         public string CloudEventsVersion { get; set;}
+        public DeliveryCloudEventsFormat()
+        { 
+           this.Type = "CloudEvents";
+        }
     }
 }

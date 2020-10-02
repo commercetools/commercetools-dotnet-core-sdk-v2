@@ -2,13 +2,14 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("InventoryEntryQuantitySet")]
-    public class InventoryEntryQuantitySetMessagePayload : MessagePayload
+    public partial class InventoryEntryQuantitySetMessagePayload : MessagePayload
     {
         public long OldQuantityOnStock { get; set;}
         
@@ -17,5 +18,9 @@ namespace commercetools.Api.Models.Messages
         public long OldAvailableQuantity { get; set;}
         
         public long NewAvailableQuantity { get; set;}
+        public InventoryEntryQuantitySetMessagePayload()
+        { 
+           this.Type = "InventoryEntryQuantitySet";
+        }
     }
 }

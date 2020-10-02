@@ -3,14 +3,19 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
     [DiscriminatorValue("cart")]
-    public class CartReference : Reference
+    public partial class CartReference : Reference
     {
         public Cart Obj { get; set;}
+        public CartReference()
+        { 
+           this.TypeId = "cart";
+        }
     }
 }

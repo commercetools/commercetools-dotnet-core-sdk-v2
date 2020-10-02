@@ -2,14 +2,19 @@ using commercetools.Api.Models.Categorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Categorys
 {
     [DiscriminatorValue("changeParent")]
-    public class CategoryChangeParentAction : CategoryUpdateAction
+    public partial class CategoryChangeParentAction : CategoryUpdateAction
     {
         public CategoryResourceIdentifier Parent { get; set;}
+        public CategoryChangeParentAction()
+        { 
+           this.Action = "changeParent";
+        }
     }
 }

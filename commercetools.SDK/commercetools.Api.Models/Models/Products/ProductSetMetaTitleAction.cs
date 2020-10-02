@@ -3,16 +3,21 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("setMetaTitle")]
-    public class ProductSetMetaTitleAction : ProductUpdateAction
+    public partial class ProductSetMetaTitleAction : ProductUpdateAction
     {
         public LocalizedString MetaTitle { get; set;}
         
         public bool Staged { get; set;}
+        public ProductSetMetaTitleAction()
+        { 
+           this.Action = "setMetaTitle";
+        }
     }
 }

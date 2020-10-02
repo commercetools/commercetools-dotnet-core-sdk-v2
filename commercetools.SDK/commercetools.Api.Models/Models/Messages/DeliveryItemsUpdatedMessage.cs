@@ -3,18 +3,23 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("DeliveryItemsUpdated")]
-    public class DeliveryItemsUpdatedMessage : Message
+    public partial class DeliveryItemsUpdatedMessage : Message
     {
         public string DeliveryId { get; set;}
         
         public List<DeliveryItem> Items { get; set;}
         
         public List<DeliveryItem> OldItems { get; set;}
+        public DeliveryItemsUpdatedMessage()
+        { 
+           this.Type = "DeliveryItemsUpdated";
+        }
     }
 }

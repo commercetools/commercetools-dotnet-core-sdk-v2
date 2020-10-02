@@ -2,12 +2,13 @@ using commercetools.Api.Models.Categorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Categorys
 {
-    public class CategoryPagedQueryResponse 
+    public partial class CategoryPagedQueryResponse 
     {
         public long Limit { get; set;}
         

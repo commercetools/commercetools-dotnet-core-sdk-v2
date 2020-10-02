@@ -4,13 +4,14 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderLineItemDiscountSet")]
-    public class OrderLineItemDiscountSetMessage : Message
+    public partial class OrderLineItemDiscountSetMessage : Message
     {
         public string LineItemId { get; set;}
         
@@ -19,5 +20,9 @@ namespace commercetools.Api.Models.Messages
         public Money TotalPrice { get; set;}
         
         public TaxedItemPrice TaxedPrice { get; set;}
+        public OrderLineItemDiscountSetMessage()
+        { 
+           this.Type = "OrderLineItemDiscountSet";
+        }
     }
 }

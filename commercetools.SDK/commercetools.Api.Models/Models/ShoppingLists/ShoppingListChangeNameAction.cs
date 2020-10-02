@@ -3,14 +3,19 @@ using commercetools.Api.Models.ShoppingLists;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DiscriminatorValue("changeName")]
-    public class ShoppingListChangeNameAction : ShoppingListUpdateAction
+    public partial class ShoppingListChangeNameAction : ShoppingListUpdateAction
     {
         public LocalizedString Name { get; set;}
+        public ShoppingListChangeNameAction()
+        { 
+           this.Action = "changeName";
+        }
     }
 }

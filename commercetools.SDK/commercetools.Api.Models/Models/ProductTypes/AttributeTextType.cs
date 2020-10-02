@@ -2,13 +2,18 @@ using commercetools.Api.Models.ProductTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
     [DiscriminatorValue("text")]
-    public class AttributeTextType : AttributeType
+    public partial class AttributeTextType : AttributeType
     {
+        public AttributeTextType()
+        { 
+           this.Name = "text";
+        }
     }
 }

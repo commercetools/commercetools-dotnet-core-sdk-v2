@@ -3,20 +3,27 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderStateChanged")]
-    public class OrderStateChangedMessagePayload : MessagePayload
+    public partial class OrderStateChangedMessagePayload : MessagePayload
     {
         public string OrderState { get; set;}
         
+        [JsonIgnore]
         public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
         
         public string OldOrderState { get; set;}
         
+        [JsonIgnore]
         public OrderState OldOrderStateAsEnum => this.OldOrderState.GetEnum<OrderState>();
+        public OrderStateChangedMessagePayload()
+        { 
+           this.Type = "OrderStateChanged";
+        }
     }
 }

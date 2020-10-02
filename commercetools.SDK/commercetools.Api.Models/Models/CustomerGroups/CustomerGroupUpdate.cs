@@ -2,12 +2,13 @@ using commercetools.Api.Models.CustomerGroups;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public class CustomerGroupUpdate 
+    public partial class CustomerGroupUpdate 
     {
         public long Version { get; set;}
         

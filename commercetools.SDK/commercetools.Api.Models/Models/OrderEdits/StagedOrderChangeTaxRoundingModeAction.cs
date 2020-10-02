@@ -3,16 +3,22 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("changeTaxRoundingMode")]
-    public class StagedOrderChangeTaxRoundingModeAction : StagedOrderUpdateAction
+    public partial class StagedOrderChangeTaxRoundingModeAction : StagedOrderUpdateAction
     {
         public string TaxRoundingMode { get; set;}
         
+        [JsonIgnore]
         public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
+        public StagedOrderChangeTaxRoundingModeAction()
+        { 
+           this.Action = "changeTaxRoundingMode";
+        }
     }
 }

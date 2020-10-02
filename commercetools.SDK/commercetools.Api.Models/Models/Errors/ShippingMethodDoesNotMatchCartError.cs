@@ -2,13 +2,18 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("ShippingMethodDoesNotMatchCart")]
-    public class ShippingMethodDoesNotMatchCartError : ErrorObject
+    public partial class ShippingMethodDoesNotMatchCartError : ErrorObject
     {
+        public ShippingMethodDoesNotMatchCartError()
+        { 
+           this.Code = "ShippingMethodDoesNotMatchCart";
+        }
     }
 }

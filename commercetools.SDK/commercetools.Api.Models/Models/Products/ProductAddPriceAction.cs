@@ -3,13 +3,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("addPrice")]
-    public class ProductAddPriceAction : ProductUpdateAction
+    public partial class ProductAddPriceAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
@@ -18,5 +19,9 @@ namespace commercetools.Api.Models.Products
         public PriceDraft Price { get; set;}
         
         public bool Staged { get; set;}
+        public ProductAddPriceAction()
+        { 
+           this.Action = "addPrice";
+        }
     }
 }

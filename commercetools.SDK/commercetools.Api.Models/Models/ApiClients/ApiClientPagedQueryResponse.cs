@@ -2,12 +2,13 @@ using commercetools.Api.Models.ApiClients;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ApiClients
 {
-    public class ApiClientPagedQueryResponse 
+    public partial class ApiClientPagedQueryResponse 
     {
         public long Limit { get; set;}
         

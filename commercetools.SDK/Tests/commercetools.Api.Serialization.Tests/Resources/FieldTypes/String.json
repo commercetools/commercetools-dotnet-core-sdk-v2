@@ -1,0 +1,22 @@
+{
+  "key": "my-category",
+  "name": { "en": "customized fields" },
+  "description": { "en": "customized fields definition" },
+  "resourceTypeIds": [ "category", "custom-line-item" ],
+  "fieldDefinitions": [
+    {
+      "name": "description",
+      "type": { "name": "String" },
+      "required": true,
+      "label": { "en": "size" },
+      "inputHint": "SingleLine"
+    },
+    {
+      "name": "color",
+      "type": { "name": "String" },
+      "required": false,
+      "label": { "en": "color" },
+      "inputHint": "SingleLine"
+    }
+  ]
+}

@@ -2,12 +2,13 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public class DiscountCodeUpdate 
+    public partial class DiscountCodeUpdate 
     {
         public long Version { get; set;}
         

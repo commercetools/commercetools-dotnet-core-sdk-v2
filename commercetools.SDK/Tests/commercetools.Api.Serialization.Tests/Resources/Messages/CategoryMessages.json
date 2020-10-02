@@ -1,0 +1,84 @@
+[
+  {
+    "id": "931dddd3-870b-41f6-9c8c-ce97686f1744",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resource": {
+      "typeId": "category",
+      "id": "3df866bd-7e5f-47d1-bbe2-ca1d1f39a260"
+    },
+    "resourceVersion": 1,
+    "resourceUserProvidedIdentifiers": {
+      "key": "A6NY1AY8MZ",
+      "slug": {
+        "en": "BL3UJSRU3Y"
+      }
+    },
+    "type": "CategoryCreated",
+    "category": {
+      "id": "3df866bd-7e5f-47d1-bbe2-ca1d1f39a260",
+      "version": 1,
+      "lastMessageSequenceNumber": 1,
+      "createdAt": "2019-08-28T10:01:03.762Z",
+      "lastModifiedAt": "2019-08-28T10:01:03.762Z",
+      "lastModifiedBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "createdBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "key": "A6NY1AY8MZ",
+      "name": {
+        "en": "PYMDR5UTBJ"
+      },
+      "slug": {
+        "en": "BL3UJSRU3Y"
+      },
+      "ancestors": [],
+      "orderHint": "0.2005310255",
+      "assets": []
+    },
+    "createdAt": "2019-08-28T10:01:03.762Z",
+    "lastModifiedAt": "2019-08-28T10:01:03.762Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  },
+  {
+    "id": "c5785abe-a7f1-4b1d-bd15-a91caba2abb7",
+    "version": 1,
+    "sequenceNumber": 2,
+    "resource": {
+      "typeId": "category",
+      "id": "3e357cad-40a3-4b04-8a83-1c3c46a027d1"
+    },
+    "resourceVersion": 2,
+    "resourceUserProvidedIdentifiers": {
+      "key": "2N0746S91V",
+      "slug": {
+        "en": "G5UPBOIV5H"
+      }
+    },
+    "type": "CategorySlugChanged",
+    "slug": {
+      "en": "G5UPBOIV5H"
+    },
+    "createdAt": "2019-08-28T10:44:49.052Z",
+    "lastModifiedAt": "2019-08-28T10:44:49.052Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  }
+]

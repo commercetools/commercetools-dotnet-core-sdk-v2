@@ -2,14 +2,19 @@ using commercetools.Api.Models.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
     [DiscriminatorValue("setKey")]
-    public class ExtensionSetKeyAction : ExtensionUpdateAction
+    public partial class ExtensionSetKeyAction : ExtensionUpdateAction
     {
         public string Key { get; set;}
+        public ExtensionSetKeyAction()
+        { 
+           this.Action = "setKey";
+        }
     }
 }

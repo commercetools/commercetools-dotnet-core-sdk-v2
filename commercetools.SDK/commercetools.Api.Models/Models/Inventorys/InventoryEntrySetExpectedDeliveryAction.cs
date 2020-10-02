@@ -2,14 +2,19 @@ using commercetools.Api.Models.Inventorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Inventorys
 {
     [DiscriminatorValue("setExpectedDelivery")]
-    public class InventoryEntrySetExpectedDeliveryAction : InventoryEntryUpdateAction
+    public partial class InventoryEntrySetExpectedDeliveryAction : InventoryEntryUpdateAction
     {
         public DateTime ExpectedDelivery { get; set;}
+        public InventoryEntrySetExpectedDeliveryAction()
+        { 
+           this.Action = "setExpectedDelivery";
+        }
     }
 }

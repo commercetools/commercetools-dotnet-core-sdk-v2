@@ -3,14 +3,19 @@ using commercetools.Api.Models.CustomerGroups;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DiscriminatorValue("customer-group")]
-    public class CustomerGroupReference : Reference
+    public partial class CustomerGroupReference : Reference
     {
         public CustomerGroup Obj { get; set;}
+        public CustomerGroupReference()
+        { 
+           this.TypeId = "customer-group";
+        }
     }
 }

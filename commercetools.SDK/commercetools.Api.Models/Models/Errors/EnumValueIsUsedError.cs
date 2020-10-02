@@ -2,13 +2,18 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("EnumValueIsUsed")]
-    public class EnumValueIsUsedError : ErrorObject
+    public partial class EnumValueIsUsedError : ErrorObject
     {
+        public EnumValueIsUsedError()
+        { 
+           this.Code = "EnumValueIsUsed";
+        }
     }
 }

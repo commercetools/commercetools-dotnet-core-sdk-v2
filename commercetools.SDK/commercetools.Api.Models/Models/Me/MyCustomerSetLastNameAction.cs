@@ -2,14 +2,19 @@ using commercetools.Api.Models.Me;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("setLastName")]
-    public class MyCustomerSetLastNameAction : MyCustomerUpdateAction
+    public partial class MyCustomerSetLastNameAction : MyCustomerUpdateAction
     {
         public string LastName { get; set;}
+        public MyCustomerSetLastNameAction()
+        { 
+           this.Action = "setLastName";
+        }
     }
 }

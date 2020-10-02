@@ -2,14 +2,19 @@ using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DiscriminatorValue("setDescription")]
-    public class ShippingMethodSetDescriptionAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodSetDescriptionAction : ShippingMethodUpdateAction
     {
         public string Description { get; set;}
+        public ShippingMethodSetDescriptionAction()
+        { 
+           this.Action = "setDescription";
+        }
     }
 }

@@ -3,14 +3,19 @@ using commercetools.Api.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderStoreSet")]
-    public class OrderStoreSetMessagePayload : MessagePayload
+    public partial class OrderStoreSetMessagePayload : MessagePayload
     {
         public StoreKeyReference Store { get; set;}
+        public OrderStoreSetMessagePayload()
+        { 
+           this.Type = "OrderStoreSet";
+        }
     }
 }

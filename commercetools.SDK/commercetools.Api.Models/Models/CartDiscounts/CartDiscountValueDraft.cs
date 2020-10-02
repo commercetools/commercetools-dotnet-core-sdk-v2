@@ -1,14 +1,14 @@
-using commercetools.Api.Models.CartDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [Discriminator(nameof(Type))]
-    public abstract class CartDiscountValueDraft 
+    public abstract partial class CartDiscountValueDraft 
     {
         public string Type { get; set;}
     }

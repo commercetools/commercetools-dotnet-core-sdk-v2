@@ -2,12 +2,13 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
-    public class UserProvidedIdentifiers 
+    public partial class UserProvidedIdentifiers 
     {
         public string Key { get; set;}
         

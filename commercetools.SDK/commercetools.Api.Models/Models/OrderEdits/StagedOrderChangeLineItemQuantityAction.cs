@@ -4,13 +4,14 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("changeLineItemQuantity")]
-    public class StagedOrderChangeLineItemQuantityAction : StagedOrderUpdateAction
+    public partial class StagedOrderChangeLineItemQuantityAction : StagedOrderUpdateAction
     {
         public string LineItemId { get; set;}
         
@@ -19,5 +20,9 @@ namespace commercetools.Api.Models.OrderEdits
         public Money ExternalPrice { get; set;}
         
         public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public StagedOrderChangeLineItemQuantityAction()
+        { 
+           this.Action = "changeLineItemQuantity";
+        }
     }
 }

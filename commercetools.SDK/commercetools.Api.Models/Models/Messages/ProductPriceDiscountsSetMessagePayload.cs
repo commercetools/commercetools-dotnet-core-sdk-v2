@@ -2,14 +2,19 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ProductPriceDiscountsSet")]
-    public class ProductPriceDiscountsSetMessagePayload : MessagePayload
+    public partial class ProductPriceDiscountsSetMessagePayload : MessagePayload
     {
         public List<ProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set;}
+        public ProductPriceDiscountsSetMessagePayload()
+        { 
+           this.Type = "ProductPriceDiscountsSet";
+        }
     }
 }

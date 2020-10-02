@@ -4,16 +4,21 @@ using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("setShippingMethod")]
-    public class MyCartSetShippingMethodAction : MyCartUpdateAction
+    public partial class MyCartSetShippingMethodAction : MyCartUpdateAction
     {
         public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
         public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public MyCartSetShippingMethodAction()
+        { 
+           this.Action = "setShippingMethod";
+        }
     }
 }

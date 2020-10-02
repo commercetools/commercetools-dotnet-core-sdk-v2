@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
@@ -54,6 +55,17 @@ namespace commercetools.Api.Models
             }
 
             throw new ArgumentException($"Enum {typeof(T)} doesn't contains value {value}'");
+        }
+        
+        public static List<T> GetEnum<T>(this List<string> values) where T : Enum
+        {
+            var enumList = new List<T>();
+            foreach (var value in values)
+            {
+                enumList.Add(GetEnum<T>(value));
+            }
+
+            return enumList;
         }
     }
 }

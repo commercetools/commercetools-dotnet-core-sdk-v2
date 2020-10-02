@@ -3,14 +3,19 @@ using commercetools.Api.Models.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.States
 {
     [DiscriminatorValue("setName")]
-    public class StateSetNameAction : StateUpdateAction
+    public partial class StateSetNameAction : StateUpdateAction
     {
         public LocalizedString Name { get; set;}
+        public StateSetNameAction()
+        { 
+           this.Action = "setName";
+        }
     }
 }

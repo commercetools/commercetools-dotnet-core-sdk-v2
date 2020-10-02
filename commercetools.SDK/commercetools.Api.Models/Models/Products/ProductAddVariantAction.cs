@@ -4,13 +4,14 @@ using Attribute = commercetools.Api.Models.Products.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("addVariant")]
-    public class ProductAddVariantAction : ProductUpdateAction
+    public partial class ProductAddVariantAction : ProductUpdateAction
     {
         public string Sku { get; set;}
         
@@ -25,5 +26,9 @@ namespace commercetools.Api.Models.Products
         public bool Staged { get; set;}
         
         public List<Asset> Assets { get; set;}
+        public ProductAddVariantAction()
+        { 
+           this.Action = "addVariant";
+        }
     }
 }

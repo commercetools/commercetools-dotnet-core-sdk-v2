@@ -2,16 +2,22 @@ using commercetools.Api.Models.CartDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("changeStackingMode")]
-    public class CartDiscountChangeStackingModeAction : CartDiscountUpdateAction
+    public partial class CartDiscountChangeStackingModeAction : CartDiscountUpdateAction
     {
         public string StackingMode { get; set;}
         
+        [JsonIgnore]
         public StackingMode StackingModeAsEnum => this.StackingMode.GetEnum<StackingMode>();
+        public CartDiscountChangeStackingModeAction()
+        { 
+           this.Action = "changeStackingMode";
+        }
     }
 }

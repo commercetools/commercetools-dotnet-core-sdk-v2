@@ -3,14 +3,19 @@ using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
     [DiscriminatorValue("payment")]
-    public class PaymentReference : Reference
+    public partial class PaymentReference : Reference
     {
         public Payment Obj { get; set;}
+        public PaymentReference()
+        { 
+           this.TypeId = "payment";
+        }
     }
 }

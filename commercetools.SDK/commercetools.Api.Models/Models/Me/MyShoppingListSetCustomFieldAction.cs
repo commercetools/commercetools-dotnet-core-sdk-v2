@@ -2,16 +2,21 @@ using commercetools.Api.Models.Me;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("setCustomField")]
-    public class MyShoppingListSetCustomFieldAction : MyShoppingListUpdateAction
+    public partial class MyShoppingListSetCustomFieldAction : MyShoppingListUpdateAction
     {
         public string Name { get; set;}
         
         public Object Value { get; set;}
+        public MyShoppingListSetCustomFieldAction()
+        { 
+           this.Action = "setCustomField";
+        }
     }
 }

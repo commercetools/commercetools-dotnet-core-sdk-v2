@@ -3,18 +3,23 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("DuplicateFieldWithConflictingResource")]
-    public class DuplicateFieldWithConflictingResourceError : ErrorObject
+    public partial class DuplicateFieldWithConflictingResourceError : ErrorObject
     {
         public string Field { get; set;}
         
         public Object DuplicateValue { get; set;}
         
         public Reference ConflictingResource { get; set;}
+        public DuplicateFieldWithConflictingResourceError()
+        { 
+           this.Code = "DuplicateFieldWithConflictingResource";
+        }
     }
 }

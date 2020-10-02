@@ -2,14 +2,19 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("AzureServiceBus")]
-    public class AzureServiceBusDestination : Destination
+    public partial class AzureServiceBusDestination : Destination
     {
         public string ConnectionString { get; set;}
+        public AzureServiceBusDestination()
+        { 
+           this.Type = "AzureServiceBus";
+        }
     }
 }

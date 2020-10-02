@@ -2,13 +2,14 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
     [Discriminator(nameof(Type))]
-    public abstract class ReturnItem 
+    public abstract partial class ReturnItem 
     {
         public string Id { get; set;}
         
@@ -20,10 +21,12 @@ namespace commercetools.Api.Models.Orders
         
         public string ShipmentState { get; set;}
         
+        [JsonIgnore]
         public ReturnShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ReturnShipmentState>();
         
         public string PaymentState { get; set;}
         
+        [JsonIgnore]
         public ReturnPaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<ReturnPaymentState>();
         
         public DateTime LastModifiedAt { get; set;}

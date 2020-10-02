@@ -5,12 +5,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Common
 {
-    public class QueryPrice 
+    public partial class QueryPrice 
     {
         public string Id { get; set;}
         

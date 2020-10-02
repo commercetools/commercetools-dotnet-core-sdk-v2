@@ -1,16 +1,16 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [Discriminator(nameof(NotificationType))]
-    public abstract class SubscriptionDelivery 
+    public abstract partial class SubscriptionDelivery 
     {
         public string ProjectKey { get; set;}
         

@@ -1,0 +1,13 @@
+{
+  "key": "new-key",
+  "resourceTypeIds": [ "category", "custom-line-item" ],
+  "fieldDefinitions": [
+    {
+      "type": { "name": "String" },
+      "name": "string-field",
+      "label": { "en": "string description" },
+      "required": true,
+      "inputHint": "SingleLine"
+    }
+  ]
+}

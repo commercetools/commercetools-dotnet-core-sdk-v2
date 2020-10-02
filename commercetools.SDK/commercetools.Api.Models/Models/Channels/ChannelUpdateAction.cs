@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Channels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Channels
 {
     [Discriminator(nameof(Action))]
-    public abstract class ChannelUpdateAction 
+    public abstract partial class ChannelUpdateAction 
     {
         public string Action { get; set;}
     }

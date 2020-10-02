@@ -3,14 +3,19 @@ using commercetools.Api.Models.OrderEdits;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("order-edit")]
-    public class OrderEditReference : Reference
+    public partial class OrderEditReference : Reference
     {
         public OrderEdit Obj { get; set;}
+        public OrderEditReference()
+        { 
+           this.TypeId = "order-edit";
+        }
     }
 }

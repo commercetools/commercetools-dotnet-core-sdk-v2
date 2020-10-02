@@ -4,13 +4,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("giftLineItem")]
-    public class CartDiscountValueGiftLineItem : CartDiscountValue
+    public partial class CartDiscountValueGiftLineItem : CartDiscountValue
     {
         public ProductReference Product { get; set;}
         
@@ -19,5 +20,9 @@ namespace commercetools.Api.Models.CartDiscounts
         public ChannelReference SupplyChannel { get; set;}
         
         public ChannelReference DistributionChannel { get; set;}
+        public CartDiscountValueGiftLineItem()
+        { 
+           this.Type = "giftLineItem";
+        }
     }
 }

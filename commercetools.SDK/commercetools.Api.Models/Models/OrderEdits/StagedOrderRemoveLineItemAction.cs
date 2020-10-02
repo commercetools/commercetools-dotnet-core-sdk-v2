@@ -4,13 +4,14 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("removeLineItem")]
-    public class StagedOrderRemoveLineItemAction : StagedOrderUpdateAction
+    public partial class StagedOrderRemoveLineItemAction : StagedOrderUpdateAction
     {
         public string LineItemId { get; set;}
         
@@ -21,5 +22,9 @@ namespace commercetools.Api.Models.OrderEdits
         public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         
         public ItemShippingDetailsDraft ShippingDetailsToRemove { get; set;}
+        public StagedOrderRemoveLineItemAction()
+        { 
+           this.Action = "removeLineItem";
+        }
     }
 }

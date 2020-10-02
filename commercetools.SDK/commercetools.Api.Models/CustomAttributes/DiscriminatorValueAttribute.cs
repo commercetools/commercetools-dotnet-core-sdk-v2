@@ -1,6 +1,6 @@
 using System;
 
-namespace commercetools.Api.Serialization.CustomAttributes
+namespace commercetools.Api.Models.CustomAttributes
 {
     /// <summary>
     /// Represents the <see cref="Attribute"/> used to indicate the discriminator value of a derived type

@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "text-attribute",
+      "value": "sometext"
+    }
+  ]
+}

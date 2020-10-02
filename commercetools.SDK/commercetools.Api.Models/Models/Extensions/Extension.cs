@@ -3,12 +3,13 @@ using commercetools.Api.Models.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
-    public class Extension : BaseResource
+    public partial class Extension : BaseResource
     {
         public string Id { get; set;}
         

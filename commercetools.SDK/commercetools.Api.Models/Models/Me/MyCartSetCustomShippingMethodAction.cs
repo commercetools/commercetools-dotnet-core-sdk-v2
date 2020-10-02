@@ -5,13 +5,14 @@ using commercetools.Api.Models.TaxCategorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("setCustomShippingMethod")]
-    public class MyCartSetCustomShippingMethodAction : MyCartUpdateAction
+    public partial class MyCartSetCustomShippingMethodAction : MyCartUpdateAction
     {
         public string ShippingMethodName { get; set;}
         
@@ -20,5 +21,9 @@ namespace commercetools.Api.Models.Me
         public TaxCategoryResourceIdentifier TaxCategory { get; set;}
         
         public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public MyCartSetCustomShippingMethodAction()
+        { 
+           this.Action = "setCustomShippingMethod";
+        }
     }
 }

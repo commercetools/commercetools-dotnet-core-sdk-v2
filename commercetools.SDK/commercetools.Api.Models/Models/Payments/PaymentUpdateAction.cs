@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
     [Discriminator(nameof(Action))]
-    public abstract class PaymentUpdateAction 
+    public abstract partial class PaymentUpdateAction 
     {
         public string Action { get; set;}
     }

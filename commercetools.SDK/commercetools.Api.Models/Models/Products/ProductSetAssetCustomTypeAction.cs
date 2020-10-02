@@ -3,13 +3,14 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("setAssetCustomType")]
-    public class ProductSetAssetCustomTypeAction : ProductUpdateAction
+    public partial class ProductSetAssetCustomTypeAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
@@ -24,5 +25,9 @@ namespace commercetools.Api.Models.Products
         public TypeResourceIdentifier Type { get; set;}
         
         public Object Fields { get; set;}
+        public ProductSetAssetCustomTypeAction()
+        { 
+           this.Action = "setAssetCustomType";
+        }
     }
 }

@@ -3,14 +3,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("setDescription")]
-    public class DiscountCodeSetDescriptionAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetDescriptionAction : DiscountCodeUpdateAction
     {
         public LocalizedString Description { get; set;}
+        public DiscountCodeSetDescriptionAction()
+        { 
+           this.Action = "setDescription";
+        }
     }
 }

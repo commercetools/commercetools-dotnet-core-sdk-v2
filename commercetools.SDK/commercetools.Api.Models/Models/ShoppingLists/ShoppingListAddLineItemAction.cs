@@ -3,13 +3,14 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DiscriminatorValue("addLineItem")]
-    public class ShoppingListAddLineItemAction : ShoppingListUpdateAction
+    public partial class ShoppingListAddLineItemAction : ShoppingListUpdateAction
     {
         public string Sku { get; set;}
         
@@ -22,5 +23,9 @@ namespace commercetools.Api.Models.ShoppingLists
         public DateTime AddedAt { get; set;}
         
         public CustomFieldsDraft Custom { get; set;}
+        public ShoppingListAddLineItemAction()
+        { 
+           this.Action = "addLineItem";
+        }
     }
 }

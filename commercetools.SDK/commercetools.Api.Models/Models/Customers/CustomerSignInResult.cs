@@ -2,12 +2,13 @@ using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
-    public class CustomerSignInResult 
+    public partial class CustomerSignInResult 
     {
         public Customer Customer { get; set;}
         

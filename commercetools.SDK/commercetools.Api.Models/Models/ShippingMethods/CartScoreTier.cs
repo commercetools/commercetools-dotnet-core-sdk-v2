@@ -3,13 +3,14 @@ using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DiscriminatorValue("CartScore")]
-    public class CartScoreTier : ShippingRatePriceTier
+    public partial class CartScoreTier : ShippingRatePriceTier
     {
         public double Score { get; set;}
         
@@ -18,5 +19,9 @@ namespace commercetools.Api.Models.ShippingMethods
         public PriceFunction PriceFunction { get; set;}
         
         public bool IsMatching { get; set;}
+        public CartScoreTier()
+        { 
+           this.Type = "CartScore";
+        }
     }
 }

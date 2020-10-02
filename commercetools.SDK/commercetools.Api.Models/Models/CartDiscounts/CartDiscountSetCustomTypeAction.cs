@@ -3,16 +3,21 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("setCustomType")]
-    public class CartDiscountSetCustomTypeAction : CartDiscountUpdateAction
+    public partial class CartDiscountSetCustomTypeAction : CartDiscountUpdateAction
     {
         public TypeResourceIdentifier Type { get; set;}
         
         public Object Fields { get; set;}
+        public CartDiscountSetCustomTypeAction()
+        { 
+           this.Action = "setCustomType";
+        }
     }
 }

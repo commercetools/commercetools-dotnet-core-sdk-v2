@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "text-attribute",
+      "value": "sometext"
+    },
+    {
+      "name": "enum-attribute",
+      "value": {
+        "key": "enum-key",
+        "label": "enum-label"
+      }
+    }, 
+    {
+      "name": "boolean-attribute",
+      "value": true
+    }
+  ]
+}

@@ -2,13 +2,18 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("invalid_token")]
-    public class InvalidTokenError : ErrorObject
+    public partial class InvalidTokenError : ErrorObject
     {
+        public InvalidTokenError()
+        { 
+           this.Code = "invalid_token";
+        }
     }
 }

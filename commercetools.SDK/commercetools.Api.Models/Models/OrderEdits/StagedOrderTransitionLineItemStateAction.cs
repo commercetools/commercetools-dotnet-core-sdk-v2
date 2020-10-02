@@ -3,13 +3,14 @@ using commercetools.Api.Models.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("transitionLineItemState")]
-    public class StagedOrderTransitionLineItemStateAction : StagedOrderUpdateAction
+    public partial class StagedOrderTransitionLineItemStateAction : StagedOrderUpdateAction
     {
         public string LineItemId { get; set;}
         
@@ -20,5 +21,9 @@ namespace commercetools.Api.Models.OrderEdits
         public StateResourceIdentifier ToState { get; set;}
         
         public DateTime ActualTransitionDate { get; set;}
+        public StagedOrderTransitionLineItemStateAction()
+        { 
+           this.Action = "transitionLineItemState";
+        }
     }
 }

@@ -4,12 +4,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public class CartDiscount : BaseResource
+    public partial class CartDiscount : BaseResource
     {
         public string Id { get; set;}
         
@@ -49,6 +50,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public string StackingMode { get; set;}
         
+        [JsonIgnore]
         public StackingMode StackingModeAsEnum => this.StackingMode.GetEnum<StackingMode>();
         
         public CustomFields Custom { get; set;}

@@ -3,14 +3,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("changeCartDiscounts")]
-    public class DiscountCodeChangeCartDiscountsAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeChangeCartDiscountsAction : DiscountCodeUpdateAction
     {
         public List<CartDiscountResourceIdentifier> CartDiscounts { get; set;}
+        public DiscountCodeChangeCartDiscountsAction()
+        { 
+           this.Action = "changeCartDiscounts";
+        }
     }
 }

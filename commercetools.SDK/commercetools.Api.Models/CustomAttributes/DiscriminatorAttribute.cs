@@ -1,6 +1,6 @@
 using System;
 
-namespace commercetools.Api.Serialization.CustomAttributes
+namespace commercetools.Api.Models.CustomAttributes
 {
     /// <summary>
     /// Represents the <see cref="Attribute"/> used to indicate the property used to discriminate derived types of the marked class

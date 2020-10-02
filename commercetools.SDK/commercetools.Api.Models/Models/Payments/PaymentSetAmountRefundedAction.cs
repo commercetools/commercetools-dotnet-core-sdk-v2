@@ -3,14 +3,19 @@ using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
     [DiscriminatorValue("setAmountRefunded")]
-    public class PaymentSetAmountRefundedAction : PaymentUpdateAction
+    public partial class PaymentSetAmountRefundedAction : PaymentUpdateAction
     {
         public Money Amount { get; set;}
+        public PaymentSetAmountRefundedAction()
+        { 
+           this.Action = "setAmountRefunded";
+        }
     }
 }

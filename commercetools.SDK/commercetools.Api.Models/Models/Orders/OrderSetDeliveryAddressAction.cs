@@ -3,16 +3,21 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
     [DiscriminatorValue("setDeliveryAddress")]
-    public class OrderSetDeliveryAddressAction : OrderUpdateAction
+    public partial class OrderSetDeliveryAddressAction : OrderUpdateAction
     {
         public string DeliveryId { get; set;}
         
         public Address Address { get; set;}
+        public OrderSetDeliveryAddressAction()
+        { 
+           this.Action = "setDeliveryAddress";
+        }
     }
 }

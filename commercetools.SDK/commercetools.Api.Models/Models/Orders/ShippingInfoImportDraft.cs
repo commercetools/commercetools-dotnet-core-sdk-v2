@@ -6,12 +6,13 @@ using commercetools.Api.Models.TaxCategorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public class ShippingInfoImportDraft 
+    public partial class ShippingInfoImportDraft 
     {
         public string ShippingMethodName { get; set;}
         
@@ -31,6 +32,7 @@ namespace commercetools.Api.Models.Orders
         
         public string ShippingMethodState { get; set;}
         
+        [JsonIgnore]
         public ShippingMethodState ShippingMethodStateAsEnum => this.ShippingMethodState.GetEnum<ShippingMethodState>();
     }
 }

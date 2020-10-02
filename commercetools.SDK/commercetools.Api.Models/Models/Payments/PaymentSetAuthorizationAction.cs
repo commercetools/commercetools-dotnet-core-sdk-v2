@@ -3,16 +3,21 @@ using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
     [DiscriminatorValue("setAuthorization")]
-    public class PaymentSetAuthorizationAction : PaymentUpdateAction
+    public partial class PaymentSetAuthorizationAction : PaymentUpdateAction
     {
         public Money Amount { get; set;}
         
         public DateTime Until { get; set;}
+        public PaymentSetAuthorizationAction()
+        { 
+           this.Action = "setAuthorization";
+        }
     }
 }

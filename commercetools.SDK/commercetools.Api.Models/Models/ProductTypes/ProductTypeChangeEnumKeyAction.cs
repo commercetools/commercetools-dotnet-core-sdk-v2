@@ -3,18 +3,23 @@ using Attribute = commercetools.Api.Models.Products.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
     [DiscriminatorValue("changeEnumKey")]
-    public class ProductTypeChangeEnumKeyAction : ProductTypeUpdateAction
+    public partial class ProductTypeChangeEnumKeyAction : ProductTypeUpdateAction
     {
         public string AttributeName { get; set;}
         
         public string Key { get; set;}
         
         public string NewKey { get; set;}
+        public ProductTypeChangeEnumKeyAction()
+        { 
+           this.Action = "changeEnumKey";
+        }
     }
 }

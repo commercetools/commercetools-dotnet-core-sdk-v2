@@ -2,12 +2,13 @@ using commercetools.Api.Models.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
-    public class ExtensionDraft 
+    public partial class ExtensionDraft 
     {
         public string Key { get; set;}
         

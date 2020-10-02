@@ -3,13 +3,14 @@ using commercetools.Api.Models.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("LineItemStateTransition")]
-    public class LineItemStateTransitionMessagePayload : MessagePayload
+    public partial class LineItemStateTransitionMessagePayload : MessagePayload
     {
         public string LineItemId { get; set;}
         
@@ -20,5 +21,9 @@ namespace commercetools.Api.Models.Messages
         public StateReference FromState { get; set;}
         
         public StateReference ToState { get; set;}
+        public LineItemStateTransitionMessagePayload()
+        { 
+           this.Type = "LineItemStateTransition";
+        }
     }
 }

@@ -5,18 +5,23 @@ using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("setShippingAddressAndShippingMethod")]
-    public class StagedOrderSetShippingAddressAndShippingMethodAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetShippingAddressAndShippingMethodAction : StagedOrderUpdateAction
     {
         public Address Address { get; set;}
         
         public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
         public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public StagedOrderSetShippingAddressAndShippingMethodAction()
+        { 
+           this.Action = "setShippingAddressAndShippingMethod";
+        }
     }
 }

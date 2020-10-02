@@ -2,14 +2,19 @@ using commercetools.Api.Models.CartDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("setKey")]
-    public class CartDiscountSetKeyAction : CartDiscountUpdateAction
+    public partial class CartDiscountSetKeyAction : CartDiscountUpdateAction
     {
         public string Key { get; set;}
+        public CartDiscountSetKeyAction()
+        { 
+           this.Action = "setKey";
+        }
     }
 }

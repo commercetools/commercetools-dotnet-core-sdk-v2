@@ -2,16 +2,21 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
     [DiscriminatorValue("changeEnumValueLabel")]
-    public class TypeChangeEnumValueLabelAction : TypeUpdateAction
+    public partial class TypeChangeEnumValueLabelAction : TypeUpdateAction
     {
         public string FieldName { get; set;}
         
         public CustomFieldEnumValue Value { get; set;}
+        public TypeChangeEnumValueLabelAction()
+        { 
+           this.Action = "changeEnumValueLabel";
+        }
     }
 }

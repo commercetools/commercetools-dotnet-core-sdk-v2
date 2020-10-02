@@ -4,13 +4,14 @@ using commercetools.Api.Models.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ReviewStateTransition")]
-    public class ReviewStateTransitionMessage : Message
+    public partial class ReviewStateTransitionMessage : Message
     {
         public StateReference OldState { get; set;}
         
@@ -23,5 +24,9 @@ namespace commercetools.Api.Models.Messages
         public Reference Target { get; set;}
         
         public bool Force { get; set;}
+        public ReviewStateTransitionMessage()
+        { 
+           this.Type = "ReviewStateTransition";
+        }
     }
 }

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "8062243c-46fc-40b5-88a4-75e2216aef75",
+    "version": 1,
+    "destination": {
+      "type": "SQS",
+      "queueUrl": "https://queue-uri",
+      "accessKey": "key",
+      "accessSecret": "sec****",
+      "region": "Europe"
+    },
+    "messages": [
+      {
+        "resourceTypeId": "product",
+        "types": [
+        ]
+      }
+    ],
+    "changes": [
+      {
+        "resourceTypeId": "product"
+      }
+    ],
+    "createdAt": "2017-01-25T14:14:22.417Z",
+    "key": "test-queue",
+    "format": {
+      "type": "Platform"
+    },
+    "lastModifiedAt": "2017-01-25T14:14:22.417Z",
+    "lastMessageSequenceNumber": 0,
+    "status": "Healthy"
+  },
+  {
+    "id": "8062243c-46fc-40b5-88a4-75e2216aef75",
+    "version": 1,
+    "destination": {
+      "type": "SNS",
+      "topicArn": "topic",
+      "accessKey": "key",
+      "accessSecret": "sec****"
+    },
+    "changes": [
+      {
+        "resourceTypeId": "newType"
+      }
+    ],
+    "createdAt": "2017-01-25T14:14:22.417Z",
+    "key": "test-queue",
+    "format": {
+      "type": "CloudEvents",
+      "cloudEventsVersion": "0.1"
+    },
+    "lastModifiedAt": "2017-01-25T14:14:22.417Z",
+    "lastMessageSequenceNumber": 0,
+    "status": "TemporaryError"
+  }
+]

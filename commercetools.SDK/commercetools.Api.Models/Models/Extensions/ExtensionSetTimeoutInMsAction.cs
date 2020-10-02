@@ -2,14 +2,19 @@ using commercetools.Api.Models.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
     [DiscriminatorValue("setTimeoutInMs")]
-    public class ExtensionSetTimeoutInMsAction : ExtensionUpdateAction
+    public partial class ExtensionSetTimeoutInMsAction : ExtensionUpdateAction
     {
         public int TimeoutInMs { get; set;}
+        public ExtensionSetTimeoutInMsAction()
+        { 
+           this.Action = "setTimeoutInMs";
+        }
     }
 }

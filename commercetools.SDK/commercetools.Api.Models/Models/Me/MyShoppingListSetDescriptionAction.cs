@@ -3,14 +3,19 @@ using commercetools.Api.Models.Me;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("setDescription")]
-    public class MyShoppingListSetDescriptionAction : MyShoppingListUpdateAction
+    public partial class MyShoppingListSetDescriptionAction : MyShoppingListUpdateAction
     {
         public LocalizedString Description { get; set;}
+        public MyShoppingListSetDescriptionAction()
+        { 
+           this.Action = "setDescription";
+        }
     }
 }

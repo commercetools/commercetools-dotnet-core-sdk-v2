@@ -2,16 +2,21 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("setSearchKeywords")]
-    public class ProductSetSearchKeywordsAction : ProductUpdateAction
+    public partial class ProductSetSearchKeywordsAction : ProductUpdateAction
     {
         public SearchKeywords SearchKeywords { get; set;}
         
         public bool Staged { get; set;}
+        public ProductSetSearchKeywordsAction()
+        { 
+           this.Action = "setSearchKeywords";
+        }
     }
 }

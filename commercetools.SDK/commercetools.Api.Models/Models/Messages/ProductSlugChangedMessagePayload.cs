@@ -3,14 +3,19 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ProductSlugChanged")]
-    public class ProductSlugChangedMessagePayload : MessagePayload
+    public partial class ProductSlugChangedMessagePayload : MessagePayload
     {
         public LocalizedString Slug { get; set;}
+        public ProductSlugChangedMessagePayload()
+        { 
+           this.Type = "ProductSlugChanged";
+        }
     }
 }

@@ -3,13 +3,14 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ReviewRatingSet")]
-    public class ReviewRatingSetMessage : Message
+    public partial class ReviewRatingSetMessage : Message
     {
         public double OldRating { get; set;}
         
@@ -18,5 +19,9 @@ namespace commercetools.Api.Models.Messages
         public bool IncludedInStatistics { get; set;}
         
         public Reference Target { get; set;}
+        public ReviewRatingSetMessage()
+        { 
+           this.Type = "ReviewRatingSet";
+        }
     }
 }

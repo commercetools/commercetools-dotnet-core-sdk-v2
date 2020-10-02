@@ -2,14 +2,19 @@ using commercetools.Api.Models.Me;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("removeItemShippingAddress")]
-    public class MyCartRemoveItemShippingAddressAction : MyCartUpdateAction
+    public partial class MyCartRemoveItemShippingAddressAction : MyCartUpdateAction
     {
         public string AddressKey { get; set;}
+        public MyCartRemoveItemShippingAddressAction()
+        { 
+           this.Action = "removeItemShippingAddress";
+        }
     }
 }

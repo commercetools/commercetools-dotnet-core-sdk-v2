@@ -6,9 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="1.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\commercetools.Api.Serialization\commercetools.Api.Serialization.csproj" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>
 </Project>

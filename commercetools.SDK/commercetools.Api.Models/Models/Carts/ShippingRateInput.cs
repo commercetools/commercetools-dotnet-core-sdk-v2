@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Carts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
     [Discriminator(nameof(Type))]
-    public abstract class ShippingRateInput 
+    public abstract partial class ShippingRateInput 
     {
         public string Type { get; set;}
     }

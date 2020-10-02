@@ -2,14 +2,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("setValidUntil")]
-    public class DiscountCodeSetValidUntilAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetValidUntilAction : DiscountCodeUpdateAction
     {
         public DateTime ValidUntil { get; set;}
+        public DiscountCodeSetValidUntilAction()
+        { 
+           this.Action = "setValidUntil";
+        }
     }
 }

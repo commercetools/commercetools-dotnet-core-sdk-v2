@@ -3,16 +3,21 @@ using commercetools.Api.Models.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("PaymentStatusStateTransition")]
-    public class PaymentStatusStateTransitionMessagePayload : MessagePayload
+    public partial class PaymentStatusStateTransitionMessagePayload : MessagePayload
     {
         public StateReference State { get; set;}
         
         public bool Force { get; set;}
+        public PaymentStatusStateTransitionMessagePayload()
+        { 
+           this.Type = "PaymentStatusStateTransition";
+        }
     }
 }

@@ -3,16 +3,21 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderShippingAddressSet")]
-    public class OrderShippingAddressSetMessagePayload : MessagePayload
+    public partial class OrderShippingAddressSetMessagePayload : MessagePayload
     {
         public Address Address { get; set;}
         
         public Address OldAddress { get; set;}
+        public OrderShippingAddressSetMessagePayload()
+        { 
+           this.Type = "OrderShippingAddressSet";
+        }
     }
 }

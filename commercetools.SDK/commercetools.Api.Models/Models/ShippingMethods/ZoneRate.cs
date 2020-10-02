@@ -3,12 +3,13 @@ using commercetools.Api.Models.Zones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public class ZoneRate 
+    public partial class ZoneRate 
     {
         public ZoneReference Zone { get; set;}
         

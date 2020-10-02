@@ -3,16 +3,21 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ParcelAddedToDelivery")]
-    public class ParcelAddedToDeliveryMessage : Message
+    public partial class ParcelAddedToDeliveryMessage : Message
     {
         public Delivery Delivery { get; set;}
         
         public Parcel Parcel { get; set;}
+        public ParcelAddedToDeliveryMessage()
+        { 
+           this.Type = "ParcelAddedToDelivery";
+        }
     }
 }

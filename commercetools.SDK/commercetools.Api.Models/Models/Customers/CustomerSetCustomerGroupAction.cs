@@ -3,14 +3,19 @@ using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
     [DiscriminatorValue("setCustomerGroup")]
-    public class CustomerSetCustomerGroupAction : CustomerUpdateAction
+    public partial class CustomerSetCustomerGroupAction : CustomerUpdateAction
     {
         public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public CustomerSetCustomerGroupAction()
+        { 
+           this.Action = "setCustomerGroup";
+        }
     }
 }

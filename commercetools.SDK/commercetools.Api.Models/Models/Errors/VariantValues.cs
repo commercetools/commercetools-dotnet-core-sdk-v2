@@ -4,12 +4,13 @@ using Attribute = commercetools.Api.Models.Products.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
-    public class VariantValues 
+    public partial class VariantValues 
     {
         public string Sku { get; set;}
         

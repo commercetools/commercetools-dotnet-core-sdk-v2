@@ -2,16 +2,21 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
     [DiscriminatorValue("addLocalizedEnumValue")]
-    public class TypeAddLocalizedEnumValueAction : TypeUpdateAction
+    public partial class TypeAddLocalizedEnumValueAction : TypeUpdateAction
     {
         public string FieldName { get; set;}
         
         public CustomFieldLocalizedEnumValue Value { get; set;}
+        public TypeAddLocalizedEnumValueAction()
+        { 
+           this.Action = "addLocalizedEnumValue";
+        }
     }
 }

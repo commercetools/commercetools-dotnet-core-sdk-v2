@@ -4,13 +4,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ProductPublished")]
-    public class ProductPublishedMessage : Message
+    public partial class ProductPublishedMessage : Message
     {
         public List<Object> RemovedImageUrls { get; set;}
         
@@ -18,6 +19,11 @@ namespace commercetools.Api.Models.Messages
         
         public string Scope { get; set;}
         
+        [JsonIgnore]
         public ProductPublishScope ScopeAsEnum => this.Scope.GetEnum<ProductPublishScope>();
+        public ProductPublishedMessage()
+        { 
+           this.Type = "ProductPublished";
+        }
     }
 }

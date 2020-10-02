@@ -3,14 +3,19 @@ using commercetools.Api.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
     [DiscriminatorValue("removeStore")]
-    public class CustomerRemoveStoreAction : CustomerUpdateAction
+    public partial class CustomerRemoveStoreAction : CustomerUpdateAction
     {
         public StoreResourceIdentifier Store { get; set;}
+        public CustomerRemoveStoreAction()
+        { 
+           this.Action = "removeStore";
+        }
     }
 }

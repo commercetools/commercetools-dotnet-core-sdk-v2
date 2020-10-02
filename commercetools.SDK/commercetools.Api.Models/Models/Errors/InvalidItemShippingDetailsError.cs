@@ -2,16 +2,21 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("InvalidItemShippingDetails")]
-    public class InvalidItemShippingDetailsError : ErrorObject
+    public partial class InvalidItemShippingDetailsError : ErrorObject
     {
         public string Subject { get; set;}
         
         public string ItemId { get; set;}
+        public InvalidItemShippingDetailsError()
+        { 
+           this.Code = "InvalidItemShippingDetails";
+        }
     }
 }

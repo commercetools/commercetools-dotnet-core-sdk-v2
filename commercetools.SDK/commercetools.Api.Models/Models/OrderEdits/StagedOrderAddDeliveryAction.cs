@@ -3,18 +3,23 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("addDelivery")]
-    public class StagedOrderAddDeliveryAction : StagedOrderUpdateAction
+    public partial class StagedOrderAddDeliveryAction : StagedOrderUpdateAction
     {
         public List<DeliveryItem> Items { get; set;}
         
         public Address Address { get; set;}
         
         public List<ParcelDraft> Parcels { get; set;}
+        public StagedOrderAddDeliveryAction()
+        { 
+           this.Action = "addDelivery";
+        }
     }
 }

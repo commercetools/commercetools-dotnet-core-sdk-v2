@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "money-attribute",
+      "value": {
+        "currencyCode": "EUR",
+        "centAmount": 250
+      }
+    }
+  ]
+}

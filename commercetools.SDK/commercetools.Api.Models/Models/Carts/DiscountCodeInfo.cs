@@ -3,17 +3,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public class DiscountCodeInfo 
+    public partial class DiscountCodeInfo 
     {
         public DiscountCodeReference DiscountCode { get; set;}
         
         public string State { get; set;}
         
+        [JsonIgnore]
         public DiscountCodeState StateAsEnum => this.State.GetEnum<DiscountCodeState>();
     }
 }

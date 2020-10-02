@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 using commercetools.Api.Registration;
-using commercetools.Api.Serialization.CustomAttributes;
 
 namespace commercetools.Api.Serialization.JsonConverters
 {
@@ -19,10 +19,13 @@ namespace commercetools.Api.Serialization.JsonConverters
         /// Initializes a new <see cref="AbstractClassConverter{T}"/>
         /// </summary>
         /// <param name="namingPolicy">The current <see cref="JsonNamingPolicy"/></param>
+        /// <param name="jsonSerializerOptions"></param>
         /// <param name="typeRetriever"></param>
-        public AbstractClassConverter(JsonNamingPolicy namingPolicy, ITypeRetriever typeRetriever)
+        public AbstractClassConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions, ITypeRetriever typeRetriever)
         {
             this.NamingPolicy = namingPolicy;
+            this.JsonSerializerOptions = jsonSerializerOptions;
+            
             DiscriminatorAttribute discriminatorAttribute = typeof(T).GetCustomAttribute<DiscriminatorAttribute>();
             if (discriminatorAttribute == null)
                 throw new NullReferenceException($"Failed to find the required '{nameof(DiscriminatorAttribute)}'");
@@ -48,6 +51,8 @@ namespace commercetools.Api.Serialization.JsonConverters
         /// Gets the current <see cref="JsonNamingPolicy"/>
         /// </summary>
         protected JsonNamingPolicy NamingPolicy { get; }
+        
+        protected JsonSerializerOptions JsonSerializerOptions { get; }
 
         /// <summary>
         /// Gets the discriminator <see cref="PropertyInfo"/> of the abstract type to convert
@@ -75,7 +80,7 @@ namespace commercetools.Api.Serialization.JsonConverters
                 throw new JsonException(
                     $"Failed to find the derived type with the specified discriminator value '{discriminatorValue}'");
             var json = jsonDocument.RootElement.GetRawText();
-            return (T) JsonSerializer.Deserialize(json, derivedType);
+            return (T) JsonSerializer.Deserialize(json, derivedType, JsonSerializerOptions);
         }
 
         /// <inheritdoc/>

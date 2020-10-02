@@ -2,14 +2,19 @@ using commercetools.Api.Models.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
     [DiscriminatorValue("changeDestination")]
-    public class ExtensionChangeDestinationAction : ExtensionUpdateAction
+    public partial class ExtensionChangeDestinationAction : ExtensionUpdateAction
     {
         public ExtensionDestination Destination { get; set;}
+        public ExtensionChangeDestinationAction()
+        { 
+           this.Action = "changeDestination";
+        }
     }
 }

@@ -1,18 +1,19 @@
 using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Common
 {
     [Discriminator(nameof(TypeId))]
-    public abstract class KeyReference 
+    public abstract partial class KeyReference 
     {
         public string TypeId { get; set;}
         
+        [JsonIgnore]
         public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
         
         public string Key { get; set;}

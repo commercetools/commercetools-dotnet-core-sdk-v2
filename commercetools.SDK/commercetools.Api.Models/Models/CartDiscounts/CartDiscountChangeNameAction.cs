@@ -3,14 +3,19 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("changeName")]
-    public class CartDiscountChangeNameAction : CartDiscountUpdateAction
+    public partial class CartDiscountChangeNameAction : CartDiscountUpdateAction
     {
         public LocalizedString Name { get; set;}
+        public CartDiscountChangeNameAction()
+        { 
+           this.Action = "changeName";
+        }
     }
 }

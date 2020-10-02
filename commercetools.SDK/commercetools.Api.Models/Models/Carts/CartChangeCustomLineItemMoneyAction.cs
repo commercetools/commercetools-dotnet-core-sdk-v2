@@ -3,16 +3,21 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
     [DiscriminatorValue("changeCustomLineItemMoney")]
-    public class CartChangeCustomLineItemMoneyAction : CartUpdateAction
+    public partial class CartChangeCustomLineItemMoneyAction : CartUpdateAction
     {
         public string CustomLineItemId { get; set;}
         
         public Money Money { get; set;}
+        public CartChangeCustomLineItemMoneyAction()
+        { 
+           this.Action = "changeCustomLineItemMoney";
+        }
     }
 }

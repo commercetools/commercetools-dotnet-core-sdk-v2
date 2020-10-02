@@ -3,12 +3,13 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public class Subscription : BaseResource
+    public partial class Subscription : BaseResource
     {
         public string Id { get; set;}
         
@@ -34,6 +35,7 @@ namespace commercetools.Api.Models.Subscriptions
         
         public string Status { get; set;}
         
+        [JsonIgnore]
         public SubscriptionHealthStatus StatusAsEnum => this.Status.GetEnum<SubscriptionHealthStatus>();
     }
 }

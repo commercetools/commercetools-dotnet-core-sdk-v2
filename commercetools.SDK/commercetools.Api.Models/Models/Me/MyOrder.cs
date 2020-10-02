@@ -9,12 +9,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public class MyOrder : BaseResource
+    public partial class MyOrder : BaseResource
     {
         public string Id { get; set;}
         
@@ -54,10 +55,12 @@ namespace commercetools.Api.Models.Me
         
         public string TaxMode { get; set;}
         
+        [JsonIgnore]
         public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
         
         public string TaxRoundingMode { get; set;}
         
+        [JsonIgnore]
         public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
         
         public CustomerGroupReference CustomerGroup { get; set;}
@@ -66,16 +69,19 @@ namespace commercetools.Api.Models.Me
         
         public string OrderState { get; set;}
         
+        [JsonIgnore]
         public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
         
         public StateReference State { get; set;}
         
         public string ShipmentState { get; set;}
         
+        [JsonIgnore]
         public ShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ShipmentState>();
         
         public string PaymentState { get; set;}
         
+        [JsonIgnore]
         public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
         
         public ShippingInfo ShippingInfo { get; set;}
@@ -98,14 +104,17 @@ namespace commercetools.Api.Models.Me
         
         public string InventoryMode { get; set;}
         
+        [JsonIgnore]
         public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
         
         public string Origin { get; set;}
         
+        [JsonIgnore]
         public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
         
         public string TaxCalculationMode { get; set;}
         
+        [JsonIgnore]
         public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
         
         public ShippingRateInput ShippingRateInput { get; set;}

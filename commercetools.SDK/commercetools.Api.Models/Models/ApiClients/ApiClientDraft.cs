@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ApiClients
 {
-    public class ApiClientDraft 
+    public partial class ApiClientDraft 
     {
         public string Name { get; set;}
         

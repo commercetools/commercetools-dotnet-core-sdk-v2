@@ -2,12 +2,13 @@ using commercetools.Api.Models.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Projects
 {
-    public class ProjectUpdate 
+    public partial class ProjectUpdate 
     {
         public long Version { get; set;}
         

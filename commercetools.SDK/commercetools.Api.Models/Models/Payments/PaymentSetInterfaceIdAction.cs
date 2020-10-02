@@ -2,14 +2,19 @@ using commercetools.Api.Models.Payments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
     [DiscriminatorValue("setInterfaceId")]
-    public class PaymentSetInterfaceIdAction : PaymentUpdateAction
+    public partial class PaymentSetInterfaceIdAction : PaymentUpdateAction
     {
         public string InterfaceId { get; set;}
+        public PaymentSetInterfaceIdAction()
+        { 
+           this.Action = "setInterfaceId";
+        }
     }
 }

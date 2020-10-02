@@ -3,14 +3,19 @@ using commercetools.Api.Models.Zones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DiscriminatorValue("removeZone")]
-    public class ShippingMethodRemoveZoneAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodRemoveZoneAction : ShippingMethodUpdateAction
     {
         public ZoneResourceIdentifier Zone { get; set;}
+        public ShippingMethodRemoveZoneAction()
+        { 
+           this.Action = "removeZone";
+        }
     }
 }

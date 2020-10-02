@@ -1,0 +1,132 @@
+[
+  {
+    "id": "931dddd3-870b-41f6-9c8c-ce97686f1744",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resource": {
+      "typeId": "category",
+      "id": "3df866bd-7e5f-47d1-bbe2-ca1d1f39a260"
+    },
+    "resourceVersion": 1,
+    "resourceUserProvidedIdentifiers": {
+      "key": "A6NY1AY8MZ",
+      "slug": {
+        "en": "BL3UJSRU3Y"
+      }
+    },
+    "type": "CategoryCreated",
+    "category": {
+      "id": "3df866bd-7e5f-47d1-bbe2-ca1d1f39a260",
+      "version": 1,
+      "lastMessageSequenceNumber": 1,
+      "createdAt": "2019-08-28T10:01:03.762Z",
+      "lastModifiedAt": "2019-08-28T10:01:03.762Z",
+      "lastModifiedBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "createdBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "key": "A6NY1AY8MZ",
+      "name": {
+        "en": "PYMDR5UTBJ"
+      },
+      "slug": {
+        "en": "BL3UJSRU3Y"
+      },
+      "ancestors": [],
+      "orderHint": "0.2005310255",
+      "assets": []
+    },
+    "createdAt": "2019-08-28T10:01:03.762Z",
+    "lastModifiedAt": "2019-08-28T10:01:03.762Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  },
+  {
+    "id": "f88a8c79-eb0a-4e74-843b-0c96c6e462bc",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resource": {
+      "typeId": "customer",
+      "id": "14dc1379-1edc-464f-9f7f-569274820aea"
+    },
+    "resourceVersion": 1,
+    "type": "CustomerCreated",
+    "customer": {
+      "id": "14dc1379-1edc-464f-9f7f-569274820aea",
+      "version": 1,
+      "lastMessageSequenceNumber": 1,
+      "createdAt": "2019-08-14T08:24:39.347Z",
+      "lastModifiedAt": "2019-08-14T08:24:39.347Z",
+      "lastModifiedBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "createdBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "email": "XGMVRP7WSC@email.com",
+      "password": "Pn04H3/3oqbXbDBfIMtWaV/y0y3VAKCAjMMNTXX4o2U=$L+ADKfr7jLnIdSLi4y/JdsL3Ek9eE5GfVxsI0CONKJc=",
+      "addresses": [],
+      "shippingAddressIds": [],
+      "billingAddressIds": [],
+      "isEmailVerified": false,
+      "stores": []
+    },
+    "createdAt": "2019-08-14T08:24:39.347Z",
+    "lastModifiedAt": "2019-08-14T08:24:39.347Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  },
+  {
+    "id": "a4c18428-d6e2-4360-a843-26a01bfb1809",
+    "version": 1,
+    "sequenceNumber": 2,
+    "resource": {
+      "typeId": "order",
+      "id": "d74b5545-8ae9-43b8-afa0-ad3942ea3535"
+    },
+    "resourceVersion": 2,
+    "resourceUserProvidedIdentifiers": {
+      "orderNumber": "JSMTSNG5C6"
+    },
+    "lineItemId": "2e46e221-5984-4f71-bab4-c11c7f730166",
+    "transitionDate": "2019-08-28T11:41:23.540Z",
+    "quantity": 1,
+    "fromState": {
+      "typeId": "state",
+      "id": "c96fa2de-d194-469d-bd92-08b5aa74483f"
+    },
+    "toState": {
+      "typeId": "state",
+      "id": "f465d7e5-562c-41b1-9334-9ca609d13b74"
+    },
+    "type": "LineItemStateTransition",
+    "createdAt": "2019-08-28T11:49:43.569Z",
+    "lastModifiedAt": "2019-08-28T11:49:43.569Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  }
+]

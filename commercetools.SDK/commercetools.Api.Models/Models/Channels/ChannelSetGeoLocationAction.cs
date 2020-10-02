@@ -3,14 +3,19 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Channels
 {
     [DiscriminatorValue("setGeoLocation")]
-    public class ChannelSetGeoLocationAction : ChannelUpdateAction
+    public partial class ChannelSetGeoLocationAction : ChannelUpdateAction
     {
         public GeoJson GeoLocation { get; set;}
+        public ChannelSetGeoLocationAction()
+        { 
+           this.Action = "setGeoLocation";
+        }
     }
 }

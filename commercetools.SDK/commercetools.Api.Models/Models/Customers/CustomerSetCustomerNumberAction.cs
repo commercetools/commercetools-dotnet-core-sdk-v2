@@ -2,14 +2,19 @@ using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
     [DiscriminatorValue("setCustomerNumber")]
-    public class CustomerSetCustomerNumberAction : CustomerUpdateAction
+    public partial class CustomerSetCustomerNumberAction : CustomerUpdateAction
     {
         public string CustomerNumber { get; set;}
+        public CustomerSetCustomerNumberAction()
+        { 
+           this.Action = "setCustomerNumber";
+        }
     }
 }

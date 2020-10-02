@@ -3,14 +3,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("discount-code")]
-    public class DiscountCodeReference : Reference
+    public partial class DiscountCodeReference : Reference
     {
         public DiscountCode Obj { get; set;}
+        public DiscountCodeReference()
+        { 
+           this.TypeId = "discount-code";
+        }
     }
 }

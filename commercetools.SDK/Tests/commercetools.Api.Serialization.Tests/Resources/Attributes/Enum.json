@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "enum-attribute",
+      "value": {
+        "key": "enum-key",
+        "label":  "enum-label"
+      }
+    }
+  ]
+}

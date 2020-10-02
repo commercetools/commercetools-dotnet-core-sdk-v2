@@ -9,12 +9,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public class LineItem 
+    public partial class LineItem 
     {
         public string Id { get; set;}
         
@@ -36,6 +37,8 @@ namespace commercetools.Api.Models.Carts
         
         public long Quantity { get; set;}
         
+        public DateTime AddedAt { get; set;}
+        
         public List<ItemState> State { get; set;}
         
         public TaxRate TaxRate { get; set;}
@@ -48,10 +51,12 @@ namespace commercetools.Api.Models.Carts
         
         public string PriceMode { get; set;}
         
+        [JsonIgnore]
         public LineItemPriceMode PriceModeAsEnum => this.PriceMode.GetEnum<LineItemPriceMode>();
         
         public string LineItemMode { get; set;}
         
+        [JsonIgnore]
         public LineItemMode LineItemModeAsEnum => this.LineItemMode.GetEnum<LineItemMode>();
         
         public CustomFields Custom { get; set;}

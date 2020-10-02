@@ -4,16 +4,21 @@ using Attribute = commercetools.Api.Models.Products.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
     [DiscriminatorValue("changeLabel")]
-    public class ProductTypeChangeLabelAction : ProductTypeUpdateAction
+    public partial class ProductTypeChangeLabelAction : ProductTypeUpdateAction
     {
         public string AttributeName { get; set;}
         
         public LocalizedString Label { get; set;}
+        public ProductTypeChangeLabelAction()
+        { 
+           this.Action = "changeLabel";
+        }
     }
 }

@@ -2,13 +2,14 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
     [DiscriminatorValue("addParcelToDelivery")]
-    public class OrderAddParcelToDeliveryAction : OrderUpdateAction
+    public partial class OrderAddParcelToDeliveryAction : OrderUpdateAction
     {
         public string DeliveryId { get; set;}
         
@@ -17,5 +18,9 @@ namespace commercetools.Api.Models.Orders
         public TrackingData TrackingData { get; set;}
         
         public List<DeliveryItem> Items { get; set;}
+        public OrderAddParcelToDeliveryAction()
+        { 
+           this.Action = "addParcelToDelivery";
+        }
     }
 }

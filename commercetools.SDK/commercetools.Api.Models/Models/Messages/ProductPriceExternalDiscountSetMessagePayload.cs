@@ -3,13 +3,14 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ProductPriceExternalDiscountSet")]
-    public class ProductPriceExternalDiscountSetMessagePayload : MessagePayload
+    public partial class ProductPriceExternalDiscountSetMessagePayload : MessagePayload
     {
         public int VariantId { get; set;}
         
@@ -22,5 +23,9 @@ namespace commercetools.Api.Models.Messages
         public DiscountedPrice Discounted { get; set;}
         
         public bool Staged { get; set;}
+        public ProductPriceExternalDiscountSetMessagePayload()
+        { 
+           this.Type = "ProductPriceExternalDiscountSet";
+        }
     }
 }

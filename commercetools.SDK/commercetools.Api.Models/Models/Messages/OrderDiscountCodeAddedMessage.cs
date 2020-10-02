@@ -3,14 +3,19 @@ using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderDiscountCodeAdded")]
-    public class OrderDiscountCodeAddedMessage : Message
+    public partial class OrderDiscountCodeAddedMessage : Message
     {
         public DiscountCodeReference DiscountCode { get; set;}
+        public OrderDiscountCodeAddedMessage()
+        { 
+           this.Type = "OrderDiscountCodeAdded";
+        }
     }
 }

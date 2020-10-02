@@ -4,12 +4,13 @@ using Attribute = commercetools.Api.Models.Products.Attribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public class AttributeDefinitionDraft 
+    public partial class AttributeDefinitionDraft 
     {
         public AttributeType Type { get; set;}
         
@@ -21,12 +22,14 @@ namespace commercetools.Api.Models.ProductTypes
         
         public string AttributeConstraint { get; set;}
         
+        [JsonIgnore]
         public AttributeConstraintEnum AttributeConstraintAsEnum => this.AttributeConstraint.GetEnum<AttributeConstraintEnum>();
         
         public LocalizedString InputTip { get; set;}
         
         public string InputHint { get; set;}
         
+        [JsonIgnore]
         public TextInputHint InputHintAsEnum => this.InputHint.GetEnum<TextInputHint>();
         
         public bool IsSearchable { get; set;}

@@ -2,12 +2,13 @@ using commercetools.Api.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Stores
 {
-    public class StoreUpdate 
+    public partial class StoreUpdate 
     {
         public long Version { get; set;}
         

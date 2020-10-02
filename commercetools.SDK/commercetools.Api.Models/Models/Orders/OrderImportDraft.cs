@@ -7,12 +7,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public class OrderImportDraft 
+    public partial class OrderImportDraft 
     {
         public string OrderNumber { get; set;}
         
@@ -38,14 +39,17 @@ namespace commercetools.Api.Models.Orders
         
         public string OrderState { get; set;}
         
+        [JsonIgnore]
         public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
         
         public string ShipmentState { get; set;}
         
+        [JsonIgnore]
         public ShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ShipmentState>();
         
         public string PaymentState { get; set;}
         
+        [JsonIgnore]
         public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
         
         public ShippingInfoImportDraft ShippingInfo { get; set;}
@@ -56,10 +60,12 @@ namespace commercetools.Api.Models.Orders
         
         public string InventoryMode { get; set;}
         
+        [JsonIgnore]
         public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
         
         public string TaxRoundingMode { get; set;}
         
+        [JsonIgnore]
         public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
         
         public List<Address> ItemShippingAddresses { get; set;}
@@ -68,6 +74,7 @@ namespace commercetools.Api.Models.Orders
         
         public string Origin { get; set;}
         
+        [JsonIgnore]
         public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
     }
 }

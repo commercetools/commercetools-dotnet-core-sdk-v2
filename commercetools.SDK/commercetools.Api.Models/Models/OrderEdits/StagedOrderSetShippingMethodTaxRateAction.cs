@@ -3,14 +3,19 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("setShippingMethodTaxRate")]
-    public class StagedOrderSetShippingMethodTaxRateAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetShippingMethodTaxRateAction : StagedOrderUpdateAction
     {
         public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public StagedOrderSetShippingMethodTaxRateAction()
+        { 
+           this.Action = "setShippingMethodTaxRate";
+        }
     }
 }

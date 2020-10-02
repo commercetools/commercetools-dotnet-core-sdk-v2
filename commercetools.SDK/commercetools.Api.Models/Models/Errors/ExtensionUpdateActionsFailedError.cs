@@ -3,18 +3,23 @@ using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Errors
 {
     [DiscriminatorValue("ExtensionUpdateActionsFailed")]
-    public class ExtensionUpdateActionsFailedError : ErrorObject
+    public partial class ExtensionUpdateActionsFailedError : ErrorObject
     {
         public LocalizedString LocalizedMessage { get; set;}
         
         public Object ExtensionExtraInfo { get; set;}
         
         public ErrorByExtension ErrorByExtension { get; set;}
+        public ExtensionUpdateActionsFailedError()
+        { 
+           this.Code = "ExtensionUpdateActionsFailed";
+        }
     }
 }

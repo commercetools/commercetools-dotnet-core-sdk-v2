@@ -6,13 +6,14 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("addLineItem")]
-    public class MyCartAddLineItemAction : MyCartUpdateAction
+    public partial class MyCartAddLineItemAction : MyCartUpdateAction
     {
         public CustomFieldsDraft Custom { get; set;}
         
@@ -35,5 +36,11 @@ namespace commercetools.Api.Models.Me
         public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         
         public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        
+        public DateTime AddedAt { get; set;}
+        public MyCartAddLineItemAction()
+        { 
+           this.Action = "addLineItem";
+        }
     }
 }

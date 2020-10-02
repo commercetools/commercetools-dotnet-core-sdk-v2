@@ -4,13 +4,14 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
     [DiscriminatorValue("addTextLineItem")]
-    public class MyShoppingListAddTextLineItemAction : MyShoppingListUpdateAction
+    public partial class MyShoppingListAddTextLineItemAction : MyShoppingListUpdateAction
     {
         public LocalizedString Name { get; set;}
         
@@ -21,5 +22,9 @@ namespace commercetools.Api.Models.Me
         public DateTime AddedAt { get; set;}
         
         public CustomFieldsDraft Custom { get; set;}
+        public MyShoppingListAddTextLineItemAction()
+        { 
+           this.Action = "addTextLineItem";
+        }
     }
 }

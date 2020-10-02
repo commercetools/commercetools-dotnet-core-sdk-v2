@@ -2,13 +2,18 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Reviews
 {
     [DiscriminatorValue("review")]
-    public class ReviewResourceIdentifier : ResourceIdentifier
+    public partial class ReviewResourceIdentifier : ResourceIdentifier
     {
+        public ReviewResourceIdentifier()
+        { 
+           this.TypeId = "review";
+        }
     }
 }

@@ -1,0 +1,27 @@
+{
+  "name":{
+    "en":"name"
+  },
+  "productType":{
+    "typeId":"product-type",
+    "key":"ProductTypeKey"
+  },
+  "slug":{
+    "en":"slug"
+  },
+  "categories":[
+    {
+      "typeId":"category",
+      "key":"CategoryKey"
+    }
+  ],
+  "taxCategory":{
+    "typeId":"tax-category",
+    "key":"TaxCategoryKey"
+  },
+  "state":{
+    "typeId":"state",
+    "key":"StateKey"
+  },
+  "publish":false
+}

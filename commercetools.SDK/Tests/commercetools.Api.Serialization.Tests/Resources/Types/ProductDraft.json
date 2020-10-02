@@ -1,0 +1,13 @@
+{
+  "name": {
+    "en": "name"
+  },
+  "productType": {
+    "key" : "Key12",
+    "type": "product-type"
+  },
+  "slug": {
+    "en": "slug"
+  },
+  "publish": false
+}

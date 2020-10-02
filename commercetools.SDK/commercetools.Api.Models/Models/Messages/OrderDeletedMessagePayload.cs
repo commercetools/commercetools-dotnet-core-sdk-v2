@@ -3,14 +3,19 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("OrderDeleted")]
-    public class OrderDeletedMessagePayload : MessagePayload
+    public partial class OrderDeletedMessagePayload : MessagePayload
     {
         public Order Order { get; set;}
+        public OrderDeletedMessagePayload()
+        { 
+           this.Type = "OrderDeleted";
+        }
     }
 }

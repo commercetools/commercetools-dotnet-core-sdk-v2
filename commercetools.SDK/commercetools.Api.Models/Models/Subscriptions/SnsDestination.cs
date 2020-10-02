@@ -2,18 +2,23 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("SNS")]
-    public class SnsDestination : Destination
+    public partial class SnsDestination : Destination
     {
         public string AccessKey { get; set;}
         
         public string AccessSecret { get; set;}
         
         public string TopicArn { get; set;}
+        public SnsDestination()
+        { 
+           this.Type = "SNS";
+        }
     }
 }

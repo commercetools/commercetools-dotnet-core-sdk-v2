@@ -2,13 +2,18 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
     [DiscriminatorValue("Date")]
-    public class CustomFieldDateType : FieldType
+    public partial class CustomFieldDateType : FieldType
     {
+        public CustomFieldDateType()
+        { 
+           this.Name = "Date";
+        }
     }
 }

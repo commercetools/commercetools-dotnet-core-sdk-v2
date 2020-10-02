@@ -5,12 +5,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Channels
 {
-    public class Channel : BaseResource
+    public partial class Channel : BaseResource
     {
         public string Id { get; set;}
         
@@ -26,7 +27,10 @@ namespace commercetools.Api.Models.Channels
         
         public string Key { get; set;}
         
-        public List<ChannelRoleEnum> Roles { get; set;}
+        public List<string> Roles { get; set;}
+        
+        [JsonIgnore]
+        public List<ChannelRoleEnum> RolesAsEnum => this.Roles.GetEnum<ChannelRoleEnum>();
         
         public LocalizedString Name { get; set;}
         

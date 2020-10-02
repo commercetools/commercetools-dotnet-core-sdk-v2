@@ -1,0 +1,13 @@
+{
+  "notificationType": "ResourceCreated",
+  "projectKey": "test-php-sdk-129839581278250",
+  "resource": {
+    "typeId": "customer",
+    "id": "e63d76ff-e203-42ba-af17-375040b8ecb6"
+  },
+  "resourceUserProvidedIdentifiers": {
+    "key": "test-ca15403ea56ec0e51137ff40a6f4607e"
+  },
+  "version": 1,
+  "modifiedAt": "2019-09-12T09:39:21.338Z"
+}

@@ -3,16 +3,21 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
     [DiscriminatorValue("changeFieldDefinitionLabel")]
-    public class TypeChangeFieldDefinitionLabelAction : TypeUpdateAction
+    public partial class TypeChangeFieldDefinitionLabelAction : TypeUpdateAction
     {
         public string FieldName { get; set;}
         
         public LocalizedString Label { get; set;}
+        public TypeChangeFieldDefinitionLabelAction()
+        { 
+           this.Action = "changeFieldDefinitionLabel";
+        }
     }
 }

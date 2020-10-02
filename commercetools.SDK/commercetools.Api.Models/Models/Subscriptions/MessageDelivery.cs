@@ -2,13 +2,14 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("Message")]
-    public class MessageDelivery : SubscriptionDelivery
+    public partial class MessageDelivery : SubscriptionDelivery
     {
         public string Id { get; set;}
         
@@ -23,5 +24,9 @@ namespace commercetools.Api.Models.Subscriptions
         public long ResourceVersion { get; set;}
         
         public PayloadNotIncluded PayloadNotIncluded { get; set;}
+        public MessageDelivery()
+        { 
+           this.NotificationType = "Message";
+        }
     }
 }

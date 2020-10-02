@@ -6,5 +6,7 @@ namespace commercetools.Api.Serialization
         string Serialize<T>(T input);
 
         T Deserialize<T>(string input);
+        
+        object Deserialize(Type returnType,string input);
     }
 }

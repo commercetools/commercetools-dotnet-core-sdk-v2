@@ -3,12 +3,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
-    public class Type : BaseResource
+    public partial class Type : BaseResource
     {
         public string Id { get; set;}
         
@@ -28,7 +29,10 @@ namespace commercetools.Api.Models.Types
         
         public LocalizedString Description { get; set;}
         
-        public List<ResourceTypeId> ResourceTypeIds { get; set;}
+        public List<string> ResourceTypeIds { get; set;}
+        
+        [JsonIgnore]
+        public List<ResourceTypeId> ResourceTypeIdsAsEnum => this.ResourceTypeIds.GetEnum<ResourceTypeId>();
         
         public List<FieldDefinition> FieldDefinitions { get; set;}
     }

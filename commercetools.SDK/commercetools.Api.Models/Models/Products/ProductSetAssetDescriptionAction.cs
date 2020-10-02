@@ -3,13 +3,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("setAssetDescription")]
-    public class ProductSetAssetDescriptionAction : ProductUpdateAction
+    public partial class ProductSetAssetDescriptionAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
@@ -22,5 +23,9 @@ namespace commercetools.Api.Models.Products
         public string AssetKey { get; set;}
         
         public LocalizedString Description { get; set;}
+        public ProductSetAssetDescriptionAction()
+        { 
+           this.Action = "setAssetDescription";
+        }
     }
 }

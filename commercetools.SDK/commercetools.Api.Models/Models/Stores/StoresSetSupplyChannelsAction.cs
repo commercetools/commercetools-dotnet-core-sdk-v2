@@ -3,14 +3,19 @@ using commercetools.Api.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Stores
 {
     [DiscriminatorValue("setSupplyChannels")]
-    public class StoresSetSupplyChannelsAction : StoreUpdateAction
+    public partial class StoresSetSupplyChannelsAction : StoreUpdateAction
     {
         public List<ChannelResourceIdentifier> SupplyChannels { get; set;}
+        public StoresSetSupplyChannelsAction()
+        { 
+           this.Action = "setSupplyChannels";
+        }
     }
 }

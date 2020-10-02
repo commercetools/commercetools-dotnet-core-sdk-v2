@@ -2,13 +2,18 @@ using commercetools.Api.Models.OrderEdits;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("NotProcessed")]
-    public class OrderEditNotProcessed : OrderEditResult
+    public partial class OrderEditNotProcessed : OrderEditResult
     {
+        public OrderEditNotProcessed()
+        { 
+           this.Type = "NotProcessed";
+        }
     }
 }

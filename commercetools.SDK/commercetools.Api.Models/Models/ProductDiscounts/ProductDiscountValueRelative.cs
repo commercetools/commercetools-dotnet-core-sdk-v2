@@ -2,14 +2,19 @@ using commercetools.Api.Models.ProductDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
     [DiscriminatorValue("relative")]
-    public class ProductDiscountValueRelative : ProductDiscountValue
+    public partial class ProductDiscountValueRelative : ProductDiscountValue
     {
         public long Permyriad { get; set;}
+        public ProductDiscountValueRelative()
+        { 
+           this.Type = "relative";
+        }
     }
 }

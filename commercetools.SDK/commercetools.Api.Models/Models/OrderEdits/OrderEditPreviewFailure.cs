@@ -3,14 +3,19 @@ using commercetools.Api.Models.OrderEdits;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("PreviewFailure")]
-    public class OrderEditPreviewFailure : OrderEditResult
+    public partial class OrderEditPreviewFailure : OrderEditResult
     {
         public List<ErrorObject> Errors { get; set;}
+        public OrderEditPreviewFailure()
+        { 
+           this.Type = "PreviewFailure";
+        }
     }
 }

@@ -1,11 +1,23 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
+using commercetools.Api.Models.Categorys;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Orders;
+using commercetools.Api.Models.Payments;
 using commercetools.Api.Models.Products;
+using commercetools.Api.Models.ProductTypes;
 using commercetools.Api.Models.Projects;
+using commercetools.Api.Models.Reviews;
 using commercetools.Api.Models.ShippingMethods;
 using commercetools.Api.Models.States;
+using commercetools.Api.Models.TaxCategorys;
+using commercetools.Api.Models.Types;
+using FluentAssertions;
+using Newtonsoft.Json.Linq;
 using Xunit;
+using JsonException = System.Text.Json.JsonException;
 
 namespace commercetools.Api.Serialization.Tests
 {
@@ -117,7 +129,160 @@ namespace commercetools.Api.Serialization.Tests
             var state = serializerService.Deserialize<State>(serialized);
 
             Assert.Equal("Unknown", state.Type);
-            var exception = Assert.Throws<ArgumentException>(() => state.TypeAsEnum);
+            Assert.Throws<ArgumentException>(() => state.TypeAsEnum);
+        }
+        
+        [Fact]
+        public void DeserializeOrder()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string orderSerialized = File.ReadAllText("Resources/Orders/order.json");
+            
+            var order = serializerService.Deserialize<Order>(orderSerialized);
+            Assert.NotNull(order);
+            Assert.Equal(PaymentState.Pending,order.PaymentStateAsEnum);
+            Assert.Null(order.ShipmentState);
+        }
+
+        [Fact]
+        public void ReferenceDeserialization()
+        {
+            //Deserialize 2 of references to list of references with the correct instance type based on Type Id
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Types/References.json");
+            List<Reference> references = serializerService.Deserialize<List<Reference>>(serialized);
+            Assert.IsType<CategoryReference>(references[0]);
+            Assert.IsType<ProductReference>(references[1]);
+
+            string serializedRev = File.ReadAllText("Resources/Types/Review.json");
+            Review review = serializerService.Deserialize<Review>(serializedRev);
+            Assert.IsType<JsonElement>(review.Target);
+        }
+
+        [Fact]
+        public void DeserializeInvalidReference()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = @"{
+                ""typeId"": ""unknown"",
+                ""id"": ""123456""
+            }";
+
+            Assert.Throws<JsonException>(() => serializerService.Deserialize<Reference>(serialized));
+        }
+
+
+        [Fact]
+        public void ResourceIdentifiersDeserialization()
+        {
+            //Deserialize 2 of resourceIdentifiers to list of resourceIdentifiers with the correct instance type based on Type Id
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Types/References.json");
+            var resourceIdentifiers = serializerService.Deserialize<List<ResourceIdentifier>>(serialized);
+            Assert.IsType<CategoryResourceIdentifier>(resourceIdentifiers[0]);
+            Assert.IsType<ProductResourceIdentifier>(resourceIdentifiers[1]);
+            string serializedRev = File.ReadAllText("Resources/Types/Review.json");
+            Review review = serializerService.Deserialize<Review>(serializedRev);
+            Assert.IsType<JsonElement>(review.Target);
+
+        }
+
+        [Fact]
+        public void ProductDraftSerializationUsingResourceIdentifier()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+
+            var productDraft = new ProductDraft
+            {
+                Name = new LocalizedString() {{"en", "name"}},
+                Slug = new LocalizedString() {{"en", "slug"}},
+                ProductType = new ProductTypeResourceIdentifier
+                {
+                    Key = "ProductTypeKey"
+                },
+                TaxCategory= new TaxCategoryResourceIdentifier
+                {
+                    Key = "TaxCategoryKey"
+                },
+                Categories = new List<CategoryResourceIdentifier>()
+                {
+                    new CategoryResourceIdentifier()
+                    {
+                        Key = "CategoryKey"
+                    }
+                },
+                State = new StateResourceIdentifier()
+                {
+                    Key = "StateKey"
+                }
+            };
+
+            string result = serializerService.Serialize(productDraft);
+            JToken resultFormatted = JValue.Parse(result);
+            string serialized = File.ReadAllText("Resources/Types/ProductDraftWithResourceIdentifier.json");
+            JToken serializedFormatted = JValue.Parse(serialized);
+            serializedFormatted.Should().BeEquivalentTo(resultFormatted);
+        }
+
+        [Fact]
+        public void ProductDraftSerializationUsingReference()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+
+            var productDraft = new ProductDraft
+            {
+                Name = new LocalizedString()
+                {
+                    {"en", "name"},
+                    {"en-US", "name"}
+                },
+                Slug = new LocalizedString() {{"en", "slug"}},
+                ProductType = new ProductTypeResourceIdentifier()
+                {
+                    Id = "ProductTypeId"
+                },
+                TaxCategory= new TaxCategoryResourceIdentifier()
+                {
+                    Id = "TaxCategoryId"
+                },
+                Categories = new List<CategoryResourceIdentifier>
+                {
+                    new CategoryResourceIdentifier()
+                    {
+                        Id = "CategoryId"
+                    }
+                },
+                State = new StateResourceIdentifier
+                {
+                    Id = "StateId"
+                }
+            };
+
+            string result = serializerService.Serialize(productDraft);
+            JToken resultFormatted = JValue.Parse(result);
+            string serialized = File.ReadAllText("Resources/Types/ProductDraftWithReference.json");
+            JToken serializedFormatted = JValue.Parse(serialized);
+            serializedFormatted.Should().BeEquivalentTo(resultFormatted);
+        }
+        
+        [Fact]
+        public void DeserializeCustomField()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+
+            string serialized = @"
+                {
+                    ""fields"": {
+                        ""foo"": ""bar"",
+                        ""Foos"": ""Bars""
+                    }
+                }
+            ";
+
+            var customFields = serializerService.Deserialize<CustomFields>(serialized);
+
+            Assert.Equal("bar", customFields.Fields["foo"]);
+            Assert.Equal("Bars", customFields.Fields["Foos"]);
         }
     }
 }

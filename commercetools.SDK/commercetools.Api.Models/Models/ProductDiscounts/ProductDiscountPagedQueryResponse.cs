@@ -2,12 +2,13 @@ using commercetools.Api.Models.ProductDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public class ProductDiscountPagedQueryResponse 
+    public partial class ProductDiscountPagedQueryResponse 
     {
         public long Limit { get; set;}
         

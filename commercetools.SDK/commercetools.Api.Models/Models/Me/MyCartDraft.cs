@@ -6,12 +6,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public class MyCartDraft 
+    public partial class MyCartDraft 
     {
         public string Currency { get; set;}
         
@@ -21,6 +22,7 @@ namespace commercetools.Api.Models.Me
         
         public string InventoryMode { get; set;}
         
+        [JsonIgnore]
         public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
         
         public List<MyLineItemDraft> LineItems { get; set;}
@@ -37,6 +39,7 @@ namespace commercetools.Api.Models.Me
         
         public string TaxMode { get; set;}
         
+        [JsonIgnore]
         public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
         
         public long DeleteDaysAfterLastModification { get; set;}

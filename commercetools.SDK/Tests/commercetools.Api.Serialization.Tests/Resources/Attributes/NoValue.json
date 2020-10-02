@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "boolean-attribute"
+    }
+  ]
+}

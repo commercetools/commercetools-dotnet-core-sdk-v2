@@ -3,14 +3,19 @@ using commercetools.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("absolute")]
-    public class CartDiscountValueAbsoluteDraft : CartDiscountValueDraft
+    public partial class CartDiscountValueAbsoluteDraft : CartDiscountValueDraft
     {
         public List<Money> Money { get; set;}
+        public CartDiscountValueAbsoluteDraft()
+        { 
+           this.Type = "absolute";
+        }
     }
 }

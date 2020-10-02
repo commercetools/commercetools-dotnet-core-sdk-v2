@@ -3,14 +3,19 @@ using commercetools.Api.Models.ShoppingLists;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DiscriminatorValue("setSlug")]
-    public class ShoppingListSetSlugAction : ShoppingListUpdateAction
+    public partial class ShoppingListSetSlugAction : ShoppingListUpdateAction
     {
         public LocalizedString Slug { get; set;}
+        public ShoppingListSetSlugAction()
+        { 
+           this.Action = "setSlug";
+        }
     }
 }

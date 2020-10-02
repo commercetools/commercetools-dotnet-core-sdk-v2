@@ -1,0 +1,46 @@
+[
+  {
+    "id": "97fab5cf-a2e3-4c43-90cc-dc3098ad4c25",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resource": {
+      "typeId": "review",
+      "id": "31e5d574-f947-43c7-b906-2c61a2e9d51a"
+    },
+    "resourceVersion": 1,
+    "resourceUserProvidedIdentifiers": {
+      "key": "B45EP3U205"
+    },
+    "type": "ReviewCreated",
+    "review": {
+      "id": "31e5d574-f947-43c7-b906-2c61a2e9d51a",
+      "version": 1,
+      "lastMessageSequenceNumber": 1,
+      "createdAt": "2019-08-30T13:59:10.798Z",
+      "lastModifiedAt": "2019-08-30T13:59:10.798Z",
+      "lastModifiedBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "createdBy": {
+        "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+        "isPlatformClient": false
+      },
+      "includedInStatistics": true,
+      "key": "B45EP3U205",
+      "title": "ReviewTitle_68",
+      "text": "ReviewText_68",
+      "rating": 68
+    },
+    "createdAt": "2019-08-30T13:59:10.798Z",
+    "lastModifiedAt": "2019-08-30T13:59:10.798Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  }
+]

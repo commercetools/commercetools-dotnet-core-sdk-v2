@@ -2,14 +2,19 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("changeDestination")]
-    public class SubscriptionChangeDestinationAction : SubscriptionUpdateAction
+    public partial class SubscriptionChangeDestinationAction : SubscriptionUpdateAction
     {
         public Destination Destination { get; set;}
+        public SubscriptionChangeDestinationAction()
+        { 
+           this.Action = "changeDestination";
+        }
     }
 }

@@ -2,12 +2,13 @@ using commercetools.Api.Models.TaxCategorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.TaxCategorys
 {
-    public class TaxCategoryUpdate 
+    public partial class TaxCategoryUpdate 
     {
         public long Version { get; set;}
         

@@ -2,14 +2,19 @@ using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
     [DiscriminatorValue("setKey")]
-    public class SubscriptionSetKeyAction : SubscriptionUpdateAction
+    public partial class SubscriptionSetKeyAction : SubscriptionUpdateAction
     {
         public string Key { get; set;}
+        public SubscriptionSetKeyAction()
+        { 
+           this.Action = "setKey";
+        }
     }
 }

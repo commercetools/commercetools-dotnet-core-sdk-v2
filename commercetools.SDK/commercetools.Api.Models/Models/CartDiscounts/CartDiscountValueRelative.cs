@@ -2,14 +2,19 @@ using commercetools.Api.Models.CartDiscounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DiscriminatorValue("relative")]
-    public class CartDiscountValueRelative : CartDiscountValue
+    public partial class CartDiscountValueRelative : CartDiscountValue
     {
         public long Permyriad { get; set;}
+        public CartDiscountValueRelative()
+        { 
+           this.Type = "relative";
+        }
     }
 }

@@ -2,16 +2,21 @@ using commercetools.Api.Models.ShoppingLists;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DiscriminatorValue("removeLineItem")]
-    public class ShoppingListRemoveLineItemAction : ShoppingListUpdateAction
+    public partial class ShoppingListRemoveLineItemAction : ShoppingListUpdateAction
     {
         public string LineItemId { get; set;}
         
         public long Quantity { get; set;}
+        public ShoppingListRemoveLineItemAction()
+        { 
+           this.Action = "removeLineItem";
+        }
     }
 }

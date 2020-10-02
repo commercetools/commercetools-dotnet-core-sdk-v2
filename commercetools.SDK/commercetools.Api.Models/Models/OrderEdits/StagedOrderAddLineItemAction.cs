@@ -6,13 +6,14 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("addLineItem")]
-    public class StagedOrderAddLineItemAction : StagedOrderUpdateAction
+    public partial class StagedOrderAddLineItemAction : StagedOrderUpdateAction
     {
         public CustomFieldsDraft Custom { get; set;}
         
@@ -28,6 +29,8 @@ namespace commercetools.Api.Models.OrderEdits
         
         public double Quantity { get; set;}
         
+        public DateTime AddedAt { get; set;}
+        
         public ChannelResourceIdentifier SupplyChannel { get; set;}
         
         public Money ExternalPrice { get; set;}
@@ -35,5 +38,9 @@ namespace commercetools.Api.Models.OrderEdits
         public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         
         public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public StagedOrderAddLineItemAction()
+        { 
+           this.Action = "addLineItem";
+        }
     }
 }

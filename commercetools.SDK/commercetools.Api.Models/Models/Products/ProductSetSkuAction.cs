@@ -2,18 +2,23 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("setSku")]
-    public class ProductSetSkuAction : ProductUpdateAction
+    public partial class ProductSetSkuAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
         public string Sku { get; set;}
         
         public bool Staged { get; set;}
+        public ProductSetSkuAction()
+        { 
+           this.Action = "setSku";
+        }
     }
 }

@@ -2,14 +2,19 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("setMaxApplicationsPerCustomer")]
-    public class DiscountCodeSetMaxApplicationsPerCustomerAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetMaxApplicationsPerCustomerAction : DiscountCodeUpdateAction
     {
         public long MaxApplicationsPerCustomer { get; set;}
+        public DiscountCodeSetMaxApplicationsPerCustomerAction()
+        { 
+           this.Action = "setMaxApplicationsPerCustomer";
+        }
     }
 }

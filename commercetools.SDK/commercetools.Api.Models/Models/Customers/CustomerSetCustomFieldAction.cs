@@ -2,16 +2,21 @@ using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
     [DiscriminatorValue("setCustomField")]
-    public class CustomerSetCustomFieldAction : CustomerUpdateAction
+    public partial class CustomerSetCustomFieldAction : CustomerUpdateAction
     {
         public string Name { get; set;}
         
         public Object Value { get; set;}
+        public CustomerSetCustomFieldAction()
+        { 
+           this.Action = "setCustomField";
+        }
     }
 }

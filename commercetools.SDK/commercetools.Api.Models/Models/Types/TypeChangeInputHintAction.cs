@@ -2,18 +2,24 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
     [DiscriminatorValue("changeInputHint")]
-    public class TypeChangeInputHintAction : TypeUpdateAction
+    public partial class TypeChangeInputHintAction : TypeUpdateAction
     {
         public string FieldName { get; set;}
         
         public string InputHint { get; set;}
         
+        [JsonIgnore]
         public TypeTextInputHint InputHintAsEnum => this.InputHint.GetEnum<TypeTextInputHint>();
+        public TypeChangeInputHintAction()
+        { 
+           this.Action = "changeInputHint";
+        }
     }
 }

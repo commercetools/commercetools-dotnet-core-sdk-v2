@@ -2,16 +2,21 @@ using commercetools.Api.Models.Carts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
     [DiscriminatorValue("setLineItemTotalPrice")]
-    public class CartSetLineItemTotalPriceAction : CartUpdateAction
+    public partial class CartSetLineItemTotalPriceAction : CartUpdateAction
     {
         public string LineItemId { get; set;}
         
         public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public CartSetLineItemTotalPriceAction()
+        { 
+           this.Action = "setLineItemTotalPrice";
+        }
     }
 }

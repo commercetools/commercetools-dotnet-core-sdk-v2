@@ -3,13 +3,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("addExternalImage")]
-    public class ProductAddExternalImageAction : ProductUpdateAction
+    public partial class ProductAddExternalImageAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
@@ -18,5 +19,9 @@ namespace commercetools.Api.Models.Products
         public Image Image { get; set;}
         
         public bool Staged { get; set;}
+        public ProductAddExternalImageAction()
+        { 
+           this.Action = "addExternalImage";
+        }
     }
 }

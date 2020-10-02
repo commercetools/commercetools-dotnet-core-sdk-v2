@@ -2,16 +2,21 @@ using commercetools.Api.Models.DiscountCodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DiscriminatorValue("setValidFromAndUntil")]
-    public class DiscountCodeSetValidFromAndUntilAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetValidFromAndUntilAction : DiscountCodeUpdateAction
     {
         public DateTime ValidFrom { get; set;}
         
         public DateTime ValidUntil { get; set;}
+        public DiscountCodeSetValidFromAndUntilAction()
+        { 
+           this.Action = "setValidFromAndUntil";
+        }
     }
 }

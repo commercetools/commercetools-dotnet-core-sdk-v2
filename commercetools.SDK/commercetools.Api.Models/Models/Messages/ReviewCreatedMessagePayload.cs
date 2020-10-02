@@ -3,14 +3,19 @@ using commercetools.Api.Models.Reviews;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
     [DiscriminatorValue("ReviewCreated")]
-    public class ReviewCreatedMessagePayload : MessagePayload
+    public partial class ReviewCreatedMessagePayload : MessagePayload
     {
         public Review Review { get; set;}
+        public ReviewCreatedMessagePayload()
+        { 
+           this.Type = "ReviewCreated";
+        }
     }
 }

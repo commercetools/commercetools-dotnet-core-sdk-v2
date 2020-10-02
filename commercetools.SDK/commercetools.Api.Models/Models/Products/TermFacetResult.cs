@@ -2,16 +2,18 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("terms")]
-    public class TermFacetResult : FacetResult
+    public partial class TermFacetResult : FacetResult
     {
         public string DataType { get; set;}
         
+        [JsonIgnore]
         public TermFacetResultType DataTypeAsEnum => this.DataType.GetEnum<TermFacetResultType>();
         
         public long Missing { get; set;}
@@ -21,5 +23,9 @@ namespace commercetools.Api.Models.Products
         public long Other { get; set;}
         
         public List<FacetResultTerm> Terms { get; set;}
+        public TermFacetResult()
+        { 
+           this.Type = "terms";
+        }
     }
 }

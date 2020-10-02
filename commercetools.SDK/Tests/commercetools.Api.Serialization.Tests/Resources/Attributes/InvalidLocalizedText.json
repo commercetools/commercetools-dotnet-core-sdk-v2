@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "loc-string-attribute",
+      "value": {
+        "_": "invalid-loc-string-de"
+      }
+    }
+  ]
+}

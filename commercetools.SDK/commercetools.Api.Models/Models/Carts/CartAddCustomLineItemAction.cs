@@ -5,19 +5,20 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
     [DiscriminatorValue("addCustomLineItem")]
-    public class CartAddCustomLineItemAction : CartUpdateAction
+    public partial class CartAddCustomLineItemAction : CartUpdateAction
     {
         public Money Money { get; set;}
         
         public LocalizedString Name { get; set;}
         
-        public double Quantity { get; set;}
+        public long Quantity { get; set;}
         
         public string Slug { get; set;}
         
@@ -26,5 +27,9 @@ namespace commercetools.Api.Models.Carts
         public CustomFieldsDraft Custom { get; set;}
         
         public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public CartAddCustomLineItemAction()
+        { 
+           this.Action = "addCustomLineItem";
+        }
     }
 }

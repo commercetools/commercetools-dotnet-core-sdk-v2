@@ -2,13 +2,14 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("moveImageToPosition")]
-    public class ProductMoveImageToPositionAction : ProductUpdateAction
+    public partial class ProductMoveImageToPositionAction : ProductUpdateAction
     {
         public long VariantId { get; set;}
         
@@ -19,5 +20,9 @@ namespace commercetools.Api.Models.Products
         public long Position { get; set;}
         
         public bool Staged { get; set;}
+        public ProductMoveImageToPositionAction()
+        { 
+           this.Action = "moveImageToPosition";
+        }
     }
 }

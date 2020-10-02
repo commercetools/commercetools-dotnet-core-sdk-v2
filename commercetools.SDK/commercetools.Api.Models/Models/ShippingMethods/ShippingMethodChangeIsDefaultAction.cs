@@ -2,14 +2,19 @@ using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DiscriminatorValue("changeIsDefault")]
-    public class ShippingMethodChangeIsDefaultAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodChangeIsDefaultAction : ShippingMethodUpdateAction
     {
         public bool IsDefault { get; set;}
+        public ShippingMethodChangeIsDefaultAction()
+        { 
+           this.Action = "changeIsDefault";
+        }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "fields": {
+    "foo": "bar",
+    "Fooz": "Bars",
+    "Bar": {
+      "key": "BarKey",
+      "label": "BarLabel"
+    }
+  }
+}

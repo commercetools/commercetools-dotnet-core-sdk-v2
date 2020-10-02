@@ -7,12 +7,13 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public class LineItemImportDraft 
+    public partial class LineItemImportDraft 
     {
         public string ProductId { get; set;}
         

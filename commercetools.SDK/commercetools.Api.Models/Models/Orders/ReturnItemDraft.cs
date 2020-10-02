@@ -2,12 +2,13 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public class ReturnItemDraft 
+    public partial class ReturnItemDraft 
     {
         public long Quantity { get; set;}
         
@@ -19,6 +20,7 @@ namespace commercetools.Api.Models.Orders
         
         public string ShipmentState { get; set;}
         
+        [JsonIgnore]
         public ReturnShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ReturnShipmentState>();
     }
 }

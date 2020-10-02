@@ -2,14 +2,19 @@ using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
     [DiscriminatorValue("setCustomerEmail")]
-    public class StagedOrderSetCustomerEmailAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetCustomerEmailAction : StagedOrderUpdateAction
     {
         public string Email { get; set;}
+        public StagedOrderSetCustomerEmailAction()
+        { 
+           this.Action = "setCustomerEmail";
+        }
     }
 }

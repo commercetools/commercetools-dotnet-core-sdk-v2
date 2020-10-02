@@ -5,16 +5,17 @@ using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public class CustomLineItemDraft 
+    public partial class CustomLineItemDraft 
     {
         public LocalizedString Name { get; set;}
         
-        public double Quantity { get; set;}
+        public long Quantity { get; set;}
         
         public Money Money { get; set;}
         

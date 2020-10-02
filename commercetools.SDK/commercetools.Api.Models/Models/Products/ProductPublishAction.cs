@@ -3,16 +3,22 @@ using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Serialization.CustomAttributes;
+using System.Text.Json.Serialization;
+using commercetools.Api.Models.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
     [DiscriminatorValue("publish")]
-    public class ProductPublishAction : ProductUpdateAction
+    public partial class ProductPublishAction : ProductUpdateAction
     {
         public string Scope { get; set;}
         
+        [JsonIgnore]
         public ProductPublishScope ScopeAsEnum => this.Scope.GetEnum<ProductPublishScope>();
+        public ProductPublishAction()
+        { 
+           this.Action = "publish";
+        }
     }
 }
