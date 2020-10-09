@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using commercetools.Api.Serialization;
 
 namespace commercetools.Api.Client
 {
@@ -9,6 +10,7 @@ namespace commercetools.Api.Client
     /// </summary>
     public interface IClient
     {
+        ISerializerService SerializerService { get; }
         /// <summary>
         /// Gets or sets the name of the client.
         /// </summary>

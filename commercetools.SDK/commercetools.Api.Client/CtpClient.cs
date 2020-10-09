@@ -9,7 +9,6 @@ namespace commercetools.Api.Client
     public class CtpClient : IClient
     {
         private readonly IHttpClientFactory httpClientFactory;
-        private readonly ISerializerService serializerService;
         private readonly IUserAgentProvider userAgentProvider;
         private HttpClient httpClient;
 
@@ -19,10 +18,11 @@ namespace commercetools.Api.Client
             IUserAgentProvider userAgentProvider)
         {
             this.httpClientFactory = httpClientFactory;
-            this.serializerService = serializerService;
+            this.SerializerService = serializerService;
             this.userAgentProvider = userAgentProvider;
         }
 
+        public ISerializerService SerializerService { get; }
         public string Name { get; set; } = DefaultClientNames.Api;
 
         private HttpClient HttpClient
@@ -42,7 +42,7 @@ namespace commercetools.Api.Client
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
         {
             var content = await ExecuteAsJsonAsync(requestMessage);
-            return this.serializerService.Deserialize<T>(content);   
+            return this.SerializerService.Deserialize<T>(content);   
         }
         
         public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)

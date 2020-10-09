@@ -1,80 +1,82 @@
-﻿using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Categorys;
+using System.Text.Json;
+using commercetools.Api.Serialization;
+
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesGet : ApiMethod<ByProjectKeyCategoriesGet>
-    {
-        public IClient ApiHttpClient { get; }
+   public partial class ByProjectKeyCategoriesGet : ApiMethod<ByProjectKeyCategoriesGet> {
 
-        public string ProjectKey { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+   
+       public ByProjectKeyCategoriesGet(IClient apiHttpClient, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.RequestUrl = $"/{ProjectKey}/categories";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+       
+       public List<string> GetSort() {
+           return this.GetQueryParam("sort");
+       }
+       
+       public List<string> GetLimit() {
+           return this.GetQueryParam("limit");
+       }
+       
+       public List<string> GetOffset() {
+           return this.GetQueryParam("offset");
+       }
+       
+       public List<string> GetWithTotal() {
+           return this.GetQueryParam("withTotal");
+       }
+       
+       public List<string> GetWhere() {
+           return this.GetQueryParam("where");
+       }
+   
+       public ByProjectKeyCategoriesGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
+       
+       public ByProjectKeyCategoriesGet WithSort(string sort){
+           return this.AddQueryParam("sort", sort);
+       }
+       
+       public ByProjectKeyCategoriesGet WithLimit(int limit){
+           return this.AddQueryParam("limit", limit.ToString());
+       }
+       
+       public ByProjectKeyCategoriesGet WithOffset(int offset){
+           return this.AddQueryParam("offset", offset.ToString());
+       }
+       
+       public ByProjectKeyCategoriesGet WithWithTotal(bool withTotal){
+           return this.AddQueryParam("withTotal", withTotal.ToString());
+       }
+       
+       public ByProjectKeyCategoriesGet WithWhere(string where){
+           return this.AddQueryParam("where", where);
+       }
 
-        public string ID { get; }
-
-        public override HttpMethod Method => HttpMethod.Get;
-
-
-        public ByProjectKeyCategoriesGet(IClient apiHttpClient,string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/categories";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-        public List<string> GetSort()
-        {
-            return this.GetQueryParam("sort");
-        }
-        public List<string> GetLimit()
-        {
-            return this.GetQueryParam("limit");
-        }
-        public List<string> GetWithTotal()
-        {
-            return this.GetQueryParam("withTotal");
-        }
-        public List<string> GetWhere()
-        {
-            return this.GetQueryParam("where");
-        }
-
-
-        public ByProjectKeyCategoriesGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-        public ByProjectKeyCategoriesGet WithSort(string sort)
-        {
-            return this.AddQueryParam("sort", sort);
-        }
-        public ByProjectKeyCategoriesGet WithLimit(int limit)
-        {
-            return this.AddQueryParam("limit", limit.ToString());
-        }
-        public ByProjectKeyCategoriesGet WithOffset(int offset)
-        {
-            return this.AddQueryParam("offset", offset.ToString());
-        }
-        public ByProjectKeyCategoriesGet WithWithTotal(bool withTotal)
-        {
-            return this.AddQueryParam("withTotal", withTotal.ToString());
-        }
-        public ByProjectKeyCategoriesGet WithWhere(string where)
-        {
-            return this.AddQueryParam("where", where);
-        }
-
-        public async Task<CategoryPagedQueryResponse> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<CategoryPagedQueryResponse>(requestMessage);
-        }
-    }
+       public async Task<commercetools.Api.Models.Categorys.CategoryPagedQueryResponse> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.CategoryPagedQueryResponse>(requestMessage);
+       }
+   }
 }

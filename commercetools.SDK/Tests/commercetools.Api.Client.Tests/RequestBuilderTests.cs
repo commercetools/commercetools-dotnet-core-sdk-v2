@@ -93,7 +93,7 @@ namespace commercetools.Api.Client.Tests
                             .Categories()
                             .WithId(categoryId)
                             .Delete()
-                            .WithVersion("2")
+                            .WithVersion(2)
                             .WithExpand(expand1)
                             .WithExpand(expand2)
                             .AddQueryParam(additionalParam.Key, additionalParam.Value)
@@ -158,6 +158,7 @@ namespace commercetools.Api.Client.Tests
         [Fact]
         public void TestCreateRequest()
         {
+            //need to mock client with SerializerService
             //arrange
             var projectKey = "test-proj";
             

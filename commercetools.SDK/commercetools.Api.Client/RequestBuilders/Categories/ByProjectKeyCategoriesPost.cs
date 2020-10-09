@@ -1,56 +1,61 @@
-﻿using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Categorys;
+using System.Text.Json;
+using commercetools.Api.Serialization;
+
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesPost : ApiMethod<ByProjectKeyCategoriesPost>
-    {
-        public IClient ApiHttpClient { get; }
+   public partial class ByProjectKeyCategoriesPost : ApiMethod<ByProjectKeyCategoriesPost> {
 
-        public string ProjectKey { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Post;
+       
+       private string ProjectKey { get; }
+       
+       private commercetools.Api.Models.Categorys.CategoryDraft CategoryDraft;
+   
+       public ByProjectKeyCategoriesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Categorys.CategoryDraft categoryDraft) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+           this.CategoryDraft = categoryDraft;
+           this.RequestUrl = $"/{ProjectKey}/categories";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyCategoriesPost WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
 
-        public CategoryDraft CategoryDraft { get; }
-
-        public override HttpMethod Method => HttpMethod.Post;
-
-
-        public ByProjectKeyCategoriesPost(IClient apiHttpClient, string projectKey, CategoryDraft categoryDraft)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.CategoryDraft = categoryDraft;
-            this.RequestUrl = $"/{ProjectKey}/categories";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyCategoriesPost WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-        public override HttpRequestMessage Build()
-        {
-            var request = base.Build();
-            //replace with seralizer service
-            var body = JsonSerializer.Serialize(CategoryDraft);
-            if(!string.IsNullOrEmpty(body))
-            {
-                request.Content = new StringContent(body);
-            }
-            return request;
-        }
-
-        public async Task<Category> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Category>(requestMessage);
-        }
-    }
+       public async Task<commercetools.Api.Models.Categorys.Category> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.Category>(requestMessage);
+       }
+       
+       public override HttpRequestMessage Build()
+       {
+          var request = base.Build();
+          if (SerializerService != null)
+          {
+              var body = this.SerializerService.Serialize(CategoryDraft);
+              if(!string.IsNullOrEmpty(body))
+              {
+                  request.Content = new StringContent(body);
+              }
+          }
+          return request;
+       }
+   }
 }

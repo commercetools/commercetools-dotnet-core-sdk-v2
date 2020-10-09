@@ -1,33 +1,38 @@
-﻿using System;
-using System.Net.Http;
-using commercetools.Api.Models.Categorys;
+using System.IO;
+using System.Text.Json;
+using commercetools.Api.Serialization;
+using commercetools.Api.Client;
+using commercetools.Api.Client.RequestBuilders.Categories;
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesRequestBuilder
-    {
-        public IClient ApiHttpClient { get; }
+   public class ByProjectKeyCategoriesRequestBuilder {
 
-        public string ProjectKey { get;}
-
-        public ByProjectKeyCategoriesRequestBuilder(IClient apiHttpClient,string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-        }
-
-        public ByProjectKeyCategoriesGet Get()
-        {
-            return new ByProjectKeyCategoriesGet(ApiHttpClient, ProjectKey);
-        }        
-        public ByProjectKeyCategoriesPost Post(CategoryDraft categoryDraft)
-        {
-            return new ByProjectKeyCategoriesPost(ApiHttpClient, ProjectKey, categoryDraft);
-        }
-        public ByProjectKeyCategoriesByIDRequestBuilder WithId(string id)
-        {
-            return new ByProjectKeyCategoriesByIDRequestBuilder(ApiHttpClient, ProjectKey, id);
-        }
-        //withKey
-    }
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+   
+       public ByProjectKeyCategoriesRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+       }
+   
+       public ByProjectKeyCategoriesGet Get() {
+           return new ByProjectKeyCategoriesGet(ApiHttpClient, ProjectKey);
+       }
+       
+       public ByProjectKeyCategoriesPost Post(commercetools.Api.Models.Categorys.CategoryDraft categoryDraft) {
+           return new ByProjectKeyCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, categoryDraft);
+       }
+       
+       public ByProjectKeyCategoriesKeyByKeyRequestBuilder WithKey(string key) {
+           return new ByProjectKeyCategoriesKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
+       }
+       public ByProjectKeyCategoriesByIDRequestBuilder WithId(string ID) {
+           return new ByProjectKeyCategoriesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+       }
+   }
 }

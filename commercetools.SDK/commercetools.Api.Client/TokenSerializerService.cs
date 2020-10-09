@@ -21,6 +21,11 @@ namespace commercetools.Api.Client
             return JsonSerializer.Deserialize<T>(input, jsonSerializerOptions);
         }
 
+        public object Deserialize(Type returnType, string input)
+        {
+            return JsonSerializer.Deserialize(input, returnType, jsonSerializerOptions);
+        }
+
         public string Serialize<T>(T input)
         {
             return JsonSerializer.Serialize<T>(input, jsonSerializerOptions);

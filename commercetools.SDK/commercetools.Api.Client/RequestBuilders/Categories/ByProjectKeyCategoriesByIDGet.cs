@@ -1,49 +1,45 @@
-﻿using System;
+using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Categorys;
+using System.Text.Json;
+using commercetools.Api.Serialization;
+
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesByIDGet : ApiMethod<ByProjectKeyCategoriesByIDGet>
-    {
-        public IClient ApiHttpClient { get; }
+   public partial class ByProjectKeyCategoriesByIDGet : ApiMethod<ByProjectKeyCategoriesByIDGet> {
 
-        public string ProjectKey { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+       private string ID { get; }
+       
+   
+       public ByProjectKeyCategoriesByIDGet(IClient apiHttpClient, string projectKey, string id) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.ID = id;
+           this.RequestUrl = $"/{ProjectKey}/categories/{ID}";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyCategoriesByIDGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
 
-        public string ID { get; }
-
-        public override HttpMethod Method => HttpMethod.Get;
-
-
-        public ByProjectKeyCategoriesByIDGet(IClient apiHttpClient, string projectKey, string id)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/categories/{ID}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyCategoriesByIDGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-        public async Task<Category> ExecuteAsync()
-        {
-            if(ApiHttpClient == null)
-            {
-                throw new ArgumentNullException("apiHttpClient cannot be null");
-            }
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Category>(requestMessage);
-        }
-    }
+       public async Task<commercetools.Api.Models.Categorys.Category> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.Category>(requestMessage);
+       }
+   }
 }

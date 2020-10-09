@@ -1,53 +1,53 @@
-﻿using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Categorys;
+using System.Text.Json;
+using commercetools.Api.Serialization;
+
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesByIDDelete : ApiMethod<ByProjectKeyCategoriesByIDDelete>
-    {
-        public IClient ApiHttpClient { get; }
+   public partial class ByProjectKeyCategoriesByIDDelete : ApiMethod<ByProjectKeyCategoriesByIDDelete> {
 
-        public string ProjectKey { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Delete;
+       
+       private string ProjectKey { get; }
+       
+       private string ID { get; }
+       
+   
+       public ByProjectKeyCategoriesByIDDelete(IClient apiHttpClient, string projectKey, string id) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.ID = id;
+           this.RequestUrl = $"/{ProjectKey}/categories/{ID}";
+       }
+   
+       public List<string> GetVersion() {
+           return this.GetQueryParam("version");
+       }
+       
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyCategoriesByIDDelete WithVersion(long version){
+           return this.AddQueryParam("version", version.ToString());
+       }
+       
+       public ByProjectKeyCategoriesByIDDelete WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
 
-        public string ID { get; }
-
-        public override HttpMethod Method => HttpMethod.Delete;
-
-
-        public ByProjectKeyCategoriesByIDDelete(IClient apiHttpClient, string projectKey, string id)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/categories/{ID}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-        public List<string> GetVersion()
-        {
-            return this.GetQueryParam("version");
-        }
-
-        public ByProjectKeyCategoriesByIDDelete WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-        public ByProjectKeyCategoriesByIDDelete WithVersion(string expand)
-        {
-            return this.AddQueryParam("version", expand);
-        }
-
-        public async Task<Category> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Category>(requestMessage);
-        }
-    }
+       public async Task<commercetools.Api.Models.Categorys.Category> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.Category>(requestMessage);
+       }
+   }
 }
