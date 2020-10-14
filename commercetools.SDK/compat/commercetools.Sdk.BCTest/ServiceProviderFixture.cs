@@ -39,7 +39,7 @@ namespace commercetools.Sdk.BCTest
                     var services = new ServiceCollection();
                     services.UseCommercetools(Configuration, "Client", TokenFlow.ClientCredentials);
                     services.AddLogging(c=> c.AddProvider(new InMemoryLoggerProvider()));
-                    services.AddSingleton(typeof(JsonConverterBase), typeof(DiscriminatorConverterFactory));
+                    services.UseCommercetoolsCompatLayer();
                     this.ServiceProvider = services.BuildServiceProvider();
                     break;
                 case ContainerType.SimpleInjector:
