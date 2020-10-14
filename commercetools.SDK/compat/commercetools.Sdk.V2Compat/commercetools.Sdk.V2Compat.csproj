@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="commercetools.Sdk.All" Version="1.0.0-alpha-925" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\commercetools.Api.Client\commercetools.Api.Client.csproj" />
+        <ProjectReference Include="..\..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
