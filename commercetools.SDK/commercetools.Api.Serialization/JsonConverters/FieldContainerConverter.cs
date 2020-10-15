@@ -79,7 +79,13 @@ namespace commercetools.Api.Serialization.JsonConverters
 
         public override void Write(Utf8JsonWriter writer, FieldContainer value, JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, value, options);
+            writer.WriteStartObject();
+            foreach (var item in value)
+            {
+                writer.WritePropertyName(item.Key);
+                JsonSerializer.Serialize(writer, item.Value, options);
+            }
+            writer.WriteEndObject();
         }
         
         private object ExtractValue(ref Utf8JsonReader reader, JsonSerializerOptions options)
