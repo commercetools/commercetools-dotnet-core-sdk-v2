@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
        
        private string ID { get; }
        
-       private commercetools.Api.Models.TaxCategorys.TaxCategoryUpdate TaxCategoryUpdate;
+       private commercetools.Api.Models.TaxCategories.TaxCategoryUpdate TaxCategoryUpdate;
    
-       public ByProjectKeyTaxCategoriesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.TaxCategorys.TaxCategoryUpdate taxCategoryUpdate) {
+       public ByProjectKeyTaxCategoriesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.TaxCategories.TaxCategoryUpdate taxCategoryUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
@@ -41,10 +41,10 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.TaxCategorys.TaxCategory> ExecuteAsync()
+       public async Task<commercetools.Api.Models.TaxCategories.TaxCategory> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategorys.TaxCategory>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.TaxCategory>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

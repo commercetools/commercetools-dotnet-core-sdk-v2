@@ -73,10 +73,10 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Categorys.CategoryPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Categories.CategoryPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.CategoryPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categories.CategoryPagedQueryResponse>(requestMessage);
        }
    }
 }

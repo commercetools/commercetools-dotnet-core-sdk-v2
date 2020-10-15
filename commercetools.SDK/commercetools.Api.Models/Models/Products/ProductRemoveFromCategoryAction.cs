@@ -1,4 +1,4 @@
-using commercetools.Api.Models.Categorys;
+using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-using commercetools.Api.Models.Inventorys;
+using commercetools.Api.Models.Inventories;
 using commercetools.Api.Models.Messages;
 using System;
 using System.Collections.Generic;

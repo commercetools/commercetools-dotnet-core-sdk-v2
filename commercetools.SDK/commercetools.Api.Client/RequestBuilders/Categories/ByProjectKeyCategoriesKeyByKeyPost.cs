@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
        
        private string Key { get; }
        
-       private commercetools.Api.Models.Categorys.CategoryUpdate CategoryUpdate;
+       private commercetools.Api.Models.Categories.CategoryUpdate CategoryUpdate;
    
-       public ByProjectKeyCategoriesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Categorys.CategoryUpdate categoryUpdate) {
+       public ByProjectKeyCategoriesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Categories.CategoryUpdate categoryUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
@@ -41,10 +41,10 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Categorys.Category> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Categories.Category> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categorys.Category>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categories.Category>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

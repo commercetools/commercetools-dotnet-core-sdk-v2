@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
            return new ByProjectKeyCategoriesGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyCategoriesPost Post(commercetools.Api.Models.Categorys.CategoryDraft categoryDraft) {
+       public ByProjectKeyCategoriesPost Post(commercetools.Api.Models.Categories.CategoryDraft categoryDraft) {
            return new ByProjectKeyCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, categoryDraft);
        }
        

@@ -1,7 +1,7 @@
 using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Orders;
 using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategorys;
+using commercetools.Api.Models.TaxCategories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

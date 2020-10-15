@@ -1,5 +1,5 @@
 using commercetools.Api.Models.Products;
-using commercetools.Api.Models.TaxCategorys;
+using commercetools.Api.Models.TaxCategories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

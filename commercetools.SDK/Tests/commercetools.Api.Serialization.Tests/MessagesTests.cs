@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json;
-using commercetools.Api.Models.Categorys;
 using commercetools.Api.Models.Customers;
 using commercetools.Api.Models.Messages;
 using commercetools.Api.Models.Subscriptions;

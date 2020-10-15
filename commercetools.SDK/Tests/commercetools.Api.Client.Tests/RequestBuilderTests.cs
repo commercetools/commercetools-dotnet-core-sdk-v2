@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Net.Http;
-using commercetools.Api.Models.Categorys;
+using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
 using Xunit;
 

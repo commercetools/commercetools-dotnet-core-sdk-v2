@@ -44,10 +44,10 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.TaxCategorys.TaxCategory> ExecuteAsync()
+       public async Task<commercetools.Api.Models.TaxCategories.TaxCategory> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategorys.TaxCategory>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.TaxCategory>(requestMessage);
        }
    }
 }

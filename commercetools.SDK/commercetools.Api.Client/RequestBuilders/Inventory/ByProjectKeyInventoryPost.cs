@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Inventorys.InventoryEntryDraft InventoryEntryDraft;
+       private commercetools.Api.Models.Inventories.InventoryEntryDraft InventoryEntryDraft;
    
-       public ByProjectKeyInventoryPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Inventorys.InventoryEntryDraft inventoryEntryDraft) {
+       public ByProjectKeyInventoryPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Inventories.InventoryEntryDraft inventoryEntryDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Inventorys.InventoryEntry> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Inventories.InventoryEntry> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventorys.InventoryEntry>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.InventoryEntry>(requestMessage);
        }
        
        public override HttpRequestMessage Build()
