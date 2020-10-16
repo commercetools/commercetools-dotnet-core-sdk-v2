@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace commercetools.Base.Registration
 {
@@ -40,7 +41,7 @@ namespace commercetools.Base.Registration
                     typeToRegister = GetTypeForGenericTypeDefinition(type, implementationType);
                 }
 
-                services.Add(new ServiceDescriptor(typeToRegister, implementationType, lifetime));
+                services.TryAdd(new ServiceDescriptor(typeToRegister, implementationType, lifetime));
             }
         }
 

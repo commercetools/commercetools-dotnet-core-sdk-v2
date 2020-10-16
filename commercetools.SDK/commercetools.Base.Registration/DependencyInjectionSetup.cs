@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace commercetools.Base.Registration
 {
@@ -13,7 +14,7 @@ namespace commercetools.Base.Registration
         /// <param name="services">The service collection.</param>
         public static void UseRegistration(this IServiceCollection services)
         {
-            services.AddSingleton<ITypeRetriever, TypeRetriever>();
+            services.TryAddSingleton<ITypeRetriever, TypeRetriever>();
         }
     }
 }
