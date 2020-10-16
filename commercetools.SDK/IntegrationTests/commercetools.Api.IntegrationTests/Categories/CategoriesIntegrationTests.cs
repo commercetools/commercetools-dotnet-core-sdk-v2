@@ -24,10 +24,9 @@ namespace commercetools.Api.IntegrationTests.Categories
             var projectKey = serviceProviderFixture.GetClientConfiguration("Client").ProjectKey;
             //var categoryId = "4cabe415-74c3-4a3f-88c7-32bb0133ea08";
             var categoryId = "02ed9a7d-7c1f-40da-b2b7-4cca6752bf29";
-            var apiRoot = ApiFactory.Create(client);
 
             //Act
-            var category = await apiRoot
+            var category = await client.ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)

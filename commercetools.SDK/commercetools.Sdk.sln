@@ -14,8 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Base.Registra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Base.Serialization", "commercetools.Base.Serialization\commercetools.Base.Serialization.csproj", "{19C3CBC4-07EB-482F-9FCE-6CA081173123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Client.Tests", "Tests\commercetools.Api.Client.Tests\commercetools.Api.Client.Tests.csproj", "{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Serialization.Tests", "Tests\commercetools.Api.Serialization.Tests\commercetools.Api.Serialization.Tests.csproj", "{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "compat", "compat", "{2505203F-9E83-43AD-99E3-5764FE502FCD}"
@@ -54,10 +52,6 @@ Global
 		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C3CBC4-07EB-482F-9FCE-6CA081173123}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -81,7 +75,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0BE26648-8480-4F6C-A353-76D03266B0C3} = {C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}
-		{38607DC0-CA17-4FFF-8FCA-7F0A98D0C1B0} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{97836DBB-A151-4C08-BD70-75E71DE70359} = {2505203F-9E83-43AD-99E3-5764FE502FCD}
 		{CFFAE846-9D5F-4176-9921-C0F04E3C2200} = {2505203F-9E83-43AD-99E3-5764FE502FCD}

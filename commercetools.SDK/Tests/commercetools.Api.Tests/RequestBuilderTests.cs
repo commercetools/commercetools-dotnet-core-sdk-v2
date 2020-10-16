@@ -30,10 +30,9 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot(GetClient());
 
             //act
-            var request = apiRoot
+            var request = GetClient().ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -63,11 +62,8 @@ namespace commercetools.Api.Tests
             var expand = "parent";
             var where = $"name = \"food\"";
             
-
-            var apiRoot = new ApiRoot(GetClient());
-
             //act
-            var request = apiRoot
+            var request = GetClient().ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .Get()
@@ -98,10 +94,9 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot(GetClient());
 
             //act
-            var request = apiRoot
+            var request = GetClient().ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -144,10 +139,8 @@ namespace commercetools.Api.Tests
             };
 
            
-            var apiRoot = new ApiRoot(GetClient());
-
             //act
-            var request = apiRoot
+            var request = GetClient().ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -180,11 +173,8 @@ namespace commercetools.Api.Tests
                 Key = "key"
             };
 
-
-            var apiRoot = new ApiRoot(GetClient());
-
             //act
-            var request = apiRoot
+            var request = GetClient().ApiRoot()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .Post(categoryDraft)
