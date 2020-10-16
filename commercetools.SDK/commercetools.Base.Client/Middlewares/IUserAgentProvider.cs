@@ -1,5 +1,5 @@
 ﻿using System;
-namespace commercetools.Base.Client.DelegatingHandlers
+namespace commercetools.Base.Client.Middlewares
 {
     public interface IUserAgentProvider
     {

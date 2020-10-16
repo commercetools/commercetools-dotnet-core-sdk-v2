@@ -11,9 +11,9 @@ namespace commercetools.Base.Client.Tokens
         private readonly ISerializerService serializerService;
         private readonly ITokenStoreManager tokenStoreManager;
 
-        protected TokenProvider(IHttpClientFactory httpClientFactory, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService)
+        protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService)
         {
-            this.HttpClientFactory = httpClientFactory;
+            this.HttpClient = httpClient;
             this.tokenStoreManager = tokenStoreManager;
             this.serializerService = serializerService;
         }
@@ -66,7 +66,7 @@ namespace commercetools.Base.Client.Tokens
 
         public IClientConfiguration ClientConfiguration { get; set; }
 
-        protected IHttpClientFactory HttpClientFactory { get; }
+        protected HttpClient HttpClient { get; }
 
         public abstract HttpRequestMessage GetRequestMessage();
 
@@ -89,7 +89,7 @@ namespace commercetools.Base.Client.Tokens
 
         private async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)
         {
-            var client = this.HttpClientFactory.CreateClient(DefaultClientNames.Authorization);
+            var client = this.HttpClient;
             var result = await client.SendAsync(requestMessage).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (result.IsSuccessStatusCode)

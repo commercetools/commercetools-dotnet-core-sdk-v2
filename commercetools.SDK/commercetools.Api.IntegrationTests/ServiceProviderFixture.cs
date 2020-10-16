@@ -22,7 +22,7 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client", TokenFlow.ClientCredentials);
+            services.UseCommercetoolsApi(configuration, "Client");
             this.serviceProvider = services.BuildServiceProvider();
         }
 

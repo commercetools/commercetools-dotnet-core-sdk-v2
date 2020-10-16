@@ -3,18 +3,18 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace commercetools.Base.Client.DelegatingHandlers
+namespace commercetools.Base.Client.Middlewares
 {
-    public class CorrelationIdHandler : DelegatingHandler
+    public class CorrelationIdMiddleware : DelegatingMiddleware
     {
         private readonly ICorrelationIdProvider correlationIdProvider;
 
-        public CorrelationIdHandler(ICorrelationIdProvider correlationIdProvider)
+        public CorrelationIdMiddleware(ICorrelationIdProvider correlationIdProvider)
         {
             this.correlationIdProvider = correlationIdProvider;
         }
 
-        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var correlationId = this.correlationIdProvider.CorrelationId;
             request.Headers.Add("X-Correlation-ID", correlationId);

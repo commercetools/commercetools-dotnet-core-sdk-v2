@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
-namespace commercetools.Base.Client.DelegatingHandlers
+namespace commercetools.Base.Client.Middlewares
 {
     public class UserAgentProvider : IUserAgentProvider
     {

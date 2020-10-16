@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Api.Client;
 using commercetools.Base.Client;
+using commercetools.Base.Serialization;
 using Xunit;
 
 namespace commercetools.Api.IntegrationTests.Categories
@@ -22,7 +24,7 @@ namespace commercetools.Api.IntegrationTests.Categories
         public async Task GetCategoryById()
         {
             // Arrange
-            var projectKey = "net-sdk-mobile-app-demo";
+            var projectKey = serviceProviderFixture.GetClientConfiguration("Client").ProjectKey;
             //var categoryId = "4cabe415-74c3-4a3f-88c7-32bb0133ea08";
             var categoryId = "02ed9a7d-7c1f-40da-b2b7-4cca6752bf29";
             var apiRoot = ApiFactory.Create(client);
@@ -43,7 +45,7 @@ namespace commercetools.Api.IntegrationTests.Categories
         public async Task GetCategoryById2()
         {
             // Arrange
-            var projectKey = "net-sdk-mobile-app-demo";
+            var projectKey = serviceProviderFixture.GetClientConfiguration("Client").ProjectKey;
             var categoryId = "02ed9a7d-7c1f-40da-b2b7-4cca6752bf29";
 
             //Act

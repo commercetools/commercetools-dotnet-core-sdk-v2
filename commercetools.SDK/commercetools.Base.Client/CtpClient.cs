@@ -1,7 +1,9 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
-using commercetools.Base.Client.DelegatingHandlers;
+using commercetools.Base.Client.Middlewares;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Serialization;
 
@@ -9,36 +11,28 @@ namespace commercetools.Base.Client
 {
     public class CtpClient : IClient
     {
-        private readonly IHttpClientFactory httpClientFactory;
-        private readonly IUserAgentProvider userAgentProvider;
-        private HttpClient httpClient;
+        public CtpClient(
+            Middleware middlewareStack,
+            ISerializerService serializerService) : this(middlewareStack, serializerService, DefaultClientNames.Api)
+        {
+            this.MiddlewareStack = middlewareStack;
+            this.SerializerService = serializerService;
+        }
 
         public CtpClient(
-            IHttpClientFactory httpClientFactory,
+            Middleware middlewareStack,
             ISerializerService serializerService,
-            IUserAgentProvider userAgentProvider)
+            string name)
         {
-            this.httpClientFactory = httpClientFactory;
+            this.MiddlewareStack = middlewareStack;
             this.SerializerService = serializerService;
-            this.userAgentProvider = userAgentProvider;
+            this.Name = name;
         }
 
+        
+        public string Name { get; set; }
         public ISerializerService SerializerService { get; }
-        public string Name { get; set; } = DefaultClientNames.Api;
-
-        private HttpClient HttpClient
-        {
-            get
-            {
-                if (this.httpClient == null)
-                {
-                    this.httpClient = this.httpClientFactory.CreateClient(this.Name);
-                    this.httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(this.userAgentProvider.UserAgent);
-                }
-
-                return this.httpClient;
-            }
-        }
+        private Middleware MiddlewareStack { get; }
 
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
         {
@@ -48,7 +42,7 @@ namespace commercetools.Base.Client
         
         public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)
         {
-            var result = await this.HttpClient.SendAsync(requestMessage).ConfigureAwait(false);
+            var result = await this.MiddlewareStack.SendAsync(requestMessage, CancellationToken.None).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (result.IsSuccessStatusCode)
             {

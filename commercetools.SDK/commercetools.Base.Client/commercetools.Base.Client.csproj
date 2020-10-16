@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DelegatingHandlers\" />
     <Folder Include="Tokens\" />
     <Folder Include="Domain\" />
   </ItemGroup>

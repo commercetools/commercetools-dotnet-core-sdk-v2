@@ -6,11 +6,13 @@ namespace commercetools.Base.Client.Tokens
     public class ClientCredentialsTokenProvider : TokenProvider, ITokenProvider
     {
         public ClientCredentialsTokenProvider(
-            IHttpClientFactory httpClientFactory,
+            IClientConfiguration configuration,
+            HttpClient httpClient,
             ITokenStoreManager tokenStoreManager,
             ITokenSerializerService serializerService)
-            : base(httpClientFactory, tokenStoreManager, serializerService)
+            : base(httpClient, tokenStoreManager, serializerService)
         {
+            ClientConfiguration = configuration;
         }
 
         public TokenFlow TokenFlow => TokenFlow.ClientCredentials;
