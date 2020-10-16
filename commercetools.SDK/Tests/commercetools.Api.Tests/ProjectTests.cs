@@ -1,9 +1,8 @@
 using System.IO;
-using System.Text.Json;
 using Xunit;
 using commercetools.Api.Models.Projects;
-using commercetools.Api.Registration;
 using commercetools.Api.Serialization;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests
 {
@@ -12,9 +11,12 @@ namespace commercetools.Api.Tests
         [Fact]
         public void TestProjectDeserialization()
         {
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApiSerialization();
+            var p = s.BuildServiceProvider();
             //arrange
             var projectResponse = File.ReadAllText("Resources/project.json");
-            var serializerService = new SerializerService(new TypeRetriever());
+            var serializerService = p.GetService<SerializerService>();
 
             //act
             var project = serializerService.Deserialize<Project>(projectResponse);

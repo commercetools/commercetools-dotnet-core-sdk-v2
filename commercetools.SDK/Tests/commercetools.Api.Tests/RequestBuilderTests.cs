@@ -2,13 +2,25 @@ using Xunit;
 using commercetools.Api.Client;
 using System.Net.Http;
 using System.Collections.Generic;
-using commercetools.Api.Models.Categorys;
+using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Serialization;
+using commercetools.Base.Client;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests
 {
     public class RequestBuilderTests
     {
+        private IClient GetClient()
+        {
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApiSerialization();
+            var p = s.BuildServiceProvider();
+            
+            return new CtpClient(null, p.GetService<SerializerService>());
+        }
+        
         [Fact]
         public void TestGetByIdRequest()
         {
@@ -18,7 +30,7 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot(null);
+            var apiRoot = new ApiRoot(GetClient());
 
             //act
             var request = apiRoot
@@ -52,7 +64,7 @@ namespace commercetools.Api.Tests
             var where = $"name = \"food\"";
             
 
-            var apiRoot = new ApiRoot(null);
+            var apiRoot = new ApiRoot(GetClient());
 
             //act
             var request = apiRoot
@@ -86,7 +98,7 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var apiRoot = new ApiRoot(null);
+            var apiRoot = new ApiRoot(GetClient());
 
             //act
             var request = apiRoot
@@ -94,7 +106,7 @@ namespace commercetools.Api.Tests
                             .Categories()
                             .WithId(categoryId)
                             .Delete()
-                            .WithVersion("2")
+                            .WithVersion(2)
                             .WithExpand(expand1)
                             .WithExpand(expand2)
                             .AddQueryParam(additionalParam.Key, additionalParam.Value)
@@ -118,7 +130,7 @@ namespace commercetools.Api.Tests
             var expand1 = "parent";
             var expand2 = "ancestors";
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
-            var categoryUpdate = new CategoryUpdate
+            var categoryUpdate = new CategoryUpdate()
             {
                 Version = 2,
                 Actions = new List<CategoryUpdateAction>
@@ -132,7 +144,7 @@ namespace commercetools.Api.Tests
             };
 
            
-            var apiRoot = new ApiRoot(null);
+            var apiRoot = new ApiRoot(GetClient());
 
             //act
             var request = apiRoot
@@ -169,7 +181,7 @@ namespace commercetools.Api.Tests
             };
 
 
-            var apiRoot = new ApiRoot(null);
+            var apiRoot = new ApiRoot(GetClient());
 
             //act
             var request = apiRoot

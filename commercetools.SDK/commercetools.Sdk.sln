@@ -6,7 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D4A429AE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.IntegrationTests", "commercetools.Api.IntegrationTests\commercetools.Api.IntegrationTests.csproj", "{0BE26648-8480-4F6C-A353-76D03266B0C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.IntegrationTests", "IntegrationTests\commercetools.Api.IntegrationTests\commercetools.Api.IntegrationTests.csproj", "{0BE26648-8480-4F6C-A353-76D03266B0C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Base.Client", "commercetools.Base.Client\commercetools.Base.Client.csproj", "{A3672F5E-9740-45ED-8FD1-43B47BBDA01B}"
 EndProject
@@ -25,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.BCTest", "compat\commercetools.Sdk.BCTest\commercetools.Sdk.BCTest.csproj", "{CFFAE846-9D5F-4176-9921-C0F04E3C2200}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Base.Abstractions", "commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj", "{CE136B1B-A0F1-47C2-8B6D-F8FB67EF1F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.Tests", "Tests\commercetools.Api.Tests\commercetools.Api.Tests.csproj", "{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,10 @@ Global
 		{CE136B1B-A0F1-47C2-8B6D-F8FB67EF1F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE136B1B-A0F1-47C2-8B6D-F8FB67EF1F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE136B1B-A0F1-47C2-8B6D-F8FB67EF1F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0BE26648-8480-4F6C-A353-76D03266B0C3} = {C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}
@@ -79,5 +85,6 @@ Global
 		{6D308EEF-032F-4ED0-9F04-B3FDEE17D85F} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{97836DBB-A151-4C08-BD70-75E71DE70359} = {2505203F-9E83-43AD-99E3-5764FE502FCD}
 		{CFFAE846-9D5F-4176-9921-C0F04E3C2200} = {2505203F-9E83-43AD-99E3-5764FE502FCD}
+		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 	EndGlobalSection
 EndGlobal

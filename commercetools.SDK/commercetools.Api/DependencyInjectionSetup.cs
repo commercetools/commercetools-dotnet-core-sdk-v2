@@ -7,6 +7,7 @@ using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
+using commercetools.Api.Client;
 using commercetools.Base.Client;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
@@ -16,17 +17,20 @@ namespace commercetools.Api
 {
     public static class DependencyInjectionSetup
     {
-        public static IHttpClientBuilder UseCommercetoolsApi(this IServiceCollection services, IConfiguration configuration,
+        public static IHttpClientBuilder UseCommercetoolsApi(this IServiceCollection services,
+            IConfiguration configuration,
             string clientName = DefaultClientNames.Api)
         {
             var clients = new List<string>()
             {
                 clientName
             };
+            services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>()));
             return services.UseCommercetoolsApi(configuration, clients).Single().Value;
         }
-        
-        public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services, IConfiguration configuration, IList<string> clients)
+
+        public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services,
+            IConfiguration configuration, IList<string> clients)
         {
             services.UseCommercetoolsApiSerialization();
             return services.UseHttpApi(configuration, clients, c => c.GetService<SerializerService>());

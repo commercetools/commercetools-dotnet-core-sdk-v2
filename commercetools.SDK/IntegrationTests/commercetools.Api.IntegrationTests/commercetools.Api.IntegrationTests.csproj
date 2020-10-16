@@ -24,10 +24,9 @@
       <Folder Include="Categories\" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\commercetools.Api.DependencyInjection\commercetools.Api.DependencyInjection.csproj" />
-      <ProjectReference Include="..\commercetools.Api\commercetools.Api.csproj" />
-      <ProjectReference Include="..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
-      <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
+      <ProjectReference Include="..\..\commercetools.Api\commercetools.Api.csproj" />
+      <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
+      <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
     </ItemGroup>
     <ItemGroup>
       <None Update="appsettings.test.Development.json">

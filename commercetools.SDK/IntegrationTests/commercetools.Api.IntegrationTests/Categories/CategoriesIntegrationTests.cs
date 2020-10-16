@@ -1,9 +1,6 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿﻿using System.Threading.Tasks;
 using commercetools.Api.Client;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 using Xunit;
 
 namespace commercetools.Api.IntegrationTests.Categories
