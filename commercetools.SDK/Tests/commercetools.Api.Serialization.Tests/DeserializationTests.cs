@@ -13,6 +13,7 @@ using commercetools.Api.Models.ShippingMethods;
 using commercetools.Api.Models.States;
 using commercetools.Api.Models.TaxCategories;
 using commercetools.Api.Models.Types;
+using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;

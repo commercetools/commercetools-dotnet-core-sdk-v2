@@ -9,8 +9,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\commercetools.Api.Client\commercetools.Api.Client.csproj" />
         <ProjectReference Include="..\..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
+        <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
     </ItemGroup>
 
 </Project>

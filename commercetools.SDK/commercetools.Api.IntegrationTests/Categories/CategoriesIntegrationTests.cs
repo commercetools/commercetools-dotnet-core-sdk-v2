@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using commercetools.Api.Client;
+using commercetools.Base.Client;
 using Xunit;
 
 namespace commercetools.Api.IntegrationTests.Categories

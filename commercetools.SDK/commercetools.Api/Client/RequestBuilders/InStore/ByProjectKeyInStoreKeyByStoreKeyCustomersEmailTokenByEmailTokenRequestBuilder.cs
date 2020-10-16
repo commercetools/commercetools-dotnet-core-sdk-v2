@@ -1,0 +1,33 @@
+using System.IO;
+using System.Text.Json;
+using commercetools.Base.Serialization;
+using commercetools.Base.Client;
+
+namespace commercetools.Api.Client.RequestBuilders.InStore
+{
+   public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenRequestBuilder {
+
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+       
+       private string StoreKey { get; }
+       
+       private string EmailToken { get; }
+   
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string emailToken) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+           this.StoreKey = storeKey;
+           this.EmailToken = emailToken;
+       }
+   
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet Get() {
+           return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet(ApiHttpClient, ProjectKey, StoreKey, EmailToken);
+       }
+       
+   }
+}

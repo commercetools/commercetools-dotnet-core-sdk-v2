@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using commercetools.Base.Abstractions.CustomAttributes;
-using commercetools.Api.Serialization;
+using commercetools.Base.CustomAttributes;
 using commercetools.Sdk.Registration;
-using commercetools.Sdk.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

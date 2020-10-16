@@ -37,6 +37,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\commercetools.Api\commercetools.Api.csproj" />
       <ProjectReference Include="..\commercetools.Sdk.V2Compat\commercetools.Sdk.V2Compat.csproj" />
     </ItemGroup>
 

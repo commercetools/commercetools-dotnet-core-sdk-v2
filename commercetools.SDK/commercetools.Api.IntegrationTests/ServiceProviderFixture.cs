@@ -1,8 +1,7 @@
-﻿using commercetools.Api.Client;
-using commercetools.Api.Client.Tokens;
+﻿using commercetools.Base.Client;
+using commercetools.Base.Client.Tokens;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using commercetools.Api.DependencyInjection;
 
 namespace commercetools.Api.IntegrationTests
 {
@@ -23,7 +22,7 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetools(configuration, "Client", TokenFlow.ClientCredentials);
+            services.UseCommercetoolsApi(configuration, "Client", TokenFlow.ClientCredentials);
             this.serviceProvider = services.BuildServiceProvider();
         }
 

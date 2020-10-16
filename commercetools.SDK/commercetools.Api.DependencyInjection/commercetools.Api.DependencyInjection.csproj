@@ -9,7 +9,8 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.7" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\commercetools.Api.Client\commercetools.Api.Client.csproj" />
-    <ProjectReference Include="..\commercetools.Api.Serialization\commercetools.Api.Serialization.csproj" />
+    <ProjectReference Include="..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
+    <ProjectReference Include="..\commercetools.Api\commercetools.Api.csproj" />
+    <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
   </ItemGroup>
 </Project>

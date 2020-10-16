@@ -16,9 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\commercetools.Api.Models\commercetools.Api.Models.csproj" />
-      <ProjectReference Include="..\..\commercetools.Api.Registration\commercetools.Api.Registration.csproj" />
-      <ProjectReference Include="..\..\commercetools.Api.Serialization\commercetools.Api.Serialization.csproj" />
+      <ProjectReference Include="..\..\commercetools.Api\commercetools.Api.csproj" />
     </ItemGroup>
 
     <ItemGroup>

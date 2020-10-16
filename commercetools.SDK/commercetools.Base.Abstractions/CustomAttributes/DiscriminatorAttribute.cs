@@ -1,6 +1,6 @@
 using System;
 
-namespace commercetools.Base.Abstractions.CustomAttributes
+namespace commercetools.Base.CustomAttributes
 {
     /// <summary>
     /// Represents the <see cref="System.Attribute"/> used to indicate the property used to discriminate derived types of the marked class

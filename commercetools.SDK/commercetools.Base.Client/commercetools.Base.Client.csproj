@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DelegatingHandlers\" />
+    <Folder Include="Tokens\" />
+    <Folder Include="Domain\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
+    <ProjectReference Include="..\commercetools.Base.Registration\commercetools.Base.Registration.csproj" />
+  </ItemGroup>
+</Project>

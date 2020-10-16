@@ -1,6 +1,7 @@
 using System.IO;
 using System.Text.Json;
 using commercetools.Api.Models.CustomObjects;
+using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;

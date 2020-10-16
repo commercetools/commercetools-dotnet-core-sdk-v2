@@ -4,6 +4,8 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <RootNamespace>commercetools.Api.Client.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +16,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\commercetools.Api.Client\commercetools.Api.Client.csproj" />
+      <ProjectReference Include="..\..\commercetools.Api\commercetools.Api.csproj" />
+      <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
     </ItemGroup>
 
 </Project>

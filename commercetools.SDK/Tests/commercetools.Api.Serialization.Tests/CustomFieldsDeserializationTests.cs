@@ -1,5 +1,6 @@
 using System.IO;
 using commercetools.Api.Models.Categories;
+using commercetools.Base.Serialization;
 using Xunit;
 
 namespace commercetools.Api.Serialization.Tests

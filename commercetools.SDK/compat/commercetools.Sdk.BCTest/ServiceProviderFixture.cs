@@ -1,4 +1,5 @@
 using System;
+using commercetools.Api;
 using commercetools.Sdk.HttpApi;
 using commercetools.Sdk.HttpApi.Tokens;
 using commercetools.Sdk.Serialization;

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Api.Client;
 using commercetools.Api.Client.Tokens;
-using commercetools.Api.Registration;
-using commercetools.Api.Serialization;
+using commercetools.Base.Registration;
+using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -39,6 +39,7 @@ namespace commercetools.Api.DependencyInjection
         {
             services.UseRegistration();
             services.UseSerialization();
+            services.UseCommercetoolsApi();
             return services.UseHttpApi(configuration, clients);
         }
 

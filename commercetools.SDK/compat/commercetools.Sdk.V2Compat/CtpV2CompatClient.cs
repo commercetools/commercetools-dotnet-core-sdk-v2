@@ -1,9 +1,9 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using commercetools.Api.Serialization;
+using commercetools.Base.Serialization;
 using commercetools.Sdk.Client;
 using IClient = commercetools.Sdk.Client.IClient;
-using IClientV2 = commercetools.Api.Client.IClient;
+using IClientV2 = commercetools.Base.Client.IClient;
 
 namespace commercetools.Sdk.V2Compat
 {
