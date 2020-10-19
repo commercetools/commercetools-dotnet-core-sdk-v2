@@ -24,7 +24,7 @@ jobs:
       - name: Setup dotnet 2.1
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '2.1.805' # SDK Version to use.
+          dotnet-version: '3.0.100' # SDK Version to use.
       - run: dotnet restore --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -56,7 +56,7 @@ jobs:
       - name: Setup
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '2.1.805' # SDK Version to use.
+          dotnet-version: '3.0.100' # SDK Version to use.
       - run: dotnet restore --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -83,7 +83,7 @@ jobs:
       # Authenticates packages to push to GPR
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '2.1.805'
+          dotnet-version: '3.0.100'
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
