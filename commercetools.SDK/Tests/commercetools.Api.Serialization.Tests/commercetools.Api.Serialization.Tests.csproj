@@ -16,10 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\commercetools.Api\commercetools.Api.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="Resources\project.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
@@ -98,6 +94,10 @@
       <None Update="Resources\CustomFields\Number.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
     </ItemGroup>
 
 </Project>
