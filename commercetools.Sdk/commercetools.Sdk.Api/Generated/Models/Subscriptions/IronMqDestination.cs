@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("IronMQ")]
-    public partial class IronMqDestination : Destination
+    public  partial class IronMqDestination : IIronMqDestination
     {
+        public string Type { get; set;}
+        
         public string Uri { get; set;}
         public IronMqDestination()
         { 

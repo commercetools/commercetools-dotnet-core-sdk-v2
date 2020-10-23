@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("setCustomer")]
-    public partial class ReviewSetCustomerAction : ReviewUpdateAction
+    public  partial class ReviewSetCustomerAction : IReviewSetCustomerAction
     {
-        public CustomerResourceIdentifier Customer { get; set;}
+        public string Action { get; set;}
+        
+        public ICustomerResourceIdentifier Customer { get; set;}
         public ReviewSetCustomerAction()
         { 
            this.Action = "setCustomer";

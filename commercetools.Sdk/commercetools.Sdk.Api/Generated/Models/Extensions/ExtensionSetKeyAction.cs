@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("setKey")]
-    public partial class ExtensionSetKeyAction : ExtensionUpdateAction
+    public  partial class ExtensionSetKeyAction : IExtensionSetKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public ExtensionSetKeyAction()
         { 

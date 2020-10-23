@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("changeTransactionTimestamp")]
-    public partial class PaymentChangeTransactionTimestampAction : PaymentUpdateAction
+    public  partial class PaymentChangeTransactionTimestampAction : IPaymentChangeTransactionTimestampAction
     {
+        public string Action { get; set;}
+        
         public string TransactionId { get; set;}
         
         public DateTime Timestamp { get; set;}

@@ -10,10 +10,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("CartClassification")]
-    public partial class CartClassificationType : ShippingRateInputType
+    public  partial class CartClassificationType : ICartClassificationType
     {
-        public List<CustomFieldLocalizedEnumValue> Values { get; set;}
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
+        
+        public List<ICustomFieldLocalizedEnumValue> Values { get; set;}
         public CartClassificationType()
         { 
            this.Type = "CartClassification";

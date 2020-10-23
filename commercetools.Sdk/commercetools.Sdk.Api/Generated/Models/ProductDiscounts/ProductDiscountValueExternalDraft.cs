@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [DiscriminatorValue("external")]
-    public partial class ProductDiscountValueExternalDraft : ProductDiscountValueDraft
+    public  partial class ProductDiscountValueExternalDraft : IProductDiscountValueExternalDraft
     {
+        public string Type { get; set;}
         public ProductDiscountValueExternalDraft()
         { 
            this.Type = "external";

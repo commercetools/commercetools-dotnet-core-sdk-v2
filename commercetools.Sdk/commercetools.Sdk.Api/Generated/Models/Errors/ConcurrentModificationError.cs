@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ConcurrentModification")]
-    public partial class ConcurrentModificationError : ErrorObject
+    public  partial class ConcurrentModificationError : IConcurrentModificationError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public long CurrentVersion { get; set;}
         public ConcurrentModificationError()
         { 

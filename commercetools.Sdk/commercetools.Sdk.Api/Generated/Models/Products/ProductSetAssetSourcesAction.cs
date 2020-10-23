@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setAssetSources")]
-    public partial class ProductSetAssetSourcesAction : ProductUpdateAction
+    public  partial class ProductSetAssetSourcesAction : IProductSetAssetSourcesAction
     {
+        public string Action { get; set;}
+        
         public long VariantId { get; set;}
         
         public string Sku { get; set;}
@@ -22,7 +23,7 @@ namespace commercetools.Api.Models.Products
         
         public string AssetKey { get; set;}
         
-        public List<AssetSource> Sources { get; set;}
+        public List<IAssetSource> Sources { get; set;}
         public ProductSetAssetSourcesAction()
         { 
            this.Action = "setAssetSources";

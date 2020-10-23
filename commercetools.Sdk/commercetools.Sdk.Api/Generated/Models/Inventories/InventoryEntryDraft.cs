@@ -4,15 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Inventories
 {
-    public partial class InventoryEntryDraft 
+    public  partial class InventoryEntryDraft : IInventoryEntryDraft
     {
         public string Sku { get; set;}
         
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         
         public long QuantityOnStock { get; set;}
         
@@ -20,6 +21,6 @@ namespace commercetools.Api.Models.Inventories
         
         public DateTime ExpectedDelivery { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
     }
 }

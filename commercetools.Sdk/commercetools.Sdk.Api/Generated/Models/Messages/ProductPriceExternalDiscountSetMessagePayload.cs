@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductPriceExternalDiscountSet")]
-    public partial class ProductPriceExternalDiscountSetMessagePayload : MessagePayload
+    public  partial class ProductPriceExternalDiscountSetMessagePayload : IProductPriceExternalDiscountSetMessagePayload
     {
+        public string Type { get; set;}
+        
         public int VariantId { get; set;}
         
         public string VariantKey { get; set;}
@@ -20,7 +21,7 @@ namespace commercetools.Api.Models.Messages
         
         public string PriceId { get; set;}
         
-        public DiscountedPrice Discounted { get; set;}
+        public IDiscountedPrice Discounted { get; set;}
         
         public bool Staged { get; set;}
         public ProductPriceExternalDiscountSetMessagePayload()

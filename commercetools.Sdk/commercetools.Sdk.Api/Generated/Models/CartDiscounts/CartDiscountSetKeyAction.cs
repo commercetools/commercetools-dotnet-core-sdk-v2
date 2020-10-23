@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("setKey")]
-    public partial class CartDiscountSetKeyAction : CartDiscountUpdateAction
+    public  partial class CartDiscountSetKeyAction : ICartDiscountSetKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public CartDiscountSetKeyAction()
         { 

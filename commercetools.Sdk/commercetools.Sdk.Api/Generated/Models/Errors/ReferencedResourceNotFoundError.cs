@@ -9,9 +9,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ReferencedResourceNotFound")]
-    public partial class ReferencedResourceNotFoundError : ErrorObject
+    public  partial class ReferencedResourceNotFoundError : IReferencedResourceNotFoundError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string TypeId { get; set;}
         
         [JsonIgnore]

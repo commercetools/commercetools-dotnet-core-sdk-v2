@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ResourceNotFound")]
-    public partial class ResourceNotFoundError : ErrorObject
+    public  partial class ResourceNotFoundError : IResourceNotFoundError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public ResourceNotFoundError()
         { 
            this.Code = "ResourceNotFound";

@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderPaymentStateChanged")]
-    public partial class OrderPaymentStateChangedMessagePayload : MessagePayload
+    public  partial class OrderPaymentStateChangedMessagePayload : IOrderPaymentStateChangedMessagePayload
     {
+        public string Type { get; set;}
+        
         public string PaymentState { get; set;}
         
         [JsonIgnore]

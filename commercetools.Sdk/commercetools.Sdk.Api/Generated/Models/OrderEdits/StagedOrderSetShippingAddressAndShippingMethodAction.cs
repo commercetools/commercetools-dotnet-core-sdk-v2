@@ -11,14 +11,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setShippingAddressAndShippingMethod")]
-    public partial class StagedOrderSetShippingAddressAndShippingMethodAction : StagedOrderUpdateAction
+    public  partial class StagedOrderSetShippingAddressAndShippingMethodAction : IStagedOrderSetShippingAddressAndShippingMethodAction
     {
-        public Address Address { get; set;}
+        public string Action { get; set;}
         
-        public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        public IAddress Address { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         public StagedOrderSetShippingAddressAndShippingMethodAction()
         { 
            this.Action = "setShippingAddressAndShippingMethod";

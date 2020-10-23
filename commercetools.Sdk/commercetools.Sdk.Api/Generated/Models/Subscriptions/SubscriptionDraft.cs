@@ -3,20 +3,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class SubscriptionDraft 
+    public  partial class SubscriptionDraft : ISubscriptionDraft
     {
-        public List<ChangeSubscription> Changes { get; set;}
+        public List<IChangeSubscription> Changes { get; set;}
         
-        public Destination Destination { get; set;}
+        public IDestination Destination { get; set;}
         
         public string Key { get; set;}
         
-        public List<MessageSubscription> Messages { get; set;}
+        public List<IMessageSubscription> Messages { get; set;}
         
-        public DeliveryFormat Format { get; set;}
+        public IDeliveryFormat Format { get; set;}
     }
 }

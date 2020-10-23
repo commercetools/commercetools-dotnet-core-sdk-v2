@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [DiscriminatorValue("changeValue")]
-    public partial class ProductDiscountChangeValueAction : ProductDiscountUpdateAction
+    public  partial class ProductDiscountChangeValueAction : IProductDiscountChangeValueAction
     {
-        public ProductDiscountValueDraft Value { get; set;}
+        public string Action { get; set;}
+        
+        public IProductDiscountValueDraft Value { get; set;}
         public ProductDiscountChangeValueAction()
         { 
            this.Action = "changeValue";

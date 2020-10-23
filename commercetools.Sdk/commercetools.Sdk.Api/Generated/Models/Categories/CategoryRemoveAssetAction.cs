@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("removeAsset")]
-    public partial class CategoryRemoveAssetAction : CategoryUpdateAction
+    public  partial class CategoryRemoveAssetAction : ICategoryRemoveAssetAction
     {
+        public string Action { get; set;}
+        
         public string AssetId { get; set;}
         
         public string AssetKey { get; set;}

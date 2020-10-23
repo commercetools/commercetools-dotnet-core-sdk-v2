@@ -12,14 +12,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("addLineItem")]
-    public partial class MyCartAddLineItemAction : MyCartUpdateAction
+    public  partial class MyCartAddLineItemAction : IMyCartAddLineItemAction
     {
-        public CustomFieldsDraft Custom { get; set;}
+        public string Action { get; set;}
         
-        public ChannelResourceIdentifier DistributionChannel { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
+        
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         
         public string ProductId { get; set;}
         
@@ -29,13 +30,13 @@ namespace commercetools.Api.Models.Me
         
         public double Quantity { get; set;}
         
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         
-        public Money ExternalPrice { get; set;}
+        public IMoney ExternalPrice { get; set;}
         
-        public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public IItemShippingDetailsDraft ShippingDetails { get; set;}
         
         public DateTime AddedAt { get; set;}
         public MyCartAddLineItemAction()

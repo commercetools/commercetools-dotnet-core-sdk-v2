@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class ReviewUpdateAction 
+    public abstract partial class ReviewUpdateAction : IReviewUpdateAction
     {
         public string Action { get; set;}
     }

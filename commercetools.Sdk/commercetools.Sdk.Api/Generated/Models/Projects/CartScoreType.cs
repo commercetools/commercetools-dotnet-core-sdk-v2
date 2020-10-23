@@ -9,9 +9,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("CartScore")]
-    public partial class CartScoreType : ShippingRateInputType
+    public  partial class CartScoreType : ICartScoreType
     {
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
         public CartScoreType()
         { 
            this.Type = "CartScore";

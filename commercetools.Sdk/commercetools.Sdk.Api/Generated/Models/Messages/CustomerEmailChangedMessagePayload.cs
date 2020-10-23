@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("CustomerEmailChanged")]
-    public partial class CustomerEmailChangedMessagePayload : MessagePayload
+    public  partial class CustomerEmailChangedMessagePayload : ICustomerEmailChangedMessagePayload
     {
+        public string Type { get; set;}
+        
         public string Email { get; set;}
         public CustomerEmailChangedMessagePayload()
         { 

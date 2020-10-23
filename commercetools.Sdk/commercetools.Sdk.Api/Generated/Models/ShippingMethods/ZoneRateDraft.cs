@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public partial class ZoneRateDraft 
+    public  partial class ZoneRateDraft : IZoneRateDraft
     {
-        public ZoneResourceIdentifier Zone { get; set;}
+        public IZoneResourceIdentifier Zone { get; set;}
         
-        public List<ShippingRateDraft> ShippingRates { get; set;}
+        public List<IShippingRateDraft> ShippingRates { get; set;}
     }
 }

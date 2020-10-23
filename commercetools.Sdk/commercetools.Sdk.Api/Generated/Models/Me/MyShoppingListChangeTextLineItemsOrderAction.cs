@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("changeTextLineItemsOrder")]
-    public partial class MyShoppingListChangeTextLineItemsOrderAction : MyShoppingListUpdateAction
+    public  partial class MyShoppingListChangeTextLineItemsOrderAction : IMyShoppingListChangeTextLineItemsOrderAction
     {
+        public string Action { get; set;}
+        
         public List<string> TextLineItemOrder { get; set;}
         public MyShoppingListChangeTextLineItemsOrderAction()
         { 

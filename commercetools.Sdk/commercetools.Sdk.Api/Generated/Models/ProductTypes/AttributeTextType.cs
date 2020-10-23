@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("text")]
-    public partial class AttributeTextType : AttributeType
+    public  partial class AttributeTextType : IAttributeTextType
     {
+        public string Name { get; set;}
         public AttributeTextType()
         { 
            this.Name = "text";

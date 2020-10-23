@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Reviews
 {
-    public partial class Review : BaseResource
+    public  partial class Review : IReview
     {
         public string Id { get; set;}
         
@@ -20,9 +21,9 @@ namespace commercetools.Api.Models.Reviews
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
@@ -42,10 +43,10 @@ namespace commercetools.Api.Models.Reviews
         
         public int Rating { get; set;}
         
-        public StateReference State { get; set;}
+        public IStateReference State { get; set;}
         
-        public CustomerReference Customer { get; set;}
+        public ICustomerReference Customer { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
     }
 }

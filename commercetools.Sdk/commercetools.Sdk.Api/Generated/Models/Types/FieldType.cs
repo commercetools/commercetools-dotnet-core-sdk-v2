@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [Discriminator(nameof(Name))]
-    public abstract partial class FieldType 
+    public abstract partial class FieldType : IFieldType
     {
         public string Name { get; set;}
     }

@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public partial class MyLineItemDraft 
+    public  partial class MyLineItemDraft : IMyLineItemDraft
     {
         public string ProductId { get; set;}
         
@@ -19,13 +20,13 @@ namespace commercetools.Api.Models.Me
         
         public DateTime AddedAt { get; set;}
         
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         
-        public ChannelResourceIdentifier DistributionChannel { get; set;}
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public IItemShippingDetailsDraft ShippingDetails { get; set;}
         
         public string Sku { get; set;}
     }

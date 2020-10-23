@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
-    public partial class Transaction 
+    public  partial class Transaction : ITransaction
     {
         public string Id { get; set;}
         
@@ -19,7 +20,7 @@ namespace commercetools.Api.Models.Payments
         [JsonIgnore]
         public TransactionType TypeAsEnum => this.Type.GetEnum<TransactionType>();
         
-        public TypedMoney Amount { get; set;}
+        public ITypedMoney Amount { get; set;}
         
         public string InteractionId { get; set;}
         

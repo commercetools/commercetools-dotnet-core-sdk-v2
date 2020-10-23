@@ -1,0 +1,18 @@
+using commercetools.Api.Models.States;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+
+namespace commercetools.Api.Models.Orders
+{
+    [DeserializeAs(typeof(commercetools.Api.Models.Orders.ItemState))]
+    public interface IItemState 
+    {
+        double Quantity { get; set;}
+        
+        IStateReference State { get; set;}
+    }
+}

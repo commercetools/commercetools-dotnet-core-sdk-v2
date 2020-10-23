@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("Score")]
-    public partial class ScoreShippingRateInputDraft : ShippingRateInputDraft
+    public  partial class ScoreShippingRateInputDraft : IScoreShippingRateInputDraft
     {
+        public string Type { get; set;}
+        
         public double Score { get; set;}
         public ScoreShippingRateInputDraft()
         { 

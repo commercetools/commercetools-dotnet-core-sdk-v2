@@ -3,17 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
-    public partial class ExtensionDraft 
+    public  partial class ExtensionDraft : IExtensionDraft
     {
         public string Key { get; set;}
         
-        public ExtensionDestination Destination { get; set;}
+        public IExtensionDestination Destination { get; set;}
         
-        public List<ExtensionTrigger> Triggers { get; set;}
+        public List<IExtensionTrigger> Triggers { get; set;}
         
         public int TimeoutInMs { get; set;}
     }

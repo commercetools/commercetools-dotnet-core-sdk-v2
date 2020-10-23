@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    [DiscriminatorValue("changeLineItemQuantity")]
-    public partial class ShoppingListChangeLineItemQuantityAction : ShoppingListUpdateAction
+    public  partial class ShoppingListChangeLineItemQuantityAction : IShoppingListChangeLineItemQuantityAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
         public long Quantity { get; set;}

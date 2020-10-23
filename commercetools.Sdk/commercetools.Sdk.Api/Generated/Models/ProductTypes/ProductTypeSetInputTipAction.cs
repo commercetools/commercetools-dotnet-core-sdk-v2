@@ -10,12 +10,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("setInputTip")]
-    public partial class ProductTypeSetInputTipAction : ProductTypeUpdateAction
+    public  partial class ProductTypeSetInputTipAction : IProductTypeSetInputTipAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
-        public LocalizedString InputTip { get; set;}
+        public ILocalizedString InputTip { get; set;}
         public ProductTypeSetInputTipAction()
         { 
            this.Action = "setInputTip";

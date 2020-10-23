@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setAnonymousId")]
-    public partial class PaymentSetAnonymousIdAction : PaymentUpdateAction
+    public  partial class PaymentSetAnonymousIdAction : IPaymentSetAnonymousIdAction
     {
+        public string Action { get; set;}
+        
         public string AnonymousId { get; set;}
         public PaymentSetAnonymousIdAction()
         { 

@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeInputHint")]
-    public partial class ProductTypeChangeInputHintAction : ProductTypeUpdateAction
+    public  partial class ProductTypeChangeInputHintAction : IProductTypeChangeInputHintAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
         public string NewValue { get; set;}

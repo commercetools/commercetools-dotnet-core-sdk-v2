@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class SuggestTokenizer 
+    public abstract partial class SuggestTokenizer : ISuggestTokenizer
     {
         public string Type { get; set;}
     }

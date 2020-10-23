@@ -24,7 +24,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""currencyCode"": ""EUR"",
                 ""centAmount"": 123456
             }";
-            var deserialized = serializerService.Deserialize<TypedMoney>(serialized);
+            var deserialized = serializerService.Deserialize<ITypedMoney>(serialized);
             Assert.IsType<Money>(deserialized);
         }
 
@@ -39,7 +39,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""centAmount"": 123456,
                 ""fractionDigits"": 2
             }";
-            var deserialized = serializerService.Deserialize<TypedMoney>(serialized);
+            var deserialized = serializerService.Deserialize<ITypedMoney>(serialized);
             Assert.IsType<CentPrecisionMoney>(deserialized);
             Assert.Equal("EUR", deserialized.CurrencyCode);
             Assert.Equal(MoneyType.CentPrecision, deserialized.TypeAsEnum);
@@ -58,7 +58,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""preciseAmount"": 12345678,
                 ""fractionDigits"": 4
             }";
-            var deserialized = serializerService.Deserialize<TypedMoney>(serialized);
+            var deserialized = serializerService.Deserialize<ITypedMoney>(serialized);
             var highPrecisionMoney = deserialized as HighPrecisionMoney;
             Assert.NotNull(highPrecisionMoney);
             Assert.Equal("EUR", highPrecisionMoney.CurrencyCode);
@@ -103,7 +103,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""centAmount"": 123456
             }";
 
-            Assert.Throws<JsonException>(() => serializerService.Deserialize<TypedMoney>(serialized));
+            Assert.Throws<JsonException>(() => serializerService.Deserialize<ITypedMoney>(serialized));
         }
     }
 }

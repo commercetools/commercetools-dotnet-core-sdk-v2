@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("InventoryEntryQuantitySet")]
-    public partial class InventoryEntryQuantitySetMessagePayload : MessagePayload
+    public  partial class InventoryEntryQuantitySetMessagePayload : IInventoryEntryQuantitySetMessagePayload
     {
+        public string Type { get; set;}
+        
         public long OldQuantityOnStock { get; set;}
         
         public long NewQuantityOnStock { get; set;}

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("setAddress")]
-    public partial class ChannelSetAddressAction : ChannelUpdateAction
+    public  partial class ChannelSetAddressAction : IChannelSetAddressAction
     {
-        public Address Address { get; set;}
+        public string Action { get; set;}
+        
+        public IAddress Address { get; set;}
         public ChannelSetAddressAction()
         { 
            this.Action = "setAddress";

@@ -10,18 +10,19 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    [DiscriminatorValue("addTextLineItem")]
-    public partial class ShoppingListAddTextLineItemAction : ShoppingListUpdateAction
+    public  partial class ShoppingListAddTextLineItemAction : IShoppingListAddTextLineItemAction
     {
-        public LocalizedString Name { get; set;}
+        public string Action { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Name { get; set;}
+        
+        public ILocalizedString Description { get; set;}
         
         public long Quantity { get; set;}
         
         public DateTime AddedAt { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         public ShoppingListAddTextLineItemAction()
         { 
            this.Action = "addTextLineItem";

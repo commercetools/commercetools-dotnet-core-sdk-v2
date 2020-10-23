@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class PaymentSetCustomTypeAction : PaymentUpdateAction
+    public  partial class PaymentSetCustomTypeAction : IPaymentSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public PaymentSetCustomTypeAction()
         { 
            this.Action = "setCustomType";

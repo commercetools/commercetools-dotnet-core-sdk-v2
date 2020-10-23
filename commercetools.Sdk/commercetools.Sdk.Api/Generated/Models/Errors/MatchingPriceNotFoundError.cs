@@ -10,9 +10,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("MatchingPriceNotFound")]
-    public partial class MatchingPriceNotFoundError : ErrorObject
+    public  partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string ProductId { get; set;}
         
         public int VariantId { get; set;}
@@ -21,9 +24,9 @@ namespace commercetools.Api.Models.Errors
         
         public string Country { get; set;}
         
-        public CustomerGroupReference CustomerGroup { get; set;}
+        public ICustomerGroupReference CustomerGroup { get; set;}
         
-        public ChannelReference Channel { get; set;}
+        public IChannelReference Channel { get; set;}
         public MatchingPriceNotFoundError()
         { 
            this.Code = "MatchingPriceNotFound";

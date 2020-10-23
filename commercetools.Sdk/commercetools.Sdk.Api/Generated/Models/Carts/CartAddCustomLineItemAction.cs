@@ -11,22 +11,23 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("addCustomLineItem")]
-    public partial class CartAddCustomLineItemAction : CartUpdateAction
+    public  partial class CartAddCustomLineItemAction : ICartAddCustomLineItemAction
     {
-        public Money Money { get; set;}
+        public string Action { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public IMoney Money { get; set;}
+        
+        public ILocalizedString Name { get; set;}
         
         public long Quantity { get; set;}
         
         public string Slug { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         public CartAddCustomLineItemAction()
         { 
            this.Action = "addCustomLineItem";

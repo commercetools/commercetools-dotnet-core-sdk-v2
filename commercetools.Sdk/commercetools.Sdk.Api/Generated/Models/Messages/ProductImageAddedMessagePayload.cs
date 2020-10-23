@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductImageAdded")]
-    public partial class ProductImageAddedMessagePayload : MessagePayload
+    public  partial class ProductImageAddedMessagePayload : IProductImageAddedMessagePayload
     {
+        public string Type { get; set;}
+        
         public long VariantId { get; set;}
         
-        public Image Image { get; set;}
+        public IImage Image { get; set;}
         
         public bool Staged { get; set;}
         public ProductImageAddedMessagePayload()

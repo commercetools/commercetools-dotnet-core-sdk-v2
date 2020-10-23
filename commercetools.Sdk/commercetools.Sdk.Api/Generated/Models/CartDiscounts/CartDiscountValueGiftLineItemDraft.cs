@@ -10,16 +10,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("giftLineItem")]
-    public partial class CartDiscountValueGiftLineItemDraft : CartDiscountValueDraft
+    public  partial class CartDiscountValueGiftLineItemDraft : ICartDiscountValueGiftLineItemDraft
     {
-        public ProductReference Product { get; set;}
+        public string Type { get; set;}
+        
+        public IProductReference Product { get; set;}
         
         public long VariantId { get; set;}
         
-        public ChannelReference SupplyChannel { get; set;}
+        public IChannelReference SupplyChannel { get; set;}
         
-        public ChannelReference DistributionChannel { get; set;}
+        public IChannelReference DistributionChannel { get; set;}
         public CartDiscountValueGiftLineItemDraft()
         { 
            this.Type = "giftLineItem";

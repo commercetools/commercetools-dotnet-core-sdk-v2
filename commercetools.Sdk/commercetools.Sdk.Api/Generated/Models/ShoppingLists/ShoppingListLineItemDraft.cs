@@ -3,15 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public partial class ShoppingListLineItemDraft 
+    public  partial class ShoppingListLineItemDraft : IShoppingListLineItemDraft
     {
         public DateTime AddedAt { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string Sku { get; set;}
         

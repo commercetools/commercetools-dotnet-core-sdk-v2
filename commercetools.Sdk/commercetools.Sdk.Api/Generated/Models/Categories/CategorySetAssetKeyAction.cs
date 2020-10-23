@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("setAssetKey")]
-    public partial class CategorySetAssetKeyAction : CategoryUpdateAction
+    public  partial class CategorySetAssetKeyAction : ICategorySetAssetKeyAction
     {
+        public string Action { get; set;}
+        
         public string AssetId { get; set;}
         
         public string AssetKey { get; set;}

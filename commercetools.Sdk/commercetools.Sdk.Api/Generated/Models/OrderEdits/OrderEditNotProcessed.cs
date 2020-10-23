@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("NotProcessed")]
-    public partial class OrderEditNotProcessed : OrderEditResult
+    public  partial class OrderEditNotProcessed : IOrderEditNotProcessed
     {
+        public string Type { get; set;}
         public OrderEditNotProcessed()
         { 
            this.Type = "NotProcessed";

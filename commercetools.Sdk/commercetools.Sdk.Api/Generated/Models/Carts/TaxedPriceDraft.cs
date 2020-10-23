@@ -4,16 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class TaxedPriceDraft 
+    public  partial class TaxedPriceDraft : ITaxedPriceDraft
     {
-        public TypedMoneyDraft TotalNet { get; set;}
+        public ITypedMoneyDraft TotalNet { get; set;}
         
-        public TypedMoneyDraft TotalGross { get; set;}
+        public ITypedMoneyDraft TotalGross { get; set;}
         
-        public List<TaxPortionDraft> TaxPortions { get; set;}
+        public List<ITaxPortionDraft> TaxPortions { get; set;}
     }
 }

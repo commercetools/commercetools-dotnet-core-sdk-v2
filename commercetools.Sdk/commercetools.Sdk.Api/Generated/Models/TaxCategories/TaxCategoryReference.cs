@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [DiscriminatorValue("tax-category")]
-    public partial class TaxCategoryReference : Reference
+    public  partial class TaxCategoryReference : ITaxCategoryReference
     {
-        public TaxCategory Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public ITaxCategory Obj { get; set;}
         public TaxCategoryReference()
         { 
            this.TypeId = "tax-category";

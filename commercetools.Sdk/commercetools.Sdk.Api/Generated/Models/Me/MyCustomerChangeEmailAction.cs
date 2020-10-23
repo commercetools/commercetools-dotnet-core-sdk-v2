@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("changeEmail")]
-    public partial class MyCustomerChangeEmailAction : MyCustomerUpdateAction
+    public  partial class MyCustomerChangeEmailAction : IMyCustomerChangeEmailAction
     {
+        public string Action { get; set;}
+        
         public string Email { get; set;}
         public MyCustomerChangeEmailAction()
         { 

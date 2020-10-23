@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductPriceDiscountsSet")]
-    public partial class ProductPriceDiscountsSetMessagePayload : MessagePayload
+    public  partial class ProductPriceDiscountsSetMessagePayload : IProductPriceDiscountsSetMessagePayload
     {
-        public List<ProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set;}
+        public string Type { get; set;}
+        
+        public List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set;}
         public ProductPriceDiscountsSetMessagePayload()
         { 
            this.Type = "ProductPriceDiscountsSet";

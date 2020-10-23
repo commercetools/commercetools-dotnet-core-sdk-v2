@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class ProductDiscountValueDraft 
+    public abstract partial class ProductDiscountValueDraft : IProductDiscountValueDraft
     {
         public string Type { get; set;}
     }

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("recalculate")]
-    public partial class CartRecalculateAction : CartUpdateAction
+    public  partial class CartRecalculateAction : ICartRecalculateAction
     {
+        public string Action { get; set;}
+        
         public bool UpdateProductData { get; set;}
         public CartRecalculateAction()
         { 

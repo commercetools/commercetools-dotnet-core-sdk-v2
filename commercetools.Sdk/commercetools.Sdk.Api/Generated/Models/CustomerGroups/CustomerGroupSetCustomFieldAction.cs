@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    [DiscriminatorValue("setCustomField")]
-    public partial class CustomerGroupSetCustomFieldAction : CustomerGroupUpdateAction
+    public  partial class CustomerGroupSetCustomFieldAction : ICustomerGroupSetCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         
         public Object Value { get; set;}

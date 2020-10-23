@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("cart")]
-    public partial class CartReference : Reference
+    public  partial class CartReference : ICartReference
     {
-        public Cart Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public ICart Obj { get; set;}
         public CartReference()
         { 
            this.TypeId = "cart";

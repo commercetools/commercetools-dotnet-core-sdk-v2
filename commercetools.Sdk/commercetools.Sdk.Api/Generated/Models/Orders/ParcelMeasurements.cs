@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class ParcelMeasurements 
+    public  partial class ParcelMeasurements : IParcelMeasurements
     {
         public double HeightInMillimeter { get; set;}
         

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("updateItemShippingAddress")]
-    public partial class OrderUpdateItemShippingAddressAction : OrderUpdateAction
+    public  partial class OrderUpdateItemShippingAddressAction : IOrderUpdateItemShippingAddressAction
     {
-        public Address Address { get; set;}
+        public string Action { get; set;}
+        
+        public IAddress Address { get; set;}
         public OrderUpdateItemShippingAddressAction()
         { 
            this.Action = "updateItemShippingAddress";

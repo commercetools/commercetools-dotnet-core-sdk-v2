@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
-    public partial class PaymentPagedQueryResponse 
+    public  partial class PaymentPagedQueryResponse : IPaymentPagedQueryResponse
     {
         public long Limit { get; set;}
         
@@ -17,6 +18,6 @@ namespace commercetools.Api.Models.Payments
         
         public long Offset { get; set;}
         
-        public List<Payment> Results { get; set;}
+        public List<IPayment> Results { get; set;}
     }
 }

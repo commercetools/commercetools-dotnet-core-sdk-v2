@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setParcelItems")]
-    public partial class OrderSetParcelItemsAction : OrderUpdateAction
+    public  partial class OrderSetParcelItemsAction : IOrderSetParcelItemsAction
     {
+        public string Action { get; set;}
+        
         public string ParcelId { get; set;}
         
-        public List<DeliveryItem> Items { get; set;}
+        public List<IDeliveryItem> Items { get; set;}
         public OrderSetParcelItemsAction()
         { 
            this.Action = "setParcelItems";

@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("Classification")]
-    public partial class ClassificationShippingRateInput : ShippingRateInput
+    public  partial class ClassificationShippingRateInput : IClassificationShippingRateInput
     {
+        public string Type { get; set;}
+        
         public string Key { get; set;}
         
-        public LocalizedString Label { get; set;}
+        public ILocalizedString Label { get; set;}
         public ClassificationShippingRateInput()
         { 
            this.Type = "Classification";

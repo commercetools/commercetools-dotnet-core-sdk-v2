@@ -8,10 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("DuplicateVariantValues")]
-    public partial class DuplicateVariantValuesError : ErrorObject
+    public  partial class DuplicateVariantValuesError : IDuplicateVariantValuesError
     {
-        public VariantValues VariantValues { get; set;}
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
+        public IVariantValues VariantValues { get; set;}
         public DuplicateVariantValuesError()
         { 
            this.Code = "DuplicateVariantValues";

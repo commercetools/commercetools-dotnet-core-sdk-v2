@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class CustomerGroupSetCustomTypeAction : CustomerGroupUpdateAction
+    public  partial class CustomerGroupSetCustomTypeAction : ICustomerGroupSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public CustomerGroupSetCustomTypeAction()
         { 
            this.Action = "setCustomType";

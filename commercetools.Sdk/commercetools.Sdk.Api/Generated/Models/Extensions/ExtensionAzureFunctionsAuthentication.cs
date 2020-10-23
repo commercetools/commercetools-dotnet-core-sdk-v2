@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("AzureFunctions")]
-    public partial class ExtensionAzureFunctionsAuthentication : ExtensionHttpDestinationAuthentication
+    public  partial class ExtensionAzureFunctionsAuthentication : IExtensionAzureFunctionsAuthentication
     {
+        public string Type { get; set;}
+        
         public string Key { get; set;}
         public ExtensionAzureFunctionsAuthentication()
         { 

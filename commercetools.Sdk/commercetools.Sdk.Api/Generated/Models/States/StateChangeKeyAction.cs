@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    [DiscriminatorValue("changeKey")]
-    public partial class StateChangeKeyAction : StateUpdateAction
+    public  partial class StateChangeKeyAction : IStateChangeKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public StateChangeKeyAction()
         { 

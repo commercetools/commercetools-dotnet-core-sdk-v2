@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("removeDiscountCode")]
-    public partial class MyCartRemoveDiscountCodeAction : MyCartUpdateAction
+    public  partial class MyCartRemoveDiscountCodeAction : IMyCartRemoveDiscountCodeAction
     {
-        public DiscountCodeReference DiscountCode { get; set;}
+        public string Action { get; set;}
+        
+        public IDiscountCodeReference DiscountCode { get; set;}
         public MyCartRemoveDiscountCodeAction()
         { 
            this.Action = "removeDiscountCode";

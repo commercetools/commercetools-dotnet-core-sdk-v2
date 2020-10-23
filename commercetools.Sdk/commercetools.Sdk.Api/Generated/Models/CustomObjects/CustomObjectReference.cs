@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomObjects
 {
-    [DiscriminatorValue("key-value-document")]
-    public partial class CustomObjectReference : Reference
+    public  partial class CustomObjectReference : ICustomObjectReference
     {
-        public CustomObject Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public ICustomObject Obj { get; set;}
         public CustomObjectReference()
         { 
            this.TypeId = "key-value-document";

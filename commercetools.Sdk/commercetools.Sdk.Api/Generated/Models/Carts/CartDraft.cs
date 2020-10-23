@@ -8,11 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class CartDraft 
+    public  partial class CartDraft : ICartDraft
     {
         public string Currency { get; set;}
         
@@ -20,11 +21,11 @@ namespace commercetools.Api.Models.Carts
         
         public string CustomerEmail { get; set;}
         
-        public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         
         public string AnonymousId { get; set;}
         
-        public StoreResourceIdentifier Store { get; set;}
+        public IStoreResourceIdentifier Store { get; set;}
         
         public string Country { get; set;}
         
@@ -48,19 +49,19 @@ namespace commercetools.Api.Models.Carts
         [JsonIgnore]
         public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
         
-        public List<LineItemDraft> LineItems { get; set;}
+        public List<ILineItemDraft> LineItems { get; set;}
         
-        public List<CustomLineItemDraft> CustomLineItems { get; set;}
+        public List<ICustomLineItemDraft> CustomLineItems { get; set;}
         
-        public Address ShippingAddress { get; set;}
+        public IAddress ShippingAddress { get; set;}
         
-        public Address BillingAddress { get; set;}
+        public IAddress BillingAddress { get; set;}
         
-        public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        public IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRateForShippingMethod { get; set;}
+        public IExternalTaxRateDraft ExternalTaxRateForShippingMethod { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string Locale { get; set;}
         
@@ -71,9 +72,9 @@ namespace commercetools.Api.Models.Carts
         [JsonIgnore]
         public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
         
-        public ShippingRateInputDraft ShippingRateInput { get; set;}
+        public IShippingRateInputDraft ShippingRateInput { get; set;}
         
-        public List<Address> ItemShippingAddresses { get; set;}
+        public List<IAddress> ItemShippingAddresses { get; set;}
         
         public List<string> DiscountCodes { get; set;}
     }

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("multiBuyCustomLineItems")]
-    public partial class MultiBuyCustomLineItemsTarget : CartDiscountTarget
+    public  partial class MultiBuyCustomLineItemsTarget : IMultiBuyCustomLineItemsTarget
     {
+        public string Type { get; set;}
+        
         public string Predicate { get; set;}
         
         public int TriggerQuantity { get; set;}

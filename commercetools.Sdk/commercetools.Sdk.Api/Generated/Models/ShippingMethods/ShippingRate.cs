@@ -4,18 +4,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public partial class ShippingRate 
+    public  partial class ShippingRate : IShippingRate
     {
-        public TypedMoney Price { get; set;}
+        public ITypedMoney Price { get; set;}
         
-        public TypedMoney FreeAbove { get; set;}
+        public ITypedMoney FreeAbove { get; set;}
         
         public bool IsMatching { get; set;}
         
-        public List<ShippingRatePriceTier> Tiers { get; set;}
+        public List<IShippingRatePriceTier> Tiers { get; set;}
     }
 }

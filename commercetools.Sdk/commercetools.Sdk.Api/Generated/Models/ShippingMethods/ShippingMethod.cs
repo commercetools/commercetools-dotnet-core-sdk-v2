@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public partial class ShippingMethod : BaseResource
+    public  partial class ShippingMethod : IShippingMethod
     {
         public string Id { get; set;}
         
@@ -19,9 +20,9 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
@@ -29,11 +30,11 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public string Description { get; set;}
         
-        public LocalizedString LocalizedDescription { get; set;}
+        public ILocalizedString LocalizedDescription { get; set;}
         
-        public TaxCategoryReference TaxCategory { get; set;}
+        public ITaxCategoryReference TaxCategory { get; set;}
         
-        public List<ZoneRate> ZoneRates { get; set;}
+        public List<IZoneRate> ZoneRates { get; set;}
         
         public bool IsDefault { get; set;}
         

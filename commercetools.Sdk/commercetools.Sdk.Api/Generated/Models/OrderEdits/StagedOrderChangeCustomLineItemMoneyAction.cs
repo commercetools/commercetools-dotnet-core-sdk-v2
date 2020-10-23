@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("changeCustomLineItemMoney")]
-    public partial class StagedOrderChangeCustomLineItemMoneyAction : StagedOrderUpdateAction
+    public  partial class StagedOrderChangeCustomLineItemMoneyAction : IStagedOrderChangeCustomLineItemMoneyAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
-        public Money Money { get; set;}
+        public IMoney Money { get; set;}
         public StagedOrderChangeCustomLineItemMoneyAction()
         { 
            this.Action = "changeCustomLineItemMoney";

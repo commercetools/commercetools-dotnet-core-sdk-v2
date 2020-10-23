@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class ChannelSetCustomTypeAction : ChannelUpdateAction
+    public  partial class ChannelSetCustomTypeAction : IChannelSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public ChannelSetCustomTypeAction()
         { 
            this.Action = "setCustomType";

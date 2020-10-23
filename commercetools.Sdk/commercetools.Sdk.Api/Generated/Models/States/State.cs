@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.States
 {
-    public partial class State : BaseResource
+    public  partial class State : IState
     {
         public string Id { get; set;}
         
@@ -18,9 +19,9 @@ namespace commercetools.Api.Models.States
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
@@ -29,9 +30,9 @@ namespace commercetools.Api.Models.States
         [JsonIgnore]
         public StateTypeEnum TypeAsEnum => this.Type.GetEnum<StateTypeEnum>();
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
         public bool Initial { get; set;}
         
@@ -42,6 +43,6 @@ namespace commercetools.Api.Models.States
         [JsonIgnore]
         public List<StateRoleEnum> RolesAsEnum => this.Roles.GetEnum<StateRoleEnum>();
         
-        public List<StateReference> Transitions { get; set;}
+        public List<IStateReference> Transitions { get; set;}
     }
 }

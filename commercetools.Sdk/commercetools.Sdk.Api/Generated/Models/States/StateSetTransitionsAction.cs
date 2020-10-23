@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    [DiscriminatorValue("setTransitions")]
-    public partial class StateSetTransitionsAction : StateUpdateAction
+    public  partial class StateSetTransitionsAction : IStateSetTransitionsAction
     {
-        public List<StateResourceIdentifier> Transitions { get; set;}
+        public string Action { get; set;}
+        
+        public List<IStateResourceIdentifier> Transitions { get; set;}
         public StateSetTransitionsAction()
         { 
            this.Action = "setTransitions";

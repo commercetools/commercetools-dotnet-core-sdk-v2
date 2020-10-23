@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setReturnShipmentState")]
-    public partial class StagedOrderSetReturnShipmentStateAction : StagedOrderUpdateAction
+    public  partial class StagedOrderSetReturnShipmentStateAction : IStagedOrderSetReturnShipmentStateAction
     {
+        public string Action { get; set;}
+        
         public string ReturnItemId { get; set;}
         
         public string ShipmentState { get; set;}

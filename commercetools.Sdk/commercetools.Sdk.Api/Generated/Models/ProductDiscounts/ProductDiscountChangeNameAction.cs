@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [DiscriminatorValue("changeName")]
-    public partial class ProductDiscountChangeNameAction : ProductDiscountUpdateAction
+    public  partial class ProductDiscountChangeNameAction : IProductDiscountChangeNameAction
     {
-        public LocalizedString Name { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString Name { get; set;}
         public ProductDiscountChangeNameAction()
         { 
            this.Action = "changeName";

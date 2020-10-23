@@ -9,50 +9,55 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class ProductProjection : BaseResource
+    public  partial class ProductProjection : IProductProjection
     {
         public string Id { get; set;}
         
         public long Version { get; set;}
         
+        public DateTime CreatedAt { get; set;}
+        
+        public DateTime LastModifiedAt { get; set;}
+        
         public string Key { get; set;}
         
-        public ProductTypeReference ProductType { get; set;}
+        public IProductTypeReference ProductType { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
-        public LocalizedString Slug { get; set;}
+        public ILocalizedString Slug { get; set;}
         
-        public List<CategoryReference> Categories { get; set;}
+        public List<ICategoryReference> Categories { get; set;}
         
-        public CategoryOrderHints CategoryOrderHints { get; set;}
+        public ICategoryOrderHints CategoryOrderHints { get; set;}
         
-        public LocalizedString MetaTitle { get; set;}
+        public ILocalizedString MetaTitle { get; set;}
         
-        public LocalizedString MetaDescription { get; set;}
+        public ILocalizedString MetaDescription { get; set;}
         
-        public LocalizedString MetaKeywords { get; set;}
+        public ILocalizedString MetaKeywords { get; set;}
         
-        public SearchKeywords SearchKeywords { get; set;}
+        public ISearchKeywords SearchKeywords { get; set;}
         
         public bool HasStagedChanges { get; set;}
         
         public bool Published { get; set;}
         
-        public ProductVariant MasterVariant { get; set;}
+        public IProductVariant MasterVariant { get; set;}
         
-        public List<ProductVariant> Variants { get; set;}
+        public List<IProductVariant> Variants { get; set;}
         
-        public TaxCategoryReference TaxCategory { get; set;}
+        public ITaxCategoryReference TaxCategory { get; set;}
         
-        public StateReference State { get; set;}
+        public IStateReference State { get; set;}
         
-        public ReviewRatingStatistics ReviewRatingStatistics { get; set;}
+        public IReviewRatingStatistics ReviewRatingStatistics { get; set;}
     }
 }

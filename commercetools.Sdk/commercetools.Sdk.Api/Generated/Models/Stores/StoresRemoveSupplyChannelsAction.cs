@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    [DiscriminatorValue("removeSupplyChannel")]
-    public partial class StoresRemoveSupplyChannelsAction : StoreUpdateAction
+    public  partial class StoresRemoveSupplyChannelsAction : IStoresRemoveSupplyChannelsAction
     {
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public string Action { get; set;}
+        
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         public StoresRemoveSupplyChannelsAction()
         { 
            this.Action = "removeSupplyChannel";

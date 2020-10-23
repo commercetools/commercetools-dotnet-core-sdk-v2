@@ -10,16 +10,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("setCustomShippingMethod")]
-    public partial class CartSetCustomShippingMethodAction : CartUpdateAction
+    public  partial class CartSetCustomShippingMethodAction : ICartSetCustomShippingMethodAction
     {
+        public string Action { get; set;}
+        
         public string ShippingMethodName { get; set;}
         
-        public ShippingRateDraft ShippingRate { get; set;}
+        public IShippingRateDraft ShippingRate { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         public CartSetCustomShippingMethodAction()
         { 
            this.Action = "setCustomShippingMethod";

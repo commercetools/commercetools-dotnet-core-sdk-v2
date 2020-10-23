@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("changeTextLineItemName")]
-    public partial class MyShoppingListChangeTextLineItemNameAction : MyShoppingListUpdateAction
+    public  partial class MyShoppingListChangeTextLineItemNameAction : IMyShoppingListChangeTextLineItemNameAction
     {
+        public string Action { get; set;}
+        
         public string TextLineItemId { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         public MyShoppingListChangeTextLineItemNameAction()
         { 
            this.Action = "changeTextLineItemName";

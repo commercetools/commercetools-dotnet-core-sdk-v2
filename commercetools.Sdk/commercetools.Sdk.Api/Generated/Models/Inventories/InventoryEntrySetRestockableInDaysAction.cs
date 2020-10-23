@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    [DiscriminatorValue("setRestockableInDays")]
-    public partial class InventoryEntrySetRestockableInDaysAction : InventoryEntryUpdateAction
+    public  partial class InventoryEntrySetRestockableInDaysAction : IInventoryEntrySetRestockableInDaysAction
     {
+        public string Action { get; set;}
+        
         public long RestockableInDays { get; set;}
         public InventoryEntrySetRestockableInDaysAction()
         { 

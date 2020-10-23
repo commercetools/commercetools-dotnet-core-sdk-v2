@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    [DiscriminatorValue("removeQuantity")]
-    public partial class InventoryEntryRemoveQuantityAction : InventoryEntryUpdateAction
+    public  partial class InventoryEntryRemoveQuantityAction : IInventoryEntryRemoveQuantityAction
     {
+        public string Action { get; set;}
+        
         public long Quantity { get; set;}
         public InventoryEntryRemoveQuantityAction()
         { 

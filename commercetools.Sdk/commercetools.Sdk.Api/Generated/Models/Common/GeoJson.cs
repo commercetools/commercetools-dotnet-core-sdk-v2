@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class GeoJson 
+    public abstract partial class GeoJson : IGeoJson
     {
         public string Type { get; set;}
     }

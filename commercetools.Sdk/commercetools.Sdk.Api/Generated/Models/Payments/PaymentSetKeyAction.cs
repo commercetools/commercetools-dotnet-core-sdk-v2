@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setKey")]
-    public partial class PaymentSetKeyAction : PaymentUpdateAction
+    public  partial class PaymentSetKeyAction : IPaymentSetKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public PaymentSetKeyAction()
         { 

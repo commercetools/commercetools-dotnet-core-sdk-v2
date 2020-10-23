@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    [DiscriminatorValue("addRoles")]
-    public partial class StateAddRolesAction : StateUpdateAction
+    public  partial class StateAddRolesAction : IStateAddRolesAction
     {
+        public string Action { get; set;}
+        
         public List<string> Roles { get; set;}
         
         [JsonIgnore]

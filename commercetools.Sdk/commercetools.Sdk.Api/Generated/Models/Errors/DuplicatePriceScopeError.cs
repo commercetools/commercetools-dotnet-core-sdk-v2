@@ -9,10 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("DuplicatePriceScope")]
-    public partial class DuplicatePriceScopeError : ErrorObject
+    public  partial class DuplicatePriceScopeError : IDuplicatePriceScopeError
     {
-        public List<Price> ConflictingPrices { get; set;}
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
+        public List<IPrice> ConflictingPrices { get; set;}
         public DuplicatePriceScopeError()
         { 
            this.Code = "DuplicatePriceScope";

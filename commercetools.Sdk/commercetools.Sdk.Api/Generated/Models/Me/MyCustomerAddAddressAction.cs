@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("addAddress")]
-    public partial class MyCustomerAddAddressAction : MyCustomerUpdateAction
+    public  partial class MyCustomerAddAddressAction : IMyCustomerAddAddressAction
     {
-        public Address Address { get; set;}
+        public string Action { get; set;}
+        
+        public IAddress Address { get; set;}
         public MyCustomerAddAddressAction()
         { 
            this.Action = "addAddress";

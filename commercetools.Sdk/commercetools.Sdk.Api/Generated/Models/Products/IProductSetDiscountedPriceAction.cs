@@ -1,0 +1,21 @@
+using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Products;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+
+namespace commercetools.Api.Models.Products
+{
+    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetDiscountedPriceAction))]
+    public interface IProductSetDiscountedPriceAction : IProductUpdateAction
+    {
+        string PriceId { get; set;}
+        
+        bool Staged { get; set;}
+        
+        IDiscountedPrice Discounted { get; set;}
+    }
+}

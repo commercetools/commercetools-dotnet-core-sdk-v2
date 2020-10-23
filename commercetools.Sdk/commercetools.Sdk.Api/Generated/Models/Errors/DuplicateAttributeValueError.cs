@@ -10,10 +10,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("DuplicateAttributeValue")]
-    public partial class DuplicateAttributeValueError : ErrorObject
+    public  partial class DuplicateAttributeValueError : IDuplicateAttributeValueError
     {
-        public Attribute Attribute { get; set;}
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
+        public IAttribute Attribute { get; set;}
         public DuplicateAttributeValueError()
         { 
            this.Code = "DuplicateAttributeValue";

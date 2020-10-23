@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class ReviewSetCustomTypeAction : ReviewUpdateAction
+    public  partial class ReviewSetCustomTypeAction : IReviewSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public ReviewSetCustomTypeAction()
         { 
            this.Action = "setCustomType";

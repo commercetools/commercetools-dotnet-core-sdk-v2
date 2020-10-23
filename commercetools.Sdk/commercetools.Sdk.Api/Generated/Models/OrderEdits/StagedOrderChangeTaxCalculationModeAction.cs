@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("changeTaxCalculationMode")]
-    public partial class StagedOrderChangeTaxCalculationModeAction : StagedOrderUpdateAction
+    public  partial class StagedOrderChangeTaxCalculationModeAction : IStagedOrderChangeTaxCalculationModeAction
     {
+        public string Action { get; set;}
+        
         public string TaxCalculationMode { get; set;}
         
         [JsonIgnore]

@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [Discriminator(nameof(TypeId))]
-    public abstract partial class KeyReference 
+    public abstract partial class KeyReference : IKeyReference
     {
         public string TypeId { get; set;}
         

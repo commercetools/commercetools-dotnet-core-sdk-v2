@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("enum")]
-    public partial class AttributeEnumType : AttributeType
+    public  partial class AttributeEnumType : IAttributeEnumType
     {
-        public List<AttributePlainEnumValue> Values { get; set;}
+        public string Name { get; set;}
+        
+        public List<IAttributePlainEnumValue> Values { get; set;}
         public AttributeEnumType()
         { 
            this.Name = "enum";

@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("changeTaxMode")]
-    public partial class MyCartChangeTaxModeAction : MyCartUpdateAction
+    public  partial class MyCartChangeTaxModeAction : IMyCartChangeTaxModeAction
     {
+        public string Action { get; set;}
+        
         public string TaxMode { get; set;}
         
         [JsonIgnore]

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [DiscriminatorValue("removeTaxRate")]
-    public partial class TaxCategoryRemoveTaxRateAction : TaxCategoryUpdateAction
+    public  partial class TaxCategoryRemoveTaxRateAction : ITaxCategoryRemoveTaxRateAction
     {
+        public string Action { get; set;}
+        
         public string TaxRateId { get; set;}
         public TaxCategoryRemoveTaxRateAction()
         { 

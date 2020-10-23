@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("addAttributeDefinition")]
-    public partial class ProductTypeAddAttributeDefinitionAction : ProductTypeUpdateAction
+    public  partial class ProductTypeAddAttributeDefinitionAction : IProductTypeAddAttributeDefinitionAction
     {
-        public AttributeDefinitionDraft Attribute { get; set;}
+        public string Action { get; set;}
+        
+        public IAttributeDefinitionDraft Attribute { get; set;}
         public ProductTypeAddAttributeDefinitionAction()
         { 
            this.Action = "addAttributeDefinition";

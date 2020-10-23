@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    [DiscriminatorValue("changeInitial")]
-    public partial class StateChangeInitialAction : StateUpdateAction
+    public  partial class StateChangeInitialAction : IStateChangeInitialAction
     {
+        public string Action { get; set;}
+        
         public bool Initial { get; set;}
         public StateChangeInitialAction()
         { 

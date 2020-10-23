@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeAttributeOrder")]
-    public partial class ProductTypeChangeAttributeOrderAction : ProductTypeUpdateAction
+    public  partial class ProductTypeChangeAttributeOrderAction : IProductTypeChangeAttributeOrderAction
     {
-        public List<AttributeDefinition> Attributes { get; set;}
+        public string Action { get; set;}
+        
+        public List<IAttributeDefinition> Attributes { get; set;}
         public ProductTypeChangeAttributeOrderAction()
         { 
            this.Action = "changeAttributeOrder";

@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderEditApplied")]
-    public partial class OrderEditAppliedMessagePayload : MessagePayload
+    public  partial class OrderEditAppliedMessagePayload : IOrderEditAppliedMessagePayload
     {
-        public OrderEditReference Edit { get; set;}
+        public string Type { get; set;}
         
-        public OrderEditApplied Result { get; set;}
+        public IOrderEditReference Edit { get; set;}
+        
+        public IOrderEditApplied Result { get; set;}
         public OrderEditAppliedMessagePayload()
         { 
            this.Type = "OrderEditApplied";

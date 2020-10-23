@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    [DiscriminatorValue("setLanguages")]
-    public partial class StoreSetLanguagesAction : StoreUpdateAction
+    public  partial class StoreSetLanguagesAction : IStoreSetLanguagesAction
     {
+        public string Action { get; set;}
+        
         public List<string> Languages { get; set;}
         public StoreSetLanguagesAction()
         { 

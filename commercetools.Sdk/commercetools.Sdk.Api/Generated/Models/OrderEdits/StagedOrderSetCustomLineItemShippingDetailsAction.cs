@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setCustomLineItemShippingDetails")]
-    public partial class StagedOrderSetCustomLineItemShippingDetailsAction : StagedOrderUpdateAction
+    public  partial class StagedOrderSetCustomLineItemShippingDetailsAction : IStagedOrderSetCustomLineItemShippingDetailsAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public IItemShippingDetailsDraft ShippingDetails { get; set;}
         public StagedOrderSetCustomLineItemShippingDetailsAction()
         { 
            this.Action = "setCustomLineItemShippingDetails";

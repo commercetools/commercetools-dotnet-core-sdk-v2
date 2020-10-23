@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
-    public partial class FieldDefinition 
+    public  partial class FieldDefinition : IFieldDefinition
     {
-        public FieldType Type { get; set;}
+        public IFieldType Type { get; set;}
         
         public string Name { get; set;}
         
-        public LocalizedString Label { get; set;}
+        public ILocalizedString Label { get; set;}
         
         public bool Required { get; set;}
         

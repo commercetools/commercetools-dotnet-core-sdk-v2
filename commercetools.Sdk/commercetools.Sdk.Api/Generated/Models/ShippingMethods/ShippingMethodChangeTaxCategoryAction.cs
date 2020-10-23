@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("changeTaxCategory")]
-    public partial class ShippingMethodChangeTaxCategoryAction : ShippingMethodUpdateAction
+    public  partial class ShippingMethodChangeTaxCategoryAction : IShippingMethodChangeTaxCategoryAction
     {
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public string Action { get; set;}
+        
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         public ShippingMethodChangeTaxCategoryAction()
         { 
            this.Action = "changeTaxCategory";

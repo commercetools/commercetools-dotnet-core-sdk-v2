@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductVariantDeleted")]
-    public partial class ProductVariantDeletedMessagePayload : MessagePayload
+    public  partial class ProductVariantDeletedMessagePayload : IProductVariantDeletedMessagePayload
     {
-        public ProductVariant Variant { get; set;}
+        public string Type { get; set;}
+        
+        public IProductVariant Variant { get; set;}
         
         public List<string> RemovedImageUrls { get; set;}
         public ProductVariantDeletedMessagePayload()

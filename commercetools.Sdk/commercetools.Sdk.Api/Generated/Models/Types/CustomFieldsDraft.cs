@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Types
 {
-    public partial class CustomFieldsDraft 
+    public  partial class CustomFieldsDraft : ICustomFieldsDraft
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public IFieldContainer Fields { get; set;}
     }
 }

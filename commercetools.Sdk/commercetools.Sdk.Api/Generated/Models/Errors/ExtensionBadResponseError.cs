@@ -9,14 +9,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ExtensionBadResponse")]
-    public partial class ExtensionBadResponseError : ErrorObject
+    public  partial class ExtensionBadResponseError : IExtensionBadResponseError
     {
-        public LocalizedString LocalizedMessage { get; set;}
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
+        public ILocalizedString LocalizedMessage { get; set;}
         
         public Object ExtensionExtraInfo { get; set;}
         
-        public ErrorByExtension ErrorByExtension { get; set;}
+        public IErrorByExtension ErrorByExtension { get; set;}
         public ExtensionBadResponseError()
         { 
            this.Code = "ExtensionBadResponse";

@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("invalid_token")]
-    public partial class InvalidTokenError : ErrorObject
+    public  partial class InvalidTokenError : IInvalidTokenError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public InvalidTokenError()
         { 
            this.Code = "invalid_token";

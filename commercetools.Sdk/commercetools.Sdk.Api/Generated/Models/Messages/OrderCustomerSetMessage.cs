@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.CustomerGroups;
 using commercetools.Api.Models.Customers;
 using commercetools.Api.Models.Messages;
@@ -10,16 +11,37 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderCustomerSet")]
-    public partial class OrderCustomerSetMessage : Message
+    public  partial class OrderCustomerSetMessage : IOrderCustomerSetMessage
     {
-        public CustomerReference Customer { get; set;}
+        public string Id { get; set;}
         
-        public CustomerGroupReference CustomerGroup { get; set;}
+        public long Version { get; set;}
         
-        public CustomerReference OldCustomer { get; set;}
+        public DateTime CreatedAt { get; set;}
         
-        public CustomerGroupReference OldCustomerGroup { get; set;}
+        public DateTime LastModifiedAt { get; set;}
+        
+        public ILastModifiedBy LastModifiedBy { get; set;}
+        
+        public ICreatedBy CreatedBy { get; set;}
+        
+        public long SequenceNumber { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public long ResourceVersion { get; set;}
+        
+        public string Type { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
+        public ICustomerReference Customer { get; set;}
+        
+        public ICustomerGroupReference CustomerGroup { get; set;}
+        
+        public ICustomerReference OldCustomer { get; set;}
+        
+        public ICustomerGroupReference OldCustomerGroup { get; set;}
         public OrderCustomerSetMessage()
         { 
            this.Type = "OrderCustomerSet";

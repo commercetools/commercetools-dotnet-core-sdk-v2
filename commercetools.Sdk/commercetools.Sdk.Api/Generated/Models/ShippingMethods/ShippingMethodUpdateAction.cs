@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class ShippingMethodUpdateAction 
+    public abstract partial class ShippingMethodUpdateAction : IShippingMethodUpdateAction
     {
         public string Action { get; set;}
     }

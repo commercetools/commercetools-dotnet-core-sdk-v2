@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class ProductPagedQueryResponse 
+    public  partial class ProductPagedQueryResponse : IProductPagedQueryResponse
     {
         public long Limit { get; set;}
         
@@ -17,6 +18,6 @@ namespace commercetools.Api.Models.Products
         
         public long Offset { get; set;}
         
-        public List<Product> Results { get; set;}
+        public List<IProduct> Results { get; set;}
     }
 }

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setMetaKeywords")]
-    public partial class ProductSetMetaKeywordsAction : ProductUpdateAction
+    public  partial class ProductSetMetaKeywordsAction : IProductSetMetaKeywordsAction
     {
-        public LocalizedString MetaKeywords { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString MetaKeywords { get; set;}
         
         public bool Staged { get; set;}
         public ProductSetMetaKeywordsAction()

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("changeEnumValueOrder")]
-    public partial class TypeChangeEnumValueOrderAction : TypeUpdateAction
+    public  partial class TypeChangeEnumValueOrderAction : ITypeChangeEnumValueOrderAction
     {
+        public string Action { get; set;}
+        
         public string FieldName { get; set;}
         
         public List<string> Keys { get; set;}

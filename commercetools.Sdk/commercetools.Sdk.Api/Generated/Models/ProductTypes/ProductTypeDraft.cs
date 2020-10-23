@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public partial class ProductTypeDraft 
+    public  partial class ProductTypeDraft : IProductTypeDraft
     {
         public string Key { get; set;}
         
@@ -16,6 +17,6 @@ namespace commercetools.Api.Models.ProductTypes
         
         public string Description { get; set;}
         
-        public List<AttributeDefinitionDraft> Attributes { get; set;}
+        public List<IAttributeDefinitionDraft> Attributes { get; set;}
     }
 }

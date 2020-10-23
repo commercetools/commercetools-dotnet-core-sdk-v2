@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [DiscriminatorValue("Point")]
-    public partial class GeoJsonPoint : GeoJson
+    public  partial class GeoJsonPoint : IGeoJsonPoint
     {
+        public string Type { get; set;}
+        
         public List<double> Coordinates { get; set;}
         public GeoJsonPoint()
         { 

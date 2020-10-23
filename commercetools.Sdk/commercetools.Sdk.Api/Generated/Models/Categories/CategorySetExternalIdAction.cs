@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("setExternalId")]
-    public partial class CategorySetExternalIdAction : CategoryUpdateAction
+    public  partial class CategorySetExternalIdAction : ICategorySetExternalIdAction
     {
+        public string Action { get; set;}
+        
         public string ExternalId { get; set;}
         public CategorySetExternalIdAction()
         { 

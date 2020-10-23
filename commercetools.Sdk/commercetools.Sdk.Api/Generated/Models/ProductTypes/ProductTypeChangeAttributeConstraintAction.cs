@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeAttributeConstraint")]
-    public partial class ProductTypeChangeAttributeConstraintAction : ProductTypeUpdateAction
+    public  partial class ProductTypeChangeAttributeConstraintAction : IProductTypeChangeAttributeConstraintAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
         public string NewValue { get; set;}

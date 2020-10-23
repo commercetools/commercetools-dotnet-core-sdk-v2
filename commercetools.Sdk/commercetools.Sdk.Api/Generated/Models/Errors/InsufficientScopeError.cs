@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("insufficient_scope")]
-    public partial class InsufficientScopeError : ErrorObject
+    public  partial class InsufficientScopeError : IInsufficientScopeError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public InsufficientScopeError()
         { 
            this.Code = "insufficient_scope";

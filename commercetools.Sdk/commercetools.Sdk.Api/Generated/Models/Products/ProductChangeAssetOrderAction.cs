@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("changeAssetOrder")]
-    public partial class ProductChangeAssetOrderAction : ProductUpdateAction
+    public  partial class ProductChangeAssetOrderAction : IProductChangeAssetOrderAction
     {
+        public string Action { get; set;}
+        
         public long VariantId { get; set;}
         
         public string Sku { get; set;}

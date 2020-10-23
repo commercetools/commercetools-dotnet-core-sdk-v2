@@ -7,11 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public partial class MyCartDraft 
+    public  partial class MyCartDraft : IMyCartDraft
     {
         public string Currency { get; set;}
         
@@ -24,15 +25,15 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
         
-        public List<MyLineItemDraft> LineItems { get; set;}
+        public List<IMyLineItemDraft> LineItems { get; set;}
         
-        public Address ShippingAddress { get; set;}
+        public IAddress ShippingAddress { get; set;}
         
-        public Address BillingAddress { get; set;}
+        public IAddress BillingAddress { get; set;}
         
-        public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        public IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string Locale { get; set;}
         
@@ -43,6 +44,6 @@ namespace commercetools.Api.Models.Me
         
         public long DeleteDaysAfterLastModification { get; set;}
         
-        public List<Address> ItemShippingAddresses { get; set;}
+        public List<IAddress> ItemShippingAddresses { get; set;}
     }
 }

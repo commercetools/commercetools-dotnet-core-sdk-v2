@@ -7,29 +7,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class ShippingInfo 
+    public  partial class ShippingInfo : IShippingInfo
     {
         public string ShippingMethodName { get; set;}
         
-        public TypedMoney Price { get; set;}
+        public ITypedMoney Price { get; set;}
         
-        public ShippingRate ShippingRate { get; set;}
+        public IShippingRate ShippingRate { get; set;}
         
-        public TaxedItemPrice TaxedPrice { get; set;}
+        public ITaxedItemPrice TaxedPrice { get; set;}
         
-        public TaxRate TaxRate { get; set;}
+        public ITaxRate TaxRate { get; set;}
         
-        public TaxCategoryReference TaxCategory { get; set;}
+        public ITaxCategoryReference TaxCategory { get; set;}
         
-        public ShippingMethodReference ShippingMethod { get; set;}
+        public IShippingMethodReference ShippingMethod { get; set;}
         
-        public List<Delivery> Deliveries { get; set;}
+        public List<IDelivery> Deliveries { get; set;}
         
-        public DiscountedLineItemPrice DiscountedPrice { get; set;}
+        public IDiscountedLineItemPrice DiscountedPrice { get; set;}
         
         public string ShippingMethodState { get; set;}
         

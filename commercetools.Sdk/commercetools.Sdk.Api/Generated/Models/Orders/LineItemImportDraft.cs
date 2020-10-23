@@ -8,32 +8,33 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class LineItemImportDraft 
+    public  partial class LineItemImportDraft : ILineItemImportDraft
     {
         public string ProductId { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public ProductVariantImportDraft Variant { get; set;}
+        public IProductVariantImportDraft Variant { get; set;}
         
-        public PriceDraft Price { get; set;}
+        public IPriceDraft Price { get; set;}
         
         public double Quantity { get; set;}
         
-        public List<ItemState> State { get; set;}
+        public List<IItemState> State { get; set;}
         
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         
-        public ChannelResourceIdentifier DistributionChannel { get; set;}
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
         
-        public TaxRate TaxRate { get; set;}
+        public ITaxRate TaxRate { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public IItemShippingDetailsDraft ShippingDetails { get; set;}
     }
 }

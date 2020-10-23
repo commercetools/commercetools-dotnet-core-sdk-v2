@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class SubscriptionPagedQueryResponse 
+    public  partial class SubscriptionPagedQueryResponse : ISubscriptionPagedQueryResponse
     {
         public long Limit { get; set;}
         
@@ -17,6 +18,6 @@ namespace commercetools.Api.Models.Subscriptions
         
         public long Offset { get; set;}
         
-        public List<Subscription> Results { get; set;}
+        public List<ISubscription> Results { get; set;}
     }
 }

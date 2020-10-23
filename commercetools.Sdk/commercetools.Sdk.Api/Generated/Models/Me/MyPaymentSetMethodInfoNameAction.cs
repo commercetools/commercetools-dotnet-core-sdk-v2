@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setMethodInfoName")]
-    public partial class MyPaymentSetMethodInfoNameAction : MyPaymentUpdateAction
+    public  partial class MyPaymentSetMethodInfoNameAction : IMyPaymentSetMethodInfoNameAction
     {
-        public LocalizedString Name { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString Name { get; set;}
         public MyPaymentSetMethodInfoNameAction()
         { 
            this.Action = "setMethodInfoName";

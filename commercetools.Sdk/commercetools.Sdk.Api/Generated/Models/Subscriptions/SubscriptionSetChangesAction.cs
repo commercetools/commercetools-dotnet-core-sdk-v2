@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("setChanges")]
-    public partial class SubscriptionSetChangesAction : SubscriptionUpdateAction
+    public  partial class SubscriptionSetChangesAction : ISubscriptionSetChangesAction
     {
-        public List<ChangeSubscription> Changes { get; set;}
+        public string Action { get; set;}
+        
+        public List<IChangeSubscription> Changes { get; set;}
         public SubscriptionSetChangesAction()
         { 
            this.Action = "setChanges";

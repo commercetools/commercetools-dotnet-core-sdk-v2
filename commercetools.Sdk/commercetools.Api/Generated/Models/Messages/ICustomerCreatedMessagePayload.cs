@@ -1,0 +1,16 @@
+using commercetools.Api.Generated.Models.Customers;
+using commercetools.Api.Generated.Models.Messages;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+
+namespace commercetools.Api.Generated.Models.Messages
+{
+    public interface ICustomerCreatedMessagePayload : IMessagePayload
+    {
+        ICustomer Customer { get; set;}
+    }
+}

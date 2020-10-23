@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeIsSearchable")]
-    public partial class ProductTypeChangeIsSearchableAction : ProductTypeUpdateAction
+    public  partial class ProductTypeChangeIsSearchableAction : IProductTypeChangeIsSearchableAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
         public bool IsSearchable { get; set;}

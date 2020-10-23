@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("InventoryEntryDeleted")]
-    public partial class InventoryEntryDeletedMessagePayload : MessagePayload
+    public  partial class InventoryEntryDeletedMessagePayload : IInventoryEntryDeletedMessagePayload
     {
+        public string Type { get; set;}
+        
         public string Sku { get; set;}
         
-        public ChannelReference SupplyChannel { get; set;}
+        public IChannelReference SupplyChannel { get; set;}
         public InventoryEntryDeletedMessagePayload()
         { 
            this.Type = "InventoryEntryDeleted";

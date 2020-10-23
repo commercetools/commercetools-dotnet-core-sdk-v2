@@ -9,14 +9,18 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("CartScore")]
-    public partial class CartScoreTier : ShippingRatePriceTier
+    public  partial class CartScoreTier : ICartScoreTier
     {
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
+        
         public double Score { get; set;}
         
-        public Money Price { get; set;}
+        public IMoney Price { get; set;}
         
-        public PriceFunction PriceFunction { get; set;}
+        public IPriceFunction PriceFunction { get; set;}
         
         public bool IsMatching { get; set;}
         public CartScoreTier()

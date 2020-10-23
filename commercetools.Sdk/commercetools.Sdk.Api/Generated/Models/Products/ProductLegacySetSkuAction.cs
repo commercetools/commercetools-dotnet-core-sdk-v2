@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("legacySetSku")]
-    public partial class ProductLegacySetSkuAction : ProductUpdateAction
+    public  partial class ProductLegacySetSkuAction : IProductLegacySetSkuAction
     {
+        public string Action { get; set;}
+        
         public string Sku { get; set;}
         
         public int VariantId { get; set;}

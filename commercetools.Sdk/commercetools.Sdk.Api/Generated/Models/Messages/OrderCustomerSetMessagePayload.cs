@@ -10,16 +10,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderCustomerSet")]
-    public partial class OrderCustomerSetMessagePayload : MessagePayload
+    public  partial class OrderCustomerSetMessagePayload : IOrderCustomerSetMessagePayload
     {
-        public CustomerReference Customer { get; set;}
+        public string Type { get; set;}
         
-        public CustomerGroupReference CustomerGroup { get; set;}
+        public ICustomerReference Customer { get; set;}
         
-        public CustomerReference OldCustomer { get; set;}
+        public ICustomerGroupReference CustomerGroup { get; set;}
         
-        public CustomerGroupReference OldCustomerGroup { get; set;}
+        public ICustomerReference OldCustomer { get; set;}
+        
+        public ICustomerGroupReference OldCustomerGroup { get; set;}
         public OrderCustomerSetMessagePayload()
         { 
            this.Type = "OrderCustomerSet";

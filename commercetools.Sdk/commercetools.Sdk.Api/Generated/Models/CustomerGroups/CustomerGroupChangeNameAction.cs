@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    [DiscriminatorValue("changeName")]
-    public partial class CustomerGroupChangeNameAction : CustomerGroupUpdateAction
+    public  partial class CustomerGroupChangeNameAction : ICustomerGroupChangeNameAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         public CustomerGroupChangeNameAction()
         { 

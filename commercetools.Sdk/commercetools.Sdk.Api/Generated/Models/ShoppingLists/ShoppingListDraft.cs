@@ -6,29 +6,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public partial class ShoppingListDraft 
+    public  partial class ShoppingListDraft : IShoppingListDraft
     {
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public CustomerResourceIdentifier Customer { get; set;}
+        public ICustomerResourceIdentifier Customer { get; set;}
         
         public long DeleteDaysAfterLastModification { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
         public string Key { get; set;}
         
-        public List<ShoppingListLineItemDraft> LineItems { get; set;}
+        public List<IShoppingListLineItemDraft> LineItems { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Slug { get; set;}
+        public ILocalizedString Slug { get; set;}
         
-        public List<TextLineItemDraft> TextLineItems { get; set;}
+        public List<ITextLineItemDraft> TextLineItems { get; set;}
         
         public string AnonymousId { get; set;}
     }

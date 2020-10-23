@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("addTransaction")]
-    public partial class MyPaymentAddTransactionAction : MyPaymentUpdateAction
+    public  partial class MyPaymentAddTransactionAction : IMyPaymentAddTransactionAction
     {
-        public TransactionDraft Transaction { get; set;}
+        public string Action { get; set;}
+        
+        public ITransactionDraft Transaction { get; set;}
         public MyPaymentAddTransactionAction()
         { 
            this.Action = "addTransaction";

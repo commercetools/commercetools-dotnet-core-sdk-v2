@@ -1,0 +1,64 @@
+using commercetools.Api.Generated.Models.Carts;
+using commercetools.Api.Generated.Models.Channels;
+using commercetools.Api.Generated.Models.Common;
+using commercetools.Api.Generated.Models.Orders;
+using commercetools.Api.Generated.Models.ProductTypes;
+using commercetools.Api.Generated.Models.Products;
+using commercetools.Api.Generated.Models.TaxCategories;
+using commercetools.Api.Generated.Models.Types;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+
+namespace commercetools.Api.Generated.Models.Carts
+{
+    public interface ILineItem 
+    {
+        string Id { get; set;}
+        
+        string ProductId { get; set;}
+        
+        ILocalizedString Name { get; set;}
+        
+        ILocalizedString ProductSlug { get; set;}
+        
+        IProductTypeReference ProductType { get; set;}
+        
+        IProductVariant Variant { get; set;}
+        
+        IPrice Price { get; set;}
+        
+        ITaxedItemPrice TaxedPrice { get; set;}
+        
+        ITypedMoney TotalPrice { get; set;}
+        
+        long Quantity { get; set;}
+        
+        DateTime AddedAt { get; set;}
+        
+        List<IItemState> State { get; set;}
+        
+        ITaxRate TaxRate { get; set;}
+        
+        IChannelReference SupplyChannel { get; set;}
+        
+        IChannelReference DistributionChannel { get; set;}
+        
+        List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
+        
+        string PriceMode { get; set;}
+        
+        LineItemPriceMode PriceModeAsEnum { get; }
+        
+        string LineItemMode { get; set;}
+        
+        LineItemMode LineItemModeAsEnum { get; }
+        
+        ICustomFields Custom { get; set;}
+        
+        IItemShippingDetails ShippingDetails { get; set;}
+    }
+}

@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setParcelMeasurements")]
-    public partial class StagedOrderSetParcelMeasurementsAction : StagedOrderUpdateAction
+    public  partial class StagedOrderSetParcelMeasurementsAction : IStagedOrderSetParcelMeasurementsAction
     {
+        public string Action { get; set;}
+        
         public string ParcelId { get; set;}
         
-        public ParcelMeasurements Measurements { get; set;}
+        public IParcelMeasurements Measurements { get; set;}
         public StagedOrderSetParcelMeasurementsAction()
         { 
            this.Action = "setParcelMeasurements";

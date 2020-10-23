@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("setText")]
-    public partial class ReviewSetTextAction : ReviewUpdateAction
+    public  partial class ReviewSetTextAction : IReviewSetTextAction
     {
+        public string Action { get; set;}
+        
         public string Text { get; set;}
         public ReviewSetTextAction()
         { 

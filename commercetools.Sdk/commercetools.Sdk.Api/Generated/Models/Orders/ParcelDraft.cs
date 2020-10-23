@@ -3,16 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class ParcelDraft 
+    public  partial class ParcelDraft : IParcelDraft
     {
-        public ParcelMeasurements Measurements { get; set;}
+        public IParcelMeasurements Measurements { get; set;}
         
-        public TrackingData TrackingData { get; set;}
+        public ITrackingData TrackingData { get; set;}
         
-        public List<DeliveryItem> Items { get; set;}
+        public List<IDeliveryItem> Items { get; set;}
     }
 }

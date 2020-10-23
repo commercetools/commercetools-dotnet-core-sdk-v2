@@ -1,0 +1,32 @@
+using commercetools.Api.Generated.Models.Common;
+using commercetools.Api.Generated.Models.Types;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+
+namespace commercetools.Api.Generated.Models.CustomerGroups
+{
+    public interface ICustomerGroup : IBaseResource
+    {
+        string Id { get; set;}
+        
+        long Version { get; set;}
+        
+        DateTime CreatedAt { get; set;}
+        
+        DateTime LastModifiedAt { get; set;}
+        
+        ILastModifiedBy LastModifiedBy { get; set;}
+        
+        ICreatedBy CreatedBy { get; set;}
+        
+        string Key { get; set;}
+        
+        string Name { get; set;}
+        
+        ICustomFields Custom { get; set;}
+    }
+}

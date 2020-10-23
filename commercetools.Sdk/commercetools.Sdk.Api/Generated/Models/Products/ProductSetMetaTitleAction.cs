@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setMetaTitle")]
-    public partial class ProductSetMetaTitleAction : ProductUpdateAction
+    public  partial class ProductSetMetaTitleAction : IProductSetMetaTitleAction
     {
-        public LocalizedString MetaTitle { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString MetaTitle { get; set;}
         
         public bool Staged { get; set;}
         public ProductSetMetaTitleAction()

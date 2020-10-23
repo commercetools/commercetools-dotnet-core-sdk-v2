@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("unpublish")]
-    public partial class ProductUnpublishAction : ProductUpdateAction
+    public  partial class ProductUnpublishAction : IProductUnpublishAction
     {
+        public string Action { get; set;}
         public ProductUnpublishAction()
         { 
            this.Action = "unpublish";

@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class TaxCategoryUpdateAction 
+    public abstract partial class TaxCategoryUpdateAction : ITaxCategoryUpdateAction
     {
         public string Action { get; set;}
     }

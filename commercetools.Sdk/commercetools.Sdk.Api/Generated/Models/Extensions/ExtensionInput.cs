@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Extensions
 {
-    public partial class ExtensionInput 
+    public  partial class ExtensionInput : IExtensionInput
     {
         public string Action { get; set;}
         
         [JsonIgnore]
         public ExtensionAction ActionAsEnum => this.Action.GetEnum<ExtensionAction>();
         
-        public Reference Resource { get; set;}
+        public IReference Resource { get; set;}
     }
 }

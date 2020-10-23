@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class ExtensionDestination 
+    public abstract partial class ExtensionDestination : IExtensionDestination
     {
         public string Type { get; set;}
     }

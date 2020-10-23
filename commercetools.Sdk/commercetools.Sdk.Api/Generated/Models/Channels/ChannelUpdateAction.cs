@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class ChannelUpdateAction 
+    public abstract partial class ChannelUpdateAction : IChannelUpdateAction
     {
         public string Action { get; set;}
     }

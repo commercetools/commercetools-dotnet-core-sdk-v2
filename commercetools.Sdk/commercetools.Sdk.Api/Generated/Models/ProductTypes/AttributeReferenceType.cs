@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("reference")]
-    public partial class AttributeReferenceType : AttributeType
+    public  partial class AttributeReferenceType : IAttributeReferenceType
     {
+        public string Name { get; set;}
+        
         public string ReferenceTypeId { get; set;}
         
         [JsonIgnore]

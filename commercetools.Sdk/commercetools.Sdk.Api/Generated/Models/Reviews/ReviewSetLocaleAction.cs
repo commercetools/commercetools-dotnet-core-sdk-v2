@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("setLocale")]
-    public partial class ReviewSetLocaleAction : ReviewUpdateAction
+    public  partial class ReviewSetLocaleAction : IReviewSetLocaleAction
     {
+        public string Action { get; set;}
+        
         public string Locale { get; set;}
         public ReviewSetLocaleAction()
         { 

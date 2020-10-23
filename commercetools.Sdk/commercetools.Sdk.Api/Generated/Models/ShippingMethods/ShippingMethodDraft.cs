@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public partial class ShippingMethodDraft 
+    public  partial class ShippingMethodDraft : IShippingMethodDraft
     {
         public string Key { get; set;}
         
@@ -17,11 +18,11 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public string Description { get; set;}
         
-        public LocalizedString LocalizedDescription { get; set;}
+        public ILocalizedString LocalizedDescription { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public List<ZoneRateDraft> ZoneRates { get; set;}
+        public List<IZoneRateDraft> ZoneRates { get; set;}
         
         public bool IsDefault { get; set;}
         

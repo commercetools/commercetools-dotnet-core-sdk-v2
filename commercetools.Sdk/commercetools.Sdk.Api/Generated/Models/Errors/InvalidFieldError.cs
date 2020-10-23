@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("InvalidField")]
-    public partial class InvalidFieldError : ErrorObject
+    public  partial class InvalidFieldError : IInvalidFieldError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string Field { get; set;}
         
         public Object InvalidValue { get; set;}

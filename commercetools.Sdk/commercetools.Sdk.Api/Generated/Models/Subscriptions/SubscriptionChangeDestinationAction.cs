@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("changeDestination")]
-    public partial class SubscriptionChangeDestinationAction : SubscriptionUpdateAction
+    public  partial class SubscriptionChangeDestinationAction : ISubscriptionChangeDestinationAction
     {
-        public Destination Destination { get; set;}
+        public string Action { get; set;}
+        
+        public IDestination Destination { get; set;}
         public SubscriptionChangeDestinationAction()
         { 
            this.Action = "changeDestination";

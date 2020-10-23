@@ -10,18 +10,19 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ReviewStateTransition")]
-    public partial class ReviewStateTransitionMessagePayload : MessagePayload
+    public  partial class ReviewStateTransitionMessagePayload : IReviewStateTransitionMessagePayload
     {
-        public StateReference OldState { get; set;}
+        public string Type { get; set;}
         
-        public StateReference NewState { get; set;}
+        public IStateReference OldState { get; set;}
+        
+        public IStateReference NewState { get; set;}
         
         public bool OldIncludedInStatistics { get; set;}
         
         public bool NewIncludedInStatistics { get; set;}
         
-        public Reference Target { get; set;}
+        public IReference Target { get; set;}
         
         public bool Force { get; set;}
         public ReviewStateTransitionMessagePayload()

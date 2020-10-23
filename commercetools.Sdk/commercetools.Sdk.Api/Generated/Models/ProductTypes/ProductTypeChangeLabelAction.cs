@@ -10,12 +10,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeLabel")]
-    public partial class ProductTypeChangeLabelAction : ProductTypeUpdateAction
+    public  partial class ProductTypeChangeLabelAction : IProductTypeChangeLabelAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
-        public LocalizedString Label { get; set;}
+        public ILocalizedString Label { get; set;}
         public ProductTypeChangeLabelAction()
         { 
            this.Action = "changeLabel";

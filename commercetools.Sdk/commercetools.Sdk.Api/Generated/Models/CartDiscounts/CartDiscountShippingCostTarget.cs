@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("shipping")]
-    public partial class CartDiscountShippingCostTarget : CartDiscountTarget
+    public  partial class CartDiscountShippingCostTarget : ICartDiscountShippingCostTarget
     {
+        public string Type { get; set;}
         public CartDiscountShippingCostTarget()
         { 
            this.Type = "shipping";

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("addStagedAction")]
-    public partial class OrderEditAddStagedActionAction : OrderEditUpdateAction
+    public  partial class OrderEditAddStagedActionAction : IOrderEditAddStagedActionAction
     {
-        public StagedOrderUpdateAction StagedAction { get; set;}
+        public string Action { get; set;}
+        
+        public IStagedOrderUpdateAction StagedAction { get; set;}
         public OrderEditAddStagedActionAction()
         { 
            this.Action = "addStagedAction";

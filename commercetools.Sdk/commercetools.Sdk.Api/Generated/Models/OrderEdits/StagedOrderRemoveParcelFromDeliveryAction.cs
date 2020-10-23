@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("removeParcelFromDelivery")]
-    public partial class StagedOrderRemoveParcelFromDeliveryAction : StagedOrderUpdateAction
+    public  partial class StagedOrderRemoveParcelFromDeliveryAction : IStagedOrderRemoveParcelFromDeliveryAction
     {
+        public string Action { get; set;}
+        
         public string ParcelId { get; set;}
         public StagedOrderRemoveParcelFromDeliveryAction()
         { 

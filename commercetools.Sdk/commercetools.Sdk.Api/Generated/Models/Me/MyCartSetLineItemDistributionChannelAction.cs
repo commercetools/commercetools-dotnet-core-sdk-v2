@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setLineItemDistributionChannel")]
-    public partial class MyCartSetLineItemDistributionChannelAction : MyCartUpdateAction
+    public  partial class MyCartSetLineItemDistributionChannelAction : IMyCartSetLineItemDistributionChannelAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public ChannelResourceIdentifier DistributionChannel { get; set;}
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
         public MyCartSetLineItemDistributionChannelAction()
         { 
            this.Action = "setLineItemDistributionChannel";

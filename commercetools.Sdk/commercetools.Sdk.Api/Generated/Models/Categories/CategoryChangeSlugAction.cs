@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("changeSlug")]
-    public partial class CategoryChangeSlugAction : CategoryUpdateAction
+    public  partial class CategoryChangeSlugAction : ICategoryChangeSlugAction
     {
-        public LocalizedString Slug { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString Slug { get; set;}
         public CategoryChangeSlugAction()
         { 
            this.Action = "changeSlug";

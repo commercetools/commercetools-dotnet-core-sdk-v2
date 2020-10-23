@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("changeOrderHint")]
-    public partial class CategoryChangeOrderHintAction : CategoryUpdateAction
+    public  partial class CategoryChangeOrderHintAction : ICategoryChangeOrderHintAction
     {
+        public string Action { get; set;}
+        
         public string OrderHint { get; set;}
         public CategoryChangeOrderHintAction()
         { 

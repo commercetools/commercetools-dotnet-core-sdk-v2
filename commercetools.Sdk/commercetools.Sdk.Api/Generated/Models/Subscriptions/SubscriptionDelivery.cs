@@ -9,15 +9,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [Discriminator(nameof(NotificationType))]
-    public abstract partial class SubscriptionDelivery 
+    public abstract partial class SubscriptionDelivery : ISubscriptionDelivery
     {
         public string ProjectKey { get; set;}
         
         public string NotificationType { get; set;}
         
-        public Reference Resource { get; set;}
+        public IReference Resource { get; set;}
         
-        public UserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
     }
 }

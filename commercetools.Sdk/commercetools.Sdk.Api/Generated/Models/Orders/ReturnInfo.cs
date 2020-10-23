@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class ReturnInfo 
+    public  partial class ReturnInfo : IReturnInfo
     {
-        public List<ReturnItem> Items { get; set;}
+        public List<IReturnItem> Items { get; set;}
         
         public string ReturnTrackingId { get; set;}
         

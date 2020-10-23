@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setAssetCustomField")]
-    public partial class ProductSetAssetCustomFieldAction : ProductUpdateAction
+    public  partial class ProductSetAssetCustomFieldAction : IProductSetAssetCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public long VariantId { get; set;}
         
         public string Sku { get; set;}

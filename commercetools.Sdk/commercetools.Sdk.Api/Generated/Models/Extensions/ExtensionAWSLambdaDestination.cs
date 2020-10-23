@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("AWSLambda")]
-    public partial class ExtensionAWSLambdaDestination : ExtensionDestination
+    public  partial class ExtensionAWSLambdaDestination : IExtensionAWSLambdaDestination
     {
+        public string Type { get; set;}
+        
         public string Arn { get; set;}
         
         public string AccessKey { get; set;}

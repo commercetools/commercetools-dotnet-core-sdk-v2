@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("importCustomLineItemState")]
-    public partial class StagedOrderImportCustomLineItemStateAction : StagedOrderUpdateAction
+    public  partial class StagedOrderImportCustomLineItemStateAction : IStagedOrderImportCustomLineItemStateAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
-        public List<ItemState> State { get; set;}
+        public List<IItemState> State { get; set;}
         public StagedOrderImportCustomLineItemStateAction()
         { 
            this.Action = "importCustomLineItemState";

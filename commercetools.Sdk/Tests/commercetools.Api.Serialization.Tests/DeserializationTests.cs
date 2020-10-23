@@ -38,7 +38,7 @@ namespace commercetools.Api.Serialization.Tests
             ISerializerService serializerService = this.serializationFixture.SerializerService;
 
             //act
-            var project = serializerService.Deserialize<Project>(projectResponse);
+            var project = serializerService.Deserialize<IProject>(projectResponse);
 
             //assert
             Assert.NotNull(project);
@@ -150,7 +150,7 @@ namespace commercetools.Api.Serialization.Tests
             //Deserialize 2 of references to list of references with the correct instance type based on Type Id
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/Types/References.json");
-            List<Reference> references = serializerService.Deserialize<List<Reference>>(serialized);
+            var references = serializerService.Deserialize<List<IReference>>(serialized);
             Assert.IsType<CategoryReference>(references[0]);
             Assert.IsType<ProductReference>(references[1]);
 
@@ -168,7 +168,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""id"": ""123456""
             }";
 
-            Assert.Throws<JsonException>(() => serializerService.Deserialize<Reference>(serialized));
+            Assert.Throws<JsonException>(() => serializerService.Deserialize<IReference>(serialized));
         }
 
 
@@ -178,7 +178,7 @@ namespace commercetools.Api.Serialization.Tests
             //Deserialize 2 of resourceIdentifiers to list of resourceIdentifiers with the correct instance type based on Type Id
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/Types/References.json");
-            var resourceIdentifiers = serializerService.Deserialize<List<ResourceIdentifier>>(serialized);
+            var resourceIdentifiers = serializerService.Deserialize<List<IResourceIdentifier>>(serialized);
             Assert.IsType<CategoryResourceIdentifier>(resourceIdentifiers[0]);
             Assert.IsType<ProductResourceIdentifier>(resourceIdentifiers[1]);
             string serializedRev = File.ReadAllText("Resources/Types/Review.json");
@@ -204,7 +204,7 @@ namespace commercetools.Api.Serialization.Tests
                 {
                     Key = "TaxCategoryKey"
                 },
-                Categories = new List<CategoryResourceIdentifier>()
+                Categories = new List<ICategoryResourceIdentifier>()
                 {
                     new CategoryResourceIdentifier()
                     {
@@ -245,7 +245,7 @@ namespace commercetools.Api.Serialization.Tests
                 {
                     Id = "TaxCategoryId"
                 },
-                Categories = new List<CategoryResourceIdentifier>
+                Categories = new List<ICategoryResourceIdentifier>
                 {
                     new CategoryResourceIdentifier()
                     {
@@ -279,7 +279,7 @@ namespace commercetools.Api.Serialization.Tests
                 }
             ";
 
-            var customFields = serializerService.Deserialize<CustomFields>(serialized);
+            var customFields = serializerService.Deserialize<ICustomFields>(serialized);
 
             Assert.Equal("bar", customFields.Fields["foo"]);
             Assert.Equal("Bars", customFields.Fields["Foos"]);

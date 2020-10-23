@@ -9,8 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class Message : BaseResource
+    public abstract partial class Message : IMessage
     {
         public string Id { get; set;}
         
@@ -20,18 +19,18 @@ namespace commercetools.Api.Models.Messages
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public long SequenceNumber { get; set;}
         
-        public Reference Resource { get; set;}
+        public IReference Resource { get; set;}
         
         public long ResourceVersion { get; set;}
         
         public string Type { get; set;}
         
-        public UserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
     }
 }

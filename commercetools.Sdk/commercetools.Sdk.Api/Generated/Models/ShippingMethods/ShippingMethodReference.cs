@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("shipping-method")]
-    public partial class ShippingMethodReference : Reference
+    public  partial class ShippingMethodReference : IShippingMethodReference
     {
-        public ShippingMethod Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IShippingMethod Obj { get; set;}
         public ShippingMethodReference()
         { 
            this.TypeId = "shipping-method";

@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class FacetResultRange 
+    public  partial class FacetResultRange : IFacetResultRange
     {
         public double From { get; set;}
         

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    [DiscriminatorValue("setMaxApplications")]
-    public partial class DiscountCodeSetMaxApplicationsAction : DiscountCodeUpdateAction
+    public  partial class DiscountCodeSetMaxApplicationsAction : IDiscountCodeSetMaxApplicationsAction
     {
+        public string Action { get; set;}
+        
         public long MaxApplications { get; set;}
         public DiscountCodeSetMaxApplicationsAction()
         { 

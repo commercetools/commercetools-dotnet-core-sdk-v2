@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CustomObjects
 {
-    public partial class CustomObject : BaseResource
+    public  partial class CustomObject : ICustomObject
     {
         public string Id { get; set;}
         
@@ -17,9 +18,9 @@ namespace commercetools.Api.Models.CustomObjects
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Container { get; set;}
         

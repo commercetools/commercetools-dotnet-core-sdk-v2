@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("DiscountCodeNonApplicable")]
-    public partial class DiscountCodeNonApplicableError : ErrorObject
+    public  partial class DiscountCodeNonApplicableError : IDiscountCodeNonApplicableError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string DiscountCode { get; set;}
         
         public string Reason { get; set;}

@@ -128,7 +128,7 @@ namespace commercetools.Api.Tests
             var categoryUpdate = new CategoryUpdate()
             {
                 Version = 2,
-                Actions = new List<CategoryUpdateAction>
+                Actions = new List<ICategoryUpdateAction>
                 {
                     new CategoryChangeOrderHintAction
                     {

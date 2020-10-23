@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class ProductVariantAvailability 
+    public  partial class ProductVariantAvailability : IProductVariantAvailability
     {
         public bool IsOnStock { get; set;}
         
@@ -15,6 +16,6 @@ namespace commercetools.Api.Models.Products
         
         public long AvailableQuantity { get; set;}
         
-        public ProductVariantChannelAvailabilityMap Channels { get; set;}
+        public IProductVariantChannelAvailabilityMap Channels { get; set;}
     }
 }

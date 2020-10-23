@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("changeStackingMode")]
-    public partial class CartDiscountChangeStackingModeAction : CartDiscountUpdateAction
+    public  partial class CartDiscountChangeStackingModeAction : ICartDiscountChangeStackingModeAction
     {
+        public string Action { get; set;}
+        
         public string StackingMode { get; set;}
         
         [JsonIgnore]

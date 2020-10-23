@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    [DiscriminatorValue("setTextLineItemCustomType")]
-    public partial class ShoppingListSetTextLineItemCustomTypeAction : ShoppingListUpdateAction
+    public  partial class ShoppingListSetTextLineItemCustomTypeAction : IShoppingListSetTextLineItemCustomTypeAction
     {
+        public string Action { get; set;}
+        
         public string TextLineItemId { get; set;}
         
-        public TypeResourceIdentifier Type { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public IFieldContainer Fields { get; set;}
         public ShoppingListSetTextLineItemCustomTypeAction()
         { 
            this.Action = "setTextLineItemCustomType";

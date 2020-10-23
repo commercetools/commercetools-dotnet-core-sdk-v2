@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public partial class MyCustomerDraft 
+    public  partial class MyCustomerDraft : IMyCustomerDraft
     {
         public string Email { get; set;}
         
@@ -29,16 +30,16 @@ namespace commercetools.Api.Models.Me
         
         public string VatId { get; set;}
         
-        public List<Address> Addresses { get; set;}
+        public List<IAddress> Addresses { get; set;}
         
         public long DefaultShippingAddress { get; set;}
         
         public long DefaultBillingAddress { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
         public string Locale { get; set;}
         
-        public List<StoreResourceIdentifier> Stores { get; set;}
+        public List<IStoreResourceIdentifier> Stores { get; set;}
     }
 }

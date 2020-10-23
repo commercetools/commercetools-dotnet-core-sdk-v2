@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("PreviewFailure")]
-    public partial class OrderEditPreviewFailure : OrderEditResult
+    public  partial class OrderEditPreviewFailure : IOrderEditPreviewFailure
     {
-        public List<ErrorObject> Errors { get; set;}
+        public string Type { get; set;}
+        
+        public List<IErrorObject> Errors { get; set;}
         public OrderEditPreviewFailure()
         { 
            this.Type = "PreviewFailure";

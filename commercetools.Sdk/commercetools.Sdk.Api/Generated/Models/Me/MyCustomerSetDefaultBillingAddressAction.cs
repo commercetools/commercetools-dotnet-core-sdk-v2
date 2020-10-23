@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setDefaultBillingAddress")]
-    public partial class MyCustomerSetDefaultBillingAddressAction : MyCustomerUpdateAction
+    public  partial class MyCustomerSetDefaultBillingAddressAction : IMyCustomerSetDefaultBillingAddressAction
     {
+        public string Action { get; set;}
+        
         public string AddressId { get; set;}
         public MyCustomerSetDefaultBillingAddressAction()
         { 

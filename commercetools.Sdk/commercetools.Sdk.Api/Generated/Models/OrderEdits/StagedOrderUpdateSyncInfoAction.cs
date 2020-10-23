@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("updateSyncInfo")]
-    public partial class StagedOrderUpdateSyncInfoAction : StagedOrderUpdateAction
+    public  partial class StagedOrderUpdateSyncInfoAction : IStagedOrderUpdateSyncInfoAction
     {
-        public ChannelResourceIdentifier Channel { get; set;}
+        public string Action { get; set;}
+        
+        public IChannelResourceIdentifier Channel { get; set;}
         
         public string ExternalId { get; set;}
         

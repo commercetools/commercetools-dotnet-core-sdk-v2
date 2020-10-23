@@ -10,12 +10,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductPublished")]
-    public partial class ProductPublishedMessagePayload : MessagePayload
+    public  partial class ProductPublishedMessagePayload : IProductPublishedMessagePayload
     {
+        public string Type { get; set;}
+        
         public List<Object> RemovedImageUrls { get; set;}
         
-        public ProductProjection ProductProjection { get; set;}
+        public IProductProjection ProductProjection { get; set;}
         
         public string Scope { get; set;}
         

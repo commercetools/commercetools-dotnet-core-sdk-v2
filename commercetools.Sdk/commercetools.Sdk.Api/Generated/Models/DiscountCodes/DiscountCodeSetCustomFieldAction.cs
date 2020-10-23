@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    [DiscriminatorValue("setCustomField")]
-    public partial class DiscountCodeSetCustomFieldAction : DiscountCodeUpdateAction
+    public  partial class DiscountCodeSetCustomFieldAction : IDiscountCodeSetCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         
         public Object Value { get; set;}

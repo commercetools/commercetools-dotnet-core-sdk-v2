@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ShippingMethodDoesNotMatchCart")]
-    public partial class ShippingMethodDoesNotMatchCartError : ErrorObject
+    public  partial class ShippingMethodDoesNotMatchCartError : IShippingMethodDoesNotMatchCartError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public ShippingMethodDoesNotMatchCartError()
         { 
            this.Code = "ShippingMethodDoesNotMatchCart";

@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class DeliveryFormat 
+    public abstract partial class DeliveryFormat : IDeliveryFormat
     {
         public string Type { get; set;}
     }

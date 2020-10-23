@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("setCustomLineItemTaxAmount")]
-    public partial class CartSetCustomLineItemTaxAmountAction : CartUpdateAction
+    public  partial class CartSetCustomLineItemTaxAmountAction : ICartSetCustomLineItemTaxAmountAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
-        public ExternalTaxAmountDraft ExternalTaxAmount { get; set;}
+        public IExternalTaxAmountDraft ExternalTaxAmount { get; set;}
         public CartSetCustomLineItemTaxAmountAction()
         { 
            this.Action = "setCustomLineItemTaxAmount";

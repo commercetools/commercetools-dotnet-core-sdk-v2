@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("addEnumValue")]
-    public partial class TypeAddEnumValueAction : TypeUpdateAction
+    public  partial class TypeAddEnumValueAction : ITypeAddEnumValueAction
     {
+        public string Action { get; set;}
+        
         public string FieldName { get; set;}
         
-        public CustomFieldEnumValue Value { get; set;}
+        public ICustomFieldEnumValue Value { get; set;}
         public TypeAddEnumValueAction()
         { 
            this.Action = "addEnumValue";

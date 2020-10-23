@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("changeKey")]
-    public partial class ChannelChangeKeyAction : ChannelUpdateAction
+    public  partial class ChannelChangeKeyAction : IChannelChangeKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public ChannelChangeKeyAction()
         { 

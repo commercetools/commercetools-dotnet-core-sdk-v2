@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderImported")]
-    public partial class OrderImportedMessagePayload : MessagePayload
+    public  partial class OrderImportedMessagePayload : IOrderImportedMessagePayload
     {
-        public Order Order { get; set;}
+        public string Type { get; set;}
+        
+        public IOrder Order { get; set;}
         public OrderImportedMessagePayload()
         { 
            this.Type = "OrderImported";

@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class ShippingRateInputType 
+    public abstract partial class ShippingRateInputType : IShippingRateInputType
     {
         public string Type { get; set;}
         

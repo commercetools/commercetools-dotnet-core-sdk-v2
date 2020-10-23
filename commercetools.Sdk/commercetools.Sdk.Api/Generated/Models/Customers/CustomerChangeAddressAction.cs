@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    [DiscriminatorValue("changeAddress")]
-    public partial class CustomerChangeAddressAction : CustomerUpdateAction
+    public  partial class CustomerChangeAddressAction : ICustomerChangeAddressAction
     {
+        public string Action { get; set;}
+        
         public string AddressId { get; set;}
         
         public string AddressKey { get; set;}
         
-        public Address Address { get; set;}
+        public IAddress Address { get; set;}
         public CustomerChangeAddressAction()
         { 
            this.Action = "changeAddress";

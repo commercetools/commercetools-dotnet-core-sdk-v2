@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ReviewCreated")]
-    public partial class ReviewCreatedMessagePayload : MessagePayload
+    public  partial class ReviewCreatedMessagePayload : IReviewCreatedMessagePayload
     {
-        public Review Review { get; set;}
+        public string Type { get; set;}
+        
+        public IReview Review { get; set;}
         public ReviewCreatedMessagePayload()
         { 
            this.Type = "ReviewCreated";

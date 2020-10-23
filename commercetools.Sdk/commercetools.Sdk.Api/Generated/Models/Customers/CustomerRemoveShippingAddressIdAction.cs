@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    [DiscriminatorValue("removeShippingAddressId")]
-    public partial class CustomerRemoveShippingAddressIdAction : CustomerUpdateAction
+    public  partial class CustomerRemoveShippingAddressIdAction : ICustomerRemoveShippingAddressIdAction
     {
+        public string Action { get; set;}
+        
         public string AddressId { get; set;}
         
         public string AddressKey { get; set;}

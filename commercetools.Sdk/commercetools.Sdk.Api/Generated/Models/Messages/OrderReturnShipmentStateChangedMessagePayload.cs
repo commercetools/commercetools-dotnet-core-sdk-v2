@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderReturnShipmentStateChanged")]
-    public partial class OrderReturnShipmentStateChangedMessagePayload : MessagePayload
+    public  partial class OrderReturnShipmentStateChangedMessagePayload : IOrderReturnShipmentStateChangedMessagePayload
     {
+        public string Type { get; set;}
+        
         public string ReturnItemId { get; set;}
         
         public string ReturnShipmentState { get; set;}

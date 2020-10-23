@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("DateTime")]
-    public partial class CustomFieldDateTimeType : FieldType
+    public  partial class CustomFieldDateTimeType : ICustomFieldDateTimeType
     {
+        public string Name { get; set;}
         public CustomFieldDateTimeType()
         { 
            this.Name = "DateTime";

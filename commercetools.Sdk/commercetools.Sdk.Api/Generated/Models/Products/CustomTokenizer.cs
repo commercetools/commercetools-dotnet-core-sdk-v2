@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("custom")]
-    public partial class CustomTokenizer : SuggestTokenizer
+    public  partial class CustomTokenizer : ICustomTokenizer
     {
+        public string Type { get; set;}
+        
         public List<string> Inputs { get; set;}
         public CustomTokenizer()
         { 

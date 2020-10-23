@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    [DiscriminatorValue("setDescription")]
-    public partial class ZoneSetDescriptionAction : ZoneUpdateAction
+    public  partial class ZoneSetDescriptionAction : IZoneSetDescriptionAction
     {
+        public string Action { get; set;}
+        
         public string Description { get; set;}
         public ZoneSetDescriptionAction()
         { 

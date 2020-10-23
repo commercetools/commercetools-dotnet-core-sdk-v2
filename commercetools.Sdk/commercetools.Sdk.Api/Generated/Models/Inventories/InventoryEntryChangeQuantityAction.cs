@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    [DiscriminatorValue("changeQuantity")]
-    public partial class InventoryEntryChangeQuantityAction : InventoryEntryUpdateAction
+    public  partial class InventoryEntryChangeQuantityAction : IInventoryEntryChangeQuantityAction
     {
+        public string Action { get; set;}
+        
         public long Quantity { get; set;}
         public InventoryEntryChangeQuantityAction()
         { 

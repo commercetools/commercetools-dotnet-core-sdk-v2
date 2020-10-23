@@ -8,14 +8,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("Applied")]
-    public partial class OrderEditApplied : OrderEditResult
+    public  partial class OrderEditApplied : IOrderEditApplied
     {
+        public string Type { get; set;}
+        
         public DateTime AppliedAt { get; set;}
         
-        public OrderExcerpt ExcerptBeforeEdit { get; set;}
+        public IOrderExcerpt ExcerptBeforeEdit { get; set;}
         
-        public OrderExcerpt ExcerptAfterEdit { get; set;}
+        public IOrderExcerpt ExcerptAfterEdit { get; set;}
         public OrderEditApplied()
         { 
            this.Type = "Applied";

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [DiscriminatorValue("absolute")]
-    public partial class ProductDiscountValueAbsolute : ProductDiscountValue
+    public  partial class ProductDiscountValueAbsolute : IProductDiscountValueAbsolute
     {
-        public List<TypedMoney> Money { get; set;}
+        public string Type { get; set;}
+        
+        public List<ITypedMoney> Money { get; set;}
         public ProductDiscountValueAbsolute()
         { 
            this.Type = "absolute";

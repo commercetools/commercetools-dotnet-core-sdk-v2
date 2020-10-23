@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class ReturnItemDraft 
+    public  partial class ReturnItemDraft : IReturnItemDraft
     {
         public long Quantity { get; set;}
         

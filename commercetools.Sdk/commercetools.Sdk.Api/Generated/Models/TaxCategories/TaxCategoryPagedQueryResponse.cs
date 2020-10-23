@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public partial class TaxCategoryPagedQueryResponse 
+    public  partial class TaxCategoryPagedQueryResponse : ITaxCategoryPagedQueryResponse
     {
         public long Limit { get; set;}
         
@@ -17,6 +18,6 @@ namespace commercetools.Api.Models.TaxCategories
         
         public long Offset { get; set;}
         
-        public List<TaxCategory> Results { get; set;}
+        public List<ITaxCategory> Results { get; set;}
     }
 }

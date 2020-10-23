@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("removeFieldDefinition")]
-    public partial class TypeRemoveFieldDefinitionAction : TypeUpdateAction
+    public  partial class TypeRemoveFieldDefinitionAction : ITypeRemoveFieldDefinitionAction
     {
+        public string Action { get; set;}
+        
         public string FieldName { get; set;}
         public TypeRemoveFieldDefinitionAction()
         { 

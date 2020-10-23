@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("changeLabel")]
-    public partial class TypeChangeLabelAction : TypeUpdateAction
+    public  partial class TypeChangeLabelAction : ITypeChangeLabelAction
     {
+        public string Action { get; set;}
+        
         public string FieldName { get; set;}
         
-        public LocalizedString Label { get; set;}
+        public ILocalizedString Label { get; set;}
         public TypeChangeLabelAction()
         { 
            this.Action = "changeLabel";

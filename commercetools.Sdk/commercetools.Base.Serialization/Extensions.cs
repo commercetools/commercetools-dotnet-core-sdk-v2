@@ -20,7 +20,11 @@ namespace commercetools.Base.Serialization
             var json = element.GetRawText();
             return serializerService.Deserialize(returnType,json);
         }
-        
+
+        public static bool IsAbstractClass(this Type type)
+        {
+            return type.IsClass && type.IsAbstract;
+        }
         
     }
 }

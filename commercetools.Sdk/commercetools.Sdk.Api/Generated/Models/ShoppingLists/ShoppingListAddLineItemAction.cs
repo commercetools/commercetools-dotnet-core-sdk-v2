@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    [DiscriminatorValue("addLineItem")]
-    public partial class ShoppingListAddLineItemAction : ShoppingListUpdateAction
+    public  partial class ShoppingListAddLineItemAction : IShoppingListAddLineItemAction
     {
+        public string Action { get; set;}
+        
         public string Sku { get; set;}
         
         public string ProductId { get; set;}
@@ -22,7 +23,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         public DateTime AddedAt { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         public ShoppingListAddLineItemAction()
         { 
            this.Action = "addLineItem";
