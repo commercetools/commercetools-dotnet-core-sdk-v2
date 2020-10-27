@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Orders
 {
     public  partial class ProductVariantImportDraft : IProductVariantImportDraft
     {
-        public long Id { get; set;}
+        public long? Id { get; set;}
         
         public string Sku { get; set;}
         

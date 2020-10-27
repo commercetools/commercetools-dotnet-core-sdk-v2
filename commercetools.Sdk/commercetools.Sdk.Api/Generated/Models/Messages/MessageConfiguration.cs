@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Messages
     {
         public bool Enabled { get; set;}
         
-        public int DeleteDaysAfterCreation { get; set;}
+        public int? DeleteDaysAfterCreation { get; set;}
     }
 }

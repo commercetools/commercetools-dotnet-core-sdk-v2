@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public ILocalizedString Name { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductChangeNameAction()
         { 
            this.Action = "changeName";

@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Products
         
         public ISearchKeywords SearchKeywords { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetSearchKeywordsAction()
         { 
            this.Action = "setSearchKeywords";

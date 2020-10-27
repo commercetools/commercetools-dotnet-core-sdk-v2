@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetRatingAction))]
     public interface IReviewSetRatingAction : IReviewUpdateAction
     {
-        int Rating { get; set;}
+        int? Rating { get; set;}
     }
 }

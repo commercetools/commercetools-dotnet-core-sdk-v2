@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Products
         
         public long Count { get; set;}
         
-        public long ProductCount { get; set;}
+        public long? ProductCount { get; set;}
         public FilteredFacetResult()
         { 
            this.Type = "filter";

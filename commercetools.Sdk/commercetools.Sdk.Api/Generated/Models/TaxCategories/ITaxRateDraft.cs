@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.TaxCategories
     {
         string Name { get; set;}
         
-        double Amount { get; set;}
+        double? Amount { get; set;}
         
         bool IncludedInPrice { get; set;}
         

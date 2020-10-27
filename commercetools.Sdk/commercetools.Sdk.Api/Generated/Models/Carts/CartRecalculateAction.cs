@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Carts
     {
         public string Action { get; set;}
         
-        public bool UpdateProductData { get; set;}
+        public bool? UpdateProductData { get; set;}
         public CartRecalculateAction()
         { 
            this.Action = "recalculate";

@@ -12,12 +12,12 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductAddPriceAction))]
     public interface IProductAddPriceAction : IProductUpdateAction
     {
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
         
         string Sku { get; set;}
         
         IPriceDraft Price { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

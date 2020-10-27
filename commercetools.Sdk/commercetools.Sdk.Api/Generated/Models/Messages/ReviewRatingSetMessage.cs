@@ -33,9 +33,9 @@ namespace commercetools.Api.Models.Messages
         
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
         
-        public double OldRating { get; set;}
+        public double? OldRating { get; set;}
         
-        public double NewRating { get; set;}
+        public double? NewRating { get; set;}
         
         public bool IncludedInStatistics { get; set;}
         

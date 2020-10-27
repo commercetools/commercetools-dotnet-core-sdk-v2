@@ -40,15 +40,15 @@ namespace commercetools.Api.Models.Customers
         
         List<IAddress> Addresses { get; set;}
         
-        long DefaultShippingAddress { get; set;}
+        long? DefaultShippingAddress { get; set;}
         
         List<int> ShippingAddresses { get; set;}
         
-        long DefaultBillingAddress { get; set;}
+        long? DefaultBillingAddress { get; set;}
         
         List<int> BillingAddresses { get; set;}
         
-        bool IsEmailVerified { get; set;}
+        bool? IsEmailVerified { get; set;}
         
         string ExternalId { get; set;}
         

@@ -10,8 +10,8 @@ namespace commercetools.Api.Models.ShippingMethods
 {
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("CartValue", typeof(commercetools.Api.Models.ShippingMethods.CartValueTier))]
-    [SubTypeDiscriminator("CartClassification", typeof(commercetools.Api.Models.ShippingMethods.CartClassificationTier))]
     [SubTypeDiscriminator("CartScore", typeof(commercetools.Api.Models.ShippingMethods.CartScoreTier))]
+    [SubTypeDiscriminator("CartClassification", typeof(commercetools.Api.Models.ShippingMethods.CartClassificationTier))]
     public interface IShippingRatePriceTier 
     {
         string Type { get; set;}

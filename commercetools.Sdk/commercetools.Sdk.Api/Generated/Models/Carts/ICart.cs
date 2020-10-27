@@ -83,7 +83,7 @@ namespace commercetools.Api.Models.Carts
         
         string Locale { get; set;}
         
-        int DeleteDaysAfterLastModification { get; set;}
+        int? DeleteDaysAfterLastModification { get; set;}
         
         List<ICartDiscountReference> RefusedGifts { get; set;}
         

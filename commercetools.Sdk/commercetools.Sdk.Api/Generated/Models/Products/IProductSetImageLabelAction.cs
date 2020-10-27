@@ -13,12 +13,12 @@ namespace commercetools.Api.Models.Products
     {
         string Sku { get; set;}
         
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
         
         string ImageUrl { get; set;}
         
         string Label { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
     public interface IConcurrentModificationError : IErrorObject
     {
-        long CurrentVersion { get; set;}
+        long? CurrentVersion { get; set;}
     }
 }

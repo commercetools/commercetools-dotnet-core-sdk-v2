@@ -18,7 +18,7 @@ namespace commercetools.Api.Models.Me
         
         public ILocalizedString Description { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         
         public DateTime AddedAt { get; set;}
         

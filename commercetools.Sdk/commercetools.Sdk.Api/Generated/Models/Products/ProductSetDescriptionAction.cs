@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public ILocalizedString Description { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetDescriptionAction()
         { 
            this.Action = "setDescription";

@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.DiscountCodes
     {
         public string Action { get; set;}
         
-        public long MaxApplicationsPerCustomer { get; set;}
+        public long? MaxApplicationsPerCustomer { get; set;}
         public DiscountCodeSetMaxApplicationsPerCustomerAction()
         { 
            this.Action = "setMaxApplicationsPerCustomer";

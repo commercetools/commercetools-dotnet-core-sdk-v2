@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Inventories
         
         public long QuantityOnStock { get; set;}
         
-        public long RestockableInDays { get; set;}
+        public long? RestockableInDays { get; set;}
         
         public DateTime ExpectedDelivery { get; set;}
         

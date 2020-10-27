@@ -19,8 +19,8 @@ namespace commercetools.Api.Models.ShoppingLists
         
         string ProductId { get; set;}
         
-        int Quantity { get; set;}
+        int? Quantity { get; set;}
         
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
     }
 }

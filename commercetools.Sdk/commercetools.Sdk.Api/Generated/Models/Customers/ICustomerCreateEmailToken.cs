@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Customers
     {
         string Id { get; set;}
         
-        long Version { get; set;}
+        long? Version { get; set;}
         
         long TtlMinutes { get; set;}
     }

@@ -31,6 +31,6 @@ namespace commercetools.Api.Models.ProductTypes
         
         TextInputHint InputHintAsEnum { get; }
         
-        bool IsSearchable { get; set;}
+        bool? IsSearchable { get; set;}
     }
 }

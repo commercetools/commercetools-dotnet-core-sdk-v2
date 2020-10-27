@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.OrderEdits
         
         public IStateResourceIdentifier State { get; set;}
         
-        public bool Force { get; set;}
+        public bool? Force { get; set;}
         public StagedOrderTransitionStateAction()
         { 
            this.Action = "transitionState";

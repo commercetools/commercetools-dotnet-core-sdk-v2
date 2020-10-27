@@ -20,7 +20,7 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public IMoney Price { get; set;}
         
-        public bool IsMatching { get; set;}
+        public bool? IsMatching { get; set;}
         public CartClassificationTier()
         { 
            this.Type = "CartClassification";

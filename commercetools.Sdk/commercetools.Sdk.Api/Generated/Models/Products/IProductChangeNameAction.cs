@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.Products
     {
         ILocalizedString Name { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

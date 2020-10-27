@@ -9,14 +9,14 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [TypeDiscriminator(nameof(Type))]
-    [SubTypeDiscriminator("centPrecision", typeof(commercetools.Api.Models.Common.CentPrecisionMoneyDraft))]
     [SubTypeDiscriminator("highPrecision", typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
+    [SubTypeDiscriminator("centPrecision", typeof(commercetools.Api.Models.Common.CentPrecisionMoneyDraft))]
     public interface ITypedMoneyDraft : IMoney
     {
         string Type { get; set;}
         
         MoneyType TypeAsEnum { get; }
         
-        int FractionDigits { get; set;}
+        int? FractionDigits { get; set;}
     }
 }

@@ -12,5 +12,7 @@ namespace commercetools.Api.Models.Me
     public interface IMyCustomerRemoveAddressAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set;}
+        
+        string AddressKey { get; set;}
     }
 }

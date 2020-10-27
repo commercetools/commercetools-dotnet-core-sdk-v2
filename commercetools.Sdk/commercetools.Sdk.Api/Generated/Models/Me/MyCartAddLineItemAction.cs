@@ -24,11 +24,11 @@ namespace commercetools.Api.Models.Me
         
         public string ProductId { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
-        public double Quantity { get; set;}
+        public double? Quantity { get; set;}
         
         public IChannelResourceIdentifier SupplyChannel { get; set;}
         

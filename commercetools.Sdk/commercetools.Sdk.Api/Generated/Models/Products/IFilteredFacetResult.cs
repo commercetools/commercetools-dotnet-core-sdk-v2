@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Products
     {
         long Count { get; set;}
         
-        long ProductCount { get; set;}
+        long? ProductCount { get; set;}
     }
 }

@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Errors
         
         public string Message { get; set;}
         
-        public long CurrentVersion { get; set;}
+        public long? CurrentVersion { get; set;}
         public ConcurrentModificationError()
         { 
            this.Code = "ConcurrentModification";

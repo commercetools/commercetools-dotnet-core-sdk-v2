@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Customers
         
         public string NewPassword { get; set;}
         
-        public long Version { get; set;}
+        public long? Version { get; set;}
     }
 }

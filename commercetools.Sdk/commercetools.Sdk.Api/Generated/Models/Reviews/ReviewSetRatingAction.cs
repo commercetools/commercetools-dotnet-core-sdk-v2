@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Reviews
     {
         public string Action { get; set;}
         
-        public int Rating { get; set;}
+        public int? Rating { get; set;}
         public ReviewSetRatingAction()
         { 
            this.Action = "setRating";

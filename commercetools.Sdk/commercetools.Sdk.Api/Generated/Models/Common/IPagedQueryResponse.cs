@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Common
         
         long Count { get; set;}
         
-        long Total { get; set;}
+        long? Total { get; set;}
         
         long Offset { get; set;}
         

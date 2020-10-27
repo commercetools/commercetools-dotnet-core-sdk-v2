@@ -42,7 +42,7 @@ namespace commercetools.Api.Models.Reviews
         
         bool IncludedInStatistics { get; set;}
         
-        int Rating { get; set;}
+        int? Rating { get; set;}
         
         IStateReference State { get; set;}
         

@@ -32,6 +32,6 @@ namespace commercetools.Api.Models.ProductTypes
         [JsonIgnore]
         public TextInputHint InputHintAsEnum => this.InputHint.GetEnum<TextInputHint>();
         
-        public bool IsSearchable { get; set;}
+        public bool? IsSearchable { get; set;}
     }
 }

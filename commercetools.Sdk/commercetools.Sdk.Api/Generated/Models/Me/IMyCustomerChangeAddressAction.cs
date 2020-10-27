@@ -14,6 +14,8 @@ namespace commercetools.Api.Models.Me
     {
         string AddressId { get; set;}
         
+        string AddressKey { get; set;}
+        
         IAddress Address { get; set;}
     }
 }

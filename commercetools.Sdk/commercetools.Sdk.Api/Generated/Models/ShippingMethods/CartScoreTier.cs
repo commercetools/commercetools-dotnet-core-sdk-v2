@@ -22,7 +22,7 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public IPriceFunction PriceFunction { get; set;}
         
-        public bool IsMatching { get; set;}
+        public bool? IsMatching { get; set;}
         public CartScoreTier()
         { 
            this.Type = "CartScore";

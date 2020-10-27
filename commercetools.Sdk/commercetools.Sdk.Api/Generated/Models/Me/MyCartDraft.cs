@@ -42,7 +42,7 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
         
-        public long DeleteDaysAfterLastModification { get; set;}
+        public long? DeleteDaysAfterLastModification { get; set;}
         
         public List<IAddress> ItemShippingAddresses { get; set;}
     }

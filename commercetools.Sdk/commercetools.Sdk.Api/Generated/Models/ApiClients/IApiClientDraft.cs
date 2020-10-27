@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.ApiClients
         
         string Scope { get; set;}
         
-        long DeleteDaysAfterCreation { get; set;}
+        long? DeleteDaysAfterCreation { get; set;}
     }
 }

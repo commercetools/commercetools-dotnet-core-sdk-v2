@@ -33,9 +33,9 @@ namespace commercetools.Api.Models.Me
         
         List<IAddress> Addresses { get; set;}
         
-        long DefaultShippingAddress { get; set;}
+        long? DefaultShippingAddress { get; set;}
         
-        long DefaultBillingAddress { get; set;}
+        long? DefaultBillingAddress { get; set;}
         
         ICustomFields Custom { get; set;}
         

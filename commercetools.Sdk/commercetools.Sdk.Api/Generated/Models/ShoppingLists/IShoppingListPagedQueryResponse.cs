@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         long Count { get; set;}
         
-        long Total { get; set;}
+        long? Total { get; set;}
         
         long Offset { get; set;}
         

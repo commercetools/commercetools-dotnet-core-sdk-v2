@@ -23,7 +23,7 @@ namespace commercetools.Api.Models.Products
         
         List<IAttribute> Attributes { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
         
         List<IAsset> Assets { get; set;}
     }

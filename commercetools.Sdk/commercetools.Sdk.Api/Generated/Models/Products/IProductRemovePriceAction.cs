@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Products
     {
         string PriceId { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

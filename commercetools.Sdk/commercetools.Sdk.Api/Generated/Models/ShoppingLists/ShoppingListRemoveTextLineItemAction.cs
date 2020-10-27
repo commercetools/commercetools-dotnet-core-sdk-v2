@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         public string TextLineItemId { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         public ShoppingListRemoveTextLineItemAction()
         { 
            this.Action = "removeTextLineItem";

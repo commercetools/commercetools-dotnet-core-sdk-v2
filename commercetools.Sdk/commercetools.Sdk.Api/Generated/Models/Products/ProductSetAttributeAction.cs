@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Products
     {
         public string Action { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
@@ -20,7 +20,7 @@ namespace commercetools.Api.Models.Products
         
         public Object Value { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetAttributeAction()
         { 
            this.Action = "setAttribute";

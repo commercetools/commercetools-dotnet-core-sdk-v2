@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Products
         
         public IPriceDraft Price { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductChangePriceAction()
         { 
            this.Action = "changePrice";

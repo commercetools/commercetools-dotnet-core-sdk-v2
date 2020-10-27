@@ -23,6 +23,6 @@ namespace commercetools.Api.Models.Customers
         
         public string AnonymousId { get; set;}
         
-        public bool UpdateProductData { get; set;}
+        public bool? UpdateProductData { get; set;}
     }
 }

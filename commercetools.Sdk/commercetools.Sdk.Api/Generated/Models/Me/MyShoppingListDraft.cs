@@ -22,6 +22,6 @@ namespace commercetools.Api.Models.Me
         
         public ICustomFieldsDraft Custom { get; set;}
         
-        public long DeleteDaysAfterLastModification { get; set;}
+        public long? DeleteDaysAfterLastModification { get; set;}
     }
 }

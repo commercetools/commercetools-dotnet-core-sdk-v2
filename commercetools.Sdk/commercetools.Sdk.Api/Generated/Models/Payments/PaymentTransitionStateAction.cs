@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Payments
         
         public IStateResourceIdentifier State { get; set;}
         
-        public bool Force { get; set;}
+        public bool? Force { get; set;}
         public PaymentTransitionStateAction()
         { 
            this.Action = "transitionState";

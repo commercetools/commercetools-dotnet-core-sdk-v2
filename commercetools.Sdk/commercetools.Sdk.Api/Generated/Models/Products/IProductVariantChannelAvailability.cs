@@ -10,10 +10,10 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariantChannelAvailability))]
     public interface IProductVariantChannelAvailability 
     {
-        bool IsOnStock { get; set;}
+        bool? IsOnStock { get; set;}
         
-        long RestockableInDays { get; set;}
+        long? RestockableInDays { get; set;}
         
-        long AvailableQuantity { get; set;}
+        long? AvailableQuantity { get; set;}
     }
 }

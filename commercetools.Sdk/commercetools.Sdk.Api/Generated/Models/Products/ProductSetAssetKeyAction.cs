@@ -12,11 +12,11 @@ namespace commercetools.Api.Models.Products
     {
         public string Action { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         
         public string AssetId { get; set;}
         

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text.Json;
@@ -11,7 +12,7 @@ namespace commercetools.Base.Serialization.JsonConverters
     public class DeserializeAsConverterFactory
         : JsonConverterFactory
     {
-        protected static Dictionary<Type, JsonConverter> Converters = new Dictionary<Type, JsonConverter>();
+        protected static ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         public DeserializeAsConverterFactory(
             JsonNamingPolicy namingPolicy,
@@ -39,8 +40,7 @@ namespace commercetools.Base.Serialization.JsonConverters
                 Type converterType = typeof(DeserializeAsConverter<>).MakeGenericType(typeToConvert);
                 converter = (JsonConverter) Activator.CreateInstance(converterType, this.NamingPolicy,
                     JsonSerializerOptions);
-                if (!Converters.ContainsKey(typeToConvert))
-                    Converters.Add(typeToConvert, converter);
+                Converters.TryAdd(typeToConvert, converter);
             }
 
             return converter;

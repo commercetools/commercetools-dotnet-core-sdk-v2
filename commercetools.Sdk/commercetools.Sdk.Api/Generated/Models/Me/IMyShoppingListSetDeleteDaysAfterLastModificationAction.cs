@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListSetDeleteDaysAfterLastModificationAction))]
     public interface IMyShoppingListSetDeleteDaysAfterLastModificationAction : IMyShoppingListUpdateAction
     {
-        long DeleteDaysAfterLastModification { get; set;}
+        long? DeleteDaysAfterLastModification { get; set;}
     }
 }

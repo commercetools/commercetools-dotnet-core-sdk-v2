@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Carts
     {
         string LineItemId { get; set;}
         
-        long Quantity { get; set;}
+        long? Quantity { get; set;}
         
         IMoney ExternalPrice { get; set;}
         

@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartRecalculateAction))]
     public interface ICartRecalculateAction : ICartUpdateAction
     {
-        bool UpdateProductData { get; set;}
+        bool? UpdateProductData { get; set;}
     }
 }

@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Carts
     {
         public string Action { get; set;}
         
-        public int DeleteDaysAfterLastModification { get; set;}
+        public int? DeleteDaysAfterLastModification { get; set;}
         public CartSetDeleteDaysAfterLastModificationAction()
         { 
            this.Action = "setDeleteDaysAfterLastModification";

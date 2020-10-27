@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Inventories
     {
         public string Action { get; set;}
         
-        public long RestockableInDays { get; set;}
+        public long? RestockableInDays { get; set;}
         public InventoryEntrySetRestockableInDaysAction()
         { 
            this.Action = "setRestockableInDays";

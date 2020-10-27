@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Extensions
     {
         public string Action { get; set;}
         
-        public int TimeoutInMs { get; set;}
+        public int? TimeoutInMs { get; set;}
         public ExtensionSetTimeoutInMsAction()
         { 
            this.Action = "setTimeoutInMs";

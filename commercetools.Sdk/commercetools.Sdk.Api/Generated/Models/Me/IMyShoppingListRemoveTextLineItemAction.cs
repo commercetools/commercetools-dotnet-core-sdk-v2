@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Me
     {
         string TextLineItemId { get; set;}
         
-        long Quantity { get; set;}
+        long? Quantity { get; set;}
     }
 }

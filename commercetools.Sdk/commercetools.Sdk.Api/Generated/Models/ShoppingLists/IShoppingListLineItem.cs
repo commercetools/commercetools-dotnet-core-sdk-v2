@@ -34,6 +34,6 @@ namespace commercetools.Api.Models.ShoppingLists
         
         IProductVariant Variant { get; set;}
         
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
     }
 }

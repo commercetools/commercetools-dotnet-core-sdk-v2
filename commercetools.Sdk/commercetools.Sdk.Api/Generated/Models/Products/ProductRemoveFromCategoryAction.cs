@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public ICategoryResourceIdentifier Category { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemoveFromCategoryAction()
         { 
            this.Action = "removeFromCategory";

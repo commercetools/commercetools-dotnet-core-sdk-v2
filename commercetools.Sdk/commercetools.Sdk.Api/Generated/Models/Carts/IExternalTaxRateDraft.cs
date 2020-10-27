@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Carts
     {
         string Name { get; set;}
         
-        double Amount { get; set;}
+        double? Amount { get; set;}
         
         string Country { get; set;}
         
@@ -21,6 +21,6 @@ namespace commercetools.Api.Models.Carts
         
         List<ISubRate> SubRates { get; set;}
         
-        bool IncludedInPrice { get; set;}
+        bool? IncludedInPrice { get; set;}
     }
 }

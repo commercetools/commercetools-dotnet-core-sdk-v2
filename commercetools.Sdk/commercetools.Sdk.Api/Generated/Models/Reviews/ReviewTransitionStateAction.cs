@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Reviews
         
         public IStateResourceIdentifier State { get; set;}
         
-        public bool Force { get; set;}
+        public bool? Force { get; set;}
         public ReviewTransitionStateAction()
         { 
            this.Action = "transitionState";

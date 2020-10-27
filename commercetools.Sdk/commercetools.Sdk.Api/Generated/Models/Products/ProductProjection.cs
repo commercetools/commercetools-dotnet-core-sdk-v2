@@ -46,9 +46,9 @@ namespace commercetools.Api.Models.Products
         
         public ISearchKeywords SearchKeywords { get; set;}
         
-        public bool HasStagedChanges { get; set;}
+        public bool? HasStagedChanges { get; set;}
         
-        public bool Published { get; set;}
+        public bool? Published { get; set;}
         
         public IProductVariant MasterVariant { get; set;}
         

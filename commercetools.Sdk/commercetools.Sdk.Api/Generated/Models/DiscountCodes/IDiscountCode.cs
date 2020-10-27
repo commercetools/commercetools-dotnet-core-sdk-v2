@@ -39,9 +39,9 @@ namespace commercetools.Api.Models.DiscountCodes
         
         List<IReference> References { get; set;}
         
-        long MaxApplications { get; set;}
+        long? MaxApplications { get; set;}
         
-        long MaxApplicationsPerCustomer { get; set;}
+        long? MaxApplicationsPerCustomer { get; set;}
         
         ICustomFields Custom { get; set;}
         

@@ -12,5 +12,7 @@ namespace commercetools.Api.Models.Me
     public interface IMyCustomerAddShippingAddressIdAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set;}
+        
+        string AddressKey { get; set;}
     }
 }

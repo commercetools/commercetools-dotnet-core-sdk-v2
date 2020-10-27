@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.Payments
     {
         IStateResourceIdentifier State { get; set;}
         
-        bool Force { get; set;}
+        bool? Force { get; set;}
     }
 }

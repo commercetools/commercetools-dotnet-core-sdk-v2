@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAttributeAction))]
     public interface IProductSetAttributeAction : IProductUpdateAction
     {
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
         
         string Sku { get; set;}
         
@@ -19,6 +19,6 @@ namespace commercetools.Api.Models.Products
         
         Object Value { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

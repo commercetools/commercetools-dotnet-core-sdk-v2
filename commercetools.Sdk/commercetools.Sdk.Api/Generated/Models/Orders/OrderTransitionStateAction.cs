@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Orders
         
         public IStateResourceIdentifier State { get; set;}
         
-        public bool Force { get; set;}
+        public bool? Force { get; set;}
         public OrderTransitionStateAction()
         { 
            this.Action = "transitionState";

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using commercetools.Base.CustomAttributes;
@@ -8,15 +9,13 @@ using Newtonsoft.Json;
 
 namespace commercetools.Sdk.V2Compat
 {
-    public class DiscriminatorConverterFactory : JsonConverterBase
+    public class TypeDiscriminatorConverterFactory : JsonConverterBase
     {
-        private readonly Dictionary<Type, JsonConverter> _converters;
-        private readonly ITypeRetriever _typeRetriever;
-        
-        public DiscriminatorConverterFactory(ITypeRetriever typeRetriever)
+        private readonly ConcurrentDictionary<Type, JsonConverter> _converters;
+
+        public TypeDiscriminatorConverterFactory()
         {
-            _converters = new Dictionary<Type, JsonConverter>();
-            _typeRetriever = typeRetriever;
+            _converters = new ConcurrentDictionary<Type, JsonConverter>();
         }
 
         public override List<SerializerType> SerializerTypes => new List<SerializerType>() { SerializerType.Deserialization };
@@ -30,9 +29,9 @@ namespace commercetools.Sdk.V2Compat
         {
             if (!_converters.TryGetValue(objectType, out var converter))
             {
-                var converterType = typeof(DiscriminatorConverter<>).MakeGenericType(objectType);
-                converter = Activator.CreateInstance(converterType, _typeRetriever) as JsonConverter;
-                _converters.Add(objectType, converter);
+                var converterType = typeof(TypeDiscriminatorConverter<>).MakeGenericType(objectType);
+                converter = Activator.CreateInstance(converterType) as JsonConverter;
+                _converters.TryAdd(objectType, converter);
             }
             
             return converter?.ReadJson(reader, objectType, existingValue, serializer) ?? throw new JsonException($"Failed to instantiate converter for object type '{objectType.FullName}'");
@@ -41,7 +40,7 @@ namespace commercetools.Sdk.V2Compat
         /// <inheritdoc/>
         public override bool CanConvert(Type typeToConvert)
         {
-            return typeToConvert.IsClass && typeToConvert.IsAbstract && typeToConvert.IsDefined(typeof(DiscriminatorAttribute));
+            return typeToConvert.IsClass && typeToConvert.IsAbstract && typeToConvert.IsDefined(typeof(TypeDiscriminatorAttribute));
         }
     }
 }

@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.Categories
     {
         IAssetDraft Asset { get; set;}
         
-        int Position { get; set;}
+        int? Position { get; set;}
     }
 }

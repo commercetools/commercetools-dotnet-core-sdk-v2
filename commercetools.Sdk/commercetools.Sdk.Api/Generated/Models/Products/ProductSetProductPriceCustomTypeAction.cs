@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public string PriceId { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         
         public ITypeResourceIdentifier Type { get; set;}
         

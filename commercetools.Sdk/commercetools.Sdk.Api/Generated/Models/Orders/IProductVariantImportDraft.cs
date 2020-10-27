@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ProductVariantImportDraft))]
     public interface IProductVariantImportDraft 
     {
-        long Id { get; set;}
+        long? Id { get; set;}
         
         string Sku { get; set;}
         

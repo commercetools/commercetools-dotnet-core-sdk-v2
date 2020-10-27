@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public ILocalizedString MetaTitle { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetMetaTitleAction()
         { 
            this.Action = "setMetaTitle";

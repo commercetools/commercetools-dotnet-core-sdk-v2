@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         public ICustomerResourceIdentifier Customer { get; set;}
         
-        public long DeleteDaysAfterLastModification { get; set;}
+        public long? DeleteDaysAfterLastModification { get; set;}
         
         public ILocalizedString Description { get; set;}
         

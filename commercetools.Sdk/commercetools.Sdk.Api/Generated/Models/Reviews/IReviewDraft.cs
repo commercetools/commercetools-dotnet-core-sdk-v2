@@ -29,7 +29,7 @@ namespace commercetools.Api.Models.Reviews
         
         IStateResourceIdentifier State { get; set;}
         
-        int Rating { get; set;}
+        int? Rating { get; set;}
         
         ICustomerResourceIdentifier Customer { get; set;}
         

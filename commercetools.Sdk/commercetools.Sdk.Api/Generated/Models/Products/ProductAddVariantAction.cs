@@ -24,7 +24,7 @@ namespace commercetools.Api.Models.Products
         
         public List<IAttribute> Attributes { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         
         public List<IAsset> Assets { get; set;}
         public ProductAddVariantAction()

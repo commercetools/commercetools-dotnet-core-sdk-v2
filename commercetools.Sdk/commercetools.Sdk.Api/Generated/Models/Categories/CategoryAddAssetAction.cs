@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Categories
         
         public IAssetDraft Asset { get; set;}
         
-        public int Position { get; set;}
+        public int? Position { get; set;}
         public CategoryAddAssetAction()
         { 
            this.Action = "addAsset";

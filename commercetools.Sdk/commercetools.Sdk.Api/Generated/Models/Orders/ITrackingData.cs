@@ -18,6 +18,6 @@ namespace commercetools.Api.Models.Orders
         
         string ProviderTransaction { get; set;}
         
-        bool IsReturn { get; set;}
+        bool? IsReturn { get; set;}
     }
 }

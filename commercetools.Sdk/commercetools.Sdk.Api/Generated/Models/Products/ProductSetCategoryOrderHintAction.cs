@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Products
         
         public string OrderHint { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetCategoryOrderHintAction()
         { 
            this.Action = "setCategoryOrderHint";

@@ -12,13 +12,13 @@ namespace commercetools.Api.Models.Products
     {
         public string Action { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
         public string ImageUrl { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemoveImageAction()
         { 
            this.Action = "removeImage";

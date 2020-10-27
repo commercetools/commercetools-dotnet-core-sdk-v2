@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
         
         public ILocalizedString MetaKeywords { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetMetaKeywordsAction()
         { 
            this.Action = "setMetaKeywords";

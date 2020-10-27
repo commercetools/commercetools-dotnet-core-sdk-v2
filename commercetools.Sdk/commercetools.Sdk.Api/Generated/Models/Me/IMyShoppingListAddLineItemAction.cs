@@ -16,9 +16,9 @@ namespace commercetools.Api.Models.Me
         
         string ProductId { get; set;}
         
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
         
-        long Quantity { get; set;}
+        long? Quantity { get; set;}
         
         DateTime AddedAt { get; set;}
         

@@ -18,7 +18,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public int DiscountedQuantity { get; set;}
         
-        public int MaxOccurrence { get; set;}
+        public int? MaxOccurrence { get; set;}
         
         public string SelectionMode { get; set;}
         

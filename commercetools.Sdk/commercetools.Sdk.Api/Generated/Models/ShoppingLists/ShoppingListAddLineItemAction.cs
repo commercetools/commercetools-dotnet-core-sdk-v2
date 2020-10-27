@@ -17,9 +17,9 @@ namespace commercetools.Api.Models.ShoppingLists
         
         public string ProductId { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         
         public DateTime AddedAt { get; set;}
         

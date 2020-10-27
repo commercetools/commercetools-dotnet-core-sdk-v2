@@ -46,6 +46,6 @@ namespace commercetools.Api.Models.Products
         
         IStateResourceIdentifier State { get; set;}
         
-        bool Publish { get; set;}
+        bool? Publish { get; set;}
     }
 }

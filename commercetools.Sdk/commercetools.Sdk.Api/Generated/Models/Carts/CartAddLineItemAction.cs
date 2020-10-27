@@ -23,11 +23,11 @@ namespace commercetools.Api.Models.Carts
         
         public string ProductId { get; set;}
         
-        public long VariantId { get; set;}
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         
         public IChannelResourceIdentifier SupplyChannel { get; set;}
         

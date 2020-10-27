@@ -65,7 +65,7 @@ namespace commercetools.Api.Models.Carts
         
         public string Locale { get; set;}
         
-        public long DeleteDaysAfterLastModification { get; set;}
+        public long? DeleteDaysAfterLastModification { get; set;}
         
         public string Origin { get; set;}
         

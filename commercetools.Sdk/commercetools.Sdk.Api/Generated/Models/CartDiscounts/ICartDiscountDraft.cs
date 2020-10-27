@@ -27,7 +27,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         string SortOrder { get; set;}
         
-        bool IsActive { get; set;}
+        bool? IsActive { get; set;}
         
         DateTime ValidFrom { get; set;}
         

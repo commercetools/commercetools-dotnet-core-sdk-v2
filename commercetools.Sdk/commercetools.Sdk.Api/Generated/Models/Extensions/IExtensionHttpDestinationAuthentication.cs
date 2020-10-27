@@ -8,8 +8,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [TypeDiscriminator(nameof(Type))]
-    [SubTypeDiscriminator("AzureFunctions", typeof(commercetools.Api.Models.Extensions.ExtensionAzureFunctionsAuthentication))]
     [SubTypeDiscriminator("AuthorizationHeader", typeof(commercetools.Api.Models.Extensions.ExtensionAuthorizationHeaderAuthentication))]
+    [SubTypeDiscriminator("AzureFunctions", typeof(commercetools.Api.Models.Extensions.ExtensionAzureFunctionsAuthentication))]
     public interface IExtensionHttpDestinationAuthentication 
     {
         string Type { get; set;}

@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Me
         
         public string LineItemId { get; set;}
         
-        public double Quantity { get; set;}
+        public double? Quantity { get; set;}
         
         public IMoney ExternalPrice { get; set;}
         

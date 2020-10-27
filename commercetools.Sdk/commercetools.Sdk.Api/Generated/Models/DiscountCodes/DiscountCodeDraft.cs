@@ -22,11 +22,11 @@ namespace commercetools.Api.Models.DiscountCodes
         
         public string CartPredicate { get; set;}
         
-        public bool IsActive { get; set;}
+        public bool? IsActive { get; set;}
         
-        public long MaxApplications { get; set;}
+        public long? MaxApplications { get; set;}
         
-        public long MaxApplicationsPerCustomer { get; set;}
+        public long? MaxApplicationsPerCustomer { get; set;}
         
         public ICustomFieldsDraft Custom { get; set;}
         

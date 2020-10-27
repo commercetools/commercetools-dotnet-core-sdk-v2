@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.ShippingMethods
         
         public ITypedMoney FreeAbove { get; set;}
         
-        public bool IsMatching { get; set;}
+        public bool? IsMatching { get; set;}
         
         public List<IShippingRatePriceTier> Tiers { get; set;}
     }

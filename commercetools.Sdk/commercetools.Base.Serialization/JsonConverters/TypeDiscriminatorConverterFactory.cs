@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text.Json;
@@ -15,7 +16,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         
         protected JsonSerializerOptions JsonSerializerOptions { get; }
         
-        protected static Dictionary<Type, JsonConverter> Converters = new Dictionary<Type, JsonConverter>();
+        protected static ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         /// <summary>
         /// Initializes a new <see cref="AbstractClassConverterFactory"/>
@@ -42,7 +43,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             {
                 var converterType = typeof(TypeDiscriminatorConverter<>).MakeGenericType(typeToConvert);
                 converter = (JsonConverter)Activator.CreateInstance(converterType, this.NamingPolicy, JsonSerializerOptions);
-                Converters.Add(typeToConvert, converter);
+                Converters.TryAdd(typeToConvert, converter);
             }
             return converter;
         }

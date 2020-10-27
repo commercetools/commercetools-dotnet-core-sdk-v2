@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsPerCustomerAction))]
     public interface IDiscountCodeSetMaxApplicationsPerCustomerAction : IDiscountCodeUpdateAction
     {
-        long MaxApplicationsPerCustomer { get; set;}
+        long? MaxApplicationsPerCustomer { get; set;}
     }
 }

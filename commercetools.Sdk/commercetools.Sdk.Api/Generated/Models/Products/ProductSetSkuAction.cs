@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Products
         
         public string Sku { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetSkuAction()
         { 
            this.Action = "setSku";

@@ -19,6 +19,6 @@ namespace commercetools.Api.Models.Common
         [JsonIgnore]
         public MoneyType TypeAsEnum => this.Type.GetEnum<MoneyType>();
         
-        public int FractionDigits { get; set;}
+        public int? FractionDigits { get; set;}
     }
 }

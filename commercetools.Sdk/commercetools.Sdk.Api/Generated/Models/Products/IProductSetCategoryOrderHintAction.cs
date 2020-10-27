@@ -15,6 +15,6 @@ namespace commercetools.Api.Models.Products
         
         string OrderHint { get; set;}
         
-        bool Staged { get; set;}
+        bool? Staged { get; set;}
     }
 }

@@ -17,6 +17,6 @@ namespace commercetools.Api.Models.Orders
         
         public string ProviderTransaction { get; set;}
         
-        public bool IsReturn { get; set;}
+        public bool? IsReturn { get; set;}
     }
 }

@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Products
         
         public string PriceId { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemovePriceAction()
         { 
            this.Action = "removePrice";

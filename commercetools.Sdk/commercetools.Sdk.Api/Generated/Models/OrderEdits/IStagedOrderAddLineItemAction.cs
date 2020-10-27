@@ -23,11 +23,11 @@ namespace commercetools.Api.Models.OrderEdits
         
         string ProductId { get; set;}
         
-        long VariantId { get; set;}
+        long? VariantId { get; set;}
         
         string Sku { get; set;}
         
-        double Quantity { get; set;}
+        double? Quantity { get; set;}
         
         DateTime AddedAt { get; set;}
         

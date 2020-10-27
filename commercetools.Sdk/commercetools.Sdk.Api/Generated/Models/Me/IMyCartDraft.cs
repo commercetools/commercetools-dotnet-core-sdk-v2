@@ -41,7 +41,7 @@ namespace commercetools.Api.Models.Me
         
         TaxMode TaxModeAsEnum { get; }
         
-        long DeleteDaysAfterLastModification { get; set;}
+        long? DeleteDaysAfterLastModification { get; set;}
         
         List<IAddress> ItemShippingAddresses { get; set;}
     }

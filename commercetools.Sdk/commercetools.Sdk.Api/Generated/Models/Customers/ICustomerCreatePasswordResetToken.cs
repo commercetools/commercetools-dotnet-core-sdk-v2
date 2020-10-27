@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Customers
     {
         string Email { get; set;}
         
-        long TtlMinutes { get; set;}
+        long? TtlMinutes { get; set;}
     }
 }

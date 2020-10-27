@@ -12,5 +12,7 @@ namespace commercetools.Api.Models.Me
     public interface IMyCustomerSetDefaultBillingAddressAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set;}
+        
+        string AddressKey { get; set;}
     }
 }

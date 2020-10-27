@@ -15,6 +15,6 @@ namespace commercetools.Api.Models.OrderEdits
         
         List<IOrderEditUpdateAction> Actions { get; set;}
         
-        bool DryRun { get; set;}
+        bool? DryRun { get; set;}
     }
 }

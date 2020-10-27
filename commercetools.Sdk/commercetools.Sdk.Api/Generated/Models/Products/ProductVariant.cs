@@ -30,10 +30,10 @@ namespace commercetools.Api.Models.Products
         
         public IProductVariantAvailability Availability { get; set;}
         
-        public bool IsMatchingVariant { get; set;}
+        public bool? IsMatchingVariant { get; set;}
         
         public IScopedPrice ScopedPrice { get; set;}
         
-        public bool ScopedPriceDiscounted { get; set;}
+        public bool? ScopedPriceDiscounted { get; set;}
     }
 }

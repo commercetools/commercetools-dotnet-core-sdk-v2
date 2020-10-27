@@ -22,7 +22,7 @@ namespace commercetools.Api.Models.States
         
         ILocalizedString Description { get; set;}
         
-        bool Initial { get; set;}
+        bool? Initial { get; set;}
         
         List<string> Roles { get; set;}
         

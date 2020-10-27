@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Products
         
         public Object Value { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetAttributeInAllVariantsAction()
         { 
            this.Action = "setAttributeInAllVariants";

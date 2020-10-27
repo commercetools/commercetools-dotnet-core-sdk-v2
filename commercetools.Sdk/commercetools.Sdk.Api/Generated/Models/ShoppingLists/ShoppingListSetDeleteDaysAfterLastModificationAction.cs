@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.ShoppingLists
     {
         public string Action { get; set;}
         
-        public long DeleteDaysAfterLastModification { get; set;}
+        public long? DeleteDaysAfterLastModification { get; set;}
         public ShoppingListSetDeleteDaysAfterLastModificationAction()
         { 
            this.Action = "setDeleteDaysAfterLastModification";

@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerEmailVerify))]
     public interface ICustomerEmailVerify 
     {
-        long Version { get; set;}
+        long? Version { get; set;}
         
         string TokenValue { get; set;}
     }

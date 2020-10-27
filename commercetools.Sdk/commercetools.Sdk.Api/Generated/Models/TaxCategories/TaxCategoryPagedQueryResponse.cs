@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.TaxCategories
         
         public long Count { get; set;}
         
-        public long Total { get; set;}
+        public long? Total { get; set;}
         
         public long Offset { get; set;}
         

@@ -16,6 +16,6 @@ namespace commercetools.Api.Models.CustomObjects
         
         Object Value { get; set;}
         
-        long Version { get; set;}
+        long? Version { get; set;}
     }
 }

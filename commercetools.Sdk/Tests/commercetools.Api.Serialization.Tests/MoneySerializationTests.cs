@@ -24,7 +24,7 @@ namespace commercetools.Api.Serialization.Tests
                 ""currencyCode"": ""EUR"",
                 ""centAmount"": 123456
             }";
-            var deserialized = serializerService.Deserialize<ITypedMoney>(serialized);
+            var deserialized = serializerService.Deserialize<IMoney>(serialized);
             Assert.IsType<Money>(deserialized);
         }
 
@@ -83,10 +83,10 @@ namespace commercetools.Api.Serialization.Tests
         
 
         [Fact]
-        public void CentPrecisionMoneySerialization()
+        public void CentPrecisionMoneyDraftSerialization()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
-            var m = CentPrecisionMoney.FromDecimal("EUR", 1234.5678M);
+            var m = CentPrecisionMoneyDraft.FromDecimal("EUR", 1234.5678M);
 
             var serialize = serializerService.Serialize(m);
             JToken resultFormatted = JValue.Parse(serialize);

@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Me
         
         public string LineItemId { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         public MyShoppingListRemoveLineItemAction()
         { 
            this.Action = "removeLineItem";
