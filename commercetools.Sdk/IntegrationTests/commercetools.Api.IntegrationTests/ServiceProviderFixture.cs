@@ -24,6 +24,10 @@ namespace commercetools.Api.IntegrationTests
 
             services.UseCommercetoolsApi(configuration, "Client");
             this.serviceProvider = services.BuildServiceProvider();
+            
+            //set default ProjectKey
+            var clientConfiguration = this.GetClientConfiguration("Client");
+            GenericFixture.DefaultProjectKey = clientConfiguration.ProjectKey;
         }
 
         public T GetService<T>()
