@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class Channel : IChannel
+    public partial class Channel : IChannel
     {
         public string Id { get; set;}
         

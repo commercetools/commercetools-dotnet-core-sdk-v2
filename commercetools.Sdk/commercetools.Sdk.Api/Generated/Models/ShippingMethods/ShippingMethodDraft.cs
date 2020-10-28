@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodDraft : IShippingMethodDraft
+    public partial class ShippingMethodDraft : IShippingMethodDraft
     {
         public string Key { get; set;}
         

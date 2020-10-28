@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListPagedQueryResponse : IShoppingListPagedQueryResponse
+    public partial class ShoppingListPagedQueryResponse : IShoppingListPagedQueryResponse
     {
         public long Limit { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductRevertedStagedChangesMessage : IProductRevertedStagedChangesMessage
+    public partial class ProductRevertedStagedChangesMessage : IProductRevertedStagedChangesMessage
     {
         public string Id { get; set;}
         

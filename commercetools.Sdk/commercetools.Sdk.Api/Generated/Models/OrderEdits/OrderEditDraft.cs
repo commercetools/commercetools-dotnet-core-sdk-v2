@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderEditDraft : IOrderEditDraft
+    public partial class OrderEditDraft : IOrderEditDraft
     {
         public string Key { get; set;}
         

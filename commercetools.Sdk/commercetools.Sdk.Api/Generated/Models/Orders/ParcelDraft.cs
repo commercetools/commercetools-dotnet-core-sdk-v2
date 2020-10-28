@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ParcelDraft : IParcelDraft
+    public partial class ParcelDraft : IParcelDraft
     {
         public IParcelMeasurements Measurements { get; set;}
         

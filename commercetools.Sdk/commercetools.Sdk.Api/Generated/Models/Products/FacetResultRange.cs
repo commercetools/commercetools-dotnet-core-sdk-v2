@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class FacetResultRange : IFacetResultRange
+    public partial class FacetResultRange : IFacetResultRange
     {
         public double From { get; set;}
         

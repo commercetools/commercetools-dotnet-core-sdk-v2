@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeReference : IProductTypeReference
+    public partial class ProductTypeReference : IProductTypeReference
     {
         public string TypeId { get; set;}
         

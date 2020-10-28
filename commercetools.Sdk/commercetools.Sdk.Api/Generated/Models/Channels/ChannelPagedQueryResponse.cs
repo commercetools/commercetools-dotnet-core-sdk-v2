@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelPagedQueryResponse : IChannelPagedQueryResponse
+    public partial class ChannelPagedQueryResponse : IChannelPagedQueryResponse
     {
         public long Limit { get; set;}
         

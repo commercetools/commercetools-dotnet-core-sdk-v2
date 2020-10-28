@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class MessageConfigurationDraft : IMessageConfigurationDraft
+    public partial class MessageConfigurationDraft : IMessageConfigurationDraft
     {
         public bool Enabled { get; set;}
         

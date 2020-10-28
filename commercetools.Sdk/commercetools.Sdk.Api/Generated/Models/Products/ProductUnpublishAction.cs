@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductUnpublishAction : IProductUnpublishAction
+    public partial class ProductUnpublishAction : IProductUnpublishAction
     {
         public string Action { get; set;}
         public ProductUnpublishAction()

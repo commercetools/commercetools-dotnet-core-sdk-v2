@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldDateType : ICustomFieldDateType
+    public partial class CustomFieldDateType : ICustomFieldDateType
     {
         public string Name { get; set;}
         public CustomFieldDateType()

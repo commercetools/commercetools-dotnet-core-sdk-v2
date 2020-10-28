@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartRecalculateAction : ICartRecalculateAction
+    public partial class CartRecalculateAction : ICartRecalculateAction
     {
         public string Action { get; set;}
         

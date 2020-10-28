@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionSetKeyAction : IExtensionSetKeyAction
+    public partial class ExtensionSetKeyAction : IExtensionSetKeyAction
     {
         public string Action { get; set;}
         

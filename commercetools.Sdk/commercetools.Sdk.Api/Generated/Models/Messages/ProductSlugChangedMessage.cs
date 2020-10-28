@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductSlugChangedMessage : IProductSlugChangedMessage
+    public partial class ProductSlugChangedMessage : IProductSlugChangedMessage
     {
         public string Id { get; set;}
         

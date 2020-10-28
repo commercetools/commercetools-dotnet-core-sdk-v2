@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class TransactionDraft : ITransactionDraft
+    public partial class TransactionDraft : ITransactionDraft
     {
         public DateTime Timestamp { get; set;}
         

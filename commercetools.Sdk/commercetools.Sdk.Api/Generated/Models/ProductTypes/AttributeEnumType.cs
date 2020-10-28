@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class AttributeEnumType : IAttributeEnumType
+    public partial class AttributeEnumType : IAttributeEnumType
     {
         public string Name { get; set;}
         

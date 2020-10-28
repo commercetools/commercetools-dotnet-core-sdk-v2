@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelSetCustomFieldAction : IChannelSetCustomFieldAction
+    public partial class ChannelSetCustomFieldAction : IChannelSetCustomFieldAction
     {
         public string Action { get; set;}
         

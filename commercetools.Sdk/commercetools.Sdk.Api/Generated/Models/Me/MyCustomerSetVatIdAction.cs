@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCustomerSetVatIdAction : IMyCustomerSetVatIdAction
+    public partial class MyCustomerSetVatIdAction : IMyCustomerSetVatIdAction
     {
         public string Action { get; set;}
         

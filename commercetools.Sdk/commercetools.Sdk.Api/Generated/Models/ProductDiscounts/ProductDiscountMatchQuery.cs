@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public  partial class ProductDiscountMatchQuery : IProductDiscountMatchQuery
+    public partial class ProductDiscountMatchQuery : IProductDiscountMatchQuery
     {
         public string ProductId { get; set;}
         

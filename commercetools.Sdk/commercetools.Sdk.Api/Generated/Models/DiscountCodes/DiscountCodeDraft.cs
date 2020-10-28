@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeDraft : IDiscountCodeDraft
+    public partial class DiscountCodeDraft : IDiscountCodeDraft
     {
         public ILocalizedString Name { get; set;}
         

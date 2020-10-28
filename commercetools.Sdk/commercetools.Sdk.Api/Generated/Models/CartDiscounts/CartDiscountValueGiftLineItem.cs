@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class CartDiscountValueGiftLineItem : ICartDiscountValueGiftLineItem
+    public partial class CartDiscountValueGiftLineItem : ICartDiscountValueGiftLineItem
     {
         public string Type { get; set;}
         

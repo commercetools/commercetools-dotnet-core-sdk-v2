@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartChangeTaxRoundingModeAction : ICartChangeTaxRoundingModeAction
+    public partial class CartChangeTaxRoundingModeAction : ICartChangeTaxRoundingModeAction
     {
         public string Action { get; set;}
         

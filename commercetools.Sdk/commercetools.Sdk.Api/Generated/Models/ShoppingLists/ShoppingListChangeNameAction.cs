@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListChangeNameAction : IShoppingListChangeNameAction
+    public partial class ShoppingListChangeNameAction : IShoppingListChangeNameAction
     {
         public string Action { get; set;}
         

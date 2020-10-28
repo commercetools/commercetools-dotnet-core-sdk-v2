@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntryRemoveQuantityAction : IInventoryEntryRemoveQuantityAction
+    public partial class InventoryEntryRemoveQuantityAction : IInventoryEntryRemoveQuantityAction
     {
         public string Action { get; set;}
         

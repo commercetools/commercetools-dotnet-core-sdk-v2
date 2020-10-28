@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldLocalizedEnumType : ICustomFieldLocalizedEnumType
+    public partial class CustomFieldLocalizedEnumType : ICustomFieldLocalizedEnumType
     {
         public string Name { get; set;}
         

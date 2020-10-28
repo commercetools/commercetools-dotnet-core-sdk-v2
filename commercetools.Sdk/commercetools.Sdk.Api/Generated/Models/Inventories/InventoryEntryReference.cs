@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntryReference : IInventoryEntryReference
+    public partial class InventoryEntryReference : IInventoryEntryReference
     {
         public string TypeId { get; set;}
         

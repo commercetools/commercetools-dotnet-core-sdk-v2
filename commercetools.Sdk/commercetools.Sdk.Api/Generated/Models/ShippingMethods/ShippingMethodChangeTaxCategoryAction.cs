@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodChangeTaxCategoryAction : IShippingMethodChangeTaxCategoryAction
+    public partial class ShippingMethodChangeTaxCategoryAction : IShippingMethodChangeTaxCategoryAction
     {
         public string Action { get; set;}
         

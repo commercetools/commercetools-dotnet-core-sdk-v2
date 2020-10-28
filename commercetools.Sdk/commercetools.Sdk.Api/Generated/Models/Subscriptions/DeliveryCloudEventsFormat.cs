@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class DeliveryCloudEventsFormat : IDeliveryCloudEventsFormat
+    public partial class DeliveryCloudEventsFormat : IDeliveryCloudEventsFormat
     {
         public string Type { get; set;}
         

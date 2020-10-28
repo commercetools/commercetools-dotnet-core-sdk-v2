@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class ProjectSetShippingRateInputTypeAction : IProjectSetShippingRateInputTypeAction
+    public partial class ProjectSetShippingRateInputTypeAction : IProjectSetShippingRateInputTypeAction
     {
         public string Action { get; set;}
         

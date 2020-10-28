@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class StagedOrderSetShippingMethodAction : IStagedOrderSetShippingMethodAction
+    public partial class StagedOrderSetShippingMethodAction : IStagedOrderSetShippingMethodAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeSetMaxApplicationsPerCustomerAction : IDiscountCodeSetMaxApplicationsPerCustomerAction
+    public partial class DiscountCodeSetMaxApplicationsPerCustomerAction : IDiscountCodeSetMaxApplicationsPerCustomerAction
     {
         public string Action { get; set;}
         

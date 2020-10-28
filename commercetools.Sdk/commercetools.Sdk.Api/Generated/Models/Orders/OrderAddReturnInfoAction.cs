@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderAddReturnInfoAction : IOrderAddReturnInfoAction
+    public partial class OrderAddReturnInfoAction : IOrderAddReturnInfoAction
     {
         public string Action { get; set;}
         

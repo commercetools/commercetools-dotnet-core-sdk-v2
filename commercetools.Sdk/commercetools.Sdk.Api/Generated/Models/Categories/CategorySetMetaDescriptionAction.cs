@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategorySetMetaDescriptionAction : ICategorySetMetaDescriptionAction
+    public partial class CategorySetMetaDescriptionAction : ICategorySetMetaDescriptionAction
     {
         public string Action { get; set;}
         

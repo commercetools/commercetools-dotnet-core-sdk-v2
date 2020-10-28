@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class OrderShipmentStateChangedMessage : IOrderShipmentStateChangedMessage
+    public partial class OrderShipmentStateChangedMessage : IOrderShipmentStateChangedMessage
     {
         public string Id { get; set;}
         

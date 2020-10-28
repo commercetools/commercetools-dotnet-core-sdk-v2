@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class ProjectChangeCountriesAction : IProjectChangeCountriesAction
+    public partial class ProjectChangeCountriesAction : IProjectChangeCountriesAction
     {
         public string Action { get; set;}
         

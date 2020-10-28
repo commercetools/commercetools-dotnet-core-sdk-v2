@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class AttributeReferenceType : IAttributeReferenceType
+    public partial class AttributeReferenceType : IAttributeReferenceType
     {
         public string Name { get; set;}
         

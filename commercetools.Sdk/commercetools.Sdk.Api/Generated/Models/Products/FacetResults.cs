@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class FacetResults : IFacetResults
+    public partial class FacetResults : IFacetResults
     {
     }
 }

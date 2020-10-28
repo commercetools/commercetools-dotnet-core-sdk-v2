@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductVariantDraft : IProductVariantDraft
+    public partial class ProductVariantDraft : IProductVariantDraft
     {
         public string Sku { get; set;}
         

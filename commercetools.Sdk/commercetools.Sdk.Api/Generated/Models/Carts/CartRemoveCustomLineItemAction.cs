@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartRemoveCustomLineItemAction : ICartRemoveCustomLineItemAction
+    public partial class CartRemoveCustomLineItemAction : ICartRemoveCustomLineItemAction
     {
         public string Action { get; set;}
         

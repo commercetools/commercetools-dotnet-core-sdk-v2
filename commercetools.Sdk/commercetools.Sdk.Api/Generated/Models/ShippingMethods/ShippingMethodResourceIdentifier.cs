@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodResourceIdentifier : IShippingMethodResourceIdentifier
+    public partial class ShippingMethodResourceIdentifier : IShippingMethodResourceIdentifier
     {
         public string TypeId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class DiscountCodeInfo : IDiscountCodeInfo
+    public partial class DiscountCodeInfo : IDiscountCodeInfo
     {
         public IDiscountCodeReference DiscountCode { get; set;}
         

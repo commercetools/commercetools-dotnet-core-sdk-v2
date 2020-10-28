@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderResourceIdentifier : IOrderResourceIdentifier
+    public partial class OrderResourceIdentifier : IOrderResourceIdentifier
     {
         public string TypeId { get; set;}
         

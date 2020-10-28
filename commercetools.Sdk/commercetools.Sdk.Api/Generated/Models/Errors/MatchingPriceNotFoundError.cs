@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
+    public partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
     {
         public string Code { get; set;}
         

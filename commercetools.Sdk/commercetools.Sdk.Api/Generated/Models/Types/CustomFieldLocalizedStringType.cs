@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldLocalizedStringType : ICustomFieldLocalizedStringType
+    public partial class CustomFieldLocalizedStringType : ICustomFieldLocalizedStringType
     {
         public string Name { get; set;}
         public CustomFieldLocalizedStringType()

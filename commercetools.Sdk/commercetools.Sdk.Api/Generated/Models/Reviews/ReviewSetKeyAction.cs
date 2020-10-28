@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewSetKeyAction : IReviewSetKeyAction
+    public partial class ReviewSetKeyAction : IReviewSetKeyAction
     {
         public string Action { get; set;}
         

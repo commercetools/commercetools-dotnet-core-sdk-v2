@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductSetAttributeInAllVariantsAction : IProductSetAttributeInAllVariantsAction
+    public partial class ProductSetAttributeInAllVariantsAction : IProductSetAttributeInAllVariantsAction
     {
         public string Action { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyShoppingListAddLineItemAction : IMyShoppingListAddLineItemAction
+    public partial class MyShoppingListAddLineItemAction : IMyShoppingListAddLineItemAction
     {
         public string Action { get; set;}
         

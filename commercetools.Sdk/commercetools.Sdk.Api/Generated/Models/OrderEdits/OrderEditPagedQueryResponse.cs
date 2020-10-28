@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderEditPagedQueryResponse : IOrderEditPagedQueryResponse
+    public partial class OrderEditPagedQueryResponse : IOrderEditPagedQueryResponse
     {
         public long Limit { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class Delivery : IDelivery
+    public partial class Delivery : IDelivery
     {
         public string Id { get; set;}
         

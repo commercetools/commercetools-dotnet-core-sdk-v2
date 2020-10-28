@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class RangeFacetResult : IRangeFacetResult
+    public partial class RangeFacetResult : IRangeFacetResult
     {
         public string Type { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class InvalidItemShippingDetailsError : IInvalidItemShippingDetailsError
+    public partial class InvalidItemShippingDetailsError : IInvalidItemShippingDetailsError
     {
         public string Code { get; set;}
         

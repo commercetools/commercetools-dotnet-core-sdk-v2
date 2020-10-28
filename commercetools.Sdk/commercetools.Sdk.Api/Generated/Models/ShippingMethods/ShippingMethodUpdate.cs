@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodUpdate : IShippingMethodUpdate
+    public partial class ShippingMethodUpdate : IShippingMethodUpdate
     {
         public long Version { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public  partial class ProductDiscountChangeSortOrderAction : IProductDiscountChangeSortOrderAction
+    public partial class ProductDiscountChangeSortOrderAction : IProductDiscountChangeSortOrderAction
     {
         public string Action { get; set;}
         

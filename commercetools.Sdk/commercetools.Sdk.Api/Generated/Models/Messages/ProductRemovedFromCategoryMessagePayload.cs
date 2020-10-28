@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductRemovedFromCategoryMessagePayload : IProductRemovedFromCategoryMessagePayload
+    public partial class ProductRemovedFromCategoryMessagePayload : IProductRemovedFromCategoryMessagePayload
     {
         public string Type { get; set;}
         

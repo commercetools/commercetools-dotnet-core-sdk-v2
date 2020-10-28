@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class DiscountedLineItemPriceDraft : IDiscountedLineItemPriceDraft
+    public partial class DiscountedLineItemPriceDraft : IDiscountedLineItemPriceDraft
     {
         public IMoney Value { get; set;}
         

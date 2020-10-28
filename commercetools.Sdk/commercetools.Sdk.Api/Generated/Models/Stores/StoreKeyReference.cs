@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    public  partial class StoreKeyReference : IStoreKeyReference
+    public partial class StoreKeyReference : IStoreKeyReference
     {
         public string TypeId { get; set;}
         

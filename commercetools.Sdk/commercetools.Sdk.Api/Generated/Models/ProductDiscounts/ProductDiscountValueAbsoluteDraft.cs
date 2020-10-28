@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public  partial class ProductDiscountValueAbsoluteDraft : IProductDiscountValueAbsoluteDraft
+    public partial class ProductDiscountValueAbsoluteDraft : IProductDiscountValueAbsoluteDraft
     {
         public string Type { get; set;}
         

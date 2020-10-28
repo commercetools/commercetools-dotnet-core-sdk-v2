@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategorySetExternalIdAction : ICategorySetExternalIdAction
+    public partial class CategorySetExternalIdAction : ICategorySetExternalIdAction
     {
         public string Action { get; set;}
         

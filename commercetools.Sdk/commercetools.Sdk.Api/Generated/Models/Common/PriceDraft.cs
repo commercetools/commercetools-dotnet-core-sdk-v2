@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class PriceDraft : IPriceDraft
+    public partial class PriceDraft : IPriceDraft
     {
         public IMoney Value { get; set;}
         

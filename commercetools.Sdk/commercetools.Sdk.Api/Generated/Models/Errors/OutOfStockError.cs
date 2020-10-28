@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class OutOfStockError : IOutOfStockError
+    public partial class OutOfStockError : IOutOfStockError
     {
         public string Code { get; set;}
         

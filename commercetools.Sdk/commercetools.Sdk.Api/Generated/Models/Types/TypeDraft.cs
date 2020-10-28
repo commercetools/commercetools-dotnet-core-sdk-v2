@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeDraft : ITypeDraft
+    public partial class TypeDraft : ITypeDraft
     {
         public string Key { get; set;}
         

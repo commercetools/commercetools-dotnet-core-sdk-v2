@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCustomerSetLastNameAction : IMyCustomerSetLastNameAction
+    public partial class MyCustomerSetLastNameAction : IMyCustomerSetLastNameAction
     {
         public string Action { get; set;}
         

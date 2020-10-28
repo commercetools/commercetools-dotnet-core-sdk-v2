@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntryUpdate : IInventoryEntryUpdate
+    public partial class InventoryEntryUpdate : IInventoryEntryUpdate
     {
         public long Version { get; set;}
         

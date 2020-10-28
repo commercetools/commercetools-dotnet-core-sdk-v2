@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartAddLineItemAction : ICartAddLineItemAction
+    public partial class CartAddLineItemAction : ICartAddLineItemAction
     {
         public string Action { get; set;}
         

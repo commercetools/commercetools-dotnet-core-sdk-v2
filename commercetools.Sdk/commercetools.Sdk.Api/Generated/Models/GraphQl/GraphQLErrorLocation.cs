@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.GraphQl
 {
-    public  partial class GraphQLErrorLocation : IGraphQLErrorLocation
+    public partial class GraphQLErrorLocation : IGraphQLErrorLocation
     {
         public int Line { get; set;}
         

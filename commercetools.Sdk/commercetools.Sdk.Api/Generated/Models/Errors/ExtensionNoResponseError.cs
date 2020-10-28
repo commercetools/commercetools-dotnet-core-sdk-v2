@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ExtensionNoResponseError : IExtensionNoResponseError
+    public partial class ExtensionNoResponseError : IExtensionNoResponseError
     {
         public string Code { get; set;}
         

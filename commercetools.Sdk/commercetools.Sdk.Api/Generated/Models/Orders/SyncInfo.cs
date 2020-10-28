@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class SyncInfo : ISyncInfo
+    public partial class SyncInfo : ISyncInfo
     {
         public IChannelReference Channel { get; set;}
         

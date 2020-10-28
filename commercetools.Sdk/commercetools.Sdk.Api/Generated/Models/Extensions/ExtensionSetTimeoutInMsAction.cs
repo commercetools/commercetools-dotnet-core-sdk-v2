@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionSetTimeoutInMsAction : IExtensionSetTimeoutInMsAction
+    public partial class ExtensionSetTimeoutInMsAction : IExtensionSetTimeoutInMsAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class TaxedItemPriceDraft : ITaxedItemPriceDraft
+    public partial class TaxedItemPriceDraft : ITaxedItemPriceDraft
     {
         public IMoney TotalNet { get; set;}
         

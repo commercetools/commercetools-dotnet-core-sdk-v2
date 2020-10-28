@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyPaymentDraft : IMyPaymentDraft
+    public partial class MyPaymentDraft : IMyPaymentDraft
     {
         public IMoney AmountPlanned { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class Transaction : ITransaction
+    public partial class Transaction : ITransaction
     {
         public string Id { get; set;}
         

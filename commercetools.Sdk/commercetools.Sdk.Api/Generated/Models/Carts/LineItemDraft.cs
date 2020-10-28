@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class LineItemDraft : ILineItemDraft
+    public partial class LineItemDraft : ILineItemDraft
     {
         public string ProductId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductAddExternalImageAction : IProductAddExternalImageAction
+    public partial class ProductAddExternalImageAction : IProductAddExternalImageAction
     {
         public string Action { get; set;}
         

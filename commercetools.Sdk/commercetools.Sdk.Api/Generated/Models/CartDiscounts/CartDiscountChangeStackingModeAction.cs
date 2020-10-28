@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class CartDiscountChangeStackingModeAction : ICartDiscountChangeStackingModeAction
+    public partial class CartDiscountChangeStackingModeAction : ICartDiscountChangeStackingModeAction
     {
         public string Action { get; set;}
         

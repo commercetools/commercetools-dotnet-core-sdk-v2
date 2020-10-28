@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategoryResourceIdentifier : ITaxCategoryResourceIdentifier
+    public partial class TaxCategoryResourceIdentifier : ITaxCategoryResourceIdentifier
     {
         public string TypeId { get; set;}
         

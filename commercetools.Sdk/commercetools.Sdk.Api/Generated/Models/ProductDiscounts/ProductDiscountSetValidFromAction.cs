@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public  partial class ProductDiscountSetValidFromAction : IProductDiscountSetValidFromAction
+    public partial class ProductDiscountSetValidFromAction : IProductDiscountSetValidFromAction
     {
         public string Action { get; set;}
         

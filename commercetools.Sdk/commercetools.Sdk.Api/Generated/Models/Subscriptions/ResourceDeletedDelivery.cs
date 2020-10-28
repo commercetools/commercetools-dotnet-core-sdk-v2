@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class ResourceDeletedDelivery : IResourceDeletedDelivery
+    public partial class ResourceDeletedDelivery : IResourceDeletedDelivery
     {
         public string ProjectKey { get; set;}
         

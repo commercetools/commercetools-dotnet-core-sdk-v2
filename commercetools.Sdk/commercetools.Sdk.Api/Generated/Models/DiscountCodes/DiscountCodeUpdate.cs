@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeUpdate : IDiscountCodeUpdate
+    public partial class DiscountCodeUpdate : IDiscountCodeUpdate
     {
         public long Version { get; set;}
         

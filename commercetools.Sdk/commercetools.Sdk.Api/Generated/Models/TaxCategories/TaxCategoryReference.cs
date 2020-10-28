@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategoryReference : ITaxCategoryReference
+    public partial class TaxCategoryReference : ITaxCategoryReference
     {
         public string TypeId { get; set;}
         

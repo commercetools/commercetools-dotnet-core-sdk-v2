@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class CartDiscount : ICartDiscount
+    public partial class CartDiscount : ICartDiscount
     {
         public string Id { get; set;}
         

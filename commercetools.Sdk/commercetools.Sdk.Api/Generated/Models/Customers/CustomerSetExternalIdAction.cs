@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerSetExternalIdAction : ICustomerSetExternalIdAction
+    public partial class CustomerSetExternalIdAction : ICustomerSetExternalIdAction
     {
         public string Action { get; set;}
         

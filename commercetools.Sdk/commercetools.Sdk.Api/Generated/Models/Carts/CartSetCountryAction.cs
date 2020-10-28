@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartSetCountryAction : ICartSetCountryAction
+    public partial class CartSetCountryAction : ICartSetCountryAction
     {
         public string Action { get; set;}
         

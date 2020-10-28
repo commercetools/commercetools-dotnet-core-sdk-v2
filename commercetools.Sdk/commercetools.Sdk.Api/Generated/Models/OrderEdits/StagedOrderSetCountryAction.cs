@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class StagedOrderSetCountryAction : IStagedOrderSetCountryAction
+    public partial class StagedOrderSetCountryAction : IStagedOrderSetCountryAction
     {
         public string Action { get; set;}
         

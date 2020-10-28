@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartSetLineItemDistributionChannelAction : IMyCartSetLineItemDistributionChannelAction
+    public partial class MyCartSetLineItemDistributionChannelAction : IMyCartSetLineItemDistributionChannelAction
     {
         public string Action { get; set;}
         

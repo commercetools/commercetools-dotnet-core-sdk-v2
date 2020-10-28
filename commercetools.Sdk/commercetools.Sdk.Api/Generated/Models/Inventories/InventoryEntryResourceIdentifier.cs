@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntryResourceIdentifier : IInventoryEntryResourceIdentifier
+    public partial class InventoryEntryResourceIdentifier : IInventoryEntryResourceIdentifier
     {
         public string TypeId { get; set;}
         

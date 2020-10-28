@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductStateTransitionMessage : IProductStateTransitionMessage
+    public partial class ProductStateTransitionMessage : IProductStateTransitionMessage
     {
         public string Id { get; set;}
         

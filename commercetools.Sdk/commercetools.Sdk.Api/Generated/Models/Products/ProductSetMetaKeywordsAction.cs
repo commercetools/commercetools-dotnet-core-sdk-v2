@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductSetMetaKeywordsAction : IProductSetMetaKeywordsAction
+    public partial class ProductSetMetaKeywordsAction : IProductSetMetaKeywordsAction
     {
         public string Action { get; set;}
         

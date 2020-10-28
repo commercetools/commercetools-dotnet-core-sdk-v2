@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentUpdate : IPaymentUpdate
+    public partial class PaymentUpdate : IPaymentUpdate
     {
         public long Version { get; set;}
         

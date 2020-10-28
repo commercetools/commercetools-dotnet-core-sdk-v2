@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodChangeIsDefaultAction : IShippingMethodChangeIsDefaultAction
+    public partial class ShippingMethodChangeIsDefaultAction : IShippingMethodChangeIsDefaultAction
     {
         public string Action { get; set;}
         

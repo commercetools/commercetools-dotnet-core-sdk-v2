@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ShippingInfoImportDraft : IShippingInfoImportDraft
+    public partial class ShippingInfoImportDraft : IShippingInfoImportDraft
     {
         public string ShippingMethodName { get; set;}
         

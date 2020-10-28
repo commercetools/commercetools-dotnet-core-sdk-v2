@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeSetDescriptionAction : ITypeSetDescriptionAction
+    public partial class TypeSetDescriptionAction : ITypeSetDescriptionAction
     {
         public string Action { get; set;}
         

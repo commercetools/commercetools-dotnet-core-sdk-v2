@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ItemState : IItemState
+    public partial class ItemState : IItemState
     {
         public double Quantity { get; set;}
         

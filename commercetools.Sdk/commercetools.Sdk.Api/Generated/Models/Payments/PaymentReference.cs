@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentReference : IPaymentReference
+    public partial class PaymentReference : IPaymentReference
     {
         public string TypeId { get; set;}
         

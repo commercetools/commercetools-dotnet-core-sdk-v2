@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class ExternalLineItemTotalPrice : IExternalLineItemTotalPrice
+    public partial class ExternalLineItemTotalPrice : IExternalLineItemTotalPrice
     {
         public IMoney Price { get; set;}
         

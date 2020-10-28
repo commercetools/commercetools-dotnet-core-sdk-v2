@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerCreateEmailToken : ICustomerCreateEmailToken
+    public partial class CustomerCreateEmailToken : ICustomerCreateEmailToken
     {
         public string Id { get; set;}
         

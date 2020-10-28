@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class StagedOrderRemoveLineItemAction : IStagedOrderRemoveLineItemAction
+    public partial class StagedOrderRemoveLineItemAction : IStagedOrderRemoveLineItemAction
     {
         public string Action { get; set;}
         

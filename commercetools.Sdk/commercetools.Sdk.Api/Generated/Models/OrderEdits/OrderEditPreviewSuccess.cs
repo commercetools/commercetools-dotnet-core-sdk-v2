@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderEditPreviewSuccess : IOrderEditPreviewSuccess
+    public partial class OrderEditPreviewSuccess : IOrderEditPreviewSuccess
     {
         public string Type { get; set;}
         

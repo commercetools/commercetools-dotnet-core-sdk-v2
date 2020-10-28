@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelUpdate : IChannelUpdate
+    public partial class ChannelUpdate : IChannelUpdate
     {
         public long Version { get; set;}
         

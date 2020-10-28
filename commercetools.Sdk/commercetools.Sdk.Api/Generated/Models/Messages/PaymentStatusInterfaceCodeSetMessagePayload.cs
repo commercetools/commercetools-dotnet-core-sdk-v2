@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class PaymentStatusInterfaceCodeSetMessagePayload : IPaymentStatusInterfaceCodeSetMessagePayload
+    public partial class PaymentStatusInterfaceCodeSetMessagePayload : IPaymentStatusInterfaceCodeSetMessagePayload
     {
         public string Type { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class AzureServiceBusDestination : IAzureServiceBusDestination
+    public partial class AzureServiceBusDestination : IAzureServiceBusDestination
     {
         public string Type { get; set;}
         

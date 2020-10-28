@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class PriceChangedError : IPriceChangedError
+    public partial class PriceChangedError : IPriceChangedError
     {
         public string Code { get; set;}
         

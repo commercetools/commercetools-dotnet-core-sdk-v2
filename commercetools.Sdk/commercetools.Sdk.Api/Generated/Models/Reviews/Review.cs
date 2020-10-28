@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class Review : IReview
+    public partial class Review : IReview
     {
         public string Id { get; set;}
         

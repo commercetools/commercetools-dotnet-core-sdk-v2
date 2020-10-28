@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class SqsDestination : ISqsDestination
+    public partial class SqsDestination : ISqsDestination
     {
         public string Type { get; set;}
         

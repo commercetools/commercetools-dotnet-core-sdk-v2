@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewUpdate : IReviewUpdate
+    public partial class ReviewUpdate : IReviewUpdate
     {
         public long Version { get; set;}
         

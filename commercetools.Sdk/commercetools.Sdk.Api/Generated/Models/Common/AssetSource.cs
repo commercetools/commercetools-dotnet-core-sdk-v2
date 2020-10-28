@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class AssetSource : IAssetSource
+    public partial class AssetSource : IAssetSource
     {
         public string Uri { get; set;}
         

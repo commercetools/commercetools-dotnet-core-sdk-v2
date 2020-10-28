@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangeNameAction : IProductTypeChangeNameAction
+    public partial class ProductTypeChangeNameAction : IProductTypeChangeNameAction
     {
         public string Action { get; set;}
         

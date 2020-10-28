@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomObjects
 {
-    public  partial class CustomObject : ICustomObject
+    public partial class CustomObject : ICustomObject
     {
         public string Id { get; set;}
         

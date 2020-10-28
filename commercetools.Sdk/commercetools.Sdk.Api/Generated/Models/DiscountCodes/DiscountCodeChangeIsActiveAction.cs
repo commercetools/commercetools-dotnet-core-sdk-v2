@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeChangeIsActiveAction : IDiscountCodeChangeIsActiveAction
+    public partial class DiscountCodeChangeIsActiveAction : IDiscountCodeChangeIsActiveAction
     {
         public string Action { get; set;}
         

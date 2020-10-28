@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class FacetResultTerm : IFacetResultTerm
+    public partial class FacetResultTerm : IFacetResultTerm
     {
         public Object Term { get; set;}
         

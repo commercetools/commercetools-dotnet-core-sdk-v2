@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class TrackingData : ITrackingData
+    public partial class TrackingData : ITrackingData
     {
         public string TrackingId { get; set;}
         

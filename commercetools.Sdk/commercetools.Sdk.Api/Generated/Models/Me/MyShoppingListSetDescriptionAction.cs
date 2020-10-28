@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyShoppingListSetDescriptionAction : IMyShoppingListSetDescriptionAction
+    public partial class MyShoppingListSetDescriptionAction : IMyShoppingListSetDescriptionAction
     {
         public string Action { get; set;}
         

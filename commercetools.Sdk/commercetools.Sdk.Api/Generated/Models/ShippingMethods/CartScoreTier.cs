@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class CartScoreTier : ICartScoreTier
+    public partial class CartScoreTier : ICartScoreTier
     {
         public string Type { get; set;}
         

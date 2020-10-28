@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelReference : IChannelReference
+    public partial class ChannelReference : IChannelReference
     {
         public string TypeId { get; set;}
         

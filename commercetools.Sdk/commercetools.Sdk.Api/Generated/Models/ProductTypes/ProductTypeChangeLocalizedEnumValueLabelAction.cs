@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangeLocalizedEnumValueLabelAction : IProductTypeChangeLocalizedEnumValueLabelAction
+    public partial class ProductTypeChangeLocalizedEnumValueLabelAction : IProductTypeChangeLocalizedEnumValueLabelAction
     {
         public string Action { get; set;}
         

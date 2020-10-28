@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class ProjectChangeCountryTaxRateFallbackEnabledAction : IProjectChangeCountryTaxRateFallbackEnabledAction
+    public partial class ProjectChangeCountryTaxRateFallbackEnabledAction : IProjectChangeCountryTaxRateFallbackEnabledAction
     {
         public string Action { get; set;}
         

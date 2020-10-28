@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeChangeKeyAction : ITypeChangeKeyAction
+    public partial class TypeChangeKeyAction : ITypeChangeKeyAction
     {
         public string Action { get; set;}
         

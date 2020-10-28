@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCustomerChangeEmailAction : IMyCustomerChangeEmailAction
+    public partial class MyCustomerChangeEmailAction : IMyCustomerChangeEmailAction
     {
         public string Action { get; set;}
         

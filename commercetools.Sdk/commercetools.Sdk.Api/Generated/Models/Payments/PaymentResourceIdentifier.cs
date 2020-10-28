@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentResourceIdentifier : IPaymentResourceIdentifier
+    public partial class PaymentResourceIdentifier : IPaymentResourceIdentifier
     {
         public string TypeId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    public  partial class StateDraft : IStateDraft
+    public partial class StateDraft : IStateDraft
     {
         public string Key { get; set;}
         

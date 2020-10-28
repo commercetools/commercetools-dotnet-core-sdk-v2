@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeSetCartPredicateAction : IDiscountCodeSetCartPredicateAction
+    public partial class DiscountCodeSetCartPredicateAction : IDiscountCodeSetCartPredicateAction
     {
         public string Action { get; set;}
         

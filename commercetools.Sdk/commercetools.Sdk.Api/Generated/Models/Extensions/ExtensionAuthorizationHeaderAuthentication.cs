@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionAuthorizationHeaderAuthentication : IExtensionAuthorizationHeaderAuthentication
+    public partial class ExtensionAuthorizationHeaderAuthentication : IExtensionAuthorizationHeaderAuthentication
     {
         public string Type { get; set;}
         

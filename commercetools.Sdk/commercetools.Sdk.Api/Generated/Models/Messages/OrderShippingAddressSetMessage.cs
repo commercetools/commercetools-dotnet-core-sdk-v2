@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class OrderShippingAddressSetMessage : IOrderShippingAddressSetMessage
+    public partial class OrderShippingAddressSetMessage : IOrderShippingAddressSetMessage
     {
         public string Id { get; set;}
         

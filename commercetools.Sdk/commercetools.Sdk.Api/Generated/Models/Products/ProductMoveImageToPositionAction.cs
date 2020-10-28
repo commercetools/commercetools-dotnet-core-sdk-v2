@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductMoveImageToPositionAction : IProductMoveImageToPositionAction
+    public partial class ProductMoveImageToPositionAction : IProductMoveImageToPositionAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class ClientLogging : IClientLogging
+    public partial class ClientLogging : IClientLogging
     {
         public string ClientId { get; set;}
         

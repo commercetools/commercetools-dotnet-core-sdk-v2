@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeChangeLocalizedEnumValueOrderAction : ITypeChangeLocalizedEnumValueOrderAction
+    public partial class TypeChangeLocalizedEnumValueOrderAction : ITypeChangeLocalizedEnumValueOrderAction
     {
         public string Action { get; set;}
         

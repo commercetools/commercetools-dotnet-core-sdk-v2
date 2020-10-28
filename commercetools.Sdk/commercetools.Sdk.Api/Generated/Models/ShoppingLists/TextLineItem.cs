@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class TextLineItem : ITextLineItem
+    public partial class TextLineItem : ITextLineItem
     {
         public DateTime AddedAt { get; set;}
         

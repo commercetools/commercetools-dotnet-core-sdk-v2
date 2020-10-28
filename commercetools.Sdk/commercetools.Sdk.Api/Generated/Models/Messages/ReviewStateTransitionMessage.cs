@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ReviewStateTransitionMessage : IReviewStateTransitionMessage
+    public partial class ReviewStateTransitionMessage : IReviewStateTransitionMessage
     {
         public string Id { get; set;}
         

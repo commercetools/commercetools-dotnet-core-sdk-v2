@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    public  partial class State : IState
+    public partial class State : IState
     {
         public string Id { get; set;}
         

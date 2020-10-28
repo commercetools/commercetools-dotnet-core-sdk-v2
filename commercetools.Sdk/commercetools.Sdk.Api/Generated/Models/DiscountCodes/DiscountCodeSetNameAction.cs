@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeSetNameAction : IDiscountCodeSetNameAction
+    public partial class DiscountCodeSetNameAction : IDiscountCodeSetNameAction
     {
         public string Action { get; set;}
         

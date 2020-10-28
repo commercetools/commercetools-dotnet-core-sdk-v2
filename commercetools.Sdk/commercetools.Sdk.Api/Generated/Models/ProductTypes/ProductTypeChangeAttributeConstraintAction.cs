@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangeAttributeConstraintAction : IProductTypeChangeAttributeConstraintAction
+    public partial class ProductTypeChangeAttributeConstraintAction : IProductTypeChangeAttributeConstraintAction
     {
         public string Action { get; set;}
         

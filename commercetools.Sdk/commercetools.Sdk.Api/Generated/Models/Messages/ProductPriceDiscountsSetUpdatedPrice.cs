@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductPriceDiscountsSetUpdatedPrice : IProductPriceDiscountsSetUpdatedPrice
+    public partial class ProductPriceDiscountsSetUpdatedPrice : IProductPriceDiscountsSetUpdatedPrice
     {
         public int VariantId { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCustomerDraft : IMyCustomerDraft
+    public partial class MyCustomerDraft : IMyCustomerDraft
     {
         public string Email { get; set;}
         

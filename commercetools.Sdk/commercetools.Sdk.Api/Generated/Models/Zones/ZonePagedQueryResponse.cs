@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class ZonePagedQueryResponse : IZonePagedQueryResponse
+    public partial class ZonePagedQueryResponse : IZonePagedQueryResponse
     {
         public long Limit { get; set;}
         

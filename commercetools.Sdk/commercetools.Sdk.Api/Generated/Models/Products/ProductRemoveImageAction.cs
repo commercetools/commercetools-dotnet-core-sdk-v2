@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductRemoveImageAction : IProductRemoveImageAction
+    public partial class ProductRemoveImageAction : IProductRemoveImageAction
     {
         public string Action { get; set;}
         

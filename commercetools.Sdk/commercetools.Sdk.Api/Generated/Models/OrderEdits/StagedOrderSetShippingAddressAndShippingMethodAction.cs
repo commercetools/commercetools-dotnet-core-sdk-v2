@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class StagedOrderSetShippingAddressAndShippingMethodAction : IStagedOrderSetShippingAddressAndShippingMethodAction
+    public partial class StagedOrderSetShippingAddressAndShippingMethodAction : IStagedOrderSetShippingAddressAndShippingMethodAction
     {
         public string Action { get; set;}
         

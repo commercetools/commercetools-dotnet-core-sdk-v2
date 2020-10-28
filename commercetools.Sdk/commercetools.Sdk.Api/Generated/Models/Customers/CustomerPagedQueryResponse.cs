@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerPagedQueryResponse : ICustomerPagedQueryResponse
+    public partial class CustomerPagedQueryResponse : ICustomerPagedQueryResponse
     {
         public long Limit { get; set;}
         

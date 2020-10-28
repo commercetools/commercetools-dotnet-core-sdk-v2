@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class Image : IImage
+    public partial class Image : IImage
     {
         public string Url { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductUnpublishedMessage : IProductUnpublishedMessage
+    public partial class ProductUnpublishedMessage : IProductUnpublishedMessage
     {
         public string Id { get; set;}
         

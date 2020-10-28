@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ApiClients
 {
-    public  partial class ApiClientDraft : IApiClientDraft
+    public partial class ApiClientDraft : IApiClientDraft
     {
         public string Name { get; set;}
         

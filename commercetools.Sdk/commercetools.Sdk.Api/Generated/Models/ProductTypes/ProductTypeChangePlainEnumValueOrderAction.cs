@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangePlainEnumValueOrderAction : IProductTypeChangePlainEnumValueOrderAction
+    public partial class ProductTypeChangePlainEnumValueOrderAction : IProductTypeChangePlainEnumValueOrderAction
     {
         public string Action { get; set;}
         

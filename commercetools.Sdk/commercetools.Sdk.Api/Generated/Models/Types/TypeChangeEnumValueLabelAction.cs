@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeChangeEnumValueLabelAction : ITypeChangeEnumValueLabelAction
+    public partial class TypeChangeEnumValueLabelAction : ITypeChangeEnumValueLabelAction
     {
         public string Action { get; set;}
         

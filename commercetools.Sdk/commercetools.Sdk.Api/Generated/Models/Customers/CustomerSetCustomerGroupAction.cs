@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerSetCustomerGroupAction : ICustomerSetCustomerGroupAction
+    public partial class CustomerSetCustomerGroupAction : ICustomerSetCustomerGroupAction
     {
         public string Action { get; set;}
         

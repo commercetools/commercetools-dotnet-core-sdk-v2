@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListDraft : IShoppingListDraft
+    public partial class ShoppingListDraft : IShoppingListDraft
     {
         public ICustomFieldsDraft Custom { get; set;}
         

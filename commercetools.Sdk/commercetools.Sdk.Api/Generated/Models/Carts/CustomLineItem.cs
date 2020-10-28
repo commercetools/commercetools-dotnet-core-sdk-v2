@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CustomLineItem : ICustomLineItem
+    public partial class CustomLineItem : ICustomLineItem
     {
         public string Id { get; set;}
         

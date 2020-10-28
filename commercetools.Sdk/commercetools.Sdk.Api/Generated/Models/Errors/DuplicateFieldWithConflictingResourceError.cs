@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class DuplicateFieldWithConflictingResourceError : IDuplicateFieldWithConflictingResourceError
+    public partial class DuplicateFieldWithConflictingResourceError : IDuplicateFieldWithConflictingResourceError
     {
         public string Code { get; set;}
         

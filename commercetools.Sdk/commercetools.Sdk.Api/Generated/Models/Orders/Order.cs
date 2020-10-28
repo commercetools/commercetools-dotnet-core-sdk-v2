@@ -15,7 +15,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class Order : IOrder
+    public partial class Order : IOrder
     {
         public string Id { get; set;}
         

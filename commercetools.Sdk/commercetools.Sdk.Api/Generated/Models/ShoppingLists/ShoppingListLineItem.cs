@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListLineItem : IShoppingListLineItem
+    public partial class ShoppingListLineItem : IShoppingListLineItem
     {
         public DateTime AddedAt { get; set;}
         

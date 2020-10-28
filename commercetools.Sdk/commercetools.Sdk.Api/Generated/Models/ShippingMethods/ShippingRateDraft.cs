@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingRateDraft : IShippingRateDraft
+    public partial class ShippingRateDraft : IShippingRateDraft
     {
         public IMoney Price { get; set;}
         

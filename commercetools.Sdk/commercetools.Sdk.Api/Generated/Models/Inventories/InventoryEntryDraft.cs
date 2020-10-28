@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntryDraft : IInventoryEntryDraft
+    public partial class InventoryEntryDraft : IInventoryEntryDraft
     {
         public string Sku { get; set;}
         

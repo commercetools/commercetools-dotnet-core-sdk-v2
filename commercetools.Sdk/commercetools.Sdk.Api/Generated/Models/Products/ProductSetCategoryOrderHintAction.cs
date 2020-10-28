@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductSetCategoryOrderHintAction : IProductSetCategoryOrderHintAction
+    public partial class ProductSetCategoryOrderHintAction : IProductSetCategoryOrderHintAction
     {
         public string Action { get; set;}
         

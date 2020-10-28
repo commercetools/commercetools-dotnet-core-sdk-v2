@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public  partial class CustomerGroupSetKeyAction : ICustomerGroupSetKeyAction
+    public partial class CustomerGroupSetKeyAction : ICustomerGroupSetKeyAction
     {
         public string Action { get; set;}
         

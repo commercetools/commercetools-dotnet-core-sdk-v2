@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderEditReference : IOrderEditReference
+    public partial class OrderEditReference : IOrderEditReference
     {
         public string TypeId { get; set;}
         

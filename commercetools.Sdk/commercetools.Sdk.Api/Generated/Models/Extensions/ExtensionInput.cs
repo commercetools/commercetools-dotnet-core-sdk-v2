@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionInput : IExtensionInput
+    public partial class ExtensionInput : IExtensionInput
     {
         public string Action { get; set;}
         

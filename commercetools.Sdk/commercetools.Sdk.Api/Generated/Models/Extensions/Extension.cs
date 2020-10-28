@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class Extension : IExtension
+    public partial class Extension : IExtension
     {
         public string Id { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionTrigger : IExtensionTrigger
+    public partial class ExtensionTrigger : IExtensionTrigger
     {
         public string ResourceTypeId { get; set;}
         

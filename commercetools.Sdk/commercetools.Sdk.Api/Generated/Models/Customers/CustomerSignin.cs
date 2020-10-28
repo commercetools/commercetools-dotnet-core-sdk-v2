@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerSignin : ICustomerSignin
+    public partial class CustomerSignin : ICustomerSignin
     {
         public string Email { get; set;}
         

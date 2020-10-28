@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.GraphQl
 {
-    public  partial class GraphQLResponse : IGraphQLResponse
+    public partial class GraphQLResponse : IGraphQLResponse
     {
         public Object Data { get; set;}
         

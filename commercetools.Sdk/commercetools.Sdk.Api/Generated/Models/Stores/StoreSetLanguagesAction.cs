@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    public  partial class StoreSetLanguagesAction : IStoreSetLanguagesAction
+    public partial class StoreSetLanguagesAction : IStoreSetLanguagesAction
     {
         public string Action { get; set;}
         

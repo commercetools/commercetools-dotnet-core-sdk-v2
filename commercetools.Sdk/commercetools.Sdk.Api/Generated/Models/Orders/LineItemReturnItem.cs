@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class LineItemReturnItem : ILineItemReturnItem
+    public partial class LineItemReturnItem : ILineItemReturnItem
     {
         public string Id { get; set;}
         

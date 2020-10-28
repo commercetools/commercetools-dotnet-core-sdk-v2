@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class PriceTierDraft : IPriceTierDraft
+    public partial class PriceTierDraft : IPriceTierDraft
     {
         public long MinimumQuantity { get; set;}
         

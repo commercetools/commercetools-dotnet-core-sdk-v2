@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderImportLineItemStateAction : IOrderImportLineItemStateAction
+    public partial class OrderImportLineItemStateAction : IOrderImportLineItemStateAction
     {
         public string Action { get; set;}
         

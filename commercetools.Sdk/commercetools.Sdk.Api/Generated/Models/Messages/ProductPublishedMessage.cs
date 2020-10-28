@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductPublishedMessage : IProductPublishedMessage
+    public partial class ProductPublishedMessage : IProductPublishedMessage
     {
         public string Id { get; set;}
         

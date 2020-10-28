@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class ShippingInfo : IShippingInfo
+    public partial class ShippingInfo : IShippingInfo
     {
         public string ShippingMethodName { get; set;}
         

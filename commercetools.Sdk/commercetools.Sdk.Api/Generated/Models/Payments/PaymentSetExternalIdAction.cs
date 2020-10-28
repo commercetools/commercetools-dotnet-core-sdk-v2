@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentSetExternalIdAction : IPaymentSetExternalIdAction
+    public partial class PaymentSetExternalIdAction : IPaymentSetExternalIdAction
     {
         public string Action { get; set;}
         

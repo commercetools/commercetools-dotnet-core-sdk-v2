@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntry : IInventoryEntry
+    public partial class InventoryEntry : IInventoryEntry
     {
         public string Id { get; set;}
         

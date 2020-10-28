@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class AttributeTimeType : IAttributeTimeType
+    public partial class AttributeTimeType : IAttributeTimeType
     {
         public string Name { get; set;}
         public AttributeTimeType()

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ErrorResponse : IErrorResponse
+    public partial class ErrorResponse : IErrorResponse
     {
         public int StatusCode { get; set;}
         

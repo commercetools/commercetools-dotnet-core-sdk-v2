@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class Parcel : IParcel
+    public partial class Parcel : IParcel
     {
         public string Id { get; set;}
         

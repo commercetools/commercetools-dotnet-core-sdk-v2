@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class ExternalTaxAmountDraft : IExternalTaxAmountDraft
+    public partial class ExternalTaxAmountDraft : IExternalTaxAmountDraft
     {
         public IMoney TotalGross { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderSetReturnShipmentStateAction : IOrderSetReturnShipmentStateAction
+    public partial class OrderSetReturnShipmentStateAction : IOrderSetReturnShipmentStateAction
     {
         public string Action { get; set;}
         

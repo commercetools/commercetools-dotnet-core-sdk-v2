@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class CustomerEmailVerifiedMessagePayload : ICustomerEmailVerifiedMessagePayload
+    public partial class CustomerEmailVerifiedMessagePayload : ICustomerEmailVerifiedMessagePayload
     {
         public string Type { get; set;}
         public CustomerEmailVerifiedMessagePayload()

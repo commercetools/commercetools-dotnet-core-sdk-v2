@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class PagedQueryResponse : IPagedQueryResponse
+    public partial class PagedQueryResponse : IPagedQueryResponse
     {
         public long Limit { get; set;}
         

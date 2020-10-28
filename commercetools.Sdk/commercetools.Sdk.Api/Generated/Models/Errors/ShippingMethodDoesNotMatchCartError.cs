@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ShippingMethodDoesNotMatchCartError : IShippingMethodDoesNotMatchCartError
+    public partial class ShippingMethodDoesNotMatchCartError : IShippingMethodDoesNotMatchCartError
     {
         public string Code { get; set;}
         

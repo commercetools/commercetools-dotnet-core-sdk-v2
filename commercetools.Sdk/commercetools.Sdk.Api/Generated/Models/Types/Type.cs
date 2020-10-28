@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class Type : IType
+    public partial class Type : IType
     {
         public string Id { get; set;}
         

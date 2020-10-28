@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class AccessDeniedError : IAccessDeniedError
+    public partial class AccessDeniedError : IAccessDeniedError
     {
         public string Code { get; set;}
         

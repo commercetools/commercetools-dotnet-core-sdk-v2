@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ConcurrentModificationError : IConcurrentModificationError
+    public partial class ConcurrentModificationError : IConcurrentModificationError
     {
         public string Code { get; set;}
         

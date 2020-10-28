@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartSetDeleteDaysAfterLastModificationAction : ICartSetDeleteDaysAfterLastModificationAction
+    public partial class CartSetDeleteDaysAfterLastModificationAction : ICartSetDeleteDaysAfterLastModificationAction
     {
         public string Action { get; set;}
         

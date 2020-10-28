@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.GraphQl
 {
-    public  partial class GraphQLRequest : IGraphQLRequest
+    public partial class GraphQLRequest : IGraphQLRequest
     {
         public string Query { get; set;}
         

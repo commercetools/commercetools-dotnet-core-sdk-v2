@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ParcelMeasurementsUpdatedMessage : IParcelMeasurementsUpdatedMessage
+    public partial class ParcelMeasurementsUpdatedMessage : IParcelMeasurementsUpdatedMessage
     {
         public string Id { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldSetType : ICustomFieldSetType
+    public partial class CustomFieldSetType : ICustomFieldSetType
     {
         public string Name { get; set;}
         

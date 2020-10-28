@@ -14,7 +14,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductProjection : IProductProjection
+    public partial class ProductProjection : IProductProjection
     {
         public string Id { get; set;}
         

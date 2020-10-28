@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntrySetSupplyChannelAction : IInventoryEntrySetSupplyChannelAction
+    public partial class InventoryEntrySetSupplyChannelAction : IInventoryEntrySetSupplyChannelAction
     {
         public string Action { get; set;}
         

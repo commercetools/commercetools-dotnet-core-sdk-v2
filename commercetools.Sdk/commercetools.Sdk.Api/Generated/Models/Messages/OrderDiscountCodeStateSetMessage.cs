@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class OrderDiscountCodeStateSetMessage : IOrderDiscountCodeStateSetMessage
+    public partial class OrderDiscountCodeStateSetMessage : IOrderDiscountCodeStateSetMessage
     {
         public string Id { get; set;}
         

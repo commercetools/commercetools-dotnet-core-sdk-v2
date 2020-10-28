@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class UserProvidedIdentifiers : IUserProvidedIdentifiers
+    public partial class UserProvidedIdentifiers : IUserProvidedIdentifiers
     {
         public string Key { get; set;}
         

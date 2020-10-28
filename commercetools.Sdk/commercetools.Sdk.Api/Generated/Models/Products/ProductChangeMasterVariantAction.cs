@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductChangeMasterVariantAction : IProductChangeMasterVariantAction
+    public partial class ProductChangeMasterVariantAction : IProductChangeMasterVariantAction
     {
         public string Action { get; set;}
         

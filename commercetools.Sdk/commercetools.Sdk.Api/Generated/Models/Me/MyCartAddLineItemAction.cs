@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartAddLineItemAction : IMyCartAddLineItemAction
+    public partial class MyCartAddLineItemAction : IMyCartAddLineItemAction
     {
         public string Action { get; set;}
         

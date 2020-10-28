@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategorySetCustomFieldAction : ICategorySetCustomFieldAction
+    public partial class CategorySetCustomFieldAction : ICategorySetCustomFieldAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentChangeTransactionTimestampAction : IPaymentChangeTransactionTimestampAction
+    public partial class PaymentChangeTransactionTimestampAction : IPaymentChangeTransactionTimestampAction
     {
         public string Action { get; set;}
         

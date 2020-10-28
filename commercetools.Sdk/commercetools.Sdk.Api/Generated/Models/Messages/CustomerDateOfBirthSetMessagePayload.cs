@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class CustomerDateOfBirthSetMessagePayload : ICustomerDateOfBirthSetMessagePayload
+    public partial class CustomerDateOfBirthSetMessagePayload : ICustomerDateOfBirthSetMessagePayload
     {
         public string Type { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntrySetExpectedDeliveryAction : IInventoryEntrySetExpectedDeliveryAction
+    public partial class InventoryEntrySetExpectedDeliveryAction : IInventoryEntrySetExpectedDeliveryAction
     {
         public string Action { get; set;}
         

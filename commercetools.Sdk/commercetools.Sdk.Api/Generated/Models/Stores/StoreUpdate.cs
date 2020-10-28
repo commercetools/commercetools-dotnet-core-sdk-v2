@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    public  partial class StoreUpdate : IStoreUpdate
+    public partial class StoreUpdate : IStoreUpdate
     {
         public long Version { get; set;}
         

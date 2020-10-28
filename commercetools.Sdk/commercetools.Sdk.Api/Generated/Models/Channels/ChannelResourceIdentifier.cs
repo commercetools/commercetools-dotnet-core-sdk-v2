@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelResourceIdentifier : IChannelResourceIdentifier
+    public partial class ChannelResourceIdentifier : IChannelResourceIdentifier
     {
         public string TypeId { get; set;}
         

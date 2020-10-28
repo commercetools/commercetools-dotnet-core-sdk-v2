@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentSetCustomFieldAction : IPaymentSetCustomFieldAction
+    public partial class PaymentSetCustomFieldAction : IPaymentSetCustomFieldAction
     {
         public string Action { get; set;}
         

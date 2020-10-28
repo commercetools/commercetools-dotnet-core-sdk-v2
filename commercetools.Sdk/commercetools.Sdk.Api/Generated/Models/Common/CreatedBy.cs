@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class CreatedBy : ICreatedBy
+    public partial class CreatedBy : ICreatedBy
     {
         public string ClientId { get; set;}
         

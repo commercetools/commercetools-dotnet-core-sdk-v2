@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentPagedQueryResponse : IPaymentPagedQueryResponse
+    public partial class PaymentPagedQueryResponse : IPaymentPagedQueryResponse
     {
         public long Limit { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListSetDeleteDaysAfterLastModificationAction : IShoppingListSetDeleteDaysAfterLastModificationAction
+    public partial class ShoppingListSetDeleteDaysAfterLastModificationAction : IShoppingListSetDeleteDaysAfterLastModificationAction
     {
         public string Action { get; set;}
         

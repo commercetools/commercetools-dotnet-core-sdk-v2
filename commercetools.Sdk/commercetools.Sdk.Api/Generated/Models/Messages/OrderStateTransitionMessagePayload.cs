@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class OrderStateTransitionMessagePayload : IOrderStateTransitionMessagePayload
+    public partial class OrderStateTransitionMessagePayload : IOrderStateTransitionMessagePayload
     {
         public string Type { get; set;}
         

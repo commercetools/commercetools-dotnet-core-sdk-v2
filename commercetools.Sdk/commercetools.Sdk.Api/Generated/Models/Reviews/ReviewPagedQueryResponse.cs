@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewPagedQueryResponse : IReviewPagedQueryResponse
+    public partial class ReviewPagedQueryResponse : IReviewPagedQueryResponse
     {
         public long Limit { get; set;}
         

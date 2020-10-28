@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class DiscountedLineItemPriceForQuantity : IDiscountedLineItemPriceForQuantity
+    public partial class DiscountedLineItemPriceForQuantity : IDiscountedLineItemPriceForQuantity
     {
         public double Quantity { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class ZoneReference : IZoneReference
+    public partial class ZoneReference : IZoneReference
     {
         public string TypeId { get; set;}
         

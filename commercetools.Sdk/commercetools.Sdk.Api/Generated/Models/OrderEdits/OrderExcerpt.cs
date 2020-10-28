@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderExcerpt : IOrderExcerpt
+    public partial class OrderExcerpt : IOrderExcerpt
     {
         public ITypedMoney TotalPrice { get; set;}
         

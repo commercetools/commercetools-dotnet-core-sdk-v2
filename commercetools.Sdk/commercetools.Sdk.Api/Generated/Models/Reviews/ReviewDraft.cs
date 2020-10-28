@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewDraft : IReviewDraft
+    public partial class ReviewDraft : IReviewDraft
     {
         public string Key { get; set;}
         

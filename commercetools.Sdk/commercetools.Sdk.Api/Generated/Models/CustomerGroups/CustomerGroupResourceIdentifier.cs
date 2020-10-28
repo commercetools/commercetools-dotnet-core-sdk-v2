@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public  partial class CustomerGroupResourceIdentifier : ICustomerGroupResourceIdentifier
+    public partial class CustomerGroupResourceIdentifier : ICustomerGroupResourceIdentifier
     {
         public string TypeId { get; set;}
         

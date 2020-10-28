@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    public  partial class CustomerResetPassword : ICustomerResetPassword
+    public partial class CustomerResetPassword : ICustomerResetPassword
     {
         public string TokenValue { get; set;}
         

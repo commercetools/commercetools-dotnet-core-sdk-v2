@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class TaxedPrice : ITaxedPrice
+    public partial class TaxedPrice : ITaxedPrice
     {
         public ITypedMoney TotalNet { get; set;}
         

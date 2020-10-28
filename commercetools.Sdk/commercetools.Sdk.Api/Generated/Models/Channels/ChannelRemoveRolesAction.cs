@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelRemoveRolesAction : IChannelRemoveRolesAction
+    public partial class ChannelRemoveRolesAction : IChannelRemoveRolesAction
     {
         public string Action { get; set;}
         

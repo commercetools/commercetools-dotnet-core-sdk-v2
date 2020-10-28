@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class Attribute : IAttribute
+    public partial class Attribute : IAttribute
     {
         public string Name { get; set;}
         

@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class Address : IAddress
+    public partial class Address : IAddress
     {
         public string Id { get; set;}
         

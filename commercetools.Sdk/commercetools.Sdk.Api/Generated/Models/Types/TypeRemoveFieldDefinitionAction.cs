@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeRemoveFieldDefinitionAction : ITypeRemoveFieldDefinitionAction
+    public partial class TypeRemoveFieldDefinitionAction : ITypeRemoveFieldDefinitionAction
     {
         public string Action { get; set;}
         

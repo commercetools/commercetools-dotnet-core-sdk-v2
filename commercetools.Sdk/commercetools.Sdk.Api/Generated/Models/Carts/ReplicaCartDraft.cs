@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class ReplicaCartDraft : IReplicaCartDraft
+    public partial class ReplicaCartDraft : IReplicaCartDraft
     {
         public Object Reference { get; set;}
     }

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class OrderLineItemDiscountSetMessage : IOrderLineItemDiscountSetMessage
+    public partial class OrderLineItemDiscountSetMessage : IOrderLineItemDiscountSetMessage
     {
         public string Id { get; set;}
         

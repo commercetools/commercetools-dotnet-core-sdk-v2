@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategoryUpdate : ITaxCategoryUpdate
+    public partial class TaxCategoryUpdate : ITaxCategoryUpdate
     {
         public long Version { get; set;}
         

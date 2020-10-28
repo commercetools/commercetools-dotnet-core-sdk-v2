@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class Project : IProject
+    public partial class Project : IProject
     {
         public long Version { get; set;}
         

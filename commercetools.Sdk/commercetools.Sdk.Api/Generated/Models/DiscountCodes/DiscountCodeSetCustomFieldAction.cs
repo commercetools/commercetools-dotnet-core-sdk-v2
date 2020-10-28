@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public  partial class DiscountCodeSetCustomFieldAction : IDiscountCodeSetCustomFieldAction
+    public partial class DiscountCodeSetCustomFieldAction : IDiscountCodeSetCustomFieldAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class CustomTokenizer : ICustomTokenizer
+    public partial class CustomTokenizer : ICustomTokenizer
     {
         public string Type { get; set;}
         

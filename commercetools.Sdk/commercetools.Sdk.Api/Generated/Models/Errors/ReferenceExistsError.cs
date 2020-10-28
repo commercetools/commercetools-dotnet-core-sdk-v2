@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ReferenceExistsError : IReferenceExistsError
+    public partial class ReferenceExistsError : IReferenceExistsError
     {
         public string Code { get; set;}
         

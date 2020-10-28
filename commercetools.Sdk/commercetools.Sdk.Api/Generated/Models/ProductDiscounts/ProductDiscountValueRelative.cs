@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public  partial class ProductDiscountValueRelative : IProductDiscountValueRelative
+    public partial class ProductDiscountValueRelative : IProductDiscountValueRelative
     {
         public string Type { get; set;}
         

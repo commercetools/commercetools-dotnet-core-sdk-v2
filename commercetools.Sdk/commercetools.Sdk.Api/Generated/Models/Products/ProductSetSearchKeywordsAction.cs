@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductSetSearchKeywordsAction : IProductSetSearchKeywordsAction
+    public partial class ProductSetSearchKeywordsAction : IProductSetSearchKeywordsAction
     {
         public string Action { get; set;}
         

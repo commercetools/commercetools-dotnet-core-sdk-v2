@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductImageAddedMessage : IProductImageAddedMessage
+    public partial class ProductImageAddedMessage : IProductImageAddedMessage
     {
         public string Id { get; set;}
         

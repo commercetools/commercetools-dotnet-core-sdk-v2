@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategoryChangeParentAction : ICategoryChangeParentAction
+    public partial class CategoryChangeParentAction : ICategoryChangeParentAction
     {
         public string Action { get; set;}
         

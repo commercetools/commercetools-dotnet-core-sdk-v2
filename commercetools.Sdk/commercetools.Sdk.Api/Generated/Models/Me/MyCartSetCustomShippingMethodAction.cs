@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartSetCustomShippingMethodAction : IMyCartSetCustomShippingMethodAction
+    public partial class MyCartSetCustomShippingMethodAction : IMyCartSetCustomShippingMethodAction
     {
         public string Action { get; set;}
         

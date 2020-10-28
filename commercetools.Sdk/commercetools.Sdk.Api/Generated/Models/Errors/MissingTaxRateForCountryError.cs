@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class MissingTaxRateForCountryError : IMissingTaxRateForCountryError
+    public partial class MissingTaxRateForCountryError : IMissingTaxRateForCountryError
     {
         public string Code { get; set;}
         

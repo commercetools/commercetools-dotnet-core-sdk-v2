@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductPriceDiscountsSetMessage : IProductPriceDiscountsSetMessage
+    public partial class ProductPriceDiscountsSetMessage : IProductPriceDiscountsSetMessage
     {
         public string Id { get; set;}
         

@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderImportDraft : IOrderImportDraft
+    public partial class OrderImportDraft : IOrderImportDraft
     {
         public string OrderNumber { get; set;}
         

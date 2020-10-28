@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class DuplicatePriceScopeError : IDuplicatePriceScopeError
+    public partial class DuplicatePriceScopeError : IDuplicatePriceScopeError
     {
         public string Code { get; set;}
         

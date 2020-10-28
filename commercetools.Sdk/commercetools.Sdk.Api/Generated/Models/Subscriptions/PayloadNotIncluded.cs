@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class PayloadNotIncluded : IPayloadNotIncluded
+    public partial class PayloadNotIncluded : IPayloadNotIncluded
     {
         public string Reason { get; set;}
         

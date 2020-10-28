@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductType : IProductType
+    public partial class ProductType : IProductType
     {
         public string Id { get; set;}
         

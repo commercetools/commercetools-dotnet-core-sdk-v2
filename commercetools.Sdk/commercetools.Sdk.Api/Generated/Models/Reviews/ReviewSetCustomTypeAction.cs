@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewSetCustomTypeAction : IReviewSetCustomTypeAction
+    public partial class ReviewSetCustomTypeAction : IReviewSetCustomTypeAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewSetLocaleAction : IReviewSetLocaleAction
+    public partial class ReviewSetLocaleAction : IReviewSetLocaleAction
     {
         public string Action { get; set;}
         

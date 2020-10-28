@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingList : IShoppingList
+    public partial class ShoppingList : IShoppingList
     {
         public string Id { get; set;}
         

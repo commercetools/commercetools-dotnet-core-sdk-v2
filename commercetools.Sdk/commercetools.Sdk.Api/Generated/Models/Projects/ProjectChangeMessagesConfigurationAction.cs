@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class ProjectChangeMessagesConfigurationAction : IProjectChangeMessagesConfigurationAction
+    public partial class ProjectChangeMessagesConfigurationAction : IProjectChangeMessagesConfigurationAction
     {
         public string Action { get; set;}
         

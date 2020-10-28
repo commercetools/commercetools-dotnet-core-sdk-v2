@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+    public partial class CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
     {
         public string Action { get; set;}
         

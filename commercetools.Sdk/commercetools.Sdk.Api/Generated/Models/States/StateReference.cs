@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    public  partial class StateReference : IStateReference
+    public partial class StateReference : IStateReference
     {
         public string TypeId { get; set;}
         

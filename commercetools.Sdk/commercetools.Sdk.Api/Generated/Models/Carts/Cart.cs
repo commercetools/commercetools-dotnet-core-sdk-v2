@@ -14,7 +14,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class Cart : ICart
+    public partial class Cart : ICart
     {
         public string Id { get; set;}
         

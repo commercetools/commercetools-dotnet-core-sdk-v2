@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ProductVariantImportDraft : IProductVariantImportDraft
+    public partial class ProductVariantImportDraft : IProductVariantImportDraft
     {
         public long? Id { get; set;}
         

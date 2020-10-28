@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategoryDraft : ICategoryDraft
+    public partial class CategoryDraft : ICategoryDraft
     {
         public ILocalizedString Name { get; set;}
         

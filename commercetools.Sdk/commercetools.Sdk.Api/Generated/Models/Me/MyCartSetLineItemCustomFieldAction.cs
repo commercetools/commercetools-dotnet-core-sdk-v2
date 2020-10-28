@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartSetLineItemCustomFieldAction : IMyCartSetLineItemCustomFieldAction
+    public partial class MyCartSetLineItemCustomFieldAction : IMyCartSetLineItemCustomFieldAction
     {
         public string Action { get; set;}
         

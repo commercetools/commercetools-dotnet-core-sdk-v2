@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class InvalidCredentialsError : IInvalidCredentialsError
+    public partial class InvalidCredentialsError : IInvalidCredentialsError
     {
         public string Code { get; set;}
         

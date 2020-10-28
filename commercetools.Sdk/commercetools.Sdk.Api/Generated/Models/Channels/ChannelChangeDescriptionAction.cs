@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelChangeDescriptionAction : IChannelChangeDescriptionAction
+    public partial class ChannelChangeDescriptionAction : IChannelChangeDescriptionAction
     {
         public string Action { get; set;}
         

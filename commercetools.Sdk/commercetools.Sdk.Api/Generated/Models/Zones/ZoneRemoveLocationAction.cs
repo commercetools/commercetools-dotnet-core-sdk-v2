@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class ZoneRemoveLocationAction : IZoneRemoveLocationAction
+    public partial class ZoneRemoveLocationAction : IZoneRemoveLocationAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldsDraft : ICustomFieldsDraft
+    public partial class CustomFieldsDraft : ICustomFieldsDraft
     {
         public ITypeResourceIdentifier Type { get; set;}
         

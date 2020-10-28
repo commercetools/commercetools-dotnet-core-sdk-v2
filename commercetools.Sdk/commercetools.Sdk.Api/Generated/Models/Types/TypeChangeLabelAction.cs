@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class TypeChangeLabelAction : ITypeChangeLabelAction
+    public partial class TypeChangeLabelAction : ITypeChangeLabelAction
     {
         public string Action { get; set;}
         

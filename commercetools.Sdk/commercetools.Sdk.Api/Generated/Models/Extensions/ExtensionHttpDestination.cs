@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionHttpDestination : IExtensionHttpDestination
+    public partial class ExtensionHttpDestination : IExtensionHttpDestination
     {
         public string Type { get; set;}
         

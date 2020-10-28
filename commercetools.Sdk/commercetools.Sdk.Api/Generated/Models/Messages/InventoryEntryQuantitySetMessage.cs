@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class InventoryEntryQuantitySetMessage : IInventoryEntryQuantitySetMessage
+    public partial class InventoryEntryQuantitySetMessage : IInventoryEntryQuantitySetMessage
     {
         public string Id { get; set;}
         

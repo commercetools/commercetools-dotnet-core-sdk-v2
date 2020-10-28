@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.GraphQl
 {
-    public  partial class GraphQLError : IGraphQLError
+    public partial class GraphQLError : IGraphQLError
     {
         public string Message { get; set;}
         

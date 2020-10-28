@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductProjectionPagedSearchResponse : IProductProjectionPagedSearchResponse
+    public partial class ProductProjectionPagedSearchResponse : IProductProjectionPagedSearchResponse
     {
         public long Count { get; set;}
         

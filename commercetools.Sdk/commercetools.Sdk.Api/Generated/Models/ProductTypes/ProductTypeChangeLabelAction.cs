@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangeLabelAction : IProductTypeChangeLabelAction
+    public partial class ProductTypeChangeLabelAction : IProductTypeChangeLabelAction
     {
         public string Action { get; set;}
         

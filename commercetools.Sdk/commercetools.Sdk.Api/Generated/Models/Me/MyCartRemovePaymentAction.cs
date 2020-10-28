@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartRemovePaymentAction : IMyCartRemovePaymentAction
+    public partial class MyCartRemovePaymentAction : IMyCartRemovePaymentAction
     {
         public string Action { get; set;}
         

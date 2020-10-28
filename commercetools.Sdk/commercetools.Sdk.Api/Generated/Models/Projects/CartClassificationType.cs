@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class CartClassificationType : ICartClassificationType
+    public partial class CartClassificationType : ICartClassificationType
     {
         public string Type { get; set;}
         

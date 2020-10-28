@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class SearchKeywords : ISearchKeywords
+    public partial class SearchKeywords : ISearchKeywords
     {
     }
 }

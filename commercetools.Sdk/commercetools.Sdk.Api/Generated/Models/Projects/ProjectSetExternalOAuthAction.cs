@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class ProjectSetExternalOAuthAction : IProjectSetExternalOAuthAction
+    public partial class ProjectSetExternalOAuthAction : IProjectSetExternalOAuthAction
     {
         public string Action { get; set;}
         

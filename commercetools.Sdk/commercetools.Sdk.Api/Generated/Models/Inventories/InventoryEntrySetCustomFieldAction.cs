@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    public  partial class InventoryEntrySetCustomFieldAction : IInventoryEntrySetCustomFieldAction
+    public partial class InventoryEntrySetCustomFieldAction : IInventoryEntrySetCustomFieldAction
     {
         public string Action { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderTransitionLineItemStateAction : IOrderTransitionLineItemStateAction
+    public partial class OrderTransitionLineItemStateAction : IOrderTransitionLineItemStateAction
     {
         public string Action { get; set;}
         

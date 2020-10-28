@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class Subscription : ISubscription
+    public partial class Subscription : ISubscription
     {
         public string Id { get; set;}
         

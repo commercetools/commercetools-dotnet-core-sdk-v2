@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public  partial class CartValueType : ICartValueType
+    public partial class CartValueType : ICartValueType
     {
         public string Type { get; set;}
         

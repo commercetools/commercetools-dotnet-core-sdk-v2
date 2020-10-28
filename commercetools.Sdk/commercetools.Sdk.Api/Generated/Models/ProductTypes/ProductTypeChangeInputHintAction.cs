@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class ProductTypeChangeInputHintAction : IProductTypeChangeInputHintAction
+    public partial class ProductTypeChangeInputHintAction : IProductTypeChangeInputHintAction
     {
         public string Action { get; set;}
         

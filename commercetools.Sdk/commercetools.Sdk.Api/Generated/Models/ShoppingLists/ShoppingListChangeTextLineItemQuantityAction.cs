@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShoppingLists
 {
-    public  partial class ShoppingListChangeTextLineItemQuantityAction : IShoppingListChangeTextLineItemQuantityAction
+    public partial class ShoppingListChangeTextLineItemQuantityAction : IShoppingListChangeTextLineItemQuantityAction
     {
         public string Action { get; set;}
         

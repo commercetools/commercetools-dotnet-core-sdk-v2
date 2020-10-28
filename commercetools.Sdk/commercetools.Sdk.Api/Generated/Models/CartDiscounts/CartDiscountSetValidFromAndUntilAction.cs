@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class CartDiscountSetValidFromAndUntilAction : ICartDiscountSetValidFromAndUntilAction
+    public partial class CartDiscountSetValidFromAndUntilAction : ICartDiscountSetValidFromAndUntilAction
     {
         public string Action { get; set;}
         

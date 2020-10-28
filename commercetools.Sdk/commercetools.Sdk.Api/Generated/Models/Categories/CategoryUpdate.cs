@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategoryUpdate : ICategoryUpdate
+    public partial class CategoryUpdate : ICategoryUpdate
     {
         public long Version { get; set;}
         

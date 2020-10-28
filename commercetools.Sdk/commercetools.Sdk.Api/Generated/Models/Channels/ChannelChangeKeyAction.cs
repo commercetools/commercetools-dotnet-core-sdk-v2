@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelChangeKeyAction : IChannelChangeKeyAction
+    public partial class ChannelChangeKeyAction : IChannelChangeKeyAction
     {
         public string Action { get; set;}
         

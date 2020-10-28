@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ParcelMeasurements : IParcelMeasurements
+    public partial class ParcelMeasurements : IParcelMeasurements
     {
         public double? HeightInMillimeter { get; set;}
         

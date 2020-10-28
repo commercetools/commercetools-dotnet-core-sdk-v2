@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class QueryPrice : IQueryPrice
+    public partial class QueryPrice : IQueryPrice
     {
         public string Id { get; set;}
         

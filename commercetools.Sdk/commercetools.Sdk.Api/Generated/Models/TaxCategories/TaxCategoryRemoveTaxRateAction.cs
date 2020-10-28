@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategoryRemoveTaxRateAction : ITaxCategoryRemoveTaxRateAction
+    public partial class TaxCategoryRemoveTaxRateAction : ITaxCategoryRemoveTaxRateAction
     {
         public string Action { get; set;}
         

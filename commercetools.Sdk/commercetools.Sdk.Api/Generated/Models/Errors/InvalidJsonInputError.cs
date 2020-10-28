@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class InvalidJsonInputError : IInvalidJsonInputError
+    public partial class InvalidJsonInputError : IInvalidJsonInputError
     {
         public string Code { get; set;}
         

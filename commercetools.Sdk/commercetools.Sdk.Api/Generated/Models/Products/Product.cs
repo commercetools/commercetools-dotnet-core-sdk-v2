@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class Product : IProduct
+    public partial class Product : IProduct
     {
         public string Id { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class AttributeLocalizableTextType : IAttributeLocalizableTextType
+    public partial class AttributeLocalizableTextType : IAttributeLocalizableTextType
     {
         public string Name { get; set;}
         public AttributeLocalizableTextType()

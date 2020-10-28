@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class ScoreShippingRateInput : IScoreShippingRateInput
+    public partial class ScoreShippingRateInput : IScoreShippingRateInput
     {
         public string Type { get; set;}
         

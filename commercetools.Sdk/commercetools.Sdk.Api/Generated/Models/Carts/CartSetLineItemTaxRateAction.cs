@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartSetLineItemTaxRateAction : ICartSetLineItemTaxRateAction
+    public partial class CartSetLineItemTaxRateAction : ICartSetLineItemTaxRateAction
     {
         public string Action { get; set;}
         

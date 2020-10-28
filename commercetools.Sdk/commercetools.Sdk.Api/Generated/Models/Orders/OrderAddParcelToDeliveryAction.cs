@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderAddParcelToDeliveryAction : IOrderAddParcelToDeliveryAction
+    public partial class OrderAddParcelToDeliveryAction : IOrderAddParcelToDeliveryAction
     {
         public string Action { get; set;}
         

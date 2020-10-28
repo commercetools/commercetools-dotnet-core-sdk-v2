@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyLineItemDraft : IMyLineItemDraft
+    public partial class MyLineItemDraft : IMyLineItemDraft
     {
         public string ProductId { get; set;}
         

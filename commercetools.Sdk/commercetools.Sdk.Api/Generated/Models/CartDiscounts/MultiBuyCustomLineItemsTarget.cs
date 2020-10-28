@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class MultiBuyCustomLineItemsTarget : IMultiBuyCustomLineItemsTarget
+    public partial class MultiBuyCustomLineItemsTarget : IMultiBuyCustomLineItemsTarget
     {
         public string Type { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class LastModifiedBy : ILastModifiedBy
+    public partial class LastModifiedBy : ILastModifiedBy
     {
         public string ClientId { get; set;}
         

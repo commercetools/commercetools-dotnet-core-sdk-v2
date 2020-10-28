@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    public  partial class ExtensionDraft : IExtensionDraft
+    public partial class ExtensionDraft : IExtensionDraft
     {
         public string Key { get; set;}
         

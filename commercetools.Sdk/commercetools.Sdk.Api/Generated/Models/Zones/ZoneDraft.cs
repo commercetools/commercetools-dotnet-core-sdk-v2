@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class ZoneDraft : IZoneDraft
+    public partial class ZoneDraft : IZoneDraft
     {
         public string Key { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class DuplicateAttributeValuesError : IDuplicateAttributeValuesError
+    public partial class DuplicateAttributeValuesError : IDuplicateAttributeValuesError
     {
         public string Code { get; set;}
         

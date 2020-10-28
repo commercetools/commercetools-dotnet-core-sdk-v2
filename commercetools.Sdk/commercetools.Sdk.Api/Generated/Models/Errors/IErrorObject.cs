@@ -32,16 +32,16 @@ namespace commercetools.Api.Models.Errors
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Api.Models.Errors.RequiredFieldError))]
     [SubTypeDiscriminator("ResourceNotFound", typeof(commercetools.Api.Models.Errors.ResourceNotFoundError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("DuplicateVariantValues", typeof(commercetools.Api.Models.Errors.DuplicateVariantValuesError))]
+    [SubTypeDiscriminator("DuplicatePriceScope", typeof(commercetools.Api.Models.Errors.DuplicatePriceScopeError))]
+    [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
+    [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
+    [SubTypeDiscriminator("DuplicateField", typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
+    [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Api.Models.Errors.EnumValueIsUsedError))]
+    [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValues", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValuesError))]
     [SubTypeDiscriminator("access_denied", typeof(commercetools.Api.Models.Errors.AccessDeniedError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValueError))]
-    [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
-    [SubTypeDiscriminator("DuplicateField", typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
-    [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
-    [SubTypeDiscriminator("DuplicateVariantValues", typeof(commercetools.Api.Models.Errors.DuplicateVariantValuesError))]
-    [SubTypeDiscriminator("DuplicatePriceScope", typeof(commercetools.Api.Models.Errors.DuplicatePriceScopeError))]
-    [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Api.Models.Errors.EnumValueIsUsedError))]
-    [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
     public interface IErrorObject 
     {
         string Code { get; set;}

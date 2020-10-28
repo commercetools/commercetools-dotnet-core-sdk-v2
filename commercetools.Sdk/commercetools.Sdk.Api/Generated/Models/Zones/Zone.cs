@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class Zone : IZone
+    public partial class Zone : IZone
     {
         public string Id { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ProductDeletedMessage : IProductDeletedMessage
+    public partial class ProductDeletedMessage : IProductDeletedMessage
     {
         public string Id { get; set;}
         

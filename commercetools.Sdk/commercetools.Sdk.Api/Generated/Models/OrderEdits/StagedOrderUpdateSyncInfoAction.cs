@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class StagedOrderUpdateSyncInfoAction : IStagedOrderUpdateSyncInfoAction
+    public partial class StagedOrderUpdateSyncInfoAction : IStagedOrderUpdateSyncInfoAction
     {
         public string Action { get; set;}
         

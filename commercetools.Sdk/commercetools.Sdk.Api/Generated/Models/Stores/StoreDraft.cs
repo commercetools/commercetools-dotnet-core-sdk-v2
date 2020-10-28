@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    public  partial class StoreDraft : IStoreDraft
+    public partial class StoreDraft : IStoreDraft
     {
         public string Key { get; set;}
         

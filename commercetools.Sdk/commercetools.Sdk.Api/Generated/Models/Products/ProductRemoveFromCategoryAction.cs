@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductRemoveFromCategoryAction : IProductRemoveFromCategoryAction
+    public partial class ProductRemoveFromCategoryAction : IProductRemoveFromCategoryAction
     {
         public string Action { get; set;}
         

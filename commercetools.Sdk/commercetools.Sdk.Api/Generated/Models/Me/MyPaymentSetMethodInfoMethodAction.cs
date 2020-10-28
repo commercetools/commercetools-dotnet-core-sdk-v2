@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyPaymentSetMethodInfoMethodAction : IMyPaymentSetMethodInfoMethodAction
+    public partial class MyPaymentSetMethodInfoMethodAction : IMyPaymentSetMethodInfoMethodAction
     {
         public string Action { get; set;}
         

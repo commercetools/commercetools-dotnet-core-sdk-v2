@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductLegacySetSkuAction : IProductLegacySetSkuAction
+    public partial class ProductLegacySetSkuAction : IProductLegacySetSkuAction
     {
         public string Action { get; set;}
         

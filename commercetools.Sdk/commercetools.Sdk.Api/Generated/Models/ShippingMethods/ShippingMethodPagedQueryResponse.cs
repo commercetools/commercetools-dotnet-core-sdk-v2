@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ShippingMethodPagedQueryResponse : IShippingMethodPagedQueryResponse
+    public partial class ShippingMethodPagedQueryResponse : IShippingMethodPagedQueryResponse
     {
         public long? Limit { get; set;}
         

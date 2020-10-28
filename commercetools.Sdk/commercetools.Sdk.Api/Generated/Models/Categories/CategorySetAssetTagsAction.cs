@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    public  partial class CategorySetAssetTagsAction : ICategorySetAssetTagsAction
+    public partial class CategorySetAssetTagsAction : ICategorySetAssetTagsAction
     {
         public string Action { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public  partial class CustomerGroupChangeNameAction : ICustomerGroupChangeNameAction
+    public partial class CustomerGroupChangeNameAction : ICustomerGroupChangeNameAction
     {
         public string Action { get; set;}
         

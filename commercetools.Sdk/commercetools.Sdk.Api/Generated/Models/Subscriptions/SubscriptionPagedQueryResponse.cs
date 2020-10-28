@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class SubscriptionPagedQueryResponse : ISubscriptionPagedQueryResponse
+    public partial class SubscriptionPagedQueryResponse : ISubscriptionPagedQueryResponse
     {
         public long Limit { get; set;}
         

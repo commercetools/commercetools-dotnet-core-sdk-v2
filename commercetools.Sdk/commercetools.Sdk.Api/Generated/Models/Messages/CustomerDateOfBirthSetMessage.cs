@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class CustomerDateOfBirthSetMessage : ICustomerDateOfBirthSetMessage
+    public partial class CustomerDateOfBirthSetMessage : ICustomerDateOfBirthSetMessage
     {
         public string Id { get; set;}
         

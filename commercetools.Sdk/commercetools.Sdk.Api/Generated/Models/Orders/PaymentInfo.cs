@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class PaymentInfo : IPaymentInfo
+    public partial class PaymentInfo : IPaymentInfo
     {
         public List<IPaymentReference> Payments { get; set;}
     }

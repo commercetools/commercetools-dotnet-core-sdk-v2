@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class MessagePagedQueryResponse : IMessagePagedQueryResponse
+    public partial class MessagePagedQueryResponse : IMessagePagedQueryResponse
     {
         public long Limit { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class InsufficientScopeError : IInsufficientScopeError
+    public partial class InsufficientScopeError : IInsufficientScopeError
     {
         public string Code { get; set;}
         

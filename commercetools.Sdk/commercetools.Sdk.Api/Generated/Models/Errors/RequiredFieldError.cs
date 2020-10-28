@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class RequiredFieldError : IRequiredFieldError
+    public partial class RequiredFieldError : IRequiredFieldError
     {
         public string Code { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class HighPrecisionMoney : IHighPrecisionMoney
+    public partial class HighPrecisionMoney : IHighPrecisionMoney
     {
         public string Type { get; set;}
         

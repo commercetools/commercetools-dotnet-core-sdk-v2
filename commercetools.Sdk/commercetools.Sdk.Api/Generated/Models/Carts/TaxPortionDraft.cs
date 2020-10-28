@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class TaxPortionDraft : ITaxPortionDraft
+    public partial class TaxPortionDraft : ITaxPortionDraft
     {
         public string Name { get; set;}
         

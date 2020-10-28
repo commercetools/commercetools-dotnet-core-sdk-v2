@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductVariantAvailability : IProductVariantAvailability
+    public partial class ProductVariantAvailability : IProductVariantAvailability
     {
         public bool? IsOnStock { get; set;}
         

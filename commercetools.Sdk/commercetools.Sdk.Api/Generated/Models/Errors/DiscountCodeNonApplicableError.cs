@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class DiscountCodeNonApplicableError : IDiscountCodeNonApplicableError
+    public partial class DiscountCodeNonApplicableError : IDiscountCodeNonApplicableError
     {
         public string Code { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class CustomerAddressRemovedMessagePayload : ICustomerAddressRemovedMessagePayload
+    public partial class CustomerAddressRemovedMessagePayload : ICustomerAddressRemovedMessagePayload
     {
         public string Type { get; set;}
         

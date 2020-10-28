@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public  partial class ZoneRate : IZoneRate
+    public partial class ZoneRate : IZoneRate
     {
         public IZoneReference Zone { get; set;}
         

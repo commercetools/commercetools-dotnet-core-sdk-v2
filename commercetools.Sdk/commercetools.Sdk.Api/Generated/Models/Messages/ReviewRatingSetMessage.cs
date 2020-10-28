@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public  partial class ReviewRatingSetMessage : IReviewRatingSetMessage
+    public partial class ReviewRatingSetMessage : IReviewRatingSetMessage
     {
         public string Id { get; set;}
         

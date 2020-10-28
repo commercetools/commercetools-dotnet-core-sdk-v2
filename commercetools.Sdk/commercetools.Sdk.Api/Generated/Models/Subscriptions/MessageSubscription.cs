@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class MessageSubscription : IMessageSubscription
+    public partial class MessageSubscription : IMessageSubscription
     {
         public string ResourceTypeId { get; set;}
         

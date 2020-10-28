@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class Money : IMoney
+    public partial class Money : IMoney
     {
         public long CentAmount { get; set;}
         

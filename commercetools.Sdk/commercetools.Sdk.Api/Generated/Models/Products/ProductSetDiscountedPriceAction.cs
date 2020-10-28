@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductSetDiscountedPriceAction : IProductSetDiscountedPriceAction
+    public partial class ProductSetDiscountedPriceAction : IProductSetDiscountedPriceAction
     {
         public string Action { get; set;}
         

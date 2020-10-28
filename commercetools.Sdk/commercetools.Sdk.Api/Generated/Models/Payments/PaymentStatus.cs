@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class PaymentStatus : IPaymentStatus
+    public partial class PaymentStatus : IPaymentStatus
     {
         public string InterfaceCode { get; set;}
         

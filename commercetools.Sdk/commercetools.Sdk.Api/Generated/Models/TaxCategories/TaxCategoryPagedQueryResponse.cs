@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategoryPagedQueryResponse : ITaxCategoryPagedQueryResponse
+    public partial class TaxCategoryPagedQueryResponse : ITaxCategoryPagedQueryResponse
     {
         public long Limit { get; set;}
         

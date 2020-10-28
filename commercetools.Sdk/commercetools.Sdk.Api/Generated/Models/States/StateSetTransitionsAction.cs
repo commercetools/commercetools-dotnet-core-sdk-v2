@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    public  partial class StateSetTransitionsAction : IStateSetTransitionsAction
+    public partial class StateSetTransitionsAction : IStateSetTransitionsAction
     {
         public string Action { get; set;}
         

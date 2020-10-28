@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CustomLineItemDraft : ICustomLineItemDraft
+    public partial class CustomLineItemDraft : ICustomLineItemDraft
     {
         public ILocalizedString Name { get; set;}
         

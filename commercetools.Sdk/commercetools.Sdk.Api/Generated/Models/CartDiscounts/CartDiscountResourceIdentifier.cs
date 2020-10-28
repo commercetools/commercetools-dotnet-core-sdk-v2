@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public  partial class CartDiscountResourceIdentifier : ICartDiscountResourceIdentifier
+    public partial class CartDiscountResourceIdentifier : ICartDiscountResourceIdentifier
     {
         public string TypeId { get; set;}
         

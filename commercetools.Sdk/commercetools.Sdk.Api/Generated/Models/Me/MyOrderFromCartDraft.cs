@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyOrderFromCartDraft : IMyOrderFromCartDraft
+    public partial class MyOrderFromCartDraft : IMyOrderFromCartDraft
     {
         public string Id { get; set;}
         

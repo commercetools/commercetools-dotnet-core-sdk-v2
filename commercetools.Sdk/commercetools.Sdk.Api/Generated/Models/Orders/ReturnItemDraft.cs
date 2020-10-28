@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class ReturnItemDraft : IReturnItemDraft
+    public partial class ReturnItemDraft : IReturnItemDraft
     {
         public long Quantity { get; set;}
         

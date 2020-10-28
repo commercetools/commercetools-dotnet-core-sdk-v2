@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public  partial class OrderEditNotProcessed : IOrderEditNotProcessed
+    public partial class OrderEditNotProcessed : IOrderEditNotProcessed
     {
         public string Type { get; set;}
         public OrderEditNotProcessed()

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class TermFacetResult : ITermFacetResult
+    public partial class TermFacetResult : ITermFacetResult
     {
         public string Type { get; set;}
         

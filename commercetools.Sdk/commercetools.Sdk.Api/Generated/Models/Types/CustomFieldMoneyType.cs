@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public  partial class CustomFieldMoneyType : ICustomFieldMoneyType
+    public partial class CustomFieldMoneyType : ICustomFieldMoneyType
     {
         public string Name { get; set;}
         public CustomFieldMoneyType()

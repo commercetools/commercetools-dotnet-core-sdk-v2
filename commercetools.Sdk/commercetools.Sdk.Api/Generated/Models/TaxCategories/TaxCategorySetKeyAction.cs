@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    public  partial class TaxCategorySetKeyAction : ITaxCategorySetKeyAction
+    public partial class TaxCategorySetKeyAction : ITaxCategorySetKeyAction
     {
         public string Action { get; set;}
         

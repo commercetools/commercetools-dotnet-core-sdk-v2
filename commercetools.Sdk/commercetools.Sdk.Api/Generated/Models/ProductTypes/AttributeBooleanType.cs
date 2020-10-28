@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public  partial class AttributeBooleanType : IAttributeBooleanType
+    public partial class AttributeBooleanType : IAttributeBooleanType
     {
         public string Name { get; set;}
         public AttributeBooleanType()

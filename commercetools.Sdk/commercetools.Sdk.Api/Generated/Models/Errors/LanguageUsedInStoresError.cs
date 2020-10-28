@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class LanguageUsedInStoresError : ILanguageUsedInStoresError
+    public partial class LanguageUsedInStoresError : ILanguageUsedInStoresError
     {
         public string Code { get; set;}
         

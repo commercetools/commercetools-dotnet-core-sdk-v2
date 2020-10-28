@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public  partial class ReferencedResourceNotFoundError : IReferencedResourceNotFoundError
+    public partial class ReferencedResourceNotFoundError : IReferencedResourceNotFoundError
     {
         public string Code { get; set;}
         

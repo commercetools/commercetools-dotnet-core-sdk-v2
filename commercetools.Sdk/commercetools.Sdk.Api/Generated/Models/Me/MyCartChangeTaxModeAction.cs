@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public  partial class MyCartChangeTaxModeAction : IMyCartChangeTaxModeAction
+    public partial class MyCartChangeTaxModeAction : IMyCartChangeTaxModeAction
     {
         public string Action { get; set;}
         

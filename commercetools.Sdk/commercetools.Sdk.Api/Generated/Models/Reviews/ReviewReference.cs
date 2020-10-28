@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewReference : IReviewReference
+    public partial class ReviewReference : IReviewReference
     {
         public string TypeId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelSetGeoLocationAction : IChannelSetGeoLocationAction
+    public partial class ChannelSetGeoLocationAction : IChannelSetGeoLocationAction
     {
         public string Action { get; set;}
         

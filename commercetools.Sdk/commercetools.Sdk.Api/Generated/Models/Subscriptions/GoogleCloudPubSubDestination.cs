@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public  partial class GoogleCloudPubSubDestination : IGoogleCloudPubSubDestination
+    public partial class GoogleCloudPubSubDestination : IGoogleCloudPubSubDestination
     {
         public string Type { get; set;}
         

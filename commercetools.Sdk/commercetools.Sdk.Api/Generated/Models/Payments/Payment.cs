@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public  partial class Payment : IPayment
+    public partial class Payment : IPayment
     {
         public string Id { get; set;}
         

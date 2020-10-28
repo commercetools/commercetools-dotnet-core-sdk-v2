@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    public  partial class ReviewRatingStatistics : IReviewRatingStatistics
+    public partial class ReviewRatingStatistics : IReviewRatingStatistics
     {
         public double AverageRating { get; set;}
         

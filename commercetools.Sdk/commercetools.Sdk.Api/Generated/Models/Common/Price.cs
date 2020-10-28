@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class Price : IPrice
+    public partial class Price : IPrice
     {
         public string Id { get; set;}
         

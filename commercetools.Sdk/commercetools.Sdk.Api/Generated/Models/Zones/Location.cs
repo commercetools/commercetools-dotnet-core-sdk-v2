@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class Location : ILocation
+    public partial class Location : ILocation
     {
         public string Country { get; set;}
         

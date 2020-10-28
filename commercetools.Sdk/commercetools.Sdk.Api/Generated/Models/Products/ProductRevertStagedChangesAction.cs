@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public  partial class ProductRevertStagedChangesAction : IProductRevertStagedChangesAction
+    public partial class ProductRevertStagedChangesAction : IProductRevertStagedChangesAction
     {
         public string Action { get; set;}
         public ProductRevertStagedChangesAction()

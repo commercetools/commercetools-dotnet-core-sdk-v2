@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public  partial class CartDraft : ICartDraft
+    public partial class CartDraft : ICartDraft
     {
         public string Currency { get; set;}
         

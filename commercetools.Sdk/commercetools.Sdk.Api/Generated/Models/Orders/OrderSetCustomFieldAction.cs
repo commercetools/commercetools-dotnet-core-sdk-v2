@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    public  partial class OrderSetCustomFieldAction : IOrderSetCustomFieldAction
+    public partial class OrderSetCustomFieldAction : IOrderSetCustomFieldAction
     {
         public string Action { get; set;}
         

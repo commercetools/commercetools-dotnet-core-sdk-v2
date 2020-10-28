@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public  partial class ChannelDraft : IChannelDraft
+    public partial class ChannelDraft : IChannelDraft
     {
         public string Key { get; set;}
         

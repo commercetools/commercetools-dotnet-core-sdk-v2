@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    public  partial class ZoneResourceIdentifier : IZoneResourceIdentifier
+    public partial class ZoneResourceIdentifier : IZoneResourceIdentifier
     {
         public string TypeId { get; set;}
         

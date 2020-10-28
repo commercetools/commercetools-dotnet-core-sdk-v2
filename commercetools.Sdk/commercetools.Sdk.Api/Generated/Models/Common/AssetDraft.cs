@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public  partial class AssetDraft : IAssetDraft
+    public partial class AssetDraft : IAssetDraft
     {
         public List<IAssetSource> Sources { get; set;}
         
