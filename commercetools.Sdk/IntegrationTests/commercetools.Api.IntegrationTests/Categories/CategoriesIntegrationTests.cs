@@ -265,6 +265,28 @@ namespace commercetools.Api.IntegrationTests.Categories
                 });
         }
         
+        [Fact]
+        public async Task ValidateMemoryLogging()
+        {
+            var key = $"ValidateMemoryLogging-{TestingUtility.RandomString()}";
+            await WithCategory(
+                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                async category =>
+                {
+                    Assert.NotNull(category);
+                    var retrievedCategory = await client.ApiRoot().WithProjectKey(projectKey)
+                        .Categories()
+                        .WithId(category.Id)
+                        .Get()
+                        .ExecuteAsync();
+                    
+                    Assert.NotNull(retrievedCategory);
+                    
+                    var log = InMemoryLogger.GetLogMessages();
+                    Assert.NotEmpty(log);
+                });
+        }
+        
         #region UpdateActions
 
         [Fact]
