@@ -2,9 +2,9 @@
 using commercetools.Base.Client.Tokens;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
- using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 
- namespace commercetools.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests
 {
     public class ServiceProviderFixture
     {
