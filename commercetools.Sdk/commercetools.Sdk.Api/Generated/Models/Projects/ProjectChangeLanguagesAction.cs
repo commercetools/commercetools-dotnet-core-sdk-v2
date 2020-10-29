@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("changeLanguages")]
-    public partial class ProjectChangeLanguagesAction : ProjectUpdateAction
+    public partial class ProjectChangeLanguagesAction : IProjectChangeLanguagesAction
     {
+        public string Action { get; set;}
+        
         public List<string> Languages { get; set;}
         public ProjectChangeLanguagesAction()
         { 

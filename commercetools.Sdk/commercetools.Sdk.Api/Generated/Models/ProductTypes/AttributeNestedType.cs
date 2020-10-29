@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("nested")]
-    public partial class AttributeNestedType : AttributeType
+    public partial class AttributeNestedType : IAttributeNestedType
     {
-        public ProductTypeReference TypeReference { get; set;}
+        public string Name { get; set;}
+        
+        public IProductTypeReference TypeReference { get; set;}
         public AttributeNestedType()
         { 
            this.Name = "nested";

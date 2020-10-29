@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class CartDiscountUpdateAction 
+    public abstract partial class CartDiscountUpdateAction : ICartDiscountUpdateAction
     {
         public string Action { get; set;}
     }

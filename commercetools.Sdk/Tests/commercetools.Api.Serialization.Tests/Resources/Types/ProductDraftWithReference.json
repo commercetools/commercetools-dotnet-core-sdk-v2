@@ -23,6 +23,5 @@
   "state":{
     "typeId":"state",
     "id":"StateId"
-  },
-  "publish":false
+  }
 }

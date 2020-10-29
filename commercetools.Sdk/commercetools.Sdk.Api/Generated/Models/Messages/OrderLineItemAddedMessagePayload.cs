@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderLineItemAdded")]
-    public partial class OrderLineItemAddedMessagePayload : MessagePayload
+    public partial class OrderLineItemAddedMessagePayload : IOrderLineItemAddedMessagePayload
     {
-        public LineItem LineItem { get; set;}
+        public string Type { get; set;}
+        
+        public ILineItem LineItem { get; set;}
         
         public long AddedQuantity { get; set;}
         public OrderLineItemAddedMessagePayload()

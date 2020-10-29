@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("EventGrid")]
-    public partial class AzureEventGridDestination : Destination
+    public partial class AzureEventGridDestination : IAzureEventGridDestination
     {
+        public string Type { get; set;}
+        
         public string Uri { get; set;}
         
         public string AccessKey { get; set;}

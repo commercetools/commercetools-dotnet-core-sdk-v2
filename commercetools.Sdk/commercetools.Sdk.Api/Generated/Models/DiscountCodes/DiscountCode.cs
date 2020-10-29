@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public partial class DiscountCode : BaseResource
+    public partial class DiscountCode : IDiscountCode
     {
         public string Id { get; set;}
         
@@ -19,29 +20,29 @@ namespace commercetools.Api.Models.DiscountCodes
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
         public string Code { get; set;}
         
-        public List<CartDiscountReference> CartDiscounts { get; set;}
+        public List<ICartDiscountReference> CartDiscounts { get; set;}
         
         public string CartPredicate { get; set;}
         
         public bool IsActive { get; set;}
         
-        public List<Reference> References { get; set;}
+        public List<IReference> References { get; set;}
         
-        public long MaxApplications { get; set;}
+        public long? MaxApplications { get; set;}
         
-        public long MaxApplicationsPerCustomer { get; set;}
+        public long? MaxApplicationsPerCustomer { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
         public List<string> Groups { get; set;}
         

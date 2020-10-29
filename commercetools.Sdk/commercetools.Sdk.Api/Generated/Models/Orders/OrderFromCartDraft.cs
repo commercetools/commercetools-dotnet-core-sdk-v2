@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class OrderFromCartDraft 
+    public partial class OrderFromCartDraft : IOrderFromCartDraft
     {
         public string Id { get; set;}
         
@@ -31,6 +32,6 @@ namespace commercetools.Api.Models.Orders
         [JsonIgnore]
         public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
         
-        public StateResourceIdentifier State { get; set;}
+        public IStateResourceIdentifier State { get; set;}
     }
 }

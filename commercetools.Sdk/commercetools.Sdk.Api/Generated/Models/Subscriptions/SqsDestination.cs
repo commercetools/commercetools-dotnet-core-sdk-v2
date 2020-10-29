@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("SQS")]
-    public partial class SqsDestination : Destination
+    public partial class SqsDestination : ISqsDestination
     {
+        public string Type { get; set;}
+        
         public string AccessKey { get; set;}
         
         public string AccessSecret { get; set;}

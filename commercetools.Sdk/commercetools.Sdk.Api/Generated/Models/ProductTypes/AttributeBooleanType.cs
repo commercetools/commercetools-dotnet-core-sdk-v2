@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("boolean")]
-    public partial class AttributeBooleanType : AttributeType
+    public partial class AttributeBooleanType : IAttributeBooleanType
     {
+        public string Name { get; set;}
         public AttributeBooleanType()
         { 
            this.Name = "boolean";

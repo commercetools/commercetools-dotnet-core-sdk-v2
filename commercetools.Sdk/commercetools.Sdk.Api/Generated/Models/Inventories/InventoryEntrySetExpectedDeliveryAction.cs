@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    [DiscriminatorValue("setExpectedDelivery")]
-    public partial class InventoryEntrySetExpectedDeliveryAction : InventoryEntryUpdateAction
+    public partial class InventoryEntrySetExpectedDeliveryAction : IInventoryEntrySetExpectedDeliveryAction
     {
+        public string Action { get; set;}
+        
         public DateTime ExpectedDelivery { get; set;}
         public InventoryEntrySetExpectedDeliveryAction()
         { 

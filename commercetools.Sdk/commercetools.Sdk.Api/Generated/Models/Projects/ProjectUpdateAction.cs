@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class ProjectUpdateAction 
+    public abstract partial class ProjectUpdateAction : IProjectUpdateAction
     {
         public string Action { get; set;}
     }

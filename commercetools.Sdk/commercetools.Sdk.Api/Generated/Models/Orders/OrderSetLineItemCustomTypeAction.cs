@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setLineItemCustomType")]
-    public partial class OrderSetLineItemCustomTypeAction : OrderUpdateAction
+    public partial class OrderSetLineItemCustomTypeAction : IOrderSetLineItemCustomTypeAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public TypeResourceIdentifier Type { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public IFieldContainer Fields { get; set;}
         public OrderSetLineItemCustomTypeAction()
         { 
            this.Action = "setLineItemCustomType";

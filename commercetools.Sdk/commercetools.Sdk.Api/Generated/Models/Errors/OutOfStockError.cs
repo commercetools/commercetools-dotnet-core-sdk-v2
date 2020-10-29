@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("OutOfStock")]
-    public partial class OutOfStockError : ErrorObject
+    public partial class OutOfStockError : IOutOfStockError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public List<string> LineItems { get; set;}
         
         public List<string> Skus { get; set;}

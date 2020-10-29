@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("changeMessagesEnabled")]
-    public partial class ProjectChangeMessagesEnabledAction : ProjectUpdateAction
+    public partial class ProjectChangeMessagesEnabledAction : IProjectChangeMessagesEnabledAction
     {
+        public string Action { get; set;}
+        
         public bool MessagesEnabled { get; set;}
         public ProjectChangeMessagesEnabledAction()
         { 

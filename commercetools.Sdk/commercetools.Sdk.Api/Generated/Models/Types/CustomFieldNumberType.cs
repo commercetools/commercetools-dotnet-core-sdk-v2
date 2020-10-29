@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("Number")]
-    public partial class CustomFieldNumberType : FieldType
+    public partial class CustomFieldNumberType : ICustomFieldNumberType
     {
+        public string Name { get; set;}
         public CustomFieldNumberType()
         { 
            this.Name = "Number";

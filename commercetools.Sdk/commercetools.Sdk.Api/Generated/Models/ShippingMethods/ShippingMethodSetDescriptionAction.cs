@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("setDescription")]
-    public partial class ShippingMethodSetDescriptionAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodSetDescriptionAction : IShippingMethodSetDescriptionAction
     {
+        public string Action { get; set;}
+        
         public string Description { get; set;}
         public ShippingMethodSetDescriptionAction()
         { 

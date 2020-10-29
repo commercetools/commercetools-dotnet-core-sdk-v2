@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Inventories
 {
-    [DiscriminatorValue("inventory-entry")]
-    public partial class InventoryEntryReference : Reference
+    public partial class InventoryEntryReference : IInventoryEntryReference
     {
-        public InventoryEntry Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IInventoryEntry Obj { get; set;}
         public InventoryEntryReference()
         { 
            this.TypeId = "inventory-entry";

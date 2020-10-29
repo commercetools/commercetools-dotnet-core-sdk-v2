@@ -8,14 +8,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("changeMasterVariant")]
-    public partial class ProductChangeMasterVariantAction : ProductUpdateAction
+    public partial class ProductChangeMasterVariantAction : IProductChangeMasterVariantAction
     {
-        public long VariantId { get; set;}
+        public string Action { get; set;}
+        
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductChangeMasterVariantAction()
         { 
            this.Action = "changeMasterVariant";

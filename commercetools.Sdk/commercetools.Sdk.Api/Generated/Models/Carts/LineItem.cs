@@ -10,43 +10,44 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class LineItem 
+    public partial class LineItem : ILineItem
     {
         public string Id { get; set;}
         
         public string ProductId { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString ProductSlug { get; set;}
+        public ILocalizedString ProductSlug { get; set;}
         
-        public ProductTypeReference ProductType { get; set;}
+        public IProductTypeReference ProductType { get; set;}
         
-        public ProductVariant Variant { get; set;}
+        public IProductVariant Variant { get; set;}
         
-        public Price Price { get; set;}
+        public IPrice Price { get; set;}
         
-        public TaxedItemPrice TaxedPrice { get; set;}
+        public ITaxedItemPrice TaxedPrice { get; set;}
         
-        public TypedMoney TotalPrice { get; set;}
+        public ITypedMoney TotalPrice { get; set;}
         
         public long Quantity { get; set;}
         
         public DateTime AddedAt { get; set;}
         
-        public List<ItemState> State { get; set;}
+        public List<IItemState> State { get; set;}
         
-        public TaxRate TaxRate { get; set;}
+        public ITaxRate TaxRate { get; set;}
         
-        public ChannelReference SupplyChannel { get; set;}
+        public IChannelReference SupplyChannel { get; set;}
         
-        public ChannelReference DistributionChannel { get; set;}
+        public IChannelReference DistributionChannel { get; set;}
         
-        public List<DiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
+        public List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
         
         public string PriceMode { get; set;}
         
@@ -58,8 +59,8 @@ namespace commercetools.Api.Models.Carts
         [JsonIgnore]
         public LineItemMode LineItemModeAsEnum => this.LineItemMode.GetEnum<LineItemMode>();
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public ItemShippingDetails ShippingDetails { get; set;}
+        public IItemShippingDetails ShippingDetails { get; set;}
     }
 }

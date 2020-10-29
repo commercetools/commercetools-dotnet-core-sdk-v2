@@ -3,7 +3,7 @@ using commercetools.Base.Serialization.Mappers;
 
 namespace commercetools.Api.Serialization.Mappers.CustomFieldMappers
 {
-    class StringFieldMapper : StringConverter<FieldContainer, string>, ICustomJsonMapper<FieldContainer>
+    class StringFieldMapper : StringConverter<IFieldContainer, string>, ICustomJsonMapper<IFieldContainer>
     {
     }
 }

@@ -10,14 +10,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("addShoppingList")]
-    public partial class StagedOrderAddShoppingListAction : StagedOrderUpdateAction
+    public partial class StagedOrderAddShoppingListAction : IStagedOrderAddShoppingListAction
     {
-        public ShoppingListResourceIdentifier ShoppingList { get; set;}
+        public string Action { get; set;}
         
-        public ChannelResourceIdentifier SupplyChannel { get; set;}
+        public IShoppingListResourceIdentifier ShoppingList { get; set;}
         
-        public ChannelResourceIdentifier DistributionChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
+        
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
         public StagedOrderAddShoppingListAction()
         { 
            this.Action = "addShoppingList";

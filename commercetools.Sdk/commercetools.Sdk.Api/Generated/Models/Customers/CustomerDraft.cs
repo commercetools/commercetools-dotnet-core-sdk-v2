@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
-    public partial class CustomerDraft 
+    public partial class CustomerDraft : ICustomerDraft
     {
         public string CustomerNumber { get; set;}
         
@@ -36,23 +37,23 @@ namespace commercetools.Api.Models.Customers
         
         public string VatId { get; set;}
         
-        public List<Address> Addresses { get; set;}
+        public List<IAddress> Addresses { get; set;}
         
-        public long DefaultShippingAddress { get; set;}
+        public long? DefaultShippingAddress { get; set;}
         
         public List<int> ShippingAddresses { get; set;}
         
-        public long DefaultBillingAddress { get; set;}
+        public long? DefaultBillingAddress { get; set;}
         
         public List<int> BillingAddresses { get; set;}
         
-        public bool IsEmailVerified { get; set;}
+        public bool? IsEmailVerified { get; set;}
         
         public string ExternalId { get; set;}
         
-        public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string Locale { get; set;}
         
@@ -60,6 +61,6 @@ namespace commercetools.Api.Models.Customers
         
         public string Key { get; set;}
         
-        public List<StoreResourceIdentifier> Stores { get; set;}
+        public List<IStoreResourceIdentifier> Stores { get; set;}
     }
 }

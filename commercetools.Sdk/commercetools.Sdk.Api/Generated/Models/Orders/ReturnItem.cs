@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class ReturnItem 
+    public abstract partial class ReturnItem : IReturnItem
     {
         public string Id { get; set;}
         

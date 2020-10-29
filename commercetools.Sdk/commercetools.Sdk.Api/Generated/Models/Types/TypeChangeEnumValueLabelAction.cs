@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("changeEnumValueLabel")]
-    public partial class TypeChangeEnumValueLabelAction : TypeUpdateAction
+    public partial class TypeChangeEnumValueLabelAction : ITypeChangeEnumValueLabelAction
     {
+        public string Action { get; set;}
+        
         public string FieldName { get; set;}
         
-        public CustomFieldEnumValue Value { get; set;}
+        public ICustomFieldEnumValue Value { get; set;}
         public TypeChangeEnumValueLabelAction()
         { 
            this.Action = "changeEnumValueLabel";

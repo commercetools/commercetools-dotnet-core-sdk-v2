@@ -9,19 +9,19 @@ using Type = System.Type;
 
 namespace commercetools.Api.Serialization.JsonConverters
 {
-    public class FieldContainerConverter : JsonConverter<FieldContainer>
+    public class FieldContainerConverter : JsonConverter<IFieldContainer>
     {
-        private readonly IMapperTypeRetriever<FieldContainer> mapperTypeRetriever;
+        private readonly IMapperTypeRetriever<IFieldContainer> mapperTypeRetriever;
         private ISerializerService serializerService;
 
-        public FieldContainerConverter(IMapperTypeRetriever<FieldContainer> mapperTypeRetriever, ISerializerService serializerService)
+        public FieldContainerConverter(IMapperTypeRetriever<IFieldContainer> mapperTypeRetriever, ISerializerService serializerService)
         {
             this.mapperTypeRetriever = mapperTypeRetriever;
             this.serializerService = serializerService;
         }
 
 
-        public override FieldContainer Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override IFieldContainer Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var jsonDocument = JsonDocument.ParseValue(ref reader);
 
@@ -79,7 +79,7 @@ namespace commercetools.Api.Serialization.JsonConverters
 */
         }
 
-        public override void Write(Utf8JsonWriter writer, FieldContainer value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, IFieldContainer value, JsonSerializerOptions options)
         {
             writer.WriteStartObject();
             foreach (var item in value)

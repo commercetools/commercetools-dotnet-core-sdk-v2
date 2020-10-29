@@ -71,7 +71,8 @@ namespace commercetools.Base.Client
 
         private static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName)
         {
-            var httpClientBuilder = services.AddHttpClient(clientName);
+            var httpClientBuilder = services.AddHttpClient(clientName)
+                .AddHttpMessageHandler<LoggerHandler>();
 
             return httpClientBuilder;
         }

@@ -8,9 +8,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    [DiscriminatorValue("store")]
-    public partial class StoreKeyReference : KeyReference
+    public partial class StoreKeyReference : IStoreKeyReference
     {
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Key { get; set;}
         public StoreKeyReference()
         { 
            this.TypeId = "store";

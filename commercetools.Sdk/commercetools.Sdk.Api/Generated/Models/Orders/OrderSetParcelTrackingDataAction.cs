@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setParcelTrackingData")]
-    public partial class OrderSetParcelTrackingDataAction : OrderUpdateAction
+    public partial class OrderSetParcelTrackingDataAction : IOrderSetParcelTrackingDataAction
     {
+        public string Action { get; set;}
+        
         public string ParcelId { get; set;}
         
-        public TrackingData TrackingData { get; set;}
+        public ITrackingData TrackingData { get; set;}
         public OrderSetParcelTrackingDataAction()
         { 
            this.Action = "setParcelTrackingData";

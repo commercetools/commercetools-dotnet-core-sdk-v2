@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("RequiredField")]
-    public partial class RequiredFieldError : ErrorObject
+    public partial class RequiredFieldError : IRequiredFieldError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string Field { get; set;}
         public RequiredFieldError()
         { 

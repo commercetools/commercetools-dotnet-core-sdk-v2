@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setSearchKeywords")]
-    public partial class ProductSetSearchKeywordsAction : ProductUpdateAction
+    public partial class ProductSetSearchKeywordsAction : IProductSetSearchKeywordsAction
     {
-        public SearchKeywords SearchKeywords { get; set;}
+        public string Action { get; set;}
         
-        public bool Staged { get; set;}
+        public ISearchKeywords SearchKeywords { get; set;}
+        
+        public bool? Staged { get; set;}
         public ProductSetSearchKeywordsAction()
         { 
            this.Action = "setSearchKeywords";

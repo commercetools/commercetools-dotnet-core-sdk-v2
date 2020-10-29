@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("addInterfaceInteraction")]
-    public partial class PaymentAddInterfaceInteractionAction : PaymentUpdateAction
+    public partial class PaymentAddInterfaceInteractionAction : IPaymentAddInterfaceInteractionAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public PaymentAddInterfaceInteractionAction()
         { 
            this.Action = "addInterfaceInteraction";

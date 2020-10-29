@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductCreated")]
-    public partial class ProductCreatedMessagePayload : MessagePayload
+    public partial class ProductCreatedMessagePayload : IProductCreatedMessagePayload
     {
-        public ProductProjection ProductProjection { get; set;}
+        public string Type { get; set;}
+        
+        public IProductProjection ProductProjection { get; set;}
         public ProductCreatedMessagePayload()
         { 
            this.Type = "ProductCreated";

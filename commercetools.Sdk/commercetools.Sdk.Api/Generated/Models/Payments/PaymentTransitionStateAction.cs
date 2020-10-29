@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("transitionState")]
-    public partial class PaymentTransitionStateAction : PaymentUpdateAction
+    public partial class PaymentTransitionStateAction : IPaymentTransitionStateAction
     {
-        public StateResourceIdentifier State { get; set;}
+        public string Action { get; set;}
         
-        public bool Force { get; set;}
+        public IStateResourceIdentifier State { get; set;}
+        
+        public bool? Force { get; set;}
         public PaymentTransitionStateAction()
         { 
            this.Action = "transitionState";

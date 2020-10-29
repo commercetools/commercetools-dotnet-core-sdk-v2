@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setCustomField")]
-    public partial class MyPaymentSetCustomFieldAction : MyPaymentUpdateAction
+    public partial class MyPaymentSetCustomFieldAction : IMyPaymentSetCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         
         public Object Value { get; set;}

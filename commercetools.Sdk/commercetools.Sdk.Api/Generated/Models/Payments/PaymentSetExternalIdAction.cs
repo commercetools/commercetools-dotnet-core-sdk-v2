@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setExternalId")]
-    public partial class PaymentSetExternalIdAction : PaymentUpdateAction
+    public partial class PaymentSetExternalIdAction : IPaymentSetExternalIdAction
     {
+        public string Action { get; set;}
+        
         public string ExternalId { get; set;}
         public PaymentSetExternalIdAction()
         { 

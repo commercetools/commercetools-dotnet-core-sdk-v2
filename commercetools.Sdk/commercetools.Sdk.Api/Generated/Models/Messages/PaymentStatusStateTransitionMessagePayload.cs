@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("PaymentStatusStateTransition")]
-    public partial class PaymentStatusStateTransitionMessagePayload : MessagePayload
+    public partial class PaymentStatusStateTransitionMessagePayload : IPaymentStatusStateTransitionMessagePayload
     {
-        public StateReference State { get; set;}
+        public string Type { get; set;}
+        
+        public IStateReference State { get; set;}
         
         public bool Force { get; set;}
         public PaymentStatusStateTransitionMessagePayload()

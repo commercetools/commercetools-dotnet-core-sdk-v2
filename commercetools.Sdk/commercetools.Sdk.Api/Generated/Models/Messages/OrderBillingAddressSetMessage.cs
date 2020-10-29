@@ -9,12 +9,33 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderBillingAddressSet")]
-    public partial class OrderBillingAddressSetMessage : Message
+    public partial class OrderBillingAddressSetMessage : IOrderBillingAddressSetMessage
     {
-        public Address Address { get; set;}
+        public string Id { get; set;}
         
-        public Address OldAddress { get; set;}
+        public long Version { get; set;}
+        
+        public DateTime CreatedAt { get; set;}
+        
+        public DateTime LastModifiedAt { get; set;}
+        
+        public ILastModifiedBy LastModifiedBy { get; set;}
+        
+        public ICreatedBy CreatedBy { get; set;}
+        
+        public long SequenceNumber { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public long ResourceVersion { get; set;}
+        
+        public string Type { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
+        public IAddress Address { get; set;}
+        
+        public IAddress OldAddress { get; set;}
         public OrderBillingAddressSetMessage()
         { 
            this.Type = "OrderBillingAddressSet";

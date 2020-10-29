@@ -5,9 +5,9 @@ using commercetools.Base.Serialization.MapperTypeRetrievers;
 
 namespace commercetools.Api.Serialization.MapperTypeRetrievers
 {
-    public class FieldMapperTypeRetriever : MapperTypeRetriever<FieldContainer>
+    public class FieldMapperTypeRetriever : MapperTypeRetriever<IFieldContainer>
     {
-        public FieldMapperTypeRetriever(IEnumerable<ICustomJsonMapper<FieldContainer>> customJsonMappers) : base(customJsonMappers)
+        public FieldMapperTypeRetriever(IEnumerable<ICustomJsonMapper<IFieldContainer>> customJsonMappers) : base(customJsonMappers)
         {
         }
     }

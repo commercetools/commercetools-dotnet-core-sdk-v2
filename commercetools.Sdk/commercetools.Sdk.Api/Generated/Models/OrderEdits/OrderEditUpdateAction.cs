@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class OrderEditUpdateAction 
+    public abstract partial class OrderEditUpdateAction : IOrderEditUpdateAction
     {
         public string Action { get; set;}
     }

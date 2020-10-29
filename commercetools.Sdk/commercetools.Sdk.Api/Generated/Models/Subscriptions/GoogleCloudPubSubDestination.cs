@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("GoogleCloudPubSub")]
-    public partial class GoogleCloudPubSubDestination : Destination
+    public partial class GoogleCloudPubSubDestination : IGoogleCloudPubSubDestination
     {
+        public string Type { get; set;}
+        
         public string ProjectId { get; set;}
         
         public string Topic { get; set;}

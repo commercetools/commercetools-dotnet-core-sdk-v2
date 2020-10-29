@@ -8,14 +8,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setAttributeInAllVariants")]
-    public partial class ProductSetAttributeInAllVariantsAction : ProductUpdateAction
+    public partial class ProductSetAttributeInAllVariantsAction : IProductSetAttributeInAllVariantsAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         
         public Object Value { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductSetAttributeInAllVariantsAction()
         { 
            this.Action = "setAttributeInAllVariants";

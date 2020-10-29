@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("transitionState")]
-    public partial class ProductTransitionStateAction : ProductUpdateAction
+    public partial class ProductTransitionStateAction : IProductTransitionStateAction
     {
-        public StateResourceIdentifier State { get; set;}
+        public string Action { get; set;}
         
-        public bool Force { get; set;}
+        public IStateResourceIdentifier State { get; set;}
+        
+        public bool? Force { get; set;}
         public ProductTransitionStateAction()
         { 
            this.Action = "transitionState";

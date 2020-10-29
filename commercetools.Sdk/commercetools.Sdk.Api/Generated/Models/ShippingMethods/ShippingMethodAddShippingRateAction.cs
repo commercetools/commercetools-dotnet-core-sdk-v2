@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("addShippingRate")]
-    public partial class ShippingMethodAddShippingRateAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodAddShippingRateAction : IShippingMethodAddShippingRateAction
     {
-        public ZoneResourceIdentifier Zone { get; set;}
+        public string Action { get; set;}
         
-        public ShippingRateDraft ShippingRate { get; set;}
+        public IZoneResourceIdentifier Zone { get; set;}
+        
+        public IShippingRateDraft ShippingRate { get; set;}
         public ShippingMethodAddShippingRateAction()
         { 
            this.Action = "addShippingRate";

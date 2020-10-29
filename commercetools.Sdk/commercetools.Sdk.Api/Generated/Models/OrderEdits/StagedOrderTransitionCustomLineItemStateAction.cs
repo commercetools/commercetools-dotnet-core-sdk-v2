@@ -9,16 +9,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("transitionCustomLineItemState")]
-    public partial class StagedOrderTransitionCustomLineItemStateAction : StagedOrderUpdateAction
+    public partial class StagedOrderTransitionCustomLineItemStateAction : IStagedOrderTransitionCustomLineItemStateAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
         public long Quantity { get; set;}
         
-        public StateResourceIdentifier FromState { get; set;}
+        public IStateResourceIdentifier FromState { get; set;}
         
-        public StateResourceIdentifier ToState { get; set;}
+        public IStateResourceIdentifier ToState { get; set;}
         
         public DateTime ActualTransitionDate { get; set;}
         public StagedOrderTransitionCustomLineItemStateAction()

@@ -10,11 +10,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public partial class MyOrder : BaseResource
+    public partial class MyOrder : IMyOrder
     {
         public string Id { get; set;}
         
@@ -24,9 +25,9 @@ namespace commercetools.Api.Models.Me
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public DateTime CompletedAt { get; set;}
         
@@ -38,19 +39,19 @@ namespace commercetools.Api.Models.Me
         
         public string AnonymousId { get; set;}
         
-        public StoreKeyReference Store { get; set;}
+        public IStoreKeyReference Store { get; set;}
         
-        public List<LineItem> LineItems { get; set;}
+        public List<ILineItem> LineItems { get; set;}
         
-        public List<CustomLineItem> CustomLineItems { get; set;}
+        public List<ICustomLineItem> CustomLineItems { get; set;}
         
-        public TypedMoney TotalPrice { get; set;}
+        public ITypedMoney TotalPrice { get; set;}
         
-        public TaxedPrice TaxedPrice { get; set;}
+        public ITaxedPrice TaxedPrice { get; set;}
         
-        public Address ShippingAddress { get; set;}
+        public IAddress ShippingAddress { get; set;}
         
-        public Address BillingAddress { get; set;}
+        public IAddress BillingAddress { get; set;}
         
         public string TaxMode { get; set;}
         
@@ -62,7 +63,7 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
         
-        public CustomerGroupReference CustomerGroup { get; set;}
+        public ICustomerGroupReference CustomerGroup { get; set;}
         
         public string Country { get; set;}
         
@@ -71,7 +72,7 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
         
-        public StateReference State { get; set;}
+        public IStateReference State { get; set;}
         
         public string ShipmentState { get; set;}
         
@@ -83,21 +84,21 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
         
-        public ShippingInfo ShippingInfo { get; set;}
+        public IShippingInfo ShippingInfo { get; set;}
         
-        public List<SyncInfo> SyncInfo { get; set;}
+        public List<ISyncInfo> SyncInfo { get; set;}
         
-        public List<ReturnInfo> ReturnInfo { get; set;}
+        public List<IReturnInfo> ReturnInfo { get; set;}
         
-        public List<DiscountCodeInfo> DiscountCodes { get; set;}
+        public List<IDiscountCodeInfo> DiscountCodes { get; set;}
         
         public long LastMessageSequenceNumber { get; set;}
         
-        public CartReference Cart { get; set;}
+        public ICartReference Cart { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public PaymentInfo PaymentInfo { get; set;}
+        public IPaymentInfo PaymentInfo { get; set;}
         
         public string Locale { get; set;}
         
@@ -116,10 +117,10 @@ namespace commercetools.Api.Models.Me
         [JsonIgnore]
         public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
         
-        public ShippingRateInput ShippingRateInput { get; set;}
+        public IShippingRateInput ShippingRateInput { get; set;}
         
-        public List<Address> ItemShippingAddresses { get; set;}
+        public List<IAddress> ItemShippingAddresses { get; set;}
         
-        public List<CartDiscountReference> RefusedGifts { get; set;}
+        public List<ICartDiscountReference> RefusedGifts { get; set;}
     }
 }

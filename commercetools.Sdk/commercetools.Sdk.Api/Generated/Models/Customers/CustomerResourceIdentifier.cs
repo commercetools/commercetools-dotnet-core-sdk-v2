@@ -8,9 +8,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    [DiscriminatorValue("customer")]
-    public partial class CustomerResourceIdentifier : ResourceIdentifier
+    public partial class CustomerResourceIdentifier : ICustomerResourceIdentifier
     {
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public string Key { get; set;}
         public CustomerResourceIdentifier()
         { 
            this.TypeId = "customer";

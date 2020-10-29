@@ -8,10 +8,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("range")]
-    public partial class RangeFacetResult : FacetResult
+    public partial class RangeFacetResult : IRangeFacetResult
     {
-        public List<FacetResultRange> Ranges { get; set;}
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        
+        public List<IFacetResultRange> Ranges { get; set;}
         public RangeFacetResult()
         { 
            this.Type = "range";

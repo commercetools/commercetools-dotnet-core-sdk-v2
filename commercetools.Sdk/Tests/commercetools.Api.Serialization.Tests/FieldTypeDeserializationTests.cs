@@ -25,7 +25,7 @@ namespace commercetools.Api.Serialization.Tests
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/FieldTypes/String.json");
-            Type deserialized = serializerService.Deserialize<Type>(serialized);
+            var deserialized = serializerService.Deserialize<IType>(serialized);
             Assert.NotNull(deserialized.ResourceTypeIdsAsEnum);
             Assert.Equal(2,deserialized.ResourceTypeIdsAsEnum.Count);
             Assert.Equal(ResourceTypeId.Category, deserialized.ResourceTypeIdsAsEnum[0]);
@@ -55,7 +55,7 @@ namespace commercetools.Api.Serialization.Tests
             };
             fieldDefinition.InputHint = TextInputHint.SingleLine.GetDescription();
             fieldDefinition.Type = new CustomFieldStringType();
-            typeDraft.FieldDefinitions = new List<FieldDefinition>
+            typeDraft.FieldDefinitions = new List<IFieldDefinition>
             {
                 fieldDefinition
             };

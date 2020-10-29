@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("changeOrderState")]
-    public partial class StagedOrderChangeOrderStateAction : StagedOrderUpdateAction
+    public partial class StagedOrderChangeOrderStateAction : IStagedOrderChangeOrderStateAction
     {
+        public string Action { get; set;}
+        
         public string OrderState { get; set;}
         
         [JsonIgnore]

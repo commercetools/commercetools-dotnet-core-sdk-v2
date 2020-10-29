@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
-    public partial class Customer : BaseResource
+    public partial class Customer : ICustomer
     {
         public string Id { get; set;}
         
@@ -20,9 +21,9 @@ namespace commercetools.Api.Models.Customers
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string CustomerNumber { get; set;}
         
@@ -44,7 +45,7 @@ namespace commercetools.Api.Models.Customers
         
         public string VatId { get; set;}
         
-        public List<Address> Addresses { get; set;}
+        public List<IAddress> Addresses { get; set;}
         
         public string DefaultShippingAddressId { get; set;}
         
@@ -58,9 +59,9 @@ namespace commercetools.Api.Models.Customers
         
         public string ExternalId { get; set;}
         
-        public CustomerGroupReference CustomerGroup { get; set;}
+        public ICustomerGroupReference CustomerGroup { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
         public string Locale { get; set;}
         
@@ -68,6 +69,6 @@ namespace commercetools.Api.Models.Customers
         
         public string Key { get; set;}
         
-        public List<StoreKeyReference> Stores { get; set;}
+        public List<IStoreKeyReference> Stores { get; set;}
     }
 }

@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class Destination 
+    public abstract partial class Destination : IDestination
     {
         public string Type { get; set;}
     }

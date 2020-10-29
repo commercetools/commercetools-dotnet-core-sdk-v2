@@ -6,28 +6,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Common
 {
-    public partial class PriceDraft 
+    public partial class PriceDraft : IPriceDraft
     {
-        public Money Value { get; set;}
+        public IMoney Value { get; set;}
         
         public string Country { get; set;}
         
-        public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         
-        public ChannelResourceIdentifier Channel { get; set;}
+        public IChannelResourceIdentifier Channel { get; set;}
         
         public DateTime ValidFrom { get; set;}
         
         public DateTime ValidUntil { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public List<PriceTierDraft> Tiers { get; set;}
+        public List<IPriceTierDraft> Tiers { get; set;}
         
-        public DiscountedPrice Discounted { get; set;}
+        public IDiscountedPrice Discounted { get; set;}
     }
 }

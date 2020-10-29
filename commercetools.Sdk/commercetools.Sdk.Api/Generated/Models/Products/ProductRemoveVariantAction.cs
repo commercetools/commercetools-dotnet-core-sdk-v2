@@ -8,14 +8,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("removeVariant")]
-    public partial class ProductRemoveVariantAction : ProductUpdateAction
+    public partial class ProductRemoveVariantAction : IProductRemoveVariantAction
     {
-        public long Id { get; set;}
+        public string Action { get; set;}
+        
+        public long? Id { get; set;}
         
         public string Sku { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemoveVariantAction()
         { 
            this.Action = "removeVariant";

@@ -6,13 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
-    public partial class PaymentDraft 
+    public partial class PaymentDraft : IPaymentDraft
     {
-        public CustomerResourceIdentifier Customer { get; set;}
+        public ICustomerResourceIdentifier Customer { get; set;}
         
         public string AnonymousId { get; set;}
         
@@ -20,25 +21,25 @@ namespace commercetools.Api.Models.Payments
         
         public string InterfaceId { get; set;}
         
-        public Money AmountPlanned { get; set;}
+        public IMoney AmountPlanned { get; set;}
         
-        public Money AmountAuthorized { get; set;}
+        public IMoney AmountAuthorized { get; set;}
         
         public string AuthorizedUntil { get; set;}
         
-        public Money AmountPaid { get; set;}
+        public IMoney AmountPaid { get; set;}
         
-        public Money AmountRefunded { get; set;}
+        public IMoney AmountRefunded { get; set;}
         
-        public PaymentMethodInfo PaymentMethodInfo { get; set;}
+        public IPaymentMethodInfo PaymentMethodInfo { get; set;}
         
-        public PaymentStatusDraft PaymentStatus { get; set;}
+        public IPaymentStatusDraft PaymentStatus { get; set;}
         
-        public List<TransactionDraft> Transactions { get; set;}
+        public List<ITransactionDraft> Transactions { get; set;}
         
-        public List<CustomFieldsDraft> InterfaceInteractions { get; set;}
+        public List<ICustomFieldsDraft> InterfaceInteractions { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string Key { get; set;}
     }

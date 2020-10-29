@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("changeDestination")]
-    public partial class ExtensionChangeDestinationAction : ExtensionUpdateAction
+    public partial class ExtensionChangeDestinationAction : IExtensionChangeDestinationAction
     {
-        public ExtensionDestination Destination { get; set;}
+        public string Action { get; set;}
+        
+        public IExtensionDestination Destination { get; set;}
         public ExtensionChangeDestinationAction()
         { 
            this.Action = "changeDestination";

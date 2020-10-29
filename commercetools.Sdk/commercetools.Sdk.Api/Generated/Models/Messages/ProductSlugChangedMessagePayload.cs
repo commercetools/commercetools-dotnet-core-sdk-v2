@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductSlugChanged")]
-    public partial class ProductSlugChangedMessagePayload : MessagePayload
+    public partial class ProductSlugChangedMessagePayload : IProductSlugChangedMessagePayload
     {
-        public LocalizedString Slug { get; set;}
+        public string Type { get; set;}
+        
+        public ILocalizedString Slug { get; set;}
         public ProductSlugChangedMessagePayload()
         { 
            this.Type = "ProductSlugChanged";

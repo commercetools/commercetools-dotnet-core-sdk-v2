@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("payment")]
-    public partial class PaymentReference : Reference
+    public partial class PaymentReference : IPaymentReference
     {
-        public Payment Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IPayment Obj { get; set;}
         public PaymentReference()
         { 
            this.TypeId = "payment";

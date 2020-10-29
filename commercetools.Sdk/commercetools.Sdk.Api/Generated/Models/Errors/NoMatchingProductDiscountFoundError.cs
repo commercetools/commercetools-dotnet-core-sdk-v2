@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("NoMatchingProductDiscountFound")]
-    public partial class NoMatchingProductDiscountFoundError : ErrorObject
+    public partial class NoMatchingProductDiscountFoundError : INoMatchingProductDiscountFoundError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public NoMatchingProductDiscountFoundError()
         { 
            this.Code = "NoMatchingProductDiscountFound";

@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("EnumValueIsUsed")]
-    public partial class EnumValueIsUsedError : ErrorObject
+    public partial class EnumValueIsUsedError : IEnumValueIsUsedError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public EnumValueIsUsedError()
         { 
            this.Code = "EnumValueIsUsed";

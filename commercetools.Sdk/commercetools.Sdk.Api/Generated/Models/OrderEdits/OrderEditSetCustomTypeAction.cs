@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class OrderEditSetCustomTypeAction : OrderEditUpdateAction
+    public partial class OrderEditSetCustomTypeAction : IOrderEditSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
+        
+        public ITypeResourceIdentifier Type { get; set;}
         
         public Object Fields { get; set;}
         public OrderEditSetCustomTypeAction()

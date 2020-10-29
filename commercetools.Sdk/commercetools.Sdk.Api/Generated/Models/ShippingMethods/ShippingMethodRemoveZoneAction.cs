@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("removeZone")]
-    public partial class ShippingMethodRemoveZoneAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodRemoveZoneAction : IShippingMethodRemoveZoneAction
     {
-        public ZoneResourceIdentifier Zone { get; set;}
+        public string Action { get; set;}
+        
+        public IZoneResourceIdentifier Zone { get; set;}
         public ShippingMethodRemoveZoneAction()
         { 
            this.Action = "removeZone";

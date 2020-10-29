@@ -8,12 +8,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class TypedMoneyDraft : Money
+    public abstract partial class TypedMoneyDraft : ITypedMoneyDraft
     {
+        public long CentAmount { get; set;}
+        
+        public string CurrencyCode { get; set;}
+        
         public string Type { get; set;}
         
         [JsonIgnore]
         public MoneyType TypeAsEnum => this.Type.GetEnum<MoneyType>();
+        
+        public int? FractionDigits { get; set;}
     }
 }

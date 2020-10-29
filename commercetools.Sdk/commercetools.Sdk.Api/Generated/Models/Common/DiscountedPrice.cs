@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Common
 {
-    public partial class DiscountedPrice 
+    public partial class DiscountedPrice : IDiscountedPrice
     {
-        public Money Value { get; set;}
+        public IMoney Value { get; set;}
         
-        public ProductDiscountReference Discount { get; set;}
+        public IProductDiscountReference Discount { get; set;}
     }
 }

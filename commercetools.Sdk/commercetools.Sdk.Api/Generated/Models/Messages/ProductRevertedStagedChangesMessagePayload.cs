@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductRevertedStagedChanges")]
-    public partial class ProductRevertedStagedChangesMessagePayload : MessagePayload
+    public partial class ProductRevertedStagedChangesMessagePayload : IProductRevertedStagedChangesMessagePayload
     {
+        public string Type { get; set;}
+        
         public List<string> RemovedImageUrls { get; set;}
         public ProductRevertedStagedChangesMessagePayload()
         { 

@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("Boolean")]
-    public partial class CustomFieldBooleanType : FieldType
+    public partial class CustomFieldBooleanType : ICustomFieldBooleanType
     {
+        public string Name { get; set;}
         public CustomFieldBooleanType()
         { 
            this.Name = "Boolean";

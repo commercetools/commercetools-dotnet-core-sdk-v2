@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    [DiscriminatorValue("setCustomerNumber")]
-    public partial class CustomerSetCustomerNumberAction : CustomerUpdateAction
+    public partial class CustomerSetCustomerNumberAction : ICustomerSetCustomerNumberAction
     {
+        public string Action { get; set;}
+        
         public string CustomerNumber { get; set;}
         public CustomerSetCustomerNumberAction()
         { 

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setStore")]
-    public partial class OrderSetStoreAction : OrderUpdateAction
+    public partial class OrderSetStoreAction : IOrderSetStoreAction
     {
-        public StoreResourceIdentifier Store { get; set;}
+        public string Action { get; set;}
+        
+        public IStoreResourceIdentifier Store { get; set;}
         public OrderSetStoreAction()
         { 
            this.Action = "setStore";

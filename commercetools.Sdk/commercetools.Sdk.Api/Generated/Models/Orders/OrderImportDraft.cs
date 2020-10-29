@@ -8,11 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class OrderImportDraft 
+    public partial class OrderImportDraft : IOrderImportDraft
     {
         public string OrderNumber { get; set;}
         
@@ -20,19 +21,19 @@ namespace commercetools.Api.Models.Orders
         
         public string CustomerEmail { get; set;}
         
-        public List<LineItemImportDraft> LineItems { get; set;}
+        public List<ILineItemImportDraft> LineItems { get; set;}
         
-        public List<CustomLineItemDraft> CustomLineItems { get; set;}
+        public List<ICustomLineItemDraft> CustomLineItems { get; set;}
         
-        public Money TotalPrice { get; set;}
+        public IMoney TotalPrice { get; set;}
         
-        public TaxedPriceDraft TaxedPrice { get; set;}
+        public ITaxedPriceDraft TaxedPrice { get; set;}
         
-        public Address ShippingAddress { get; set;}
+        public IAddress ShippingAddress { get; set;}
         
-        public Address BillingAddress { get; set;}
+        public IAddress BillingAddress { get; set;}
         
-        public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         
         public string Country { get; set;}
         
@@ -51,11 +52,11 @@ namespace commercetools.Api.Models.Orders
         [JsonIgnore]
         public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
         
-        public ShippingInfoImportDraft ShippingInfo { get; set;}
+        public IShippingInfoImportDraft ShippingInfo { get; set;}
         
         public DateTime CompletedAt { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public string InventoryMode { get; set;}
         
@@ -67,9 +68,9 @@ namespace commercetools.Api.Models.Orders
         [JsonIgnore]
         public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
         
-        public List<Address> ItemShippingAddresses { get; set;}
+        public List<IAddress> ItemShippingAddresses { get; set;}
         
-        public StoreResourceIdentifier Store { get; set;}
+        public IStoreResourceIdentifier Store { get; set;}
         
         public string Origin { get; set;}
         

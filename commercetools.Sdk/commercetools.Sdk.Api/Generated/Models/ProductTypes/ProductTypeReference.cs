@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("product-type")]
-    public partial class ProductTypeReference : Reference
+    public partial class ProductTypeReference : IProductTypeReference
     {
-        public ProductType Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IProductType Obj { get; set;}
         public ProductTypeReference()
         { 
            this.TypeId = "product-type";

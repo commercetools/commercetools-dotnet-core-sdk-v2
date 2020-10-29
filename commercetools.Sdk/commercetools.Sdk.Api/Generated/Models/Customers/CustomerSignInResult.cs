@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Customers
 {
-    public partial class CustomerSignInResult 
+    public partial class CustomerSignInResult : ICustomerSignInResult
     {
-        public Customer Customer { get; set;}
+        public ICustomer Customer { get; set;}
         
         public Object Cart { get; set;}
     }

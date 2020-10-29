@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setComment")]
-    public partial class OrderEditSetCommentAction : OrderEditUpdateAction
+    public partial class OrderEditSetCommentAction : IOrderEditSetCommentAction
     {
+        public string Action { get; set;}
+        
         public string Comment { get; set;}
         public OrderEditSetCommentAction()
         { 

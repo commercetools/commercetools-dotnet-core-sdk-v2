@@ -8,42 +8,43 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class ProductDraft 
+    public partial class ProductDraft : IProductDraft
     {
-        public ProductTypeResourceIdentifier ProductType { get; set;}
+        public IProductTypeResourceIdentifier ProductType { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Slug { get; set;}
+        public ILocalizedString Slug { get; set;}
         
         public string Key { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
-        public List<CategoryResourceIdentifier> Categories { get; set;}
+        public List<ICategoryResourceIdentifier> Categories { get; set;}
         
-        public CategoryOrderHints CategoryOrderHints { get; set;}
+        public ICategoryOrderHints CategoryOrderHints { get; set;}
         
-        public LocalizedString MetaTitle { get; set;}
+        public ILocalizedString MetaTitle { get; set;}
         
-        public LocalizedString MetaDescription { get; set;}
+        public ILocalizedString MetaDescription { get; set;}
         
-        public LocalizedString MetaKeywords { get; set;}
+        public ILocalizedString MetaKeywords { get; set;}
         
-        public ProductVariantDraft MasterVariant { get; set;}
+        public IProductVariantDraft MasterVariant { get; set;}
         
-        public List<ProductVariantDraft> Variants { get; set;}
+        public List<IProductVariantDraft> Variants { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public SearchKeywords SearchKeywords { get; set;}
+        public ISearchKeywords SearchKeywords { get; set;}
         
-        public StateResourceIdentifier State { get; set;}
+        public IStateResourceIdentifier State { get; set;}
         
-        public bool Publish { get; set;}
+        public bool? Publish { get; set;}
     }
 }

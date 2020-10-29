@@ -9,14 +9,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("DuplicateField")]
-    public partial class DuplicateFieldError : ErrorObject
+    public partial class DuplicateFieldError : IDuplicateFieldError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string Field { get; set;}
         
         public Object DuplicateValue { get; set;}
         
-        public Reference ConflictingResource { get; set;}
+        public IReference ConflictingResource { get; set;}
         public DuplicateFieldError()
         { 
            this.Code = "DuplicateField";

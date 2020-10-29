@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductAddedToCategory")]
-    public partial class ProductAddedToCategoryMessagePayload : MessagePayload
+    public partial class ProductAddedToCategoryMessagePayload : IProductAddedToCategoryMessagePayload
     {
-        public CategoryReference Category { get; set;}
+        public string Type { get; set;}
+        
+        public ICategoryReference Category { get; set;}
         
         public bool Staged { get; set;}
         public ProductAddedToCategoryMessagePayload()

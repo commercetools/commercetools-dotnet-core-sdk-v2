@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("HTTP")]
-    public partial class ExtensionHttpDestination : ExtensionDestination
+    public partial class ExtensionHttpDestination : IExtensionHttpDestination
     {
+        public string Type { get; set;}
+        
         public string Url { get; set;}
         
-        public ExtensionHttpDestinationAuthentication Authentication { get; set;}
+        public IExtensionHttpDestinationAuthentication Authentication { get; set;}
         public ExtensionHttpDestination()
         { 
            this.Type = "HTTP";

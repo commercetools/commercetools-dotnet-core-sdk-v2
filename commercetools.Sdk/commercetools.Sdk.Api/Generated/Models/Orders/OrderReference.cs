@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("order")]
-    public partial class OrderReference : Reference
+    public partial class OrderReference : IOrderReference
     {
-        public Order Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IOrder Obj { get; set;}
         public OrderReference()
         { 
            this.TypeId = "order";

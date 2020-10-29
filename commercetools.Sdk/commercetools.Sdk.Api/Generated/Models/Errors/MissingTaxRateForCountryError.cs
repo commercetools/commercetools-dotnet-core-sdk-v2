@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("MissingTaxRateForCountry")]
-    public partial class MissingTaxRateForCountryError : ErrorObject
+    public partial class MissingTaxRateForCountryError : IMissingTaxRateForCountryError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string TaxCategoryId { get; set;}
         
         public string Country { get; set;}

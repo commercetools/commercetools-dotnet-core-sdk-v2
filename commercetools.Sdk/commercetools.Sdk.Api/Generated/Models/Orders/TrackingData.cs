@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class TrackingData 
+    public partial class TrackingData : ITrackingData
     {
         public string TrackingId { get; set;}
         
@@ -16,6 +17,6 @@ namespace commercetools.Api.Models.Orders
         
         public string ProviderTransaction { get; set;}
         
-        public bool IsReturn { get; set;}
+        public bool? IsReturn { get; set;}
     }
 }

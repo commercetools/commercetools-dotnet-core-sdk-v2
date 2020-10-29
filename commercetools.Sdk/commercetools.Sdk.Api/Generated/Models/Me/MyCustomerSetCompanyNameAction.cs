@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setCompanyName")]
-    public partial class MyCustomerSetCompanyNameAction : MyCustomerUpdateAction
+    public partial class MyCustomerSetCompanyNameAction : IMyCustomerSetCompanyNameAction
     {
+        public string Action { get; set;}
+        
         public string CompanyName { get; set;}
         public MyCustomerSetCompanyNameAction()
         { 

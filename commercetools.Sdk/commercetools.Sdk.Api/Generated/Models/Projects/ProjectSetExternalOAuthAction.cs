@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("setExternalOAuth")]
-    public partial class ProjectSetExternalOAuthAction : ProjectUpdateAction
+    public partial class ProjectSetExternalOAuthAction : IProjectSetExternalOAuthAction
     {
-        public ExternalOAuth ExternalOAuth { get; set;}
+        public string Action { get; set;}
+        
+        public IExternalOAuth ExternalOAuth { get; set;}
         public ProjectSetExternalOAuthAction()
         { 
            this.Action = "setExternalOAuth";

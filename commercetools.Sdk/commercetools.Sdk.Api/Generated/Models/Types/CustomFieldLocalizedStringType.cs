@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("LocalizedString")]
-    public partial class CustomFieldLocalizedStringType : FieldType
+    public partial class CustomFieldLocalizedStringType : ICustomFieldLocalizedStringType
     {
+        public string Name { get; set;}
         public CustomFieldLocalizedStringType()
         { 
            this.Name = "LocalizedString";

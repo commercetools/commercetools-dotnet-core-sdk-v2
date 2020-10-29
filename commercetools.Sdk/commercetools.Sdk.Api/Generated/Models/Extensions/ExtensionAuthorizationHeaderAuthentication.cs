@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("AuthorizationHeader")]
-    public partial class ExtensionAuthorizationHeaderAuthentication : ExtensionHttpDestinationAuthentication
+    public partial class ExtensionAuthorizationHeaderAuthentication : IExtensionAuthorizationHeaderAuthentication
     {
+        public string Type { get; set;}
+        
         public string HeaderValue { get; set;}
         public ExtensionAuthorizationHeaderAuthentication()
         { 

@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setMetaDescription")]
-    public partial class ProductSetMetaDescriptionAction : ProductUpdateAction
+    public partial class ProductSetMetaDescriptionAction : IProductSetMetaDescriptionAction
     {
-        public LocalizedString MetaDescription { get; set;}
+        public string Action { get; set;}
         
-        public bool Staged { get; set;}
+        public ILocalizedString MetaDescription { get; set;}
+        
+        public bool? Staged { get; set;}
         public ProductSetMetaDescriptionAction()
         { 
            this.Action = "setMetaDescription";

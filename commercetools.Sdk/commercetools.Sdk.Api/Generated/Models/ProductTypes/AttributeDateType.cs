@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("date")]
-    public partial class AttributeDateType : AttributeType
+    public partial class AttributeDateType : IAttributeDateType
     {
+        public string Name { get; set;}
         public AttributeDateType()
         { 
            this.Name = "date";

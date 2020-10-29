@@ -9,20 +9,21 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("changeAssetName")]
-    public partial class ProductChangeAssetNameAction : ProductUpdateAction
+    public partial class ProductChangeAssetNameAction : IProductChangeAssetNameAction
     {
-        public long VariantId { get; set;}
+        public string Action { get; set;}
+        
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         
         public string AssetId { get; set;}
         
         public string AssetKey { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         public ProductChangeAssetNameAction()
         { 
            this.Action = "changeAssetName";

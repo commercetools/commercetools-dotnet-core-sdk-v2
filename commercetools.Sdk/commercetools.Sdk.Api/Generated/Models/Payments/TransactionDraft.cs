@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Payments
 {
-    public partial class TransactionDraft 
+    public partial class TransactionDraft : ITransactionDraft
     {
         public DateTime Timestamp { get; set;}
         
@@ -17,7 +18,7 @@ namespace commercetools.Api.Models.Payments
         [JsonIgnore]
         public TransactionType TypeAsEnum => this.Type.GetEnum<TransactionType>();
         
-        public Money Amount { get; set;}
+        public IMoney Amount { get; set;}
         
         public string InteractionId { get; set;}
         

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    [DiscriminatorValue("setKey")]
-    public partial class ZoneSetKeyAction : ZoneUpdateAction
+    public partial class ZoneSetKeyAction : IZoneSetKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public ZoneSetKeyAction()
         { 

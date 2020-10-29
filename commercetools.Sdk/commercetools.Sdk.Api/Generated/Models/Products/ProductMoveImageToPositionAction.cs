@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("moveImageToPosition")]
-    public partial class ProductMoveImageToPositionAction : ProductUpdateAction
+    public partial class ProductMoveImageToPositionAction : IProductMoveImageToPositionAction
     {
-        public long VariantId { get; set;}
+        public string Action { get; set;}
+        
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
@@ -19,7 +20,7 @@ namespace commercetools.Api.Models.Products
         
         public long Position { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductMoveImageToPositionAction()
         { 
            this.Action = "moveImageToPosition";

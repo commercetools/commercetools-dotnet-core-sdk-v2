@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class DiscountCodeSetCustomTypeAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetCustomTypeAction : IDiscountCodeSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public DiscountCodeSetCustomTypeAction()
         { 
            this.Action = "setCustomType";

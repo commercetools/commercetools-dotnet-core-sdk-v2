@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Messages;
 using commercetools.Api.Models.Orders;
 using System;
@@ -9,10 +10,31 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderCreated")]
-    public partial class OrderCreatedMessage : Message
+    public partial class OrderCreatedMessage : IOrderCreatedMessage
     {
-        public Order Order { get; set;}
+        public string Id { get; set;}
+        
+        public long Version { get; set;}
+        
+        public DateTime CreatedAt { get; set;}
+        
+        public DateTime LastModifiedAt { get; set;}
+        
+        public ILastModifiedBy LastModifiedBy { get; set;}
+        
+        public ICreatedBy CreatedBy { get; set;}
+        
+        public long SequenceNumber { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public long ResourceVersion { get; set;}
+        
+        public string Type { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
+        public IOrder Order { get; set;}
         public OrderCreatedMessage()
         { 
            this.Type = "OrderCreated";

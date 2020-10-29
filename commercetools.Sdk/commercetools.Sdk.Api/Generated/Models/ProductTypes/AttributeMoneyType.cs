@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("money")]
-    public partial class AttributeMoneyType : AttributeType
+    public partial class AttributeMoneyType : IAttributeMoneyType
     {
+        public string Name { get; set;}
         public AttributeMoneyType()
         { 
            this.Name = "money";

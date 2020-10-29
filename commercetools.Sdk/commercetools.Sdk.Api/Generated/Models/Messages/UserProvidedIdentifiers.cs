@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
-    public partial class UserProvidedIdentifiers 
+    public partial class UserProvidedIdentifiers : IUserProvidedIdentifiers
     {
         public string Key { get; set;}
         
@@ -19,6 +20,6 @@ namespace commercetools.Api.Models.Messages
         
         public string Sku { get; set;}
         
-        public LocalizedString Slug { get; set;}
+        public ILocalizedString Slug { get; set;}
     }
 }

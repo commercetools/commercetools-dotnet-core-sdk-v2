@@ -7,36 +7,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class CustomLineItem 
+    public partial class CustomLineItem : ICustomLineItem
     {
         public string Id { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public TypedMoney Money { get; set;}
+        public ITypedMoney Money { get; set;}
         
-        public TaxedItemPrice TaxedPrice { get; set;}
+        public ITaxedItemPrice TaxedPrice { get; set;}
         
-        public TypedMoney TotalPrice { get; set;}
+        public ITypedMoney TotalPrice { get; set;}
         
         public string Slug { get; set;}
         
         public long Quantity { get; set;}
         
-        public List<ItemState> State { get; set;}
+        public List<IItemState> State { get; set;}
         
-        public TaxCategoryReference TaxCategory { get; set;}
+        public ITaxCategoryReference TaxCategory { get; set;}
         
-        public TaxRate TaxRate { get; set;}
+        public ITaxRate TaxRate { get; set;}
         
-        public List<DiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
+        public List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public ItemShippingDetails ShippingDetails { get; set;}
+        public IItemShippingDetails ShippingDetails { get; set;}
     }
 }

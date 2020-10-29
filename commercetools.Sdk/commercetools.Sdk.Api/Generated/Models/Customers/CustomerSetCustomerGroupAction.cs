@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Customers
 {
-    [DiscriminatorValue("setCustomerGroup")]
-    public partial class CustomerSetCustomerGroupAction : CustomerUpdateAction
+    public partial class CustomerSetCustomerGroupAction : ICustomerSetCustomerGroupAction
     {
-        public CustomerGroupResourceIdentifier CustomerGroup { get; set;}
+        public string Action { get; set;}
+        
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         public CustomerSetCustomerGroupAction()
         { 
            this.Action = "setCustomerGroup";

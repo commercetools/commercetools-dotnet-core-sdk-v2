@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("access_denied")]
-    public partial class AccessDeniedError : ErrorObject
+    public partial class AccessDeniedError : IAccessDeniedError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public AccessDeniedError()
         { 
            this.Code = "access_denied";

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setAuthorization")]
-    public partial class PaymentSetAuthorizationAction : PaymentUpdateAction
+    public partial class PaymentSetAuthorizationAction : IPaymentSetAuthorizationAction
     {
-        public Money Amount { get; set;}
+        public string Action { get; set;}
+        
+        public IMoney Amount { get; set;}
         
         public DateTime Until { get; set;}
         public PaymentSetAuthorizationAction()

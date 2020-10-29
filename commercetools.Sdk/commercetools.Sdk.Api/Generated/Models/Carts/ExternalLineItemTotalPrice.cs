@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class ExternalLineItemTotalPrice 
+    public partial class ExternalLineItemTotalPrice : IExternalLineItemTotalPrice
     {
-        public Money Price { get; set;}
+        public IMoney Price { get; set;}
         
-        public Money TotalPrice { get; set;}
+        public IMoney TotalPrice { get; set;}
     }
 }

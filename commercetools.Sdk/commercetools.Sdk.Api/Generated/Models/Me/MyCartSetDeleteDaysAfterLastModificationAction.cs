@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setDeleteDaysAfterLastModification")]
-    public partial class MyCartSetDeleteDaysAfterLastModificationAction : MyCartUpdateAction
+    public partial class MyCartSetDeleteDaysAfterLastModificationAction : IMyCartSetDeleteDaysAfterLastModificationAction
     {
-        public int DeleteDaysAfterLastModification { get; set;}
+        public string Action { get; set;}
+        
+        public int? DeleteDaysAfterLastModification { get; set;}
         public MyCartSetDeleteDaysAfterLastModificationAction()
         { 
            this.Action = "setDeleteDaysAfterLastModification";

@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("PreviewSuccess")]
-    public partial class OrderEditPreviewSuccess : OrderEditResult
+    public partial class OrderEditPreviewSuccess : IOrderEditPreviewSuccess
     {
-        public StagedOrder Preview { get; set;}
+        public string Type { get; set;}
         
-        public List<MessagePayload> MessagePayloads { get; set;}
+        public IStagedOrder Preview { get; set;}
+        
+        public List<IMessagePayload> MessagePayloads { get; set;}
         public OrderEditPreviewSuccess()
         { 
            this.Type = "PreviewSuccess";

@@ -9,16 +9,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ReviewRatingSet")]
-    public partial class ReviewRatingSetMessagePayload : MessagePayload
+    public partial class ReviewRatingSetMessagePayload : IReviewRatingSetMessagePayload
     {
-        public double OldRating { get; set;}
+        public string Type { get; set;}
         
-        public double NewRating { get; set;}
+        public double? OldRating { get; set;}
+        
+        public double? NewRating { get; set;}
         
         public bool IncludedInStatistics { get; set;}
         
-        public Reference Target { get; set;}
+        public IReference Target { get; set;}
         public ReviewRatingSetMessagePayload()
         { 
            this.Type = "ReviewRatingSet";

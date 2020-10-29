@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("Reference")]
-    public partial class CustomFieldReferenceType : FieldType
+    public partial class CustomFieldReferenceType : ICustomFieldReferenceType
     {
+        public string Name { get; set;}
+        
         public string ReferenceTypeId { get; set;}
         
         [JsonIgnore]

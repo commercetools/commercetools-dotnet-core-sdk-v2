@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Carts;
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Messages;
 using commercetools.Api.Models.Products;
 using System;
@@ -10,12 +11,33 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductPublished")]
-    public partial class ProductPublishedMessage : Message
+    public partial class ProductPublishedMessage : IProductPublishedMessage
     {
+        public string Id { get; set;}
+        
+        public long Version { get; set;}
+        
+        public DateTime CreatedAt { get; set;}
+        
+        public DateTime LastModifiedAt { get; set;}
+        
+        public ILastModifiedBy LastModifiedBy { get; set;}
+        
+        public ICreatedBy CreatedBy { get; set;}
+        
+        public long SequenceNumber { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public long ResourceVersion { get; set;}
+        
+        public string Type { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
         public List<Object> RemovedImageUrls { get; set;}
         
-        public ProductProjection ProductProjection { get; set;}
+        public IProductProjection ProductProjection { get; set;}
         
         public string Scope { get; set;}
         

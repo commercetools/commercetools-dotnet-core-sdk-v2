@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("removeAttributeDefinition")]
-    public partial class ProductTypeRemoveAttributeDefinitionAction : ProductTypeUpdateAction
+    public partial class ProductTypeRemoveAttributeDefinitionAction : IProductTypeRemoveAttributeDefinitionAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         public ProductTypeRemoveAttributeDefinitionAction()
         { 

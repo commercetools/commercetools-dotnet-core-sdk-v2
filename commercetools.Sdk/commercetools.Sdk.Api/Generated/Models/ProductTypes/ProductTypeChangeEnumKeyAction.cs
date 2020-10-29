@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changeEnumKey")]
-    public partial class ProductTypeChangeEnumKeyAction : ProductTypeUpdateAction
+    public partial class ProductTypeChangeEnumKeyAction : IProductTypeChangeEnumKeyAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
         public string Key { get; set;}

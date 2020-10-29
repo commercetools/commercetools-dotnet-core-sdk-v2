@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("revertStagedVariantChanges")]
-    public partial class ProductRevertStagedVariantChangesAction : ProductUpdateAction
+    public partial class ProductRevertStagedVariantChangesAction : IProductRevertStagedVariantChangesAction
     {
+        public string Action { get; set;}
+        
         public long VariantId { get; set;}
         public ProductRevertStagedVariantChangesAction()
         { 

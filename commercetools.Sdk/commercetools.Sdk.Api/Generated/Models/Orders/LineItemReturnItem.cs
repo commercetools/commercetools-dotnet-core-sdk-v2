@@ -8,9 +8,30 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("LineItemReturnItem")]
-    public partial class LineItemReturnItem : ReturnItem
+    public partial class LineItemReturnItem : ILineItemReturnItem
     {
+        public string Id { get; set;}
+        
+        public long Quantity { get; set;}
+        
+        public string Type { get; set;}
+        
+        public string Comment { get; set;}
+        
+        public string ShipmentState { get; set;}
+        
+        [JsonIgnore]
+        public ReturnShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ReturnShipmentState>();
+        
+        public string PaymentState { get; set;}
+        
+        [JsonIgnore]
+        public ReturnPaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<ReturnPaymentState>();
+        
+        public DateTime LastModifiedAt { get; set;}
+        
+        public DateTime CreatedAt { get; set;}
+        
         public string LineItemId { get; set;}
         public LineItemReturnItem()
         { 

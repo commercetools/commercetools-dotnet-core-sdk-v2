@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setCountry")]
-    public partial class MyCartSetCountryAction : MyCartUpdateAction
+    public partial class MyCartSetCountryAction : IMyCartSetCountryAction
     {
+        public string Action { get; set;}
+        
         public string Country { get; set;}
         public MyCartSetCountryAction()
         { 

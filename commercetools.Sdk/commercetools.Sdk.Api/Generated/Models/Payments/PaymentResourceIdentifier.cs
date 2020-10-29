@@ -8,9 +8,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("payment")]
-    public partial class PaymentResourceIdentifier : ResourceIdentifier
+    public partial class PaymentResourceIdentifier : IPaymentResourceIdentifier
     {
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public string Key { get; set;}
         public PaymentResourceIdentifier()
         { 
            this.TypeId = "payment";

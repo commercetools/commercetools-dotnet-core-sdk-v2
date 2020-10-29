@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    [DiscriminatorValue("addLocation")]
-    public partial class ZoneAddLocationAction : ZoneUpdateAction
+    public partial class ZoneAddLocationAction : IZoneAddLocationAction
     {
-        public Location Location { get; set;}
+        public string Action { get; set;}
+        
+        public ILocation Location { get; set;}
         public ZoneAddLocationAction()
         { 
            this.Action = "addLocation";

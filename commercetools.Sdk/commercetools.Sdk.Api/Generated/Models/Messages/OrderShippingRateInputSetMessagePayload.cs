@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderShippingRateInputSet")]
-    public partial class OrderShippingRateInputSetMessagePayload : MessagePayload
+    public partial class OrderShippingRateInputSetMessagePayload : IOrderShippingRateInputSetMessagePayload
     {
-        public ShippingRateInput ShippingRateInput { get; set;}
+        public string Type { get; set;}
         
-        public ShippingRateInput OldShippingRateInput { get; set;}
+        public IShippingRateInput ShippingRateInput { get; set;}
+        
+        public IShippingRateInput OldShippingRateInput { get; set;}
         public OrderShippingRateInputSetMessagePayload()
         { 
            this.Type = "OrderShippingRateInputSet";

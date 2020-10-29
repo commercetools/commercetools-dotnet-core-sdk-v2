@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("removePrice")]
-    public partial class ProductRemovePriceAction : ProductUpdateAction
+    public partial class ProductRemovePriceAction : IProductRemovePriceAction
     {
+        public string Action { get; set;}
+        
         public string PriceId { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemovePriceAction()
         { 
            this.Action = "removePrice";
