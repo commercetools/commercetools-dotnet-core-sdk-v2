@@ -29,9 +29,9 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeReference))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneReference))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartReference))]
-    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryReference))]
-    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountReference))]
     [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelReference))]
+    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountReference))]
+    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryReference))]
     public interface IReference 
     {
         string TypeId { get; set;}

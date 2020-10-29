@@ -1,9 +1,8 @@
-﻿using System.IO;
+using System.IO;
 using System.Text.Json;
+using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Api.Client.RequestBuilders.Categories;
-
-using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
