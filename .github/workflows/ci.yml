@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1' # SDK Version to use.
-      - run: dotnet restore --packages ../packages
+      - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
         working-directory: ./commercetools.Sdk
@@ -57,7 +57,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1' # SDK Version to use.
-      - run: dotnet restore --packages ../packages
+      - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
         working-directory: ./commercetools.Sdk
@@ -88,7 +88,7 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: ./patch_csproj.rb --version 0.1.0-alpha-${{ github.run_number }} --patch **/*.csproj
-      - run: dotnet restore --packages ../packages
+      - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
         working-directory: ./commercetools.Sdk

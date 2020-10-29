@@ -29,5 +29,3 @@ generate_import:
 
 generate_ml:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="Ml" PACKAGE_DIR="machine-learning" GEN_RAML_FILE=../$(ML_RAML) generate_sdk
-
-
