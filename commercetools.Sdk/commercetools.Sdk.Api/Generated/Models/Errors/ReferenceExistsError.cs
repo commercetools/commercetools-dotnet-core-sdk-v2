@@ -9,9 +9,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("ReferenceExists")]
-    public partial class ReferenceExistsError : ErrorObject
+    public partial class ReferenceExistsError : IReferenceExistsError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string ReferencedBy { get; set;}
         
         [JsonIgnore]

@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public partial class ProductDiscountMatchQuery 
+    public partial class ProductDiscountMatchQuery : IProductDiscountMatchQuery
     {
         public string ProductId { get; set;}
         
@@ -15,6 +16,6 @@ namespace commercetools.Api.Models.ProductDiscounts
         
         public bool Staged { get; set;}
         
-        public QueryPrice Price { get; set;}
+        public IQueryPrice Price { get; set;}
     }
 }

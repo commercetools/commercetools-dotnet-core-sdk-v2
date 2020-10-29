@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("changeTransactionInteractionId")]
-    public partial class PaymentChangeTransactionInteractionIdAction : PaymentUpdateAction
+    public partial class PaymentChangeTransactionInteractionIdAction : IPaymentChangeTransactionInteractionIdAction
     {
+        public string Action { get; set;}
+        
         public string TransactionId { get; set;}
         
         public string InteractionId { get; set;}

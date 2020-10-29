@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class FacetResult 
+    public abstract partial class FacetResult : IFacetResult
     {
         public string Type { get; set;}
         

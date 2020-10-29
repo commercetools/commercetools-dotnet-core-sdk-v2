@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("PriceChanged")]
-    public partial class PriceChangedError : ErrorObject
+    public partial class PriceChangedError : IPriceChangedError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public List<string> LineItems { get; set;}
         
         public bool Shipping { get; set;}

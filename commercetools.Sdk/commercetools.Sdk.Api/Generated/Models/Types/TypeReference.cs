@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("type")]
-    public partial class TypeReference : Reference
+    public partial class TypeReference : ITypeReference
     {
-        public Type Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IType Obj { get; set;}
         public TypeReference()
         { 
            this.TypeId = "type";

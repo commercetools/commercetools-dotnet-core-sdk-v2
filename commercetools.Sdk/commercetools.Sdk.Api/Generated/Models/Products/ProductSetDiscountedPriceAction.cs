@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setDiscountedPrice")]
-    public partial class ProductSetDiscountedPriceAction : ProductUpdateAction
+    public partial class ProductSetDiscountedPriceAction : IProductSetDiscountedPriceAction
     {
+        public string Action { get; set;}
+        
         public string PriceId { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         
-        public DiscountedPrice Discounted { get; set;}
+        public IDiscountedPrice Discounted { get; set;}
         public ProductSetDiscountedPriceAction()
         { 
            this.Action = "setDiscountedPrice";

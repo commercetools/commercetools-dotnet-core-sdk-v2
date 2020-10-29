@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Extensions
 {
-    [DiscriminatorValue("changeTriggers")]
-    public partial class ExtensionChangeTriggersAction : ExtensionUpdateAction
+    public partial class ExtensionChangeTriggersAction : IExtensionChangeTriggersAction
     {
-        public List<ExtensionTrigger> Triggers { get; set;}
+        public string Action { get; set;}
+        
+        public List<IExtensionTrigger> Triggers { get; set;}
         public ExtensionChangeTriggersAction()
         { 
            this.Action = "changeTriggers";

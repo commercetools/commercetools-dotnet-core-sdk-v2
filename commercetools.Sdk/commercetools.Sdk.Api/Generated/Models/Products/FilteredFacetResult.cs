@@ -8,12 +8,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("filter")]
-    public partial class FilteredFacetResult : FacetResult
+    public partial class FilteredFacetResult : IFilteredFacetResult
     {
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        
         public long Count { get; set;}
         
-        public long ProductCount { get; set;}
+        public long? ProductCount { get; set;}
         public FilteredFacetResult()
         { 
            this.Type = "filter";

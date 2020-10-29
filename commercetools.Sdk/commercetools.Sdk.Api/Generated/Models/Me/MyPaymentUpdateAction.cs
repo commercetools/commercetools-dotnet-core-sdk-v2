@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [Discriminator(nameof(Action))]
-    public abstract partial class MyPaymentUpdateAction 
+    public abstract partial class MyPaymentUpdateAction : IMyPaymentUpdateAction
     {
         public string Action { get; set;}
     }

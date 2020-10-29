@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public partial class OrderEdit : BaseResource
+    public partial class OrderEdit : IOrderEdit
     {
         public string Id { get; set;}
         
@@ -20,19 +21,19 @@ namespace commercetools.Api.Models.OrderEdits
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
-        public OrderReference Resource { get; set;}
+        public IOrderReference Resource { get; set;}
         
-        public List<StagedOrderUpdateAction> StagedActions { get; set;}
+        public List<IStagedOrderUpdateAction> StagedActions { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public OrderEditResult Result { get; set;}
+        public IOrderEditResult Result { get; set;}
         
         public string Comment { get; set;}
     }

@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("addPayment")]
-    public partial class StagedOrderAddPaymentAction : StagedOrderUpdateAction
+    public partial class StagedOrderAddPaymentAction : IStagedOrderAddPaymentAction
     {
-        public PaymentResourceIdentifier Payment { get; set;}
+        public string Action { get; set;}
+        
+        public IPaymentResourceIdentifier Payment { get; set;}
         public StagedOrderAddPaymentAction()
         { 
            this.Action = "addPayment";

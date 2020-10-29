@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setCustomField")]
-    public partial class StagedOrderSetCustomFieldAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetCustomFieldAction : IStagedOrderSetCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         
         public Object Value { get; set;}

@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public partial class CustomerGroup : BaseResource
+    public partial class CustomerGroup : ICustomerGroup
     {
         public string Id { get; set;}
         
@@ -18,14 +19,14 @@ namespace commercetools.Api.Models.CustomerGroups
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
         public string Name { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
     }
 }

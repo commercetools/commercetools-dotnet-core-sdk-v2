@@ -8,16 +8,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("removeImage")]
-    public partial class ProductRemoveImageAction : ProductUpdateAction
+    public partial class ProductRemoveImageAction : IProductRemoveImageAction
     {
-        public long VariantId { get; set;}
+        public string Action { get; set;}
+        
+        public long? VariantId { get; set;}
         
         public string Sku { get; set;}
         
         public string ImageUrl { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductRemoveImageAction()
         { 
            this.Action = "removeImage";

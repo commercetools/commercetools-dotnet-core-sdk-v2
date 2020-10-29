@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class Subscription : BaseResource
+    public partial class Subscription : ISubscription
     {
         public string Id { get; set;}
         
@@ -18,19 +19,19 @@ namespace commercetools.Api.Models.Subscriptions
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
-        public List<ChangeSubscription> Changes { get; set;}
+        public List<IChangeSubscription> Changes { get; set;}
         
-        public Destination Destination { get; set;}
+        public IDestination Destination { get; set;}
         
         public string Key { get; set;}
         
-        public List<MessageSubscription> Messages { get; set;}
+        public List<IMessageSubscription> Messages { get; set;}
         
-        public DeliveryFormat Format { get; set;}
+        public IDeliveryFormat Format { get; set;}
         
         public string Status { get; set;}
         

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    [DiscriminatorValue("relative")]
-    public partial class ProductDiscountValueRelative : ProductDiscountValue
+    public partial class ProductDiscountValueRelative : IProductDiscountValueRelative
     {
+        public string Type { get; set;}
+        
         public long Permyriad { get; set;}
         public ProductDiscountValueRelative()
         { 

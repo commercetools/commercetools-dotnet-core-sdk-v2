@@ -9,9 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("publish")]
-    public partial class ProductPublishAction : ProductUpdateAction
+    public partial class ProductPublishAction : IProductPublishAction
     {
+        public string Action { get; set;}
+        
         public string Scope { get; set;}
         
         [JsonIgnore]

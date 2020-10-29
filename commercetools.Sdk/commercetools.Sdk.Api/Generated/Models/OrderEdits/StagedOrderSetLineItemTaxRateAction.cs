@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setLineItemTaxRate")]
-    public partial class StagedOrderSetLineItemTaxRateAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetLineItemTaxRateAction : IStagedOrderSetLineItemTaxRateAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         public StagedOrderSetLineItemTaxRateAction()
         { 
            this.Action = "setLineItemTaxRate";

@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("ltext")]
-    public partial class AttributeLocalizableTextType : AttributeType
+    public partial class AttributeLocalizableTextType : IAttributeLocalizableTextType
     {
+        public string Name { get; set;}
         public AttributeLocalizableTextType()
         { 
            this.Name = "ltext";

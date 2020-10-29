@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class TaxedItemPriceDraft 
+    public partial class TaxedItemPriceDraft : ITaxedItemPriceDraft
     {
-        public Money TotalNet { get; set;}
+        public IMoney TotalNet { get; set;}
         
-        public Money TotalGross { get; set;}
+        public IMoney TotalGross { get; set;}
     }
 }

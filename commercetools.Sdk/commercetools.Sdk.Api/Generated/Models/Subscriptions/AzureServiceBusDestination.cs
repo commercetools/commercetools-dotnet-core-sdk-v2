@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("AzureServiceBus")]
-    public partial class AzureServiceBusDestination : Destination
+    public partial class AzureServiceBusDestination : IAzureServiceBusDestination
     {
+        public string Type { get; set;}
+        
         public string ConnectionString { get; set;}
         public AzureServiceBusDestination()
         { 

@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public partial class CartDiscount : BaseResource
+    public partial class CartDiscount : ICartDiscount
     {
         public string Id { get; set;}
         
@@ -19,21 +20,21 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
         public string Key { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
-        public CartDiscountValue Value { get; set;}
+        public ICartDiscountValue Value { get; set;}
         
         public string CartPredicate { get; set;}
         
-        public CartDiscountTarget Target { get; set;}
+        public ICartDiscountTarget Target { get; set;}
         
         public string SortOrder { get; set;}
         
@@ -45,13 +46,13 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public bool RequiresDiscountCode { get; set;}
         
-        public List<Reference> References { get; set;}
+        public List<IReference> References { get; set;}
         
         public string StackingMode { get; set;}
         
         [JsonIgnore]
         public StackingMode StackingModeAsEnum => this.StackingMode.GetEnum<StackingMode>();
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
     }
 }

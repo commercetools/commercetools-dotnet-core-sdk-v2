@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("transitionState")]
-    public partial class ReviewTransitionStateAction : ReviewUpdateAction
+    public partial class ReviewTransitionStateAction : IReviewTransitionStateAction
     {
-        public StateResourceIdentifier State { get; set;}
+        public string Action { get; set;}
         
-        public bool Force { get; set;}
+        public IStateResourceIdentifier State { get; set;}
+        
+        public bool? Force { get; set;}
         public ReviewTransitionStateAction()
         { 
            this.Action = "transitionState";

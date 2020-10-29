@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("changeCountryTaxRateFallbackEnabled")]
-    public partial class ProjectChangeCountryTaxRateFallbackEnabledAction : ProjectUpdateAction
+    public partial class ProjectChangeCountryTaxRateFallbackEnabledAction : IProjectChangeCountryTaxRateFallbackEnabledAction
     {
+        public string Action { get; set;}
+        
         public bool CountryTaxRateFallbackEnabled { get; set;}
         public ProjectChangeCountryTaxRateFallbackEnabledAction()
         { 

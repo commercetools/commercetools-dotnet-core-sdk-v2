@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("addDiscountCode")]
-    public partial class StagedOrderAddDiscountCodeAction : StagedOrderUpdateAction
+    public partial class StagedOrderAddDiscountCodeAction : IStagedOrderAddDiscountCodeAction
     {
+        public string Action { get; set;}
+        
         public string Code { get; set;}
         public StagedOrderAddDiscountCodeAction()
         { 

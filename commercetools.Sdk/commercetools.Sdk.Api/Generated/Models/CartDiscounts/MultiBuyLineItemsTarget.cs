@@ -8,16 +8,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("multiBuyLineItems")]
-    public partial class MultiBuyLineItemsTarget : CartDiscountTarget
+    public partial class MultiBuyLineItemsTarget : IMultiBuyLineItemsTarget
     {
+        public string Type { get; set;}
+        
         public string Predicate { get; set;}
         
         public int TriggerQuantity { get; set;}
         
         public int DiscountedQuantity { get; set;}
         
-        public int MaxOccurrence { get; set;}
+        public int? MaxOccurrence { get; set;}
         
         public string SelectionMode { get; set;}
         

@@ -1,3 +1,5 @@
+using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Messages;
 using commercetools.Api.Models.Subscriptions;
 using System;
 using System.Collections.Generic;
@@ -8,9 +10,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("ResourceUpdated")]
-    public partial class ResourceUpdatedDelivery : SubscriptionDelivery
+    public partial class ResourceUpdatedDelivery : IResourceUpdatedDelivery
     {
+        public string ProjectKey { get; set;}
+        
+        public string NotificationType { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
         public long Version { get; set;}
         
         public long OldVersion { get; set;}

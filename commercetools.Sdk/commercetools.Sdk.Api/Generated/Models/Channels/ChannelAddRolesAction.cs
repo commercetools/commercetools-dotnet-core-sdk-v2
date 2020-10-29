@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("addRoles")]
-    public partial class ChannelAddRolesAction : ChannelUpdateAction
+    public partial class ChannelAddRolesAction : IChannelAddRolesAction
     {
+        public string Action { get; set;}
+        
         public List<string> Roles { get; set;}
         
         [JsonIgnore]

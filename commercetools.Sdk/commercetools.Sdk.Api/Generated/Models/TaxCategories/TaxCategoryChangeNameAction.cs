@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [DiscriminatorValue("changeName")]
-    public partial class TaxCategoryChangeNameAction : TaxCategoryUpdateAction
+    public partial class TaxCategoryChangeNameAction : ITaxCategoryChangeNameAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         public TaxCategoryChangeNameAction()
         { 

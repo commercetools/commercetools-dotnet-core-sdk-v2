@@ -8,9 +8,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("InvalidItemShippingDetails")]
-    public partial class InvalidItemShippingDetailsError : ErrorObject
+    public partial class InvalidItemShippingDetailsError : IInvalidItemShippingDetailsError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
+        
         public string Subject { get; set;}
         
         public string ItemId { get; set;}

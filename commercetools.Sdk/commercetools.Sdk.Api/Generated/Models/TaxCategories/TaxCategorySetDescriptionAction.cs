@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [DiscriminatorValue("setDescription")]
-    public partial class TaxCategorySetDescriptionAction : TaxCategoryUpdateAction
+    public partial class TaxCategorySetDescriptionAction : ITaxCategorySetDescriptionAction
     {
+        public string Action { get; set;}
+        
         public string Description { get; set;}
         public TaxCategorySetDescriptionAction()
         { 

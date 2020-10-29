@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("SNS")]
-    public partial class SnsDestination : Destination
+    public partial class SnsDestination : ISnsDestination
     {
+        public string Type { get; set;}
+        
         public string AccessKey { get; set;}
         
         public string AccessSecret { get; set;}

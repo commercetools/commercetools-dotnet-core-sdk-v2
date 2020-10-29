@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("setAnonymousId")]
-    public partial class CartSetAnonymousIdAction : CartUpdateAction
+    public partial class CartSetAnonymousIdAction : ICartSetAnonymousIdAction
     {
+        public string Action { get; set;}
+        
         public string AnonymousId { get; set;}
         public CartSetAnonymousIdAction()
         { 

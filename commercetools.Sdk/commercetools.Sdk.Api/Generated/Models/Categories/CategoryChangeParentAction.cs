@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("changeParent")]
-    public partial class CategoryChangeParentAction : CategoryUpdateAction
+    public partial class CategoryChangeParentAction : ICategoryChangeParentAction
     {
-        public CategoryResourceIdentifier Parent { get; set;}
+        public string Action { get; set;}
+        
+        public ICategoryResourceIdentifier Parent { get; set;}
         public CategoryChangeParentAction()
         { 
            this.Action = "changeParent";

@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("whitespace")]
-    public partial class WhitespaceTokenizer : SuggestTokenizer
+    public partial class WhitespaceTokenizer : IWhitespaceTokenizer
     {
+        public string Type { get; set;}
         public WhitespaceTokenizer()
         { 
            this.Type = "whitespace";

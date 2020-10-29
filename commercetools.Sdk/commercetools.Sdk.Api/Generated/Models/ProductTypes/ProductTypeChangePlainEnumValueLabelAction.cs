@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("changePlainEnumValueLabel")]
-    public partial class ProductTypeChangePlainEnumValueLabelAction : ProductTypeUpdateAction
+    public partial class ProductTypeChangePlainEnumValueLabelAction : IProductTypeChangePlainEnumValueLabelAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
-        public AttributePlainEnumValue NewValue { get; set;}
+        public IAttributePlainEnumValue NewValue { get; set;}
         public ProductTypeChangePlainEnumValueLabelAction()
         { 
            this.Action = "changePlainEnumValueLabel";

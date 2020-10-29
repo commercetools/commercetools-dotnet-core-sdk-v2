@@ -4,14 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class DiscountedLineItemPrice 
+    public partial class DiscountedLineItemPrice : IDiscountedLineItemPrice
     {
-        public TypedMoney Value { get; set;}
+        public ITypedMoney Value { get; set;}
         
-        public List<DiscountedLineItemPortion> IncludedDiscounts { get; set;}
+        public List<IDiscountedLineItemPortion> IncludedDiscounts { get; set;}
     }
 }

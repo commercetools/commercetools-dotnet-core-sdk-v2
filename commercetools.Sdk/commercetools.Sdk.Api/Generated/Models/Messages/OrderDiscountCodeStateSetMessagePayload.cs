@@ -10,10 +10,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderDiscountCodeStateSet")]
-    public partial class OrderDiscountCodeStateSetMessagePayload : MessagePayload
+    public partial class OrderDiscountCodeStateSetMessagePayload : IOrderDiscountCodeStateSetMessagePayload
     {
-        public DiscountCodeReference DiscountCode { get; set;}
+        public string Type { get; set;}
+        
+        public IDiscountCodeReference DiscountCode { get; set;}
         
         public string State { get; set;}
         

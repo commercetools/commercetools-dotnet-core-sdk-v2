@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("InvalidSubject")]
-    public partial class InvalidSubjectError : ErrorObject
+    public partial class InvalidSubjectError : IInvalidSubjectError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public InvalidSubjectError()
         { 
            this.Code = "InvalidSubject";

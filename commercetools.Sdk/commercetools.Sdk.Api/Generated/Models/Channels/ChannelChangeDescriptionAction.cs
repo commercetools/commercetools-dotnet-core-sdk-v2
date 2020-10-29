@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("changeDescription")]
-    public partial class ChannelChangeDescriptionAction : ChannelUpdateAction
+    public partial class ChannelChangeDescriptionAction : IChannelChangeDescriptionAction
     {
-        public LocalizedString Description { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString Description { get; set;}
         public ChannelChangeDescriptionAction()
         { 
            this.Action = "changeDescription";

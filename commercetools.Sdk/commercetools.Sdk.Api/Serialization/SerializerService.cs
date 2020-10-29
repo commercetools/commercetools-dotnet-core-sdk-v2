@@ -19,7 +19,7 @@ namespace commercetools.Api.Serialization
        
         public SerializerService(
             ITypeRetriever typeRetriever,
-            IMapperTypeRetriever<FieldContainer> mapperTypeRetriever)
+            IMapperTypeRetriever<IFieldContainer> mapperTypeRetriever)
         {
             _serializerOptions = new JsonSerializerOptions
             {
@@ -28,8 +28,10 @@ namespace commercetools.Api.Serialization
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new FieldContainerConverter(mapperTypeRetriever, this));
-            _serializerOptions.Converters.Add(new AbstractClassConverterFactory(
-                _serializerOptions.PropertyNamingPolicy, _serializerOptions, typeRetriever));
+            _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
+                _serializerOptions.PropertyNamingPolicy, _serializerOptions));
+            _serializerOptions.Converters.Add(new TypeDiscriminatorConverterFactory(
+                _serializerOptions.PropertyNamingPolicy, _serializerOptions));
         }
 
         public T Deserialize<T>(string input)

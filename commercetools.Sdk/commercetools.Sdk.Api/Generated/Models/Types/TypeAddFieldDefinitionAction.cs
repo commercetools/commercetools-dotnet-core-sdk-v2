@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("addFieldDefinition")]
-    public partial class TypeAddFieldDefinitionAction : TypeUpdateAction
+    public partial class TypeAddFieldDefinitionAction : ITypeAddFieldDefinitionAction
     {
-        public FieldDefinition FieldDefinition { get; set;}
+        public string Action { get; set;}
+        
+        public IFieldDefinition FieldDefinition { get; set;}
         public TypeAddFieldDefinitionAction()
         { 
            this.Action = "addFieldDefinition";

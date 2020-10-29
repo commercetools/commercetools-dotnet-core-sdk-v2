@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductUnpublished")]
-    public partial class ProductUnpublishedMessagePayload : MessagePayload
+    public partial class ProductUnpublishedMessagePayload : IProductUnpublishedMessagePayload
     {
+        public string Type { get; set;}
         public ProductUnpublishedMessagePayload()
         { 
            this.Type = "ProductUnpublished";

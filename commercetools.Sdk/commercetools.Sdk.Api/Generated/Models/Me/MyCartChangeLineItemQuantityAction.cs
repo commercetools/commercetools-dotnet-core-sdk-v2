@@ -10,16 +10,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("changeLineItemQuantity")]
-    public partial class MyCartChangeLineItemQuantityAction : MyCartUpdateAction
+    public partial class MyCartChangeLineItemQuantityAction : IMyCartChangeLineItemQuantityAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
         public double Quantity { get; set;}
         
-        public Money ExternalPrice { get; set;}
+        public IMoney ExternalPrice { get; set;}
         
-        public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         public MyCartChangeLineItemQuantityAction()
         { 
            this.Action = "changeLineItemQuantity";

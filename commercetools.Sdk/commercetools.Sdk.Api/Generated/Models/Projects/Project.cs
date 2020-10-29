@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Projects
 {
-    public partial class Project 
+    public partial class Project : IProject
     {
         public long Version { get; set;}
         
@@ -26,12 +27,12 @@ namespace commercetools.Api.Models.Projects
         
         public string TrialUntil { get; set;}
         
-        public MessageConfiguration Messages { get; set;}
+        public IMessageConfiguration Messages { get; set;}
         
-        public ShippingRateInputType ShippingRateInputType { get; set;}
+        public IShippingRateInputType ShippingRateInputType { get; set;}
         
-        public ExternalOAuth ExternalOAuth { get; set;}
+        public IExternalOAuth ExternalOAuth { get; set;}
         
-        public CartsConfiguration Carts { get; set;}
+        public ICartsConfiguration Carts { get; set;}
     }
 }

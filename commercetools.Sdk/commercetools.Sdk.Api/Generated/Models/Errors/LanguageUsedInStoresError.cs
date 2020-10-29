@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("LanguageUsedInStores")]
-    public partial class LanguageUsedInStoresError : ErrorObject
+    public partial class LanguageUsedInStoresError : ILanguageUsedInStoresError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public LanguageUsedInStoresError()
         { 
            this.Code = "LanguageUsedInStores";

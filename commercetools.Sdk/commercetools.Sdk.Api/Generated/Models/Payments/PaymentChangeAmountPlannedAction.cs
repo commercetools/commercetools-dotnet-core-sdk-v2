@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("changeAmountPlanned")]
-    public partial class PaymentChangeAmountPlannedAction : PaymentUpdateAction
+    public partial class PaymentChangeAmountPlannedAction : IPaymentChangeAmountPlannedAction
     {
-        public Money Amount { get; set;}
+        public string Action { get; set;}
+        
+        public IMoney Amount { get; set;}
         public PaymentChangeAmountPlannedAction()
         { 
            this.Action = "changeAmountPlanned";

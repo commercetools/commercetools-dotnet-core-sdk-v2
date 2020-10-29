@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("LocalizedEnum")]
-    public partial class CustomFieldLocalizedEnumType : FieldType
+    public partial class CustomFieldLocalizedEnumType : ICustomFieldLocalizedEnumType
     {
-        public List<CustomFieldLocalizedEnumValue> Values { get; set;}
+        public string Name { get; set;}
+        
+        public List<ICustomFieldLocalizedEnumValue> Values { get; set;}
         public CustomFieldLocalizedEnumType()
         { 
            this.Name = "LocalizedEnum";

@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("applyDeltaToCustomLineItemShippingDetailsTargets")]
-    public partial class CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : CartUpdateAction
+    public partial class CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
-        public List<ItemShippingTarget> TargetsDelta { get; set;}
+        public List<IItemShippingTarget> TargetsDelta { get; set;}
         public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction()
         { 
            this.Action = "applyDeltaToCustomLineItemShippingDetailsTargets";

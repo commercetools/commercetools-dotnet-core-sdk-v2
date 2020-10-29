@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class TypedMoney 
+    public abstract partial class TypedMoney : ITypedMoney
     {
         public string Type { get; set;}
         

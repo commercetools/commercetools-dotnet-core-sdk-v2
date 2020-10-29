@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("setDescription")]
-    public partial class CartDiscountSetDescriptionAction : CartDiscountUpdateAction
+    public partial class CartDiscountSetDescriptionAction : ICartDiscountSetDescriptionAction
     {
-        public LocalizedString Description { get; set;}
+        public string Action { get; set;}
+        
+        public ILocalizedString Description { get; set;}
         public CartDiscountSetDescriptionAction()
         { 
            this.Action = "setDescription";

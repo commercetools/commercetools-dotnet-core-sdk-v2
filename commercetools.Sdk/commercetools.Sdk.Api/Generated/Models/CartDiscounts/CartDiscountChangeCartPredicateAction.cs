@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("changeCartPredicate")]
-    public partial class CartDiscountChangeCartPredicateAction : CartDiscountUpdateAction
+    public partial class CartDiscountChangeCartPredicateAction : ICartDiscountChangeCartPredicateAction
     {
+        public string Action { get; set;}
+        
         public string CartPredicate { get; set;}
         public CartDiscountChangeCartPredicateAction()
         { 

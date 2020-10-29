@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    [DiscriminatorValue("Set")]
-    public partial class CustomFieldSetType : FieldType
+    public partial class CustomFieldSetType : ICustomFieldSetType
     {
-        public FieldType ElementType { get; set;}
+        public string Name { get; set;}
+        
+        public IFieldType ElementType { get; set;}
         public CustomFieldSetType()
         { 
            this.Name = "Set";

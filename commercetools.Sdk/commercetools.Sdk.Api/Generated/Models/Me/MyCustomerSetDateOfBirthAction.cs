@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setDateOfBirth")]
-    public partial class MyCustomerSetDateOfBirthAction : MyCustomerUpdateAction
+    public partial class MyCustomerSetDateOfBirthAction : IMyCustomerSetDateOfBirthAction
     {
+        public string Action { get; set;}
+        
         public DateTime DateOfBirth { get; set;}
         public MyCustomerSetDateOfBirthAction()
         { 

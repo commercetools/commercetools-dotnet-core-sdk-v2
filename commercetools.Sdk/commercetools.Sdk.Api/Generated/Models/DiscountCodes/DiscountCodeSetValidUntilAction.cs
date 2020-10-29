@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    [DiscriminatorValue("setValidUntil")]
-    public partial class DiscountCodeSetValidUntilAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeSetValidUntilAction : IDiscountCodeSetValidUntilAction
     {
+        public string Action { get; set;}
+        
         public DateTime ValidUntil { get; set;}
         public DiscountCodeSetValidUntilAction()
         { 

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("setLineItemCustomField")]
-    public partial class MyShoppingListSetLineItemCustomFieldAction : MyShoppingListUpdateAction
+    public partial class MyShoppingListSetLineItemCustomFieldAction : IMyShoppingListSetLineItemCustomFieldAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
         public string Name { get; set;}

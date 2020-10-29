@@ -8,9 +8,18 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [DiscriminatorValue("centPrecision")]
-    public partial class CentPrecisionMoney : TypedMoney
+    public partial class CentPrecisionMoney : ICentPrecisionMoney
     {
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public MoneyType TypeAsEnum => this.Type.GetEnum<MoneyType>();
+        
+        public int FractionDigits { get; set;}
+        
+        public long CentAmount { get; set;}
+        
+        public string CurrencyCode { get; set;}
         public CentPrecisionMoney()
         { 
            this.Type = "centPrecision";

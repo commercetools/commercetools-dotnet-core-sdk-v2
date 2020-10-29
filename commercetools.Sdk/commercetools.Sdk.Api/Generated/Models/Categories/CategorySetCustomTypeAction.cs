@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class CategorySetCustomTypeAction : CategoryUpdateAction
+    public partial class CategorySetCustomTypeAction : ICategorySetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
         
-        public FieldContainer Fields { get; set;}
+        public ITypeResourceIdentifier Type { get; set;}
+        
+        public IFieldContainer Fields { get; set;}
         public CategorySetCustomTypeAction()
         { 
            this.Action = "setCustomType";

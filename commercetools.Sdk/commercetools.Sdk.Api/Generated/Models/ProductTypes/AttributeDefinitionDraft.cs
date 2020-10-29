@@ -5,17 +5,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    public partial class AttributeDefinitionDraft 
+    public partial class AttributeDefinitionDraft : IAttributeDefinitionDraft
     {
-        public AttributeType Type { get; set;}
+        public IAttributeType Type { get; set;}
         
         public string Name { get; set;}
         
-        public LocalizedString Label { get; set;}
+        public ILocalizedString Label { get; set;}
         
         public bool IsRequired { get; set;}
         
@@ -24,13 +25,13 @@ namespace commercetools.Api.Models.ProductTypes
         [JsonIgnore]
         public AttributeConstraintEnum AttributeConstraintAsEnum => this.AttributeConstraint.GetEnum<AttributeConstraintEnum>();
         
-        public LocalizedString InputTip { get; set;}
+        public ILocalizedString InputTip { get; set;}
         
         public string InputHint { get; set;}
         
         [JsonIgnore]
         public TextInputHint InputHintAsEnum => this.InputHint.GetEnum<TextInputHint>();
         
-        public bool IsSearchable { get; set;}
+        public bool? IsSearchable { get; set;}
     }
 }

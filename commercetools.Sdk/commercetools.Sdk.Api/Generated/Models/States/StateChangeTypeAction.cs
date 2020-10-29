@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.States
 {
-    [DiscriminatorValue("changeType")]
-    public partial class StateChangeTypeAction : StateUpdateAction
+    public partial class StateChangeTypeAction : IStateChangeTypeAction
     {
+        public string Action { get; set;}
+        
         public string Type { get; set;}
         
         [JsonIgnore]

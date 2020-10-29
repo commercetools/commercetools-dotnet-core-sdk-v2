@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("setLineItemTotalPrice")]
-    public partial class CartSetLineItemTotalPriceAction : CartUpdateAction
+    public partial class CartSetLineItemTotalPriceAction : ICartSetLineItemTotalPriceAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         public CartSetLineItemTotalPriceAction()
         { 
            this.Action = "setLineItemTotalPrice";

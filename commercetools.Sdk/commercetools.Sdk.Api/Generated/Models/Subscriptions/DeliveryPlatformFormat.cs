@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("Platform")]
-    public partial class DeliveryPlatformFormat : DeliveryFormat
+    public partial class DeliveryPlatformFormat : IDeliveryPlatformFormat
     {
+        public string Type { get; set;}
         public DeliveryPlatformFormat()
         { 
            this.Type = "Platform";

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DiscriminatorValue("setKey")]
-    public partial class SubscriptionSetKeyAction : SubscriptionUpdateAction
+    public partial class SubscriptionSetKeyAction : ISubscriptionSetKeyAction
     {
+        public string Action { get; set;}
+        
         public string Key { get; set;}
         public SubscriptionSetKeyAction()
         { 

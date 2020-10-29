@@ -40,9 +40,9 @@ namespace commercetools.Api
         {
             services.UseRegistration();
             services.UseSerialization();
-            services.AddSingleton<ICustomJsonMapper<FieldContainer>, StringFieldMapper>();
-            services.AddSingleton<ICustomJsonMapper<FieldContainer>, NumberFieldMapper>();
-            services.AddSingleton<IMapperTypeRetriever<FieldContainer>, FieldMapperTypeRetriever>();
+            services.AddSingleton<ICustomJsonMapper<IFieldContainer>, StringFieldMapper>();
+            services.AddSingleton<ICustomJsonMapper<IFieldContainer>, NumberFieldMapper>();
+            services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
             services.AddSingleton<SerializerService>();
         }
     }

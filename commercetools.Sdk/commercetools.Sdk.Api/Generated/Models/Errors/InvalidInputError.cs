@@ -8,9 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    [DiscriminatorValue("InvalidInput")]
-    public partial class InvalidInputError : ErrorObject
+    public partial class InvalidInputError : IInvalidInputError
     {
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public InvalidInputError()
         { 
            this.Code = "InvalidInput";

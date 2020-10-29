@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.ApiClients
 {
-    public partial class ApiClient 
+    public partial class ApiClient : IApiClient
     {
         public string Id { get; set;}
         

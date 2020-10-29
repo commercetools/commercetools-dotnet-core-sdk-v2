@@ -7,7 +7,7 @@ namespace commercetools.Sdk.V2Compat
     {
         public static void UseCommercetoolsCompatLayer(this IServiceCollection services)
         {
-            services.AddSingleton(typeof(JsonConverterBase), typeof(DiscriminatorConverterFactory));
+            services.AddSingleton(typeof(JsonConverterBase), typeof(TypeDiscriminatorConverterFactory));
         }
     }
 }

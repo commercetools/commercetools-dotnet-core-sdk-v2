@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("setValidFrom")]
-    public partial class CartDiscountSetValidFromAction : CartDiscountUpdateAction
+    public partial class CartDiscountSetValidFromAction : ICartDiscountSetValidFromAction
     {
+        public string Action { get; set;}
+        
         public DateTime ValidFrom { get; set;}
         public CartDiscountSetValidFromAction()
         { 

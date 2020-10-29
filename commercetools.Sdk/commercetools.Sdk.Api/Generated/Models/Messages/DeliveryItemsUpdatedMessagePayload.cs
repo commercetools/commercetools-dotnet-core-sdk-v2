@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("DeliveryItemsUpdated")]
-    public partial class DeliveryItemsUpdatedMessagePayload : MessagePayload
+    public partial class DeliveryItemsUpdatedMessagePayload : IDeliveryItemsUpdatedMessagePayload
     {
+        public string Type { get; set;}
+        
         public string DeliveryId { get; set;}
         
-        public List<DeliveryItem> Items { get; set;}
+        public List<IDeliveryItem> Items { get; set;}
         
-        public List<DeliveryItem> OldItems { get; set;}
+        public List<IDeliveryItem> OldItems { get; set;}
         public DeliveryItemsUpdatedMessagePayload()
         { 
            this.Type = "DeliveryItemsUpdated";

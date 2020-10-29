@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("changeCustomLineItemQuantity")]
-    public partial class StagedOrderChangeCustomLineItemQuantityAction : StagedOrderUpdateAction
+    public partial class StagedOrderChangeCustomLineItemQuantityAction : IStagedOrderChangeCustomLineItemQuantityAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         
         public double Quantity { get; set;}

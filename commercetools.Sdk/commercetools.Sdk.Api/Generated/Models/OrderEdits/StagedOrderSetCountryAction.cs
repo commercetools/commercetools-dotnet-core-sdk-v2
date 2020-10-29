@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("setCountry")]
-    public partial class StagedOrderSetCountryAction : StagedOrderUpdateAction
+    public partial class StagedOrderSetCountryAction : IStagedOrderSetCountryAction
     {
+        public string Action { get; set;}
+        
         public string Country { get; set;}
         public StagedOrderSetCountryAction()
         { 

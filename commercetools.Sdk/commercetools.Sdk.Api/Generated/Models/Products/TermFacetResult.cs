@@ -8,9 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("terms")]
-    public partial class TermFacetResult : FacetResult
+    public partial class TermFacetResult : ITermFacetResult
     {
+        public string Type { get; set;}
+        
+        [JsonIgnore]
+        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        
         public string DataType { get; set;}
         
         [JsonIgnore]
@@ -22,7 +26,7 @@ namespace commercetools.Api.Models.Products
         
         public long Other { get; set;}
         
-        public List<FacetResultTerm> Terms { get; set;}
+        public List<IFacetResultTerm> Terms { get; set;}
         public TermFacetResult()
         { 
            this.Type = "terms";

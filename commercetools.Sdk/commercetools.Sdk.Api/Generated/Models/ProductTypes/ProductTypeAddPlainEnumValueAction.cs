@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("addPlainEnumValue")]
-    public partial class ProductTypeAddPlainEnumValueAction : ProductTypeUpdateAction
+    public partial class ProductTypeAddPlainEnumValueAction : IProductTypeAddPlainEnumValueAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
-        public AttributePlainEnumValue Value { get; set;}
+        public IAttributePlainEnumValue Value { get; set;}
         public ProductTypeAddPlainEnumValueAction()
         { 
            this.Action = "addPlainEnumValue";

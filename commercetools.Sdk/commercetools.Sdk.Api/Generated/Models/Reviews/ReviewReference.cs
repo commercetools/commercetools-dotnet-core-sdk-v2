@@ -9,10 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Reviews
 {
-    [DiscriminatorValue("review")]
-    public partial class ReviewReference : Reference
+    public partial class ReviewReference : IReviewReference
     {
-        public Review Obj { get; set;}
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public IReview Obj { get; set;}
         public ReviewReference()
         { 
            this.TypeId = "review";

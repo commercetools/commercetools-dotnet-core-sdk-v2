@@ -8,9 +8,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("channel")]
-    public partial class ChannelResourceIdentifier : ResourceIdentifier
+    public partial class ChannelResourceIdentifier : IChannelResourceIdentifier
     {
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public string Key { get; set;}
         public ChannelResourceIdentifier()
         { 
            this.TypeId = "channel";

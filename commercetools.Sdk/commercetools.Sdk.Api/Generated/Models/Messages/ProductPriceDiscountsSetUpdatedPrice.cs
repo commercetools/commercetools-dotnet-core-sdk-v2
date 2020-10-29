@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Messages
 {
-    public partial class ProductPriceDiscountsSetUpdatedPrice 
+    public partial class ProductPriceDiscountsSetUpdatedPrice : IProductPriceDiscountsSetUpdatedPrice
     {
         public int VariantId { get; set;}
         
@@ -17,7 +18,7 @@ namespace commercetools.Api.Models.Messages
         
         public string PriceId { get; set;}
         
-        public DiscountedPrice Discounted { get; set;}
+        public IDiscountedPrice Discounted { get; set;}
         
         public bool Staged { get; set;}
     }

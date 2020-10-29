@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("DeliveryAdded")]
-    public partial class DeliveryAddedMessagePayload : MessagePayload
+    public partial class DeliveryAddedMessagePayload : IDeliveryAddedMessagePayload
     {
-        public Delivery Delivery { get; set;}
+        public string Type { get; set;}
+        
+        public IDelivery Delivery { get; set;}
         public DeliveryAddedMessagePayload()
         { 
            this.Type = "DeliveryAdded";

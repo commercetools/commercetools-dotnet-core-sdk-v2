@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("changeMessagesConfiguration")]
-    public partial class ProjectChangeMessagesConfigurationAction : ProjectUpdateAction
+    public partial class ProjectChangeMessagesConfigurationAction : IProjectChangeMessagesConfigurationAction
     {
-        public MessageConfigurationDraft MessagesConfiguration { get; set;}
+        public string Action { get; set;}
+        
+        public IMessageConfigurationDraft MessagesConfiguration { get; set;}
         public ProjectChangeMessagesConfigurationAction()
         { 
            this.Action = "changeMessagesConfiguration";

@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Channels
 {
-    public partial class Channel : BaseResource
+    public partial class Channel : IChannel
     {
         public string Id { get; set;}
         
@@ -20,9 +21,9 @@ namespace commercetools.Api.Models.Channels
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
@@ -31,16 +32,16 @@ namespace commercetools.Api.Models.Channels
         [JsonIgnore]
         public List<ChannelRoleEnum> RolesAsEnum => this.Roles.GetEnum<ChannelRoleEnum>();
         
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
-        public Address Address { get; set;}
+        public IAddress Address { get; set;}
         
-        public ReviewRatingStatistics ReviewRatingStatistics { get; set;}
+        public IReviewRatingStatistics ReviewRatingStatistics { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public GeoJson GeoLocation { get; set;}
+        public IGeoJson GeoLocation { get; set;}
     }
 }

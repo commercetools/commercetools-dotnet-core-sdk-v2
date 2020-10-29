@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    [DiscriminatorValue("changeGroups")]
-    public partial class DiscountCodeChangeGroupsAction : DiscountCodeUpdateAction
+    public partial class DiscountCodeChangeGroupsAction : IDiscountCodeChangeGroupsAction
     {
+        public string Action { get; set;}
+        
         public List<string> Groups { get; set;}
         public DiscountCodeChangeGroupsAction()
         { 

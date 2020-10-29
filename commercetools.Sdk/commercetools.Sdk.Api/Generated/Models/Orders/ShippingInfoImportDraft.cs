@@ -7,27 +7,28 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
 {
-    public partial class ShippingInfoImportDraft 
+    public partial class ShippingInfoImportDraft : IShippingInfoImportDraft
     {
         public string ShippingMethodName { get; set;}
         
-        public Money Price { get; set;}
+        public IMoney Price { get; set;}
         
-        public ShippingRateDraft ShippingRate { get; set;}
+        public IShippingRateDraft ShippingRate { get; set;}
         
-        public TaxRate TaxRate { get; set;}
+        public ITaxRate TaxRate { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public ShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        public IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
-        public List<Delivery> Deliveries { get; set;}
+        public List<IDelivery> Deliveries { get; set;}
         
-        public DiscountedLineItemPriceDraft DiscountedPrice { get; set;}
+        public IDiscountedLineItemPriceDraft DiscountedPrice { get; set;}
         
         public string ShippingMethodState { get; set;}
         

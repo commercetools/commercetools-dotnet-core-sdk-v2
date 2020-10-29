@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    [DiscriminatorValue("setCustomType")]
-    public partial class CartDiscountSetCustomTypeAction : CartDiscountUpdateAction
+    public partial class CartDiscountSetCustomTypeAction : ICartDiscountSetCustomTypeAction
     {
-        public TypeResourceIdentifier Type { get; set;}
+        public string Action { get; set;}
+        
+        public ITypeResourceIdentifier Type { get; set;}
         
         public Object Fields { get; set;}
         public CartDiscountSetCustomTypeAction()

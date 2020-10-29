@@ -6,26 +6,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class CustomLineItemDraft 
+    public partial class CustomLineItemDraft : ICustomLineItemDraft
     {
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
         public long Quantity { get; set;}
         
-        public Money Money { get; set;}
+        public IMoney Money { get; set;}
         
         public string Slug { get; set;}
         
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         
-        public ExternalTaxRateDraft ExternalTaxRate { get; set;}
+        public IExternalTaxRateDraft ExternalTaxRate { get; set;}
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetails { get; set;}
+        public IItemShippingDetailsDraft ShippingDetails { get; set;}
     }
 }

@@ -9,10 +9,31 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("ProductSlugChanged")]
-    public partial class ProductSlugChangedMessage : Message
+    public partial class ProductSlugChangedMessage : IProductSlugChangedMessage
     {
-        public LocalizedString Slug { get; set;}
+        public string Id { get; set;}
+        
+        public long Version { get; set;}
+        
+        public DateTime CreatedAt { get; set;}
+        
+        public DateTime LastModifiedAt { get; set;}
+        
+        public ILastModifiedBy LastModifiedBy { get; set;}
+        
+        public ICreatedBy CreatedBy { get; set;}
+        
+        public long SequenceNumber { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public long ResourceVersion { get; set;}
+        
+        public string Type { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        
+        public ILocalizedString Slug { get; set;}
         public ProductSlugChangedMessage()
         { 
            this.Type = "ProductSlugChanged";

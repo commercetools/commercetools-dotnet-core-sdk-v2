@@ -2,6 +2,7 @@
 using commercetools.Base.Client.Tokens;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace commercetools.Api.IntegrationTests
 {
@@ -23,7 +24,12 @@ namespace commercetools.Api.IntegrationTests
                 Build();
 
             services.UseCommercetoolsApi(configuration, "Client");
+            services.AddLogging(c=> c.AddProvider(new InMemoryLoggerProvider()));
             this.serviceProvider = services.BuildServiceProvider();
+            
+            //set default ProjectKey
+            var clientConfiguration = this.GetClientConfiguration("Client");
+            GenericFixture.DefaultProjectKey = clientConfiguration.ProjectKey;
         }
 
         public T GetService<T>()

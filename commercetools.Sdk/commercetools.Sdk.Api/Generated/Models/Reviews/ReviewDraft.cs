@@ -5,11 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Reviews
 {
-    public partial class ReviewDraft 
+    public partial class ReviewDraft : IReviewDraft
     {
         public string Key { get; set;}
         
@@ -25,12 +26,12 @@ namespace commercetools.Api.Models.Reviews
         
         public Object Target { get; set;}
         
-        public StateResourceIdentifier State { get; set;}
+        public IStateResourceIdentifier State { get; set;}
         
-        public int Rating { get; set;}
+        public int? Rating { get; set;}
         
-        public CustomerResourceIdentifier Customer { get; set;}
+        public ICustomerResourceIdentifier Customer { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
     }
 }

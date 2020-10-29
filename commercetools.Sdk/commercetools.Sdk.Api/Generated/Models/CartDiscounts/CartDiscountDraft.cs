@@ -5,27 +5,28 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public partial class CartDiscountDraft 
+    public partial class CartDiscountDraft : ICartDiscountDraft
     {
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
         public string Key { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
-        public CartDiscountValueDraft Value { get; set;}
+        public ICartDiscountValueDraft Value { get; set;}
         
         public string CartPredicate { get; set;}
         
-        public CartDiscountTarget Target { get; set;}
+        public ICartDiscountTarget Target { get; set;}
         
         public string SortOrder { get; set;}
         
-        public bool IsActive { get; set;}
+        public bool? IsActive { get; set;}
         
         public DateTime ValidFrom { get; set;}
         
@@ -38,6 +39,6 @@ namespace commercetools.Api.Models.CartDiscounts
         [JsonIgnore]
         public StackingMode StackingModeAsEnum => this.StackingMode.GetEnum<StackingMode>();
         
-        public CustomFields Custom { get; set;}
+        public ICustomFields Custom { get; set;}
     }
 }

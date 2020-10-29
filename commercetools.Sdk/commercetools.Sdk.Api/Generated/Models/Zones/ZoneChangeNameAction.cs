@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Zones
 {
-    [DiscriminatorValue("changeName")]
-    public partial class ZoneChangeNameAction : ZoneUpdateAction
+    public partial class ZoneChangeNameAction : IZoneChangeNameAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         public ZoneChangeNameAction()
         { 

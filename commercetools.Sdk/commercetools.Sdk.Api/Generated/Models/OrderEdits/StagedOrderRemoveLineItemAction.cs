@@ -10,18 +10,19 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DiscriminatorValue("removeLineItem")]
-    public partial class StagedOrderRemoveLineItemAction : StagedOrderUpdateAction
+    public partial class StagedOrderRemoveLineItemAction : IStagedOrderRemoveLineItemAction
     {
+        public string Action { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public double Quantity { get; set;}
+        public double? Quantity { get; set;}
         
-        public Money ExternalPrice { get; set;}
+        public IMoney ExternalPrice { get; set;}
         
-        public ExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        public IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
         
-        public ItemShippingDetailsDraft ShippingDetailsToRemove { get; set;}
+        public IItemShippingDetailsDraft ShippingDetailsToRemove { get; set;}
         public StagedOrderRemoveLineItemAction()
         { 
            this.Action = "removeLineItem";

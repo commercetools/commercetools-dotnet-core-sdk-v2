@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("changeName")]
-    public partial class ShippingMethodChangeNameAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodChangeNameAction : IShippingMethodChangeNameAction
     {
+        public string Action { get; set;}
+        
         public string Name { get; set;}
         public ShippingMethodChangeNameAction()
         { 

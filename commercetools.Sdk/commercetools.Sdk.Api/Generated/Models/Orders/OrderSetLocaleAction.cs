@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setLocale")]
-    public partial class OrderSetLocaleAction : OrderUpdateAction
+    public partial class OrderSetLocaleAction : IOrderSetLocaleAction
     {
+        public string Action { get; set;}
+        
         public string Locale { get; set;}
         public OrderSetLocaleAction()
         { 

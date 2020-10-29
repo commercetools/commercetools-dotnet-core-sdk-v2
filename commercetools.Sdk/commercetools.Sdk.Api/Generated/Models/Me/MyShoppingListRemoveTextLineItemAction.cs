@@ -8,12 +8,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    [DiscriminatorValue("removeTextLineItem")]
-    public partial class MyShoppingListRemoveTextLineItemAction : MyShoppingListUpdateAction
+    public partial class MyShoppingListRemoveTextLineItemAction : IMyShoppingListRemoveTextLineItemAction
     {
+        public string Action { get; set;}
+        
         public string TextLineItemId { get; set;}
         
-        public long Quantity { get; set;}
+        public long? Quantity { get; set;}
         public MyShoppingListRemoveTextLineItemAction()
         { 
            this.Action = "removeTextLineItem";

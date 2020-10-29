@@ -8,8 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class ShippingRatePriceTier 
+    public abstract partial class ShippingRatePriceTier : IShippingRatePriceTier
     {
         public string Type { get; set;}
         

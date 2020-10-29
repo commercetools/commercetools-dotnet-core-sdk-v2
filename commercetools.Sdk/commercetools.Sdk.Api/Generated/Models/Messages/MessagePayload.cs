@@ -7,8 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [Discriminator(nameof(Type))]
-    public abstract partial class MessagePayload 
+    public abstract partial class MessagePayload : IMessagePayload
     {
         public string Type { get; set;}
     }

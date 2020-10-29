@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    [DiscriminatorValue("setGeoLocation")]
-    public partial class ChannelSetGeoLocationAction : ChannelUpdateAction
+    public partial class ChannelSetGeoLocationAction : IChannelSetGeoLocationAction
     {
-        public GeoJson GeoLocation { get; set;}
+        public string Action { get; set;}
+        
+        public IGeoJson GeoLocation { get; set;}
         public ChannelSetGeoLocationAction()
         { 
            this.Action = "setGeoLocation";

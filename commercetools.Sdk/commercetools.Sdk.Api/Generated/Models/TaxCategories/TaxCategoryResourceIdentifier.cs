@@ -8,9 +8,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.TaxCategories
 {
-    [DiscriminatorValue("tax-category")]
-    public partial class TaxCategoryResourceIdentifier : ResourceIdentifier
+    public partial class TaxCategoryResourceIdentifier : ITaxCategoryResourceIdentifier
     {
+        public string TypeId { get; set;}
+        
+        [JsonIgnore]
+        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        
+        public string Id { get; set;}
+        
+        public string Key { get; set;}
         public TaxCategoryResourceIdentifier()
         { 
            this.TypeId = "tax-category";

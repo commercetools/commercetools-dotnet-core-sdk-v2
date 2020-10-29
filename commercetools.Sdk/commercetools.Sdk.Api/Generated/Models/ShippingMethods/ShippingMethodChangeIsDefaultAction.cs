@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    [DiscriminatorValue("changeIsDefault")]
-    public partial class ShippingMethodChangeIsDefaultAction : ShippingMethodUpdateAction
+    public partial class ShippingMethodChangeIsDefaultAction : IShippingMethodChangeIsDefaultAction
     {
+        public string Action { get; set;}
+        
         public bool IsDefault { get; set;}
         public ShippingMethodChangeIsDefaultAction()
         { 

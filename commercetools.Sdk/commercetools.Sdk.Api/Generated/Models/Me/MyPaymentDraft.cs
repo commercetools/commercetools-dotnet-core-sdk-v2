@@ -6,18 +6,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Me
 {
-    public partial class MyPaymentDraft 
+    public partial class MyPaymentDraft : IMyPaymentDraft
     {
-        public Money AmountPlanned { get; set;}
+        public IMoney AmountPlanned { get; set;}
         
-        public PaymentMethodInfo PaymentMethodInfo { get; set;}
+        public IPaymentMethodInfo PaymentMethodInfo { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
-        public MyTransactionDraft Transaction { get; set;}
+        public IMyTransactionDraft Transaction { get; set;}
     }
 }

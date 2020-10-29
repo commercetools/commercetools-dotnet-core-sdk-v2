@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Orders
 {
-    [DiscriminatorValue("setOrderNumber")]
-    public partial class OrderSetOrderNumberAction : OrderUpdateAction
+    public partial class OrderSetOrderNumberAction : IOrderSetOrderNumberAction
     {
+        public string Action { get; set;}
+        
         public string OrderNumber { get; set;}
         public OrderSetOrderNumberAction()
         { 

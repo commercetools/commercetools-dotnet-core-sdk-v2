@@ -5,29 +5,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.DiscountCodes
 {
-    public partial class DiscountCodeDraft 
+    public partial class DiscountCodeDraft : IDiscountCodeDraft
     {
-        public LocalizedString Name { get; set;}
+        public ILocalizedString Name { get; set;}
         
-        public LocalizedString Description { get; set;}
+        public ILocalizedString Description { get; set;}
         
         public string Code { get; set;}
         
-        public List<CartDiscountResourceIdentifier> CartDiscounts { get; set;}
+        public List<ICartDiscountResourceIdentifier> CartDiscounts { get; set;}
         
         public string CartPredicate { get; set;}
         
-        public bool IsActive { get; set;}
+        public bool? IsActive { get; set;}
         
-        public long MaxApplications { get; set;}
+        public long? MaxApplications { get; set;}
         
-        public long MaxApplicationsPerCustomer { get; set;}
+        public long? MaxApplicationsPerCustomer { get; set;}
         
-        public CustomFieldsDraft Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
         
         public List<string> Groups { get; set;}
         

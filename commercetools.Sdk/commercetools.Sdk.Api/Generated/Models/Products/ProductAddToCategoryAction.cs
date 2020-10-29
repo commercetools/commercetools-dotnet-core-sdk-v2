@@ -9,14 +9,15 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("addToCategory")]
-    public partial class ProductAddToCategoryAction : ProductUpdateAction
+    public partial class ProductAddToCategoryAction : IProductAddToCategoryAction
     {
-        public CategoryResourceIdentifier Category { get; set;}
+        public string Action { get; set;}
+        
+        public ICategoryResourceIdentifier Category { get; set;}
         
         public string OrderHint { get; set;}
         
-        public bool Staged { get; set;}
+        public bool? Staged { get; set;}
         public ProductAddToCategoryAction()
         { 
            this.Action = "addToCategory";

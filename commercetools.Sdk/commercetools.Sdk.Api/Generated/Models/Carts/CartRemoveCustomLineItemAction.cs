@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("removeCustomLineItem")]
-    public partial class CartRemoveCustomLineItemAction : CartUpdateAction
+    public partial class CartRemoveCustomLineItemAction : ICartRemoveCustomLineItemAction
     {
+        public string Action { get; set;}
+        
         public string CustomLineItemId { get; set;}
         public CartRemoveCustomLineItemAction()
         { 

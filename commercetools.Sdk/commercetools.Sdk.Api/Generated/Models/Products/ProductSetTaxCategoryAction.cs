@@ -9,10 +9,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    [DiscriminatorValue("setTaxCategory")]
-    public partial class ProductSetTaxCategoryAction : ProductUpdateAction
+    public partial class ProductSetTaxCategoryAction : IProductSetTaxCategoryAction
     {
-        public TaxCategoryResourceIdentifier TaxCategory { get; set;}
+        public string Action { get; set;}
+        
+        public ITaxCategoryResourceIdentifier TaxCategory { get; set;}
         public ProductSetTaxCategoryAction()
         { 
            this.Action = "setTaxCategory";

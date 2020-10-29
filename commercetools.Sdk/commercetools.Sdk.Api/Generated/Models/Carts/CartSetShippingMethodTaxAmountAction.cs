@@ -8,10 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    [DiscriminatorValue("setShippingMethodTaxAmount")]
-    public partial class CartSetShippingMethodTaxAmountAction : CartUpdateAction
+    public partial class CartSetShippingMethodTaxAmountAction : ICartSetShippingMethodTaxAmountAction
     {
-        public ExternalTaxAmountDraft ExternalTaxAmount { get; set;}
+        public string Action { get; set;}
+        
+        public IExternalTaxAmountDraft ExternalTaxAmount { get; set;}
         public CartSetShippingMethodTaxAmountAction()
         { 
            this.Action = "setShippingMethodTaxAmount";

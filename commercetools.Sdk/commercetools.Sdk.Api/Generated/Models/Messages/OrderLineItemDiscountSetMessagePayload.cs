@@ -10,16 +10,17 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DiscriminatorValue("OrderLineItemDiscountSet")]
-    public partial class OrderLineItemDiscountSetMessagePayload : MessagePayload
+    public partial class OrderLineItemDiscountSetMessagePayload : IOrderLineItemDiscountSetMessagePayload
     {
+        public string Type { get; set;}
+        
         public string LineItemId { get; set;}
         
-        public List<DiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
+        public List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
         
-        public Money TotalPrice { get; set;}
+        public IMoney TotalPrice { get; set;}
         
-        public TaxedItemPrice TaxedPrice { get; set;}
+        public ITaxedItemPrice TaxedPrice { get; set;}
         public OrderLineItemDiscountSetMessagePayload()
         { 
            this.Type = "OrderLineItemDiscountSet";

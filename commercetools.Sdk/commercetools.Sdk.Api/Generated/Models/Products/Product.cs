@@ -8,11 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class Product : BaseResource
+    public partial class Product : IProduct
     {
         public string Id { get; set;}
         
@@ -22,20 +23,20 @@ namespace commercetools.Api.Models.Products
         
         public DateTime LastModifiedAt { get; set;}
         
-        public LastModifiedBy LastModifiedBy { get; set;}
+        public ILastModifiedBy LastModifiedBy { get; set;}
         
-        public CreatedBy CreatedBy { get; set;}
+        public ICreatedBy CreatedBy { get; set;}
         
         public string Key { get; set;}
         
-        public ProductTypeReference ProductType { get; set;}
+        public IProductTypeReference ProductType { get; set;}
         
-        public ProductCatalogData MasterData { get; set;}
+        public IProductCatalogData MasterData { get; set;}
         
-        public TaxCategoryReference TaxCategory { get; set;}
+        public ITaxCategoryReference TaxCategory { get; set;}
         
-        public StateReference State { get; set;}
+        public IStateReference State { get; set;}
         
-        public ReviewRatingStatistics ReviewRatingStatistics { get; set;}
+        public IReviewRatingStatistics ReviewRatingStatistics { get; set;}
     }
 }

@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    [DiscriminatorValue("setMethodInfoInterface")]
-    public partial class PaymentSetMethodInfoInterfaceAction : PaymentUpdateAction
+    public partial class PaymentSetMethodInfoInterfaceAction : IPaymentSetMethodInfoInterfaceAction
     {
+        public string Action { get; set;}
+        
         public string Interface { get; set;}
         public PaymentSetMethodInfoInterfaceAction()
         { 

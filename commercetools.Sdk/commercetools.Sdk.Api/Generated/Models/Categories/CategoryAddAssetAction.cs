@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Categories
 {
-    [DiscriminatorValue("addAsset")]
-    public partial class CategoryAddAssetAction : CategoryUpdateAction
+    public partial class CategoryAddAssetAction : ICategoryAddAssetAction
     {
-        public AssetDraft Asset { get; set;}
+        public string Action { get; set;}
         
-        public int Position { get; set;}
+        public IAssetDraft Asset { get; set;}
+        
+        public int? Position { get; set;}
         public CategoryAddAssetAction()
         { 
            this.Action = "addAsset";

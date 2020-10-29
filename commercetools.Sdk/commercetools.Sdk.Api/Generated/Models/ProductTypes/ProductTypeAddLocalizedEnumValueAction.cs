@@ -9,12 +9,13 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductTypes
 {
-    [DiscriminatorValue("addLocalizedEnumValue")]
-    public partial class ProductTypeAddLocalizedEnumValueAction : ProductTypeUpdateAction
+    public partial class ProductTypeAddLocalizedEnumValueAction : IProductTypeAddLocalizedEnumValueAction
     {
+        public string Action { get; set;}
+        
         public string AttributeName { get; set;}
         
-        public AttributeLocalizedEnumValue Value { get; set;}
+        public IAttributeLocalizedEnumValue Value { get; set;}
         public ProductTypeAddLocalizedEnumValueAction()
         { 
            this.Action = "addLocalizedEnumValue";

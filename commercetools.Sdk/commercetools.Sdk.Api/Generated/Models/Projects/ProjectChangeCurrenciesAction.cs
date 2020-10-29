@@ -8,9 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    [DiscriminatorValue("changeCurrencies")]
-    public partial class ProjectChangeCurrenciesAction : ProjectUpdateAction
+    public partial class ProjectChangeCurrenciesAction : IProjectChangeCurrenciesAction
     {
+        public string Action { get; set;}
+        
         public List<string> Currencies { get; set;}
         public ProjectChangeCurrenciesAction()
         { 
