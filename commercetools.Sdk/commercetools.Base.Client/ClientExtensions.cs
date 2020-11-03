@@ -6,6 +6,17 @@ namespace commercetools.Base.Client
 {
     public static class ClientExtensions
     {
+        public static ApiHttpHeaders GetHeaders(this HttpRequestMessage requestMessage)
+        {
+            var headers = new ApiHttpHeaders();
+            foreach (var header in requestMessage.Headers)
+            {
+                headers.AddHeader(header.Key, header.Value.ToString());
+            }
+
+            return headers;
+        }
+        
         public static void AddHeaders(
             this HttpRequestMessage requestMessage
             , ApiHttpHeaders addedHeaders)

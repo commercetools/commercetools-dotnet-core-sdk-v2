@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Api.Client;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Error;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
 
@@ -237,8 +237,8 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .Delete()
                         .WithVersion(category.Version)
                         .ExecuteAsync();
-                    
-                    await Assert.ThrowsAsync<Exception>(
+
+                    await Assert.ThrowsAsync<NotFoundException>(
                         () => client.ApiRoot().WithProjectKey(projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
@@ -260,7 +260,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .WithVersion(category.Version)
                         .ExecuteAsync();
                     
-                    await Assert.ThrowsAsync<Exception>(
+                    await Assert.ThrowsAsync<NotFoundException>(
                         () => client.ApiRoot().WithProjectKey(projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }

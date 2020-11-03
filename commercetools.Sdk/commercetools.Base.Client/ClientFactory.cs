@@ -12,19 +12,20 @@ namespace commercetools.Base.Client
     public class ClientFactory
     {
         public static IClient Create(
+            string clientName,
             IClientConfiguration configuration,
             IHttpClientFactory factory,
             ISerializerService serializerService)
         {
             return new CtpClient(
-                CreateMiddlewareStack(configuration, factory),
+                CreateMiddlewareStack(clientName, configuration, factory),
                 serializerService
             );
         }
 
-        public static Middleware CreateMiddlewareStack(IClientConfiguration configuration, IHttpClientFactory factory)
+        public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration, IHttpClientFactory factory)
         {
-            var httpClient = factory.CreateClient(DefaultClientNames.Api);
+            var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
             httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(new UserAgentProvider().UserAgent);
 
