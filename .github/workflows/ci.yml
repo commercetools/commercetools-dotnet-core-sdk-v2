@@ -102,3 +102,6 @@ jobs:
           path: pack
       - name: Publish the package to GPR
         run: dotnet nuget push pack/*.nupkg
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
