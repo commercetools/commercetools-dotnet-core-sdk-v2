@@ -80,7 +80,7 @@ jobs:
 #    needs: [unittests, integrationtests]
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       # Authenticates packages to push to GPR
       - uses: actions/setup-dotnet@v1
         with:
@@ -101,7 +101,7 @@ jobs:
           name: commercetools.Sdkv2.0.1.0-alpha-${{ github.run_number }}
           path: pack
       - name: Publish the package to GPR
-        run: dotnet nuget push pack/*.nupkg
+        run: dotnet nuget push pack/*.nupkg --source https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
