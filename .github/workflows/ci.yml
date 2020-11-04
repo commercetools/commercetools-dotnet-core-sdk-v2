@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup dotnet 2.1
+      - name: Setup dotnet 3.1
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1' # SDK Version to use.
@@ -100,5 +100,5 @@ jobs:
         with:
           name: commercetools.Sdkv2.0.1.0-alpha-${{ github.run_number }}
           path: pack
-#      - name: Publish the package to GPR
-#        run: dotnet nuget push pack/*.nupkg
+      - name: Publish the package to GPR
+        run: dotnet nuget push pack/*.nupkg
