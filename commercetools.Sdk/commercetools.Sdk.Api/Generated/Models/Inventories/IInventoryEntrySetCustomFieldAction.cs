@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetCustomFieldAction))]
-    public interface IInventoryEntrySetCustomFieldAction : IInventoryEntryUpdateAction
+    public partial interface IInventoryEntrySetCustomFieldAction : IInventoryEntryUpdateAction
     {
         string Name { get; set;}
         

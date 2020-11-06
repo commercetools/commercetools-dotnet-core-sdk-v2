@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentCreatedMessagePayload))]
-    public interface IPaymentCreatedMessagePayload : IMessagePayload
+    public partial interface IPaymentCreatedMessagePayload : IMessagePayload
     {
         IPayment Payment { get; set;}
     }

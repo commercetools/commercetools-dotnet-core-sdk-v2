@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.GraphQl
 {
     [DeserializeAs(typeof(commercetools.Api.Models.GraphQl.GraphQLError))]
-    public interface IGraphQLError 
+    public partial interface IGraphQLError 
     {
         string Message { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartChangeTaxModeAction))]
-    public interface IMyCartChangeTaxModeAction : IMyCartUpdateAction
+    public partial interface IMyCartChangeTaxModeAction : IMyCartUpdateAction
     {
         string TaxMode { get; set;}
         

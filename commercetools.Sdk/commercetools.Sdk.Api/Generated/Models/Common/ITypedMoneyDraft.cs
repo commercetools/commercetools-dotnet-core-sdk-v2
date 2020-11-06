@@ -9,9 +9,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [TypeDiscriminator(nameof(Type))]
-    [SubTypeDiscriminator("highPrecision", typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
     [SubTypeDiscriminator("centPrecision", typeof(commercetools.Api.Models.Common.CentPrecisionMoneyDraft))]
-    public interface ITypedMoneyDraft : IMoney
+    [SubTypeDiscriminator("highPrecision", typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
+    public partial interface ITypedMoneyDraft : IMoney
     {
         string Type { get; set;}
         

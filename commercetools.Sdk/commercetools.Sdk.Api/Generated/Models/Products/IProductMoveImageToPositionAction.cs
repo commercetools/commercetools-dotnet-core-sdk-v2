@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductMoveImageToPositionAction))]
-    public interface IProductMoveImageToPositionAction : IProductUpdateAction
+    public partial interface IProductMoveImageToPositionAction : IProductUpdateAction
     {
         long? VariantId { get; set;}
         

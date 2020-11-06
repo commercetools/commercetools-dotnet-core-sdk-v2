@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditApply))]
-    public interface IOrderEditApply 
+    public partial interface IOrderEditApply 
     {
         int EditVersion { get; set;}
         

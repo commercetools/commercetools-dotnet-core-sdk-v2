@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ErrorResponse))]
-    public interface IErrorResponse 
+    public partial interface IErrorResponse 
     {
         int StatusCode { get; set;}
         

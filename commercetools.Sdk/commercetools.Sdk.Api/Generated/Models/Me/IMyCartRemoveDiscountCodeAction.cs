@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartRemoveDiscountCodeAction))]
-    public interface IMyCartRemoveDiscountCodeAction : IMyCartUpdateAction
+    public partial interface IMyCartRemoveDiscountCodeAction : IMyCartUpdateAction
     {
         IDiscountCodeReference DiscountCode { get; set;}
     }

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditApplied))]
-    public interface IOrderEditApplied : IOrderEditResult
+    public partial interface IOrderEditApplied : IOrderEditResult
     {
         DateTime AppliedAt { get; set;}
         

@@ -11,16 +11,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.Category))]
-    public interface ICategory : IBaseResource
+    public partial interface ICategory : IBaseResource
     {
-        string Id { get; set;}
-        
-        long Version { get; set;}
-        
-        DateTime CreatedAt { get; set;}
-        
-        DateTime LastModifiedAt { get; set;}
-        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

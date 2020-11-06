@@ -11,16 +11,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntry))]
-    public interface IInventoryEntry : IBaseResource
+    public partial interface IInventoryEntry : IBaseResource
     {
-        string Id { get; set;}
-        
-        long Version { get; set;}
-        
-        DateTime CreatedAt { get; set;}
-        
-        DateTime LastModifiedAt { get; set;}
-        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

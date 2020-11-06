@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction))]
-    public interface ICartDiscountSetDescriptionAction : ICartDiscountUpdateAction
+    public partial interface ICartDiscountSetDescriptionAction : ICartDiscountUpdateAction
     {
         ILocalizedString Description { get; set;}
     }

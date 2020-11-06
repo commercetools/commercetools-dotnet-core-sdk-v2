@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateAttributeValueError))]
-    public interface IDuplicateAttributeValueError : IErrorObject
+    public partial interface IDuplicateAttributeValueError : IErrorObject
     {
         IAttribute Attribute { get; set;}
     }

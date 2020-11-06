@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeRemoveEnumValuesAction))]
-    public interface IProductTypeRemoveEnumValuesAction : IProductTypeUpdateAction
+    public partial interface IProductTypeRemoveEnumValuesAction : IProductTypeUpdateAction
     {
         string AttributeName { get; set;}
         

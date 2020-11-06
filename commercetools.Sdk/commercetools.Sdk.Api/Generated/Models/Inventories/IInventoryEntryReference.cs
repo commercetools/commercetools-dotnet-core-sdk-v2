@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryReference))]
-    public interface IInventoryEntryReference : IReference
+    public partial interface IInventoryEntryReference : IReference
     {
         IInventoryEntry Obj { get; set;}
     }

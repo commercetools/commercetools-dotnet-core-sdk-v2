@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerToken))]
-    public interface ICustomerToken 
+    public partial interface ICustomerToken 
     {
         string Id { get; set;}
         

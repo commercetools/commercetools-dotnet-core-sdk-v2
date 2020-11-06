@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductUnpublishedMessage))]
-    public interface IProductUnpublishedMessage : IMessage
+    public partial interface IProductUnpublishedMessage : IMessage
     {
     }
 }

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelResourceIdentifier))]
-    public interface IChannelResourceIdentifier : IResourceIdentifier
+    public partial interface IChannelResourceIdentifier : IResourceIdentifier
     {
     }
 }

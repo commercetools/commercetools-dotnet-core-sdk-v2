@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAttributeInAllVariantsAction))]
-    public interface IProductSetAttributeInAllVariantsAction : IProductUpdateAction
+    public partial interface IProductSetAttributeInAllVariantsAction : IProductUpdateAction
     {
         string Name { get; set;}
         

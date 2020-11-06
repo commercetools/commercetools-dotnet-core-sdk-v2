@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditSetCommentAction))]
-    public interface IOrderEditSetCommentAction : IOrderEditUpdateAction
+    public partial interface IOrderEditSetCommentAction : IOrderEditUpdateAction
     {
         string Comment { get; set;}
     }

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateSetTransitionsAction))]
-    public interface IStateSetTransitionsAction : IStateUpdateAction
+    public partial interface IStateSetTransitionsAction : IStateUpdateAction
     {
         List<IStateResourceIdentifier> Transitions { get; set;}
     }

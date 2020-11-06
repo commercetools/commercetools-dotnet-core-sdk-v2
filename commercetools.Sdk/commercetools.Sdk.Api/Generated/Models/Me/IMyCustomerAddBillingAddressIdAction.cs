@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerAddBillingAddressIdAction))]
-    public interface IMyCustomerAddBillingAddressIdAction : IMyCustomerUpdateAction
+    public partial interface IMyCustomerAddBillingAddressIdAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set;}
         

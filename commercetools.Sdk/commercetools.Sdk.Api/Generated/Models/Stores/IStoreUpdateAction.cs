@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Stores
     [SubTypeDiscriminator("removeSupplyChannel", typeof(commercetools.Api.Models.Stores.StoresRemoveSupplyChannelsAction))]
     [SubTypeDiscriminator("setDistributionChannels", typeof(commercetools.Api.Models.Stores.StoresSetDistributionChannelsAction))]
     [SubTypeDiscriminator("setSupplyChannels", typeof(commercetools.Api.Models.Stores.StoresSetSupplyChannelsAction))]
-    public interface IStoreUpdateAction 
+    public partial interface IStoreUpdateAction 
     {
         string Action { get; set;}
     }

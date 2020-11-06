@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditReference))]
-    public interface IOrderEditReference : IReference
+    public partial interface IOrderEditReference : IReference
     {
         IOrderEdit Obj { get; set;}
     }

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartChangeLineItemQuantityAction))]
-    public interface IMyCartChangeLineItemQuantityAction : IMyCartUpdateAction
+    public partial interface IMyCartChangeLineItemQuantityAction : IMyCartUpdateAction
     {
         string LineItemId { get; set;}
         

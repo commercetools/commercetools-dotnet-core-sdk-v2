@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeDraft))]
-    public interface IDiscountCodeDraft 
+    public partial interface IDiscountCodeDraft 
     {
         ILocalizedString Name { get; set;}
         

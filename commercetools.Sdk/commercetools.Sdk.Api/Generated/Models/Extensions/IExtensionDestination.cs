@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Extensions
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("HTTP", typeof(commercetools.Api.Models.Extensions.ExtensionHttpDestination))]
     [SubTypeDiscriminator("AWSLambda", typeof(commercetools.Api.Models.Extensions.ExtensionAWSLambdaDestination))]
-    public interface IExtensionDestination 
+    public partial interface IExtensionDestination 
     {
         string Type { get; set;}
     }

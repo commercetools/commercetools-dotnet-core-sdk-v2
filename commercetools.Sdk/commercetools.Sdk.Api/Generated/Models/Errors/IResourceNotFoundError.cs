@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ResourceNotFoundError))]
-    public interface IResourceNotFoundError : IErrorObject
+    public partial interface IResourceNotFoundError : IErrorObject
     {
     }
 }

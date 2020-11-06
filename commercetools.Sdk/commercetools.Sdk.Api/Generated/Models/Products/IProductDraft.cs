@@ -14,7 +14,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductDraft))]
-    public interface IProductDraft 
+    public partial interface IProductDraft 
     {
         IProductTypeResourceIdentifier ProductType { get; set;}
         

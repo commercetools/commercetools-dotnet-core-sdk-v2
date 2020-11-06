@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ReferenceExistsError))]
-    public interface IReferenceExistsError : IErrorObject
+    public partial interface IReferenceExistsError : IErrorObject
     {
         string ReferencedBy { get; set;}
         

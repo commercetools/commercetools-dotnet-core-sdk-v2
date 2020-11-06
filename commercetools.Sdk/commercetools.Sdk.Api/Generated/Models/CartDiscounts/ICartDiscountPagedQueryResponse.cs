@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountPagedQueryResponse))]
-    public interface ICartDiscountPagedQueryResponse 
+    public partial interface ICartDiscountPagedQueryResponse 
     {
         long Limit { get; set;}
         

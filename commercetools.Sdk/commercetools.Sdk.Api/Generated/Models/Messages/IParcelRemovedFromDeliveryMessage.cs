@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ParcelRemovedFromDeliveryMessage))]
-    public interface IParcelRemovedFromDeliveryMessage : IMessage
+    public partial interface IParcelRemovedFromDeliveryMessage : IMessage
     {
         string DeliveryId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionSetKeyAction))]
-    public interface IExtensionSetKeyAction : IExtensionUpdateAction
+    public partial interface IExtensionSetKeyAction : IExtensionUpdateAction
     {
         string Key { get; set;}
     }

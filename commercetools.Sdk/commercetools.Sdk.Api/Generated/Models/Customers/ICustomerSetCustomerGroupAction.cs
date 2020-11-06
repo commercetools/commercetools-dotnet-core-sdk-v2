@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetCustomerGroupAction))]
-    public interface ICustomerSetCustomerGroupAction : ICustomerUpdateAction
+    public partial interface ICustomerSetCustomerGroupAction : ICustomerUpdateAction
     {
         ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
     }

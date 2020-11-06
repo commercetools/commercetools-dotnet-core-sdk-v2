@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.DiscountedPrice))]
-    public interface IDiscountedPrice 
+    public partial interface IDiscountedPrice 
     {
         IMoney Value { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListSetTextLineItemCustomTypeAction))]
-    public interface IMyShoppingListSetTextLineItemCustomTypeAction : IMyShoppingListUpdateAction
+    public partial interface IMyShoppingListSetTextLineItemCustomTypeAction : IMyShoppingListUpdateAction
     {
         string TextLineItemId { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodDraft))]
-    public interface IShippingMethodDraft 
+    public partial interface IShippingMethodDraft 
     {
         string Key { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelPagedQueryResponse))]
-    public interface IChannelPagedQueryResponse 
+    public partial interface IChannelPagedQueryResponse 
     {
         long Limit { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyLineItemDraft))]
-    public interface IMyLineItemDraft 
+    public partial interface IMyLineItemDraft 
     {
         string ProductId { get; set;}
         

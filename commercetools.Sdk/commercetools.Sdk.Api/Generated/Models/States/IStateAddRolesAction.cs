@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateAddRolesAction))]
-    public interface IStateAddRolesAction : IStateUpdateAction
+    public partial interface IStateAddRolesAction : IStateUpdateAction
     {
         List<string> Roles { get; set;}
         

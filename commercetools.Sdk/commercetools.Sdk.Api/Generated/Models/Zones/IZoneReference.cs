@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Zones
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneReference))]
-    public interface IZoneReference : IReference
+    public partial interface IZoneReference : IReference
     {
         IZone Obj { get; set;}
     }

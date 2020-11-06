@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelChangeNameAction))]
-    public interface IChannelChangeNameAction : IChannelUpdateAction
+    public partial interface IChannelChangeNameAction : IChannelUpdateAction
     {
         ILocalizedString Name { get; set;}
     }

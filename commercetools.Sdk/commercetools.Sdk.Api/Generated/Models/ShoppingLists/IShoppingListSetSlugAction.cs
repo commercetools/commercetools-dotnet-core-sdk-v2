@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetSlugAction))]
-    public interface IShoppingListSetSlugAction : IShoppingListUpdateAction
+    public partial interface IShoppingListSetSlugAction : IShoppingListUpdateAction
     {
         ILocalizedString Slug { get; set;}
     }

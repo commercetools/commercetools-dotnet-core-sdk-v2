@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetCustomFieldAction))]
-    public interface ICustomerSetCustomFieldAction : ICustomerUpdateAction
+    public partial interface ICustomerSetCustomFieldAction : ICustomerUpdateAction
     {
         string Name { get; set;}
         

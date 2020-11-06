@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomerGroupSetMessagePayload))]
-    public interface IOrderCustomerGroupSetMessagePayload : IMessagePayload
+    public partial interface IOrderCustomerGroupSetMessagePayload : IMessagePayload
     {
         ICustomerGroupReference CustomerGroup { get; set;}
         

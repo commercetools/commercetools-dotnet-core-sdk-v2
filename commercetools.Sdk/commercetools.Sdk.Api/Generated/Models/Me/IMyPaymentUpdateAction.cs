@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setMethodInfoInterface", typeof(commercetools.Api.Models.Me.MyPaymentSetMethodInfoInterfaceAction))]
     [SubTypeDiscriminator("setMethodInfoMethod", typeof(commercetools.Api.Models.Me.MyPaymentSetMethodInfoMethodAction))]
     [SubTypeDiscriminator("setMethodInfoName", typeof(commercetools.Api.Models.Me.MyPaymentSetMethodInfoNameAction))]
-    public interface IMyPaymentUpdateAction 
+    public partial interface IMyPaymentUpdateAction 
     {
         string Action { get; set;}
     }

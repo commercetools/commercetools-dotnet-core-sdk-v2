@@ -19,7 +19,7 @@ namespace commercetools.Api.Models.ShippingMethods
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodSetKeyAction))]
     [SubTypeDiscriminator("setLocalizedDescription", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodSetLocalizedDescriptionAction))]
     [SubTypeDiscriminator("setPredicate", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction))]
-    public interface IShippingMethodUpdateAction 
+    public partial interface IShippingMethodUpdateAction 
     {
         string Action { get; set;}
     }

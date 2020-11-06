@@ -10,16 +10,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.Type))]
-    public interface IType : IBaseResource
+    public partial interface IType : IBaseResource
     {
-        string Id { get; set;}
-        
-        long Version { get; set;}
-        
-        DateTime CreatedAt { get; set;}
-        
-        DateTime LastModifiedAt { get; set;}
-        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

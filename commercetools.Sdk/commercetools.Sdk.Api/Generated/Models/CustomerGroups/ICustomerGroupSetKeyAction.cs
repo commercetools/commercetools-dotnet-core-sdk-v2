@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupSetKeyAction))]
-    public interface ICustomerGroupSetKeyAction : ICustomerGroupUpdateAction
+    public partial interface ICustomerGroupSetKeyAction : ICustomerGroupUpdateAction
     {
         string Key { get; set;}
     }

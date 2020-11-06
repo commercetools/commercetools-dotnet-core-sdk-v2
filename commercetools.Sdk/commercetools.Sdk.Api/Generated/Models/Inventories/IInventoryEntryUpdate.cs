@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryUpdate))]
-    public interface IInventoryEntryUpdate 
+    public partial interface IInventoryEntryUpdate 
     {
         long Version { get; set;}
         

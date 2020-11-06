@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.ScopedPrice))]
-    public interface IScopedPrice 
+    public partial interface IScopedPrice 
     {
         string Id { get; set;}
         

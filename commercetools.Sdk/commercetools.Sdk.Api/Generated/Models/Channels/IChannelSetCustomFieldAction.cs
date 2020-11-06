@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelSetCustomFieldAction))]
-    public interface IChannelSetCustomFieldAction : IChannelUpdateAction
+    public partial interface IChannelSetCustomFieldAction : IChannelUpdateAction
     {
         string Name { get; set;}
         

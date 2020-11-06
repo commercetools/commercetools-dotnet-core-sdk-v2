@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ParcelMeasurements))]
-    public interface IParcelMeasurements 
+    public partial interface IParcelMeasurements 
     {
         double? HeightInMillimeter { get; set;}
         

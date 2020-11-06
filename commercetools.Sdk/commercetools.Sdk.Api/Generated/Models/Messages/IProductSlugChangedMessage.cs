@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductSlugChangedMessage))]
-    public interface IProductSlugChangedMessage : IMessage
+    public partial interface IProductSlugChangedMessage : IMessage
     {
         ILocalizedString Slug { get; set;}
     }

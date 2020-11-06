@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Stores
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetLanguagesAction))]
-    public interface IStoreSetLanguagesAction : IStoreUpdateAction
+    public partial interface IStoreSetLanguagesAction : IStoreUpdateAction
     {
         List<string> Languages { get; set;}
     }

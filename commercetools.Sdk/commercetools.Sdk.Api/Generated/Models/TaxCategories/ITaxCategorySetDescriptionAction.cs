@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategorySetDescriptionAction))]
-    public interface ITaxCategorySetDescriptionAction : ITaxCategoryUpdateAction
+    public partial interface ITaxCategorySetDescriptionAction : ITaxCategoryUpdateAction
     {
         string Description { get; set;}
     }

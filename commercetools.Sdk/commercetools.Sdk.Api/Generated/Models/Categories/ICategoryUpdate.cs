@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryUpdate))]
-    public interface ICategoryUpdate 
+    public partial interface ICategoryUpdate 
     {
         long Version { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetAssetCustomTypeAction))]
-    public interface ICategorySetAssetCustomTypeAction : ICategoryUpdateAction
+    public partial interface ICategorySetAssetCustomTypeAction : ICategoryUpdateAction
     {
         string AssetId { get; set;}
         

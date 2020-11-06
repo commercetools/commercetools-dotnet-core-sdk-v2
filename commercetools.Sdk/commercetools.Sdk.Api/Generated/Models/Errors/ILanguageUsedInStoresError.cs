@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.LanguageUsedInStoresError))]
-    public interface ILanguageUsedInStoresError : IErrorObject
+    public partial interface ILanguageUsedInStoresError : IErrorObject
     {
     }
 }

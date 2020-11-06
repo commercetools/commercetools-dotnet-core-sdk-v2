@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerEmailVerifiedMessage))]
-    public interface ICustomerEmailVerifiedMessage : IMessage
+    public partial interface ICustomerEmailVerifiedMessage : IMessage
     {
     }
 }

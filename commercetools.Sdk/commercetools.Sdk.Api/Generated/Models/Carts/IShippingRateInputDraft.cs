@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Carts
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("Classification", typeof(commercetools.Api.Models.Carts.ClassificationShippingRateInputDraft))]
     [SubTypeDiscriminator("Score", typeof(commercetools.Api.Models.Carts.ScoreShippingRateInputDraft))]
-    public interface IShippingRateInputDraft 
+    public partial interface IShippingRateInputDraft 
     {
         string Type { get; set;}
     }

@@ -15,12 +15,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductProjection))]
-    public interface IProductProjection : IBaseResource
+    public partial interface IProductProjection : IBaseResource
     {
-        string Id { get; set;}
-        
-        long Version { get; set;}
-        
         string Key { get; set;}
         
         IProductTypeReference ProductType { get; set;}

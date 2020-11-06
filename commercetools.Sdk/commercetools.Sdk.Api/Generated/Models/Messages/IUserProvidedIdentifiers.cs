@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.UserProvidedIdentifiers))]
-    public interface IUserProvidedIdentifiers 
+    public partial interface IUserProvidedIdentifiers 
     {
         string Key { get; set;}
         

@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.OrderEdits
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.OrderEdits.OrderEditSetCustomTypeAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.OrderEdits.OrderEditSetKeyAction))]
     [SubTypeDiscriminator("setStagedActions", typeof(commercetools.Api.Models.OrderEdits.OrderEditSetStagedActionsAction))]
-    public interface IOrderEditUpdateAction 
+    public partial interface IOrderEditUpdateAction 
     {
         string Action { get; set;}
     }

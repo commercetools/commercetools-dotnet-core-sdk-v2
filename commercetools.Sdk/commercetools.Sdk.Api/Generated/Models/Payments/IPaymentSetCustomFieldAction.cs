@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetCustomFieldAction))]
-    public interface IPaymentSetCustomFieldAction : IPaymentUpdateAction
+    public partial interface IPaymentSetCustomFieldAction : IPaymentUpdateAction
     {
         string Name { get; set;}
         

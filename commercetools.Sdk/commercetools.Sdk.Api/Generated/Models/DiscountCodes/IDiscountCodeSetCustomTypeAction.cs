@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction))]
-    public interface IDiscountCodeSetCustomTypeAction : IDiscountCodeUpdateAction
+    public partial interface IDiscountCodeSetCustomTypeAction : IDiscountCodeUpdateAction
     {
         ITypeResourceIdentifier Type { get; set;}
         

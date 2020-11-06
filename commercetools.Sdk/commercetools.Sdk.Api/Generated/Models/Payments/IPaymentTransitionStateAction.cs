@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentTransitionStateAction))]
-    public interface IPaymentTransitionStateAction : IPaymentUpdateAction
+    public partial interface IPaymentTransitionStateAction : IPaymentUpdateAction
     {
         IStateResourceIdentifier State { get; set;}
         

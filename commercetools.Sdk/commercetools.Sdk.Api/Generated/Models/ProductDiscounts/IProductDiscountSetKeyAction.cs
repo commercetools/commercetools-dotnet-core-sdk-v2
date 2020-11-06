@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetKeyAction))]
-    public interface IProductDiscountSetKeyAction : IProductDiscountUpdateAction
+    public partial interface IProductDiscountSetKeyAction : IProductDiscountUpdateAction
     {
         string Key { get; set;}
     }

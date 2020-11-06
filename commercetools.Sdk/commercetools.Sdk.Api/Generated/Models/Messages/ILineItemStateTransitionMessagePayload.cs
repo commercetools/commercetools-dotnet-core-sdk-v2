@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
-    public interface ILineItemStateTransitionMessagePayload : IMessagePayload
+    public partial interface ILineItemStateTransitionMessagePayload : IMessagePayload
     {
         string LineItemId { get; set;}
         

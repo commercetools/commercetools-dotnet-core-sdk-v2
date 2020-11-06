@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetOrderTotalTaxAction))]
-    public interface IStagedOrderSetOrderTotalTaxAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderSetOrderTotalTaxAction : IStagedOrderUpdateAction
     {
         IMoney ExternalTotalGross { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldMoneyType))]
-    public interface ICustomFieldMoneyType : IFieldType
+    public partial interface ICustomFieldMoneyType : IFieldType
     {
     }
 }

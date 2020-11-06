@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAssetCustomTypeAction))]
-    public interface IProductSetAssetCustomTypeAction : IProductUpdateAction
+    public partial interface IProductSetAssetCustomTypeAction : IProductUpdateAction
     {
         long? VariantId { get; set;}
         

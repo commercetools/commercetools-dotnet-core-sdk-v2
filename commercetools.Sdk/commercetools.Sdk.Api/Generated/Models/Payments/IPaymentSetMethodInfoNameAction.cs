@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetMethodInfoNameAction))]
-    public interface IPaymentSetMethodInfoNameAction : IPaymentUpdateAction
+    public partial interface IPaymentSetMethodInfoNameAction : IPaymentUpdateAction
     {
         ILocalizedString Name { get; set;}
     }

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetShippingMethodAction))]
-    public interface IMyCartSetShippingMethodAction : IMyCartUpdateAction
+    public partial interface IMyCartSetShippingMethodAction : IMyCartUpdateAction
     {
         IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateResourceIdentifier))]
-    public interface IStateResourceIdentifier : IResourceIdentifier
+    public partial interface IStateResourceIdentifier : IResourceIdentifier
     {
     }
 }

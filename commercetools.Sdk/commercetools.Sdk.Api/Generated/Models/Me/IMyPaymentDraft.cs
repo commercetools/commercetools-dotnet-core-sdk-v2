@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPaymentDraft))]
-    public interface IMyPaymentDraft 
+    public partial interface IMyPaymentDraft 
     {
         IMoney AmountPlanned { get; set;}
         

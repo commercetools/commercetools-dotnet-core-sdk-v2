@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.TaxedPrice))]
-    public interface ITaxedPrice 
+    public partial interface ITaxedPrice 
     {
         ITypedMoney TotalNet { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueAbsolute))]
-    public interface IProductDiscountValueAbsolute : IProductDiscountValue
+    public partial interface IProductDiscountValueAbsolute : IProductDiscountValue
     {
         List<ITypedMoney> Money { get; set;}
     }

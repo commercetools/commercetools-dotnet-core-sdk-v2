@@ -18,7 +18,7 @@ namespace commercetools.Api.Models.ProductDiscounts
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetValidUntilAction))]
-    public interface IProductDiscountUpdateAction 
+    public partial interface IProductDiscountUpdateAction 
     {
         string Action { get; set;}
     }

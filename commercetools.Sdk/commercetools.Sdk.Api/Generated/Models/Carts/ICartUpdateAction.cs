@@ -59,7 +59,7 @@ namespace commercetools.Api.Models.Carts
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Api.Models.Carts.CartSetShippingMethodTaxRateAction))]
     [SubTypeDiscriminator("setShippingRateInput", typeof(commercetools.Api.Models.Carts.CartSetShippingRateInputAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
-    public interface ICartUpdateAction 
+    public partial interface ICartUpdateAction 
     {
         string Action { get; set;}
     }

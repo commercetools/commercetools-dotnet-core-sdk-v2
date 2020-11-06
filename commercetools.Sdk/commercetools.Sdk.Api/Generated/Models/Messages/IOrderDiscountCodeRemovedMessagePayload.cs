@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDiscountCodeRemovedMessagePayload))]
-    public interface IOrderDiscountCodeRemovedMessagePayload : IMessagePayload
+    public partial interface IOrderDiscountCodeRemovedMessagePayload : IMessagePayload
     {
         IDiscountCodeReference DiscountCode { get; set;}
     }

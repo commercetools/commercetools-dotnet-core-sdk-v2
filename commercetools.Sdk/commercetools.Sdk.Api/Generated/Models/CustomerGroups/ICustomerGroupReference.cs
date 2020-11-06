@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupReference))]
-    public interface ICustomerGroupReference : IReference
+    public partial interface ICustomerGroupReference : IReference
     {
         ICustomerGroup Obj { get; set;}
     }

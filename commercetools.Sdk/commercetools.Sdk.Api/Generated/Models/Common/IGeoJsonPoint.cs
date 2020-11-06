@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.GeoJsonPoint))]
-    public interface IGeoJsonPoint : IGeoJson
+    public partial interface IGeoJsonPoint : IGeoJson
     {
         List<double> Coordinates { get; set;}
     }
