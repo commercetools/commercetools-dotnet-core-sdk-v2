@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.Parcel))]
-    public interface IParcel 
+    public partial interface IParcel 
     {
         string Id { get; set;}
         

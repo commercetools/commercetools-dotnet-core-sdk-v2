@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewTransitionStateAction))]
-    public interface IReviewTransitionStateAction : IReviewUpdateAction
+    public partial interface IReviewTransitionStateAction : IReviewUpdateAction
     {
         IStateResourceIdentifier State { get; set;}
         

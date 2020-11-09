@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSignin))]
-    public interface ICustomerSignin 
+    public partial interface ICustomerSignin 
     {
         string Email { get; set;}
         

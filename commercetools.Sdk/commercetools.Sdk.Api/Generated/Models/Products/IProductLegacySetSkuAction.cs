@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductLegacySetSkuAction))]
-    public interface IProductLegacySetSkuAction : IProductUpdateAction
+    public partial interface IProductLegacySetSkuAction : IProductUpdateAction
     {
         string Sku { get; set;}
         

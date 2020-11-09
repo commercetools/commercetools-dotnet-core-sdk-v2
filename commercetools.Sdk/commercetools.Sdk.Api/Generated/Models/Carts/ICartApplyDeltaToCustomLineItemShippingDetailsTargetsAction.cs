@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction))]
-    public interface ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartUpdateAction
+    public partial interface ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartUpdateAction
     {
         string CustomLineItemId { get; set;}
         

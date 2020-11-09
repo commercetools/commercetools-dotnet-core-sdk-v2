@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Projects
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Projects.Project))]
-    public interface IProject 
+    public partial interface IProject 
     {
         long Version { get; set;}
         

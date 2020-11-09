@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetCustomShippingMethodAction))]
-    public interface IMyCartSetCustomShippingMethodAction : IMyCartUpdateAction
+    public partial interface IMyCartSetCustomShippingMethodAction : IMyCartUpdateAction
     {
         string ShippingMethodName { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
-    public interface IConcurrentModificationError : IErrorObject
+    public partial interface IConcurrentModificationError : IErrorObject
     {
         long? CurrentVersion { get; set;}
     }

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
-    public interface IDuplicateFieldWithConflictingResourceError : IErrorObject
+    public partial interface IDuplicateFieldWithConflictingResourceError : IErrorObject
     {
         string Field { get; set;}
         

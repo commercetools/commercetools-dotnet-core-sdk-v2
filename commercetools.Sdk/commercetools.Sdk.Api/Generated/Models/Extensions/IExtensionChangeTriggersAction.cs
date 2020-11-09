@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionChangeTriggersAction))]
-    public interface IExtensionChangeTriggersAction : IExtensionUpdateAction
+    public partial interface IExtensionChangeTriggersAction : IExtensionUpdateAction
     {
         List<IExtensionTrigger> Triggers { get; set;}
     }

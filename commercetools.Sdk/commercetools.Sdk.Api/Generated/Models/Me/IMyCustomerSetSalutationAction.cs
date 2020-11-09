@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerSetSalutationAction))]
-    public interface IMyCustomerSetSalutationAction : IMyCustomerUpdateAction
+    public partial interface IMyCustomerSetSalutationAction : IMyCustomerUpdateAction
     {
         string Salutation { get; set;}
     }

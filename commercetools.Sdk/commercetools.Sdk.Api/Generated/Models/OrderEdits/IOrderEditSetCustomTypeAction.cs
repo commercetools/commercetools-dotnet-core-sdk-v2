@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditSetCustomTypeAction))]
-    public interface IOrderEditSetCustomTypeAction : IOrderEditUpdateAction
+    public partial interface IOrderEditSetCustomTypeAction : IOrderEditUpdateAction
     {
         ITypeResourceIdentifier Type { get; set;}
         

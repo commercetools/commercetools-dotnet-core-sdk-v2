@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderReturnShipmentStateChangedMessage))]
-    public interface IOrderReturnShipmentStateChangedMessage : IMessage
+    public partial interface IOrderReturnShipmentStateChangedMessage : IMessage
     {
         string ReturnItemId { get; set;}
         

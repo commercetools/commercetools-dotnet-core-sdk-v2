@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.LineItemDraft))]
-    public interface ILineItemDraft 
+    public partial interface ILineItemDraft 
     {
         string ProductId { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.CartClassificationTier))]
-    public interface ICartClassificationTier : IShippingRatePriceTier
+    public partial interface ICartClassificationTier : IShippingRatePriceTier
     {
         string Value { get; set;}
         

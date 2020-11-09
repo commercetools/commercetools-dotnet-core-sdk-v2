@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateDraft))]
-    public interface IStateDraft 
+    public partial interface IStateDraft 
     {
         string Key { get; set;}
         

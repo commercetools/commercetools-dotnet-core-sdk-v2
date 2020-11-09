@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
     [SubTypeDiscriminator("store", typeof(commercetools.Api.Models.Stores.StoreKeyReference))]
-    public interface IKeyReference 
+    public partial interface IKeyReference 
     {
         string TypeId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderAddParcelToDeliveryAction))]
-    public interface IOrderAddParcelToDeliveryAction : IOrderUpdateAction
+    public partial interface IOrderAddParcelToDeliveryAction : IOrderUpdateAction
     {
         string DeliveryId { get; set;}
         

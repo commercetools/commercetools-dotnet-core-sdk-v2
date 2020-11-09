@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductChangeNameAction))]
-    public interface IProductChangeNameAction : IProductUpdateAction
+    public partial interface IProductChangeNameAction : IProductUpdateAction
     {
         ILocalizedString Name { get; set;}
         

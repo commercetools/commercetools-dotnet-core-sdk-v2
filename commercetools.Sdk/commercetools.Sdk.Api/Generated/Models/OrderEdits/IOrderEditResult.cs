@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.OrderEdits
     [SubTypeDiscriminator("PreviewSuccess", typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
     [SubTypeDiscriminator("PreviewFailure", typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewFailure))]
     [SubTypeDiscriminator("Applied", typeof(commercetools.Api.Models.OrderEdits.OrderEditApplied))]
-    public interface IOrderEditResult 
+    public partial interface IOrderEditResult 
     {
         string Type { get; set;}
     }

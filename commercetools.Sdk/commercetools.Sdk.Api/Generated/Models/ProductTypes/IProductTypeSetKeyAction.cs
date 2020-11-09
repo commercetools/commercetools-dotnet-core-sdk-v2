@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeSetKeyAction))]
-    public interface IProductTypeSetKeyAction : IProductTypeUpdateAction
+    public partial interface IProductTypeSetKeyAction : IProductTypeUpdateAction
     {
         string Key { get; set;}
     }

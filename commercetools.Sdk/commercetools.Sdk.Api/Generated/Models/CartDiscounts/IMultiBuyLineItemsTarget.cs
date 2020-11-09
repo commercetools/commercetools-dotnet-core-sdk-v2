@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.MultiBuyLineItemsTarget))]
-    public interface IMultiBuyLineItemsTarget : ICartDiscountTarget
+    public partial interface IMultiBuyLineItemsTarget : ICartDiscountTarget
     {
         string Predicate { get; set;}
         

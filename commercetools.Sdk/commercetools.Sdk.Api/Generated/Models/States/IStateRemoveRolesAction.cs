@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateRemoveRolesAction))]
-    public interface IStateRemoveRolesAction : IStateUpdateAction
+    public partial interface IStateRemoveRolesAction : IStateUpdateAction
     {
         List<string> Roles { get; set;}
         

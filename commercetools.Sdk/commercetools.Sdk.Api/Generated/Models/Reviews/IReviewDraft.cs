@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewDraft))]
-    public interface IReviewDraft 
+    public partial interface IReviewDraft 
     {
         string Key { get; set;}
         

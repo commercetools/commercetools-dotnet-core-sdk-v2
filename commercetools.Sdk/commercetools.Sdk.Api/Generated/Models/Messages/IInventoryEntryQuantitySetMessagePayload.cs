@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload))]
-    public interface IInventoryEntryQuantitySetMessagePayload : IMessagePayload
+    public partial interface IInventoryEntryQuantitySetMessagePayload : IMessagePayload
     {
         long OldQuantityOnStock { get; set;}
         

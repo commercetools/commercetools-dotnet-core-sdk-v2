@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SubscriptionPagedQueryResponse))]
-    public interface ISubscriptionPagedQueryResponse 
+    public partial interface ISubscriptionPagedQueryResponse 
     {
         long Limit { get; set;}
         

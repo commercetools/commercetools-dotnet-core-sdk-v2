@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategoryResourceIdentifier))]
-    public interface ITaxCategoryResourceIdentifier : IResourceIdentifier
+    public partial interface ITaxCategoryResourceIdentifier : IResourceIdentifier
     {
     }
 }

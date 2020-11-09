@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListDraft))]
-    public interface IShoppingListDraft 
+    public partial interface IShoppingListDraft 
     {
         ICustomFieldsDraft Custom { get; set;}
         

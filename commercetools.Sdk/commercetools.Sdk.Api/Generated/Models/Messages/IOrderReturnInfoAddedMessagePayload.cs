@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderReturnInfoAddedMessagePayload))]
-    public interface IOrderReturnInfoAddedMessagePayload : IMessagePayload
+    public partial interface IOrderReturnInfoAddedMessagePayload : IMessagePayload
     {
         IReturnInfo ReturnInfo { get; set;}
     }

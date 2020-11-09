@@ -29,7 +29,7 @@ namespace commercetools.Api.Models.ProductTypes
     [SubTypeDiscriminator("removeEnumValues", typeof(commercetools.Api.Models.ProductTypes.ProductTypeRemoveEnumValuesAction))]
     [SubTypeDiscriminator("setInputTip", typeof(commercetools.Api.Models.ProductTypes.ProductTypeSetInputTipAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.ProductTypes.ProductTypeSetKeyAction))]
-    public interface IProductTypeUpdateAction 
+    public partial interface IProductTypeUpdateAction 
     {
         string Action { get; set;}
     }

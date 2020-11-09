@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
-    public interface IHighPrecisionMoneyDraft : ITypedMoneyDraft
+    public partial interface IHighPrecisionMoneyDraft : ITypedMoneyDraft
     {
         long PreciseAmount { get; set;}
     }

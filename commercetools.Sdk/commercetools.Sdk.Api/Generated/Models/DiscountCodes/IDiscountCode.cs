@@ -11,15 +11,15 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCode))]
-    public interface IDiscountCode : IBaseResource
+    public partial interface IDiscountCode : IBaseResource
     {
-        string Id { get; set;}
+        new string Id { get; set;}
         
-        long Version { get; set;}
+        new long Version { get; set;}
         
-        DateTime CreatedAt { get; set;}
+        new DateTime CreatedAt { get; set;}
         
-        DateTime LastModifiedAt { get; set;}
+        new DateTime LastModifiedAt { get; set;}
         
         ILastModifiedBy LastModifiedBy { get; set;}
         

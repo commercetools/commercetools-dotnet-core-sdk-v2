@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldBooleanType))]
-    public interface ICustomFieldBooleanType : IFieldType
+    public partial interface ICustomFieldBooleanType : IFieldType
     {
     }
 }

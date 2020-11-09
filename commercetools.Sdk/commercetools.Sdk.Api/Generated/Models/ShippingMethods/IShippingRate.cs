@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingRate))]
-    public interface IShippingRate 
+    public partial interface IShippingRate 
     {
         ITypedMoney Price { get; set;}
         

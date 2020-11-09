@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductUnpublishAction))]
-    public interface IProductUnpublishAction : IProductUpdateAction
+    public partial interface IProductUnpublishAction : IProductUpdateAction
     {
     }
 }

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ReturnInfo))]
-    public interface IReturnInfo 
+    public partial interface IReturnInfo 
     {
         List<IReturnItem> Items { get; set;}
         

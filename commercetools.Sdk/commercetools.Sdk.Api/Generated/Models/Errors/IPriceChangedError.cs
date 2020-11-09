@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.PriceChangedError))]
-    public interface IPriceChangedError : IErrorObject
+    public partial interface IPriceChangedError : IErrorObject
     {
         List<string> LineItems { get; set;}
         

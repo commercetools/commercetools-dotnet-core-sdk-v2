@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryDraft))]
-    public interface ICategoryDraft 
+    public partial interface ICategoryDraft 
     {
         ILocalizedString Name { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.SearchKeyword))]
-    public interface ISearchKeyword 
+    public partial interface ISearchKeyword 
     {
         string Text { get; set;}
         

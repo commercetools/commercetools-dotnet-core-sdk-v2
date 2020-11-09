@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditNotProcessed))]
-    public interface IOrderEditNotProcessed : IOrderEditResult
+    public partial interface IOrderEditNotProcessed : IOrderEditResult
     {
     }
 }

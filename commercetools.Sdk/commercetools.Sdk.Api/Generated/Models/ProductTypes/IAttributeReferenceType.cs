@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeReferenceType))]
-    public interface IAttributeReferenceType : IAttributeType
+    public partial interface IAttributeReferenceType : IAttributeType
     {
         string ReferenceTypeId { get; set;}
         

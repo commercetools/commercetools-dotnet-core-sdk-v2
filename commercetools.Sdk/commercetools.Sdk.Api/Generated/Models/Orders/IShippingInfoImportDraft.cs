@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ShippingInfoImportDraft))]
-    public interface IShippingInfoImportDraft 
+    public partial interface IShippingInfoImportDraft 
     {
         string ShippingMethodName { get; set;}
         

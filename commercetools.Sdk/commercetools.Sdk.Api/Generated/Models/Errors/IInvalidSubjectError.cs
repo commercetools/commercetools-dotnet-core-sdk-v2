@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.InvalidSubjectError))]
-    public interface IInvalidSubjectError : IErrorObject
+    public partial interface IInvalidSubjectError : IErrorObject
     {
     }
 }

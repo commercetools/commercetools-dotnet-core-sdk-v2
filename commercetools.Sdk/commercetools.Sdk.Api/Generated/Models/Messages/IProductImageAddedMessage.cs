@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductImageAddedMessage))]
-    public interface IProductImageAddedMessage : IMessage
+    public partial interface IProductImageAddedMessage : IMessage
     {
         long VariantId { get; set;}
         

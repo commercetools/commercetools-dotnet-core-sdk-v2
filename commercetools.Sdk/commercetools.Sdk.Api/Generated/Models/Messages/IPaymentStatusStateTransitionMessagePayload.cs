@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentStatusStateTransitionMessagePayload))]
-    public interface IPaymentStatusStateTransitionMessagePayload : IMessagePayload
+    public partial interface IPaymentStatusStateTransitionMessagePayload : IMessagePayload
     {
         IStateReference State { get; set;}
         

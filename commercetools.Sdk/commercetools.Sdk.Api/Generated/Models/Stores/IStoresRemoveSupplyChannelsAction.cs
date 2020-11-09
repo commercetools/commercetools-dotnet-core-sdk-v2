@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Stores
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoresRemoveSupplyChannelsAction))]
-    public interface IStoresRemoveSupplyChannelsAction : IStoreUpdateAction
+    public partial interface IStoresRemoveSupplyChannelsAction : IStoreUpdateAction
     {
         IChannelResourceIdentifier SupplyChannel { get; set;}
     }

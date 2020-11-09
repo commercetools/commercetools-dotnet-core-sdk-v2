@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentChangeTransactionTimestampAction))]
-    public interface IPaymentChangeTransactionTimestampAction : IPaymentUpdateAction
+    public partial interface IPaymentChangeTransactionTimestampAction : IPaymentUpdateAction
     {
         string TransactionId { get; set;}
         

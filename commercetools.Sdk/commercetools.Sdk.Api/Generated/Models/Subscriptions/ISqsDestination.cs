@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SqsDestination))]
-    public interface ISqsDestination : IDestination
+    public partial interface ISqsDestination : IDestination
     {
         string AccessKey { get; set;}
         

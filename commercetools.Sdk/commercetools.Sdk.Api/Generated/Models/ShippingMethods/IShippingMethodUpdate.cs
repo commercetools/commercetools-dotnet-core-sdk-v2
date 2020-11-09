@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodUpdate))]
-    public interface IShippingMethodUpdate 
+    public partial interface IShippingMethodUpdate 
     {
         long Version { get; set;}
         

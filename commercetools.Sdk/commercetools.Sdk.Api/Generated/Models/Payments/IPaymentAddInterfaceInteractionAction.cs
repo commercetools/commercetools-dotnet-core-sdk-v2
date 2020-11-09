@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentAddInterfaceInteractionAction))]
-    public interface IPaymentAddInterfaceInteractionAction : IPaymentUpdateAction
+    public partial interface IPaymentAddInterfaceInteractionAction : IPaymentUpdateAction
     {
         ITypeResourceIdentifier Type { get; set;}
         

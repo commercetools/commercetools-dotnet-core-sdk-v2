@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.PriceFunction))]
-    public interface IPriceFunction 
+    public partial interface IPriceFunction 
     {
         string CurrencyCode { get; set;}
         

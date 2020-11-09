@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldReferenceType))]
-    public interface ICustomFieldReferenceType : IFieldType
+    public partial interface ICustomFieldReferenceType : IFieldType
     {
         string ReferenceTypeId { get; set;}
         

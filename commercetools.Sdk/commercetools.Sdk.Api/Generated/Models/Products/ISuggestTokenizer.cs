@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Products
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("whitespace", typeof(commercetools.Api.Models.Products.WhitespaceTokenizer))]
     [SubTypeDiscriminator("custom", typeof(commercetools.Api.Models.Products.CustomTokenizer))]
-    public interface ISuggestTokenizer 
+    public partial interface ISuggestTokenizer 
     {
         string Type { get; set;}
     }

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemovePaymentAction))]
-    public interface IStagedOrderRemovePaymentAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderRemovePaymentAction : IStagedOrderUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set;}
     }

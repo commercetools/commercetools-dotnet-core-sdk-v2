@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ReferencedResourceNotFoundError))]
-    public interface IReferencedResourceNotFoundError : IErrorObject
+    public partial interface IReferencedResourceNotFoundError : IErrorObject
     {
         string TypeId { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderStateTransitionMessage))]
-    public interface IOrderStateTransitionMessage : IMessage
+    public partial interface IOrderStateTransitionMessage : IMessage
     {
         IStateReference State { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountSetValidUntilAction))]
-    public interface ICartDiscountSetValidUntilAction : ICartDiscountUpdateAction
+    public partial interface ICartDiscountSetValidUntilAction : ICartDiscountUpdateAction
     {
         DateTime ValidUntil { get; set;}
     }

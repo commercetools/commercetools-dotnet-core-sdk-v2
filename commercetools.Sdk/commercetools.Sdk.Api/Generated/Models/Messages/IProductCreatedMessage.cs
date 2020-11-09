@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductCreatedMessage))]
-    public interface IProductCreatedMessage : IMessage
+    public partial interface IProductCreatedMessage : IMessage
     {
         IProductProjection ProductProjection { get; set;}
     }

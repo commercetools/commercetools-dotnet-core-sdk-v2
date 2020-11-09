@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomObjects
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomObjects.CustomObjectDraft))]
-    public interface ICustomObjectDraft 
+    public partial interface ICustomObjectDraft 
     {
         string Container { get; set;}
         

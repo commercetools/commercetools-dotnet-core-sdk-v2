@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartAddPaymentAction))]
-    public interface IMyCartAddPaymentAction : IMyCartUpdateAction
+    public partial interface IMyCartAddPaymentAction : IMyCartUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set;}
     }

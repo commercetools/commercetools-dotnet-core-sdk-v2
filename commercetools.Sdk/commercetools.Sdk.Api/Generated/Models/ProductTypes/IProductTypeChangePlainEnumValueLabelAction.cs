@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueLabelAction))]
-    public interface IProductTypeChangePlainEnumValueLabelAction : IProductTypeUpdateAction
+    public partial interface IProductTypeChangePlainEnumValueLabelAction : IProductTypeUpdateAction
     {
         string AttributeName { get; set;}
         

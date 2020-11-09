@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.PriceTier))]
-    public interface IPriceTier 
+    public partial interface IPriceTier 
     {
         long MinimumQuantity { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.ResourceDeletedDelivery))]
-    public interface IResourceDeletedDelivery : ISubscriptionDelivery
+    public partial interface IResourceDeletedDelivery : ISubscriptionDelivery
     {
         long Version { get; set;}
         

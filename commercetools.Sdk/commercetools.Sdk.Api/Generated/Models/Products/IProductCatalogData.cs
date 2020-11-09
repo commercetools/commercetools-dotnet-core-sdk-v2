@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductCatalogData))]
-    public interface IProductCatalogData 
+    public partial interface IProductCatalogData 
     {
         bool Published { get; set;}
         

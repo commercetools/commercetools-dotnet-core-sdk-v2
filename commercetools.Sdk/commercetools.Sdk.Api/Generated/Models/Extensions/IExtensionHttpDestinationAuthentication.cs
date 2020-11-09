@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.Extensions
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("AzureFunctions", typeof(commercetools.Api.Models.Extensions.ExtensionAzureFunctionsAuthentication))]
     [SubTypeDiscriminator("AuthorizationHeader", typeof(commercetools.Api.Models.Extensions.ExtensionAuthorizationHeaderAuthentication))]
-    public interface IExtensionHttpDestinationAuthentication 
+    public partial interface IExtensionHttpDestinationAuthentication 
     {
         string Type { get; set;}
     }

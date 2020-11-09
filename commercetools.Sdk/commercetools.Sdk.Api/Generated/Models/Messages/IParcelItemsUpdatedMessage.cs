@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ParcelItemsUpdatedMessage))]
-    public interface IParcelItemsUpdatedMessage : IMessage
+    public partial interface IParcelItemsUpdatedMessage : IMessage
     {
         string ParcelId { get; set;}
         

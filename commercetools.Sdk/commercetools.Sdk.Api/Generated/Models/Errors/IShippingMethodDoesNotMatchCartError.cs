@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
-    public interface IShippingMethodDoesNotMatchCartError : IErrorObject
+    public partial interface IShippingMethodDoesNotMatchCartError : IErrorObject
     {
     }
 }

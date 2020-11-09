@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariantChannelAvailability))]
-    public interface IProductVariantChannelAvailability 
+    public partial interface IProductVariantChannelAvailability 
     {
         bool? IsOnStock { get; set;}
         

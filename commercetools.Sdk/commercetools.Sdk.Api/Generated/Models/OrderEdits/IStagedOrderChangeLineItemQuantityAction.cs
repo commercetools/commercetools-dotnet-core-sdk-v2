@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderChangeLineItemQuantityAction))]
-    public interface IStagedOrderChangeLineItemQuantityAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderChangeLineItemQuantityAction : IStagedOrderUpdateAction
     {
         string LineItemId { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.SyncInfo))]
-    public interface ISyncInfo 
+    public partial interface ISyncInfo 
     {
         IChannelReference Channel { get; set;}
         

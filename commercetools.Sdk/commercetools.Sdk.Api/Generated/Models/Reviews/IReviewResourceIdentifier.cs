@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewResourceIdentifier))]
-    public interface IReviewResourceIdentifier : IResourceIdentifier
+    public partial interface IReviewResourceIdentifier : IResourceIdentifier
     {
     }
 }

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetCustomTypeAction))]
-    public interface IInventoryEntrySetCustomTypeAction : IInventoryEntryUpdateAction
+    public partial interface IInventoryEntrySetCustomTypeAction : IInventoryEntryUpdateAction
     {
         ITypeResourceIdentifier Type { get; set;}
         

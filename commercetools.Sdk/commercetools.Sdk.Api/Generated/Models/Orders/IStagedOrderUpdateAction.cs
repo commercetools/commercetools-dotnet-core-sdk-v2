@@ -78,7 +78,7 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderTransitionStateAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateItemShippingAddressAction))]
     [SubTypeDiscriminator("updateSyncInfo", typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
-    public interface IStagedOrderUpdateAction 
+    public partial interface IStagedOrderUpdateAction 
     {
         string Action { get; set;}
     }

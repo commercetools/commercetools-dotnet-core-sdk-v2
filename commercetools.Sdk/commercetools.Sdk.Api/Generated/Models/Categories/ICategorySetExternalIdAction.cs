@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetExternalIdAction))]
-    public interface ICategorySetExternalIdAction : ICategoryUpdateAction
+    public partial interface ICategorySetExternalIdAction : ICategoryUpdateAction
     {
         string ExternalId { get; set;}
     }

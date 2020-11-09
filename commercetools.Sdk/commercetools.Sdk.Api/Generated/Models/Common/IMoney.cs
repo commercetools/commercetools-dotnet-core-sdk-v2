@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.Money))]
-    public interface IMoney 
+    public partial interface IMoney 
     {
         long CentAmount { get; set;}
         

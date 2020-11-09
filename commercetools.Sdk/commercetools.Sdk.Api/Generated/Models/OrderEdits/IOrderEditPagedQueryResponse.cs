@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPagedQueryResponse))]
-    public interface IOrderEditPagedQueryResponse 
+    public partial interface IOrderEditPagedQueryResponse 
     {
         long Limit { get; set;}
         

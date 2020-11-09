@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductRemoveFromCategoryAction))]
-    public interface IProductRemoveFromCategoryAction : IProductUpdateAction
+    public partial interface IProductRemoveFromCategoryAction : IProductUpdateAction
     {
         ICategoryResourceIdentifier Category { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeNumberType))]
-    public interface IAttributeNumberType : IAttributeType
+    public partial interface IAttributeNumberType : IAttributeType
     {
     }
 }

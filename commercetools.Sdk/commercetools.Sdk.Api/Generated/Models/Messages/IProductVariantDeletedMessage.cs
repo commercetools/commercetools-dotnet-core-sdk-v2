@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductVariantDeletedMessage))]
-    public interface IProductVariantDeletedMessage : IMessage
+    public partial interface IProductVariantDeletedMessage : IMessage
     {
         IProductVariant Variant { get; set;}
         

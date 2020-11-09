@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditDraft))]
-    public interface IOrderEditDraft 
+    public partial interface IOrderEditDraft 
     {
         string Key { get; set;}
         

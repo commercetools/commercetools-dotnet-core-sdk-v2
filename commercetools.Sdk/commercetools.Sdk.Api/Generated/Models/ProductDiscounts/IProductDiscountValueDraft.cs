@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.ProductDiscounts
     [SubTypeDiscriminator("external", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueExternalDraft))]
     [SubTypeDiscriminator("relative", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueRelativeDraft))]
     [SubTypeDiscriminator("absolute", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueAbsoluteDraft))]
-    public interface IProductDiscountValueDraft 
+    public partial interface IProductDiscountValueDraft 
     {
         string Type { get; set;}
     }

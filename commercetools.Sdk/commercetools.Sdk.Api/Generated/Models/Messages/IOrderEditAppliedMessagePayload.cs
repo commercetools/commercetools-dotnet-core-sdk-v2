@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderEditAppliedMessagePayload))]
-    public interface IOrderEditAppliedMessagePayload : IMessagePayload
+    public partial interface IOrderEditAppliedMessagePayload : IMessagePayload
     {
         IOrderEditReference Edit { get; set;}
         

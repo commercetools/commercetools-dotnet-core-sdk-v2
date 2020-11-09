@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerSetCustomTypeAction))]
-    public interface IMyCustomerSetCustomTypeAction : IMyCustomerUpdateAction
+    public partial interface IMyCustomerSetCustomTypeAction : IMyCustomerUpdateAction
     {
         ITypeResourceIdentifier Type { get; set;}
         

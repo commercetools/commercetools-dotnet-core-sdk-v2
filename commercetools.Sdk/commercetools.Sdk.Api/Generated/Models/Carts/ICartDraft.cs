@@ -14,7 +14,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartDraft))]
-    public interface ICartDraft 
+    public partial interface ICartDraft 
     {
         string Currency { get; set;}
         

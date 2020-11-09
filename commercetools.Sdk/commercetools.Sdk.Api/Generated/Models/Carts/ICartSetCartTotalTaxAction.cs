@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetCartTotalTaxAction))]
-    public interface ICartSetCartTotalTaxAction : ICartUpdateAction
+    public partial interface ICartSetCartTotalTaxAction : ICartUpdateAction
     {
         IMoney ExternalTotalGross { get; set;}
         

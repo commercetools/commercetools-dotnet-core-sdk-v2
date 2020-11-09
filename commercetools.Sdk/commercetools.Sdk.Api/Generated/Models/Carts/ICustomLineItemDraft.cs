@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CustomLineItemDraft))]
-    public interface ICustomLineItemDraft 
+    public partial interface ICustomLineItemDraft 
     {
         ILocalizedString Name { get; set;}
         

@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDiscountCodeStateSetMessage))]
-    public interface IOrderDiscountCodeStateSetMessage : IMessage
+    public partial interface IOrderDiscountCodeStateSetMessage : IMessage
     {
         IDiscountCodeReference DiscountCode { get; set;}
         

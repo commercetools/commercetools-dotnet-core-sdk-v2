@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartResourceIdentifier))]
-    public interface ICartResourceIdentifier : IResourceIdentifier
+    public partial interface ICartResourceIdentifier : IResourceIdentifier
     {
     }
 }

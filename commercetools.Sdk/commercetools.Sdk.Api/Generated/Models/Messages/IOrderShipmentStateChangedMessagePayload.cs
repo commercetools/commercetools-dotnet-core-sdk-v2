@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderShipmentStateChangedMessagePayload))]
-    public interface IOrderShipmentStateChangedMessagePayload : IMessagePayload
+    public partial interface IOrderShipmentStateChangedMessagePayload : IMessagePayload
     {
         string ShipmentState { get; set;}
         

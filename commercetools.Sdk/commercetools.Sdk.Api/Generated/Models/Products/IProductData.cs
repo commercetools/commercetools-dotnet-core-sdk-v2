@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductData))]
-    public interface IProductData 
+    public partial interface IProductData 
     {
         ILocalizedString Name { get; set;}
         

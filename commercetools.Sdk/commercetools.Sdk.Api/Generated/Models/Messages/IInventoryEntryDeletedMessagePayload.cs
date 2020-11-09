@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
-    public interface IInventoryEntryDeletedMessagePayload : IMessagePayload
+    public partial interface IInventoryEntryDeletedMessagePayload : IMessagePayload
     {
         string Sku { get; set;}
         

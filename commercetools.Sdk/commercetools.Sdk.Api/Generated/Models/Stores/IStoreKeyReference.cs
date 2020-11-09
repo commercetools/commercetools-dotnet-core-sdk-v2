@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Stores
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreKeyReference))]
-    public interface IStoreKeyReference : IKeyReference
+    public partial interface IStoreKeyReference : IKeyReference
     {
     }
 }

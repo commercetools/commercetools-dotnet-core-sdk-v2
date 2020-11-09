@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetCategoryOrderHintAction))]
-    public interface IProductSetCategoryOrderHintAction : IProductUpdateAction
+    public partial interface IProductSetCategoryOrderHintAction : IProductUpdateAction
     {
         string CategoryId { get; set;}
         

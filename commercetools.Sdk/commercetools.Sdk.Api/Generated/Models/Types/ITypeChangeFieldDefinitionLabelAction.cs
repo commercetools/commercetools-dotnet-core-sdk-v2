@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeChangeFieldDefinitionLabelAction))]
-    public interface ITypeChangeFieldDefinitionLabelAction : ITypeUpdateAction
+    public partial interface ITypeChangeFieldDefinitionLabelAction : ITypeUpdateAction
     {
         string FieldName { get; set;}
         

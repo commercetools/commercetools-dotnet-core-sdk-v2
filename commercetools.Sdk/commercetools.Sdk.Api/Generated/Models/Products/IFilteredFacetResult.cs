@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.FilteredFacetResult))]
-    public interface IFilteredFacetResult : IFacetResult
+    public partial interface IFilteredFacetResult : IFacetResult
     {
         long Count { get; set;}
         

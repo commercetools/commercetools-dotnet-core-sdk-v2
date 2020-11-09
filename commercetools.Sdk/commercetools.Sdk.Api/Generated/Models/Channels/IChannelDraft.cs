@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelDraft))]
-    public interface IChannelDraft 
+    public partial interface IChannelDraft 
     {
         string Key { get; set;}
         

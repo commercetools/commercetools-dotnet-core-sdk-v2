@@ -16,7 +16,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.LineItem))]
-    public interface ILineItem 
+    public partial interface ILineItem 
     {
         string Id { get; set;}
         

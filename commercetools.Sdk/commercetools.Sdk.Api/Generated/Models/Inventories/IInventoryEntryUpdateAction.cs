@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Inventories
     [SubTypeDiscriminator("setExpectedDelivery", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction))]
     [SubTypeDiscriminator("setRestockableInDays", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction))]
     [SubTypeDiscriminator("setSupplyChannel", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
-    public interface IInventoryEntryUpdateAction 
+    public partial interface IInventoryEntryUpdateAction 
     {
         string Action { get; set;}
     }

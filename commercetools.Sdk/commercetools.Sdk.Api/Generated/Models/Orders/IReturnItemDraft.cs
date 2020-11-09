@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ReturnItemDraft))]
-    public interface IReturnItemDraft 
+    public partial interface IReturnItemDraft 
     {
         long Quantity { get; set;}
         

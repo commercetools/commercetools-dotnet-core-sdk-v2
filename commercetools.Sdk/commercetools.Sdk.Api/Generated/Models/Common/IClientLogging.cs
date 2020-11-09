@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.ClientLogging))]
-    public interface IClientLogging 
+    public partial interface IClientLogging 
     {
         string ClientId { get; set;}
         
