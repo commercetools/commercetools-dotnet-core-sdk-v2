@@ -96,8 +96,10 @@ jobs:
       - name: Create the package
         run: dotnet pack -c Release  -o ../pack/ --configfile Nuget.config
         working-directory: ./commercetools.Sdk
+      - name: List packages
+        run: ls -la pack
       - name: Publish Nuget to GitHub registry
-        run: dotnet nuget push pack/*.nupkg -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols
+        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v1
