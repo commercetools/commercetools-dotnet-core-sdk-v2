@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductPublishAction))]
-    public interface IProductPublishAction : IProductUpdateAction
+    public partial interface IProductPublishAction : IProductUpdateAction
     {
         string Scope { get; set;}
         

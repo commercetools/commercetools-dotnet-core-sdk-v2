@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductAddVariantAction))]
-    public interface IProductAddVariantAction : IProductUpdateAction
+    public partial interface IProductAddVariantAction : IProductUpdateAction
     {
         string Sku { get; set;}
         

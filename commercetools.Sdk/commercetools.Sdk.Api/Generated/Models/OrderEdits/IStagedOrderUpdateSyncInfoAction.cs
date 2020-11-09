@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
-    public interface IStagedOrderUpdateSyncInfoAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderUpdateSyncInfoAction : IStagedOrderUpdateAction
     {
         IChannelResourceIdentifier Channel { get; set;}
         

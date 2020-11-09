@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeReference))]
-    public interface IDiscountCodeReference : IReference
+    public partial interface IDiscountCodeReference : IReference
     {
         IDiscountCode Obj { get; set;}
     }

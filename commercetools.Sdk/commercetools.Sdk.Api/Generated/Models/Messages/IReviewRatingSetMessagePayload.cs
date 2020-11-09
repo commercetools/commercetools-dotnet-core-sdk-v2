@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ReviewRatingSetMessagePayload))]
-    public interface IReviewRatingSetMessagePayload : IMessagePayload
+    public partial interface IReviewRatingSetMessagePayload : IMessagePayload
     {
         double? OldRating { get; set;}
         

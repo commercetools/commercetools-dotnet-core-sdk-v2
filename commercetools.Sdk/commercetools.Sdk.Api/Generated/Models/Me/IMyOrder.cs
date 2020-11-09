@@ -16,15 +16,15 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyOrder))]
-    public interface IMyOrder : IBaseResource
+    public partial interface IMyOrder : IBaseResource
     {
-        string Id { get; set;}
+        new string Id { get; set;}
         
-        long Version { get; set;}
+        new long Version { get; set;}
         
-        DateTime CreatedAt { get; set;}
+        new DateTime CreatedAt { get; set;}
         
-        DateTime LastModifiedAt { get; set;}
+        new DateTime LastModifiedAt { get; set;}
         
         ILastModifiedBy LastModifiedBy { get; set;}
         

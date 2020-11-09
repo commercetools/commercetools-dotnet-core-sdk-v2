@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupDraft))]
-    public interface ICustomerGroupDraft 
+    public partial interface ICustomerGroupDraft 
     {
         string Key { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
-    public interface ISubscriptionSetMessagesAction : ISubscriptionUpdateAction
+    public partial interface ISubscriptionSetMessagesAction : ISubscriptionUpdateAction
     {
         List<IMessageSubscription> Messages { get; set;}
     }

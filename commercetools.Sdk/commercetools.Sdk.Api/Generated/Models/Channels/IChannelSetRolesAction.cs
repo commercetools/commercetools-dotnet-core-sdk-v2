@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelSetRolesAction))]
-    public interface IChannelSetRolesAction : IChannelUpdateAction
+    public partial interface IChannelSetRolesAction : IChannelUpdateAction
     {
         List<string> Roles { get; set;}
         

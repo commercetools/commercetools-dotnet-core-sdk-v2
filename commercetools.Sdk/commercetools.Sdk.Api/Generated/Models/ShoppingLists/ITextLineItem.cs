@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.TextLineItem))]
-    public interface ITextLineItem 
+    public partial interface ITextLineItem 
     {
         DateTime AddedAt { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerDraft))]
-    public interface IMyCustomerDraft 
+    public partial interface IMyCustomerDraft 
     {
         string Email { get; set;}
         

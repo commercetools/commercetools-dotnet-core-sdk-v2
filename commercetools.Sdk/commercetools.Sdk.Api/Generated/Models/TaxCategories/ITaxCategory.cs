@@ -10,15 +10,15 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategory))]
-    public interface ITaxCategory : IBaseResource
+    public partial interface ITaxCategory : IBaseResource
     {
-        string Id { get; set;}
+        new string Id { get; set;}
         
-        long Version { get; set;}
+        new long Version { get; set;}
         
-        DateTime CreatedAt { get; set;}
+        new DateTime CreatedAt { get; set;}
         
-        DateTime LastModifiedAt { get; set;}
+        new DateTime LastModifiedAt { get; set;}
         
         ILastModifiedBy LastModifiedBy { get; set;}
         

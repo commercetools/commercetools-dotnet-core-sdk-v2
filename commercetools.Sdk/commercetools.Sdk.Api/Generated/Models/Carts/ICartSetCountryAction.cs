@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetCountryAction))]
-    public interface ICartSetCountryAction : ICartUpdateAction
+    public partial interface ICartSetCountryAction : ICartUpdateAction
     {
         string Country { get; set;}
     }

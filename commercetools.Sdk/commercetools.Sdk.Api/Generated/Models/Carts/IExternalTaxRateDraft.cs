@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.ExternalTaxRateDraft))]
-    public interface IExternalTaxRateDraft 
+    public partial interface IExternalTaxRateDraft 
     {
         string Name { get; set;}
         

@@ -27,22 +27,23 @@ namespace commercetools.Api.Models.Errors
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Api.Models.Errors.NoMatchingProductDiscountFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Api.Models.Errors.OutOfStockError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Api.Models.Errors.PriceChangedError))]
+    [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Api.Models.Errors.QueryTimedOutError))]
     [SubTypeDiscriminator("ReferenceExists", typeof(commercetools.Api.Models.Errors.ReferenceExistsError))]
     [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Api.Models.Errors.ReferencedResourceNotFoundError))]
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Api.Models.Errors.RequiredFieldError))]
     [SubTypeDiscriminator("ResourceNotFound", typeof(commercetools.Api.Models.Errors.ResourceNotFoundError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
+    [SubTypeDiscriminator("DuplicateField", typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
+    [SubTypeDiscriminator("DuplicateAttributeValues", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValuesError))]
     [SubTypeDiscriminator("access_denied", typeof(commercetools.Api.Models.Errors.AccessDeniedError))]
     [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Api.Models.Errors.EnumValueIsUsedError))]
-    [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
-    [SubTypeDiscriminator("DuplicatePriceScope", typeof(commercetools.Api.Models.Errors.DuplicatePriceScopeError))]
-    [SubTypeDiscriminator("DuplicateAttributeValues", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValuesError))]
-    [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
-    [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValueError))]
+    [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
+    [SubTypeDiscriminator("DuplicatePriceScope", typeof(commercetools.Api.Models.Errors.DuplicatePriceScopeError))]
     [SubTypeDiscriminator("DuplicateVariantValues", typeof(commercetools.Api.Models.Errors.DuplicateVariantValuesError))]
-    [SubTypeDiscriminator("DuplicateField", typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
-    public interface IErrorObject 
+    [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
+    public partial interface IErrorObject 
     {
         string Code { get; set;}
         

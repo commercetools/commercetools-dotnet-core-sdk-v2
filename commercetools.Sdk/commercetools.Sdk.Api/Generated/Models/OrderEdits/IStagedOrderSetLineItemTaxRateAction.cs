@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLineItemTaxRateAction))]
-    public interface IStagedOrderSetLineItemTaxRateAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderSetLineItemTaxRateAction : IStagedOrderUpdateAction
     {
         string LineItemId { get; set;}
         

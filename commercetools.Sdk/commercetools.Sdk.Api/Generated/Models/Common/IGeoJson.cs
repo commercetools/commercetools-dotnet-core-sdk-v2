@@ -9,7 +9,7 @@ namespace commercetools.Api.Models.Common
 {
     [TypeDiscriminator(nameof(Type))]
     [SubTypeDiscriminator("Point", typeof(commercetools.Api.Models.Common.GeoJsonPoint))]
-    public interface IGeoJson 
+    public partial interface IGeoJson 
     {
         string Type { get; set;}
     }

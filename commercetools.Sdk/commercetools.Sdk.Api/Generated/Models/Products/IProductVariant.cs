@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariant))]
-    public interface IProductVariant 
+    public partial interface IProductVariant 
     {
         long Id { get; set;}
         

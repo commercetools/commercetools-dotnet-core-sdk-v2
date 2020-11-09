@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ExtensionUpdateActionsFailedError))]
-    public interface IExtensionUpdateActionsFailedError : IErrorObject
+    public partial interface IExtensionUpdateActionsFailedError : IErrorObject
     {
         ILocalizedString LocalizedMessage { get; set;}
         

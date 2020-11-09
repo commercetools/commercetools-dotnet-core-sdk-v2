@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerCompanyNameSetMessage))]
-    public interface ICustomerCompanyNameSetMessage : IMessage
+    public partial interface ICustomerCompanyNameSetMessage : IMessage
     {
         string CompanyName { get; set;}
     }

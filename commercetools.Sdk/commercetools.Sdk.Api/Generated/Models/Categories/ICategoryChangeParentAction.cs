@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryChangeParentAction))]
-    public interface ICategoryChangeParentAction : ICategoryUpdateAction
+    public partial interface ICategoryChangeParentAction : ICategoryUpdateAction
     {
         ICategoryResourceIdentifier Parent { get; set;}
     }

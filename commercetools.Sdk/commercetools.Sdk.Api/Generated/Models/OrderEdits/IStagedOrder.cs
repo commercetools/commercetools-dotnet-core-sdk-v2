@@ -16,7 +16,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrder))]
-    public interface IStagedOrder : IOrder
+    public partial interface IStagedOrder : IOrder
     {
     }
 }

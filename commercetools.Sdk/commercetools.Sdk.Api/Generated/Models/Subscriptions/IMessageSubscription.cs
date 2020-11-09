@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.MessageSubscription))]
-    public interface IMessageSubscription 
+    public partial interface IMessageSubscription 
     {
         string ResourceTypeId { get; set;}
         

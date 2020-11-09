@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Zones
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZonePagedQueryResponse))]
-    public interface IZonePagedQueryResponse 
+    public partial interface IZonePagedQueryResponse 
     {
         long Limit { get; set;}
         

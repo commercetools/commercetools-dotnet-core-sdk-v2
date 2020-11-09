@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodRemoveZoneAction))]
-    public interface IShippingMethodRemoveZoneAction : IShippingMethodUpdateAction
+    public partial interface IShippingMethodRemoveZoneAction : IShippingMethodUpdateAction
     {
         IZoneResourceIdentifier Zone { get; set;}
     }

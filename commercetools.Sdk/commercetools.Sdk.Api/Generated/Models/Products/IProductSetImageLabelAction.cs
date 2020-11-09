@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetImageLabelAction))]
-    public interface IProductSetImageLabelAction : IProductUpdateAction
+    public partial interface IProductSetImageLabelAction : IProductUpdateAction
     {
         string Sku { get; set;}
         

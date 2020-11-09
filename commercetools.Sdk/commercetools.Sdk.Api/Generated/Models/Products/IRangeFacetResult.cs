@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.RangeFacetResult))]
-    public interface IRangeFacetResult : IFacetResult
+    public partial interface IRangeFacetResult : IFacetResult
     {
         List<IFacetResultRange> Ranges { get; set;}
     }

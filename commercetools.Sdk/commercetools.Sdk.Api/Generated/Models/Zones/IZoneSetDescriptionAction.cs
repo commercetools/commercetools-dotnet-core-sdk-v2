@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Zones
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneSetDescriptionAction))]
-    public interface IZoneSetDescriptionAction : IZoneUpdateAction
+    public partial interface IZoneSetDescriptionAction : IZoneUpdateAction
     {
         string Description { get; set;}
     }

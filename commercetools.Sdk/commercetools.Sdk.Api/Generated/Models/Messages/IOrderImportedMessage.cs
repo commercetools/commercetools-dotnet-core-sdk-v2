@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderImportedMessage))]
-    public interface IOrderImportedMessage : IMessage
+    public partial interface IOrderImportedMessage : IMessage
     {
         IOrder Order { get; set;}
     }

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.MessageConfigurationDraft))]
-    public interface IMessageConfigurationDraft 
+    public partial interface IMessageConfigurationDraft 
     {
         bool Enabled { get; set;}
         

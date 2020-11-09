@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentStatusStateTransitionMessage))]
-    public interface IPaymentStatusStateTransitionMessage : IMessage
+    public partial interface IPaymentStatusStateTransitionMessage : IMessage
     {
         IStateReference State { get; set;}
         

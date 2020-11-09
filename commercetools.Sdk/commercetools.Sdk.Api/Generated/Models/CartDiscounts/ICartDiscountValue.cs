@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.CartDiscounts
     [SubTypeDiscriminator("absolute", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueAbsolute))]
     [SubTypeDiscriminator("giftLineItem", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItem))]
     [SubTypeDiscriminator("relative", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueRelative))]
-    public interface ICartDiscountValue 
+    public partial interface ICartDiscountValue 
     {
         string Type { get; set;}
     }

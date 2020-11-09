@@ -11,7 +11,6 @@ namespace commercetools.Sdk.BCTest
     public class BcTest
     {
         private readonly IClient client;
-        private readonly ApiRoot root;
 
         public BcTest(ServiceProviderFixture serviceProviderFixture)
         {

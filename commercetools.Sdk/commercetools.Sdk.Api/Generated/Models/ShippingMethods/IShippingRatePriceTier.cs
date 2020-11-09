@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [TypeDiscriminator(nameof(Type))]
+    [SubTypeDiscriminator("CartValue", typeof(commercetools.Api.Models.ShippingMethods.CartValueTier))]
     [SubTypeDiscriminator("CartScore", typeof(commercetools.Api.Models.ShippingMethods.CartScoreTier))]
     [SubTypeDiscriminator("CartClassification", typeof(commercetools.Api.Models.ShippingMethods.CartClassificationTier))]
-    [SubTypeDiscriminator("CartValue", typeof(commercetools.Api.Models.ShippingMethods.CartValueTier))]
-    public interface IShippingRatePriceTier 
+    public partial interface IShippingRatePriceTier 
     {
         string Type { get; set;}
         

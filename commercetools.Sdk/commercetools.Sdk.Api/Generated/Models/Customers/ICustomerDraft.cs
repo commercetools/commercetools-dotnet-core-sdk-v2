@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerDraft))]
-    public interface ICustomerDraft 
+    public partial interface ICustomerDraft 
     {
         string CustomerNumber { get; set;}
         

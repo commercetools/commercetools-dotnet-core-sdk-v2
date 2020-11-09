@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ZoneRate))]
-    public interface IZoneRate 
+    public partial interface IZoneRate 
     {
         IZoneReference Zone { get; set;}
         

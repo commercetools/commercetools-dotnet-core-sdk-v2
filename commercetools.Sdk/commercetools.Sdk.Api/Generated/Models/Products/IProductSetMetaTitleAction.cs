@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetMetaTitleAction))]
-    public interface IProductSetMetaTitleAction : IProductUpdateAction
+    public partial interface IProductSetMetaTitleAction : IProductUpdateAction
     {
         ILocalizedString MetaTitle { get; set;}
         

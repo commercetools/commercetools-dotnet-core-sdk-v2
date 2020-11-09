@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomShippingMethodAction))]
-    public interface IStagedOrderSetCustomShippingMethodAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderSetCustomShippingMethodAction : IStagedOrderUpdateAction
     {
         string ShippingMethodName { get; set;}
         

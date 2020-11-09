@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.TermFacetResult))]
-    public interface ITermFacetResult : IFacetResult
+    public partial interface ITermFacetResult : IFacetResult
     {
         string DataType { get; set;}
         

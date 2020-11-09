@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.CartValueTier))]
-    public interface ICartValueTier : IShippingRatePriceTier
+    public partial interface ICartValueTier : IShippingRatePriceTier
     {
         long MinimumCentAmount { get; set;}
         

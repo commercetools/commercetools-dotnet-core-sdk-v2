@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomLineItemStateTransitionMessage))]
-    public interface ICustomLineItemStateTransitionMessage : IMessage
+    public partial interface ICustomLineItemStateTransitionMessage : IMessage
     {
         string CustomLineItemId { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateSetDescriptionAction))]
-    public interface IStateSetDescriptionAction : IStateUpdateAction
+    public partial interface IStateSetDescriptionAction : IStateUpdateAction
     {
         ILocalizedString Description { get; set;}
     }

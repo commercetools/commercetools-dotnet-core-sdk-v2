@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
-    public interface IDuplicateFieldError : IErrorObject
+    public partial interface IDuplicateFieldError : IErrorObject
     {
         string Field { get; set;}
         

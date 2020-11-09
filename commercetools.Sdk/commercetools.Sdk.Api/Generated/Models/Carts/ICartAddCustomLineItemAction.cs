@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartAddCustomLineItemAction))]
-    public interface ICartAddCustomLineItemAction : ICartUpdateAction
+    public partial interface ICartAddCustomLineItemAction : ICartUpdateAction
     {
         IMoney Money { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelSetAddressAction))]
-    public interface IChannelSetAddressAction : IChannelUpdateAction
+    public partial interface IChannelSetAddressAction : IChannelUpdateAction
     {
         IAddress Address { get; set;}
     }

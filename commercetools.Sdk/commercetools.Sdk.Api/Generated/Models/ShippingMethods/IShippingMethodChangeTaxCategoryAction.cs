@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodChangeTaxCategoryAction))]
-    public interface IShippingMethodChangeTaxCategoryAction : IShippingMethodUpdateAction
+    public partial interface IShippingMethodChangeTaxCategoryAction : IShippingMethodUpdateAction
     {
         ITaxCategoryResourceIdentifier TaxCategory { get; set;}
     }

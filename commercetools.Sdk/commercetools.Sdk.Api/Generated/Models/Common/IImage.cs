@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.Image))]
-    public interface IImage 
+    public partial interface IImage 
     {
         string Url { get; set;}
         

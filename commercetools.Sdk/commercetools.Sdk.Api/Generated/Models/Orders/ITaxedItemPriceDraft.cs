@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.TaxedItemPriceDraft))]
-    public interface ITaxedItemPriceDraft 
+    public partial interface ITaxedItemPriceDraft 
     {
         IMoney TotalNet { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
-    public interface IInventoryEntrySetSupplyChannelAction : IInventoryEntryUpdateAction
+    public partial interface IInventoryEntrySetSupplyChannelAction : IInventoryEntryUpdateAction
     {
         IChannelResourceIdentifier SupplyChannel { get; set;}
     }

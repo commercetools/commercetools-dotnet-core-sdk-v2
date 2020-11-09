@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerChangeAddressAction))]
-    public interface ICustomerChangeAddressAction : ICustomerUpdateAction
+    public partial interface ICustomerChangeAddressAction : ICustomerUpdateAction
     {
         string AddressId { get; set;}
         

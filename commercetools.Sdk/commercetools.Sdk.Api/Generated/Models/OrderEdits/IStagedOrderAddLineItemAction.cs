@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddLineItemAction))]
-    public interface IStagedOrderAddLineItemAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderAddLineItemAction : IStagedOrderUpdateAction
     {
         ICustomFieldsDraft Custom { get; set;}
         

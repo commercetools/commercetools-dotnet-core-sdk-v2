@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountShippingCostTarget))]
-    public interface ICartDiscountShippingCostTarget : ICartDiscountTarget
+    public partial interface ICartDiscountShippingCostTarget : ICartDiscountTarget
     {
     }
 }

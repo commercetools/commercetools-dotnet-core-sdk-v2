@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListRemoveLineItemAction))]
-    public interface IShoppingListRemoveLineItemAction : IShoppingListUpdateAction
+    public partial interface IShoppingListRemoveLineItemAction : IShoppingListUpdateAction
     {
         string LineItemId { get; set;}
         

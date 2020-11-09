@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ReviewStateTransitionMessagePayload))]
-    public interface IReviewStateTransitionMessagePayload : IMessagePayload
+    public partial interface IReviewStateTransitionMessagePayload : IMessagePayload
     {
         IStateReference OldState { get; set;}
         

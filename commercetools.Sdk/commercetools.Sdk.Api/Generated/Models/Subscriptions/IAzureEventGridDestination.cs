@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.AzureEventGridDestination))]
-    public interface IAzureEventGridDestination : IDestination
+    public partial interface IAzureEventGridDestination : IDestination
     {
         string Uri { get; set;}
         

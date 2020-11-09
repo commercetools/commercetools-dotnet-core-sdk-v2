@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueExternalDraft))]
-    public interface IProductDiscountValueExternalDraft : IProductDiscountValueDraft
+    public partial interface IProductDiscountValueExternalDraft : IProductDiscountValueDraft
     {
     }
 }

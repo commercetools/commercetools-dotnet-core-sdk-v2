@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomerSetMessagePayload))]
-    public interface IOrderCustomerSetMessagePayload : IMessagePayload
+    public partial interface IOrderCustomerSetMessagePayload : IMessagePayload
     {
         ICustomerReference Customer { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderFromCartDraft))]
-    public interface IOrderFromCartDraft 
+    public partial interface IOrderFromCartDraft 
     {
         string Id { get; set;}
         

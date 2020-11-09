@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerChangePassword))]
-    public interface ICustomerChangePassword 
+    public partial interface ICustomerChangePassword 
     {
         string Id { get; set;}
         

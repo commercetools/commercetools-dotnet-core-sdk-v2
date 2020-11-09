@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryDraft))]
-    public interface IInventoryEntryDraft 
+    public partial interface IInventoryEntryDraft 
     {
         string Sku { get; set;}
         

@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetCustomerAction))]
-    public interface IReviewSetCustomerAction : IReviewUpdateAction
+    public partial interface IReviewSetCustomerAction : IReviewUpdateAction
     {
         ICustomerResourceIdentifier Customer { get; set;}
     }

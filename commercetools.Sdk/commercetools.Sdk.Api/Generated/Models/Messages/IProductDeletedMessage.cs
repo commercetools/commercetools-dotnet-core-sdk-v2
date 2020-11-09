@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductDeletedMessage))]
-    public interface IProductDeletedMessage : IMessage
+    public partial interface IProductDeletedMessage : IMessage
     {
         List<string> RemovedImageUrls { get; set;}
         

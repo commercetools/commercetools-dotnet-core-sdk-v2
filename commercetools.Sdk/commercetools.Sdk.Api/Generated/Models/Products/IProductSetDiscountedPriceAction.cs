@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetDiscountedPriceAction))]
-    public interface IProductSetDiscountedPriceAction : IProductUpdateAction
+    public partial interface IProductSetDiscountedPriceAction : IProductUpdateAction
     {
         string PriceId { get; set;}
         

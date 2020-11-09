@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategoryReference))]
-    public interface ITaxCategoryReference : IReference
+    public partial interface ITaxCategoryReference : IReference
     {
         ITaxCategory Obj { get; set;}
     }

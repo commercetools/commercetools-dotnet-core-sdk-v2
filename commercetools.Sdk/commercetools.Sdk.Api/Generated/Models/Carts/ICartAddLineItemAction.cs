@@ -12,7 +12,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartAddLineItemAction))]
-    public interface ICartAddLineItemAction : ICartUpdateAction
+    public partial interface ICartAddLineItemAction : ICartUpdateAction
     {
         ICustomFieldsDraft Custom { get; set;}
         

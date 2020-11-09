@@ -13,7 +13,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartDraft))]
-    public interface IMyCartDraft 
+    public partial interface IMyCartDraft 
     {
         string Currency { get; set;}
         

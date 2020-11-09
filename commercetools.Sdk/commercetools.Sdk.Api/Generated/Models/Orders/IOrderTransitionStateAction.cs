@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderTransitionStateAction))]
-    public interface IOrderTransitionStateAction : IOrderUpdateAction
+    public partial interface IOrderTransitionStateAction : IOrderUpdateAction
     {
         IStateResourceIdentifier State { get; set;}
         

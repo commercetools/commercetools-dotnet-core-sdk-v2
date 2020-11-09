@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction))]
-    public interface IShoppingListSetAnonymousIdAction : IShoppingListUpdateAction
+    public partial interface IShoppingListSetAnonymousIdAction : IShoppingListUpdateAction
     {
         string AnonymousId { get; set;}
     }

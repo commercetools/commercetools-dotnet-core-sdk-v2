@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodPagedQueryResponse))]
-    public interface IShippingMethodPagedQueryResponse 
+    public partial interface IShippingMethodPagedQueryResponse 
     {
         long? Limit { get; set;}
         

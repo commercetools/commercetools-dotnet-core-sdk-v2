@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeDefinitionDraft))]
-    public interface IAttributeDefinitionDraft 
+    public partial interface IAttributeDefinitionDraft 
     {
         IAttributeType Type { get; set;}
         

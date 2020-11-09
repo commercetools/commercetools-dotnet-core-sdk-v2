@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductRemovedFromCategoryMessage))]
-    public interface IProductRemovedFromCategoryMessage : IMessage
+    public partial interface IProductRemovedFromCategoryMessage : IMessage
     {
         ICategoryReference Category { get; set;}
         

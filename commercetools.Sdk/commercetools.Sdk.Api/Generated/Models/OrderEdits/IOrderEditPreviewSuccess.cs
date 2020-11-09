@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
-    public interface IOrderEditPreviewSuccess : IOrderEditResult
+    public partial interface IOrderEditPreviewSuccess : IOrderEditResult
     {
         IStagedOrder Preview { get; set;}
         

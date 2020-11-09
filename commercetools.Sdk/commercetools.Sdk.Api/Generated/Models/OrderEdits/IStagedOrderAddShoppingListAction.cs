@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddShoppingListAction))]
-    public interface IStagedOrderAddShoppingListAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderAddShoppingListAction : IStagedOrderUpdateAction
     {
         IShoppingListResourceIdentifier ShoppingList { get; set;}
         

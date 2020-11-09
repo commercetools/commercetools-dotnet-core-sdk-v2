@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetCustomFieldAction))]
-    public interface IReviewSetCustomFieldAction : IReviewUpdateAction
+    public partial interface IReviewSetCustomFieldAction : IReviewUpdateAction
     {
         string Name { get; set;}
         

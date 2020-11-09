@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductProjectionPagedSearchResponse))]
-    public interface IProductProjectionPagedSearchResponse 
+    public partial interface IProductProjectionPagedSearchResponse 
     {
         long Count { get; set;}
         

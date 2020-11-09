@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
-    public interface ICartSetLineItemShippingDetailsAction : ICartUpdateAction
+    public partial interface ICartSetLineItemShippingDetailsAction : ICartUpdateAction
     {
         string LineItemId { get; set;}
         

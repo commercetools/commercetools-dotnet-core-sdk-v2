@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditUpdate))]
-    public interface IOrderEditUpdate 
+    public partial interface IOrderEditUpdate 
     {
         long Version { get; set;}
         

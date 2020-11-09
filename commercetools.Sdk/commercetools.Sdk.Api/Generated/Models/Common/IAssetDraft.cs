@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.AssetDraft))]
-    public interface IAssetDraft 
+    public partial interface IAssetDraft 
     {
         List<IAssetSource> Sources { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupChangeNameAction))]
-    public interface ICustomerGroupChangeNameAction : ICustomerGroupUpdateAction
+    public partial interface ICustomerGroupChangeNameAction : ICustomerGroupUpdateAction
     {
         string Name { get; set;}
     }

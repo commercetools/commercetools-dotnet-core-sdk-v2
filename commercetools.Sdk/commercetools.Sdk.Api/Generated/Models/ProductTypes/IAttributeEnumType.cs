@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeEnumType))]
-    public interface IAttributeEnumType : IAttributeType
+    public partial interface IAttributeEnumType : IAttributeType
     {
         List<IAttributePlainEnumValue> Values { get; set;}
     }

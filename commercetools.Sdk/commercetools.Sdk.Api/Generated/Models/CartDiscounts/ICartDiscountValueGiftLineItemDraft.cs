@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
-    public interface ICartDiscountValueGiftLineItemDraft : ICartDiscountValueDraft
+    public partial interface ICartDiscountValueGiftLineItemDraft : ICartDiscountValueDraft
     {
         IProductReference Product { get; set;}
         

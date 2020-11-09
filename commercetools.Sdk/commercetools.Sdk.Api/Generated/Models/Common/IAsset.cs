@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.Asset))]
-    public interface IAsset 
+    public partial interface IAsset 
     {
         string Id { get; set;}
         

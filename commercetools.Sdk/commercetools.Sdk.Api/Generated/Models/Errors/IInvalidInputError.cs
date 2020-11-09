@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.InvalidInputError))]
-    public interface IInvalidInputError : IErrorObject
+    public partial interface IInvalidInputError : IErrorObject
     {
     }
 }

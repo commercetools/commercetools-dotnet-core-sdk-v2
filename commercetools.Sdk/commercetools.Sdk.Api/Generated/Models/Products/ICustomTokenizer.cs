@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.CustomTokenizer))]
-    public interface ICustomTokenizer : ISuggestTokenizer
+    public partial interface ICustomTokenizer : ISuggestTokenizer
     {
         List<string> Inputs { get; set;}
     }

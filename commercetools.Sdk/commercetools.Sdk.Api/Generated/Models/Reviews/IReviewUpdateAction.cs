@@ -19,7 +19,7 @@ namespace commercetools.Api.Models.Reviews
     [SubTypeDiscriminator("setText", typeof(commercetools.Api.Models.Reviews.ReviewSetTextAction))]
     [SubTypeDiscriminator("setTitle", typeof(commercetools.Api.Models.Reviews.ReviewSetTitleAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Api.Models.Reviews.ReviewTransitionStateAction))]
-    public interface IReviewUpdateAction 
+    public partial interface IReviewUpdateAction 
     {
         string Action { get; set;}
     }

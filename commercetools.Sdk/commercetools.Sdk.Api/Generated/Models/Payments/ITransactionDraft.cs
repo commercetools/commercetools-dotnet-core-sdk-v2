@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.TransactionDraft))]
-    public interface ITransactionDraft 
+    public partial interface ITransactionDraft 
     {
         DateTime Timestamp { get; set;}
         

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductRevertStagedChangesAction))]
-    public interface IProductRevertStagedChangesAction : IProductUpdateAction
+    public partial interface IProductRevertStagedChangesAction : IProductUpdateAction
     {
     }
 }

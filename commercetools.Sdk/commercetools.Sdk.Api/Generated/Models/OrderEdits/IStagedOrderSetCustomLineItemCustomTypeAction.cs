@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomLineItemCustomTypeAction))]
-    public interface IStagedOrderSetCustomLineItemCustomTypeAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderSetCustomLineItemCustomTypeAction : IStagedOrderUpdateAction
     {
         string CustomLineItemId { get; set;}
         

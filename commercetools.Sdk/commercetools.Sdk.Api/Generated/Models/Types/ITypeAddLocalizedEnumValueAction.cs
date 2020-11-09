@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeAddLocalizedEnumValueAction))]
-    public interface ITypeAddLocalizedEnumValueAction : ITypeUpdateAction
+    public partial interface ITypeAddLocalizedEnumValueAction : ITypeUpdateAction
     {
         string FieldName { get; set;}
         

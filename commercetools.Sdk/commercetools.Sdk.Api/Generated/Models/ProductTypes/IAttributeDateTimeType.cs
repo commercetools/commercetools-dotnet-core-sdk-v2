@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductTypes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeDateTimeType))]
-    public interface IAttributeDateTimeType : IAttributeType
+    public partial interface IAttributeDateTimeType : IAttributeType
     {
     }
 }

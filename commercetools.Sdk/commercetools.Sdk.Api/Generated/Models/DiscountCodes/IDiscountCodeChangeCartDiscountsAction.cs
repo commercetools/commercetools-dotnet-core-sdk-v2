@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction))]
-    public interface IDiscountCodeChangeCartDiscountsAction : IDiscountCodeUpdateAction
+    public partial interface IDiscountCodeChangeCartDiscountsAction : IDiscountCodeUpdateAction
     {
         List<ICartDiscountResourceIdentifier> CartDiscounts { get; set;}
     }

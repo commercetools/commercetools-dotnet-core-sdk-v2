@@ -32,7 +32,7 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelReference))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountReference))]
     [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryReference))]
-    public interface IReference 
+    public partial interface IReference 
     {
         string TypeId { get; set;}
         

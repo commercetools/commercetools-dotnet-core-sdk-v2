@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentPagedQueryResponse))]
-    public interface IPaymentPagedQueryResponse 
+    public partial interface IPaymentPagedQueryResponse 
     {
         long Limit { get; set;}
         

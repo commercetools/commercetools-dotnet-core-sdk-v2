@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListChangeLineItemQuantityAction))]
-    public interface IMyShoppingListChangeLineItemQuantityAction : IMyShoppingListUpdateAction
+    public partial interface IMyShoppingListChangeLineItemQuantityAction : IMyShoppingListUpdateAction
     {
         string LineItemId { get; set;}
         

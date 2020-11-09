@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariantDraft))]
-    public interface IProductVariantDraft 
+    public partial interface IProductVariantDraft 
     {
         string Sku { get; set;}
         

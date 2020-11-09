@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupResourceIdentifier))]
-    public interface ICustomerGroupResourceIdentifier : IResourceIdentifier
+    public partial interface ICustomerGroupResourceIdentifier : IResourceIdentifier
     {
     }
 }

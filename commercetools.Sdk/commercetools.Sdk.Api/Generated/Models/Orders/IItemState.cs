@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.ItemState))]
-    public interface IItemState 
+    public partial interface IItemState 
     {
         double Quantity { get; set;}
         

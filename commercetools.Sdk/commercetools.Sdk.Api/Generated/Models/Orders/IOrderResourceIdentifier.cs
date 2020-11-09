@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderResourceIdentifier))]
-    public interface IOrderResourceIdentifier : IResourceIdentifier
+    public partial interface IOrderResourceIdentifier : IResourceIdentifier
     {
     }
 }

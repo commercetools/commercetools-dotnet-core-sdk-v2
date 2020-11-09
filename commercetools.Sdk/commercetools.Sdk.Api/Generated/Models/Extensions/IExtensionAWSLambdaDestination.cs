@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionAWSLambdaDestination))]
-    public interface IExtensionAWSLambdaDestination : IExtensionDestination
+    public partial interface IExtensionAWSLambdaDestination : IExtensionDestination
     {
         string Arn { get; set;}
         

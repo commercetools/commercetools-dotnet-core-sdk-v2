@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetLastNameAction))]
-    public interface ICustomerSetLastNameAction : ICustomerUpdateAction
+    public partial interface ICustomerSetLastNameAction : ICustomerUpdateAction
     {
         string LastName { get; set;}
     }

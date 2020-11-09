@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderLineItemDiscountSetMessagePayload))]
-    public interface IOrderLineItemDiscountSetMessagePayload : IMessagePayload
+    public partial interface IOrderLineItemDiscountSetMessagePayload : IMessagePayload
     {
         string LineItemId { get; set;}
         

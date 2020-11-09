@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction))]
-    public interface IShoppingListAddTextLineItemAction : IShoppingListUpdateAction
+    public partial interface IShoppingListAddTextLineItemAction : IShoppingListUpdateAction
     {
         ILocalizedString Name { get; set;}
         

@@ -11,7 +11,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingMethodAction))]
-    public interface IStagedOrderSetShippingMethodAction : IStagedOrderUpdateAction
+    public partial interface IStagedOrderSetShippingMethodAction : IStagedOrderUpdateAction
     {
         IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         

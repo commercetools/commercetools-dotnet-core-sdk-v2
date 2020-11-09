@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductAddToCategoryAction))]
-    public interface IProductAddToCategoryAction : IProductUpdateAction
+    public partial interface IProductAddToCategoryAction : IProductUpdateAction
     {
         ICategoryResourceIdentifier Category { get; set;}
         

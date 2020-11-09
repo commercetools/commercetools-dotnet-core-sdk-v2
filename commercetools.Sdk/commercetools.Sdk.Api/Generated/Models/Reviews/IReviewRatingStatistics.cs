@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewRatingStatistics))]
-    public interface IReviewRatingStatistics 
+    public partial interface IReviewRatingStatistics 
     {
         double AverageRating { get; set;}
         

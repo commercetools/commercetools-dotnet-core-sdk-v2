@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetShippingAddressAction))]
-    public interface IMyCartSetShippingAddressAction : IMyCartUpdateAction
+    public partial interface IMyCartSetShippingAddressAction : IMyCartUpdateAction
     {
         IAddress Address { get; set;}
     }

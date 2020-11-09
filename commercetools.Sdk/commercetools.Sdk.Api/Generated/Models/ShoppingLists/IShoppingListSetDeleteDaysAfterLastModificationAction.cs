@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetDeleteDaysAfterLastModificationAction))]
-    public interface IShoppingListSetDeleteDaysAfterLastModificationAction : IShoppingListUpdateAction
+    public partial interface IShoppingListSetDeleteDaysAfterLastModificationAction : IShoppingListUpdateAction
     {
         long? DeleteDaysAfterLastModification { get; set;}
     }

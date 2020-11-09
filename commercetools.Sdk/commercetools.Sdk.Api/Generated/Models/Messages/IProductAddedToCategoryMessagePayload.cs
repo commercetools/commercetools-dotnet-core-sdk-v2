@@ -10,7 +10,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductAddedToCategoryMessagePayload))]
-    public interface IProductAddedToCategoryMessagePayload : IMessagePayload
+    public partial interface IProductAddedToCategoryMessagePayload : IMessagePayload
     {
         ICategoryReference Category { get; set;}
         
