@@ -14,6 +14,14 @@ namespace commercetools.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.MyShoppingList))]
     public partial interface IMyShoppingList : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

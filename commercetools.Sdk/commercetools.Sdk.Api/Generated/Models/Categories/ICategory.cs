@@ -13,6 +13,14 @@ namespace commercetools.Api.Models.Categories
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.Category))]
     public partial interface ICategory : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

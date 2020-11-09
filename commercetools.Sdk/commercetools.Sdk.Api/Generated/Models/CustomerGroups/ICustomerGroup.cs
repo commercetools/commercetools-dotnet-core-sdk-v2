@@ -12,6 +12,14 @@ namespace commercetools.Api.Models.CustomerGroups
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroup))]
     public partial interface ICustomerGroup : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

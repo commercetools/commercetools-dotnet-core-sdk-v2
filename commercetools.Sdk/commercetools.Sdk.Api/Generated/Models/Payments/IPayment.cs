@@ -14,6 +14,14 @@ namespace commercetools.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.Payment))]
     public partial interface IPayment : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

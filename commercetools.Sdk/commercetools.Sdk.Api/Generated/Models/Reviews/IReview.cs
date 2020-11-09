@@ -14,6 +14,14 @@ namespace commercetools.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.Review))]
     public partial interface IReview : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

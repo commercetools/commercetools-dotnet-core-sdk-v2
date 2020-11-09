@@ -12,6 +12,14 @@ namespace commercetools.Api.Models.TaxCategories
     [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategory))]
     public partial interface ITaxCategory : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
         ILastModifiedBy LastModifiedBy { get; set;}
         
         ICreatedBy CreatedBy { get; set;}

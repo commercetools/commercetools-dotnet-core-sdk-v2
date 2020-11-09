@@ -17,6 +17,10 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductProjection))]
     public partial interface IProductProjection : IBaseResource
     {
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
         string Key { get; set;}
         
         IProductTypeReference ProductType { get; set;}
