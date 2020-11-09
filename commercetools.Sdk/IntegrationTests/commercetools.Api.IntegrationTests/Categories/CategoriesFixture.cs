@@ -77,6 +77,10 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             await With(client, new CategoryDraft(), draftAction, func, CreateCategory, DeleteCategory);
         }
+        public static async Task WithCategory( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, Func<Category, Task> func)
+        {
+            await WithAsync(client, new CategoryDraft(), draftAction, func, CreateCategory, DeleteCategory);
+        }
         public static async Task WithCategory( IClient client, Func<Category, Task> func)
         {
             await WithAsync(client, new CategoryDraft(), DefaultCategoryDraft, func, CreateCategory, DeleteCategory);
