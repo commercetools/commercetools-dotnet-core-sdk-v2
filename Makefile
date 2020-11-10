@@ -16,8 +16,8 @@ gen_import_sdk: generate_import
 gen_ml_sdk: generate_ml
 
 verify:
-	dotnet test --verbosity=normal Tests/commercetools.Api.Serialization.Tests -c Release
-	dotnet test --verbosity=normal Tests/commercetools.Api.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Api.Serialization.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Api.Tests -c Release
 
 codegen_install:
 	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
