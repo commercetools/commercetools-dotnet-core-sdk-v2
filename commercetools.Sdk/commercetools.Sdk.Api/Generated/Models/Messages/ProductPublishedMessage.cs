@@ -35,7 +35,7 @@ namespace commercetools.Api.Models.Messages
         
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
         
-        public List<Object> RemovedImageUrls { get; set;}
+        public List<string> RemovedImageUrls { get; set;}
         
         public IProductProjection ProductProjection { get; set;}
         
