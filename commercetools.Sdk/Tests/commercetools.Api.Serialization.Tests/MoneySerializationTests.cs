@@ -42,7 +42,8 @@ namespace commercetools.Api.Serialization.Tests
             var deserialized = serializerService.Deserialize<ITypedMoney>(serialized);
             Assert.IsType<CentPrecisionMoney>(deserialized);
             Assert.Equal("EUR", deserialized.CurrencyCode);
-            Assert.Equal(MoneyType.CentPrecision, deserialized.TypeAsEnum);
+            Assert.NotNull(deserialized.Type.Value);
+            Assert.Equal(MoneyType.CentPrecision, deserialized.Type.Value);
             Assert.Equal(1234.56M, deserialized.AmountToDecimal());
             Assert.Equal(2, deserialized.FractionDigits);
         }
@@ -62,7 +63,8 @@ namespace commercetools.Api.Serialization.Tests
             var highPrecisionMoney = deserialized as HighPrecisionMoney;
             Assert.NotNull(highPrecisionMoney);
             Assert.Equal("EUR", highPrecisionMoney.CurrencyCode);
-            Assert.Equal(MoneyType.HighPrecision, highPrecisionMoney.TypeAsEnum);
+            Assert.NotNull(highPrecisionMoney.Type.Value);
+            Assert.Equal(MoneyType.HighPrecision, highPrecisionMoney.Type.Value);
             Assert.Equal(123456, highPrecisionMoney.CentAmount);
             Assert.Equal(1234.5678M, highPrecisionMoney.AmountToDecimal());
             Assert.Equal(4, highPrecisionMoney.FractionDigits);
