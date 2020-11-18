@@ -1,0 +1,38 @@
+using System;
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using commercetools.Base.CustomAttributes;
+
+namespace commercetools.Base.Serialization.JsonConverters
+{
+    public class EnumInterfaceConverter<T>
+        : JsonConverter<T>
+    {
+        protected JsonNamingPolicy NamingPolicy { get; }
+        
+        protected JsonSerializerOptions JsonSerializerOptions { get; }
+        
+        
+        public EnumInterfaceConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions)
+        {
+            this.NamingPolicy = namingPolicy;
+            this.JsonSerializerOptions = jsonSerializerOptions;
+        }
+
+        public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            var attr = typeof(T).GetCustomAttribute<EnumInterfaceCreatorAttribute>();
+            if (attr == null)
+                throw new NullReferenceException($"Failed to find the required '{nameof(EnumInterfaceCreatorAttribute)}'");
+            var attrDelegate = attr.Creator();
+            return (T)attrDelegate.DynamicInvoke(reader.GetString());
+        }
+
+        /// <inheritdoc/>
+        public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
