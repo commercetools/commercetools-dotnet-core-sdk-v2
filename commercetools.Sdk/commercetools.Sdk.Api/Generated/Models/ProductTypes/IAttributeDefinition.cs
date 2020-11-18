@@ -21,15 +21,11 @@ namespace commercetools.Api.Models.ProductTypes
         
         bool IsRequired { get; set;}
         
-        string AttributeConstraint { get; set;}
-        
-        AttributeConstraintEnum AttributeConstraintAsEnum { get; }
+        IAttributeConstraintEnum AttributeConstraint { get; set;}
         
         ILocalizedString InputTip { get; set;}
         
-        string InputHint { get; set;}
-        
-        TextInputHint InputHintAsEnum { get; }
+        ITextInputHint InputHint { get; set;}
         
         bool IsSearchable { get; set;}
     }

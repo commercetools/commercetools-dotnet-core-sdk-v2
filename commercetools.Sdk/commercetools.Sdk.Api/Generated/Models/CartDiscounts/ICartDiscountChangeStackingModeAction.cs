@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountChangeStackingModeAction))]
     public partial interface ICartDiscountChangeStackingModeAction : ICartDiscountUpdateAction
     {
-        string StackingMode { get; set;}
-        
-        StackingMode StackingModeAsEnum { get; }
+        IStackingMode StackingMode { get; set;}
     }
 }

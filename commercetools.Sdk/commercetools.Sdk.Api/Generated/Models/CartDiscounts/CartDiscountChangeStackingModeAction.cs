@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.CartDiscounts
     {
         public string Action { get; set;}
         
-        public string StackingMode { get; set;}
-        
-        [JsonIgnore]
-        public StackingMode StackingModeAsEnum => this.StackingMode.GetEnum<StackingMode>();
+        public IStackingMode StackingMode { get; set;}
         public CartDiscountChangeStackingModeAction()
         { 
            this.Action = "changeStackingMode";

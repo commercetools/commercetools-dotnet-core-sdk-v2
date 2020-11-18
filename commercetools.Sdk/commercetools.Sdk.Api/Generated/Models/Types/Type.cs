@@ -29,10 +29,7 @@ namespace commercetools.Api.Models.Types
         
         public ILocalizedString Description { get; set;}
         
-        public List<string> ResourceTypeIds { get; set;}
-        
-        [JsonIgnore]
-        public List<ResourceTypeId> ResourceTypeIdsAsEnum => this.ResourceTypeIds.GetEnum<ResourceTypeId>();
+        public List<IResourceTypeId> ResourceTypeIds { get; set;}
         
         public List<IFieldDefinition> FieldDefinitions { get; set;}
     }

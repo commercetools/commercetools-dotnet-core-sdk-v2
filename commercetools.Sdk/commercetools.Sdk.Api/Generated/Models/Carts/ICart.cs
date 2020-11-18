@@ -45,29 +45,19 @@ namespace commercetools.Api.Models.Carts
         
         ITaxedPrice TaxedPrice { get; set;}
         
-        string CartState { get; set;}
-        
-        CartState CartStateAsEnum { get; }
+        ICartState CartState { get; set;}
         
         IAddress ShippingAddress { get; set;}
         
         IAddress BillingAddress { get; set;}
         
-        string InventoryMode { get; set;}
+        IInventoryMode InventoryMode { get; set;}
         
-        InventoryMode InventoryModeAsEnum { get; }
+        ITaxMode TaxMode { get; set;}
         
-        string TaxMode { get; set;}
+        IRoundingMode TaxRoundingMode { get; set;}
         
-        TaxMode TaxModeAsEnum { get; }
-        
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
-        
-        string TaxCalculationMode { get; set;}
-        
-        TaxCalculationMode TaxCalculationModeAsEnum { get; }
+        ITaxCalculationMode TaxCalculationMode { get; set;}
         
         ICustomerGroupReference CustomerGroup { get; set;}
         
@@ -87,9 +77,7 @@ namespace commercetools.Api.Models.Carts
         
         List<ICartDiscountReference> RefusedGifts { get; set;}
         
-        string Origin { get; set;}
-        
-        CartOrigin OriginAsEnum { get; }
+        ICartOrigin Origin { get; set;}
         
         IShippingRateInput ShippingRateInput { get; set;}
         

@@ -10,14 +10,8 @@ namespace commercetools.Api.Models.Extensions
 {
     public partial class ExtensionTrigger : IExtensionTrigger
     {
-        public string ResourceTypeId { get; set;}
+        public IExtensionResourceTypeId ResourceTypeId { get; set;}
         
-        [JsonIgnore]
-        public ExtensionResourceTypeId ResourceTypeIdAsEnum => this.ResourceTypeId.GetEnum<ExtensionResourceTypeId>();
-        
-        public List<string> Actions { get; set;}
-        
-        [JsonIgnore]
-        public List<ExtensionAction> ActionsAsEnum => this.Actions.GetEnum<ExtensionAction>();
+        public List<IExtensionAction> Actions { get; set;}
     }
 }

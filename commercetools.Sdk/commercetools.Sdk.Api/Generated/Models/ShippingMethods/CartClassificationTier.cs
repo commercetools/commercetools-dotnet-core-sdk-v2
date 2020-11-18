@@ -11,10 +11,7 @@ namespace commercetools.Api.Models.ShippingMethods
 {
     public partial class CartClassificationTier : ICartClassificationTier
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
+        public IShippingRateTierType Type { get; set;}
         
         public string Value { get; set;}
         
@@ -23,7 +20,7 @@ namespace commercetools.Api.Models.ShippingMethods
         public bool? IsMatching { get; set;}
         public CartClassificationTier()
         { 
-           this.Type = "CartClassification";
+           this.Type = IShippingRateTierType.FindEnum("CartClassification");
         }
     }
 }

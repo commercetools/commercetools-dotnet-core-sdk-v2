@@ -12,8 +12,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.MaxResourceLimitExceededError))]
     public partial interface IMaxResourceLimitExceededError : IErrorObject
     {
-        string ExceededResource { get; set;}
-        
-        ReferenceTypeId ExceededResourceAsEnum { get; }
+        IReferenceTypeId ExceededResource { get; set;}
     }
 }

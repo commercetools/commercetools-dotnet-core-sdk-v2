@@ -19,9 +19,6 @@ namespace commercetools.Api.Models.Types
         
         public bool Required { get; set;}
         
-        public string InputHint { get; set;}
-        
-        [JsonIgnore]
-        public TypeTextInputHint InputHintAsEnum => this.InputHint.GetEnum<TypeTextInputHint>();
+        public ITypeTextInputHint InputHint { get; set;}
     }
 }

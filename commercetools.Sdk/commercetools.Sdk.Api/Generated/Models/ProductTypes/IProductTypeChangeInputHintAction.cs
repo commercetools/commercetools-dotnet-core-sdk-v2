@@ -14,8 +14,6 @@ namespace commercetools.Api.Models.ProductTypes
     {
         string AttributeName { get; set;}
         
-        string NewValue { get; set;}
-        
-        TextInputHint NewValueAsEnum { get; }
+        ITextInputHint NewValue { get; set;}
     }
 }

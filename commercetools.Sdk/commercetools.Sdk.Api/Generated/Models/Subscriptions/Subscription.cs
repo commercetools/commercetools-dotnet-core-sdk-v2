@@ -33,9 +33,6 @@ namespace commercetools.Api.Models.Subscriptions
         
         public IDeliveryFormat Format { get; set;}
         
-        public string Status { get; set;}
-        
-        [JsonIgnore]
-        public SubscriptionHealthStatus StatusAsEnum => this.Status.GetEnum<SubscriptionHealthStatus>();
+        public ISubscriptionHealthStatus Status { get; set;}
     }
 }

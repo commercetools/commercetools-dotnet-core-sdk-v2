@@ -12,12 +12,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderShipmentStateChangedMessagePayload))]
     public partial interface IOrderShipmentStateChangedMessagePayload : IMessagePayload
     {
-        string ShipmentState { get; set;}
+        IShipmentState ShipmentState { get; set;}
         
-        ShipmentState ShipmentStateAsEnum { get; }
-        
-        string OldShipmentState { get; set;}
-        
-        ShipmentState OldShipmentStateAsEnum { get; }
+        IShipmentState OldShipmentState { get; set;}
     }
 }

@@ -13,12 +13,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderPaymentStateChangedMessage))]
     public partial interface IOrderPaymentStateChangedMessage : IMessage
     {
-        string PaymentState { get; set;}
+        IPaymentState PaymentState { get; set;}
         
-        PaymentState PaymentStateAsEnum { get; }
-        
-        string OldPaymentState { get; set;}
-        
-        PaymentState OldPaymentStateAsEnum { get; }
+        IPaymentState OldPaymentState { get; set;}
     }
 }

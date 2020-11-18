@@ -28,15 +28,13 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryReference))]
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeReference))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneReference))]
-    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountReference))]
     [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelReference))]
-    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryReference))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartReference))]
+    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountReference))]
+    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryReference))]
     public partial interface IReference 
     {
-        string TypeId { get; set;}
-        
-        ReferenceTypeId TypeIdAsEnum { get; }
+        IReferenceTypeId TypeId { get; set;}
         
         string Id { get; set;}
     }

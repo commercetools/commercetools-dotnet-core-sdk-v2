@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.Products
 {
     public partial class FilteredFacetResult : IFilteredFacetResult
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        public IFacetTypes Type { get; set;}
         
         public long Count { get; set;}
         
         public long? ProductCount { get; set;}
         public FilteredFacetResult()
         { 
-           this.Type = "filter";
+           this.Type = IFacetTypes.FindEnum("filter");
         }
     }
 }

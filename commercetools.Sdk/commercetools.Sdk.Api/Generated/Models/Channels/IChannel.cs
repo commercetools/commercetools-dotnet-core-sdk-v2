@@ -28,9 +28,7 @@ namespace commercetools.Api.Models.Channels
         
         string Key { get; set;}
         
-        List<string> Roles { get; set;}
-        
-        List<ChannelRoleEnum> RolesAsEnum { get; }
+        List<IChannelRoleEnum> Roles { get; set;}
         
         ILocalizedString Name { get; set;}
         

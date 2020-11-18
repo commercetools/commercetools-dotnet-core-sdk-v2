@@ -20,10 +20,7 @@ namespace commercetools.Api.Models.Me
         
         public string Country { get; set;}
         
-        public string InventoryMode { get; set;}
-        
-        [JsonIgnore]
-        public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
+        public IInventoryMode InventoryMode { get; set;}
         
         public List<IMyLineItemDraft> LineItems { get; set;}
         
@@ -37,10 +34,7 @@ namespace commercetools.Api.Models.Me
         
         public string Locale { get; set;}
         
-        public string TaxMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
+        public ITaxMode TaxMode { get; set;}
         
         public long? DeleteDaysAfterLastModification { get; set;}
         

@@ -49,9 +49,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         List<IReference> References { get; set;}
         
-        string StackingMode { get; set;}
-        
-        StackingMode StackingModeAsEnum { get; }
+        IStackingMode StackingMode { get; set;}
         
         ICustomFields Custom { get; set;}
     }

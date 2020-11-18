@@ -19,8 +19,6 @@ namespace commercetools.Api.Models.Orders
         
         string Comment { get; set;}
         
-        string ShipmentState { get; set;}
-        
-        ReturnShipmentState ShipmentStateAsEnum { get; }
+        IReturnShipmentState ShipmentState { get; set;}
     }
 }

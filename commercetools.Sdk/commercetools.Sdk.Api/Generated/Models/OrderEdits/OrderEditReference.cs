@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class OrderEditReference : IOrderEditReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IOrderEdit Obj { get; set;}
         public OrderEditReference()
         { 
-           this.TypeId = "order-edit";
+           this.TypeId = IReferenceTypeId.FindEnum("order-edit");
         }
     }
 }

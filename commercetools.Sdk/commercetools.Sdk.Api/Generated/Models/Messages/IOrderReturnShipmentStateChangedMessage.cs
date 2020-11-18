@@ -15,8 +15,6 @@ namespace commercetools.Api.Models.Messages
     {
         string ReturnItemId { get; set;}
         
-        string ReturnShipmentState { get; set;}
-        
-        ReturnShipmentState ReturnShipmentStateAsEnum { get; }
+        IReturnShipmentState ReturnShipmentState { get; set;}
     }
 }

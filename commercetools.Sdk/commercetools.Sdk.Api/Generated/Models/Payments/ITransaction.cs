@@ -16,16 +16,12 @@ namespace commercetools.Api.Models.Payments
         
         DateTime Timestamp { get; set;}
         
-        string Type { get; set;}
-        
-        TransactionType TypeAsEnum { get; }
+        ITransactionType Type { get; set;}
         
         ITypedMoney Amount { get; set;}
         
         string InteractionId { get; set;}
         
-        string State { get; set;}
-        
-        TransactionState StateAsEnum { get; }
+        ITransactionState State { get; set;}
     }
 }

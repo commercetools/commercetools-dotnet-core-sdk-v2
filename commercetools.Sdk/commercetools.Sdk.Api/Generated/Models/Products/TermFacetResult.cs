@@ -10,15 +10,9 @@ namespace commercetools.Api.Models.Products
 {
     public partial class TermFacetResult : ITermFacetResult
     {
-        public string Type { get; set;}
+        public IFacetTypes Type { get; set;}
         
-        [JsonIgnore]
-        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
-        
-        public string DataType { get; set;}
-        
-        [JsonIgnore]
-        public TermFacetResultType DataTypeAsEnum => this.DataType.GetEnum<TermFacetResultType>();
+        public ITermFacetResultType DataType { get; set;}
         
         public long Missing { get; set;}
         
@@ -29,7 +23,7 @@ namespace commercetools.Api.Models.Products
         public List<IFacetResultTerm> Terms { get; set;}
         public TermFacetResult()
         { 
-           this.Type = "terms";
+           this.Type = IFacetTypes.FindEnum("terms");
         }
     }
 }

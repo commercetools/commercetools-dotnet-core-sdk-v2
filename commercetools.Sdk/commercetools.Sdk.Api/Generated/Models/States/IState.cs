@@ -26,9 +26,7 @@ namespace commercetools.Api.Models.States
         
         string Key { get; set;}
         
-        string Type { get; set;}
-        
-        StateTypeEnum TypeAsEnum { get; }
+        IStateTypeEnum Type { get; set;}
         
         ILocalizedString Name { get; set;}
         
@@ -38,9 +36,7 @@ namespace commercetools.Api.Models.States
         
         bool BuiltIn { get; set;}
         
-        List<string> Roles { get; set;}
-        
-        List<StateRoleEnum> RolesAsEnum { get; }
+        List<IStateRoleEnum> Roles { get; set;}
         
         List<IStateReference> Transitions { get; set;}
     }

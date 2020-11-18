@@ -44,34 +44,19 @@ namespace commercetools.Api.Models.Me
         
         public ITaxedPrice TaxedPrice { get; set;}
         
-        public string CartState { get; set;}
-        
-        [JsonIgnore]
-        public CartState CartStateAsEnum => this.CartState.GetEnum<CartState>();
+        public ICartState CartState { get; set;}
         
         public IAddress ShippingAddress { get; set;}
         
         public IAddress BillingAddress { get; set;}
         
-        public string InventoryMode { get; set;}
+        public IInventoryMode InventoryMode { get; set;}
         
-        [JsonIgnore]
-        public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
+        public ITaxMode TaxMode { get; set;}
         
-        public string TaxMode { get; set;}
+        public IRoundingMode TaxRoundingMode { get; set;}
         
-        [JsonIgnore]
-        public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
-        
-        public string TaxRoundingMode { get; set;}
-        
-        [JsonIgnore]
-        public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
-        
-        public string TaxCalculationMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
+        public ITaxCalculationMode TaxCalculationMode { get; set;}
         
         public ICustomerGroupReference CustomerGroup { get; set;}
         
@@ -91,10 +76,7 @@ namespace commercetools.Api.Models.Me
         
         public List<ICartDiscountReference> RefusedGifts { get; set;}
         
-        public string Origin { get; set;}
-        
-        [JsonIgnore]
-        public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
+        public ICartOrigin Origin { get; set;}
         
         public IShippingRateInput ShippingRateInput { get; set;}
         

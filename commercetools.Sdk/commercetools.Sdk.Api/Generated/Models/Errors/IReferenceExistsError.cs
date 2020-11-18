@@ -12,8 +12,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ReferenceExistsError))]
     public partial interface IReferenceExistsError : IErrorObject
     {
-        string ReferencedBy { get; set;}
-        
-        ReferenceTypeId ReferencedByAsEnum { get; }
+        IReferenceTypeId ReferencedBy { get; set;}
     }
 }

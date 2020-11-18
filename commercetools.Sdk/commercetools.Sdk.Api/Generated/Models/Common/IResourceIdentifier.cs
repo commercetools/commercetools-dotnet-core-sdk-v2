@@ -27,15 +27,13 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryResourceIdentifier))]
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeResourceIdentifier))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneResourceIdentifier))]
-    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryResourceIdentifier))]
-    [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartResourceIdentifier))]
-    [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelResourceIdentifier))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountResourceIdentifier))]
+    [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelResourceIdentifier))]
+    [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartResourceIdentifier))]
+    [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryResourceIdentifier))]
     public partial interface IResourceIdentifier 
     {
-        string TypeId { get; set;}
-        
-        ReferenceTypeId TypeIdAsEnum { get; }
+        IReferenceTypeId TypeId { get; set;}
         
         string Id { get; set;}
         

@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.ShippingMethods
 {
     public partial class ShippingMethodResourceIdentifier : IShippingMethodResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public ShippingMethodResourceIdentifier()
         { 
-           this.TypeId = "shipping-method";
+           this.TypeId = IReferenceTypeId.FindEnum("shipping-method");
         }
     }
 }

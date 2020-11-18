@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.Products
     {
         public string Action { get; set;}
         
-        public string Scope { get; set;}
-        
-        [JsonIgnore]
-        public ProductPublishScope ScopeAsEnum => this.Scope.GetEnum<ProductPublishScope>();
+        public IProductPublishScope Scope { get; set;}
         public ProductPublishAction()
         { 
            this.Action = "publish";

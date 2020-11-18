@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.CustomerGroups
 {
     public partial class CustomerGroupReference : ICustomerGroupReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public ICustomerGroup Obj { get; set;}
         public CustomerGroupReference()
         { 
-           this.TypeId = "customer-group";
+           this.TypeId = IReferenceTypeId.FindEnum("customer-group");
         }
     }
 }

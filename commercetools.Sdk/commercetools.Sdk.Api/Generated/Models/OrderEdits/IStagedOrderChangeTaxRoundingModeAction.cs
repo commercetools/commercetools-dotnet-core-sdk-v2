@@ -12,8 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderChangeTaxRoundingModeAction))]
     public partial interface IStagedOrderChangeTaxRoundingModeAction : IStagedOrderUpdateAction
     {
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
+        IRoundingMode TaxRoundingMode { get; set;}
     }
 }

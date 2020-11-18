@@ -34,15 +34,9 @@ namespace commercetools.Api.Models.Messages
         
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
         
-        public string PaymentState { get; set;}
+        public IPaymentState PaymentState { get; set;}
         
-        [JsonIgnore]
-        public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
-        
-        public string OldPaymentState { get; set;}
-        
-        [JsonIgnore]
-        public PaymentState OldPaymentStateAsEnum => this.OldPaymentState.GetEnum<PaymentState>();
+        public IPaymentState OldPaymentState { get; set;}
         public OrderPaymentStateChangedMessage()
         { 
            this.Type = "OrderPaymentStateChanged";

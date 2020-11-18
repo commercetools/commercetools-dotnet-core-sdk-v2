@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.Customers
 {
     public partial class CustomerResourceIdentifier : ICustomerResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public CustomerResourceIdentifier()
         { 
-           this.TypeId = "customer";
+           this.TypeId = IReferenceTypeId.FindEnum("customer");
         }
     }
 }

@@ -38,17 +38,11 @@ namespace commercetools.Api.Models.Orders
         
         string Country { get; set;}
         
-        string OrderState { get; set;}
+        IOrderState OrderState { get; set;}
         
-        OrderState OrderStateAsEnum { get; }
+        IShipmentState ShipmentState { get; set;}
         
-        string ShipmentState { get; set;}
-        
-        ShipmentState ShipmentStateAsEnum { get; }
-        
-        string PaymentState { get; set;}
-        
-        PaymentState PaymentStateAsEnum { get; }
+        IPaymentState PaymentState { get; set;}
         
         IShippingInfoImportDraft ShippingInfo { get; set;}
         
@@ -56,20 +50,14 @@ namespace commercetools.Api.Models.Orders
         
         ICustomFieldsDraft Custom { get; set;}
         
-        string InventoryMode { get; set;}
+        IInventoryMode InventoryMode { get; set;}
         
-        InventoryMode InventoryModeAsEnum { get; }
-        
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
+        IRoundingMode TaxRoundingMode { get; set;}
         
         List<IAddress> ItemShippingAddresses { get; set;}
         
         IStoreResourceIdentifier Store { get; set;}
         
-        string Origin { get; set;}
-        
-        CartOrigin OriginAsEnum { get; }
+        ICartOrigin Origin { get; set;}
     }
 }

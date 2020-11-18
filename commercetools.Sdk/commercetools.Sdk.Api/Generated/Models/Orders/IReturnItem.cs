@@ -9,8 +9,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [TypeDiscriminator(nameof(Type))]
-    [SubTypeDiscriminator("LineItemReturnItem", typeof(commercetools.Api.Models.Orders.LineItemReturnItem))]
     [SubTypeDiscriminator("CustomLineItemReturnItem", typeof(commercetools.Api.Models.Orders.CustomLineItemReturnItem))]
+    [SubTypeDiscriminator("LineItemReturnItem", typeof(commercetools.Api.Models.Orders.LineItemReturnItem))]
     public partial interface IReturnItem 
     {
         string Id { get; set;}
@@ -21,13 +21,9 @@ namespace commercetools.Api.Models.Orders
         
         string Comment { get; set;}
         
-        string ShipmentState { get; set;}
+        IReturnShipmentState ShipmentState { get; set;}
         
-        ReturnShipmentState ShipmentStateAsEnum { get; }
-        
-        string PaymentState { get; set;}
-        
-        ReturnPaymentState PaymentStateAsEnum { get; }
+        IReturnPaymentState PaymentState { get; set;}
         
         DateTime LastModifiedAt { get; set;}
         

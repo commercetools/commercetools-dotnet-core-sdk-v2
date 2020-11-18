@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.ShoppingLists
 {
     public partial class ShoppingListResourceIdentifier : IShoppingListResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public ShoppingListResourceIdentifier()
         { 
-           this.TypeId = "shopping-list";
+           this.TypeId = IReferenceTypeId.FindEnum("shopping-list");
         }
     }
 }

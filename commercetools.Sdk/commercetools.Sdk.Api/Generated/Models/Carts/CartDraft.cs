@@ -29,25 +29,13 @@ namespace commercetools.Api.Models.Carts
         
         public string Country { get; set;}
         
-        public string InventoryMode { get; set;}
+        public IInventoryMode InventoryMode { get; set;}
         
-        [JsonIgnore]
-        public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
+        public ITaxMode TaxMode { get; set;}
         
-        public string TaxMode { get; set;}
+        public IRoundingMode TaxRoundingMode { get; set;}
         
-        [JsonIgnore]
-        public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
-        
-        public string TaxRoundingMode { get; set;}
-        
-        [JsonIgnore]
-        public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
-        
-        public string TaxCalculationMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
+        public ITaxCalculationMode TaxCalculationMode { get; set;}
         
         public List<ILineItemDraft> LineItems { get; set;}
         
@@ -67,10 +55,7 @@ namespace commercetools.Api.Models.Carts
         
         public long? DeleteDaysAfterLastModification { get; set;}
         
-        public string Origin { get; set;}
-        
-        [JsonIgnore]
-        public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
+        public ICartOrigin Origin { get; set;}
         
         public IShippingRateInputDraft ShippingRateInput { get; set;}
         

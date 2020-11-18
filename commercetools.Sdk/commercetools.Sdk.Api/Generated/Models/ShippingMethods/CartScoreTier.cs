@@ -11,10 +11,7 @@ namespace commercetools.Api.Models.ShippingMethods
 {
     public partial class CartScoreTier : ICartScoreTier
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
+        public IShippingRateTierType Type { get; set;}
         
         public double Score { get; set;}
         
@@ -25,7 +22,7 @@ namespace commercetools.Api.Models.ShippingMethods
         public bool? IsMatching { get; set;}
         public CartScoreTier()
         { 
-           this.Type = "CartScore";
+           this.Type = IShippingRateTierType.FindEnum("CartScore");
         }
     }
 }

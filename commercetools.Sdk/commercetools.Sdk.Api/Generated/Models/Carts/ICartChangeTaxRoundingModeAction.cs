@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartChangeTaxRoundingModeAction))]
     public partial interface ICartChangeTaxRoundingModeAction : ICartUpdateAction
     {
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
+        IRoundingMode TaxRoundingMode { get; set;}
     }
 }

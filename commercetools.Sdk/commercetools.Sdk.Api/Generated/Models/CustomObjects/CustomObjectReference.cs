@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.CustomObjects
 {
     public partial class CustomObjectReference : ICustomObjectReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public ICustomObject Obj { get; set;}
         public CustomObjectReference()
         { 
-           this.TypeId = "key-value-document";
+           this.TypeId = IReferenceTypeId.FindEnum("key-value-document");
         }
     }
 }

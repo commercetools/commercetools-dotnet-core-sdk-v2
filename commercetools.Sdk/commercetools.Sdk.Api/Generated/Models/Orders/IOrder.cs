@@ -54,31 +54,21 @@ namespace commercetools.Api.Models.Orders
         
         IAddress BillingAddress { get; set;}
         
-        string TaxMode { get; set;}
+        ITaxMode TaxMode { get; set;}
         
-        TaxMode TaxModeAsEnum { get; }
-        
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
+        IRoundingMode TaxRoundingMode { get; set;}
         
         ICustomerGroupReference CustomerGroup { get; set;}
         
         string Country { get; set;}
         
-        string OrderState { get; set;}
-        
-        OrderState OrderStateAsEnum { get; }
+        IOrderState OrderState { get; set;}
         
         IStateReference State { get; set;}
         
-        string ShipmentState { get; set;}
+        IShipmentState ShipmentState { get; set;}
         
-        ShipmentState ShipmentStateAsEnum { get; }
-        
-        string PaymentState { get; set;}
-        
-        PaymentState PaymentStateAsEnum { get; }
+        IPaymentState PaymentState { get; set;}
         
         IShippingInfo ShippingInfo { get; set;}
         
@@ -98,17 +88,11 @@ namespace commercetools.Api.Models.Orders
         
         string Locale { get; set;}
         
-        string InventoryMode { get; set;}
+        IInventoryMode InventoryMode { get; set;}
         
-        InventoryMode InventoryModeAsEnum { get; }
+        ICartOrigin Origin { get; set;}
         
-        string Origin { get; set;}
-        
-        CartOrigin OriginAsEnum { get; }
-        
-        string TaxCalculationMode { get; set;}
-        
-        TaxCalculationMode TaxCalculationModeAsEnum { get; }
+        ITaxCalculationMode TaxCalculationMode { get; set;}
         
         IShippingRateInput ShippingRateInput { get; set;}
         

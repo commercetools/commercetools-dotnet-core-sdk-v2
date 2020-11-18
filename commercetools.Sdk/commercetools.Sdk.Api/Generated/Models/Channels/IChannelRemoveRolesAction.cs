@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelRemoveRolesAction))]
     public partial interface IChannelRemoveRolesAction : IChannelUpdateAction
     {
-        List<string> Roles { get; set;}
-        
-        List<ChannelRoleEnum> RolesAsEnum { get; }
+        List<IChannelRoleEnum> Roles { get; set;}
     }
 }

@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.Errors
         
         public string Message { get; set;}
         
-        public string ReferencedBy { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId ReferencedByAsEnum => this.ReferencedBy.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId ReferencedBy { get; set;}
         public ReferenceExistsError()
         { 
            this.Code = "ReferenceExists";

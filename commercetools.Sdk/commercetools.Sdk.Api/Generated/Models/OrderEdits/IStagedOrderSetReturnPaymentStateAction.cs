@@ -13,8 +13,6 @@ namespace commercetools.Api.Models.OrderEdits
     {
         string ReturnItemId { get; set;}
         
-        string PaymentState { get; set;}
-        
-        ReturnPaymentState PaymentStateAsEnum { get; }
+        IReturnPaymentState PaymentState { get; set;}
     }
 }

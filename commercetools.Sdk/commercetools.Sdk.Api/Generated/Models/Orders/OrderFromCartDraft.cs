@@ -17,20 +17,11 @@ namespace commercetools.Api.Models.Orders
         
         public string OrderNumber { get; set;}
         
-        public string PaymentState { get; set;}
+        public IPaymentState PaymentState { get; set;}
         
-        [JsonIgnore]
-        public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
+        public IShipmentState ShipmentState { get; set;}
         
-        public string ShipmentState { get; set;}
-        
-        [JsonIgnore]
-        public ShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ShipmentState>();
-        
-        public string OrderState { get; set;}
-        
-        [JsonIgnore]
-        public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
+        public IOrderState OrderState { get; set;}
         
         public IStateResourceIdentifier State { get; set;}
     }
