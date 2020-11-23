@@ -120,6 +120,9 @@ namespace commercetools.Api.IntegrationTests.Categories
                         Assert.Equal(category.Key, retrievedCategory.Key);
                         Assert.NotNull(retrievedCategory.Parent);
                         Assert.Equal(parentCategory.Id, retrievedCategory.Parent.Id);
+                        Assert.Equal(IReferenceTypeId.Category, retrievedCategory.Parent.TypeId);
+                        Assert.NotNull(retrievedCategory.Parent.TypeId.Value);
+                        Assert.Equal(ReferenceTypeId.Category, retrievedCategory.Parent.TypeId.Value);
                     });
             });
         }

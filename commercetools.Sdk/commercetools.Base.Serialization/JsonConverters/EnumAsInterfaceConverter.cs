@@ -7,7 +7,7 @@ using commercetools.Base.Models;
 
 namespace commercetools.Base.Serialization.JsonConverters
 {
-    public class EnumInterfaceConverter<T>
+    public class EnumAsInterfaceConverter<T>
         : JsonConverter<T>
     {
         protected JsonNamingPolicy NamingPolicy { get; }
@@ -15,7 +15,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         protected JsonSerializerOptions JsonSerializerOptions { get; }
         
         
-        public EnumInterfaceConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions)
+        public EnumAsInterfaceConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions)
         {
             this.NamingPolicy = namingPolicy;
             this.JsonSerializerOptions = jsonSerializerOptions;

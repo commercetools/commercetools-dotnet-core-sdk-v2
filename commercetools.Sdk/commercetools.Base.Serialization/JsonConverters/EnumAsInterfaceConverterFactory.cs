@@ -9,12 +9,12 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Base.Serialization.JsonConverters
 {
-    public class EnumInterfaceConverterFactory
+    public class EnumAsInterfaceConverterFactory
         : JsonConverterFactory
     {
         protected static ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
-        public EnumInterfaceConverterFactory(
+        public EnumAsInterfaceConverterFactory(
             JsonNamingPolicy namingPolicy,
             JsonSerializerOptions jsonSerializerOptions)
         {
@@ -37,7 +37,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {
-                Type converterType = typeof(EnumInterfaceConverter<>).MakeGenericType(typeToConvert);
+                Type converterType = typeof(EnumAsInterfaceConverter<>).MakeGenericType(typeToConvert);
                 converter = (JsonConverter) Activator.CreateInstance(converterType, this.NamingPolicy,
                     JsonSerializerOptions);
                 Converters.TryAdd(typeToConvert, converter);

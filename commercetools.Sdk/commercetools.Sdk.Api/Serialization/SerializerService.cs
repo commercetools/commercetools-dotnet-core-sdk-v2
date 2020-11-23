@@ -30,7 +30,7 @@ namespace commercetools.Api.Serialization
             _serializerOptions.Converters.Add(new FieldContainerConverter(mapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
-            _serializerOptions.Converters.Add(new EnumInterfaceConverterFactory(
+            _serializerOptions.Converters.Add(new EnumAsInterfaceConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new TypeDiscriminatorConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
