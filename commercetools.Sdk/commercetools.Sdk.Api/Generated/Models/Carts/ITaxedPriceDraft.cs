@@ -12,9 +12,9 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.TaxedPriceDraft))]
     public partial interface ITaxedPriceDraft 
     {
-        ITypedMoneyDraft TotalNet { get; set;}
+        IMoney TotalNet { get; set;}
         
-        ITypedMoneyDraft TotalGross { get; set;}
+        IMoney TotalGross { get; set;}
         
         List<ITaxPortionDraft> TaxPortions { get; set;}
     }
