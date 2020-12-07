@@ -14,13 +14,13 @@ namespace commercetools.Api.Models.CartDiscounts
     {
         public string Type { get; set;}
         
-        public IProductReference Product { get; set;}
+        public IProductResourceIdentifier Product { get; set;}
         
         public long VariantId { get; set;}
         
-        public IChannelReference SupplyChannel { get; set;}
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
         
-        public IChannelReference DistributionChannel { get; set;}
+        public IChannelResourceIdentifier DistributionChannel { get; set;}
         public CartDiscountValueGiftLineItemDraft()
         { 
            this.Type = "giftLineItem";
