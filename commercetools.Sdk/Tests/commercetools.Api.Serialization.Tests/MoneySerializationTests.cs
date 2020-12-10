@@ -73,7 +73,7 @@ namespace commercetools.Api.Serialization.Tests
         public void HighPrecisionMoneySerialization()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
-            var m = HighPrecisionMoney.FromDecimal("EUR", 1234.56789M, 4);
+            var m = HighPrecisionMoneyDraft.FromDecimal("EUR", 1234.56789M, 4);
 
             var serialize = serializerService.Serialize(m);
             var resultFormatted = JValue.Parse(serialize);
