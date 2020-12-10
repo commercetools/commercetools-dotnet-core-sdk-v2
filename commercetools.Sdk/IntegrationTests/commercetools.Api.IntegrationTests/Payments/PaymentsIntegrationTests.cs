@@ -28,7 +28,7 @@ namespace commercetools.Api.IntegrationTests.Payments
             var transactionDraft = new TransactionDraft
             {
                 Amount = amount,
-                Type = TransactionType.Charge.GetDescription()
+                Type = ITransactionType.Charge
             };
             await WithPayment(
                 client, paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
@@ -37,7 +37,7 @@ namespace commercetools.Api.IntegrationTests.Payments
                     Assert.Single(payment.Transactions);
                     var transaction = payment.Transactions.FirstOrDefault();
                     Assert.NotNull(transaction);
-                    Assert.Equal(TransactionType.Charge, transaction.TypeAsEnum);
+                    Assert.Equal(ITransactionType.Charge, transaction.Type);
                     var retrievedAmount = transaction.Amount;
                     Assert.NotNull(retrievedAmount);
                     Assert.Equal(amount.CentAmount, retrievedAmount.CentAmount);
