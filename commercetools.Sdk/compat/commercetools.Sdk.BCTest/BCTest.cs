@@ -38,7 +38,7 @@ namespace commercetools.Sdk.BCTest
         }
 
         [Fact]
-        public async Task TestEnumDeserialization()
+        public void TestEnumDeserialization()
         {
             var json = "{\"typeId\" : \"category\"}";
             var refTypeId = _serializerService.Deserialize<IReferenceTypeId>(json);
@@ -46,7 +46,7 @@ namespace commercetools.Sdk.BCTest
         }
         
         [Fact]
-        public async Task TestEnumDeserialization2()
+        public void TestEnumDeserialization2()
         {
             var json = "{\"typeId\" : \"category\", \"id\": \"6b0aae40-29dc-4236-8065-80abab12f959\"}";
             var icategoryRef = _serializerService.Deserialize<ICategoryReference>(json);
@@ -54,7 +54,7 @@ namespace commercetools.Sdk.BCTest
         }
 
         [Fact]
-        public async Task TestCategoryDeseralization()
+        public void TestCategoryDeseralization()
         {
             var json = File.ReadAllText("Resources/category.json");
             var category = _serializerService.Deserialize<ICategory>(json);
