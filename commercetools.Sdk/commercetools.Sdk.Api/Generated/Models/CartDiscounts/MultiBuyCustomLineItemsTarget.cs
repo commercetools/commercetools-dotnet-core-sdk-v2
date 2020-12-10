@@ -20,10 +20,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public int? MaxOccurrence { get; set;}
         
-        public string SelectionMode { get; set;}
-        
-        [JsonIgnore]
-        public SelectionMode SelectionModeAsEnum => this.SelectionMode.GetEnum<SelectionMode>();
+        public ISelectionMode SelectionMode { get; set;}
         public MultiBuyCustomLineItemsTarget()
         { 
            this.Type = "multiBuyCustomLineItems";

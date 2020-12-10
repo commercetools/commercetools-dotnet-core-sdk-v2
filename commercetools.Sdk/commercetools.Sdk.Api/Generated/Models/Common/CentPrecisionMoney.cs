@@ -10,10 +10,7 @@ namespace commercetools.Api.Models.Common
 {
     public partial class CentPrecisionMoney : ICentPrecisionMoney
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public MoneyType TypeAsEnum => this.Type.GetEnum<MoneyType>();
+        public IMoneyType Type { get; set;}
         
         public int FractionDigits { get; set;}
         
@@ -22,7 +19,7 @@ namespace commercetools.Api.Models.Common
         public string CurrencyCode { get; set;}
         public CentPrecisionMoney()
         { 
-           this.Type = "centPrecision";
+           this.Type = IMoneyType.FindEnum("centPrecision");
         }
     }
 }

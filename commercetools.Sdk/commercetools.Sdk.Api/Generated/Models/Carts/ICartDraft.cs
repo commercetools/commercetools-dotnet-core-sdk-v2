@@ -30,21 +30,13 @@ namespace commercetools.Api.Models.Carts
         
         string Country { get; set;}
         
-        string InventoryMode { get; set;}
+        IInventoryMode InventoryMode { get; set;}
         
-        InventoryMode InventoryModeAsEnum { get; }
+        ITaxMode TaxMode { get; set;}
         
-        string TaxMode { get; set;}
+        IRoundingMode TaxRoundingMode { get; set;}
         
-        TaxMode TaxModeAsEnum { get; }
-        
-        string TaxRoundingMode { get; set;}
-        
-        RoundingMode TaxRoundingModeAsEnum { get; }
-        
-        string TaxCalculationMode { get; set;}
-        
-        TaxCalculationMode TaxCalculationModeAsEnum { get; }
+        ITaxCalculationMode TaxCalculationMode { get; set;}
         
         List<ILineItemDraft> LineItems { get; set;}
         
@@ -64,9 +56,7 @@ namespace commercetools.Api.Models.Carts
         
         long? DeleteDaysAfterLastModification { get; set;}
         
-        string Origin { get; set;}
-        
-        CartOrigin OriginAsEnum { get; }
+        ICartOrigin Origin { get; set;}
         
         IShippingRateInputDraft ShippingRateInput { get; set;}
         

@@ -13,8 +13,6 @@ namespace commercetools.Api.Models.Payments
     {
         string TransactionId { get; set;}
         
-        string State { get; set;}
-        
-        TransactionState StateAsEnum { get; }
+        ITransactionState State { get; set;}
     }
 }

@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Reflection;
 using commercetools.Base.CustomAttributes;
-using commercetools.Sdk.Registration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace commercetools.Sdk.V2Compat
+namespace commercetools.Sdk.V2Compat.JsonConverters
 {
     public class TypeDiscriminatorConverter<T> : JsonConverter
     {

@@ -37,20 +37,11 @@ namespace commercetools.Api.Models.Orders
         
         public string Country { get; set;}
         
-        public string OrderState { get; set;}
+        public IOrderState OrderState { get; set;}
         
-        [JsonIgnore]
-        public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
+        public IShipmentState ShipmentState { get; set;}
         
-        public string ShipmentState { get; set;}
-        
-        [JsonIgnore]
-        public ShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ShipmentState>();
-        
-        public string PaymentState { get; set;}
-        
-        [JsonIgnore]
-        public PaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<PaymentState>();
+        public IPaymentState PaymentState { get; set;}
         
         public IShippingInfoImportDraft ShippingInfo { get; set;}
         
@@ -58,23 +49,14 @@ namespace commercetools.Api.Models.Orders
         
         public ICustomFieldsDraft Custom { get; set;}
         
-        public string InventoryMode { get; set;}
+        public IInventoryMode InventoryMode { get; set;}
         
-        [JsonIgnore]
-        public InventoryMode InventoryModeAsEnum => this.InventoryMode.GetEnum<InventoryMode>();
-        
-        public string TaxRoundingMode { get; set;}
-        
-        [JsonIgnore]
-        public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
+        public IRoundingMode TaxRoundingMode { get; set;}
         
         public List<IAddress> ItemShippingAddresses { get; set;}
         
         public IStoreResourceIdentifier Store { get; set;}
         
-        public string Origin { get; set;}
-        
-        [JsonIgnore]
-        public CartOrigin OriginAsEnum => this.Origin.GetEnum<CartOrigin>();
+        public ICartOrigin Origin { get; set;}
     }
 }

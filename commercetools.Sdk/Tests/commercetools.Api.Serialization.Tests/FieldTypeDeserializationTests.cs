@@ -26,10 +26,10 @@ namespace commercetools.Api.Serialization.Tests
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/FieldTypes/String.json");
             var deserialized = serializerService.Deserialize<IType>(serialized);
-            Assert.NotNull(deserialized.ResourceTypeIdsAsEnum);
-            Assert.Equal(2,deserialized.ResourceTypeIdsAsEnum.Count);
-            Assert.Equal(ResourceTypeId.Category, deserialized.ResourceTypeIdsAsEnum[0]);
-            Assert.Equal(ResourceTypeId.CustomLineItem, deserialized.ResourceTypeIdsAsEnum[1]);
+            Assert.NotNull(deserialized.ResourceTypeIds);
+            Assert.Equal(2,deserialized.ResourceTypeIds.Count);
+            Assert.Equal(ResourceTypeId.Category, deserialized.ResourceTypeIds[0].Value);
+            Assert.Equal(ResourceTypeId.CustomLineItem, deserialized.ResourceTypeIds[1].Value);
             Assert.IsType<CustomFieldStringType>(deserialized.FieldDefinitions[0].Type);
         }
 
@@ -40,10 +40,10 @@ namespace commercetools.Api.Serialization.Tests
             TypeDraft typeDraft = new TypeDraft
             {
                 Key = "new-key",
-                ResourceTypeIds = new List<string>
+                ResourceTypeIds = new List<IResourceTypeId>
                 {
-                    ResourceTypeId.Category.GetDescription(), 
-                    ResourceTypeId.CustomLineItem.GetDescription()
+                    IResourceTypeId.Category, 
+                    IResourceTypeId.CustomLineItem
                 }
             };
             FieldDefinition fieldDefinition = new FieldDefinition();
@@ -53,7 +53,7 @@ namespace commercetools.Api.Serialization.Tests
             {
                 {"en", "string description"}
             };
-            fieldDefinition.InputHint = TextInputHint.SingleLine.GetDescription();
+            fieldDefinition.InputHint = ITypeTextInputHint.SingleLine;
             fieldDefinition.Type = new CustomFieldStringType();
             typeDraft.FieldDefinitions = new List<IFieldDefinition>
             {

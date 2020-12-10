@@ -1,5 +1,7 @@
 using System.ComponentModel;
-
+using System.Linq;
+using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 namespace commercetools.Api.Models.Carts
 {
    public enum ShippingMethodState
@@ -9,5 +11,34 @@ namespace commercetools.Api.Models.Carts
        
        [Description("MatchesCart")]
        MatchesCart
+   }
+   public class ShippingMethodStateWrapper : IShippingMethodState
+   {
+       public string JsonName { get; internal set; }
+       public ShippingMethodState? Value { get; internal set; }
+   }
+   [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
+   public interface IShippingMethodState : IJsonName
+   {
+        public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
+         {Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart"}; 
+       
+        public static IShippingMethodState MatchesCart = new ShippingMethodStateWrapper
+         {Value = ShippingMethodState.MatchesCart, JsonName = "MatchesCart"}; 
+       
+        ShippingMethodState? Value { get; }
+        
+        static IShippingMethodState[] Values()
+        {
+           return new[]
+           {
+                DoesNotMatchCart ,
+                MatchesCart 
+           };
+        }
+        static IShippingMethodState FindEnum(string value)
+        {
+           return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShippingMethodStateWrapper() {JsonName = value};
+        }
    }
 }

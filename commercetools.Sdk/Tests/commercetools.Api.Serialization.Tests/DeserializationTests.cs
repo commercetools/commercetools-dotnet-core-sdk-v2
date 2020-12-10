@@ -80,7 +80,8 @@ namespace commercetools.Api.Serialization.Tests
             var taxCategoryRef = shippingMethod.TaxCategory;
             Assert.NotNull(taxCategoryRef.Obj);
             Assert.Equal("3d018013-b53d-422a-933c-7294cf114323", taxCategoryRef.Obj.Id);
-            Assert.Equal(ReferenceTypeId.TaxCategory, taxCategoryRef.TypeIdAsEnum);
+            Assert.NotNull(taxCategoryRef.TypeId.Value);
+            Assert.Equal(ReferenceTypeId.TaxCategory, taxCategoryRef.TypeId.Value);
         }
         
         [Fact]
@@ -94,7 +95,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal(2, shippingMethodsResult.Count);
             Assert.Equal(20, shippingMethodsResult.Limit);
             Assert.Equal("7806c94b-bd59-47e0-b4b4-fd32ecd2f93d", shippingMethodsResult.Results[0].Id);
-            Assert.Equal(ReferenceTypeId.TaxCategory, shippingMethodsResult.Results[0].TaxCategory.TypeIdAsEnum);
+            Assert.NotNull(shippingMethodsResult.Results[0].TaxCategory.TypeId.Value);
+            Assert.Equal(ReferenceTypeId.TaxCategory, shippingMethodsResult.Results[0].TaxCategory.TypeId.Value);
             Assert.Equal("3d018013-b53d-422a-933c-7294cf114323", shippingMethodsResult.Results[0].TaxCategory.Obj.Id);
         }
         
@@ -110,9 +112,8 @@ namespace commercetools.Api.Serialization.Tests
             ";
 
             var state = serializerService.Deserialize<State>(serialized);
-
-            Assert.Equal("OrderState", state.Type);
-            Assert.Equal(StateTypeEnum.OrderState, state.TypeAsEnum);
+            
+            Assert.Equal(StateTypeEnum.OrderState, state.Type.Value);
         }
         
         [Fact]
@@ -128,8 +129,8 @@ namespace commercetools.Api.Serialization.Tests
 
             var state = serializerService.Deserialize<State>(serialized);
 
-            Assert.Equal("Unknown", state.Type);
-            Assert.Throws<ArgumentException>(() => state.TypeAsEnum);
+            Assert.Equal("Unknown", state.Type.JsonName);
+            Assert.Null(state.Type.Value);
         }
         
         [Fact]
@@ -140,7 +141,8 @@ namespace commercetools.Api.Serialization.Tests
             
             var order = serializerService.Deserialize<Order>(orderSerialized);
             Assert.NotNull(order);
-            Assert.Equal(PaymentState.Pending,order.PaymentStateAsEnum);
+            Assert.NotNull(order.PaymentState.Value);
+            Assert.Equal(PaymentState.Pending,order.PaymentState.Value);
             Assert.Null(order.ShipmentState);
         }
 

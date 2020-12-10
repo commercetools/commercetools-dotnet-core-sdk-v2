@@ -14,8 +14,6 @@ namespace commercetools.Api.Models.Products
     [SubTypeDiscriminator("terms", typeof(commercetools.Api.Models.Products.TermFacetResult))]
     public partial interface IFacetResult 
     {
-        string Type { get; set;}
-        
-        FacetTypes TypeAsEnum { get; }
+        IFacetTypes Type { get; set;}
     }
 }

@@ -10,9 +10,6 @@ namespace commercetools.Api.Models.Products
 {
     public abstract partial class FacetResult : IFacetResult
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        public IFacetTypes Type { get; set;}
     }
 }

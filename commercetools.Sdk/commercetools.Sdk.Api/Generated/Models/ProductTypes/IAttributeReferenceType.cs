@@ -12,8 +12,6 @@ namespace commercetools.Api.Models.ProductTypes
     [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeReferenceType))]
     public partial interface IAttributeReferenceType : IAttributeType
     {
-        string ReferenceTypeId { get; set;}
-        
-        ReferenceTypeId ReferenceTypeIdAsEnum { get; }
+        IReferenceTypeId ReferenceTypeId { get; set;}
     }
 }

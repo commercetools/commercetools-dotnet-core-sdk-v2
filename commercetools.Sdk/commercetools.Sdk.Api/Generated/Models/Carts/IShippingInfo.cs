@@ -33,8 +33,6 @@ namespace commercetools.Api.Models.Carts
         
         IDiscountedLineItemPrice DiscountedPrice { get; set;}
         
-        string ShippingMethodState { get; set;}
-        
-        ShippingMethodState ShippingMethodStateAsEnum { get; }
+        IShippingMethodState ShippingMethodState { get; set;}
     }
 }

@@ -10,15 +10,12 @@ namespace commercetools.Api.Models.Products
 {
     public partial class RangeFacetResult : IRangeFacetResult
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public FacetTypes TypeAsEnum => this.Type.GetEnum<FacetTypes>();
+        public IFacetTypes Type { get; set;}
         
         public List<IFacetResultRange> Ranges { get; set;}
         public RangeFacetResult()
         { 
-           this.Type = "range";
+           this.Type = IFacetTypes.FindEnum("range");
         }
     }
 }

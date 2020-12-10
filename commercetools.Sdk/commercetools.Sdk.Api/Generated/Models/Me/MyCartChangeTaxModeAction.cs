@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.Me
     {
         public string Action { get; set;}
         
-        public string TaxMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxMode TaxModeAsEnum => this.TaxMode.GetEnum<TaxMode>();
+        public ITaxMode TaxMode { get; set;}
         public MyCartChangeTaxModeAction()
         { 
            this.Action = "changeTaxMode";

@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.Categories
 {
     public partial class CategoryResourceIdentifier : ICategoryResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public CategoryResourceIdentifier()
         { 
-           this.TypeId = "category";
+           this.TypeId = IReferenceTypeId.FindEnum("category");
         }
     }
 }

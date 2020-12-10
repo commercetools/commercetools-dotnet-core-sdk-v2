@@ -13,18 +13,12 @@ namespace commercetools.Api.Models.Payments
     {
         public DateTime Timestamp { get; set;}
         
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public TransactionType TypeAsEnum => this.Type.GetEnum<TransactionType>();
+        public ITransactionType Type { get; set;}
         
         public IMoney Amount { get; set;}
         
         public string InteractionId { get; set;}
         
-        public string State { get; set;}
-        
-        [JsonIgnore]
-        public TransactionState StateAsEnum => this.State.GetEnum<TransactionState>();
+        public ITransactionState State { get; set;}
     }
 }

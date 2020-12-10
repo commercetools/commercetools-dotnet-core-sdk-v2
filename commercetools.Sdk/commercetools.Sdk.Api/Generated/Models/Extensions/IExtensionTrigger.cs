@@ -11,12 +11,8 @@ namespace commercetools.Api.Models.Extensions
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionTrigger))]
     public partial interface IExtensionTrigger 
     {
-        string ResourceTypeId { get; set;}
+        IExtensionResourceTypeId ResourceTypeId { get; set;}
         
-        ExtensionResourceTypeId ResourceTypeIdAsEnum { get; }
-        
-        List<string> Actions { get; set;}
-        
-        List<ExtensionAction> ActionsAsEnum { get; }
+        List<IExtensionAction> Actions { get; set;}
     }
 }

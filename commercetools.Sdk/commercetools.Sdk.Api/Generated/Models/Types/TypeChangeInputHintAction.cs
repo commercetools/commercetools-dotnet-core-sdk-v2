@@ -14,10 +14,7 @@ namespace commercetools.Api.Models.Types
         
         public string FieldName { get; set;}
         
-        public string InputHint { get; set;}
-        
-        [JsonIgnore]
-        public TypeTextInputHint InputHintAsEnum => this.InputHint.GetEnum<TypeTextInputHint>();
+        public ITypeTextInputHint InputHint { get; set;}
         public TypeChangeInputHintAction()
         { 
            this.Action = "changeInputHint";

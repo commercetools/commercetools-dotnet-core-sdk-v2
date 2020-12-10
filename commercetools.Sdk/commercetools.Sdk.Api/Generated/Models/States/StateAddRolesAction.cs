@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.States
     {
         public string Action { get; set;}
         
-        public List<string> Roles { get; set;}
-        
-        [JsonIgnore]
-        public List<StateRoleEnum> RolesAsEnum => this.Roles.GetEnum<StateRoleEnum>();
+        public List<IStateRoleEnum> Roles { get; set;}
         public StateAddRolesAction()
         { 
            this.Action = "addRoles";

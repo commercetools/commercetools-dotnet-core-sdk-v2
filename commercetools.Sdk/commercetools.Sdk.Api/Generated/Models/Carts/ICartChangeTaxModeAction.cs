@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartChangeTaxModeAction))]
     public partial interface ICartChangeTaxModeAction : ICartUpdateAction
     {
-        string TaxMode { get; set;}
-        
-        TaxMode TaxModeAsEnum { get; }
+        ITaxMode TaxMode { get; set;}
     }
 }

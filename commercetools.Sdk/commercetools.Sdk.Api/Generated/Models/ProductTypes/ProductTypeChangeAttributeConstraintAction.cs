@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.ProductTypes
         
         public string AttributeName { get; set;}
         
-        public string NewValue { get; set;}
-        
-        [JsonIgnore]
-        public AttributeConstraintEnumDraft NewValueAsEnum => this.NewValue.GetEnum<AttributeConstraintEnumDraft>();
+        public IAttributeConstraintEnumDraft NewValue { get; set;}
         public ProductTypeChangeAttributeConstraintAction()
         { 
            this.Action = "changeAttributeConstraint";

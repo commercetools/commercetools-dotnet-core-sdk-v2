@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.States
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateChangeTypeAction))]
     public partial interface IStateChangeTypeAction : IStateUpdateAction
     {
-        string Type { get; set;}
-        
-        StateTypeEnum TypeAsEnum { get; }
+        IStateTypeEnum Type { get; set;}
     }
 }

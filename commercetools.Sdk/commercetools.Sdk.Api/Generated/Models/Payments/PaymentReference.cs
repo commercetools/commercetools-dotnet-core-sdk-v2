@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.Payments
 {
     public partial class PaymentReference : IPaymentReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IPayment Obj { get; set;}
         public PaymentReference()
         { 
-           this.TypeId = "payment";
+           this.TypeId = IReferenceTypeId.FindEnum("payment");
         }
     }
 }

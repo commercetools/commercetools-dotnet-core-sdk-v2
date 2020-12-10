@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.OrderEdits
     {
         public string Action { get; set;}
         
-        public string TaxRoundingMode { get; set;}
-        
-        [JsonIgnore]
-        public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
+        public IRoundingMode TaxRoundingMode { get; set;}
         public StagedOrderChangeTaxRoundingModeAction()
         { 
            this.Action = "changeTaxRoundingMode";

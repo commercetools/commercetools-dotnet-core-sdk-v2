@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.ProductTypes
 {
     public partial class ProductTypeReference : IProductTypeReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IProductType Obj { get; set;}
         public ProductTypeReference()
         { 
-           this.TypeId = "product-type";
+           this.TypeId = IReferenceTypeId.FindEnum("product-type");
         }
     }
 }

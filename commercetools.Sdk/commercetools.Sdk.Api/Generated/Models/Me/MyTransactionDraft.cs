@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.Me
     {
         public DateTime Timestamp { get; set;}
         
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public TransactionType TypeAsEnum => this.Type.GetEnum<TransactionType>();
+        public ITransactionType Type { get; set;}
         
         public IMoney Amount { get; set;}
         

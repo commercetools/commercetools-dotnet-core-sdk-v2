@@ -1,3 +1,5 @@
+using System;
+
 namespace commercetools.Sdk.V2Compat
 {
     public static class Extensions
@@ -10,6 +12,10 @@ namespace commercetools.Sdk.V2Compat
             }
 
             return value;
+        }
+        public static bool IsAbstractClass(this Type type)
+        {
+            return type.IsClass && type.IsAbstract;
         }
     }
 }

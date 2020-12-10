@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderResourceIdentifier : IOrderResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public OrderResourceIdentifier()
         { 
-           this.TypeId = "order";
+           this.TypeId = IReferenceTypeId.FindEnum("order");
         }
     }
 }

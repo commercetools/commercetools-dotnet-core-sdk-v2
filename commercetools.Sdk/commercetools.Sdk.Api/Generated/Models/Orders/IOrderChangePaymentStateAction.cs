@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderChangePaymentStateAction))]
     public partial interface IOrderChangePaymentStateAction : IOrderUpdateAction
     {
-        string PaymentState { get; set;}
-        
-        PaymentState PaymentStateAsEnum { get; }
+        IPaymentState PaymentState { get; set;}
     }
 }

@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.Messages
         
         public string ReturnItemId { get; set;}
         
-        public string ReturnShipmentState { get; set;}
-        
-        [JsonIgnore]
-        public ReturnShipmentState ReturnShipmentStateAsEnum => this.ReturnShipmentState.GetEnum<ReturnShipmentState>();
+        public IReturnShipmentState ReturnShipmentState { get; set;}
         public OrderReturnShipmentStateChangedMessagePayload()
         { 
            this.Type = "OrderReturnShipmentStateChanged";

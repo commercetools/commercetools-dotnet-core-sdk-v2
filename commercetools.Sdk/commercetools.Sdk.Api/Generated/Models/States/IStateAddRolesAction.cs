@@ -11,8 +11,6 @@ namespace commercetools.Api.Models.States
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateAddRolesAction))]
     public partial interface IStateAddRolesAction : IStateUpdateAction
     {
-        List<string> Roles { get; set;}
-        
-        List<StateRoleEnum> RolesAsEnum { get; }
+        List<IStateRoleEnum> Roles { get; set;}
     }
 }

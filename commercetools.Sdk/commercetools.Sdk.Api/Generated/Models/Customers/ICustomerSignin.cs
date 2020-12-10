@@ -17,9 +17,7 @@ namespace commercetools.Api.Models.Customers
         
         string AnonymousCartId { get; set;}
         
-        string AnonymousCartSignInMode { get; set;}
-        
-        AnonymousCartSignInMode AnonymousCartSignInModeAsEnum { get; }
+        IAnonymousCartSignInMode AnonymousCartSignInMode { get; set;}
         
         string AnonymousId { get; set;}
         

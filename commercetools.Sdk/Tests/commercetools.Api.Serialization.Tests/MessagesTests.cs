@@ -180,8 +180,10 @@ namespace commercetools.Api.Serialization.Tests
             var subscription2Format = subscription2.Format as DeliveryCloudEventsFormat;
             Assert.NotNull(subscription2Format);
             Assert.Equal("0.1", subscription2Format.CloudEventsVersion);
-            Assert.Equal(SubscriptionHealthStatus.Healthy, subscription1.StatusAsEnum);
-            Assert.Equal(SubscriptionHealthStatus.TemporaryError, subscription2.StatusAsEnum);
+            Assert.NotNull(subscription1.Status.Value);
+            Assert.NotNull(subscription2.Status.Value);
+            Assert.Equal(SubscriptionHealthStatus.Healthy, subscription1.Status.Value);
+            Assert.Equal(SubscriptionHealthStatus.TemporaryError, subscription2.Status.Value);
             Assert.Single(subscription1.Messages);
             Assert.Single(subscription2.Changes);
         }

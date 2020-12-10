@@ -12,9 +12,7 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ReferencedResourceNotFoundError))]
     public partial interface IReferencedResourceNotFoundError : IErrorObject
     {
-        string TypeId { get; set;}
-        
-        ReferenceTypeId TypeIdAsEnum { get; }
+        IReferenceTypeId TypeId { get; set;}
         
         string Id { get; set;}
         

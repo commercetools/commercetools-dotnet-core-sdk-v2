@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.OrderEdits
     {
         public string Action { get; set;}
         
-        public string TaxCalculationMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
+        public ITaxCalculationMode TaxCalculationMode { get; set;}
         public StagedOrderChangeTaxCalculationModeAction()
         { 
            this.Action = "changeTaxCalculationMode";

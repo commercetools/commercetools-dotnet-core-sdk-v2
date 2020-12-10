@@ -35,9 +35,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         bool RequiresDiscountCode { get; set;}
         
-        string StackingMode { get; set;}
-        
-        StackingMode StackingModeAsEnum { get; }
+        IStackingMode StackingMode { get; set;}
         
         ICustomFields Custom { get; set;}
     }

@@ -38,9 +38,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             if (reader.TokenType != JsonTokenType.StartObject)
                 throw new JsonException("Start object token type expected");
-            using JsonDocument jsonDocument = JsonDocument.ParseValue(ref reader);
-            var json = jsonDocument.RootElement.GetRawText();
-            return (T) JsonSerializer.Deserialize(json, DeserializedType, JsonSerializerOptions);
+            return (T) JsonSerializer.Deserialize(ref reader, DeserializedType, JsonSerializerOptions);
         }
 
         /// <inheritdoc/>
