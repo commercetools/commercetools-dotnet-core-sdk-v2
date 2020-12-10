@@ -15,12 +15,8 @@ namespace commercetools.Api.Models.Messages
     {
         IDiscountCodeReference DiscountCode { get; set;}
         
-        string State { get; set;}
+        IDiscountCodeState State { get; set;}
         
-        DiscountCodeState StateAsEnum { get; }
-        
-        string OldState { get; set;}
-        
-        DiscountCodeState OldStateAsEnum { get; }
+        IDiscountCodeState OldState { get; set;}
     }
 }

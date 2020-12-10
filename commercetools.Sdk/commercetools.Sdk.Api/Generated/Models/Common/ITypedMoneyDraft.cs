@@ -13,9 +13,7 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("highPrecision", typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
     public partial interface ITypedMoneyDraft : IMoney
     {
-        string Type { get; set;}
-        
-        MoneyType TypeAsEnum { get; }
+        IMoneyType Type { get; set;}
         
         int? FractionDigits { get; set;}
     }

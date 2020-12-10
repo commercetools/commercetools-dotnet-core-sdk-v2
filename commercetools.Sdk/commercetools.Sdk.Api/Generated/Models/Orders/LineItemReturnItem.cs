@@ -18,15 +18,9 @@ namespace commercetools.Api.Models.Orders
         
         public string Comment { get; set;}
         
-        public string ShipmentState { get; set;}
+        public IReturnShipmentState ShipmentState { get; set;}
         
-        [JsonIgnore]
-        public ReturnShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ReturnShipmentState>();
-        
-        public string PaymentState { get; set;}
-        
-        [JsonIgnore]
-        public ReturnPaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<ReturnPaymentState>();
+        public IReturnPaymentState PaymentState { get; set;}
         
         public DateTime LastModifiedAt { get; set;}
         

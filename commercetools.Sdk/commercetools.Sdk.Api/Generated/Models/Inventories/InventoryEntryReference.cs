@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.Inventories
 {
     public partial class InventoryEntryReference : IInventoryEntryReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IInventoryEntry Obj { get; set;}
         public InventoryEntryReference()
         { 
-           this.TypeId = "inventory-entry";
+           this.TypeId = IReferenceTypeId.FindEnum("inventory-entry");
         }
     }
 }

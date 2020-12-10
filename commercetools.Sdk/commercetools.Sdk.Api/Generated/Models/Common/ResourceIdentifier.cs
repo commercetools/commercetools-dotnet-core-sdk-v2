@@ -10,10 +10,7 @@ namespace commercetools.Api.Models.Common
 {
     public abstract partial class ResourceIdentifier : IResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         

@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.Carts
     {
         public string Action { get; set;}
         
-        public string TaxCalculationMode { get; set;}
-        
-        [JsonIgnore]
-        public TaxCalculationMode TaxCalculationModeAsEnum => this.TaxCalculationMode.GetEnum<TaxCalculationMode>();
+        public ITaxCalculationMode TaxCalculationMode { get; set;}
         public CartChangeTaxCalculationModeAction()
         { 
            this.Action = "changeTaxCalculationMode";

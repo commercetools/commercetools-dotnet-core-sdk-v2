@@ -14,10 +14,7 @@ namespace commercetools.Api.Models.OrderEdits
         
         public string ReturnItemId { get; set;}
         
-        public string PaymentState { get; set;}
-        
-        [JsonIgnore]
-        public ReturnPaymentState PaymentStateAsEnum => this.PaymentState.GetEnum<ReturnPaymentState>();
+        public IReturnPaymentState PaymentState { get; set;}
         public StagedOrderSetReturnPaymentStateAction()
         { 
            this.Action = "setReturnPaymentState";

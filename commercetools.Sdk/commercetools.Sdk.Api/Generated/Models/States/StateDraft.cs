@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.States
     {
         public string Key { get; set;}
         
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public StateTypeEnum TypeAsEnum => this.Type.GetEnum<StateTypeEnum>();
+        public IStateTypeEnum Type { get; set;}
         
         public ILocalizedString Name { get; set;}
         
@@ -24,10 +21,7 @@ namespace commercetools.Api.Models.States
         
         public bool? Initial { get; set;}
         
-        public List<string> Roles { get; set;}
-        
-        [JsonIgnore]
-        public List<StateRoleEnum> RolesAsEnum => this.Roles.GetEnum<StateRoleEnum>();
+        public List<IStateRoleEnum> Roles { get; set;}
         
         public List<IStateResourceIdentifier> Transitions { get; set;}
     }

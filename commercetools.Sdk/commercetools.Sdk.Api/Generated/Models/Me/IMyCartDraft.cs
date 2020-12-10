@@ -21,9 +21,7 @@ namespace commercetools.Api.Models.Me
         
         string Country { get; set;}
         
-        string InventoryMode { get; set;}
-        
-        InventoryMode InventoryModeAsEnum { get; }
+        IInventoryMode InventoryMode { get; set;}
         
         List<IMyLineItemDraft> LineItems { get; set;}
         
@@ -37,9 +35,7 @@ namespace commercetools.Api.Models.Me
         
         string Locale { get; set;}
         
-        string TaxMode { get; set;}
-        
-        TaxMode TaxModeAsEnum { get; }
+        ITaxMode TaxMode { get; set;}
         
         long? DeleteDaysAfterLastModification { get; set;}
         

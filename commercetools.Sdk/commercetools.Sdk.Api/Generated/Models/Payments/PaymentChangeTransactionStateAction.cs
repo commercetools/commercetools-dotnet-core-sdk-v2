@@ -14,10 +14,7 @@ namespace commercetools.Api.Models.Payments
         
         public string TransactionId { get; set;}
         
-        public string State { get; set;}
-        
-        [JsonIgnore]
-        public TransactionState StateAsEnum => this.State.GetEnum<TransactionState>();
+        public ITransactionState State { get; set;}
         public PaymentChangeTransactionStateAction()
         { 
            this.Action = "changeTransactionState";

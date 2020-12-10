@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.DiscountCodes
 {
     public partial class DiscountCodeReference : IDiscountCodeReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IDiscountCode Obj { get; set;}
         public DiscountCodeReference()
         { 
-           this.TypeId = "discount-code";
+           this.TypeId = IReferenceTypeId.FindEnum("discount-code");
         }
     }
 }

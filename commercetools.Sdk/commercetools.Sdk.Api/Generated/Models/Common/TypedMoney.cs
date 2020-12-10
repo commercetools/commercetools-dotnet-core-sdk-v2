@@ -10,10 +10,7 @@ namespace commercetools.Api.Models.Common
 {
     public abstract partial class TypedMoney : ITypedMoney
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public MoneyType TypeAsEnum => this.Type.GetEnum<MoneyType>();
+        public IMoneyType Type { get; set;}
         
         public int FractionDigits { get; set;}
         

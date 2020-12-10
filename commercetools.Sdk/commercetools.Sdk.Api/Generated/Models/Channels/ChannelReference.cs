@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.Channels
 {
     public partial class ChannelReference : IChannelReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IChannel Obj { get; set;}
         public ChannelReference()
         { 
-           this.TypeId = "channel";
+           this.TypeId = IReferenceTypeId.FindEnum("channel");
         }
     }
 }

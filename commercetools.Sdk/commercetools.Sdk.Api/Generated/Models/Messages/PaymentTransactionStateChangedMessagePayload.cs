@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.Messages
         
         public string TransactionId { get; set;}
         
-        public string State { get; set;}
-        
-        [JsonIgnore]
-        public TransactionState StateAsEnum => this.State.GetEnum<TransactionState>();
+        public ITransactionState State { get; set;}
         public PaymentTransactionStateChangedMessagePayload()
         { 
            this.Type = "PaymentTransactionStateChanged";

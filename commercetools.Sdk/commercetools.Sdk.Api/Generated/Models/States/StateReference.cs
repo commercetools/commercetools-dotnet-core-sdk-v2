@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.States
 {
     public partial class StateReference : IStateReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public IState Obj { get; set;}
         public StateReference()
         { 
-           this.TypeId = "state";
+           this.TypeId = IReferenceTypeId.FindEnum("state");
         }
     }
 }

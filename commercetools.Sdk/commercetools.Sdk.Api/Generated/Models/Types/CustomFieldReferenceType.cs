@@ -13,10 +13,7 @@ namespace commercetools.Api.Models.Types
     {
         public string Name { get; set;}
         
-        public string ReferenceTypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId ReferenceTypeIdAsEnum => this.ReferenceTypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId ReferenceTypeId { get; set;}
         public CustomFieldReferenceType()
         { 
            this.Name = "Reference";

@@ -25,7 +25,6 @@ namespace commercetools.Sdk.BCTest
         {
             this.TestId = Guid.NewGuid();
             this.Configuration = new ConfigurationBuilder().
-                AddJsonFile("appsettings.test.json").
                 AddJsonFile("appsettings.test.Development.json", true).
                 // https://www.jerriepelser.com/blog/aspnet-core-no-more-worries-about-checking-in-secrets/
                 AddUserSecrets<ServiceProviderFixture>().

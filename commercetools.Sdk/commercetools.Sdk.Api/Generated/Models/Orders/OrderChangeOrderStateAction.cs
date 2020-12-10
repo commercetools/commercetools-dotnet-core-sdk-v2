@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.Orders
     {
         public string Action { get; set;}
         
-        public string OrderState { get; set;}
-        
-        [JsonIgnore]
-        public OrderState OrderStateAsEnum => this.OrderState.GetEnum<OrderState>();
+        public IOrderState OrderState { get; set;}
         public OrderChangeOrderStateAction()
         { 
            this.Action = "changeOrderState";

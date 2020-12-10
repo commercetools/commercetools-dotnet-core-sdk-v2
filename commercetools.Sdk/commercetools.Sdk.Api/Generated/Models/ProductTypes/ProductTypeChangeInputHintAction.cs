@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.ProductTypes
         
         public string AttributeName { get; set;}
         
-        public string NewValue { get; set;}
-        
-        [JsonIgnore]
-        public TextInputHint NewValueAsEnum => this.NewValue.GetEnum<TextInputHint>();
+        public ITextInputHint NewValue { get; set;}
         public ProductTypeChangeInputHintAction()
         { 
            this.Action = "changeInputHint";

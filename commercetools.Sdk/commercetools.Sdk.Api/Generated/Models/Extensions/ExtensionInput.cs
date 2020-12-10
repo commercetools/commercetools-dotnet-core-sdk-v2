@@ -11,10 +11,7 @@ namespace commercetools.Api.Models.Extensions
 {
     public partial class ExtensionInput : IExtensionInput
     {
-        public string Action { get; set;}
-        
-        [JsonIgnore]
-        public ExtensionAction ActionAsEnum => this.Action.GetEnum<ExtensionAction>();
+        public IExtensionAction Action { get; set;}
         
         public IReference Resource { get; set;}
     }

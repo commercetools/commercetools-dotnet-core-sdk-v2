@@ -34,8 +34,6 @@ namespace commercetools.Api.Models.Subscriptions
         
         IDeliveryFormat Format { get; set;}
         
-        string Status { get; set;}
-        
-        SubscriptionHealthStatus StatusAsEnum { get; }
+        ISubscriptionHealthStatus Status { get; set;}
     }
 }

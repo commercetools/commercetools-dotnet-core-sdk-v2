@@ -12,8 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderChangeTaxModeAction))]
     public partial interface IStagedOrderChangeTaxModeAction : IStagedOrderUpdateAction
     {
-        string TaxMode { get; set;}
-        
-        TaxMode TaxModeAsEnum { get; }
+        ITaxMode TaxMode { get; set;}
     }
 }

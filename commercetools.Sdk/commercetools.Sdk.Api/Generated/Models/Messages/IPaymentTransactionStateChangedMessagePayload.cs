@@ -14,8 +14,6 @@ namespace commercetools.Api.Models.Messages
     {
         string TransactionId { get; set;}
         
-        string State { get; set;}
-        
-        TransactionState StateAsEnum { get; }
+        ITransactionState State { get; set;}
     }
 }

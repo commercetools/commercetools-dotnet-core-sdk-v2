@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.Channels
     {
         public string Action { get; set;}
         
-        public List<string> Roles { get; set;}
-        
-        [JsonIgnore]
-        public List<ChannelRoleEnum> RolesAsEnum => this.Roles.GetEnum<ChannelRoleEnum>();
+        public List<IChannelRoleEnum> Roles { get; set;}
         public ChannelSetRolesAction()
         { 
            this.Action = "setRoles";

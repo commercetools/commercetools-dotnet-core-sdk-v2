@@ -14,9 +14,7 @@ namespace commercetools.Api.Models.Me
     {
         DateTime Timestamp { get; set;}
         
-        string Type { get; set;}
-        
-        TransactionType TypeAsEnum { get; }
+        ITransactionType Type { get; set;}
         
         IMoney Amount { get; set;}
         

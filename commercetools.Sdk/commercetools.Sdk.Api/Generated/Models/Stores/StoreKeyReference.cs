@@ -10,15 +10,12 @@ namespace commercetools.Api.Models.Stores
 {
     public partial class StoreKeyReference : IStoreKeyReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Key { get; set;}
         public StoreKeyReference()
         { 
-           this.TypeId = "store";
+           this.TypeId = IReferenceTypeId.FindEnum("store");
         }
     }
 }

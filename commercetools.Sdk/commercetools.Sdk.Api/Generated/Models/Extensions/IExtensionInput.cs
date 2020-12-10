@@ -12,9 +12,7 @@ namespace commercetools.Api.Models.Extensions
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionInput))]
     public partial interface IExtensionInput 
     {
-        string Action { get; set;}
-        
-        ExtensionAction ActionAsEnum { get; }
+        IExtensionAction Action { get; set;}
         
         IReference Resource { get; set;}
     }

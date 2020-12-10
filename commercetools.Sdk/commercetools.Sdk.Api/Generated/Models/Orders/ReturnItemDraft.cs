@@ -18,9 +18,6 @@ namespace commercetools.Api.Models.Orders
         
         public string Comment { get; set;}
         
-        public string ShipmentState { get; set;}
-        
-        [JsonIgnore]
-        public ReturnShipmentState ShipmentStateAsEnum => this.ShipmentState.GetEnum<ReturnShipmentState>();
+        public IReturnShipmentState ShipmentState { get; set;}
     }
 }

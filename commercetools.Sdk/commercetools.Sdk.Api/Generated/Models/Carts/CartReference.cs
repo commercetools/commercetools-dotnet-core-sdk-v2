@@ -11,17 +11,14 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartReference : ICartReference
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public ICart Obj { get; set;}
         public CartReference()
         { 
-           this.TypeId = "cart";
+           this.TypeId = IReferenceTypeId.FindEnum("cart");
         }
     }
 }

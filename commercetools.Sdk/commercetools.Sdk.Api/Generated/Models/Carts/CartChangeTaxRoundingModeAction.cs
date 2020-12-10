@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.Carts
     {
         public string Action { get; set;}
         
-        public string TaxRoundingMode { get; set;}
-        
-        [JsonIgnore]
-        public RoundingMode TaxRoundingModeAsEnum => this.TaxRoundingMode.GetEnum<RoundingMode>();
+        public IRoundingMode TaxRoundingMode { get; set;}
         public CartChangeTaxRoundingModeAction()
         { 
            this.Action = "changeTaxRoundingMode";

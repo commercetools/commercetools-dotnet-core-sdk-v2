@@ -13,8 +13,6 @@ namespace commercetools.Api.Models.Types
     {
         string FieldName { get; set;}
         
-        string InputHint { get; set;}
-        
-        TypeTextInputHint InputHintAsEnum { get; }
+        ITypeTextInputHint InputHint { get; set;}
     }
 }

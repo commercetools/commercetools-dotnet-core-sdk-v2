@@ -10,9 +10,6 @@ namespace commercetools.Api.Models.ShippingMethods
 {
     public abstract partial class ShippingRatePriceTier : IShippingRatePriceTier
     {
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public ShippingRateTierType TypeAsEnum => this.Type.GetEnum<ShippingRateTierType>();
+        public IShippingRateTierType Type { get; set;}
     }
 }

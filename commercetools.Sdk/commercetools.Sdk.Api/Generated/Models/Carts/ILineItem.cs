@@ -50,13 +50,9 @@ namespace commercetools.Api.Models.Carts
         
         List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
         
-        string PriceMode { get; set;}
+        ILineItemPriceMode PriceMode { get; set;}
         
-        LineItemPriceMode PriceModeAsEnum { get; }
-        
-        string LineItemMode { get; set;}
-        
-        LineItemMode LineItemModeAsEnum { get; }
+        ILineItemMode LineItemMode { get; set;}
         
         ICustomFields Custom { get; set;}
         

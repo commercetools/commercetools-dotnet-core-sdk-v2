@@ -15,10 +15,7 @@ namespace commercetools.Api.Models.Errors
         
         public string Message { get; set;}
         
-        public string ExceededResource { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId ExceededResourceAsEnum => this.ExceededResource.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId ExceededResource { get; set;}
         public MaxResourceLimitExceededError()
         { 
            this.Code = "MaxResourceLimitExceeded";

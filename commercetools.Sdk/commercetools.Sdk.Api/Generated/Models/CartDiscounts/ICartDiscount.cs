@@ -31,7 +31,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         ILocalizedString Description { get; set;}
         
-        ICartDiscountValue Value { get; set;}
+        ICartDiscountValueDraft Value { get; set;}
         
         string CartPredicate { get; set;}
         
@@ -49,9 +49,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         List<IReference> References { get; set;}
         
-        string StackingMode { get; set;}
-        
-        StackingMode StackingModeAsEnum { get; }
+        IStackingMode StackingMode { get; set;}
         
         ICustomFields Custom { get; set;}
     }

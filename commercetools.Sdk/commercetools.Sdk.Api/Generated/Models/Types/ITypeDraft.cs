@@ -18,9 +18,7 @@ namespace commercetools.Api.Models.Types
         
         ILocalizedString Description { get; set;}
         
-        List<string> ResourceTypeIds { get; set;}
-        
-        List<ResourceTypeId> ResourceTypeIdsAsEnum { get; }
+        List<IResourceTypeId> ResourceTypeIds { get; set;}
         
         List<IFieldDefinition> FieldDefinitions { get; set;}
     }

@@ -10,17 +10,14 @@ namespace commercetools.Api.Models.States
 {
     public partial class StateResourceIdentifier : IStateResourceIdentifier
     {
-        public string TypeId { get; set;}
-        
-        [JsonIgnore]
-        public ReferenceTypeId TypeIdAsEnum => this.TypeId.GetEnum<ReferenceTypeId>();
+        public IReferenceTypeId TypeId { get; set;}
         
         public string Id { get; set;}
         
         public string Key { get; set;}
         public StateResourceIdentifier()
         { 
-           this.TypeId = "state";
+           this.TypeId = IReferenceTypeId.FindEnum("state");
         }
     }
 }

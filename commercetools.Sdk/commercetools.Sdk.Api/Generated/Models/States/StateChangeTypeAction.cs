@@ -12,10 +12,7 @@ namespace commercetools.Api.Models.States
     {
         public string Action { get; set;}
         
-        public string Type { get; set;}
-        
-        [JsonIgnore]
-        public StateTypeEnum TypeAsEnum => this.Type.GetEnum<StateTypeEnum>();
+        public IStateTypeEnum Type { get; set;}
         public StateChangeTypeAction()
         { 
            this.Action = "changeType";

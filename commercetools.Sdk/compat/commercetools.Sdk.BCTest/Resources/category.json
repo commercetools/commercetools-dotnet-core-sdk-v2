@@ -1,0 +1,33 @@
+{
+  "id": "b032e8a4-ade3-4cc4-95d0-e4f358d83b9c",
+  "version": 1,
+  "lastMessageSequenceNumber": 1,
+  "createdAt": "2020-02-28T10:57:19.281Z",
+  "lastModifiedAt": "2020-02-28T10:57:19.281Z",
+  "lastModifiedBy": {
+    "clientId": "Py7j5PA9p_nWbBSmAM_d28_x",
+    "isPlatformClient": false
+  },
+  "createdBy": {
+    "clientId": "Py7j5PA9p_nWbBSmAM_d28_x",
+    "isPlatformClient": false
+  },
+  "key": "c154",
+  "name": {
+    "de": "Herren",
+    "en": "Men",
+    "it": "Uomo"
+  },
+  "slug": {
+    "de": "sale-men",
+    "en": "sale-men",
+    "it": "sale-men"
+  },
+  "parent": {
+    "typeId": "category",
+    "id": "6b0aae40-29dc-4236-8065-80abab12f959"
+  },
+  "orderHint": "0.000015828874392791618045735",
+  "externalId": "154",
+  "assets": []
+}

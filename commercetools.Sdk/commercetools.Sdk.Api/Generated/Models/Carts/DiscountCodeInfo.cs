@@ -13,9 +13,6 @@ namespace commercetools.Api.Models.Carts
     {
         public IDiscountCodeReference DiscountCode { get; set;}
         
-        public string State { get; set;}
-        
-        [JsonIgnore]
-        public DiscountCodeState StateAsEnum => this.State.GetEnum<DiscountCodeState>();
+        public IDiscountCodeState State { get; set;}
     }
 }
