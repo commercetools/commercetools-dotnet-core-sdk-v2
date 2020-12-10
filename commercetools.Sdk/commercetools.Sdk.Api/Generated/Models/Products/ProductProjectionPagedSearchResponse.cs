@@ -10,6 +10,8 @@ namespace commercetools.Api.Models.Products
 {
     public partial class ProductProjectionPagedSearchResponse : IProductProjectionPagedSearchResponse
     {
+        public long Limit { get; set;}
+        
         public long Count { get; set;}
         
         public long? Total { get; set;}

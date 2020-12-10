@@ -11,9 +11,9 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class TaxedPriceDraft : ITaxedPriceDraft
     {
-        public ITypedMoneyDraft TotalNet { get; set;}
+        public IMoney TotalNet { get; set;}
         
-        public ITypedMoneyDraft TotalGross { get; set;}
+        public IMoney TotalGross { get; set;}
         
         public List<ITaxPortionDraft> TaxPortions { get; set;}
     }

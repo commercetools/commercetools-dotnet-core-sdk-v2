@@ -13,12 +13,12 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
     public partial interface ICartDiscountValueGiftLineItemDraft : ICartDiscountValueDraft
     {
-        IProductReference Product { get; set;}
+        IProductResourceIdentifier Product { get; set;}
         
         long VariantId { get; set;}
         
-        IChannelReference SupplyChannel { get; set;}
+        IChannelResourceIdentifier SupplyChannel { get; set;}
         
-        IChannelReference DistributionChannel { get; set;}
+        IChannelResourceIdentifier DistributionChannel { get; set;}
     }
 }
