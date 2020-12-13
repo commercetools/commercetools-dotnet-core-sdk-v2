@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Api.Models.Common;
 using commercetools.Base.Client;
@@ -109,6 +110,45 @@ namespace commercetools.Api.IntegrationTests
                 await deleteFunc(client, updatedResource!=null ? updatedResource : resource);
             }
         }
+        
+        public static async Task AssertEventuallyAsync(Func<Task> runnableBlock, int maxWaitTimeSecond = 300,
+            int waitBeforeRetryMilliseconds = 100)
+        {
+            var maxWaitTime = TimeSpan.FromSeconds(maxWaitTimeSecond);
+            var waitBeforeRetry = TimeSpan.FromMilliseconds(waitBeforeRetryMilliseconds);
+            await AssertEventuallyAsync(maxWaitTime, waitBeforeRetry, runnableBlock);
+        }
+
+        private static async Task AssertEventuallyAsync(TimeSpan maxWaitTime, TimeSpan waitBeforeRetry, Func<Task> runnableBlock)
+        {
+            long timeOutAt = (int) DateTime.Now.TimeOfDay.TotalMilliseconds + (int) maxWaitTime.TotalMilliseconds;
+            while (true)
+            {
+                try
+                {
+                    await runnableBlock.Invoke();
+                    // the block executed without throwing an exception, return
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    if ((int) DateTime.Now.TimeOfDay.TotalMilliseconds > timeOutAt) //if it's timeout
+                    {
+                        throw;
+                    }
+                }
+
+                try
+                {
+                    Task.Delay((int) waitBeforeRetry.TotalMilliseconds).Wait();
+                }
+                catch (ThreadInterruptedException e)
+                {
+                    throw new SystemException(e.Message);
+                }
+            }
+        }
+
     }
 
 }
