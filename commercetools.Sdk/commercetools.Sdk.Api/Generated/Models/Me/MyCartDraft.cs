@@ -2,6 +2,7 @@ using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Me;
 using commercetools.Api.Models.ShippingMethods;
+using commercetools.Api.Models.Stores;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -39,5 +40,9 @@ namespace commercetools.Api.Models.Me
         public long? DeleteDaysAfterLastModification { get; set;}
         
         public List<IAddress> ItemShippingAddresses { get; set;}
+        
+        public IStoreKeyReference Store { get; set;}
+        
+        public List<IDiscountCodeInfo> DiscountCodes { get; set;}
     }
 }
