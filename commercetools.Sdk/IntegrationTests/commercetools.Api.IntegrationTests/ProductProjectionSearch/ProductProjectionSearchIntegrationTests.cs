@@ -6,7 +6,7 @@ using commercetools.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
-using static commercetools.Api.IntegrationTests.Products.ProductTypesFixture;
+using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
@@ -18,23 +18,21 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
         public readonly string KeyProductType = $"{KeyPrefix}_ProductType";
         public readonly string KeyLocalizedProduct = $"{KeyPrefix}_localizedProduct";
         
-        private readonly IClient client;
-        private readonly ServiceProviderFixture serviceProviderFixture;
-        private readonly string projectKey;
+        private readonly IClient _client;
+        private readonly string _projectKey;
 
         public ProductProjectionSearchIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this.serviceProviderFixture = serviceProviderFixture;
-            this.client = serviceProviderFixture.GetService<IClient>();
-            var clientConfiguration = this.serviceProviderFixture.GetClientConfiguration("Client");
-            this.projectKey = clientConfiguration.ProjectKey;
+            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
+            this._client = serviceProviderFixture.GetService<IClient>();
+            this._projectKey = clientConfiguration.ProjectKey;
         }
 
         [Fact]
         public async Task SearchByFullLocale()
         {
             //Arrange
-            var productType = await CreateOrRetrieveProductType(client, new ProductTypeDraft
+            var productType = await CreateOrRetrieveProductType(_client, new ProductTypeDraft
             {
                 Key = KeyProductType,
                 Name = "SearchProductType",
@@ -52,14 +50,14 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                     {"de", $"Slug_de_{KeyLocalizedProduct}"}
                 }
             };
-            var product = await CreateOrRetrieveProduct(client, productDraft);
+            var product = await CreateOrRetrieveProduct(_client, productDraft);
             Assert.NotNull(product);
 
             await AssertEventuallyAsync(async () =>
             {
                 //Act
-                var searchResult = await client.ApiRoot()
-                    .WithProjectKey(projectKey)
+                var searchResult = await _client.ApiRoot()
+                    .WithProjectKey(_projectKey)
                     .ProductProjections()
                     .Search()
                     .Get()

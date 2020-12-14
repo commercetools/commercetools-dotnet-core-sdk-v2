@@ -1,6 +1,5 @@
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Models;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Payments;
 using commercetools.Base.Client;
@@ -12,13 +11,11 @@ namespace commercetools.Api.IntegrationTests.Payments
     [Collection("Integration Tests")]
     public class PaymentsIntegrationTests
     {
-        private readonly IClient client;
-        private readonly ServiceProviderFixture serviceProviderFixture;
+        private readonly IClient _client;
 
         public PaymentsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this.serviceProviderFixture = serviceProviderFixture;
-            this.client = serviceProviderFixture.GetService<IClient>();
+            this._client = serviceProviderFixture.GetService<IClient>();
         }
         
         [Fact]
@@ -31,7 +28,7 @@ namespace commercetools.Api.IntegrationTests.Payments
                 Type = ITransactionType.Charge
             };
             await WithPayment(
-                client, paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
+                _client, paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
                 payment =>
                 {
                     Assert.Single(payment.Transactions);
