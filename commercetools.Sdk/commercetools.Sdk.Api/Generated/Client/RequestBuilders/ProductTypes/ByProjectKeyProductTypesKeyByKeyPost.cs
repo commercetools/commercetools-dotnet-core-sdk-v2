@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.ProductTypes
        
        private string Key { get; }
        
-       private commercetools.Api.Models.ProductTypes.ProductTypeUpdate ProductTypeUpdate;
+       private commercetools.Api.Models.ProductTypes.IProductTypeUpdate ProductTypeUpdate;
    
-       public ByProjectKeyProductTypesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ProductTypes.ProductTypeUpdate productTypeUpdate) {
+       public ByProjectKeyProductTypesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ProductTypes.IProductTypeUpdate productTypeUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

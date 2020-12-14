@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Types
            return new ByProjectKeyTypesGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyTypesPost Post(commercetools.Api.Models.Types.TypeDraft typeDraft) {
+       public ByProjectKeyTypesPost Post(commercetools.Api.Models.Types.ITypeDraft typeDraft) {
            return new ByProjectKeyTypesPost(ApiHttpClient, SerializerService, ProjectKey, typeDraft);
        }
        

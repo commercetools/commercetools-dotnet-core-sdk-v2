@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
        
        private string Key { get; }
        
-       private commercetools.Api.Models.Extensions.ExtensionUpdate ExtensionUpdate;
+       private commercetools.Api.Models.Extensions.IExtensionUpdate ExtensionUpdate;
    
-       public ByProjectKeyExtensionsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Extensions.ExtensionUpdate extensionUpdate) {
+       public ByProjectKeyExtensionsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Extensions.IExtensionUpdate extensionUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

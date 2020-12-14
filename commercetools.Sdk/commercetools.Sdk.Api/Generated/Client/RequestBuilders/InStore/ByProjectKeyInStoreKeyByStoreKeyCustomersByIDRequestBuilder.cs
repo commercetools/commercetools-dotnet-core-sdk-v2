@@ -29,7 +29,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet(ApiHttpClient, ProjectKey, StoreKey, ID);
        }
        
-       public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost Post(commercetools.Api.Models.Common.Update update) {
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost Post(commercetools.Api.Models.Common.IUpdate update) {
            return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID, update);
        }
        

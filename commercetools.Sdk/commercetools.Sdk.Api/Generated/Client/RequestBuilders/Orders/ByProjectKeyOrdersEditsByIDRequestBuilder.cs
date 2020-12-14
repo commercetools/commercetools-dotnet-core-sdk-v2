@@ -27,7 +27,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            return new ByProjectKeyOrdersEditsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyOrdersEditsByIDPost Post(commercetools.Api.Models.OrderEdits.OrderEditUpdate orderEditUpdate) {
+       public ByProjectKeyOrdersEditsByIDPost Post(commercetools.Api.Models.OrderEdits.IOrderEditUpdate orderEditUpdate) {
            return new ByProjectKeyOrdersEditsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, orderEditUpdate);
        }
        

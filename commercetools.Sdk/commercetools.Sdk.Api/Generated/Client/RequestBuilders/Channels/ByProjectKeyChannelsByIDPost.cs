@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
        
        private string ID { get; }
        
-       private commercetools.Api.Models.Channels.ChannelUpdate ChannelUpdate;
+       private commercetools.Api.Models.Channels.IChannelUpdate ChannelUpdate;
    
-       public ByProjectKeyChannelsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Channels.ChannelUpdate channelUpdate) {
+       public ByProjectKeyChannelsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Channels.IChannelUpdate channelUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

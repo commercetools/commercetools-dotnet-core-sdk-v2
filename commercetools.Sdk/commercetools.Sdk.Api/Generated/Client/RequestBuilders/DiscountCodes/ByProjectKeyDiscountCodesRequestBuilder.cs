@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
            return new ByProjectKeyDiscountCodesGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyDiscountCodesPost Post(commercetools.Api.Models.DiscountCodes.DiscountCodeDraft discountCodeDraft) {
+       public ByProjectKeyDiscountCodesPost Post(commercetools.Api.Models.DiscountCodes.IDiscountCodeDraft discountCodeDraft) {
            return new ByProjectKeyDiscountCodesPost(ApiHttpClient, SerializerService, ProjectKey, discountCodeDraft);
        }
        

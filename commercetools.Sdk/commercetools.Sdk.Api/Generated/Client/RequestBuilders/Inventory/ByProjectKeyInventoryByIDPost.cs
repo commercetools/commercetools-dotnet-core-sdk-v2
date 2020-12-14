@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
        
        private string ID { get; }
        
-       private commercetools.Api.Models.Inventories.InventoryEntryUpdate InventoryEntryUpdate;
+       private commercetools.Api.Models.Inventories.IInventoryEntryUpdate InventoryEntryUpdate;
    
-       public ByProjectKeyInventoryByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Inventories.InventoryEntryUpdate inventoryEntryUpdate) {
+       public ByProjectKeyInventoryByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

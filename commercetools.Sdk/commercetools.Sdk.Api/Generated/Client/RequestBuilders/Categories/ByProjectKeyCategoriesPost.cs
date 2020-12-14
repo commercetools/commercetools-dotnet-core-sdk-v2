@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Categories.CategoryDraft CategoryDraft;
+       private commercetools.Api.Models.Categories.ICategoryDraft CategoryDraft;
    
-       public ByProjectKeyCategoriesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Categories.CategoryDraft categoryDraft) {
+       public ByProjectKeyCategoriesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Categories.ICategoryDraft categoryDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

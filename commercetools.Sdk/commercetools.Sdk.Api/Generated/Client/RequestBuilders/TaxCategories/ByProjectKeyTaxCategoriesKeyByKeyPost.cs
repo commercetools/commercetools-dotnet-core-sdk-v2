@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
        
        private string Key { get; }
        
-       private commercetools.Api.Models.TaxCategories.TaxCategoryUpdate TaxCategoryUpdate;
+       private commercetools.Api.Models.TaxCategories.ITaxCategoryUpdate TaxCategoryUpdate;
    
-       public ByProjectKeyTaxCategoriesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.TaxCategories.TaxCategoryUpdate taxCategoryUpdate) {
+       public ByProjectKeyTaxCategoriesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.TaxCategories.ITaxCategoryUpdate taxCategoryUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

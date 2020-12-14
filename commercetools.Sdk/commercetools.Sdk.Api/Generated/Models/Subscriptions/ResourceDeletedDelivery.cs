@@ -23,6 +23,8 @@ namespace commercetools.Api.Models.Subscriptions
         public long Version { get; set;}
         
         public DateTime ModifiedAt { get; set;}
+        
+        public bool? DataErasure { get; set;}
         public ResourceDeletedDelivery()
         { 
            this.NotificationType = "ResourceDeleted";

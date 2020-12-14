@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.ShoppingLists.ShoppingListDraft ShoppingListDraft;
+       private commercetools.Api.Models.ShoppingLists.IShoppingListDraft ShoppingListDraft;
    
-       public ByProjectKeyShoppingListsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ShoppingLists.ShoppingListDraft shoppingListDraft) {
+       public ByProjectKeyShoppingListsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ShoppingLists.IShoppingListDraft shoppingListDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

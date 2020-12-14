@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.States
        
        private string ID { get; }
        
-       private commercetools.Api.Models.States.StateUpdate StateUpdate;
+       private commercetools.Api.Models.States.IStateUpdate StateUpdate;
    
-       public ByProjectKeyStatesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.States.StateUpdate stateUpdate) {
+       public ByProjectKeyStatesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.States.IStateUpdate stateUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

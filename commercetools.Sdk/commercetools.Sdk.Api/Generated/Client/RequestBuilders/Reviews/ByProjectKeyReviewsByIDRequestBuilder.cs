@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
            return new ByProjectKeyReviewsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyReviewsByIDPost Post(commercetools.Api.Models.Reviews.ReviewUpdate reviewUpdate) {
+       public ByProjectKeyReviewsByIDPost Post(commercetools.Api.Models.Reviews.IReviewUpdate reviewUpdate) {
            return new ByProjectKeyReviewsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, reviewUpdate);
        }
        

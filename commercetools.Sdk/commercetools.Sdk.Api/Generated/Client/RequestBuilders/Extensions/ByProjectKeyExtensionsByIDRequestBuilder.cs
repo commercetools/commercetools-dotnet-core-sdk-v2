@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
            return new ByProjectKeyExtensionsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyExtensionsByIDPost Post(commercetools.Api.Models.Extensions.ExtensionUpdate extensionUpdate) {
+       public ByProjectKeyExtensionsByIDPost Post(commercetools.Api.Models.Extensions.IExtensionUpdate extensionUpdate) {
            return new ByProjectKeyExtensionsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, extensionUpdate);
        }
        

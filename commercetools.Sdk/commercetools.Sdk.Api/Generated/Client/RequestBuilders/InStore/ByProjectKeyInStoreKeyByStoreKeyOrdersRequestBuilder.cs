@@ -27,7 +27,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersGet(ApiHttpClient, ProjectKey, StoreKey);
        }
        
-       public ByProjectKeyInStoreKeyByStoreKeyOrdersPost Post(commercetools.Api.Models.Orders.OrderFromCartDraft orderFromCartDraft) {
+       public ByProjectKeyInStoreKeyByStoreKeyOrdersPost Post(commercetools.Api.Models.Orders.IOrderFromCartDraft orderFromCartDraft) {
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, orderFromCartDraft);
        }
        

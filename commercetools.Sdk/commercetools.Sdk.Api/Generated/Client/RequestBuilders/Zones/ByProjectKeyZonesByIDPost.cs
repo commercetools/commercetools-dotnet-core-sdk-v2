@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
        
        private string ID { get; }
        
-       private commercetools.Api.Models.Zones.ZoneUpdate ZoneUpdate;
+       private commercetools.Api.Models.Zones.IZoneUpdate ZoneUpdate;
    
-       public ByProjectKeyZonesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Zones.ZoneUpdate zoneUpdate) {
+       public ByProjectKeyZonesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Zones.IZoneUpdate zoneUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.CustomObjects.CustomObjectDraft CustomObjectDraft;
+       private commercetools.Api.Models.CustomObjects.ICustomObjectDraft CustomObjectDraft;
    
-       public ByProjectKeyCustomObjectsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CustomObjects.CustomObjectDraft customObjectDraft) {
+       public ByProjectKeyCustomObjectsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

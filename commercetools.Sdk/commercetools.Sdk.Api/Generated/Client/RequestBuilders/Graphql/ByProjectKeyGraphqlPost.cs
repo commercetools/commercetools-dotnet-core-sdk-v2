@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.GraphQl.GraphQLRequest GraphQLRequest;
+       private commercetools.Api.Models.GraphQl.IGraphQLRequest GraphQLRequest;
    
-       public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.GraphQl.GraphQLRequest graphQLRequest) {
+       public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

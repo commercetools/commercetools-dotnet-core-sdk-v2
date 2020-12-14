@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
            return new ByProjectKeyChannelsGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyChannelsPost Post(commercetools.Api.Models.Channels.ChannelDraft channelDraft) {
+       public ByProjectKeyChannelsPost Post(commercetools.Api.Models.Channels.IChannelDraft channelDraft) {
            return new ByProjectKeyChannelsPost(ApiHttpClient, SerializerService, ProjectKey, channelDraft);
        }
        

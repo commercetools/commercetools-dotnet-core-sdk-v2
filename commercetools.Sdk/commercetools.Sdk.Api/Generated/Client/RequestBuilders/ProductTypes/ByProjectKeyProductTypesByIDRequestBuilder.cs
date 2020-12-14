@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductTypes
            return new ByProjectKeyProductTypesByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyProductTypesByIDPost Post(commercetools.Api.Models.ProductTypes.ProductTypeUpdate productTypeUpdate) {
+       public ByProjectKeyProductTypesByIDPost Post(commercetools.Api.Models.ProductTypes.IProductTypeUpdate productTypeUpdate) {
            return new ByProjectKeyProductTypesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, productTypeUpdate);
        }
        

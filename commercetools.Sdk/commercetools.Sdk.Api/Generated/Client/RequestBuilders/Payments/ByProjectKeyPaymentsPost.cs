@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Payments.PaymentDraft PaymentDraft;
+       private commercetools.Api.Models.Payments.IPaymentDraft PaymentDraft;
    
-       public ByProjectKeyPaymentsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Payments.PaymentDraft paymentDraft) {
+       public ByProjectKeyPaymentsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Payments.IPaymentDraft paymentDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyProductDiscountsMatchingPost Post(commercetools.Api.Models.ProductDiscounts.ProductDiscountMatchQuery productDiscountMatchQuery) {
+       public ByProjectKeyProductDiscountsMatchingPost Post(commercetools.Api.Models.ProductDiscounts.IProductDiscountMatchQuery productDiscountMatchQuery) {
            return new ByProjectKeyProductDiscountsMatchingPost(ApiHttpClient, SerializerService, ProjectKey, productDiscountMatchQuery);
        }
        

@@ -22,7 +22,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            this.ID = id;
        }
    
-       public ByProjectKeyOrdersEditsByIDApplyPost Post(commercetools.Api.Models.OrderEdits.OrderEditApply orderEditApply) {
+       public ByProjectKeyOrdersEditsByIDApplyPost Post(commercetools.Api.Models.OrderEdits.IOrderEditApply orderEditApply) {
            return new ByProjectKeyOrdersEditsByIDApplyPost(ApiHttpClient, SerializerService, ProjectKey, ID, orderEditApply);
        }
        

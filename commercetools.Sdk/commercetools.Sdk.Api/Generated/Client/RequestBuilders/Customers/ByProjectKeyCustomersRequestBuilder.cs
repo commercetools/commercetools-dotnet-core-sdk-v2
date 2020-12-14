@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
            return new ByProjectKeyCustomersGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyCustomersPost Post(commercetools.Api.Models.Customers.CustomerDraft customerDraft) {
+       public ByProjectKeyCustomersPost Post(commercetools.Api.Models.Customers.ICustomerDraft customerDraft) {
            return new ByProjectKeyCustomersPost(ApiHttpClient, SerializerService, ProjectKey, customerDraft);
        }
        

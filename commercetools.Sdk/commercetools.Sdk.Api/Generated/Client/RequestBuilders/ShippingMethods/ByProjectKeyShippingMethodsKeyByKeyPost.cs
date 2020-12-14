@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
        
        private string Key { get; }
        
-       private commercetools.Api.Models.ShippingMethods.ShippingMethodUpdate ShippingMethodUpdate;
+       private commercetools.Api.Models.ShippingMethods.IShippingMethodUpdate ShippingMethodUpdate;
    
-       public ByProjectKeyShippingMethodsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ShippingMethods.ShippingMethodUpdate shippingMethodUpdate) {
+       public ByProjectKeyShippingMethodsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

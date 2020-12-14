@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Subscriptions.SubscriptionDraft SubscriptionDraft;
+       private commercetools.Api.Models.Subscriptions.ISubscriptionDraft SubscriptionDraft;
    
-       public ByProjectKeySubscriptionsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Subscriptions.SubscriptionDraft subscriptionDraft) {
+       public ByProjectKeySubscriptionsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Subscriptions.ISubscriptionDraft subscriptionDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyOrdersImportPost Post(commercetools.Api.Models.Orders.OrderImportDraft orderImportDraft) {
+       public ByProjectKeyOrdersImportPost Post(commercetools.Api.Models.Orders.IOrderImportDraft orderImportDraft) {
            return new ByProjectKeyOrdersImportPost(ApiHttpClient, SerializerService, ProjectKey, orderImportDraft);
        }
        

@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
        
        private string Key { get; }
        
-       private commercetools.Api.Models.CustomerGroups.CustomerGroupUpdate CustomerGroupUpdate;
+       private commercetools.Api.Models.CustomerGroups.ICustomerGroupUpdate CustomerGroupUpdate;
    
-       public ByProjectKeyCustomerGroupsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.CustomerGroups.CustomerGroupUpdate customerGroupUpdate) {
+       public ByProjectKeyCustomerGroupsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.CustomerGroups.ICustomerGroupUpdate customerGroupUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
            return new ByProjectKeyCategoriesByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyCategoriesByIDPost Post(commercetools.Api.Models.Categories.CategoryUpdate categoryUpdate) {
+       public ByProjectKeyCategoriesByIDPost Post(commercetools.Api.Models.Categories.ICategoryUpdate categoryUpdate) {
            return new ByProjectKeyCategoriesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, categoryUpdate);
        }
        
