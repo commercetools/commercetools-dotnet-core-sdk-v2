@@ -75,13 +75,9 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        public override HttpRequestMessage Build()
        {
           var request = base.Build();
-          if (SerializerService != null)
+          if (Stream != null && Stream.Length > 0)
           {
-              var body = this.SerializerService.Serialize(Stream);
-              if(!string.IsNullOrEmpty(body))
-              {
-                  request.Content = new StringContent(body);
-              }
+              request.Content = new StreamContent(Stream);
           }
           return request;
        }
