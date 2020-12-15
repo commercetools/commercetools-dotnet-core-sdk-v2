@@ -63,7 +63,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                     .Get()
                     .WithStaged(true)
                     .AddQueryParam("text.de", localizedName["de"])
-                    .WithFilterQuery($"id:\"{product.Id}\"")
+                    .WithFilter($"key:\"{KeyLocalizedProduct}\"")
                     .ExecuteAsync();
             
                 //Assert
