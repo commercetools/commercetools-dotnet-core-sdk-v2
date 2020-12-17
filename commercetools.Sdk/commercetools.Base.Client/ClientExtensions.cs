@@ -23,7 +23,7 @@ namespace commercetools.Base.Client
         {
             foreach (var header in addedHeaders.Headers)
             {
-                requestMessage.Headers.Add(header.Key, header.Value);
+                requestMessage.Headers.TryAddWithoutValidation(header.Key, header.Value);
             }
         }
         

@@ -8,22 +8,21 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Categories
 {
     [Collection("Integration Tests")]
     public class CategoriesIntegrationTests
     {
-        private readonly IClient client;
-        private readonly ServiceProviderFixture serviceProviderFixture;
-        private readonly string projectKey;
+        private readonly IClient _client;
+        private readonly string _projectKey;
 
         public CategoriesIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this.serviceProviderFixture = serviceProviderFixture;
-            this.client = serviceProviderFixture.GetService<IClient>();
-            var clientConfiguration = this.serviceProviderFixture.GetClientConfiguration("Client");
-            this.projectKey = clientConfiguration.ProjectKey;
+            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
+            this._client = serviceProviderFixture.GetService<IClient>();
+            this._projectKey = clientConfiguration.ProjectKey;
         }
 
         [Fact]
@@ -31,7 +30,7 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"CreateCategory-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 category =>
                 {
                     Assert.Equal(key, category.Key);
@@ -43,11 +42,11 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"GetCategoryById-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await client.ApiRoot().WithProjectKey(projectKey)
+                    var retrievedCategory = await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .WithId(category.Id)
                         .Get()
@@ -63,11 +62,11 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"GetCategoryByKey-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await client.ApiRoot().WithProjectKey(projectKey)
+                    var retrievedCategory = await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .WithKey(category.Key)
                         .Get()
@@ -83,11 +82,11 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"QueryCategories-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var returnedSet = await client.ApiRoot().WithProjectKey(projectKey)
+                    var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .Get()
                         .WithWhere($"key = \"{category.Key}\"")
@@ -100,15 +99,15 @@ namespace commercetools.Api.IntegrationTests.Categories
         [Fact]
         public async Task QueryCategoryByParentAndExpandIt()
         {
-            await WithCategory(client, async parentCategory =>
+            await WithCategory(_client, async parentCategory =>
             {
                 await WithCategory(
-                    client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory),
+                    _client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory),
                     async category =>
                     {
                         Assert.NotNull(category);
                         
-                        var returnedSet = await client.ApiRoot().WithProjectKey(projectKey)
+                        var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
                             .WithWhere($"key = \"{category.Key}\"")
@@ -131,17 +130,17 @@ namespace commercetools.Api.IntegrationTests.Categories
         public async Task QueryCategoriesByParentAndSort()
         {
             var count = 3;
-            await WithCategory(client, async parentCategory =>
+            await WithCategory(_client, async parentCategory =>
             {
                 await WithListOfCategories(
-                    client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
+                    _client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
                     async categoriesList =>
                     {
                         Assert.Equal(count, categoriesList.Count);
                         var orderedCategoriesNames =
                             categoriesList.OrderBy(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
                         
-                        var returnedSet = await client.ApiRoot().WithProjectKey(projectKey)
+                        var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
                             .WithWhere($"parent(id = \"{parentCategory.Id}\")")
@@ -163,17 +162,17 @@ namespace commercetools.Api.IntegrationTests.Categories
         public async Task QueryCategoriesByParentAndSortDescending()
         {
             var count = 3;
-            await WithCategory(client, async parentCategory =>
+            await WithCategory(_client, async parentCategory =>
             {
                 await WithListOfCategories(
-                    client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
+                    _client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
                     async categoriesList =>
                     {
                         Assert.Equal(count, categoriesList.Count);
                         var orderedCategoriesNames =
                             categoriesList.OrderByDescending(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
                         
-                        var returnedSet = await client.ApiRoot().WithProjectKey(projectKey)
+                        var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
                             .WithWhere($"parent(id = \"{parentCategory.Id}\")")
@@ -195,31 +194,34 @@ namespace commercetools.Api.IntegrationTests.Categories
         public async Task QueryCategoriesByParentAndLimit()
         {
             var count = 3;
-            await WithCategory(client, async parentCategory =>
+            await WithCategory(_client, async parentCategory =>
             {
                 await WithListOfCategories(
-                    client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
+                    _client, categoryDraft => DefaultCategoryDraftWithParent(categoryDraft, parentCategory), count,
                     async categoriesList =>
                     {
                         var limit = count - 1;
                         Assert.Equal(count, categoriesList.Count);
-                        
-                        var returnedSet = await client.ApiRoot().WithProjectKey(projectKey)
-                            .Categories()
-                            .Get()
-                            .WithWhere($"parent(id = \"{parentCategory.Id}\")")
-                            .WithExpand("parent")
-                            .WithLimit(limit)
-                            .WithWithTotal(true)
-                            .ExecuteAsync();
-                        
-                        Assert.Equal(limit, returnedSet.Count);
-                        Assert.Equal(limit, returnedSet.Limit);
-                        Assert.Equal(count, returnedSet.Total);
 
-                        var categoriesResult = returnedSet.Results;
-                        Assert.NotNull(categoriesList[0].Parent);
-                        Assert.Equal(parentCategory.Id, categoriesResult[0].Parent.Id);
+                        await AssertEventuallyAsync(async () =>
+                        {
+                            var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
+                                .Categories()
+                                .Get()
+                                .WithWhere($"parent(id = \"{parentCategory.Id}\")")
+                                .WithExpand("parent")
+                                .WithLimit(limit)
+                                .WithWithTotal(true)
+                                .ExecuteAsync();
+
+                            Assert.Equal(limit, returnedSet.Count);
+                            Assert.Equal(limit, returnedSet.Limit);
+                            Assert.Equal(count, returnedSet.Total);
+
+                            var categoriesResult = returnedSet.Results;
+                            Assert.NotNull(categoriesList[0].Parent);
+                            Assert.Equal(parentCategory.Id, categoriesResult[0].Parent.Id);
+                        });
                     });
             });
         }
@@ -229,12 +231,12 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"DeleteCategoryById-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
 
-                    await client.ApiRoot().WithProjectKey(projectKey)
+                    await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .WithId(category.Id)
                         .Delete()
@@ -242,7 +244,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .ExecuteAsync();
 
                     await Assert.ThrowsAsync<NotFoundException>(
-                        () => client.ApiRoot().WithProjectKey(projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
+                        () => _client.ApiRoot().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
         
@@ -251,12 +253,12 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"DeleteCategoryByKey-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
 
-                    await client.ApiRoot().WithProjectKey(projectKey)
+                    await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .WithKey(category.Key)
                         .Delete()
@@ -264,7 +266,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .ExecuteAsync();
                     
                     await Assert.ThrowsAsync<NotFoundException>(
-                        () => client.ApiRoot().WithProjectKey(projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
+                        () => _client.ApiRoot().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
         
@@ -273,11 +275,11 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             var key = $"ValidateMemoryLogging-{TestingUtility.RandomString()}";
             await WithCategory(
-                client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
+                _client, categoryDraft => DefaultCategoryDraftWithKey(categoryDraft, key),
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await client.ApiRoot().WithProjectKey(projectKey)
+                    var retrievedCategory = await _client.ApiRoot().WithProjectKey(_projectKey)
                         .Categories()
                         .WithId(category.Id)
                         .Get()
@@ -295,7 +297,7 @@ namespace commercetools.Api.IntegrationTests.Categories
         [Fact]
         public async Task UpdateCategoryByKeyChangeName()
         {
-            await WithUpdateableCategory(client, async category =>
+            await WithUpdateableCategory(_client, async category =>
             {
                 Assert.NotNull(category);
                 
@@ -310,7 +312,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     Actions = new List<ICategoryUpdateAction> {action}
                 };
 
-                var updatedCategory = await client.ApiRoot().WithProjectKey(projectKey)
+                var updatedCategory = await _client.ApiRoot().WithProjectKey(_projectKey)
                     .Categories()
                     .WithKey(category.Key)
                     .Post(update)
