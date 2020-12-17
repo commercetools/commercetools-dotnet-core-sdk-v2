@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Reviews.ReviewDraft ReviewDraft;
+       private commercetools.Api.Models.Reviews.IReviewDraft ReviewDraft;
    
-       public ByProjectKeyReviewsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Reviews.ReviewDraft reviewDraft) {
+       public ByProjectKeyReviewsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Reviews.IReviewDraft reviewDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

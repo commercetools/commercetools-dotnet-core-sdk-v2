@@ -130,7 +130,7 @@ namespace commercetools.Api.IntegrationTests
                     // the block executed without throwing an exception, return
                     return;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     if ((int) DateTime.Now.TimeOfDay.TotalMilliseconds > timeOutAt) //if it's timeout
                     {

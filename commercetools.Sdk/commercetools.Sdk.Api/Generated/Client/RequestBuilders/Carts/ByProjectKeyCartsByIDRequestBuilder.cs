@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
            return new ByProjectKeyCartsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyCartsByIDPost Post(commercetools.Api.Models.Carts.CartUpdate cartUpdate) {
+       public ByProjectKeyCartsByIDPost Post(commercetools.Api.Models.Carts.ICartUpdate cartUpdate) {
            return new ByProjectKeyCartsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, cartUpdate);
        }
        

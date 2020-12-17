@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Me.MyCustomerDraft MyCustomerDraft;
+       private commercetools.Api.Models.Me.IMyCustomerDraft MyCustomerDraft;
    
-       public ByProjectKeyMeSignupPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.MyCustomerDraft myCustomerDraft) {
+       public ByProjectKeyMeSignupPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.IMyCustomerDraft myCustomerDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

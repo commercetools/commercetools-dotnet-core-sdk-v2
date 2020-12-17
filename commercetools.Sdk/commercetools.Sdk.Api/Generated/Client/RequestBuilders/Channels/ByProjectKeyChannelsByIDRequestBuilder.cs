@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
            return new ByProjectKeyChannelsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyChannelsByIDPost Post(commercetools.Api.Models.Channels.ChannelUpdate channelUpdate) {
+       public ByProjectKeyChannelsByIDPost Post(commercetools.Api.Models.Channels.IChannelUpdate channelUpdate) {
            return new ByProjectKeyChannelsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, channelUpdate);
        }
        

@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
            return new ByProjectKeyCustomObjectsGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyCustomObjectsPost Post(commercetools.Api.Models.CustomObjects.CustomObjectDraft customObjectDraft) {
+       public ByProjectKeyCustomObjectsPost Post(commercetools.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft) {
            return new ByProjectKeyCustomObjectsPost(ApiHttpClient, SerializerService, ProjectKey, customObjectDraft);
        }
        

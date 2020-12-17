@@ -14,7 +14,7 @@ namespace commercetools.Api.Models.Messages
     {
         public string Type { get; set;}
         
-        public List<Object> RemovedImageUrls { get; set;}
+        public List<string> RemovedImageUrls { get; set;}
         
         public IProductProjection ProductProjection { get; set;}
         

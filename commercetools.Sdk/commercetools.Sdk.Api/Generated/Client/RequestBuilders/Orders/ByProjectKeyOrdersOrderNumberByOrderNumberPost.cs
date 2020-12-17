@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
        
        private string OrderNumber { get; }
        
-       private commercetools.Api.Models.Orders.OrderUpdate OrderUpdate;
+       private commercetools.Api.Models.Orders.IOrderUpdate OrderUpdate;
    
-       public ByProjectKeyOrdersOrderNumberByOrderNumberPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string orderNumber, commercetools.Api.Models.Orders.OrderUpdate orderUpdate) {
+       public ByProjectKeyOrdersOrderNumberByOrderNumberPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string orderNumber, commercetools.Api.Models.Orders.IOrderUpdate orderUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

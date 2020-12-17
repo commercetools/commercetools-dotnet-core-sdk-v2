@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
            return new ByProjectKeyReviewsGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyReviewsPost Post(commercetools.Api.Models.Reviews.ReviewDraft reviewDraft) {
+       public ByProjectKeyReviewsPost Post(commercetools.Api.Models.Reviews.IReviewDraft reviewDraft) {
            return new ByProjectKeyReviewsPost(ApiHttpClient, SerializerService, ProjectKey, reviewDraft);
        }
        

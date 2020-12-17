@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
            return new ByProjectKeySubscriptionsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeySubscriptionsByIDPost Post(commercetools.Api.Models.Subscriptions.SubscriptionUpdate subscriptionUpdate) {
+       public ByProjectKeySubscriptionsByIDPost Post(commercetools.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate) {
            return new ByProjectKeySubscriptionsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, subscriptionUpdate);
        }
        

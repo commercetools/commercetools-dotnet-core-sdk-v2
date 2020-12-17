@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Types
            return new ByProjectKeyTypesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
        }
        
-       public ByProjectKeyTypesKeyByKeyPost Post(commercetools.Api.Models.Types.TypeUpdate typeUpdate) {
+       public ByProjectKeyTypesKeyByKeyPost Post(commercetools.Api.Models.Types.ITypeUpdate typeUpdate) {
            return new ByProjectKeyTypesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, typeUpdate);
        }
        

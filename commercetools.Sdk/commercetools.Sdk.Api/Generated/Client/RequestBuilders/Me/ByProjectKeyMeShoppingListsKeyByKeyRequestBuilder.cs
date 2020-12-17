@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            return new ByProjectKeyMeShoppingListsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
        }
        
-       public ByProjectKeyMeShoppingListsKeyByKeyPost Post(commercetools.Api.Models.Me.MyShoppingListUpdate myShoppingListUpdate) {
+       public ByProjectKeyMeShoppingListsKeyByKeyPost Post(commercetools.Api.Models.Me.IMyShoppingListUpdate myShoppingListUpdate) {
            return new ByProjectKeyMeShoppingListsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, myShoppingListUpdate);
        }
        

@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            return new ByProjectKeyOrdersOrderNumberByOrderNumberGet(ApiHttpClient, ProjectKey, OrderNumber);
        }
        
-       public ByProjectKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Api.Models.Orders.OrderUpdate orderUpdate) {
+       public ByProjectKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Api.Models.Orders.IOrderUpdate orderUpdate) {
            return new ByProjectKeyOrdersOrderNumberByOrderNumberPost(ApiHttpClient, SerializerService, ProjectKey, OrderNumber, orderUpdate);
        }
        

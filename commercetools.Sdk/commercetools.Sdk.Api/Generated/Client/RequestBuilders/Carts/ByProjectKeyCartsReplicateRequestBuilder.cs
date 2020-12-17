@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyCartsReplicatePost Post(commercetools.Api.Models.Carts.ReplicaCartDraft replicaCartDraft) {
+       public ByProjectKeyCartsReplicatePost Post(commercetools.Api.Models.Carts.IReplicaCartDraft replicaCartDraft) {
            return new ByProjectKeyCartsReplicatePost(ApiHttpClient, SerializerService, ProjectKey, replicaCartDraft);
        }
        

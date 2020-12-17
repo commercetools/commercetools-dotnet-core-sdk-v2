@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Customers.CustomerCreatePasswordResetToken CustomerCreatePasswordResetToken;
+       private commercetools.Api.Models.Customers.ICustomerCreatePasswordResetToken CustomerCreatePasswordResetToken;
    
-       public ByProjectKeyCustomersPasswordTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.CustomerCreatePasswordResetToken customerCreatePasswordResetToken) {
+       public ByProjectKeyCustomersPasswordTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerCreatePasswordResetToken customerCreatePasswordResetToken) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

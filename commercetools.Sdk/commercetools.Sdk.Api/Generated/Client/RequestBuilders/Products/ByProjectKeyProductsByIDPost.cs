@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        
        private string ID { get; }
        
-       private commercetools.Api.Models.Products.ProductUpdate ProductUpdate;
+       private commercetools.Api.Models.Products.IProductUpdate ProductUpdate;
    
-       public ByProjectKeyProductsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Products.ProductUpdate productUpdate) {
+       public ByProjectKeyProductsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Products.IProductUpdate productUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

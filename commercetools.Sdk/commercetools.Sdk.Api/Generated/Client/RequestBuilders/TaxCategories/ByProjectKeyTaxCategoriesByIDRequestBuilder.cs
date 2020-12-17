@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
            return new ByProjectKeyTaxCategoriesByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyTaxCategoriesByIDPost Post(commercetools.Api.Models.TaxCategories.TaxCategoryUpdate taxCategoryUpdate) {
+       public ByProjectKeyTaxCategoriesByIDPost Post(commercetools.Api.Models.TaxCategories.ITaxCategoryUpdate taxCategoryUpdate) {
            return new ByProjectKeyTaxCategoriesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, taxCategoryUpdate);
        }
        

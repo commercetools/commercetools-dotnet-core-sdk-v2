@@ -47,11 +47,11 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        }
        
        public List<string> GetFilterFacets() {
-           return this.GetQueryParam("filterFacets");
+           return this.GetQueryParam("filter.facets");
        }
        
        public List<string> GetFilterQuery() {
-           return this.GetQueryParam("filterQuery");
+           return this.GetQueryParam("filter.query");
        }
        
        public List<string> GetFacet() {
@@ -123,11 +123,11 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        }
        
        public ByProjectKeyProductProjectionsSearchGet WithFilterFacets(string filterFacets){
-           return this.AddQueryParam("filterFacets", filterFacets);
+           return this.AddQueryParam("filter.facets", filterFacets);
        }
        
        public ByProjectKeyProductProjectionsSearchGet WithFilterQuery(string filterQuery){
-           return this.AddQueryParam("filterQuery", filterQuery);
+           return this.AddQueryParam("filter.query", filterQuery);
        }
        
        public ByProjectKeyProductProjectionsSearchGet WithFacet(string facet){

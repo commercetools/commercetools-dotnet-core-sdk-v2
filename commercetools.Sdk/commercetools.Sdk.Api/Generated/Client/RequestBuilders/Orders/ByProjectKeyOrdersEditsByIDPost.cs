@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
        
        private string ID { get; }
        
-       private commercetools.Api.Models.OrderEdits.OrderEditUpdate OrderEditUpdate;
+       private commercetools.Api.Models.OrderEdits.IOrderEditUpdate OrderEditUpdate;
    
-       public ByProjectKeyOrdersEditsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.OrderEdits.OrderEditUpdate orderEditUpdate) {
+       public ByProjectKeyOrdersEditsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.OrderEdits.IOrderEditUpdate orderEditUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

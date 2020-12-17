@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductTypes
            return new ByProjectKeyProductTypesGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyProductTypesPost Post(commercetools.Api.Models.ProductTypes.ProductTypeDraft productTypeDraft) {
+       public ByProjectKeyProductTypesPost Post(commercetools.Api.Models.ProductTypes.IProductTypeDraft productTypeDraft) {
            return new ByProjectKeyProductTypesPost(ApiHttpClient, SerializerService, ProjectKey, productTypeDraft);
        }
        

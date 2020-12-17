@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyCustomersEmailConfirmPost Post(commercetools.Api.Models.Customers.CustomerEmailVerify customerEmailVerify) {
+       public ByProjectKeyCustomersEmailConfirmPost Post(commercetools.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify) {
            return new ByProjectKeyCustomersEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, customerEmailVerify);
        }
        

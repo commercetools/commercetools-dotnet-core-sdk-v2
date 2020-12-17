@@ -22,7 +22,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            this.StoreKey = storeKey;
        }
    
-       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost Post(commercetools.Api.Models.Customers.CustomerResetPassword customerResetPassword) {
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost Post(commercetools.Api.Models.Customers.ICustomerResetPassword customerResetPassword) {
            return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerResetPassword);
        }
        

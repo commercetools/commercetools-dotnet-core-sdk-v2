@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
            return new ByProjectKeyCustomerGroupsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
        }
        
-       public ByProjectKeyCustomerGroupsKeyByKeyPost Post(commercetools.Api.Models.CustomerGroups.CustomerGroupUpdate customerGroupUpdate) {
+       public ByProjectKeyCustomerGroupsKeyByKeyPost Post(commercetools.Api.Models.CustomerGroups.ICustomerGroupUpdate customerGroupUpdate) {
            return new ByProjectKeyCustomerGroupsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, customerGroupUpdate);
        }
        

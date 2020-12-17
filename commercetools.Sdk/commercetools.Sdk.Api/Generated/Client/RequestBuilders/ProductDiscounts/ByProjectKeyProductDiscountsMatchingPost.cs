@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.ProductDiscounts.ProductDiscountMatchQuery ProductDiscountMatchQuery;
+       private commercetools.Api.Models.ProductDiscounts.IProductDiscountMatchQuery ProductDiscountMatchQuery;
    
-       public ByProjectKeyProductDiscountsMatchingPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ProductDiscounts.ProductDiscountMatchQuery productDiscountMatchQuery) {
+       public ByProjectKeyProductDiscountsMatchingPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ProductDiscounts.IProductDiscountMatchQuery productDiscountMatchQuery) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

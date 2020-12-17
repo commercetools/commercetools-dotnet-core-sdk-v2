@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        
        private string StoreKey { get; }
        
-       private commercetools.Api.Models.Customers.CustomerSignin CustomerSignin;
+       private commercetools.Api.Models.Customers.ICustomerSignin CustomerSignin;
    
-       public ByProjectKeyInStoreKeyByStoreKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Api.Models.Customers.CustomerSignin customerSignin) {
+       public ByProjectKeyInStoreKeyByStoreKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Api.Models.Customers.ICustomerSignin customerSignin) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

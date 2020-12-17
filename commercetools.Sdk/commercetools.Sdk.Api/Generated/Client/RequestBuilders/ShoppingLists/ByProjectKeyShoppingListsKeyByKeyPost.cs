@@ -23,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
        
        private string Key { get; }
        
-       private commercetools.Api.Models.ShoppingLists.ShoppingListUpdate ShoppingListUpdate;
+       private commercetools.Api.Models.ShoppingLists.IShoppingListUpdate ShoppingListUpdate;
    
-       public ByProjectKeyShoppingListsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ShoppingLists.ShoppingListUpdate shoppingListUpdate) {
+       public ByProjectKeyShoppingListsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ShoppingLists.IShoppingListUpdate shoppingListUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

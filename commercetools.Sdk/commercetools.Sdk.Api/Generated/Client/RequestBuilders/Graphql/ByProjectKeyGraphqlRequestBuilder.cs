@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyGraphqlPost Post(commercetools.Api.Models.GraphQl.GraphQLRequest graphQLRequest) {
+       public ByProjectKeyGraphqlPost Post(commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest) {
            return new ByProjectKeyGraphqlPost(ApiHttpClient, SerializerService, ProjectKey, graphQLRequest);
        }
        

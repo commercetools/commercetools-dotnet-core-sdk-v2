@@ -22,7 +22,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            this.StoreKey = storeKey;
        }
    
-       public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost Post(commercetools.Api.Models.Customers.CustomerEmailVerify customerEmailVerify) {
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost Post(commercetools.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify) {
            return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerEmailVerify);
        }
        

@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
            return new ByProjectKeyProductDiscountsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyProductDiscountsByIDPost Post(commercetools.Api.Models.ProductDiscounts.ProductDiscountUpdate productDiscountUpdate) {
+       public ByProjectKeyProductDiscountsByIDPost Post(commercetools.Api.Models.ProductDiscounts.IProductDiscountUpdate productDiscountUpdate) {
            return new ByProjectKeyProductDiscountsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, productDiscountUpdate);
        }
        

@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyMeSignupPost Post(commercetools.Api.Models.Me.MyCustomerDraft myCustomerDraft) {
+       public ByProjectKeyMeSignupPost Post(commercetools.Api.Models.Me.IMyCustomerDraft myCustomerDraft) {
            return new ByProjectKeyMeSignupPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerDraft);
        }
        

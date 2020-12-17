@@ -29,7 +29,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(ApiHttpClient, ProjectKey, StoreKey, OrderNumber);
        }
        
-       public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Api.Models.Orders.OrderUpdate orderUpdate) {
+       public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Api.Models.Orders.IOrderUpdate orderUpdate) {
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, OrderNumber, orderUpdate);
        }
        

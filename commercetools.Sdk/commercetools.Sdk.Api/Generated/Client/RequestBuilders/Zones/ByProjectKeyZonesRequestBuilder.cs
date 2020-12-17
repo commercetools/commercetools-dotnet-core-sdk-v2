@@ -24,7 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
            return new ByProjectKeyZonesGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyZonesPost Post(commercetools.Api.Models.Zones.ZoneDraft zoneDraft) {
+       public ByProjectKeyZonesPost Post(commercetools.Api.Models.Zones.IZoneDraft zoneDraft) {
            return new ByProjectKeyZonesPost(ApiHttpClient, SerializerService, ProjectKey, zoneDraft);
        }
        

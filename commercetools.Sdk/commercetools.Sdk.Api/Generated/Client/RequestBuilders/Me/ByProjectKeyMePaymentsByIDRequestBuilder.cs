@@ -26,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            return new ByProjectKeyMePaymentsByIDGet(ApiHttpClient, ProjectKey, ID);
        }
        
-       public ByProjectKeyMePaymentsByIDPost Post(commercetools.Api.Models.Me.MyPaymentUpdate myPaymentUpdate) {
+       public ByProjectKeyMePaymentsByIDPost Post(commercetools.Api.Models.Me.IMyPaymentUpdate myPaymentUpdate) {
            return new ByProjectKeyMePaymentsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, myPaymentUpdate);
        }
        

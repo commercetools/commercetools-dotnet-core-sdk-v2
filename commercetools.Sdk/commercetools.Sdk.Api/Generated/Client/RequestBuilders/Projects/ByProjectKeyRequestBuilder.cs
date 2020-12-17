@@ -54,7 +54,7 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
            return new ByProjectKeyGet(ApiHttpClient, ProjectKey);
        }
        
-       public ByProjectKeyPost Post(commercetools.Api.Models.Projects.ProjectUpdate projectUpdate) {
+       public ByProjectKeyPost Post(commercetools.Api.Models.Projects.IProjectUpdate projectUpdate) {
            return new ByProjectKeyPost(ApiHttpClient, SerializerService, ProjectKey, projectUpdate);
        }
        

@@ -19,7 +19,7 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyCustomersPasswordPost Post(commercetools.Api.Models.Customers.CustomerChangePassword customerChangePassword) {
+       public ByProjectKeyCustomersPasswordPost Post(commercetools.Api.Models.Customers.ICustomerChangePassword customerChangePassword) {
            return new ByProjectKeyCustomersPasswordPost(ApiHttpClient, SerializerService, ProjectKey, customerChangePassword);
        }
        

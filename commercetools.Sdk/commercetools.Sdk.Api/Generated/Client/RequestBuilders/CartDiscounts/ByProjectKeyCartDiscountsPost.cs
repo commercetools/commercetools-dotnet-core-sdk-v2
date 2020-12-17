@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.CartDiscounts.CartDiscountDraft CartDiscountDraft;
+       private commercetools.Api.Models.CartDiscounts.ICartDiscountDraft CartDiscountDraft;
    
-       public ByProjectKeyCartDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CartDiscounts.CartDiscountDraft cartDiscountDraft) {
+       public ByProjectKeyCartDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CartDiscounts.ICartDiscountDraft cartDiscountDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;

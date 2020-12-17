@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Customers.CustomerCreateEmailToken CustomerCreateEmailToken;
+       private commercetools.Api.Models.Customers.ICustomerCreateEmailToken CustomerCreateEmailToken;
    
-       public ByProjectKeyCustomersEmailTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.CustomerCreateEmailToken customerCreateEmailToken) {
+       public ByProjectKeyCustomersEmailTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerCreateEmailToken customerCreateEmailToken) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
