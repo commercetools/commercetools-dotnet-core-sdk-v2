@@ -10,7 +10,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Products
 {
-    public partial class ByProjectKeyProductsByIDImagesPost : ApiMethod<ByProjectKeyProductsByIDImagesPost> {
+   public partial class ByProjectKeyProductsByIDImagesPost : ApiMethod<ByProjectKeyProductsByIDImagesPost> {
 
        
        private ISerializerService SerializerService { get; }
