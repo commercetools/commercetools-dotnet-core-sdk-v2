@@ -8,6 +8,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Categories
 {
@@ -201,23 +202,26 @@ namespace commercetools.Api.IntegrationTests.Categories
                     {
                         var limit = count - 1;
                         Assert.Equal(count, categoriesList.Count);
-                        
-                        var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
-                            .Categories()
-                            .Get()
-                            .WithWhere($"parent(id = \"{parentCategory.Id}\")")
-                            .WithExpand("parent")
-                            .WithLimit(limit)
-                            .WithWithTotal(true)
-                            .ExecuteAsync();
-                        
-                        Assert.Equal(limit, returnedSet.Count);
-                        Assert.Equal(limit, returnedSet.Limit);
-                        Assert.Equal(count, returnedSet.Total);
 
-                        var categoriesResult = returnedSet.Results;
-                        Assert.NotNull(categoriesList[0].Parent);
-                        Assert.Equal(parentCategory.Id, categoriesResult[0].Parent.Id);
+                        await AssertEventuallyAsync(async () =>
+                        {
+                            var returnedSet = await _client.ApiRoot().WithProjectKey(_projectKey)
+                                .Categories()
+                                .Get()
+                                .WithWhere($"parent(id = \"{parentCategory.Id}\")")
+                                .WithExpand("parent")
+                                .WithLimit(limit)
+                                .WithWithTotal(true)
+                                .ExecuteAsync();
+
+                            Assert.Equal(limit, returnedSet.Count);
+                            Assert.Equal(limit, returnedSet.Limit);
+                            Assert.Equal(count, returnedSet.Total);
+
+                            var categoriesResult = returnedSet.Results;
+                            Assert.NotNull(categoriesList[0].Parent);
+                            Assert.Equal(parentCategory.Id, categoriesResult[0].Parent.Id);
+                        });
                     });
             });
         }
