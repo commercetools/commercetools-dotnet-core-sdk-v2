@@ -10,7 +10,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
-   public partial class ByProjectKeyMeCartsByIDPost : ApiMethod<ByProjectKeyMeCartsByIDPost> {
+   public partial class ByProjectKeyMeCartsKeyByKeyPost : ApiMethod<ByProjectKeyMeCartsKeyByKeyPost> {
 
        
        private ISerializerService SerializerService { get; }
@@ -21,31 +21,25 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private string ID { get; }
+       private string Key { get; }
        
        private commercetools.Api.Models.Me.IMyCartUpdate MyCartUpdate;
    
-       public ByProjectKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate) {
+       public ByProjectKeyMeCartsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
-           this.ID = id;
+           this.Key = key;
            this.MyCartUpdate = myCartUpdate;
-           this.RequestUrl = $"/{ProjectKey}/me/carts/{ID}";
+           this.RequestUrl = $"/{ProjectKey}/me/carts/key={Key}";
        }
    
-       public List<string> GetExpand() {
-           return this.GetQueryParam("expand");
-       }
    
-       public ByProjectKeyMeCartsByIDPost WithExpand(string expand){
-           return this.AddQueryParam("expand", expand);
-       }
 
-       public async Task<commercetools.Api.Models.Me.MyCart> ExecuteAsync()
+       public async Task<JsonElement> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Me.MyCart>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

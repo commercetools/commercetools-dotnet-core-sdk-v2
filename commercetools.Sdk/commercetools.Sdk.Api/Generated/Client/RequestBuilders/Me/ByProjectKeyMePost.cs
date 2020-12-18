@@ -21,13 +21,13 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private commercetools.Api.Models.Common.IUpdate Update;
+       private commercetools.Api.Models.Me.IMyCustomerUpdate MyCustomerUpdate;
    
-       public ByProjectKeyMePost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Common.IUpdate update) {
+       public ByProjectKeyMePost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.IMyCustomerUpdate myCustomerUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
-           this.Update = update;
+           this.MyCustomerUpdate = myCustomerUpdate;
            this.RequestUrl = $"/{ProjectKey}/me";
        }
    
@@ -44,7 +44,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
           var request = base.Build();
           if (SerializerService != null)
           {
-              var body = this.SerializerService.Serialize(Update);
+              var body = this.SerializerService.Serialize(MyCustomerUpdate);
               if(!string.IsNullOrEmpty(body))
               {
                   request.Content = new StringContent(body);
