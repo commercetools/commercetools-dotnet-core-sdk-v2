@@ -1,4 +1,3 @@
-using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
@@ -15,11 +14,9 @@ namespace commercetools.Api.Models.Errors
         
         public string Message { get; set;}
         
-        public ILocalizedString LocalizedMessage { get; set;}
+        public string ExtensionId { get; set;}
         
-        public Object ExtensionExtraInfo { get; set;}
-        
-        public IErrorByExtension ErrorByExtension { get; set;}
+        public string ExtensionKey { get; set;}
         public ExtensionNoResponseError()
         { 
            this.Code = "ExtensionNoResponse";
