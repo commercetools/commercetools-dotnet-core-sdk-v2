@@ -9,14 +9,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    public partial class StoresSetDistributionChannelsAction : IStoresSetDistributionChannelsAction
+    public partial class StoreAddSupplyChannelAction : IStoreAddSupplyChannelAction
     {
         public string Action { get; set;}
         
-        public List<IChannelResourceIdentifier> DistributionChannels { get; set;}
-        public StoresSetDistributionChannelsAction()
+        public IChannelResourceIdentifier SupplyChannel { get; set;}
+        public StoreAddSupplyChannelAction()
         { 
-           this.Action = "setDistributionChannels";
+           this.Action = "addSupplyChannel";
         }
     }
 }

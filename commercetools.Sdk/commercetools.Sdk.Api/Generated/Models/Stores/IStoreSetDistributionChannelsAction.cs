@@ -9,9 +9,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoresAddDistributionChannelsAction))]
-    public partial interface IStoresAddDistributionChannelsAction : IStoreUpdateAction
+    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetDistributionChannelsAction))]
+    public partial interface IStoreSetDistributionChannelsAction : IStoreUpdateAction
     {
-        IChannelResourceIdentifier DistributionChannel { get; set;}
+        List<IChannelResourceIdentifier> DistributionChannels { get; set;}
     }
 }
