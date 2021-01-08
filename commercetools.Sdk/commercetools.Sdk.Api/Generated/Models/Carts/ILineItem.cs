@@ -57,5 +57,7 @@ namespace commercetools.Api.Models.Carts
         ICustomFields Custom { get; set;}
         
         IItemShippingDetails ShippingDetails { get; set;}
+        
+        DateTime LastModifiedAt { get; set;}
     }
 }
