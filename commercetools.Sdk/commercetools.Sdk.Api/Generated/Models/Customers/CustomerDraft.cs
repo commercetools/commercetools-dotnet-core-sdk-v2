@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.CustomerGroups;
 using commercetools.Api.Models.Stores;
@@ -28,6 +29,8 @@ namespace commercetools.Api.Models.Customers
         public string Title { get; set;}
         
         public string AnonymousCartId { get; set;}
+        
+        public ICartResourceIdentifier AnonymousCart { get; set;}
         
         public string AnonymousId { get; set;}
         

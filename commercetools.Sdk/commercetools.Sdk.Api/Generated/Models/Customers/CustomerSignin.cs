@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace commercetools.Api.Models.Customers
         public string Password { get; set;}
         
         public string AnonymousCartId { get; set;}
+        
+        public ICartResourceIdentifier AnonymousCart { get; set;}
         
         public IAnonymousCartSignInMode AnonymousCartSignInMode { get; set;}
         
