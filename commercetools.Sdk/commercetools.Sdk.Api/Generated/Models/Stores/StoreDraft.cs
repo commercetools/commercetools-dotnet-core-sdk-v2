@@ -1,5 +1,6 @@
 using commercetools.Api.Models.Channels;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,7 @@ namespace commercetools.Api.Models.Stores
         public List<IChannelResourceIdentifier> DistributionChannels { get; set;}
         
         public List<IChannelResourceIdentifier> SupplyChannels { get; set;}
+        
+        public ICustomFieldsDraft Custom { get; set;}
     }
 }

@@ -12,6 +12,8 @@ namespace commercetools.Api.Models.Stores
     [SubTypeDiscriminator("addSupplyChannel", typeof(commercetools.Api.Models.Stores.StoreAddSupplyChannelAction))]
     [SubTypeDiscriminator("removeDistributionChannel", typeof(commercetools.Api.Models.Stores.StoreRemoveDistributionChannelAction))]
     [SubTypeDiscriminator("removeSupplyChannel", typeof(commercetools.Api.Models.Stores.StoreRemoveSupplyChannelAction))]
+    [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Stores.StoreSetCustomFieldAction))]
+    [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Stores.StoreSetCustomTypeAction))]
     [SubTypeDiscriminator("setDistributionChannels", typeof(commercetools.Api.Models.Stores.StoreSetDistributionChannelsAction))]
     [SubTypeDiscriminator("setLanguages", typeof(commercetools.Api.Models.Stores.StoreSetLanguagesAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Api.Models.Stores.StoreSetNameAction))]
