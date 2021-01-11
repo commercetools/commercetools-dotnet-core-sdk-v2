@@ -13,5 +13,7 @@ namespace commercetools.Api.Models.Messages
     public partial interface IProductSlugChangedMessagePayload : IMessagePayload
     {
         ILocalizedString Slug { get; set;}
+        
+        ILocalizedString OldSlug { get; set;}
     }
 }

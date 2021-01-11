@@ -34,6 +34,8 @@ namespace commercetools.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
         
         public ILocalizedString Slug { get; set;}
+        
+        public ILocalizedString OldSlug { get; set;}
         public CategorySlugChangedMessage()
         { 
            this.Type = "CategorySlugChanged";
