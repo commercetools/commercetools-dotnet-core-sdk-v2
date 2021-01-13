@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Orders;
 using commercetools.Api.Models.States;
 using System;
@@ -13,6 +14,8 @@ namespace commercetools.Api.Models.Orders
     public partial interface IOrderFromCartDraft 
     {
         string Id { get; set;}
+        
+        ICartResourceIdentifier Cart { get; set;}
         
         long Version { get; set;}
         

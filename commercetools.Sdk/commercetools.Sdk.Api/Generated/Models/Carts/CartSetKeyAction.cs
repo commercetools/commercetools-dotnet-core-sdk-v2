@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Carts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Carts
 {
-    public partial class ReplicaCartDraft : IReplicaCartDraft
+    public partial class CartSetKeyAction : ICartSetKeyAction
     {
-        public Object Reference { get; set;}
+        public string Action { get; set;}
         
         public string Key { get; set;}
+        public CartSetKeyAction()
+        { 
+           this.Action = "setKey";
+        }
     }
 }

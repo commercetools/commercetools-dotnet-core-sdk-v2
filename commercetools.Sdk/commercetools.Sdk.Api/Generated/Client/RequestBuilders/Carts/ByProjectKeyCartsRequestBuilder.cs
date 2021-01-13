@@ -34,6 +34,9 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
        public ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder WithCustomerId(string customerId) {
            return new ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, customerId);
        }
+       public ByProjectKeyCartsKeyByKeyRequestBuilder WithKey(string key) {
+           return new ByProjectKeyCartsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
+       }
        public ByProjectKeyCartsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyCartsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

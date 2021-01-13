@@ -44,6 +44,7 @@ namespace commercetools.Api.Models.Carts
     [SubTypeDiscriminator("setCustomerGroup", typeof(commercetools.Api.Models.Carts.CartSetCustomerGroupAction))]
     [SubTypeDiscriminator("setCustomerId", typeof(commercetools.Api.Models.Carts.CartSetCustomerIdAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Carts.CartSetKeyAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Api.Models.Carts.CartSetLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Api.Models.Carts.CartSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
