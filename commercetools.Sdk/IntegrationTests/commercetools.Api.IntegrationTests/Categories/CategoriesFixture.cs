@@ -46,7 +46,7 @@ namespace commercetools.Api.IntegrationTests.Categories
 
         public static async Task<Category> CreateCategory(IClient client, CategoryDraft categoryDraft)
         {
-            return await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+            return await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Categories()
                 .Post(categoryDraft)
                 .ExecuteAsync();
@@ -56,7 +56,7 @@ namespace commercetools.Api.IntegrationTests.Categories
         {
             try
             {
-                await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+                await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .Categories()
                     .WithId(category.Id)
                     .Delete()

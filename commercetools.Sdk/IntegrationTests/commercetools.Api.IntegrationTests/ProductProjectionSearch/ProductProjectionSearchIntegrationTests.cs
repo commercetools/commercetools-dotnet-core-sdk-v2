@@ -56,7 +56,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
             await AssertEventuallyAsync(async () =>
             {
                 //Act
-                var searchResult = await _client.ApiRoot()
+                var searchResult = await _client.WithApi()
                     .WithProjectKey(_projectKey)
                     .ProductProjections()
                     .Search()

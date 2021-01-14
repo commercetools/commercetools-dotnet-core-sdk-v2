@@ -20,7 +20,7 @@ In addition, the SDK has the following directories:
 
 ## Getting Started with the .NET SDK
 
-All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it. all the request builders accessible through ApiRoot, you can use the instance inside the injected client or use ApiFactory to create a new instance, In order to use the client object, it needs to be setup first through dependency injection setup.
+All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it. all the request builders accessible through ApiRoot, you can use the instance inside the injected client using function client.WithApi() or use ApiFactory to create a new instance, In order to use the client object, it needs to be setup first through dependency injection setup.
 
 ### Basic Workflow
 
@@ -78,34 +78,34 @@ public void CreatingRequests()
                 };
     
     // Use in the previous step configured client instance to send and receive a newly created Category
-     var category = await client.ApiRoot().WithProjectKey("project-key")
+     var category = await client.WithApi().WithProjectKey("project-key")
                                     .Categories()
                                     .Post(categoryDraft)
                                     .ExecuteAsync();
     
     // Get Category by id
-    var queriedCategory = await client.ApiRoot().WithProjectKey("project-key")
+    var queriedCategory = await client.WithApi().WithProjectKey("project-key")
                 .Categories()
                 .WithId(category.Id)
                 .Get()
                 .ExecuteAsync();
                 
     // Get Category by key
-    var queriedCategory = await client.ApiRoot().WithProjectKey("project-key")
+    var queriedCategory = await client.WithApi().WithProjectKey("project-key")
                 .Categories()
                 .WithKey(category.Key)
                 .Get()
                 .ExecuteAsync();
     
     // Query Categories
-    var response = await client.ApiRoot().WithProjectKey("project-key")
+    var response = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .Get()
             .WithWhere($"key = \"{category.Key}\"")
             .ExecuteAsync();
     
     // Delete Category by id
-    var deletedCategory = await client.ApiRoot().WithProjectKey("project-key")
+    var deletedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .WithId(category.Id)
             .Delete()
@@ -124,14 +124,14 @@ public void CreatingRequests()
                         Actions = new List<ICategoryUpdateAction> {action}
                     };
     
-    var updatedCategory = await client.ApiRoot().WithProjectKey("project-key")
+    var updatedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .WithId(category.Id)
             .Post(categoryUpdate)
             .ExecuteAsync();
     
     // Delete Category by key
-    var deletedCategory = await client.ApiRoot().WithProjectKey("project-key")
+    var deletedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .WithKey(category.Key)
             .Delete()
