@@ -1,19 +1,8 @@
 # commercetools .NET SDK
 
-<img src="http://dev.commercetools.com/assets/img/CT-logo.svg" width="550px" alt="CT-logo"></img>
-
-
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.All?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.All)
-
 ## Introduction
 
-This repository contains the commercetools platform c# sdk generated from our api reference.The SDK enables developers to easily communicate with the [commercetools HTTP API](https://docs.commercetools.com/http-api.html). The developers do not need to create plain HTTP requests, but they can instead use the domain specific classes and methods to formulate valid requests.
-
-## Installation
-
-- Download from [Nuget](https://www.nuget.org/profiles/commercetools)
-
-  ```dotnet add package commercetools.Sdk.All```
+This repository contains the commercetools platform C# SDK generated from our api reference. The SDK enables developers to communicate with the [commercetools HTTP API](https://docs.commercetools.com/http-api.html). The developers do not need to create plain HTTP requests, but they can instead use the domain specific classes and methods to formulate valid requests.
 
 ## Technical Overview
 
@@ -41,8 +30,8 @@ At a high level, to make a basic call to the API, do the following:
 2. get a client object from the services responsible for calling requests to the API
 3. use the ApiRoot instance inside the client and identify the project-key.
 4. If needed – Create a draft object as a required for the request, as needed.
-4. Build your request and execute it using ExecuteAsync.
-5. Receive the response as a model.
+5. Build your request and execute it using ExecuteAsync.
+6. Receive the response as a model.
 
 ### Dependency Injection Setup
 
