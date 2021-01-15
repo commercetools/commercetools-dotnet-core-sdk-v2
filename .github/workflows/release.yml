@@ -21,8 +21,12 @@ jobs:
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+      - name: Retrieve branch name
+        id: branch_name
+        run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
       - run: ./patch_csproj.rb --version $SOURCE_TAG --patch **/*.csproj
+        env:
+          SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}   
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -39,6 +43,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v1
         with:
-          name: commercetools.Sdkv2.SOURCE_TAG
+          name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
 
