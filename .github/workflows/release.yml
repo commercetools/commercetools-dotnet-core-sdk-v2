@@ -1,0 +1,46 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: RELEASE
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  artifacts:
+    name: Release
+    runs-on: ubuntu-latest
+#    needs: [unittests, integrationtests]
+    steps:
+      - uses: actions/checkout@v2
+      # Authenticates packages to push to GPR
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1'
+          source-url: https://nuget.pkg.github.com/commercetools/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Retrieve branch name
+          id: branch_name
+          run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+      - run: ./patch_csproj.rb --version $SOURCE_TAG --patch **/*.csproj
+      - run: dotnet restore --configfile Nuget.config --packages ../packages
+        working-directory: ./commercetools.Sdk
+      - run: dotnet build --no-restore --source ../packages -c Release
+        working-directory: ./commercetools.Sdk
+      - name: Create the package
+        run: dotnet pack -c Release  -o ../pack/ --configfile Nuget.config
+        working-directory: ./commercetools.Sdk
+      - name: List packages
+        run: ls -la pack
+      - name: Publish Nuget to GitHub registry
+        if: github.ref == 'refs/heads/master'
+        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v1
+        with:
+          name: commercetools.Sdkv2.SOURCE_TAG
+          path: pack
+
