@@ -21,9 +21,7 @@ jobs:
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Retrieve branch name
-          id: branch_name
-          run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+      - run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
       - run: ./patch_csproj.rb --version $SOURCE_TAG --patch **/*.csproj
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
