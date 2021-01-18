@@ -37,7 +37,6 @@ jobs:
       - name: List packages
         run: ls -la pack
       - name: Publish Nuget to GitHub registry
-        if: github.ref == 'refs/heads/master'
         run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -45,4 +44,16 @@ jobs:
         with:
           name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
+      - name: Push generated package to NuGet
+        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+      - name: Create GH Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: true
 
