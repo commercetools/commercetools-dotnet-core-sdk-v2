@@ -7,7 +7,7 @@ This repository contains the commercetools platform C# SDK generated from our ap
 ## Technical Overview
 
 The SDK consists of the following projects:
-* `commercetools.Base.Abstractions`: Contains abstraction that implemented in other SDK projects like IClient and ISerializerService.
+* `commercetools.Base.Abstractions`: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.
 * `commercetools.Base.Client`: Contains CtpClient which communicate with the platform to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
@@ -29,7 +29,7 @@ At a high level, to make a basic call to the API, do the following:
 1. Use the dependency injection class to set things up.
 2. get a client object from the services responsible for calling requests to the API
 3. use the ApiRoot instance inside the client and identify the project-key.
-4. If needed – Create a draft object as a required for the request, as needed.
+4. If needed – Create a draft object as a required for the request based on the documentation.
 5. Build your request and execute it using ExecuteAsync.
 6. Receive the response as a model.
 
