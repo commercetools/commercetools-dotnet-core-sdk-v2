@@ -32,7 +32,7 @@ namespace commercetools.Api.Tests
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
 
             //act
-            var request = GetClient().ApiRoot()
+            var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -63,7 +63,7 @@ namespace commercetools.Api.Tests
             var where = $"name = \"food\"";
             
             //act
-            var request = GetClient().ApiRoot()
+            var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .Get()
@@ -96,7 +96,7 @@ namespace commercetools.Api.Tests
             var additionalParam = new KeyValuePair<string, string>("withTotal", "false");
 
             //act
-            var request = GetClient().ApiRoot()
+            var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -140,7 +140,7 @@ namespace commercetools.Api.Tests
 
            
             //act
-            var request = GetClient().ApiRoot()
+            var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .WithId(categoryId)
@@ -174,7 +174,7 @@ namespace commercetools.Api.Tests
             };
 
             //act
-            var request = GetClient().ApiRoot()
+            var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
                             .Categories()
                             .Post(categoryDraft)

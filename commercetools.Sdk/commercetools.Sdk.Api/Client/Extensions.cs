@@ -4,7 +4,7 @@ namespace commercetools.Api.Client
 {
     public static class Extensions
     {
-        public static ApiRoot ApiRoot(this IClient client)
+        public static ApiRoot WithApi(this IClient client)
         {
             return ApiFactory.Create(client);
         }

@@ -22,7 +22,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
 
         public static async Task<ProductType> CreateProductType(IClient client, ProductTypeDraft productTypeDraft)
         {
-            return await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+            return await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .ProductTypes()
                 .Post(productTypeDraft)
                 .ExecuteAsync();
@@ -32,7 +32,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
         {
             try
             {
-                await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+                await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .ProductTypes()
                     .WithId(productType.Id)
                     .Delete()
@@ -51,7 +51,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             ProductType productType = null;
             try
             {
-                productType = await client.ApiRoot().WithProjectKey(projectKey)
+                productType = await client.WithApi().WithProjectKey(projectKey)
                     .ProductTypes()
                     .WithKey(productTypeDraft.Key)
                     .Get()
@@ -59,7 +59,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             }
             catch (NotFoundException)
             {
-                productType = await client.ApiRoot()
+                productType = await client.WithApi()
                     .WithProjectKey(projectKey)
                     .ProductTypes()
                     .Post(productTypeDraft).ExecuteAsync();   

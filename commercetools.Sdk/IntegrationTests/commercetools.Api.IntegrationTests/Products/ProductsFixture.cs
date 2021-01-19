@@ -59,7 +59,7 @@ namespace commercetools.Api.IntegrationTests.Products
 
         public static async Task<Product> CreateProduct(IClient client, ProductDraft productDraft)
         {
-            var resource = await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+            var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Products()
                 .Post(productDraft)
                 .ExecuteAsync();
@@ -73,7 +73,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 var version = product.Version;
                 if (product.MasterData.Published)
                 {
-                   var updatedProduct =  await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+                   var updatedProduct =  await client.WithApi().WithProjectKey(DefaultProjectKey)
                         .Products()
                         .WithId(product.Id)
                         .Post(new ProductUpdate
@@ -86,7 +86,7 @@ namespace commercetools.Api.IntegrationTests.Products
                         .ExecuteAsync();
                    version = updatedProduct.Version;
                 }
-                await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+                await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .Products()
                     .WithId(product.Id)
                     .Delete()
@@ -105,7 +105,7 @@ namespace commercetools.Api.IntegrationTests.Products
             Product product = null;
             try
             {
-                product = await client.ApiRoot().WithProjectKey(projectKey)
+                product = await client.WithApi().WithProjectKey(projectKey)
                     .Products()
                     .WithKey(productDraft.Key)
                     .Get()
@@ -113,7 +113,7 @@ namespace commercetools.Api.IntegrationTests.Products
             }
             catch (NotFoundException)
             {
-                product = await client.ApiRoot()
+                product = await client.WithApi()
                     .WithProjectKey(projectKey)
                     .Products()
                     .Post(productDraft).ExecuteAsync();   

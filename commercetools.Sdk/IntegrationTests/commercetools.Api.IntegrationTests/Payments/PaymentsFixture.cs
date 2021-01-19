@@ -32,7 +32,7 @@ namespace commercetools.Api.IntegrationTests.Payments
 
         public static async Task<Payment> CreatePayment(IClient client, PaymentDraft paymentDraft)
         {
-            var resource = await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+            var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Payments()
                 .Post(paymentDraft)
                 .ExecuteAsync();
@@ -43,7 +43,7 @@ namespace commercetools.Api.IntegrationTests.Payments
         {
             try
             {
-                await client.ApiRoot().WithProjectKey(DefaultProjectKey)
+                await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .Payments()
                     .WithId(payment.Id)
                     .Delete()

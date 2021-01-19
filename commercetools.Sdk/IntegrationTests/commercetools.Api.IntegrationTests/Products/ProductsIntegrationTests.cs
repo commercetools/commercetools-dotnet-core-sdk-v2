@@ -39,7 +39,7 @@ namespace commercetools.Api.IntegrationTests.Products
                     var file = new FileStream(logoPath, FileMode.Open, FileAccess.Read);
 
                     var updateProduct = await _client
-                        .ApiRoot()
+                        .WithApi()
                         .WithProjectKey(_projectKey)
                         .Products()
                         .WithId(product.Id)
