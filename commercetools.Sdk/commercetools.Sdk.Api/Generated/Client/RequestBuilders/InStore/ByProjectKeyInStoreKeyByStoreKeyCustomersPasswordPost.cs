@@ -23,14 +23,14 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        
        private string StoreKey { get; }
        
-       private commercetools.Api.Models.Customers.ICustomerUpdate CustomerUpdate;
+       private commercetools.Api.Models.Customers.ICustomerChangePassword CustomerChangePassword;
    
-       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Api.Models.Customers.ICustomerUpdate customerUpdate) {
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Api.Models.Customers.ICustomerChangePassword customerChangePassword) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
            this.StoreKey = storeKey;
-           this.CustomerUpdate = customerUpdate;
+           this.CustomerChangePassword = customerChangePassword;
            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/password";
        }
    
@@ -47,7 +47,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
           var request = base.Build();
           if (SerializerService != null)
           {
-              var body = this.SerializerService.Serialize(CustomerUpdate);
+              var body = this.SerializerService.Serialize(CustomerChangePassword);
               if(!string.IsNullOrEmpty(body))
               {
                   request.Content = new StringContent(body);
