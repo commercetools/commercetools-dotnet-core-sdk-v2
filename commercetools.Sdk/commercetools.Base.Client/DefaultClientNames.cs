@@ -4,5 +4,6 @@
     {
         public const string Authorization = "CommercetoolsAuth";
         public const string Api = "CommercetoolsApi";
+        public const string ImportApi = "CommercetoolsImportApi";
     }
 }
