@@ -5,7 +5,7 @@ namespace commercetools.Api.Client
 {
     public class ApiRoot
     {
-        private IClient ApiHttpClient { get; set; }
+        private IClient ApiHttpClient { get; }
         
         public ApiRoot(IClient apiHttpClient)
         {
