@@ -3,7 +3,9 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using commercetools.Base.Client.Middlewares;
 using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -78,6 +80,20 @@ namespace commercetools.Base.Client
         private static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName)
         {
             var httpClientBuilder = services.AddHttpClient(clientName)
+                .ConfigureHttpClient(client =>
+                {
+                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
+                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
+                    client.DefaultRequestHeaders.UserAgent.ParseAdd(new UserAgentProvider().UserAgent);
+                })
+                .ConfigureHttpMessageHandlerBuilder(builder =>
+                {
+                    builder.PrimaryHandler = new HttpClientHandler
+                    {
+                        AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip
+                    };
+                })
+
                 .AddHttpMessageHandler(c => new ErrorHandler())
                 .AddHttpMessageHandler(c => new LoggerHandler(c.GetService<ILoggerFactory>()));
 

@@ -27,7 +27,6 @@ namespace commercetools.Base.Client
         {
             var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
-            httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(new UserAgentProvider().UserAgent);
 
             var authClient = factory.CreateClient(DefaultClientNames.Authorization);
             
