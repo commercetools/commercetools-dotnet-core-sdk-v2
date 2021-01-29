@@ -1,0 +1,37 @@
+using System.IO;
+using System.Text.Json;
+using commercetools.Base.Client;
+using commercetools.Base.Serialization;
+using commercetools.ImportApi.Client.RequestBuilders.Inventories;
+
+namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
+{
+   public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder {
+
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+       
+       private string ImportSinkKey { get; }
+   
+       public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+           this.ImportSinkKey = importSinkKey;
+       }
+   
+       public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyPost Post(commercetools.ImportApi.Models.Importrequests.IInventoryImportRequest inventoryImportRequest) {
+           return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyPost(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, inventoryImportRequest);
+       }
+       
+       public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder ResourceKeyWithResourceKeyValue(string resourceKey) {
+           return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, resourceKey);
+       }
+       public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder ImportOperations() {
+           return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey);
+       }
+   }
+}
