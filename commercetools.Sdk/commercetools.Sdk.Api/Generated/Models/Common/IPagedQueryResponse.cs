@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +20,6 @@ namespace commercetools.Api.Models.Common
         long Offset { get; set;}
         
         List<IBaseResource> Results { get; set;}
-        
-        IFacetResults Facets { get; set;}
         
         Object Meta { get; set;}
     }
