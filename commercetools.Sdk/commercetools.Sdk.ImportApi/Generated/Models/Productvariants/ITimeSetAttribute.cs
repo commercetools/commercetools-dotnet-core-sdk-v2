@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.TimeSetAttribute))]
     public partial interface ITimeSetAttribute : IAttribute
     {
-        List<ITimeSpan> Value { get; set;}
+        List<TimeSpan> Value { get; set;}
     }
 }

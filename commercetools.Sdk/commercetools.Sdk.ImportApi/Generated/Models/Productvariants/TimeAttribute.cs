@@ -14,7 +14,7 @@ namespace commercetools.ImportApi.Models.Productvariants
         
         public string Type { get; set;}
         
-        public ITimeSpan Value { get; set;}
+        public TimeSpan Value { get; set;}
         public TimeAttribute()
         { 
            this.Type = "time";

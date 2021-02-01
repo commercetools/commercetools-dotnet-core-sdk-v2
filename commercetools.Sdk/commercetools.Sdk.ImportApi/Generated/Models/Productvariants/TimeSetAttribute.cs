@@ -14,7 +14,7 @@ namespace commercetools.ImportApi.Models.Productvariants
         
         public string Type { get; set;}
         
-        public List<ITimeSpan> Value { get; set;}
+        public List<TimeSpan> Value { get; set;}
         public TimeSetAttribute()
         { 
            this.Type = "time-set";

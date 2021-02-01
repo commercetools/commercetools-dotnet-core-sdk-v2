@@ -12,7 +12,7 @@ namespace commercetools.ImportApi.Models.Customfields
     {
         public string Type { get; set;}
         
-        public ITimeSpan Value { get; set;}
+        public TimeSpan Value { get; set;}
         public TimeField()
         { 
            this.Type = "Time";

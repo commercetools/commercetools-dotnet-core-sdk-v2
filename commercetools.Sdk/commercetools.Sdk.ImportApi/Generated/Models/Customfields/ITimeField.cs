@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Customfields
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.TimeField))]
     public partial interface ITimeField : ICustomField
     {
-        ITimeSpan Value { get; set;}
+        TimeSpan Value { get; set;}
     }
 }
