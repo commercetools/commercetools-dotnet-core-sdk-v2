@@ -1,5 +1,3 @@
-using commercetools.Base.Serialization.Mappers;
-using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
