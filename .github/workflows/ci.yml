@@ -21,6 +21,8 @@ jobs:
     runs-on: ${{ matrix.osversion }}
 
     steps:
+      - name: Support longpaths
+        run: git config --system core.longpaths true
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup dotnet 3.1
