@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Customers;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,6 @@ namespace commercetools.Api.Models.Customers
     {
         ICustomer Customer { get; set;}
         
-        Object Cart { get; set;}
+        ICart Cart { get; set;}
     }
 }
