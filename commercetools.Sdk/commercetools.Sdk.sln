@@ -28,7 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.Api", "co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.ImportApi", "commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj", "{063701C0-1057-402D-8129-BC1F9C9F12FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.ML", "commercetools.Sdk.ML\commercetools.Sdk.ML.csproj", "{9D5B98CC-7387-4B58-A77C-A127C2EAF7EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.ML", "commercetools.Sdk.ML\commercetools.Sdk.ML.csproj", "{1A83C27D-9996-497F-954E-D1BD9A1E9E65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +79,10 @@ Global
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D5B98CC-7387-4B58-A77C-A127C2EAF7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D5B98CC-7387-4B58-A77C-A127C2EAF7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D5B98CC-7387-4B58-A77C-A127C2EAF7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D5B98CC-7387-4B58-A77C-A127C2EAF7EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A83C27D-9996-497F-954E-D1BD9A1E9E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A83C27D-9996-497F-954E-D1BD9A1E9E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A83C27D-9996-497F-954E-D1BD9A1E9E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A83C27D-9996-497F-954E-D1BD9A1E9E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0BE26648-8480-4F6C-A353-76D03266B0C3} = {C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}

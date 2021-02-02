@@ -2,13 +2,17 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <Description>The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.</Description>
+        <Copyright>Copyright commercetools 2021</Copyright>
+        <PackageProjectUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</PackageProjectUrl>
+        <PackageIconUrl>https://raw.githubusercontent.com/commercetools/commercetools-dotnet-core-sdk-v2/master/ct-logo.png</PackageIconUrl>
+        <PackageTags>commercetools;dotnet-core;sdk</PackageTags>
+        <RepositoryUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</RepositoryUrl>
     </PropertyGroup>
-
     <ItemGroup>
         <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
         <ProjectReference Include="..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
         <ProjectReference Include="..\commercetools.Base.Registration\commercetools.Base.Registration.csproj" />
         <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
     </ItemGroup>
-    
 </Project>
