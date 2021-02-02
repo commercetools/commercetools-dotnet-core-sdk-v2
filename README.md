@@ -39,7 +39,8 @@ At a high level, to make a basic call to the API, do the following:
 
 ```c#
 services.UseCommercetoolsApi(
-    this.configuration); // replace with your instance of IConfiguration
+    this.configuration, "Client"); // replace with your instance of IConfiguration
+//replace "Client" with your Client Key in the Configuration
 ```
 ### Configuration
 The client configuration needs to be added to appsettings.json in order for the client to work. The structure is as follows:
