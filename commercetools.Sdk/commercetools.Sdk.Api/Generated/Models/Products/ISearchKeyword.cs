@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace commercetools.Api.Models.Products
     {
         string Text { get; set;}
         
-        Object SuggestTokenizer { get; set;}
+        ISuggestTokenizer SuggestTokenizer { get; set;}
     }
 }
