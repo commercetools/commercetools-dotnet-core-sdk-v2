@@ -1,6 +1,7 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.ShippingMethods;
 using commercetools.Api.Models.TaxCategories;
+using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,7 @@ namespace commercetools.Api.Models.ShippingMethods
         bool IsDefault { get; set;}
         
         string Predicate { get; set;}
+        
+        ICustomFieldsDraft Custom { get; set;}
     }
 }

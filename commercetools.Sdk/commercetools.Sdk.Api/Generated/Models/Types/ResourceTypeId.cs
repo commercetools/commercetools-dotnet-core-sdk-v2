@@ -45,6 +45,9 @@ namespace commercetools.Api.Models.Types
        [Description("review")]
        Review,
        
+       [Description("shipping-method")]
+       ShippingMethod,
+       
        [Description("shopping-list")]
        ShoppingList,
        
@@ -107,6 +110,9 @@ namespace commercetools.Api.Models.Types
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
          {Value = ResourceTypeId.Review, JsonName = "review"}; 
        
+        public static IResourceTypeId ShippingMethod = new ResourceTypeIdWrapper
+         {Value = ResourceTypeId.ShippingMethod, JsonName = "shipping-method"}; 
+       
         public static IResourceTypeId ShoppingList = new ResourceTypeIdWrapper
          {Value = ResourceTypeId.ShoppingList, JsonName = "shopping-list"}; 
        
@@ -141,6 +147,7 @@ namespace commercetools.Api.Models.Types
                 Payment ,
                 PaymentInterfaceInteraction ,
                 Review ,
+                ShippingMethod ,
                 ShoppingList ,
                 ShoppingListTextLineItem ,
                 DiscountCode ,
