@@ -29,18 +29,26 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
            this.RequestUrl = $"/{ProjectKey}/custom-objects/{Container}";
        }
    
+       public List<string> GetWhere() {
+           return this.GetQueryParam("where");
+       }
+       
        public List<string> GetExpand() {
            return this.GetQueryParam("expand");
        }
    
+       public ByProjectKeyCustomObjectsByContainerGet WithWhere(string where){
+           return this.AddQueryParam("where", where);
+       }
+       
        public ByProjectKeyCustomObjectsByContainerGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.CustomObjects.CustomObject> ExecuteAsync()
+       public async Task<commercetools.Api.Models.CustomObjects.CustomObjectPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.CustomObject>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.CustomObjectPagedQueryResponse>(requestMessage);
        }
    }
 }
