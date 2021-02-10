@@ -15,26 +15,56 @@ namespace commercetools.Base.Client
             string clientName,
             IClientConfiguration configuration,
             IHttpClientFactory factory,
-            ISerializerService serializerService)
+            ISerializerService serializerService,
+            ITokenStoreManager tokenStoreManager = null)
         {
+            var tokenStore = tokenStoreManager ?? new InMemoryTokenStoreManager();
+            var authClient = factory.CreateClient(DefaultClientNames.Authorization);
+            var tokenProvider = CreateClientCredentialsTokenProvider(configuration, authClient, tokenStore);
             return new CtpClient(
-                CreateMiddlewareStack(clientName, configuration, factory),
+                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
+                serializerService
+            );
+        }
+        public static IClient CreatePasswordFlow(
+            string clientName,
+            IClientConfiguration configuration,
+            IHttpClientFactory factory,
+            ISerializerService serializerService,
+            IUserCredentialsStoreManager userCredentials)
+        {
+            var authClient = factory.CreateClient(DefaultClientNames.Authorization);
+            var tokenProvider = CreatePasswordTokenProvider(configuration, authClient, userCredentials);
+            return new CtpClient(
+                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
+                serializerService
+            );
+        }
+        
+        public static IClient CreateAnonymousFlow(
+            string clientName,
+            IClientConfiguration configuration,
+            IHttpClientFactory factory,
+            ISerializerService serializerService,
+            IAnonymousCredentialsStoreManager anonymousCredentials)
+        {
+            var authClient = factory.CreateClient(DefaultClientNames.Authorization);
+            var tokenProvider = CreateAnonymousSessionTokenProvider(configuration, authClient, anonymousCredentials);
+            return new CtpClient(
+                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
                 serializerService
             );
         }
 
-        public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration, IHttpClientFactory factory)
+        public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration,
+            IHttpClientFactory factory, ITokenProvider tokenProvider)
         {
             var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
 
-            var authClient = factory.CreateClient(DefaultClientNames.Authorization);
-            
             List<DelegatingMiddleware> handlers = new List<DelegatingMiddleware>()
             {
-                CreateAuthMiddleware(
-                    CreateClientCredentialsProvider(configuration, authClient)
-                ),
+                CreateAuthMiddleware(tokenProvider),
                 CreateCorrelationIdMiddleware(
                     new DefaultCorrelationIdProvider(configuration)
                 )
@@ -46,6 +76,7 @@ namespace commercetools.Base.Client
                 handler.InnerMiddleware = httpMiddleware;
                 httpMiddleware = handler;
             }
+
             return httpMiddleware;
         }
 
@@ -54,17 +85,42 @@ namespace commercetools.Base.Client
             return new AuthorizationMiddleware(tokenProvider);
         }
 
-        public static CorrelationIdMiddleware CreateCorrelationIdMiddleware(ICorrelationIdProvider correlationIdProvider)
+        public static CorrelationIdMiddleware CreateCorrelationIdMiddleware(
+            ICorrelationIdProvider correlationIdProvider)
         {
             return new CorrelationIdMiddleware(correlationIdProvider);
         }
+        
 
-        public static ITokenProvider CreateClientCredentialsProvider(IClientConfiguration configuration, HttpClient httpClient)
+        private static ITokenProvider CreateClientCredentialsTokenProvider(IClientConfiguration configuration,
+            HttpClient httpClient, ITokenStoreManager tokenStoreManager)
         {
             return new ClientCredentialsTokenProvider(
                 configuration,
                 httpClient,
-                new InMemoryTokenStoreManager(),
+                tokenStoreManager,
+                new TokenSerializerService()
+            );
+        }
+
+        private static ITokenProvider CreatePasswordTokenProvider(IClientConfiguration configuration,
+            HttpClient httpClient, IUserCredentialsStoreManager userCredentials)
+        {
+            return new PasswordTokenProvider(
+                configuration,
+                httpClient,
+                userCredentials,
+                new TokenSerializerService()
+            );
+        }
+
+        private static ITokenProvider CreateAnonymousSessionTokenProvider(IClientConfiguration configuration,
+            HttpClient httpClient, IAnonymousCredentialsStoreManager anonymousCredentials)
+        {
+            return new AnonymousSessionTokenProvider(
+                configuration,
+                httpClient,
+                anonymousCredentials,
                 new TokenSerializerService()
             );
         }
