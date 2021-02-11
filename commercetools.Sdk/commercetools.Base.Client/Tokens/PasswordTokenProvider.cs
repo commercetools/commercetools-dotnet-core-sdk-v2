@@ -10,8 +10,8 @@ namespace commercetools.Base.Client.Tokens
             IClientConfiguration configuration,
             HttpClient httpClient,
             IUserCredentialsStoreManager userCredentialsStoreManager,
-            ITokenSerializerService serializerService)
-            : base(httpClient, userCredentialsStoreManager, serializerService)
+            ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
+            : base(httpClient, userCredentialsStoreManager, serializerService, tokenEndpointBaseAddress)
         {
             this.ClientConfiguration = configuration;
             this.userCredentialsManager = userCredentialsStoreManager;
@@ -19,10 +19,9 @@ namespace commercetools.Base.Client.Tokens
 
         public TokenFlow TokenFlow => TokenFlow.Password;
 
-        public override HttpRequestMessage GetRequestMessage()
+        protected override string BuildTokenRequestUri()
         {
-            HttpRequestMessage request = new HttpRequestMessage();
-            string requestUri = this.ClientConfiguration.AuthorizationBaseAddress + $"oauth/{this.ClientConfiguration.ProjectKey}/customers/token?grant_type=password";
+            var requestUri = this.TokenEndpointBaseAddress+"?grant_type=password";
             requestUri += $"&username={this.userCredentialsManager.Username}";
             requestUri += $"&password={this.userCredentialsManager.Password}";
             if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
@@ -30,11 +29,7 @@ namespace commercetools.Base.Client.Tokens
                 requestUri += $"&scope={this.ClientConfiguration.Scope}";
             }
 
-            request.RequestUri = new Uri(requestUri);
-            string credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
-            request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
-            request.Method = HttpMethod.Post;
-            return request;
+            return requestUri;
         }
     }
 }

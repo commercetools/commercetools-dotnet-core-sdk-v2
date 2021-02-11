@@ -10,19 +10,19 @@ namespace commercetools.Base.Client.Tokens
             IClientConfiguration configuration,
             HttpClient httpClient,
             IAnonymousCredentialsStoreManager anonymousCredentialsStoreManager,
-            ITokenSerializerService serializerService)
-            : base(httpClient, anonymousCredentialsStoreManager, serializerService)
+            ITokenSerializerService serializerService,
+            string tokenEndpointBaseAddress)
+            : base(httpClient, anonymousCredentialsStoreManager, serializerService, tokenEndpointBaseAddress)
         {
             this.ClientConfiguration = configuration;
             this.anonymousCredentialsStoreManager = anonymousCredentialsStoreManager;
         }
 
         public TokenFlow TokenFlow => TokenFlow.AnonymousSession;
-
-        public override HttpRequestMessage GetRequestMessage()
+        
+        protected override string BuildTokenRequestUri()
         {
-            HttpRequestMessage request = new HttpRequestMessage();
-            string requestUri = this.ClientConfiguration.AuthorizationBaseAddress + $"oauth/{this.ClientConfiguration.ProjectKey}/anonymous/token?grant_type=client_credentials";
+            var requestUri = this.TokenEndpointBaseAddress+"?grant_type=client_credentials";
             if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
             {
                 requestUri += $"&scope={this.ClientConfiguration.Scope}";
@@ -32,12 +32,7 @@ namespace commercetools.Base.Client.Tokens
             {
                 requestUri += $"&anonymous_id={this.anonymousCredentialsStoreManager.AnonymousId}";
             }
-
-            request.RequestUri = new Uri(requestUri);
-            string credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
-            request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
-            request.Method = HttpMethod.Post;
-            return request;
+            return requestUri;
         }
     }
 }

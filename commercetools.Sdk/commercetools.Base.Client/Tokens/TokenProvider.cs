@@ -11,11 +11,12 @@ namespace commercetools.Base.Client.Tokens
         private readonly ISerializerService serializerService;
         private readonly ITokenStoreManager tokenStoreManager;
 
-        protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService)
+        protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
             this.HttpClient = httpClient;
             this.tokenStoreManager = tokenStoreManager;
             this.serializerService = serializerService;
+            this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
 
         public Token Token
@@ -67,8 +68,20 @@ namespace commercetools.Base.Client.Tokens
         public IClientConfiguration ClientConfiguration { get; set; }
 
         protected HttpClient HttpClient { get; }
+        
+        protected string TokenEndpointBaseAddress { get; }
 
-        public abstract HttpRequestMessage GetRequestMessage();
+        public virtual HttpRequestMessage GetRequestMessage()
+        {
+            HttpRequestMessage request = new HttpRequestMessage
+            {
+                RequestUri = new Uri(BuildTokenRequestUri())
+            };
+            string credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
+            request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
+            request.Method = HttpMethod.Post;
+            return request;
+        }
 
         private HttpRequestMessage GetRefreshTokenRequestMessage()
         {
@@ -100,6 +113,17 @@ namespace commercetools.Base.Client.Tokens
             var generalClientException =
                 new HttpApiClientException(result.ReasonPhrase, (int)result.StatusCode);
             throw generalClientException;
+        }
+
+        protected virtual string BuildTokenRequestUri()
+        {
+            var requestUri = this.TokenEndpointBaseAddress+ "?grant_type=client_credentials";
+            if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
+            {
+                requestUri += $"&scope={this.ClientConfiguration.Scope}";
+            }
+
+            return requestUri;
         }
     }
 }
