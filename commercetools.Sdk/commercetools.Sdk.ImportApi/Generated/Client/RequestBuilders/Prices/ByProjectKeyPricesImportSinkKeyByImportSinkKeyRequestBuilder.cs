@@ -27,9 +27,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Prices
            return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, priceImportRequest);
        }
        
-       public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder ResourceKeyWithResourceKeyValue(string resourceKey) {
-           return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, resourceKey);
-       }
        public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder ImportOperations() {
            return new ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey);
        }
