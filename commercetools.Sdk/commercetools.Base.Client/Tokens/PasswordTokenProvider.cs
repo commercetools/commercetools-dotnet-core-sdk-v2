@@ -18,18 +18,19 @@ namespace commercetools.Base.Client.Tokens
         }
 
         public TokenFlow TokenFlow => TokenFlow.Password;
-
-        protected override string BuildTokenRequestUri()
+        
+        protected override string BuildTokenRequestBody()
         {
-            var requestUri = this.TokenEndpointBaseAddress+"?grant_type=password";
-            requestUri += $"&username={this.userCredentialsManager.Username}";
-            requestUri += $"&password={this.userCredentialsManager.Password}";
-            if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
+            var body = "grant_type=password";
+            var scope = this.ClientConfiguration.Scope;
+            body += $"&username={this.userCredentialsManager.Username}";
+            body += $"&password={this.userCredentialsManager.Password}";
+            if (!string.IsNullOrEmpty(scope))
             {
-                requestUri += $"&scope={this.ClientConfiguration.Scope}";
+                body += $"&scope={scope}";
             }
 
-            return requestUri;
+            return body;
         }
     }
 }

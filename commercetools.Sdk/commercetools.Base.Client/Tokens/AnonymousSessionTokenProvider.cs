@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 
 namespace commercetools.Base.Client.Tokens
@@ -20,19 +19,21 @@ namespace commercetools.Base.Client.Tokens
 
         public TokenFlow TokenFlow => TokenFlow.AnonymousSession;
         
-        protected override string BuildTokenRequestUri()
+        protected override string BuildTokenRequestBody()
         {
-            var requestUri = this.TokenEndpointBaseAddress+"?grant_type=client_credentials";
-            if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
+            var body = "grant_type=client_credentials";
+            var scope = this.ClientConfiguration.Scope;
+            var anonymousId = this.anonymousCredentialsStoreManager.AnonymousId;
+            if (!string.IsNullOrEmpty(scope))
             {
-                requestUri += $"&scope={this.ClientConfiguration.Scope}";
+                body += $"&scope={scope}";
+            }
+            if (!string.IsNullOrEmpty(anonymousId))
+            {
+                body += $"&anonymous_id={anonymousId}";
             }
 
-            if (!string.IsNullOrEmpty(this.anonymousCredentialsStoreManager.AnonymousId))
-            {
-                requestUri += $"&anonymous_id={this.anonymousCredentialsStoreManager.AnonymousId}";
-            }
-            return requestUri;
+            return body;
         }
     }
 }

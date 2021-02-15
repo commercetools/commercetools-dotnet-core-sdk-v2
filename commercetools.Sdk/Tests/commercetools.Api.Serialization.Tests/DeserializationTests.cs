@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.GraphQl;
 using commercetools.Api.Models.Orders;
 using commercetools.Api.Models.Products;
 using commercetools.Api.Models.ProductTypes;
@@ -286,5 +288,48 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("bar", customFields.Fields["foo"]);
             Assert.Equal("Bars", customFields.Fields["Foos"]);
         }
+        
+        
+        [Fact]
+        public void TestFacetResultsDeserialization()
+        {
+            //arrange
+            var response = File.ReadAllText("Resources/ProductProjectionSearch/FacetResults.json");
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+
+            //act
+            var facetResults = serializerService.Deserialize<IFacetResults>(response);
+
+            //assert
+            Assert.NotNull(facetResults);
+            Assert.Single(facetResults.Keys);
+            Assert.IsAssignableFrom<ITermFacetResult>(facetResults["size"]);
+            var sizeFacetResults = facetResults["size"] as TermFacetResult;
+            Assert.NotNull(sizeFacetResults);
+            Assert.Equal(5, sizeFacetResults.Terms.Count);
+            var xxxlTerm = sizeFacetResults.Terms.FirstOrDefault();
+            Assert.NotNull(xxxlTerm);
+            Assert.Equal(1, xxxlTerm.Count);
+            Assert.Equal("XXXL",xxxlTerm.Term.ToString());
+
+        }
+
+        [Fact]
+        public void TestGraphQlResponseDeserialization()
+        {
+            //arrange
+            var response = File.ReadAllText("Resources/GraphQL/response.json");
+            var serializerService = this.serializationFixture.SerializerService;
+
+            //act
+            var result = serializerService.Deserialize<GraphQLResponse>(response);
+            
+            //assert
+            var typedResult = ((JsonElement) result.Data).ToObject<GraphResultData>(serializerService);
+            var customersResult = typedResult.Customers;
+            Assert.NotNull(customersResult);
+            Assert.Equal(customersResult.Count, customersResult.Results.Count);
+        }
+
     }
 }

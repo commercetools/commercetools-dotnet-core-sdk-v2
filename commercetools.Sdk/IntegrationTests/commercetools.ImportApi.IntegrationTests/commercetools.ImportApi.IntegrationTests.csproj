@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.8" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
+      <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
+      <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.test.Development.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

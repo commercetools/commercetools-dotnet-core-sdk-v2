@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Serialization;
@@ -75,7 +76,8 @@ namespace commercetools.Base.Client.Tokens
         {
             HttpRequestMessage request = new HttpRequestMessage
             {
-                RequestUri = new Uri(BuildTokenRequestUri())
+                RequestUri = new Uri(this.TokenEndpointBaseAddress),
+                Content = new StringContent(BuildTokenRequestBody(), Encoding.UTF8, "application/x-www-form-urlencoded")
             };
             string credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
             request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
@@ -114,16 +116,16 @@ namespace commercetools.Base.Client.Tokens
                 new HttpApiClientException(result.ReasonPhrase, (int)result.StatusCode);
             throw generalClientException;
         }
-
-        protected virtual string BuildTokenRequestUri()
+        protected virtual string BuildTokenRequestBody()
         {
-            var requestUri = this.TokenEndpointBaseAddress+ "?grant_type=client_credentials";
-            if (!string.IsNullOrEmpty(this.ClientConfiguration.Scope))
+            var body = "grant_type=client_credentials";
+            var scope = this.ClientConfiguration.Scope;
+            if (!string.IsNullOrEmpty(scope))
             {
-                requestUri += $"&scope={this.ClientConfiguration.Scope}";
+                body += $"&scope={scope}";
             }
 
-            return requestUri;
+            return body;
         }
     }
 }

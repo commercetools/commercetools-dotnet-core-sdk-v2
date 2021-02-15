@@ -1,0 +1,18 @@
+{
+  "data": {
+    "customers": {
+      "count": 3,
+      "results": [
+        {
+          "email": "a.b@gmail.com"
+        },
+        {
+          "email": "c.d@gmail.com"
+        },
+        {
+          "email": "e.f@hotmail.com"
+        }
+      ]
+    }
+  }
+}
