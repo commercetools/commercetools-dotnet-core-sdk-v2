@@ -94,6 +94,12 @@
       <None Update="Resources\CustomFields\Number.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="Resources\GraphQL\response.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\ProductProjectionSearch\FacetResults.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
