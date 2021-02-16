@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-
         <IsPackable>false</IsPackable>
         <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
     </PropertyGroup>
