@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using commercetools.Base.Client;
@@ -47,7 +48,7 @@ namespace commercetools.Ml.Client.RequestBuilders.Similarities
               var body = this.SerializerService.Serialize(SimilarProductSearchRequest);
               if(!string.IsNullOrEmpty(body))
               {
-                  request.Content = new StringContent(body);
+                  request.Content = new StringContent(body, Encoding.UTF8, "application/json");
               }
           }
           return request;
