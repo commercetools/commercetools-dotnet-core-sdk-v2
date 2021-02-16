@@ -11,6 +11,7 @@ namespace commercetools.Sdk.ImportApi.Client
         {
             this.ApiHttpClient = apiHttpClient;
         }
+
         public ByProjectKeyRequestBuilder WithProjectKey(string projectKey)
         {
             return new ByProjectKeyRequestBuilder(ApiHttpClient, ApiHttpClient?.SerializerService, projectKey);

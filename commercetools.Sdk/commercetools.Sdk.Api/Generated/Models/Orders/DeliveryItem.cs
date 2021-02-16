@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Orders
     {
         public string Id { get; set;}
         
-        public double Quantity { get; set;}
+        public long Quantity { get; set;}
     }
 }

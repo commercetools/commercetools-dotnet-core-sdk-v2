@@ -27,7 +27,7 @@ namespace commercetools.Api.Models.Me
         
         string Sku { get; set;}
         
-        double? Quantity { get; set;}
+        long? Quantity { get; set;}
         
         IChannelResourceIdentifier SupplyChannel { get; set;}
         

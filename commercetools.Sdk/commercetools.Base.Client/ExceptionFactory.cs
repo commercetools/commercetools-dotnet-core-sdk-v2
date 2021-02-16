@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using commercetools.Base.Client.Error;
 
@@ -18,7 +20,8 @@ namespace commercetools.Base.Client
             var statusCode = (int) response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Server error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
-            var headers = request.GetHeaders();
+            List<KeyValuePair<string, string>> t = new List<KeyValuePair<string, string>>();
+            var headers = new ApiHttpHeaders(response.Headers.SelectMany(pair => pair.Value.Select(v => new KeyValuePair<string, string>(pair.Key, v))).ToList());
 
             switch (statusCode)
             {
@@ -45,7 +48,7 @@ namespace commercetools.Base.Client
             var statusCode = (int) response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Client error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
-            var headers = request.GetHeaders();
+            var headers = new ApiHttpHeaders(response.Headers.SelectMany(pair => pair.Value.Select(v => new KeyValuePair<string, string>(pair.Key, v))).ToList());
 
             switch (statusCode)
             {
