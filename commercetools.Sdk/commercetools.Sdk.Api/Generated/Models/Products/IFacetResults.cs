@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public class IFacetResults : Dictionary<string, Object>
+    public class IFacetResults : Dictionary<string, IFacetResult>
     {
     }
 }

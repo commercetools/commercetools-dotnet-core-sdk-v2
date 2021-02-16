@@ -14,11 +14,16 @@ namespace commercetools.Base.Client
         public const string CONTENT_LENGTH = "Content-Length";
         public const string X_CORRELATION_ID = "X-Correlation-ID";
 
-        public List<KeyValuePair<string, string>> Headers { get;}
+        public List<KeyValuePair<string, string>> Headers { get; }
 
         public ApiHttpHeaders()
         {
             Headers = new List<KeyValuePair<string, string>>();
+        }
+
+        public ApiHttpHeaders(List<KeyValuePair<string, string>> headers)
+        {
+            Headers = headers;
         }
 
         public void AddHeader (string key, string value)
