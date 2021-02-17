@@ -6,6 +6,9 @@ namespace commercetools.Api.Models.Types
 {
    public enum ResourceTypeId
    {
+       [Description("address")]
+       Address,
+       
        [Description("asset")]
        Asset,
        
@@ -71,6 +74,9 @@ namespace commercetools.Api.Models.Types
    [EnumInterfaceCreator(typeof(IResourceTypeId), "FindEnum")]
    public interface IResourceTypeId : IJsonName
    {
+        public static IResourceTypeId Address = new ResourceTypeIdWrapper
+         {Value = ResourceTypeId.Address, JsonName = "address"}; 
+       
         public static IResourceTypeId Asset = new ResourceTypeIdWrapper
          {Value = ResourceTypeId.Asset, JsonName = "asset"}; 
        
@@ -134,6 +140,7 @@ namespace commercetools.Api.Models.Types
         {
            return new[]
            {
+                Address ,
                 Asset ,
                 Category ,
                 Channel ,
