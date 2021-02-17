@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.MLApi.Client;
@@ -14,21 +16,23 @@ namespace commercetools.Sdk.MLApi
     {
         public static IHttpClientBuilder UseCommercetoolsMLApi(this IServiceCollection services,
             IConfiguration configuration,
-            string clientName = DefaultClientNames.MLApi)
+            string clientName = DefaultClientNames.MLApi,
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
             var clients = new List<string>()
             {
                 clientName
             };
             services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>()));
-            return services.UseCommercetoolsMLApi(configuration, clients).Single().Value;
+            return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsMLApi(this IServiceCollection services,
-            IConfiguration configuration, IList<string> clients)
+            IConfiguration configuration, IList<string> clients, 
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             services.UseCommercetoolsMLApiSerialization();
-            return services.UseHttpApi(configuration, clients, c => c.GetService<SerializerService>());
+            return services.UseHttpApi(configuration, clients, serviceProvider => serviceProvider.GetService<SerializerService>(), tokenProviderSupplier);
         }
 
         public static void UseCommercetoolsMLApiSerialization(this IServiceCollection services)

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using commercetools.Base.Client.Middlewares;
+using commercetools.Base.Client.Tokens;
 using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,19 +23,21 @@ namespace commercetools.Base.Client
 
         public static IDictionary<string, IHttpClientBuilder> UseHttpApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
-            Func<IServiceProvider, ISerializerService> serializerFactory)
+            Func<IServiceProvider, ISerializerService> serializerFactory,
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             if (clients.Count() == 1)
             {
-                return services.UseSingleClient(configuration, clients.First(), serializerFactory);
+                return services.UseSingleClient(configuration, clients.First(), serializerFactory, tokenProviderSupplier);
             }
 
-            return services.UseMultipleClients(configuration, clients, serializerFactory);
+            return services.UseMultipleClients(configuration, clients, serializerFactory, tokenProviderSupplier);
         }
 
         private static IDictionary<string, IHttpClientBuilder> UseMultipleClients(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
-            Func<IServiceProvider, ISerializerService> serializerFactory)
+            Func<IServiceProvider, ISerializerService> serializerFactory,
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
             foreach (string clientName in clients)
@@ -44,10 +47,12 @@ namespace commercetools.Base.Client
                 Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
 
                 builders.TryAdd(clientName, services.SetupClient(clientName));
-                services.AddSingleton(c =>
+                services.AddSingleton(serviceProvider =>
                 {
-                    var client = ClientFactory.Create(clientName, clientConfiguration, c.GetService<IHttpClientFactory>(),
-                        serializerFactory(c));
+                    var client = ClientFactory.Create(clientName, clientConfiguration,
+                        serviceProvider.GetService<IHttpClientFactory>(),
+                        serializerFactory(serviceProvider),
+                        tokenProviderSupplier(clientName, configuration, serviceProvider));
                     client.Name = clientName;
                     return client;
                 });
@@ -58,15 +63,18 @@ namespace commercetools.Base.Client
 
         private static IDictionary<string, IHttpClientBuilder> UseSingleClient(this IServiceCollection services,
             IConfiguration configuration, string clientName,
-            Func<IServiceProvider, ISerializerService> serializerFactory)
+            Func<IServiceProvider, ISerializerService> serializerFactory,
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
 
-            services.AddSingleton(c =>
+            services.AddSingleton(serviceProvider =>
             {
-                var client = ClientFactory.Create(clientName, clientConfiguration, c.GetService<IHttpClientFactory>(),
-                    serializerFactory(c));
+                var client = ClientFactory.Create(clientName, clientConfiguration,
+                    serviceProvider.GetService<IHttpClientFactory>(),
+                    serializerFactory(serviceProvider),
+                    tokenProviderSupplier(clientName, configuration, serviceProvider));
                 client.Name = clientName;
                 return client;
             });
@@ -93,7 +101,6 @@ namespace commercetools.Base.Client
                         AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip
                     };
                 })
-
                 .AddHttpMessageHandler(c => new ErrorHandler())
                 .AddHttpMessageHandler(c => new LoggerHandler(c.GetService<ILoggerFactory>()));
 

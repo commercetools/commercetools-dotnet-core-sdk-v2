@@ -6,6 +6,7 @@ using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
+using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
 using static commercetools.Api.IntegrationTests.GenericFixture;
