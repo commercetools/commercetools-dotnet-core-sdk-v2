@@ -36,10 +36,12 @@ namespace commercetools.Api
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients, 
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
             services.UseCommercetoolsApiSerialization();
-            return services.UseHttpApi(configuration, clients, serviceProvider => serviceProvider.GetService<SerializerService>(), tokenProviderSupplier);
+            return services.UseHttpApi(configuration, clients, 
+                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
         public static void UseCommercetoolsApiSerialization(this IServiceCollection services)
