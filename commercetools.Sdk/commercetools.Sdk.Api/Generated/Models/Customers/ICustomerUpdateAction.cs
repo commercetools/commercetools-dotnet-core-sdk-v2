@@ -18,6 +18,8 @@ namespace commercetools.Api.Models.Customers
     [SubTypeDiscriminator("removeBillingAddressId", typeof(commercetools.Api.Models.Customers.CustomerRemoveBillingAddressIdAction))]
     [SubTypeDiscriminator("removeShippingAddressId", typeof(commercetools.Api.Models.Customers.CustomerRemoveShippingAddressIdAction))]
     [SubTypeDiscriminator("removeStore", typeof(commercetools.Api.Models.Customers.CustomerRemoveStoreAction))]
+    [SubTypeDiscriminator("setAddressCustomField", typeof(commercetools.Api.Models.Customers.CustomerSetAddressCustomFieldAction))]
+    [SubTypeDiscriminator("setAddressCustomType", typeof(commercetools.Api.Models.Customers.CustomerSetAddressCustomTypeAction))]
     [SubTypeDiscriminator("setCompanyName", typeof(commercetools.Api.Models.Customers.CustomerSetCompanyNameAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Customers.CustomerSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Customers.CustomerSetCustomTypeAction))]

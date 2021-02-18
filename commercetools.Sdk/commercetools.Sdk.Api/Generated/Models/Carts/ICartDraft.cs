@@ -18,6 +18,8 @@ namespace commercetools.Api.Models.Carts
     {
         string Currency { get; set;}
         
+        string Key { get; set;}
+        
         string CustomerId { get; set;}
         
         string CustomerEmail { get; set;}
