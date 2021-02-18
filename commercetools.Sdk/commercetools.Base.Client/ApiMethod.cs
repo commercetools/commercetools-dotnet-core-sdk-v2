@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.WebUtilities;
 
 namespace commercetools.Base.Client
 {
-    public abstract class ApiMethod<T> where T:ApiMethod<T>
+    public abstract class ApiMethod<T> where T : ApiMethod<T>
     {
         public abstract HttpMethod Method { get; }
 
@@ -24,42 +24,42 @@ namespace commercetools.Base.Client
 
         public T AddQueryParam(string key, string value)
         {
+            if (string.IsNullOrEmpty(value))
+                return (T) this;
             this.QueryParams.Add(
                 new KeyValuePair<string, string>(key, value));
-            return (T)this;
+            return (T) this;
         }
 
         public T WithQueryParam(List<KeyValuePair<string, string>> queryParams)
         {
             this.QueryParams = queryParams;
-            return (T)this;
+            return (T) this;
         }
 
         public List<string> GetQueryParam(string key)
         {
             return this.QueryParams.Where(
-                p => p.Key.Equals(key))
+                    p => p.Key.Equals(key))
                 .Select(p => p.Value).ToList();
         }
 
         public T AddHeader(string key, string value)
         {
             this.Headers.AddHeader(key, value);
-            return (T)this;
+            return (T) this;
         }
 
         public T WithHeaders(ApiHttpHeaders headers)
         {
             this.Headers = headers;
-            return (T)this;
+            return (T) this;
         }
 
         public virtual HttpRequestMessage Build()
         {
             var requestPath = RequestUrl;
-            QueryParams.ForEach(x => {
-                requestPath = QueryHelpers.AddQueryString(requestPath, x.Key, x.Value);
-            });
+            QueryParams.ForEach(x => { requestPath = QueryHelpers.AddQueryString(requestPath, x.Key, x.Value); });
 
             var request = new HttpRequestMessage();
             request.Method = this.Method;
