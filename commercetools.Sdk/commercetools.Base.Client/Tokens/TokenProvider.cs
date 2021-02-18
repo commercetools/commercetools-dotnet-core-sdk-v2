@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Serialization;
@@ -11,11 +12,12 @@ namespace commercetools.Base.Client.Tokens
         private readonly ISerializerService serializerService;
         private readonly ITokenStoreManager tokenStoreManager;
 
-        protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService)
+        protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
             this.HttpClient = httpClient;
             this.tokenStoreManager = tokenStoreManager;
             this.serializerService = serializerService;
+            this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
 
         public Token Token
@@ -67,8 +69,21 @@ namespace commercetools.Base.Client.Tokens
         public IClientConfiguration ClientConfiguration { get; set; }
 
         protected HttpClient HttpClient { get; }
+        
+        protected string TokenEndpointBaseAddress { get; }
 
-        public abstract HttpRequestMessage GetRequestMessage();
+        public virtual HttpRequestMessage GetRequestMessage()
+        {
+            HttpRequestMessage request = new HttpRequestMessage
+            {
+                RequestUri = new Uri(this.TokenEndpointBaseAddress),
+                Content = new StringContent(BuildTokenRequestBody(), Encoding.UTF8, "application/x-www-form-urlencoded")
+            };
+            string credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
+            request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
+            request.Method = HttpMethod.Post;
+            return request;
+        }
 
         private HttpRequestMessage GetRefreshTokenRequestMessage()
         {
@@ -100,6 +115,17 @@ namespace commercetools.Base.Client.Tokens
             var generalClientException =
                 new HttpApiClientException(result.ReasonPhrase, (int)result.StatusCode);
             throw generalClientException;
+        }
+        protected virtual string BuildTokenRequestBody()
+        {
+            var body = "grant_type=client_credentials";
+            var scope = this.ClientConfiguration.Scope;
+            if (!string.IsNullOrEmpty(scope))
+            {
+                body += $"&scope={scope}";
+            }
+
+            return body;
         }
     }
 }

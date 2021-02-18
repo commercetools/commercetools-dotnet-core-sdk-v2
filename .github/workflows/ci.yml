@@ -21,6 +21,8 @@ jobs:
     runs-on: ${{ matrix.osversion }}
 
     steps:
+      - name: Support longpaths
+        run: git config --global core.longpaths true
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup dotnet 3.1
@@ -67,6 +69,17 @@ jobs:
         if: github.event_name == 'push'
         working-directory: ./commercetools.Sdk
       - run: dotnet test IntegrationTests/commercetools.Api.IntegrationTests --verbosity=normal --no-build -c Release
+        if: github.event_name == 'pull_request'
+        working-directory: ./commercetools.Sdk
+        env:
+          CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID_PR }}
+          CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+          CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
+          CTP_Client__Scope: ${{ secrets.CTP_SCOPE_PR }}
+      - run: dotnet test IntegrationTests/commercetools.ImportApi.IntegrationTests --verbosity=normal --no-build -c Release
+        if: github.event_name == 'push'
+        working-directory: ./commercetools.Sdk
+      - run: dotnet test IntegrationTests/commercetools.ImportApi.IntegrationTests --verbosity=normal --no-build -c Release
         if: github.event_name == 'pull_request'
         working-directory: ./commercetools.Sdk
         env:

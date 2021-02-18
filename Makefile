@@ -29,4 +29,4 @@ generate_import:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="ImportApi" GEN_RAML_FILE=../$(IMPORT_RAML) generate_sdk
 
 generate_ml:
-	$(MAKE) -C commercetools.Sdk LIB_NAME="Ml" PACKAGE_DIR="machine-learning" GEN_RAML_FILE=../$(ML_RAML) generate_sdk
+	$(MAKE) -C commercetools.Sdk LIB_NAME="MLApi" GEN_RAML_FILE=../$(ML_RAML) generate_sdk

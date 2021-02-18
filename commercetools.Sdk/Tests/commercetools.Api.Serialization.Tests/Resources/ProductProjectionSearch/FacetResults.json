@@ -1,0 +1,31 @@
+{
+  "size": {
+    "type": "terms",
+    "dataType": "text",
+    "missing": 0,
+    "total": 5,
+    "other": 0,
+    "terms": [
+      {
+        "term": "XXXL",
+        "count": 1
+      },
+      {
+        "term": "XXS",
+        "count": 2
+      },
+      {
+        "term": "XXL",
+        "count": 3
+      },
+      {
+        "term": "XS",
+        "count": 4
+      },
+      {
+        "term": "XL",
+        "count": 5
+      }
+    ]
+  }
+}

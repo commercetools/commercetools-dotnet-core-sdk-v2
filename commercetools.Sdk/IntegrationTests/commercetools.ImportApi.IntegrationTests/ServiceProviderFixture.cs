@@ -1,12 +1,9 @@
-﻿﻿using System.Collections.Generic;
- using System.Net.Http;
- using commercetools.Base.Client;
-using commercetools.Base.Client.Tokens;
+﻿using commercetools.Base.Client;
+using commercetools.Sdk.ImportApi;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.ImportApi.IntegrationTests
 {
     public class ServiceProviderFixture
     {
@@ -16,8 +13,7 @@ namespace commercetools.Api.IntegrationTests
         public ServiceProviderFixture()
         {
             var services = new ServiceCollection();
-
-            //services.AddLogging(configure => configure.AddConsole());
+            
             this.configuration = new ConfigurationBuilder().
                 AddJsonFile("appsettings.test.Development.json", true).
                 AddEnvironmentVariables().
@@ -25,12 +21,11 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client");
-            services.AddLogging(c=> c.AddProvider(new InMemoryLoggerProvider()));
+            services.UseCommercetoolsImportApi(configuration, "ImportClient");
             this.serviceProvider = services.BuildServiceProvider();
             
             //set default ProjectKey
-            var clientConfiguration = this.GetClientConfiguration("Client");
+            var clientConfiguration = this.GetClientConfiguration("ImportClient");
             GenericFixture.DefaultProjectKey = clientConfiguration.ProjectKey;
         }
 

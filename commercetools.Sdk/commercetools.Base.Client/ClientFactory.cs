@@ -15,26 +15,24 @@ namespace commercetools.Base.Client
             string clientName,
             IClientConfiguration configuration,
             IHttpClientFactory factory,
-            ISerializerService serializerService)
+            ISerializerService serializerService,
+            ITokenProvider tokenProvider)
         {
             return new CtpClient(
-                CreateMiddlewareStack(clientName, configuration, factory),
+                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
                 serializerService
             );
         }
 
-        public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration, IHttpClientFactory factory)
+        public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration,
+            IHttpClientFactory factory, ITokenProvider tokenProvider)
         {
             var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
 
-            var authClient = factory.CreateClient(DefaultClientNames.Authorization);
-            
             List<DelegatingMiddleware> handlers = new List<DelegatingMiddleware>()
             {
-                CreateAuthMiddleware(
-                    CreateClientCredentialsProvider(configuration, authClient)
-                ),
+                CreateAuthMiddleware(tokenProvider),
                 CreateCorrelationIdMiddleware(
                     new DefaultCorrelationIdProvider(configuration)
                 )
@@ -46,6 +44,7 @@ namespace commercetools.Base.Client
                 handler.InnerMiddleware = httpMiddleware;
                 httpMiddleware = handler;
             }
+
             return httpMiddleware;
         }
 
@@ -54,19 +53,10 @@ namespace commercetools.Base.Client
             return new AuthorizationMiddleware(tokenProvider);
         }
 
-        public static CorrelationIdMiddleware CreateCorrelationIdMiddleware(ICorrelationIdProvider correlationIdProvider)
+        public static CorrelationIdMiddleware CreateCorrelationIdMiddleware(
+            ICorrelationIdProvider correlationIdProvider)
         {
             return new CorrelationIdMiddleware(correlationIdProvider);
-        }
-
-        public static ITokenProvider CreateClientCredentialsProvider(IClientConfiguration configuration, HttpClient httpClient)
-        {
-            return new ClientCredentialsTokenProvider(
-                configuration,
-                httpClient,
-                new InMemoryTokenStoreManager(),
-                new TokenSerializerService()
-            );
         }
     }
 }

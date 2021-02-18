@@ -1,13 +1,13 @@
 using commercetools.Base.Client;
-using commercetools.ImportApi.Client.RequestBuilders.Projects;
+using commercetools.MLApi.Client.RequestBuilders.Projects;
 
-namespace commercetools.Sdk.ImportApi.Client
+namespace commercetools.Sdk.MLApi.Client
 {
-    public class ImportApiRoot
+    public class MLApiRoot
     {
         private IClient ApiHttpClient { get; }
         
-        public ImportApiRoot(IClient apiHttpClient)
+        public MLApiRoot(IClient apiHttpClient)
         {
             this.ApiHttpClient = apiHttpClient;
         }
