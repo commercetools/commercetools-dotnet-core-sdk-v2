@@ -19,6 +19,8 @@ namespace commercetools.ImportApi.Models.Customers
         
         public string Password { get; set;}
         
+        public List<IStoreKeyReference> Stores { get; set;}
+        
         public string FirstName { get; set;}
         
         public string LastName { get; set;}
@@ -43,13 +45,13 @@ namespace commercetools.ImportApi.Models.Customers
         
         public List<IAddress> Addresses { get; set;}
         
-        public IAddress DefaultBillingAddress { get; set;}
+        public int? DefaultBillingAddress { get; set;}
         
-        public IAddress BillingAddresses { get; set;}
+        public List<int> BillingAddresses { get; set;}
         
-        public IAddress DefaultShippingAddress { get; set;}
+        public int? DefaultShippingAddress { get; set;}
         
-        public IAddress ShippingAddresses { get; set;}
+        public List<int> ShippingAddresses { get; set;}
         
         public string Locale { get; set;}
         
