@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
@@ -24,7 +25,7 @@ namespace commercetools.Sdk.MLApi
                 clientName
             };
             services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>()));
-            return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier).Single().Value;
+            return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsMLApi(this IServiceCollection services,
@@ -32,7 +33,9 @@ namespace commercetools.Sdk.MLApi
             Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             services.UseCommercetoolsMLApiSerialization();
-            return services.UseHttpApi(configuration, clients, serviceProvider => serviceProvider.GetService<SerializerService>(), tokenProviderSupplier);
+            return services.UseHttpApi(configuration, clients, 
+                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
         public static void UseCommercetoolsMLApiSerialization(this IServiceCollection services)
@@ -40,6 +43,13 @@ namespace commercetools.Sdk.MLApi
             services.UseRegistration();
             services.UseSerialization();
             services.AddSingleton<SerializerService>();
+        }
+        
+        public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)
+        {
+            var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
+            var clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            return TokenProviderFactory.CreateClientCredentialsTokenProvider(clientConfiguration, httpClientFactory);
         }
     }
 }
