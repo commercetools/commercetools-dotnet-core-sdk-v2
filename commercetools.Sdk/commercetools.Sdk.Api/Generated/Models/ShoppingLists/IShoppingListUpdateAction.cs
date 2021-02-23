@@ -28,6 +28,7 @@ namespace commercetools.Api.Models.ShoppingLists
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setSlug", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetSlugAction))]
+    [SubTypeDiscriminator("setStore", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetStoreAction))]
     [SubTypeDiscriminator("setTextLineItemCustomField", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setTextLineItemCustomType", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setTextLineItemDescription", typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction))]

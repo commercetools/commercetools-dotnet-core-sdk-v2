@@ -42,5 +42,8 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder ShippingMethods() {
            return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder ShoppingLists() {
+           return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+       }
    }
 }
