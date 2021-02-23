@@ -22,7 +22,7 @@ namespace commercetools.Api.Models.Products
         
         long? ProductCount { get; set;}
         
-        long Total { get; set;}
+        double Total { get; set;}
         
         double Min { get; set;}
         
