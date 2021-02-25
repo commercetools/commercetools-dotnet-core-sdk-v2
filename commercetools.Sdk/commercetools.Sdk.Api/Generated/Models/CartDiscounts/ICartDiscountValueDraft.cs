@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CartDiscounts
 {
     [TypeDiscriminator(nameof(Type))]
+    [SubTypeDiscriminator("fixed", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueFixedDraft))]
     [SubTypeDiscriminator("giftLineItem", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
     [SubTypeDiscriminator("relative", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueRelativeDraft))]
     [SubTypeDiscriminator("absolute", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueAbsoluteDraft))]
