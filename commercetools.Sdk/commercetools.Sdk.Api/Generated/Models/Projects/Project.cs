@@ -34,5 +34,7 @@ namespace commercetools.Api.Models.Projects
         public IExternalOAuth ExternalOAuth { get; set;}
         
         public ICartsConfiguration Carts { get; set;}
+        
+        public ISearchIndexingConfiguration SearchIndexing { get; set;}
     }
 }
