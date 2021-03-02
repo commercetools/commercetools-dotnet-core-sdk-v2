@@ -29,8 +29,8 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDGet(ApiHttpClient, ProjectKey, StoreKey, ID);
        }
        
-       public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost Post(commercetools.Api.Models.Common.IUpdate update) {
-           return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID, update);
+       public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost Post(commercetools.Api.Models.ShoppingLists.IShoppingListUpdate shoppingListUpdate) {
+           return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID, shoppingListUpdate);
        }
        
        public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete Delete() {

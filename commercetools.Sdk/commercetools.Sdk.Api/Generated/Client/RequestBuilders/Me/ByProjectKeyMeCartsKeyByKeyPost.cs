@@ -35,12 +35,18 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            this.RequestUrl = $"/{ProjectKey}/me/carts/key={Key}";
        }
    
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
    
+       public ByProjectKeyMeCartsKeyByKeyPost WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
 
-       public async Task<JsonElement> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Me.MyCart> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Me.MyCart>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

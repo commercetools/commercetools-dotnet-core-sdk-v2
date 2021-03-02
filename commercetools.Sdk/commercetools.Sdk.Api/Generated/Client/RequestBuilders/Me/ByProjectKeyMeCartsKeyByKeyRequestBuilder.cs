@@ -22,8 +22,16 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            this.Key = key;
        }
    
+       public ByProjectKeyMeCartsKeyByKeyGet Get() {
+           return new ByProjectKeyMeCartsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
+       }
+       
        public ByProjectKeyMeCartsKeyByKeyPost Post(commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate) {
            return new ByProjectKeyMeCartsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, myCartUpdate);
+       }
+       
+       public ByProjectKeyMeCartsKeyByKeyDelete Delete() {
+           return new ByProjectKeyMeCartsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
        }
        
    }
