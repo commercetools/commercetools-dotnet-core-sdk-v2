@@ -1,7 +1,5 @@
-﻿﻿using System.Collections.Generic;
- using System.Net.Http;
- using commercetools.Base.Client;
-using commercetools.Base.Client.Tokens;
+﻿using commercetools.Base.Client;
+using commercetools.Sdk.Api;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;

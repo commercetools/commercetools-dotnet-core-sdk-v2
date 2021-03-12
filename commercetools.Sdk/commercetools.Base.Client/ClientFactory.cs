@@ -20,7 +20,8 @@ namespace commercetools.Base.Client
         {
             return new CtpClient(
                 CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
-                serializerService
+                serializerService,
+                clientName
             );
         }
 

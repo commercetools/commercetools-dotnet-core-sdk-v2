@@ -1,11 +1,12 @@
 using Xunit;
-using commercetools.Api.Client;
 using System.Net.Http;
 using System.Collections.Generic;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
-using commercetools.Api.Serialization;
 using commercetools.Base.Client;
+using commercetools.Base.Serialization;
+using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests
@@ -18,7 +19,7 @@ namespace commercetools.Api.Tests
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
             
-            return new CtpClient(null, p.GetService<SerializerService>());
+            return new CtpClient(null, p.GetService<ISerializerService>());
         }
         
         [Fact]

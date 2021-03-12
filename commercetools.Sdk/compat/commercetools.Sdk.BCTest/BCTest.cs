@@ -1,8 +1,8 @@
 using System.IO;
 using System.Threading.Tasks;
-using commercetools.Api.Client;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.HttpApi;
 using commercetools.Sdk.Serialization;
 using commercetools.Sdk.V2Compat;

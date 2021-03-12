@@ -1,17 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json;
 using commercetools.Api.Models.Types;
-using commercetools.Api.Serialization.JsonConverters;
-
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
+using commercetools.Sdk.Api.Serialization.JsonConverters;
 using Type = System.Type;
 
-namespace commercetools.Api.Serialization
+namespace commercetools.Sdk.Api.Serialization
 {
     public class SerializerService : ISerializerService
     {

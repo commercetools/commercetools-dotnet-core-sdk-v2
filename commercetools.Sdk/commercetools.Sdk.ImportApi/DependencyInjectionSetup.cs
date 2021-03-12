@@ -31,9 +31,10 @@ namespace commercetools.Sdk.ImportApi
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsImportApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients, Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
+            services.AddSingleton(configuration);
             services.UseCommercetoolsImportApiSerialization();
             return services.UseHttpApi(configuration, clients, 
-                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                serviceProvider => serviceProvider.GetService<ISerializerService>(), 
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
@@ -41,7 +42,7 @@ namespace commercetools.Sdk.ImportApi
         {
             services.UseRegistration();
             services.UseSerialization();
-            services.AddSingleton<SerializerService>();
+            services.AddSingleton<ISerializerService,SerializerService>();
         }
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)
         {

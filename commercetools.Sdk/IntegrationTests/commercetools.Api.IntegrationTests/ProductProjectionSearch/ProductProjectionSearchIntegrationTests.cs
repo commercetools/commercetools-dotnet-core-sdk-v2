@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using commercetools.Api.Client;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Products;
 using commercetools.Api.Models.ProductTypes;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
 using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
