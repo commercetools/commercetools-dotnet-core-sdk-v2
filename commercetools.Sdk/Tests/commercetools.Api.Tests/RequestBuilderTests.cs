@@ -7,6 +7,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests
@@ -19,7 +20,7 @@ namespace commercetools.Api.Tests
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
             
-            return new CtpClient(null, p.GetService<ISerializerService>());
+            return new CtpClient(null, p.GetService<SerializerService>());
         }
         
         [Fact]

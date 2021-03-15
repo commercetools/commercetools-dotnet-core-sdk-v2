@@ -3,6 +3,7 @@ using Xunit;
 using commercetools.Api.Models.Projects;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests
@@ -17,7 +18,7 @@ namespace commercetools.Api.Tests
             var p = s.BuildServiceProvider();
             //arrange
             var projectResponse = File.ReadAllText("Resources/project.json");
-            var serializerService = p.GetService<ISerializerService>();
+            var serializerService = p.GetService<SerializerService>();
 
             //act
             var project = serializerService.Deserialize<Project>(projectResponse);

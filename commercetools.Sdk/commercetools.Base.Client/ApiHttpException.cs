@@ -12,12 +12,6 @@ namespace commercetools.Base.Client
 
         public ApiHttpHeaders Headers { get; set; }
 
-        public ApiHttpException(int statusCode, string body, ApiHttpHeaders headers, string message)
-            : base(message)
-        {
-            Initialize(statusCode, body, headers, null);
-        }
-        
         public ApiHttpException(int statusCode, string body, ApiHttpHeaders headers, Object responseBody, string message)
             : base(message)
         {
