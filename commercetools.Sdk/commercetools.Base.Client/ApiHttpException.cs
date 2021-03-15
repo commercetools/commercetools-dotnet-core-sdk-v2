@@ -11,6 +11,8 @@ namespace commercetools.Base.Client
         public Object ResponseBody { get; private set; }
 
         public ApiHttpHeaders Headers { get; set; }
+        
+        public string BodyDeserializationException { get; set; }
 
         public ApiHttpException(int statusCode, string body, ApiHttpHeaders headers, string message)
             : base(message)

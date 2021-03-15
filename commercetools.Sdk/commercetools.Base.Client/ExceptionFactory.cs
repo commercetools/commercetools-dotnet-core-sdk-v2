@@ -10,22 +10,35 @@ namespace commercetools.Base.Client
 {
     public class ExceptionFactory
     {
-        public static ApiHttpException Create(HttpRequestMessage request, HttpResponseMessage response, Func<HttpResponseMessage, Object> errorResponseBodyFactory)
+        public static ApiHttpException Create(HttpRequestMessage request, HttpResponseMessage response, Func<HttpResponseMessage, Object> errorResponseBodyMapper)
         {
-            return (int) response.StatusCode >= 500
-                ? CreateServerException(request, response, errorResponseBodyFactory)
-                : CreateClientException(request, response, errorResponseBodyFactory);
+            Object errorResponse = null;
+            string bodyDeserializationException = null;
+            
+            try
+            {
+                errorResponse = errorResponseBodyMapper(response);
+            }
+            catch (Exception deserializationException)
+            {
+                bodyDeserializationException = deserializationException.Message;
+            }
+            var createdException = (int) response.StatusCode >= 500
+                ? CreateServerException(request, response, errorResponse)
+                : CreateClientException(request, response, errorResponse);
+
+            createdException.BodyDeserializationException = bodyDeserializationException;
+            return createdException;
         }
 
         
-        private static ApiHttpException CreateServerException(HttpRequestMessage request, HttpResponseMessage response, Func<HttpResponseMessage, Object> errorResponseBodyFactory)
+        private static ApiHttpException CreateServerException(HttpRequestMessage request, HttpResponseMessage response, Object errorResponse)
         {
             var statusCode = (int) response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Server error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
             List<KeyValuePair<string, string>> t = new List<KeyValuePair<string, string>>();
             var headers = new ApiHttpHeaders(response.Headers.SelectMany(pair => pair.Value.Select(v => new KeyValuePair<string, string>(pair.Key, v))).ToList());
-            var errorResponse = errorResponseBodyFactory(response);
             switch (statusCode)
             {
                 case 500:
@@ -46,13 +59,12 @@ namespace commercetools.Base.Client
                 headers, errorResponse, message);
         }
 
-        private static ApiHttpException CreateClientException(HttpRequestMessage request, HttpResponseMessage response, Func<HttpResponseMessage, Object> errorResponseBodyFactory)
+        private static ApiHttpException CreateClientException(HttpRequestMessage request, HttpResponseMessage response, Object errorResponse)
         {
             var statusCode = (int) response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Client error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
             var headers = new ApiHttpHeaders(response.Headers.SelectMany(pair => pair.Value.Select(v => new KeyValuePair<string, string>(pair.Key, v))).ToList());
-            var errorResponse = errorResponseBodyFactory(response);
             switch (statusCode)
             {
                 case 400:
