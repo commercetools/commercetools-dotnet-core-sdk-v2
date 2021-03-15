@@ -6,9 +6,9 @@ namespace commercetools.Sdk.Api.Extensions
 {
     public static class ApiHttpExceptionExtensions
     {
-        public static IErrorResponse DeserializeAsErrorResponse(this ApiHttpException exception, ISerializerService serializerService)
+        public static IErrorResponse AsErrorResponse(this ApiHttpException exception)
         {
-            return serializerService.Deserialize<ErrorResponse>(exception.Body);
+            return exception.ResponseBody as ErrorResponse;
         }
     }
 }

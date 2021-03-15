@@ -36,6 +36,7 @@ namespace commercetools.Sdk.MLApi
             services.UseCommercetoolsMLApiSerialization();
             return services.UseHttpApi(configuration, clients, 
                 serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                message => typeof(Object),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
@@ -43,7 +44,7 @@ namespace commercetools.Sdk.MLApi
         {
             services.UseRegistration();
             services.UseSerialization();
-            services.AddSingleton<ISerializerService,SerializerService>();
+            services.AddSingleton<SerializerService>();
         }
         
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)

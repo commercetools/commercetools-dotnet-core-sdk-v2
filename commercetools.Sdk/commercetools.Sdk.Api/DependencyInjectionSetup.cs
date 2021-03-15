@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using commercetools.Api.Client;
+using commercetools.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
@@ -38,10 +40,10 @@ namespace commercetools.Sdk.Api
             IConfiguration configuration, IList<string> clients, 
             Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
-            services.AddSingleton(configuration);
             services.UseCommercetoolsApiSerialization();
             return services.UseHttpApi(configuration, clients, 
-                serviceProvider => serviceProvider.GetService<ISerializerService>(), 
+                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                message => typeof(ErrorResponse), 
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
@@ -52,7 +54,7 @@ namespace commercetools.Sdk.Api
             services.AddSingleton<ICustomJsonMapper<IFieldContainer>, StringFieldMapper>();
             services.AddSingleton<ICustomJsonMapper<IFieldContainer>, NumberFieldMapper>();
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
-            services.AddSingleton<ISerializerService,SerializerService>();
+            services.AddSingleton<SerializerService>();
         }
 
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)

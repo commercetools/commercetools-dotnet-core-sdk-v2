@@ -7,6 +7,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
+using commercetools.ImportApi.Models.Errors;
 using commercetools.Sdk.ImportApi.Client;
 using commercetools.Sdk.ImportApi.Serialization;
 using Microsoft.Extensions.Configuration;
@@ -31,10 +32,10 @@ namespace commercetools.Sdk.ImportApi
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsImportApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients, Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
-            services.AddSingleton(configuration);
             services.UseCommercetoolsImportApiSerialization();
             return services.UseHttpApi(configuration, clients, 
-                serviceProvider => serviceProvider.GetService<ISerializerService>(), 
+                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+                message => typeof(ErrorResponse),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
@@ -42,7 +43,7 @@ namespace commercetools.Sdk.ImportApi
         {
             services.UseRegistration();
             services.UseSerialization();
-            services.AddSingleton<ISerializerService,SerializerService>();
+            services.AddSingleton<SerializerService>();
         }
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)
         {

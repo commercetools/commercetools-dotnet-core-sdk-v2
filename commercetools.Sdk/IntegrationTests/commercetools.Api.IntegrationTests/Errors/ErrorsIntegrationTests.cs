@@ -64,7 +64,7 @@ namespace commercetools.Api.IntegrationTests.Errors
                 }
                 catch (ConcurrentModificationException ex)
                 {
-                    var errorResponse = ex.DeserializeAsErrorResponse(_client.SerializerService);
+                    var errorResponse = ex.AsErrorResponse();
                     Assert.NotNull(errorResponse);
                     Assert.Single(errorResponse.Errors);
                     var error = errorResponse.Errors.FirstOrDefault() as ConcurrentModificationError;
