@@ -2,7 +2,23 @@
 
 ## Introduction
 
-This repository contains the commercetools platform C# SDK generated from our api reference. The SDK enables developers to communicate with the [commercetools HTTP API](https://docs.commercetools.com/http-api.html). The developers do not need to create plain HTTP requests, but they can instead use the domain specific classes and methods to formulate valid requests.
+This repository contains the commercetools platform, import-api and ml-api C# sdks generated from our api reference.
+
+## Packages
+
+| Package | Version|
+| --------| --------------------------------------------------------------------------------------------------------- |
+| Platform Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
+| Import Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
+| ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)| 
+
+## Installation
+####Download from [Nuget](https://www.nuget.org/profiles/commercetools)
+| Package                                                            | Installation                                                                                                   |
+| ------------------------------------------------------------------ | ----------------------------------------------------------|
+| [Platform Api](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```|
+| [Import Api](https://www.nuget.org/packages/commercetools.Sdk.ImportApi) | ```dotnet add package commercetools.Sdk.ImportApi```|
+| [ML Api](https://www.nuget.org/packages/commercetools.Sdk.MLApi) | ```dotnet add package commercetools.Sdk.MLApi```|
 
 ## Technical Overview
 
@@ -11,7 +27,9 @@ The SDK consists of the following projects:
 * `commercetools.Base.Client`: Contains CtpClient which communicate with the platform to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
-* `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with the platform api.
+* `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with the [platform api](https://docs.commercetools.com/http-api.html).
+* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [import api](https://docs.commercetools.com/import-api/).
+* `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the ml api.
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -20,7 +38,8 @@ In addition, the SDK has the following directories:
 
 ## Getting Started with the .NET SDK
 
-All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it. all the request builders accessible through ApiRoot, you can use the instance inside the injected client using function client.WithApi() or use ApiFactory to create a new instance, In order to use the client object, it needs to be setup first through dependency injection setup.
+All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it and all the request builders accessible through ApiRoot.
+In order to use the client object, it needs to be setup first through dependency injection setup. 
 
 ### Basic Workflow
 
@@ -33,16 +52,24 @@ At a high level, to make a basic call to the API, do the following:
 5. Build your request and execute it using ExecuteAsync.
 6. Receive the response as a model.
 
-### Dependency Injection Setup
+#### Dependency Injection Setup
 
  In the ConfigureServices method of Startup.cs add the following:
 
+* `Platform Api`:
 ```c#
-services.UseCommercetoolsApi(
-    this.configuration, "Client"); // replace with your instance of IConfiguration
-//replace "Client" with your Client Key in the Configuration
+services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration
 ```
-### Configuration
+* `Import Api`:
+```c#
+services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
+```
+* `ML Api`:
+```c#
+services.UseCommercetoolsMLApi(this.configuration, "MLClient");
+```
+
+##### Configuration
 The client configuration needs to be added to appsettings.json in order for the client to work. The structure is as follows:
 
 ```c#
@@ -58,7 +85,51 @@ The client configuration needs to be added to appsettings.json in order for the 
 }
 ```
 
-## Using SDK
+##### Getting instance of ApiRoot
+you can use the instance inside the injected client or use ApiFactory to create a new instance.
+* `Platform Api`:
+```c#
+var root1 = client.WithApi();
+var root2 = ApiFactory.Create(client);
+```
+* `Import Api`:
+```c#
+var root1 = client.WithImportApi();
+var root2 = ImportApiFactory.Create(client);
+```
+* `ML Api`:
+```c#
+var root1 = client.WithMLApi();
+var root2 = MLApiFactory.Create(client);
+``` 
+
+### Multiple Clients
+It is possible to use more than one client in the same application with different token providers. 
+The following code can be used to set it up 2 clients with the default ClientCredentials token provider:
+
+```c#
+services.UseCommercetoolsApi(configuration, 
+                new List<string>{"AdminClient", "StoreClient"},
+                CreateTokenProvider);
+
+public static ITokenProvider CreateTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)
+        {
+            var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
+            var clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            return TokenProviderFactory.CreateClientCredentialsTokenProvider(clientConfiguration, httpClientFactory);
+        }
+```
+
+you can choose different token provider based on the clientName, Also The appsettings.json then needs to contain the configuration sections named the same.
+The clients can then be injected by using IEnumerable and specific client can be selected by name.
+```c#
+    public MyController(IEnumerable<IClient> clients)
+    {
+        var storeClient = clients.FirstOrDefault(c => c.Name.Equals("StoreClient"));
+    }
+``` 
+
+### Using SDK
 
 SDK follows a builder pattern when creating requests. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources.
 The IClient interface can be used by injecting it and calling its ExecuteAsync method for different requests.
@@ -68,7 +139,7 @@ public CategoryController(IClient client)
 {
     this.client = client;
 }
-public void CreatingRequests() 
+public async Task CreatingRequests() 
 {
     // Create CategoryDraft using builder pattern
     var categoryDraft = new CategoryDraft
@@ -140,4 +211,55 @@ public void CreatingRequests()
             .ExecuteAsync();        
     }
                 
+```
+### Creating a client using ClientFactory
+You can get a client from injected services or you can create client on the fly using ClientFactory, 
+the example below illustrate how to create a client with password TokenFlow to get customer's orders:
+```c#
+private readonly IServiceProvider serviceProvider;
+        
+public CustomerController(IServiceProvider serviceProvider)
+{
+    this.serviceProvider = serviceProvider;
+}
+public async Task ExecuteAsync()
+{
+    var email = "customerEmail";
+    var password = "customerPassword";
+    
+    var configuration = serviceProvider.GetService<IConfiguration>();
+    var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
+    var serializerService = serviceProvider.GetService<ISerializerService>();
+    
+    var clientConfiguration = configuration.GetSection("MeClient").Get<ClientConfiguration>();
+    
+    //Create passwordFlow TokenProvider
+    var passwordTokenProvider = TokenProviderFactory
+        .CreatePasswordTokenProvider(clientConfiguration,
+            httpClientFactory,
+            new InMemoryUserCredentialsStoreManager(email, password));
+    
+    //Create MeClient
+    var meClient = ClientFactory.Create(
+        "MeClient",
+        clientConfiguration,
+        httpClientFactory,
+        serializerService,
+        passwordTokenProvider);
+    
+    //Get Customer Profile
+    var myProfile = await meClient.WithApi().WithProjectKey("project-key")
+        .Me()
+        .Get()
+        .ExecuteAsync();
+    
+    //Get Customer Orders
+    var myOrders = await
+        meClient.WithApi()
+            .WithProjectKey("project-key")
+            .Me()
+            .Orders()
+            .Get()
+            .ExecuteAsync();
+}
 ```
