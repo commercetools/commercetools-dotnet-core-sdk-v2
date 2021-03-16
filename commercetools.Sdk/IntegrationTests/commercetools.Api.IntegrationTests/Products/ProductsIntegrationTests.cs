@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Api.Client;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
 

@@ -1,11 +1,13 @@
 using Xunit;
-using commercetools.Api.Client;
 using System.Net.Http;
 using System.Collections.Generic;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
-using commercetools.Api.Serialization;
 using commercetools.Base.Client;
+using commercetools.Base.Serialization;
+using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.Api.Tests

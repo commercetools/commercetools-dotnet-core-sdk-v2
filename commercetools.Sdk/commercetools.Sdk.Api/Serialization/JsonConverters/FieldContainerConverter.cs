@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Type = System.Type;
 
-namespace commercetools.Api.Serialization.JsonConverters
+namespace commercetools.Sdk.Api.Serialization.JsonConverters
 {
     public class FieldContainerConverter : JsonConverter<IFieldContainer>
     {

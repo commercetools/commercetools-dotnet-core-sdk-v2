@@ -1,7 +1,7 @@
 ﻿using commercetools.Base.Client;
 using commercetools.Api.Client.RequestBuilders.Projects;
 
-namespace commercetools.Api.Client
+namespace commercetools.Sdk.Api.Client
 {
     public class ApiRoot
     {

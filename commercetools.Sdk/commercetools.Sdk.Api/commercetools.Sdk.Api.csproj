@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>commercetools.Api</RootNamespace>
     <Version>0.1.0</Version>
     <RepositoryUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</RepositoryUrl>
     <Description>The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.</Description>

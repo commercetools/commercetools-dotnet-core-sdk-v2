@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Client;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
-using Microsoft.Extensions.DependencyInjection;
+using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
 using static commercetools.Api.IntegrationTests.GenericFixture;
@@ -67,7 +66,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await _client.WithApi().WithProjectKey(_projectKey)
+                    var retrievedCategory = await _client.WithApi(_projectKey)
                         .Categories()
                         .WithKey(category.Key)
                         .Get()
