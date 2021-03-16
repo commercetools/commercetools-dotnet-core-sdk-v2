@@ -13,7 +13,7 @@ This repository contains the commercetools platform, import-api and ml-api C# sd
 | ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)| 
 
 ## Installation
-####Download from [Nuget](https://www.nuget.org/profiles/commercetools)
+#### Download from [Nuget](https://www.nuget.org/profiles/commercetools)
 | Package                                                            | Installation                                                                                                   |
 | ------------------------------------------------------------------ | ----------------------------------------------------------|
 | [Platform Api](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```|
@@ -229,7 +229,7 @@ public async Task ExecuteAsync()
     
     var configuration = serviceProvider.GetService<IConfiguration>();
     var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
-    var serializerService = serviceProvider.GetService<ISerializerService>();
+    var serializerService = serviceProvider.GetService<SerializerService>();
     
     var clientConfiguration = configuration.GetSection("MeClient").Get<ClientConfiguration>();
     
