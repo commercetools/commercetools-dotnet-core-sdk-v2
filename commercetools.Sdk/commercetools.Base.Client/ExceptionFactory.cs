@@ -13,21 +13,20 @@ namespace commercetools.Base.Client
         public static ApiHttpException Create(HttpRequestMessage request, HttpResponseMessage response, Func<HttpResponseMessage, Object> errorResponseBodyMapper)
         {
             Object errorResponse = null;
-            string bodyDeserializationException = null;
-            
+
             try
             {
                 errorResponse = errorResponseBodyMapper(response);
             }
-            catch (Exception deserializationException)
+            catch (Exception)
             {
-                bodyDeserializationException = deserializationException.Message;
+                // ignored
             }
+
             var createdException = (int) response.StatusCode >= 500
                 ? CreateServerException(request, response, errorResponse)
                 : CreateClientException(request, response, errorResponse);
-
-            createdException.BodyDeserializationException = bodyDeserializationException;
+            
             return createdException;
         }
 
