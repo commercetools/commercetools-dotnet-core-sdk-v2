@@ -10,9 +10,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(NotificationType))]
-    [SubTypeDiscriminator("ResourceUpdated", typeof(commercetools.Api.Models.Subscriptions.ResourceUpdatedDelivery))]
     [SubTypeDiscriminator("ResourceDeleted", typeof(commercetools.Api.Models.Subscriptions.ResourceDeletedDelivery))]
     [SubTypeDiscriminator("Message", typeof(commercetools.Api.Models.Subscriptions.MessageDelivery))]
+    [SubTypeDiscriminator("ResourceUpdated", typeof(commercetools.Api.Models.Subscriptions.ResourceUpdatedDelivery))]
     [SubTypeDiscriminator("ResourceCreated", typeof(commercetools.Api.Models.Subscriptions.ResourceCreatedDelivery))]
     public partial interface ISubscriptionDelivery 
     {
