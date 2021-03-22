@@ -1,3 +1,5 @@
+using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Projects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,10 @@ namespace commercetools.Api.Models.Projects
     [DeserializeAs(typeof(commercetools.Api.Models.Projects.SearchIndexingConfigurationValues))]
     public partial interface ISearchIndexingConfigurationValues 
     {
-        string Status { get; set;}
+        ISearchIndexingConfigurationStatus Status { get; set;}
+        
+        DateTime LastModifiedAt { get; set;}
+        
+        ILastModifiedBy LastModifiedBy { get; set;}
     }
 }
