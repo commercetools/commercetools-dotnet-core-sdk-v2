@@ -8,7 +8,8 @@
     },
     "fields": {
       "string": "my string",
-      "number": 150,
+      "integer": 10,
+      "double": 11.2,
       "enum": "enum-key-2",
       "localized-enum": "enum-key-2",
       "localized-string": {
@@ -30,6 +31,12 @@
         "fractionDigits": 2
       },
       "set-empty": [],
+      "set-integer": [
+        10
+      ],
+      "set-double": [
+        11.2
+      ],
       "set-boolean": [
         true
       ],
@@ -45,12 +52,6 @@
           "centAmount": 100,
           "type": "centPrecision"
         }
-      ],
-      "set-double": [
-        11.0
-      ],
-      "set-integer": [
-        10
       ],
       "set-ltext": [
         {

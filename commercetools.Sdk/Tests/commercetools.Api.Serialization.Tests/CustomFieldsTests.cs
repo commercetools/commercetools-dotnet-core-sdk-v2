@@ -1,30 +1,35 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using commercetools.Base;
 using Xunit;
 
 namespace commercetools.Api.Serialization.Tests
 {
-    public class CustomFieldsDeserializationTests : IClassFixture<SerializationFixture>
+    public class CustomFieldsTests : IClassFixture<SerializationFixture>
     {
         private readonly SerializationFixture _serializationFixture;
 
-        public CustomFieldsDeserializationTests(SerializationFixture serializationFixture)
+        public CustomFieldsTests(SerializationFixture serializationFixture)
         {
             this._serializationFixture = serializationFixture;
         }
         
         [Fact]
-        public void CustomFieldsList()
+        public void CustomFieldsListDeserialization()
         {
             var serializerService = this._serializationFixture.SerializerService;
             var serialized = File.ReadAllText("Resources/CustomFields/List.json");
             var deserialized = serializerService.Deserialize<Category>(serialized);
             Assert.IsType<string>(deserialized.Custom.Fields["string"]);
-            Assert.IsType<double>(deserialized.Custom.Fields["number"]);
+            Assert.IsType<double>(deserialized.Custom.Fields["integer"]);
+            Assert.Equal(10.0, deserialized.Custom.Fields["integer"]);
+            Assert.IsType<double>(deserialized.Custom.Fields["double"]);
+            Assert.Equal(11.2, deserialized.Custom.Fields["double"]);
             Assert.IsType<bool>(deserialized.Custom.Fields["boolean"]);
             Assert.IsType<string>(deserialized.Custom.Fields["date"]);
             Assert.IsType<string>(deserialized.Custom.Fields["date-time"]);
@@ -37,8 +42,10 @@ namespace commercetools.Api.Serialization.Tests
             
             Assert.IsType<List<Object>>(deserialized.Custom.Fields["set-empty"]);
             Assert.IsType<List<bool>>(deserialized.Custom.Fields["set-boolean"]);
-            Assert.IsType<List<double>>(deserialized.Custom.Fields["set-double"]);
             Assert.IsType<List<double>>(deserialized.Custom.Fields["set-integer"]);
+            Assert.Equal(10.0, (deserialized.Custom.Fields["set-integer"] as List<Double>).First());
+            Assert.IsType<List<double>>(deserialized.Custom.Fields["set-double"]);
+            Assert.Equal(11.2, (deserialized.Custom.Fields["set-double"] as List<Double>).First());
             Assert.IsType<List<LocalizedString>>(deserialized.Custom.Fields["set-ltext"]);
             Assert.IsType<List<IReference>>(deserialized.Custom.Fields["set-reference"]);
             Assert.IsType<List<ITypedMoney>>(deserialized.Custom.Fields["set-money"]);
@@ -48,6 +55,18 @@ namespace commercetools.Api.Serialization.Tests
             var dateTime = ((string) deserialized.Custom.Fields["date-time"]).AsDateTime();
             Assert.Equal(date, dateTime.Date);
             
+        }
+        [Fact]
+        public void CustomFieldsSerialization()
+        {
+            var serializerService = this._serializationFixture.SerializerService;
+            var fieldContainer = new FieldContainer
+            {
+                {"int", 13}, {"double", 13.0}, {"double2", 13.2}
+            };
+            var result = serializerService.Serialize(fieldContainer);
+            var expectedResult = "{\"int\":13,\"double\":13,\"double2\":13.2}";
+            Assert.Equal(expectedResult, result);
         }
         
     }
