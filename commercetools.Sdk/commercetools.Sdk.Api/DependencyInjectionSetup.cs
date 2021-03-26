@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using commercetools.Api.Models.Errors;
+using commercetools.Api.Models.Products;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
@@ -50,6 +51,7 @@ namespace commercetools.Sdk.Api
             services.UseRegistration();
             services.UseSerialization();
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
+            services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
             services.AddSingleton<SerializerService>();
         }
 

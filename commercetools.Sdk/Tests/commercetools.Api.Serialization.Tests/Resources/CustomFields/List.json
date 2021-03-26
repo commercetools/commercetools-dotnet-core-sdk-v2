@@ -9,7 +9,7 @@
     "fields": {
       "string": "my string",
       "integer": 10,
-      "double": 11.2,
+      "double": 11.0,
       "enum": "enum-key-2",
       "localized-enum": "enum-key-2",
       "localized-string": {
@@ -35,7 +35,7 @@
         10
       ],
       "set-double": [
-        11.2
+        11.0
       ],
       "set-boolean": [
         true

@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using commercetools.Api.Models.Types;
-
 using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Type = System.Type;
@@ -20,6 +18,10 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             this.serializerService = serializerService;
         }
 
+        public override bool CanConvert(Type typeToConvert)
+        {
+            return typeof(IFieldContainer).IsAssignableFrom(typeToConvert);
+        }
 
         public override IFieldContainer Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
