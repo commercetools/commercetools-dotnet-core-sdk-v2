@@ -22,11 +22,13 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        
        private string ProjectKey { get; }
        
+       private JsonElement jsonNode;
    
-       public ByProjectKeyProductProjectionsSearchPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+       public ByProjectKeyProductProjectionsSearchPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, JsonElement jsonNode) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
+           this.jsonNode = jsonNode;
            this.RequestUrl = $"/{ProjectKey}/product-projections/search";
        }
    
@@ -36,6 +38,20 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        {
           var requestMessage = Build();
           return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+       }
+       
+       public override HttpRequestMessage Build()
+       {
+          var request = base.Build();
+          if (SerializerService != null)
+          {
+              var body = this.SerializerService.Serialize(jsonNode);
+              if(!string.IsNullOrEmpty(body))
+              {
+                  request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+              }
+          }
+          return request;
        }
    }
 }

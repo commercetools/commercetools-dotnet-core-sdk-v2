@@ -19,8 +19,8 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyProductProjectionsSearchPost Post() {
-           return new ByProjectKeyProductProjectionsSearchPost(ApiHttpClient, SerializerService, ProjectKey);
+       public ByProjectKeyProductProjectionsSearchPost Post(JsonElement jsonNode) {
+           return new ByProjectKeyProductProjectionsSearchPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
        }
        
        public ByProjectKeyProductProjectionsSearchGet Get() {
