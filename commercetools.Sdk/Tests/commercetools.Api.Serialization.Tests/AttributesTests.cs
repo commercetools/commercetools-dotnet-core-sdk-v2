@@ -34,7 +34,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<string>(attributes.Get("datetime"));
             Assert.IsType<bool>(attributes.Get("boolean"));
             Assert.IsType<long>(attributes.Get("integer"));
-            Assert.IsType<double>(attributes.Get("double"));
+            Assert.IsType<decimal>(attributes.Get("double"));
             Assert.IsType<ProductReference>(attributes.Get("reference"));
             Assert.IsAssignableFrom<ITypedMoney>(attributes.Get("money"));
             Assert.IsType<List<IAttribute>>(attributes.Get("nested"));
@@ -43,7 +43,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<string>>(attributes.Get("set-text"));
             Assert.IsType<List<LocalizedString>>(attributes.Get("set-ltext"));
             Assert.IsType<List<long>>(attributes.Get("set-integer"));
-            Assert.IsType<List<double>>(attributes.Get("set-double"));
+            Assert.IsType<List<decimal>>(attributes.Get("set-double"));
             Assert.IsType<List<IAttributePlainEnumValue>>(attributes.Get("set-enum"));
             Assert.IsType<List<IAttributeLocalizedEnumValue>>(attributes.Get("set-lenum"));
             Assert.IsType<List<ITypedMoney>>(attributes.Get("set-money"));
@@ -53,6 +53,31 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<string>>(attributes.Get("set-time"));
             Assert.IsType<List<bool>>(attributes.Get("set-boolean"));
             Assert.IsType<List<List<IAttribute>>>(attributes.Get("set-nested"));
+        }
+        
+        [Fact]
+        public void DecimalDeserialization()
+        {
+            var serializerService = this._serializationFixture.SerializerService;
+            var serialized = "{\"attributes\": [{\"name\": \"t\", \"value\": 13.0}]}";
+            var deserialized = serializerService.Deserialize<ProductVariant>(serialized);
+            Assert.NotNull(deserialized);
+            var attributes = deserialized.Attributes;
+            Assert.IsType<decimal>(attributes.Get("t"));
+
+            Assert.Equal("{\"id\":0,\"attributes\":[{\"name\":\"t\",\"value\":13.0}]}", serializerService.Serialize(deserialized));
+        }
+        
+        [Fact]
+        public void IntDeserialization()
+        {
+            var serializerService = this._serializationFixture.SerializerService;
+            var serialized = "{\"attributes\": [{\"name\": \"t\", \"value\": 13}]}";
+            var deserialized = serializerService.Deserialize<ProductVariant>(serialized);
+            Assert.NotNull(deserialized);
+            var attributes = deserialized.Attributes;
+            Assert.IsType<long>(attributes.Get("t"));
+            Assert.Equal("{\"id\":0,\"attributes\":[{\"name\":\"t\",\"value\":13}]}", serializerService.Serialize(deserialized));
         }
     }
 }

@@ -1,8 +1,10 @@
+using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using commercetools.Api.Models.Products;
 using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
+using Attribute = commercetools.Api.Models.Products.Attribute;
 using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
@@ -42,7 +44,11 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
 
         public override void Write(Utf8JsonWriter writer, IAttribute value, JsonSerializerOptions options)
         {
-            throw new System.NotImplementedException();
+            writer.WriteStartObject();
+            writer.WriteString("name", value.Name);
+            writer.WritePropertyName("value");
+            JsonSerializer.Serialize(writer, value.Value, options);
+            writer.WriteEndObject();
         }
     }
 }
