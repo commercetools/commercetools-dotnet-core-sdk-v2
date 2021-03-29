@@ -11,5 +11,7 @@ namespace commercetools.Api.Models.Projects
     public partial interface ICartsConfiguration 
     {
         bool? CountryTaxRateFallbackEnabled { get; set;}
+        
+        long? DeleteDaysAfterLastModification { get; set;}
     }
 }
