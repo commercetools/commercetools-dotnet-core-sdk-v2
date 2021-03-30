@@ -18,4 +18,4 @@ jobs:
         with:
           request_title: "Update generated SDKs"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          team_reviewer: "clients-team"
+          team_reviewer: "clients-sdk-team"
