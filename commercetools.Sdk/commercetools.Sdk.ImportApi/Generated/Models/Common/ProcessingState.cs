@@ -18,12 +18,6 @@ namespace commercetools.ImportApi.Models.Common
        [Description("Imported")]
        Imported,
        
-       [Description("Delete")]
-       Delete,
-       
-       [Description("Deleted")]
-       Deleted,
-       
        [Description("Rejected")]
        Rejected
    }
@@ -47,12 +41,6 @@ namespace commercetools.ImportApi.Models.Common
         public static IProcessingState Imported = new ProcessingStateWrapper
          {Value = ProcessingState.Imported, JsonName = "Imported"}; 
        
-        public static IProcessingState Delete = new ProcessingStateWrapper
-         {Value = ProcessingState.Delete, JsonName = "Delete"}; 
-       
-        public static IProcessingState Deleted = new ProcessingStateWrapper
-         {Value = ProcessingState.Deleted, JsonName = "Deleted"}; 
-       
         public static IProcessingState Rejected = new ProcessingStateWrapper
          {Value = ProcessingState.Rejected, JsonName = "Rejected"}; 
        
@@ -66,8 +54,6 @@ namespace commercetools.ImportApi.Models.Common
                 Unresolved ,
                 WaitForMasterVariant ,
                 Imported ,
-                Delete ,
-                Deleted ,
                 Rejected 
            };
         }

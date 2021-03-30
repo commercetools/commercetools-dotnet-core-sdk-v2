@@ -24,8 +24,6 @@ namespace commercetools.ImportApi.Models.Importoperations
         
         long? ResourceVersion { get; set;}
         
-        int RetryCount { get; set;}
-        
         List<IErrorObject> Errors { get; set;}
         
         DateTime CreatedAt { get; set;}

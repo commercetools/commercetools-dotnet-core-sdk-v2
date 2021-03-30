@@ -17,10 +17,6 @@ namespace commercetools.ImportApi.Models.Importsummaries
         
         public long Imported { get; set;}
         
-        public long Delete { get; set;}
-        
-        public long Deleted { get; set;}
-        
         public long Rejected { get; set;}
     }
 }

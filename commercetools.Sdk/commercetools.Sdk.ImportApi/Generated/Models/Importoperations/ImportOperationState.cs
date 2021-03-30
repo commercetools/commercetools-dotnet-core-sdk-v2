@@ -10,10 +10,7 @@ namespace commercetools.ImportApi.Models.Importoperations
        Unresolved,
        
        [Description("ValidationFailed")]
-       ValidationFailed,
-       
-       [Description("Delete")]
-       Delete
+       ValidationFailed
    }
    public class ImportOperationStateWrapper : IImportOperationState
    {
@@ -29,9 +26,6 @@ namespace commercetools.ImportApi.Models.Importoperations
         public static IImportOperationState ValidationFailed = new ImportOperationStateWrapper
          {Value = ImportOperationState.ValidationFailed, JsonName = "ValidationFailed"}; 
        
-        public static IImportOperationState Delete = new ImportOperationStateWrapper
-         {Value = ImportOperationState.Delete, JsonName = "Delete"}; 
-       
         ImportOperationState? Value { get; }
         
         static IImportOperationState[] Values()
@@ -39,8 +33,7 @@ namespace commercetools.ImportApi.Models.Importoperations
            return new[]
            {
                 Unresolved ,
-                ValidationFailed ,
-                Delete 
+                ValidationFailed 
            };
         }
         static IImportOperationState FindEnum(string value)
