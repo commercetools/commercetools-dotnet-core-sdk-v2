@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace commercetools.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodSetLocalizedDescriptionAction))]
     public partial interface IShippingMethodSetLocalizedDescriptionAction : IShippingMethodUpdateAction
     {
-        string LocalizedDescription { get; set;}
+        ILocalizedString LocalizedDescription { get; set;}
     }
 }

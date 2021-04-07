@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Subscriptions
     [SubTypeDiscriminator("IronMQ", typeof(commercetools.Api.Models.Subscriptions.IronMqDestination))]
     [SubTypeDiscriminator("SNS", typeof(commercetools.Api.Models.Subscriptions.SnsDestination))]
     [SubTypeDiscriminator("SQS", typeof(commercetools.Api.Models.Subscriptions.SqsDestination))]
-    [SubTypeDiscriminator("EventGrid", typeof(commercetools.Api.Models.Subscriptions.AzureEventGridDestination))]
     [SubTypeDiscriminator("AzureServiceBus", typeof(commercetools.Api.Models.Subscriptions.AzureServiceBusDestination))]
+    [SubTypeDiscriminator("EventGrid", typeof(commercetools.Api.Models.Subscriptions.AzureEventGridDestination))]
     public partial interface IDestination 
     {
         string Type { get; set;}
