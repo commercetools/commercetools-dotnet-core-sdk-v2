@@ -9,9 +9,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Projects
 {
     [TypeDiscriminator(nameof(Type))]
+    [SubTypeDiscriminator("CartScore", typeof(commercetools.Api.Models.Projects.CartScoreType))]
     [SubTypeDiscriminator("CartClassification", typeof(commercetools.Api.Models.Projects.CartClassificationType))]
     [SubTypeDiscriminator("CartValue", typeof(commercetools.Api.Models.Projects.CartValueType))]
-    [SubTypeDiscriminator("CartScore", typeof(commercetools.Api.Models.Projects.CartScoreType))]
     public partial interface IShippingRateInputType 
     {
         IShippingRateTierType Type { get; set;}
