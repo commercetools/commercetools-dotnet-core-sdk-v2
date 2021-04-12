@@ -68,18 +68,5 @@ namespace commercetools.Api.Serialization.Tests
             var expectedResult = "{\"int\":13,\"double\":13.0,\"double2\":13.2,\"double3\":13}";
             Assert.Equal(expectedResult, result);
         }
-        [Fact]
-        public void CustomFieldSerialization()
-        {
-            var serializerService = this._serializationFixture.SerializerService;
-            var fieldContainer = new FieldContainer
-            {
-                {"double", 13.0}
-            };
-            var result = serializerService.Serialize(fieldContainer);
-            var expectedResult = "{\"double\":13.0}";
-            Assert.Equal(expectedResult, result);
-        }
-        
     }
 }
