@@ -62,10 +62,10 @@ namespace commercetools.Api.Serialization.Tests
             var serializerService = this._serializationFixture.SerializerService;
             var fieldContainer = new FieldContainer
             {
-                {"int", 13}, {"double", 13.0}, {"double2", 13.2}
+                {"int", 13}, {"double", 13.0m}, {"double2", 13.2}, {"double3", 13.0d}
             };
             var result = serializerService.Serialize(fieldContainer);
-            var expectedResult = "{\"int\":13,\"double\":13,\"double2\":13.2}";
+            var expectedResult = "{\"int\":13,\"double\":13.0,\"double2\":13.2,\"double3\":13}";
             Assert.Equal(expectedResult, result);
         }
         [Fact]
