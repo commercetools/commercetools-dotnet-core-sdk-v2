@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Me
         
         long VariantId { get; set;}
         
-        double Quantity { get; set;}
+        long Quantity { get; set;}
         
         DateTime AddedAt { get; set;}
         
