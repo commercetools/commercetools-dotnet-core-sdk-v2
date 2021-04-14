@@ -23,7 +23,6 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Api.Models.Me.MyCartSetBillingAddressAction))]
     [SubTypeDiscriminator("setCountry", typeof(commercetools.Api.Models.Me.MyCartSetCountryAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Me.MyCartSetCustomFieldAction))]
-    [SubTypeDiscriminator("setCustomShippingMethod", typeof(commercetools.Api.Models.Me.MyCartSetCustomShippingMethodAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Me.MyCartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Api.Models.Me.MyCartSetLineItemCustomFieldAction))]
