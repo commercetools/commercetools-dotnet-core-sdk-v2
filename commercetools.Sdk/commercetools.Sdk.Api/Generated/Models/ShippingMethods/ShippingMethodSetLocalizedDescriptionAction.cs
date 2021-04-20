@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.ShippingMethods;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace commercetools.Api.Models.ShippingMethods
     {
         public string Action { get; set;}
         
-        public string LocalizedDescription { get; set;}
+        public ILocalizedString LocalizedDescription { get; set;}
         public ShippingMethodSetLocalizedDescriptionAction()
         { 
            this.Action = "setLocalizedDescription";
