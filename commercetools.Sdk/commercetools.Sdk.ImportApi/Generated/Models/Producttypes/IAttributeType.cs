@@ -9,11 +9,11 @@ namespace commercetools.ImportApi.Models.Producttypes
 {
     [TypeDiscriminator(nameof(Name))]
     [SubTypeDiscriminator("boolean", typeof(commercetools.ImportApi.Models.Producttypes.AttributeBooleanType))]
-    [SubTypeDiscriminator("datetime", typeof(commercetools.ImportApi.Models.Producttypes.AttributeDateTimeType))]
     [SubTypeDiscriminator("date", typeof(commercetools.ImportApi.Models.Producttypes.AttributeDateType))]
+    [SubTypeDiscriminator("datetime", typeof(commercetools.ImportApi.Models.Producttypes.AttributeDateTimeType))]
     [SubTypeDiscriminator("enum", typeof(commercetools.ImportApi.Models.Producttypes.AttributeEnumType))]
-    [SubTypeDiscriminator("ltext", typeof(commercetools.ImportApi.Models.Producttypes.AttributeLocalizableTextType))]
     [SubTypeDiscriminator("lenum", typeof(commercetools.ImportApi.Models.Producttypes.AttributeLocalizedEnumType))]
+    [SubTypeDiscriminator("ltext", typeof(commercetools.ImportApi.Models.Producttypes.AttributeLocalizableTextType))]
     [SubTypeDiscriminator("money", typeof(commercetools.ImportApi.Models.Producttypes.AttributeMoneyType))]
     [SubTypeDiscriminator("nested", typeof(commercetools.ImportApi.Models.Producttypes.AttributeNestedType))]
     [SubTypeDiscriminator("number", typeof(commercetools.ImportApi.Models.Producttypes.AttributeNumberType))]

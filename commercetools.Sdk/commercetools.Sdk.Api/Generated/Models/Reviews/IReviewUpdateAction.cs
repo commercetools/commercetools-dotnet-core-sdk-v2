@@ -9,9 +9,9 @@ namespace commercetools.Api.Models.Reviews
 {
     [TypeDiscriminator(nameof(Action))]
     [SubTypeDiscriminator("setAuthorName", typeof(commercetools.Api.Models.Reviews.ReviewSetAuthorNameAction))]
+    [SubTypeDiscriminator("setCustomer", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomerAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomTypeAction))]
-    [SubTypeDiscriminator("setCustomer", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomerAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Reviews.ReviewSetKeyAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Api.Models.Reviews.ReviewSetLocaleAction))]
     [SubTypeDiscriminator("setRating", typeof(commercetools.Api.Models.Reviews.ReviewSetRatingAction))]
