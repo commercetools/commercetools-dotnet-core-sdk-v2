@@ -28,9 +28,9 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeResourceIdentifier))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneResourceIdentifier))]
     [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryResourceIdentifier))]
-    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountResourceIdentifier))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartResourceIdentifier))]
     [SubTypeDiscriminator("channel", typeof(commercetools.Api.Models.Channels.ChannelResourceIdentifier))]
+    [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountResourceIdentifier))]
     public partial interface IResourceIdentifier 
     {
         IReferenceTypeId TypeId { get; set;}
