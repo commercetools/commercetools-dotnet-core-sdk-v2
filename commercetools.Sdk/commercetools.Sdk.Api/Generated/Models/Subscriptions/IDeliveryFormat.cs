@@ -8,8 +8,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(Type))]
-    [SubTypeDiscriminator("Platform", typeof(commercetools.Api.Models.Subscriptions.DeliveryPlatformFormat))]
     [SubTypeDiscriminator("CloudEvents", typeof(commercetools.Api.Models.Subscriptions.DeliveryCloudEventsFormat))]
+    [SubTypeDiscriminator("Platform", typeof(commercetools.Api.Models.Subscriptions.DeliveryPlatformFormat))]
     public partial interface IDeliveryFormat 
     {
         string Type { get; set;}
