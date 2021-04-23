@@ -9,9 +9,9 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Api.Client.RequestBuilders.InStore
 {
-   public partial class ByProjectKeyMeShoppingListsKeyByKeyDelete : ApiMethod<ByProjectKeyMeShoppingListsKeyByKeyDelete> {
+   public partial class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete> {
 
        
        private IClient ApiHttpClient { get; }
@@ -20,16 +20,23 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
+       private string StoreKey { get; }
+       
        private string Key { get; }
        
    
-       public ByProjectKeyMeShoppingListsKeyByKeyDelete(IClient apiHttpClient, string projectKey, string key) {
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete(IClient apiHttpClient, string projectKey, string storeKey, string key) {
            this.ApiHttpClient = apiHttpClient;
            this.ProjectKey = projectKey;
+           this.StoreKey = storeKey;
            this.Key = key;
-           this.RequestUrl = $"/{ProjectKey}/me/shopping-lists/key={Key}";
+           this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/shopping-lists/key={Key}";
        }
    
+       public List<string> GetDataErasure() {
+           return this.GetQueryParam("dataErasure");
+       }
+       
        public List<string> GetVersion() {
            return this.GetQueryParam("version");
        }
@@ -38,11 +45,15 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            return this.GetQueryParam("expand");
        }
    
-       public ByProjectKeyMeShoppingListsKeyByKeyDelete WithVersion(long version){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithDataErasure(bool dataErasure){
+           return this.AddQueryParam("dataErasure", dataErasure.ToString());
+       }
+       
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithVersion(long version){
            return this.AddQueryParam("version", version.ToString());
        }
        
-       public ByProjectKeyMeShoppingListsKeyByKeyDelete WithExpand(string expand){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
 

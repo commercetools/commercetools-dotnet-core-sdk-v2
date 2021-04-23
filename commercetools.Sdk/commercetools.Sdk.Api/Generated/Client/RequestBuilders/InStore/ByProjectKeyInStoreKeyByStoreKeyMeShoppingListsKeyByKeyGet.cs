@@ -9,9 +9,9 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Api.Client.RequestBuilders.InStore
 {
-   public partial class ByProjectKeyMeShoppingListsByIDGet : ApiMethod<ByProjectKeyMeShoppingListsByIDGet> {
+   public partial class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet> {
 
        
        private IClient ApiHttpClient { get; }
@@ -20,21 +20,24 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private string ID { get; }
+       private string StoreKey { get; }
+       
+       private string Key { get; }
        
    
-       public ByProjectKeyMeShoppingListsByIDGet(IClient apiHttpClient, string projectKey, string id) {
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet(IClient apiHttpClient, string projectKey, string storeKey, string key) {
            this.ApiHttpClient = apiHttpClient;
            this.ProjectKey = projectKey;
-           this.ID = id;
-           this.RequestUrl = $"/{ProjectKey}/me/shopping-lists/{ID}";
+           this.StoreKey = storeKey;
+           this.Key = key;
+           this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/shopping-lists/key={Key}";
        }
    
        public List<string> GetExpand() {
            return this.GetQueryParam("expand");
        }
    
-       public ByProjectKeyMeShoppingListsByIDGet WithExpand(string expand){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
 

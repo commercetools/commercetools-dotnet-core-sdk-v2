@@ -26,15 +26,15 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        
        private string ID { get; }
        
-       private commercetools.Api.Models.Carts.ICartUpdate CartUpdate;
+       private commercetools.Api.Models.Me.IMyCartUpdate MyCartUpdate;
    
-       public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string id, commercetools.Api.Models.Carts.ICartUpdate cartUpdate) {
+       public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string id, commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
            this.StoreKey = storeKey;
            this.ID = id;
-           this.CartUpdate = cartUpdate;
+           this.MyCartUpdate = myCartUpdate;
            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/carts/{ID}";
        }
    
@@ -57,7 +57,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
           var request = base.Build();
           if (SerializerService != null)
           {
-              var body = this.SerializerService.Serialize(CartUpdate);
+              var body = this.SerializerService.Serialize(MyCartUpdate);
               if(!string.IsNullOrEmpty(body))
               {
                   request.Content = new StringContent(body, Encoding.UTF8, "application/json");

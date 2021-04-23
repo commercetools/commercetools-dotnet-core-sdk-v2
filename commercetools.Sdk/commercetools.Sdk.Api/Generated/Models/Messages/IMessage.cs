@@ -83,7 +83,6 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Api.Models.Messages.ReviewCreatedMessage))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Api.Models.Messages.ReviewRatingSetMessage))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Api.Models.Messages.ReviewStateTransitionMessage))]
-    [SubTypeDiscriminator("ShoppingListStoreSet", typeof(commercetools.Api.Models.Messages.ShoppingListStoreSetMessage))]
     public partial interface IMessage : IBaseResource
     {
         new string Id { get; set;}
