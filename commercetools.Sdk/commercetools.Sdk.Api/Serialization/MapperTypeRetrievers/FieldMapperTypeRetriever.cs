@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(bool);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(double);
+                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(string);

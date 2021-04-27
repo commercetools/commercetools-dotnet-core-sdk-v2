@@ -28,8 +28,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<string>(deserialized.Custom.Fields["string"]);
             Assert.IsType<long>(deserialized.Custom.Fields["integer"]);
             Assert.Equal(10L, deserialized.Custom.Fields["integer"]);
-            Assert.IsType<double>(deserialized.Custom.Fields["double"]);
-            Assert.Equal(11.0, deserialized.Custom.Fields["double"]);
+            Assert.IsType<decimal>(deserialized.Custom.Fields["double"]);
+            Assert.Equal(11.0m, deserialized.Custom.Fields["double"]);
             Assert.IsType<bool>(deserialized.Custom.Fields["boolean"]);
             Assert.IsType<string>(deserialized.Custom.Fields["date"]);
             Assert.IsType<string>(deserialized.Custom.Fields["date-time"]);
@@ -44,8 +44,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<bool>>(deserialized.Custom.Fields["set-boolean"]);
             Assert.IsType<List<long>>(deserialized.Custom.Fields["set-integer"]);
             Assert.Equal(10, (deserialized.Custom.Fields["set-integer"] as List<long>).First());
-            Assert.IsType<List<double>>(deserialized.Custom.Fields["set-double"]);
-            Assert.Equal(11.0, (deserialized.Custom.Fields["set-double"] as List<Double>).First());
+            Assert.IsType<List<decimal>>(deserialized.Custom.Fields["set-double"]);
+            Assert.Equal(11.0m, (deserialized.Custom.Fields["set-double"] as List<decimal>).First());
             Assert.IsType<List<LocalizedString>>(deserialized.Custom.Fields["set-ltext"]);
             Assert.IsType<List<IReference>>(deserialized.Custom.Fields["set-reference"]);
             Assert.IsType<List<ITypedMoney>>(deserialized.Custom.Fields["set-money"]);
