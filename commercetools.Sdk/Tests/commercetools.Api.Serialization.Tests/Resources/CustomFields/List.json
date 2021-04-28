@@ -8,11 +8,59 @@
     },
     "fields": {
       "string": "my string",
-      "number": 10,
-      "enum": {
-        "key": "my key",
-        "label": "my label"
-      }
+      "integer": 10,
+      "double": 11.0,
+      "enum": "enum-key-2",
+      "localized-enum": "enum-key-2",
+      "localized-string": {
+        "de": "l description-de",
+        "en": "l description-en"
+      },
+      "boolean": true,
+      "date": "2021-03-17",
+      "date-time": "2021-03-17T00:20:00.000Z",
+      "time": "14:28",
+      "reference": {
+        "typeId": "category",
+        "id": "3a0e5f50-9a5c-4384-a926-01669ded2c9b"
+      },
+      "money": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 320000,
+        "fractionDigits": 2
+      },
+      "set-empty": [],
+      "set-integer": [
+        10
+      ],
+      "set-double": [
+        11.0
+      ],
+      "set-boolean": [
+        true
+      ],
+      "set-reference": [
+        {
+          "typeId": "product",
+          "id": "12345"
+        }
+      ],
+      "set-money": [
+        {
+          "currencyCode": "EUR",
+          "centAmount": 100,
+          "type": "centPrecision"
+        }
+      ],
+      "set-ltext": [
+        {
+          "en": "foo"
+        }
+      ],
+      "set-text": [
+        "foo"
+      ]
     }
   }
 }

@@ -1,20 +1,19 @@
 using System;
 using commercetools.Api.Models.Types;
-using commercetools.Base.Serialization.Mappers;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using commercetools.Api.Client;
+using System.Reflection;
 using commercetools.Api.Models.Errors;
+using commercetools.Api.Models.Products;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Serialization;
-using commercetools.Sdk.Api.Serialization.Mappers.CustomFieldMappers;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.Configuration;
 
@@ -51,9 +50,8 @@ namespace commercetools.Sdk.Api
         {
             services.UseRegistration();
             services.UseSerialization();
-            services.AddSingleton<ICustomJsonMapper<IFieldContainer>, StringFieldMapper>();
-            services.AddSingleton<ICustomJsonMapper<IFieldContainer>, NumberFieldMapper>();
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
+            services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
             services.AddSingleton<SerializerService>();
         }
 

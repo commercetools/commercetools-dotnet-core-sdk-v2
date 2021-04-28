@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using commercetools.Api.Models.Products;
 using commercetools.Api.Models.Types;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
@@ -15,7 +16,8 @@ namespace commercetools.Sdk.Api.Serialization
        
         public SerializerService(
             ITypeRetriever typeRetriever,
-            IMapperTypeRetriever<IFieldContainer> mapperTypeRetriever)
+            IMapperTypeRetriever<IFieldContainer> customFieldsMapperTypeRetriever,
+            IMapperTypeRetriever<IAttribute> attributesMapperTypeRetriever)
         {
             _serializerOptions = new JsonSerializerOptions
             {
@@ -23,7 +25,8 @@ namespace commercetools.Sdk.Api.Serialization
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
-            _serializerOptions.Converters.Add(new FieldContainerConverter(mapperTypeRetriever, this));
+            _serializerOptions.Converters.Add(new FieldContainerConverter(customFieldsMapperTypeRetriever, this));
+            _serializerOptions.Converters.Add(new AttributeConverter(attributesMapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new EnumAsInterfaceConverterFactory(
