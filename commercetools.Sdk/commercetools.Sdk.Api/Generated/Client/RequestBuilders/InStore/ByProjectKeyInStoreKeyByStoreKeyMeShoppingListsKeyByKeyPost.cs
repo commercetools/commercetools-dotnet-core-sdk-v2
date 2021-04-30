@@ -9,9 +9,9 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Api.Client.RequestBuilders.InStore
 {
-   public partial class ByProjectKeyMeCartsByIDPost : ApiMethod<ByProjectKeyMeCartsByIDPost> {
+   public partial class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost> {
 
        
        private ISerializerService SerializerService { get; }
@@ -22,31 +22,34 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private string ID { get; }
+       private string StoreKey { get; }
        
-       private commercetools.Api.Models.Me.IMyCartUpdate MyCartUpdate;
+       private string Key { get; }
+       
+       private commercetools.Api.Models.Me.IMyShoppingListUpdate MyShoppingListUpdate;
    
-       public ByProjectKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate) {
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string key, commercetools.Api.Models.Me.IMyShoppingListUpdate myShoppingListUpdate) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
-           this.ID = id;
-           this.MyCartUpdate = myCartUpdate;
-           this.RequestUrl = $"/{ProjectKey}/me/carts/{ID}";
+           this.StoreKey = storeKey;
+           this.Key = key;
+           this.MyShoppingListUpdate = myShoppingListUpdate;
+           this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/shopping-lists/key={Key}";
        }
    
        public List<string> GetExpand() {
            return this.GetQueryParam("expand");
        }
    
-       public ByProjectKeyMeCartsByIDPost WithExpand(string expand){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Carts.Cart> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ShoppingLists.ShoppingList> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.Cart>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShoppingLists.ShoppingList>(requestMessage);
        }
        
        public override HttpRequestMessage Build()
@@ -54,7 +57,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
           var request = base.Build();
           if (SerializerService != null)
           {
-              var body = this.SerializerService.Serialize(MyCartUpdate);
+              var body = this.SerializerService.Serialize(MyShoppingListUpdate);
               if(!string.IsNullOrEmpty(body))
               {
                   request.Content = new StringContent(body, Encoding.UTF8, "application/json");

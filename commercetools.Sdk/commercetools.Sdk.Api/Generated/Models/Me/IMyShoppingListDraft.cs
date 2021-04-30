@@ -1,5 +1,6 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.ShoppingLists;
+using commercetools.Api.Models.Stores;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -24,5 +25,7 @@ namespace commercetools.Api.Models.Me
         ICustomFieldsDraft Custom { get; set;}
         
         long? DeleteDaysAfterLastModification { get; set;}
+        
+        IStoreResourceIdentifier Store { get; set;}
     }
 }

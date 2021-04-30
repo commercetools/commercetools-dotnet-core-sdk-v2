@@ -33,5 +33,8 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder ActiveCart() {
            return new ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder ShoppingLists() {
+           return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+       }
    }
 }

@@ -29,10 +29,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
    
    
 
-       public async Task<commercetools.Api.Models.Me.MyCart> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Carts.Cart> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Me.MyCart>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.Cart>(requestMessage);
        }
    }
 }

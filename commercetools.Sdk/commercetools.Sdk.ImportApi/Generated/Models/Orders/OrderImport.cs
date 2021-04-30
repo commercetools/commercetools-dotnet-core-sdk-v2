@@ -12,8 +12,6 @@ namespace commercetools.ImportApi.Models.Orders
 {
     public partial class OrderImport : IOrderImport
     {
-        public string Key { get; set;}
-        
         public string OrderNumber { get; set;}
         
         public ICustomerKeyReference Customer { get; set;}

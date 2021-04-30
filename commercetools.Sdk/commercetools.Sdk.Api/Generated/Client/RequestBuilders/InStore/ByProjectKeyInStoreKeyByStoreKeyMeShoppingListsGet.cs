@@ -9,9 +9,9 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Api.Client.RequestBuilders.InStore
 {
-   public partial class ByProjectKeyMeGet : ApiMethod<ByProjectKeyMeGet> {
+   public partial class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet> {
 
        
        private IClient ApiHttpClient { get; }
@@ -20,13 +20,20 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
+       private string StoreKey { get; }
+       
    
-       public ByProjectKeyMeGet(IClient apiHttpClient, string projectKey) {
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet(IClient apiHttpClient, string projectKey, string storeKey) {
            this.ApiHttpClient = apiHttpClient;
            this.ProjectKey = projectKey;
-           this.RequestUrl = $"/{ProjectKey}/me";
+           this.StoreKey = storeKey;
+           this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/shopping-lists";
        }
    
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+       
        public List<string> GetSort() {
            return this.GetQueryParam("sort");
        }
@@ -43,42 +50,38 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            return this.GetQueryParam("withTotal");
        }
        
-       public List<string> GetExpand() {
-           return this.GetQueryParam("expand");
-       }
-       
        public List<string> GetWhere() {
            return this.GetQueryParam("where");
        }
    
-       public ByProjectKeyMeGet WithSort(string sort){
-           return this.AddQueryParam("sort", sort);
-       }
-       
-       public ByProjectKeyMeGet WithLimit(int limit){
-           return this.AddQueryParam("limit", limit.ToString());
-       }
-       
-       public ByProjectKeyMeGet WithOffset(int offset){
-           return this.AddQueryParam("offset", offset.ToString());
-       }
-       
-       public ByProjectKeyMeGet WithWithTotal(bool withTotal){
-           return this.AddQueryParam("withTotal", withTotal.ToString());
-       }
-       
-       public ByProjectKeyMeGet WithExpand(string expand){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
        
-       public ByProjectKeyMeGet WithWhere(string where){
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithSort(string sort){
+           return this.AddQueryParam("sort", sort);
+       }
+       
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithLimit(int limit){
+           return this.AddQueryParam("limit", limit.ToString());
+       }
+       
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithOffset(int offset){
+           return this.AddQueryParam("offset", offset.ToString());
+       }
+       
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithWithTotal(bool withTotal){
+           return this.AddQueryParam("withTotal", withTotal.ToString());
+       }
+       
+       public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Customers.Customer> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ShoppingLists.ShoppingListPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.Customer>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShoppingLists.ShoppingListPagedQueryResponse>(requestMessage);
        }
    }
 }
