@@ -40,7 +40,7 @@ jobs:
         run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
