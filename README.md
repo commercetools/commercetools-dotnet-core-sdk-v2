@@ -12,6 +12,10 @@ This repository contains the commercetools platform, import-api and ml-api C# sd
 | Import Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
 | ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)| 
 
+## Example and Training material
+Feel free to explore these examples using this SDK for calling Platform, and Import API.
+[.NET Core SDK Training for V2 SDK](https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2)
+
 ## Installation
 #### Download from [Nuget](https://www.nuget.org/profiles/commercetools)
 | Package                                                            | Installation                                                                                                   |
