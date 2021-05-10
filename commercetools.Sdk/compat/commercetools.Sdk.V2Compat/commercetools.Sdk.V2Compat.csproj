@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="commercetools.Sdk.All" Version="1.1.3" />
+        <PackageReference Include="commercetools.Sdk.All" Version="1.1.4" />
     </ItemGroup>
 
     <ItemGroup>
