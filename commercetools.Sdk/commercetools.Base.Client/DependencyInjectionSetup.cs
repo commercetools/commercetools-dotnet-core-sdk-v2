@@ -88,7 +88,7 @@ namespace commercetools.Base.Client
             return builders;
         }
 
-        private static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName, Func<HttpResponseMessage, Type> errorResponseTypeMapper, Func<IServiceProvider, ISerializerService> serializerFactory)
+        public static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName, Func<HttpResponseMessage, Type> errorResponseTypeMapper, Func<IServiceProvider, ISerializerService> serializerFactory)
         {
             var httpClientBuilder = services.AddHttpClient(clientName)
                 .ConfigureHttpClient(client =>
