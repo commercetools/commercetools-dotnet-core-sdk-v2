@@ -1,12 +1,13 @@
-using System;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using commercetools.Api.IntegrationTests.Services;
 using commercetools.Api.Models.Customers;
+using commercetools.Api.Models.ShoppingLists;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Serialization;
-using Microsoft.Extensions.Configuration;
 using Xunit;
 
 namespace commercetools.Api.IntegrationTests.Me
@@ -18,6 +19,7 @@ namespace commercetools.Api.IntegrationTests.Me
 
         private readonly IClient _adminClient;
         private readonly CustomerServices _customerServices;
+        private readonly ShoppingListServices _shoppingListServices;
         private readonly ServiceProviderFixture _serviceProviderFixture;
         private IClient _meClient;
         private ICustomer _customer = null;
@@ -29,6 +31,8 @@ namespace commercetools.Api.IntegrationTests.Me
             this._serviceProviderFixture = serviceProviderFixture;
             this._adminClient = serviceProviderFixture.GetService<IClient>();
             _customerServices = new CustomerServices();
+            _shoppingListServices = new ShoppingListServices();
+            CreateMeClient();
         }
 
         [Fact]
@@ -36,7 +40,6 @@ namespace commercetools.Api.IntegrationTests.Me
         {
             //Arrange
             await CreateEntitiesForTesting();
-            CreateMeClient();
 
             //Act
             var myProfile = await _meClient.WithApi()
@@ -47,24 +50,51 @@ namespace commercetools.Api.IntegrationTests.Me
 
             //Assert
             Assert.NotNull(myProfile);
-            Assert.Equal(CustomerServices.CUSTOMER_EMAIL, myProfile.Email);
+            Assert.Equal(CustomerServices.CustomerEmail, myProfile.Email);
+        }
+        
+        [Fact]
+        public async Task GetMyShoppingLists()
+        {
+            //Arrange
+            await CreateEntitiesForTesting();
+
+            //Act
+            var response = await _meClient.WithApi()
+                .WithProjectKey(GenericFixture.DefaultProjectKey)
+                .Me()
+                .ShoppingLists()
+                .Get()
+                .ExecuteAsync();
+
+            //Assert
+            var shoppingList = response.Results.FirstOrDefault();
+            Assert.NotNull(shoppingList);
+            Assert.Equal(ShoppingListServices.ShoppingListKey, shoppingList.Key);
         }
 
         private async Task CreateEntitiesForTesting()
         {
             //Get Customer By Key, Create if not exists
-            _customer = await _customerServices.GetCustomerByKey(_adminClient, CustomerServices.CUSTOMER_KEY);
+            _customer = await _customerServices.GetCustomerByKey(_adminClient, CustomerServices.CustomerKey);
             if (_customer == null)
             {
-                var customerDraft = new CustomerDraft
-                {
-                    Email = CustomerServices.CUSTOMER_EMAIL,
-                    Password = CustomerServices.CUSTOMER_PASSWORD,
-                    Key = CustomerServices.CUSTOMER_KEY,
-                    FirstName = "FN_Me",
-                    LastName = "LN_Me"
-                };
+                var customerDraft = _customerServices.CreateCustomerDraft();
                 _customer = await _customerServices.CreateCustomer(_adminClient, customerDraft);
+            }
+            
+            //Create a shoppingList for this customer (if not exists)
+            IShoppingList shoppingList =
+                await _shoppingListServices.GetShoppingListByKey(_adminClient, ShoppingListServices.ShoppingListKey);
+            if (shoppingList == null)
+            {
+                var shoppingListDraft = _shoppingListServices.CreateShoppingListDraft(
+                    new CustomerResourceIdentifier()
+                    {
+                        Id = _customer.Id
+                    });
+                shoppingList = await _shoppingListServices
+                    .CreateShoppingList(_adminClient, shoppingListDraft);
             }
         }
 
@@ -79,8 +109,8 @@ namespace commercetools.Api.IntegrationTests.Me
                 .CreatePasswordTokenProvider(meClientConfig,
                     httpClientFactory,
                     new InMemoryUserCredentialsStoreManager(
-                        CustomerServices.CUSTOMER_EMAIL,
-                        CustomerServices.CUSTOMER_PASSWORD));
+                        CustomerServices.CustomerEmail,
+                        CustomerServices.CustomerPassword));
 
             //Create MeClient
             _meClient = ClientFactory.Create(

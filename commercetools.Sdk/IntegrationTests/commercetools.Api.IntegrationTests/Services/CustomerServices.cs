@@ -5,13 +5,13 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests.Services
 {
     public class CustomerServices
     {
-        public const string CUSTOMER_EMAIL = "Customer_Me@gmail.com";
-        public const string CUSTOMER_PASSWORD = "password";
-        public const string CUSTOMER_KEY = "Customer_Me_Key123";
+        public const string CustomerEmail = "Customer_Me@gmail.com";
+        public const string CustomerPassword = "password";
+        public const string CustomerKey = "Customer_Me_Key123";
         public async Task<ICustomer> GetCustomerByKey(IClient adminClient,string key)
         {
             try
@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests
 
             return null;
         }
-        public async Task<ICustomer> CreateCustomer(IClient adminClient,CustomerDraft customerDraft)
+        public async Task<ICustomer> CreateCustomer(IClient adminClient,ICustomerDraft customerDraft)
         {
             var customerSignInResult = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
                 .Customers()
@@ -38,6 +38,18 @@ namespace commercetools.Api.IntegrationTests
                 .ExecuteAsync();
             var customer = customerSignInResult.Customer;
             return customer;
+        }
+
+        public ICustomerDraft CreateCustomerDraft()
+        {
+            return new CustomerDraft
+            {
+                Email = CustomerEmail,
+                Password = CustomerPassword,
+                Key = CustomerKey,
+                FirstName = "FN_Me",
+                LastName = "LN_Me"
+            };
         }
     }
 }
