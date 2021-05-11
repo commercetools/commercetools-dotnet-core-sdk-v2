@@ -10,6 +10,8 @@ namespace commercetools.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Api.Models.Common.BaseAddress))]
     public partial interface IBaseAddress 
     {
+        string Id { get; set;}
+        
         string Key { get; set;}
         
         string Title { get; set;}

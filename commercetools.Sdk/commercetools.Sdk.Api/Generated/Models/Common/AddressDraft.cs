@@ -11,6 +11,8 @@ namespace commercetools.Api.Models.Common
 {
     public partial class AddressDraft : IAddressDraft
     {
+        public string Id { get; set;}
+        
         public string Key { get; set;}
         
         public string Title { get; set;}

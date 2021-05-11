@@ -11,6 +11,8 @@ namespace commercetools.Api.Models.Common
 {
     public partial class Address : IAddress
     {
+        public string Id { get; set;}
+        
         public string Key { get; set;}
         
         public string Title { get; set;}
@@ -58,8 +60,6 @@ namespace commercetools.Api.Models.Common
         public string AdditionalAddressInfo { get; set;}
         
         public string ExternalId { get; set;}
-        
-        public string Id { get; set;}
         
         public ICustomFields Custom { get; set;}
     }
