@@ -16,6 +16,6 @@ namespace commercetools.Api.Models.Me
         
         string AddressKey { get; set;}
         
-        IAddress Address { get; set;}
+        IBaseAddress Address { get; set;}
     }
 }

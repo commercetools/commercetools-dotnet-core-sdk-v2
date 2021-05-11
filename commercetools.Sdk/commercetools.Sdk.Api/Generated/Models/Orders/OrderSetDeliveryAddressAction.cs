@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Orders
         
         public string DeliveryId { get; set;}
         
-        public IAddress Address { get; set;}
+        public IBaseAddress Address { get; set;}
         public OrderSetDeliveryAddressAction()
         { 
            this.Action = "setDeliveryAddress";

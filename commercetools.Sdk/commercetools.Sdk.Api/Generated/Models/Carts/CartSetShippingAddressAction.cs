@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Carts
     {
         public string Action { get; set;}
         
-        public IAddress Address { get; set;}
+        public IBaseAddress Address { get; set;}
         public CartSetShippingAddressAction()
         { 
            this.Action = "setShippingAddress";

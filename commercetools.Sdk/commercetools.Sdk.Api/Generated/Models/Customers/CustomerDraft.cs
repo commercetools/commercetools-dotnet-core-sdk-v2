@@ -40,7 +40,7 @@ namespace commercetools.Api.Models.Customers
         
         public string VatId { get; set;}
         
-        public List<IAddress> Addresses { get; set;}
+        public List<IBaseAddress> Addresses { get; set;}
         
         public long? DefaultShippingAddress { get; set;}
         

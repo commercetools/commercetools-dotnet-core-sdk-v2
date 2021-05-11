@@ -9,11 +9,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.Address))]
-    public partial interface IAddress : IBaseAddress
+    [DeserializeAs(typeof(commercetools.Api.Models.Common.AddressDraft))]
+    public partial interface IAddressDraft : IBaseAddress
     {
-        string Id { get; set;}
-        
-        ICustomFields Custom { get; set;}
+        ICustomFieldsDraft Custom { get; set;}
     }
 }

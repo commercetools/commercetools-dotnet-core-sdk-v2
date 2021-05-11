@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Orders
         
         public List<IDeliveryItem> Items { get; set;}
         
-        public IAddress Address { get; set;}
+        public IBaseAddress Address { get; set;}
         
         public List<IParcelDraft> Parcels { get; set;}
         public OrderAddDeliveryAction()

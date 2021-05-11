@@ -31,7 +31,7 @@ namespace commercetools.Api.Models.Me
         
         string VatId { get; set;}
         
-        List<IAddress> Addresses { get; set;}
+        List<IBaseAddress> Addresses { get; set;}
         
         long? DefaultShippingAddress { get; set;}
         

@@ -21,7 +21,7 @@ namespace commercetools.Api.Models.Channels
         
         ILocalizedString Description { get; set;}
         
-        IAddress Address { get; set;}
+        IBaseAddress Address { get; set;}
         
         ICustomFieldsDraft Custom { get; set;}
         

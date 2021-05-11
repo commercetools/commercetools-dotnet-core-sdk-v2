@@ -44,9 +44,9 @@ namespace commercetools.Api.Models.Carts
         
         List<ICustomLineItemDraft> CustomLineItems { get; set;}
         
-        IAddress ShippingAddress { get; set;}
+        IBaseAddress ShippingAddress { get; set;}
         
-        IAddress BillingAddress { get; set;}
+        IBaseAddress BillingAddress { get; set;}
         
         IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
@@ -62,7 +62,7 @@ namespace commercetools.Api.Models.Carts
         
         IShippingRateInputDraft ShippingRateInput { get; set;}
         
-        List<IAddress> ItemShippingAddresses { get; set;}
+        List<IBaseAddress> ItemShippingAddresses { get; set;}
         
         List<string> DiscountCodes { get; set;}
     }

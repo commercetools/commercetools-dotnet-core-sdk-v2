@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerAddAddressAction))]
     public partial interface ICustomerAddAddressAction : ICustomerUpdateAction
     {
-        IAddress Address { get; set;}
+        IBaseAddress Address { get; set;}
     }
 }
