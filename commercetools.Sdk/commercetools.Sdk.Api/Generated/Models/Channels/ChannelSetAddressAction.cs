@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Channels
     {
         public string Action { get; set;}
         
-        public IAddress Address { get; set;}
+        public IBaseAddress Address { get; set;}
         public ChannelSetAddressAction()
         { 
            this.Action = "setAddress";

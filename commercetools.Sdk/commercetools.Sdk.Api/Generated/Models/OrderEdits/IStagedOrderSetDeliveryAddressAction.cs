@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.OrderEdits
     {
         string DeliveryId { get; set;}
         
-        IAddress Address { get; set;}
+        IBaseAddress Address { get; set;}
     }
 }

@@ -30,9 +30,9 @@ namespace commercetools.Api.Models.Orders
         
         ITaxedPriceDraft TaxedPrice { get; set;}
         
-        IAddress ShippingAddress { get; set;}
+        IBaseAddress ShippingAddress { get; set;}
         
-        IAddress BillingAddress { get; set;}
+        IBaseAddress BillingAddress { get; set;}
         
         ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
         
@@ -54,7 +54,7 @@ namespace commercetools.Api.Models.Orders
         
         IRoundingMode TaxRoundingMode { get; set;}
         
-        List<IAddress> ItemShippingAddresses { get; set;}
+        List<IBaseAddress> ItemShippingAddresses { get; set;}
         
         IStoreResourceIdentifier Store { get; set;}
         

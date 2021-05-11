@@ -1,5 +1,3 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public partial class Address : IAddress
+    public partial class BaseAddress : IBaseAddress
     {
         public string Key { get; set;}
         
@@ -58,9 +56,5 @@ namespace commercetools.Api.Models.Common
         public string AdditionalAddressInfo { get; set;}
         
         public string ExternalId { get; set;}
-        
-        public string Id { get; set;}
-        
-        public ICustomFields Custom { get; set;}
     }
 }

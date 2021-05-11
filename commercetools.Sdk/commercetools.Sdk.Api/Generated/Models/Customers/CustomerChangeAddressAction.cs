@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Customers
         
         public string AddressKey { get; set;}
         
-        public IAddress Address { get; set;}
+        public IBaseAddress Address { get; set;}
         public CustomerChangeAddressAction()
         { 
            this.Action = "changeAddress";

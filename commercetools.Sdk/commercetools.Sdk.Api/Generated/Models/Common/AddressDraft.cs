@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public partial class Address : IAddress
+    public partial class AddressDraft : IAddressDraft
     {
         public string Key { get; set;}
         
@@ -59,8 +59,6 @@ namespace commercetools.Api.Models.Common
         
         public string ExternalId { get; set;}
         
-        public string Id { get; set;}
-        
-        public ICustomFields Custom { get; set;}
+        public ICustomFieldsDraft Custom { get; set;}
     }
 }

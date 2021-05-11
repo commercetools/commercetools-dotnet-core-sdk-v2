@@ -26,9 +26,9 @@ namespace commercetools.Api.Models.Me
         
         List<IMyLineItemDraft> LineItems { get; set;}
         
-        IAddress ShippingAddress { get; set;}
+        IBaseAddress ShippingAddress { get; set;}
         
-        IAddress BillingAddress { get; set;}
+        IBaseAddress BillingAddress { get; set;}
         
         IShippingMethodResourceIdentifier ShippingMethod { get; set;}
         
@@ -40,7 +40,7 @@ namespace commercetools.Api.Models.Me
         
         long? DeleteDaysAfterLastModification { get; set;}
         
-        List<IAddress> ItemShippingAddresses { get; set;}
+        List<IBaseAddress> ItemShippingAddresses { get; set;}
         
         IStoreKeyReference Store { get; set;}
         
