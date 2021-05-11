@@ -1,4 +1,5 @@
 using commercetools.ImportApi.Models.Common;
+using commercetools.ImportApi.Models.Customers;
 using commercetools.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace commercetools.ImportApi.Models.Customers
         
         ICustomerGroupKeyReference CustomerGroup { get; set;}
         
-        List<IAddress> Addresses { get; set;}
+        List<ICustomerAddress> Addresses { get; set;}
         
         int? DefaultBillingAddress { get; set;}
         
