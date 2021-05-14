@@ -54,6 +54,10 @@ jobs:
       CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET }}
       CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}
       CTP_Client__Scope: ${{ secrets.CTP_SCOPE }}
+      CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID }}
+      CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET }}
+      CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY }}
+      CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -76,6 +80,10 @@ jobs:
           CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
           CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
           CTP_Client__Scope: ${{ secrets.CTP_SCOPE_PR }}
+          CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID_PR }}
+          CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
+          CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
+          CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES_PR }}
       - run: dotnet test IntegrationTests/commercetools.ImportApi.IntegrationTests --verbosity=normal --no-build -c Release
         if: github.event_name == 'push'
         working-directory: ./commercetools.Sdk
@@ -87,6 +95,10 @@ jobs:
           CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
           CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
           CTP_Client__Scope: ${{ secrets.CTP_SCOPE_PR }}
+          CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID_PR }}
+          CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
+          CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
+          CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES_PR }}
 
   artifacts:
     name: Create artifacts
