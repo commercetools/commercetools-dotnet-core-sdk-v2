@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using commercetools.Base.Client.Tokens;
 
@@ -43,6 +44,7 @@ namespace commercetools.Base.Client
             IAnonymousCredentialsStoreManager anonymousCredentials = null
             )
         {
+            Validator.ValidateObject(configuration, new ValidationContext(configuration), true);
             ITokenProvider provider = null;
             var authClient = factory.CreateClient(DefaultClientNames.Authorization);
             var serializerService = new TokenSerializerService();

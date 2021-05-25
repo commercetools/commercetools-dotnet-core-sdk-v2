@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
 using System.Net.Http;
 using System.Security;
@@ -18,6 +19,7 @@ namespace commercetools.Base.Client
             ISerializerService serializerService,
             ITokenProvider tokenProvider)
         {
+            Validator.ValidateObject(configuration, new ValidationContext(configuration), true);
             return new CtpClient(
                 CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
                 serializerService,
