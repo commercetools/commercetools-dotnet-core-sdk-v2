@@ -12,6 +12,9 @@ namespace commercetools.ImportApi.Models.Common
        [Description("order")]
        Order,
        
+       [Description("order-patch")]
+       OrderPatch,
+       
        [Description("price")]
        Price,
        
@@ -50,6 +53,9 @@ namespace commercetools.ImportApi.Models.Common
         public static IImportResourceType Order = new ImportResourceTypeWrapper
          {Value = ImportResourceType.Order, JsonName = "order"}; 
        
+        public static IImportResourceType OrderPatch = new ImportResourceTypeWrapper
+         {Value = ImportResourceType.OrderPatch, JsonName = "order-patch"}; 
+       
         public static IImportResourceType Price = new ImportResourceTypeWrapper
          {Value = ImportResourceType.Price, JsonName = "price"}; 
        
@@ -82,6 +88,7 @@ namespace commercetools.ImportApi.Models.Common
            {
                 Category ,
                 Order ,
+                OrderPatch ,
                 Price ,
                 Product ,
                 ProductDraft ,
