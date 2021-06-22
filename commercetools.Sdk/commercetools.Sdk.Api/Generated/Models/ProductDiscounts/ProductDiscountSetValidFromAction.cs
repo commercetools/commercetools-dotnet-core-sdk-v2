@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.ProductDiscounts
     {
         public string Action { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         public ProductDiscountSetValidFromAction()
         { 
            this.Action = "setValidFrom";

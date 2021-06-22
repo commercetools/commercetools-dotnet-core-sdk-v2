@@ -16,6 +16,7 @@ namespace commercetools.Api.Models.Customers
         
         string Password { get; set;}
         
+        [ObsoleteAttribute("This property is obsolete", false)]
         string AnonymousCartId { get; set;}
         
         ICartResourceIdentifier AnonymousCart { get; set;}

@@ -1,4 +1,5 @@
 using commercetools.ImportApi.Models.Common;
+using commercetools.ImportApi.Models.Customers;
 using commercetools.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace commercetools.ImportApi.Models.Customers
         
         public string ExternalId { get; set;}
         
-        public DateTime DateOfBirth { get; set;}
+        public DateTime? DateOfBirth { get; set;}
         
         public string CompanyName { get; set;}
         
@@ -43,7 +44,7 @@ namespace commercetools.ImportApi.Models.Customers
         
         public ICustomerGroupKeyReference CustomerGroup { get; set;}
         
-        public List<IAddress> Addresses { get; set;}
+        public List<ICustomerAddress> Addresses { get; set;}
         
         public int? DefaultBillingAddress { get; set;}
         

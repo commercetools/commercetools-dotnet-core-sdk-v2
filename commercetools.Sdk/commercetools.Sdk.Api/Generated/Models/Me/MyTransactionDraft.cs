@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.Me
 {
     public partial class MyTransactionDraft : IMyTransactionDraft
     {
-        public DateTime Timestamp { get; set;}
+        public DateTime? Timestamp { get; set;}
         
         public ITransactionType Type { get; set;}
         

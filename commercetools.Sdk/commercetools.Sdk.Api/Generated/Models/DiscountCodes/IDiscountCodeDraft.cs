@@ -33,8 +33,8 @@ namespace commercetools.Api.Models.DiscountCodes
         
         List<string> Groups { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
     }
 }

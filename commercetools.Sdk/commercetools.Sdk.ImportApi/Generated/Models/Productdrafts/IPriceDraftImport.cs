@@ -20,9 +20,9 @@ namespace commercetools.ImportApi.Models.Productdrafts
         
         IChannelKeyReference Channel { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
         
         ICustom Custom { get; set;}
         

@@ -40,8 +40,8 @@ namespace commercetools.Api.Models.ProductDiscounts
         
         List<IReference> References { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
     }
 }

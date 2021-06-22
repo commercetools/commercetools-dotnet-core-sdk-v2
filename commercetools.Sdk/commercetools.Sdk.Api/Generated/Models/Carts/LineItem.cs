@@ -37,7 +37,7 @@ namespace commercetools.Api.Models.Carts
         
         public long Quantity { get; set;}
         
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         
         public List<IItemState> State { get; set;}
         
@@ -57,6 +57,6 @@ namespace commercetools.Api.Models.Carts
         
         public IItemShippingDetails ShippingDetails { get; set;}
         
-        public DateTime LastModifiedAt { get; set;}
+        public DateTime? LastModifiedAt { get; set;}
     }
 }

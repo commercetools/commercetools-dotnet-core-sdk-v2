@@ -12,6 +12,7 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderFromCartDraft : IOrderFromCartDraft
     {
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string Id { get; set;}
         
         public ICartResourceIdentifier Cart { get; set;}

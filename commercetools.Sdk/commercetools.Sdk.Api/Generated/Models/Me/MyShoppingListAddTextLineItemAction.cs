@@ -20,7 +20,7 @@ namespace commercetools.Api.Models.Me
         
         public long? Quantity { get; set;}
         
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         
         public ICustomFieldsDraft Custom { get; set;}
         public MyShoppingListAddTextLineItemAction()

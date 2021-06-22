@@ -21,7 +21,7 @@ namespace commercetools.Api.Models.OrderEdits
         
         public IStateResourceIdentifier ToState { get; set;}
         
-        public DateTime ActualTransitionDate { get; set;}
+        public DateTime? ActualTransitionDate { get; set;}
         public StagedOrderTransitionLineItemStateAction()
         { 
            this.Action = "transitionLineItemState";

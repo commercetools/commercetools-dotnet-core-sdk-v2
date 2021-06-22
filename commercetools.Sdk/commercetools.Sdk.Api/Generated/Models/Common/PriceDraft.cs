@@ -21,9 +21,9 @@ namespace commercetools.Api.Models.Common
         
         public IChannelResourceIdentifier Channel { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
         
         public ICustomFieldsDraft Custom { get; set;}
         

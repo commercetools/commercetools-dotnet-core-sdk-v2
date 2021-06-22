@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Inventories
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction))]
     public partial interface IInventoryEntrySetExpectedDeliveryAction : IInventoryEntryUpdateAction
     {
-        DateTime ExpectedDelivery { get; set;}
+        DateTime? ExpectedDelivery { get; set;}
     }
 }

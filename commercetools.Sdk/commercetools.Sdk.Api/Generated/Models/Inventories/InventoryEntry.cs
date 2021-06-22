@@ -26,7 +26,7 @@ namespace commercetools.Api.Models.Inventories
         
         public string Sku { get; set;}
         
-        public IChannelResourceIdentifier SupplyChannel { get; set;}
+        public IChannelReference SupplyChannel { get; set;}
         
         public long QuantityOnStock { get; set;}
         
@@ -34,7 +34,7 @@ namespace commercetools.Api.Models.Inventories
         
         public long? RestockableInDays { get; set;}
         
-        public DateTime ExpectedDelivery { get; set;}
+        public DateTime? ExpectedDelivery { get; set;}
         
         public ICustomFields Custom { get; set;}
     }

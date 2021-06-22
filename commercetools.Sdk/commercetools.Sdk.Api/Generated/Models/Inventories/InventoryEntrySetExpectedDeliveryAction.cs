@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Inventories
     {
         public string Action { get; set;}
         
-        public DateTime ExpectedDelivery { get; set;}
+        public DateTime? ExpectedDelivery { get; set;}
         public InventoryEntrySetExpectedDeliveryAction()
         { 
            this.Action = "setExpectedDelivery";

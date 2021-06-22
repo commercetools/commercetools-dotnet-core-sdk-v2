@@ -13,6 +13,7 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderFromCartDraft))]
     public partial interface IOrderFromCartDraft 
     {
+        [ObsoleteAttribute("This property is obsolete", false)]
         string Id { get; set;}
         
         ICartResourceIdentifier Cart { get; set;}

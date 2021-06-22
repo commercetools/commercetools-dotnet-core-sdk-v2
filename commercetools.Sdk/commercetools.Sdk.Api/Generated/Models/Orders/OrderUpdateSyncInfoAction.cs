@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Orders
         
         public string ExternalId { get; set;}
         
-        public DateTime SyncedAt { get; set;}
+        public DateTime? SyncedAt { get; set;}
         public OrderUpdateSyncInfoAction()
         { 
            this.Action = "updateSyncInfo";

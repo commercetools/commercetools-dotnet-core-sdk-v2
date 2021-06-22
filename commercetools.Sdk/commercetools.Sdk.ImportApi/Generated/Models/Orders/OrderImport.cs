@@ -42,7 +42,7 @@ namespace commercetools.ImportApi.Models.Orders
         
         public IShippingInfoImportDraft ShippingInfo { get; set;}
         
-        public DateTime CompletedAt { get; set;}
+        public DateTime? CompletedAt { get; set;}
         
         public ICustom Custom { get; set;}
         

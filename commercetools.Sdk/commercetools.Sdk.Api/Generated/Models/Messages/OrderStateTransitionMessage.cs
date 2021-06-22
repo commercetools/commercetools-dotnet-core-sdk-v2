@@ -36,6 +36,8 @@ namespace commercetools.Api.Models.Messages
         
         public IStateReference State { get; set;}
         
+        public IStateReference OldState { get; set;}
+        
         public bool Force { get; set;}
         public OrderStateTransitionMessage()
         { 

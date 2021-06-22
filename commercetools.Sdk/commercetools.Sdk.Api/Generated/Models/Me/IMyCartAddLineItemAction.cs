@@ -37,6 +37,6 @@ namespace commercetools.Api.Models.Me
         
         IItemShippingDetailsDraft ShippingDetails { get; set;}
         
-        DateTime AddedAt { get; set;}
+        DateTime? AddedAt { get; set;}
     }
 }

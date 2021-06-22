@@ -1,5 +1,3 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +5,10 @@ using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.ImportApi.Models.Customers
 {
-    public partial class Address : IAddress
+    public partial class CustomerAddress : ICustomerAddress
     {
-        public string Id { get; set;}
-        
         public string Key { get; set;}
         
         public string Title { get; set;}
@@ -60,7 +56,5 @@ namespace commercetools.Api.Models.Common
         public string AdditionalAddressInfo { get; set;}
         
         public string ExternalId { get; set;}
-        
-        public ICustomFields Custom { get; set;}
     }
 }

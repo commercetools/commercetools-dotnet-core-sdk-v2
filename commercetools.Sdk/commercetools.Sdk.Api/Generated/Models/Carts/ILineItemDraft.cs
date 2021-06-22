@@ -22,7 +22,7 @@ namespace commercetools.Api.Models.Carts
         
         long? Quantity { get; set;}
         
-        DateTime AddedAt { get; set;}
+        DateTime? AddedAt { get; set;}
         
         IChannelResourceIdentifier SupplyChannel { get; set;}
         

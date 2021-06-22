@@ -5,13 +5,11 @@ using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.ImportApi.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.BaseAddress))]
-    public partial interface IBaseAddress 
+    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customers.CustomerAddress))]
+    public partial interface ICustomerAddress 
     {
-        string Id { get; set;}
-        
         string Key { get; set;}
         
         string Title { get; set;}

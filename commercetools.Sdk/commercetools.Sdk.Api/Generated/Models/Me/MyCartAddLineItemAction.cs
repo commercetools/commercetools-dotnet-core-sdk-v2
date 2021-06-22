@@ -38,7 +38,7 @@ namespace commercetools.Api.Models.Me
         
         public IItemShippingDetailsDraft ShippingDetails { get; set;}
         
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         public MyCartAddLineItemAction()
         { 
            this.Action = "addLineItem";

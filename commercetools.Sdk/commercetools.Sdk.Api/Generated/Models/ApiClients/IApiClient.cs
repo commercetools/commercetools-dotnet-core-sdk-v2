@@ -16,11 +16,11 @@ namespace commercetools.Api.Models.ApiClients
         
         string Scope { get; set;}
         
-        DateTime CreatedAt { get; set;}
+        DateTime? CreatedAt { get; set;}
         
-        DateTime LastUsedAt { get; set;}
+        DateTime? LastUsedAt { get; set;}
         
-        DateTime DeleteAt { get; set;}
+        DateTime? DeleteAt { get; set;}
         
         string Secret { get; set;}
     }

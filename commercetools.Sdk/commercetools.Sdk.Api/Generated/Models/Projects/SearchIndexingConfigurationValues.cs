@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Projects
     {
         public ISearchIndexingConfigurationStatus Status { get; set;}
         
-        public DateTime LastModifiedAt { get; set;}
+        public DateTime? LastModifiedAt { get; set;}
         
         public ILastModifiedBy LastModifiedBy { get; set;}
     }

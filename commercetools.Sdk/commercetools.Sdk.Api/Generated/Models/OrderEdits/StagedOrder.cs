@@ -29,7 +29,7 @@ namespace commercetools.Api.Models.OrderEdits
         
         public ICreatedBy CreatedBy { get; set;}
         
-        public DateTime CompletedAt { get; set;}
+        public DateTime? CompletedAt { get; set;}
         
         public string OrderNumber { get; set;}
         
