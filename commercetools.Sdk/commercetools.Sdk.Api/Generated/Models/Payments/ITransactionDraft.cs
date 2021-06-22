@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.TransactionDraft))]
     public partial interface ITransactionDraft 
     {
-        DateTime Timestamp { get; set;}
+        DateTime? Timestamp { get; set;}
         
         ITransactionType Type { get; set;}
         

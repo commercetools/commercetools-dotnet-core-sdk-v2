@@ -32,8 +32,8 @@ namespace commercetools.Api.Models.DiscountCodes
         
         public List<string> Groups { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
     }
 }

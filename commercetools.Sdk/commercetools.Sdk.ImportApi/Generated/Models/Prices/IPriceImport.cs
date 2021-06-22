@@ -16,9 +16,9 @@ namespace commercetools.ImportApi.Models.Prices
         
         string Country { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
         
         ICustomerGroupKeyReference CustomerGroup { get; set;}
         

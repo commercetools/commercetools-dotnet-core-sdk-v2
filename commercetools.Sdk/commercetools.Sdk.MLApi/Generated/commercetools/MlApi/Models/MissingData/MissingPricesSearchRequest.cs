@@ -23,9 +23,9 @@ namespace commercetools.MLApi.Models.MissingData
         
         public bool? CheckDate { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
         
         public List<string> ProductIds { get; set;}
         

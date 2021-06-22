@@ -46,7 +46,7 @@ namespace commercetools.Api.Models.Orders
         
         IShippingInfoImportDraft ShippingInfo { get; set;}
         
-        DateTime CompletedAt { get; set;}
+        DateTime? CompletedAt { get; set;}
         
         ICustomFieldsDraft Custom { get; set;}
         

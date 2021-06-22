@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Customers
         
         public DateTime CreatedAt { get; set;}
         
-        public DateTime LastModifiedAt { get; set;}
+        public DateTime? LastModifiedAt { get; set;}
         
         public string CustomerId { get; set;}
         

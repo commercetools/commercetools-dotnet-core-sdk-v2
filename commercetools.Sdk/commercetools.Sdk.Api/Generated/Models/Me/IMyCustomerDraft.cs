@@ -25,7 +25,7 @@ namespace commercetools.Api.Models.Me
         
         string Title { get; set;}
         
-        DateTime DateOfBirth { get; set;}
+        DateTime? DateOfBirth { get; set;}
         
         string CompanyName { get; set;}
         

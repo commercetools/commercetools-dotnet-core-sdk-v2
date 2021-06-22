@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Me
     {
         public string Action { get; set;}
         
-        public DateTime DateOfBirth { get; set;}
+        public DateTime? DateOfBirth { get; set;}
         public MyCustomerSetDateOfBirthAction()
         { 
            this.Action = "setDateOfBirth";

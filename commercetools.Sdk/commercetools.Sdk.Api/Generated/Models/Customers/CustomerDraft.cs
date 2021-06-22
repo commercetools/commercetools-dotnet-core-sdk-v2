@@ -28,13 +28,14 @@ namespace commercetools.Api.Models.Customers
         
         public string Title { get; set;}
         
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string AnonymousCartId { get; set;}
         
         public ICartResourceIdentifier AnonymousCart { get; set;}
         
         public string AnonymousId { get; set;}
         
-        public DateTime DateOfBirth { get; set;}
+        public DateTime? DateOfBirth { get; set;}
         
         public string CompanyName { get; set;}
         

@@ -13,7 +13,7 @@ namespace commercetools.MLApi.Models.SimilarProducts
     {
         public ITaskStatusEnum State { get; set;}
         
-        public DateTime Expires { get; set;}
+        public DateTime? Expires { get; set;}
         
         public ISimilarProductsPagedQueryResult Result { get; set;}
     }

@@ -16,8 +16,6 @@ namespace commercetools.ImportApi.Models.Importsinks
         
         public long Count { get; set;}
         
-        public long Total { get; set;}
-        
         public List<IImportSink> Results { get; set;}
     }
 }

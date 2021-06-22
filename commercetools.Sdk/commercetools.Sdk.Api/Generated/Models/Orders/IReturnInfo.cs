@@ -15,6 +15,6 @@ namespace commercetools.Api.Models.Orders
         
         string ReturnTrackingId { get; set;}
         
-        DateTime ReturnDate { get; set;}
+        DateTime? ReturnDate { get; set;}
     }
 }

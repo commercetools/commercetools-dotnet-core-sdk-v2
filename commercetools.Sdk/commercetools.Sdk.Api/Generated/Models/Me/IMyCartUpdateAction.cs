@@ -22,7 +22,6 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("removePayment", typeof(commercetools.Api.Models.Me.MyCartRemovePaymentAction))]
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Api.Models.Me.MyCartSetBillingAddressAction))]
     [SubTypeDiscriminator("setCountry", typeof(commercetools.Api.Models.Me.MyCartSetCountryAction))]
-    [SubTypeDiscriminator("setCustomerEmail", typeof(commercetools.Api.Models.Me.MyCartSetCustomerEmailAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Me.MyCartSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Me.MyCartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction))]

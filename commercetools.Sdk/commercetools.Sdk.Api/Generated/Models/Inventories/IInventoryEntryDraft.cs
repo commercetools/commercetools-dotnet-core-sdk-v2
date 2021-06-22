@@ -20,7 +20,7 @@ namespace commercetools.Api.Models.Inventories
         
         long? RestockableInDays { get; set;}
         
-        DateTime ExpectedDelivery { get; set;}
+        DateTime? ExpectedDelivery { get; set;}
         
         ICustomFieldsDraft Custom { get; set;}
     }

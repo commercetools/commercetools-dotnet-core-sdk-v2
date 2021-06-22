@@ -20,11 +20,11 @@ namespace commercetools.Api.Models.Errors
         
         public string DicountCodeId { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
         
-        public DateTime ValidityCheckTime { get; set;}
+        public DateTime? ValidityCheckTime { get; set;}
         public DiscountCodeNonApplicableError()
         { 
            this.Code = "DiscountCodeNonApplicable";

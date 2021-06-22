@@ -18,7 +18,7 @@ namespace commercetools.ImportApi.Models.Inventories
         
         double? RestockableInDays { get; set;}
         
-        DateTime ExpectedDelivery { get; set;}
+        DateTime? ExpectedDelivery { get; set;}
         
         IChannelKeyReference SupplyChannel { get; set;}
         

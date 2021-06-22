@@ -40,7 +40,7 @@ namespace commercetools.Api.Models.Customers
         
         string Title { get; set;}
         
-        DateTime DateOfBirth { get; set;}
+        DateTime? DateOfBirth { get; set;}
         
         string CompanyName { get; set;}
         

@@ -16,6 +16,6 @@ namespace commercetools.Api.Models.Orders
         
         string ExternalId { get; set;}
         
-        DateTime SyncedAt { get; set;}
+        DateTime? SyncedAt { get; set;}
     }
 }

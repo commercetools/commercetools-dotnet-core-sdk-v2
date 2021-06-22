@@ -16,7 +16,7 @@ namespace commercetools.Api.Models.Orders
         
         public List<IReturnItemDraft> Items { get; set;}
         
-        public DateTime ReturnDate { get; set;}
+        public DateTime? ReturnDate { get; set;}
         public OrderAddReturnInfoAction()
         { 
            this.Action = "addReturnInfo";

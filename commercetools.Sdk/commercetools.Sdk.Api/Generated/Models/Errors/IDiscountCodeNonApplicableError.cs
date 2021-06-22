@@ -17,10 +17,10 @@ namespace commercetools.Api.Models.Errors
         
         string DicountCodeId { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
         
-        DateTime ValidityCheckTime { get; set;}
+        DateTime? ValidityCheckTime { get; set;}
     }
 }

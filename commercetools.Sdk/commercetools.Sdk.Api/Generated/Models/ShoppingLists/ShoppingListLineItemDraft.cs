@@ -10,7 +10,7 @@ namespace commercetools.Api.Models.ShoppingLists
 {
     public partial class ShoppingListLineItemDraft : IShoppingListLineItemDraft
     {
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         
         public ICustomFieldsDraft Custom { get; set;}
         

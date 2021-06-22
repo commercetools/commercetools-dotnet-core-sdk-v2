@@ -30,7 +30,7 @@ namespace commercetools.Api.Models.Orders
         
         ICreatedBy CreatedBy { get; set;}
         
-        DateTime CompletedAt { get; set;}
+        DateTime? CompletedAt { get; set;}
         
         string OrderNumber { get; set;}
         

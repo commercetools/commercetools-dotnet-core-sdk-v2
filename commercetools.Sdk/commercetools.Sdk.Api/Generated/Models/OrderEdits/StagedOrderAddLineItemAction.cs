@@ -30,7 +30,7 @@ namespace commercetools.Api.Models.OrderEdits
         
         public double? Quantity { get; set;}
         
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         
         public IChannelResourceIdentifier SupplyChannel { get; set;}
         

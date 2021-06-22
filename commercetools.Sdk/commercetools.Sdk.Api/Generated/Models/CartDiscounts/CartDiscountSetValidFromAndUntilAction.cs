@@ -12,9 +12,9 @@ namespace commercetools.Api.Models.CartDiscounts
     {
         public string Action { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
         public CartDiscountSetValidFromAndUntilAction()
         { 
            this.Action = "setValidFromAndUntil";

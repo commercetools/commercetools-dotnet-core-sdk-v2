@@ -13,7 +13,7 @@ namespace commercetools.Api.Models.Payments
     {
         public string Id { get; set;}
         
-        public DateTime Timestamp { get; set;}
+        public DateTime? Timestamp { get; set;}
         
         public ITransactionType Type { get; set;}
         

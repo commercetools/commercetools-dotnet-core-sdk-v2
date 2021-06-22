@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListLineItemDraft))]
     public partial interface IShoppingListLineItemDraft 
     {
-        DateTime AddedAt { get; set;}
+        DateTime? AddedAt { get; set;}
         
         ICustomFieldsDraft Custom { get; set;}
         

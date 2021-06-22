@@ -19,7 +19,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         long? Quantity { get; set;}
         
-        DateTime AddedAt { get; set;}
+        DateTime? AddedAt { get; set;}
         
         ICustomFieldsDraft Custom { get; set;}
     }

@@ -29,9 +29,9 @@ namespace commercetools.Api.Models.CartDiscounts
         
         bool? IsActive { get; set;}
         
-        DateTime ValidFrom { get; set;}
+        DateTime? ValidFrom { get; set;}
         
-        DateTime ValidUntil { get; set;}
+        DateTime? ValidUntil { get; set;}
         
         bool RequiresDiscountCode { get; set;}
         

@@ -11,7 +11,7 @@ namespace commercetools.Api.Models.ShoppingLists
 {
     public partial class TextLineItemDraft : ITextLineItemDraft
     {
-        public DateTime AddedAt { get; set;}
+        public DateTime? AddedAt { get; set;}
         
         public ICustomFieldsDraft Custom { get; set;}
         

@@ -25,8 +25,8 @@ namespace commercetools.Api.Models.ProductDiscounts
         
         public bool IsActive { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
     }
 }

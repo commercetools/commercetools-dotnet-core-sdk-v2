@@ -20,6 +20,6 @@ namespace commercetools.Api.Models.Orders
         
         IStateResourceIdentifier ToState { get; set;}
         
-        DateTime ActualTransitionDate { get; set;}
+        DateTime? ActualTransitionDate { get; set;}
     }
 }

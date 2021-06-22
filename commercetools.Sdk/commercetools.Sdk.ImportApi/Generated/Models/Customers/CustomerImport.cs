@@ -34,7 +34,7 @@ namespace commercetools.ImportApi.Models.Customers
         
         public string ExternalId { get; set;}
         
-        public DateTime DateOfBirth { get; set;}
+        public DateTime? DateOfBirth { get; set;}
         
         public string CompanyName { get; set;}
         

@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Payments
         
         public IMoney Amount { get; set;}
         
-        public DateTime Until { get; set;}
+        public DateTime? Until { get; set;}
         public PaymentSetAuthorizationAction()
         { 
            this.Action = "setAuthorization";

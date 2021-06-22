@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.ShoppingLists
         
         public ICustomFields Custom { get; set;}
         
-        public DateTime DeactivatedAt { get; set;}
+        public DateTime? DeactivatedAt { get; set;}
         
         public string Id { get; set;}
         

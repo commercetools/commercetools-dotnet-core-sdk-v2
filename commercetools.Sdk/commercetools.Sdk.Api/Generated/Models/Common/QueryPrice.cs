@@ -23,9 +23,9 @@ namespace commercetools.Api.Models.Common
         
         public IChannelReference Channel { get; set;}
         
-        public DateTime ValidFrom { get; set;}
+        public DateTime? ValidFrom { get; set;}
         
-        public DateTime ValidUntil { get; set;}
+        public DateTime? ValidUntil { get; set;}
         
         public IDiscountedPrice Discounted { get; set;}
         

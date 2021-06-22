@@ -14,6 +14,6 @@ namespace commercetools.Api.Models.Payments
     {
         IMoney Amount { get; set;}
         
-        DateTime Until { get; set;}
+        DateTime? Until { get; set;}
     }
 }
