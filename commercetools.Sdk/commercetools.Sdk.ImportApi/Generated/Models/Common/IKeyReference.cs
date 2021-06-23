@@ -9,11 +9,15 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
+    [SubTypeDiscriminator("cart", typeof(commercetools.ImportApi.Models.Common.CartKeyReference))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.ImportApi.Models.Common.CartDiscountKeyReference))]
     [SubTypeDiscriminator("category", typeof(commercetools.ImportApi.Models.Common.CategoryKeyReference))]
     [SubTypeDiscriminator("channel", typeof(commercetools.ImportApi.Models.Common.ChannelKeyReference))]
     [SubTypeDiscriminator("customer", typeof(commercetools.ImportApi.Models.Common.CustomerKeyReference))]
     [SubTypeDiscriminator("customer-group", typeof(commercetools.ImportApi.Models.Common.CustomerGroupKeyReference))]
+    [SubTypeDiscriminator("discount-code", typeof(commercetools.ImportApi.Models.Common.DiscountCodeKeyReference))]
+    [SubTypeDiscriminator("order", typeof(commercetools.ImportApi.Models.Common.OrderKeyReference))]
+    [SubTypeDiscriminator("payment", typeof(commercetools.ImportApi.Models.Common.PaymentKeyReference))]
     [SubTypeDiscriminator("price", typeof(commercetools.ImportApi.Models.Common.PriceKeyReference))]
     [SubTypeDiscriminator("product", typeof(commercetools.ImportApi.Models.Common.ProductKeyReference))]
     [SubTypeDiscriminator("product-discount", typeof(commercetools.ImportApi.Models.Common.ProductDiscountKeyReference))]

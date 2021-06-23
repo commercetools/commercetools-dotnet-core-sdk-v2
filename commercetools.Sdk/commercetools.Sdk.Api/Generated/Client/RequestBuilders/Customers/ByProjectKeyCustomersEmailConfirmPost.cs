@@ -34,10 +34,10 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
    
    
 
-       public async Task<JsonElement> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Customers.Customer> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.Customer>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

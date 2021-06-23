@@ -6,6 +6,9 @@ namespace commercetools.ImportApi.Models.Common
 {
    public enum ReferenceType
    {
+       [Description("cart")]
+       Cart,
+       
        [Description("cart-discount")]
        CartDiscount,
        
@@ -20,6 +23,15 @@ namespace commercetools.ImportApi.Models.Common
        
        [Description("customer-group")]
        CustomerGroup,
+       
+       [Description("discount-code")]
+       DiscountCode,
+       
+       [Description("order")]
+       Order,
+       
+       [Description("payment")]
+       Payment,
        
        [Description("price")]
        Price,
@@ -59,6 +71,9 @@ namespace commercetools.ImportApi.Models.Common
    [EnumInterfaceCreator(typeof(IReferenceType), "FindEnum")]
    public interface IReferenceType : IJsonName
    {
+        public static IReferenceType Cart = new ReferenceTypeWrapper
+         {Value = ReferenceType.Cart, JsonName = "cart"}; 
+       
         public static IReferenceType CartDiscount = new ReferenceTypeWrapper
          {Value = ReferenceType.CartDiscount, JsonName = "cart-discount"}; 
        
@@ -73,6 +88,15 @@ namespace commercetools.ImportApi.Models.Common
        
         public static IReferenceType CustomerGroup = new ReferenceTypeWrapper
          {Value = ReferenceType.CustomerGroup, JsonName = "customer-group"}; 
+       
+        public static IReferenceType DiscountCode = new ReferenceTypeWrapper
+         {Value = ReferenceType.DiscountCode, JsonName = "discount-code"}; 
+       
+        public static IReferenceType Order = new ReferenceTypeWrapper
+         {Value = ReferenceType.Order, JsonName = "order"}; 
+       
+        public static IReferenceType Payment = new ReferenceTypeWrapper
+         {Value = ReferenceType.Payment, JsonName = "payment"}; 
        
         public static IReferenceType Price = new ReferenceTypeWrapper
          {Value = ReferenceType.Price, JsonName = "price"}; 
@@ -110,11 +134,15 @@ namespace commercetools.ImportApi.Models.Common
         {
            return new[]
            {
+                Cart ,
                 CartDiscount ,
                 Category ,
                 Channel ,
                 Customer ,
                 CustomerGroup ,
+                DiscountCode ,
+                Order ,
+                Payment ,
                 Price ,
                 Product ,
                 ProductDiscount ,
