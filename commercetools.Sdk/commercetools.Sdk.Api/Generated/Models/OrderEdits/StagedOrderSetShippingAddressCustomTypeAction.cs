@@ -1,4 +1,4 @@
-using commercetools.Api.Models.OrderEdits;
+using commercetools.Api.Models.Orders;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -9,18 +9,16 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public partial class OrderEditSetItemShippingAddressCustomTypeAction : IOrderEditSetItemShippingAddressCustomTypeAction
+    public partial class StagedOrderSetShippingAddressCustomTypeAction : IStagedOrderSetShippingAddressCustomTypeAction
     {
         public string Action { get; set;}
-        
-        public string AddressKey { get; set;}
         
         public ITypeResourceIdentifier Type { get; set;}
         
         public IFieldContainer Fields { get; set;}
-        public OrderEditSetItemShippingAddressCustomTypeAction()
+        public StagedOrderSetShippingAddressCustomTypeAction()
         { 
-           this.Action = "setItemShippingAddressCustomType";
+           this.Action = "setShippingAddressCustomType";
         }
     }
 }
