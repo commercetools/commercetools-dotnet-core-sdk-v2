@@ -34,6 +34,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
        public List<string> GetOffset() {
            return this.GetQueryParam("offset");
        }
+       
+       public List<string> GetSort() {
+           return this.GetQueryParam("sort");
+       }
    
        public ByProjectKeyImportSinksGet WithLimit(double limit){
            return this.AddQueryParam("limit", limit.ToString());
@@ -41,6 +45,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
        
        public ByProjectKeyImportSinksGet WithOffset(double offset){
            return this.AddQueryParam("offset", offset.ToString());
+       }
+       
+       public ByProjectKeyImportSinksGet WithSort(string sort){
+           return this.AddQueryParam("sort", sort);
        }
 
        public async Task<commercetools.ImportApi.Models.Importsinks.ImportSinkPagedResponse> ExecuteAsync()

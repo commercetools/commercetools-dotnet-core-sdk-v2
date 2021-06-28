@@ -13,6 +13,7 @@ namespace commercetools.ImportApi.Models.Importrequests
     [SubTypeDiscriminator("customer", typeof(commercetools.ImportApi.Models.Importrequests.CustomerImportRequest))]
     [SubTypeDiscriminator("inventory", typeof(commercetools.ImportApi.Models.Importrequests.InventoryImportRequest))]
     [SubTypeDiscriminator("order", typeof(commercetools.ImportApi.Models.Importrequests.OrderImportRequest))]
+    [SubTypeDiscriminator("order-patch", typeof(commercetools.ImportApi.Models.Importrequests.OrderPatchImportRequest))]
     [SubTypeDiscriminator("price", typeof(commercetools.ImportApi.Models.Importrequests.PriceImportRequest))]
     [SubTypeDiscriminator("product", typeof(commercetools.ImportApi.Models.Importrequests.ProductImportRequest))]
     [SubTypeDiscriminator("product-draft", typeof(commercetools.ImportApi.Models.Importrequests.ProductDraftImportRequest))]
