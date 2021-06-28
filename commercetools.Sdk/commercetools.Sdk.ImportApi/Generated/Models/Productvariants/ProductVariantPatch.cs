@@ -14,5 +14,7 @@ namespace commercetools.ImportApi.Models.Productvariants
         public IProductVariantKeyReference ProductVariant { get; set;}
         
         public IAttributes Attributes { get; set;}
+        
+        public bool? Staged { get; set;}
     }
 }
