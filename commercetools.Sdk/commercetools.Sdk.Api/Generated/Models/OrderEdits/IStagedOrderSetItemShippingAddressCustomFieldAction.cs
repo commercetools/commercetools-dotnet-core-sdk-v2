@@ -1,4 +1,4 @@
-using commercetools.Api.Models.OrderEdits;
+using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditSetItemShippingAddressCustomFieldAction))]
-    public partial interface IOrderEditSetItemShippingAddressCustomFieldAction : IOrderEditUpdateAction
+    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction))]
+    public partial interface IStagedOrderSetItemShippingAddressCustomFieldAction : IStagedOrderUpdateAction
     {
         string AddressKey { get; set;}
         

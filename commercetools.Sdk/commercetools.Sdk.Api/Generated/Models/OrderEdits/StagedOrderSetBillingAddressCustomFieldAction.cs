@@ -1,4 +1,4 @@
-using commercetools.Api.Models.OrderEdits;
+using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +8,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.OrderEdits
 {
-    public partial class OrderEditSetBillingAddressCustomFieldAction : IOrderEditSetBillingAddressCustomFieldAction
+    public partial class StagedOrderSetBillingAddressCustomFieldAction : IStagedOrderSetBillingAddressCustomFieldAction
     {
         public string Action { get; set;}
         
         public string Name { get; set;}
         
         public Object Value { get; set;}
-        public OrderEditSetBillingAddressCustomFieldAction()
+        public StagedOrderSetBillingAddressCustomFieldAction()
         { 
            this.Action = "setBillingAddressCustomField";
         }
