@@ -1,0 +1,7 @@
+{
+  "ValidationFailed":1,
+  "Unresolved":2,
+  "WaitForMasterVariant":4,
+  "Imported":10,
+  "Rejected":3
+}

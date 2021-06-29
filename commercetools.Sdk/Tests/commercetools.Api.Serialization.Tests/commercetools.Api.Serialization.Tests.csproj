@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
+      <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
     </ItemGroup>
 
 </Project>
