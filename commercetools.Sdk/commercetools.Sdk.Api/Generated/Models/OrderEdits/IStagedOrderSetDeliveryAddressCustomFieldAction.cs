@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +13,8 @@ namespace commercetools.Api.Models.OrderEdits
     {
         string DeliveryId { get; set;}
         
-        ITypeResourceIdentifier Type { get; set;}
+        string Name { get; set;}
         
-        IFieldContainer Fields { get; set;}
+        Object Value { get; set;}
     }
 }

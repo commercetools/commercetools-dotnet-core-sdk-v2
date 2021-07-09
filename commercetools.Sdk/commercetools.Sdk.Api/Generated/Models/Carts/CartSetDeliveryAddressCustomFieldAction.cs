@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +14,9 @@ namespace commercetools.Api.Models.Carts
         
         public string DeliveryId { get; set;}
         
-        public ITypeResourceIdentifier Type { get; set;}
+        public string Name { get; set;}
         
-        public IFieldContainer Fields { get; set;}
+        public Object Value { get; set;}
         public CartSetDeliveryAddressCustomFieldAction()
         { 
            this.Action = "setDeliveryAddressCustomField";
