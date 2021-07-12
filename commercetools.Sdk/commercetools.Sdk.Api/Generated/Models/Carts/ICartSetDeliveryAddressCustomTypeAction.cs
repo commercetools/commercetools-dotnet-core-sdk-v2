@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Carts;
+using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,8 @@ namespace commercetools.Api.Models.Carts
     {
         string DeliveryId { get; set;}
         
-        string Name { get; set;}
+        ITypeResourceIdentifier Type { get; set;}
         
-        Object Value { get; set;}
+        IFieldContainer Fields { get; set;}
     }
 }
