@@ -55,7 +55,7 @@ namespace commercetools.Api.Client.RequestBuilders.Products
            return this.AddQueryParam("filename", filename);
        }
        
-       public ByProjectKeyProductsByIDImagesPost WithVariant(double variant){
+       public ByProjectKeyProductsByIDImagesPost WithVariant(long variant){
            return this.AddQueryParam("variant", variant.ToString());
        }
        
