@@ -38,6 +38,7 @@ The SDK consists of the following projects:
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
 * `/Tests`: Unit Tests for serialization and request builders.
+* `/Examples`: Contains `commercetools.Api.ConsoleApp` as an example of how to use the SDK in a console app and create a client using ClientFactory.
 
 
 ## Getting Started with the .NET SDK
