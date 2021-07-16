@@ -9,8 +9,8 @@ namespace commercetools.ImportApi.Models.Common
 {
     public partial class AssetDimensions : IAssetDimensions
     {
-        public double W { get; set;}
+        public int W { get; set;}
         
-        public double H { get; set;}
+        public int H { get; set;}
     }
 }

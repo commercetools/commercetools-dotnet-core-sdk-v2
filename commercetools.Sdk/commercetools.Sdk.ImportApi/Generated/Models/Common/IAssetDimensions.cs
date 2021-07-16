@@ -10,8 +10,8 @@ namespace commercetools.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.AssetDimensions))]
     public partial interface IAssetDimensions 
     {
-        double W { get; set;}
+        int W { get; set;}
         
-        double H { get; set;}
+        int H { get; set;}
     }
 }
