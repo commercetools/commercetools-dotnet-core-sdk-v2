@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Importsinks
 {
-    public partial class ImportSinkDraft : IImportSinkDraft
+    public partial class ImportSinkUpdateDraft : IImportSinkUpdateDraft
     {
-        public string Key { get; set;}
+        public long Version { get; set;}
         
         public IImportResourceType ResourceType { get; set;}
     }

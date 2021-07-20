@@ -22,13 +22,13 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
        
        private string ImportSinkKey { get; }
        
-       private commercetools.ImportApi.Models.Importsinks.IImportSinkDraft ImportSinkDraft;
+       private commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft ImportSinkUpdateDraft;
    
-       public ByProjectKeyImportSinksByImportSinkKeyPut(IClient apiHttpClient, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importsinks.IImportSinkDraft importSinkDraft) {
+       public ByProjectKeyImportSinksByImportSinkKeyPut(IClient apiHttpClient, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft) {
            this.ApiHttpClient = apiHttpClient;
            this.ProjectKey = projectKey;
            this.ImportSinkKey = importSinkKey;
-           this.ImportSinkDraft = importSinkDraft;
+           this.ImportSinkUpdateDraft = importSinkUpdateDraft;
            this.RequestUrl = $"/{ProjectKey}/import-sinks/{ImportSinkKey}";
        }
    
