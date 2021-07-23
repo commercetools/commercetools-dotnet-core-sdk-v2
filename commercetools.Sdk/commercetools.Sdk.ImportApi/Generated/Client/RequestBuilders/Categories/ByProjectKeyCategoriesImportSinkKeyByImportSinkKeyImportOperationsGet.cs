@@ -49,6 +49,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
        public List<string> GetState() {
            return this.GetQueryParam("state");
        }
+       
+       public List<string> GetDebug() {
+           return this.GetQueryParam("debug");
+       }
    
        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithLimit(double limit){
            return this.AddQueryParam("limit", limit.ToString());
@@ -68,6 +72,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
        
        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithState(IProcessingState state){
            return this.AddQueryParam("state", state.ToString());
+       }
+       
+       public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithDebug(bool debug){
+           return this.AddQueryParam("debug", debug.ToString());
        }
 
        public async Task<commercetools.ImportApi.Models.Importoperations.ImportOperationPagedResponse> ExecuteAsync()
