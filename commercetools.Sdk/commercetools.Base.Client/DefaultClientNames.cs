@@ -6,5 +6,6 @@
         public const string Api = "CommercetoolsApi";
         public const string ImportApi = "CommercetoolsImportApi";
         public const string MLApi = "CommercetoolsMLApi";
+        public const string HistoryApi = "CommercetoolsHistoryApi";
     }
 }

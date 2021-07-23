@@ -187,6 +187,28 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Single(subscription1.Messages);
             Assert.Single(subscription2.Changes);
         }
+        
+        [Fact]
+        public void DeserializeMessagePayloads()
+        {
+            var serializerService = this.serializationFixture.SerializerService;
+
+            string serialized1 = @"
+                {
+                    ""type"": ""CategoryCreated""
+                }
+            ";
+            string serialized2 = @"
+                {
+                    ""type"": ""new-type""
+                }
+            ";
+
+            var payload1 = serializerService.Deserialize<IMessagePayload>(serialized1);
+            var payload2 = serializerService.Deserialize<IMessagePayload>(serialized2);
+            Assert.IsType<CategoryCreatedMessagePayload>(payload1);
+            Assert.IsType<MessagePayloadImpl>(payload2);
+        }
 
     }
 }
