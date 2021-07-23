@@ -97,7 +97,7 @@ namespace commercetools.Api.Serialization.Tests
         }
 
         [Fact]
-        public void DeserializeInvalidMoney()
+        public void DeserializeUnknownMoneyType()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = @"{
@@ -105,7 +105,9 @@ namespace commercetools.Api.Serialization.Tests
                 ""centAmount"": 123456
             }";
 
-            Assert.Throws<JsonException>(() => serializerService.Deserialize<ITypedMoney>(serialized));
+            var typedMoney = serializerService.Deserialize<ITypedMoney>(serialized);
+            Assert.NotNull(typedMoney);
+            Assert.Null(typedMoney.Type.Value);
         }
     }
 }

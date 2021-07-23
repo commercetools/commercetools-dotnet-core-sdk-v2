@@ -63,6 +63,11 @@ namespace commercetools.Base.Serialization.JsonConverters
 
             if (!this.SubTypes.TryGetValue(discriminatorValue, out Type derivedType))
             {
+                if (DefaultType == null)
+                {
+                    throw new JsonException(
+                        $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");    
+                }
                 derivedType = DefaultType;
             }
 
