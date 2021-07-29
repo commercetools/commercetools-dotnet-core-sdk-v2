@@ -37,5 +37,7 @@ namespace commercetools.Api.Models.Projects
         ICartsConfiguration Carts { get; set;}
         
         ISearchIndexingConfiguration SearchIndexing { get; set;}
+        
+        IShoppingListsConfiguration ShoppingLists { get; set;}
     }
 }

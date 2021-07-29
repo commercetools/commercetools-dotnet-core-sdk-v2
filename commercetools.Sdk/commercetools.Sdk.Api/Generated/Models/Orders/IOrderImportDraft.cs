@@ -24,7 +24,7 @@ namespace commercetools.Api.Models.Orders
         
         List<ILineItemImportDraft> LineItems { get; set;}
         
-        List<ICustomLineItemDraft> CustomLineItems { get; set;}
+        List<ICustomLineItemImportDraft> CustomLineItems { get; set;}
         
         IMoney TotalPrice { get; set;}
         

@@ -17,6 +17,7 @@ namespace commercetools.Api.Models.Projects
     [SubTypeDiscriminator("changeMessagesEnabled", typeof(commercetools.Api.Models.Projects.ProjectChangeMessagesEnabledAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.Projects.ProjectChangeNameAction))]
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]
+    [SubTypeDiscriminator("changeShoppingListsConfiguration", typeof(commercetools.Api.Models.Projects.ProjectChangeShoppingListsConfiguration))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
     public partial interface IProjectUpdateAction 
