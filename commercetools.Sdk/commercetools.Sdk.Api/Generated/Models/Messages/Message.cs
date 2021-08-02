@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public abstract partial class Message : IMessage
+    public partial class Message : IMessage
     {
         public string Id { get; set;}
         

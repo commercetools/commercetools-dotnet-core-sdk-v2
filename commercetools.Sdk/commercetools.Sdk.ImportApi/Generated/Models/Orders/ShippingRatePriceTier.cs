@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Orders
 {
-    public abstract partial class ShippingRatePriceTier : IShippingRatePriceTier
+    public partial class ShippingRatePriceTier : IShippingRatePriceTier
     {
         public IShippingRateTierType Type { get; set;}
     }

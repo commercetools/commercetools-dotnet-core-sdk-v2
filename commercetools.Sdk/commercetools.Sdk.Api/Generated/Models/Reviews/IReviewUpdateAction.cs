@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Reviews
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Reviews.ReviewUpdateAction))]
     [SubTypeDiscriminator("setAuthorName", typeof(commercetools.Api.Models.Reviews.ReviewSetAuthorNameAction))]
     [SubTypeDiscriminator("setCustomer", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomerAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Reviews.ReviewSetCustomFieldAction))]

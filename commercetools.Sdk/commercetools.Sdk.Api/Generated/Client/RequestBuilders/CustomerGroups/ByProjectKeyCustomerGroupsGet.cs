@@ -27,6 +27,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
            this.RequestUrl = $"/{ProjectKey}/customer-groups";
        }
    
+       public List<string> GetWhere() {
+           return this.GetQueryParam("where");
+       }
+       
        public List<string> GetExpand() {
            return this.GetQueryParam("expand");
        }
@@ -46,11 +50,11 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
        public List<string> GetWithTotal() {
            return this.GetQueryParam("withTotal");
        }
-       
-       public List<string> GetWhere() {
-           return this.GetQueryParam("where");
-       }
    
+       public ByProjectKeyCustomerGroupsGet WithWhere(string where){
+           return this.AddQueryParam("where", where);
+       }
+       
        public ByProjectKeyCustomerGroupsGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
@@ -70,15 +74,11 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
        public ByProjectKeyCustomerGroupsGet WithWithTotal(bool withTotal){
            return this.AddQueryParam("withTotal", withTotal.ToString());
        }
-       
-       public ByProjectKeyCustomerGroupsGet WithWhere(string where){
-           return this.AddQueryParam("where", where);
-       }
 
-       public async Task<commercetools.Api.Models.CustomerGroups.CustomerGroupPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomerGroups.CustomerGroupPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>(requestMessage);
        }
    }
 }

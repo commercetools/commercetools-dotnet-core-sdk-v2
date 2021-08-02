@@ -9,6 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [TypeDiscriminator(nameof(Type))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Orders.ReturnItem))]
     [SubTypeDiscriminator("CustomLineItemReturnItem", typeof(commercetools.Api.Models.Orders.CustomLineItemReturnItem))]
     [SubTypeDiscriminator("LineItemReturnItem", typeof(commercetools.Api.Models.Orders.LineItemReturnItem))]
     public partial interface IReturnItem 

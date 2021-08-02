@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShippingMethods
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodUpdateAction))]
     [SubTypeDiscriminator("addShippingRate", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction))]
     [SubTypeDiscriminator("addZone", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodAddZoneAction))]
     [SubTypeDiscriminator("changeIsDefault", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodChangeIsDefaultAction))]

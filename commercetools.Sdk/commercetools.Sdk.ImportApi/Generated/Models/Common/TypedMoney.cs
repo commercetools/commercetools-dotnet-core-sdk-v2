@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Common
 {
-    public abstract partial class TypedMoney : ITypedMoney
+    public partial class TypedMoney : ITypedMoney
     {
         public IMoneyType Type { get; set;}
         

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public abstract partial class ShippingRatePriceTier : IShippingRatePriceTier
+    public partial class ShippingRatePriceTier : IShippingRatePriceTier
     {
         public IShippingRateTierType Type { get; set;}
     }

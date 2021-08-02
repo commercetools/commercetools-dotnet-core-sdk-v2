@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Me
 {
-    public abstract partial class MyCustomerUpdateAction : IMyCustomerUpdateAction
+    public partial class MyCustomerUpdateAction : IMyCustomerUpdateAction
     {
         public string Action { get; set;}
     }

@@ -37,10 +37,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
    
    
 
-       public async Task<commercetools.Api.Models.Customers.CustomerToken> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Customers.ICustomerToken> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.CustomerToken>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerToken>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

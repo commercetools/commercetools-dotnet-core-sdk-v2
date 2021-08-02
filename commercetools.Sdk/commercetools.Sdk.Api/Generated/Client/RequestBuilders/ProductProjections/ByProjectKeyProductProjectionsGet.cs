@@ -131,10 +131,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Products.ProductProjectionPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.ProductProjectionPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse>(requestMessage);
        }
    }
 }

@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Reviews.ReviewPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Reviews.IReviewPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Reviews.ReviewPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Reviews.IReviewPagedQueryResponse>(requestMessage);
        }
    }
 }

@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ProductDiscounts
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountUpdateAction))]
     [SubTypeDiscriminator("changeIsActive", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountChangeNameAction))]
     [SubTypeDiscriminator("changePredicate", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountChangePredicateAction))]

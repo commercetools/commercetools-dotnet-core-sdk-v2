@@ -46,10 +46,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Inventories.InventoryEntry> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.InventoryEntry>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.IInventoryEntry>(requestMessage);
        }
    }
 }

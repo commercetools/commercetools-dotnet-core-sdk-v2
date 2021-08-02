@@ -46,10 +46,10 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Subscriptions.Subscription> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.Subscription>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.ISubscription>(requestMessage);
        }
    }
 }

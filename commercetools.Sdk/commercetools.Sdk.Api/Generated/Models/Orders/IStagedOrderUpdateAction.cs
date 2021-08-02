@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Orders.StagedOrderUpdateAction))]
     [SubTypeDiscriminator("addCustomLineItem", typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddCustomLineItemAction))]
     [SubTypeDiscriminator("addDelivery", typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddDeliveryAction))]
     [SubTypeDiscriminator("addDiscountCode", typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddDiscountCodeAction))]

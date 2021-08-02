@@ -34,10 +34,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
    
    
 
-       public async Task<commercetools.MLApi.Models.Common.TaskToken> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.Common.ITaskToken> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.TaskToken>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.ITaskToken>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

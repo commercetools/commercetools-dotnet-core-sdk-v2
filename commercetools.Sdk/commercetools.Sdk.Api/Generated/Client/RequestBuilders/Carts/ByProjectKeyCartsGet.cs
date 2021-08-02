@@ -83,10 +83,10 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Carts.CartPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Carts.ICartPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.CartPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICartPagedQueryResponse>(requestMessage);
        }
    }
 }

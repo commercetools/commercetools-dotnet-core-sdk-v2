@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.TaxCategories
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.TaxCategories.TaxCategoryUpdateAction))]
     [SubTypeDiscriminator("addTaxRate", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryChangeNameAction))]
     [SubTypeDiscriminator("removeTaxRate", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryRemoveTaxRateAction))]

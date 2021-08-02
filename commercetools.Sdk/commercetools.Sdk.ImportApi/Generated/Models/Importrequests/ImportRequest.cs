@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Importrequests
 {
-    public abstract partial class ImportRequest : IImportRequest
+    public partial class ImportRequest : IImportRequest
     {
         public IImportResourceType Type { get; set;}
     }

@@ -32,10 +32,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
    
    
 
-       public async Task<commercetools.MLApi.Models.MissingData.MissingImagesTaskStatus> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.MissingData.IMissingImagesTaskStatus> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.MissingData.MissingImagesTaskStatus>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.MissingData.IMissingImagesTaskStatus>(requestMessage);
        }
    }
 }

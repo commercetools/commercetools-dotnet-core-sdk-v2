@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Me.MyShoppingListUpdateAction))]
     [SubTypeDiscriminator("addLineItem", typeof(commercetools.Api.Models.Me.MyShoppingListAddLineItemAction))]
     [SubTypeDiscriminator("addTextLineItem", typeof(commercetools.Api.Models.Me.MyShoppingListAddTextLineItemAction))]
     [SubTypeDiscriminator("changeLineItemQuantity", typeof(commercetools.Api.Models.Me.MyShoppingListChangeLineItemQuantityAction))]

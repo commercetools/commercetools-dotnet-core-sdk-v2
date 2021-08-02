@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Products
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Products.ProductUpdateAction))]
     [SubTypeDiscriminator("addAsset", typeof(commercetools.Api.Models.Products.ProductAddAssetAction))]
     [SubTypeDiscriminator("addExternalImage", typeof(commercetools.Api.Models.Products.ProductAddExternalImageAction))]
     [SubTypeDiscriminator("addPrice", typeof(commercetools.Api.Models.Products.ProductAddPriceAction))]

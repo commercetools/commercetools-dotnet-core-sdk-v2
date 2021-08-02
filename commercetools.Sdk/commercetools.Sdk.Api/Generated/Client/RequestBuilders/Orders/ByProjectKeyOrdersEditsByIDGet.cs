@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.OrderEdits.OrderEdit> ExecuteAsync()
+       public async Task<commercetools.Api.Models.OrderEdits.IOrderEdit> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.OrderEdits.OrderEdit>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.OrderEdits.IOrderEdit>(requestMessage);
        }
    }
 }

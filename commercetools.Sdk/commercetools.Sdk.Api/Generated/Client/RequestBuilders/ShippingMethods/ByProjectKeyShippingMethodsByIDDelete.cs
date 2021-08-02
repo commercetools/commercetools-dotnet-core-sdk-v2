@@ -46,10 +46,10 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.ShippingMethods.ShippingMethod> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethod> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.ShippingMethod>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethod>(requestMessage);
        }
    }
 }

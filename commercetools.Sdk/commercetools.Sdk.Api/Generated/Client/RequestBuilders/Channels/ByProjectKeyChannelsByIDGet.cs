@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Channels.Channel> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Channels.IChannel> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Channels.Channel>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Channels.IChannel>(requestMessage);
        }
    }
 }

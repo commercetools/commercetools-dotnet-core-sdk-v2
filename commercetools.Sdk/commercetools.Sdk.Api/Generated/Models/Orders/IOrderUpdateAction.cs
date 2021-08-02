@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Orders.OrderUpdateAction))]
     [SubTypeDiscriminator("addDelivery", typeof(commercetools.Api.Models.Orders.OrderAddDeliveryAction))]
     [SubTypeDiscriminator("addItemShippingAddress", typeof(commercetools.Api.Models.Orders.OrderAddItemShippingAddressAction))]
     [SubTypeDiscriminator("addParcelToDelivery", typeof(commercetools.Api.Models.Orders.OrderAddParcelToDeliveryAction))]

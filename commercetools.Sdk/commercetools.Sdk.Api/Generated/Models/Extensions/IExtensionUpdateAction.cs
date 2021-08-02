@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Extensions.ExtensionUpdateAction))]
     [SubTypeDiscriminator("changeDestination", typeof(commercetools.Api.Models.Extensions.ExtensionChangeDestinationAction))]
     [SubTypeDiscriminator("changeTriggers", typeof(commercetools.Api.Models.Extensions.ExtensionChangeTriggersAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Extensions.ExtensionSetKeyAction))]

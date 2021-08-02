@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public abstract partial class SubscriptionDelivery : ISubscriptionDelivery
+    public partial class SubscriptionDelivery : ISubscriptionDelivery
     {
         public string ProjectKey { get; set;}
         

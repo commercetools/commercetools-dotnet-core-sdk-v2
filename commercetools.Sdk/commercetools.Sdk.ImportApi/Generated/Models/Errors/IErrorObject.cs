@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Errors
 {
     [TypeDiscriminator(nameof(Code))]
+    [DefaultTypeDiscriminator(typeof(commercetools.ImportApi.Models.Errors.ErrorObject))]
     [SubTypeDiscriminator("access_denied", typeof(commercetools.ImportApi.Models.Errors.AccessDeniedError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.ImportApi.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("Contention", typeof(commercetools.ImportApi.Models.Errors.ContentionError))]

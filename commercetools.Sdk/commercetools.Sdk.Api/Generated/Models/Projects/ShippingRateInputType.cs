@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Projects
 {
-    public abstract partial class ShippingRateInputType : IShippingRateInputType
+    public partial class ShippingRateInputType : IShippingRateInputType
     {
         public IShippingRateTierType Type { get; set;}
     }

@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Customers
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Customers.CustomerUpdateAction))]
     [SubTypeDiscriminator("addAddress", typeof(commercetools.Api.Models.Customers.CustomerAddAddressAction))]
     [SubTypeDiscriminator("addBillingAddressId", typeof(commercetools.Api.Models.Customers.CustomerAddBillingAddressIdAction))]
     [SubTypeDiscriminator("addShippingAddressId", typeof(commercetools.Api.Models.Customers.CustomerAddShippingAddressIdAction))]

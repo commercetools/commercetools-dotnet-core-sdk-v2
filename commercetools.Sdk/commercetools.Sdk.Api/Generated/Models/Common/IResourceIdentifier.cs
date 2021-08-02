@@ -9,6 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Common.ResourceIdentifier))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Api.Models.Carts.CartResourceIdentifier))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountResourceIdentifier))]
     [SubTypeDiscriminator("category", typeof(commercetools.Api.Models.Categories.CategoryResourceIdentifier))]

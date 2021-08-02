@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Payments.Payment> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Payments.IPayment> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Payments.Payment>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Payments.IPayment>(requestMessage);
        }
    }
 }

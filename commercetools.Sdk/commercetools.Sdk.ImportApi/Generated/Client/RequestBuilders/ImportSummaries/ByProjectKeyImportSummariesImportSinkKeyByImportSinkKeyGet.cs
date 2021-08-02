@@ -32,10 +32,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSummaries
    
    
 
-       public async Task<commercetools.ImportApi.Models.Importsummaries.ImportSummary> ExecuteAsync()
+       public async Task<commercetools.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsummaries.ImportSummary>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage);
        }
    }
 }

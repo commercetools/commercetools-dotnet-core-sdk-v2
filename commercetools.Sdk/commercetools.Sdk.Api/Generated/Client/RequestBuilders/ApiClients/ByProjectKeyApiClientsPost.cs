@@ -40,10 +40,10 @@ namespace commercetools.Api.Client.RequestBuilders.ApiClients
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.ApiClients.ApiClient> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ApiClients.IApiClient> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.ApiClient>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.IApiClient>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

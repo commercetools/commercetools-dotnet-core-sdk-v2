@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public abstract partial class DeliveryFormat : IDeliveryFormat
+    public partial class DeliveryFormat : IDeliveryFormat
     {
         public string Type { get; set;}
     }

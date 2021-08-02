@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Zones
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Zones.ZoneUpdateAction))]
     [SubTypeDiscriminator("addLocation", typeof(commercetools.Api.Models.Zones.ZoneAddLocationAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.Zones.ZoneChangeNameAction))]
     [SubTypeDiscriminator("removeLocation", typeof(commercetools.Api.Models.Zones.ZoneRemoveLocationAction))]

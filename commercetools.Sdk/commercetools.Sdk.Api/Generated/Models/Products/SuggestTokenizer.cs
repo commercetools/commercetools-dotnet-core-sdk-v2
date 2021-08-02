@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public abstract partial class SuggestTokenizer : ISuggestTokenizer
+    public partial class SuggestTokenizer : ISuggestTokenizer
     {
         public string Type { get; set;}
     }

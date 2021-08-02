@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Me.MyCartUpdateAction))]
     [SubTypeDiscriminator("addDiscountCode", typeof(commercetools.Api.Models.Me.MyCartAddDiscountCodeAction))]
     [SubTypeDiscriminator("addItemShippingAddress", typeof(commercetools.Api.Models.Me.MyCartAddItemShippingAddressAction))]
     [SubTypeDiscriminator("addLineItem", typeof(commercetools.Api.Models.Me.MyCartAddLineItemAction))]

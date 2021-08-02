@@ -34,10 +34,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
    
    
 
-       public async Task<commercetools.MLApi.Models.ImageSearchConfigs.ImageSearchConfigResponse> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearchConfigs.ImageSearchConfigResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

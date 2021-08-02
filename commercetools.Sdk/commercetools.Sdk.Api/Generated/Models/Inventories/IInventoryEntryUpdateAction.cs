@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Inventories.InventoryEntryUpdateAction))]
     [SubTypeDiscriminator("addQuantity", typeof(commercetools.Api.Models.Inventories.InventoryEntryAddQuantityAction))]
     [SubTypeDiscriminator("changeQuantity", typeof(commercetools.Api.Models.Inventories.InventoryEntryChangeQuantityAction))]
     [SubTypeDiscriminator("removeQuantity", typeof(commercetools.Api.Models.Inventories.InventoryEntryRemoveQuantityAction))]

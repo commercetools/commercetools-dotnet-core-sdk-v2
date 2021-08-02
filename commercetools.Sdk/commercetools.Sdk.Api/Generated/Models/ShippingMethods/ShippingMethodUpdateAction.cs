@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ShippingMethods
 {
-    public abstract partial class ShippingMethodUpdateAction : IShippingMethodUpdateAction
+    public partial class ShippingMethodUpdateAction : IShippingMethodUpdateAction
     {
         public string Action { get; set;}
     }

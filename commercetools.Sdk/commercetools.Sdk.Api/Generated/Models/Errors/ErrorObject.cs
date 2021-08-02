@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Errors
 {
-    public abstract partial class ErrorObject : IErrorObject
+    public partial class ErrorObject : IErrorObject
     {
         public string Code { get; set;}
         

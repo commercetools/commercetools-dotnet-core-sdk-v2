@@ -75,10 +75,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
            return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
        }
 
-       public async Task<commercetools.MLApi.Models.GeneralCategoryRecommendations.GeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.GeneralCategoryRecommendations.GeneralCategoryRecommendationPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse>(requestMessage);
        }
    }
 }

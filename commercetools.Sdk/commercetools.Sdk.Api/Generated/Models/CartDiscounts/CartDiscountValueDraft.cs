@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CartDiscounts
 {
-    public abstract partial class CartDiscountValueDraft : ICartDiscountValueDraft
+    public partial class CartDiscountValueDraft : ICartDiscountValueDraft
     {
         public string Type { get; set;}
     }

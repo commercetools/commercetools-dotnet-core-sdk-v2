@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Me.MyPaymentUpdateAction))]
     [SubTypeDiscriminator("addTransaction", typeof(commercetools.Api.Models.Me.MyPaymentAddTransactionAction))]
     [SubTypeDiscriminator("changeAmountPlanned", typeof(commercetools.Api.Models.Me.MyPaymentChangeAmountPlannedAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Me.MyPaymentSetCustomFieldAction))]

@@ -34,10 +34,10 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
    
    
 
-       public async Task<commercetools.Api.Models.GraphQl.GraphQLResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.GraphQl.IGraphQLResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.GraphQl.GraphQLResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.GraphQl.IGraphQLResponse>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

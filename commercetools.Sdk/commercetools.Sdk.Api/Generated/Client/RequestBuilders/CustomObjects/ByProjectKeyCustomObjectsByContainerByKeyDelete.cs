@@ -57,10 +57,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.CustomObjects.CustomObject> ExecuteAsync()
+       public async Task<commercetools.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.CustomObject>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.ICustomObject>(requestMessage);
        }
    }
 }

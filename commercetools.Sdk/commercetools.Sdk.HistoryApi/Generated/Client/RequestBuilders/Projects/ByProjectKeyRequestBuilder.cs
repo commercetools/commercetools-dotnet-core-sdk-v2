@@ -2,7 +2,9 @@ using System.IO;
 using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-namespace commercetools.HistoryApi.Client.RequestBuilders
+using commercetools.HistoryApi.Client.RequestBuilders.ResourceType;
+
+namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
 {
    public class ByProjectKeyRequestBuilder {
 
@@ -16,6 +18,14 @@ namespace commercetools.HistoryApi.Client.RequestBuilders
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
+       }
+   
+       public ByProjectKeyGet Get() {
+           return new ByProjectKeyGet(ApiHttpClient, ProjectKey);
+       }
+       
+       public ByProjectKeyByResourceTypeRequestBuilder WithResourceTypeValue(string resourceType) {
+           return new ByProjectKeyByResourceTypeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, resourceType);
        }
    }
 }

@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.ProductDiscounts
 {
-    public abstract partial class ProductDiscountUpdateAction : IProductDiscountUpdateAction
+    public partial class ProductDiscountUpdateAction : IProductDiscountUpdateAction
     {
         public string Action { get; set;}
     }

@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public abstract partial class SubscriptionUpdateAction : ISubscriptionUpdateAction
+    public partial class SubscriptionUpdateAction : ISubscriptionUpdateAction
     {
         public string Action { get; set;}
     }

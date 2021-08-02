@@ -32,10 +32,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
    
    
 
-       public async Task<commercetools.MLApi.Models.SimilarProducts.SimilarProductsTaskStatus> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.SimilarProducts.SimilarProductsTaskStatus>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage);
        }
    }
 }

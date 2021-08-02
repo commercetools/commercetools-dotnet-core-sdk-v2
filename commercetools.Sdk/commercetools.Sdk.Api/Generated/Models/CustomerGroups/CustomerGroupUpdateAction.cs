@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.CustomerGroups
 {
-    public abstract partial class CustomerGroupUpdateAction : ICustomerGroupUpdateAction
+    public partial class CustomerGroupUpdateAction : ICustomerGroupUpdateAction
     {
         public string Action { get; set;}
     }

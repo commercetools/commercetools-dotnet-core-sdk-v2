@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Errors
 {
     [TypeDiscriminator(nameof(Code))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Errors.ErrorObject))]
     [SubTypeDiscriminator("access_denied", typeof(commercetools.Api.Models.Errors.AccessDeniedError))]
     [SubTypeDiscriminator("AnonymousIdAlreadyInUse", typeof(commercetools.Api.Models.Errors.AnonymousIdAlreadyInUseError))]
     [SubTypeDiscriminator("AttributeDefinitionAlreadyExists", typeof(commercetools.Api.Models.Errors.AttributeDefinitionAlreadyExistsError))]

@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.States
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.States.StateUpdateAction))]
     [SubTypeDiscriminator("addRoles", typeof(commercetools.Api.Models.States.StateAddRolesAction))]
     [SubTypeDiscriminator("changeInitial", typeof(commercetools.Api.Models.States.StateChangeInitialAction))]
     [SubTypeDiscriminator("changeKey", typeof(commercetools.Api.Models.States.StateChangeKeyAction))]

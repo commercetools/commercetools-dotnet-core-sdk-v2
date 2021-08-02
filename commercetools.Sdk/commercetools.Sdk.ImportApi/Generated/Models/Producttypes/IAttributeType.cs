@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Producttypes
 {
     [TypeDiscriminator(nameof(Name))]
+    [DefaultTypeDiscriminator(typeof(commercetools.ImportApi.Models.Producttypes.AttributeType))]
     [SubTypeDiscriminator("boolean", typeof(commercetools.ImportApi.Models.Producttypes.AttributeBooleanType))]
     [SubTypeDiscriminator("date", typeof(commercetools.ImportApi.Models.Producttypes.AttributeDateType))]
     [SubTypeDiscriminator("datetime", typeof(commercetools.ImportApi.Models.Producttypes.AttributeDateTimeType))]
