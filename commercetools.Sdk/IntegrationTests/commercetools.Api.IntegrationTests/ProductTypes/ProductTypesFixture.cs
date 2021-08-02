@@ -20,7 +20,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
         
         #region CreateAndDelete
 
-        public static async Task<ProductType> CreateProductType(IClient client, ProductTypeDraft productTypeDraft)
+        public static async Task<IProductType> CreateProductType(IClient client, ProductTypeDraft productTypeDraft)
         {
             return await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .ProductTypes()
@@ -28,7 +28,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                 .ExecuteAsync();
         }
         
-        public static async Task DeleteProductType(IClient client, ProductType productType)
+        public static async Task DeleteProductType(IClient client, IProductType productType)
         {
             try
             {
@@ -45,10 +45,10 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             }
         }
         
-        public static async Task<ProductType> CreateOrRetrieveProductType(IClient client, ProductTypeDraft productTypeDraft)
+        public static async Task<IProductType> CreateOrRetrieveProductType(IClient client, ProductTypeDraft productTypeDraft)
         {
             var projectKey = GenericFixture.DefaultProjectKey;
-            ProductType productType = null;
+            IProductType productType = null;
             try
             {
                 productType = await client.WithApi().WithProjectKey(projectKey)
@@ -68,7 +68,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             return productType;
         }
         #endregion
-        public static async Task WithProductType( IClient client, Func<ProductType, Task> func)
+        public static async Task WithProductType( IClient client, Func<IProductType, Task> func)
         {
             await WithAsync(client, new ProductTypeDraft(), DefaultProductTypeDraft, func, CreateProductType, DeleteProductType);
         }

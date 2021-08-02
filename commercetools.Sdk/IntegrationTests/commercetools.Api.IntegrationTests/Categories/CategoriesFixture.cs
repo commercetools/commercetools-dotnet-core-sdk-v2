@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests.Categories
             return categoryDraft;
         }
         
-        public static CategoryDraft DefaultCategoryDraftWithParent(CategoryDraft draft, Category parent)
+        public static CategoryDraft DefaultCategoryDraftWithParent(CategoryDraft draft, ICategory parent)
         {
             var categoryDraft = DefaultCategoryDraft(draft);
             categoryDraft.Parent = new CategoryResourceIdentifier
@@ -44,7 +44,7 @@ namespace commercetools.Api.IntegrationTests.Categories
 
         #region CreateAndDelete
 
-        public static async Task<Category> CreateCategory(IClient client, CategoryDraft categoryDraft)
+        public static async Task<ICategory> CreateCategory(IClient client, CategoryDraft categoryDraft)
         {
             return await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Categories()
@@ -52,7 +52,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 .ExecuteAsync();
         }
         
-        public static async Task DeleteCategory(IClient client, Category category)
+        public static async Task DeleteCategory(IClient client, ICategory category)
         {
             try
             {
@@ -73,24 +73,24 @@ namespace commercetools.Api.IntegrationTests.Categories
 
         #region WithCategory
 
-        public static async Task WithCategory( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, Action<Category> func)
+        public static async Task WithCategory( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, Action<ICategory> func)
         {
             await With(client, new CategoryDraft(), draftAction, func, CreateCategory, DeleteCategory);
         }
-        public static async Task WithCategory( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, Func<Category, Task> func)
+        public static async Task WithCategory( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, Func<ICategory, Task> func)
         {
             await WithAsync(client, new CategoryDraft(), draftAction, func, CreateCategory, DeleteCategory);
         }
-        public static async Task WithCategory( IClient client, Func<Category, Task> func)
+        public static async Task WithCategory( IClient client, Func<ICategory, Task> func)
         {
             await WithAsync(client, new CategoryDraft(), DefaultCategoryDraft, func, CreateCategory, DeleteCategory);
         }
-        public static async Task WithListOfCategories( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, int count, Func<List<Category>, Task> func)
+        public static async Task WithListOfCategories( IClient client, Func<CategoryDraft, CategoryDraft> draftAction, int count, Func<List<ICategory>, Task> func)
         {
             await WithListAsync(client, new CategoryDraft(), draftAction, func, count, CreateCategory, DeleteCategory);
         }
         
-        public static async Task WithUpdateableCategory(IClient client, Func<Category, Task<Category>> func)
+        public static async Task WithUpdateableCategory(IClient client, Func<ICategory, Task<ICategory>> func)
         {
             await WithUpdateableAsync(client, new CategoryDraft(), DefaultCategoryDraft, func, CreateCategory, DeleteCategory);
         }

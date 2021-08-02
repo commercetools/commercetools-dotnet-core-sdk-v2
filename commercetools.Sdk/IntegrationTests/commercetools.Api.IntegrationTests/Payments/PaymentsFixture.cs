@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests.Payments
         
         #region CreateAndDelete
 
-        public static async Task<Payment> CreatePayment(IClient client, PaymentDraft paymentDraft)
+        public static async Task<IPayment> CreatePayment(IClient client, PaymentDraft paymentDraft)
         {
             var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Payments()
@@ -39,7 +39,7 @@ namespace commercetools.Api.IntegrationTests.Payments
             return resource;
         }
         
-        public static async Task DeletePayment(IClient client, Payment payment)
+        public static async Task DeletePayment(IClient client, IPayment payment)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace commercetools.Api.IntegrationTests.Payments
         
         #region WithPayment
 
-        public static async Task WithPayment( IClient client, Func<PaymentDraft, PaymentDraft> draftAction, Action<Payment> func)
+        public static async Task WithPayment( IClient client, Func<PaymentDraft, PaymentDraft> draftAction, Action<IPayment> func)
         {
             await With(client, new PaymentDraft(), draftAction, func, CreatePayment, DeletePayment);
         }

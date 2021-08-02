@@ -57,7 +57,7 @@ namespace commercetools.Api.IntegrationTests.Products
         
         #region CreateAndDelete
 
-        public static async Task<Product> CreateProduct(IClient client, ProductDraft productDraft)
+        public static async Task<IProduct> CreateProduct(IClient client, ProductDraft productDraft)
         {
             var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Products()
@@ -66,7 +66,7 @@ namespace commercetools.Api.IntegrationTests.Products
             return resource;
         }
         
-        public static async Task DeleteProduct(IClient client, Product product)
+        public static async Task DeleteProduct(IClient client, IProduct product)
         {
             try
             {
@@ -99,10 +99,10 @@ namespace commercetools.Api.IntegrationTests.Products
             }
         }
         
-        public static async Task<Product> CreateOrRetrieveProduct(IClient client, ProductDraft productDraft)
+        public static async Task<IProduct> CreateOrRetrieveProduct(IClient client, ProductDraft productDraft)
         {
             var projectKey = GenericFixture.DefaultProjectKey;
-            Product product = null;
+            IProduct product = null;
             try
             {
                 product = await client.WithApi().WithProjectKey(projectKey)
@@ -123,7 +123,7 @@ namespace commercetools.Api.IntegrationTests.Products
         }
         #endregion
         
-        public static async Task WithProduct( IClient client, Func<Product, Task> func)
+        public static async Task WithProduct( IClient client, Func<IProduct, Task> func)
         {
             await WithProductType(client, async productType =>
             {
@@ -135,7 +135,7 @@ namespace commercetools.Api.IntegrationTests.Products
                     DefaultProductDraft, func, CreateProduct, DeleteProduct);
             });
         }
-        public static async Task WithProduct( IClient client, Func<ProductDraft, ProductDraft> draftAction, Func<Product, Task> func)
+        public static async Task WithProduct( IClient client, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task> func)
         {
             await WithProductType(client, async productType =>
             {

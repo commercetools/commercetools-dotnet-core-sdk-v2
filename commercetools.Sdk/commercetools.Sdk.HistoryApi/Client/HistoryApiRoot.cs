@@ -1,5 +1,5 @@
 using commercetools.Base.Client;
-using commercetools.HistoryApi.Client.RequestBuilders;
+using commercetools.HistoryApi.Client.RequestBuilders.Projects;
 
 namespace commercetools.Sdk.HistoryApi.Client
 {
