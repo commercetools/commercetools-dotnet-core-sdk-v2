@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public abstract partial class MessagePayload : IMessagePayload
+    public partial class MessagePayloadImpl : IMessagePayload
     {
         public string Type { get; set;}
     }

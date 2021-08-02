@@ -25,6 +25,8 @@ namespace commercetools.Base.Serialization.JsonConverters
                 throw new NullReferenceException(
                     $"Failed to find the specified discriminator property '{DiscriminatorAttribute.Property}' in type '{typeof(T).Name}'");
             
+            var defaultTypeAttr = typeof(T).GetCustomAttribute<DefaultTypeDiscriminatorAttribute>();
+            DefaultType = defaultTypeAttr?.DefaultType;
             var subTypesAttrs = typeof(T).GetCustomAttributes<SubTypeDiscriminatorAttribute>();
             SubTypes = new Dictionary<string, Type>();
             foreach (var attr in subTypesAttrs)
@@ -43,6 +45,8 @@ namespace commercetools.Base.Serialization.JsonConverters
         
         protected Dictionary<string, Type> SubTypes { get; }
         
+        protected Type DefaultType { get; }
+        
         /// <inheritdoc/>
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
@@ -58,9 +62,15 @@ namespace commercetools.Base.Serialization.JsonConverters
 
 
             if (!this.SubTypes.TryGetValue(discriminatorValue, out Type derivedType))
-                throw new JsonException(
-                    $"Failed to find the derived type with the specified discriminator value '{discriminatorValue}'");
-            
+            {
+                if (DefaultType == null)
+                {
+                    throw new JsonException(
+                        $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");    
+                }
+                derivedType = DefaultType;
+            }
+
             var json = jsonDocument.RootElement.GetRawText();
             return (T)JsonSerializer.Deserialize(json, derivedType, JsonSerializerOptions);
         }
