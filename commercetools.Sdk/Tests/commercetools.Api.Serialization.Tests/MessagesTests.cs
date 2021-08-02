@@ -207,7 +207,7 @@ namespace commercetools.Api.Serialization.Tests
             var payload1 = serializerService.Deserialize<IMessagePayload>(serialized1);
             var payload2 = serializerService.Deserialize<IMessagePayload>(serialized2);
             Assert.IsType<CategoryCreatedMessagePayload>(payload1);
-            Assert.IsType<MessagePayloadImpl>(payload2);
+            Assert.IsType<MessagePayload>(payload2);
         }
 
     }
