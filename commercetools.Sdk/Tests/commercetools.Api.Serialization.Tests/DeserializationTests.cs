@@ -172,7 +172,10 @@ namespace commercetools.Api.Serialization.Tests
                 ""id"": ""123456""
             }";
 
-            Assert.Throws<JsonException>(() => serializerService.Deserialize<IReference>(serialized));
+            var reference = serializerService.Deserialize<IReference>(serialized);
+
+            Assert.IsAssignableFrom<IReferenceTypeId>(reference.TypeId);
+            Assert.Equal("unknown", reference.TypeId.JsonName);
         }
 
 
