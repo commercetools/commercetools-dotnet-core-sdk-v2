@@ -22,8 +22,8 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
            this.ImportSinkKey = importSinkKey;
        }
    
-       public ByProjectKeyImportSinksByImportSinkKeyPut Put(commercetools.ImportApi.Models.Importsinks.IImportSinkDraft importSinkDraft) {
-           return new ByProjectKeyImportSinksByImportSinkKeyPut(ApiHttpClient, ProjectKey, ImportSinkKey, importSinkDraft);
+       public ByProjectKeyImportSinksByImportSinkKeyPut Put(commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft) {
+           return new ByProjectKeyImportSinksByImportSinkKeyPut(ApiHttpClient, ProjectKey, ImportSinkKey, importSinkUpdateDraft);
        }
        
        public ByProjectKeyImportSinksByImportSinkKeyGet Get() {
