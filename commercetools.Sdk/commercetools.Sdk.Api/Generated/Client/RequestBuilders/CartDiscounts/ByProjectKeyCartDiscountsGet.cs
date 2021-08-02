@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.CartDiscounts.CartDiscountPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.CartDiscountPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>(requestMessage);
        }
    }
 }

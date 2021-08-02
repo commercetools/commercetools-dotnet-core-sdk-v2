@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Productvariants
 {
-    public abstract partial class Attribute : IAttribute
+    public partial class Attribute : IAttribute
     {
         public string Name { get; set;}
         

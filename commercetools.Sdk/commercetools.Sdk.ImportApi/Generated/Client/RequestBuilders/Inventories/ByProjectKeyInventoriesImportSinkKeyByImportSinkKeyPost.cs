@@ -37,10 +37,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
    
    
 
-       public async Task<commercetools.ImportApi.Models.Importrequests.ImportResponse> ExecuteAsync()
+       public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.ImportResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

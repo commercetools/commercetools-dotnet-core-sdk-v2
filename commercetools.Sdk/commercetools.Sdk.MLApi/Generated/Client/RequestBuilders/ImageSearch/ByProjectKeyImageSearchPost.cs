@@ -48,10 +48,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
            return this.AddQueryParam("offset", offset.ToString());
        }
 
-       public async Task<commercetools.MLApi.Models.ImageSearches.ImageSearchResponse> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearches.ImageSearchResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

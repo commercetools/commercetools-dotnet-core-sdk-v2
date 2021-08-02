@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.DiscountCodes
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeUpdateAction))]
     [SubTypeDiscriminator("changeCartDiscounts", typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction))]
     [SubTypeDiscriminator("changeGroups", typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeGroupsAction))]
     [SubTypeDiscriminator("changeIsActive", typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeIsActiveAction))]

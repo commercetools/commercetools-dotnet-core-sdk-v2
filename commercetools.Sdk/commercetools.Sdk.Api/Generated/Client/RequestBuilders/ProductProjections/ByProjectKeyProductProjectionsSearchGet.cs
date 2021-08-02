@@ -179,10 +179,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Products.ProductProjectionPagedSearchResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.ProductProjectionPagedSearchResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
        }
    }
 }

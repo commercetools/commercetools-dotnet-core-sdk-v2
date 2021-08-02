@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public abstract partial class FieldType : IFieldType
+    public partial class FieldType : IFieldType
     {
         public string Name { get; set;}
     }

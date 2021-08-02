@@ -43,10 +43,10 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.CartDiscounts.CartDiscount> ExecuteAsync()
+       public async Task<commercetools.Api.Models.CartDiscounts.ICartDiscount> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.CartDiscount>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.ICartDiscount>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

@@ -46,10 +46,10 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Zones.Zone> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.Zone>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZone>(requestMessage);
        }
    }
 }

@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Stores
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Stores.StoreUpdateAction))]
     [SubTypeDiscriminator("addDistributionChannel", typeof(commercetools.Api.Models.Stores.StoreAddDistributionChannelAction))]
     [SubTypeDiscriminator("addSupplyChannel", typeof(commercetools.Api.Models.Stores.StoreAddSupplyChannelAction))]
     [SubTypeDiscriminator("removeDistributionChannel", typeof(commercetools.Api.Models.Stores.StoreRemoveDistributionChannelAction))]

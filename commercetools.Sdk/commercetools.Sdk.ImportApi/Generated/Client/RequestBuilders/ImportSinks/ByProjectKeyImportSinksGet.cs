@@ -51,10 +51,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
            return this.AddQueryParam("sort", sort);
        }
 
-       public async Task<commercetools.ImportApi.Models.Importsinks.ImportSinkPagedResponse> ExecuteAsync()
+       public async Task<commercetools.ImportApi.Models.Importsinks.IImportSinkPagedResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.ImportSinkPagedResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.IImportSinkPagedResponse>(requestMessage);
        }
    }
 }

@@ -32,10 +32,10 @@ namespace commercetools.Api.Client.RequestBuilders.ApiClients
    
    
 
-       public async Task<commercetools.Api.Models.ApiClients.ApiClient> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ApiClients.IApiClient> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.ApiClient>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.IApiClient>(requestMessage);
        }
    }
 }

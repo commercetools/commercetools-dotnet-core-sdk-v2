@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public abstract partial class GeoJson : IGeoJson
+    public partial class GeoJson : IGeoJson
     {
         public string Type { get; set;}
     }

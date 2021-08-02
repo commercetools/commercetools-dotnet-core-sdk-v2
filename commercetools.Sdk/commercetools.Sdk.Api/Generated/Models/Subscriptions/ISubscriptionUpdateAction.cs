@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Subscriptions.SubscriptionUpdateAction))]
     [SubTypeDiscriminator("changeDestination", typeof(commercetools.Api.Models.Subscriptions.SubscriptionChangeDestinationAction))]
     [SubTypeDiscriminator("setChanges", typeof(commercetools.Api.Models.Subscriptions.SubscriptionSetChangesAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Subscriptions.SubscriptionSetKeyAction))]

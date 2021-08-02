@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [TypeDiscriminator(nameof(Type))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Extensions.ExtensionDestination))]
     [SubTypeDiscriminator("AWSLambda", typeof(commercetools.Api.Models.Extensions.ExtensionAWSLambdaDestination))]
     [SubTypeDiscriminator("HTTP", typeof(commercetools.Api.Models.Extensions.ExtensionHttpDestination))]
     public partial interface IExtensionDestination 

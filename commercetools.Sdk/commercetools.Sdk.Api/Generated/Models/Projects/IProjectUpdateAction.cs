@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Projects
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Projects.ProjectUpdateAction))]
     [SubTypeDiscriminator("changeCartsConfiguration", typeof(commercetools.Api.Models.Projects.ProjectChangeCartsConfiguration))]
     [SubTypeDiscriminator("changeCountries", typeof(commercetools.Api.Models.Projects.ProjectChangeCountriesAction))]
     [SubTypeDiscriminator("changeCountryTaxRateFallbackEnabled", typeof(commercetools.Api.Models.Projects.ProjectChangeCountryTaxRateFallbackEnabledAction))]

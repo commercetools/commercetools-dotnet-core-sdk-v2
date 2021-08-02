@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public abstract partial class Reference : IReference
+    public partial class Reference : IReference
     {
         public IReferenceTypeId TypeId { get; set;}
         

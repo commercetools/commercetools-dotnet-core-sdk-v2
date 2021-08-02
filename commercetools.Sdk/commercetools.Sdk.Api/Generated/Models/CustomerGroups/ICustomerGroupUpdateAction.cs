@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.CustomerGroups
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupUpdateAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupChangeNameAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupSetCustomTypeAction))]

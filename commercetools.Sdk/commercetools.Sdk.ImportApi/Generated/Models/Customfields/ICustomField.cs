@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Customfields
 {
     [TypeDiscriminator(nameof(Type))]
+    [DefaultTypeDiscriminator(typeof(commercetools.ImportApi.Models.Customfields.CustomField))]
     [SubTypeDiscriminator("Boolean", typeof(commercetools.ImportApi.Models.Customfields.BooleanField))]
     [SubTypeDiscriminator("BooleanSet", typeof(commercetools.ImportApi.Models.Customfields.BooleanSetField))]
     [SubTypeDiscriminator("Date", typeof(commercetools.ImportApi.Models.Customfields.DateField))]

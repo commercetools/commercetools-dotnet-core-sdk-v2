@@ -34,10 +34,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
    
    
 
-       public async Task<commercetools.ImportApi.Models.Importsinks.ImportSink> ExecuteAsync()
+       public async Task<commercetools.ImportApi.Models.Importsinks.IImportSink> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.ImportSink>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.IImportSink>(requestMessage);
        }
    }
 }

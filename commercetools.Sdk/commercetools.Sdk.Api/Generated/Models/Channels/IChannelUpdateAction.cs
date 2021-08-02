@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Channels.ChannelUpdateAction))]
     [SubTypeDiscriminator("addRoles", typeof(commercetools.Api.Models.Channels.ChannelAddRolesAction))]
     [SubTypeDiscriminator("changeDescription", typeof(commercetools.Api.Models.Channels.ChannelChangeDescriptionAction))]
     [SubTypeDiscriminator("changeKey", typeof(commercetools.Api.Models.Channels.ChannelChangeKeyAction))]

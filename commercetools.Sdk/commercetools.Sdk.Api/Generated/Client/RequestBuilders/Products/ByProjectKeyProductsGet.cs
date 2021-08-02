@@ -123,10 +123,10 @@ namespace commercetools.Api.Client.RequestBuilders.Products
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Products.ProductPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.ProductPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductPagedQueryResponse>(requestMessage);
        }
    }
 }

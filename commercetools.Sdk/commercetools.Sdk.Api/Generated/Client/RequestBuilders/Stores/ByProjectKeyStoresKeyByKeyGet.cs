@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Stores
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Stores.Store> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Stores.IStore> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Stores.Store>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Stores.IStore>(requestMessage);
        }
    }
 }

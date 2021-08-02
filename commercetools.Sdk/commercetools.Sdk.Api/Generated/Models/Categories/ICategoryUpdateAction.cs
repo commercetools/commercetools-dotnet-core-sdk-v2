@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Categories
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Categories.CategoryUpdateAction))]
     [SubTypeDiscriminator("addAsset", typeof(commercetools.Api.Models.Categories.CategoryAddAssetAction))]
     [SubTypeDiscriminator("changeAssetName", typeof(commercetools.Api.Models.Categories.CategoryChangeAssetNameAction))]
     [SubTypeDiscriminator("changeAssetOrder", typeof(commercetools.Api.Models.Categories.CategoryChangeAssetOrderAction))]

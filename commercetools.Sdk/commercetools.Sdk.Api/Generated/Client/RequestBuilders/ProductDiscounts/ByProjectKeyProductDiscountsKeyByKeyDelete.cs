@@ -46,10 +46,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.ProductDiscounts.ProductDiscount> ExecuteAsync()
+       public async Task<commercetools.Api.Models.ProductDiscounts.IProductDiscount> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductDiscounts.ProductDiscount>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductDiscounts.IProductDiscount>(requestMessage);
        }
    }
 }

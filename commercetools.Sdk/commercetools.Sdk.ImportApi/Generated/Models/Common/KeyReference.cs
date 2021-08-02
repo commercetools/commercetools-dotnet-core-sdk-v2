@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Common
 {
-    public abstract partial class KeyReference : IKeyReference
+    public partial class KeyReference : IKeyReference
     {
         public string Key { get; set;}
         

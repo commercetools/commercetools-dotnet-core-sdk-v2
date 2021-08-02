@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Messages.MessagePagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Messages.IMessagePagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Messages.MessagePagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Messages.IMessagePagedQueryResponse>(requestMessage);
        }
    }
 }

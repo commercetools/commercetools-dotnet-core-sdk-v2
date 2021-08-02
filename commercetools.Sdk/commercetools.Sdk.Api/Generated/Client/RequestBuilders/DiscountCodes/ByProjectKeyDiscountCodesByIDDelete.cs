@@ -54,10 +54,10 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.DiscountCodes.DiscountCode> ExecuteAsync()
+       public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.DiscountCode>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
        }
    }
 }

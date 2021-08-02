@@ -9,6 +9,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Importrequests
 {
     [TypeDiscriminator(nameof(Type))]
+    [DefaultTypeDiscriminator(typeof(commercetools.ImportApi.Models.Importrequests.ImportRequest))]
     [SubTypeDiscriminator("category", typeof(commercetools.ImportApi.Models.Importrequests.CategoryImportRequest))]
     [SubTypeDiscriminator("customer", typeof(commercetools.ImportApi.Models.Importrequests.CustomerImportRequest))]
     [SubTypeDiscriminator("inventory", typeof(commercetools.ImportApi.Models.Importrequests.InventoryImportRequest))]

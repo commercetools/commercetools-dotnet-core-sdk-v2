@@ -34,10 +34,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
    
    
 
-       public async Task<commercetools.Api.Models.Customers.CustomerSignInResult> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.CustomerSignInResult>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

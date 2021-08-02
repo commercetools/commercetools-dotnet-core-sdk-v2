@@ -94,10 +94,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
            return this.AddQueryParam("expand", expand);
        }
 
-       public async Task<commercetools.Api.Models.Products.ProductProjection> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Products.IProductProjection> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.ProductProjection>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjection>(requestMessage);
        }
    }
 }

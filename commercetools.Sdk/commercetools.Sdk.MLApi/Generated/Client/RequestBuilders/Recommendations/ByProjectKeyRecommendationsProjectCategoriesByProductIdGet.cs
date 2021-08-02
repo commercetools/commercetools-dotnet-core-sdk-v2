@@ -70,10 +70,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
            return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
        }
 
-       public async Task<commercetools.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse>(requestMessage);
        }
    }
 }

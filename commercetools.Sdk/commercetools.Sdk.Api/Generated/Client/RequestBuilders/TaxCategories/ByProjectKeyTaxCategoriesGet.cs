@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.TaxCategories.TaxCategoryPagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.TaxCategoryPagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>(requestMessage);
        }
    }
 }

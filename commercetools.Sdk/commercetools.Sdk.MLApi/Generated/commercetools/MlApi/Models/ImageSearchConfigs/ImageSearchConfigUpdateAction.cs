@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.MLApi.Models.ImageSearchConfigs
 {
-    public abstract partial class ImageSearchConfigUpdateAction : IImageSearchConfigUpdateAction
+    public partial class ImageSearchConfigUpdateAction : IImageSearchConfigUpdateAction
     {
         public string Action { get; set;}
     }

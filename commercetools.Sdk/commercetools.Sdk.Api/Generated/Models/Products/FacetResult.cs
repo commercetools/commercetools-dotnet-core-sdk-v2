@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public abstract partial class FacetResult : IFacetResult
+    public partial class FacetResult : IFacetResult
     {
         public IFacetTypes Type { get; set;}
     }

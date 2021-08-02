@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Payments
 {
-    public abstract partial class PaymentUpdateAction : IPaymentUpdateAction
+    public partial class PaymentUpdateAction : IPaymentUpdateAction
     {
         public string Action { get; set;}
     }

@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
            return this.AddQueryParam("where", where);
        }
 
-       public async Task<commercetools.Api.Models.Zones.ZonePagedQueryResponse> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Zones.IZonePagedQueryResponse> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.ZonePagedQueryResponse>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZonePagedQueryResponse>(requestMessage);
        }
    }
 }

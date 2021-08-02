@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Channels
 {
-    public abstract partial class ChannelUpdateAction : IChannelUpdateAction
+    public partial class ChannelUpdateAction : IChannelUpdateAction
     {
         public string Action { get; set;}
     }

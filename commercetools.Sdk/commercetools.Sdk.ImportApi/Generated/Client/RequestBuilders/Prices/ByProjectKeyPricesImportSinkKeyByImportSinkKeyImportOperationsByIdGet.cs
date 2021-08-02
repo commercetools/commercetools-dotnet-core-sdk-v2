@@ -35,10 +35,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Prices
    
    
 
-       public async Task<commercetools.ImportApi.Models.Importoperations.ImportOperation> ExecuteAsync()
+       public async Task<commercetools.ImportApi.Models.Importoperations.IImportOperation> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importoperations.ImportOperation>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importoperations.IImportOperation>(requestMessage);
        }
    }
 }

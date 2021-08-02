@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public abstract partial class BaseResource : IBaseResource
+    public partial class BaseResource : IBaseResource
     {
         public string Id { get; set;}
         

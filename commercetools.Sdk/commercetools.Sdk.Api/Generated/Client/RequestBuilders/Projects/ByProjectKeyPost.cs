@@ -34,10 +34,10 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
    
    
 
-       public async Task<commercetools.Api.Models.Projects.Project> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Projects.IProject> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Projects.Project>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Projects.IProject>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

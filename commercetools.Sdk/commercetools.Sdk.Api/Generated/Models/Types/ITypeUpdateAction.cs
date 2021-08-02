@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Types.TypeUpdateAction))]
     [SubTypeDiscriminator("addEnumValue", typeof(commercetools.Api.Models.Types.TypeAddEnumValueAction))]
     [SubTypeDiscriminator("addFieldDefinition", typeof(commercetools.Api.Models.Types.TypeAddFieldDefinitionAction))]
     [SubTypeDiscriminator("addLocalizedEnumValue", typeof(commercetools.Api.Models.Types.TypeAddLocalizedEnumValueAction))]

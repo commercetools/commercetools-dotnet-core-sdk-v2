@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
-    [DefaultTypeDiscriminator(typeof(MessagePayloadImpl))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Messages.MessagePayload))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Api.Models.Messages.CategoryCreatedMessagePayload))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Api.Models.Messages.CategorySlugChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Api.Models.Messages.CustomerAddressAddedMessagePayload))]

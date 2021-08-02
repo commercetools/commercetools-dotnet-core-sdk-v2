@@ -34,10 +34,10 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
    
    
 
-       public async Task<commercetools.Api.Models.Carts.Cart> ExecuteAsync()
+       public async Task<commercetools.Api.Models.Carts.ICart> ExecuteAsync()
        {
           var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.Cart>(requestMessage);
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICart>(requestMessage);
        }
        
        public override HttpRequestMessage Build()

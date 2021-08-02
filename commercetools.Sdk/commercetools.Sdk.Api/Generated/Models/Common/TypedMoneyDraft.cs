@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public abstract partial class TypedMoneyDraft : ITypedMoneyDraft
+    public partial class TypedMoneyDraft : ITypedMoneyDraft
     {
         public long CentAmount { get; set;}
         

@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(Type))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Subscriptions.Destination))]
     [SubTypeDiscriminator("AzureServiceBus", typeof(commercetools.Api.Models.Subscriptions.AzureServiceBusDestination))]
     [SubTypeDiscriminator("EventGrid", typeof(commercetools.Api.Models.Subscriptions.AzureEventGridDestination))]
     [SubTypeDiscriminator("GoogleCloudPubSub", typeof(commercetools.Api.Models.Subscriptions.GoogleCloudPubSubDestination))]

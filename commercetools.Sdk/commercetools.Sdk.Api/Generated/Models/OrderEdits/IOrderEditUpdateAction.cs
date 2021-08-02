@@ -8,6 +8,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [TypeDiscriminator(nameof(Action))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.OrderEdits.OrderEditUpdateAction))]
     [SubTypeDiscriminator("addStagedAction", typeof(commercetools.Api.Models.OrderEdits.OrderEditAddStagedActionAction))]
     [SubTypeDiscriminator("setComment", typeof(commercetools.Api.Models.OrderEdits.OrderEditSetCommentAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.OrderEdits.OrderEditSetCustomFieldAction))]
