@@ -33,6 +33,6 @@ generate_import:
 
 generate_ml:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="MLApi" GEN_RAML_FILE=../$(ML_RAML) generate_sdk
-	
+
 generate_history:
-    $(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
+	$(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
