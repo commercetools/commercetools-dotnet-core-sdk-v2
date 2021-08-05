@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
 {
+   
    public class ByProjectKeyShippingMethodsKeyByKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }

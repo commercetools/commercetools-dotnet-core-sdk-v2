@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Payments
 {
+   
    public class ByProjectKeyPaymentsByIDRequestBuilder {
 
        private IClient ApiHttpClient { get; }

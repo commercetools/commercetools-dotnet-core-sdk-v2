@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Extensions
 {
+   
    public class ByProjectKeyExtensionsKeyByKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }

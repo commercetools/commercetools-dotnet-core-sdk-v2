@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Subscriptions;
 
 namespace commercetools.Api.Client.RequestBuilders.Subscriptions
 {
+   
    public class ByProjectKeySubscriptionsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
            return new ByProjectKeySubscriptionsPost(ApiHttpClient, SerializerService, ProjectKey, subscriptionDraft);
        }
        
+       
        public ByProjectKeySubscriptionsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeySubscriptionsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeySubscriptionsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeySubscriptionsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 {
+   
    public class ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder {
 
        private IClient ApiHttpClient { get; }

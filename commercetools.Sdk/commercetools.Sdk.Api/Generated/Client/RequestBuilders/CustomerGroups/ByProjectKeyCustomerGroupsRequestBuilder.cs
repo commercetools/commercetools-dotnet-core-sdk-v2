@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.CustomerGroups;
 
 namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
 {
+   
    public class ByProjectKeyCustomerGroupsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
            return new ByProjectKeyCustomerGroupsPost(ApiHttpClient, SerializerService, ProjectKey, customerGroupDraft);
        }
        
+       
        public ByProjectKeyCustomerGroupsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyCustomerGroupsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyCustomerGroupsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyCustomerGroupsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

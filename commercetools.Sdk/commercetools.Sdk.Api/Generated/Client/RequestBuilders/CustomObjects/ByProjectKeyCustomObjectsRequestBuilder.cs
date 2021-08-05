@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.CustomObjects;
 
 namespace commercetools.Api.Client.RequestBuilders.CustomObjects
 {
+   
    public class ByProjectKeyCustomObjectsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
            return new ByProjectKeyCustomObjectsPost(ApiHttpClient, SerializerService, ProjectKey, customObjectDraft);
        }
        
+       
        public ByProjectKeyCustomObjectsByContainerByKeyRequestBuilder WithContainerAndKey(string container ,string key) {
            return new ByProjectKeyCustomObjectsByContainerByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, container, key);
        }
+       
        public ByProjectKeyCustomObjectsByContainerRequestBuilder WithContainer(string container) {
            return new ByProjectKeyCustomObjectsByContainerRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, container);
        }

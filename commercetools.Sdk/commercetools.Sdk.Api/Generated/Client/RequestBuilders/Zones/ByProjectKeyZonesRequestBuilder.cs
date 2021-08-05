@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Zones;
 
 namespace commercetools.Api.Client.RequestBuilders.Zones
 {
+   
    public class ByProjectKeyZonesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
            return new ByProjectKeyZonesPost(ApiHttpClient, SerializerService, ProjectKey, zoneDraft);
        }
        
+       
        public ByProjectKeyZonesKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyZonesKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyZonesByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyZonesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

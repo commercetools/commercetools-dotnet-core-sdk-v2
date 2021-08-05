@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.ShoppingLists;
 
 namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
 {
+   
    public class ByProjectKeyShoppingListsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
            return new ByProjectKeyShoppingListsPost(ApiHttpClient, SerializerService, ProjectKey, shoppingListDraft);
        }
        
+       
        public ByProjectKeyShoppingListsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyShoppingListsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyShoppingListsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyShoppingListsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

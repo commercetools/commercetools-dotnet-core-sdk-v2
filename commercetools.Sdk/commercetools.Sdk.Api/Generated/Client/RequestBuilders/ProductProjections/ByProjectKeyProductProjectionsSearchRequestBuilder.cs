@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.ProductProjections
 {
+   
    public class ByProjectKeyProductProjectionsSearchRequestBuilder {
 
        private IClient ApiHttpClient { get; }

@@ -6,6 +6,7 @@ using commercetools.ImportApi.Client.RequestBuilders.Categories;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.Categories
 {
+   
    public class ByProjectKeyCategoriesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -20,6 +21,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
            this.ProjectKey = projectKey;
        }
    
+       
        
        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey) {
            return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);

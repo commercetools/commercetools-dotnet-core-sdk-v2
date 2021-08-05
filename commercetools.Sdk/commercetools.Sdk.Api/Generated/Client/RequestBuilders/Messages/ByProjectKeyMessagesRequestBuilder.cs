@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Messages;
 
 namespace commercetools.Api.Client.RequestBuilders.Messages
 {
+   
    public class ByProjectKeyMessagesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -23,6 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
        public ByProjectKeyMessagesGet Get() {
            return new ByProjectKeyMessagesGet(ApiHttpClient, ProjectKey);
        }
+       
        
        public ByProjectKeyMessagesByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyMessagesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);

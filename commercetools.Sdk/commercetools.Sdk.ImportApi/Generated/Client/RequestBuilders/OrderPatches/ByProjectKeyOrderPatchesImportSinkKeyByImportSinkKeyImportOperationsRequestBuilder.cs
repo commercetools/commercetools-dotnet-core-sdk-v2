@@ -6,6 +6,7 @@ using commercetools.ImportApi.Client.RequestBuilders.OrderPatches;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
 {
+   
    public class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -26,6 +27,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet Get() {
            return new ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet(ApiHttpClient, ProjectKey, ImportSinkKey);
        }
+       
        
        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder WithIdValue(string id) {
            return new ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsByIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, id);

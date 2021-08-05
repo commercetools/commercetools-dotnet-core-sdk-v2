@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Me;
 
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
+   
    public class ByProjectKeyMePasswordRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -23,6 +24,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        public ByProjectKeyMePasswordPost Post(JsonElement jsonNode) {
            return new ByProjectKeyMePasswordPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
        }
+       
        
        public ByProjectKeyMePasswordResetRequestBuilder Reset() {
            return new ByProjectKeyMePasswordResetRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);

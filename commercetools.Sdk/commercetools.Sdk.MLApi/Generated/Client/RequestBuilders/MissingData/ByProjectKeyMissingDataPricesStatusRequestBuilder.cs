@@ -6,6 +6,7 @@ using commercetools.MLApi.Client.RequestBuilders.MissingData;
 
 namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 {
+   
    public class ByProjectKeyMissingDataPricesStatusRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -20,6 +21,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
            this.ProjectKey = projectKey;
        }
    
+       
        
        public ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder WithTaskId(string taskId) {
            return new ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, taskId);

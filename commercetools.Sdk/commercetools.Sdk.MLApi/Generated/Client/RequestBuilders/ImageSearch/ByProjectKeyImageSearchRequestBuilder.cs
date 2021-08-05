@@ -6,6 +6,7 @@ using commercetools.MLApi.Client.RequestBuilders.ImageSearch;
 
 namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
 {
+   
    public class ByProjectKeyImageSearchRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -23,6 +24,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
        public ByProjectKeyImageSearchPost Post(Stream stream) {
            return new ByProjectKeyImageSearchPost(ApiHttpClient, SerializerService, ProjectKey, stream);
        }
+       
        
        public ByProjectKeyImageSearchConfigRequestBuilder Config() {
            return new ByProjectKeyImageSearchConfigRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);

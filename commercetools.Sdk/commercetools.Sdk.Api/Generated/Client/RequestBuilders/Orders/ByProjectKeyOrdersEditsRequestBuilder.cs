@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Orders;
 
 namespace commercetools.Api.Client.RequestBuilders.Orders
 {
+   
    public class ByProjectKeyOrdersEditsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
            return new ByProjectKeyOrdersEditsPost(ApiHttpClient, SerializerService, ProjectKey, orderEditDraft);
        }
        
+       
        public ByProjectKeyOrdersEditsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyOrdersEditsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyOrdersEditsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyOrdersEditsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

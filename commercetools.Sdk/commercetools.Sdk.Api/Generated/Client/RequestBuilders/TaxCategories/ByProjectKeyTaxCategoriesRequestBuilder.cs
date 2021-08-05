@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.TaxCategories;
 
 namespace commercetools.Api.Client.RequestBuilders.TaxCategories
 {
+   
    public class ByProjectKeyTaxCategoriesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
            return new ByProjectKeyTaxCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, taxCategoryDraft);
        }
        
+       
        public ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyTaxCategoriesByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyTaxCategoriesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

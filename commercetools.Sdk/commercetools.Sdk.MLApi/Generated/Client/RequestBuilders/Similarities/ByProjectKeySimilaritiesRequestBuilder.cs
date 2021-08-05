@@ -6,6 +6,7 @@ using commercetools.MLApi.Client.RequestBuilders.Similarities;
 
 namespace commercetools.MLApi.Client.RequestBuilders.Similarities
 {
+   
    public class ByProjectKeySimilaritiesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -20,6 +21,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
            this.ProjectKey = projectKey;
        }
    
+       
        
        public ByProjectKeySimilaritiesProductsRequestBuilder Products() {
            return new ByProjectKeySimilaritiesProductsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);

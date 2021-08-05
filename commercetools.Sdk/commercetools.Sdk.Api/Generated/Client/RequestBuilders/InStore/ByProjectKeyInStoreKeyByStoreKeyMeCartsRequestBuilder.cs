@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.InStore;
 
 namespace commercetools.Api.Client.RequestBuilders.InStore
 {
+   
    public class ByProjectKeyInStoreKeyByStoreKeyMeCartsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -30,6 +31,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        public ByProjectKeyInStoreKeyByStoreKeyMeCartsPost Post(commercetools.Api.Models.Me.IMyCartDraft myCartDraft) {
            return new ByProjectKeyInStoreKeyByStoreKeyMeCartsPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, myCartDraft);
        }
+       
        
        public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID);
