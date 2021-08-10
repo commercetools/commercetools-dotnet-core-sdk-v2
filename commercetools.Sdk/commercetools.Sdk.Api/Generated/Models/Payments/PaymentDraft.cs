@@ -17,6 +17,7 @@ namespace commercetools.Api.Models.Payments
         
         public string AnonymousId { get; set;}
         
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string ExternalId { get; set;}
         
         public string InterfaceId { get; set;}
