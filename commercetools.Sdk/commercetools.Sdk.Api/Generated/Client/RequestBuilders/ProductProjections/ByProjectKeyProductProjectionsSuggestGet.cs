@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        public ByProjectKeyProductProjectionsSuggestGet WithWithTotal(bool withTotal){
            return this.AddQueryParam("withTotal", withTotal.ToString());
        }
+       
+       public ByProjectKeyProductProjectionsSuggestGet WithSearchKeywords(string locale, string searchKeywords){
+           return this.AddQueryParam($"searchKeywords.{locale}", searchKeywords);
+       }
 
        public async Task<Object> ExecuteAsync()
        {

@@ -37,6 +37,7 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
        public ByProjectKeyZonesByIDGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
        {

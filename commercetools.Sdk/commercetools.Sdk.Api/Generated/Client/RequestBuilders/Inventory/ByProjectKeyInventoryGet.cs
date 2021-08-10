@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
        public ByProjectKeyInventoryGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyInventoryGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Inventories.IInventoryPagedQueryResponse> ExecuteAsync()
        {

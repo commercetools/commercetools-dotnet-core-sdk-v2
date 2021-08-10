@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
        public ByProjectKeyChannelsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyChannelsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Channels.IChannelPagedQueryResponse> ExecuteAsync()
        {

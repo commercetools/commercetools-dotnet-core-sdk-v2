@@ -39,6 +39,7 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
        public ByProjectKeyCustomerGroupsPost WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroup> ExecuteAsync()
        {

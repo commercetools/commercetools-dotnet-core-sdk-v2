@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        public ByProjectKeyMeOrdersGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyMeOrdersGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Orders.IOrderPagedQueryResponse> ExecuteAsync()
        {

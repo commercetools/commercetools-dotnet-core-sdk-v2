@@ -45,6 +45,7 @@ namespace commercetools.Api.Client.RequestBuilders.Stores
        public ByProjectKeyStoresKeyByKeyDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Stores.IStore> ExecuteAsync()
        {

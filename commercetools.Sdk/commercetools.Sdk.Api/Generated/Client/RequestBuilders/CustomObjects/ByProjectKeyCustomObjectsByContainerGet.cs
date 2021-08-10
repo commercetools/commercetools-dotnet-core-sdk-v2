@@ -45,6 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
        public ByProjectKeyCustomObjectsByContainerGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
+       public ByProjectKeyCustomObjectsByContainerGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.CustomObjects.ICustomObjectPagedQueryResponse> ExecuteAsync()
        {

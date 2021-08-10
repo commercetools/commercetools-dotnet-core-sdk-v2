@@ -74,6 +74,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
        public ByProjectKeyRecommendationsGeneralCategoriesGet WithConfidenceMax(double confidenceMax){
            return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
        }
+       
 
        public async Task<commercetools.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
        {

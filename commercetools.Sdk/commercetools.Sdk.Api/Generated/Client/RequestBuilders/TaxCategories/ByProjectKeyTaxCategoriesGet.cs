@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
        public ByProjectKeyTaxCategoriesGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyTaxCategoriesGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse> ExecuteAsync()
        {

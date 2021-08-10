@@ -34,6 +34,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        public ByProjectKeyMeDelete WithVersion(long version){
            return this.AddQueryParam("version", version.ToString());
        }
+       
 
        public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
        {

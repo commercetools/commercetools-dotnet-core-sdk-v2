@@ -45,6 +45,7 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
        public ByProjectKeySubscriptionsKeyByKeyDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
        {

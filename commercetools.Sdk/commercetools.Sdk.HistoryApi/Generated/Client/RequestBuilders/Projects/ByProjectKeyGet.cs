@@ -130,6 +130,7 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
        public ByProjectKeyGet WithExpand(bool expand){
            return this.AddQueryParam("expand", expand.ToString());
        }
+       
 
        public async Task<commercetools.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
        {

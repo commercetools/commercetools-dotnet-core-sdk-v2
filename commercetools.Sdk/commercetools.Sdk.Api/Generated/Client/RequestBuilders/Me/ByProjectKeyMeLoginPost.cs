@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        
        private string ProjectKey { get; }
        
-       private JsonElement jsonNode;
+       private JsonElement? jsonNode;
    
-       public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, JsonElement jsonNode) {
+       public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, JsonElement? jsonNode) {
            this.ApiHttpClient = apiHttpClient;
            this.SerializerService = serializerService;
            this.ProjectKey = projectKey;
@@ -33,6 +33,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
        }
    
    
+       
 
        public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
        {

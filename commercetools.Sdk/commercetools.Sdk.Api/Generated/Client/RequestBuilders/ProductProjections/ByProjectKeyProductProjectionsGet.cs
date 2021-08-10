@@ -130,6 +130,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        public ByProjectKeyProductProjectionsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyProductProjectionsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse> ExecuteAsync()
        {

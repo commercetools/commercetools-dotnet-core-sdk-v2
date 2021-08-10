@@ -45,6 +45,7 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
        public ByProjectKeyInventoryByIDDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
        {

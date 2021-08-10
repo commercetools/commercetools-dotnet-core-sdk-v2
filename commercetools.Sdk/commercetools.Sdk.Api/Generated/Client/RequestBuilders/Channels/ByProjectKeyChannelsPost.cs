@@ -39,6 +39,7 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
        public ByProjectKeyChannelsPost WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Channels.IChannel> ExecuteAsync()
        {

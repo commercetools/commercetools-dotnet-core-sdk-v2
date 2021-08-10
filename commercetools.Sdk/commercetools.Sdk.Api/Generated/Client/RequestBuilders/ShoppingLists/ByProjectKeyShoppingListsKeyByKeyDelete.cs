@@ -53,6 +53,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
        public ByProjectKeyShoppingListsKeyByKeyDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.ShoppingLists.IShoppingList> ExecuteAsync()
        {

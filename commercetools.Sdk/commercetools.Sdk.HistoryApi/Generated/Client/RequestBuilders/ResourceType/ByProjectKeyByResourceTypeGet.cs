@@ -125,6 +125,7 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
        public ByProjectKeyByResourceTypeGet WithExpand(bool expand){
            return this.AddQueryParam("expand", expand.ToString());
        }
+       
 
        public async Task<commercetools.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
        {

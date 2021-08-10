@@ -37,6 +37,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
        public ByProjectKeyCategoriesByIDGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Categories.ICategory> ExecuteAsync()
        {

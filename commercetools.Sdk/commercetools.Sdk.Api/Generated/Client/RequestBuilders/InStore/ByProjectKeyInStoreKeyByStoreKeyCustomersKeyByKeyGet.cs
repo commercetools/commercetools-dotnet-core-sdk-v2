@@ -40,6 +40,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
        {

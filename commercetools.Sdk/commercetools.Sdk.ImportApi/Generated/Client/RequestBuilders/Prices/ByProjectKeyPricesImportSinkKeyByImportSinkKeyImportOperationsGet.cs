@@ -77,6 +77,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Prices
        public ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsGet WithDebug(bool debug){
            return this.AddQueryParam("debug", debug.ToString());
        }
+       
 
        public async Task<commercetools.ImportApi.Models.Importoperations.IImportOperationPagedResponse> ExecuteAsync()
        {

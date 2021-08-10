@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
        public ByProjectKeyCategoriesGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyCategoriesGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Categories.ICategoryPagedQueryResponse> ExecuteAsync()
        {

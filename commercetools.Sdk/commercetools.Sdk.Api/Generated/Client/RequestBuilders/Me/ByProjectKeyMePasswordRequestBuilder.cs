@@ -21,7 +21,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyMePasswordPost Post(JsonElement jsonNode) {
+       public ByProjectKeyMePasswordPost Post(JsonElement? jsonNode) {
            return new ByProjectKeyMePasswordPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
        }
        
