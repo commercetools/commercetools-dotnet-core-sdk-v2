@@ -83,6 +83,8 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Api.Models.Messages.ReviewRatingSetMessagePayload))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Api.Models.Messages.ReviewStateTransitionMessagePayload))]
     [SubTypeDiscriminator("ShoppingListStoreSet", typeof(commercetools.Api.Models.Messages.ShoppingListStoreSetMessagePayload))]
+    [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Api.Models.Messages.StoreCreatedMessagePayload))]
+    [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessagePayload))]
     public partial interface IMessagePayload 
     {
         string Type { get; set;}
