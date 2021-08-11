@@ -32,7 +32,7 @@ namespace commercetools.Api.Models.CartDiscounts
         
         public DateTime? ValidUntil { get; set;}
         
-        public bool RequiresDiscountCode { get; set;}
+        public bool? RequiresDiscountCode { get; set;}
         
         public IStackingMode StackingMode { get; set;}
         
