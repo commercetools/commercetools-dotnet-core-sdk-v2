@@ -1,6 +1,6 @@
 using commercetools.Sdk.MLApi.Client;
 
-namespace commercetools.Sdk.MLApi.Tests.Client
+namespace commercetools.MLApi.Tests.Client
 {
     public class RequestBuilderParentTests
     {

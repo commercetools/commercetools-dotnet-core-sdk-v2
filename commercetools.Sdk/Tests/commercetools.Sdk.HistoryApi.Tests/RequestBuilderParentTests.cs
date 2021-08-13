@@ -1,6 +1,6 @@
 using commercetools.Sdk.HistoryApi.Client;
 
-namespace commercetools.Sdk.HistoryApi.Tests.Client
+namespace commercetools.HistoryApi.Tests.Client
 {
     public class RequestBuilderParentTests
     {
