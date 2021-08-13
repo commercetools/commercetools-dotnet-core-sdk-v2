@@ -71,7 +71,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
        }
        
        public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithState(IProcessingState state){
-           return this.AddQueryParam("state", state.ToString());
+           return this.AddQueryParam("state", state.JsonName);
        }
        
        public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithDebug(bool debug){

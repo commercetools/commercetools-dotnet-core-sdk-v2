@@ -71,7 +71,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
        }
        
        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithState(IProcessingState state){
-           return this.AddQueryParam("state", state.ToString());
+           return this.AddQueryParam("state", state.JsonName);
        }
        
        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet WithDebug(bool debug){

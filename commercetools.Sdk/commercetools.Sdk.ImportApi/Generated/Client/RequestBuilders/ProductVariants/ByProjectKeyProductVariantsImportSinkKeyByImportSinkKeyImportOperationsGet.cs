@@ -71,7 +71,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductVariants
        }
        
        public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet WithState(IProcessingState state){
-           return this.AddQueryParam("state", state.ToString());
+           return this.AddQueryParam("state", state.JsonName);
        }
        
        public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet WithDebug(bool debug){
