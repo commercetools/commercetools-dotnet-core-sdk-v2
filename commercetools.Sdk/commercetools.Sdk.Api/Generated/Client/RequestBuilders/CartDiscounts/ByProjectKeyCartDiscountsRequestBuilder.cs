@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.CartDiscounts;
 
 namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
 {
+   
    public class ByProjectKeyCartDiscountsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
            return new ByProjectKeyCartDiscountsPost(ApiHttpClient, SerializerService, ProjectKey, cartDiscountDraft);
        }
        
+       
        public ByProjectKeyCartDiscountsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyCartDiscountsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyCartDiscountsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyCartDiscountsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

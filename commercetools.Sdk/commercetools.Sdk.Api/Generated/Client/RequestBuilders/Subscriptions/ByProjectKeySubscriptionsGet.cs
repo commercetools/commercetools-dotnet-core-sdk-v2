@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
        public ByProjectKeySubscriptionsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeySubscriptionsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse> ExecuteAsync()
        {

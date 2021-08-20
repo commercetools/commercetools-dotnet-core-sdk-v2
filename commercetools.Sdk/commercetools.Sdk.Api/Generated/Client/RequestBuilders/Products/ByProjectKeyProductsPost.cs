@@ -87,6 +87,7 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        public ByProjectKeyProductsPost WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Products.IProduct> ExecuteAsync()
        {

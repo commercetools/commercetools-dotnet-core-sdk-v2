@@ -37,6 +37,7 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
        public ByProjectKeyMessagesByIDGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Messages.IMessage> ExecuteAsync()
        {

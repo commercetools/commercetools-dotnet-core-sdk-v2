@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Graphql
 {
+   
    public class ByProjectKeyGraphqlRequestBuilder {
 
        private IClient ApiHttpClient { get; }

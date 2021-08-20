@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.ProductDiscounts;
 
 namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
 {
+   
    public class ByProjectKeyProductDiscountsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,12 +29,15 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
            return new ByProjectKeyProductDiscountsPost(ApiHttpClient, SerializerService, ProjectKey, productDiscountDraft);
        }
        
+       
        public ByProjectKeyProductDiscountsMatchingRequestBuilder Matching() {
            return new ByProjectKeyProductDiscountsMatchingRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductDiscountsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyProductDiscountsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyProductDiscountsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyProductDiscountsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

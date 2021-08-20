@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
+   
    public class ByProjectKeyMeLoginRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -19,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyMeLoginPost Post(JsonElement jsonNode) {
+       public ByProjectKeyMeLoginPost Post(JsonElement? jsonNode) {
            return new ByProjectKeyMeLoginPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
        }
        

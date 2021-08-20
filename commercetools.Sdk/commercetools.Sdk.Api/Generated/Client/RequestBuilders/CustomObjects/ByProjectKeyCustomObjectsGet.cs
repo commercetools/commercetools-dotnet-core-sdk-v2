@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
        public ByProjectKeyCustomObjectsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyCustomObjectsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.CustomObjects.ICustomObjectPagedQueryResponse> ExecuteAsync()
        {

@@ -58,6 +58,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
        public ByProjectKeyShippingMethodsMatchingLocationGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
        {

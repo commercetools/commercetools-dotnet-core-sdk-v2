@@ -18,6 +18,7 @@ using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.Projects
 {
+   
    public class ByProjectKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -33,42 +34,55 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Projects
        }
    
        
+       
        public ByProjectKeyImportSinksRequestBuilder ImportSinks() {
            return new ByProjectKeyImportSinksRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyImportSummariesRequestBuilder ImportSummaries() {
            return new ByProjectKeyImportSummariesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyCategoriesRequestBuilder Categories() {
            return new ByProjectKeyCategoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyPricesRequestBuilder Prices() {
            return new ByProjectKeyPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductsRequestBuilder Products() {
            return new ByProjectKeyProductsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductDraftsRequestBuilder ProductDrafts() {
            return new ByProjectKeyProductDraftsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductTypesRequestBuilder ProductTypes() {
            return new ByProjectKeyProductTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductVariantsRequestBuilder ProductVariants() {
            return new ByProjectKeyProductVariantsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyProductVariantPatchesRequestBuilder ProductVariantPatches() {
            return new ByProjectKeyProductVariantPatchesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyOrdersRequestBuilder Orders() {
            return new ByProjectKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyOrderPatchesRequestBuilder OrderPatches() {
            return new ByProjectKeyOrderPatchesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyCustomersRequestBuilder Customers() {
            return new ByProjectKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyInventoriesRequestBuilder Inventories() {
            return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }

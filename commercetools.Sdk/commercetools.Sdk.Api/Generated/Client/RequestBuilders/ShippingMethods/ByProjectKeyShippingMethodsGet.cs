@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
        public ByProjectKeyShippingMethodsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyShippingMethodsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
        {

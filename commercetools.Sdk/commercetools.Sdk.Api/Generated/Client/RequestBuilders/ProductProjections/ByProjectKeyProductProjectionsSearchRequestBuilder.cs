@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.ProductProjections
 {
+   
    public class ByProjectKeyProductProjectionsSearchRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -19,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
            this.ProjectKey = projectKey;
        }
    
-       public ByProjectKeyProductProjectionsSearchPost Post(JsonElement jsonNode) {
+       public ByProjectKeyProductProjectionsSearchPost Post(JsonElement? jsonNode) {
            return new ByProjectKeyProductProjectionsSearchPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
        }
        

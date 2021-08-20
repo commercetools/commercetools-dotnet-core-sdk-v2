@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.ImportSummaries
 {
+   
    public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }

@@ -93,6 +93,7 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        public ByProjectKeyProductsByIDDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Products.IProduct> ExecuteAsync()
        {

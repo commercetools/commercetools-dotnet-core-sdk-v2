@@ -93,6 +93,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        public ByProjectKeyProductProjectionsKeyByKeyGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.Products.IProductProjection> ExecuteAsync()
        {

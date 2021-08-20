@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Me;
 
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
+   
    public class ByProjectKeyMePaymentsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -28,9 +29,11 @@ namespace commercetools.Api.Client.RequestBuilders.Me
            return new ByProjectKeyMePaymentsPost(ApiHttpClient, SerializerService, ProjectKey, myPaymentDraft);
        }
        
+       
        public ByProjectKeyMePaymentsKeyByKeyRequestBuilder WithKey(string key) {
            return new ByProjectKeyMePaymentsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
        }
+       
        public ByProjectKeyMePaymentsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyMePaymentsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
        }

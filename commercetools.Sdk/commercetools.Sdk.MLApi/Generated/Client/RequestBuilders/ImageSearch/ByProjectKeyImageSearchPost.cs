@@ -47,6 +47,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
        public ByProjectKeyImageSearchPost WithOffset(int offset){
            return this.AddQueryParam("offset", offset.ToString());
        }
+       
 
        public async Task<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync()
        {

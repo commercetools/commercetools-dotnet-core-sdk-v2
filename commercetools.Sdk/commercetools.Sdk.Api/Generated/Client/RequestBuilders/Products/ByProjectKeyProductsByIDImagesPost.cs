@@ -66,6 +66,7 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        public ByProjectKeyProductsByIDImagesPost WithStaged(bool staged){
            return this.AddQueryParam("staged", staged.ToString());
        }
+       
 
        public async Task<commercetools.Api.Models.Products.IProduct> ExecuteAsync()
        {

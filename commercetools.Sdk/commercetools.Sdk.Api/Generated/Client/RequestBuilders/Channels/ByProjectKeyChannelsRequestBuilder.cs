@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.Channels;
 
 namespace commercetools.Api.Client.RequestBuilders.Channels
 {
+   
    public class ByProjectKeyChannelsRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -27,6 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
        public ByProjectKeyChannelsPost Post(commercetools.Api.Models.Channels.IChannelDraft channelDraft) {
            return new ByProjectKeyChannelsPost(ApiHttpClient, SerializerService, ProjectKey, channelDraft);
        }
+       
        
        public ByProjectKeyChannelsByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyChannelsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);

@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.MLApi.Client.RequestBuilders.Similarities
 {
+   
    public class ByProjectKeySimilaritiesProductsStatusByTaskIdRequestBuilder {
 
        private IClient ApiHttpClient { get; }

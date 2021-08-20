@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
        public ByProjectKeyCustomerGroupsGet WithWithTotal(bool withTotal){
            return this.AddQueryParam("withTotal", withTotal.ToString());
        }
+       
+       public ByProjectKeyCustomerGroupsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync()
        {

@@ -45,6 +45,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
        public ByProjectKeyShippingMethodsKeyByKeyDelete WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
 
        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethod> ExecuteAsync()
        {

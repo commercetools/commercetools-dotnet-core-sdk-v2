@@ -122,6 +122,10 @@ namespace commercetools.Api.Client.RequestBuilders.Products
        public ByProjectKeyProductsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyProductsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync()
        {

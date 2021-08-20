@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
        public ByProjectKeyShoppingListsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyShoppingListsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.ShoppingLists.IShoppingListPagedQueryResponse> ExecuteAsync()
        {

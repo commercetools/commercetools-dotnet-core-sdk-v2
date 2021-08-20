@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
 {
+   
    public class ByProjectKeyByResourceTypeByIDRequestBuilder {
 
        private IClient ApiHttpClient { get; }

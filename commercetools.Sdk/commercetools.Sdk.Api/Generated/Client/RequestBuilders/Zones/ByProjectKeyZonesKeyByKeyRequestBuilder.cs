@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Zones
 {
+   
    public class ByProjectKeyZonesKeyByKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }

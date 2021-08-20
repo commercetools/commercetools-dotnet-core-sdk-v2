@@ -6,6 +6,7 @@ using commercetools.HistoryApi.Client.RequestBuilders.ResourceType;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
 {
+   
    public class ByProjectKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -23,6 +24,7 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
        public ByProjectKeyGet Get() {
            return new ByProjectKeyGet(ApiHttpClient, ProjectKey);
        }
+       
        
        public ByProjectKeyByResourceTypeRequestBuilder WithResourceTypeValue(string resourceType) {
            return new ByProjectKeyByResourceTypeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, resourceType);

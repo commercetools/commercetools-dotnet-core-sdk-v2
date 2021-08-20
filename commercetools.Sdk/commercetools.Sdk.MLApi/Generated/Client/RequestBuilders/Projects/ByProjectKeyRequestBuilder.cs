@@ -9,6 +9,7 @@ using commercetools.MLApi.Client.RequestBuilders.Similarities;
 
 namespace commercetools.MLApi.Client.RequestBuilders.Projects
 {
+   
    public class ByProjectKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -24,15 +25,19 @@ namespace commercetools.MLApi.Client.RequestBuilders.Projects
        }
    
        
+       
        public ByProjectKeyImageSearchRequestBuilder ImageSearch() {
            return new ByProjectKeyImageSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyRecommendationsRequestBuilder Recommendations() {
            return new ByProjectKeyRecommendationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeyMissingDataRequestBuilder MissingData() {
            return new ByProjectKeyMissingDataRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }
+       
        public ByProjectKeySimilaritiesRequestBuilder Similarities() {
            return new ByProjectKeySimilaritiesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
        }

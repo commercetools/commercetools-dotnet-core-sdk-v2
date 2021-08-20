@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.InStore;
 
 namespace commercetools.Api.Client.RequestBuilders.InStore
 {
+   
    public class ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -31,9 +32,11 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, orderFromCartDraft);
        }
        
+       
        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder WithOrderNumber(string orderNumber) {
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, orderNumber);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID);
        }

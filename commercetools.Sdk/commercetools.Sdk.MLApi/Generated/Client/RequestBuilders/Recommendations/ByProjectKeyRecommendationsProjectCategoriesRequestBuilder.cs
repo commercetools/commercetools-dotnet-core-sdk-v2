@@ -6,6 +6,7 @@ using commercetools.MLApi.Client.RequestBuilders.Recommendations;
 
 namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
 {
+   
    public class ByProjectKeyRecommendationsProjectCategoriesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -20,6 +21,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
            this.ProjectKey = projectKey;
        }
    
+       
        
        public ByProjectKeyRecommendationsProjectCategoriesByProductIdRequestBuilder WithProductId(string productId) {
            return new ByProjectKeyRecommendationsProjectCategoriesByProductIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, productId);

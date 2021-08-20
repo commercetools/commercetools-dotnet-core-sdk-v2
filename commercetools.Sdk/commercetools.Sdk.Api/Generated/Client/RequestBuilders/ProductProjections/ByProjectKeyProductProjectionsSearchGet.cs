@@ -178,6 +178,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
        public ByProjectKeyProductProjectionsSearchGet WithExpand(string expand){
            return this.AddQueryParam("expand", expand);
        }
+       
+       public ByProjectKeyProductProjectionsSearchGet WithText(string locale, string text){
+           return this.AddQueryParam($"text.{locale}", text);
+       }
 
        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
        {

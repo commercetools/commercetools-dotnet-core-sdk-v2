@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
 {
+   
    public class ByProjectKeyRecommendationsProjectCategoriesByProductIdRequestBuilder {
 
        private IClient ApiHttpClient { get; }

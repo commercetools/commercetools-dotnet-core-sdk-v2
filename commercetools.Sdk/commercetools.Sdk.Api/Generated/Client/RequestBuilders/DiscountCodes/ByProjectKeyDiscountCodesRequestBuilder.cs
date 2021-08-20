@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.DiscountCodes;
 
 namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
 {
+   
    public class ByProjectKeyDiscountCodesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -27,6 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
        public ByProjectKeyDiscountCodesPost Post(commercetools.Api.Models.DiscountCodes.IDiscountCodeDraft discountCodeDraft) {
            return new ByProjectKeyDiscountCodesPost(ApiHttpClient, SerializerService, ProjectKey, discountCodeDraft);
        }
+       
        
        public ByProjectKeyDiscountCodesByIDRequestBuilder WithId(string ID) {
            return new ByProjectKeyDiscountCodesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);

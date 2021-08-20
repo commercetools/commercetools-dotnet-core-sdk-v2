@@ -74,6 +74,10 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
        public ByProjectKeyReviewsGet WithWhere(string where){
            return this.AddQueryParam("where", where);
        }
+       
+       public ByProjectKeyReviewsGet WithPredicateVar(string varName, string predicateVar){
+           return this.AddQueryParam($"var.{varName}", predicateVar);
+       }
 
        public async Task<commercetools.Api.Models.Reviews.IReviewPagedQueryResponse> ExecuteAsync()
        {

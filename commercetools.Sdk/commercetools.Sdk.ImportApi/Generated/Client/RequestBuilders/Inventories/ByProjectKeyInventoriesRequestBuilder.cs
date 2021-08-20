@@ -6,6 +6,7 @@ using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
 {
+   
    public class ByProjectKeyInventoriesRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -20,6 +21,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
            this.ProjectKey = projectKey;
        }
    
+       
        
        public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey) {
            return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);

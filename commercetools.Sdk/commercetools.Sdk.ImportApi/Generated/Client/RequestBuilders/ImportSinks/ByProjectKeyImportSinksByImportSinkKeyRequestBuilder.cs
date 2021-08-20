@@ -5,6 +5,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
 {
+   
    public class ByProjectKeyImportSinksByImportSinkKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }

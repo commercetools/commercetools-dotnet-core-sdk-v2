@@ -6,6 +6,7 @@ using commercetools.Api.Client.RequestBuilders.InStore;
 
 namespace commercetools.Api.Client.RequestBuilders.InStore
 {
+   
    public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
 
        private IClient ApiHttpClient { get; }
@@ -24,24 +25,31 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
        }
    
        
+       
        public ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder Carts() {
            return new ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder Orders() {
            return new ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder Me() {
            return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder Customers() {
            return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder Login() {
            return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder ShippingMethods() {
            return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
+       
        public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder ShoppingLists() {
            return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
        }
