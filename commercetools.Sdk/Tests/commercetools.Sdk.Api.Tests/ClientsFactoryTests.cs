@@ -1,12 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using commercetools.Base.Client;
-using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace commercetools.Api.Tests
+namespace commercetools.Sdk.Api.Tests
 {
     public class ClientsFactoryTests
     {

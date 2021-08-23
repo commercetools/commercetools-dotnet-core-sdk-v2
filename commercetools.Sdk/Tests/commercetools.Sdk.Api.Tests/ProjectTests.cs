@@ -1,12 +1,10 @@
 using System.IO;
 using Xunit;
 using commercetools.Api.Models.Projects;
-using commercetools.Base.Serialization;
-using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace commercetools.Api.Tests
+namespace commercetools.Sdk.Api.Tests
 {
     public class ProjectTests
     {

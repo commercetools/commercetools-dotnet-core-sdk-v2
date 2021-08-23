@@ -35,9 +35,15 @@ jobs:
         working-directory: ./commercetools.Sdk
       - run: dotnet test --verbosity=normal Tests/commercetools.Api.Serialization.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk
-      - run: dotnet test --verbosity=normal Tests/commercetools.Api.Tests --no-build -c Release
+      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.Api.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk
-
+      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.ImportApi.Tests --no-build -c Release
+        working-directory: ./commercetools.Sdk        
+      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.MLApi.Tests --no-build -c Release
+        working-directory: ./commercetools.Sdk
+      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.HistoryApi.Tests --no-build -c Release
+        working-directory: ./commercetools.Sdk
+        
   integrationtests:
     name: Integration tests
 

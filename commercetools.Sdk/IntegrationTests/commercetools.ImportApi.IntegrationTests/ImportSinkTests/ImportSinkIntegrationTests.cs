@@ -26,14 +26,14 @@ namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
                 Key = $"sink-{TestingUtility.RandomInt()}",
                 ResourceType = IImportResourceType.Customer
             };
-            var importSink = await _client.WithImportApi().WithProjectKey(_projectKey)
+            var importSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
                 .ImportSinks()
                 .Post(importSinkDraft)
                 .ExecuteAsync();
             
             Assert.NotNull(importSink);
 
-            var deletedImportSink = await _client.WithImportApi().WithProjectKey(_projectKey)
+            var deletedImportSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
                 .ImportSinks()
                 .WithImportSinkKeyValue(importSink.Key)
                 .Delete()
