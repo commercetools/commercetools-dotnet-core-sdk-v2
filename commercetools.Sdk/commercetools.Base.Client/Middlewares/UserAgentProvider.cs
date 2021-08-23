@@ -44,7 +44,7 @@ namespace commercetools.Base.Client.Middlewares
                 osPlatform = " (FreeBSD/" + Environment.OSVersion.Version + ")";
             }
 
-            this.UserAgent = $"commercetools-dotnet-core-sdk/{assemblyVersion} {frameworkName}/{attr.Version}{osPlatform}";
+            this.UserAgent = $"commercetools-sdk-dotnet-v2/{assemblyVersion} {frameworkName}/{attr.Version}{osPlatform}";
         }
 
         public string UserAgent { get; set; }
