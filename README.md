@@ -10,7 +10,8 @@ This repository contains the commercetools platform, import-api and ml-api C# sd
 | --------| --------------------------------------------------------------------------------------------------------- |
 | Platform Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
 | Import Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
-| ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)| 
+| ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)|
+| History Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)| 
 
 ## Example and Training material
 Feel free to explore these examples using this SDK for calling Platform, and Import API.
@@ -23,6 +24,7 @@ Feel free to explore these examples using this SDK for calling Platform, and Imp
 | [Platform Api](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```|
 | [Import Api](https://www.nuget.org/packages/commercetools.Sdk.ImportApi) | ```dotnet add package commercetools.Sdk.ImportApi```|
 | [ML Api](https://www.nuget.org/packages/commercetools.Sdk.MLApi) | ```dotnet add package commercetools.Sdk.MLApi```|
+| [History Api](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi) | ```dotnet add package commercetools.Sdk.HistoryApi```|
 
 ## Technical Overview
 
@@ -34,6 +36,7 @@ The SDK consists of the following projects:
 * `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with the [platform api](https://docs.commercetools.com/http-api.html).
 * `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [import api](https://docs.commercetools.com/import-api/).
 * `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the ml api.
+* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the history api.
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -73,6 +76,10 @@ services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```c#
 services.UseCommercetoolsMLApi(this.configuration, "MLClient");
 ```
+* `History Api`:
+```c#
+services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");
+```
 
 ##### Configuration
 The client configuration needs to be added to appsettings.json in order for the client to work. The structure is as follows:
@@ -106,6 +113,11 @@ var root2 = ImportApiFactory.Create(client);
 ```c#
 var root1 = client.WithMLApi();
 var root2 = MLApiFactory.Create(client);
+```
+* `History Api`:
+```c#
+var root1 = client.WithHistoryApi();
+var root2 = HistoryApiFactory.Create(client);
 ``` 
 
 ### Multiple Clients
@@ -146,7 +158,7 @@ public CategoryController(IClient client)
 }
 public async Task CreatingRequests() 
 {
-    // Create CategoryDraft using builder pattern
+    // Create CategoryDraft
     var categoryDraft = new CategoryDraft
                 {
                     Name = new LocalizedString {{"en", "Name"}},
