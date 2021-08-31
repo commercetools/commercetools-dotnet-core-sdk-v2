@@ -1,8 +1,3 @@
-<style>
-td {
-  font-size: 15px
-}
-</style>
 # Comparison between DotNet Core SDK V2 and V1
 ## Why I should use V2 SDK
 The SDK [V2](/) has some features which is not exists in [V1](https://github.com/commercetools/commercetools-dotnet-core-sdk) like:
@@ -23,12 +18,13 @@ The SDK [V2](/) has some features which is not exists in [V1](https://github.com
 ## Comparison of SDK Services Configuration
 After packages installation, you have to configure services using Dependency Injection Setup in the application Startup.cs
 
-| Package     | V2                                                                              | V1                                                             |
-|-------------|---------------------------------------------------------------------------------|----------------------------------------------------------------|
-| Platform    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(this.configuration,"Client");```  |
-| Import Api  | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                                                |
-| ML Api      | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                                                |
-| History Api | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                                                |
+| Package     | V2                                                                              | V1                                    |
+|-------------|---------------------------------------------------------------------------------|---------------------------------------|
+| Platform    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```
+|             |                                                                                 |  ```this.configuration,"Client");```  |
+| Import Api  | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                       |
+| ML Api      | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
+| History Api | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
 
 ## Comparison of how to make requests to the platform
 ```c#
