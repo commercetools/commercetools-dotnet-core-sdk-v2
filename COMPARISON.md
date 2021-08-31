@@ -1,3 +1,8 @@
+<style>
+td {
+  font-size: 15px
+}
+</style>
 # Comparison between DotNet Core SDK V2 and V1
 ## Why I should use V2 SDK
 The SDK [V2](/) has some features which is not exists in [V1](https://github.com/commercetools/commercetools-dotnet-core-sdk) like:
