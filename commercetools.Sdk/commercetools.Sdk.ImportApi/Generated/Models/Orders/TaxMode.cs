@@ -18,11 +18,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("Disabled")]
         Disabled
     }
+
     public class TaxModeWrapper : ITaxMode
     {
         public string JsonName { get; internal set; }
         public TaxMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITaxMode), "FindEnum")]
     public interface ITaxMode : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                Platform ,
-                External ,
-                ExternalAmount ,
-                Disabled
-           };
+                 Platform ,
+                 External ,
+                 ExternalAmount ,
+                 Disabled
+             };
         }
         static ITaxMode FindEnum(string value)
         {

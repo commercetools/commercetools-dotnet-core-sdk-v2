@@ -12,11 +12,17 @@ namespace commercetools.ImportApi.Models.Importoperations
         [Description("ValidationFailed")]
         ValidationFailed
     }
+
     public class ImportOperationStateWrapper : IImportOperationState
     {
         public string JsonName { get; internal set; }
         public ImportOperationState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IImportOperationState), "FindEnum")]
     public interface IImportOperationState : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.ImportApi.Models.Importoperations
         {
             return new[]
             {
-                Unresolved ,
-                ValidationFailed
-           };
+                 Unresolved ,
+                 ValidationFailed
+             };
         }
         static IImportOperationState FindEnum(string value)
         {

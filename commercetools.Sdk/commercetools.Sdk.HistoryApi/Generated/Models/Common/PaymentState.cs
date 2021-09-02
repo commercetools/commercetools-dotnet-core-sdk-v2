@@ -21,11 +21,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("Paid")]
         Paid
     }
+
     public class PaymentStateWrapper : IPaymentState
     {
         public string JsonName { get; internal set; }
         public PaymentState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IPaymentState), "FindEnum")]
     public interface IPaymentState : IJsonName
     {
@@ -50,12 +56,12 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                BalanceDue ,
-                Failed ,
-                Pending ,
-                CreditOwed ,
-                Paid
-           };
+                 BalanceDue ,
+                 Failed ,
+                 Pending ,
+                 CreditOwed ,
+                 Paid
+             };
         }
         static IPaymentState FindEnum(string value)
         {

@@ -9,11 +9,17 @@ namespace commercetools.Api.Models.ProductTypes
         [Description("None")]
         None
     }
+
     public class AttributeConstraintEnumDraftWrapper : IAttributeConstraintEnumDraft
     {
         public string JsonName { get; internal set; }
         public AttributeConstraintEnumDraft? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IAttributeConstraintEnumDraft), "FindEnum")]
     public interface IAttributeConstraintEnumDraft : IJsonName
     {
@@ -26,8 +32,8 @@ namespace commercetools.Api.Models.ProductTypes
         {
             return new[]
             {
-                None
-           };
+                 None
+             };
         }
         static IAttributeConstraintEnumDraft FindEnum(string value)
         {

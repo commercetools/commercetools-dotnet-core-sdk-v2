@@ -21,11 +21,17 @@ namespace commercetools.ImportApi.Models.Common
         [Description("Rejected")]
         Rejected
     }
+
     public class ProcessingStateWrapper : IProcessingState
     {
         public string JsonName { get; internal set; }
         public ProcessingState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IProcessingState), "FindEnum")]
     public interface IProcessingState : IJsonName
     {
@@ -50,12 +56,12 @@ namespace commercetools.ImportApi.Models.Common
         {
             return new[]
             {
-                ValidationFailed ,
-                Unresolved ,
-                WaitForMasterVariant ,
-                Imported ,
-                Rejected
-           };
+                 ValidationFailed ,
+                 Unresolved ,
+                 WaitForMasterVariant ,
+                 Imported ,
+                 Rejected
+             };
         }
         static IProcessingState FindEnum(string value)
         {

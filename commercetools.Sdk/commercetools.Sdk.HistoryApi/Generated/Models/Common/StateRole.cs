@@ -12,11 +12,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("Return")]
         Return
     }
+
     public class StateRoleWrapper : IStateRole
     {
         public string JsonName { get; internal set; }
         public StateRole? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IStateRole), "FindEnum")]
     public interface IStateRole : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                ReviewIncludedInStatistics ,
-                Return
-           };
+                 ReviewIncludedInStatistics ,
+                 Return
+             };
         }
         static IStateRole FindEnum(string value)
         {

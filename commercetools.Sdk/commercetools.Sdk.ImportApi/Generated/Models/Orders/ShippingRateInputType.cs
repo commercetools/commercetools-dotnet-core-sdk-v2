@@ -12,11 +12,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("Score")]
         Score
     }
+
     public class ShippingRateInputTypeWrapper : IShippingRateInputType
     {
         public string JsonName { get; internal set; }
         public ShippingRateInputType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IShippingRateInputType), "FindEnum")]
     public interface IShippingRateInputType : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                Classification ,
-                Score
-           };
+                 Classification ,
+                 Score
+             };
         }
         static IShippingRateInputType FindEnum(string value)
         {

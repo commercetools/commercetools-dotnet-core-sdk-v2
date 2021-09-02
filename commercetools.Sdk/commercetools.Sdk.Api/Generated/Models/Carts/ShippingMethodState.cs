@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Carts
         [Description("MatchesCart")]
         MatchesCart
     }
+
     public class ShippingMethodStateWrapper : IShippingMethodState
     {
         public string JsonName { get; internal set; }
         public ShippingMethodState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
     public interface IShippingMethodState : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                DoesNotMatchCart ,
-                MatchesCart
-           };
+                 DoesNotMatchCart ,
+                 MatchesCart
+             };
         }
         static IShippingMethodState FindEnum(string value)
         {

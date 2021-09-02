@@ -12,11 +12,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("UnitPriceLevel")]
         UnitPriceLevel
     }
+
     public class TaxCalculationModeWrapper : ITaxCalculationMode
     {
         public string JsonName { get; internal set; }
         public TaxCalculationMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITaxCalculationMode), "FindEnum")]
     public interface ITaxCalculationMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                LineItemLevel ,
-                UnitPriceLevel
-           };
+                 LineItemLevel ,
+                 UnitPriceLevel
+             };
         }
         static ITaxCalculationMode FindEnum(string value)
         {

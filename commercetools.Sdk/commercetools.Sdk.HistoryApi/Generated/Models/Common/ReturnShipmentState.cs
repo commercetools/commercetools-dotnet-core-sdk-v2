@@ -18,11 +18,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("Unusable")]
         Unusable
     }
+
     public class ReturnShipmentStateWrapper : IReturnShipmentState
     {
         public string JsonName { get; internal set; }
         public ReturnShipmentState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IReturnShipmentState), "FindEnum")]
     public interface IReturnShipmentState : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                Advised ,
-                Returned ,
-                BackInStock ,
-                Unusable
-           };
+                 Advised ,
+                 Returned ,
+                 BackInStock ,
+                 Unusable
+             };
         }
         static IReturnShipmentState FindEnum(string value)
         {

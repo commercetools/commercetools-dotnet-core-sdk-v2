@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Customers
         [Description("UseAsNewActiveCustomerCart")]
         UseAsNewActiveCustomerCart
     }
+
     public class AnonymousCartSignInModeWrapper : IAnonymousCartSignInMode
     {
         public string JsonName { get; internal set; }
         public AnonymousCartSignInMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IAnonymousCartSignInMode), "FindEnum")]
     public interface IAnonymousCartSignInMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Customers
         {
             return new[]
             {
-                MergeWithExistingCustomerCart ,
-                UseAsNewActiveCustomerCart
-           };
+                 MergeWithExistingCustomerCart ,
+                 UseAsNewActiveCustomerCart
+             };
         }
         static IAnonymousCartSignInMode FindEnum(string value)
         {

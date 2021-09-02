@@ -15,11 +15,17 @@ namespace commercetools.Api.Models.Carts
         [Description("None")]
         None
     }
+
     public class InventoryModeWrapper : IInventoryMode
     {
         public string JsonName { get; internal set; }
         public InventoryMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
     public interface IInventoryMode : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                TrackOnly ,
-                ReserveOnOrder ,
-                None
-           };
+                 TrackOnly ,
+                 ReserveOnOrder ,
+                 None
+             };
         }
         static IInventoryMode FindEnum(string value)
         {

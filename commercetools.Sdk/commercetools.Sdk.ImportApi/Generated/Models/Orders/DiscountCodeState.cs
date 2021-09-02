@@ -24,11 +24,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("ApplicationStoppedByPreviousDiscount")]
         ApplicationStoppedByPreviousDiscount
     }
+
     public class DiscountCodeStateWrapper : IDiscountCodeState
     {
         public string JsonName { get; internal set; }
         public DiscountCodeState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IDiscountCodeState), "FindEnum")]
     public interface IDiscountCodeState : IJsonName
     {
@@ -56,13 +62,13 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                NotActive ,
-                NotValid ,
-                DoesNotMatchCart ,
-                MatchesCart ,
-                MaxApplicationReached ,
-                ApplicationStoppedByPreviousDiscount
-           };
+                 NotActive ,
+                 NotValid ,
+                 DoesNotMatchCart ,
+                 MatchesCart ,
+                 MaxApplicationReached ,
+                 ApplicationStoppedByPreviousDiscount
+             };
         }
         static IDiscountCodeState FindEnum(string value)
         {

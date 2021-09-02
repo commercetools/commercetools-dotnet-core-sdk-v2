@@ -15,11 +15,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("HalfDown")]
         HalfDown
     }
+
     public class RoundingModeWrapper : IRoundingMode
     {
         public string JsonName { get; internal set; }
         public RoundingMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IRoundingMode), "FindEnum")]
     public interface IRoundingMode : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                HalfEven ,
-                HalfUp ,
-                HalfDown
-           };
+                 HalfEven ,
+                 HalfUp ,
+                 HalfDown
+             };
         }
         static IRoundingMode FindEnum(string value)
         {

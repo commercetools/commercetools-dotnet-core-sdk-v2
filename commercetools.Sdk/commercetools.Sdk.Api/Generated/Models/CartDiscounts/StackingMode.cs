@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.CartDiscounts
         [Description("StopAfterThisDiscount")]
         StopAfterThisDiscount
     }
+
     public class StackingModeWrapper : IStackingMode
     {
         public string JsonName { get; internal set; }
         public StackingMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IStackingMode), "FindEnum")]
     public interface IStackingMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.CartDiscounts
         {
             return new[]
             {
-                Stacking ,
-                StopAfterThisDiscount
-           };
+                 Stacking ,
+                 StopAfterThisDiscount
+             };
         }
         static IStackingMode FindEnum(string value)
         {

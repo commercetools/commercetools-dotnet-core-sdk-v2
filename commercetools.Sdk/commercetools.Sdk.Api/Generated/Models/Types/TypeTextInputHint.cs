@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Types
         [Description("MultiLine")]
         MultiLine
     }
+
     public class TypeTextInputHintWrapper : ITypeTextInputHint
     {
         public string JsonName { get; internal set; }
         public TypeTextInputHint? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITypeTextInputHint), "FindEnum")]
     public interface ITypeTextInputHint : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Types
         {
             return new[]
             {
-                SingleLine ,
-                MultiLine
-           };
+                 SingleLine ,
+                 MultiLine
+             };
         }
         static ITypeTextInputHint FindEnum(string value)
         {

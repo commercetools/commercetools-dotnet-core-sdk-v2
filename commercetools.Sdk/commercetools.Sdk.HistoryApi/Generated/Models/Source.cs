@@ -15,11 +15,17 @@ namespace commercetools.HistoryApi.Models
         [Description("ApiClient")]
         ApiClient
     }
+
     public class SourceWrapper : ISource
     {
         public string JsonName { get; internal set; }
         public Source? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ISource), "FindEnum")]
     public interface ISource : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.HistoryApi.Models
         {
             return new[]
             {
-                MerchantCenter ,
-                ImpEx ,
-                ApiClient
-           };
+                 MerchantCenter ,
+                 ImpEx ,
+                 ApiClient
+             };
         }
         static ISource FindEnum(string value)
         {

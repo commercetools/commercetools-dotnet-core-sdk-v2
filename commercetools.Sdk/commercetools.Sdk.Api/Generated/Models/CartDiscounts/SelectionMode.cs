@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.CartDiscounts
         [Description("MostExpensive")]
         MostExpensive
     }
+
     public class SelectionModeWrapper : ISelectionMode
     {
         public string JsonName { get; internal set; }
         public SelectionMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ISelectionMode), "FindEnum")]
     public interface ISelectionMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.CartDiscounts
         {
             return new[]
             {
-                Cheapest ,
-                MostExpensive
-           };
+                 Cheapest ,
+                 MostExpensive
+             };
         }
         static ISelectionMode FindEnum(string value)
         {

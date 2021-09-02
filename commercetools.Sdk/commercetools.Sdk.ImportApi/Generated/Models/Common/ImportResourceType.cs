@@ -39,11 +39,17 @@ namespace commercetools.ImportApi.Models.Common
         [Description("inventory")]
         Inventory
     }
+
     public class ImportResourceTypeWrapper : IImportResourceType
     {
         public string JsonName { get; internal set; }
         public ImportResourceType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IImportResourceType), "FindEnum")]
     public interface IImportResourceType : IJsonName
     {
@@ -86,18 +92,18 @@ namespace commercetools.ImportApi.Models.Common
         {
             return new[]
             {
-                Category ,
-                Order ,
-                OrderPatch ,
-                Price ,
-                Product ,
-                ProductDraft ,
-                ProductType ,
-                ProductVariant ,
-                ProductVariantPatch ,
-                Customer ,
-                Inventory
-           };
+                 Category ,
+                 Order ,
+                 OrderPatch ,
+                 Price ,
+                 Product ,
+                 ProductDraft ,
+                 ProductType ,
+                 ProductVariant ,
+                 ProductVariantPatch ,
+                 Customer ,
+                 Inventory
+             };
         }
         static IImportResourceType FindEnum(string value)
         {

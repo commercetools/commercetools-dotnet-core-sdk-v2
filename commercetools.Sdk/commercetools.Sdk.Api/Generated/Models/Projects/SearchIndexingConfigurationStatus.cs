@@ -15,11 +15,17 @@ namespace commercetools.Api.Models.Projects
         [Description("Indexing")]
         Indexing
     }
+
     public class SearchIndexingConfigurationStatusWrapper : ISearchIndexingConfigurationStatus
     {
         public string JsonName { get; internal set; }
         public SearchIndexingConfigurationStatus? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ISearchIndexingConfigurationStatus), "FindEnum")]
     public interface ISearchIndexingConfigurationStatus : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.Api.Models.Projects
         {
             return new[]
             {
-                Activated ,
-                Deactivated ,
-                Indexing
-           };
+                 Activated ,
+                 Deactivated ,
+                 Indexing
+             };
         }
         static ISearchIndexingConfigurationStatus FindEnum(string value)
         {

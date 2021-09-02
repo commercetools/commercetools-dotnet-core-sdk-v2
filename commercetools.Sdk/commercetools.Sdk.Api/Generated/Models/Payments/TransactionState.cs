@@ -18,11 +18,17 @@ namespace commercetools.Api.Models.Payments
         [Description("Failure")]
         Failure
     }
+
     public class TransactionStateWrapper : ITransactionState
     {
         public string JsonName { get; internal set; }
         public TransactionState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITransactionState), "FindEnum")]
     public interface ITransactionState : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.Api.Models.Payments
         {
             return new[]
             {
-                Initial ,
-                Pending ,
-                Success ,
-                Failure
-           };
+                 Initial ,
+                 Pending ,
+                 Success ,
+                 Failure
+             };
         }
         static ITransactionState FindEnum(string value)
         {

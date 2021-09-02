@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Carts
         [Description("GiftLineItem")]
         GiftLineItem
     }
+
     public class LineItemModeWrapper : ILineItemMode
     {
         public string JsonName { get; internal set; }
         public LineItemMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ILineItemMode), "FindEnum")]
     public interface ILineItemMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                Standard ,
-                GiftLineItem
-           };
+                 Standard ,
+                 GiftLineItem
+             };
         }
         static ILineItemMode FindEnum(string value)
         {
