@@ -15,11 +15,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("CartScore")]
         CartScore
     }
+
     public class ShippingRateTierTypeWrapper : IShippingRateTierType
     {
         public string JsonName { get; internal set; }
         public ShippingRateTierType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IShippingRateTierType), "FindEnum")]
     public interface IShippingRateTierType : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                CartValue ,
-                CartClassification ,
-                CartScore
-           };
+                 CartValue ,
+                 CartClassification ,
+                 CartScore
+             };
         }
         static IShippingRateTierType FindEnum(string value)
         {

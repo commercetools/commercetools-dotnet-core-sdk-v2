@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Carts
         [Description("Prices")]
         Prices
     }
+
     public class ProductPublishScopeWrapper : IProductPublishScope
     {
         public string JsonName { get; internal set; }
         public ProductPublishScope? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IProductPublishScope), "FindEnum")]
     public interface IProductPublishScope : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                All ,
-                Prices
-           };
+                 All ,
+                 Prices
+             };
         }
         static IProductPublishScope FindEnum(string value)
         {

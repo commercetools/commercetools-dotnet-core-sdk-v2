@@ -21,11 +21,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("Primary")]
         Primary
     }
+
     public class ChannelRoleWrapper : IChannelRole
     {
         public string JsonName { get; internal set; }
         public ChannelRole? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IChannelRole), "FindEnum")]
     public interface IChannelRole : IJsonName
     {
@@ -50,12 +56,12 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                InventorySupply ,
-                ProductDistribution ,
-                OrderExport ,
-                OrderImport ,
-                Primary
-           };
+                 InventorySupply ,
+                 ProductDistribution ,
+                 OrderExport ,
+                 OrderImport ,
+                 Primary
+             };
         }
         static IChannelRole FindEnum(string value)
         {

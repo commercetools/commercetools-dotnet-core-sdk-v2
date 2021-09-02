@@ -18,11 +18,17 @@ namespace commercetools.ImportApi.Models.Producttypes
         [Description("SameForAll")]
         SameForAll
     }
+
     public class AttributeConstraintEnumWrapper : IAttributeConstraintEnum
     {
         public string JsonName { get; internal set; }
         public AttributeConstraintEnum? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IAttributeConstraintEnum), "FindEnum")]
     public interface IAttributeConstraintEnum : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.ImportApi.Models.Producttypes
         {
             return new[]
             {
-                None ,
-                Unique ,
-                CombinationUnique ,
-                SameForAll
-           };
+                 None ,
+                 Unique ,
+                 CombinationUnique ,
+                 SameForAll
+             };
         }
         static IAttributeConstraintEnum FindEnum(string value)
         {

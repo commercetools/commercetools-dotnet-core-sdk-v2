@@ -12,11 +12,17 @@ namespace commercetools.MLApi.Models.Common
         [Description("SUCCESS")]
         Success
     }
+
     public class TaskStatusEnumWrapper : ITaskStatusEnum
     {
         public string JsonName { get; internal set; }
         public TaskStatusEnum? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITaskStatusEnum), "FindEnum")]
     public interface ITaskStatusEnum : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.MLApi.Models.Common
         {
             return new[]
             {
-                Pending ,
-                Success
-           };
+                 Pending ,
+                 Success
+             };
         }
         static ITaskStatusEnum FindEnum(string value)
         {

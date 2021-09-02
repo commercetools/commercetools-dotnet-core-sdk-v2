@@ -24,11 +24,17 @@ namespace commercetools.Api.Models.Carts
         [Description("NotValid")]
         NotValid
     }
+
     public class DiscountCodeStateWrapper : IDiscountCodeState
     {
         public string JsonName { get; internal set; }
         public DiscountCodeState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IDiscountCodeState), "FindEnum")]
     public interface IDiscountCodeState : IJsonName
     {
@@ -56,13 +62,13 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                NotActive ,
-                DoesNotMatchCart ,
-                MatchesCart ,
-                MaxApplicationReached ,
-                ApplicationStoppedByPreviousDiscount ,
-                NotValid
-           };
+                 NotActive ,
+                 DoesNotMatchCart ,
+                 MatchesCart ,
+                 MaxApplicationReached ,
+                 ApplicationStoppedByPreviousDiscount ,
+                 NotValid
+             };
         }
         static IDiscountCodeState FindEnum(string value)
         {

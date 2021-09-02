@@ -21,11 +21,17 @@ namespace commercetools.Api.Models.States
         [Description("PaymentState")]
         PaymentState
     }
+
     public class StateTypeEnumWrapper : IStateTypeEnum
     {
         public string JsonName { get; internal set; }
         public StateTypeEnum? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IStateTypeEnum), "FindEnum")]
     public interface IStateTypeEnum : IJsonName
     {
@@ -50,12 +56,12 @@ namespace commercetools.Api.Models.States
         {
             return new[]
             {
-                OrderState ,
-                LineItemState ,
-                ProductState ,
-                ReviewState ,
-                PaymentState
-           };
+                 OrderState ,
+                 LineItemState ,
+                 ProductState ,
+                 ReviewState ,
+                 PaymentState
+             };
         }
         static IStateTypeEnum FindEnum(string value)
         {

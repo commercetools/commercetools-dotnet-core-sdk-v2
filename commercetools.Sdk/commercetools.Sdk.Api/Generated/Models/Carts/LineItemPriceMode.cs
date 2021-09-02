@@ -15,11 +15,17 @@ namespace commercetools.Api.Models.Carts
         [Description("ExternalPrice")]
         ExternalPrice
     }
+
     public class LineItemPriceModeWrapper : ILineItemPriceMode
     {
         public string JsonName { get; internal set; }
         public LineItemPriceMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ILineItemPriceMode), "FindEnum")]
     public interface ILineItemPriceMode : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                Platform ,
-                ExternalTotal ,
-                ExternalPrice
-           };
+                 Platform ,
+                 ExternalTotal ,
+                 ExternalPrice
+             };
         }
         static ILineItemPriceMode FindEnum(string value)
         {

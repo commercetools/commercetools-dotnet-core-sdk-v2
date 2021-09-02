@@ -15,11 +15,17 @@ namespace commercetools.Api.Models.Carts
         [Description("Ordered")]
         Ordered
     }
+
     public class CartStateWrapper : ICartState
     {
         public string JsonName { get; internal set; }
         public CartState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ICartState), "FindEnum")]
     public interface ICartState : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
-                Active ,
-                Merged ,
-                Ordered
-           };
+                 Active ,
+                 Merged ,
+                 Ordered
+             };
         }
         static ICartState FindEnum(string value)
         {

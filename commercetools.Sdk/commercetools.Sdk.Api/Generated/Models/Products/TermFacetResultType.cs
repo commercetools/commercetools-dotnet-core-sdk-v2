@@ -24,11 +24,17 @@ namespace commercetools.Api.Models.Products
         [Description("number")]
         Number
     }
+
     public class TermFacetResultTypeWrapper : ITermFacetResultType
     {
         public string JsonName { get; internal set; }
         public TermFacetResultType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITermFacetResultType), "FindEnum")]
     public interface ITermFacetResultType : IJsonName
     {
@@ -56,13 +62,13 @@ namespace commercetools.Api.Models.Products
         {
             return new[]
             {
-                Text ,
-                Date ,
-                Time ,
-                Datetime ,
-                Boolean ,
-                Number
-           };
+                 Text ,
+                 Date ,
+                 Time ,
+                 Datetime ,
+                 Boolean ,
+                 Number
+             };
         }
         static ITermFacetResultType FindEnum(string value)
         {

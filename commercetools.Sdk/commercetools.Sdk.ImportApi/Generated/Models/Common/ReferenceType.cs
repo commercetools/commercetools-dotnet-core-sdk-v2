@@ -63,11 +63,17 @@ namespace commercetools.ImportApi.Models.Common
         [Description("type")]
         Type
     }
+
     public class ReferenceTypeWrapper : IReferenceType
     {
         public string JsonName { get; internal set; }
         public ReferenceType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IReferenceType), "FindEnum")]
     public interface IReferenceType : IJsonName
     {
@@ -134,26 +140,26 @@ namespace commercetools.ImportApi.Models.Common
         {
             return new[]
             {
-                Cart ,
-                CartDiscount ,
-                Category ,
-                Channel ,
-                Customer ,
-                CustomerGroup ,
-                DiscountCode ,
-                Order ,
-                Payment ,
-                Price ,
-                Product ,
-                ProductDiscount ,
-                ProductType ,
-                ProductVariant ,
-                ShippingMethod ,
-                State ,
-                Store ,
-                TaxCategory ,
-                Type
-           };
+                 Cart ,
+                 CartDiscount ,
+                 Category ,
+                 Channel ,
+                 Customer ,
+                 CustomerGroup ,
+                 DiscountCode ,
+                 Order ,
+                 Payment ,
+                 Price ,
+                 Product ,
+                 ProductDiscount ,
+                 ProductType ,
+                 ProductVariant ,
+                 ShippingMethod ,
+                 State ,
+                 Store ,
+                 TaxCategory ,
+                 Type
+             };
         }
         static IReferenceType FindEnum(string value)
         {

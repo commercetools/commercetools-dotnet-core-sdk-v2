@@ -21,11 +21,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("Chargeback")]
         Chargeback
     }
+
     public class TransactionTypeWrapper : ITransactionType
     {
         public string JsonName { get; internal set; }
         public TransactionType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ITransactionType), "FindEnum")]
     public interface ITransactionType : IJsonName
     {
@@ -50,12 +56,12 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                Authorization ,
-                CancelAuthorization ,
-                Charge ,
-                Refund ,
-                Chargeback
-           };
+                 Authorization ,
+                 CancelAuthorization ,
+                 Charge ,
+                 Refund ,
+                 Chargeback
+             };
         }
         static ITransactionType FindEnum(string value)
         {

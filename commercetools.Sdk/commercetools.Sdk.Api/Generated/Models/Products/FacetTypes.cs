@@ -15,11 +15,17 @@ namespace commercetools.Api.Models.Products
         [Description("filter")]
         Filter
     }
+
     public class FacetTypesWrapper : IFacetTypes
     {
         public string JsonName { get; internal set; }
         public FacetTypes? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IFacetTypes), "FindEnum")]
     public interface IFacetTypes : IJsonName
     {
@@ -38,10 +44,10 @@ namespace commercetools.Api.Models.Products
         {
             return new[]
             {
-                Terms ,
-                Range ,
-                Filter
-           };
+                 Terms ,
+                 Range ,
+                 Filter
+             };
         }
         static IFacetTypes FindEnum(string value)
         {

@@ -87,11 +87,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("zone")]
         Zone
     }
+
     public class ReferenceTypeIdWrapper : IReferenceTypeId
     {
         public string JsonName { get; internal set; }
         public ReferenceTypeId? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName
     {
@@ -182,34 +188,34 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                Cart ,
-                CartDiscount ,
-                Category ,
-                Channel ,
-                Customer ,
-                CustomerEmailToken ,
-                CustomerGroup ,
-                CustomerPasswordToken ,
-                DiscountCode ,
-                Extension ,
-                InventoryEntry ,
-                KeyValueDocument ,
-                Order ,
-                OrderEdit ,
-                Payment ,
-                Product ,
-                ProductDiscount ,
-                ProductType ,
-                Review ,
-                ShippingMethod ,
-                ShoppingList ,
-                State ,
-                Store ,
-                Subscription ,
-                TaxCategory ,
-                Type ,
-                Zone
-           };
+                 Cart ,
+                 CartDiscount ,
+                 Category ,
+                 Channel ,
+                 Customer ,
+                 CustomerEmailToken ,
+                 CustomerGroup ,
+                 CustomerPasswordToken ,
+                 DiscountCode ,
+                 Extension ,
+                 InventoryEntry ,
+                 KeyValueDocument ,
+                 Order ,
+                 OrderEdit ,
+                 Payment ,
+                 Product ,
+                 ProductDiscount ,
+                 ProductType ,
+                 Review ,
+                 ShippingMethod ,
+                 ShoppingList ,
+                 State ,
+                 Store ,
+                 Subscription ,
+                 TaxCategory ,
+                 Type ,
+                 Zone
+             };
         }
         static IReferenceTypeId FindEnum(string value)
         {

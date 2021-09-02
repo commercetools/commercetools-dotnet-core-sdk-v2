@@ -75,11 +75,17 @@ namespace commercetools.MLApi.Models.Common
         [Description("order-edit")]
         OrderEdit
     }
+
     public class ReferenceTypeIdWrapper : IReferenceTypeId
     {
         public string JsonName { get; internal set; }
         public ReferenceTypeId? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName
     {
@@ -158,30 +164,30 @@ namespace commercetools.MLApi.Models.Common
         {
             return new[]
             {
-                Cart ,
-                CartDiscount ,
-                Category ,
-                Channel ,
-                Customer ,
-                CustomerGroup ,
-                DiscountCode ,
-                KeyValueDocument ,
-                Payment ,
-                Product ,
-                ProductType ,
-                ProductDiscount ,
-                Order ,
-                Review ,
-                ShoppingList ,
-                ShippingMethod ,
-                State ,
-                Store ,
-                TaxCategory ,
-                Type ,
-                Zone ,
-                InventoryEntry ,
-                OrderEdit
-           };
+                 Cart ,
+                 CartDiscount ,
+                 Category ,
+                 Channel ,
+                 Customer ,
+                 CustomerGroup ,
+                 DiscountCode ,
+                 KeyValueDocument ,
+                 Payment ,
+                 Product ,
+                 ProductType ,
+                 ProductDiscount ,
+                 Order ,
+                 Review ,
+                 ShoppingList ,
+                 ShippingMethod ,
+                 State ,
+                 Store ,
+                 TaxCategory ,
+                 Type ,
+                 Zone ,
+                 InventoryEntry ,
+                 OrderEdit
+             };
         }
         static IReferenceTypeId FindEnum(string value)
         {

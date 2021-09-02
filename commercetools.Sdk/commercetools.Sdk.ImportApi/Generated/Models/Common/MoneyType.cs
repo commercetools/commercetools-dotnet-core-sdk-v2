@@ -12,11 +12,17 @@ namespace commercetools.ImportApi.Models.Common
         [Description("highPrecision")]
         HighPrecision
     }
+
     public class MoneyTypeWrapper : IMoneyType
     {
         public string JsonName { get; internal set; }
         public MoneyType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IMoneyType), "FindEnum")]
     public interface IMoneyType : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.ImportApi.Models.Common
         {
             return new[]
             {
-                CentPrecision ,
-                HighPrecision
-           };
+                 CentPrecision ,
+                 HighPrecision
+             };
         }
         static IMoneyType FindEnum(string value)
         {

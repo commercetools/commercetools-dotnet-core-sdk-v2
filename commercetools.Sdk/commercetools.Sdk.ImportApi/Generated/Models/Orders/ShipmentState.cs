@@ -24,11 +24,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("Backorder")]
         Backorder
     }
+
     public class ShipmentStateWrapper : IShipmentState
     {
         public string JsonName { get; internal set; }
         public ShipmentState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IShipmentState), "FindEnum")]
     public interface IShipmentState : IJsonName
     {
@@ -56,13 +62,13 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                Shipped ,
-                Ready ,
-                Pending ,
-                Delayed ,
-                Partial ,
-                Backorder
-           };
+                 Shipped ,
+                 Ready ,
+                 Pending ,
+                 Delayed ,
+                 Partial ,
+                 Backorder
+             };
         }
         static IShipmentState FindEnum(string value)
         {

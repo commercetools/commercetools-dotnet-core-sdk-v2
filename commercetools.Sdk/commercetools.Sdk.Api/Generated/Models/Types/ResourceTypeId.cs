@@ -69,11 +69,17 @@ namespace commercetools.Api.Models.Types
         [Description("store")]
         Store
     }
+
     public class ResourceTypeIdWrapper : IResourceTypeId
     {
         public string JsonName { get; internal set; }
         public ResourceTypeId? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IResourceTypeId), "FindEnum")]
     public interface IResourceTypeId : IJsonName
     {
@@ -146,28 +152,28 @@ namespace commercetools.Api.Models.Types
         {
             return new[]
             {
-                Address ,
-                Asset ,
-                Category ,
-                Channel ,
-                Customer ,
-                Order ,
-                OrderEdit ,
-                InventoryEntry ,
-                LineItem ,
-                CustomLineItem ,
-                ProductPrice ,
-                Payment ,
-                PaymentInterfaceInteraction ,
-                Review ,
-                ShippingMethod ,
-                ShoppingList ,
-                ShoppingListTextLineItem ,
-                DiscountCode ,
-                CartDiscount ,
-                CustomerGroup ,
-                Store
-           };
+                 Address ,
+                 Asset ,
+                 Category ,
+                 Channel ,
+                 Customer ,
+                 Order ,
+                 OrderEdit ,
+                 InventoryEntry ,
+                 LineItem ,
+                 CustomLineItem ,
+                 ProductPrice ,
+                 Payment ,
+                 PaymentInterfaceInteraction ,
+                 Review ,
+                 ShippingMethod ,
+                 ShoppingList ,
+                 ShoppingListTextLineItem ,
+                 DiscountCode ,
+                 CartDiscount ,
+                 CustomerGroup ,
+                 Store
+             };
         }
         static IResourceTypeId FindEnum(string value)
         {

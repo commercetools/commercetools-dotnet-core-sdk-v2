@@ -63,11 +63,17 @@ namespace commercetools.HistoryApi.Models
         [Description("zone")]
         Zone
     }
+
     public class ChangeHistoryResourceTypeWrapper : IChangeHistoryResourceType
     {
         public string JsonName { get; internal set; }
         public ChangeHistoryResourceType? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IChangeHistoryResourceType), "FindEnum")]
     public interface IChangeHistoryResourceType : IJsonName
     {
@@ -134,26 +140,26 @@ namespace commercetools.HistoryApi.Models
         {
             return new[]
             {
-                CartDiscount ,
-                Category ,
-                Channel ,
-                Customer ,
-                CustomerGroup ,
-                DiscountCode ,
-                InventoryEntry ,
-                Order ,
-                Payment ,
-                Product ,
-                ProductDiscount ,
-                ProductType ,
-                Review ,
-                ShoppingList ,
-                State ,
-                Store ,
-                TaxCategory ,
-                Type ,
-                Zone
-           };
+                 CartDiscount ,
+                 Category ,
+                 Channel ,
+                 Customer ,
+                 CustomerGroup ,
+                 DiscountCode ,
+                 InventoryEntry ,
+                 Order ,
+                 Payment ,
+                 Product ,
+                 ProductDiscount ,
+                 ProductType ,
+                 Review ,
+                 ShoppingList ,
+                 State ,
+                 Store ,
+                 TaxCategory ,
+                 Type ,
+                 Zone
+             };
         }
         static IChangeHistoryResourceType FindEnum(string value)
         {

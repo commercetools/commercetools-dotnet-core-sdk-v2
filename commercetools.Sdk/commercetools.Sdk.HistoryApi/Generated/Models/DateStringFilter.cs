@@ -9,11 +9,17 @@ namespace commercetools.HistoryApi.Models
         [Description("now")]
         Now
     }
+
     public class DateStringFilterWrapper : IDateStringFilter
     {
         public string JsonName { get; internal set; }
         public DateStringFilter? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IDateStringFilter), "FindEnum")]
     public interface IDateStringFilter : IJsonName
     {
@@ -26,8 +32,8 @@ namespace commercetools.HistoryApi.Models
         {
             return new[]
             {
-                Now
-           };
+                 Now
+             };
         }
         static IDateStringFilter FindEnum(string value)
         {

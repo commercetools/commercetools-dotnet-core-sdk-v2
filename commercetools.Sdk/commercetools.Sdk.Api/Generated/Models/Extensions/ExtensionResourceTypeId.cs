@@ -18,11 +18,17 @@ namespace commercetools.Api.Models.Extensions
         [Description("customer")]
         Customer
     }
+
     public class ExtensionResourceTypeIdWrapper : IExtensionResourceTypeId
     {
         public string JsonName { get; internal set; }
         public ExtensionResourceTypeId? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IExtensionResourceTypeId), "FindEnum")]
     public interface IExtensionResourceTypeId : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.Api.Models.Extensions
         {
             return new[]
             {
-                Cart ,
-                Order ,
-                Payment ,
-                Customer
-           };
+                 Cart ,
+                 Order ,
+                 Payment ,
+                 Customer
+             };
         }
         static IExtensionResourceTypeId FindEnum(string value)
         {

@@ -18,11 +18,17 @@ namespace commercetools.Api.Models.Orders
         [Description("Cancelled")]
         Cancelled
     }
+
     public class OrderStateWrapper : IOrderState
     {
         public string JsonName { get; internal set; }
         public OrderState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IOrderState), "FindEnum")]
     public interface IOrderState : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.Api.Models.Orders
         {
             return new[]
             {
-                Open ,
-                Confirmed ,
-                Complete ,
-                Cancelled
-           };
+                 Open ,
+                 Confirmed ,
+                 Complete ,
+                 Cancelled
+             };
         }
         static IOrderState FindEnum(string value)
         {

@@ -18,11 +18,17 @@ namespace commercetools.HistoryApi.Models.Common
         [Description("NotRefunded")]
         NotRefunded
     }
+
     public class ReturnPaymentStateWrapper : IReturnPaymentState
     {
         public string JsonName { get; internal set; }
         public ReturnPaymentState? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IReturnPaymentState), "FindEnum")]
     public interface IReturnPaymentState : IJsonName
     {
@@ -44,11 +50,11 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return new[]
             {
-                NonRefundable ,
-                Initial ,
-                Refunded ,
-                NotRefunded
-           };
+                 NonRefundable ,
+                 Initial ,
+                 Refunded ,
+                 NotRefunded
+             };
         }
         static IReturnPaymentState FindEnum(string value)
         {

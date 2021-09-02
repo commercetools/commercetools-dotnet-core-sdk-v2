@@ -12,11 +12,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("Merchant")]
         Merchant
     }
+
     public class CartOriginWrapper : ICartOrigin
     {
         public string JsonName { get; internal set; }
         public CartOrigin? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(ICartOrigin), "FindEnum")]
     public interface ICartOrigin : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                Customer ,
-                Merchant
-           };
+                 Customer ,
+                 Merchant
+             };
         }
         static ICartOrigin FindEnum(string value)
         {

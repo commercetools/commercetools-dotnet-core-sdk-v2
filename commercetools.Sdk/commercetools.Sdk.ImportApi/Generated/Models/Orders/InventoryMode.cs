@@ -12,11 +12,17 @@ namespace commercetools.ImportApi.Models.Orders
         [Description("ReserveOnOrder")]
         ReserveOnOrder
     }
+
     public class InventoryModeWrapper : IInventoryMode
     {
         public string JsonName { get; internal set; }
         public InventoryMode? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
     public interface IInventoryMode : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return new[]
             {
-                TrackOnly ,
-                ReserveOnOrder
-           };
+                 TrackOnly ,
+                 ReserveOnOrder
+             };
         }
         static IInventoryMode FindEnum(string value)
         {

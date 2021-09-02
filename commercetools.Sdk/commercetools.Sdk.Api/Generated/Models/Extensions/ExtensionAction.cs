@@ -12,11 +12,17 @@ namespace commercetools.Api.Models.Extensions
         [Description("Update")]
         Update
     }
+
     public class ExtensionActionWrapper : IExtensionAction
     {
         public string JsonName { get; internal set; }
         public ExtensionAction? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
     }
+
     [EnumInterfaceCreator(typeof(IExtensionAction), "FindEnum")]
     public interface IExtensionAction : IJsonName
     {
@@ -32,9 +38,9 @@ namespace commercetools.Api.Models.Extensions
         {
             return new[]
             {
-                Create ,
-                Update
-           };
+                 Create ,
+                 Update
+             };
         }
         static IExtensionAction FindEnum(string value)
         {
