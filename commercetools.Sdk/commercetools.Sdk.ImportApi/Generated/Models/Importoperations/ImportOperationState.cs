@@ -6,10 +6,10 @@ namespace commercetools.ImportApi.Models.Importoperations
 {
     public enum ImportOperationState
     {
-        [Description("Unresolved")]
-        Unresolved,
+        [Description("processing")]
+        Processing,
 
-        [Description("ValidationFailed")]
+        [Description("validationFailed")]
         ValidationFailed
     }
 
@@ -26,11 +26,11 @@ namespace commercetools.ImportApi.Models.Importoperations
     [EnumInterfaceCreator(typeof(IImportOperationState), "FindEnum")]
     public interface IImportOperationState : IJsonName
     {
-        public static IImportOperationState Unresolved = new ImportOperationStateWrapper
-        { Value = ImportOperationState.Unresolved, JsonName = "Unresolved" };
+        public static IImportOperationState Processing = new ImportOperationStateWrapper
+        { Value = ImportOperationState.Processing, JsonName = "processing" };
 
         public static IImportOperationState ValidationFailed = new ImportOperationStateWrapper
-        { Value = ImportOperationState.ValidationFailed, JsonName = "ValidationFailed" };
+        { Value = ImportOperationState.ValidationFailed, JsonName = "validationFailed" };
 
         ImportOperationState? Value { get; }
 
@@ -38,7 +38,7 @@ namespace commercetools.ImportApi.Models.Importoperations
         {
             return new[]
             {
-                 Unresolved ,
+                 Processing ,
                  ValidationFailed
              };
         }

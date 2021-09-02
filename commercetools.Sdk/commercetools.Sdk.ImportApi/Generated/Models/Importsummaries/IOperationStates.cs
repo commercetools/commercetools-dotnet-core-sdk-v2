@@ -10,6 +10,8 @@ namespace commercetools.ImportApi.Models.Importsummaries
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importsummaries.OperationStates))]
     public partial interface IOperationStates
     {
+        long Processing { get; set; }
+
         long ValidationFailed { get; set; }
 
         long Unresolved { get; set; }

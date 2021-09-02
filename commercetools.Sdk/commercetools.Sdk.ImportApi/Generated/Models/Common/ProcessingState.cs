@@ -6,19 +6,22 @@ namespace commercetools.ImportApi.Models.Common
 {
     public enum ProcessingState
     {
-        [Description("ValidationFailed")]
+        [Description("processing")]
+        Processing,
+
+        [Description("validationFailed")]
         ValidationFailed,
 
-        [Description("Unresolved")]
+        [Description("unresolved")]
         Unresolved,
 
-        [Description("WaitForMasterVariant")]
+        [Description("waitForMasterVariant")]
         WaitForMasterVariant,
 
-        [Description("Imported")]
+        [Description("imported")]
         Imported,
 
-        [Description("Rejected")]
+        [Description("rejected")]
         Rejected
     }
 
@@ -35,20 +38,23 @@ namespace commercetools.ImportApi.Models.Common
     [EnumInterfaceCreator(typeof(IProcessingState), "FindEnum")]
     public interface IProcessingState : IJsonName
     {
+        public static IProcessingState Processing = new ProcessingStateWrapper
+        { Value = ProcessingState.Processing, JsonName = "processing" };
+
         public static IProcessingState ValidationFailed = new ProcessingStateWrapper
-        { Value = ProcessingState.ValidationFailed, JsonName = "ValidationFailed" };
+        { Value = ProcessingState.ValidationFailed, JsonName = "validationFailed" };
 
         public static IProcessingState Unresolved = new ProcessingStateWrapper
-        { Value = ProcessingState.Unresolved, JsonName = "Unresolved" };
+        { Value = ProcessingState.Unresolved, JsonName = "unresolved" };
 
         public static IProcessingState WaitForMasterVariant = new ProcessingStateWrapper
-        { Value = ProcessingState.WaitForMasterVariant, JsonName = "WaitForMasterVariant" };
+        { Value = ProcessingState.WaitForMasterVariant, JsonName = "waitForMasterVariant" };
 
         public static IProcessingState Imported = new ProcessingStateWrapper
-        { Value = ProcessingState.Imported, JsonName = "Imported" };
+        { Value = ProcessingState.Imported, JsonName = "imported" };
 
         public static IProcessingState Rejected = new ProcessingStateWrapper
-        { Value = ProcessingState.Rejected, JsonName = "Rejected" };
+        { Value = ProcessingState.Rejected, JsonName = "rejected" };
 
         ProcessingState? Value { get; }
 
@@ -56,6 +62,7 @@ namespace commercetools.ImportApi.Models.Common
         {
             return new[]
             {
+                 Processing ,
                  ValidationFailed ,
                  Unresolved ,
                  WaitForMasterVariant ,
