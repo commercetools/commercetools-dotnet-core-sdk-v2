@@ -8,7 +8,7 @@ namespace commercetools.Base.Serialization
     public class BaseSerializerService : ISerializerService
     {
         protected readonly JsonSerializerOptions _serializerOptions;
-       
+
         public BaseSerializerService(
             ITypeRetriever typeRetriever)
         {
@@ -30,8 +30,8 @@ namespace commercetools.Base.Serialization
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
         }
-        
-        public object Deserialize(Type returnType,string input)
+
+        public object Deserialize(Type returnType, string input)
         {
             return JsonSerializer.Deserialize(input, returnType, _serializerOptions);
         }

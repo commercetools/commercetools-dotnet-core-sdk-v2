@@ -13,8 +13,8 @@ namespace commercetools.HistoryApi.Models.ChangeValues
     [SubTypeDiscriminator("external", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue))]
     [SubTypeDiscriminator("giftLineItem", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeValueGiftLineItemChangeValue))]
     [SubTypeDiscriminator("relative", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeValueRelativeChangeValue))]
-    public partial interface IChangeValueChangeValue 
+    public partial interface IChangeValueChangeValue
     {
-        string Type { get; set;}
+        string Type { get; set; }
     }
 }

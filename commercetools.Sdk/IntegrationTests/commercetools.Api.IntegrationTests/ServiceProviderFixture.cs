@@ -24,9 +24,9 @@ namespace commercetools.Api.IntegrationTests
                 Build();
 
             services.UseCommercetoolsApi(configuration, "Client");
-            services.AddLogging(c=> c.AddProvider(new InMemoryLoggerProvider()));
+            services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
             this.serviceProvider = services.BuildServiceProvider();
-            
+
             //set default ProjectKey
             var clientConfiguration = this.GetClientConfiguration("Client");
             GenericFixture.DefaultProjectKey = clientConfiguration.ProjectKey;

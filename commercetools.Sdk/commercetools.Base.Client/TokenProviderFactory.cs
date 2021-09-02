@@ -65,7 +65,7 @@ namespace commercetools.Base.Client
 
             return provider;
         }
-        
+
         private static string GetDefaultTokenEndpointUrl(IClientConfiguration configuration, TokenFlow tokenFlow)
         {
             var tokenUrl = "";

@@ -12,10 +12,10 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetItemShippingAddressCustomTypeAction))]
     public partial interface IOrderSetItemShippingAddressCustomTypeAction : IOrderUpdateAction
     {
-        string AddressKey { get; set;}
-        
-        ITypeResourceIdentifier Type { get; set;}
-        
-        IFieldContainer Fields { get; set;}
+        string AddressKey { get; set; }
+
+        ITypeResourceIdentifier Type { get; set; }
+
+        IFieldContainer Fields { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
         }
 
         public override List<SerializerType> SerializerTypes =>
-            new List<SerializerType>() {SerializerType.Deserialization, SerializerType.Serialization};
+            new List<SerializerType>() { SerializerType.Deserialization, SerializerType.Serialization };
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -33,7 +33,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
                 converter = Activator.CreateInstance(converterType) as JsonConverter;
                 _converters.TryAdd(objectType, converter);
             }
-            
+
             return converter?.ReadJson(reader, objectType, existingValue, serializer) ?? throw new JsonException($"Failed to instantiate converter for object type '{objectType.FullName}'");
         }
         public override bool CanConvert(Type typeToConvert)

@@ -10,10 +10,10 @@ namespace commercetools.Api.Models.ProductTypes
 {
     public partial class AttributeDateTimeType : IAttributeDateTimeType
     {
-        public string Name { get; set;}
+        public string Name { get; set; }
         public AttributeDateTimeType()
-        { 
-           this.Name = "datetime";
+        {
+            this.Name = "datetime";
         }
     }
 }

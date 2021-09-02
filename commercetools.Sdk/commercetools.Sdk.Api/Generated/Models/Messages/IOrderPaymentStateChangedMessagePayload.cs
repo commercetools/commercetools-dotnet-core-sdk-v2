@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderPaymentStateChangedMessagePayload))]
     public partial interface IOrderPaymentStateChangedMessagePayload : IMessagePayload
     {
-        IPaymentState PaymentState { get; set;}
-        
-        IPaymentState OldPaymentState { get; set;}
+        IPaymentState PaymentState { get; set; }
+
+        IPaymentState OldPaymentState { get; set; }
     }
 }

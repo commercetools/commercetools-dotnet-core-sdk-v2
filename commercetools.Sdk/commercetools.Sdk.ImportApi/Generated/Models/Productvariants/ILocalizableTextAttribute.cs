@@ -12,6 +12,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.LocalizableTextAttribute))]
     public partial interface ILocalizableTextAttribute : IAttribute
     {
-        ILocalizedString Value { get; set;}
+        ILocalizedString Value { get; set; }
     }
 }

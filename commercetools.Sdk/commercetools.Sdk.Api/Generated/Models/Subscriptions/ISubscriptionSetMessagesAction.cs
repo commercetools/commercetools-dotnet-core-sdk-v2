@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
     public partial interface ISubscriptionSetMessagesAction : ISubscriptionUpdateAction
     {
-        List<IMessageSubscription> Messages { get; set;}
+        List<IMessageSubscription> Messages { get; set; }
     }
 }

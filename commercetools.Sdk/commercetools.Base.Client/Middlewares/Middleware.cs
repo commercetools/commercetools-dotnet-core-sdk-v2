@@ -8,7 +8,7 @@ namespace commercetools.Base.Client.Middlewares
     {
         protected Middleware()
         {
-            
+
         }
 
         protected internal abstract Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken);

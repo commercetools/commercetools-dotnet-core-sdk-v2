@@ -23,17 +23,17 @@ namespace commercetools.Base.Client
                 // ignored
             }
 
-            var createdException = (int) response.StatusCode >= 500
+            var createdException = (int)response.StatusCode >= 500
                 ? CreateServerException(request, response, errorResponse)
                 : CreateClientException(request, response, errorResponse);
-            
+
             return createdException;
         }
 
-        
+
         private static ApiHttpException CreateServerException(HttpRequestMessage request, HttpResponseMessage response, Object errorResponse)
         {
-            var statusCode = (int) response.StatusCode;
+            var statusCode = (int)response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Server error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
             List<KeyValuePair<string, string>> t = new List<KeyValuePair<string, string>>();
@@ -60,7 +60,7 @@ namespace commercetools.Base.Client
 
         private static ApiHttpException CreateClientException(HttpRequestMessage request, HttpResponseMessage response, Object errorResponse)
         {
-            var statusCode = (int) response.StatusCode;
+            var statusCode = (int)response.StatusCode;
             var body = response.ExtractResponseBody();
             var message = $"Client error response {request.RequestUri} {statusCode} {response.ReasonPhrase}";
             var headers = new ApiHttpHeaders(response.Headers.SelectMany(pair => pair.Value.Select(v => new KeyValuePair<string, string>(pair.Key, v))).ToList());

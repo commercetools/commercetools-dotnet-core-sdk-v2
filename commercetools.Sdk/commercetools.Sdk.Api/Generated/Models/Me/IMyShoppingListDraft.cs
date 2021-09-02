@@ -12,20 +12,20 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListDraft))]
-    public partial interface IMyShoppingListDraft 
+    public partial interface IMyShoppingListDraft
     {
-        ILocalizedString Name { get; set;}
-        
-        ILocalizedString Description { get; set;}
-        
-        List<IShoppingListLineItemDraft> LineItems { get; set;}
-        
-        List<ITextLineItemDraft> TextLineItems { get; set;}
-        
-        ICustomFieldsDraft Custom { get; set;}
-        
-        long? DeleteDaysAfterLastModification { get; set;}
-        
-        IStoreResourceIdentifier Store { get; set;}
+        ILocalizedString Name { get; set; }
+
+        ILocalizedString Description { get; set; }
+
+        List<IShoppingListLineItemDraft> LineItems { get; set; }
+
+        List<ITextLineItemDraft> TextLineItems { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
+
+        long? DeleteDaysAfterLastModification { get; set; }
+
+        IStoreResourceIdentifier Store { get; set; }
     }
 }

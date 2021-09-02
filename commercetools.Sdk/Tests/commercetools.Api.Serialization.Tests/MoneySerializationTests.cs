@@ -28,7 +28,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<Money>(deserialized);
         }
 
-        
+
         [Fact]
         public void MoneyWithTypeDeserialization()
         {
@@ -70,7 +70,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal(4, highPrecisionMoney.FractionDigits);
         }
 
-        
+
         [Fact]
         public void HighPrecisionMoneySerialization()
         {
@@ -82,7 +82,7 @@ namespace commercetools.Api.Serialization.Tests
             JToken serializedFormatted = JValue.Parse(@"{""type"":""highPrecision"",""preciseAmount"":12345679,""currencyCode"":""EUR"",""centAmount"":123457,""fractionDigits"":4}");
             serializedFormatted.Should().BeEquivalentTo(resultFormatted);
         }
-        
+
 
         [Fact]
         public void CentPrecisionMoneyDraftSerialization()

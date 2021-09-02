@@ -5,9 +5,9 @@ using commercetools.Api.Client.RequestBuilders.Projects;
 namespace commercetools.Sdk.Api.Client
 {
     public class ApiFactory
-    { 
-       public static ApiRoot Create(
-            IClient client)
+    {
+        public static ApiRoot Create(
+             IClient client)
         {
             return new ApiRoot(client);
         }
@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Client
         {
             return new ApiRoot(client).WithProjectKey(projectKey);
         }
-        
+
         public static ByProjectKeyInStoreKeyByStoreKeyRequestBuilder CreateForStore(
             IClient client, string projectKey, string storeKey)
         {

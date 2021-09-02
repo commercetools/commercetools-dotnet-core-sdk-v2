@@ -32,7 +32,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(categorySlugChangedMessage);
             Assert.NotNull(categorySlugChangedMessage.Slug);
         }
-        
+
         [Fact]
         public void MessagesDeserializationOfDifferentTypes()
         {
@@ -77,7 +77,7 @@ namespace commercetools.Api.Serialization.Tests
             var generalMessage = messages[0];
             Assert.NotNull(generalMessage.Type);
         }
-        
+
         [Fact]
         public void DeserializationOfResourceCreatedDelivery()
         {
@@ -92,9 +92,9 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(customerCreatedPayload);
             Assert.NotNull(customerCreatedPayload.Resource);
             Assert.IsType<CustomerReference>(customerCreatedPayload.Resource);
-            Assert.Equal("e63d76ff-e203-42ba-af17-375040b8ecb6",customerCreatedPayload.Resource.Id);
+            Assert.Equal("e63d76ff-e203-42ba-af17-375040b8ecb6", customerCreatedPayload.Resource.Id);
         }
-        
+
         [Fact]
         public void DeserializationOfListOfSubscriptionDelivery()
         {
@@ -128,7 +128,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal(expectedCategoryId, categoryCreatedPayload.Resource.Id);
             var categoryCreatedMessage = serializerService.Deserialize<CategoryCreatedMessage>(serialized);
             Assert.NotNull(categoryCreatedMessage);
-            Assert.Equal(expectedCategoryId,categoryCreatedMessage.Category.Id);
+            Assert.Equal(expectedCategoryId, categoryCreatedMessage.Category.Id);
         }
 
         [Fact]
@@ -164,14 +164,14 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("new-type", changeSubscription2.ResourceTypeId);
         }
 
-        
+
         [Fact]
         public void DeserializeOfSubscriptions()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/Messages/Subscriptions.json");
             var subscriptions = serializerService.Deserialize<List<Subscription>>(serialized);
-            Assert.Equal(2,subscriptions.Count);
+            Assert.Equal(2, subscriptions.Count);
             Assert.IsType<SqsDestination>(subscriptions[0].Destination);
             Assert.IsType<SnsDestination>(subscriptions[1].Destination);
             var subscription1 = subscriptions[0];
@@ -187,7 +187,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Single(subscription1.Messages);
             Assert.Single(subscription2.Changes);
         }
-        
+
         [Fact]
         public void DeserializeMessagePayloads()
         {

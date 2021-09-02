@@ -33,7 +33,7 @@ namespace commercetools.Api.Models
                 string[] names = Enum.GetNames(typeofEnum);
                 foreach (string name in names)
                 {
-                    if (GetDescription((Enum) Enum.Parse(typeofEnum, name)).Equals(value))
+                    if (GetDescription((Enum)Enum.Parse(typeofEnum, name)).Equals(value))
                     {
                         return Enum.Parse(typeofEnum, name);
                     }
@@ -42,7 +42,7 @@ namespace commercetools.Api.Models
 
             throw new ArgumentException();
         }
-        
+
         public static T GetEnum<T>(this string value) where T : Enum
         {
             string[] names = Enum.GetNames(typeof(T));
@@ -56,7 +56,7 @@ namespace commercetools.Api.Models
 
             throw new ArgumentException($"Enum {typeof(T)} doesn't contains value {value}'");
         }
-        
+
         public static List<T> GetEnum<T>(this List<string> values) where T : Enum
         {
             var enumList = new List<T>();

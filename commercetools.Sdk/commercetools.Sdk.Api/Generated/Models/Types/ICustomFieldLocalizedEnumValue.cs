@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Types
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldLocalizedEnumValue))]
-    public partial interface ICustomFieldLocalizedEnumValue 
+    public partial interface ICustomFieldLocalizedEnumValue
     {
-        string Key { get; set;}
-        
-        ILocalizedString Label { get; set;}
+        string Key { get; set; }
+
+        ILocalizedString Label { get; set; }
     }
 }

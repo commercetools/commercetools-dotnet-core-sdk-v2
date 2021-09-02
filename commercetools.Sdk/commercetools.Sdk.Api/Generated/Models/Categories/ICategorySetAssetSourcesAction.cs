@@ -12,10 +12,10 @@ namespace commercetools.Api.Models.Categories
     [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetAssetSourcesAction))]
     public partial interface ICategorySetAssetSourcesAction : ICategoryUpdateAction
     {
-        string AssetId { get; set;}
-        
-        string AssetKey { get; set;}
-        
-        List<IAssetSource> Sources { get; set;}
+        string AssetId { get; set; }
+
+        string AssetKey { get; set; }
+
+        List<IAssetSource> Sources { get; set; }
     }
 }

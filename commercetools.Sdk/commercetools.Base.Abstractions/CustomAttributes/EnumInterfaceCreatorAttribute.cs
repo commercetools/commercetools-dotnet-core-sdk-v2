@@ -11,11 +11,11 @@ namespace commercetools.Base.CustomAttributes
             this.Type = type;
             this.Method = method;
         }
-        
+
         public Type Type { get; }
-        
-        public string Method { get ; }
-        
+
+        public string Method { get; }
+
         public Delegate Creator()
         {
             return Type.GetMethod(Method)?.CreateDelegate(typeof(Func<string, object>));

@@ -11,8 +11,8 @@ namespace commercetools.Api.IntegrationTests.Services
     public class ShoppingListServices
     {
         public const string ShoppingListKey = "ShoppingList_Me_Key123";
-        
-        public async Task<IShoppingList> GetShoppingListByKey(IClient adminClient,string key)
+
+        public async Task<IShoppingList> GetShoppingListByKey(IClient adminClient, string key)
         {
             try
             {
@@ -30,8 +30,8 @@ namespace commercetools.Api.IntegrationTests.Services
 
             return null;
         }
-        
-        public async Task<IShoppingList> CreateShoppingList(IClient adminClient,IShoppingListDraft shoppingListDraft)
+
+        public async Task<IShoppingList> CreateShoppingList(IClient adminClient, IShoppingListDraft shoppingListDraft)
         {
             var shoppingList = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
                 .ShoppingLists()
@@ -39,14 +39,14 @@ namespace commercetools.Api.IntegrationTests.Services
                 .ExecuteAsync();
             return shoppingList;
         }
-        
+
         public IShoppingListDraft CreateShoppingListDraft(ICustomerResourceIdentifier customerResourceIdentifier)
         {
             return new ShoppingListDraft()
             {
-               Key = ShoppingListKey,
-               Customer = customerResourceIdentifier,
-               Name = new LocalizedString
+                Key = ShoppingListKey,
+                Customer = customerResourceIdentifier,
+                Name = new LocalizedString
                {
                    {"en", ShoppingListKey}
                }

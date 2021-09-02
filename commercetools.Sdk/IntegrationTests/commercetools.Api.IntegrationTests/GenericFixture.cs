@@ -10,7 +10,7 @@ namespace commercetools.Api.IntegrationTests
     public static class GenericFixture
     {
         public static string DefaultProjectKey { get; set; }
-        
+
         public static async Task WithAsync<T, TDraft>(
             IClient client,
             TDraft draft,
@@ -18,7 +18,7 @@ namespace commercetools.Api.IntegrationTests
             Func<T, Task> func,
             Func<IClient, TDraft, Task<T>> createFunc,
             Func<IClient, T, Task> deleteFunc
-        ) 
+        )
         {
             var buildDraft = draftAction.Invoke(draft);
             var resource = await createFunc(client, buildDraft);
@@ -31,7 +31,7 @@ namespace commercetools.Api.IntegrationTests
                 await deleteFunc(client, resource);
             }
         }
-        
+
         public static async Task With<T, TDraft>(
             IClient client,
             TDraft draft,
@@ -54,7 +54,7 @@ namespace commercetools.Api.IntegrationTests
                 await deleteFunc(client, resource);
             }
         }
-        
+
         public static async Task WithListAsync<T, TDraft>(
             IClient client,
             TDraft draft,
@@ -81,11 +81,11 @@ namespace commercetools.Api.IntegrationTests
             {
                 foreach (var resource in resourcesList)
                 {
-                    await deleteFunc(client, resource);   
+                    await deleteFunc(client, resource);
                 }
             }
         }
-        
+
         public static async Task WithUpdateableAsync<T, TDraft>(
             IClient client,
             TDraft draft,
@@ -107,10 +107,10 @@ namespace commercetools.Api.IntegrationTests
             }
             finally
             {
-                await deleteFunc(client, updatedResource!=null ? updatedResource : resource);
+                await deleteFunc(client, updatedResource != null ? updatedResource : resource);
             }
         }
-        
+
         public static async Task AssertEventuallyAsync(Func<Task> runnableBlock, int maxWaitTimeSecond = 300,
             int waitBeforeRetryMilliseconds = 100)
         {
@@ -121,7 +121,7 @@ namespace commercetools.Api.IntegrationTests
 
         private static async Task AssertEventuallyAsync(TimeSpan maxWaitTime, TimeSpan waitBeforeRetry, Func<Task> runnableBlock)
         {
-            long timeOutAt = (int) DateTime.Now.TimeOfDay.TotalMilliseconds + (int) maxWaitTime.TotalMilliseconds;
+            long timeOutAt = (int)DateTime.Now.TimeOfDay.TotalMilliseconds + (int)maxWaitTime.TotalMilliseconds;
             while (true)
             {
                 try
@@ -132,7 +132,7 @@ namespace commercetools.Api.IntegrationTests
                 }
                 catch (Exception)
                 {
-                    if ((int) DateTime.Now.TimeOfDay.TotalMilliseconds > timeOutAt) //if it's timeout
+                    if ((int)DateTime.Now.TimeOfDay.TotalMilliseconds > timeOutAt) //if it's timeout
                     {
                         throw;
                     }
@@ -140,7 +140,7 @@ namespace commercetools.Api.IntegrationTests
 
                 try
                 {
-                    Task.Delay((int) waitBeforeRetry.TotalMilliseconds).Wait();
+                    Task.Delay((int)waitBeforeRetry.TotalMilliseconds).Wait();
                 }
                 catch (ThreadInterruptedException e)
                 {

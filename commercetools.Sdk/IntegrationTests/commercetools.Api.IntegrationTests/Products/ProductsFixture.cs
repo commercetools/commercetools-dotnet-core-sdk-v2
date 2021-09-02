@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests.Products
             };
             productDraft.Key = $"Key_{randomInt}";
             productDraft.Publish = true;
-            
+
             return productDraft;
         }
         public static ProductDraft DefaultProductDraftWithMultipleVariants(ProductDraft draft, int variantsCount = 1)
@@ -54,7 +54,7 @@ namespace commercetools.Api.IntegrationTests.Products
         }
 
         #endregion
-        
+
         #region CreateAndDelete
 
         public static async Task<IProduct> CreateProduct(IClient client, ProductDraft productDraft)
@@ -65,7 +65,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 .ExecuteAsync();
             return resource;
         }
-        
+
         public static async Task DeleteProduct(IClient client, IProduct product)
         {
             try
@@ -73,18 +73,18 @@ namespace commercetools.Api.IntegrationTests.Products
                 var version = product.Version;
                 if (product.MasterData.Published)
                 {
-                   var updatedProduct =  await client.WithApi().WithProjectKey(DefaultProjectKey)
-                        .Products()
-                        .WithId(product.Id)
-                        .Post(new ProductUpdate
-                        {
-                            Actions = new List<IProductUpdateAction>
-                            {
+                    var updatedProduct = await client.WithApi().WithProjectKey(DefaultProjectKey)
+                         .Products()
+                         .WithId(product.Id)
+                         .Post(new ProductUpdate
+                         {
+                             Actions = new List<IProductUpdateAction>
+                             {
                                 new ProductUnpublishAction()
-                            }
-                        })
-                        .ExecuteAsync();
-                   version = updatedProduct.Version;
+                             }
+                         })
+                         .ExecuteAsync();
+                    version = updatedProduct.Version;
                 }
                 await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .Products()
@@ -98,7 +98,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 // ignored
             }
         }
-        
+
         public static async Task<IProduct> CreateOrRetrieveProduct(IClient client, ProductDraft productDraft)
         {
             var projectKey = GenericFixture.DefaultProjectKey;
@@ -116,14 +116,14 @@ namespace commercetools.Api.IntegrationTests.Products
                 product = await client.WithApi()
                     .WithProjectKey(projectKey)
                     .Products()
-                    .Post(productDraft).ExecuteAsync();   
+                    .Post(productDraft).ExecuteAsync();
             }
 
             return product;
         }
         #endregion
-        
-        public static async Task WithProduct( IClient client, Func<IProduct, Task> func)
+
+        public static async Task WithProduct(IClient client, Func<IProduct, Task> func)
         {
             await WithProductType(client, async productType =>
             {
@@ -135,7 +135,7 @@ namespace commercetools.Api.IntegrationTests.Products
                     DefaultProductDraft, func, CreateProduct, DeleteProduct);
             });
         }
-        public static async Task WithProduct( IClient client, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task> func)
+        public static async Task WithProduct(IClient client, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task> func)
         {
             await WithProductType(client, async productType =>
             {
@@ -147,6 +147,6 @@ namespace commercetools.Api.IntegrationTests.Products
                 await WithAsync(client, productDraftWithProductType, draftAction, func, CreateProduct, DeleteProduct);
             });
         }
-        
+
     }
 }

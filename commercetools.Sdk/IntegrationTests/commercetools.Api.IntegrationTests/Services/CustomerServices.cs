@@ -12,7 +12,7 @@ namespace commercetools.Api.IntegrationTests.Services
         public const string CustomerEmail = "Customer_Me@gmail.com";
         public const string CustomerPassword = "password";
         public const string CustomerKey = "Customer_Me_Key123";
-        public async Task<ICustomer> GetCustomerByKey(IClient adminClient,string key)
+        public async Task<ICustomer> GetCustomerByKey(IClient adminClient, string key)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests.Services
 
             return null;
         }
-        public async Task<ICustomer> CreateCustomer(IClient adminClient,ICustomerDraft customerDraft)
+        public async Task<ICustomer> CreateCustomer(IClient adminClient, ICustomerDraft customerDraft)
         {
             var customerSignInResult = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
                 .Customers()

@@ -10,10 +10,10 @@ namespace commercetools.ImportApi.Models.Producttypes
 {
     public partial class AttributeTextType : IAttributeTextType
     {
-        public string Name { get; set;}
+        public string Name { get; set; }
         public AttributeTextType()
-        { 
-           this.Name = "text";
+        {
+            this.Name = "text";
         }
     }
 }

@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Channels
 {
     public partial class ChannelRemoveRolesAction : IChannelRemoveRolesAction
     {
-        public string Action { get; set;}
-        
-        public List<IChannelRoleEnum> Roles { get; set;}
+        public string Action { get; set; }
+
+        public List<IChannelRoleEnum> Roles { get; set; }
         public ChannelRemoveRolesAction()
-        { 
-           this.Action = "removeRoles";
+        {
+            this.Action = "removeRoles";
         }
     }
 }

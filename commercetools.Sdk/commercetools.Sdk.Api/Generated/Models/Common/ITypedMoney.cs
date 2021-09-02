@@ -12,14 +12,14 @@ namespace commercetools.Api.Models.Common
     [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Common.TypedMoney))]
     [SubTypeDiscriminator("centPrecision", typeof(commercetools.Api.Models.Common.CentPrecisionMoney))]
     [SubTypeDiscriminator("highPrecision", typeof(commercetools.Api.Models.Common.HighPrecisionMoney))]
-    public partial interface ITypedMoney 
+    public partial interface ITypedMoney
     {
-        IMoneyType Type { get; set;}
-        
-        int FractionDigits { get; set;}
-        
-        long CentAmount { get; set;}
-        
-        string CurrencyCode { get; set;}
+        IMoneyType Type { get; set; }
+
+        int FractionDigits { get; set; }
+
+        long CentAmount { get; set; }
+
+        string CurrencyCode { get; set; }
     }
 }

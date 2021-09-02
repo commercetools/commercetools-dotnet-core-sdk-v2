@@ -52,7 +52,7 @@ namespace commercetools.Api.IntegrationTests.Me
             Assert.NotNull(myProfile);
             Assert.Equal(CustomerServices.CustomerEmail, myProfile.Email);
         }
-        
+
         [Fact]
         public async Task GetMyShoppingLists()
         {
@@ -82,7 +82,7 @@ namespace commercetools.Api.IntegrationTests.Me
                 var customerDraft = _customerServices.CreateCustomerDraft();
                 _customer = await _customerServices.CreateCustomer(_adminClient, customerDraft);
             }
-            
+
             //Create a shoppingList for this customer (if not exists)
             IShoppingList shoppingList =
                 await _shoppingListServices.GetShoppingListByKey(_adminClient, ShoppingListServices.ShoppingListKey);
@@ -100,7 +100,7 @@ namespace commercetools.Api.IntegrationTests.Me
 
         private void CreateMeClient()
         {
-            var meClientConfig= _serviceProviderFixture.GetClientConfiguration("MeClient");
+            var meClientConfig = _serviceProviderFixture.GetClientConfiguration("MeClient");
             var httpClientFactory = _serviceProviderFixture.GetService<IHttpClientFactory>();
             var serializerService = _serviceProviderFixture.GetService<SerializerService>();
 

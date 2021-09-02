@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.ProductDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountReference))]
     public partial interface IProductDiscountReference : IReference
     {
-        IProductDiscount Obj { get; set;}
+        IProductDiscount Obj { get; set; }
     }
 }

@@ -15,28 +15,28 @@ namespace commercetools.Api.Models.Products
 {
     public partial class Product : IProduct
     {
-        public string Id { get; set;}
-        
-        public long Version { get; set;}
-        
-        public DateTime CreatedAt { get; set;}
-        
-        public DateTime LastModifiedAt { get; set;}
-        
-        public ILastModifiedBy LastModifiedBy { get; set;}
-        
-        public ICreatedBy CreatedBy { get; set;}
-        
-        public string Key { get; set;}
-        
-        public IProductTypeReference ProductType { get; set;}
-        
-        public IProductCatalogData MasterData { get; set;}
-        
-        public ITaxCategoryReference TaxCategory { get; set;}
-        
-        public IStateReference State { get; set;}
-        
-        public IReviewRatingStatistics ReviewRatingStatistics { get; set;}
+        public string Id { get; set; }
+
+        public long Version { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime LastModifiedAt { get; set; }
+
+        public ILastModifiedBy LastModifiedBy { get; set; }
+
+        public ICreatedBy CreatedBy { get; set; }
+
+        public string Key { get; set; }
+
+        public IProductTypeReference ProductType { get; set; }
+
+        public IProductCatalogData MasterData { get; set; }
+
+        public ITaxCategoryReference TaxCategory { get; set; }
+
+        public IStateReference State { get; set; }
+
+        public IReviewRatingStatistics ReviewRatingStatistics { get; set; }
     }
 }

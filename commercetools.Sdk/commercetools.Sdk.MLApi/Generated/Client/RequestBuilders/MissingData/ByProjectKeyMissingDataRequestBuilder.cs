@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text.Json;
 using commercetools.Base.Client;
@@ -6,33 +7,38 @@ using commercetools.MLApi.Client.RequestBuilders.MissingData;
 
 namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 {
-   
-   public class ByProjectKeyMissingDataRequestBuilder {
 
-       private IClient ApiHttpClient { get; }
-       
-       private ISerializerService SerializerService { get; }
-       
-       private string ProjectKey { get; }
-   
-       public ByProjectKeyMissingDataRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
-           this.ApiHttpClient = apiHttpClient;
-           this.SerializerService = serializerService;
-           this.ProjectKey = projectKey;
-       }
-   
-       
-       
-       public ByProjectKeyMissingDataAttributesRequestBuilder Attributes() {
-           return new ByProjectKeyMissingDataAttributesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-       }
-       
-       public ByProjectKeyMissingDataImagesRequestBuilder Images() {
-           return new ByProjectKeyMissingDataImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-       }
-       
-       public ByProjectKeyMissingDataPricesRequestBuilder Prices() {
-           return new ByProjectKeyMissingDataPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-       }
-   }
+    public class ByProjectKeyMissingDataRequestBuilder
+    {
+
+        private IClient ApiHttpClient { get; }
+
+        private ISerializerService SerializerService { get; }
+
+        private string ProjectKey { get; }
+
+        public ByProjectKeyMissingDataRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.SerializerService = serializerService;
+            this.ProjectKey = projectKey;
+        }
+
+
+
+        public ByProjectKeyMissingDataAttributesRequestBuilder Attributes()
+        {
+            return new ByProjectKeyMissingDataAttributesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMissingDataImagesRequestBuilder Images()
+        {
+            return new ByProjectKeyMissingDataImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMissingDataPricesRequestBuilder Prices()
+        {
+            return new ByProjectKeyMissingDataPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+    }
 }

@@ -11,16 +11,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetStateRolesChange : ISetStateRolesChange
     {
-        public string Type { get; set;}
-        
-        public string Change { get; set;}
-        
-        public List<IStateRole> PreviousValue { get; set;}
-        
-        public List<IStateRole> NextValue { get; set;}
+        public string Type { get; set; }
+
+        public string Change { get; set; }
+
+        public List<IStateRole> PreviousValue { get; set; }
+
+        public List<IStateRole> NextValue { get; set; }
         public SetStateRolesChange()
-        { 
-           this.Type = "SetStateRolesChange";
+        {
+            this.Type = "SetStateRolesChange";
         }
     }
 }

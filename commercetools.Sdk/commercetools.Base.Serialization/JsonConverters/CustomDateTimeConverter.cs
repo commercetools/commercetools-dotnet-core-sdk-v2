@@ -7,7 +7,7 @@ namespace commercetools.Base.Serialization.JsonConverters
     public class CustomDateTimeConverter : JsonConverter<DateTime>
     {
         private const string DefaultDateTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK";
-        
+
         public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             return DateTime.Parse(reader.GetString());

@@ -25,7 +25,7 @@ namespace commercetools.Base.Client
             IConfiguration configuration, IList<string> clients,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             if (clients.Count() == 1)
             {
@@ -39,7 +39,7 @@ namespace commercetools.Base.Client
             IConfiguration configuration, IList<string> clients,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
             foreach (string clientName in clients)
@@ -67,7 +67,7 @@ namespace commercetools.Base.Client
             IConfiguration configuration, string clientName,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);

@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentTransactionAddedMessage))]
     public partial interface IPaymentTransactionAddedMessage : IMessage
     {
-        ITransaction Transaction { get; set;}
+        ITransaction Transaction { get; set; }
     }
 }

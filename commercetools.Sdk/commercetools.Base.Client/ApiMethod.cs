@@ -25,16 +25,16 @@ namespace commercetools.Base.Client
         public T AddQueryParam(string key, string value)
         {
             if (string.IsNullOrEmpty(value))
-                return (T) this;
+                return (T)this;
             this.QueryParams.Add(
                 new KeyValuePair<string, string>(key, value));
-            return (T) this;
+            return (T)this;
         }
 
         public T WithQueryParam(List<KeyValuePair<string, string>> queryParams)
         {
             this.QueryParams = queryParams;
-            return (T) this;
+            return (T)this;
         }
 
         public List<string> GetQueryParam(string key)
@@ -47,13 +47,13 @@ namespace commercetools.Base.Client
         public T AddHeader(string key, string value)
         {
             this.Headers.AddHeader(key, value);
-            return (T) this;
+            return (T)this;
         }
 
         public T WithHeaders(ApiHttpHeaders headers)
         {
             this.Headers = headers;
-            return (T) this;
+            return (T)this;
         }
 
         public virtual HttpRequestMessage Build()

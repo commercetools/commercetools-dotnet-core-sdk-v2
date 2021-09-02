@@ -11,7 +11,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
     {
         private readonly PropertyInfo _discriminatorProperty;
         protected ConcurrentDictionary<string, Type> _subTypes;
-        
+
         public TypeDiscriminatorConverter()
         {
             var discriminatorAttribute = typeof(T).GetCustomAttribute<TypeDiscriminatorAttribute>();
@@ -22,7 +22,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
             if (this._discriminatorProperty == null)
                 throw new NullReferenceException(
                     $"Failed to find the specified discriminator property '{discriminatorAttribute.Property}' in type '{typeof(T).Name}'");
-            
+
             var subTypesAttrs = typeof(T).GetCustomAttributes<SubTypeDiscriminatorAttribute>();
             _subTypes = new ConcurrentDictionary<string, Type>();
             foreach (var attr in subTypesAttrs)
@@ -30,7 +30,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
                 _subTypes.TryAdd(attr.Value, attr.SubType);
             }
         }
-        
+
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             throw new NotImplementedException();

@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.Messages
 {
     public partial class PaymentCreatedMessagePayload : IPaymentCreatedMessagePayload
     {
-        public string Type { get; set;}
-        
-        public IPayment Payment { get; set;}
+        public string Type { get; set; }
+
+        public IPayment Payment { get; set; }
         public PaymentCreatedMessagePayload()
-        { 
-           this.Type = "PaymentCreated";
+        {
+            this.Type = "PaymentCreated";
         }
     }
 }

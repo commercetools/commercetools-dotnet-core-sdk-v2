@@ -28,9 +28,9 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             var jsonDocument = JsonDocument.ParseValue(ref reader);
 
             var enumerator = jsonDocument.RootElement.EnumerateObject();
-            
+
             var fieldContainer = new FieldContainer();
-            
+
             foreach (var jsonElement in enumerator)
             {
                 string key = jsonElement.Name;
@@ -38,7 +38,7 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                 Type returnType = this.mapperTypeRetriever.GetTypeForToken(value);
                 if (returnType != null)
                 {
-                    object o =  value.ToObject(returnType, serializerService);
+                    object o = value.ToObject(returnType, serializerService);
                     fieldContainer.Add(key, o);
                 }
                 else

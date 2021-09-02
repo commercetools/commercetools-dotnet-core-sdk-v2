@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.HistoryApi.Models.ChangeValues
 {
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.TextLineItemValue))]
-    public partial interface ITextLineItemValue 
+    public partial interface ITextLineItemValue
     {
-        string Id { get; set;}
-        
-        ILocalizedString Name { get; set;}
+        string Id { get; set; }
+
+        ILocalizedString Name { get; set; }
     }
 }

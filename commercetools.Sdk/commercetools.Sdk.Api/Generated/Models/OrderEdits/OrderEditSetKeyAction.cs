@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class OrderEditSetKeyAction : IOrderEditSetKeyAction
     {
-        public string Action { get; set;}
-        
-        public string Key { get; set;}
+        public string Action { get; set; }
+
+        public string Key { get; set; }
         public OrderEditSetKeyAction()
-        { 
-           this.Action = "setKey";
+        {
+            this.Action = "setKey";
         }
     }
 }

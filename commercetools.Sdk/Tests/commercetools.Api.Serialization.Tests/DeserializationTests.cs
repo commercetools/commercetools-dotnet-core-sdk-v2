@@ -31,7 +31,7 @@ namespace commercetools.Api.Serialization.Tests
         {
             this.serializationFixture = serializationFixture;
         }
-        
+
         [Fact]
         public void TestProjectDeserialization()
         {
@@ -47,7 +47,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(project.ShippingRateInputType);
             Assert.IsType<CartScoreType>(project.ShippingRateInputType);
         }
-        
+
         [Fact]
         public void DeserializeLocalizedString()
         {
@@ -67,7 +67,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("name-en", product.Name["en"]);
             Assert.Equal("name-en-us", product.Name["en-US"]);
         }
-        
+
         [Fact]
         public void DeserializeShippingMethod()
         {
@@ -85,7 +85,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(taxCategoryRef.TypeId.Value);
             Assert.Equal(ReferenceTypeId.TaxCategory, taxCategoryRef.TypeId.Value);
         }
-        
+
         [Fact]
         public void DeserializeShippingMethods()
         {
@@ -101,7 +101,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal(ReferenceTypeId.TaxCategory, shippingMethodsResult.Results[0].TaxCategory.TypeId.Value);
             Assert.Equal("3d018013-b53d-422a-933c-7294cf114323", shippingMethodsResult.Results[0].TaxCategory.Obj.Id);
         }
-        
+
         [Fact]
         public void DeserializeKnowEnum()
         {
@@ -114,10 +114,10 @@ namespace commercetools.Api.Serialization.Tests
             ";
 
             var state = serializerService.Deserialize<State>(serialized);
-            
+
             Assert.Equal(StateTypeEnum.OrderState, state.Type.Value);
         }
-        
+
         [Fact]
         public void DeserializeUnKnowEnum()
         {
@@ -134,17 +134,17 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("Unknown", state.Type.JsonName);
             Assert.Null(state.Type.Value);
         }
-        
+
         [Fact]
         public void DeserializeOrder()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string orderSerialized = File.ReadAllText("Resources/Orders/order.json");
-            
+
             var order = serializerService.Deserialize<Order>(orderSerialized);
             Assert.NotNull(order);
             Assert.NotNull(order.PaymentState.Value);
-            Assert.Equal(PaymentState.Pending,order.PaymentState.Value);
+            Assert.Equal(PaymentState.Pending, order.PaymentState.Value);
             Assert.Null(order.ShipmentState);
         }
 
@@ -201,13 +201,13 @@ namespace commercetools.Api.Serialization.Tests
 
             var productDraft = new ProductDraft
             {
-                Name = new LocalizedString() {{"en", "name"}},
-                Slug = new LocalizedString() {{"en", "slug"}},
+                Name = new LocalizedString() { { "en", "name" } },
+                Slug = new LocalizedString() { { "en", "slug" } },
                 ProductType = new ProductTypeResourceIdentifier
                 {
                     Key = "ProductTypeKey"
                 },
-                TaxCategory= new TaxCategoryResourceIdentifier
+                TaxCategory = new TaxCategoryResourceIdentifier
                 {
                     Key = "TaxCategoryKey"
                 },
@@ -243,12 +243,12 @@ namespace commercetools.Api.Serialization.Tests
                     {"en", "name"},
                     {"en-US", "name"}
                 },
-                Slug = new LocalizedString() {{"en", "slug"}},
+                Slug = new LocalizedString() { { "en", "slug" } },
                 ProductType = new ProductTypeResourceIdentifier()
                 {
                     Id = "ProductTypeId"
                 },
-                TaxCategory= new TaxCategoryResourceIdentifier()
+                TaxCategory = new TaxCategoryResourceIdentifier()
                 {
                     Id = "TaxCategoryId"
                 },
@@ -271,7 +271,7 @@ namespace commercetools.Api.Serialization.Tests
             JToken serializedFormatted = JValue.Parse(serialized);
             serializedFormatted.Should().BeEquivalentTo(resultFormatted);
         }
-        
+
         [Fact]
         public void DeserializeCustomField()
         {
@@ -291,8 +291,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("bar", customFields.Fields["foo"]);
             Assert.Equal("Bars", customFields.Fields["Foos"]);
         }
-        
-        
+
+
         [Fact]
         public void TestFacetResultsDeserialization()
         {
@@ -313,7 +313,7 @@ namespace commercetools.Api.Serialization.Tests
             var xxxlTerm = sizeFacetResults.Terms.FirstOrDefault();
             Assert.NotNull(xxxlTerm);
             Assert.Equal(1, xxxlTerm.Count);
-            Assert.Equal("XXXL",xxxlTerm.Term.ToString());
+            Assert.Equal("XXXL", xxxlTerm.Term.ToString());
 
         }
 
@@ -326,9 +326,9 @@ namespace commercetools.Api.Serialization.Tests
 
             //act
             var result = serializerService.Deserialize<GraphQLResponse>(response);
-            
+
             //assert
-            var typedResult = ((JsonElement) result.Data).ToObject<GraphResultData>(serializerService);
+            var typedResult = ((JsonElement)result.Data).ToObject<GraphResultData>(serializerService);
             var customersResult = typedResult.Customers;
             Assert.NotNull(customersResult);
             Assert.Equal(customersResult.Count, customersResult.Results.Count);

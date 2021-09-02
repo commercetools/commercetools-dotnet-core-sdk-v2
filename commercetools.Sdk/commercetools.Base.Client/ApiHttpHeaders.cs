@@ -26,7 +26,7 @@ namespace commercetools.Base.Client
             Headers = headers;
         }
 
-        public void AddHeader (string key, string value)
+        public void AddHeader(string key, string value)
         {
             this.Headers.Add(
                 new KeyValuePair<string, string>(key, value));

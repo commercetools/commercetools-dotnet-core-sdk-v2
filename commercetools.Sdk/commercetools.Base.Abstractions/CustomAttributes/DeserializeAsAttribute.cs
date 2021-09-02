@@ -10,7 +10,7 @@ namespace commercetools.Base.CustomAttributes
         {
             this.DeserializedType = deserializeType;
         }
-        
+
         public Type DeserializedType { get; }
 
     }

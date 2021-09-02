@@ -38,7 +38,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<ProductReference>(attributes.Get("reference"));
             Assert.IsAssignableFrom<ITypedMoney>(attributes.Get("money"));
             Assert.IsType<List<IAttribute>>(attributes.Get("nested"));
-            
+
             Assert.IsType<List<object>>(attributes.Get("set-empty"));
             Assert.IsType<List<string>>(attributes.Get("set-text"));
             Assert.IsType<List<LocalizedString>>(attributes.Get("set-ltext"));
@@ -54,7 +54,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<bool>>(attributes.Get("set-boolean"));
             Assert.IsType<List<List<IAttribute>>>(attributes.Get("set-nested"));
         }
-        
+
         [Fact]
         public void DecimalDeserialization()
         {
@@ -67,7 +67,7 @@ namespace commercetools.Api.Serialization.Tests
 
             Assert.Equal("{\"id\":0,\"attributes\":[{\"name\":\"t\",\"value\":13.0}]}", serializerService.Serialize(deserialized));
         }
-        
+
         [Fact]
         public void IntDeserialization()
         {

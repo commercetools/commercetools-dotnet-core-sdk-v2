@@ -15,7 +15,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             this.NamingPolicy = namingPolicy;
             this.JsonSerializerOptions = jsonSerializerOptions;
-            
+
             DiscriminatorAttribute = typeof(T).GetCustomAttribute<TypeDiscriminatorAttribute>();
             if (DiscriminatorAttribute == null)
                 throw new NullReferenceException($"Failed to find the required '{nameof(TypeDiscriminatorAttribute)}'");
@@ -24,7 +24,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             if (this.DiscriminatorProperty == null)
                 throw new NullReferenceException(
                     $"Failed to find the specified discriminator property '{DiscriminatorAttribute.Property}' in type '{typeof(T).Name}'");
-            
+
             var defaultTypeAttr = typeof(T).GetCustomAttribute<DefaultTypeDiscriminatorAttribute>();
             DefaultType = defaultTypeAttr?.DefaultType;
             var subTypesAttrs = typeof(T).GetCustomAttributes<SubTypeDiscriminatorAttribute>();
@@ -34,19 +34,19 @@ namespace commercetools.Base.Serialization.JsonConverters
                 SubTypes.Add(attr.Value, attr.SubType);
             }
         }
-        
+
         protected JsonNamingPolicy NamingPolicy { get; }
-        
+
         protected TypeDiscriminatorAttribute DiscriminatorAttribute { get; }
-        
+
         protected JsonSerializerOptions JsonSerializerOptions { get; }
-        
+
         protected PropertyInfo DiscriminatorProperty { get; }
-        
+
         protected Dictionary<string, Type> SubTypes { get; }
-        
+
         protected Type DefaultType { get; }
-        
+
         /// <inheritdoc/>
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
@@ -66,7 +66,7 @@ namespace commercetools.Base.Serialization.JsonConverters
                 if (DefaultType == null)
                 {
                     throw new JsonException(
-                        $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");    
+                        $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");
                 }
                 derivedType = DefaultType;
             }
@@ -78,7 +78,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         /// <inheritdoc/>
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, (object) value, options);
+            JsonSerializer.Serialize(writer, (object)value, options);
         }
     }
 }

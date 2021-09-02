@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.Me
 {
     public partial class MyCartRemovePaymentAction : IMyCartRemovePaymentAction
     {
-        public string Action { get; set;}
-        
-        public IPaymentResourceIdentifier Payment { get; set;}
+        public string Action { get; set; }
+
+        public IPaymentResourceIdentifier Payment { get; set; }
         public MyCartRemovePaymentAction()
-        { 
-           this.Action = "removePayment";
+        {
+            this.Action = "removePayment";
         }
     }
 }

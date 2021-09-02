@@ -7,16 +7,16 @@ namespace commercetools.Sdk.BCTest
     public class InMemoryLoggerProvider : ILoggerProvider
     {
         private readonly ConcurrentDictionary<string, ILogger> _loggers;
- 
+
         public InMemoryLoggerProvider()
         {
             _loggers = new ConcurrentDictionary<string, ILogger>();
         }
- 
+
         public void Dispose()
         {
         }
- 
+
         public ILogger CreateLogger(string categoryName)
         {
             return _loggers.GetOrAdd(categoryName, new InMemoryLogger());

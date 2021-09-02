@@ -19,7 +19,7 @@ namespace commercetools.Sdk.ImportApi
         public static IHttpClientBuilder UseCommercetoolsImportApi(this IServiceCollection services,
             IConfiguration configuration,
             string clientName = DefaultClientNames.ImportApi,
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
             var clients = new List<string>()
             {
@@ -30,11 +30,11 @@ namespace commercetools.Sdk.ImportApi
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsImportApi(this IServiceCollection services,
-            IConfiguration configuration, IList<string> clients, Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            IConfiguration configuration, IList<string> clients, Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             services.UseCommercetoolsImportApiSerialization();
-            return services.UseHttpApi(configuration, clients, 
-                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+            return services.UseHttpApi(configuration, clients,
+                serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(ErrorResponse),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }

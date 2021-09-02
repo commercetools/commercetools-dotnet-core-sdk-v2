@@ -6,7 +6,7 @@ namespace commercetools.Sdk.Api.Client
     public class ApiRoot
     {
         private IClient ApiHttpClient { get; }
-        
+
         public ApiRoot(IClient apiHttpClient)
         {
             this.ApiHttpClient = apiHttpClient;

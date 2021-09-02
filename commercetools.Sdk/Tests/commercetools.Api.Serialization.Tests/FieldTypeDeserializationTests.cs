@@ -27,7 +27,7 @@ namespace commercetools.Api.Serialization.Tests
             string serialized = File.ReadAllText("Resources/FieldTypes/String.json");
             var deserialized = serializerService.Deserialize<IType>(serialized);
             Assert.NotNull(deserialized.ResourceTypeIds);
-            Assert.Equal(2,deserialized.ResourceTypeIds.Count);
+            Assert.Equal(2, deserialized.ResourceTypeIds.Count);
             Assert.Equal(ResourceTypeId.Category, deserialized.ResourceTypeIds[0].Value);
             Assert.Equal(ResourceTypeId.CustomLineItem, deserialized.ResourceTypeIds[1].Value);
             Assert.IsType<CustomFieldStringType>(deserialized.FieldDefinitions[0].Type);
@@ -42,7 +42,7 @@ namespace commercetools.Api.Serialization.Tests
                 Key = "new-key",
                 ResourceTypeIds = new List<IResourceTypeId>
                 {
-                    IResourceTypeId.Category, 
+                    IResourceTypeId.Category,
                     IResourceTypeId.CustomLineItem
                 }
             };
@@ -70,7 +70,8 @@ namespace commercetools.Api.Serialization.Tests
         public void SerializeCustomField()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
-            var customFieldsDraft = new CustomFieldsDraft() {
+            var customFieldsDraft = new CustomFieldsDraft()
+            {
                 Fields = new FieldContainer
                 {
                     {"foo", "bar"},

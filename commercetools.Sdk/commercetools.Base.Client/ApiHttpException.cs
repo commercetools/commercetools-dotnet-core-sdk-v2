@@ -5,9 +5,9 @@ namespace commercetools.Base.Client
     public class ApiHttpException : Exception
     {
         public int StatusCode { get; set; }
-        
+
         public string Body { get; set; }
-        
+
         public Object ResponseBody { get; private set; }
 
         public ApiHttpHeaders Headers { get; set; }

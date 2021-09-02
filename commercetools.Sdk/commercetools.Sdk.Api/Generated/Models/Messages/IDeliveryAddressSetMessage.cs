@@ -12,10 +12,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.DeliveryAddressSetMessage))]
     public partial interface IDeliveryAddressSetMessage : IMessage
     {
-        string DeliveryId { get; set;}
-        
-        IAddress Address { get; set;}
-        
-        IAddress OldAddress { get; set;}
+        string DeliveryId { get; set; }
+
+        IAddress Address { get; set; }
+
+        IAddress OldAddress { get; set; }
     }
 }

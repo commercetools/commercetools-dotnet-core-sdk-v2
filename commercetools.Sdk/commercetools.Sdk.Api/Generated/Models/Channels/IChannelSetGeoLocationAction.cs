@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelSetGeoLocationAction))]
     public partial interface IChannelSetGeoLocationAction : IChannelUpdateAction
     {
-        IGeoJson GeoLocation { get; set;}
+        IGeoJson GeoLocation { get; set; }
     }
 }

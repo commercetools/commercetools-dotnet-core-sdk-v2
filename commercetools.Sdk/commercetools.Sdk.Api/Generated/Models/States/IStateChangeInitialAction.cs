@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.States
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateChangeInitialAction))]
     public partial interface IStateChangeInitialAction : IStateUpdateAction
     {
-        bool Initial { get; set;}
+        bool Initial { get; set; }
     }
 }

@@ -32,16 +32,16 @@ namespace commercetools.Api.IntegrationTests.Errors
             await WithUpdateableCategory(_client, async category =>
             {
                 Assert.NotNull(category);
-                
+
                 var name = TestingUtility.RandomString();
                 var action = new CategoryChangeNameAction
                 {
-                    Name = new LocalizedString {{"en", name}}
+                    Name = new LocalizedString { { "en", name } }
                 };
                 var update = new CategoryUpdate
                 {
                     Version = category.Version,
-                    Actions = new List<ICategoryUpdateAction> {action}
+                    Actions = new List<ICategoryUpdateAction> { action }
                 };
 
                 var updatedCategory = await _client.WithApi(_projectKey)
@@ -49,7 +49,7 @@ namespace commercetools.Api.IntegrationTests.Errors
                     .WithKey(category.Key)
                     .Post(update)
                     .ExecuteAsync();
-                    
+
 
                 Assert.Equal(name, updatedCategory.Name["en"]);
 
@@ -69,7 +69,7 @@ namespace commercetools.Api.IntegrationTests.Errors
                     Assert.Single(errorResponse.Errors);
                     var error = errorResponse.Errors.FirstOrDefault() as ConcurrentModificationError;
                     Assert.NotNull(error);
-                    Assert.Equal(2,error.CurrentVersion);
+                    Assert.Equal(2, error.CurrentVersion);
                 }
                 return updatedCategory;
             });

@@ -10,12 +10,12 @@ namespace commercetools.ImportApi.Models.Common
 {
     public partial class StoreKeyReference : IStoreKeyReference
     {
-        public string Key { get; set;}
-        
-        public IReferenceType TypeId { get; set;}
+        public string Key { get; set; }
+
+        public IReferenceType TypeId { get; set; }
         public StoreKeyReference()
-        { 
-           this.TypeId = IReferenceType.FindEnum("store");
+        {
+            this.TypeId = IReferenceType.FindEnum("store");
         }
     }
 }

@@ -11,18 +11,18 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetOrderTaxedPriceChange : ISetOrderTaxedPriceChange
     {
-        public string Type { get; set;}
-        
-        public string Change { get; set;}
-        
-        public ITaxMode TaxMode { get; set;}
-        
-        public ITaxedItemPrice NextValue { get; set;}
-        
-        public ITaxedItemPrice PreviousValue { get; set;}
+        public string Type { get; set; }
+
+        public string Change { get; set; }
+
+        public ITaxMode TaxMode { get; set; }
+
+        public ITaxedItemPrice NextValue { get; set; }
+
+        public ITaxedItemPrice PreviousValue { get; set; }
         public SetOrderTaxedPriceChange()
-        { 
-           this.Type = "SetOrderTaxedPriceChange";
+        {
+            this.Type = "SetOrderTaxedPriceChange";
         }
     }
 }

@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetDeliveryAddressAction))]
     public partial interface IOrderSetDeliveryAddressAction : IOrderUpdateAction
     {
-        string DeliveryId { get; set;}
-        
-        IBaseAddress Address { get; set;}
+        string DeliveryId { get; set; }
+
+        IBaseAddress Address { get; set; }
     }
 }

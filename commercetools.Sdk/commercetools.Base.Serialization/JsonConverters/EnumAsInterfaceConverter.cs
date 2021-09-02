@@ -11,10 +11,10 @@ namespace commercetools.Base.Serialization.JsonConverters
         : JsonConverter<T>
     {
         protected JsonNamingPolicy NamingPolicy { get; }
-        
+
         protected JsonSerializerOptions JsonSerializerOptions { get; }
-        
-        
+
+
         public EnumAsInterfaceConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions)
         {
             this.NamingPolicy = namingPolicy;
@@ -29,7 +29,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             var attrDelegate = attr.Creator();
             return (T)attrDelegate.DynamicInvoke(reader.GetString());
         }
-        
+
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
             if (value is IJsonName withJsonName)

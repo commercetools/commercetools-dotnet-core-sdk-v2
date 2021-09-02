@@ -11,10 +11,10 @@ namespace commercetools.ImportApi.Models.Errors
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.InvalidFieldError))]
     public partial interface IInvalidFieldError : IErrorObject
     {
-        string Field { get; set;}
-        
-        Object InvalidValue { get; set;}
-        
-        List<Object> AllowedValues { get; set;}
+        string Field { get; set; }
+
+        Object InvalidValue { get; set; }
+
+        List<Object> AllowedValues { get; set; }
     }
 }

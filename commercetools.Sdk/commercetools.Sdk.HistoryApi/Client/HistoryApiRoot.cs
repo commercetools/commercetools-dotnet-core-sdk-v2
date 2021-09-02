@@ -6,7 +6,7 @@ namespace commercetools.Sdk.HistoryApi.Client
     public class HistoryApiRoot
     {
         private IClient ApiHttpClient { get; }
-        
+
         public HistoryApiRoot(IClient apiHttpClient)
         {
             this.ApiHttpClient = apiHttpClient;

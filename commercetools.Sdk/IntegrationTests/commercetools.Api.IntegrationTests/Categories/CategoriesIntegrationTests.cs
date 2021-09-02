@@ -51,7 +51,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .WithId(category.Id)
                         .Get()
                         .ExecuteAsync();
-                    
+
                     Assert.NotNull(retrievedCategory);
                     Assert.Equal(key, retrievedCategory.Key);
                 });
@@ -71,12 +71,12 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .WithKey(category.Key)
                         .Get()
                         .ExecuteAsync();
-                    
+
                     Assert.NotNull(retrievedCategory);
                     Assert.Equal(key, retrievedCategory.Key);
                 });
         }
-        
+
         [Fact]
         public async Task QueryCategories()
         {
@@ -95,7 +95,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     Assert.Equal(key, returnedSet.Results[0].Key);
                 });
         }
-        
+
         [Fact]
         public async Task QueryCategoryByParentAndExpandIt()
         {
@@ -106,14 +106,14 @@ namespace commercetools.Api.IntegrationTests.Categories
                     async category =>
                     {
                         Assert.NotNull(category);
-                        
+
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
                             .WithWhere($"key = \"{category.Key}\"")
                             .WithExpand("parent")
                             .ExecuteAsync();
-                        
+
                         Assert.Single(returnedSet.Results);
                         var retrievedCategory = returnedSet.Results[0];
                         Assert.Equal(category.Key, retrievedCategory.Key);
@@ -125,7 +125,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     });
             });
         }
-        
+
         [Fact]
         public async Task QueryCategoriesByParentAndSort()
         {
@@ -139,7 +139,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         Assert.Equal(count, categoriesList.Count);
                         var orderedCategoriesNames =
                             categoriesList.OrderBy(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
-                        
+
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
@@ -147,7 +147,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                             .WithExpand("parent")
                             .WithSort("name.en asc")
                             .ExecuteAsync();
-                        
+
                         var categoriesResult = returnedSet.Results;
                         Assert.Equal(count, categoriesResult.Count);
                         Assert.NotNull(categoriesList[0].Parent);
@@ -157,7 +157,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     });
             });
         }
-        
+
         [Fact]
         public async Task QueryCategoriesByParentAndSortDescending()
         {
@@ -171,7 +171,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         Assert.Equal(count, categoriesList.Count);
                         var orderedCategoriesNames =
                             categoriesList.OrderByDescending(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
-                        
+
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
@@ -179,7 +179,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                             .WithExpand("parent")
                             .WithSort("name.en desc")
                             .ExecuteAsync();
-                        
+
                         var categoriesResult = returnedSet.Results;
                         Assert.Equal(count, categoriesResult.Count);
                         Assert.NotNull(categoriesList[0].Parent);
@@ -189,7 +189,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     });
             });
         }
-        
+
         [Fact]
         public async Task QueryCategoriesByParentAndLimit()
         {
@@ -225,7 +225,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     });
             });
         }
-        
+
         [Fact]
         public async Task DeleteCategoryById()
         {
@@ -247,7 +247,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         () => _client.WithApi().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
-        
+
         [Fact]
         public async Task DeleteCategoryByKey()
         {
@@ -264,12 +264,12 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .Delete()
                         .WithVersion(category.Version)
                         .ExecuteAsync();
-                    
+
                     await Assert.ThrowsAsync<NotFoundException>(
                         () => _client.WithApi().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
-        
+
         [Fact]
         public async Task ValidateMemoryLogging()
         {
@@ -284,14 +284,14 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .WithId(category.Id)
                         .Get()
                         .ExecuteAsync();
-                    
+
                     Assert.NotNull(retrievedCategory);
-                    
+
                     var log = InMemoryLogger.GetLogMessages();
                     Assert.NotEmpty(log);
                 });
         }
-        
+
         #region UpdateActions
 
         [Fact]
@@ -300,16 +300,16 @@ namespace commercetools.Api.IntegrationTests.Categories
             await WithUpdateableCategory(_client, async category =>
             {
                 Assert.NotNull(category);
-                
+
                 var name = TestingUtility.RandomString();
                 var action = new CategoryChangeNameAction
                 {
-                    Name = new LocalizedString {{"en", name}}
+                    Name = new LocalizedString { { "en", name } }
                 };
                 var update = new CategoryUpdate
                 {
                     Version = category.Version,
-                    Actions = new List<ICategoryUpdateAction> {action}
+                    Actions = new List<ICategoryUpdateAction> { action }
                 };
 
                 var updatedCategory = await _client.WithApi().WithProjectKey(_projectKey)
@@ -317,7 +317,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     .WithKey(category.Key)
                     .Post(update)
                     .ExecuteAsync();
-                    
+
 
                 Assert.Equal(name, updatedCategory.Name["en"]);
                 return updatedCategory;

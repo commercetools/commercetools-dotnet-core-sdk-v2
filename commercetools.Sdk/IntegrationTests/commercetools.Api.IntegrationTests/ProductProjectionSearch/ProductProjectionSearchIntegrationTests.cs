@@ -17,7 +17,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
         public const string KeyPrefix = "EntityForSearch";
         public readonly string KeyProductType = $"{KeyPrefix}_ProductType";
         public readonly string KeyLocalizedProduct = $"{KeyPrefix}_localizedProduct";
-        
+
         private readonly IClient _client;
         private readonly string _projectKey;
 
@@ -38,7 +38,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                 Name = "SearchProductType",
                 Description = "SearchProductType"
             });
-            var localizedName = new LocalizedString() {{"en", "apricot"}, {"de", "Aprikose"}};
+            var localizedName = new LocalizedString() { { "en", "apricot" }, { "de", "Aprikose" } };
             var productDraft = new ProductDraft
             {
                 Key = KeyLocalizedProduct,
@@ -65,13 +65,13 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                     .AddQueryParam("text.de", localizedName["de"])
                     .WithFilter($"key:\"{KeyLocalizedProduct}\"")
                     .ExecuteAsync();
-            
+
                 //Assert
                 Assert.NotNull(searchResult);
                 Assert.Single(searchResult.Results);
                 Assert.Equal(product.Id, searchResult.Results[0].Id);
                 Assert.Equal(localizedName["en"], searchResult.Results[0].Name["en"]);
- 
+
             });
         }
     }

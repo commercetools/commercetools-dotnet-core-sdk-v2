@@ -10,14 +10,14 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetReturnPaymentStateAction : IStagedOrderSetReturnPaymentStateAction
     {
-        public string Action { get; set;}
-        
-        public string ReturnItemId { get; set;}
-        
-        public IReturnPaymentState PaymentState { get; set;}
+        public string Action { get; set; }
+
+        public string ReturnItemId { get; set; }
+
+        public IReturnPaymentState PaymentState { get; set; }
         public StagedOrderSetReturnPaymentStateAction()
-        { 
-           this.Action = "setReturnPaymentState";
+        {
+            this.Action = "setReturnPaymentState";
         }
     }
 }

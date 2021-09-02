@@ -17,7 +17,7 @@ namespace commercetools.Api.IntegrationTests.Payments
         {
             this._client = serviceProviderFixture.GetService<IClient>();
         }
-        
+
         [Fact]
         public async Task CreatePayment()
         {

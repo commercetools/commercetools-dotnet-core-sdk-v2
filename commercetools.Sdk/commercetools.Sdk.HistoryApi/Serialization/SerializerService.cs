@@ -8,7 +8,7 @@ namespace commercetools.Sdk.HistoryApi.Serialization
     public class SerializerService : ISerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
-       
+
         public SerializerService()
         {
             _serializerOptions = new JsonSerializerOptions
@@ -29,8 +29,8 @@ namespace commercetools.Sdk.HistoryApi.Serialization
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
         }
-        
-        public object Deserialize(Type returnType,string input)
+
+        public object Deserialize(Type returnType, string input)
         {
             return JsonSerializer.Deserialize(input, returnType, _serializerOptions);
         }

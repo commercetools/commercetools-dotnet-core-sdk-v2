@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.OrderEdits
     [SubTypeDiscriminator("NotProcessed", typeof(commercetools.Api.Models.OrderEdits.OrderEditNotProcessed))]
     [SubTypeDiscriminator("PreviewFailure", typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewFailure))]
     [SubTypeDiscriminator("PreviewSuccess", typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
-    public partial interface IOrderEditResult 
+    public partial interface IOrderEditResult
     {
-        string Type { get; set;}
+        string Type { get; set; }
     }
 }

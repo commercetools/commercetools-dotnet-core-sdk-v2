@@ -10,7 +10,7 @@ namespace commercetools.Api.IntegrationTests
         private static readonly Random Random = new Random();
 
         #endregion
-        
+
         #region Functions
         public static int RandomInt(int? min = null, int? max = null)
         {

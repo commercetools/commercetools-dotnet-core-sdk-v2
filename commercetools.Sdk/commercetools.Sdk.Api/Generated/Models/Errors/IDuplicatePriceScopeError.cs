@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicatePriceScopeError))]
     public partial interface IDuplicatePriceScopeError : IErrorObject
     {
-        List<IPrice> ConflictingPrices { get; set;}
+        List<IPrice> ConflictingPrices { get; set; }
     }
 }

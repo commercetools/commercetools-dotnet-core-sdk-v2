@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.CartDiscounts
 {
     public partial class CartDiscountChangeSortOrderAction : ICartDiscountChangeSortOrderAction
     {
-        public string Action { get; set;}
-        
-        public string SortOrder { get; set;}
+        public string Action { get; set; }
+
+        public string SortOrder { get; set; }
         public CartDiscountChangeSortOrderAction()
-        { 
-           this.Action = "changeSortOrder";
+        {
+            this.Action = "changeSortOrder";
         }
     }
 }

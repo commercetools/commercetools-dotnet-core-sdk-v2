@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text.Json;
 using commercetools.Base.Client;
@@ -6,31 +7,35 @@ using commercetools.HistoryApi.Client.RequestBuilders.ResourceType;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
 {
-   
-   public class ByProjectKeyByResourceTypeRequestBuilder {
 
-       private IClient ApiHttpClient { get; }
-       
-       private ISerializerService SerializerService { get; }
-       
-       private string ProjectKey { get; }
-       
-       private string ResourceType { get; }
-   
-       public ByProjectKeyByResourceTypeRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey, string resourceType) {
-           this.ApiHttpClient = apiHttpClient;
-           this.SerializerService = serializerService;
-           this.ProjectKey = projectKey;
-           this.ResourceType = resourceType;
-       }
-   
-       public ByProjectKeyByResourceTypeGet Get() {
-           return new ByProjectKeyByResourceTypeGet(ApiHttpClient, ProjectKey, ResourceType);
-       }
-       
-       
-       public ByProjectKeyByResourceTypeByIDRequestBuilder WithIDValue(string ID) {
-           return new ByProjectKeyByResourceTypeByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ResourceType, ID);
-       }
-   }
+    public class ByProjectKeyByResourceTypeRequestBuilder
+    {
+
+        private IClient ApiHttpClient { get; }
+
+        private ISerializerService SerializerService { get; }
+
+        private string ProjectKey { get; }
+
+        private string ResourceType { get; }
+
+        public ByProjectKeyByResourceTypeRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string resourceType)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.SerializerService = serializerService;
+            this.ProjectKey = projectKey;
+            this.ResourceType = resourceType;
+        }
+
+        public ByProjectKeyByResourceTypeGet Get()
+        {
+            return new ByProjectKeyByResourceTypeGet(ApiHttpClient, ProjectKey, ResourceType);
+        }
+
+
+        public ByProjectKeyByResourceTypeByIDRequestBuilder WithIDValue(string ID)
+        {
+            return new ByProjectKeyByResourceTypeByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ResourceType, ID);
+        }
+    }
 }

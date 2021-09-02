@@ -10,12 +10,12 @@ namespace commercetools.ImportApi.Models.Common
 {
     public partial class CategoryKeyReference : ICategoryKeyReference
     {
-        public string Key { get; set;}
-        
-        public IReferenceType TypeId { get; set;}
+        public string Key { get; set; }
+
+        public IReferenceType TypeId { get; set; }
         public CategoryKeyReference()
-        { 
-           this.TypeId = IReferenceType.FindEnum("category");
+        {
+            this.TypeId = IReferenceType.FindEnum("category");
         }
     }
 }

@@ -14,34 +14,34 @@ namespace commercetools.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethod))]
     public partial interface IShippingMethod : IBaseResource
     {
-        new string Id { get; set;}
-        
-        new long Version { get; set;}
-        
-        new DateTime CreatedAt { get; set;}
-        
-        new DateTime LastModifiedAt { get; set;}
-        
-        ILastModifiedBy LastModifiedBy { get; set;}
-        
-        ICreatedBy CreatedBy { get; set;}
-        
-        string Key { get; set;}
-        
-        string Name { get; set;}
-        
-        string Description { get; set;}
-        
-        ILocalizedString LocalizedDescription { get; set;}
-        
-        ITaxCategoryReference TaxCategory { get; set;}
-        
-        List<IZoneRate> ZoneRates { get; set;}
-        
-        bool IsDefault { get; set;}
-        
-        string Predicate { get; set;}
-        
-        ICustomFields Custom { get; set;}
+        new string Id { get; set; }
+
+        new long Version { get; set; }
+
+        new DateTime CreatedAt { get; set; }
+
+        new DateTime LastModifiedAt { get; set; }
+
+        ILastModifiedBy LastModifiedBy { get; set; }
+
+        ICreatedBy CreatedBy { get; set; }
+
+        string Key { get; set; }
+
+        string Name { get; set; }
+
+        string Description { get; set; }
+
+        ILocalizedString LocalizedDescription { get; set; }
+
+        ITaxCategoryReference TaxCategory { get; set; }
+
+        List<IZoneRate> ZoneRates { get; set; }
+
+        bool IsDefault { get; set; }
+
+        string Predicate { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }

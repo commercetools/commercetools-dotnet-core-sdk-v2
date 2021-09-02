@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartSetCountryAction : ICartSetCountryAction
     {
-        public string Action { get; set;}
-        
-        public string Country { get; set;}
+        public string Action { get; set; }
+
+        public string Country { get; set; }
         public CartSetCountryAction()
-        { 
-           this.Action = "setCountry";
+        {
+            this.Action = "setCountry";
         }
     }
 }

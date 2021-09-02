@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountChangeIsActiveAction))]
     public partial interface ICartDiscountChangeIsActiveAction : ICartDiscountUpdateAction
     {
-        bool IsActive { get; set;}
+        bool IsActive { get; set; }
     }
 }

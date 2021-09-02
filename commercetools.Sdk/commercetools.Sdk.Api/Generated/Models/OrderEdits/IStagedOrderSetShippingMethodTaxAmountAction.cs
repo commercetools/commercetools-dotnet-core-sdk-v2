@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingMethodTaxAmountAction))]
     public partial interface IStagedOrderSetShippingMethodTaxAmountAction : IStagedOrderUpdateAction
     {
-        IExternalTaxAmountDraft ExternalTaxAmount { get; set;}
+        IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
     }
 }

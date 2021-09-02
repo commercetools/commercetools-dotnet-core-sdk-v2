@@ -28,8 +28,8 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setTextLineItemCustomField", typeof(commercetools.Api.Models.Me.MyShoppingListSetTextLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setTextLineItemCustomType", typeof(commercetools.Api.Models.Me.MyShoppingListSetTextLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setTextLineItemDescription", typeof(commercetools.Api.Models.Me.MyShoppingListSetTextLineItemDescriptionAction))]
-    public partial interface IMyShoppingListUpdateAction 
+    public partial interface IMyShoppingListUpdateAction
     {
-        string Action { get; set;}
+        string Action { get; set; }
     }
 }

@@ -12,6 +12,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.ReferenceSetAttribute))]
     public partial interface IReferenceSetAttribute : IAttribute
     {
-        List<IKeyReference> Value { get; set;}
+        List<IKeyReference> Value { get; set; }
     }
 }

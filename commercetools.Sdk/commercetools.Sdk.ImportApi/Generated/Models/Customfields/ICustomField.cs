@@ -31,8 +31,8 @@ namespace commercetools.ImportApi.Models.Customfields
     [SubTypeDiscriminator("StringSet", typeof(commercetools.ImportApi.Models.Customfields.StringSetField))]
     [SubTypeDiscriminator("Time", typeof(commercetools.ImportApi.Models.Customfields.TimeField))]
     [SubTypeDiscriminator("TimeSet", typeof(commercetools.ImportApi.Models.Customfields.TimeSetField))]
-    public partial interface ICustomField 
+    public partial interface ICustomField
     {
-        string Type { get; set;}
+        string Type { get; set; }
     }
 }

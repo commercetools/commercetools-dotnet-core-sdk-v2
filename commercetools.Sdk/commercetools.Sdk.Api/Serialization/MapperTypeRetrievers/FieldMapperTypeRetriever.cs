@@ -48,7 +48,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();
-                    var firstElementType = valueKind== JsonValueKind.Null? 
+                    var firstElementType = valueKind == JsonValueKind.Null ?
                         typeof(object) :
                         GetTypeForToken(element.GetFirstArrayElement());
                     tokenType = typeof(List<>).MakeGenericType(firstElementType);

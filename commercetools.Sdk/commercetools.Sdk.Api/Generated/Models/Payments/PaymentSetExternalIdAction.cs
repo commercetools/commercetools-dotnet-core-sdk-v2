@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Payments
 {
     public partial class PaymentSetExternalIdAction : IPaymentSetExternalIdAction
     {
-        public string Action { get; set;}
-        
-        public string ExternalId { get; set;}
+        public string Action { get; set; }
+
+        public string ExternalId { get; set; }
         public PaymentSetExternalIdAction()
-        { 
-           this.Action = "setExternalId";
+        {
+            this.Action = "setExternalId";
         }
     }
 }

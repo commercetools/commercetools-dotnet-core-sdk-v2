@@ -44,7 +44,7 @@ namespace commercetools.Base.Registration
                 services.Add(new ServiceDescriptor(typeToRegister, implementationType, lifetime));
             }
         }
-        
+
         /// <summary>
         /// Adds all concrete implementation types that are assignable from the specified service type to the service collection.
         /// </summary>
@@ -53,7 +53,7 @@ namespace commercetools.Base.Registration
         /// <param name="type">The service type.</param>
         /// <param name="lifetime">The lifetime.</param>
         /// <remarks>In case the specified service type in an open generic type, first the concrete generic type is created based on the retrieved implementation type.</remarks>
-        public static void RegisterAllTypes(this IServiceCollection services,Assembly assembly, Type type, ServiceLifetime lifetime)
+        public static void RegisterAllTypes(this IServiceCollection services, Assembly assembly, Type type, ServiceLifetime lifetime)
         {
             var typesToRegister = type.GetAllConcreteAssignableTypes(assembly);
             foreach (var implementationType in typesToRegister)
