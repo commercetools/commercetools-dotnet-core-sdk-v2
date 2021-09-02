@@ -14,13 +14,13 @@ namespace commercetools.Base.Serialization
         public static object ToObject(this JsonElement element, Type returnType, ISerializerService serializerService)
         {
             var json = element.GetRawText();
-            return serializerService.Deserialize(returnType,json);
+            return serializerService.Deserialize(returnType, json);
         }
 
         public static bool IsAbstractClass(this Type type)
         {
             return type.IsClass && type.IsAbstract;
         }
-        
+
     }
 }

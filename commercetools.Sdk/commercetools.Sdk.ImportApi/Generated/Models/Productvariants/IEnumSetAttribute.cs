@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.EnumSetAttribute))]
     public partial interface IEnumSetAttribute : IAttribute
     {
-        List<string> Value { get; set;}
+        List<string> Value { get; set; }
     }
 }

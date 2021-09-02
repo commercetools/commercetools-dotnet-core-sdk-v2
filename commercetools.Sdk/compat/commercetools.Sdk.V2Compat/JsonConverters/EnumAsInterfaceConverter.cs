@@ -19,7 +19,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
         {
             string enumJsonValue = null;
             var jToken = JToken.Load(reader);
-            
+
             if (jToken.Type == JTokenType.Object)
             {
                 if (jToken.Children().First() is JProperty jProperty)
@@ -29,9 +29,9 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
             }
             else
             {
-                enumJsonValue = jToken.Value<string>();                
+                enumJsonValue = jToken.Value<string>();
             }
-            
+
             var attr = typeof(T).GetCustomAttribute<EnumInterfaceCreatorAttribute>();
             if (attr == null)
                 throw new NullReferenceException($"Failed to find the required '{nameof(EnumInterfaceCreatorAttribute)}'");
@@ -40,7 +40,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
             var attrDelegate = attr.Creator();
             return (T)attrDelegate.DynamicInvoke(enumJsonValue);
         }
-        
+
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             if (value is IJsonName withJsonName)

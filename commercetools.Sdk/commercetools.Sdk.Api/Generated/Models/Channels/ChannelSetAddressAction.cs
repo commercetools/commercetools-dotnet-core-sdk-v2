@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.Channels
 {
     public partial class ChannelSetAddressAction : IChannelSetAddressAction
     {
-        public string Action { get; set;}
-        
-        public IBaseAddress Address { get; set;}
+        public string Action { get; set; }
+
+        public IBaseAddress Address { get; set; }
         public ChannelSetAddressAction()
-        { 
-           this.Action = "setAddress";
+        {
+            this.Action = "setAddress";
         }
     }
 }

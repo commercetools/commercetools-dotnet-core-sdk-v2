@@ -13,7 +13,7 @@ namespace commercetools.ImportApi.IntegrationTests
         public ServiceProviderFixture()
         {
             var services = new ServiceCollection();
-            
+
             this.configuration = new ConfigurationBuilder().
                 AddJsonFile("appsettings.test.Development.json", true).
                 AddEnvironmentVariables().
@@ -23,7 +23,7 @@ namespace commercetools.ImportApi.IntegrationTests
 
             services.UseCommercetoolsImportApi(configuration, "ImportClient");
             this.serviceProvider = services.BuildServiceProvider();
-            
+
             //set default ProjectKey
             var clientConfiguration = this.GetClientConfiguration("ImportClient");
             GenericFixture.DefaultProjectKey = clientConfiguration.ProjectKey;

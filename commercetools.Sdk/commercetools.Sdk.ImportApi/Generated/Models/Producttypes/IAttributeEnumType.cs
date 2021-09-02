@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Producttypes
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Producttypes.AttributeEnumType))]
     public partial interface IAttributeEnumType : IAttributeType
     {
-        List<IAttributePlainEnumValue> Values { get; set;}
+        List<IAttributePlainEnumValue> Values { get; set; }
     }
 }

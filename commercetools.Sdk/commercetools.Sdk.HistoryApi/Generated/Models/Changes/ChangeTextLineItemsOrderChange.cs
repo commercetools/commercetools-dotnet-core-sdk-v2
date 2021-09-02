@@ -11,16 +11,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class ChangeTextLineItemsOrderChange : IChangeTextLineItemsOrderChange
     {
-        public string Type { get; set;}
-        
-        public string Change { get; set;}
-        
-        public List<ITextLineItemValue> PreviousValue { get; set;}
-        
-        public List<ITextLineItemValue> NextValue { get; set;}
+        public string Type { get; set; }
+
+        public string Change { get; set; }
+
+        public List<ITextLineItemValue> PreviousValue { get; set; }
+
+        public List<ITextLineItemValue> NextValue { get; set; }
         public ChangeTextLineItemsOrderChange()
-        { 
-           this.Type = "ChangeTextLineItemsOrderChange";
+        {
+            this.Type = "ChangeTextLineItemsOrderChange";
         }
     }
 }

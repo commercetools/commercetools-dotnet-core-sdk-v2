@@ -25,9 +25,9 @@ namespace commercetools.Api.IntegrationTests.Payments
             paymentDraft.Transactions = new List<ITransactionDraft> { transactionDraft };
             return paymentDraft;
         }
-        
+
         #endregion
-        
+
         #region CreateAndDelete
 
         public static async Task<IPayment> CreatePayment(IClient client, PaymentDraft paymentDraft)
@@ -38,7 +38,7 @@ namespace commercetools.Api.IntegrationTests.Payments
                 .ExecuteAsync();
             return resource;
         }
-        
+
         public static async Task DeletePayment(IClient client, IPayment payment)
         {
             try
@@ -57,10 +57,10 @@ namespace commercetools.Api.IntegrationTests.Payments
         }
 
         #endregion
-        
+
         #region WithPayment
 
-        public static async Task WithPayment( IClient client, Func<PaymentDraft, PaymentDraft> draftAction, Action<IPayment> func)
+        public static async Task WithPayment(IClient client, Func<PaymentDraft, PaymentDraft> draftAction, Action<IPayment> func)
         {
             await With(client, new PaymentDraft(), draftAction, func, CreatePayment, DeletePayment);
         }

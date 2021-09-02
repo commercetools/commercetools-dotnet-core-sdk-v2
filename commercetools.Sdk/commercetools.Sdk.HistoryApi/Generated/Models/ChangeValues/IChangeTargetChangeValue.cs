@@ -14,8 +14,8 @@ namespace commercetools.HistoryApi.Models.ChangeValues
     [SubTypeDiscriminator("multiBuyCustomLineItems", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
     [SubTypeDiscriminator("multiBuyLineItems", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyLineItemsChangeValue))]
     [SubTypeDiscriminator("shipping", typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeTargetShippingChangeValue))]
-    public partial interface IChangeTargetChangeValue 
+    public partial interface IChangeTargetChangeValue
     {
-        string Type { get; set;}
+        string Type { get; set; }
     }
 }

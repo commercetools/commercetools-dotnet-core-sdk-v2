@@ -12,28 +12,28 @@ namespace commercetools.Api.Models.Stores
 {
     public partial class Store : IStore
     {
-        public string Id { get; set;}
-        
-        public long Version { get; set;}
-        
-        public DateTime CreatedAt { get; set;}
-        
-        public DateTime LastModifiedAt { get; set;}
-        
-        public ILastModifiedBy LastModifiedBy { get; set;}
-        
-        public ICreatedBy CreatedBy { get; set;}
-        
-        public string Key { get; set;}
-        
-        public ILocalizedString Name { get; set;}
-        
-        public List<string> Languages { get; set;}
-        
-        public List<IChannelReference> DistributionChannels { get; set;}
-        
-        public List<IChannelReference> SupplyChannels { get; set;}
-        
-        public ICustomFields Custom { get; set;}
+        public string Id { get; set; }
+
+        public long Version { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime LastModifiedAt { get; set; }
+
+        public ILastModifiedBy LastModifiedBy { get; set; }
+
+        public ICreatedBy CreatedBy { get; set; }
+
+        public string Key { get; set; }
+
+        public ILocalizedString Name { get; set; }
+
+        public List<string> Languages { get; set; }
+
+        public List<IChannelReference> DistributionChannels { get; set; }
+
+        public List<IChannelReference> SupplyChannels { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

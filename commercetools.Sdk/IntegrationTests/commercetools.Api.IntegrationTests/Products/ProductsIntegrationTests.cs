@@ -14,7 +14,7 @@ namespace commercetools.Api.IntegrationTests.Products
     {
         private readonly IClient _client;
         private readonly string _projectKey;
-        
+
         public ProductsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
             var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
@@ -34,7 +34,7 @@ namespace commercetools.Api.IntegrationTests.Products
                     Assert.Equal(2, product.MasterData.Staged.Variants.Count);
                     Assert.Empty(product.MasterData.Staged.Variants[1].Images);
                     var variantId = product.MasterData.Staged.Variants[1].Id;
-                    
+
 
                     var logoPath = @"Resources/ct_logo_farbe.gif";
                     var file = new FileStream(logoPath, FileMode.Open, FileAccess.Read);
@@ -51,7 +51,7 @@ namespace commercetools.Api.IntegrationTests.Products
                         .WithStaged(true)
                         .AddHeader("content-type", "image/gif")
                         .ExecuteAsync();
-                    
+
                     Assert.NotNull(updateProduct);
                     Assert.Single(updateProduct.MasterData.Staged.Variants[1].Images);
                     var img = updateProduct.MasterData.Staged.Variants[1].Images.FirstOrDefault();

@@ -30,7 +30,7 @@ namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
                 .ImportSinks()
                 .Post(importSinkDraft)
                 .ExecuteAsync();
-            
+
             Assert.NotNull(importSink);
 
             var deletedImportSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)

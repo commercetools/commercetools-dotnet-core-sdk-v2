@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddItemShippingAddressAction))]
     public partial interface IStagedOrderAddItemShippingAddressAction : IStagedOrderUpdateAction
     {
-        IBaseAddress Address { get; set;}
+        IBaseAddress Address { get; set; }
     }
 }

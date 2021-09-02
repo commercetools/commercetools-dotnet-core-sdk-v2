@@ -10,12 +10,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderExcerpt))]
-    public partial interface IOrderExcerpt 
+    public partial interface IOrderExcerpt
     {
-        ITypedMoney TotalPrice { get; set;}
-        
-        ITaxedPrice TaxedPrice { get; set;}
-        
-        int Version { get; set;}
+        ITypedMoney TotalPrice { get; set; }
+
+        ITaxedPrice TaxedPrice { get; set; }
+
+        int Version { get; set; }
     }
 }

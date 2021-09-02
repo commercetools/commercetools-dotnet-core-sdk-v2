@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Stores
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetCustomTypeAction))]
     public partial interface IStoreSetCustomTypeAction : IStoreUpdateAction
     {
-        ITypeResourceIdentifier Type { get; set;}
-        
-        Object Fields { get; set;}
+        ITypeResourceIdentifier Type { get; set; }
+
+        Object Fields { get; set; }
     }
 }

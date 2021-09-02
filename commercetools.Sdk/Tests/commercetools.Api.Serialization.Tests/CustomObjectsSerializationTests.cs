@@ -26,7 +26,7 @@ namespace commercetools.Api.Serialization.Tests
             {
                 Key = "key1",
                 Container = "container1",
-                Value =  new CustomFooBar
+                Value = new CustomFooBar
                 {
                     Foo = "Bar"
                 },
@@ -60,5 +60,5 @@ namespace commercetools.Api.Serialization.Tests
     {
         public string Foo { get; set; }
     }
-    
+
 }

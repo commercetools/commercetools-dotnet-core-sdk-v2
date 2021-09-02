@@ -10,8 +10,8 @@ namespace commercetools.MLApi.Models.ImageSearches
 {
     public partial class ResultItem : IResultItem
     {
-        public string ImageUrl { get; set;}
-        
-        public List<IProductVariant> ProductVariants { get; set;}
+        public string ImageUrl { get; set; }
+
+        public List<IProductVariant> ProductVariants { get; set; }
     }
 }

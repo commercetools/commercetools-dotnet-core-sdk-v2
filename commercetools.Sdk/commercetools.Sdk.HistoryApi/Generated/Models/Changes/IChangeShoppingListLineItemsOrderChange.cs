@@ -12,12 +12,12 @@ namespace commercetools.HistoryApi.Models.Changes
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeShoppingListLineItemsOrderChange))]
     public partial interface IChangeShoppingListLineItemsOrderChange : IChange
     {
-        new string Type { get; set;}
-        
-        new string Change { get; set;}
-        
-        List<IShoppingListLineItemValue> PreviousValue { get; set;}
-        
-        List<IShoppingListLineItemValue> NextValue { get; set;}
+        new string Type { get; set; }
+
+        new string Change { get; set; }
+
+        List<IShoppingListLineItemValue> PreviousValue { get; set; }
+
+        List<IShoppingListLineItemValue> NextValue { get; set; }
     }
 }

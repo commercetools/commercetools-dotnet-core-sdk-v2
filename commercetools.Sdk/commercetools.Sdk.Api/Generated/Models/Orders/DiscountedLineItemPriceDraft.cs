@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class DiscountedLineItemPriceDraft : IDiscountedLineItemPriceDraft
     {
-        public IMoney Value { get; set;}
-        
-        public List<IDiscountedLineItemPortion> IncludedDiscounts { get; set;}
+        public IMoney Value { get; set; }
+
+        public List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
     }
 }

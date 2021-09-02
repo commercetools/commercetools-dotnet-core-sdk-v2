@@ -18,7 +18,7 @@ namespace commercetools.Base.Client.Tokens
         }
 
         public TokenFlow TokenFlow => TokenFlow.Password;
-        
+
         protected override string BuildTokenRequestBody()
         {
             var body = "grant_type=password";

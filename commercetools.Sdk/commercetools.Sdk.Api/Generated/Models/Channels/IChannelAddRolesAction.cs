@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelAddRolesAction))]
     public partial interface IChannelAddRolesAction : IChannelUpdateAction
     {
-        List<IChannelRoleEnum> Roles { get; set;}
+        List<IChannelRoleEnum> Roles { get; set; }
     }
 }

@@ -11,10 +11,10 @@ namespace commercetools.MLApi.Models.MissingData
 {
     public partial class MissingPricesTaskStatus : IMissingPricesTaskStatus
     {
-        public ITaskStatusEnum State { get; set;}
-        
-        public DateTime Expires { get; set;}
-        
-        public IMissingPricesPagedQueryResult Result { get; set;}
+        public ITaskStatusEnum State { get; set; }
+
+        public DateTime Expires { get; set; }
+
+        public IMissingPricesPagedQueryResult Result { get; set; }
     }
 }

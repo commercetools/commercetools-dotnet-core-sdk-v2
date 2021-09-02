@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerAddressRemovedMessagePayload))]
     public partial interface ICustomerAddressRemovedMessagePayload : IMessagePayload
     {
-        IAddress Address { get; set;}
+        IAddress Address { get; set; }
     }
 }

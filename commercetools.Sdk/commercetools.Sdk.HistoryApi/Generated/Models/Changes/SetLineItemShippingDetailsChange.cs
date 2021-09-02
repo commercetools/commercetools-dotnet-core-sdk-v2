@@ -11,18 +11,18 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetLineItemShippingDetailsChange : ISetLineItemShippingDetailsChange
     {
-        public string Type { get; set;}
-        
-        public string Change { get; set;}
-        
-        public string LineItemId { get; set;}
-        
-        public IItemShippingDetails NextValue { get; set;}
-        
-        public IItemShippingDetails PreviousValue { get; set;}
+        public string Type { get; set; }
+
+        public string Change { get; set; }
+
+        public string LineItemId { get; set; }
+
+        public IItemShippingDetails NextValue { get; set; }
+
+        public IItemShippingDetails PreviousValue { get; set; }
         public SetLineItemShippingDetailsChange()
-        { 
-           this.Type = "SetLineItemShippingDetailsChange";
+        {
+            this.Type = "SetLineItemShippingDetailsChange";
         }
     }
 }

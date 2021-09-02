@@ -23,7 +23,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
             var jsonObject = JObject.Load(reader);
             return jsonObject.ToObject(deserializedType, serializer);
         }
-        
+
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             throw new NotImplementedException();

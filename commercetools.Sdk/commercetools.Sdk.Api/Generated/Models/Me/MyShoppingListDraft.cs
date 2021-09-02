@@ -13,18 +13,18 @@ namespace commercetools.Api.Models.Me
 {
     public partial class MyShoppingListDraft : IMyShoppingListDraft
     {
-        public ILocalizedString Name { get; set;}
-        
-        public ILocalizedString Description { get; set;}
-        
-        public List<IShoppingListLineItemDraft> LineItems { get; set;}
-        
-        public List<ITextLineItemDraft> TextLineItems { get; set;}
-        
-        public ICustomFieldsDraft Custom { get; set;}
-        
-        public long? DeleteDaysAfterLastModification { get; set;}
-        
-        public IStoreResourceIdentifier Store { get; set;}
+        public ILocalizedString Name { get; set; }
+
+        public ILocalizedString Description { get; set; }
+
+        public List<IShoppingListLineItemDraft> LineItems { get; set; }
+
+        public List<ITextLineItemDraft> TextLineItems { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
+
+        public long? DeleteDaysAfterLastModification { get; set; }
+
+        public IStoreResourceIdentifier Store { get; set; }
     }
 }

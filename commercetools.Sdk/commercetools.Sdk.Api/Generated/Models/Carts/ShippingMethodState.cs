@@ -4,41 +4,41 @@ using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 namespace commercetools.Api.Models.Carts
 {
-   public enum ShippingMethodState
-   {
-       [Description("DoesNotMatchCart")]
-       DoesNotMatchCart,
-       
-       [Description("MatchesCart")]
-       MatchesCart
-   }
-   public class ShippingMethodStateWrapper : IShippingMethodState
-   {
-       public string JsonName { get; internal set; }
-       public ShippingMethodState? Value { get; internal set; }
-   }
-   [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
-   public interface IShippingMethodState : IJsonName
-   {
+    public enum ShippingMethodState
+    {
+        [Description("DoesNotMatchCart")]
+        DoesNotMatchCart,
+
+        [Description("MatchesCart")]
+        MatchesCart
+    }
+    public class ShippingMethodStateWrapper : IShippingMethodState
+    {
+        public string JsonName { get; internal set; }
+        public ShippingMethodState? Value { get; internal set; }
+    }
+    [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
+    public interface IShippingMethodState : IJsonName
+    {
         public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
-         {Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart"}; 
-       
+        { Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart" };
+
         public static IShippingMethodState MatchesCart = new ShippingMethodStateWrapper
-         {Value = ShippingMethodState.MatchesCart, JsonName = "MatchesCart"}; 
-       
+        { Value = ShippingMethodState.MatchesCart, JsonName = "MatchesCart" };
+
         ShippingMethodState? Value { get; }
-        
+
         static IShippingMethodState[] Values()
         {
-           return new[]
-           {
+            return new[]
+            {
                 DoesNotMatchCart ,
-                MatchesCart 
+                MatchesCart
            };
         }
         static IShippingMethodState FindEnum(string value)
         {
-           return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShippingMethodStateWrapper() {JsonName = value};
+            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShippingMethodStateWrapper() { JsonName = value };
         }
-   }
+    }
 }

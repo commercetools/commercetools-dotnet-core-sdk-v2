@@ -11,16 +11,16 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartSetLineItemCustomTypeAction : ICartSetLineItemCustomTypeAction
     {
-        public string Action { get; set;}
-        
-        public string LineItemId { get; set;}
-        
-        public ITypeResourceIdentifier Type { get; set;}
-        
-        public IFieldContainer Fields { get; set;}
+        public string Action { get; set; }
+
+        public string LineItemId { get; set; }
+
+        public ITypeResourceIdentifier Type { get; set; }
+
+        public IFieldContainer Fields { get; set; }
         public CartSetLineItemCustomTypeAction()
-        { 
-           this.Action = "setLineItemCustomType";
+        {
+            this.Action = "setLineItemCustomType";
         }
     }
 }

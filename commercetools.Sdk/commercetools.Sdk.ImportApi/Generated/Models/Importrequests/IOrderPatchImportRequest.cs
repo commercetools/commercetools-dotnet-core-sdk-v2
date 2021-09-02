@@ -13,6 +13,6 @@ namespace commercetools.ImportApi.Models.Importrequests
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.OrderPatchImportRequest))]
     public partial interface IOrderPatchImportRequest : IImportRequest
     {
-        List<IOrderPatchImport> Patches { get; set;}
+        List<IOrderPatchImport> Patches { get; set; }
     }
 }

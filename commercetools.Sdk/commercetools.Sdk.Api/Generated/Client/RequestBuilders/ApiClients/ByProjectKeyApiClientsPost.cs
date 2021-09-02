@@ -11,54 +11,58 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.ApiClients
 {
-   public partial class ByProjectKeyApiClientsPost : ApiMethod<ByProjectKeyApiClientsPost> {
+    public partial class ByProjectKeyApiClientsPost : ApiMethod<ByProjectKeyApiClientsPost>
+    {
 
-       
-       private ISerializerService SerializerService { get; }
-       
-       private IClient ApiHttpClient { get; }
-       
-       public override HttpMethod Method => HttpMethod.Post;
-       
-       private string ProjectKey { get; }
-       
-       private commercetools.Api.Models.ApiClients.IApiClientDraft ApiClientDraft;
-   
-       public ByProjectKeyApiClientsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ApiClients.IApiClientDraft apiClientDraft) {
-           this.ApiHttpClient = apiHttpClient;
-           this.SerializerService = serializerService;
-           this.ProjectKey = projectKey;
-           this.ApiClientDraft = apiClientDraft;
-           this.RequestUrl = $"/{ProjectKey}/api-clients";
-       }
-   
-       public List<string> GetExpand() {
-           return this.GetQueryParam("expand");
-       }
-   
-       public ByProjectKeyApiClientsPost WithExpand(string expand){
-           return this.AddQueryParam("expand", expand);
-       }
-       
 
-       public async Task<commercetools.Api.Models.ApiClients.IApiClient> ExecuteAsync()
-       {
-          var requestMessage = Build();
-          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.IApiClient>(requestMessage);
-       }
-       
-       public override HttpRequestMessage Build()
-       {
-          var request = base.Build();
-          if (SerializerService != null)
-          {
-              var body = this.SerializerService.Serialize(ApiClientDraft);
-              if(!string.IsNullOrEmpty(body))
-              {
-                  request.Content = new StringContent(body, Encoding.UTF8, "application/json");
-              }
-          }
-          return request;
-       }
-   }
+        private ISerializerService SerializerService { get; }
+
+        private IClient ApiHttpClient { get; }
+
+        public override HttpMethod Method => HttpMethod.Post;
+
+        private string ProjectKey { get; }
+
+        private commercetools.Api.Models.ApiClients.IApiClientDraft ApiClientDraft;
+
+        public ByProjectKeyApiClientsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ApiClients.IApiClientDraft apiClientDraft)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.SerializerService = serializerService;
+            this.ProjectKey = projectKey;
+            this.ApiClientDraft = apiClientDraft;
+            this.RequestUrl = $"/{ProjectKey}/api-clients";
+        }
+
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
+
+        public ByProjectKeyApiClientsPost WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
+
+
+        public async Task<commercetools.Api.Models.ApiClients.IApiClient> ExecuteAsync()
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ApiClients.IApiClient>(requestMessage);
+        }
+
+        public override HttpRequestMessage Build()
+        {
+            var request = base.Build();
+            if (SerializerService != null)
+            {
+                var body = this.SerializerService.Serialize(ApiClientDraft);
+                if (!string.IsNullOrEmpty(body))
+                {
+                    request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+                }
+            }
+            return request;
+        }
+    }
 }

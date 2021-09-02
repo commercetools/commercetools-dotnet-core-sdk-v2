@@ -11,12 +11,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.OrderPatches
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.DeliveryDraft))]
-    public partial interface IDeliveryDraft 
+    public partial interface IDeliveryDraft
     {
-        List<IDeliveryItem> Items { get; set;}
-        
-        IAddress Address { get; set;}
-        
-        List<IDeliveryParcelDraft> Parcels { get; set;}
+        List<IDeliveryItem> Items { get; set; }
+
+        IAddress Address { get; set; }
+
+        List<IDeliveryParcelDraft> Parcels { get; set; }
     }
 }

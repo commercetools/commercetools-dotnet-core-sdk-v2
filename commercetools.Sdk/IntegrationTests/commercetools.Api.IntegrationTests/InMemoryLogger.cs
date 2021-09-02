@@ -8,10 +8,10 @@ namespace commercetools.Api.IntegrationTests
     public class InMemoryLogger : ILogger
     {
         private static ConcurrentQueue<string> LogMessages { get; set; }
-        
+
         public void Log<TState>(
-            LogLevel logLevel, EventId eventId, 
-            TState state, Exception exception, 
+            LogLevel logLevel, EventId eventId,
+            TState state, Exception exception,
             Func<TState, Exception, string> formatter)
         {
             if (LogMessages == null)
@@ -23,12 +23,12 @@ namespace commercetools.Api.IntegrationTests
                 LogMessages.Enqueue((formatter(state, exception)));
             }
         }
- 
+
         public bool IsEnabled(LogLevel logLevel)
         {
             return true;
         }
- 
+
         public IDisposable BeginScope<TState>(TState state)
         {
             return null;
@@ -38,7 +38,7 @@ namespace commercetools.Api.IntegrationTests
         {
             if (LogMessages == null)
                 return "";
-            
+
             var stringBuilder = new StringBuilder();
             foreach (var item in LogMessages)
             {

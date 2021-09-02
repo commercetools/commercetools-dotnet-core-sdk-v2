@@ -38,7 +38,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {
                 Type converterType = typeof(EnumAsInterfaceConverter<>).MakeGenericType(typeToConvert);
-                converter = (JsonConverter) Activator.CreateInstance(converterType, this.NamingPolicy,
+                converter = (JsonConverter)Activator.CreateInstance(converterType, this.NamingPolicy,
                     JsonSerializerOptions);
                 Converters.TryAdd(typeToConvert, converter);
             }

@@ -32,7 +32,7 @@ namespace commercetools.Api.Serialization.Tests
         {
             this.serializationFixture = serializationFixture;
         }
-        
+
         // [Fact]
         public void TestOperationStatesDeserialization()
         {
@@ -45,13 +45,13 @@ namespace commercetools.Api.Serialization.Tests
 
             //assert
             Assert.NotNull(operationStates);
-            Assert.Equal(10,operationStates.Imported);
-            Assert.Equal(3,operationStates.Rejected);
-            Assert.Equal(4,operationStates.WaitForMasterVariant);
-            Assert.Equal(2,operationStates.Unresolved);
-            Assert.Equal(1,operationStates.ValidationFailed);
+            Assert.Equal(10, operationStates.Imported);
+            Assert.Equal(3, operationStates.Rejected);
+            Assert.Equal(4, operationStates.WaitForMasterVariant);
+            Assert.Equal(2, operationStates.Unresolved);
+            Assert.Equal(1, operationStates.ValidationFailed);
         }
-        
+
 
     }
 }

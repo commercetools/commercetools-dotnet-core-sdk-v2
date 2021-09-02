@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Errors
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.ResourceNotFoundError))]
     public partial interface IResourceNotFoundError : IErrorObject
     {
-        Object Resource { get; set;}
+        Object Resource { get; set; }
     }
 }

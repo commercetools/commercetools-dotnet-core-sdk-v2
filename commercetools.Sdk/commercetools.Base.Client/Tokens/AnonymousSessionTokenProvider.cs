@@ -18,7 +18,7 @@ namespace commercetools.Base.Client.Tokens
         }
 
         public TokenFlow TokenFlow => TokenFlow.AnonymousSession;
-        
+
         protected override string BuildTokenRequestBody()
         {
             var body = "grant_type=client_credentials";

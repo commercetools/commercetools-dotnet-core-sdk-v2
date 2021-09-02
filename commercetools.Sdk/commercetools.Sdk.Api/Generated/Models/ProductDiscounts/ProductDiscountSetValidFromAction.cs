@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.ProductDiscounts
 {
     public partial class ProductDiscountSetValidFromAction : IProductDiscountSetValidFromAction
     {
-        public string Action { get; set;}
-        
-        public DateTime? ValidFrom { get; set;}
+        public string Action { get; set; }
+
+        public DateTime? ValidFrom { get; set; }
         public ProductDiscountSetValidFromAction()
-        { 
-           this.Action = "setValidFrom";
+        {
+            this.Action = "setValidFrom";
         }
     }
 }

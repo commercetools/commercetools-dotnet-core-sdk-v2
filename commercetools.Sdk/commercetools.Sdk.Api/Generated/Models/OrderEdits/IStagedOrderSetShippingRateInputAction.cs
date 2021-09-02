@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingRateInputAction))]
     public partial interface IStagedOrderSetShippingRateInputAction : IStagedOrderUpdateAction
     {
-        IShippingRateInputDraft ShippingRateInput { get; set;}
+        IShippingRateInputDraft ShippingRateInput { get; set; }
     }
 }

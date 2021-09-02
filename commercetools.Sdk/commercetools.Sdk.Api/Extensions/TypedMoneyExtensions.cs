@@ -9,7 +9,7 @@ namespace commercetools.Api.Models.Common
         {
             if (typedMoney is IHighPrecisionMoney highPrecisionMoney)
             {
-                return highPrecisionMoney.PreciseAmount / (decimal)Math.Pow(10, highPrecisionMoney.FractionDigits );
+                return highPrecisionMoney.PreciseAmount / (decimal)Math.Pow(10, highPrecisionMoney.FractionDigits);
             }
             return typedMoney.CentAmount / 100M;
         }

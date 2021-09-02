@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction))]
     public partial interface IShoppingListSetTextLineItemDescriptionAction : IShoppingListUpdateAction
     {
-        string TextLineItemId { get; set;}
-        
-        ILocalizedString Description { get; set;}
+        string TextLineItemId { get; set; }
+
+        ILocalizedString Description { get; set; }
     }
 }

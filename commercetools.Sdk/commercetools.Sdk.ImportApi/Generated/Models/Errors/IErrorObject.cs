@@ -31,10 +31,10 @@ namespace commercetools.ImportApi.Models.Errors
     [SubTypeDiscriminator("ResourceDeletion", typeof(commercetools.ImportApi.Models.Errors.ResourceDeletionError))]
     [SubTypeDiscriminator("ResourceNotFound", typeof(commercetools.ImportApi.Models.Errors.ResourceNotFoundError))]
     [SubTypeDiscriminator("ResourceUpdate", typeof(commercetools.ImportApi.Models.Errors.ResourceUpdateError))]
-    public partial interface IErrorObject 
+    public partial interface IErrorObject
     {
-        string Code { get; set;}
-        
-        string Message { get; set;}
+        string Code { get; set; }
+
+        string Message { get; set; }
     }
 }

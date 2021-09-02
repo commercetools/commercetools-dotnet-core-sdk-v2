@@ -17,10 +17,10 @@ namespace commercetools.Sdk.Api.Tests
             var s = new ServiceCollection();
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
-            
+
             return new CtpClient(null, p.GetService<SerializerService>());
         }
-        
+
         [Fact]
         public void TestGetByIdRequest()
         {
@@ -41,13 +41,13 @@ namespace commercetools.Sdk.Api.Tests
                             .WithExpand(expand2)
                             .AddQueryParam(additionalParam.Key, additionalParam.Value)
                             .Build();
-            
+
 
             var expectedRequestUrl = $"/{projectKey}/categories/{categoryId}?" +
                 $"expand={expand1}&expand={expand2}&{additionalParam.Key}={additionalParam.Value}";
             //assert
             Assert.NotNull(request);
-            Assert.Equal(HttpMethod.Get,request.Method);
+            Assert.Equal(HttpMethod.Get, request.Method);
             Assert.Equal(expectedRequestUrl, request.RequestUri.ToString());
         }
 
@@ -61,7 +61,7 @@ namespace commercetools.Sdk.Api.Tests
             var withTotal = false;
             var expand = "parent";
             var where = $"name = \"food\"";
-            
+
             //act
             var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
@@ -78,7 +78,7 @@ namespace commercetools.Sdk.Api.Tests
             var expectedRequestUrl = $"/{projectKey}/categories?" +
                 $"expand={expand}&limit={limit}&offset={offset}" +
                 $"&withTotal={withTotal}&where=name%20%3D%20%22food%22";
-            
+
             //assert
             Assert.NotNull(request);
             Assert.Equal(HttpMethod.Get, request.Method);
@@ -138,7 +138,7 @@ namespace commercetools.Sdk.Api.Tests
                 }
             };
 
-           
+
             //act
             var request = GetClient().WithApi()
                             .WithProjectKey(projectKey)
@@ -166,7 +166,7 @@ namespace commercetools.Sdk.Api.Tests
         {
             //arrange
             var projectKey = "test-proj";
-            
+
             var categoryDraft = new CategoryDraft
             {
                 Name = new LocalizedString { { "en", "Name" } },

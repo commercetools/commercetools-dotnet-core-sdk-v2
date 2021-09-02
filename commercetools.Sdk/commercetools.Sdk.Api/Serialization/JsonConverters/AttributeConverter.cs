@@ -36,7 +36,7 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                 var valueProp = rootElement.GetProperty("value");
                 attribute.Name = nameProp.GetString();
                 var returnType = this.mapperTypeRetriever.GetTypeForToken(valueProp);
-                attribute.Value = valueProp.ToObject(returnType, serializerService);;
+                attribute.Value = valueProp.ToObject(returnType, serializerService); ;
             }
 
             return attribute;

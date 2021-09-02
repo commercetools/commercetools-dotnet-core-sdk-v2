@@ -10,16 +10,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetDateOfBirthChange : ISetDateOfBirthChange
     {
-        public string Type { get; set;}
-        
-        public string Change { get; set;}
-        
-        public string PreviousValue { get; set;}
-        
-        public string NextValue { get; set;}
+        public string Type { get; set; }
+
+        public string Change { get; set; }
+
+        public string PreviousValue { get; set; }
+
+        public string NextValue { get; set; }
         public SetDateOfBirthChange()
-        { 
-           this.Type = "SetDateOfBirthChange";
+        {
+            this.Type = "SetDateOfBirthChange";
         }
     }
 }

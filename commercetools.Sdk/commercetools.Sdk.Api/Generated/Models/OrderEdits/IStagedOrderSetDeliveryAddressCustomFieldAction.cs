@@ -11,10 +11,10 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryAddressCustomFieldAction))]
     public partial interface IStagedOrderSetDeliveryAddressCustomFieldAction : IStagedOrderUpdateAction
     {
-        string DeliveryId { get; set;}
-        
-        string Name { get; set;}
-        
-        Object Value { get; set;}
+        string DeliveryId { get; set; }
+
+        string Name { get; set; }
+
+        Object Value { get; set; }
     }
 }

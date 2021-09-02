@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetCartTotalTaxAction))]
     public partial interface ICartSetCartTotalTaxAction : ICartUpdateAction
     {
-        IMoney ExternalTotalGross { get; set;}
-        
-        List<ITaxPortionDraft> ExternalTaxPortions { get; set;}
+        IMoney ExternalTotalGross { get; set; }
+
+        List<ITaxPortionDraft> ExternalTaxPortions { get; set; }
     }
 }

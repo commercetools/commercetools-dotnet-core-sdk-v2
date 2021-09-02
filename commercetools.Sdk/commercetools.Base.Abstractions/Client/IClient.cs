@@ -18,9 +18,9 @@ namespace commercetools.Base.Client
         /// </value>
         string Name { get; set; }
 
-        
+
         Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage);
-        
+
         Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage);
     }
 }

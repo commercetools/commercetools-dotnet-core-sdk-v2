@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.BooleanSetAttribute))]
     public partial interface IBooleanSetAttribute : IAttribute
     {
-        List<bool> Value { get; set;}
+        List<bool> Value { get; set; }
     }
 }

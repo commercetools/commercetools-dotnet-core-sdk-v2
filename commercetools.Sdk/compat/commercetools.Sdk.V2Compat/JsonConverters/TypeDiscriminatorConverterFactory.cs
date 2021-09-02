@@ -18,7 +18,7 @@ namespace commercetools.Sdk.V2Compat.JsonConverters
         }
 
         public override List<SerializerType> SerializerTypes =>
-            new List<SerializerType>() {SerializerType.Deserialization};
+            new List<SerializerType>() { SerializerType.Deserialization };
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {

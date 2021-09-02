@@ -29,7 +29,7 @@ namespace commercetools.Base.Client
             this.Name = name;
         }
 
-        
+
         public string Name { get; set; }
         public ISerializerService SerializerService { get; }
         private Middleware MiddlewareStack { get; }
@@ -37,9 +37,9 @@ namespace commercetools.Base.Client
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
         {
             var content = await ExecuteAsJsonAsync(requestMessage);
-            return this.SerializerService.Deserialize<T>(content);   
+            return this.SerializerService.Deserialize<T>(content);
         }
-        
+
         public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)
         {
             var result = await this.MiddlewareStack.SendAsync(requestMessage, CancellationToken.None).ConfigureAwait(false);

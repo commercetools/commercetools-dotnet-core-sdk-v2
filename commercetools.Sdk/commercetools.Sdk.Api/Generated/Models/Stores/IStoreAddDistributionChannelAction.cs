@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Stores
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreAddDistributionChannelAction))]
     public partial interface IStoreAddDistributionChannelAction : IStoreUpdateAction
     {
-        IChannelResourceIdentifier DistributionChannel { get; set;}
+        IChannelResourceIdentifier DistributionChannel { get; set; }
     }
 }

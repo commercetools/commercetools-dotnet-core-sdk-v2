@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.RangeFacetResult))]
     public partial interface IRangeFacetResult : IFacetResult
     {
-        List<IFacetResultRange> Ranges { get; set;}
+        List<IFacetResultRange> Ranges { get; set; }
     }
 }

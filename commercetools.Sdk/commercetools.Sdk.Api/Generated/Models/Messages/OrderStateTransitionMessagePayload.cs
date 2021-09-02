@@ -11,14 +11,14 @@ namespace commercetools.Api.Models.Messages
 {
     public partial class OrderStateTransitionMessagePayload : IOrderStateTransitionMessagePayload
     {
-        public string Type { get; set;}
-        
-        public IStateReference State { get; set;}
-        
-        public bool Force { get; set;}
+        public string Type { get; set; }
+
+        public IStateReference State { get; set; }
+
+        public bool Force { get; set; }
         public OrderStateTransitionMessagePayload()
-        { 
-           this.Type = "OrderStateTransition";
+        {
+            this.Type = "OrderStateTransition";
         }
     }
 }

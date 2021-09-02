@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetAuthorizationAction))]
     public partial interface IPaymentSetAuthorizationAction : IPaymentUpdateAction
     {
-        IMoney Amount { get; set;}
-        
-        DateTime? Until { get; set;}
+        IMoney Amount { get; set; }
+
+        DateTime? Until { get; set; }
     }
 }

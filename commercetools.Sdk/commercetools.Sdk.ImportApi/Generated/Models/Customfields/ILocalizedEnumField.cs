@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Customfields
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.LocalizedEnumField))]
     public partial interface ILocalizedEnumField : ICustomField
     {
-        string Value { get; set;}
+        string Value { get; set; }
     }
 }

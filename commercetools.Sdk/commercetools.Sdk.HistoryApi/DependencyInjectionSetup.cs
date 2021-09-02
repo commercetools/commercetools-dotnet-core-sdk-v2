@@ -18,7 +18,7 @@ namespace commercetools.Sdk.HistoryApi
         public static IHttpClientBuilder UseCommercetoolsHistoryApi(this IServiceCollection services,
             IConfiguration configuration,
             string clientName = DefaultClientNames.HistoryApi,
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
             var clients = new List<string>()
             {
@@ -29,13 +29,13 @@ namespace commercetools.Sdk.HistoryApi
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsHistoryApi(this IServiceCollection services,
-            IConfiguration configuration, IList<string> clients, 
-            Func<string, IConfiguration , IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            IConfiguration configuration, IList<string> clients,
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             services.AddSingleton(configuration);
             services.UseCommercetoolsHistoryApiSerialization();
-            return services.UseHttpApi(configuration, clients, 
-                serviceProvider => serviceProvider.GetService<SerializerService>(), 
+            return services.UseHttpApi(configuration, clients,
+                serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(Object),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
@@ -46,7 +46,7 @@ namespace commercetools.Sdk.HistoryApi
             services.UseSerialization();
             services.AddSingleton<SerializerService>();
         }
-        
+
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)
         {
             var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();

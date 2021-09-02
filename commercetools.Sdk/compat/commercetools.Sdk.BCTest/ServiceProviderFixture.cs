@@ -38,7 +38,7 @@ namespace commercetools.Sdk.BCTest
                 case ContainerType.BuiltIn:
                     var services = new ServiceCollection();
                     services.UseCommercetools(Configuration, "Client", TokenFlow.ClientCredentials);
-                    services.AddLogging(c=> c.AddProvider(new InMemoryLoggerProvider()));
+                    services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
                     services.UseCommercetoolsCompatLayer();
                     this.ServiceProvider = services.BuildServiceProvider();
                     break;

@@ -69,7 +69,7 @@ namespace commercetools.Base.Client.Tokens
         public IClientConfiguration ClientConfiguration { get; set; }
 
         protected HttpClient HttpClient { get; }
-        
+
         protected string TokenEndpointBaseAddress { get; }
 
         public virtual HttpRequestMessage GetRequestMessage()

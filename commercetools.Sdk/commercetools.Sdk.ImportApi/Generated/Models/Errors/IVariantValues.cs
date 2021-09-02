@@ -10,12 +10,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.VariantValues))]
-    public partial interface IVariantValues 
+    public partial interface IVariantValues
     {
-        string Sku { get; set;}
-        
-        List<IPriceImport> Prices { get; set;}
-        
-        List<IAttribute> Attributes { get; set;}
+        string Sku { get; set; }
+
+        List<IPriceImport> Prices { get; set; }
+
+        List<IAttribute> Attributes { get; set; }
     }
 }

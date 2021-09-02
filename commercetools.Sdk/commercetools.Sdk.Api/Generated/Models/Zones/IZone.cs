@@ -12,24 +12,24 @@ namespace commercetools.Api.Models.Zones
     [DeserializeAs(typeof(commercetools.Api.Models.Zones.Zone))]
     public partial interface IZone : IBaseResource
     {
-        new string Id { get; set;}
-        
-        new long Version { get; set;}
-        
-        new DateTime CreatedAt { get; set;}
-        
-        new DateTime LastModifiedAt { get; set;}
-        
-        ILastModifiedBy LastModifiedBy { get; set;}
-        
-        ICreatedBy CreatedBy { get; set;}
-        
-        string Key { get; set;}
-        
-        string Name { get; set;}
-        
-        string Description { get; set;}
-        
-        List<ILocation> Locations { get; set;}
+        new string Id { get; set; }
+
+        new long Version { get; set; }
+
+        new DateTime CreatedAt { get; set; }
+
+        new DateTime LastModifiedAt { get; set; }
+
+        ILastModifiedBy LastModifiedBy { get; set; }
+
+        ICreatedBy CreatedBy { get; set; }
+
+        string Key { get; set; }
+
+        string Name { get; set; }
+
+        string Description { get; set; }
+
+        List<ILocation> Locations { get; set; }
     }
 }

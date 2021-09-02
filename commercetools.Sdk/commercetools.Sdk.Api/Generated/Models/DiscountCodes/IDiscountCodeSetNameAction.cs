@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetNameAction))]
     public partial interface IDiscountCodeSetNameAction : IDiscountCodeUpdateAction
     {
-        ILocalizedString Name { get; set;}
+        ILocalizedString Name { get; set; }
     }
 }

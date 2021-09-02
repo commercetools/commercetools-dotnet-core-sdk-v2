@@ -11,12 +11,12 @@ namespace commercetools.ImportApi.Models.Customfields
 {
     public partial class ReferenceSetField : IReferenceSetField
     {
-        public string Type { get; set;}
-        
-        public List<IKeyReference> Value { get; set;}
+        public string Type { get; set; }
+
+        public List<IKeyReference> Value { get; set; }
         public ReferenceSetField()
-        { 
-           this.Type = "ReferenceSet";
+        {
+            this.Type = "ReferenceSet";
         }
     }
 }

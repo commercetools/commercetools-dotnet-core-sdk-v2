@@ -31,8 +31,8 @@ namespace commercetools.Api.Models.Payments
     [SubTypeDiscriminator("setStatusInterfaceCode", typeof(commercetools.Api.Models.Payments.PaymentSetStatusInterfaceCodeAction))]
     [SubTypeDiscriminator("setStatusInterfaceText", typeof(commercetools.Api.Models.Payments.PaymentSetStatusInterfaceTextAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Api.Models.Payments.PaymentTransitionStateAction))]
-    public partial interface IPaymentUpdateAction 
+    public partial interface IPaymentUpdateAction
     {
-        string Action { get; set;}
+        string Action { get; set; }
     }
 }

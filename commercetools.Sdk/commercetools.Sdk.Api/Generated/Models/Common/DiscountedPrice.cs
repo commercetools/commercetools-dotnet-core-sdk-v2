@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Common
 {
     public partial class DiscountedPrice : IDiscountedPrice
     {
-        public IMoney Value { get; set;}
-        
-        public IProductDiscountReference Discount { get; set;}
+        public IMoney Value { get; set; }
+
+        public IProductDiscountReference Discount { get; set; }
     }
 }

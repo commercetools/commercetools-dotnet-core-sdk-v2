@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderRemoveParcelFromDeliveryAction : IOrderRemoveParcelFromDeliveryAction
     {
-        public string Action { get; set;}
-        
-        public string ParcelId { get; set;}
+        public string Action { get; set; }
+
+        public string ParcelId { get; set; }
         public OrderRemoveParcelFromDeliveryAction()
-        { 
-           this.Action = "removeParcelFromDelivery";
+        {
+            this.Action = "removeParcelFromDelivery";
         }
     }
 }

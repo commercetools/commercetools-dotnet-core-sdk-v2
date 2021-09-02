@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomerEmailAction))]
     public partial interface IStagedOrderSetCustomerEmailAction : IStagedOrderUpdateAction
     {
-        string Email { get; set;}
+        string Email { get; set; }
     }
 }

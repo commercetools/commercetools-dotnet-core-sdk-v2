@@ -13,10 +13,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomLineItemDiscountSetMessage))]
     public partial interface IOrderCustomLineItemDiscountSetMessage : IMessage
     {
-        string CustomLineItemId { get; set;}
-        
-        List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set;}
-        
-        ITaxedItemPrice TaxedPrice { get; set;}
+        string CustomLineItemId { get; set; }
+
+        List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+
+        ITaxedItemPrice TaxedPrice { get; set; }
     }
 }

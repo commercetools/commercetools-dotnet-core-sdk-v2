@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.CartDiscounts
 {
     public partial class CartDiscountValueRelativeDraft : ICartDiscountValueRelativeDraft
     {
-        public string Type { get; set;}
-        
-        public long Permyriad { get; set;}
+        public string Type { get; set; }
+
+        public long Permyriad { get; set; }
         public CartDiscountValueRelativeDraft()
-        { 
-           this.Type = "relative";
+        {
+            this.Type = "relative";
         }
     }
 }

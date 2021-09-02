@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction))]
     public partial interface IDiscountCodeSetCustomTypeAction : IDiscountCodeUpdateAction
     {
-        ITypeResourceIdentifier Type { get; set;}
-        
-        IFieldContainer Fields { get; set;}
+        ITypeResourceIdentifier Type { get; set; }
+
+        IFieldContainer Fields { get; set; }
     }
 }

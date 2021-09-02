@@ -4,62 +4,62 @@ using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 namespace commercetools.HistoryApi.Models.Common
 {
-   public enum ChannelRole
-   {
-       [Description("InventorySupply")]
-       InventorySupply,
-       
-       [Description("ProductDistribution")]
-       ProductDistribution,
-       
-       [Description("OrderExport")]
-       OrderExport,
-       
-       [Description("OrderImport")]
-       OrderImport,
-       
-       [Description("Primary")]
-       Primary
-   }
-   public class ChannelRoleWrapper : IChannelRole
-   {
-       public string JsonName { get; internal set; }
-       public ChannelRole? Value { get; internal set; }
-   }
-   [EnumInterfaceCreator(typeof(IChannelRole), "FindEnum")]
-   public interface IChannelRole : IJsonName
-   {
+    public enum ChannelRole
+    {
+        [Description("InventorySupply")]
+        InventorySupply,
+
+        [Description("ProductDistribution")]
+        ProductDistribution,
+
+        [Description("OrderExport")]
+        OrderExport,
+
+        [Description("OrderImport")]
+        OrderImport,
+
+        [Description("Primary")]
+        Primary
+    }
+    public class ChannelRoleWrapper : IChannelRole
+    {
+        public string JsonName { get; internal set; }
+        public ChannelRole? Value { get; internal set; }
+    }
+    [EnumInterfaceCreator(typeof(IChannelRole), "FindEnum")]
+    public interface IChannelRole : IJsonName
+    {
         public static IChannelRole InventorySupply = new ChannelRoleWrapper
-         {Value = ChannelRole.InventorySupply, JsonName = "InventorySupply"}; 
-       
+        { Value = ChannelRole.InventorySupply, JsonName = "InventorySupply" };
+
         public static IChannelRole ProductDistribution = new ChannelRoleWrapper
-         {Value = ChannelRole.ProductDistribution, JsonName = "ProductDistribution"}; 
-       
+        { Value = ChannelRole.ProductDistribution, JsonName = "ProductDistribution" };
+
         public static IChannelRole OrderExport = new ChannelRoleWrapper
-         {Value = ChannelRole.OrderExport, JsonName = "OrderExport"}; 
-       
+        { Value = ChannelRole.OrderExport, JsonName = "OrderExport" };
+
         public static IChannelRole OrderImport = new ChannelRoleWrapper
-         {Value = ChannelRole.OrderImport, JsonName = "OrderImport"}; 
-       
+        { Value = ChannelRole.OrderImport, JsonName = "OrderImport" };
+
         public static IChannelRole Primary = new ChannelRoleWrapper
-         {Value = ChannelRole.Primary, JsonName = "Primary"}; 
-       
+        { Value = ChannelRole.Primary, JsonName = "Primary" };
+
         ChannelRole? Value { get; }
-        
+
         static IChannelRole[] Values()
         {
-           return new[]
-           {
+            return new[]
+            {
                 InventorySupply ,
                 ProductDistribution ,
                 OrderExport ,
                 OrderImport ,
-                Primary 
+                Primary
            };
         }
         static IChannelRole FindEnum(string value)
         {
-           return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ChannelRoleWrapper() {JsonName = value};
+            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ChannelRoleWrapper() { JsonName = value };
         }
-   }
+    }
 }

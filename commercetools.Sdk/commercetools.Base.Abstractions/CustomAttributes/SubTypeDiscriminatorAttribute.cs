@@ -11,7 +11,7 @@ namespace commercetools.Base.CustomAttributes
             this.Value = value;
             this.SubType = subType;
         }
-        
+
         public string Value { get; }
 
         public Type SubType { get; set; }

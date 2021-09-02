@@ -18,7 +18,7 @@ namespace commercetools.Api.Serialization.Tests
         {
             this._serializationFixture = serializationFixture;
         }
-        
+
         [Fact]
         public void CustomFieldsListDeserialization()
         {
@@ -39,7 +39,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<CategoryReference>(deserialized.Custom.Fields["reference"]);
             Assert.IsType<CentPrecisionMoney>(deserialized.Custom.Fields["money"]);
             Assert.IsType<LocalizedString>(deserialized.Custom.Fields["localized-string"]);
-            
+
             Assert.IsType<List<Object>>(deserialized.Custom.Fields["set-empty"]);
             Assert.IsType<List<bool>>(deserialized.Custom.Fields["set-boolean"]);
             Assert.IsType<List<long>>(deserialized.Custom.Fields["set-integer"]);
@@ -50,11 +50,11 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<IReference>>(deserialized.Custom.Fields["set-reference"]);
             Assert.IsType<List<ITypedMoney>>(deserialized.Custom.Fields["set-money"]);
             Assert.IsType<List<string>>(deserialized.Custom.Fields["set-text"]);
-            
-            var date = ((string) deserialized.Custom.Fields["date"]).AsDate();
-            var dateTime = ((string) deserialized.Custom.Fields["date-time"]).AsDateTime();
+
+            var date = ((string)deserialized.Custom.Fields["date"]).AsDate();
+            var dateTime = ((string)deserialized.Custom.Fields["date-time"]).AsDateTime();
             Assert.Equal(date, dateTime.Date);
-            
+
         }
         [Fact]
         public void CustomFieldsSerialization()

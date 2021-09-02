@@ -24,13 +24,13 @@ namespace commercetools.Sdk.BCTest
             this._serializerService = serviceProviderFixture.GetService<ISerializerService>();
             this.clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
         }
-        
+
         [Fact]
         public async Task TestBc()
         {
             var projectKey = this.clientConfiguration.ProjectKey;
             var categories = await ApiFactory
-                .CreateForProject(new CtpV2CompatClient(client),projectKey)
+                .CreateForProject(new CtpV2CompatClient(client), projectKey)
                 .Categories()
                 .Get()
                 .ExecuteAsync();
@@ -44,7 +44,7 @@ namespace commercetools.Sdk.BCTest
             var refTypeId = _serializerService.Deserialize<IReferenceTypeId>(json);
             Assert.NotNull(refTypeId);
         }
-        
+
         [Fact]
         public void TestEnumDeserialization2()
         {

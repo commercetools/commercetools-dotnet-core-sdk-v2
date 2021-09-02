@@ -13,7 +13,7 @@ namespace commercetools.Sdk.Api.Serialization
     public class SerializerService : ISerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
-       
+
         public SerializerService(
             ITypeRetriever typeRetriever,
             IMapperTypeRetriever<IFieldContainer> customFieldsMapperTypeRetriever,
@@ -39,8 +39,8 @@ namespace commercetools.Sdk.Api.Serialization
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
         }
-        
-        public object Deserialize(Type returnType,string input)
+
+        public object Deserialize(Type returnType, string input)
         {
             return JsonSerializer.Deserialize(input, returnType, _serializerOptions);
         }

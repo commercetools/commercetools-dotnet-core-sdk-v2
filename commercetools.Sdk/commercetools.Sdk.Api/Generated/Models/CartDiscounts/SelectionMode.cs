@@ -4,41 +4,41 @@ using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 namespace commercetools.Api.Models.CartDiscounts
 {
-   public enum SelectionMode
-   {
-       [Description("Cheapest")]
-       Cheapest,
-       
-       [Description("MostExpensive")]
-       MostExpensive
-   }
-   public class SelectionModeWrapper : ISelectionMode
-   {
-       public string JsonName { get; internal set; }
-       public SelectionMode? Value { get; internal set; }
-   }
-   [EnumInterfaceCreator(typeof(ISelectionMode), "FindEnum")]
-   public interface ISelectionMode : IJsonName
-   {
+    public enum SelectionMode
+    {
+        [Description("Cheapest")]
+        Cheapest,
+
+        [Description("MostExpensive")]
+        MostExpensive
+    }
+    public class SelectionModeWrapper : ISelectionMode
+    {
+        public string JsonName { get; internal set; }
+        public SelectionMode? Value { get; internal set; }
+    }
+    [EnumInterfaceCreator(typeof(ISelectionMode), "FindEnum")]
+    public interface ISelectionMode : IJsonName
+    {
         public static ISelectionMode Cheapest = new SelectionModeWrapper
-         {Value = SelectionMode.Cheapest, JsonName = "Cheapest"}; 
-       
+        { Value = SelectionMode.Cheapest, JsonName = "Cheapest" };
+
         public static ISelectionMode MostExpensive = new SelectionModeWrapper
-         {Value = SelectionMode.MostExpensive, JsonName = "MostExpensive"}; 
-       
+        { Value = SelectionMode.MostExpensive, JsonName = "MostExpensive" };
+
         SelectionMode? Value { get; }
-        
+
         static ISelectionMode[] Values()
         {
-           return new[]
-           {
+            return new[]
+            {
                 Cheapest ,
-                MostExpensive 
+                MostExpensive
            };
         }
         static ISelectionMode FindEnum(string value)
         {
-           return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SelectionModeWrapper() {JsonName = value};
+            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SelectionModeWrapper() { JsonName = value };
         }
-   }
+    }
 }

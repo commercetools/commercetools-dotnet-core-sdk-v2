@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Products
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Products.CustomTokenizer))]
     public partial interface ICustomTokenizer : ISuggestTokenizer
     {
-        List<string> Inputs { get; set;}
+        List<string> Inputs { get; set; }
     }
 }

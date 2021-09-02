@@ -88,26 +88,26 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessage))]
     public partial interface IMessage : IBaseResource
     {
-        new string Id { get; set;}
-        
-        new long Version { get; set;}
-        
-        new DateTime CreatedAt { get; set;}
-        
-        new DateTime LastModifiedAt { get; set;}
-        
-        ILastModifiedBy LastModifiedBy { get; set;}
-        
-        ICreatedBy CreatedBy { get; set;}
-        
-        long SequenceNumber { get; set;}
-        
-        IReference Resource { get; set;}
-        
-        long ResourceVersion { get; set;}
-        
-        string Type { get; set;}
-        
-        IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
+        new string Id { get; set; }
+
+        new long Version { get; set; }
+
+        new DateTime CreatedAt { get; set; }
+
+        new DateTime LastModifiedAt { get; set; }
+
+        ILastModifiedBy LastModifiedBy { get; set; }
+
+        ICreatedBy CreatedBy { get; set; }
+
+        long SequenceNumber { get; set; }
+
+        IReference Resource { get; set; }
+
+        long ResourceVersion { get; set; }
+
+        string Type { get; set; }
+
+        IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
     }
 }

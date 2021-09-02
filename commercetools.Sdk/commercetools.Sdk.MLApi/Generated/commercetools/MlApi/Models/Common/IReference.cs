@@ -13,10 +13,10 @@ namespace commercetools.MLApi.Models.Common
     [SubTypeDiscriminator("category", typeof(commercetools.MLApi.Models.Common.CategoryReference))]
     [SubTypeDiscriminator("product", typeof(commercetools.MLApi.Models.Common.ProductReference))]
     [SubTypeDiscriminator("product-type", typeof(commercetools.MLApi.Models.Common.ProductTypeReference))]
-    public partial interface IReference 
+    public partial interface IReference
     {
-        IReferenceTypeId TypeId { get; set;}
-        
-        string Id { get; set;}
+        IReferenceTypeId TypeId { get; set; }
+
+        string Id { get; set; }
     }
 }

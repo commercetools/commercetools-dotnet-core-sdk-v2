@@ -7,7 +7,7 @@ using IClientV2 = commercetools.Base.Client.IClient;
 
 namespace commercetools.Sdk.V2Compat
 {
-    public class CtpV2CompatClient: IClientV2
+    public class CtpV2CompatClient : IClientV2
     {
         private IClient client;
 
@@ -17,7 +17,7 @@ namespace commercetools.Sdk.V2Compat
         }
 
         public ISerializerService SerializerService { get; }
-        
+
         public string Name { get; set; }
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
         {

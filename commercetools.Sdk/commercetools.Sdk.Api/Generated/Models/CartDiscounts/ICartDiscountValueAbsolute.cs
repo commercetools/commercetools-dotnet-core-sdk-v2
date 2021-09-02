@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueAbsolute))]
     public partial interface ICartDiscountValueAbsolute : ICartDiscountValue
     {
-        List<ITypedMoney> Money { get; set;}
+        List<ITypedMoney> Money { get; set; }
     }
 }

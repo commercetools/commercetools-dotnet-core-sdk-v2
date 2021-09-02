@@ -13,9 +13,9 @@ namespace commercetools.Base.Serialization.JsonConverters
         : JsonConverterFactory
     {
         protected JsonNamingPolicy NamingPolicy { get; }
-        
+
         protected JsonSerializerOptions JsonSerializerOptions { get; }
-        
+
         protected static ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         /// <param name="namingPolicy">The current <see cref="JsonNamingPolicy"/></param>
         /// <param name="jsonSerializerOptions"></param>
         public TypeDiscriminatorConverterFactory(
-            JsonNamingPolicy namingPolicy, 
+            JsonNamingPolicy namingPolicy,
             JsonSerializerOptions jsonSerializerOptions)
         {
             this.JsonSerializerOptions = jsonSerializerOptions;
@@ -33,13 +33,13 @@ namespace commercetools.Base.Serialization.JsonConverters
 
         public override bool CanConvert(Type typeToConvert)
         {
-            return (typeToConvert.IsAbstractClass() || typeToConvert.IsInterface) 
+            return (typeToConvert.IsAbstractClass() || typeToConvert.IsInterface)
                     && typeToConvert.IsDefined(typeof(TypeDiscriminatorAttribute));
         }
-        
+
         public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
         {
-            if(!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
+            if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {
                 var converterType = typeof(TypeDiscriminatorConverter<>).MakeGenericType(typeToConvert);
                 converter = (JsonConverter)Activator.CreateInstance(converterType, this.NamingPolicy, JsonSerializerOptions);

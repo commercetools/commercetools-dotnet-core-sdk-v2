@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace commercetools.Base.Client.Middlewares
 {
-    public abstract class DelegatingMiddleware: Middleware
+    public abstract class DelegatingMiddleware : Middleware
     {
         public Middleware InnerMiddleware { get; set; }
 
