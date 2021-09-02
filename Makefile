@@ -21,9 +21,9 @@ gen_history_sdk: generate_history
 verify:
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Api.Serialization.Tests -c Release
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.Api.Tests -c Release
-#	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.HistoryApi.Tests -c Release
-#	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.ImportApi.Tests -c Release
-#	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.MLApi.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.HistoryApi.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.ImportApi.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.MLApi.Tests -c Release
 
 codegen_install:
 	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
