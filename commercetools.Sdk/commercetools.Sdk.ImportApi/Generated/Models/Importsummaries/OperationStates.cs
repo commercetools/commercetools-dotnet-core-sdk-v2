@@ -9,6 +9,8 @@ namespace commercetools.ImportApi.Models.Importsummaries
 {
     public partial class OperationStates : IOperationStates
     {
+        public long Processing { get; set; }
+
         public long ValidationFailed { get; set; }
 
         public long Unresolved { get; set; }
