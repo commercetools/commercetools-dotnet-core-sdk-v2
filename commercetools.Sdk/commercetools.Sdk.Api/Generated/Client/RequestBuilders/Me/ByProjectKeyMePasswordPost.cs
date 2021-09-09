@@ -23,14 +23,14 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private JsonElement? jsonNode;
+        private commercetools.Api.Models.Customers.IMyCustomerChangePassword MyCustomerChangePassword;
 
-        public ByProjectKeyMePasswordPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, JsonElement? jsonNode)
+        public ByProjectKeyMePasswordPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.IMyCustomerChangePassword myCustomerChangePassword)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
-            this.jsonNode = jsonNode;
+            this.MyCustomerChangePassword = myCustomerChangePassword;
             this.RequestUrl = $"/{ProjectKey}/me/password";
         }
 
@@ -48,7 +48,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(jsonNode);
+                var body = this.SerializerService.Serialize(MyCustomerChangePassword);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");
