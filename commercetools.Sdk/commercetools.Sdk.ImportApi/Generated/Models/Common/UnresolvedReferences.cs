@@ -8,14 +8,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Common
 {
-    public partial class ProductVariantKeyReference : IProductVariantKeyReference
+    public partial class UnresolvedReferences : IUnresolvedReferences
     {
         public string Key { get; set; }
 
-        public string TypeId { get; set; }
-        public ProductVariantKeyReference()
-        {
-            this.TypeId = "product-variant";
-        }
+        public IReferenceType TypeId { get; set; }
     }
 }

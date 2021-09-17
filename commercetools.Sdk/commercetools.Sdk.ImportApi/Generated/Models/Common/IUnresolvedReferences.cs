@@ -8,14 +8,11 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Common
 {
-    public partial class CustomerKeyReference : ICustomerKeyReference
+    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.UnresolvedReferences))]
+    public partial interface IUnresolvedReferences
     {
-        public string Key { get; set; }
+        string Key { get; set; }
 
-        public string TypeId { get; set; }
-        public CustomerKeyReference()
-        {
-            this.TypeId = "customer";
-        }
+        IReferenceType TypeId { get; set; }
     }
 }
