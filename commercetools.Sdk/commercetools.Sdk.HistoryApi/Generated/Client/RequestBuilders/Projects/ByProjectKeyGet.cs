@@ -8,6 +8,7 @@ using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.HistoryApi.Models;
+using commercetools.HistoryApi.Models;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
 {
@@ -89,6 +90,11 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
             return this.GetQueryParam("customerId");
         }
 
+        public List<string> GetExcludePlatformInitiatedChanges()
+        {
+            return this.GetQueryParam("excludePlatformInitiatedChanges");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -152,6 +158,11 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.Projects
         public ByProjectKeyGet WithCustomerId(string customerId)
         {
             return this.AddQueryParam("customerId", customerId);
+        }
+
+        public ByProjectKeyGet WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange excludePlatformInitiatedChanges)
+        {
+            return this.AddQueryParam("excludePlatformInitiatedChanges", excludePlatformInitiatedChanges.ToString());
         }
 
         public ByProjectKeyGet WithExpand(bool expand)

@@ -133,6 +133,15 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
+                   .WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
                    .WithExpand(true)
                    .Build(),
                    "Get",
