@@ -24,7 +24,7 @@ namespace commercetools.Api.Models.Orders
 
         IPriceDraft Price { get; set; }
 
-        double Quantity { get; set; }
+        long Quantity { get; set; }
 
         List<IItemState> State { get; set; }
 
