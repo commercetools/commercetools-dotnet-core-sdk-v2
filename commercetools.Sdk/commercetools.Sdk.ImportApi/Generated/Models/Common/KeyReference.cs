@@ -1,3 +1,4 @@
+using commercetools.ImportApi.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace commercetools.ImportApi.Models.Common
     {
         public string Key { get; set; }
 
-        public string TypeId { get; set; }
+        public IReferenceType TypeId { get; set; }
     }
 }

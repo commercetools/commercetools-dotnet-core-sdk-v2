@@ -12,10 +12,10 @@ namespace commercetools.ImportApi.Models.Common
     {
         public string Key { get; set; }
 
-        public string TypeId { get; set; }
+        public IReferenceType TypeId { get; set; }
         public ShippingMethodKeyReference()
         {
-            this.TypeId = "shipping-method";
+            this.TypeId = IReferenceType.FindEnum("shipping-method");
         }
     }
 }
