@@ -136,6 +136,16 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithProjectKeyValue("test_projectKey")
                    .WithResourceTypeValue("test_resourceType")
                    .Get()
+                   .WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .Get()
                    .WithExpand(true)
                    .Build(),
                    "Get",

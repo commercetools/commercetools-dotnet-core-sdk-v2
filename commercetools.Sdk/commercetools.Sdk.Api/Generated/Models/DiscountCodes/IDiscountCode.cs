@@ -50,5 +50,7 @@ namespace commercetools.Api.Models.DiscountCodes
         DateTime? ValidFrom { get; set; }
 
         DateTime? ValidUntil { get; set; }
+
+        long ApplicationVersion { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace commercetools.ImportApi.Models.Common
     [SubTypeDiscriminator("customer", typeof(commercetools.ImportApi.Models.Common.CustomerKeyReference))]
     [SubTypeDiscriminator("customer-group", typeof(commercetools.ImportApi.Models.Common.CustomerGroupKeyReference))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.ImportApi.Models.Common.DiscountCodeKeyReference))]
+    [SubTypeDiscriminator("key-value-document", typeof(commercetools.ImportApi.Models.Common.CustomObjectKeyReference))]
     [SubTypeDiscriminator("order", typeof(commercetools.ImportApi.Models.Common.OrderKeyReference))]
     [SubTypeDiscriminator("payment", typeof(commercetools.ImportApi.Models.Common.PaymentKeyReference))]
     [SubTypeDiscriminator("price", typeof(commercetools.ImportApi.Models.Common.PriceKeyReference))]

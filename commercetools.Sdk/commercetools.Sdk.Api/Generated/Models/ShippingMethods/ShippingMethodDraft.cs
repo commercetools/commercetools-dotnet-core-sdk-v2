@@ -17,6 +17,8 @@ namespace commercetools.Api.Models.ShippingMethods
 
         public string Name { get; set; }
 
+        public ILocalizedString LocalizedName { get; set; }
+
         public string Description { get; set; }
 
         public ILocalizedString LocalizedDescription { get; set; }

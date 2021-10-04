@@ -25,7 +25,7 @@ namespace commercetools.ImportApi.Models.Importoperations
 
         public List<IErrorObject> Errors { get; set; }
 
-        public List<IKeyReference> UnresolvedReferences { get; set; }
+        public List<IUnresolvedReferences> UnresolvedReferences { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

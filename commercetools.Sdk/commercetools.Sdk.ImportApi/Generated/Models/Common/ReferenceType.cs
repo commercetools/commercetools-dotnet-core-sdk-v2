@@ -61,7 +61,10 @@ namespace commercetools.ImportApi.Models.Common
         TaxCategory,
 
         [Description("type")]
-        Type
+        Type,
+
+        [Description("key-value-document")]
+        KeyValueDocument
     }
 
     public class ReferenceTypeWrapper : IReferenceType
@@ -134,6 +137,9 @@ namespace commercetools.ImportApi.Models.Common
         public static IReferenceType Type = new ReferenceTypeWrapper
         { Value = ReferenceType.Type, JsonName = "type" };
 
+        public static IReferenceType KeyValueDocument = new ReferenceTypeWrapper
+        { Value = ReferenceType.KeyValueDocument, JsonName = "key-value-document" };
+
         ReferenceType? Value { get; }
 
         static IReferenceType[] Values()
@@ -158,7 +164,8 @@ namespace commercetools.ImportApi.Models.Common
                  State ,
                  Store ,
                  TaxCategory ,
-                 Type
+                 Type ,
+                 KeyValueDocument
              };
         }
         static IReferenceType FindEnum(string value)
