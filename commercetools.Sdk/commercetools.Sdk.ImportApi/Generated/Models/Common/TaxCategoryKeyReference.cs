@@ -12,10 +12,10 @@ namespace commercetools.ImportApi.Models.Common
     {
         public string Key { get; set; }
 
-        public IReferenceType TypeId { get; set; }
+        public string TypeId { get; set; }
         public TaxCategoryKeyReference()
         {
-            this.TypeId = IReferenceType.FindEnum("tax-category");
+            this.TypeId = "tax-category";
         }
     }
 }
