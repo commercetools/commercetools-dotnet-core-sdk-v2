@@ -10,5 +10,10 @@ namespace commercetools.Api.Serialization.Tests
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name))?.Value;
         }
+        
+        public static T GetAttribute<T>(this List<IAttribute> attributes, string name)
+        {
+            return (T) attributes.FirstOrDefault(a => a.Name.Equals(name));
+        }
     }
 }

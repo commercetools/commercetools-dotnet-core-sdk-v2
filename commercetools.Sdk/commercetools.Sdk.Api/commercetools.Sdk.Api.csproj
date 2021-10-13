@@ -22,7 +22,4 @@
     <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Generated\Client" />
-  </ItemGroup>
 </Project>
