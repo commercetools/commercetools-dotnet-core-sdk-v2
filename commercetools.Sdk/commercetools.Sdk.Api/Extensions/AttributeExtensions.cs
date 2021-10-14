@@ -13,7 +13,7 @@ namespace commercetools.Sdk.Api.Extensions
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
         
-        public static T Get<T>(this List<IAttribute> attributes, string name)
+        public static T Get<T>(this List<IAttribute> attributes, string name) where T : IAttribute
         {
             return (T) attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
