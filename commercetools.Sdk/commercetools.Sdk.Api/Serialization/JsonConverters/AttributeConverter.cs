@@ -12,14 +12,14 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
 {
     public class AttributeConverter : JsonConverter<IAttribute>
     {
-        private readonly IMapperTypeRetriever<IAttribute> mapperTypeRetriever;
-        private readonly AttributeTypeRetriever attributeTypeRetriever;
+        private readonly IMapperTypeRetriever<IAttribute> _mapperTypeRetriever;
+        private readonly AttributeTypeRetriever _attributeTypeRetriever;
         private ISerializerService serializerService;
 
         public AttributeConverter(IMapperTypeRetriever<IAttribute> mapperTypeRetriever, AttributeTypeRetriever attributeTypeRetriever, ISerializerService serializerService)
         {
-            this.mapperTypeRetriever = mapperTypeRetriever;
-            this.attributeTypeRetriever = attributeTypeRetriever;
+            this._mapperTypeRetriever = mapperTypeRetriever;
+            this._attributeTypeRetriever = attributeTypeRetriever;
             this.serializerService = serializerService;
         }
 
@@ -37,9 +37,11 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             {
                 var nameProp = rootElement.GetProperty("name");
                 var valueProp = rootElement.GetProperty("value");
-                attribute = attributeTypeRetriever.GetAttribute(valueProp);
+                attribute = _attributeTypeRetriever.GetAttribute(valueProp);
                 attribute.Name = nameProp.GetString();
-                var returnType = this.mapperTypeRetriever.GetTypeForToken(valueProp);
+                var returnType = attribute is IGenericTypeAttribute attributeValueType ?
+                    attributeValueType.GetValueType() :
+                    _mapperTypeRetriever.GetTypeForToken(valueProp);
                 attribute.Value = valueProp.ToObject(returnType, serializerService); ;
             }
             else
