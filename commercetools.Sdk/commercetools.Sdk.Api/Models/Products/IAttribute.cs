@@ -6,7 +6,7 @@ namespace commercetools.Api.Models.Products
 {
     public partial interface IAttribute
     {
-        #nullable enable
+#nullable enable
         public PlainEnumAttribute? ToPlainEnumAttribute()
         {
             if (this is PlainEnumAttribute t) { return t; }
@@ -69,7 +69,7 @@ namespace commercetools.Api.Models.Products
 
             return null;
         }
-        
+
         public NestedAttribute? ToNestedAttribute()
         {
             if (this is NestedAttribute t) { return t; }
@@ -139,13 +139,13 @@ namespace commercetools.Api.Models.Products
 
             return null;
         }
-        
+
         public SetAttribute<List<IAttribute>>? ToSetOfNestedAttribute()
         {
             if (this is SetAttribute<List<IAttribute>> t) { return t; }
 
             return null;
         }
-        #nullable disable
+#nullable disable
     }
 }
