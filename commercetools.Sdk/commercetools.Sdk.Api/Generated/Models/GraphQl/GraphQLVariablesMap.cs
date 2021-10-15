@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.GraphQl
 {
-    public class GraphQLVariablesMap : Dictionary<string, Object>, IGraphQLVariablesMap
+    public partial class GraphQLVariablesMap : Dictionary<string, Object>, IGraphQLVariablesMap
     {
     }
 }

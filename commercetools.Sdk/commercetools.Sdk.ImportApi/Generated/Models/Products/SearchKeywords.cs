@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Products
 {
-    public class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
+    public partial class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
     {
     }
 }

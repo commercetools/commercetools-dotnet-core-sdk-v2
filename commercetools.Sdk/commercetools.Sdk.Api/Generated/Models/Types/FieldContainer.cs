@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public class FieldContainer : Dictionary<string, Object>, IFieldContainer
+    public partial class FieldContainer : Dictionary<string, Object>, IFieldContainer
     {
     }
 }

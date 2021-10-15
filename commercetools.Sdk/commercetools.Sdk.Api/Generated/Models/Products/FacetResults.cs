@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public class FacetResults : Dictionary<string, IFacetResult>, IFacetResults
+    public partial class FacetResults : Dictionary<string, IFacetResult>, IFacetResults
     {
     }
 }
