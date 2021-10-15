@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.HistoryApi.Models.Common
 {
-    public class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
+    public partial class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
     {
     }
 }

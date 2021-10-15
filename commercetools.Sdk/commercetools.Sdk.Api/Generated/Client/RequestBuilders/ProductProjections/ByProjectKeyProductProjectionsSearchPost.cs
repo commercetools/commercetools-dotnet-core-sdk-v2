@@ -32,7 +32,6 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
-            AddHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
             this._formParams = formParams ?? new List<KeyValuePair<string, string>>();
             this.RequestUrl = $"/{ProjectKey}/product-projections/search";
         }

@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Customfields
 {
-    public class FieldContainer : Dictionary<string, ICustomField>, IFieldContainer
+    public partial class FieldContainer : Dictionary<string, ICustomField>, IFieldContainer
     {
     }
 }

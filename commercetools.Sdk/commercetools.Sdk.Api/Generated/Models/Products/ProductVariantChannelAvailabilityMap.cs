@@ -8,7 +8,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public class ProductVariantChannelAvailabilityMap : Dictionary<string, IProductVariantChannelAvailability>, IProductVariantChannelAvailabilityMap
+    public partial class ProductVariantChannelAvailabilityMap : Dictionary<string, IProductVariantChannelAvailability>, IProductVariantChannelAvailabilityMap
     {
     }
 }
