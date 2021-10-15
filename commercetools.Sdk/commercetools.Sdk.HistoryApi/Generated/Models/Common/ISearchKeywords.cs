@@ -8,7 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.HistoryApi.Models.Common
 {
-    public class ISearchKeywords : Dictionary<string, List<ISearchKeyword>>
+    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.SearchKeywords))]
+    public interface ISearchKeywords : IDictionary<string, List<ISearchKeyword>>
     {
     }
 }

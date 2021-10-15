@@ -8,7 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public class ISuggestionResult : Dictionary<string, List<ISuggestion>>
+    [DeserializeAs(typeof(commercetools.Api.Models.Products.SuggestionResult))]
+    public interface ISuggestionResult : IDictionary<string, List<ISuggestion>>
     {
     }
 }

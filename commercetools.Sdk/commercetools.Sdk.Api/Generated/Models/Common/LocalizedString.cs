@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    public partial class LocalizedString : ILocalizedString
+    public class LocalizedString : Dictionary<string, string>, ILocalizedString
     {
     }
 }

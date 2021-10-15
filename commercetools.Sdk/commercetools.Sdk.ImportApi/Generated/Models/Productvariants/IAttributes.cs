@@ -8,7 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Productvariants
 {
-    public class IAttributes : Dictionary<string, IAttribute>
+    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.Attributes))]
+    public interface IAttributes : IDictionary<string, IAttribute>
     {
     }
 }

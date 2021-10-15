@@ -7,7 +7,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Types
 {
-    public class IFieldContainer : Dictionary<string, Object>
+    [DeserializeAs(typeof(commercetools.Api.Models.Types.FieldContainer))]
+    public interface IFieldContainer : IDictionary<string, Object>
     {
     }
 }

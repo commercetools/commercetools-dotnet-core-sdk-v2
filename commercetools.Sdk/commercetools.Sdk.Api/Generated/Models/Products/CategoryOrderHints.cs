@@ -7,7 +7,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class CategoryOrderHints : ICategoryOrderHints
+    public class CategoryOrderHints : Dictionary<string, string>, ICategoryOrderHints
     {
     }
 }
