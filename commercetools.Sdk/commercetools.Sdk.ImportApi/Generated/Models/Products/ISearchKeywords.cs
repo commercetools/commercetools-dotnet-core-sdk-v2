@@ -8,7 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.ImportApi.Models.Products
 {
-    public class ISearchKeywords : Dictionary<string, List<ISearchKeyword>>
+    [DeserializeAs(typeof(commercetools.ImportApi.Models.Products.SearchKeywords))]
+    public interface ISearchKeywords : IDictionary<string, List<ISearchKeyword>>
     {
     }
 }

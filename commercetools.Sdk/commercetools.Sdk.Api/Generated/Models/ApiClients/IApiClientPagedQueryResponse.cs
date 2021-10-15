@@ -13,11 +13,11 @@ namespace commercetools.Api.Models.ApiClients
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<IApiClient> Results { get; set; }
     }

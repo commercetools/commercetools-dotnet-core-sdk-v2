@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +62,6 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -70,5 +71,6 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
             }
             return request;
         }
+
     }
 }

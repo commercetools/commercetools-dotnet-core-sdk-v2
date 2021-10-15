@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
         {
             this._cultureValidator = cultureValidator;
         }
-        
+
         private Type GetTypeForToken(JsonElement element)
         {
             Type tokenType;
@@ -58,8 +58,8 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     if (valueKind == JsonValueKind.Null)
                         tokenType = typeof(SetAttribute<>).MakeGenericType(typeof(object));
                     else if (element.GetFirstArrayElement().IsNestedElement())
-                        tokenType =  typeof(NestedAttribute);
-                    else 
+                        tokenType = typeof(NestedAttribute);
+                    else
                         tokenType = typeof(SetAttribute<>).MakeGenericType(GetElementTypeForToken(element.GetFirstArrayElement()));
                     break;
                 default:
@@ -69,7 +69,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 
             return tokenType;
         }
-        
+
         private Type GetElementTypeForToken(JsonElement element)
         {
             Type tokenType;
@@ -120,7 +120,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 
             return tokenType;
         }
-               
+
         public IAttribute GetAttribute(JsonElement element)
         {
             var type = GetTypeForToken(element);

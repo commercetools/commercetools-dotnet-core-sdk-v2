@@ -8,7 +8,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Products
 {
-    public class IFacetResults : Dictionary<string, IFacetResult>
+    [DeserializeAs(typeof(commercetools.Api.Models.Products.FacetResults))]
+    public interface IFacetResults : IDictionary<string, IFacetResult>
     {
     }
 }

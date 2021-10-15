@@ -27,7 +27,7 @@ namespace commercetools.Api.Models.Common
 
         public DateTime? ValidUntil { get; set; }
 
-        public IDiscountedPrice Discounted { get; set; }
+        public IDiscountedPriceDraft Discounted { get; set; }
 
         public ICustomFields Custom { get; set; }
 

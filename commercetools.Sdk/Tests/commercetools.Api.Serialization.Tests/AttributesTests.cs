@@ -54,7 +54,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<bool>>(attributes.Get("set-boolean").Value);
             Assert.IsType<List<List<IAttribute>>>(attributes.Get("set-nested").Value);
         }
-        
+
         [Fact]
         public void AttributesTypesDeserialization()
         {
@@ -76,7 +76,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<ReferenceAttribute>(attributes.Get<ReferenceAttribute>("reference"));
             Assert.IsType<MoneyAttribute>(attributes.Get<MoneyAttribute>("money"));
             Assert.IsType<NestedAttribute>(attributes.Get<NestedAttribute>("nested"));
-            
+
             Assert.IsType<SetAttribute<object>>(attributes.Get<SetAttribute<object>>("set-empty"));
             Assert.IsType<SetAttribute<string>>(attributes.Get<SetAttribute<string>>("set-text"));
             Assert.IsType<SetAttribute<LocalizedString>>(attributes.Get<SetAttribute<LocalizedString>>("set-ltext"));
@@ -91,7 +91,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SetAttribute<string>>(attributes.Get<SetAttribute<string>>("set-time"));
             Assert.IsType<SetAttribute<bool>>(attributes.Get<SetAttribute<bool>>("set-boolean"));
             Assert.IsType<SetAttribute<List<IAttribute>>>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested"));
-            
+
             Assert.IsType<string>(attributes.Get<StringAttribute>("text").GetValue());
             Assert.IsType<LocalizedString>(attributes.Get<LocalizedStringAttribute>("ltext").GetValue());
             Assert.IsAssignableFrom<IAttributePlainEnumValue>(attributes.Get<PlainEnumAttribute>("enum").GetValue());
@@ -120,7 +120,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<string>>(attributes.Get<SetAttribute<string>>("set-time").GetValue());
             Assert.IsType<List<bool>>(attributes.Get<SetAttribute<bool>>("set-boolean").GetValue());
             Assert.IsType<List<List<IAttribute>>>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue());
-            
+
             Assert.Equal("set-nested-enum", attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[0][0].Name);
             Assert.IsType<PlainEnumAttribute>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[0][0]);
             Assert.Equal("set-nested-reference", attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[1][0].Name);
@@ -148,7 +148,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<ReferenceAttribute>(attributes.Get("reference").ToReferenceAttribute());
             Assert.IsType<MoneyAttribute>(attributes.Get("money").ToMoneyAttribute());
             Assert.IsType<NestedAttribute>(attributes.Get("nested").ToNestedAttribute());
-            
+
             Assert.Null(attributes.Get("set-empty").ToSetStringAttribute());
             Assert.IsType<SetAttribute<string>>(attributes.Get("set-text").ToSetStringAttribute());
             Assert.IsType<SetAttribute<LocalizedString>>(attributes.Get("set-ltext").ToSetLocalizedStringAttribute());
@@ -163,7 +163,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SetAttribute<string>>(attributes.Get("set-time").ToSetStringAttribute());
             Assert.IsType<SetAttribute<bool>>(attributes.Get("set-boolean").ToSetBooleanAttribute());
             Assert.IsType<SetAttribute<List<IAttribute>>>(attributes.Get("set-nested").ToSetOfNestedAttribute());
-            
+
             Assert.IsType<string>(attributes.Get("text").ToStringAttribute()?.GetValue());
             Assert.IsType<LocalizedString>(attributes.Get("ltext").ToLocalizedStringAttribute()?.GetValue());
             Assert.IsAssignableFrom<IAttributePlainEnumValue>(attributes.Get("enum").ToPlainEnumAttribute()?.GetValue());
@@ -192,7 +192,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<string>>(attributes.Get("set-time").ToSetStringAttribute()?.GetValue());
             Assert.IsType<List<bool>>(attributes.Get("set-boolean").ToSetBooleanAttribute()?.GetValue());
             Assert.IsType<List<List<IAttribute>>>(attributes.Get("set-nested").ToSetOfNestedAttribute()?.GetValue());
-            
+
             Assert.Equal("set-nested-enum", attributes.Get("set-nested").ToSetOfNestedAttribute()?.GetValue()[0][0].Name);
             Assert.IsType<PlainEnumAttribute>(attributes.Get("set-nested").ToSetOfNestedAttribute()?.GetValue()[0][0]);
             Assert.Equal("set-nested-reference", attributes.Get("set-nested").ToSetOfNestedAttribute()?.GetValue()[1][0].Name);

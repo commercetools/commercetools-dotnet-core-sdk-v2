@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +55,6 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethod>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -67,5 +68,6 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             }
             return request;
         }
+
     }
 }

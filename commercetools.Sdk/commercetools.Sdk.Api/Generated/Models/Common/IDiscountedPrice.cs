@@ -12,7 +12,7 @@ namespace commercetools.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Api.Models.Common.DiscountedPrice))]
     public partial interface IDiscountedPrice
     {
-        IMoney Value { get; set; }
+        ITypedMoney Value { get; set; }
 
         IProductDiscountReference Discount { get; set; }
     }

@@ -17,7 +17,7 @@ namespace commercetools.Api.Models.Products
 
         public bool? Staged { get; set; }
 
-        public IDiscountedPrice Discounted { get; set; }
+        public IDiscountedPriceDraft Discounted { get; set; }
         public ProductSetDiscountedPriceAction()
         {
             this.Action = "setDiscountedPrice";

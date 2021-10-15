@@ -12,12 +12,12 @@ namespace commercetools.Sdk.Api.Extensions
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
-        
+
         public static T Get<T>(this List<IAttribute> attributes, string name) where T : IAttribute
         {
-            return (T) attributes.FirstOrDefault(a => a.Name.Equals(name));
+            return (T)attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
-        
+
         public static bool IsTextAttribute(this IAttribute attribute)
         {
             return
@@ -41,7 +41,7 @@ namespace commercetools.Sdk.Api.Extensions
             return
                 attribute is LocalizedEnumAttribute;
         }
-        
+
         public static bool IsLocalizedStringAttribute(this IAttribute attribute)
         {
             return
@@ -71,14 +71,14 @@ namespace commercetools.Sdk.Api.Extensions
             return
                 attribute is ReferenceAttribute;
         }
-        
+
         public static bool IsNestedAttribute(this IAttribute attribute)
         {
             return
                 attribute is NestedAttribute ||
                 attribute is IGenericAttribute<List<IAttribute>>;
         }
-      
+
         public static bool IsSetBooleanAttribute(this IAttribute attribute)
         {
             return

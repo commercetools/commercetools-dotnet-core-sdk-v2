@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,5 +67,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.IImportSinkPagedResponse>(requestMessage);
         }
+
     }
 }
