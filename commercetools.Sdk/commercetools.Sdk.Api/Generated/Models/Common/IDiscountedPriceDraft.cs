@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.DiscountedPrice))]
-    public partial interface IDiscountedPrice
+    [DeserializeAs(typeof(commercetools.Api.Models.Common.DiscountedPriceDraft))]
+    public partial interface IDiscountedPriceDraft
     {
-        ITypedMoney Value { get; set; }
+        IMoney Value { get; set; }
 
         IProductDiscountReference Discount { get; set; }
     }

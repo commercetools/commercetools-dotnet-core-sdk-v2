@@ -29,6 +29,6 @@ namespace commercetools.Api.Models.Common
 
         public List<IPriceTierDraft> Tiers { get; set; }
 
-        public IDiscountedPrice Discounted { get; set; }
+        public IDiscountedPriceDraft Discounted { get; set; }
     }
 }
