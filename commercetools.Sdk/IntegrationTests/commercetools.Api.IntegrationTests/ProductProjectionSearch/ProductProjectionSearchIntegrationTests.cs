@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Products;
@@ -73,6 +75,18 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                 Assert.Equal(localizedName["en"], searchResult.Results[0].Name["en"]);
 
             });
+        }
+
+        [Fact]
+        public async Task SearchPost()
+        {
+            var request = _client.WithApi().WithProjectKey(_projectKey).ProductProjections().Search()
+                .Post()
+                .AddFormParam("filter", "test")
+                .AddFormParam("filter", "test2")
+                .Build();
+            Assert.Equal("application/x-www-form-urlencoded", request.Content.Headers.GetValues(ApiHttpHeaders.CONTENT_TYPE).First());
+            Assert.Equal("filter=test&filter=test2", request.Content.ReadAsStringAsync().Result);
         }
     }
 }
