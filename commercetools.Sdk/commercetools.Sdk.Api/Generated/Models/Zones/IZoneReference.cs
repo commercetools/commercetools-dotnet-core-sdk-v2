@@ -13,5 +13,7 @@ namespace commercetools.Api.Models.Zones
     public partial interface IZoneReference : IReference
     {
         IZone Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

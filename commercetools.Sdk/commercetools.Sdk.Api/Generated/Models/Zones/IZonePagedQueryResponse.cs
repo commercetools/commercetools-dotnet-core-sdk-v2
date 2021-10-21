@@ -13,11 +13,11 @@ namespace commercetools.Api.Models.Zones
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<IZone> Results { get; set; }
     }
