@@ -113,6 +113,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/products/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithPriceCurrency("priceCurrency")
                    .Build(),

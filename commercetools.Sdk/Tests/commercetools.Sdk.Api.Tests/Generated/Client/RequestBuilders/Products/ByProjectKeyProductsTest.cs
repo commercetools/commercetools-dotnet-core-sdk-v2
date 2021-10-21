@@ -164,6 +164,15 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Products()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/products",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
                    .Post(null)
                    .WithPriceCurrency("priceCurrency")
                    .Build(),
