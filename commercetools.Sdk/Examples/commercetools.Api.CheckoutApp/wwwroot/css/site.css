@@ -23,6 +23,10 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+.marginTop10
+{
+  margin-top: 10px;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

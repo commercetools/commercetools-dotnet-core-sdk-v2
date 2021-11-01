@@ -1,7 +1,6 @@
 using commercetools.Api.CheckoutApp.Extensions;
 using commercetools.Api.CheckoutApp.Services;
 using commercetools.Base.Client;
-using commercetools.Base.Client.Tokens;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -17,16 +16,18 @@ namespace commercetools.Api.CheckoutApp
         public Startup(IConfiguration configuration)
         {
             this.configuration = configuration;
-            var clientConfiguration = configuration.GetSection("SPAClient").Get<ClientConfiguration>();
+            var clientConfiguration = configuration.GetSection("SPA-Client").Get<ClientConfiguration>();
             Settings.ProjectKey = clientConfiguration.ProjectKey;
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.UseCommercetoolsScopedClient(configuration, "SPAClient");
+            services.UseCommercetoolsScopedClient(configuration, "SPA-Client");
+            services.AddScoped<InCookiesStoreManager>();
             services.AddScoped<CartServices>();
             services.AddScoped<ProductServices>();
+            services.AddScoped<MeServices>();
             services.AddSession();
             services.AddControllersWithViews();
             services.AddMvc();

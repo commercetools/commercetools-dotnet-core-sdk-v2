@@ -1,4 +1,4 @@
-﻿@model commercetools.Api.CheckoutApp.Models.MyCartViewModel
+﻿@model commercetools.Api.CheckoutApp.Models.CustomerProfileViewModel
 @{
     ViewData["Title"] = $"My Cart";
     Layout = "_Layout";
@@ -17,7 +17,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var lineItem in Model.LineItems)
+            @foreach (var lineItem in Model.ActiveCart.LineItems)
             {
                 <tr>
                     <td> @lineItem.ProductName</td>

@@ -1,0 +1,33 @@
+@model ICustomerProfile
+
+<div class="pull-right">
+    <ul class="nav pull-right">
+        @if (Model.Customer == null)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Me" asp-action="SignIn">Login</a>
+            </li>
+        }
+        else
+        {
+            <li class="dropdown marginTop10">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, @Model.Customer.Name <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Me" asp-action="Logout">
+                            <i class="icon-off">Logout</i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        }
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="MyCart" asp-action="Index">
+                <i class="fa" style="font-size:24px">&#xf07a;</i>
+                <span class='badge badge-warning' id='lblCartCount'>
+                    @Model.ActiveCart.LineItems.Count
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
