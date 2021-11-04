@@ -31,7 +31,7 @@ namespace commercetools.Api.Models.CartDiscounts
 
         ILocalizedString Description { get; set; }
 
-        ICartDiscountValueDraft Value { get; set; }
+        ICartDiscountValue Value { get; set; }
 
         string CartPredicate { get; set; }
 
