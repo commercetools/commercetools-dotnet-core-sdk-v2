@@ -19,6 +19,8 @@ namespace commercetools.ImportApi.Models.Errors
         public Object InvalidValue { get; set; }
 
         public List<Object> AllowedValues { get; set; }
+
+        public long? ResourceIndex { get; set; }
         public InvalidFieldError()
         {
             this.Code = "InvalidField";

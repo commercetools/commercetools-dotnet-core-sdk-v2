@@ -16,5 +16,7 @@ namespace commercetools.ImportApi.Models.Errors
         Object InvalidValue { get; set; }
 
         List<Object> AllowedValues { get; set; }
+
+        long? ResourceIndex { get; set; }
     }
 }
