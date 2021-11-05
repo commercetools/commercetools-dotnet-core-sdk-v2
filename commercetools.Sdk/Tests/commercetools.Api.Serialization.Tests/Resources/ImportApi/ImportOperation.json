@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "importContainerKey": "productsImport",
+  "resourceKey": "MG-Iphone11",
+  "id": "d2c20ea3-657b-4314-b312-cd527asss",
+  "state": "validationFailed",
+  "errors": [
+    {
+      "code": "DuplicateAttributeValue",
+      "message": "Attribute can't have the same value in a different variant.",
+      "attribute": {
+        "name": "phonecolor",
+        "value": "Black"
+      }
+    }
+  ],
+  "createdAt": "2021-11-05T09:38:28.878Z",
+  "lastModifiedAt": "2021-11-05T09:38:29.204Z",
+  "expiresAt": "2021-11-07T09:38:28.878Z"
+}
