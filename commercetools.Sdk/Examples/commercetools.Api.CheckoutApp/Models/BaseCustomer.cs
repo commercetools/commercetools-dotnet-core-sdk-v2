@@ -19,11 +19,14 @@ namespace commercetools.Api.CheckoutApp.Models
         }
         public BaseCustomer(ICustomer customer)
         {
-            FirstName = customer.FirstName;
-            LastName = customer.LastName;
-            Email = customer.Email;
-            Id = customer.Id;
-            CustomerNumber = customer.CustomerNumber;
+            if (customer != null)
+            {
+                FirstName = customer.FirstName;
+                LastName = customer.LastName;
+                Email = customer.Email;
+                Id = customer.Id;
+                CustomerNumber = customer.CustomerNumber;
+            }
         }
     }
 }

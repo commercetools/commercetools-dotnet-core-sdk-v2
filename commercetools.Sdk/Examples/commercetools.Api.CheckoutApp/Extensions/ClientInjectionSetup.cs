@@ -59,16 +59,16 @@ namespace commercetools.Api.CheckoutApp.Extensions
         {
             services.AddScoped<IAnonymousCredentialsStoreManager>(serviceProvider =>
             {
-                //var httpContextAccessor = serviceProvider.GetService<IHttpContextAccessor>();
                 var inCookiesStoreManager = serviceProvider.GetService<InCookiesStoreManager>();
-                var anonymousIdStore = new InCookiesAnonymousCredentialsStoreManager(inCookiesStoreManager);
+                var inSessionStoreManager = serviceProvider.GetService<InSessionStoreManager>();
+                var anonymousIdStore = new InSessionAnonymousCredentialsStoreManager(inSessionStoreManager,inCookiesStoreManager);
                 return anonymousIdStore;
             });
             services.AddScoped<IUserCredentialsStoreManager>(serviceProvider =>
             {
-                //var httpContextAccessor = serviceProvider.GetService<IHttpContextAccessor>();
                 var inCookiesStoreManager = serviceProvider.GetService<InCookiesStoreManager>();
-                var userCredentialsStore = new InCookiesUserCredentialsStoreManager(inCookiesStoreManager);
+                var inSessionStoreManager = serviceProvider.GetService<InSessionStoreManager>();
+                var userCredentialsStore = new InSessionUserCredentialsStoreManager(inSessionStoreManager,inCookiesStoreManager);
                 return userCredentialsStore;
             });
         }
@@ -97,8 +97,8 @@ namespace commercetools.Api.CheckoutApp.Extensions
                 }
                 else
                 {
-                    var anonymousIdStore = (InCookiesAnonymousCredentialsStoreManager)serviceProvider.GetService<IAnonymousCredentialsStoreManager>();
-                    if (anonymousIdStore != null && string.IsNullOrEmpty(anonymousIdStore.AnonymousId))
+                    var anonymousIdStore = serviceProvider.GetService<IAnonymousCredentialsStoreManager>();
+                    if (anonymousIdStore != null && anonymousIdStore.Token == null)
                     {
                         anonymousIdStore.AnonymousId = Guid.NewGuid().ToString();    
                     }

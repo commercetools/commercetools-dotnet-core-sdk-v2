@@ -52,7 +52,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         
         public async Task<IActionResult> Logout()
         {
-            //clear cookies token
+            _userCredentialsStore.ClearCredentialsAndToken();
             return RedirectToAction("Index", "Home");
         }
     }

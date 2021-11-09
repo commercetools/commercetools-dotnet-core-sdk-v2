@@ -28,30 +28,15 @@ namespace commercetools.Api.CheckoutApp.Controllers
         public async Task<CustomerProfileViewModel> GetCurrentCustomerProfile()
         {
             var profileViewModel = new CustomerProfileViewModel();
-            var tokenFlow = GetCurrentTokenFlow();
+            var meProfile = await _meServices.GetMyProfile();
             profileViewModel.ActiveCart = await _cartServices.GetActiveCartViewModel();
-            if (tokenFlow == TokenFlow.Password)
+            if (meProfile != null)
             {
-                var meProfile = await _meServices.GetMyProfile();
                 var baseInfo = new BaseCustomer(meProfile);
                 profileViewModel.Customer = baseInfo;
             }
 
             return profileViewModel;
-        }
-
-        /// <summary>
-        /// User authenticated if there is username in the cookie
-        /// </summary>
-        public bool IsUserAuthenticated => GetCurrentTokenFlow() == TokenFlow.Password;
-        protected TokenFlow GetCurrentTokenFlow()
-        {
-            var tokenFlow = TokenFlow.AnonymousSession;
-            if (_userCredentialsStore != null && !string.IsNullOrEmpty(_userCredentialsStore.Username))
-            {
-                tokenFlow = TokenFlow.Password;
-            }
-            return tokenFlow;
         }
     }
 }

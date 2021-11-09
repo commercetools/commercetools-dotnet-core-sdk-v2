@@ -12,6 +12,13 @@ namespace commercetools.Base.Client.Tokens
             this.ClearToken(); 
         }
 
+        public void ClearCredentialsAndToken()
+        {
+            Username = null;
+            Password = null;
+            this.ClearToken();
+        }
+
         public InMemoryUserCredentialsStoreManager(string username, string password)
         {
             this.Username = username;

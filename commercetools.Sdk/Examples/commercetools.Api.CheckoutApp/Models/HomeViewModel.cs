@@ -16,8 +16,8 @@ namespace commercetools.Api.CheckoutApp.Models
         public HomeViewModel(List<IProduct> products, CustomerProfileViewModel customerProfile)
         {
             this.Products = products;
-            this.ActiveCart = customerProfile.ActiveCart;
-            this.Customer = customerProfile.Customer;
+            this.ActiveCart = customerProfile?.ActiveCart;
+            this.Customer = customerProfile?.Customer;
         }
     }
 }

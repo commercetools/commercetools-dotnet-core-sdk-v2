@@ -7,5 +7,7 @@ namespace commercetools.Base.Client.Tokens
         string Password { get; }
 
         void StoreUserCredentialsAndClearToken(string username, string password);
+
+        void ClearCredentialsAndToken();
     }
 }

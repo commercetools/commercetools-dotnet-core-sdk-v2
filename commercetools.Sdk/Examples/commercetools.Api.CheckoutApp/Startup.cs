@@ -25,10 +25,14 @@ namespace commercetools.Api.CheckoutApp
         {
             services.UseCommercetoolsScopedClient(configuration, "SPA-Client");
             services.AddScoped<InCookiesStoreManager>();
+            services.AddScoped<InSessionStoreManager>();
             services.AddScoped<CartServices>();
             services.AddScoped<ProductServices>();
             services.AddScoped<MeServices>();
-            services.AddSession();
+            services.AddSession(options =>
+            {
+                options.Cookie.HttpOnly = true;
+            });
             services.AddControllersWithViews();
             services.AddMvc();
             services.AddHttpContextAccessor();

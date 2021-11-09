@@ -64,13 +64,27 @@ namespace commercetools.Api.CheckoutApp.Services
 
         public async Task<ICustomer> GetMyProfile()
         {
-            var customer = await _client
-                .WithApi()
-                .WithProjectKey(Settings.ProjectKey)
-                .Me()
-                .Get()
-                .ExecuteAsync();
+            ICustomer customer = null;
+            try
+            {
+                customer = await _client
+                    .WithApi()
+                    .WithProjectKey(Settings.ProjectKey)
+                    .Me()
+                    .Get()
+                    .ExecuteAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            
             return customer;
         }
+
+        /// <summary>
+        /// User authenticated Me().Get() return current customer profile
+        /// </summary>
+        public async Task<bool> IsUserAuthenticated() => await GetMyProfile() != null;
     }
 }

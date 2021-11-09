@@ -2,7 +2,7 @@
 
 <div class="pull-right">
     <ul class="nav pull-right">
-        @if (Model.Customer == null)
+        @if (Model?.Customer == null)
         {
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Me" asp-action="SignIn">Login</a>
@@ -25,7 +25,7 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="MyCart" asp-action="Index">
                 <i class="fa" style="font-size:24px">&#xf07a;</i>
                 <span class='badge badge-warning' id='lblCartCount'>
-                    @Model.ActiveCart.LineItems.Count
+                    @Model?.ActiveCart?.LineItems?.Count
                 </span>
             </a>
         </li>
