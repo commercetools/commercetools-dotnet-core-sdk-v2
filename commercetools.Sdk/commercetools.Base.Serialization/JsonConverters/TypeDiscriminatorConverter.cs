@@ -52,33 +52,45 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             if (reader.TokenType != JsonTokenType.StartObject)
                 throw new JsonException("Start object token type expected");
+
             using JsonDocument jsonDocument = JsonDocument.ParseValue(ref reader);
             var discriminatorPropertyName = this.NamingPolicy?.ConvertName(this.DiscriminatorProperty.Name);
+            var typeToDeserialize = DefaultType;
+
+            //can't find discriminatorProperty in json
             if (!jsonDocument.RootElement.TryGetProperty(discriminatorPropertyName,
                 out JsonElement discriminatorProperty))
-                throw new JsonException(
-                    $"Failed to find the required '{this.DiscriminatorProperty.Name}' discriminator property");
-            var discriminatorValue = discriminatorProperty.GetString();
-
-
-            if (!this.SubTypes.TryGetValue(discriminatorValue, out Type derivedType))
             {
                 if (DefaultType == null)
-                {
                     throw new JsonException(
-                        $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");
+                        $"Failed to find the required '{this.DiscriminatorProperty.Name}' discriminator property, type: {typeToConvert}");
+            }
+            else
+            {
+                var discriminatorValue = discriminatorProperty.GetString();
+                
+                if (!this.SubTypes.TryGetValue(discriminatorValue, out Type derivedType))
+                {
+                    if (DefaultType == null)
+                    {
+                        throw new JsonException(
+                            $"Failed to find ${nameof(DefaultTypeDiscriminatorAttribute)}");
+                    }
                 }
-                derivedType = DefaultType;
+                else
+                {
+                    typeToDeserialize = derivedType;
+                }
             }
 
             var json = jsonDocument.RootElement.GetRawText();
-            return (T)JsonSerializer.Deserialize(json, derivedType, JsonSerializerOptions);
+            return (T) JsonSerializer.Deserialize(json, typeToDeserialize, JsonSerializerOptions);
         }
 
         /// <inheritdoc/>
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, (object)value, options);
+            JsonSerializer.Serialize(writer, (object) value, options);
         }
     }
 }
