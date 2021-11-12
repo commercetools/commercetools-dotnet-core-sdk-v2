@@ -8,9 +8,9 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerDateOfBirthSetMessagePayload))]
-    public partial interface ICustomerDateOfBirthSetMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerTitleSetMessagePayload))]
+    public partial interface ICustomerTitleSetMessagePayload : IMessagePayload
     {
-        DateTime? DateOfBirth { get; set; }
+        string Title { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Messages
 {
-    public partial class CustomerDateOfBirthSetMessage : ICustomerDateOfBirthSetMessage
+    public partial class CustomerFirstNameSetMessage : ICustomerFirstNameSetMessage
     {
         public string Id { get; set; }
 
@@ -33,10 +33,10 @@ namespace commercetools.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
-        public CustomerDateOfBirthSetMessage()
+        public string FirstName { get; set; }
+        public CustomerFirstNameSetMessage()
         {
-            this.Type = "CustomerDateOfBirthSet";
+            this.Type = "CustomerFirstNameSet";
         }
     }
 }
