@@ -1,12 +1,8 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.ShoppingLists;
 using commercetools.Api.Models.Stores;
 using commercetools.Api.Models.Types;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 

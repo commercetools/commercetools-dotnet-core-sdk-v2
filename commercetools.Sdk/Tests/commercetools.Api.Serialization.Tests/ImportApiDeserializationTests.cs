@@ -1,6 +1,5 @@
 using System.IO;
 using System.Linq;
-using commercetools.Base.Serialization;
 using commercetools.ImportApi.Models.Importoperations;
 using commercetools.ImportApi.Models.Importsummaries;
 using Xunit;

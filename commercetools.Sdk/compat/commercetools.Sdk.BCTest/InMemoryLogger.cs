@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.Text;
-using commercetools.Sdk.Client;
 using Microsoft.Extensions.Logging;
 
 namespace commercetools.Sdk.BCTest

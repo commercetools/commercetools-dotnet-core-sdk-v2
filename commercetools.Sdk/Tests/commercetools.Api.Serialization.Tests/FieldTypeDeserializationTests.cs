@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
-using commercetools.Api.Models;
 using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
 using commercetools.Api.Models.Types;
 using commercetools.Base.Serialization;
 using FluentAssertions;

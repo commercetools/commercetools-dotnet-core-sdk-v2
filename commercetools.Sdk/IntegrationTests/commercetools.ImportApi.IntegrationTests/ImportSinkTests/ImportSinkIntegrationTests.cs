@@ -19,6 +19,7 @@ namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
         }
 
         [Fact]
+        [System.Obsolete]
         public async void CreateAndDelete()
         {
             var importSinkDraft = new ImportSinkDraft

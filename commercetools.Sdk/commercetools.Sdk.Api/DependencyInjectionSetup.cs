@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using commercetools.Api.Models.Errors;
 using commercetools.Api.Models.Products;
 using commercetools.Base.Client;

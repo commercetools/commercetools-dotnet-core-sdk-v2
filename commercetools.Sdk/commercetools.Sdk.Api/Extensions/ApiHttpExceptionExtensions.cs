@@ -1,6 +1,5 @@
 using commercetools.Api.Models.Errors;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Extensions
 {
