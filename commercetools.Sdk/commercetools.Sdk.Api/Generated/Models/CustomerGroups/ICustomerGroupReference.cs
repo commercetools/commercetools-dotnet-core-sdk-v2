@@ -8,5 +8,7 @@ namespace commercetools.Api.Models.CustomerGroups
     public partial interface ICustomerGroupReference : IReference
     {
         ICustomerGroup Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

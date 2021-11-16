@@ -7,9 +7,9 @@ namespace commercetools.Api.Models.CustomerGroups
     [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupPagedQueryResponse))]
     public partial interface ICustomerGroupPagedQueryResponse
     {
-        long Offset { get; set; }
-
         long Limit { get; set; }
+
+        long Offset { get; set; }
 
         long Count { get; set; }
 

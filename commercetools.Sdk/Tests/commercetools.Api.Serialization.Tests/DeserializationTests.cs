@@ -350,12 +350,12 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<CustomerGroupResourceIdentifier>(resourceIdentifier);
             Assert.IsType<CustomerGroupResourceIdentifier>(customerGroupResourceIdentifier);
             Assert.Equal(resourceIdentifier.Id, customerGroupResourceIdentifier.Id);
-            
+
             //downcast
             IResourceIdentifier rs = serializerService.Deserialize<IResourceIdentifier>(serialized);
-            ICustomerGroupResourceIdentifier crs = (ICustomerGroupResourceIdentifier) rs;
-            CustomerGroupResourceIdentifier cgrs = (CustomerGroupResourceIdentifier) rs;
-            
+            ICustomerGroupResourceIdentifier crs = (ICustomerGroupResourceIdentifier)rs;
+            CustomerGroupResourceIdentifier cgrs = (CustomerGroupResourceIdentifier)rs;
+
             Assert.Equal(rs.Id, crs.Id);
             Assert.Equal(rs.Id, cgrs.Id);
 

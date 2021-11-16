@@ -1,11 +1,12 @@
-using commercetools.Api.Models.Channels;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Orders;
 using System;
+using System.Collections.Generic;
 
 
 namespace commercetools.Api.Models.Messages
 {
-    public partial class InventoryEntryQuantitySetMessage : IInventoryEntryQuantitySetMessage
+    public partial class OrderReturnInfoSetMessage : IOrderReturnInfoSetMessage
     {
         public string Id { get; set; }
 
@@ -29,18 +30,10 @@ namespace commercetools.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public long OldQuantityOnStock { get; set; }
-
-        public long NewQuantityOnStock { get; set; }
-
-        public long OldAvailableQuantity { get; set; }
-
-        public long NewAvailableQuantity { get; set; }
-
-        public IChannelReference SupplyChannel { get; set; }
-        public InventoryEntryQuantitySetMessage()
+        public List<IReturnInfo> ReturnInfo { get; set; }
+        public OrderReturnInfoSetMessage()
         {
-            this.Type = "InventoryEntryQuantitySet";
+            this.Type = "ReturnInfoSet";
         }
     }
 }
