@@ -1,5 +1,4 @@
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 using commercetools.ImportApi.Models.Errors;
 
 namespace commercetools.Sdk.ImportApi.Extensions

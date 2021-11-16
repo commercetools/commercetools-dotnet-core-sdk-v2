@@ -1,5 +1,4 @@
 using System;
-using commercetools.Api.Models.Common;
 
 namespace commercetools.Api.Models.Common
 {

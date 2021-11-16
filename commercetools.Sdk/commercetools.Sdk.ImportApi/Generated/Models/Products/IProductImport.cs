@@ -1,9 +1,5 @@
 using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Products;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 

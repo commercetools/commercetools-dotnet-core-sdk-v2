@@ -1,15 +1,11 @@
 using System;
-using commercetools.Api;
 using commercetools.Sdk.HttpApi;
 using commercetools.Sdk.HttpApi.Tokens;
-using commercetools.Sdk.Serialization;
 using commercetools.Sdk.V2Compat;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using SimpleInjector;
-using Xunit;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 
