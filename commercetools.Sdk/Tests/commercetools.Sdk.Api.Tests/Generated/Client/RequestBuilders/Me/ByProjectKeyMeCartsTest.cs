@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Me
 {
-    public class ByProjectKeyMeCartsTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyMeCartsTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -29,7 +27,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -40,7 +38,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -51,7 +49,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -62,7 +60,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -73,7 +71,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -84,7 +82,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -95,7 +93,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -105,7 +103,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Get",
                    "/test_projectKey/me/carts",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -116,7 +114,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "Post",
                    "/test_projectKey/me/carts?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Me()
@@ -127,6 +125,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    "/test_projectKey/me/carts",
                }
        };
-        }
     }
+   }
 }

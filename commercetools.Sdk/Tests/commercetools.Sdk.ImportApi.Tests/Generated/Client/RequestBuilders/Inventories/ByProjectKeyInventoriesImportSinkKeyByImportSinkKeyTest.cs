@@ -5,21 +5,19 @@ using Xunit;
 
 namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Inventories
 {
-    public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
         [Obsolete]
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+        public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Inventories()
@@ -30,6 +28,6 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Inventories
                    "/test_projectKey/inventories/importSinkKey=test_importSinkKey",
                }
        };
-        }
     }
+   }
 }

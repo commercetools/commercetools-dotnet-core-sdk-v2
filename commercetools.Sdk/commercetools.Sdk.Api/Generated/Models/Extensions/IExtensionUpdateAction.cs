@@ -9,8 +9,8 @@ namespace commercetools.Api.Models.Extensions
     [SubTypeDiscriminator("changeTriggers", typeof(commercetools.Api.Models.Extensions.ExtensionChangeTriggersAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Extensions.ExtensionSetKeyAction))]
     [SubTypeDiscriminator("setTimeoutInMs", typeof(commercetools.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
-    public partial interface IExtensionUpdateAction
+    public partial interface IExtensionUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

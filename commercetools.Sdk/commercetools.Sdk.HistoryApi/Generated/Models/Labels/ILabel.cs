@@ -12,8 +12,8 @@ namespace commercetools.HistoryApi.Models.Labels
     [SubTypeDiscriminator("ProductLabel", typeof(commercetools.HistoryApi.Models.Labels.ProductLabel))]
     [SubTypeDiscriminator("ReviewLabel", typeof(commercetools.HistoryApi.Models.Labels.ReviewLabel))]
     [SubTypeDiscriminator("StringLabel", typeof(commercetools.HistoryApi.Models.Labels.StringLabel))]
-    public partial interface ILabel
+    public partial interface ILabel 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

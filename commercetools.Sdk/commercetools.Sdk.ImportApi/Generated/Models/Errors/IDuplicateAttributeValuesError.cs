@@ -8,6 +8,6 @@ namespace commercetools.ImportApi.Models.Errors
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.DuplicateAttributeValuesError))]
     public partial interface IDuplicateAttributeValuesError : IErrorObject
     {
-        List<IAttribute> Attributes { get; set; }
+        List<IAttribute> Attributes { get; set;}
     }
 }

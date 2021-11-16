@@ -8,10 +8,10 @@ namespace commercetools.HistoryApi.Models
     {
         [Description("MerchantCenter")]
         MerchantCenter,
-
+        
         [Description("ImpEx")]
         ImpEx,
-
+        
         [Description("ApiClient")]
         ApiClient
     }
@@ -29,29 +29,29 @@ namespace commercetools.HistoryApi.Models
     [EnumInterfaceCreator(typeof(ISource), "FindEnum")]
     public interface ISource : IJsonName
     {
-        public static ISource MerchantCenter = new SourceWrapper
-        { Value = Source.MerchantCenter, JsonName = "MerchantCenter" };
+         public static ISource MerchantCenter = new SourceWrapper
+             {Value = Source.MerchantCenter, JsonName = "MerchantCenter"}; 
+         
+         public static ISource ImpEx = new SourceWrapper
+             {Value = Source.ImpEx, JsonName = "ImpEx"}; 
+         
+         public static ISource ApiClient = new SourceWrapper
+             {Value = Source.ApiClient, JsonName = "ApiClient"}; 
 
-        public static ISource ImpEx = new SourceWrapper
-        { Value = Source.ImpEx, JsonName = "ImpEx" };
-
-        public static ISource ApiClient = new SourceWrapper
-        { Value = Source.ApiClient, JsonName = "ApiClient" };
-
-        Source? Value { get; }
-
-        static ISource[] Values()
-        {
-            return new[]
-            {
+         Source? Value { get; }
+        
+         static ISource[] Values()
+         {
+             return new[]
+             {
                  MerchantCenter ,
                  ImpEx ,
-                 ApiClient
+                 ApiClient 
              };
-        }
-        static ISource FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SourceWrapper() { JsonName = value };
-        }
+         }
+         static ISource FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SourceWrapper() {JsonName = value};
+         }
     }
 }

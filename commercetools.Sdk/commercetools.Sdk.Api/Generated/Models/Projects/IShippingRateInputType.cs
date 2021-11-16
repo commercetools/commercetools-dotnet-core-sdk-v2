@@ -9,8 +9,8 @@ namespace commercetools.Api.Models.Projects
     [SubTypeDiscriminator("CartClassification", typeof(commercetools.Api.Models.Projects.CartClassificationType))]
     [SubTypeDiscriminator("CartScore", typeof(commercetools.Api.Models.Projects.CartScoreType))]
     [SubTypeDiscriminator("CartValue", typeof(commercetools.Api.Models.Projects.CartValueType))]
-    public partial interface IShippingRateInputType
+    public partial interface IShippingRateInputType 
     {
-        IShippingRateTierType Type { get; set; }
+        IShippingRateTierType Type { get; set;}
     }
 }

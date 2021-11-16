@@ -11,28 +11,28 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEdit))]
     public partial interface IOrderEdit : IBaseResource
     {
-        new string Id { get; set; }
-
-        new long Version { get; set; }
-
-        new DateTime CreatedAt { get; set; }
-
-        new DateTime LastModifiedAt { get; set; }
-
-        ILastModifiedBy LastModifiedBy { get; set; }
-
-        ICreatedBy CreatedBy { get; set; }
-
-        string Key { get; set; }
-
-        IOrderReference Resource { get; set; }
-
-        List<IStagedOrderUpdateAction> StagedActions { get; set; }
-
-        ICustomFields Custom { get; set; }
-
-        IOrderEditResult Result { get; set; }
-
-        string Comment { get; set; }
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
+        ILastModifiedBy LastModifiedBy { get; set;}
+        
+        ICreatedBy CreatedBy { get; set;}
+        
+        string Key { get; set;}
+        
+        IOrderReference Resource { get; set;}
+        
+        List<IStagedOrderUpdateAction> StagedActions { get; set;}
+        
+        ICustomFields Custom { get; set;}
+        
+        IOrderEditResult Result { get; set;}
+        
+        string Comment { get; set;}
     }
 }

@@ -2,6 +2,6 @@ namespace commercetools.MLApi.Models.SimilarProducts
 {
     public partial class SimilarProductSearchRequestMeta : ISimilarProductSearchRequestMeta
     {
-        public ISimilarityMeasures SimilarityMeasures { get; set; }
+        public ISimilarityMeasures SimilarityMeasures { get; set;}
     }
 }

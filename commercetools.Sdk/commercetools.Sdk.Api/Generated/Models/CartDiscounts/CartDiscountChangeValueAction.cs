@@ -2,12 +2,12 @@ namespace commercetools.Api.Models.CartDiscounts
 {
     public partial class CartDiscountChangeValueAction : ICartDiscountChangeValueAction
     {
-        public string Action { get; set; }
-
-        public ICartDiscountValueDraft Value { get; set; }
+        public string Action { get; set;}
+        
+        public ICartDiscountValueDraft Value { get; set;}
         public CartDiscountChangeValueAction()
-        {
-            this.Action = "changeValue";
+        { 
+           this.Action = "changeValue";
         }
     }
 }

@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetStoreAction))]
     public partial interface IOrderSetStoreAction : IOrderUpdateAction
     {
-        IStoreResourceIdentifier Store { get; set; }
+        IStoreResourceIdentifier Store { get; set;}
     }
 }

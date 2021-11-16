@@ -8,13 +8,13 @@ namespace commercetools.Api.Models.Extensions
     {
         [Description("cart")]
         Cart,
-
+        
         [Description("order")]
         Order,
-
+        
         [Description("payment")]
         Payment,
-
+        
         [Description("customer")]
         Customer
     }
@@ -32,33 +32,33 @@ namespace commercetools.Api.Models.Extensions
     [EnumInterfaceCreator(typeof(IExtensionResourceTypeId), "FindEnum")]
     public interface IExtensionResourceTypeId : IJsonName
     {
-        public static IExtensionResourceTypeId Cart = new ExtensionResourceTypeIdWrapper
-        { Value = ExtensionResourceTypeId.Cart, JsonName = "cart" };
+         public static IExtensionResourceTypeId Cart = new ExtensionResourceTypeIdWrapper
+             {Value = ExtensionResourceTypeId.Cart, JsonName = "cart"}; 
+         
+         public static IExtensionResourceTypeId Order = new ExtensionResourceTypeIdWrapper
+             {Value = ExtensionResourceTypeId.Order, JsonName = "order"}; 
+         
+         public static IExtensionResourceTypeId Payment = new ExtensionResourceTypeIdWrapper
+             {Value = ExtensionResourceTypeId.Payment, JsonName = "payment"}; 
+         
+         public static IExtensionResourceTypeId Customer = new ExtensionResourceTypeIdWrapper
+             {Value = ExtensionResourceTypeId.Customer, JsonName = "customer"}; 
 
-        public static IExtensionResourceTypeId Order = new ExtensionResourceTypeIdWrapper
-        { Value = ExtensionResourceTypeId.Order, JsonName = "order" };
-
-        public static IExtensionResourceTypeId Payment = new ExtensionResourceTypeIdWrapper
-        { Value = ExtensionResourceTypeId.Payment, JsonName = "payment" };
-
-        public static IExtensionResourceTypeId Customer = new ExtensionResourceTypeIdWrapper
-        { Value = ExtensionResourceTypeId.Customer, JsonName = "customer" };
-
-        ExtensionResourceTypeId? Value { get; }
-
-        static IExtensionResourceTypeId[] Values()
-        {
-            return new[]
-            {
+         ExtensionResourceTypeId? Value { get; }
+        
+         static IExtensionResourceTypeId[] Values()
+         {
+             return new[]
+             {
                  Cart ,
                  Order ,
                  Payment ,
-                 Customer
+                 Customer 
              };
-        }
-        static IExtensionResourceTypeId FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ExtensionResourceTypeIdWrapper() { JsonName = value };
-        }
+         }
+         static IExtensionResourceTypeId FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ExtensionResourceTypeIdWrapper() {JsonName = value};
+         }
     }
 }

@@ -8,19 +8,19 @@ namespace commercetools.ImportApi.Models.Orders
     {
         [Description("Shipped")]
         Shipped,
-
+        
         [Description("Ready")]
         Ready,
-
+        
         [Description("Pending")]
         Pending,
-
+        
         [Description("Delayed")]
         Delayed,
-
+        
         [Description("Partial")]
         Partial,
-
+        
         [Description("Backorder")]
         Backorder
     }
@@ -38,41 +38,41 @@ namespace commercetools.ImportApi.Models.Orders
     [EnumInterfaceCreator(typeof(IShipmentState), "FindEnum")]
     public interface IShipmentState : IJsonName
     {
-        public static IShipmentState Shipped = new ShipmentStateWrapper
-        { Value = ShipmentState.Shipped, JsonName = "Shipped" };
+         public static IShipmentState Shipped = new ShipmentStateWrapper
+             {Value = ShipmentState.Shipped, JsonName = "Shipped"}; 
+         
+         public static IShipmentState Ready = new ShipmentStateWrapper
+             {Value = ShipmentState.Ready, JsonName = "Ready"}; 
+         
+         public static IShipmentState Pending = new ShipmentStateWrapper
+             {Value = ShipmentState.Pending, JsonName = "Pending"}; 
+         
+         public static IShipmentState Delayed = new ShipmentStateWrapper
+             {Value = ShipmentState.Delayed, JsonName = "Delayed"}; 
+         
+         public static IShipmentState Partial = new ShipmentStateWrapper
+             {Value = ShipmentState.Partial, JsonName = "Partial"}; 
+         
+         public static IShipmentState Backorder = new ShipmentStateWrapper
+             {Value = ShipmentState.Backorder, JsonName = "Backorder"}; 
 
-        public static IShipmentState Ready = new ShipmentStateWrapper
-        { Value = ShipmentState.Ready, JsonName = "Ready" };
-
-        public static IShipmentState Pending = new ShipmentStateWrapper
-        { Value = ShipmentState.Pending, JsonName = "Pending" };
-
-        public static IShipmentState Delayed = new ShipmentStateWrapper
-        { Value = ShipmentState.Delayed, JsonName = "Delayed" };
-
-        public static IShipmentState Partial = new ShipmentStateWrapper
-        { Value = ShipmentState.Partial, JsonName = "Partial" };
-
-        public static IShipmentState Backorder = new ShipmentStateWrapper
-        { Value = ShipmentState.Backorder, JsonName = "Backorder" };
-
-        ShipmentState? Value { get; }
-
-        static IShipmentState[] Values()
-        {
-            return new[]
-            {
+         ShipmentState? Value { get; }
+        
+         static IShipmentState[] Values()
+         {
+             return new[]
+             {
                  Shipped ,
                  Ready ,
                  Pending ,
                  Delayed ,
                  Partial ,
-                 Backorder
+                 Backorder 
              };
-        }
-        static IShipmentState FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShipmentStateWrapper() { JsonName = value };
-        }
+         }
+         static IShipmentState FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShipmentStateWrapper() {JsonName = value};
+         }
     }
 }

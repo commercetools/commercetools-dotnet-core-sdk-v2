@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductPublishAction))]
     public partial interface IProductPublishAction : IProductUpdateAction
     {
-        IProductPublishScope Scope { get; set; }
+        IProductPublishScope Scope { get; set;}
     }
 }

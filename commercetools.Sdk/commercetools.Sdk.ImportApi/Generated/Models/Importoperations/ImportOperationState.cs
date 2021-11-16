@@ -8,7 +8,7 @@ namespace commercetools.ImportApi.Models.Importoperations
     {
         [Description("processing")]
         Processing,
-
+        
         [Description("validationFailed")]
         ValidationFailed
     }
@@ -26,25 +26,25 @@ namespace commercetools.ImportApi.Models.Importoperations
     [EnumInterfaceCreator(typeof(IImportOperationState), "FindEnum")]
     public interface IImportOperationState : IJsonName
     {
-        public static IImportOperationState Processing = new ImportOperationStateWrapper
-        { Value = ImportOperationState.Processing, JsonName = "processing" };
+         public static IImportOperationState Processing = new ImportOperationStateWrapper
+             {Value = ImportOperationState.Processing, JsonName = "processing"}; 
+         
+         public static IImportOperationState ValidationFailed = new ImportOperationStateWrapper
+             {Value = ImportOperationState.ValidationFailed, JsonName = "validationFailed"}; 
 
-        public static IImportOperationState ValidationFailed = new ImportOperationStateWrapper
-        { Value = ImportOperationState.ValidationFailed, JsonName = "validationFailed" };
-
-        ImportOperationState? Value { get; }
-
-        static IImportOperationState[] Values()
-        {
-            return new[]
-            {
+         ImportOperationState? Value { get; }
+        
+         static IImportOperationState[] Values()
+         {
+             return new[]
+             {
                  Processing ,
-                 ValidationFailed
+                 ValidationFailed 
              };
-        }
-        static IImportOperationState FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ImportOperationStateWrapper() { JsonName = value };
-        }
+         }
+         static IImportOperationState FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ImportOperationStateWrapper() {JsonName = value};
+         }
     }
 }

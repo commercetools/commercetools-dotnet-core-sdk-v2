@@ -27,12 +27,12 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryResourceIdentifier))]
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeResourceIdentifier))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneResourceIdentifier))]
-    public partial interface IResourceIdentifier
+    public partial interface IResourceIdentifier 
     {
-        IReferenceTypeId TypeId { get; set; }
-
-        string Id { get; set; }
-
-        string Key { get; set; }
+        IReferenceTypeId TypeId { get; set;}
+        
+        string Id { get; set;}
+        
+        string Key { get; set;}
     }
 }

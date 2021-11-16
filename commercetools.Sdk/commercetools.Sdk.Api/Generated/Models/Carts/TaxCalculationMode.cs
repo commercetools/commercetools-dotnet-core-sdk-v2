@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.Carts
     {
         [Description("LineItemLevel")]
         LineItemLevel,
-
+        
         [Description("UnitPriceLevel")]
         UnitPriceLevel
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.Carts
     [EnumInterfaceCreator(typeof(ITaxCalculationMode), "FindEnum")]
     public interface ITaxCalculationMode : IJsonName
     {
-        public static ITaxCalculationMode LineItemLevel = new TaxCalculationModeWrapper
-        { Value = TaxCalculationMode.LineItemLevel, JsonName = "LineItemLevel" };
+         public static ITaxCalculationMode LineItemLevel = new TaxCalculationModeWrapper
+             {Value = TaxCalculationMode.LineItemLevel, JsonName = "LineItemLevel"}; 
+         
+         public static ITaxCalculationMode UnitPriceLevel = new TaxCalculationModeWrapper
+             {Value = TaxCalculationMode.UnitPriceLevel, JsonName = "UnitPriceLevel"}; 
 
-        public static ITaxCalculationMode UnitPriceLevel = new TaxCalculationModeWrapper
-        { Value = TaxCalculationMode.UnitPriceLevel, JsonName = "UnitPriceLevel" };
-
-        TaxCalculationMode? Value { get; }
-
-        static ITaxCalculationMode[] Values()
-        {
-            return new[]
-            {
+         TaxCalculationMode? Value { get; }
+        
+         static ITaxCalculationMode[] Values()
+         {
+             return new[]
+             {
                  LineItemLevel ,
-                 UnitPriceLevel
+                 UnitPriceLevel 
              };
-        }
-        static ITaxCalculationMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaxCalculationModeWrapper() { JsonName = value };
-        }
+         }
+         static ITaxCalculationMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaxCalculationModeWrapper() {JsonName = value};
+         }
     }
 }

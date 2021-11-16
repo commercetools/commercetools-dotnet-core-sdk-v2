@@ -4,27 +4,24 @@ using commercetools.Base.Serialization;
 namespace commercetools.ImportApi.Client.RequestBuilders.ProductVariant
 {
 
-    public class ByProjectKeyProductVariantPatchesImportContainersRequestBuilder
-    {
+    public class ByProjectKeyProductVariantPatchesImportContainersRequestBuilder {
 
-        private IClient ApiHttpClient { get; }
-
-        private ISerializerService SerializerService { get; }
-
-        private string ProjectKey { get; }
-
-        public ByProjectKeyProductVariantPatchesImportContainersRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-        }
-
-
-
-        public ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyRequestBuilder WithImportContainerKeyValue(string importContainerKey)
-        {
-            return new ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importContainerKey);
-        }
-    }
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+   
+       public ByProjectKeyProductVariantPatchesImportContainersRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+       }
+   
+       
+       
+       public ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyRequestBuilder WithImportContainerKeyValue(string importContainerKey) {
+           return new ByProjectKeyProductVariantPatchesImportContainersByImportContainerKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importContainerKey);
+       }
+   }
 }

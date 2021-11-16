@@ -7,12 +7,12 @@ namespace commercetools.ImportApi.Models.Importrequests
 {
     public partial class CustomerImportRequest : ICustomerImportRequest
     {
-        public IImportResourceType Type { get; set; }
-
-        public List<ICustomerImport> Resources { get; set; }
+        public IImportResourceType Type { get; set;}
+        
+        public List<ICustomerImport> Resources { get; set;}
         public CustomerImportRequest()
-        {
-            this.Type = IImportResourceType.FindEnum("customer");
+        { 
+           this.Type = IImportResourceType.FindEnum("customer");
         }
     }
 }

@@ -2,14 +2,14 @@ namespace commercetools.HistoryApi.Models.Labels
 {
     public partial class OrderLabel : IOrderLabel
     {
-        public string Type { get; set; }
-
-        public string CustomerEmail { get; set; }
-
-        public string OrderNumber { get; set; }
+        public string Type { get; set;}
+        
+        public string CustomerEmail { get; set;}
+        
+        public string OrderNumber { get; set;}
         public OrderLabel()
-        {
-            this.Type = "OrderLabel";
+        { 
+           this.Type = "OrderLabel";
         }
     }
 }

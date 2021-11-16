@@ -7,10 +7,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ParcelMeasurementsUpdatedMessagePayload))]
     public partial interface IParcelMeasurementsUpdatedMessagePayload : IMessagePayload
     {
-        string DeliveryId { get; set; }
-
-        string ParcelId { get; set; }
-
-        IParcelMeasurements Measurements { get; set; }
+        string DeliveryId { get; set;}
+        
+        string ParcelId { get; set;}
+        
+        IParcelMeasurements Measurements { get; set;}
     }
 }

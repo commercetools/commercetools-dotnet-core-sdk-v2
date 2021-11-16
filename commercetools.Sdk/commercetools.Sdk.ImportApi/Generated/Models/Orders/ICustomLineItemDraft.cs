@@ -7,30 +7,30 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.CustomLineItemDraft))]
-    public partial interface ICustomLineItemDraft
+    public partial interface ICustomLineItemDraft 
     {
-        ILocalizedString Name { get; set; }
-
-        ITypedMoney Money { get; set; }
-
-        ICustomLineItemTaxedPrice TaxedPrice { get; set; }
-
-        ITypedMoney TotalPrice { get; set; }
-
-        string Slug { get; set; }
-
-        double Quantity { get; set; }
-
-        List<IItemState> State { get; set; }
-
-        ITaxCategoryKeyReference TaxCategory { get; set; }
-
-        ITaxRate TaxRate { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
-
-        List<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set; }
-
-        IItemShippingDetailsDraft ShippingDetails { get; set; }
+        ILocalizedString Name { get; set;}
+        
+        ITypedMoney Money { get; set;}
+        
+        ICustomLineItemTaxedPrice TaxedPrice { get; set;}
+        
+        ITypedMoney TotalPrice { get; set;}
+        
+        string Slug { get; set;}
+        
+        double Quantity { get; set;}
+        
+        List<IItemState> State { get; set;}
+        
+        ITaxCategoryKeyReference TaxCategory { get; set;}
+        
+        ITaxRate TaxRate { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
+        
+        List<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set;}
+        
+        IItemShippingDetailsDraft ShippingDetails { get; set;}
     }
 }

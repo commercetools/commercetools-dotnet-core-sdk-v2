@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.ProductDiscounts
     [SubTypeDiscriminator("absolute", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueAbsoluteDraft))]
     [SubTypeDiscriminator("external", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueExternalDraft))]
     [SubTypeDiscriminator("relative", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountValueRelativeDraft))]
-    public partial interface IProductDiscountValueDraft
+    public partial interface IProductDiscountValueDraft 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

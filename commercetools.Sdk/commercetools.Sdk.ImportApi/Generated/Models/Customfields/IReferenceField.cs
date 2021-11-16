@@ -7,6 +7,6 @@ namespace commercetools.ImportApi.Models.Customfields
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.ReferenceField))]
     public partial interface IReferenceField : ICustomField
     {
-        IKeyReference Value { get; set; }
+        IKeyReference Value { get; set;}
     }
 }

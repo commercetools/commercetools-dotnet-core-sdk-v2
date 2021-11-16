@@ -6,6 +6,6 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class PaymentInfo : IPaymentInfo
     {
-        public List<IPaymentReference> Payments { get; set; }
+        public List<IPaymentReference> Payments { get; set;}
     }
 }

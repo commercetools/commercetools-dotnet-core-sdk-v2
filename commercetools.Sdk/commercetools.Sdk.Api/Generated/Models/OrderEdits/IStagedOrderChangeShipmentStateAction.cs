@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderChangeShipmentStateAction))]
     public partial interface IStagedOrderChangeShipmentStateAction : IStagedOrderUpdateAction
     {
-        IShipmentState ShipmentState { get; set; }
+        IShipmentState ShipmentState { get; set;}
     }
 }

@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryAddressAction))]
     public partial interface IStagedOrderSetDeliveryAddressAction : IStagedOrderUpdateAction
     {
-        string DeliveryId { get; set; }
-
-        IBaseAddress Address { get; set; }
+        string DeliveryId { get; set;}
+        
+        IBaseAddress Address { get; set;}
     }
 }

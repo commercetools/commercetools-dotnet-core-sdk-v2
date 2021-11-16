@@ -5,16 +5,16 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartPagedQueryResponse))]
-    public partial interface ICartPagedQueryResponse
+    public partial interface ICartPagedQueryResponse 
     {
-        long Limit { get; set; }
-
-        long Count { get; set; }
-
-        long? Total { get; set; }
-
-        long Offset { get; set; }
-
-        List<ICart> Results { get; set; }
+        long Limit { get; set;}
+        
+        long Count { get; set;}
+        
+        long? Total { get; set;}
+        
+        long Offset { get; set;}
+        
+        List<ICart> Results { get; set;}
     }
 }

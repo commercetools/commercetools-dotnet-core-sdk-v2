@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemoveCustomLineItemAction))]
     public partial interface IStagedOrderRemoveCustomLineItemAction : IStagedOrderUpdateAction
     {
-        string CustomLineItemId { get; set; }
+        string CustomLineItemId { get; set;}
     }
 }

@@ -8,16 +8,16 @@ namespace commercetools.Api.Models.States
     {
         [Description("OrderState")]
         OrderState,
-
+        
         [Description("LineItemState")]
         LineItemState,
-
+        
         [Description("ProductState")]
         ProductState,
-
+        
         [Description("ReviewState")]
         ReviewState,
-
+        
         [Description("PaymentState")]
         PaymentState
     }
@@ -35,37 +35,37 @@ namespace commercetools.Api.Models.States
     [EnumInterfaceCreator(typeof(IStateTypeEnum), "FindEnum")]
     public interface IStateTypeEnum : IJsonName
     {
-        public static IStateTypeEnum OrderState = new StateTypeEnumWrapper
-        { Value = StateTypeEnum.OrderState, JsonName = "OrderState" };
+         public static IStateTypeEnum OrderState = new StateTypeEnumWrapper
+             {Value = StateTypeEnum.OrderState, JsonName = "OrderState"}; 
+         
+         public static IStateTypeEnum LineItemState = new StateTypeEnumWrapper
+             {Value = StateTypeEnum.LineItemState, JsonName = "LineItemState"}; 
+         
+         public static IStateTypeEnum ProductState = new StateTypeEnumWrapper
+             {Value = StateTypeEnum.ProductState, JsonName = "ProductState"}; 
+         
+         public static IStateTypeEnum ReviewState = new StateTypeEnumWrapper
+             {Value = StateTypeEnum.ReviewState, JsonName = "ReviewState"}; 
+         
+         public static IStateTypeEnum PaymentState = new StateTypeEnumWrapper
+             {Value = StateTypeEnum.PaymentState, JsonName = "PaymentState"}; 
 
-        public static IStateTypeEnum LineItemState = new StateTypeEnumWrapper
-        { Value = StateTypeEnum.LineItemState, JsonName = "LineItemState" };
-
-        public static IStateTypeEnum ProductState = new StateTypeEnumWrapper
-        { Value = StateTypeEnum.ProductState, JsonName = "ProductState" };
-
-        public static IStateTypeEnum ReviewState = new StateTypeEnumWrapper
-        { Value = StateTypeEnum.ReviewState, JsonName = "ReviewState" };
-
-        public static IStateTypeEnum PaymentState = new StateTypeEnumWrapper
-        { Value = StateTypeEnum.PaymentState, JsonName = "PaymentState" };
-
-        StateTypeEnum? Value { get; }
-
-        static IStateTypeEnum[] Values()
-        {
-            return new[]
-            {
+         StateTypeEnum? Value { get; }
+        
+         static IStateTypeEnum[] Values()
+         {
+             return new[]
+             {
                  OrderState ,
                  LineItemState ,
                  ProductState ,
                  ReviewState ,
-                 PaymentState
+                 PaymentState 
              };
-        }
-        static IStateTypeEnum FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateTypeEnumWrapper() { JsonName = value };
-        }
+         }
+         static IStateTypeEnum FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateTypeEnumWrapper() {JsonName = value};
+         }
     }
 }

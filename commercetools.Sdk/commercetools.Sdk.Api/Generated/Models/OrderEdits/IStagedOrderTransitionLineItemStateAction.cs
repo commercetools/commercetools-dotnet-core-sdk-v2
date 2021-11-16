@@ -9,14 +9,14 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderTransitionLineItemStateAction))]
     public partial interface IStagedOrderTransitionLineItemStateAction : IStagedOrderUpdateAction
     {
-        string LineItemId { get; set; }
-
-        long Quantity { get; set; }
-
-        IStateResourceIdentifier FromState { get; set; }
-
-        IStateResourceIdentifier ToState { get; set; }
-
-        DateTime? ActualTransitionDate { get; set; }
+        string LineItemId { get; set;}
+        
+        long Quantity { get; set;}
+        
+        IStateResourceIdentifier FromState { get; set;}
+        
+        IStateResourceIdentifier ToState { get; set;}
+        
+        DateTime? ActualTransitionDate { get; set;}
     }
 }

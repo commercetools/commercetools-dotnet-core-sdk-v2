@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.ProductTypes
     {
         [Description("SingleLine")]
         SingleLine,
-
+        
         [Description("MultiLine")]
         MultiLine
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.ProductTypes
     [EnumInterfaceCreator(typeof(ITextInputHint), "FindEnum")]
     public interface ITextInputHint : IJsonName
     {
-        public static ITextInputHint SingleLine = new TextInputHintWrapper
-        { Value = TextInputHint.SingleLine, JsonName = "SingleLine" };
+         public static ITextInputHint SingleLine = new TextInputHintWrapper
+             {Value = TextInputHint.SingleLine, JsonName = "SingleLine"}; 
+         
+         public static ITextInputHint MultiLine = new TextInputHintWrapper
+             {Value = TextInputHint.MultiLine, JsonName = "MultiLine"}; 
 
-        public static ITextInputHint MultiLine = new TextInputHintWrapper
-        { Value = TextInputHint.MultiLine, JsonName = "MultiLine" };
-
-        TextInputHint? Value { get; }
-
-        static ITextInputHint[] Values()
-        {
-            return new[]
-            {
+         TextInputHint? Value { get; }
+        
+         static ITextInputHint[] Values()
+         {
+             return new[]
+             {
                  SingleLine ,
-                 MultiLine
+                 MultiLine 
              };
-        }
-        static ITextInputHint FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TextInputHintWrapper() { JsonName = value };
-        }
+         }
+         static ITextInputHint FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TextInputHintWrapper() {JsonName = value};
+         }
     }
 }

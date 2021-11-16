@@ -8,12 +8,12 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomerSetMessage))]
     public partial interface IOrderCustomerSetMessage : IMessage
     {
-        ICustomerReference Customer { get; set; }
-
-        ICustomerGroupReference CustomerGroup { get; set; }
-
-        ICustomerReference OldCustomer { get; set; }
-
-        ICustomerGroupReference OldCustomerGroup { get; set; }
+        ICustomerReference Customer { get; set;}
+        
+        ICustomerGroupReference CustomerGroup { get; set;}
+        
+        ICustomerReference OldCustomer { get; set;}
+        
+        ICustomerGroupReference OldCustomerGroup { get; set;}
     }
 }

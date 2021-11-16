@@ -11,18 +11,18 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddCustomLineItemAction))]
     public partial interface IStagedOrderAddCustomLineItemAction : IStagedOrderUpdateAction
     {
-        IMoney Money { get; set; }
-
-        ILocalizedString Name { get; set; }
-
-        double? Quantity { get; set; }
-
-        string Slug { get; set; }
-
-        ITaxCategoryResourceIdentifier TaxCategory { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        IMoney Money { get; set;}
+        
+        ILocalizedString Name { get; set;}
+        
+        double? Quantity { get; set;}
+        
+        string Slug { get; set;}
+        
+        ITaxCategoryResourceIdentifier TaxCategory { get; set;}
+        
+        ICustomFieldsDraft Custom { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

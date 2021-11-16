@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductDeletedMessagePayload))]
     public partial interface IProductDeletedMessagePayload : IMessagePayload
     {
-        List<string> RemovedImageUrls { get; set; }
-
-        IProductProjection CurrentProjection { get; set; }
+        List<string> RemovedImageUrls { get; set;}
+        
+        IProductProjection CurrentProjection { get; set;}
     }
 }

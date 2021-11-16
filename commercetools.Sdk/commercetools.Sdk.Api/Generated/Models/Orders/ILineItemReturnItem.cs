@@ -6,6 +6,6 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.LineItemReturnItem))]
     public partial interface ILineItemReturnItem : IReturnItem
     {
-        string LineItemId { get; set; }
+        string LineItemId { get; set;}
     }
 }

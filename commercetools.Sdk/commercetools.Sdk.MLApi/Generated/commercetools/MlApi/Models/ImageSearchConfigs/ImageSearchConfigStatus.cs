@@ -8,7 +8,7 @@ namespace commercetools.MLApi.Models.ImageSearchConfigs
     {
         [Description("on")]
         On,
-
+        
         [Description("off")]
         Off
     }
@@ -26,25 +26,25 @@ namespace commercetools.MLApi.Models.ImageSearchConfigs
     [EnumInterfaceCreator(typeof(IImageSearchConfigStatus), "FindEnum")]
     public interface IImageSearchConfigStatus : IJsonName
     {
-        public static IImageSearchConfigStatus On = new ImageSearchConfigStatusWrapper
-        { Value = ImageSearchConfigStatus.On, JsonName = "on" };
+         public static IImageSearchConfigStatus On = new ImageSearchConfigStatusWrapper
+             {Value = ImageSearchConfigStatus.On, JsonName = "on"}; 
+         
+         public static IImageSearchConfigStatus Off = new ImageSearchConfigStatusWrapper
+             {Value = ImageSearchConfigStatus.Off, JsonName = "off"}; 
 
-        public static IImageSearchConfigStatus Off = new ImageSearchConfigStatusWrapper
-        { Value = ImageSearchConfigStatus.Off, JsonName = "off" };
-
-        ImageSearchConfigStatus? Value { get; }
-
-        static IImageSearchConfigStatus[] Values()
-        {
-            return new[]
-            {
+         ImageSearchConfigStatus? Value { get; }
+        
+         static IImageSearchConfigStatus[] Values()
+         {
+             return new[]
+             {
                  On ,
-                 Off
+                 Off 
              };
-        }
-        static IImageSearchConfigStatus FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ImageSearchConfigStatusWrapper() { JsonName = value };
-        }
+         }
+         static IImageSearchConfigStatus FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ImageSearchConfigStatusWrapper() {JsonName = value};
+         }
     }
 }

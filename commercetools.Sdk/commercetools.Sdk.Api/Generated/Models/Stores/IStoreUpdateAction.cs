@@ -15,8 +15,8 @@ namespace commercetools.Api.Models.Stores
     [SubTypeDiscriminator("setLanguages", typeof(commercetools.Api.Models.Stores.StoreSetLanguagesAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Api.Models.Stores.StoreSetNameAction))]
     [SubTypeDiscriminator("setSupplyChannels", typeof(commercetools.Api.Models.Stores.StoreSetSupplyChannelsAction))]
-    public partial interface IStoreUpdateAction
+    public partial interface IStoreUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

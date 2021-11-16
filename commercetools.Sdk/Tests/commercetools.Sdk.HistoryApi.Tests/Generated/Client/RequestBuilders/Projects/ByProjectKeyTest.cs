@@ -6,20 +6,18 @@ using Xunit;
 
 namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
 {
-    public class ByProjectKeyTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -28,7 +26,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?resourceType=resourceType",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -37,7 +35,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?date.from=date.from",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -46,7 +44,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?date.to=date.to",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -55,7 +53,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -64,7 +62,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -73,7 +71,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?userId=userId",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -82,7 +80,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?type=type",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -91,7 +89,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?clientId=clientId",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -100,7 +98,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?resourceId=resourceId",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -109,7 +107,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?source=source",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -118,7 +116,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?changes=changes",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -127,7 +125,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?customerId=customerId",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -136,7 +134,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -145,7 +143,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "Get",
                    "/test_projectKey?expand=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
@@ -154,6 +152,6 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
                    "/test_projectKey",
                }
        };
-        }
     }
+   }
 }

@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
 {
-    public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -30,7 +28,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -42,7 +40,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -54,7 +52,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -66,7 +64,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -78,7 +76,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -90,7 +88,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -102,7 +100,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -113,7 +111,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -125,7 +123,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "Post",
                    "/test_projectKey/in-store/key=test_storeKey/me/orders?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
@@ -137,6 +135,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    "/test_projectKey/in-store/key=test_storeKey/me/orders",
                }
        };
-        }
     }
+   }
 }

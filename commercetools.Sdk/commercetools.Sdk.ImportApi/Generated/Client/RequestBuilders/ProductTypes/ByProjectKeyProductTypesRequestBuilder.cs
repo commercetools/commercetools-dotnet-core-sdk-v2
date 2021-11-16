@@ -5,32 +5,28 @@ using commercetools.Base.Serialization;
 namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
 {
 
-    public class ByProjectKeyProductTypesRequestBuilder
-    {
+    public class ByProjectKeyProductTypesRequestBuilder {
 
-        private IClient ApiHttpClient { get; }
-
-        private ISerializerService SerializerService { get; }
-
-        private string ProjectKey { get; }
-
-        public ByProjectKeyProductTypesRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-        }
-
-
-
-        public ByProjectKeyProductTypesImportContainersRequestBuilder ImportContainers()
-        {
-            return new ByProjectKeyProductTypesImportContainersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey)
-        {
-            return new ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);
-        }
-    }
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+   
+       public ByProjectKeyProductTypesRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+       }
+   
+       
+       
+       public ByProjectKeyProductTypesImportContainersRequestBuilder ImportContainers() {
+           return new ByProjectKeyProductTypesImportContainersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+       }
+       [Obsolete("usage of this endpoint has been deprecated.", false)]
+       public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey) {
+           return new ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);
+       }
+   }
 }

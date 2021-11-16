@@ -5,10 +5,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.HistoryApi.Models.Common
 {
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.CustomFields))]
-    public partial interface ICustomFields
+    public partial interface ICustomFields 
     {
-        IReference Type { get; set; }
-
-        Object Fields { get; set; }
+        IReference Type { get; set;}
+        
+        Object Fields { get; set;}
     }
 }

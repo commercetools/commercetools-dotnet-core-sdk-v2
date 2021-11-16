@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Subscriptions
     [SubTypeDiscriminator("IronMQ", typeof(commercetools.Api.Models.Subscriptions.IronMqDestination))]
     [SubTypeDiscriminator("SNS", typeof(commercetools.Api.Models.Subscriptions.SnsDestination))]
     [SubTypeDiscriminator("SQS", typeof(commercetools.Api.Models.Subscriptions.SqsDestination))]
-    public partial interface IDestination
+    public partial interface IDestination 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

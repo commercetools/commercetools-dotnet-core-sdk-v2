@@ -18,8 +18,8 @@ namespace commercetools.Api.Models.ProductTypes
     [SubTypeDiscriminator("set", typeof(commercetools.Api.Models.ProductTypes.AttributeSetType))]
     [SubTypeDiscriminator("text", typeof(commercetools.Api.Models.ProductTypes.AttributeTextType))]
     [SubTypeDiscriminator("time", typeof(commercetools.Api.Models.ProductTypes.AttributeTimeType))]
-    public partial interface IAttributeType
+    public partial interface IAttributeType 
     {
-        string Name { get; set; }
+        string Name { get; set;}
     }
 }

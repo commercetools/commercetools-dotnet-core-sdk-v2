@@ -7,12 +7,12 @@ namespace commercetools.ImportApi.Models.Importrequests
 {
     public partial class OrderPatchImportRequest : IOrderPatchImportRequest
     {
-        public IImportResourceType Type { get; set; }
-
-        public List<IOrderPatchImport> Patches { get; set; }
+        public IImportResourceType Type { get; set;}
+        
+        public List<IOrderPatchImport> Patches { get; set;}
         public OrderPatchImportRequest()
-        {
-            this.Type = IImportResourceType.FindEnum("order-patch");
+        { 
+           this.Type = IImportResourceType.FindEnum("order-patch");
         }
     }
 }

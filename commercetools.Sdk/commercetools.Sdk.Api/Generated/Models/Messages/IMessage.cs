@@ -18,8 +18,11 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("CustomerDeleted", typeof(commercetools.Api.Models.Messages.CustomerDeletedMessage))]
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Api.Models.Messages.CustomerEmailChangedMessage))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Api.Models.Messages.CustomerEmailVerifiedMessage))]
+    [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Api.Models.Messages.CustomerFirstNameSetMessage))]
     [SubTypeDiscriminator("CustomerGroupSet", typeof(commercetools.Api.Models.Messages.CustomerGroupSetMessage))]
+    [SubTypeDiscriminator("CustomerLastNameSet", typeof(commercetools.Api.Models.Messages.CustomerLastNameSetMessage))]
     [SubTypeDiscriminator("CustomerPasswordUpdated", typeof(commercetools.Api.Models.Messages.CustomerPasswordUpdatedMessage))]
+    [SubTypeDiscriminator("CustomerTitleSet", typeof(commercetools.Api.Models.Messages.CustomerTitleSetMessage))]
     [SubTypeDiscriminator("CustomLineItemStateTransition", typeof(commercetools.Api.Models.Messages.CustomLineItemStateTransitionMessage))]
     [SubTypeDiscriminator("DeliveryAdded", typeof(commercetools.Api.Models.Messages.DeliveryAddedMessage))]
     [SubTypeDiscriminator("DeliveryAddressSet", typeof(commercetools.Api.Models.Messages.DeliveryAddressSetMessage))]
@@ -78,6 +81,7 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ProductVariantAdded", typeof(commercetools.Api.Models.Messages.ProductVariantAddedMessage))]
     [SubTypeDiscriminator("ProductVariantDeleted", typeof(commercetools.Api.Models.Messages.ProductVariantDeletedMessage))]
     [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Api.Models.Messages.OrderReturnInfoAddedMessage))]
+    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Api.Models.Messages.OrderReturnInfoSetMessage))]
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Api.Models.Messages.ReviewCreatedMessage))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Api.Models.Messages.ReviewRatingSetMessage))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Api.Models.Messages.ReviewStateTransitionMessage))]
@@ -85,26 +89,26 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessage))]
     public partial interface IMessage : IBaseResource
     {
-        new string Id { get; set; }
-
-        new long Version { get; set; }
-
-        new DateTime CreatedAt { get; set; }
-
-        new DateTime LastModifiedAt { get; set; }
-
-        ILastModifiedBy LastModifiedBy { get; set; }
-
-        ICreatedBy CreatedBy { get; set; }
-
-        long SequenceNumber { get; set; }
-
-        IReference Resource { get; set; }
-
-        long ResourceVersion { get; set; }
-
-        string Type { get; set; }
-
-        IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
+        ILastModifiedBy LastModifiedBy { get; set;}
+        
+        ICreatedBy CreatedBy { get; set;}
+        
+        long SequenceNumber { get; set;}
+        
+        IReference Resource { get; set;}
+        
+        long ResourceVersion { get; set;}
+        
+        string Type { get; set;}
+        
+        IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
     }
 }

@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodRemoveZoneAction))]
     public partial interface IShippingMethodRemoveZoneAction : IShippingMethodUpdateAction
     {
-        IZoneResourceIdentifier Zone { get; set; }
+        IZoneResourceIdentifier Zone { get; set;}
     }
 }

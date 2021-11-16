@@ -2,14 +2,14 @@ namespace commercetools.Api.Models.Types
 {
     public partial class TypeChangeInputHintAction : ITypeChangeInputHintAction
     {
-        public string Action { get; set; }
-
-        public string FieldName { get; set; }
-
-        public ITypeTextInputHint InputHint { get; set; }
+        public string Action { get; set;}
+        
+        public string FieldName { get; set;}
+        
+        public ITypeTextInputHint InputHint { get; set;}
         public TypeChangeInputHintAction()
-        {
-            this.Action = "changeInputHint";
+        { 
+           this.Action = "changeInputHint";
         }
     }
 }

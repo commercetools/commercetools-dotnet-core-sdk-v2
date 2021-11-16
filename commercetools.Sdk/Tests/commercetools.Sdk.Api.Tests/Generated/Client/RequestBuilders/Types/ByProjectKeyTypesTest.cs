@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Types
 {
-    public class ByProjectKeyTypesTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyTypesTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -28,7 +26,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -38,7 +36,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -48,7 +46,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -58,7 +56,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -68,7 +66,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -78,7 +76,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -88,7 +86,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -97,7 +95,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Get",
                    "/test_projectKey/types",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -107,7 +105,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "Post",
                    "/test_projectKey/types?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Types()
@@ -117,6 +115,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Types
                    "/test_projectKey/types",
                }
        };
-        }
     }
+   }
 }

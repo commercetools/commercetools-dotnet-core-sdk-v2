@@ -2,12 +2,12 @@ namespace commercetools.Api.Models.Payments
 {
     public partial class PaymentSetMethodInfoMethodAction : IPaymentSetMethodInfoMethodAction
     {
-        public string Action { get; set; }
-
-        public string Method { get; set; }
+        public string Action { get; set;}
+        
+        public string Method { get; set;}
         public PaymentSetMethodInfoMethodAction()
-        {
-            this.Action = "setMethodInfoMethod";
+        { 
+           this.Action = "setMethodInfoMethod";
         }
     }
 }

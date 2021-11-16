@@ -2,12 +2,12 @@ namespace commercetools.ImportApi.Models.Errors
 {
     public partial class InsufficientScopeError : IInsufficientScopeError
     {
-        public string Code { get; set; }
-
-        public string Message { get; set; }
+        public string Code { get; set;}
+        
+        public string Message { get; set;}
         public InsufficientScopeError()
-        {
-            this.Code = "insufficient_scope";
+        { 
+           this.Code = "insufficient_scope";
         }
     }
 }

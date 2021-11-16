@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.EditPreviewFailedError))]
     public partial interface IEditPreviewFailedError : IErrorObject
     {
-        IOrderEditPreviewFailure Result { get; set; }
+        IOrderEditPreviewFailure Result { get; set;}
     }
 }

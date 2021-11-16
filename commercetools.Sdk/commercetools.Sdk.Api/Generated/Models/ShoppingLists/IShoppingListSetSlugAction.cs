@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetSlugAction))]
     public partial interface IShoppingListSetSlugAction : IShoppingListUpdateAction
     {
-        ILocalizedString Slug { get; set; }
+        ILocalizedString Slug { get; set;}
     }
 }

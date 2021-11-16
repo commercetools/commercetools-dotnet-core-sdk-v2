@@ -6,6 +6,6 @@ namespace commercetools.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.IronMqDestination))]
     public partial interface IIronMqDestination : IDestination
     {
-        string Uri { get; set; }
+        string Uri { get; set;}
     }
 }

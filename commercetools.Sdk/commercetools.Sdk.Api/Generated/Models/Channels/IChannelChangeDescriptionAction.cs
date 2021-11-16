@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelChangeDescriptionAction))]
     public partial interface IChannelChangeDescriptionAction : IChannelUpdateAction
     {
-        ILocalizedString Description { get; set; }
+        ILocalizedString Description { get; set;}
     }
 }

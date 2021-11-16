@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLocaleAction))]
     public partial interface IStagedOrderSetLocaleAction : IStagedOrderUpdateAction
     {
-        string Locale { get; set; }
+        string Locale { get; set;}
     }
 }

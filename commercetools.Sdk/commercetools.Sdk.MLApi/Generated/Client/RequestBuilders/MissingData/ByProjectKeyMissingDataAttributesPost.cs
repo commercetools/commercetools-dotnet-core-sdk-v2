@@ -7,50 +7,48 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 {
-    public partial class ByProjectKeyMissingDataAttributesPost : ApiMethod<ByProjectKeyMissingDataAttributesPost>
-    {
+    public partial class ByProjectKeyMissingDataAttributesPost : ApiMethod<ByProjectKeyMissingDataAttributesPost> {
 
+       
+       private ISerializerService SerializerService { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Post;
+       
+       private string ProjectKey { get; }
+       
+       private commercetools.MLApi.Models.MissingData.IMissingAttributesSearchRequest MissingAttributesSearchRequest;
+   
+       public ByProjectKeyMissingDataAttributesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.MLApi.Models.MissingData.IMissingAttributesSearchRequest missingAttributesSearchRequest) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+           this.MissingAttributesSearchRequest = missingAttributesSearchRequest;
+           this.RequestUrl = $"/{ProjectKey}/missing-data/attributes";
+       }
+   
+   
+       
 
-        private ISerializerService SerializerService { get; }
+       public async Task<commercetools.MLApi.Models.Common.ITaskToken> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.ITaskToken>(requestMessage);
+       }
+       public override HttpRequestMessage Build()
+       {
+          var request = base.Build();
+          if (SerializerService != null)
+          {
+              var body = this.SerializerService.Serialize(MissingAttributesSearchRequest);
+              if(!string.IsNullOrEmpty(body))
+              {
+                  request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+              }
+          }
+          return request;
+       }
 
-        private IClient ApiHttpClient { get; }
-
-        public override HttpMethod Method => HttpMethod.Post;
-
-        private string ProjectKey { get; }
-
-        private commercetools.MLApi.Models.MissingData.IMissingAttributesSearchRequest MissingAttributesSearchRequest;
-
-        public ByProjectKeyMissingDataAttributesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.MLApi.Models.MissingData.IMissingAttributesSearchRequest missingAttributesSearchRequest)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-            this.MissingAttributesSearchRequest = missingAttributesSearchRequest;
-            this.RequestUrl = $"/{ProjectKey}/missing-data/attributes";
-        }
-
-
-
-
-        public async Task<commercetools.MLApi.Models.Common.ITaskToken> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.ITaskToken>(requestMessage);
-        }
-        public override HttpRequestMessage Build()
-        {
-            var request = base.Build();
-            if (SerializerService != null)
-            {
-                var body = this.SerializerService.Serialize(MissingAttributesSearchRequest);
-                if (!string.IsNullOrEmpty(body))
-                {
-                    request.Content = new StringContent(body, Encoding.UTF8, "application/json");
-                }
-            }
-            return request;
-        }
-
-    }
+   }
 }

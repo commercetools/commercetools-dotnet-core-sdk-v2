@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLineItemDistributionChannelAction))]
     public partial interface IStagedOrderSetLineItemDistributionChannelAction : IStagedOrderUpdateAction
     {
-        string LineItemId { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
+        string LineItemId { get; set;}
+        
+        IChannelResourceIdentifier DistributionChannel { get; set;}
     }
 }

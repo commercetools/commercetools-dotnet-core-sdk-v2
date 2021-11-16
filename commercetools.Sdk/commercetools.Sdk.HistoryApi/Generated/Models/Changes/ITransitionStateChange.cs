@@ -7,12 +7,12 @@ namespace commercetools.HistoryApi.Models.Changes
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.TransitionStateChange))]
     public partial interface ITransitionStateChange : IChange
     {
-        new string Type { get; set; }
-
-        new string Change { get; set; }
-
-        IReference PreviousValue { get; set; }
-
-        IReference NextValue { get; set; }
+        new string Type { get; set;}
+        
+        new string Change { get; set;}
+        
+        IReference PreviousValue { get; set;}
+        
+        IReference NextValue { get; set;}
     }
 }

@@ -23,21 +23,21 @@ namespace commercetools.Api.Models.ProductTypes
     [EnumInterfaceCreator(typeof(IAttributeConstraintEnumDraft), "FindEnum")]
     public interface IAttributeConstraintEnumDraft : IJsonName
     {
-        public static IAttributeConstraintEnumDraft None = new AttributeConstraintEnumDraftWrapper
-        { Value = AttributeConstraintEnumDraft.None, JsonName = "None" };
+         public static IAttributeConstraintEnumDraft None = new AttributeConstraintEnumDraftWrapper
+             {Value = AttributeConstraintEnumDraft.None, JsonName = "None"}; 
 
-        AttributeConstraintEnumDraft? Value { get; }
-
-        static IAttributeConstraintEnumDraft[] Values()
-        {
-            return new[]
-            {
-                 None
+         AttributeConstraintEnumDraft? Value { get; }
+        
+         static IAttributeConstraintEnumDraft[] Values()
+         {
+             return new[]
+             {
+                 None 
              };
-        }
-        static IAttributeConstraintEnumDraft FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new AttributeConstraintEnumDraftWrapper() { JsonName = value };
-        }
+         }
+         static IAttributeConstraintEnumDraft FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new AttributeConstraintEnumDraftWrapper() {JsonName = value};
+         }
     }
 }

@@ -6,16 +6,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class ChangeCartDiscountsChange : IChangeCartDiscountsChange
     {
-        public string Type { get; set; }
-
-        public string Change { get; set; }
-
-        public List<IReference> PreviousValue { get; set; }
-
-        public List<IReference> NextValue { get; set; }
+        public string Type { get; set;}
+        
+        public string Change { get; set;}
+        
+        public List<IReference> PreviousValue { get; set;}
+        
+        public List<IReference> NextValue { get; set;}
         public ChangeCartDiscountsChange()
-        {
-            this.Type = "ChangeCartDiscountsChange";
+        { 
+           this.Type = "ChangeCartDiscountsChange";
         }
     }
 }

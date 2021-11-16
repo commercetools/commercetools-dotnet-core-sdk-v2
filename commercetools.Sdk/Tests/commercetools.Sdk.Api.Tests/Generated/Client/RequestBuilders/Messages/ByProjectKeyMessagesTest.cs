@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
 {
-    public class ByProjectKeyMessagesTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyMessagesTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -28,7 +26,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -38,7 +36,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -48,7 +46,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -58,7 +56,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -68,7 +66,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -78,7 +76,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -88,7 +86,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "Get",
                    "/test_projectKey/messages?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Messages()
@@ -98,6 +96,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Messages
                    "/test_projectKey/messages",
                }
        };
-        }
     }
+   }
 }

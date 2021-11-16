@@ -67,6 +67,7 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setParcelItems", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelItemsAction))]
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]
+    [SubTypeDiscriminator("setReturnInfo", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnInfoAction))]
     [SubTypeDiscriminator("setReturnPaymentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnPaymentStateAction))]
     [SubTypeDiscriminator("setReturnShipmentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnShipmentStateAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingAddressAction))]
@@ -83,8 +84,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderTransitionStateAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateItemShippingAddressAction))]
     [SubTypeDiscriminator("updateSyncInfo", typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
-    public partial interface IStagedOrderUpdateAction
+    public partial interface IStagedOrderUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

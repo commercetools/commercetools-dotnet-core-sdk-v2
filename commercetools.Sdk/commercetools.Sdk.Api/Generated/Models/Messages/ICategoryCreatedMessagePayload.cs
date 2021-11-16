@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.CategoryCreatedMessagePayload))]
     public partial interface ICategoryCreatedMessagePayload : IMessagePayload
     {
-        ICategory Category { get; set; }
+        ICategory Category { get; set;}
     }
 }

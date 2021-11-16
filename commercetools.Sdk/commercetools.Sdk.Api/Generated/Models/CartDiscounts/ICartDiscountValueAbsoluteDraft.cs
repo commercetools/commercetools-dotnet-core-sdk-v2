@@ -8,6 +8,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueAbsoluteDraft))]
     public partial interface ICartDiscountValueAbsoluteDraft : ICartDiscountValueDraft
     {
-        List<IMoney> Money { get; set; }
+        List<IMoney> Money { get; set;}
     }
 }

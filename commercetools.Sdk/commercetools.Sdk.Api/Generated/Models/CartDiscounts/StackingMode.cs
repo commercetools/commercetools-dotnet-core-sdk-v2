@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.CartDiscounts
     {
         [Description("Stacking")]
         Stacking,
-
+        
         [Description("StopAfterThisDiscount")]
         StopAfterThisDiscount
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.CartDiscounts
     [EnumInterfaceCreator(typeof(IStackingMode), "FindEnum")]
     public interface IStackingMode : IJsonName
     {
-        public static IStackingMode Stacking = new StackingModeWrapper
-        { Value = StackingMode.Stacking, JsonName = "Stacking" };
+         public static IStackingMode Stacking = new StackingModeWrapper
+             {Value = StackingMode.Stacking, JsonName = "Stacking"}; 
+         
+         public static IStackingMode StopAfterThisDiscount = new StackingModeWrapper
+             {Value = StackingMode.StopAfterThisDiscount, JsonName = "StopAfterThisDiscount"}; 
 
-        public static IStackingMode StopAfterThisDiscount = new StackingModeWrapper
-        { Value = StackingMode.StopAfterThisDiscount, JsonName = "StopAfterThisDiscount" };
-
-        StackingMode? Value { get; }
-
-        static IStackingMode[] Values()
-        {
-            return new[]
-            {
+         StackingMode? Value { get; }
+        
+         static IStackingMode[] Values()
+         {
+             return new[]
+             {
                  Stacking ,
-                 StopAfterThisDiscount
+                 StopAfterThisDiscount 
              };
-        }
-        static IStackingMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StackingModeWrapper() { JsonName = value };
-        }
+         }
+         static IStackingMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StackingModeWrapper() {JsonName = value};
+         }
     }
 }

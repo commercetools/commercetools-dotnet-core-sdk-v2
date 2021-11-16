@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ReviewCreatedMessage))]
     public partial interface IReviewCreatedMessage : IMessage
     {
-        IReview Review { get; set; }
+        IReview Review { get; set;}
     }
 }

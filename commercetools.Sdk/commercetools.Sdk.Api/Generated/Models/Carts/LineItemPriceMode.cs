@@ -8,10 +8,10 @@ namespace commercetools.Api.Models.Carts
     {
         [Description("Platform")]
         Platform,
-
+        
         [Description("ExternalTotal")]
         ExternalTotal,
-
+        
         [Description("ExternalPrice")]
         ExternalPrice
     }
@@ -29,29 +29,29 @@ namespace commercetools.Api.Models.Carts
     [EnumInterfaceCreator(typeof(ILineItemPriceMode), "FindEnum")]
     public interface ILineItemPriceMode : IJsonName
     {
-        public static ILineItemPriceMode Platform = new LineItemPriceModeWrapper
-        { Value = LineItemPriceMode.Platform, JsonName = "Platform" };
+         public static ILineItemPriceMode Platform = new LineItemPriceModeWrapper
+             {Value = LineItemPriceMode.Platform, JsonName = "Platform"}; 
+         
+         public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
+             {Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal"}; 
+         
+         public static ILineItemPriceMode ExternalPrice = new LineItemPriceModeWrapper
+             {Value = LineItemPriceMode.ExternalPrice, JsonName = "ExternalPrice"}; 
 
-        public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
-        { Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal" };
-
-        public static ILineItemPriceMode ExternalPrice = new LineItemPriceModeWrapper
-        { Value = LineItemPriceMode.ExternalPrice, JsonName = "ExternalPrice" };
-
-        LineItemPriceMode? Value { get; }
-
-        static ILineItemPriceMode[] Values()
-        {
-            return new[]
-            {
+         LineItemPriceMode? Value { get; }
+        
+         static ILineItemPriceMode[] Values()
+         {
+             return new[]
+             {
                  Platform ,
                  ExternalTotal ,
-                 ExternalPrice
+                 ExternalPrice 
              };
-        }
-        static ILineItemPriceMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new LineItemPriceModeWrapper() { JsonName = value };
-        }
+         }
+         static ILineItemPriceMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new LineItemPriceModeWrapper() {JsonName = value};
+         }
     }
 }

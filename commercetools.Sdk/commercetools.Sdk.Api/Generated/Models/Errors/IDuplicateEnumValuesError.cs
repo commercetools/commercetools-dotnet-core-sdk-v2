@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateEnumValuesError))]
     public partial interface IDuplicateEnumValuesError : IErrorObject
     {
-        List<string> Duplicates { get; set; }
+        List<string> Duplicates { get; set;}
     }
 }

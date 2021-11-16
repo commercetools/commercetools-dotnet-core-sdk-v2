@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyCategoriesTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -28,7 +26,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -38,7 +36,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -48,7 +46,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -58,7 +56,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -68,7 +66,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -78,7 +76,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -88,7 +86,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -97,7 +95,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -107,7 +105,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Post",
                    "/test_projectKey/categories?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -117,6 +115,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "/test_projectKey/categories",
                }
        };
-        }
     }
+   }
 }

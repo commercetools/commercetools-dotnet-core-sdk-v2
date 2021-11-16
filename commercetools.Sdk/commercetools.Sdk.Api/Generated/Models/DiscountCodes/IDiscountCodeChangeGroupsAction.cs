@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeGroupsAction))]
     public partial interface IDiscountCodeChangeGroupsAction : IDiscountCodeUpdateAction
     {
-        List<string> Groups { get; set; }
+        List<string> Groups { get; set;}
     }
 }

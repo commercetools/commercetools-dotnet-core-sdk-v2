@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelSetAddressAction))]
     public partial interface IChannelSetAddressAction : IChannelUpdateAction
     {
-        IBaseAddress Address { get; set; }
+        IBaseAddress Address { get; set;}
     }
 }

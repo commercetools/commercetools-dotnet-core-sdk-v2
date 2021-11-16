@@ -5,10 +5,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Importsinks
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importsinks.ImportSinkUpdateDraft))]
-    public partial interface IImportSinkUpdateDraft
+    public partial interface IImportSinkUpdateDraft 
     {
-        long Version { get; set; }
-
-        IImportResourceType ResourceType { get; set; }
+        long Version { get; set;}
+        
+        IImportResourceType ResourceType { get; set;}
     }
 }

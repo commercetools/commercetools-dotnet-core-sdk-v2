@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
 {
-    public class ByProjectKeyImportContainersTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyImportContainersTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
@@ -27,7 +25,7 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    "Post",
                    "/test_projectKey/import-containers",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
@@ -37,7 +35,7 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    "Get",
                    "/test_projectKey/import-containers?limit=0.26748633",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
@@ -47,7 +45,7 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    "Get",
                    "/test_projectKey/import-containers?offset=0.7475848",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
@@ -57,7 +55,7 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    "Get",
                    "/test_projectKey/import-containers?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
@@ -67,6 +65,6 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    "/test_projectKey/import-containers",
                }
        };
-        }
     }
+   }
 }

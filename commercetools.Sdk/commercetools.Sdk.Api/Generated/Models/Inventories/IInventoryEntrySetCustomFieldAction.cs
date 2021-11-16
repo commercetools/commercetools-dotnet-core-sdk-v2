@@ -7,8 +7,8 @@ namespace commercetools.Api.Models.Inventories
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetCustomFieldAction))]
     public partial interface IInventoryEntrySetCustomFieldAction : IInventoryEntryUpdateAction
     {
-        string Name { get; set; }
-
-        Object Value { get; set; }
+        string Name { get; set;}
+        
+        Object Value { get; set;}
     }
 }

@@ -9,10 +9,10 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddReturnInfoAction))]
     public partial interface IStagedOrderAddReturnInfoAction : IStagedOrderUpdateAction
     {
-        string ReturnTrackingId { get; set; }
-
-        List<IReturnItemDraft> Items { get; set; }
-
-        DateTime? ReturnDate { get; set; }
+        string ReturnTrackingId { get; set;}
+        
+        List<IReturnItemDraft> Items { get; set;}
+        
+        DateTime? ReturnDate { get; set;}
     }
 }

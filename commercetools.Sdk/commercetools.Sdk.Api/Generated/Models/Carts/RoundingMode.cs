@@ -8,10 +8,10 @@ namespace commercetools.Api.Models.Carts
     {
         [Description("HalfEven")]
         HalfEven,
-
+        
         [Description("HalfUp")]
         HalfUp,
-
+        
         [Description("HalfDown")]
         HalfDown
     }
@@ -29,29 +29,29 @@ namespace commercetools.Api.Models.Carts
     [EnumInterfaceCreator(typeof(IRoundingMode), "FindEnum")]
     public interface IRoundingMode : IJsonName
     {
-        public static IRoundingMode HalfEven = new RoundingModeWrapper
-        { Value = RoundingMode.HalfEven, JsonName = "HalfEven" };
+         public static IRoundingMode HalfEven = new RoundingModeWrapper
+             {Value = RoundingMode.HalfEven, JsonName = "HalfEven"}; 
+         
+         public static IRoundingMode HalfUp = new RoundingModeWrapper
+             {Value = RoundingMode.HalfUp, JsonName = "HalfUp"}; 
+         
+         public static IRoundingMode HalfDown = new RoundingModeWrapper
+             {Value = RoundingMode.HalfDown, JsonName = "HalfDown"}; 
 
-        public static IRoundingMode HalfUp = new RoundingModeWrapper
-        { Value = RoundingMode.HalfUp, JsonName = "HalfUp" };
-
-        public static IRoundingMode HalfDown = new RoundingModeWrapper
-        { Value = RoundingMode.HalfDown, JsonName = "HalfDown" };
-
-        RoundingMode? Value { get; }
-
-        static IRoundingMode[] Values()
-        {
-            return new[]
-            {
+         RoundingMode? Value { get; }
+        
+         static IRoundingMode[] Values()
+         {
+             return new[]
+             {
                  HalfEven ,
                  HalfUp ,
-                 HalfDown
+                 HalfDown 
              };
-        }
-        static IRoundingMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new RoundingModeWrapper() { JsonName = value };
-        }
+         }
+         static IRoundingMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new RoundingModeWrapper() {JsonName = value};
+         }
     }
 }

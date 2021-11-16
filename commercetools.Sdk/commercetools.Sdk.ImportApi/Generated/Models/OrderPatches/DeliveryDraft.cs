@@ -7,10 +7,10 @@ namespace commercetools.ImportApi.Models.OrderPatches
 {
     public partial class DeliveryDraft : IDeliveryDraft
     {
-        public List<IDeliveryItem> Items { get; set; }
-
-        public IAddress Address { get; set; }
-
-        public List<IDeliveryParcelDraft> Parcels { get; set; }
+        public List<IDeliveryItem> Items { get; set;}
+        
+        public IAddress Address { get; set;}
+        
+        public List<IDeliveryParcelDraft> Parcels { get; set;}
     }
 }

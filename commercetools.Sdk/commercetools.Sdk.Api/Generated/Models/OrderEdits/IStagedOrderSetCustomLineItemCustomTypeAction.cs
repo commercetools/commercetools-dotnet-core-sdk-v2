@@ -8,10 +8,10 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomLineItemCustomTypeAction))]
     public partial interface IStagedOrderSetCustomLineItemCustomTypeAction : IStagedOrderUpdateAction
     {
-        string CustomLineItemId { get; set; }
-
-        ITypeResourceIdentifier Type { get; set; }
-
-        IFieldContainer Fields { get; set; }
+        string CustomLineItemId { get; set;}
+        
+        ITypeResourceIdentifier Type { get; set;}
+        
+        IFieldContainer Fields { get; set;}
     }
 }

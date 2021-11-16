@@ -2,8 +2,8 @@ namespace commercetools.MLApi.Models.MissingData
 {
     public partial class MissingPricesProductLevel : IMissingPricesProductLevel
     {
-        public long Total { get; set; }
-
-        public long MissingPrices { get; set; }
+        public long Total { get; set;}
+        
+        public long MissingPrices { get; set;}
     }
 }

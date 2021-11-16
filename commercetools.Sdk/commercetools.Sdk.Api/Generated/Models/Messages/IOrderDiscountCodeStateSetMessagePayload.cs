@@ -8,10 +8,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDiscountCodeStateSetMessagePayload))]
     public partial interface IOrderDiscountCodeStateSetMessagePayload : IMessagePayload
     {
-        IDiscountCodeReference DiscountCode { get; set; }
-
-        IDiscountCodeState State { get; set; }
-
-        IDiscountCodeState OldState { get; set; }
+        IDiscountCodeReference DiscountCode { get; set;}
+        
+        IDiscountCodeState State { get; set;}
+        
+        IDiscountCodeState OldState { get; set;}
     }
 }

@@ -2,8 +2,8 @@ namespace commercetools.ImportApi.Models.OrderPatches
 {
     public partial class OrderPatchImport : IOrderPatchImport
     {
-        public string OrderNumber { get; set; }
-
-        public IOrderField Fields { get; set; }
+        public string OrderNumber { get; set;}
+        
+        public IOrderField Fields { get; set;}
     }
 }

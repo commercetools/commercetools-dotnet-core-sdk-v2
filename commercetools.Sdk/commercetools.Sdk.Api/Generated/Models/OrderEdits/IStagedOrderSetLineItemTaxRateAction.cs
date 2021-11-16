@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLineItemTaxRateAction))]
     public partial interface IStagedOrderSetLineItemTaxRateAction : IStagedOrderUpdateAction
     {
-        string LineItemId { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        string LineItemId { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

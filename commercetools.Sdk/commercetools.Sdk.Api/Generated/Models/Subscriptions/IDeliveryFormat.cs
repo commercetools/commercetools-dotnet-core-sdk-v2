@@ -7,8 +7,8 @@ namespace commercetools.Api.Models.Subscriptions
     [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Subscriptions.DeliveryFormat))]
     [SubTypeDiscriminator("CloudEvents", typeof(commercetools.Api.Models.Subscriptions.DeliveryCloudEventsFormat))]
     [SubTypeDiscriminator("Platform", typeof(commercetools.Api.Models.Subscriptions.DeliveryPlatformFormat))]
-    public partial interface IDeliveryFormat
+    public partial interface IDeliveryFormat 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

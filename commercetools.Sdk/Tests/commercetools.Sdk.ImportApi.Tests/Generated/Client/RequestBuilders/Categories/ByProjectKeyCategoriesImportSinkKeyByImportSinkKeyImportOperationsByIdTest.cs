@@ -5,21 +5,19 @@ using Xunit;
 
 namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsByIdTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsByIdTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
         [Obsolete]
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+        public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Categories()
@@ -32,6 +30,6 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Categories
                    "/test_projectKey/categories/importSinkKey=test_importSinkKey/import-operations/test_id",
                }
        };
-        }
     }
+   }
 }

@@ -7,50 +7,48 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Login
 {
-    public partial class ByProjectKeyLoginPost : ApiMethod<ByProjectKeyLoginPost>
-    {
+    public partial class ByProjectKeyLoginPost : ApiMethod<ByProjectKeyLoginPost> {
 
+       
+       private ISerializerService SerializerService { get; }
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Post;
+       
+       private string ProjectKey { get; }
+       
+       private commercetools.Api.Models.Customers.ICustomerSignin CustomerSignin;
+   
+       public ByProjectKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerSignin customerSignin) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+           this.CustomerSignin = customerSignin;
+           this.RequestUrl = $"/{ProjectKey}/login";
+       }
+   
+   
+       
 
-        private ISerializerService SerializerService { get; }
+       public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
+       }
+       public override HttpRequestMessage Build()
+       {
+          var request = base.Build();
+          if (SerializerService != null)
+          {
+              var body = this.SerializerService.Serialize(CustomerSignin);
+              if(!string.IsNullOrEmpty(body))
+              {
+                  request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+              }
+          }
+          return request;
+       }
 
-        private IClient ApiHttpClient { get; }
-
-        public override HttpMethod Method => HttpMethod.Post;
-
-        private string ProjectKey { get; }
-
-        private commercetools.Api.Models.Customers.ICustomerSignin CustomerSignin;
-
-        public ByProjectKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerSignin customerSignin)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-            this.CustomerSignin = customerSignin;
-            this.RequestUrl = $"/{ProjectKey}/login";
-        }
-
-
-
-
-        public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
-        }
-        public override HttpRequestMessage Build()
-        {
-            var request = base.Build();
-            if (SerializerService != null)
-            {
-                var body = this.SerializerService.Serialize(CustomerSignin);
-                if (!string.IsNullOrEmpty(body))
-                {
-                    request.Content = new StringContent(body, Encoding.UTF8, "application/json");
-                }
-            }
-            return request;
-        }
-
-    }
+   }
 }

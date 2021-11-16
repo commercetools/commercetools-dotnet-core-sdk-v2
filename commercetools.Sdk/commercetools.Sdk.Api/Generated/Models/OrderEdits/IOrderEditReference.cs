@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditReference))]
     public partial interface IOrderEditReference : IReference
     {
-        IOrderEdit Obj { get; set; }
+        IOrderEdit Obj { get; set;}
     }
 }

@@ -5,10 +5,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryUpdate))]
-    public partial interface IInventoryEntryUpdate
+    public partial interface IInventoryEntryUpdate 
     {
-        long Version { get; set; }
-
-        List<IInventoryEntryUpdateAction> Actions { get; set; }
+        long Version { get; set;}
+        
+        List<IInventoryEntryUpdateAction> Actions { get; set;}
     }
 }

@@ -6,12 +6,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.OrderPatches
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.DeliveryParcelDraft))]
-    public partial interface IDeliveryParcelDraft
+    public partial interface IDeliveryParcelDraft 
     {
-        IParcelMeasurements Measurements { get; set; }
-
-        ITrackingData TrackingData { get; set; }
-
-        List<IDeliveryItem> Items { get; set; }
+        IParcelMeasurements Measurements { get; set;}
+        
+        ITrackingData TrackingData { get; set;}
+        
+        List<IDeliveryItem> Items { get; set;}
     }
 }

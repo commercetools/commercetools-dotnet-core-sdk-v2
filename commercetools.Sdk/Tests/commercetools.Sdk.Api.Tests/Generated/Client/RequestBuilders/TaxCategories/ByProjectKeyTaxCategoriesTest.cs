@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
 {
-    public class ByProjectKeyTaxCategoriesTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyTaxCategoriesTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -28,7 +26,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -38,7 +36,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -48,7 +46,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -58,7 +56,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -68,7 +66,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -78,7 +76,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -88,7 +86,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -97,7 +95,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Get",
                    "/test_projectKey/tax-categories",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -107,7 +105,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "Post",
                    "/test_projectKey/tax-categories?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
@@ -117,6 +115,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.TaxCategories
                    "/test_projectKey/tax-categories",
                }
        };
-        }
     }
+   }
 }

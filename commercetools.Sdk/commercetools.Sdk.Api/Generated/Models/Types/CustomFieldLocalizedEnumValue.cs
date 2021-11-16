@@ -5,8 +5,8 @@ namespace commercetools.Api.Models.Types
 {
     public partial class CustomFieldLocalizedEnumValue : ICustomFieldLocalizedEnumValue
     {
-        public string Key { get; set; }
-
-        public ILocalizedString Label { get; set; }
+        public string Key { get; set;}
+        
+        public ILocalizedString Label { get; set;}
     }
 }

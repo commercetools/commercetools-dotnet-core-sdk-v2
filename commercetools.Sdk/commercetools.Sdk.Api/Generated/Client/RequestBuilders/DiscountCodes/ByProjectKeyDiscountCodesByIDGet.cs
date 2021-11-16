@@ -6,43 +6,39 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
 {
-    public partial class ByProjectKeyDiscountCodesByIDGet : ApiMethod<ByProjectKeyDiscountCodesByIDGet>
-    {
+    public partial class ByProjectKeyDiscountCodesByIDGet : ApiMethod<ByProjectKeyDiscountCodesByIDGet> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+       private string ID { get; }
+       
+   
+       public ByProjectKeyDiscountCodesByIDGet(IClient apiHttpClient, string projectKey, string id) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.ID = id;
+           this.RequestUrl = $"/{ProjectKey}/discount-codes/{ID}";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyDiscountCodesByIDGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Get;
-
-        private string ProjectKey { get; }
-
-        private string ID { get; }
-
-
-        public ByProjectKeyDiscountCodesByIDGet(IClient apiHttpClient, string projectKey, string id)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/{ID}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyDiscountCodesByIDGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
-        }
-
-    }
+   }
 }

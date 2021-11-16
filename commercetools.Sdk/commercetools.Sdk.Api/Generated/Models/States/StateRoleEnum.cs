@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.States
     {
         [Description("ReviewIncludedInStatistics")]
         ReviewIncludedInStatistics,
-
+        
         [Description("Return")]
         Return
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.States
     [EnumInterfaceCreator(typeof(IStateRoleEnum), "FindEnum")]
     public interface IStateRoleEnum : IJsonName
     {
-        public static IStateRoleEnum ReviewIncludedInStatistics = new StateRoleEnumWrapper
-        { Value = StateRoleEnum.ReviewIncludedInStatistics, JsonName = "ReviewIncludedInStatistics" };
+         public static IStateRoleEnum ReviewIncludedInStatistics = new StateRoleEnumWrapper
+             {Value = StateRoleEnum.ReviewIncludedInStatistics, JsonName = "ReviewIncludedInStatistics"}; 
+         
+         public static IStateRoleEnum Return = new StateRoleEnumWrapper
+             {Value = StateRoleEnum.Return, JsonName = "Return"}; 
 
-        public static IStateRoleEnum Return = new StateRoleEnumWrapper
-        { Value = StateRoleEnum.Return, JsonName = "Return" };
-
-        StateRoleEnum? Value { get; }
-
-        static IStateRoleEnum[] Values()
-        {
-            return new[]
-            {
+         StateRoleEnum? Value { get; }
+        
+         static IStateRoleEnum[] Values()
+         {
+             return new[]
+             {
                  ReviewIncludedInStatistics ,
-                 Return
+                 Return 
              };
-        }
-        static IStateRoleEnum FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateRoleEnumWrapper() { JsonName = value };
-        }
+         }
+         static IStateRoleEnum FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateRoleEnumWrapper() {JsonName = value};
+         }
     }
 }

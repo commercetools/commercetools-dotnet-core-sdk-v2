@@ -2,12 +2,12 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartSetKeyAction : ICartSetKeyAction
     {
-        public string Action { get; set; }
-
-        public string Key { get; set; }
+        public string Action { get; set;}
+        
+        public string Key { get; set;}
         public CartSetKeyAction()
-        {
-            this.Action = "setKey";
+        { 
+           this.Action = "setKey";
         }
     }
 }

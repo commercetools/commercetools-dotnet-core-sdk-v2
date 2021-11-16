@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.Customers
     {
         [Description("MergeWithExistingCustomerCart")]
         MergeWithExistingCustomerCart,
-
+        
         [Description("UseAsNewActiveCustomerCart")]
         UseAsNewActiveCustomerCart
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.Customers
     [EnumInterfaceCreator(typeof(IAnonymousCartSignInMode), "FindEnum")]
     public interface IAnonymousCartSignInMode : IJsonName
     {
-        public static IAnonymousCartSignInMode MergeWithExistingCustomerCart = new AnonymousCartSignInModeWrapper
-        { Value = AnonymousCartSignInMode.MergeWithExistingCustomerCart, JsonName = "MergeWithExistingCustomerCart" };
+         public static IAnonymousCartSignInMode MergeWithExistingCustomerCart = new AnonymousCartSignInModeWrapper
+             {Value = AnonymousCartSignInMode.MergeWithExistingCustomerCart, JsonName = "MergeWithExistingCustomerCart"}; 
+         
+         public static IAnonymousCartSignInMode UseAsNewActiveCustomerCart = new AnonymousCartSignInModeWrapper
+             {Value = AnonymousCartSignInMode.UseAsNewActiveCustomerCart, JsonName = "UseAsNewActiveCustomerCart"}; 
 
-        public static IAnonymousCartSignInMode UseAsNewActiveCustomerCart = new AnonymousCartSignInModeWrapper
-        { Value = AnonymousCartSignInMode.UseAsNewActiveCustomerCart, JsonName = "UseAsNewActiveCustomerCart" };
-
-        AnonymousCartSignInMode? Value { get; }
-
-        static IAnonymousCartSignInMode[] Values()
-        {
-            return new[]
-            {
+         AnonymousCartSignInMode? Value { get; }
+        
+         static IAnonymousCartSignInMode[] Values()
+         {
+             return new[]
+             {
                  MergeWithExistingCustomerCart ,
-                 UseAsNewActiveCustomerCart
+                 UseAsNewActiveCustomerCart 
              };
-        }
-        static IAnonymousCartSignInMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new AnonymousCartSignInModeWrapper() { JsonName = value };
-        }
+         }
+         static IAnonymousCartSignInMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new AnonymousCartSignInModeWrapper() {JsonName = value};
+         }
     }
 }

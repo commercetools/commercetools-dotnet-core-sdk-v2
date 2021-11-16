@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDiscountCodeRemovedMessagePayload))]
     public partial interface IOrderDiscountCodeRemovedMessagePayload : IMessagePayload
     {
-        IDiscountCodeReference DiscountCode { get; set; }
+        IDiscountCodeReference DiscountCode { get; set;}
     }
 }

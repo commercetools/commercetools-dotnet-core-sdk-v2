@@ -8,7 +8,7 @@ namespace commercetools.MLApi.Models.Common
     {
         [Description("PENDING")]
         Pending,
-
+        
         [Description("SUCCESS")]
         Success
     }
@@ -26,25 +26,25 @@ namespace commercetools.MLApi.Models.Common
     [EnumInterfaceCreator(typeof(ITaskStatusEnum), "FindEnum")]
     public interface ITaskStatusEnum : IJsonName
     {
-        public static ITaskStatusEnum Pending = new TaskStatusEnumWrapper
-        { Value = TaskStatusEnum.Pending, JsonName = "PENDING" };
+         public static ITaskStatusEnum Pending = new TaskStatusEnumWrapper
+             {Value = TaskStatusEnum.Pending, JsonName = "PENDING"}; 
+         
+         public static ITaskStatusEnum Success = new TaskStatusEnumWrapper
+             {Value = TaskStatusEnum.Success, JsonName = "SUCCESS"}; 
 
-        public static ITaskStatusEnum Success = new TaskStatusEnumWrapper
-        { Value = TaskStatusEnum.Success, JsonName = "SUCCESS" };
-
-        TaskStatusEnum? Value { get; }
-
-        static ITaskStatusEnum[] Values()
-        {
-            return new[]
-            {
+         TaskStatusEnum? Value { get; }
+        
+         static ITaskStatusEnum[] Values()
+         {
+             return new[]
+             {
                  Pending ,
-                 Success
+                 Success 
              };
-        }
-        static ITaskStatusEnum FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaskStatusEnumWrapper() { JsonName = value };
-        }
+         }
+         static ITaskStatusEnum FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaskStatusEnumWrapper() {JsonName = value};
+         }
     }
 }

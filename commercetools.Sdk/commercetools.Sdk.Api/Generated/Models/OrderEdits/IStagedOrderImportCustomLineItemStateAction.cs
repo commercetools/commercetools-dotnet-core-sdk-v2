@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderImportCustomLineItemStateAction))]
     public partial interface IStagedOrderImportCustomLineItemStateAction : IStagedOrderUpdateAction
     {
-        string CustomLineItemId { get; set; }
-
-        List<IItemState> State { get; set; }
+        string CustomLineItemId { get; set;}
+        
+        List<IItemState> State { get; set;}
     }
 }

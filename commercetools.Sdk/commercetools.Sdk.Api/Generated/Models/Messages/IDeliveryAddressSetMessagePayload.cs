@@ -7,10 +7,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.DeliveryAddressSetMessagePayload))]
     public partial interface IDeliveryAddressSetMessagePayload : IMessagePayload
     {
-        string DeliveryId { get; set; }
-
-        IAddress Address { get; set; }
-
-        IAddress OldAddress { get; set; }
+        string DeliveryId { get; set;}
+        
+        IAddress Address { get; set;}
+        
+        IAddress OldAddress { get; set;}
     }
 }

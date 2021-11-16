@@ -6,43 +6,39 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.TaxCategories
 {
-    public partial class ByProjectKeyTaxCategoriesKeyByKeyGet : ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet>
-    {
+    public partial class ByProjectKeyTaxCategoriesKeyByKeyGet : ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+       private string Key { get; }
+       
+   
+       public ByProjectKeyTaxCategoriesKeyByKeyGet(IClient apiHttpClient, string projectKey, string key) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.Key = key;
+           this.RequestUrl = $"/{ProjectKey}/tax-categories/key={Key}";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyTaxCategoriesKeyByKeyGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<commercetools.Api.Models.TaxCategories.ITaxCategory> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.ITaxCategory>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Get;
-
-        private string ProjectKey { get; }
-
-        private string Key { get; }
-
-
-        public ByProjectKeyTaxCategoriesKeyByKeyGet(IClient apiHttpClient, string projectKey, string key)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories/key={Key}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyTaxCategoriesKeyByKeyGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.TaxCategories.ITaxCategory> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.TaxCategories.ITaxCategory>(requestMessage);
-        }
-
-    }
+   }
 }

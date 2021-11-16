@@ -2,10 +2,10 @@ namespace commercetools.HistoryApi.Models.ChangeValues
 {
     public partial class ChangeTargetShippingChangeValue : IChangeTargetShippingChangeValue
     {
-        public string Type { get; set; }
+        public string Type { get; set;}
         public ChangeTargetShippingChangeValue()
-        {
-            this.Type = "shipping";
+        { 
+           this.Type = "shipping";
         }
     }
 }

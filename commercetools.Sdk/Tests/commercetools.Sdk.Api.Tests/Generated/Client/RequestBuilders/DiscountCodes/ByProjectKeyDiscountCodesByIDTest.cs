@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
 {
-    public class ByProjectKeyDiscountCodesByIDTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyDiscountCodesByIDTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -29,7 +27,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Get",
                    "/test_projectKey/discount-codes/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -39,7 +37,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Get",
                    "/test_projectKey/discount-codes/test_ID",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -50,7 +48,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Post",
                    "/test_projectKey/discount-codes/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -60,7 +58,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Post",
                    "/test_projectKey/discount-codes/test_ID",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -71,7 +69,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Delete",
                    "/test_projectKey/discount-codes/test_ID?dataErasure=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -82,7 +80,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Delete",
                    "/test_projectKey/discount-codes/test_ID?version=2",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -93,7 +91,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "Delete",
                    "/test_projectKey/discount-codes/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
@@ -104,6 +102,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.DiscountCodes
                    "/test_projectKey/discount-codes/test_ID",
                }
        };
-        }
     }
+   }
 }

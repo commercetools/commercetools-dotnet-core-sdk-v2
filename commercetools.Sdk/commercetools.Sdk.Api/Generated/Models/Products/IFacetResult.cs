@@ -8,8 +8,8 @@ namespace commercetools.Api.Models.Products
     [SubTypeDiscriminator("filter", typeof(commercetools.Api.Models.Products.FilteredFacetResult))]
     [SubTypeDiscriminator("range", typeof(commercetools.Api.Models.Products.RangeFacetResult))]
     [SubTypeDiscriminator("terms", typeof(commercetools.Api.Models.Products.TermFacetResult))]
-    public partial interface IFacetResult
+    public partial interface IFacetResult 
     {
-        IFacetTypes Type { get; set; }
+        IFacetTypes Type { get; set;}
     }
 }

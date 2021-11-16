@@ -7,6 +7,6 @@ namespace commercetools.ImportApi.Models.Customfields
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.NumberSetField))]
     public partial interface INumberSetField : ICustomField
     {
-        List<double> Value { get; set; }
+        List<double> Value { get; set;}
     }
 }

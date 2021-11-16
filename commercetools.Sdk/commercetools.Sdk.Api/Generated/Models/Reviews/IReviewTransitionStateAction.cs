@@ -7,8 +7,8 @@ namespace commercetools.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewTransitionStateAction))]
     public partial interface IReviewTransitionStateAction : IReviewUpdateAction
     {
-        IStateResourceIdentifier State { get; set; }
-
-        bool? Force { get; set; }
+        IStateResourceIdentifier State { get; set;}
+        
+        bool? Force { get; set;}
     }
 }

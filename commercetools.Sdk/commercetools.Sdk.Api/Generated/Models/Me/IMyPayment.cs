@@ -9,22 +9,22 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPayment))]
-    public partial interface IMyPayment
+    public partial interface IMyPayment 
     {
-        string Id { get; set; }
-
-        long Version { get; set; }
-
-        ICustomerReference Customer { get; set; }
-
-        string AnonymousId { get; set; }
-
-        ITypedMoney AmountPlanned { get; set; }
-
-        IPaymentMethodInfo PaymentMethodInfo { get; set; }
-
-        List<ITransaction> Transactions { get; set; }
-
-        ICustomFields Custom { get; set; }
+        string Id { get; set;}
+        
+        long Version { get; set;}
+        
+        ICustomerReference Customer { get; set;}
+        
+        string AnonymousId { get; set;}
+        
+        ITypedMoney AmountPlanned { get; set;}
+        
+        IPaymentMethodInfo PaymentMethodInfo { get; set;}
+        
+        List<ITransaction> Transactions { get; set;}
+        
+        ICustomFields Custom { get; set;}
     }
 }

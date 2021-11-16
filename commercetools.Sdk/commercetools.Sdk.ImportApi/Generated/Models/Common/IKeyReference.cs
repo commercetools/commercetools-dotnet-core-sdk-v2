@@ -25,10 +25,10 @@ namespace commercetools.ImportApi.Models.Common
     [SubTypeDiscriminator("store", typeof(commercetools.ImportApi.Models.Common.StoreKeyReference))]
     [SubTypeDiscriminator("tax-category", typeof(commercetools.ImportApi.Models.Common.TaxCategoryKeyReference))]
     [SubTypeDiscriminator("type", typeof(commercetools.ImportApi.Models.Common.TypeKeyReference))]
-    public partial interface IKeyReference
+    public partial interface IKeyReference 
     {
-        string Key { get; set; }
-
-        IReferenceType TypeId { get; set; }
+        string Key { get; set;}
+        
+        IReferenceType TypeId { get; set;}
     }
 }

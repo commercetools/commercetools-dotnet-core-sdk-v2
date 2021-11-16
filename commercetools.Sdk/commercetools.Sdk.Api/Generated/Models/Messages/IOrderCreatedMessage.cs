@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCreatedMessage))]
     public partial interface IOrderCreatedMessage : IMessage
     {
-        IOrder Order { get; set; }
+        IOrder Order { get; set;}
     }
 }

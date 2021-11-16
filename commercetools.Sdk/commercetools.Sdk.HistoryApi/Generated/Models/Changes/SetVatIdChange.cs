@@ -2,16 +2,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetVatIdChange : ISetVatIdChange
     {
-        public string Type { get; set; }
-
-        public string Change { get; set; }
-
-        public string PreviousValue { get; set; }
-
-        public string NextValue { get; set; }
+        public string Type { get; set;}
+        
+        public string Change { get; set;}
+        
+        public string PreviousValue { get; set;}
+        
+        public string NextValue { get; set;}
         public SetVatIdChange()
-        {
-            this.Type = "SetVatIdChange";
+        { 
+           this.Type = "SetVatIdChange";
         }
     }
 }

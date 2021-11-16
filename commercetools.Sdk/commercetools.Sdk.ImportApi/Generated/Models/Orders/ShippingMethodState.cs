@@ -8,7 +8,7 @@ namespace commercetools.ImportApi.Models.Orders
     {
         [Description("DoesNotMatchCart")]
         DoesNotMatchCart,
-
+        
         [Description("MatchesCart")]
         MatchesCart
     }
@@ -26,25 +26,25 @@ namespace commercetools.ImportApi.Models.Orders
     [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
     public interface IShippingMethodState : IJsonName
     {
-        public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
-        { Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart" };
+         public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
+             {Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart"}; 
+         
+         public static IShippingMethodState MatchesCart = new ShippingMethodStateWrapper
+             {Value = ShippingMethodState.MatchesCart, JsonName = "MatchesCart"}; 
 
-        public static IShippingMethodState MatchesCart = new ShippingMethodStateWrapper
-        { Value = ShippingMethodState.MatchesCart, JsonName = "MatchesCart" };
-
-        ShippingMethodState? Value { get; }
-
-        static IShippingMethodState[] Values()
-        {
-            return new[]
-            {
+         ShippingMethodState? Value { get; }
+        
+         static IShippingMethodState[] Values()
+         {
+             return new[]
+             {
                  DoesNotMatchCart ,
-                 MatchesCart
+                 MatchesCart 
              };
-        }
-        static IShippingMethodState FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShippingMethodStateWrapper() { JsonName = value };
-        }
+         }
+         static IShippingMethodState FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ShippingMethodStateWrapper() {JsonName = value};
+         }
     }
 }

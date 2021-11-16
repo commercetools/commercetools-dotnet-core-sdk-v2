@@ -10,8 +10,8 @@ namespace commercetools.Api.Models.CartDiscounts
     [SubTypeDiscriminator("multiBuyCustomLineItems", typeof(commercetools.Api.Models.CartDiscounts.MultiBuyCustomLineItemsTarget))]
     [SubTypeDiscriminator("multiBuyLineItems", typeof(commercetools.Api.Models.CartDiscounts.MultiBuyLineItemsTarget))]
     [SubTypeDiscriminator("shipping", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountShippingCostTarget))]
-    public partial interface ICartDiscountTarget
+    public partial interface ICartDiscountTarget 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

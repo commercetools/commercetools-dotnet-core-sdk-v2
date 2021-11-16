@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.Extensions
     {
         [Description("Create")]
         Create,
-
+        
         [Description("Update")]
         Update
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.Extensions
     [EnumInterfaceCreator(typeof(IExtensionAction), "FindEnum")]
     public interface IExtensionAction : IJsonName
     {
-        public static IExtensionAction Create = new ExtensionActionWrapper
-        { Value = ExtensionAction.Create, JsonName = "Create" };
+         public static IExtensionAction Create = new ExtensionActionWrapper
+             {Value = ExtensionAction.Create, JsonName = "Create"}; 
+         
+         public static IExtensionAction Update = new ExtensionActionWrapper
+             {Value = ExtensionAction.Update, JsonName = "Update"}; 
 
-        public static IExtensionAction Update = new ExtensionActionWrapper
-        { Value = ExtensionAction.Update, JsonName = "Update" };
-
-        ExtensionAction? Value { get; }
-
-        static IExtensionAction[] Values()
-        {
-            return new[]
-            {
+         ExtensionAction? Value { get; }
+        
+         static IExtensionAction[] Values()
+         {
+             return new[]
+             {
                  Create ,
-                 Update
+                 Update 
              };
-        }
-        static IExtensionAction FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ExtensionActionWrapper() { JsonName = value };
-        }
+         }
+         static IExtensionAction FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ExtensionActionWrapper() {JsonName = value};
+         }
     }
 }

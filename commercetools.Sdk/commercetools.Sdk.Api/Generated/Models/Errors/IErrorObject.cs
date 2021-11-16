@@ -70,10 +70,10 @@ namespace commercetools.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Api.Models.Errors.SyntaxErrorError))]
     [SubTypeDiscriminator("WeakPassword", typeof(commercetools.Api.Models.Errors.WeakPasswordError))]
-    public partial interface IErrorObject
+    public partial interface IErrorObject 
     {
-        string Code { get; set; }
-
-        string Message { get; set; }
+        string Code { get; set;}
+        
+        string Message { get; set;}
     }
 }

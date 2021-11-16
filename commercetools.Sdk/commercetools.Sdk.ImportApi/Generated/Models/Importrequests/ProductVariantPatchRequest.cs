@@ -7,12 +7,12 @@ namespace commercetools.ImportApi.Models.Importrequests
 {
     public partial class ProductVariantPatchRequest : IProductVariantPatchRequest
     {
-        public IImportResourceType Type { get; set; }
-
-        public List<IProductVariantPatch> Patches { get; set; }
+        public IImportResourceType Type { get; set;}
+        
+        public List<IProductVariantPatch> Patches { get; set;}
         public ProductVariantPatchRequest()
-        {
-            this.Type = IImportResourceType.FindEnum("product-variant-patch");
+        { 
+           this.Type = IImportResourceType.FindEnum("product-variant-patch");
         }
     }
 }

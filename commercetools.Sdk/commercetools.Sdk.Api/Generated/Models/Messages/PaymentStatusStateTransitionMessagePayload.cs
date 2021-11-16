@@ -5,14 +5,14 @@ namespace commercetools.Api.Models.Messages
 {
     public partial class PaymentStatusStateTransitionMessagePayload : IPaymentStatusStateTransitionMessagePayload
     {
-        public string Type { get; set; }
-
-        public IStateReference State { get; set; }
-
-        public bool Force { get; set; }
+        public string Type { get; set;}
+        
+        public IStateReference State { get; set;}
+        
+        public bool Force { get; set;}
         public PaymentStatusStateTransitionMessagePayload()
-        {
-            this.Type = "PaymentStatusStateTransition";
+        { 
+           this.Type = "PaymentStatusStateTransition";
         }
     }
 }

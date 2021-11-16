@@ -9,14 +9,14 @@ namespace commercetools.HistoryApi.Models.Changes
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetAssetSourcesChange))]
     public partial interface ISetAssetSourcesChange : IChange
     {
-        new string Change { get; set; }
-
-        new string Type { get; set; }
-
-        IAssetChangeValue Asset { get; set; }
-
-        List<IAssetSource> NextValue { get; set; }
-
-        List<IAssetSource> PreviousValue { get; set; }
+        new string Change { get; set;}
+        
+        new string Type { get; set;}
+        
+        IAssetChangeValue Asset { get; set;}
+        
+        List<IAssetSource> NextValue { get; set;}
+        
+        List<IAssetSource> PreviousValue { get; set;}
     }
 }

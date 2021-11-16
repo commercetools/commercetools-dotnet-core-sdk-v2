@@ -5,8 +5,8 @@ namespace commercetools.ImportApi.Models.OrderPatches
 {
     public partial class ParcelMeasurementDraft : IParcelMeasurementDraft
     {
-        public string ParcelId { get; set; }
-
-        public IParcelMeasurements Measurements { get; set; }
+        public string ParcelId { get; set;}
+        
+        public IParcelMeasurements Measurements { get; set;}
     }
 }

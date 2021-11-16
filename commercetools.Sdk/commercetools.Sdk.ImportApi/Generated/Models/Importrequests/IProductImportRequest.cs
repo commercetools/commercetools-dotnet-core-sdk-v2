@@ -8,6 +8,6 @@ namespace commercetools.ImportApi.Models.Importrequests
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.ProductImportRequest))]
     public partial interface IProductImportRequest : IImportRequest
     {
-        List<IProductImport> Resources { get; set; }
+        List<IProductImport> Resources { get; set;}
     }
 }

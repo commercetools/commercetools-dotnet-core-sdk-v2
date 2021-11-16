@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductCreatedMessagePayload))]
     public partial interface IProductCreatedMessagePayload : IMessagePayload
     {
-        IProductProjection ProductProjection { get; set; }
+        IProductProjection ProductProjection { get; set;}
     }
 }

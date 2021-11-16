@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.ProductDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAction))]
     public partial interface IProductDiscountSetValidFromAction : IProductDiscountUpdateAction
     {
-        DateTime? ValidFrom { get; set; }
+        DateTime? ValidFrom { get; set;}
     }
 }

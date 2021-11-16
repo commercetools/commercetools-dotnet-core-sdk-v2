@@ -4,31 +4,27 @@ using commercetools.Base.Serialization;
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
 
-    public class ByProjectKeyMePasswordRequestBuilder
-    {
+    public class ByProjectKeyMePasswordRequestBuilder {
 
-        private IClient ApiHttpClient { get; }
-
-        private ISerializerService SerializerService { get; }
-
-        private string ProjectKey { get; }
-
-        public ByProjectKeyMePasswordRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-        }
-
-        public ByProjectKeyMePasswordPost Post(commercetools.Api.Models.Customers.IMyCustomerChangePassword myCustomerChangePassword)
-        {
-            return new ByProjectKeyMePasswordPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerChangePassword);
-        }
-
-
-        public ByProjectKeyMePasswordResetRequestBuilder Reset()
-        {
-            return new ByProjectKeyMePasswordResetRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-    }
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+   
+       public ByProjectKeyMePasswordRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+       }
+   
+       public ByProjectKeyMePasswordPost Post(commercetools.Api.Models.Customers.IMyCustomerChangePassword myCustomerChangePassword) {
+           return new ByProjectKeyMePasswordPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerChangePassword);
+       }
+       
+       
+       public ByProjectKeyMePasswordResetRequestBuilder Reset() {
+           return new ByProjectKeyMePasswordResetRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+       }
+   }
 }

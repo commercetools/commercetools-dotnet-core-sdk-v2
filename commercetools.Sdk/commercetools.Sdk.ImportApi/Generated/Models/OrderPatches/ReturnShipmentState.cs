@@ -8,13 +8,13 @@ namespace commercetools.ImportApi.Models.OrderPatches
     {
         [Description("Advised")]
         Advised,
-
+        
         [Description("Returned")]
         Returned,
-
+        
         [Description("BackInStock")]
         BackInStock,
-
+        
         [Description("Unusable")]
         Unusable
     }
@@ -32,33 +32,33 @@ namespace commercetools.ImportApi.Models.OrderPatches
     [EnumInterfaceCreator(typeof(IReturnShipmentState), "FindEnum")]
     public interface IReturnShipmentState : IJsonName
     {
-        public static IReturnShipmentState Advised = new ReturnShipmentStateWrapper
-        { Value = ReturnShipmentState.Advised, JsonName = "Advised" };
+         public static IReturnShipmentState Advised = new ReturnShipmentStateWrapper
+             {Value = ReturnShipmentState.Advised, JsonName = "Advised"}; 
+         
+         public static IReturnShipmentState Returned = new ReturnShipmentStateWrapper
+             {Value = ReturnShipmentState.Returned, JsonName = "Returned"}; 
+         
+         public static IReturnShipmentState BackInStock = new ReturnShipmentStateWrapper
+             {Value = ReturnShipmentState.BackInStock, JsonName = "BackInStock"}; 
+         
+         public static IReturnShipmentState Unusable = new ReturnShipmentStateWrapper
+             {Value = ReturnShipmentState.Unusable, JsonName = "Unusable"}; 
 
-        public static IReturnShipmentState Returned = new ReturnShipmentStateWrapper
-        { Value = ReturnShipmentState.Returned, JsonName = "Returned" };
-
-        public static IReturnShipmentState BackInStock = new ReturnShipmentStateWrapper
-        { Value = ReturnShipmentState.BackInStock, JsonName = "BackInStock" };
-
-        public static IReturnShipmentState Unusable = new ReturnShipmentStateWrapper
-        { Value = ReturnShipmentState.Unusable, JsonName = "Unusable" };
-
-        ReturnShipmentState? Value { get; }
-
-        static IReturnShipmentState[] Values()
-        {
-            return new[]
-            {
+         ReturnShipmentState? Value { get; }
+        
+         static IReturnShipmentState[] Values()
+         {
+             return new[]
+             {
                  Advised ,
                  Returned ,
                  BackInStock ,
-                 Unusable
+                 Unusable 
              };
-        }
-        static IReturnShipmentState FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ReturnShipmentStateWrapper() { JsonName = value };
-        }
+         }
+         static IReturnShipmentState FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ReturnShipmentStateWrapper() {JsonName = value};
+         }
     }
 }

@@ -2,12 +2,12 @@ namespace commercetools.Api.Models.Subscriptions
 {
     public partial class SubscriptionSetKeyAction : ISubscriptionSetKeyAction
     {
-        public string Action { get; set; }
-
-        public string Key { get; set; }
+        public string Action { get; set;}
+        
+        public string Key { get; set;}
         public SubscriptionSetKeyAction()
-        {
-            this.Action = "setKey";
+        { 
+           this.Action = "setKey";
         }
     }
 }

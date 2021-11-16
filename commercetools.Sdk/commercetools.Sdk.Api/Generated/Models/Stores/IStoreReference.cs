@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Stores
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreReference))]
     public partial interface IStoreReference : IReference
     {
-        IStore Obj { get; set; }
+        IStore Obj { get; set;}
     }
 }

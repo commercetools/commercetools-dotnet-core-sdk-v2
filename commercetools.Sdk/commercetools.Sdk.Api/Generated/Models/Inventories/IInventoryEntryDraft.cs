@@ -7,18 +7,18 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryDraft))]
-    public partial interface IInventoryEntryDraft
+    public partial interface IInventoryEntryDraft 
     {
-        string Sku { get; set; }
-
-        IChannelResourceIdentifier SupplyChannel { get; set; }
-
-        long QuantityOnStock { get; set; }
-
-        long? RestockableInDays { get; set; }
-
-        DateTime? ExpectedDelivery { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
+        string Sku { get; set;}
+        
+        IChannelResourceIdentifier SupplyChannel { get; set;}
+        
+        long QuantityOnStock { get; set;}
+        
+        long? RestockableInDays { get; set;}
+        
+        DateTime? ExpectedDelivery { get; set;}
+        
+        ICustomFieldsDraft Custom { get; set;}
     }
 }

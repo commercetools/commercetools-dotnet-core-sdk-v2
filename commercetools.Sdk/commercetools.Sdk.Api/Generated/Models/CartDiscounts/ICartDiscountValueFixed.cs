@@ -8,6 +8,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueFixed))]
     public partial interface ICartDiscountValueFixed : ICartDiscountValue
     {
-        List<ITypedMoney> Money { get; set; }
+        List<ITypedMoney> Money { get; set;}
     }
 }

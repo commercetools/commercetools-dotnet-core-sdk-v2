@@ -5,10 +5,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.ShoppingLists
 {
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListUpdate))]
-    public partial interface IShoppingListUpdate
+    public partial interface IShoppingListUpdate 
     {
-        long Version { get; set; }
-
-        List<IShoppingListUpdateAction> Actions { get; set; }
+        long Version { get; set;}
+        
+        List<IShoppingListUpdateAction> Actions { get; set;}
     }
 }

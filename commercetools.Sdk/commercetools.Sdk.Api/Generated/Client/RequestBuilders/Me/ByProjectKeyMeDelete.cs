@@ -6,40 +6,36 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeDelete : ApiMethod<ByProjectKeyMeDelete>
-    {
+    public partial class ByProjectKeyMeDelete : ApiMethod<ByProjectKeyMeDelete> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Delete;
+       
+       private string ProjectKey { get; }
+       
+   
+       public ByProjectKeyMeDelete(IClient apiHttpClient, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.RequestUrl = $"/{ProjectKey}/me";
+       }
+   
+       public List<string> GetVersion() {
+           return this.GetQueryParam("version");
+       }
+   
+       public ByProjectKeyMeDelete WithVersion(long version){
+           return this.AddQueryParam("version", version.ToString());
+       }
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomer>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Delete;
-
-        private string ProjectKey { get; }
-
-
-        public ByProjectKeyMeDelete(IClient apiHttpClient, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/me";
-        }
-
-        public List<string> GetVersion()
-        {
-            return this.GetQueryParam("version");
-        }
-
-        public ByProjectKeyMeDelete WithVersion(long version)
-        {
-            return this.AddQueryParam("version", version.ToString());
-        }
-
-
-        public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomer>(requestMessage);
-        }
-
-    }
+   }
 }

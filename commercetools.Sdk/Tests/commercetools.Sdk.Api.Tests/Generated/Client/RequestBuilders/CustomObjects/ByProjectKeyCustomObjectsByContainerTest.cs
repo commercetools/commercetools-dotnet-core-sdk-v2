@@ -5,20 +5,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
 {
-    public class ByProjectKeyCustomObjectsByContainerTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+    public class ByProjectKeyCustomObjectsByContainerTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomObjects()
@@ -29,7 +27,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    "Get",
                    "/test_projectKey/custom-objects/test_container?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomObjects()
@@ -40,7 +38,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    "Get",
                    "/test_projectKey/custom-objects/test_container?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomObjects()
@@ -51,7 +49,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    "Get",
                    "/test_projectKey/custom-objects/test_container?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomObjects()
@@ -62,6 +60,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    "/test_projectKey/custom-objects/test_container",
                }
        };
-        }
     }
+   }
 }

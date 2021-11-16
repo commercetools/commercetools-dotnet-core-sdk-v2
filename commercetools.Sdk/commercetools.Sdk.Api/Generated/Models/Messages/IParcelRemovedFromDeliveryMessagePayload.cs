@@ -7,8 +7,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ParcelRemovedFromDeliveryMessagePayload))]
     public partial interface IParcelRemovedFromDeliveryMessagePayload : IMessagePayload
     {
-        string DeliveryId { get; set; }
-
-        IParcel Parcel { get; set; }
+        string DeliveryId { get; set;}
+        
+        IParcel Parcel { get; set;}
     }
 }

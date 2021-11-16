@@ -7,8 +7,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderEditAppliedMessage))]
     public partial interface IOrderEditAppliedMessage : IMessage
     {
-        IOrderEditReference Edit { get; set; }
-
-        IOrderEditApplied Result { get; set; }
+        IOrderEditReference Edit { get; set;}
+        
+        IOrderEditApplied Result { get; set;}
     }
 }

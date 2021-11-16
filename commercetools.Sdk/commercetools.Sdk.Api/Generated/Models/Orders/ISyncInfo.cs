@@ -6,12 +6,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.SyncInfo))]
-    public partial interface ISyncInfo
+    public partial interface ISyncInfo 
     {
-        IChannelReference Channel { get; set; }
-
-        string ExternalId { get; set; }
-
-        DateTime SyncedAt { get; set; }
+        IChannelReference Channel { get; set;}
+        
+        string ExternalId { get; set;}
+        
+        DateTime SyncedAt { get; set;}
     }
 }

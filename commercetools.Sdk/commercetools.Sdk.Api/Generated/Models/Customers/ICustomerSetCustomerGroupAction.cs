@@ -7,6 +7,6 @@ namespace commercetools.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetCustomerGroupAction))]
     public partial interface ICustomerSetCustomerGroupAction : ICustomerUpdateAction
     {
-        ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+        ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
     }
 }
