@@ -1,4 +1,5 @@
 root = true
 
-[*.{cs,vb}]
+[*.cs]
+# remove all unnecessary imports
 dotnet_diagnostic.IDE0005.severity = warning
