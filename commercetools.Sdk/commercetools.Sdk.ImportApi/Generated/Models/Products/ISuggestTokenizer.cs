@@ -11,8 +11,8 @@ namespace commercetools.ImportApi.Models.Products
     [DefaultTypeDiscriminator(typeof(commercetools.ImportApi.Models.Products.SuggestTokenizer))]
     [SubTypeDiscriminator("custom", typeof(commercetools.ImportApi.Models.Products.CustomTokenizer))]
     [SubTypeDiscriminator("whitespace", typeof(commercetools.ImportApi.Models.Products.WhitespaceTokenizer))]
-    public partial interface ISuggestTokenizer
+    public partial interface ISuggestTokenizer 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

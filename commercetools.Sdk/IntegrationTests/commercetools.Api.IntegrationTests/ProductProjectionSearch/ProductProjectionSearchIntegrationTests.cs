@@ -78,7 +78,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
         }
 
         [Fact]
-        public async Task SearchPost()
+        public Task SearchPost()
         {
             var request = _client.WithApi().WithProjectKey(_projectKey).ProductProjections().Search()
                 .Post()
@@ -87,6 +87,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                 .Build();
             Assert.Equal("application/x-www-form-urlencoded", request.Content.Headers.GetValues(ApiHttpHeaders.CONTENT_TYPE).First());
             Assert.Equal("filter=test&filter=test2", request.Content.ReadAsStringAsync().Result);
+            return Task.CompletedTask;
         }
     }
 }

@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetCustomFieldAction))]
     public partial interface IReviewSetCustomFieldAction : IReviewUpdateAction
     {
-        string Name { get; set; }
-
-        Object Value { get; set; }
+        string Name { get; set;}
+        
+        Object Value { get; set;}
     }
 }

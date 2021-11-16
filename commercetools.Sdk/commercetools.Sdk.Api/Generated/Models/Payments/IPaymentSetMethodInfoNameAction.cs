@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetMethodInfoNameAction))]
     public partial interface IPaymentSetMethodInfoNameAction : IPaymentUpdateAction
     {
-        ILocalizedString Name { get; set; }
+        ILocalizedString Name { get; set;}
     }
 }

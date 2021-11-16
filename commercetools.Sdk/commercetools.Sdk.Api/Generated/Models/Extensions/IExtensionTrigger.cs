@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Extensions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionTrigger))]
-    public partial interface IExtensionTrigger
+    public partial interface IExtensionTrigger 
     {
-        IExtensionResourceTypeId ResourceTypeId { get; set; }
-
-        List<IExtensionAction> Actions { get; set; }
+        IExtensionResourceTypeId ResourceTypeId { get; set;}
+        
+        List<IExtensionAction> Actions { get; set;}
     }
 }

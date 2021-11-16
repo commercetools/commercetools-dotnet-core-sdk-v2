@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomLineItemTaxRateAction))]
     public partial interface IStagedOrderSetCustomLineItemTaxRateAction : IStagedOrderUpdateAction
     {
-        string CustomLineItemId { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        string CustomLineItemId { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

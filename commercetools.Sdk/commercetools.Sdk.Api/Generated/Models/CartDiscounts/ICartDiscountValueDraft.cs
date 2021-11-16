@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.CartDiscounts
     [SubTypeDiscriminator("fixed", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueFixedDraft))]
     [SubTypeDiscriminator("giftLineItem", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
     [SubTypeDiscriminator("relative", typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueRelativeDraft))]
-    public partial interface ICartDiscountValueDraft
+    public partial interface ICartDiscountValueDraft 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

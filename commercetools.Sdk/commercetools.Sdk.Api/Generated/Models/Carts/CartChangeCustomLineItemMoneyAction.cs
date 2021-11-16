@@ -11,14 +11,14 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartChangeCustomLineItemMoneyAction : ICartChangeCustomLineItemMoneyAction
     {
-        public string Action { get; set; }
-
-        public string CustomLineItemId { get; set; }
-
-        public IMoney Money { get; set; }
+        public string Action { get; set;}
+        
+        public string CustomLineItemId { get; set;}
+        
+        public IMoney Money { get; set;}
         public CartChangeCustomLineItemMoneyAction()
-        {
-            this.Action = "changeCustomLineItemMoney";
+        { 
+           this.Action = "changeCustomLineItemMoney";
         }
     }
 }

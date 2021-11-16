@@ -90,8 +90,8 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ShoppingListStoreSet", typeof(commercetools.Api.Models.Messages.ShoppingListStoreSetMessagePayload))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Api.Models.Messages.StoreCreatedMessagePayload))]
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessagePayload))]
-    public partial interface IMessagePayload
+    public partial interface IMessagePayload 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

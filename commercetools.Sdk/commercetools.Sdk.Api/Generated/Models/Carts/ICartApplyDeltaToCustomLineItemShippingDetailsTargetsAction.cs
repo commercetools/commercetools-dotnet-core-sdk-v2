@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction))]
     public partial interface ICartApplyDeltaToCustomLineItemShippingDetailsTargetsAction : ICartUpdateAction
     {
-        string CustomLineItemId { get; set; }
-
-        List<IItemShippingTarget> TargetsDelta { get; set; }
+        string CustomLineItemId { get; set;}
+        
+        List<IItemShippingTarget> TargetsDelta { get; set;}
     }
 }

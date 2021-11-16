@@ -14,12 +14,12 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomShippingMethodAction))]
     public partial interface IStagedOrderSetCustomShippingMethodAction : IStagedOrderUpdateAction
     {
-        string ShippingMethodName { get; set; }
-
-        IShippingRateDraft ShippingRate { get; set; }
-
-        ITaxCategoryResourceIdentifier TaxCategory { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        string ShippingMethodName { get; set;}
+        
+        IShippingRateDraft ShippingRate { get; set;}
+        
+        ITaxCategoryResourceIdentifier TaxCategory { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

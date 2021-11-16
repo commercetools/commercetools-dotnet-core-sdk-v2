@@ -21,8 +21,8 @@ namespace commercetools.Api.Models.Types
     [SubTypeDiscriminator("Set", typeof(commercetools.Api.Models.Types.CustomFieldSetType))]
     [SubTypeDiscriminator("String", typeof(commercetools.Api.Models.Types.CustomFieldStringType))]
     [SubTypeDiscriminator("Time", typeof(commercetools.Api.Models.Types.CustomFieldTimeType))]
-    public partial interface IFieldType
+    public partial interface IFieldType 
     {
-        string Name { get; set; }
+        string Name { get; set;}
     }
 }

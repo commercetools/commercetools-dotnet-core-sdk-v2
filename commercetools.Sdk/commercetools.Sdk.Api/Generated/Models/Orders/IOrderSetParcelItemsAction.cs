@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetParcelItemsAction))]
     public partial interface IOrderSetParcelItemsAction : IOrderUpdateAction
     {
-        string ParcelId { get; set; }
-
-        List<IDeliveryItem> Items { get; set; }
+        string ParcelId { get; set;}
+        
+        List<IDeliveryItem> Items { get; set;}
     }
 }

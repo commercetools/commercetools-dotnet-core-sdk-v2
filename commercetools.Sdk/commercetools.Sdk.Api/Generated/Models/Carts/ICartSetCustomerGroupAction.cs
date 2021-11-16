@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetCustomerGroupAction))]
     public partial interface ICartSetCustomerGroupAction : ICartUpdateAction
     {
-        ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+        ICustomerGroupResourceIdentifier CustomerGroup { get; set;}
     }
 }

@@ -10,10 +10,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.DiscountedLineItemPrice))]
-    public partial interface IDiscountedLineItemPrice
+    public partial interface IDiscountedLineItemPrice 
     {
-        ITypedMoney Value { get; set; }
-
-        List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        ITypedMoney Value { get; set;}
+        
+        List<IDiscountedLineItemPortion> IncludedDiscounts { get; set;}
     }
 }

@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.Customers
 {
     public partial class CustomerAddStoreAction : ICustomerAddStoreAction
     {
-        public string Action { get; set; }
-
-        public IStoreResourceIdentifier Store { get; set; }
+        public string Action { get; set;}
+        
+        public IStoreResourceIdentifier Store { get; set;}
         public CustomerAddStoreAction()
-        {
-            this.Action = "addStore";
+        { 
+           this.Action = "addStore";
         }
     }
 }

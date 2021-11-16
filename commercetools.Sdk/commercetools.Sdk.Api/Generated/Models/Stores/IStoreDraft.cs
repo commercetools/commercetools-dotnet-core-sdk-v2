@@ -11,18 +11,18 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Stores
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreDraft))]
-    public partial interface IStoreDraft
+    public partial interface IStoreDraft 
     {
-        string Key { get; set; }
-
-        ILocalizedString Name { get; set; }
-
-        List<string> Languages { get; set; }
-
-        List<IChannelResourceIdentifier> DistributionChannels { get; set; }
-
-        List<IChannelResourceIdentifier> SupplyChannels { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
+        string Key { get; set;}
+        
+        ILocalizedString Name { get; set;}
+        
+        List<string> Languages { get; set;}
+        
+        List<IChannelResourceIdentifier> DistributionChannels { get; set;}
+        
+        List<IChannelResourceIdentifier> SupplyChannels { get; set;}
+        
+        ICustomFieldsDraft Custom { get; set;}
     }
 }

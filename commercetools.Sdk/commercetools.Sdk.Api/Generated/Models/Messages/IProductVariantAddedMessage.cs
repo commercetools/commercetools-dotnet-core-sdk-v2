@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductVariantAddedMessage))]
     public partial interface IProductVariantAddedMessage : IMessage
     {
-        IProductVariant Variant { get; set; }
-
-        bool Staged { get; set; }
+        IProductVariant Variant { get; set;}
+        
+        bool Staged { get; set;}
     }
 }

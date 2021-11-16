@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemoveDiscountCodeAction))]
     public partial interface IStagedOrderRemoveDiscountCodeAction : IStagedOrderUpdateAction
     {
-        IDiscountCodeReference DiscountCode { get; set; }
+        IDiscountCodeReference DiscountCode { get; set;}
     }
 }

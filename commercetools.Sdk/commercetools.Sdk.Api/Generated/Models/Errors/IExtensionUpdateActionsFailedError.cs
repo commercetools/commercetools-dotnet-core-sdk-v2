@@ -12,10 +12,10 @@ namespace commercetools.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Api.Models.Errors.ExtensionUpdateActionsFailedError))]
     public partial interface IExtensionUpdateActionsFailedError : IErrorObject
     {
-        ILocalizedString LocalizedMessage { get; set; }
-
-        Object ExtensionExtraInfo { get; set; }
-
-        IErrorByExtension ErrorByExtension { get; set; }
+        ILocalizedString LocalizedMessage { get; set;}
+        
+        Object ExtensionExtraInfo { get; set;}
+        
+        IErrorByExtension ErrorByExtension { get; set;}
     }
 }

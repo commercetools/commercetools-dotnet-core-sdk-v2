@@ -9,10 +9,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.OrderPatches
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.ParcelItems))]
-    public partial interface IParcelItems
+    public partial interface IParcelItems 
     {
-        string ParcelId { get; set; }
-
-        List<IDeliveryItem> Items { get; set; }
+        string ParcelId { get; set;}
+        
+        List<IDeliveryItem> Items { get; set;}
     }
 }

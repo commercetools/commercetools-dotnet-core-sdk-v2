@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Zones
     [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneSetKeyAction))]
     public partial interface IZoneSetKeyAction : IZoneUpdateAction
     {
-        string Key { get; set; }
+        string Key { get; set;}
     }
 }

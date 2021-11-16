@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.States
 {
     public partial class StateChangeTypeAction : IStateChangeTypeAction
     {
-        public string Action { get; set; }
-
-        public IStateTypeEnum Type { get; set; }
+        public string Action { get; set;}
+        
+        public IStateTypeEnum Type { get; set;}
         public StateChangeTypeAction()
-        {
-            this.Action = "changeType";
+        { 
+           this.Action = "changeType";
         }
     }
 }

@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelItemsAction))]
     public partial interface IStagedOrderSetParcelItemsAction : IStagedOrderUpdateAction
     {
-        string ParcelId { get; set; }
-
-        List<IDeliveryItem> Items { get; set; }
+        string ParcelId { get; set;}
+        
+        List<IDeliveryItem> Items { get; set;}
     }
 }

@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemovePaymentAction))]
     public partial interface IStagedOrderRemovePaymentAction : IStagedOrderUpdateAction
     {
-        IPaymentResourceIdentifier Payment { get; set; }
+        IPaymentResourceIdentifier Payment { get; set;}
     }
 }

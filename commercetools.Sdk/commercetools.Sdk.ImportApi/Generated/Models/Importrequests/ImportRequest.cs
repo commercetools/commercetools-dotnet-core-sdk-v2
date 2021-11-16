@@ -10,6 +10,6 @@ namespace commercetools.ImportApi.Models.Importrequests
 {
     public partial class ImportRequest : IImportRequest
     {
-        public IImportResourceType Type { get; set; }
+        public IImportResourceType Type { get; set;}
     }
 }

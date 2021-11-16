@@ -9,6 +9,6 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class StagedOrderUpdateAction : IStagedOrderUpdateAction
     {
-        public string Action { get; set; }
+        public string Action { get; set;}
     }
 }

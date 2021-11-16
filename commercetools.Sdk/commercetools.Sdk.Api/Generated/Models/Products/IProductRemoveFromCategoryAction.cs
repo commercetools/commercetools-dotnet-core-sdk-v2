@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductRemoveFromCategoryAction))]
     public partial interface IProductRemoveFromCategoryAction : IProductUpdateAction
     {
-        ICategoryResourceIdentifier Category { get; set; }
-
-        bool? Staged { get; set; }
+        ICategoryResourceIdentifier Category { get; set;}
+        
+        bool? Staged { get; set;}
     }
 }

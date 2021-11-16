@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemsOrderAction))]
     public partial interface IShoppingListChangeTextLineItemsOrderAction : IShoppingListUpdateAction
     {
-        List<string> TextLineItemOrder { get; set; }
+        List<string> TextLineItemOrder { get; set;}
     }
 }

@@ -9,8 +9,8 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Orders
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.PaymentInfo))]
-    public partial interface IPaymentInfo
+    public partial interface IPaymentInfo 
     {
-        List<IPaymentReference> Payments { get; set; }
+        List<IPaymentReference> Payments { get; set;}
     }
 }

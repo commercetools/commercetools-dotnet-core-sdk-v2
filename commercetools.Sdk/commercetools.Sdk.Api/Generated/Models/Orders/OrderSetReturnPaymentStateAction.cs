@@ -10,14 +10,14 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderSetReturnPaymentStateAction : IOrderSetReturnPaymentStateAction
     {
-        public string Action { get; set; }
-
-        public string ReturnItemId { get; set; }
-
-        public IReturnPaymentState PaymentState { get; set; }
+        public string Action { get; set;}
+        
+        public string ReturnItemId { get; set;}
+        
+        public IReturnPaymentState PaymentState { get; set;}
         public OrderSetReturnPaymentStateAction()
-        {
-            this.Action = "setReturnPaymentState";
+        { 
+           this.Action = "setReturnPaymentState";
         }
     }
 }

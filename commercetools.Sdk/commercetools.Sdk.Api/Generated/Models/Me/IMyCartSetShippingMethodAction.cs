@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetShippingMethodAction))]
     public partial interface IMyCartSetShippingMethodAction : IMyCartUpdateAction
     {
-        IShippingMethodResourceIdentifier ShippingMethod { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        IShippingMethodResourceIdentifier ShippingMethod { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

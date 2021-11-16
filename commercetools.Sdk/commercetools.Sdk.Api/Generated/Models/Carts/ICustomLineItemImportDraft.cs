@@ -13,24 +13,24 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Carts
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CustomLineItemImportDraft))]
-    public partial interface ICustomLineItemImportDraft
+    public partial interface ICustomLineItemImportDraft 
     {
-        ILocalizedString Name { get; set; }
-
-        long Quantity { get; set; }
-
-        IMoney Money { get; set; }
-
-        string Slug { get; set; }
-
-        List<IItemState> State { get; set; }
-
-        ITaxRate TaxRate { get; set; }
-
-        ITaxCategoryResourceIdentifier TaxCategory { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
-
-        IItemShippingDetailsDraft ShippingDetails { get; set; }
+        ILocalizedString Name { get; set;}
+        
+        long Quantity { get; set;}
+        
+        IMoney Money { get; set;}
+        
+        string Slug { get; set;}
+        
+        List<IItemState> State { get; set;}
+        
+        ITaxRate TaxRate { get; set;}
+        
+        ITaxCategoryResourceIdentifier TaxCategory { get; set;}
+        
+        ICustomFieldsDraft Custom { get; set;}
+        
+        IItemShippingDetailsDraft ShippingDetails { get; set;}
     }
 }

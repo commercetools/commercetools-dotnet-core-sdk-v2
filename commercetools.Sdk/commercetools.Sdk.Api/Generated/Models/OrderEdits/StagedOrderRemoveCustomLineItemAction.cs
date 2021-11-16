@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class StagedOrderRemoveCustomLineItemAction : IStagedOrderRemoveCustomLineItemAction
     {
-        public string Action { get; set; }
-
-        public string CustomLineItemId { get; set; }
+        public string Action { get; set;}
+        
+        public string CustomLineItemId { get; set;}
         public StagedOrderRemoveCustomLineItemAction()
-        {
-            this.Action = "removeCustomLineItem";
+        { 
+           this.Action = "removeCustomLineItem";
         }
     }
 }

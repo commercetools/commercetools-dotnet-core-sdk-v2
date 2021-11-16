@@ -11,16 +11,16 @@ namespace commercetools.HistoryApi.Models.Changes
 {
     public partial class SetSupplyChannelsChange : ISetSupplyChannelsChange
     {
-        public string Type { get; set; }
-
-        public string Change { get; set; }
-
-        public List<IReference> PreviousValue { get; set; }
-
-        public List<IReference> NextValue { get; set; }
+        public string Type { get; set;}
+        
+        public string Change { get; set;}
+        
+        public List<IReference> PreviousValue { get; set;}
+        
+        public List<IReference> NextValue { get; set;}
         public SetSupplyChannelsChange()
-        {
-            this.Type = "SetSupplyChannelsChange";
+        { 
+           this.Type = "SetSupplyChannelsChange";
         }
     }
 }

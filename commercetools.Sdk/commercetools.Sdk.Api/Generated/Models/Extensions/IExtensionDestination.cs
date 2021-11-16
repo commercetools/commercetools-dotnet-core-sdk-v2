@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Extensions
     [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Extensions.ExtensionDestination))]
     [SubTypeDiscriminator("AWSLambda", typeof(commercetools.Api.Models.Extensions.ExtensionAWSLambdaDestination))]
     [SubTypeDiscriminator("HTTP", typeof(commercetools.Api.Models.Extensions.ExtensionHttpDestination))]
-    public partial interface IExtensionDestination
+    public partial interface IExtensionDestination 
     {
-        string Type { get; set; }
+        string Type { get; set;}
     }
 }

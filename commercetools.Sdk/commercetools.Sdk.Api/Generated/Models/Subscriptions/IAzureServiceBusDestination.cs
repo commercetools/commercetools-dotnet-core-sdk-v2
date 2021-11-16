@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.AzureServiceBusDestination))]
     public partial interface IAzureServiceBusDestination : IDestination
     {
-        string ConnectionString { get; set; }
+        string ConnectionString { get; set;}
     }
 }

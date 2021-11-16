@@ -10,8 +10,8 @@ namespace commercetools.ImportApi.Models.OrderPatches
 {
     public partial class ParcelTrackingData : IParcelTrackingData
     {
-        public string ParcelId { get; set; }
-
-        public ITrackingData TrackingData { get; set; }
+        public string ParcelId { get; set;}
+        
+        public ITrackingData TrackingData { get; set;}
     }
 }

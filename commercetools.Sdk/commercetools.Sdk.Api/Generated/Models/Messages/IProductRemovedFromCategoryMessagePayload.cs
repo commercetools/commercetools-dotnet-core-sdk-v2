@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductRemovedFromCategoryMessagePayload))]
     public partial interface IProductRemovedFromCategoryMessagePayload : IMessagePayload
     {
-        ICategoryReference Category { get; set; }
-
-        bool Staged { get; set; }
+        ICategoryReference Category { get; set;}
+        
+        bool Staged { get; set;}
     }
 }

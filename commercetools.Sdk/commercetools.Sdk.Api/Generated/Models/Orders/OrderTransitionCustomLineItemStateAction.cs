@@ -11,20 +11,20 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderTransitionCustomLineItemStateAction : IOrderTransitionCustomLineItemStateAction
     {
-        public string Action { get; set; }
-
-        public string CustomLineItemId { get; set; }
-
-        public long Quantity { get; set; }
-
-        public IStateResourceIdentifier FromState { get; set; }
-
-        public IStateResourceIdentifier ToState { get; set; }
-
-        public DateTime? ActualTransitionDate { get; set; }
+        public string Action { get; set;}
+        
+        public string CustomLineItemId { get; set;}
+        
+        public long Quantity { get; set;}
+        
+        public IStateResourceIdentifier FromState { get; set;}
+        
+        public IStateResourceIdentifier ToState { get; set;}
+        
+        public DateTime? ActualTransitionDate { get; set;}
         public OrderTransitionCustomLineItemStateAction()
-        {
-            this.Action = "transitionCustomLineItemState";
+        { 
+           this.Action = "transitionCustomLineItemState";
         }
     }
 }

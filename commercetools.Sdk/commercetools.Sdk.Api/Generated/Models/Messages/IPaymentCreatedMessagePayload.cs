@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentCreatedMessagePayload))]
     public partial interface IPaymentCreatedMessagePayload : IMessagePayload
     {
-        IPayment Payment { get; set; }
+        IPayment Payment { get; set;}
     }
 }

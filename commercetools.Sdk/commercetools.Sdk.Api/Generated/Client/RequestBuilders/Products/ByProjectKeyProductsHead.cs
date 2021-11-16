@@ -13,32 +13,30 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Products
 {
-    public partial class ByProjectKeyProductsHead : ApiMethod<ByProjectKeyProductsHead>
-    {
+   public partial class ByProjectKeyProductsHead : ApiMethod<ByProjectKeyProductsHead> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Head;
+       
+       private string ProjectKey { get; }
+       
+   
+       public ByProjectKeyProductsHead(IClient apiHttpClient, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.RequestUrl = $"/{ProjectKey}/products";
+       }
+   
+   
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<JsonElement> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Head;
-
-        private string ProjectKey { get; }
-
-
-        public ByProjectKeyProductsHead(IClient apiHttpClient, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/products";
-        }
-
-
-
-
-        public async Task<JsonElement> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
-        }
-
-    }
+   }
 }

@@ -8,20 +8,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
 {
-    public class ByProjectKeyCategoriesKeyByKeyTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+   public class ByProjectKeyCategoriesKeyByKeyTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -32,7 +30,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -42,7 +40,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Get",
                    "/test_projectKey/categories/key=test_key",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -53,7 +51,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Post",
                    "/test_projectKey/categories/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -63,7 +61,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Post",
                    "/test_projectKey/categories/key=test_key",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -74,7 +72,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Delete",
                    "/test_projectKey/categories/key=test_key?version=2",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -85,7 +83,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "Delete",
                    "/test_projectKey/categories/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Categories()
@@ -96,6 +94,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Categories
                    "/test_projectKey/categories/key=test_key",
                }
        };
-        }
     }
+   }
 }

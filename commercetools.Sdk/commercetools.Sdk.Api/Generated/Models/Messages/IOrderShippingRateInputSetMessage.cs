@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderShippingRateInputSetMessage))]
     public partial interface IOrderShippingRateInputSetMessage : IMessage
     {
-        IShippingRateInput ShippingRateInput { get; set; }
-
-        IShippingRateInput OldShippingRateInput { get; set; }
+        IShippingRateInput ShippingRateInput { get; set;}
+        
+        IShippingRateInput OldShippingRateInput { get; set;}
     }
 }

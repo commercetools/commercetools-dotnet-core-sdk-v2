@@ -10,12 +10,12 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.ImportApi.Models.Importoperations
 {
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importoperations.ImportOperationStatus))]
-    public partial interface IImportOperationStatus
+    public partial interface IImportOperationStatus 
     {
-        string OperationId { get; set; }
-
-        IImportOperationState State { get; set; }
-
-        List<IErrorObject> Errors { get; set; }
+        string OperationId { get; set;}
+        
+        IImportOperationState State { get; set;}
+        
+        List<IErrorObject> Errors { get; set;}
     }
 }

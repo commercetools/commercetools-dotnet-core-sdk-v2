@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomFieldAction))]
     public partial interface IStagedOrderSetShippingAddressCustomFieldAction : IStagedOrderUpdateAction
     {
-        string Name { get; set; }
-
-        Object Value { get; set; }
+        string Name { get; set;}
+        
+        Object Value { get; set;}
     }
 }

@@ -11,6 +11,6 @@ namespace commercetools.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.LocalizableEnumAttribute))]
     public partial interface ILocalizableEnumAttribute : IAttribute
     {
-        string Value { get; set; }
+        string Value { get; set;}
     }
 }

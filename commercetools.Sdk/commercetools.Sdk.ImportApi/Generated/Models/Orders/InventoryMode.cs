@@ -8,7 +8,7 @@ namespace commercetools.ImportApi.Models.Orders
     {
         [Description("TrackOnly")]
         TrackOnly,
-
+        
         [Description("ReserveOnOrder")]
         ReserveOnOrder
     }
@@ -26,25 +26,25 @@ namespace commercetools.ImportApi.Models.Orders
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
     public interface IInventoryMode : IJsonName
     {
-        public static IInventoryMode TrackOnly = new InventoryModeWrapper
-        { Value = InventoryMode.TrackOnly, JsonName = "TrackOnly" };
+         public static IInventoryMode TrackOnly = new InventoryModeWrapper
+             {Value = InventoryMode.TrackOnly, JsonName = "TrackOnly"}; 
+         
+         public static IInventoryMode ReserveOnOrder = new InventoryModeWrapper
+             {Value = InventoryMode.ReserveOnOrder, JsonName = "ReserveOnOrder"}; 
 
-        public static IInventoryMode ReserveOnOrder = new InventoryModeWrapper
-        { Value = InventoryMode.ReserveOnOrder, JsonName = "ReserveOnOrder" };
-
-        InventoryMode? Value { get; }
-
-        static IInventoryMode[] Values()
-        {
-            return new[]
-            {
+         InventoryMode? Value { get; }
+        
+         static IInventoryMode[] Values()
+         {
+             return new[]
+             {
                  TrackOnly ,
-                 ReserveOnOrder
+                 ReserveOnOrder 
              };
-        }
-        static IInventoryMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new InventoryModeWrapper() { JsonName = value };
-        }
+         }
+         static IInventoryMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new InventoryModeWrapper() {JsonName = value};
+         }
     }
 }

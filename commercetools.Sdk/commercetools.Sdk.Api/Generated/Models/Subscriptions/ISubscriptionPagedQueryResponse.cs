@@ -9,16 +9,16 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SubscriptionPagedQueryResponse))]
-    public partial interface ISubscriptionPagedQueryResponse
+    public partial interface ISubscriptionPagedQueryResponse 
     {
-        long Limit { get; set; }
-
-        long Count { get; set; }
-
-        long? Total { get; set; }
-
-        long Offset { get; set; }
-
-        List<ISubscription> Results { get; set; }
+        long Limit { get; set;}
+        
+        long Count { get; set;}
+        
+        long? Total { get; set;}
+        
+        long Offset { get; set;}
+        
+        List<ISubscription> Results { get; set;}
     }
 }

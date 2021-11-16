@@ -12,26 +12,26 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Common
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Common.Price))]
-    public partial interface IPrice
+    public partial interface IPrice 
     {
-        string Id { get; set; }
-
-        ITypedMoney Value { get; set; }
-
-        string Country { get; set; }
-
-        ICustomerGroupReference CustomerGroup { get; set; }
-
-        IChannelReference Channel { get; set; }
-
-        DateTime? ValidFrom { get; set; }
-
-        DateTime? ValidUntil { get; set; }
-
-        IDiscountedPrice Discounted { get; set; }
-
-        ICustomFields Custom { get; set; }
-
-        List<IPriceTier> Tiers { get; set; }
+        string Id { get; set;}
+        
+        ITypedMoney Value { get; set;}
+        
+        string Country { get; set;}
+        
+        ICustomerGroupReference CustomerGroup { get; set;}
+        
+        IChannelReference Channel { get; set;}
+        
+        DateTime? ValidFrom { get; set;}
+        
+        DateTime? ValidUntil { get; set;}
+        
+        IDiscountedPrice Discounted { get; set;}
+        
+        ICustomFields Custom { get; set;}
+        
+        List<IPriceTier> Tiers { get; set;}
     }
 }

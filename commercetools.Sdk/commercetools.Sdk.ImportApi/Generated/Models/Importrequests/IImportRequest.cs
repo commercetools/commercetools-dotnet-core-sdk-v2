@@ -21,8 +21,8 @@ namespace commercetools.ImportApi.Models.Importrequests
     [SubTypeDiscriminator("product-type", typeof(commercetools.ImportApi.Models.Importrequests.ProductTypeImportRequest))]
     [SubTypeDiscriminator("product-variant", typeof(commercetools.ImportApi.Models.Importrequests.ProductVariantImportRequest))]
     [SubTypeDiscriminator("product-variant-patch", typeof(commercetools.ImportApi.Models.Importrequests.ProductVariantPatchRequest))]
-    public partial interface IImportRequest
+    public partial interface IImportRequest 
     {
-        IImportResourceType Type { get; set; }
+        IImportResourceType Type { get; set;}
     }
 }

@@ -12,36 +12,36 @@ namespace commercetools.Api.Models.ProductDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscount))]
     public partial interface IProductDiscount : IBaseResource
     {
-        new string Id { get; set; }
-
-        new long Version { get; set; }
-
-        new DateTime CreatedAt { get; set; }
-
-        new DateTime LastModifiedAt { get; set; }
-
-        ILastModifiedBy LastModifiedBy { get; set; }
-
-        ICreatedBy CreatedBy { get; set; }
-
-        ILocalizedString Name { get; set; }
-
-        string Key { get; set; }
-
-        ILocalizedString Description { get; set; }
-
-        IProductDiscountValue Value { get; set; }
-
-        string Predicate { get; set; }
-
-        string SortOrder { get; set; }
-
-        bool IsActive { get; set; }
-
-        List<IReference> References { get; set; }
-
-        DateTime? ValidFrom { get; set; }
-
-        DateTime? ValidUntil { get; set; }
+        new string Id { get; set;}
+        
+        new long Version { get; set;}
+        
+        new DateTime CreatedAt { get; set;}
+        
+        new DateTime LastModifiedAt { get; set;}
+        
+        ILastModifiedBy LastModifiedBy { get; set;}
+        
+        ICreatedBy CreatedBy { get; set;}
+        
+        ILocalizedString Name { get; set;}
+        
+        string Key { get; set;}
+        
+        ILocalizedString Description { get; set;}
+        
+        IProductDiscountValue Value { get; set;}
+        
+        string Predicate { get; set;}
+        
+        string SortOrder { get; set;}
+        
+        bool IsActive { get; set;}
+        
+        List<IReference> References { get; set;}
+        
+        DateTime? ValidFrom { get; set;}
+        
+        DateTime? ValidUntil { get; set;}
     }
 }

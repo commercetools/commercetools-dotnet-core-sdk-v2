@@ -258,10 +258,10 @@ namespace commercetools.HistoryApi.Models.Changes
     [SubTypeDiscriminator("UnpublishChange", typeof(commercetools.HistoryApi.Models.Changes.UnpublishChange))]
     [SubTypeDiscriminator("UpdateSyncInfoChange", typeof(commercetools.HistoryApi.Models.Changes.UpdateSyncInfoChange))]
     [SubTypeDiscriminator("VerifyEmailChange", typeof(commercetools.HistoryApi.Models.Changes.VerifyEmailChange))]
-    public partial interface IChange
+    public partial interface IChange 
     {
-        string Type { get; set; }
-
-        string Change { get; set; }
+        string Type { get; set;}
+        
+        string Change { get; set;}
     }
 }

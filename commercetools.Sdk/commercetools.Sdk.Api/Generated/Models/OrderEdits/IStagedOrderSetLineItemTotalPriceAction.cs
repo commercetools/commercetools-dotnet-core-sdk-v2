@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLineItemTotalPriceAction))]
     public partial interface IStagedOrderSetLineItemTotalPriceAction : IStagedOrderUpdateAction
     {
-        string LineItemId { get; set; }
-
-        IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
+        string LineItemId { get; set;}
+        
+        IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
     }
 }

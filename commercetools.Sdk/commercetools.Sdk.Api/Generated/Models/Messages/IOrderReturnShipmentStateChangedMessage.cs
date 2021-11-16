@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderReturnShipmentStateChangedMessage))]
     public partial interface IOrderReturnShipmentStateChangedMessage : IMessage
     {
-        string ReturnItemId { get; set; }
-
-        IReturnShipmentState ReturnShipmentState { get; set; }
+        string ReturnItemId { get; set;}
+        
+        IReturnShipmentState ReturnShipmentState { get; set;}
     }
 }

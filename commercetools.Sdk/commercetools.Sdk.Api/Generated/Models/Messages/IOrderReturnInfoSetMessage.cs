@@ -13,6 +13,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderReturnInfoSetMessage))]
     public partial interface IOrderReturnInfoSetMessage : IMessage
     {
-        List<IReturnInfo> ReturnInfo { get; set; }
+        List<IReturnInfo> ReturnInfo { get; set;}
     }
 }

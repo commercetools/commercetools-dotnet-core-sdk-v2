@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductPriceDiscountsSetMessagePayload))]
     public partial interface IProductPriceDiscountsSetMessagePayload : IMessagePayload
     {
-        List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+        List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set;}
     }
 }

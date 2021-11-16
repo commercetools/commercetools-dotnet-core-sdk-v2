@@ -31,10 +31,10 @@ namespace commercetools.ImportApi.Models.Productvariants
     [SubTypeDiscriminator("text-set", typeof(commercetools.ImportApi.Models.Productvariants.TextSetAttribute))]
     [SubTypeDiscriminator("time", typeof(commercetools.ImportApi.Models.Productvariants.TimeAttribute))]
     [SubTypeDiscriminator("time-set", typeof(commercetools.ImportApi.Models.Productvariants.TimeSetAttribute))]
-    public partial interface IAttribute
+    public partial interface IAttribute 
     {
-        string Name { get; set; }
-
-        string Type { get; set; }
+        string Name { get; set;}
+        
+        string Type { get; set;}
     }
 }

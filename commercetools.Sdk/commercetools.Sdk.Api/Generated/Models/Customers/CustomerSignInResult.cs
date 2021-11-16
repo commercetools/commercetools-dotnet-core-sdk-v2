@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Customers
 {
     public partial class CustomerSignInResult : ICustomerSignInResult
     {
-        public ICustomer Customer { get; set; }
-
-        public ICart Cart { get; set; }
+        public ICustomer Customer { get; set;}
+        
+        public ICart Cart { get; set;}
     }
 }

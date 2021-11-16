@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetLocaleAction : IStagedOrderSetLocaleAction
     {
-        public string Action { get; set; }
-
-        public string Locale { get; set; }
+        public string Action { get; set;}
+        
+        public string Locale { get; set;}
         public StagedOrderSetLocaleAction()
-        {
-            this.Action = "setLocale";
+        { 
+           this.Action = "setLocale";
         }
     }
 }

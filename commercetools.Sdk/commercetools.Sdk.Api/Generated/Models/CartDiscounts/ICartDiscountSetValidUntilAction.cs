@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountSetValidUntilAction))]
     public partial interface ICartDiscountSetValidUntilAction : ICartDiscountUpdateAction
     {
-        DateTime? ValidUntil { get; set; }
+        DateTime? ValidUntil { get; set;}
     }
 }

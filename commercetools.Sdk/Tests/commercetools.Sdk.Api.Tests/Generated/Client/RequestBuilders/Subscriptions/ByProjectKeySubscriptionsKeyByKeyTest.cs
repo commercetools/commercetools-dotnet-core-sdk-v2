@@ -8,20 +8,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
 {
-    public class ByProjectKeySubscriptionsKeyByKeyTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+   public class ByProjectKeySubscriptionsKeyByKeyTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -32,7 +30,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Get",
                    "/test_projectKey/subscriptions/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -42,7 +40,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Get",
                    "/test_projectKey/subscriptions/key=test_key",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -53,7 +51,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Post",
                    "/test_projectKey/subscriptions/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -63,7 +61,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Post",
                    "/test_projectKey/subscriptions/key=test_key",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -74,7 +72,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Delete",
                    "/test_projectKey/subscriptions/key=test_key?version=2",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -85,7 +83,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "Delete",
                    "/test_projectKey/subscriptions/key=test_key?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
@@ -96,6 +94,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    "/test_projectKey/subscriptions/key=test_key",
                }
        };
-        }
     }
+   }
 }

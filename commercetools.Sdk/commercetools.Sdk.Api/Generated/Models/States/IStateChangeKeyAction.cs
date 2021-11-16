@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.States
     [DeserializeAs(typeof(commercetools.Api.Models.States.StateChangeKeyAction))]
     public partial interface IStateChangeKeyAction : IStateUpdateAction
     {
-        string Key { get; set; }
+        string Key { get; set;}
     }
 }

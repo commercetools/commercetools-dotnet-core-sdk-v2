@@ -10,16 +10,16 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetLineItemCustomFieldAction : IStagedOrderSetLineItemCustomFieldAction
     {
-        public string Action { get; set; }
-
-        public string LineItemId { get; set; }
-
-        public string Name { get; set; }
-
-        public Object Value { get; set; }
+        public string Action { get; set;}
+        
+        public string LineItemId { get; set;}
+        
+        public string Name { get; set;}
+        
+        public Object Value { get; set;}
         public StagedOrderSetLineItemCustomFieldAction()
-        {
-            this.Action = "setLineItemCustomField";
+        { 
+           this.Action = "setLineItemCustomField";
         }
     }
 }

@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetLastNameAction))]
     public partial interface ICustomerSetLastNameAction : ICustomerUpdateAction
     {
-        string LastName { get; set; }
+        string LastName { get; set;}
     }
 }

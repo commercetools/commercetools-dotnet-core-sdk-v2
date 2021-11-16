@@ -12,8 +12,8 @@ namespace commercetools.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetMetaDescriptionAction))]
     public partial interface IProductSetMetaDescriptionAction : IProductUpdateAction
     {
-        ILocalizedString MetaDescription { get; set; }
-
-        bool? Staged { get; set; }
+        ILocalizedString MetaDescription { get; set;}
+        
+        bool? Staged { get; set;}
     }
 }

@@ -13,46 +13,42 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet>
-    {
+   public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+       private string StoreKey { get; }
+       
+       private string PasswordToken { get; }
+       
+   
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet(IClient apiHttpClient, string projectKey, string storeKey, string passwordToken) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.StoreKey = storeKey;
+           this.PasswordToken = passwordToken;
+           this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/password-token={PasswordToken}";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomer>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Get;
-
-        private string ProjectKey { get; }
-
-        private string StoreKey { get; }
-
-        private string PasswordToken { get; }
-
-
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet(IClient apiHttpClient, string projectKey, string storeKey, string passwordToken)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.StoreKey = storeKey;
-            this.PasswordToken = passwordToken;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/password-token={PasswordToken}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomer>(requestMessage);
-        }
-
-    }
+   }
 }

@@ -10,6 +10,6 @@ namespace commercetools.ImportApi.Models.Importrequests
 {
     public partial class ImportResponse : IImportResponse
     {
-        public List<IImportOperationStatus> OperationStatus { get; set; }
+        public List<IImportOperationStatus> OperationStatus { get; set;}
     }
 }

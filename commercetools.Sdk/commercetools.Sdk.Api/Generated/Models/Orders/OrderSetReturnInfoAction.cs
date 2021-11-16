@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderSetReturnInfoAction : IOrderSetReturnInfoAction
     {
-        public string Action { get; set; }
-
-        public List<IReturnInfoDraft> Items { get; set; }
+        public string Action { get; set;}
+        
+        public List<IReturnInfoDraft> Items { get; set;}
         public OrderSetReturnInfoAction()
-        {
-            this.Action = "setReturnInfo";
+        { 
+           this.Action = "setReturnInfo";
         }
     }
 }

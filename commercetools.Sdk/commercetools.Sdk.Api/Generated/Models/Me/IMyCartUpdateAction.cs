@@ -35,8 +35,8 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Api.Models.Me.MyCartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingMethod", typeof(commercetools.Api.Models.Me.MyCartSetShippingMethodAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Api.Models.Me.MyCartUpdateItemShippingAddressAction))]
-    public partial interface IMyCartUpdateAction
+    public partial interface IMyCartUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

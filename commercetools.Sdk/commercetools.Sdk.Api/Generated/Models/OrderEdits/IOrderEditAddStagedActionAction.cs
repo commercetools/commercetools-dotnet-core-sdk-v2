@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditAddStagedActionAction))]
     public partial interface IOrderEditAddStagedActionAction : IOrderEditUpdateAction
     {
-        IStagedOrderUpdateAction StagedAction { get; set; }
+        IStagedOrderUpdateAction StagedAction { get; set;}
     }
 }

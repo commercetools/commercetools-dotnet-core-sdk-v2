@@ -8,15 +8,13 @@ using Xunit;
 
 namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Products
 {
-    public class ByProjectKeyProductsImportContainersTest : RequestBuilderParentTests
-    {
+   public class ByProjectKeyProductsImportContainersTest:RequestBuilderParentTests 
+   { 
 
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]>
-            {
-            };
-        }
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+       };
     }
+   }
 }

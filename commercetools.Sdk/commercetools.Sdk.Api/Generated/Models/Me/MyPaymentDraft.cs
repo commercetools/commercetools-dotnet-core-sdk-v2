@@ -13,12 +13,12 @@ namespace commercetools.Api.Models.Me
 {
     public partial class MyPaymentDraft : IMyPaymentDraft
     {
-        public IMoney AmountPlanned { get; set; }
-
-        public IPaymentMethodInfo PaymentMethodInfo { get; set; }
-
-        public ICustomFieldsDraft Custom { get; set; }
-
-        public IMyTransactionDraft Transaction { get; set; }
+        public IMoney AmountPlanned { get; set;}
+        
+        public IPaymentMethodInfo PaymentMethodInfo { get; set;}
+        
+        public ICustomFieldsDraft Custom { get; set;}
+        
+        public IMyTransactionDraft Transaction { get; set;}
     }
 }

@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetShippingMethodTaxAmountAction : IStagedOrderSetShippingMethodTaxAmountAction
     {
-        public string Action { get; set; }
-
-        public IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
+        public string Action { get; set;}
+        
+        public IExternalTaxAmountDraft ExternalTaxAmount { get; set;}
         public StagedOrderSetShippingMethodTaxAmountAction()
-        {
-            this.Action = "setShippingMethodTaxAmount";
+        { 
+           this.Action = "setShippingMethodTaxAmount";
         }
     }
 }

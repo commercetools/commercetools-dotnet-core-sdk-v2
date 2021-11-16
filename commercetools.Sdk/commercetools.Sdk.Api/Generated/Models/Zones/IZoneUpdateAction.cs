@@ -14,8 +14,8 @@ namespace commercetools.Api.Models.Zones
     [SubTypeDiscriminator("removeLocation", typeof(commercetools.Api.Models.Zones.ZoneRemoveLocationAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Api.Models.Zones.ZoneSetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Zones.ZoneSetKeyAction))]
-    public partial interface IZoneUpdateAction
+    public partial interface IZoneUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.CartDiscounts
     {
         [Description("Cheapest")]
         Cheapest,
-
+        
         [Description("MostExpensive")]
         MostExpensive
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.CartDiscounts
     [EnumInterfaceCreator(typeof(ISelectionMode), "FindEnum")]
     public interface ISelectionMode : IJsonName
     {
-        public static ISelectionMode Cheapest = new SelectionModeWrapper
-        { Value = SelectionMode.Cheapest, JsonName = "Cheapest" };
+         public static ISelectionMode Cheapest = new SelectionModeWrapper
+             {Value = SelectionMode.Cheapest, JsonName = "Cheapest"}; 
+         
+         public static ISelectionMode MostExpensive = new SelectionModeWrapper
+             {Value = SelectionMode.MostExpensive, JsonName = "MostExpensive"}; 
 
-        public static ISelectionMode MostExpensive = new SelectionModeWrapper
-        { Value = SelectionMode.MostExpensive, JsonName = "MostExpensive" };
-
-        SelectionMode? Value { get; }
-
-        static ISelectionMode[] Values()
-        {
-            return new[]
-            {
+         SelectionMode? Value { get; }
+        
+         static ISelectionMode[] Values()
+         {
+             return new[]
+             {
                  Cheapest ,
-                 MostExpensive
+                 MostExpensive 
              };
-        }
-        static ISelectionMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SelectionModeWrapper() { JsonName = value };
-        }
+         }
+         static ISelectionMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new SelectionModeWrapper() {JsonName = value};
+         }
     }
 }

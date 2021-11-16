@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderReference))]
     public partial interface IOrderReference : IReference
     {
-        IOrder Obj { get; set; }
+        IOrder Obj { get; set;}
     }
 }

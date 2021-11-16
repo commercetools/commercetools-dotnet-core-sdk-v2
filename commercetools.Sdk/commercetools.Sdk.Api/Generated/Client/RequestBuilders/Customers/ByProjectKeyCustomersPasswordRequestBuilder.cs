@@ -7,27 +7,24 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Customers
 {
+   
+   public class ByProjectKeyCustomersPasswordRequestBuilder {
 
-    public class ByProjectKeyCustomersPasswordRequestBuilder
-    {
-
-        private IClient ApiHttpClient { get; }
-
-        private ISerializerService SerializerService { get; }
-
-        private string ProjectKey { get; }
-
-        public ByProjectKeyCustomersPasswordRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.SerializerService = serializerService;
-            this.ProjectKey = projectKey;
-        }
-
-        public ByProjectKeyCustomersPasswordPost Post(commercetools.Api.Models.Customers.ICustomerChangePassword customerChangePassword)
-        {
-            return new ByProjectKeyCustomersPasswordPost(ApiHttpClient, SerializerService, ProjectKey, customerChangePassword);
-        }
-
-    }
+       private IClient ApiHttpClient { get; }
+       
+       private ISerializerService SerializerService { get; }
+       
+       private string ProjectKey { get; }
+   
+       public ByProjectKeyCustomersPasswordRequestBuilder (IClient apiHttpClient, ISerializerService serializerService, string projectKey) {
+           this.ApiHttpClient = apiHttpClient;
+           this.SerializerService = serializerService;
+           this.ProjectKey = projectKey;
+       }
+   
+       public ByProjectKeyCustomersPasswordPost Post(commercetools.Api.Models.Customers.ICustomerChangePassword customerChangePassword) {
+           return new ByProjectKeyCustomersPasswordPost(ApiHttpClient, SerializerService, ProjectKey, customerChangePassword);
+       }
+       
+   }
 }

@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Inventories
     [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
     public partial interface IInventoryEntrySetSupplyChannelAction : IInventoryEntryUpdateAction
     {
-        IChannelResourceIdentifier SupplyChannel { get; set; }
+        IChannelResourceIdentifier SupplyChannel { get; set;}
     }
 }

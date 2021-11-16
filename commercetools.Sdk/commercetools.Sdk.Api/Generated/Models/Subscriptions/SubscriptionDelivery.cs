@@ -11,12 +11,12 @@ namespace commercetools.Api.Models.Subscriptions
 {
     public partial class SubscriptionDelivery : ISubscriptionDelivery
     {
-        public string ProjectKey { get; set; }
-
-        public string NotificationType { get; set; }
-
-        public IReference Resource { get; set; }
-
-        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+        public string ProjectKey { get; set;}
+        
+        public string NotificationType { get; set;}
+        
+        public IReference Resource { get; set;}
+        
+        public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set;}
     }
 }

@@ -33,10 +33,10 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Api.Models.TaxCategories.TaxCategoryReference))]
     [SubTypeDiscriminator("type", typeof(commercetools.Api.Models.Types.TypeReference))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Api.Models.Zones.ZoneReference))]
-    public partial interface IReference
+    public partial interface IReference 
     {
-        IReferenceTypeId TypeId { get; set; }
-
-        string Id { get; set; }
+        IReferenceTypeId TypeId { get; set;}
+        
+        string Id { get; set;}
     }
 }

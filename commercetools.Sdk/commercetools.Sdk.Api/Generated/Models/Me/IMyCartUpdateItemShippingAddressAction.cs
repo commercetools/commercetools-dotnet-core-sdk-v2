@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartUpdateItemShippingAddressAction))]
     public partial interface IMyCartUpdateItemShippingAddressAction : IMyCartUpdateAction
     {
-        IBaseAddress Address { get; set; }
+        IBaseAddress Address { get; set;}
     }
 }

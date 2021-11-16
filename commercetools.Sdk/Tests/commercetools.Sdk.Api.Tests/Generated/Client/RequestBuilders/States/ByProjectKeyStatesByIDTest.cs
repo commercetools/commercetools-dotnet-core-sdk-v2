@@ -8,20 +8,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.States
 {
-    public class ByProjectKeyStatesByIDTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+   public class ByProjectKeyStatesByIDTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -32,7 +30,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Get",
                    "/test_projectKey/states/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -42,7 +40,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Get",
                    "/test_projectKey/states/test_ID",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -53,7 +51,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Post",
                    "/test_projectKey/states/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -63,7 +61,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Post",
                    "/test_projectKey/states/test_ID",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -74,7 +72,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Delete",
                    "/test_projectKey/states/test_ID?version=2",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -85,7 +83,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "Delete",
                    "/test_projectKey/states/test_ID?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
@@ -96,6 +94,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.States
                    "/test_projectKey/states/test_ID",
                }
        };
-        }
     }
+   }
 }

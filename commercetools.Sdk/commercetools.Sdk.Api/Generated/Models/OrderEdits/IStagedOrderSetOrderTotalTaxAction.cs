@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetOrderTotalTaxAction))]
     public partial interface IStagedOrderSetOrderTotalTaxAction : IStagedOrderUpdateAction
     {
-        IMoney ExternalTotalGross { get; set; }
-
-        List<ITaxPortionDraft> ExternalTaxPortions { get; set; }
+        IMoney ExternalTotalGross { get; set;}
+        
+        List<ITaxPortionDraft> ExternalTaxPortions { get; set;}
     }
 }

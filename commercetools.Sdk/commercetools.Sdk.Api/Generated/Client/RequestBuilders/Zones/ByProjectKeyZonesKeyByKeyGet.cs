@@ -13,43 +13,39 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Api.Client.RequestBuilders.Zones
 {
-    public partial class ByProjectKeyZonesKeyByKeyGet : ApiMethod<ByProjectKeyZonesKeyByKeyGet>
-    {
+   public partial class ByProjectKeyZonesKeyByKeyGet : ApiMethod<ByProjectKeyZonesKeyByKeyGet> {
 
+       
+       private IClient ApiHttpClient { get; }
+       
+       public override HttpMethod Method => HttpMethod.Get;
+       
+       private string ProjectKey { get; }
+       
+       private string Key { get; }
+       
+   
+       public ByProjectKeyZonesKeyByKeyGet(IClient apiHttpClient, string projectKey, string key) {
+           this.ApiHttpClient = apiHttpClient;
+           this.ProjectKey = projectKey;
+           this.Key = key;
+           this.RequestUrl = $"/{ProjectKey}/zones/key={Key}";
+       }
+   
+       public List<string> GetExpand() {
+           return this.GetQueryParam("expand");
+       }
+   
+       public ByProjectKeyZonesKeyByKeyGet WithExpand(string expand){
+           return this.AddQueryParam("expand", expand);
+       }
+       
 
-        private IClient ApiHttpClient { get; }
+       public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
+       {
+          var requestMessage = Build();
+          return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZone>(requestMessage);
+       }
 
-        public override HttpMethod Method => HttpMethod.Get;
-
-        private string ProjectKey { get; }
-
-        private string Key { get; }
-
-
-        public ByProjectKeyZonesKeyByKeyGet(IClient apiHttpClient, string projectKey, string key)
-        {
-            this.ApiHttpClient = apiHttpClient;
-            this.ProjectKey = projectKey;
-            this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/zones/key={Key}";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
-        public ByProjectKeyZonesKeyByKeyGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
-        {
-            var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZone>(requestMessage);
-        }
-
-    }
+   }
 }

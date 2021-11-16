@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Stores
     [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetSupplyChannelsAction))]
     public partial interface IStoreSetSupplyChannelsAction : IStoreUpdateAction
     {
-        List<IChannelResourceIdentifier> SupplyChannels { get; set; }
+        List<IChannelResourceIdentifier> SupplyChannels { get; set;}
     }
 }

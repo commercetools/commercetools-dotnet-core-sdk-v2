@@ -30,8 +30,8 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setSalutation", typeof(commercetools.Api.Models.Me.MyCustomerSetSalutationAction))]
     [SubTypeDiscriminator("setTitle", typeof(commercetools.Api.Models.Me.MyCustomerSetTitleAction))]
     [SubTypeDiscriminator("setVatId", typeof(commercetools.Api.Models.Me.MyCustomerSetVatIdAction))]
-    public partial interface IMyCustomerUpdateAction
+    public partial interface IMyCustomerUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

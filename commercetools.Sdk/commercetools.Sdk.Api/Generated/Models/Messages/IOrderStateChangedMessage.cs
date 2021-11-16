@@ -13,8 +13,8 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderStateChangedMessage))]
     public partial interface IOrderStateChangedMessage : IMessage
     {
-        IOrderState OrderState { get; set; }
-
-        IOrderState OldOrderState { get; set; }
+        IOrderState OrderState { get; set;}
+        
+        IOrderState OldOrderState { get; set;}
     }
 }

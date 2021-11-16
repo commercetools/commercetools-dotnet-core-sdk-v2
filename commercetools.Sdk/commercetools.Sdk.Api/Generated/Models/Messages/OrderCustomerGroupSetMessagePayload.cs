@@ -11,14 +11,14 @@ namespace commercetools.Api.Models.Messages
 {
     public partial class OrderCustomerGroupSetMessagePayload : IOrderCustomerGroupSetMessagePayload
     {
-        public string Type { get; set; }
-
-        public ICustomerGroupReference CustomerGroup { get; set; }
-
-        public ICustomerGroupReference OldCustomerGroup { get; set; }
+        public string Type { get; set;}
+        
+        public ICustomerGroupReference CustomerGroup { get; set;}
+        
+        public ICustomerGroupReference OldCustomerGroup { get; set;}
         public OrderCustomerGroupSetMessagePayload()
-        {
-            this.Type = "OrderCustomerGroupSet";
+        { 
+           this.Type = "OrderCustomerGroupSet";
         }
     }
 }

@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetStoresAction))]
     public partial interface ICustomerSetStoresAction : ICustomerUpdateAction
     {
-        List<IStoreResourceIdentifier> Stores { get; set; }
+        List<IStoreResourceIdentifier> Stores { get; set;}
     }
 }

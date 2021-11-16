@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.CartDiscounts
 {
     public partial class CartDiscountSetKeyAction : ICartDiscountSetKeyAction
     {
-        public string Action { get; set; }
-
-        public string Key { get; set; }
+        public string Action { get; set;}
+        
+        public string Key { get; set;}
         public CartDiscountSetKeyAction()
-        {
-            this.Action = "setKey";
+        { 
+           this.Action = "setKey";
         }
     }
 }

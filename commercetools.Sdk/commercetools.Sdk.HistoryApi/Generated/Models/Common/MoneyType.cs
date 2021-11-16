@@ -8,7 +8,7 @@ namespace commercetools.HistoryApi.Models.Common
     {
         [Description("centPrecision")]
         CentPrecision,
-
+        
         [Description("highPrecision")]
         HighPrecision
     }
@@ -26,25 +26,25 @@ namespace commercetools.HistoryApi.Models.Common
     [EnumInterfaceCreator(typeof(IMoneyType), "FindEnum")]
     public interface IMoneyType : IJsonName
     {
-        public static IMoneyType CentPrecision = new MoneyTypeWrapper
-        { Value = MoneyType.CentPrecision, JsonName = "centPrecision" };
+         public static IMoneyType CentPrecision = new MoneyTypeWrapper
+             {Value = MoneyType.CentPrecision, JsonName = "centPrecision"}; 
+         
+         public static IMoneyType HighPrecision = new MoneyTypeWrapper
+             {Value = MoneyType.HighPrecision, JsonName = "highPrecision"}; 
 
-        public static IMoneyType HighPrecision = new MoneyTypeWrapper
-        { Value = MoneyType.HighPrecision, JsonName = "highPrecision" };
-
-        MoneyType? Value { get; }
-
-        static IMoneyType[] Values()
-        {
-            return new[]
-            {
+         MoneyType? Value { get; }
+        
+         static IMoneyType[] Values()
+         {
+             return new[]
+             {
                  CentPrecision ,
-                 HighPrecision
+                 HighPrecision 
              };
-        }
-        static IMoneyType FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new MoneyTypeWrapper() { JsonName = value };
-        }
+         }
+         static IMoneyType FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new MoneyTypeWrapper() {JsonName = value};
+         }
     }
 }

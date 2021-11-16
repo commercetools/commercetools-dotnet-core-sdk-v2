@@ -13,14 +13,14 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemoveLineItemAction))]
     public partial interface IStagedOrderRemoveLineItemAction : IStagedOrderUpdateAction
     {
-        string LineItemId { get; set; }
-
-        double? Quantity { get; set; }
-
-        IMoney ExternalPrice { get; set; }
-
-        IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
-
-        IItemShippingDetailsDraft ShippingDetailsToRemove { get; set; }
+        string LineItemId { get; set;}
+        
+        double? Quantity { get; set;}
+        
+        IMoney ExternalPrice { get; set;}
+        
+        IExternalLineItemTotalPrice ExternalTotalPrice { get; set;}
+        
+        IItemShippingDetailsDraft ShippingDetailsToRemove { get; set;}
     }
 }

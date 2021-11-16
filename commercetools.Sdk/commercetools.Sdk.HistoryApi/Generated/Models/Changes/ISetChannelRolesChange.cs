@@ -12,12 +12,12 @@ namespace commercetools.HistoryApi.Models.Changes
     [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetChannelRolesChange))]
     public partial interface ISetChannelRolesChange : IChange
     {
-        new string Type { get; set; }
-
-        new string Change { get; set; }
-
-        List<IChannelRole> PreviousValue { get; set; }
-
-        List<IChannelRole> NextValue { get; set; }
+        new string Type { get; set;}
+        
+        new string Change { get; set;}
+        
+        List<IChannelRole> PreviousValue { get; set;}
+        
+        List<IChannelRole> NextValue { get; set;}
     }
 }

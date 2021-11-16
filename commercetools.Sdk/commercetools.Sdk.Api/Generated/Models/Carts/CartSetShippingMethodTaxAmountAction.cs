@@ -10,12 +10,12 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class CartSetShippingMethodTaxAmountAction : ICartSetShippingMethodTaxAmountAction
     {
-        public string Action { get; set; }
-
-        public IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
+        public string Action { get; set;}
+        
+        public IExternalTaxAmountDraft ExternalTaxAmount { get; set;}
         public CartSetShippingMethodTaxAmountAction()
-        {
-            this.Action = "setShippingMethodTaxAmount";
+        { 
+           this.Action = "setShippingMethodTaxAmount";
         }
     }
 }

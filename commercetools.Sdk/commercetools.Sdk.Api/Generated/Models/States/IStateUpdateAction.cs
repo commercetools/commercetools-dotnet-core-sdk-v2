@@ -18,8 +18,8 @@ namespace commercetools.Api.Models.States
     [SubTypeDiscriminator("setName", typeof(commercetools.Api.Models.States.StateSetNameAction))]
     [SubTypeDiscriminator("setRoles", typeof(commercetools.Api.Models.States.StateSetRolesAction))]
     [SubTypeDiscriminator("setTransitions", typeof(commercetools.Api.Models.States.StateSetTransitionsAction))]
-    public partial interface IStateUpdateAction
+    public partial interface IStateUpdateAction 
     {
-        string Action { get; set; }
+        string Action { get; set;}
     }
 }

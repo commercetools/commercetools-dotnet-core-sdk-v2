@@ -15,14 +15,14 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingAddressAndCustomShippingMethodAction))]
     public partial interface IStagedOrderSetShippingAddressAndCustomShippingMethodAction : IStagedOrderUpdateAction
     {
-        IBaseAddress Address { get; set; }
-
-        string ShippingMethodName { get; set; }
-
-        IShippingRateDraft ShippingRate { get; set; }
-
-        ITaxCategoryResourceIdentifier TaxCategory { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        IBaseAddress Address { get; set;}
+        
+        string ShippingMethodName { get; set;}
+        
+        IShippingRateDraft ShippingRate { get; set;}
+        
+        ITaxCategoryResourceIdentifier TaxCategory { get; set;}
+        
+        IExternalTaxRateDraft ExternalTaxRate { get; set;}
     }
 }

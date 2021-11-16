@@ -11,6 +11,6 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetReturnInfoAction))]
     public partial interface IOrderSetReturnInfoAction : IOrderUpdateAction
     {
-        List<IReturnInfoDraft> Items { get; set; }
+        List<IReturnInfoDraft> Items { get; set;}
     }
 }

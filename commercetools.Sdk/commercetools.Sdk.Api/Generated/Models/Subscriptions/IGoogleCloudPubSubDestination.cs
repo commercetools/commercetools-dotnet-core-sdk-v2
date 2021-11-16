@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.GoogleCloudPubSubDestination))]
     public partial interface IGoogleCloudPubSubDestination : IDestination
     {
-        string ProjectId { get; set; }
-
-        string Topic { get; set; }
+        string ProjectId { get; set;}
+        
+        string Topic { get; set;}
     }
 }

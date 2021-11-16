@@ -8,20 +8,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
 {
-    public class ByProjectKeyShoppingListsTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+   public class ByProjectKeyShoppingListsTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -31,7 +29,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -41,7 +39,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -51,7 +49,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -61,7 +59,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -71,7 +69,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -81,7 +79,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -91,7 +89,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -100,7 +98,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Get",
                    "/test_projectKey/shopping-lists",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -110,7 +108,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "Post",
                    "/test_projectKey/shopping-lists?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
@@ -120,6 +118,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    "/test_projectKey/shopping-lists",
                }
        };
-        }
     }
+   }
 }

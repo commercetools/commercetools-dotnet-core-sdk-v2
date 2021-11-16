@@ -11,10 +11,10 @@ namespace commercetools.Api.Models.Projects
 {
     public partial class CartScoreType : ICartScoreType
     {
-        public IShippingRateTierType Type { get; set; }
+        public IShippingRateTierType Type { get; set;}
         public CartScoreType()
-        {
-            this.Type = IShippingRateTierType.FindEnum("CartScore");
+        { 
+           this.Type = IShippingRateTierType.FindEnum("CartScore");
         }
     }
 }

@@ -22,8 +22,8 @@ namespace commercetools.ImportApi.Models.Producttypes
     [SubTypeDiscriminator("set", typeof(commercetools.ImportApi.Models.Producttypes.AttributeSetType))]
     [SubTypeDiscriminator("text", typeof(commercetools.ImportApi.Models.Producttypes.AttributeTextType))]
     [SubTypeDiscriminator("time", typeof(commercetools.ImportApi.Models.Producttypes.AttributeTimeType))]
-    public partial interface IAttributeType
+    public partial interface IAttributeType 
     {
-        string Name { get; set; }
+        string Name { get; set;}
     }
 }

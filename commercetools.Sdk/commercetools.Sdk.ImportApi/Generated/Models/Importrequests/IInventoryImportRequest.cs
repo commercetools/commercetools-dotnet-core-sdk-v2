@@ -13,6 +13,6 @@ namespace commercetools.ImportApi.Models.Importrequests
     [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.InventoryImportRequest))]
     public partial interface IInventoryImportRequest : IImportRequest
     {
-        List<IInventoryImport> Resources { get; set; }
+        List<IInventoryImport> Resources { get; set;}
     }
 }

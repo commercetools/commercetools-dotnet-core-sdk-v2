@@ -23,21 +23,21 @@ namespace commercetools.HistoryApi.Models
     [EnumInterfaceCreator(typeof(IDateStringFilter), "FindEnum")]
     public interface IDateStringFilter : IJsonName
     {
-        public static IDateStringFilter Now = new DateStringFilterWrapper
-        { Value = DateStringFilter.Now, JsonName = "now" };
+         public static IDateStringFilter Now = new DateStringFilterWrapper
+             {Value = DateStringFilter.Now, JsonName = "now"}; 
 
-        DateStringFilter? Value { get; }
-
-        static IDateStringFilter[] Values()
-        {
-            return new[]
-            {
-                 Now
+         DateStringFilter? Value { get; }
+        
+         static IDateStringFilter[] Values()
+         {
+             return new[]
+             {
+                 Now 
              };
-        }
-        static IDateStringFilter FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new DateStringFilterWrapper() { JsonName = value };
-        }
+         }
+         static IDateStringFilter FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new DateStringFilterWrapper() {JsonName = value};
+         }
     }
 }

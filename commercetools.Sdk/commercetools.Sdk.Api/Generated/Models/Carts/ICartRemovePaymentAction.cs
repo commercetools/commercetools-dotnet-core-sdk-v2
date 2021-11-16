@@ -12,6 +12,6 @@ namespace commercetools.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartRemovePaymentAction))]
     public partial interface ICartRemovePaymentAction : ICartUpdateAction
     {
-        IPaymentResourceIdentifier Payment { get; set; }
+        IPaymentResourceIdentifier Payment { get; set;}
     }
 }

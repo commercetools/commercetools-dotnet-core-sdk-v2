@@ -10,10 +10,10 @@ namespace commercetools.Api.Models.Products
 {
     public partial class ProductUnpublishAction : IProductUnpublishAction
     {
-        public string Action { get; set; }
+        public string Action { get; set;}
         public ProductUnpublishAction()
-        {
-            this.Action = "unpublish";
+        { 
+           this.Action = "unpublish";
         }
     }
 }

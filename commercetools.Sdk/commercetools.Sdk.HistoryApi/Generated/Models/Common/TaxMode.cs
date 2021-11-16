@@ -8,13 +8,13 @@ namespace commercetools.HistoryApi.Models.Common
     {
         [Description("Platform")]
         Platform,
-
+        
         [Description("External")]
         External,
-
+        
         [Description("ExternalAmount")]
         ExternalAmount,
-
+        
         [Description("Disabled")]
         Disabled
     }
@@ -32,33 +32,33 @@ namespace commercetools.HistoryApi.Models.Common
     [EnumInterfaceCreator(typeof(ITaxMode), "FindEnum")]
     public interface ITaxMode : IJsonName
     {
-        public static ITaxMode Platform = new TaxModeWrapper
-        { Value = TaxMode.Platform, JsonName = "Platform" };
+         public static ITaxMode Platform = new TaxModeWrapper
+             {Value = TaxMode.Platform, JsonName = "Platform"}; 
+         
+         public static ITaxMode External = new TaxModeWrapper
+             {Value = TaxMode.External, JsonName = "External"}; 
+         
+         public static ITaxMode ExternalAmount = new TaxModeWrapper
+             {Value = TaxMode.ExternalAmount, JsonName = "ExternalAmount"}; 
+         
+         public static ITaxMode Disabled = new TaxModeWrapper
+             {Value = TaxMode.Disabled, JsonName = "Disabled"}; 
 
-        public static ITaxMode External = new TaxModeWrapper
-        { Value = TaxMode.External, JsonName = "External" };
-
-        public static ITaxMode ExternalAmount = new TaxModeWrapper
-        { Value = TaxMode.ExternalAmount, JsonName = "ExternalAmount" };
-
-        public static ITaxMode Disabled = new TaxModeWrapper
-        { Value = TaxMode.Disabled, JsonName = "Disabled" };
-
-        TaxMode? Value { get; }
-
-        static ITaxMode[] Values()
-        {
-            return new[]
-            {
+         TaxMode? Value { get; }
+        
+         static ITaxMode[] Values()
+         {
+             return new[]
+             {
                  Platform ,
                  External ,
                  ExternalAmount ,
-                 Disabled
+                 Disabled 
              };
-        }
-        static ITaxMode FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaxModeWrapper() { JsonName = value };
-        }
+         }
+         static ITaxMode FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new TaxModeWrapper() {JsonName = value};
+         }
     }
 }

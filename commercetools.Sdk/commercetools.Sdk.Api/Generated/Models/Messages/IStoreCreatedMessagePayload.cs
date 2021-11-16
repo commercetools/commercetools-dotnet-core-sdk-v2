@@ -14,14 +14,14 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.StoreCreatedMessagePayload))]
     public partial interface IStoreCreatedMessagePayload : IMessagePayload
     {
-        ILocalizedString Name { get; set; }
-
-        List<string> Languages { get; set; }
-
-        List<IChannelReference> DistributionChannels { get; set; }
-
-        List<IChannelReference> SupplyChannels { get; set; }
-
-        ICustomFields Custom { get; set; }
+        ILocalizedString Name { get; set;}
+        
+        List<string> Languages { get; set;}
+        
+        List<IChannelReference> DistributionChannels { get; set;}
+        
+        List<IChannelReference> SupplyChannels { get; set;}
+        
+        ICustomFields Custom { get; set;}
     }
 }

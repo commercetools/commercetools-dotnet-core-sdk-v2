@@ -14,10 +14,10 @@ namespace commercetools.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductPublishedMessage))]
     public partial interface IProductPublishedMessage : IMessage
     {
-        List<string> RemovedImageUrls { get; set; }
-
-        IProductProjection ProductProjection { get; set; }
-
-        IProductPublishScope Scope { get; set; }
+        List<string> RemovedImageUrls { get; set;}
+        
+        IProductProjection ProductProjection { get; set;}
+        
+        IProductPublishScope Scope { get; set;}
     }
 }

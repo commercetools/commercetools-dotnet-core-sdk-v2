@@ -8,15 +8,13 @@ using Xunit;
 
 namespace commercetools.MLApi.Tests.Client.RequestBuilders.MissingData
 {
-    public class ByProjectKeyMissingDataPricesStatusTest : RequestBuilderParentTests
-    {
+   public class ByProjectKeyMissingDataPricesStatusTest:RequestBuilderParentTests 
+   { 
 
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]>
-            {
-            };
-        }
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+       };
     }
+   }
 }

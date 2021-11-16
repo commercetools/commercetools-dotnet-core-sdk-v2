@@ -10,14 +10,14 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Me
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Me.MyTransactionDraft))]
-    public partial interface IMyTransactionDraft
+    public partial interface IMyTransactionDraft 
     {
-        DateTime? Timestamp { get; set; }
-
-        ITransactionType Type { get; set; }
-
-        IMoney Amount { get; set; }
-
-        string InteractionId { get; set; }
+        DateTime? Timestamp { get; set;}
+        
+        ITransactionType Type { get; set;}
+        
+        IMoney Amount { get; set;}
+        
+        string InteractionId { get; set;}
     }
 }

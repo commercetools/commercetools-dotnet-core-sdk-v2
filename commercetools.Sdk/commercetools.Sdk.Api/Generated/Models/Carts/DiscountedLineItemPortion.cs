@@ -11,8 +11,8 @@ namespace commercetools.Api.Models.Carts
 {
     public partial class DiscountedLineItemPortion : IDiscountedLineItemPortion
     {
-        public ICartDiscountReference Discount { get; set; }
-
-        public ITypedMoney DiscountedAmount { get; set; }
+        public ICartDiscountReference Discount { get; set;}
+        
+        public ITypedMoney DiscountedAmount { get; set;}
     }
 }

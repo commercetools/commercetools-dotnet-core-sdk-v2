@@ -8,7 +8,7 @@ namespace commercetools.Api.Models.Carts
     {
         [Description("All")]
         All,
-
+        
         [Description("Prices")]
         Prices
     }
@@ -26,25 +26,25 @@ namespace commercetools.Api.Models.Carts
     [EnumInterfaceCreator(typeof(IProductPublishScope), "FindEnum")]
     public interface IProductPublishScope : IJsonName
     {
-        public static IProductPublishScope All = new ProductPublishScopeWrapper
-        { Value = ProductPublishScope.All, JsonName = "All" };
+         public static IProductPublishScope All = new ProductPublishScopeWrapper
+             {Value = ProductPublishScope.All, JsonName = "All"}; 
+         
+         public static IProductPublishScope Prices = new ProductPublishScopeWrapper
+             {Value = ProductPublishScope.Prices, JsonName = "Prices"}; 
 
-        public static IProductPublishScope Prices = new ProductPublishScopeWrapper
-        { Value = ProductPublishScope.Prices, JsonName = "Prices" };
-
-        ProductPublishScope? Value { get; }
-
-        static IProductPublishScope[] Values()
-        {
-            return new[]
-            {
+         ProductPublishScope? Value { get; }
+        
+         static IProductPublishScope[] Values()
+         {
+             return new[]
+             {
                  All ,
-                 Prices
+                 Prices 
              };
-        }
-        static IProductPublishScope FindEnum(string value)
-        {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ProductPublishScopeWrapper() { JsonName = value };
-        }
+         }
+         static IProductPublishScope FindEnum(string value)
+         {
+             return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ProductPublishScopeWrapper() {JsonName = value};
+         }
     }
 }

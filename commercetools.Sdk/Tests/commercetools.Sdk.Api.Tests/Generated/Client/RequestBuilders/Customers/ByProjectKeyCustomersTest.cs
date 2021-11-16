@@ -8,20 +8,18 @@ using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
 {
-    public class ByProjectKeyCustomersTest : RequestBuilderParentTests
-    {
-        [Theory]
-        [MemberData(nameof(GetData))]
-        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
-        {
-            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
-            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
-        }
+   public class ByProjectKeyCustomersTest:RequestBuilderParentTests 
+   { 
+       [Theory]
+       [MemberData(nameof(GetData))]
+       public void WithMethods(HttpRequestMessage request, string httpMethod, string uri) {
+           Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+           Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+       }
 
-        public static IEnumerable<object[]> GetData()
-        {
-            return new List<object[]> {
-               new Object[] {
+       public static IEnumerable<object[]> GetData() {
+       return new List<object[]> {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -31,7 +29,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -41,7 +39,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?sort=sort",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -51,7 +49,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?limit=7",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -61,7 +59,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?offset=3",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -71,7 +69,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?withTotal=true",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -81,7 +79,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?where=where",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -91,7 +89,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers?var.varName=var.varName",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -100,7 +98,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Get",
                    "/test_projectKey/customers",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -110,7 +108,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "Post",
                    "/test_projectKey/customers?expand=expand",
                },
-               new Object[] {
+               new Object[] {           
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Customers()
@@ -120,6 +118,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Customers
                    "/test_projectKey/customers",
                }
        };
-        }
     }
+   }
 }
