@@ -9,5 +9,10 @@ namespace commercetools.Sdk.ImportApi.Extensions
         {
             return ImportApiFactory.Create(client);
         }
+
+        public static ProjectApiRoot WithImportApi(this IClient client, string projectKey)
+        {
+            return ImportApiFactory.Create(client, projectKey);
+        }
     }
 }

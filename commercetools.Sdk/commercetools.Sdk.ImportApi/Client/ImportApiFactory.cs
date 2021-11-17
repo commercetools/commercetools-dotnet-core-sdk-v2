@@ -9,5 +9,11 @@ namespace commercetools.Sdk.ImportApi.Client
         {
             return new ImportApiRoot(client);
         }
+
+        public static ProjectApiRoot Create(
+            IClient client, string projectKey)
+        {
+            return new ProjectApiRoot(client, projectKey);
+        }
     }
 }

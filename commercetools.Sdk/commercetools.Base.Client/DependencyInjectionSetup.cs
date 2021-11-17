@@ -42,7 +42,8 @@ namespace commercetools.Base.Client
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
-            foreach (string clientName in clients)
+
+            clients.ToList().ForEach(clientName =>
             {
                 IClientConfiguration clientConfiguration =
                     configuration.GetSection(clientName).Get<ClientConfiguration>();
@@ -58,7 +59,7 @@ namespace commercetools.Base.Client
                     client.Name = clientName;
                     return client;
                 });
-            }
+            });
 
             return builders;
         }
