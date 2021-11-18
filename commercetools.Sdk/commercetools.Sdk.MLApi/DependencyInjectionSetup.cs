@@ -25,6 +25,12 @@ namespace commercetools.Sdk.MLApi
                 clientName
             };
             services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>()));
+            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            if (clientConfiguration.ProjectKey != null)
+            {
+                services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            }
+
             return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
         }
 
@@ -34,6 +40,13 @@ namespace commercetools.Sdk.MLApi
         {
             services.AddSingleton(configuration);
             services.UseCommercetoolsMLApiSerialization();
+            clients.ToList().ForEach(clientName =>
+            {
+                IClientConfiguration clientConfiguration =
+                    configuration.GetSection(clientName).Get<ClientConfiguration>();
+                services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            });
+
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(Object),
