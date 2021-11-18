@@ -6,28 +6,32 @@ namespace commercetools.Sdk.HistoryApi.Client
 {
     public class ProjectApiRoot
     {
-            private string ProjectKey { get;  }
+        public string ClientName { get; }
 
-            private IClient ApiHttpClient { get; }
+        private string ProjectKey { get; }
 
-            public ProjectApiRoot(IClient apiHttpClient, string projectKey)
-            {
-                this.ApiHttpClient = apiHttpClient;
-                this.ProjectKey = projectKey;
-            }
-            
-            private ByProjectKeyRequestBuilder With()
-            {
-                return new HistoryApiRoot(ApiHttpClient).WithProjectKeyValue(ProjectKey);
-            }
+        private IClient ApiHttpClient { get; }
 
-            public ByProjectKeyGet Get()
-            {
-                return With().Get();
-            }
-            
-            public ByProjectKeyByResourceTypeRequestBuilder  WithResourceType(string resourceType) {
-                return With().WithResourceTypeValue(resourceType);
-            }
+        public ProjectApiRoot(IClient apiHttpClient, string projectKey)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.ProjectKey = projectKey;
+            this.ClientName = apiHttpClient.Name;
+        }
+
+        private ByProjectKeyRequestBuilder With()
+        {
+            return new HistoryApiRoot(ApiHttpClient).WithProjectKeyValue(ProjectKey);
+        }
+
+        public ByProjectKeyGet Get()
+        {
+            return With().Get();
+        }
+
+        public ByProjectKeyByResourceTypeRequestBuilder WithResourceType(string resourceType)
+        {
+            return With().WithResourceTypeValue(resourceType);
+        }
     }
 }

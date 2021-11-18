@@ -18,72 +18,87 @@ namespace commercetools.Sdk.ImportApi.Client
 {
     public class ProjectApiRoot
     {
-            private string ProjectKey { get;  }
+        public string ClientName { get; }
 
-            private IClient ApiHttpClient { get; }
+        private string ProjectKey { get; }
 
-            public ProjectApiRoot(IClient apiHttpClient, string projectKey)
-            {
-                this.ApiHttpClient = apiHttpClient;
-                this.ProjectKey = projectKey;
-            }
-            
-            private ByProjectKeyRequestBuilder With()
-            {
-                return new ImportApiRoot(ApiHttpClient).WithProjectKeyValue(ProjectKey);
-            }
+        private IClient ApiHttpClient { get; }
 
-            public ByProjectKeyCategoriesRequestBuilder Categories()
-            {
-                return With().Categories();
-            }
-            
-            public ByProjectKeyImportContainersRequestBuilder ImportContainers() {
-                return With().ImportContainers();
-            }
+        public ProjectApiRoot(IClient apiHttpClient, string projectKey)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.ProjectKey = projectKey;
+            this.ClientName = apiHttpClient.Name;
+        }
 
-            public ByProjectKeyImportOperationsRequestBuilder ImportOperations() {
-                return With().ImportOperations();
-            }
+        private ByProjectKeyRequestBuilder With()
+        {
+            return new ImportApiRoot(ApiHttpClient).WithProjectKeyValue(ProjectKey);
+        }
 
-            public ByProjectKeyPricesRequestBuilder Prices() {
-                return With().Prices();
-            }
+        public ByProjectKeyCategoriesRequestBuilder Categories()
+        {
+            return With().Categories();
+        }
 
-            public ByProjectKeyProductsRequestBuilder Products() {
-                return With().Products();
-            }
+        public ByProjectKeyImportContainersRequestBuilder ImportContainers()
+        {
+            return With().ImportContainers();
+        }
 
-            public ByProjectKeyProductDraftsRequestBuilder ProductDrafts() {
-                return With().ProductDrafts();
-            }
+        public ByProjectKeyImportOperationsRequestBuilder ImportOperations()
+        {
+            return With().ImportOperations();
+        }
 
-            public ByProjectKeyProductTypesRequestBuilder ProductTypes() {
-                return With().ProductTypes();
-            }
+        public ByProjectKeyPricesRequestBuilder Prices()
+        {
+            return With().Prices();
+        }
 
-            public ByProjectKeyProductVariantsRequestBuilder ProductVariants() {
-                return With().ProductVariants();
-            }
+        public ByProjectKeyProductsRequestBuilder Products()
+        {
+            return With().Products();
+        }
 
-            public ByProjectKeyProductVariantPatchesRequestBuilder ProductVariantPatches() {
-                return With().ProductVariantPatches();
-            }
+        public ByProjectKeyProductDraftsRequestBuilder ProductDrafts()
+        {
+            return With().ProductDrafts();
+        }
 
-            public ByProjectKeyOrdersRequestBuilder Orders() {
-                return With().Orders();
-            }
+        public ByProjectKeyProductTypesRequestBuilder ProductTypes()
+        {
+            return With().ProductTypes();
+        }
 
-            public ByProjectKeyOrderPatchesRequestBuilder OrderPatches() {
-                return With().OrderPatches();
-            }
+        public ByProjectKeyProductVariantsRequestBuilder ProductVariants()
+        {
+            return With().ProductVariants();
+        }
 
-            public ByProjectKeyCustomersRequestBuilder Customers() {
-                return With().Customers();
-            }
+        public ByProjectKeyProductVariantPatchesRequestBuilder ProductVariantPatches()
+        {
+            return With().ProductVariantPatches();
+        }
 
-            public ByProjectKeyInventoriesRequestBuilder Inventories() {
-                return With().Inventories();
-            }
+        public ByProjectKeyOrdersRequestBuilder Orders()
+        {
+            return With().Orders();
+        }
+
+        public ByProjectKeyOrderPatchesRequestBuilder OrderPatches()
+        {
+            return With().OrderPatches();
+        }
+
+        public ByProjectKeyCustomersRequestBuilder Customers()
+        {
+            return With().Customers();
+        }
+
+        public ByProjectKeyInventoriesRequestBuilder Inventories()
+        {
+            return With().Inventories();
+        }
     }
 }

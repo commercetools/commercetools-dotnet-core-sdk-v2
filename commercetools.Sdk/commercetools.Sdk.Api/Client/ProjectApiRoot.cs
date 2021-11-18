@@ -37,150 +37,185 @@ namespace commercetools.Sdk.Api.Client
 {
     public class ProjectApiRoot
     {
-            public string ProjectKey { get;  }
-            private IClient ApiHttpClient { get; }
+        public string ClientName { get; }
+        public string ProjectKey { get; }
+        private IClient ApiHttpClient { get; }
 
-            public ProjectApiRoot(IClient apiHttpClient, string projectKey)
-            {
-                this.ApiHttpClient = apiHttpClient;
-                this.ProjectKey = projectKey;
-            }
-            
-            private ByProjectKeyRequestBuilder With()
-            {
-                return new ApiRoot(ApiHttpClient).WithProjectKey(ProjectKey);
-            }
-            
-            public ByProjectKeyGet Get() {
-                return With().Get();
-            }
+        public ProjectApiRoot(IClient apiHttpClient, string projectKey)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.ProjectKey = projectKey;
+            this.ClientName = apiHttpClient.Name;
+        }
 
-            public ByProjectKeyPost Post(ProjectUpdate projectUpdate) {
-                return With().Post(projectUpdate);
-            }
-            
-            public ByProjectKeyCategoriesRequestBuilder Categories() {
-                return With().Categories();
-            }
+        private ByProjectKeyRequestBuilder With()
+        {
+            return new ApiRoot(ApiHttpClient).WithProjectKey(ProjectKey);
+        }
 
-            public ByProjectKeyCartsRequestBuilder Carts() {
-                return With().Carts();
-            }
+        public ByProjectKeyGet Get()
+        {
+            return With().Get();
+        }
 
-            public ByProjectKeyCartDiscountsRequestBuilder CartDiscounts() {
-                return With().CartDiscounts();
-            }
+        public ByProjectKeyPost Post(ProjectUpdate projectUpdate)
+        {
+            return With().Post(projectUpdate);
+        }
 
-            public ByProjectKeyChannelsRequestBuilder Channels() {
-                return With().Channels();
-            }
+        public ByProjectKeyCategoriesRequestBuilder Categories()
+        {
+            return With().Categories();
+        }
 
-            public ByProjectKeyCustomersRequestBuilder Customers() {
-                return With().Customers();
-            }
+        public ByProjectKeyCartsRequestBuilder Carts()
+        {
+            return With().Carts();
+        }
 
-            public ByProjectKeyCustomerGroupsRequestBuilder CustomerGroups() {
-                return With().CustomerGroups();
-            }
+        public ByProjectKeyCartDiscountsRequestBuilder CartDiscounts()
+        {
+            return With().CartDiscounts();
+        }
 
-            public ByProjectKeyCustomObjectsRequestBuilder CustomObjects() {
-                return With().CustomObjects();
-            }
+        public ByProjectKeyChannelsRequestBuilder Channels()
+        {
+            return With().Channels();
+        }
 
-            public ByProjectKeyDiscountCodesRequestBuilder DiscountCodes() {
-                return With().DiscountCodes();
-            }
+        public ByProjectKeyCustomersRequestBuilder Customers()
+        {
+            return With().Customers();
+        }
 
-            public ByProjectKeyGraphqlRequestBuilder Graphql() {
-                return With().Graphql();
-            }
+        public ByProjectKeyCustomerGroupsRequestBuilder CustomerGroups()
+        {
+            return With().CustomerGroups();
+        }
 
-            public ByProjectKeyInventoryRequestBuilder Inventory() {
-                return With().Inventory();
-            }
+        public ByProjectKeyCustomObjectsRequestBuilder CustomObjects()
+        {
+            return With().CustomObjects();
+        }
 
-            public ByProjectKeyLoginRequestBuilder Login() {
-                return With().Login();
-            }
+        public ByProjectKeyDiscountCodesRequestBuilder DiscountCodes()
+        {
+            return With().DiscountCodes();
+        }
 
-            public ByProjectKeyMessagesRequestBuilder Messages() {
-                return With().Messages();
-            }
+        public ByProjectKeyGraphqlRequestBuilder Graphql()
+        {
+            return With().Graphql();
+        }
 
-            public ByProjectKeyOrdersRequestBuilder Orders() {
-                return With().Orders();
-            }
+        public ByProjectKeyInventoryRequestBuilder Inventory()
+        {
+            return With().Inventory();
+        }
 
-            public ByProjectKeyPaymentsRequestBuilder Payments() {
-                return With().Payments();
-            }
+        public ByProjectKeyLoginRequestBuilder Login()
+        {
+            return With().Login();
+        }
 
-            public ByProjectKeyProductsRequestBuilder Products() {
-                return With().Products();
-            }
+        public ByProjectKeyMessagesRequestBuilder Messages()
+        {
+            return With().Messages();
+        }
 
-            public ByProjectKeyProductDiscountsRequestBuilder ProductDiscounts() {
-                return With().ProductDiscounts();
-            }
+        public ByProjectKeyOrdersRequestBuilder Orders()
+        {
+            return With().Orders();
+        }
 
-            public ByProjectKeyProductProjectionsRequestBuilder ProductProjections() {
-                return With().ProductProjections();
-            }
+        public ByProjectKeyPaymentsRequestBuilder Payments()
+        {
+            return With().Payments();
+        }
 
-            public ByProjectKeyProductTypesRequestBuilder ProductTypes() {
-                return With().ProductTypes();
-            }
+        public ByProjectKeyProductsRequestBuilder Products()
+        {
+            return With().Products();
+        }
 
-            public ByProjectKeyReviewsRequestBuilder Reviews() {
-                return With().Reviews();
-            }
+        public ByProjectKeyProductDiscountsRequestBuilder ProductDiscounts()
+        {
+            return With().ProductDiscounts();
+        }
 
-            public ByProjectKeyShippingMethodsRequestBuilder ShippingMethods() {
-                return With().ShippingMethods();
-            }
+        public ByProjectKeyProductProjectionsRequestBuilder ProductProjections()
+        {
+            return With().ProductProjections();
+        }
 
-            public ByProjectKeyShoppingListsRequestBuilder ShoppingLists() {
-                return With().ShoppingLists();
-            }
+        public ByProjectKeyProductTypesRequestBuilder ProductTypes()
+        {
+            return With().ProductTypes();
+        }
 
-            public ByProjectKeyStatesRequestBuilder States() {
-                return With().States();
-            }
+        public ByProjectKeyReviewsRequestBuilder Reviews()
+        {
+            return With().Reviews();
+        }
 
-            public ByProjectKeySubscriptionsRequestBuilder Subscriptions() {
-                return With().Subscriptions();
-            }
+        public ByProjectKeyShippingMethodsRequestBuilder ShippingMethods()
+        {
+            return With().ShippingMethods();
+        }
 
-            public ByProjectKeyTaxCategoriesRequestBuilder TaxCategories() {
-                return With().TaxCategories();
-            }
+        public ByProjectKeyShoppingListsRequestBuilder ShoppingLists()
+        {
+            return With().ShoppingLists();
+        }
 
-            public ByProjectKeyTypesRequestBuilder Types() {
-                return With().Types();
-            }
+        public ByProjectKeyStatesRequestBuilder States()
+        {
+            return With().States();
+        }
 
-            public ByProjectKeyZonesRequestBuilder Zones() {
-                return With().Zones();
-            }
+        public ByProjectKeySubscriptionsRequestBuilder Subscriptions()
+        {
+            return With().Subscriptions();
+        }
 
-            public ByProjectKeyMeRequestBuilder Me() {
-                return With().Me();
-            }
+        public ByProjectKeyTaxCategoriesRequestBuilder TaxCategories()
+        {
+            return With().TaxCategories();
+        }
 
-            public ByProjectKeyExtensionsRequestBuilder Extensions() {
-                return With().Extensions();
-            }
+        public ByProjectKeyTypesRequestBuilder Types()
+        {
+            return With().Types();
+        }
 
-            public ByProjectKeyApiClientsRequestBuilder ApiClients() {
-                return With().ApiClients();
-            }
+        public ByProjectKeyZonesRequestBuilder Zones()
+        {
+            return With().Zones();
+        }
 
-            public ByProjectKeyStoresRequestBuilder Stores() {
-                return With().Stores();
-            }
+        public ByProjectKeyMeRequestBuilder Me()
+        {
+            return With().Me();
+        }
 
-            public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder InStore(string storeKey) {
-                return With().InStoreKeyWithStoreKeyValue(storeKey);
-            }
+        public ByProjectKeyExtensionsRequestBuilder Extensions()
+        {
+            return With().Extensions();
+        }
+
+        public ByProjectKeyApiClientsRequestBuilder ApiClients()
+        {
+            return With().ApiClients();
+        }
+
+        public ByProjectKeyStoresRequestBuilder Stores()
+        {
+            return With().Stores();
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder InStore(string storeKey)
+        {
+            return With().InStoreKeyWithStoreKeyValue(storeKey);
+        }
     }
 }

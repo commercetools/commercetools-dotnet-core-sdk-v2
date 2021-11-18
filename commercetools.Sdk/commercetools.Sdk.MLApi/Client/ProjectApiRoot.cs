@@ -9,7 +9,9 @@ namespace commercetools.Sdk.MLApi.Client
 {
     public class ProjectApiRoot
     {
-        private string ProjectKey { get;  }
+        public string ClientName { get; }
+
+        private string ProjectKey { get; }
 
         private IClient ApiHttpClient { get; }
 
@@ -17,8 +19,9 @@ namespace commercetools.Sdk.MLApi.Client
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
+            this.ClientName = apiHttpClient.Name;
         }
-        
+
         private ByProjectKeyRequestBuilder With()
         {
             return new MLApiRoot(ApiHttpClient).WithProjectKey(ProjectKey);
@@ -28,16 +31,19 @@ namespace commercetools.Sdk.MLApi.Client
         {
             return With().Recommendations();
         }
-        
-        public ByProjectKeySimilaritiesRequestBuilder Similarities() {
+
+        public ByProjectKeySimilaritiesRequestBuilder Similarities()
+        {
             return With().Similarities();
         }
 
-        public ByProjectKeyImageSearchRequestBuilder ImageSearch() {
+        public ByProjectKeyImageSearchRequestBuilder ImageSearch()
+        {
             return With().ImageSearch();
         }
 
-        public ByProjectKeyMissingDataRequestBuilder MissingData() {
+        public ByProjectKeyMissingDataRequestBuilder MissingData()
+        {
             return With().MissingData();
         }
     }
