@@ -8,5 +8,7 @@ namespace commercetools.Api.Models.TaxCategories
     public partial interface ITaxCategoryReference : IReference
     {
         ITaxCategory Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }
