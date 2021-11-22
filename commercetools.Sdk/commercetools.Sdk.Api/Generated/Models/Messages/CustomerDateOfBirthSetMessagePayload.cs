@@ -7,7 +7,7 @@ namespace commercetools.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public CustomerDateOfBirthSetMessagePayload()
         {
             this.Type = "CustomerDateOfBirthSet";

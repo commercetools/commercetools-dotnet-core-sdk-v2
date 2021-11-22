@@ -28,7 +28,7 @@ namespace commercetools.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public CustomerDateOfBirthSetMessage()
         {
             this.Type = "CustomerDateOfBirthSet";

@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,5 +14,7 @@ namespace commercetools.Api.Models.Messages
         long OldAvailableQuantity { get; set; }
 
         long NewAvailableQuantity { get; set; }
+
+        IChannelReference SupplyChannel { get; set; }
     }
 }
