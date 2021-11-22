@@ -26,6 +26,12 @@ namespace commercetools.Sdk.ImportApi
                 clientName
             };
             services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>()));
+            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            if (clientConfiguration.ProjectKey != null)
+            {
+                services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            }
+
             return services.UseCommercetoolsImportApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
         }
 
@@ -33,6 +39,13 @@ namespace commercetools.Sdk.ImportApi
             IConfiguration configuration, IList<string> clients, Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
         {
             services.UseCommercetoolsImportApiSerialization();
+            clients.ToList().ForEach(clientName =>
+            {
+                IClientConfiguration clientConfiguration =
+                    configuration.GetSection(clientName).Get<ClientConfiguration>();
+                services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            });
+
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(ErrorResponse),

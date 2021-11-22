@@ -9,5 +9,10 @@ namespace commercetools.Sdk.MLApi.Extensions
         {
             return MLApiFactory.Create(client);
         }
+
+        public static ProjectApiRoot WithMLApi(this IClient client, string projectKey)
+        {
+            return MLApiFactory.Create(client, projectKey);
+        }
     }
 }

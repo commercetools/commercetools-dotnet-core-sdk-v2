@@ -8,5 +8,10 @@ namespace commercetools.Sdk.HistoryApi.Extensions
         {
             return HistoryApiFactory.Create(client);
         }
+
+        public static ProjectApiRoot WithHistoryApi(this IClient client, string projectKey)
+        {
+            return HistoryApiFactory.Create(client, projectKey);
+        }
     }
 }
