@@ -27,6 +27,9 @@ namespace commercetools.HistoryApi.Models
         [Description("inventory-entry")]
         InventoryEntry,
 
+        [Description("key-value-document")]
+        KeyValueDocument,
+
         [Description("order")]
         Order,
 
@@ -98,6 +101,9 @@ namespace commercetools.HistoryApi.Models
         public static IChangeHistoryResourceType InventoryEntry = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.InventoryEntry, JsonName = "inventory-entry" };
 
+        public static IChangeHistoryResourceType KeyValueDocument = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.KeyValueDocument, JsonName = "key-value-document" };
+
         public static IChangeHistoryResourceType Order = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.Order, JsonName = "order" };
 
@@ -147,6 +153,7 @@ namespace commercetools.HistoryApi.Models
                  CustomerGroup ,
                  DiscountCode ,
                  InventoryEntry ,
+                 KeyValueDocument ,
                  Order ,
                  Payment ,
                  Product ,
