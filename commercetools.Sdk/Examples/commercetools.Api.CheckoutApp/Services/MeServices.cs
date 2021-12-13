@@ -27,7 +27,7 @@ namespace commercetools.Api.CheckoutApp.Services
         /// <param name="email"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public async Task<SignInResult> SingIn(string email, string password)
+        public async Task<SignInResult> SignIn(string email, string password)
         {
             ICustomerSignInResult result = null;
             var signInResult = new SignInResult();

@@ -28,18 +28,13 @@ namespace commercetools.Api.CheckoutApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var signInResult = await _meServices.SingIn(model.Email, model.Password);
+                var signInResult = await _meServices.SignIn(model.Email, model.Password);
                 if (signInResult.IsValidCredentials)
                 {
                     //after signin, the anonymous access token and refresh token are immediately invalid
                     //we need to get new access and refresh tokens with the password flow
                     _userCredentialsStore.StoreUserCredentialsAndClearToken(model.Email, model.Password); 
-
-                    if (signInResult.Customer.IsEmailVerified)
-                    {
-                        return RedirectToAction("Index", "MyCart");
-                    }
-                    model.ResetAfterEmailNotVerified();
+                    return RedirectToAction("Index", "MyCart");
                 }
                 
                 else
