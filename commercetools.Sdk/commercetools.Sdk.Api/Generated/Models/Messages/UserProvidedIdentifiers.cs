@@ -16,5 +16,7 @@ namespace commercetools.Api.Models.Messages
         public string Sku { get; set; }
 
         public ILocalizedString Slug { get; set; }
+
+        public IContainerAndKey ContainerAndKey { get; set; }
     }
 }
