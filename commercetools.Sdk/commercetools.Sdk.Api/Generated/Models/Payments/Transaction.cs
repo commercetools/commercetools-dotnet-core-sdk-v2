@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using System;
 
 
@@ -17,5 +18,7 @@ namespace commercetools.Api.Models.Payments
         public string InteractionId { get; set; }
 
         public ITransactionState State { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }
