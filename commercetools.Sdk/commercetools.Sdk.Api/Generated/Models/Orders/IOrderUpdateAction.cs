@@ -32,6 +32,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setDeliveryAddress", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryAddressAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomField", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryAddressCustomFieldAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomType", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setDeliveryCustomField", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryCustomFieldAction))]
+    [SubTypeDiscriminator("setDeliveryCustomType", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryCustomTypeAction))]
     [SubTypeDiscriminator("setDeliveryItems", typeof(commercetools.Api.Models.Orders.OrderSetDeliveryItemsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Api.Models.Orders.OrderSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Api.Models.Orders.OrderSetItemShippingAddressCustomTypeAction))]

@@ -15,7 +15,6 @@ using commercetools.ImportApi.Client.RequestBuilders.ProductVariant;
 using commercetools.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.ImportApi.Client.RequestBuilders.Customers;
-using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.Projects
 {
@@ -106,11 +105,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyCustomersRequestBuilder Customers()
         {
             return new ByProjectKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-
-        public ByProjectKeyInventoriesRequestBuilder Inventories()
-        {
-            return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

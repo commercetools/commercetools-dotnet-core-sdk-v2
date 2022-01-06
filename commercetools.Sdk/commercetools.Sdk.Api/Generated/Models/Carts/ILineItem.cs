@@ -19,6 +19,8 @@ namespace commercetools.Api.Models.Carts
 
         string ProductId { get; set; }
 
+        string ProductKey { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ILocalizedString ProductSlug { get; set; }

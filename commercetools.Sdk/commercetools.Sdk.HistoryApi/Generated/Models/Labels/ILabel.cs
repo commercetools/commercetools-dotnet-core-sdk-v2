@@ -6,6 +6,7 @@ namespace commercetools.HistoryApi.Models.Labels
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.HistoryApi.Models.Labels.Label))]
     [SubTypeDiscriminator("CustomerLabel", typeof(commercetools.HistoryApi.Models.Labels.CustomerLabel))]
+    [SubTypeDiscriminator("CustomObjectLabel", typeof(commercetools.HistoryApi.Models.Labels.CustomObjectLabel))]
     [SubTypeDiscriminator("LocalizedLabel", typeof(commercetools.HistoryApi.Models.Labels.LocalizedLabel))]
     [SubTypeDiscriminator("OrderLabel", typeof(commercetools.HistoryApi.Models.Labels.OrderLabel))]
     [SubTypeDiscriminator("PaymentLabel", typeof(commercetools.HistoryApi.Models.Labels.PaymentLabel))]
