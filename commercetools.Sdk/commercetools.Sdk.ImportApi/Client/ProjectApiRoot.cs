@@ -3,7 +3,6 @@ using commercetools.ImportApi.Client.RequestBuilders.Categories;
 using commercetools.ImportApi.Client.RequestBuilders.Customers;
 using commercetools.ImportApi.Client.RequestBuilders.ImportContainers;
 using commercetools.ImportApi.Client.RequestBuilders.ImportOperations;
-using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 using commercetools.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.ImportApi.Client.RequestBuilders.Prices;
