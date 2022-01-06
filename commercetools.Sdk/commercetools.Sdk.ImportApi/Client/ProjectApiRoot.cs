@@ -95,10 +95,5 @@ namespace commercetools.Sdk.ImportApi.Client
         {
             return With().Customers();
         }
-
-        public ByProjectKeyInventoriesRequestBuilder Inventories()
-        {
-            return With().Inventories();
-        }
     }
 }
