@@ -1,6 +1,7 @@
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Messages;
 using commercetools.Api.Models.Subscriptions;
 using commercetools.Base.Serialization;
@@ -40,6 +41,10 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                 if (rootElement.TryGetProperty("payloadNotIncluded", out var payloadNotIncluded))
                 {
                     messageDelivery.PayloadNotIncluded = payloadNotIncluded.ToObject<IPayloadNotIncluded>(_serializerService);
+                }
+                if (rootElement.TryGetProperty("resource", out var resource))
+                {
+                    messageDelivery.Resource = resource.ToObject<IReference>(_serializerService);
                 }
                 if (rootElement.TryGetProperty("resourceUserProvidedIdentifiers",
                     out var resourceUserProvidedIdentifiers))
