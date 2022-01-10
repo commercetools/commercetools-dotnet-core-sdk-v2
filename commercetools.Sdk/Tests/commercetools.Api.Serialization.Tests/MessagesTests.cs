@@ -143,6 +143,41 @@ namespace commercetools.Api.Serialization.Tests
         }
 
         [Fact]
+        public void DeserializationOfListOfSubscriptionDeliveryUnwrapped()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Messages/Payloads.json");
+            var payloads = serializerService.Deserialize<List<ISubscriptionDelivery>>(serialized);
+            Assert.NotNull(payloads);
+            Assert.Equal(4, payloads.Count);
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDelivery;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDelivery;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDelivery;
+            var customerCreatedPayload = payloads[3] as MessageDelivery;
+
+            Assert.NotNull(resourceCreatedPayload);
+            Assert.NotNull(resourceUpdatedPayload);
+            Assert.NotNull(resourceDeletedPayload);
+            Assert.NotNull(customerCreatedPayload);
+            Assert.Equal(2, resourceUpdatedPayload.OldVersion);
+            Assert.IsType<CustomerCreatedMessage>(customerCreatedPayload.Message);
+        }
+
+        [Fact]
+        public void DeserializationOfListOfMessageSubscriptionPayloadsUnwrapped()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Messages/MessageSubscriptionPayloads.json");
+            var payloads = serializerService.Deserialize<List<ISubscriptionDelivery>>(serialized);
+            Assert.NotNull(payloads);
+            Assert.IsType<MessageDelivery>(payloads[0]);
+            Assert.IsType<MessageDelivery>(payloads[1]);
+            Assert.IsType<CategoryCreatedMessage>((payloads[0] as IMessageDelivery).Message);
+            Assert.IsType<CustomerCreatedMessage>((payloads[1] as IMessageDelivery).Message);
+
+        }
+
+        [Fact]
         public void DeserializeChangeSubscription()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
