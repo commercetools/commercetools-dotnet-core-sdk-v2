@@ -16,5 +16,7 @@ namespace commercetools.HistoryApi.Models.Common
         List<IParcel> Parcels { get; set; }
 
         IAddress Address { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }

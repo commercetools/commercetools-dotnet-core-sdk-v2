@@ -40,11 +40,11 @@ namespace commercetools.Api.Models.Customers
 
         public List<IBaseAddress> Addresses { get; set; }
 
-        public long? DefaultShippingAddress { get; set; }
+        public int? DefaultShippingAddress { get; set; }
 
         public List<int> ShippingAddresses { get; set; }
 
-        public long? DefaultBillingAddress { get; set; }
+        public int? DefaultBillingAddress { get; set; }
 
         public List<int> BillingAddresses { get; set; }
 

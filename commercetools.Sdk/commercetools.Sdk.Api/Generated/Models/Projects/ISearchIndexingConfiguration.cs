@@ -7,5 +7,7 @@ namespace commercetools.Api.Models.Projects
     public partial interface ISearchIndexingConfiguration
     {
         ISearchIndexingConfigurationValues Products { get; set; }
+
+        ISearchIndexingConfigurationValues Orders { get; set; }
     }
 }

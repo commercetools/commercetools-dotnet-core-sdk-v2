@@ -13,6 +13,8 @@ namespace commercetools.HistoryApi.Models.Changes
 
         ILocalizedString CustomLineItem { get; set; }
 
+        string CustomLineItemId { get; set; }
+
         ICustomFields NextValue { get; set; }
 
         ICustomFields PreviousValue { get; set; }

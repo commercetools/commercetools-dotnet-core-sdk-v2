@@ -1,5 +1,6 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Payments;
+using commercetools.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
@@ -16,5 +17,7 @@ namespace commercetools.Api.Models.Me
         IMoney Amount { get; set; }
 
         string InteractionId { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }

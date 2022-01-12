@@ -50,5 +50,10 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
         {
             return new ByProjectKeyOrdersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyOrdersSearchRequestBuilder Search()
+        {
+            return new ByProjectKeyOrdersSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
     }
 }

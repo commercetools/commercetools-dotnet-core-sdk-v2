@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -13,5 +14,7 @@ namespace commercetools.Api.Models.Orders
         IBaseAddress Address { get; set; }
 
         List<IParcelDraft> Parcels { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }

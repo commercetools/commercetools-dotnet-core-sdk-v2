@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using System.Collections.Generic;
 
 
@@ -13,6 +14,8 @@ namespace commercetools.Api.Models.Orders
         public IBaseAddress Address { get; set; }
 
         public List<IParcelDraft> Parcels { get; set; }
+
+        public ICustomFields Custom { get; set; }
         public OrderAddDeliveryAction()
         {
             this.Action = "addDelivery";
