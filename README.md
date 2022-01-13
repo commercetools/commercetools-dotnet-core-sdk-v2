@@ -41,8 +41,13 @@ The SDK consists of the following projects:
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
 * `/Tests`: Unit Tests for serialization and request builders.
-* `/Examples`: Contains `commercetools.Api.ConsoleApp` as an example of how to use the SDK in a console app and create a client using ClientFactory.
-
+* `/Examples`:
+  1. `commercetools.Api.ConsoleApp` as an example of how to use the SDK in a console app and create a client using ClientFactory.
+  2. `commercetools.Api.CheckoutApp`, it's developed
+     to illustrate how to deal with the me endpoints, like listing and adding products
+     to cart as anonymous user, user can login and switch to password token flow,
+     it's storing the token in the cookie right now, cookies only used
+     as POC, it maybe not the best option for production purposes.
 
 ## Getting Started with the .NET SDK
 
