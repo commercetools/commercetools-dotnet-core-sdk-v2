@@ -103,10 +103,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<Object> ExecuteAsync()
+        public async Task<commercetools.Api.Models.Carts.ICartPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Object>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICartPagedQueryResponse>(requestMessage);
         }
 
     }
