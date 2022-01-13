@@ -1,9 +1,6 @@
-using System;
 using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.MLApi.Client.RequestBuilders.ImageSearch;
 
 namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
 {

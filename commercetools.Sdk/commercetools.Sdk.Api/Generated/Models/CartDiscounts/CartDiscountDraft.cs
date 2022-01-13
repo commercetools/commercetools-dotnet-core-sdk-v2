@@ -1,11 +1,6 @@
-using commercetools.Api.Models.CartDiscounts;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
@@ -36,6 +31,6 @@ namespace commercetools.Api.Models.CartDiscounts
 
         public IStackingMode StackingMode { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

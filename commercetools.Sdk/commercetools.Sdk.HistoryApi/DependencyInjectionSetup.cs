@@ -25,6 +25,12 @@ namespace commercetools.Sdk.HistoryApi
                 clientName
             };
             services.AddSingleton(c => HistoryApiFactory.Create(c.GetService<IClient>()));
+            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            if (clientConfiguration.ProjectKey != null)
+            {
+                services.AddSingleton(c => HistoryApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            }
+
             return services.UseCommercetoolsHistoryApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
         }
 
@@ -34,6 +40,13 @@ namespace commercetools.Sdk.HistoryApi
         {
             services.AddSingleton(configuration);
             services.UseCommercetoolsHistoryApiSerialization();
+            clients.ToList().ForEach(clientName =>
+            {
+                IClientConfiguration clientConfiguration =
+                    configuration.GetSection(clientName).Get<ClientConfiguration>();
+                services.AddSingleton(c => HistoryApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            });
+
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(Object),

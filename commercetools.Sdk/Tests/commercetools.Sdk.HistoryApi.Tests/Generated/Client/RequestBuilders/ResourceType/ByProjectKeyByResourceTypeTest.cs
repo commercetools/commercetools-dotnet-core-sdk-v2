@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
 using commercetools.HistoryApi.Models;
-using commercetools.HistoryApi.Models.Common;
 using Xunit;
 
 namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType

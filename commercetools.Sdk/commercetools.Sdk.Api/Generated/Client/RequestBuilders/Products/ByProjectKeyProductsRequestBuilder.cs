@@ -1,9 +1,5 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Products;
 
 namespace commercetools.Api.Client.RequestBuilders.Products
 {
@@ -27,6 +23,11 @@ namespace commercetools.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsGet Get()
         {
             return new ByProjectKeyProductsGet(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyProductsHead Head()
+        {
+            return new ByProjectKeyProductsHead(ApiHttpClient, ProjectKey);
         }
 
         public ByProjectKeyProductsPost Post(commercetools.Api.Models.Products.IProductDraft productDraft)

@@ -1,10 +1,7 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -56,7 +53,6 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Orders.IOrder>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -70,5 +66,6 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             }
             return request;
         }
+
     }
 }

@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Dynamic;
 using System.Net.Http;
-using System.Security;
 using commercetools.Base.Client.Middlewares;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Serialization;

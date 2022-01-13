@@ -1,10 +1,7 @@
 using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
+using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Orders
@@ -20,5 +17,7 @@ namespace commercetools.Api.Models.Orders
         public List<IParcel> Parcels { get; set; }
 
         public IAddress Address { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

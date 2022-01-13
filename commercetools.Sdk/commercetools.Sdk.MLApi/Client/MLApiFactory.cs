@@ -9,5 +9,11 @@ namespace commercetools.Sdk.MLApi.Client
         {
             return new MLApiRoot(client);
         }
+
+        public static ProjectApiRoot Create(
+            IClient client, string projectKey)
+        {
+            return new ProjectApiRoot(client, projectKey);
+        }
     }
 }

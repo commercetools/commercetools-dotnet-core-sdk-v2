@@ -1,4 +1,3 @@
-using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Channels;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Orders;
@@ -8,8 +7,6 @@ using commercetools.Api.Models.TaxCategories;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -21,6 +18,8 @@ namespace commercetools.Api.Models.Carts
         string Id { get; set; }
 
         string ProductId { get; set; }
+
+        string ProductKey { get; set; }
 
         ILocalizedString Name { get; set; }
 

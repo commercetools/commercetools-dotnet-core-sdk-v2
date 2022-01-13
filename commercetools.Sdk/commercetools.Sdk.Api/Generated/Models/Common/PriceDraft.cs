@@ -1,12 +1,8 @@
 using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
 using commercetools.Api.Models.CustomerGroups;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Common
@@ -29,6 +25,6 @@ namespace commercetools.Api.Models.Common
 
         public List<IPriceTierDraft> Tiers { get; set; }
 
-        public IDiscountedPrice Discounted { get; set; }
+        public IDiscountedPriceDraft Discounted { get; set; }
     }
 }

@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using commercetools.Base.Registration;
 using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Base.Serialization.JsonConverters

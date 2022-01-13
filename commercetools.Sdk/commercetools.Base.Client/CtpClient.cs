@@ -1,10 +1,7 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Base.Client.Middlewares;
-using commercetools.Base.Client.Domain;
 using commercetools.Base.Serialization;
 
 namespace commercetools.Base.Client

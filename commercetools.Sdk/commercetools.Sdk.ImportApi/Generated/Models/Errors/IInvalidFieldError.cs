@@ -1,8 +1,5 @@
-using commercetools.ImportApi.Models.Errors;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -16,5 +13,7 @@ namespace commercetools.ImportApi.Models.Errors
         Object InvalidValue { get; set; }
 
         List<Object> AllowedValues { get; set; }
+
+        long? ResourceIndex { get; set; }
     }
 }

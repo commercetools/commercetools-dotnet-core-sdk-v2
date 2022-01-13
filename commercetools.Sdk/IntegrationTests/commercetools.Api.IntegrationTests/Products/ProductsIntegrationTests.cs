@@ -1,7 +1,6 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Client;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;

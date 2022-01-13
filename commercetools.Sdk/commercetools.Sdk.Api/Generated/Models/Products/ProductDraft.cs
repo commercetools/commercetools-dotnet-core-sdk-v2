@@ -1,14 +1,9 @@
 using commercetools.Api.Models.Categories;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Products;
 using commercetools.Api.Models.States;
 using commercetools.Api.Models.TaxCategories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products

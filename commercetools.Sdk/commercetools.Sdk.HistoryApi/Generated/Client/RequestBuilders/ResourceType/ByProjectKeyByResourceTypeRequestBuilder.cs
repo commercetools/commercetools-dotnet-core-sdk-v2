@@ -1,9 +1,5 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.HistoryApi.Client.RequestBuilders.ResourceType;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
 {

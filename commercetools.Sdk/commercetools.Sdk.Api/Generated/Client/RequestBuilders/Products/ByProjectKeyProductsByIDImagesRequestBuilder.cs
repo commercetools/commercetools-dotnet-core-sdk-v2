@@ -1,6 +1,4 @@
-using System;
 using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,6 +10,7 @@ namespace commercetools.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionAlreadyExists", typeof(commercetools.Api.Models.Errors.AttributeDefinitionAlreadyExistsError))]
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Api.Models.Errors.AttributeNameDoesNotExistError))]
+    [SubTypeDiscriminator("BadGateway", typeof(commercetools.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Api.Models.Errors.DuplicateAttributeValueError))]

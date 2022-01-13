@@ -11,6 +11,12 @@ namespace commercetools.Sdk.Api.Extensions
         {
             return ApiFactory.Create(client);
         }
+
+        public static ProjectApiRoot WithProject(this IClient client, string projectKey)
+        {
+            return ApiFactory.Create(client, projectKey);
+        }
+
         public static ByProjectKeyRequestBuilder WithApi(this IClient client, string projectKey)
         {
             return ApiFactory.CreateForProject(client, projectKey);

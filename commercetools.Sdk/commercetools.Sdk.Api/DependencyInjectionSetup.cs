@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using commercetools.Api.Models.Errors;
 using commercetools.Api.Models.Products;
 using commercetools.Base.Client;
@@ -31,6 +30,11 @@ namespace commercetools.Sdk.Api
                 clientName
             };
             services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>()));
+            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
+            if (clientConfiguration.ProjectKey != null)
+            {
+                services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            }
             return services.UseCommercetoolsApi(configuration, clients,
                 tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
         }
@@ -40,6 +44,14 @@ namespace commercetools.Sdk.Api
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
         {
             services.UseCommercetoolsApiSerialization();
+
+            clients.ToList().ForEach(clientName =>
+            {
+                IClientConfiguration clientConfiguration =
+                    configuration.GetSection(clientName).Get<ClientConfiguration>();
+                services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+            });
+
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(ErrorResponse),
@@ -52,6 +64,7 @@ namespace commercetools.Sdk.Api
             services.UseSerialization();
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
             services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
+            services.AddSingleton<AttributeTypeRetriever>();
             services.AddSingleton<SerializerService>();
         }
 

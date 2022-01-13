@@ -1,12 +1,7 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
 namespace commercetools.Api.Client.RequestBuilders.Customers
@@ -99,5 +94,6 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerPagedQueryResponse>(requestMessage);
         }
+
     }
 }

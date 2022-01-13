@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -30,6 +26,8 @@ namespace commercetools.Api.Models.Payments
     [SubTypeDiscriminator("setMethodInfoName", typeof(commercetools.Api.Models.Payments.PaymentSetMethodInfoNameAction))]
     [SubTypeDiscriminator("setStatusInterfaceCode", typeof(commercetools.Api.Models.Payments.PaymentSetStatusInterfaceCodeAction))]
     [SubTypeDiscriminator("setStatusInterfaceText", typeof(commercetools.Api.Models.Payments.PaymentSetStatusInterfaceTextAction))]
+    [SubTypeDiscriminator("setTransactionCustomField", typeof(commercetools.Api.Models.Payments.PaymentSetTransactionCustomFieldAction))]
+    [SubTypeDiscriminator("setTransactionCustomType", typeof(commercetools.Api.Models.Payments.PaymentSetTransactionCustomTypeAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Api.Models.Payments.PaymentTransitionStateAction))]
     public partial interface IPaymentUpdateAction
     {

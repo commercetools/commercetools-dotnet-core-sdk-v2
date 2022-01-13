@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -31,6 +27,7 @@ namespace commercetools.Api.Models.Me
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Api.Models.Me.MyCartSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Api.Models.Me.MyCartSetLineItemDistributionChannelAction))]
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Api.Models.Me.MyCartSetLineItemShippingDetailsAction))]
+    [SubTypeDiscriminator("setLineItemSupplyChannel", typeof(commercetools.Api.Models.Me.MyCartSetLineItemSupplyChannelAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Api.Models.Me.MyCartSetLocaleAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Api.Models.Me.MyCartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingMethod", typeof(commercetools.Api.Models.Me.MyCartSetShippingMethodAction))]

@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public class IProductVariantChannelAvailabilityMap : Dictionary<string, IProductVariantChannelAvailability>
+    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariantChannelAvailabilityMap))]
+    public interface IProductVariantChannelAvailabilityMap : IDictionary<string, IProductVariantChannelAvailability>
     {
     }
 }

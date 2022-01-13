@@ -1,9 +1,5 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Orders;
 
 namespace commercetools.Api.Client.RequestBuilders.Orders
 {
@@ -53,6 +49,11 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
         public ByProjectKeyOrdersByIDRequestBuilder WithId(string ID)
         {
             return new ByProjectKeyOrdersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
+
+        public ByProjectKeyOrdersSearchRequestBuilder Search()
+        {
+            return new ByProjectKeyOrdersSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

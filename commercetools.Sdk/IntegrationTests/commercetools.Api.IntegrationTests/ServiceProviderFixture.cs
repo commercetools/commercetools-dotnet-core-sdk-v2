@@ -1,5 +1,7 @@
-﻿using commercetools.Base.Client;
+﻿using commercetools.Api.Models.Errors;
+using commercetools.Base.Client;
 using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -25,6 +27,11 @@ namespace commercetools.Api.IntegrationTests
 
             services.UseCommercetoolsApi(configuration, "Client");
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
+            services.SetupClient(
+                "MeClient",
+                errorTypeMapper => typeof(ErrorResponse),
+                s => s.GetService<SerializerService>()
+            );
             this.serviceProvider = services.BuildServiceProvider();
 
             //set default ProjectKey

@@ -1,12 +1,8 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 using commercetools.HistoryApi.Models;
 
 namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
@@ -60,7 +56,7 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("userId");
         }
 
-        public List<string> GetType()
+        public new List<string> GetType()
         {
             return this.GetQueryParam("type");
         }
@@ -161,5 +157,6 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.HistoryApi.Models.IRecordPagedQueryResponse>(requestMessage);
         }
+
     }
 }

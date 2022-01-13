@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
 {
-    public class ISuggestionResult : Dictionary<string, List<ISuggestion>>
+    [DeserializeAs(typeof(commercetools.Api.Models.Products.SuggestionResult))]
+    public interface ISuggestionResult : IDictionary<string, List<ISuggestion>>
     {
     }
 }

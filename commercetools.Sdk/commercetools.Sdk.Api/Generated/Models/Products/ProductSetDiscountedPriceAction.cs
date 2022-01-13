@@ -1,10 +1,4 @@
 using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.Products
@@ -17,7 +11,7 @@ namespace commercetools.Api.Models.Products
 
         public bool? Staged { get; set; }
 
-        public IDiscountedPrice Discounted { get; set; }
+        public IDiscountedPriceDraft Discounted { get; set; }
         public ProductSetDiscountedPriceAction()
         {
             this.Action = "setDiscountedPrice";

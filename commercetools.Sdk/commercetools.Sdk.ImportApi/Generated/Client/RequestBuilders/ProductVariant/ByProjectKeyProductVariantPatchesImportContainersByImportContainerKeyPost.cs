@@ -1,10 +1,6 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -45,7 +41,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductVariant
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -59,5 +54,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductVariant
             }
             return request;
         }
+
     }
 }

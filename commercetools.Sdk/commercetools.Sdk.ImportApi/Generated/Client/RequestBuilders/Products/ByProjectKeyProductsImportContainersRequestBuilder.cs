@@ -1,9 +1,5 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.ImportApi.Client.RequestBuilders.Products;
 
 namespace commercetools.ImportApi.Client.RequestBuilders.Products
 {

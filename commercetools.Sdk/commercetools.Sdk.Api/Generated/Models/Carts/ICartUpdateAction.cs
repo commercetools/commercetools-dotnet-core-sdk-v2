@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -57,6 +53,7 @@ namespace commercetools.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
     [SubTypeDiscriminator("setLineItemPrice", typeof(commercetools.Api.Models.Carts.CartSetLineItemPriceAction))]
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
+    [SubTypeDiscriminator("setLineItemSupplyChannel", typeof(commercetools.Api.Models.Carts.CartSetLineItemSupplyChannelAction))]
     [SubTypeDiscriminator("setLineItemTaxAmount", typeof(commercetools.Api.Models.Carts.CartSetLineItemTaxAmountAction))]
     [SubTypeDiscriminator("setLineItemTaxRate", typeof(commercetools.Api.Models.Carts.CartSetLineItemTaxRateAction))]
     [SubTypeDiscriminator("setLineItemTotalPrice", typeof(commercetools.Api.Models.Carts.CartSetLineItemTotalPriceAction))]

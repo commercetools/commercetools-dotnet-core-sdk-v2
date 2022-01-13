@@ -1,6 +1,3 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -29,6 +26,11 @@ namespace commercetools.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsKeyByKeyGet Get()
         {
             return new ByProjectKeyProductsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
+        }
+
+        public ByProjectKeyProductsKeyByKeyHead Head()
+        {
+            return new ByProjectKeyProductsKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
         }
 
         public ByProjectKeyProductsKeyByKeyPost Post(commercetools.Api.Models.Products.IProductUpdate productUpdate)

@@ -1,6 +1,3 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,7 +42,6 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -59,5 +55,6 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             }
             return request;
         }
+
     }
 }

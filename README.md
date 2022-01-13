@@ -233,10 +233,6 @@ public async Task CreatingRequests()
 You can get a client from injected services or you can create client on the fly using ClientFactory, 
 the example below illustrate how to create a client with password TokenFlow to get customer's orders:
 
-
-### Migration Guidelines
-To migrate from the 1.x to the 2.x, there is a guideline below:
-* [Migration guidelines from v1 to v2](COMPARISON.md)
 ```c#
 private readonly IServiceProvider serviceProvider;
         
@@ -285,3 +281,16 @@ public async Task ExecuteAsync()
             .ExecuteAsync();
 }
 ```
+If you are going to create the client using the ClientFactory, Don't forget to call 
+SetupClient extension method [here](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs#L92) while building 
+the services container to attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
+```c#
+services.SetupClient(
+                "MeClient",
+                errorTypeMapper => typeof(ErrorResponse),
+                s => s.GetService<SerializerService>()
+            );
+```
+### Migration Guidelines
+To migrate from the 1.x to the 2.x, there is a guideline below:
+* [Migration guidelines from v1 to v2](COMPARISON.md)

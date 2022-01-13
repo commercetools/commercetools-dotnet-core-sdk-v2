@@ -1,10 +1,7 @@
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Orders;
-using System;
+using commercetools.Api.Models.Types;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.OrderEdits
@@ -18,6 +15,8 @@ namespace commercetools.Api.Models.OrderEdits
         public IBaseAddress Address { get; set; }
 
         public List<IParcelDraft> Parcels { get; set; }
+
+        public ICustomFields Custom { get; set; }
         public StagedOrderAddDeliveryAction()
         {
             this.Action = "addDelivery";

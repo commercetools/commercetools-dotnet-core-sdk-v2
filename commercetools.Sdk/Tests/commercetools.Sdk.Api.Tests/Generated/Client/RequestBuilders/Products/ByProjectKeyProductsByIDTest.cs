@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
 namespace commercetools.Api.Tests.Client.RequestBuilders.Products
@@ -106,6 +103,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/products/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/products/test_ID",
                },
                new Object[] {

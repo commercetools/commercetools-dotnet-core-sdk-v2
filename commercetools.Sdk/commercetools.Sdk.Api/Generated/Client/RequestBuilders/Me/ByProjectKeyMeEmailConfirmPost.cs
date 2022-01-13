@@ -1,8 +1,4 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using commercetools.Base.Client;
@@ -40,5 +36,6 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
         }
+
     }
 }

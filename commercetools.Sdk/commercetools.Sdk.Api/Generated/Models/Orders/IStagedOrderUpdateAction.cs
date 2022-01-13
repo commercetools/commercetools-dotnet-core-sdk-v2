@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
@@ -54,6 +50,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setDeliveryAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryAddressAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomField", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryAddressCustomFieldAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomType", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setDeliveryCustomField", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomFieldAction))]
+    [SubTypeDiscriminator("setDeliveryCustomType", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomTypeAction))]
     [SubTypeDiscriminator("setDeliveryItems", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryItemsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomTypeAction))]
@@ -71,6 +69,7 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setParcelItems", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelItemsAction))]
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]
+    [SubTypeDiscriminator("setReturnInfo", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnInfoAction))]
     [SubTypeDiscriminator("setReturnPaymentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnPaymentStateAction))]
     [SubTypeDiscriminator("setReturnShipmentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnShipmentStateAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingAddressAction))]

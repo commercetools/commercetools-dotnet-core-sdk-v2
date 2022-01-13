@@ -1,10 +1,6 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -42,7 +38,6 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICart>(requestMessage);
         }
-
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
@@ -56,5 +51,6 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
             }
             return request;
         }
+
     }
 }

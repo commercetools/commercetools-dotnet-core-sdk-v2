@@ -1,9 +1,5 @@
-using System;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Products;
 
 namespace commercetools.Api.Client.RequestBuilders.Products
 {
@@ -30,6 +26,11 @@ namespace commercetools.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsByIDGet Get()
         {
             return new ByProjectKeyProductsByIDGet(ApiHttpClient, ProjectKey, ID);
+        }
+
+        public ByProjectKeyProductsByIDHead Head()
+        {
+            return new ByProjectKeyProductsByIDHead(ApiHttpClient, ProjectKey, ID);
         }
 
         public ByProjectKeyProductsByIDPost Post(commercetools.Api.Models.Products.IProductUpdate productUpdate)

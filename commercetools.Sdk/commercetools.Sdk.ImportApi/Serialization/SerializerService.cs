@@ -1,9 +1,6 @@
 ﻿using System.Text.Json;
-using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using commercetools.Base.Serialization;
-using commercetools.Base.Serialization.MapperTypeRetrievers;
-using commercetools.Sdk.ImportApi.Serialization.JsonConverters;
 using Type = System.Type;
 
 namespace commercetools.Sdk.ImportApi.Serialization
@@ -26,7 +23,6 @@ namespace commercetools.Sdk.ImportApi.Serialization
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new TypeDiscriminatorConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
-            _serializerOptions.Converters.Add(new OperationStatesConverter());
         }
 
         public T Deserialize<T>(string input)

@@ -1,9 +1,5 @@
-using commercetools.ImportApi.Models.Errors;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.ImportApi.Models.Errors
@@ -19,6 +15,8 @@ namespace commercetools.ImportApi.Models.Errors
         public Object InvalidValue { get; set; }
 
         public List<Object> AllowedValues { get; set; }
+
+        public long? ResourceIndex { get; set; }
         public InvalidFieldError()
         {
             this.Code = "InvalidField";

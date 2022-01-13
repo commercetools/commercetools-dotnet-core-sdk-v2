@@ -1,6 +1,4 @@
-using System;
-using System.IO;
-using System.Text.Json;
+using System.Collections.Generic;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -23,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyProductProjectionsSearchPost Post(JsonElement? jsonNode)
+        public ByProjectKeyProductProjectionsSearchPost Post(List<KeyValuePair<string, string>> formParams = null)
         {
-            return new ByProjectKeyProductProjectionsSearchPost(ApiHttpClient, SerializerService, ProjectKey, jsonNode);
+            return new ByProjectKeyProductProjectionsSearchPost(ApiHttpClient, SerializerService, ProjectKey, formParams);
         }
 
         public ByProjectKeyProductProjectionsSearchGet Get()

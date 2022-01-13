@@ -1,11 +1,7 @@
-using commercetools.Api.Models.CartDiscounts;
 using commercetools.Api.Models.Common;
 using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
 namespace commercetools.Api.Models.CartDiscounts
@@ -30,7 +26,7 @@ namespace commercetools.Api.Models.CartDiscounts
 
         public ILocalizedString Description { get; set; }
 
-        public ICartDiscountValueDraft Value { get; set; }
+        public ICartDiscountValue Value { get; set; }
 
         public string CartPredicate { get; set; }
 
