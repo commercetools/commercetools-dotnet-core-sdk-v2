@@ -7,6 +7,8 @@ namespace commercetools.Api.Models.Payments
     {
         public string Action { get; set; }
 
+        public string TransactionId { get; set; }
+
         public string Name { get; set; }
 
         public Object Value { get; set; }
