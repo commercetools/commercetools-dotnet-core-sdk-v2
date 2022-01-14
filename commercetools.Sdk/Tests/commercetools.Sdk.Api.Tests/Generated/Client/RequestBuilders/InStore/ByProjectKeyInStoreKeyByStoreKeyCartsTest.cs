@@ -24,17 +24,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .Carts()
                    .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/in-store/key=test_storeKey/carts?customerId=customerId",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .InStoreKeyWithStoreKeyValue("test_storeKey")
-                   .Carts()
-                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

@@ -24,11 +24,6 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
             this.RequestUrl = $"/{ProjectKey}/carts";
         }
 
-        public List<string> GetCustomerId()
-        {
-            return this.GetQueryParam("customerId");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -57,11 +52,6 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
-        }
-
-        public ByProjectKeyCartsGet WithCustomerId(string customerId)
-        {
-            return this.AddQueryParam("customerId", customerId);
         }
 
         public ByProjectKeyCartsGet WithExpand(string expand)

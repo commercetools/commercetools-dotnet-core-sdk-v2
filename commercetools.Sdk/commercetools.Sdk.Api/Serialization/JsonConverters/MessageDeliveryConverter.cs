@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
 {
-    public class MessageDeliveryConverter: JsonConverter<MessageDelivery>
+    public class MessageDeliveryConverter : JsonConverter<MessageDelivery>
     {
         private readonly ISerializerService _serializerService;
 
