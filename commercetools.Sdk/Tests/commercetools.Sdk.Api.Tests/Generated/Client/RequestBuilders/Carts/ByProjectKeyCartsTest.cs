@@ -23,16 +23,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Carts
                    .WithProjectKey("test_projectKey")
                    .Carts()
                    .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/carts?customerId=customerId",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Carts()
-                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

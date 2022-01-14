@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -26,11 +25,6 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/carts";
-        }
-
-        public List<string> GetCustomerId()
-        {
-            return this.GetQueryParam("customerId");
         }
 
         public List<string> GetExpand()
@@ -61,11 +55,6 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyCartsGet WithCustomerId(string customerId)
-        {
-            return this.AddQueryParam("customerId", customerId);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyCartsGet WithExpand(string expand)
@@ -103,10 +92,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<Object> ExecuteAsync()
+        public async Task<commercetools.Api.Models.Carts.ICartPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Object>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICartPagedQueryResponse>(requestMessage);
         }
 
     }
