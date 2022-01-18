@@ -66,6 +66,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLocaleAction))]
     [SubTypeDiscriminator("setOrderNumber", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetOrderNumberAction))]
     [SubTypeDiscriminator("setOrderTotalTax", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetOrderTotalTaxAction))]
+    [SubTypeDiscriminator("setParcelCustomField", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelCustomFieldAction))]
+    [SubTypeDiscriminator("setParcelCustomType", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelCustomTypeAction))]
     [SubTypeDiscriminator("setParcelItems", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelItemsAction))]
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]

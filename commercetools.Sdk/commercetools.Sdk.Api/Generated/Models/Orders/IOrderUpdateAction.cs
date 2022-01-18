@@ -42,6 +42,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Api.Models.Orders.OrderSetLineItemShippingDetailsAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Api.Models.Orders.OrderSetLocaleAction))]
     [SubTypeDiscriminator("setOrderNumber", typeof(commercetools.Api.Models.Orders.OrderSetOrderNumberAction))]
+    [SubTypeDiscriminator("setParcelCustomField", typeof(commercetools.Api.Models.Orders.OrderSetParcelCustomFieldAction))]
+    [SubTypeDiscriminator("setParcelCustomType", typeof(commercetools.Api.Models.Orders.OrderSetParcelCustomTypeAction))]
     [SubTypeDiscriminator("setParcelItems", typeof(commercetools.Api.Models.Orders.OrderSetParcelItemsAction))]
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Api.Models.Orders.OrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Api.Models.Orders.OrderSetParcelTrackingDataAction))]
