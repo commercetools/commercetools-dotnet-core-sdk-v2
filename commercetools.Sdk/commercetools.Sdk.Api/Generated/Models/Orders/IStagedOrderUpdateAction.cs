@@ -72,6 +72,8 @@ namespace commercetools.Api.Models.Orders
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]
     [SubTypeDiscriminator("setReturnInfo", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnInfoAction))]
+    [SubTypeDiscriminator("setReturnItemCustomField", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnItemCustomFieldAction))]
+    [SubTypeDiscriminator("setReturnItemCustomType", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnItemCustomTypeAction))]
     [SubTypeDiscriminator("setReturnPaymentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnPaymentStateAction))]
     [SubTypeDiscriminator("setReturnShipmentState", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetReturnShipmentStateAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingAddressAction))]
