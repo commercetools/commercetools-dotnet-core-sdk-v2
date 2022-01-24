@@ -8,5 +8,7 @@ namespace commercetools.Api.Models.Channels
     public partial interface IChannelReference : IReference
     {
         IChannel Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

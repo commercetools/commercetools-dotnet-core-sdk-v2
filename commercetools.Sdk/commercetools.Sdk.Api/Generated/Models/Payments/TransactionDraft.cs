@@ -17,6 +17,6 @@ namespace commercetools.Api.Models.Payments
 
         public ITransactionState State { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace commercetools.Api.Models.Me
 
         public string LineItemId { get; set; }
 
-        public IChannelResourceIdentifier DistributionChannel { get; set; }
+        public IChannelResourceIdentifier SupplyChannel { get; set; }
         public MyCartSetLineItemSupplyChannelAction()
         {
             this.Action = "setLineItemSupplyChannel";
