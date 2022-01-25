@@ -1,5 +1,6 @@
 using commercetools.Api.Models.Channels;
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Stores;
 using commercetools.Api.Models.Types;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
@@ -17,6 +18,8 @@ namespace commercetools.Api.Models.Messages
         List<IChannelReference> DistributionChannels { get; set; }
 
         List<IChannelReference> SupplyChannels { get; set; }
+
+        List<IProductSelectionSetting> ProductSelections { get; set; }
 
         ICustomFields Custom { get; set; }
     }

@@ -1,0 +1,78 @@
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using commercetools.Base.Client;
+
+
+namespace commercetools.Api.Client.RequestBuilders.ProductSelections
+{
+    public partial class ByProjectKeyProductSelectionsByIDProductsGet : ApiMethod<ByProjectKeyProductSelectionsByIDProductsGet>
+    {
+
+
+        private IClient ApiHttpClient { get; }
+
+        public override HttpMethod Method => HttpMethod.Get;
+
+        private string ProjectKey { get; }
+
+        private string ID { get; }
+
+
+        public ByProjectKeyProductSelectionsByIDProductsGet(IClient apiHttpClient, string projectKey, string id)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.ProjectKey = projectKey;
+            this.ID = id;
+            this.RequestUrl = $"/{ProjectKey}/product-selections/{ID}/products";
+        }
+
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
+
+        public List<string> GetLimit()
+        {
+            return this.GetQueryParam("limit");
+        }
+
+        public List<string> GetOffset()
+        {
+            return this.GetQueryParam("offset");
+        }
+
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
+        public ByProjectKeyProductSelectionsByIDProductsGet WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyProductSelectionsByIDProductsGet WithLimit(int limit)
+        {
+            return this.AddQueryParam("limit", limit.ToString());
+        }
+
+        public ByProjectKeyProductSelectionsByIDProductsGet WithOffset(int offset)
+        {
+            return this.AddQueryParam("offset", offset.ToString());
+        }
+
+        public ByProjectKeyProductSelectionsByIDProductsGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+
+        public async Task<commercetools.Api.Models.ProductSelections.IProductSelectionProductPagedQueryResponse> ExecuteAsync()
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductSelections.IProductSelectionProductPagedQueryResponse>(requestMessage);
+        }
+
+    }
+}

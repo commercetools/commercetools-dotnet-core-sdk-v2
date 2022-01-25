@@ -15,6 +15,6 @@ namespace commercetools.Api.Models.Orders
 
         public IReturnShipmentState ShipmentState { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }
