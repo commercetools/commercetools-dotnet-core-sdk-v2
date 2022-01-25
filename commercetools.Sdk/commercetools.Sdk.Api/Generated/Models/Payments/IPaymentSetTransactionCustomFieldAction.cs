@@ -7,6 +7,8 @@ namespace commercetools.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetTransactionCustomFieldAction))]
     public partial interface IPaymentSetTransactionCustomFieldAction : IPaymentUpdateAction
     {
+        string TransactionId { get; set; }
+
         string Name { get; set; }
 
         Object Value { get; set; }

@@ -9,6 +9,6 @@ namespace commercetools.Api.Models.Me
     {
         string LineItemId { get; set; }
 
-        IChannelResourceIdentifier DistributionChannel { get; set; }
+        IChannelResourceIdentifier SupplyChannel { get; set; }
     }
 }

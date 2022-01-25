@@ -75,6 +75,10 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ProductPublished", typeof(commercetools.Api.Models.Messages.ProductPublishedMessagePayload))]
     [SubTypeDiscriminator("ProductRemovedFromCategory", typeof(commercetools.Api.Models.Messages.ProductRemovedFromCategoryMessagePayload))]
     [SubTypeDiscriminator("ProductRevertedStagedChanges", typeof(commercetools.Api.Models.Messages.ProductRevertedStagedChangesMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionCreated", typeof(commercetools.Api.Models.Messages.ProductSelectionCreatedMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionDeleted", typeof(commercetools.Api.Models.Messages.ProductSelectionDeletedMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionProductAdded", typeof(commercetools.Api.Models.Messages.ProductSelectionProductAddedMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionProductRemoved", typeof(commercetools.Api.Models.Messages.ProductSelectionProductRemovedMessagePayload))]
     [SubTypeDiscriminator("ProductSlugChanged", typeof(commercetools.Api.Models.Messages.ProductSlugChangedMessagePayload))]
     [SubTypeDiscriminator("ProductStateTransition", typeof(commercetools.Api.Models.Messages.ProductStateTransitionMessagePayload))]
     [SubTypeDiscriminator("ProductUnpublished", typeof(commercetools.Api.Models.Messages.ProductUnpublishedMessagePayload))]
@@ -88,6 +92,7 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ShoppingListStoreSet", typeof(commercetools.Api.Models.Messages.ShoppingListStoreSetMessagePayload))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Api.Models.Messages.StoreCreatedMessagePayload))]
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessagePayload))]
+    [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
     public partial interface IMessagePayload
     {
         string Type { get; set; }

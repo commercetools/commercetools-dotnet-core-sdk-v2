@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
@@ -17,5 +18,7 @@ namespace commercetools.Api.Models.Orders
         ITrackingData TrackingData { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }

@@ -77,6 +77,10 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ProductPublished", typeof(commercetools.Api.Models.Messages.ProductPublishedMessage))]
     [SubTypeDiscriminator("ProductRemovedFromCategory", typeof(commercetools.Api.Models.Messages.ProductRemovedFromCategoryMessage))]
     [SubTypeDiscriminator("ProductRevertedStagedChanges", typeof(commercetools.Api.Models.Messages.ProductRevertedStagedChangesMessage))]
+    [SubTypeDiscriminator("ProductSelectionCreated", typeof(commercetools.Api.Models.Messages.ProductSelectionCreatedMessage))]
+    [SubTypeDiscriminator("ProductSelectionDeleted", typeof(commercetools.Api.Models.Messages.ProductSelectionDeletedMessage))]
+    [SubTypeDiscriminator("ProductSelectionProductAdded", typeof(commercetools.Api.Models.Messages.ProductSelectionProductAddedMessage))]
+    [SubTypeDiscriminator("ProductSelectionProductRemoved", typeof(commercetools.Api.Models.Messages.ProductSelectionProductRemovedMessage))]
     [SubTypeDiscriminator("ProductSlugChanged", typeof(commercetools.Api.Models.Messages.ProductSlugChangedMessage))]
     [SubTypeDiscriminator("ProductStateTransition", typeof(commercetools.Api.Models.Messages.ProductStateTransitionMessage))]
     [SubTypeDiscriminator("ProductUnpublished", typeof(commercetools.Api.Models.Messages.ProductUnpublishedMessage))]
@@ -89,6 +93,7 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Api.Models.Messages.ReviewStateTransitionMessage))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Api.Models.Messages.StoreCreatedMessage))]
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Api.Models.Messages.StoreDeletedMessage))]
+    [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Api.Models.Messages.StoreProductSelectionsChangedMessage))]
     public partial interface IMessage : IBaseResource
     {
         new string Id { get; set; }

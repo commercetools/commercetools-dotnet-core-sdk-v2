@@ -17,6 +17,7 @@ using commercetools.Api.Client.RequestBuilders.Payments;
 using commercetools.Api.Client.RequestBuilders.Products;
 using commercetools.Api.Client.RequestBuilders.ProductDiscounts;
 using commercetools.Api.Client.RequestBuilders.ProductProjections;
+using commercetools.Api.Client.RequestBuilders.ProductSelections;
 using commercetools.Api.Client.RequestBuilders.ProductTypes;
 using commercetools.Api.Client.RequestBuilders.Reviews;
 using commercetools.Api.Client.RequestBuilders.ShippingMethods;
@@ -145,6 +146,11 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
         public ByProjectKeyProductProjectionsRequestBuilder ProductProjections()
         {
             return new ByProjectKeyProductProjectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
+        {
+            return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyProductTypesRequestBuilder ProductTypes()

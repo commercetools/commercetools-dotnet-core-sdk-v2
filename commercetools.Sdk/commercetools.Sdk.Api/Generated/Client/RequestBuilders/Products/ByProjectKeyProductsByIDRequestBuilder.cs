@@ -48,5 +48,10 @@ namespace commercetools.Api.Client.RequestBuilders.Products
         {
             return new ByProjectKeyProductsByIDImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyProductsByIDProductSelectionsRequestBuilder ProductSelections()
+        {
+            return new ByProjectKeyProductsByIDProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
     }
 }

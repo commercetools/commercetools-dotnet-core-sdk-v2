@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
@@ -21,6 +22,8 @@ namespace commercetools.Api.Models.Orders
         IReturnShipmentState ShipmentState { get; set; }
 
         IReturnPaymentState PaymentState { get; set; }
+
+        ICustomFields Custom { get; set; }
 
         DateTime LastModifiedAt { get; set; }
 

@@ -1,3 +1,4 @@
+using commercetools.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,5 +16,7 @@ namespace commercetools.Api.Models.Orders
         string Comment { get; set; }
 
         IReturnShipmentState ShipmentState { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
     }
 }

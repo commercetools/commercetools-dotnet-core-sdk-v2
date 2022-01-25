@@ -18,6 +18,8 @@ namespace commercetools.Api.Models.Stores
 
         public List<IChannelResourceIdentifier> SupplyChannels { get; set; }
 
+        public List<IProductSelectionSettingDraft> ProductSelections { get; set; }
+
         public ICustomFieldsDraft Custom { get; set; }
     }
 }

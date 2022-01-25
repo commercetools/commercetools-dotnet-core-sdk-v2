@@ -19,6 +19,7 @@ namespace commercetools.Api.Models.Common
     [SubTypeDiscriminator("payment", typeof(commercetools.Api.Models.Payments.PaymentReference))]
     [SubTypeDiscriminator("product", typeof(commercetools.Api.Models.Products.ProductReference))]
     [SubTypeDiscriminator("product-discount", typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountReference))]
+    [SubTypeDiscriminator("product-selection", typeof(commercetools.Api.Models.ProductSelections.ProductSelectionReference))]
     [SubTypeDiscriminator("product-type", typeof(commercetools.Api.Models.ProductTypes.ProductTypeReference))]
     [SubTypeDiscriminator("review", typeof(commercetools.Api.Models.Reviews.ReviewReference))]
     [SubTypeDiscriminator("shipping-method", typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodReference))]

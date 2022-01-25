@@ -1,3 +1,6 @@
+using commercetools.Api.Models.Types;
+
+
 namespace commercetools.Api.Models.Orders
 {
     public partial class ReturnItemDraft : IReturnItemDraft
@@ -11,5 +14,7 @@ namespace commercetools.Api.Models.Orders
         public string Comment { get; set; }
 
         public IReturnShipmentState ShipmentState { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }
