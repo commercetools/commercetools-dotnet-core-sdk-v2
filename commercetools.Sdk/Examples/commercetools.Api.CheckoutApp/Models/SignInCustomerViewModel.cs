@@ -9,17 +9,17 @@ namespace commercetools.Api.CheckoutApp.Models
         [Required(ErrorMessage = "The email address is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
-        
+
         [Required(ErrorMessage = "The password is required")]
         [PasswordPropertyText]
         public string Password { get; set; }
-        
+
         public bool FailedLogin { get; set; }
         public bool EmailNotVerified { get; set; }
 
         public SignInCustomerViewModel()
         {
-            
+
         }
 
         public SignInCustomerViewModel(CustomerProfileViewModel profile)

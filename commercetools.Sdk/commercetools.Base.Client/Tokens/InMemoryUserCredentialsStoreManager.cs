@@ -9,7 +9,7 @@ namespace commercetools.Base.Client.Tokens
         {
             this.Username = username;
             this.Password = password;
-            this.ClearToken(); 
+            this.ClearToken();
         }
 
         public void ClearCredentialsAndToken()

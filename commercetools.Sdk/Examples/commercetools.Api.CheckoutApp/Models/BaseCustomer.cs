@@ -15,7 +15,7 @@ namespace commercetools.Api.CheckoutApp.Models
 
         public BaseCustomer()
         {
-            
+
         }
         public BaseCustomer(ICustomer customer)
         {

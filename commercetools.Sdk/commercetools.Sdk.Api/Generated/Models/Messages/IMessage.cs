@@ -48,6 +48,7 @@ namespace commercetools.Api.Models.Messages
     [SubTypeDiscriminator("OrderLineItemDiscountSet", typeof(commercetools.Api.Models.Messages.OrderLineItemDiscountSetMessage))]
     [SubTypeDiscriminator("OrderLineItemDistributionChannelSet", typeof(commercetools.Api.Models.Messages.OrderLineItemDistributionChannelSetMessage))]
     [SubTypeDiscriminator("OrderLineItemRemoved", typeof(commercetools.Api.Models.Messages.OrderLineItemRemovedMessage))]
+    [SubTypeDiscriminator("OrderPaymentAdded", typeof(commercetools.Api.Models.Messages.OrderPaymentAddedMessage))]
     [SubTypeDiscriminator("OrderPaymentStateChanged", typeof(commercetools.Api.Models.Messages.OrderPaymentStateChangedMessage))]
     [SubTypeDiscriminator("OrderReturnShipmentStateChanged", typeof(commercetools.Api.Models.Messages.OrderReturnShipmentStateChangedMessage))]
     [SubTypeDiscriminator("OrderShipmentStateChanged", typeof(commercetools.Api.Models.Messages.OrderShipmentStateChangedMessage))]

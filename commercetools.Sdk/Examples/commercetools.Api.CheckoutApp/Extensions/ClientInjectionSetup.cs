@@ -5,7 +5,6 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -39,13 +38,13 @@ namespace commercetools.Api.CheckoutApp.Extensions
                 client.Name = clientName;
                 return client;
             });
-            
+
             //Add the httpClient and setup the Middlewares
-            return services.SetupClient(clientName, 
-                errorTypeMapper => typeof(ErrorResponse), 
+            return services.SetupClient(clientName,
+                errorTypeMapper => typeof(ErrorResponse),
                 serviceProvider => serviceProvider.GetService<SerializerService>());
         }
-        
+
 
         /// <summary>
         /// Inject two instance, one for IAnonymousCredentialsStoreManager and other for IUserCredentialsStoreManager
@@ -61,14 +60,14 @@ namespace commercetools.Api.CheckoutApp.Extensions
             {
                 var inCookiesStoreManager = serviceProvider.GetService<InCookiesStoreManager>();
                 var inSessionStoreManager = serviceProvider.GetService<InSessionStoreManager>();
-                var anonymousIdStore = new InSessionAnonymousCredentialsStoreManager(inSessionStoreManager,inCookiesStoreManager);
+                var anonymousIdStore = new InSessionAnonymousCredentialsStoreManager(inSessionStoreManager, inCookiesStoreManager);
                 return anonymousIdStore;
             });
             services.AddScoped<IUserCredentialsStoreManager>(serviceProvider =>
             {
                 var inCookiesStoreManager = serviceProvider.GetService<InCookiesStoreManager>();
                 var inSessionStoreManager = serviceProvider.GetService<InSessionStoreManager>();
-                var userCredentialsStore = new InSessionUserCredentialsStoreManager(inSessionStoreManager,inCookiesStoreManager);
+                var userCredentialsStore = new InSessionUserCredentialsStoreManager(inSessionStoreManager, inCookiesStoreManager);
                 return userCredentialsStore;
             });
         }
@@ -80,7 +79,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
         /// <param name="clientName"></param>
         /// <param name="configuration"></param>
         public static void UseScopedTokenProvider(this IServiceCollection services,
-            string clientName, 
+            string clientName,
             IConfiguration configuration)
         {
             services.AddScoped(serviceProvider =>
@@ -100,7 +99,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
                     var anonymousIdStore = serviceProvider.GetService<IAnonymousCredentialsStoreManager>();
                     if (anonymousIdStore != null && anonymousIdStore.Token == null)
                     {
-                        anonymousIdStore.AnonymousId = Guid.NewGuid().ToString();    
+                        anonymousIdStore.AnonymousId = Guid.NewGuid().ToString();
                     }
                     tokenProvider = TokenProviderFactory.CreateAnonymousSessionTokenProvider(
                         clientConfiguration, httpClientFactory, anonymousIdStore);
@@ -108,7 +107,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
                 return tokenProvider;
             });
         }
-        
+
         public static TokenFlow GetCurrentTokenFlow(IServiceProvider serviceProvider)
         {
             var tokenFlow = TokenFlow.AnonymousSession;
