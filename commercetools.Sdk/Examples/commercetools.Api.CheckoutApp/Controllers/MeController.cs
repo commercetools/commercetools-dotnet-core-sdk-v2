@@ -47,6 +47,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         
         public async Task<IActionResult> Logout()
         {
+            await Task.CompletedTask;
             _userCredentialsStore.ClearCredentialsAndToken();
             return RedirectToAction("Index", "Home");
         }
