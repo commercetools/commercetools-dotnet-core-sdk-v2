@@ -11,7 +11,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
     {
 
         public InSessionAnonymousCredentialsStoreManager(
-            InSessionStoreManager inSessionStoreManager,InCookiesStoreManager inCookiesStoreManager)
+            InSessionStoreManager inSessionStoreManager, InCookiesStoreManager inCookiesStoreManager)
             : base(inCookiesStoreManager, inSessionStoreManager)
         {
         }
@@ -19,7 +19,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
         public string AnonymousId
         {
             get => InSessionStoreManager.GetFromSession(Settings.AnonymousKey);
-            set => InSessionStoreManager.SetInSession(Settings.AnonymousKey,value);
+            set => InSessionStoreManager.SetInSession(Settings.AnonymousKey, value);
         }
     }
 }

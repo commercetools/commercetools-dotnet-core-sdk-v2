@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Api.CheckoutApp.Models;
@@ -77,8 +76,8 @@ namespace commercetools.Api.CheckoutApp.Services
                     .Get()
                     .ExecuteAsync();
             }
-            catch (NotFoundException){}
-            
+            catch (NotFoundException) { }
+
             return cart;
         }
 
@@ -104,7 +103,7 @@ namespace commercetools.Api.CheckoutApp.Services
             return myCartModel;
         }
 
-        public async Task<ICart> DeleteLineItem(string lineItemId, int quantity=1)
+        public async Task<ICart> DeleteLineItem(string lineItemId, int quantity = 1)
         {
             var myCart = await GetActiveCart();
             var update = new MyCartUpdate

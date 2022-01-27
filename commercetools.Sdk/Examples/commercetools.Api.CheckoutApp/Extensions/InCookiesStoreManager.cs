@@ -12,8 +12,8 @@ namespace commercetools.Api.CheckoutApp.Extensions
         {
             this._httpContextAccessor = httpContextAccessor;
         }
-        
-        public void SetInCookie(string key,string value)
+
+        public void SetInCookie(string key, string value)
         {
             var response = _httpContextAccessor?.HttpContext?.Response;
             response?.Cookies.Append(key, value,
