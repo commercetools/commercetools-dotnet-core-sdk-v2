@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Products;
 
 namespace commercetools.Api.CheckoutApp.Models
@@ -12,7 +11,7 @@ namespace commercetools.Api.CheckoutApp.Models
         {
             Products = new List<IProduct>();
         }
-        
+
         public HomeViewModel(List<IProduct> products, CustomerProfileViewModel customerProfile)
         {
             this.Products = products;

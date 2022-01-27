@@ -20,14 +20,14 @@ namespace commercetools.Api.CheckoutApp.Extensions
         public string Username
         {
             get => InSessionStoreManager.GetFromSession(Settings.UserNameKey);
-            set => InSessionStoreManager.SetInSession(Settings.UserNameKey,value);
+            set => InSessionStoreManager.SetInSession(Settings.UserNameKey, value);
         }
-        
+
 
         public string Password
         {
             get => InSessionStoreManager.GetFromSession(Settings.PasswordKey);
-            set => InSessionStoreManager.SetInSession(Settings.PasswordKey,value);
+            set => InSessionStoreManager.SetInSession(Settings.PasswordKey, value);
         }
 
         public void StoreUserCredentialsAndClearToken(string username, string password)

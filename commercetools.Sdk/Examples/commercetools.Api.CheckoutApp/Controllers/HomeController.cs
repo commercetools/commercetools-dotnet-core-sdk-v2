@@ -6,7 +6,6 @@ using commercetools.Api.Models.Products;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
 namespace commercetools.Api.CheckoutApp.Controllers
 {
@@ -16,7 +15,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         public HomeController(IClient client,
             IUserCredentialsStoreManager userCredentialsStore,
             MeServices meServices,
-            CartServices cartServices,ProductServices productServices) 
+            CartServices cartServices, ProductServices productServices)
             : base(client, userCredentialsStore, meServices, cartServices)
         {
             this._productServices = productServices;

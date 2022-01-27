@@ -1,13 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Api.CheckoutApp.Models;
-using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Me;
-using commercetools.Api.Models.Products;
 using commercetools.Base.Client;
-using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 
 namespace commercetools.Api.CheckoutApp.Services
@@ -78,7 +73,7 @@ namespace commercetools.Api.CheckoutApp.Services
             {
                 Console.WriteLine(e);
             }
-            
+
             return customer;
         }
 

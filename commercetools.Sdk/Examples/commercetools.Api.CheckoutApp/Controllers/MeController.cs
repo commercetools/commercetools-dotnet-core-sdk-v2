@@ -12,7 +12,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         public MeController(IClient client,
             MeServices meServices,
             CartServices cartServices,
-            IUserCredentialsStoreManager userCredentialsStoreManager) 
+            IUserCredentialsStoreManager userCredentialsStoreManager)
             : base(client, userCredentialsStoreManager, meServices, cartServices)
         {
         }
@@ -33,10 +33,10 @@ namespace commercetools.Api.CheckoutApp.Controllers
                 {
                     //after signin, the anonymous access token and refresh token are immediately invalid
                     //we need to get new access and refresh tokens with the password flow
-                    _userCredentialsStore.StoreUserCredentialsAndClearToken(model.Email, model.Password); 
+                    _userCredentialsStore.StoreUserCredentialsAndClearToken(model.Email, model.Password);
                     return RedirectToAction("Index", "MyCart");
                 }
-                
+
                 else
                 {
                     model.ResetAfterLoginFailed();
@@ -44,11 +44,11 @@ namespace commercetools.Api.CheckoutApp.Controllers
             }
             return View("SignIn", model);
         }
-        
-        public async Task<IActionResult> Logout()
+
+        public Task<IActionResult> Logout()
         {
             _userCredentialsStore.ClearCredentialsAndToken();
-            return RedirectToAction("Index", "Home");
+            return Task.FromResult(RedirectToAction("Index", "Home"));
         }
     }
 }

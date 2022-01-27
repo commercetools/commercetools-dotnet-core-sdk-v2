@@ -12,11 +12,11 @@ namespace commercetools.Api.CheckoutApp.Extensions
         {
             this._httpContextAccessor = httpContextAccessor;
         }
-        
-        public void SetInSession(string key,string value)
+
+        public void SetInSession(string key, string value)
         {
             var session = _httpContextAccessor?.HttpContext?.Session;
-            session?.SetString(key,value);
+            session?.SetString(key, value);
         }
         public string GetFromSession(string key)
         {
@@ -26,7 +26,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
 
         public bool IsKeyExists(string key)
         {
-            return  _httpContextAccessor?.HttpContext?.Session.Keys.Contains(key) ?? false;
+            return _httpContextAccessor?.HttpContext?.Session.Keys.Contains(key) ?? false;
         }
         public void ClearSession(string key)
         {

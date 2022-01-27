@@ -15,7 +15,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         protected readonly CartServices _cartServices;
 
         public BaseController(IClient client,
-            IUserCredentialsStoreManager userCredentialsStore, 
+            IUserCredentialsStoreManager userCredentialsStore,
             MeServices meServices,
             CartServices cartServices)
         {
