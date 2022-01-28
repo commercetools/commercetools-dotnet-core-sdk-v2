@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.Json;
 using commercetools.Api.Models.Products;
 using commercetools.Api.Models.Types;
 using commercetools.Base.Registration;
@@ -15,6 +17,23 @@ namespace commercetools.Sdk.Api.Serialization
     {
         private readonly JsonSerializerOptions _serializerOptions;
 
+        public static readonly JsonNamingPolicy MappedCamelCase = new MappingCamelCaseNamingPolicy();
+
+        public class MappingCamelCaseNamingPolicy : JsonNamingPolicy
+        {
+            private readonly JsonNamingPolicy _policy = CamelCase;
+
+            private readonly Dictionary<string, string> _fieldMapping = new Dictionary<string, string>
+            {
+                { "POBox", "pOBox" }
+            };
+
+            public override string ConvertName(string name)
+            {
+                return _fieldMapping.ContainsKey(name) ? _fieldMapping[name] : _policy.ConvertName(name);
+            }
+        }
+
         public SerializerService(
             ITypeRetriever typeRetriever,
             IMapperTypeRetriever<IFieldContainer> customFieldsMapperTypeRetriever,
@@ -24,8 +43,9 @@ namespace commercetools.Sdk.Api.Serialization
             _serializerOptions = new JsonSerializerOptions
             {
                 IgnoreNullValues = true,
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                PropertyNamingPolicy = MappedCamelCase
             };
+
             _serializerOptions.Converters.Add(new MessageDeliveryConverter(this));
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new FieldContainerConverter(customFieldsMapperTypeRetriever, this));
