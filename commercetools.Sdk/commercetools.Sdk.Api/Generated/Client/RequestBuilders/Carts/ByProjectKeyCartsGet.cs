@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Carts
 {
-    public partial class ByProjectKeyCartsGet : ApiMethod<ByProjectKeyCartsGet>
+    public partial class ByProjectKeyCartsGet : ApiMethod<ByProjectKeyCartsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCartsGet, commercetools.Api.Models.Carts.ICartPagedQueryResponse>
     {
 
 

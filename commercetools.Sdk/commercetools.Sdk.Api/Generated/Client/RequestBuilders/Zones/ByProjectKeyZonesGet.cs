@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Zones
 {
-    public partial class ByProjectKeyZonesGet : ApiMethod<ByProjectKeyZonesGet>
+    public partial class ByProjectKeyZonesGet : ApiMethod<ByProjectKeyZonesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyZonesGet, commercetools.Api.Models.Zones.IZonePagedQueryResponse>
     {
 
 

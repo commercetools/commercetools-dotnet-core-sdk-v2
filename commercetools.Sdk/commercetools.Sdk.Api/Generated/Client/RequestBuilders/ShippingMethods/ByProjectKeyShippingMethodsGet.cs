@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
 {
-    public partial class ByProjectKeyShippingMethodsGet : ApiMethod<ByProjectKeyShippingMethodsGet>
+    public partial class ByProjectKeyShippingMethodsGet : ApiMethod<ByProjectKeyShippingMethodsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyShippingMethodsGet, commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>
+    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet, commercetools.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>
     {
 
 

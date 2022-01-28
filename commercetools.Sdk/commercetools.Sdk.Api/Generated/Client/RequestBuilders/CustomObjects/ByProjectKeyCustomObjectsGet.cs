@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.CustomObjects
 {
-    public partial class ByProjectKeyCustomObjectsGet : ApiMethod<ByProjectKeyCustomObjectsGet>
+    public partial class ByProjectKeyCustomObjectsGet : ApiMethod<ByProjectKeyCustomObjectsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCustomObjectsGet, commercetools.Api.Models.CustomObjects.ICustomObjectPagedQueryResponse>
     {
 
 

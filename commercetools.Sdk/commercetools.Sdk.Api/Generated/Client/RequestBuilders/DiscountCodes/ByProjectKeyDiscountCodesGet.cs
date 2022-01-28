@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
 {
-    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>
+    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyDiscountCodesGet, commercetools.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>
     {
 
 

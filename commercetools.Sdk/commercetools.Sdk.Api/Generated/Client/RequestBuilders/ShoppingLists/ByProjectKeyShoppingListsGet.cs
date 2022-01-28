@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
 {
-    public partial class ByProjectKeyShoppingListsGet : ApiMethod<ByProjectKeyShoppingListsGet>
+    public partial class ByProjectKeyShoppingListsGet : ApiMethod<ByProjectKeyShoppingListsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyShoppingListsGet, commercetools.Api.Models.ShoppingLists.IShoppingListPagedQueryResponse>
     {
 
 

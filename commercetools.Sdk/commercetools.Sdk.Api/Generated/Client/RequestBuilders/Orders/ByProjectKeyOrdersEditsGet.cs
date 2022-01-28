@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Orders
 {
-    public partial class ByProjectKeyOrdersEditsGet : ApiMethod<ByProjectKeyOrdersEditsGet>
+    public partial class ByProjectKeyOrdersEditsGet : ApiMethod<ByProjectKeyOrdersEditsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyOrdersEditsGet, commercetools.Api.Models.OrderEdits.IOrderEditPagedQueryResponse>
     {
 
 

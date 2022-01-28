@@ -1,10 +1,9 @@
-using System.IO;
 using commercetools.Api.Models.Common;
 using Xunit;
 
 namespace commercetools.Api.Serialization.Tests
 {
-    public class AddressTests: IClassFixture<SerializationFixture>
+    public class AddressTests : IClassFixture<SerializationFixture>
     {
         private readonly SerializationFixture _serializationFixture;
 

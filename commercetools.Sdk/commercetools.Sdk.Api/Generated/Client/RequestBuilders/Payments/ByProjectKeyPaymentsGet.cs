@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Payments
 {
-    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>
+    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyPaymentsGet, commercetools.Api.Models.Payments.IPaymentPagedQueryResponse>
     {
 
 
