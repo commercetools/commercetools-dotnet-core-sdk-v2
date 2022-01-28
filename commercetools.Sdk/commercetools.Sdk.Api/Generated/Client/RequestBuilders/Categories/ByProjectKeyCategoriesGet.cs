@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Categories
 {
-    public partial class ByProjectKeyCategoriesGet : ApiMethod<ByProjectKeyCategoriesGet>
+    public partial class ByProjectKeyCategoriesGet : ApiMethod<ByProjectKeyCategoriesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCategoriesGet, commercetools.Api.Models.Categories.ICategoryPagedQueryResponse>
     {
 
 

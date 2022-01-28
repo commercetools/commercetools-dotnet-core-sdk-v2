@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Messages
 {
-    public partial class ByProjectKeyMessagesGet : ApiMethod<ByProjectKeyMessagesGet>
+    public partial class ByProjectKeyMessagesGet : ApiMethod<ByProjectKeyMessagesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyMessagesGet, commercetools.Api.Models.Messages.IMessagePagedQueryResponse>
     {
 
 

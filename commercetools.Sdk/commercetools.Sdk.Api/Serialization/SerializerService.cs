@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json;
 using commercetools.Api.Models.Products;
 using commercetools.Api.Models.Types;

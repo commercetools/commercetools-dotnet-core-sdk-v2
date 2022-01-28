@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>
+    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>
     {
 
 

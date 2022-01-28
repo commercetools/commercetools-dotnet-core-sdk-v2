@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.TaxCategories
 {
-    public partial class ByProjectKeyTaxCategoriesGet : ApiMethod<ByProjectKeyTaxCategoriesGet>
+    public partial class ByProjectKeyTaxCategoriesGet : ApiMethod<ByProjectKeyTaxCategoriesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet, commercetools.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>
+    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInventoryGet, commercetools.Api.Models.Inventories.IInventoryPagedQueryResponse>
     {
 
 

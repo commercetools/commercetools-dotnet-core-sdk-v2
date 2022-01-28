@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Channels
 {
-    public partial class ByProjectKeyChannelsGet : ApiMethod<ByProjectKeyChannelsGet>
+    public partial class ByProjectKeyChannelsGet : ApiMethod<ByProjectKeyChannelsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyChannelsGet, commercetools.Api.Models.Channels.IChannelPagedQueryResponse>
     {
 
 

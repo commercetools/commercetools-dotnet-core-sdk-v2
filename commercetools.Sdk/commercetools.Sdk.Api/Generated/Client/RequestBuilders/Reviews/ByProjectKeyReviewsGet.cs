@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Reviews
 {
-    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>
+    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyReviewsGet, commercetools.Api.Models.Reviews.IReviewPagedQueryResponse>
     {
 
 

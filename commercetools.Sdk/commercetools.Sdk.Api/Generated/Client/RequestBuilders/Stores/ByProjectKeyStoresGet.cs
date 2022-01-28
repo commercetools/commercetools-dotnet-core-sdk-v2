@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.Stores
 {
-    public partial class ByProjectKeyStoresGet : ApiMethod<ByProjectKeyStoresGet>
+    public partial class ByProjectKeyStoresGet : ApiMethod<ByProjectKeyStoresGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyStoresGet, commercetools.Api.Models.Stores.IStorePagedQueryResponse>
     {
 
 

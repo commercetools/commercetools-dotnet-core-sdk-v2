@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Api.Client.RequestBuilders.ProductProjections
 {
-    public partial class ByProjectKeyProductProjectionsGet : ApiMethod<ByProjectKeyProductProjectionsGet>
+    public partial class ByProjectKeyProductProjectionsGet : ApiMethod<ByProjectKeyProductProjectionsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductProjectionsGet, commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse>
     {
 
 

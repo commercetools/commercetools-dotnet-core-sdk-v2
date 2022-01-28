@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelUpdate))]
-    public partial interface IChannelUpdate
+    public partial interface IChannelUpdate : commercetools.Api.Models.IResourceUpdate<IChannelUpdate, IChannelUpdateAction>
     {
-        long Version { get; set; }
-
-        List<IChannelUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<IChannelUpdateAction> Actions { get; set; }
     }
 }
