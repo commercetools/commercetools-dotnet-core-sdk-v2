@@ -8,5 +8,7 @@ namespace commercetools.Api.Models.States
     public partial interface IStateReference : IReference
     {
         IState Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

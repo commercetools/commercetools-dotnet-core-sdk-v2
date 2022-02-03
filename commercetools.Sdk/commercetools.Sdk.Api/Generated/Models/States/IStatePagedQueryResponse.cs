@@ -9,11 +9,11 @@ namespace commercetools.Api.Models.States
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<IState> Results { get; set; }
     }
