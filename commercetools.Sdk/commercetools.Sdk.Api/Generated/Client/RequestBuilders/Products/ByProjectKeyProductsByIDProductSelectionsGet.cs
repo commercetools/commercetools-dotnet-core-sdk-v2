@@ -92,10 +92,10 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.ProductSelections.IProductSelectionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductSelections.IProductSelectionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse>(requestMessage);
         }
 
     }
