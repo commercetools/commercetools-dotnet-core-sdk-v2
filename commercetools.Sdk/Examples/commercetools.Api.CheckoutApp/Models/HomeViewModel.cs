@@ -5,14 +5,14 @@ namespace commercetools.Api.CheckoutApp.Models
 {
     public class HomeViewModel : CustomerProfileViewModel
     {
-        public List<IProduct> Products { get; set; }
+        public List<IProductProjection> Products { get; set; }
 
         public HomeViewModel()
         {
-            Products = new List<IProduct>();
+            Products = new List<IProductProjection>();
         }
 
-        public HomeViewModel(List<IProduct> products, CustomerProfileViewModel customerProfile)
+        public HomeViewModel(List<IProductProjection> products, CustomerProfileViewModel customerProfile)
         {
             this.Products = products;
             this.ActiveCart = customerProfile?.ActiveCart;

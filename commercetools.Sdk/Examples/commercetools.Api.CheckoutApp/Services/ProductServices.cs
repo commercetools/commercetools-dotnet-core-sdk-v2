@@ -15,11 +15,11 @@ namespace commercetools.Api.CheckoutApp.Services
             _client = client;
         }
 
-        public async Task<List<IProduct>> GetAllProducts()
+        public async Task<List<IProductProjection>> GetAllPublishedProducts()
         {
             var response = await _client
                 .WithApi().WithProjectKey(Settings.ProjectKey)
-                .Products()
+                .ProductProjections()
                 .Get()
                 .ExecuteAsync();
             return response.Results;
