@@ -5,7 +5,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderEditAppliedMessage))]
-    public partial interface IOrderEditAppliedMessage : IMessage
+    public partial interface IOrderEditAppliedMessage : IOrderMessage
     {
         IOrderEditReference Edit { get; set; }
 

@@ -5,7 +5,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderLineItemDistributionChannelSetMessage))]
-    public partial interface IOrderLineItemDistributionChannelSetMessage : IMessage
+    public partial interface IOrderLineItemDistributionChannelSetMessage : IOrderMessage
     {
         string LineItemId { get; set; }
 

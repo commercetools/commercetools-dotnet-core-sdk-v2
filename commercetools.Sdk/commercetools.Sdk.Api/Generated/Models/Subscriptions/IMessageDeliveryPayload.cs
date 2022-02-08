@@ -4,8 +4,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.MessageDelivery))]
-    public partial interface IMessageDelivery : ISubscriptionDelivery
+    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.MessageDeliveryPayload))]
+    public partial interface IMessageDeliveryPayload : IDeliveryPayload
     {
         string Id { get; set; }
 

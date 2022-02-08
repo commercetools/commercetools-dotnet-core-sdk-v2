@@ -1,6 +1,6 @@
 namespace commercetools.Api.Models.Extensions
 {
-    public partial class ExtensionAWSLambdaDestination : IExtensionAWSLambdaDestination
+    public partial class AWSLambdaDestination : IAWSLambdaDestination
     {
         public string Type { get; set; }
 
@@ -9,7 +9,7 @@ namespace commercetools.Api.Models.Extensions
         public string AccessKey { get; set; }
 
         public string AccessSecret { get; set; }
-        public ExtensionAWSLambdaDestination()
+        public AWSLambdaDestination()
         {
             this.Type = "AWSLambda";
         }

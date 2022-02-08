@@ -5,7 +5,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderPaymentStateChangedMessagePayload))]
-    public partial interface IOrderPaymentStateChangedMessagePayload : IMessagePayload
+    public partial interface IOrderPaymentStateChangedMessagePayload : IOrderMessagePayload
     {
         IPaymentState PaymentState { get; set; }
 

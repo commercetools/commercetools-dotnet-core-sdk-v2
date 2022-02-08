@@ -15,6 +15,6 @@ namespace commercetools.Api.Models.Products
 
         long Other { get; set; }
 
-        List<IFacetResultTerm> Terms { get; set; }
+        List<IFacetTerm> Terms { get; set; }
     }
 }

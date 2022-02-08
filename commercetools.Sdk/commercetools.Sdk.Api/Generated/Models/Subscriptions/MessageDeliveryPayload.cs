@@ -5,7 +5,7 @@ using System;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class MessageDelivery : IMessageDelivery
+    public partial class MessageDeliveryPayload : IMessageDeliveryPayload
     {
         public string ProjectKey { get; set; }
 
@@ -28,7 +28,7 @@ namespace commercetools.Api.Models.Subscriptions
         public long ResourceVersion { get; set; }
 
         public IPayloadNotIncluded PayloadNotIncluded { get; set; }
-        public MessageDelivery()
+        public MessageDeliveryPayload()
         {
             this.NotificationType = "Message";
         }

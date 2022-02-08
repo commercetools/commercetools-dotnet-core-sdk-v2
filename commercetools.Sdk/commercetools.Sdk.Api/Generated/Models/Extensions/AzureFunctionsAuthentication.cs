@@ -1,11 +1,11 @@
 namespace commercetools.Api.Models.Extensions
 {
-    public partial class ExtensionAzureFunctionsAuthentication : IExtensionAzureFunctionsAuthentication
+    public partial class AzureFunctionsAuthentication : IAzureFunctionsAuthentication
     {
         public string Type { get; set; }
 
         public string Key { get; set; }
-        public ExtensionAzureFunctionsAuthentication()
+        public AzureFunctionsAuthentication()
         {
             this.Type = "AzureFunctions";
         }

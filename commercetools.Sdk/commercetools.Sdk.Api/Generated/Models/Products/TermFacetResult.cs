@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Products
 
         public long Other { get; set; }
 
-        public List<IFacetResultTerm> Terms { get; set; }
+        public List<IFacetTerm> Terms { get; set; }
         public TermFacetResult()
         {
             this.Type = IFacetTypes.FindEnum("terms");

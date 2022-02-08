@@ -1,9 +1,9 @@
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class DeliveryPlatformFormat : IDeliveryPlatformFormat
+    public partial class PlatformFormat : IPlatformFormat
     {
         public string Type { get; set; }
-        public DeliveryPlatformFormat()
+        public PlatformFormat()
         {
             this.Type = "Platform";
         }

@@ -3,7 +3,7 @@ using System;
 
 namespace commercetools.Api.Models.Products
 {
-    public partial class FacetResultTerm : IFacetResultTerm
+    public partial class FacetTerm : IFacetTerm
     {
         public Object Term { get; set; }
 

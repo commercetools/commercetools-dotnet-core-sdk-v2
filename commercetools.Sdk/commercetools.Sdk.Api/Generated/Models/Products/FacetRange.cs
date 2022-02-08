@@ -1,6 +1,6 @@
 namespace commercetools.Api.Models.Products
 {
-    public partial class FacetResultRange : IFacetResultRange
+    public partial class FacetRange : IFacetRange
     {
         public double From { get; set; }
 
