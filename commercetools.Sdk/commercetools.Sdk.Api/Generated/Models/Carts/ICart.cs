@@ -81,5 +81,7 @@ namespace commercetools.Api.Models.Carts
         IShippingRateInput ShippingRateInput { get; set; }
 
         List<IAddress> ItemShippingAddresses { get; set; }
+
+        long? TotalLineItemQuantity { get; set; }
     }
 }
