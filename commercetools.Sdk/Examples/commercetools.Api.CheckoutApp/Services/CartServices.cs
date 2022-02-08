@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using commercetools.Api.CheckoutApp.Extensions;
 using commercetools.Api.CheckoutApp.Models;
 using commercetools.Api.Models.Carts;
 using commercetools.Api.Models.Me;
@@ -19,7 +20,7 @@ namespace commercetools.Api.CheckoutApp.Services
             _client = client;
         }
 
-        public async Task<ICart> AddProductToCurrentActiveCart(ICart cart, IProduct product, int variantId = 1,
+        public async Task<ICart> AddProductToCurrentActiveCart(ICart cart, IProductProjection product, int variantId = 1,
             int quantity = 1)
         {
             var myCartUpdate = new MyCartUpdate
@@ -93,7 +94,7 @@ namespace commercetools.Api.CheckoutApp.Services
                     myCartModel.LineItems.Add(new LineItemViewModel
                     {
                         ProductId = lineItem.Id,
-                        ProductName = lineItem.Name["en"],
+                        ProductName = lineItem.GetDisplayName(),
                         LineItemId = lineItem.Id,
                         Quantity = lineItem.Quantity
                     });

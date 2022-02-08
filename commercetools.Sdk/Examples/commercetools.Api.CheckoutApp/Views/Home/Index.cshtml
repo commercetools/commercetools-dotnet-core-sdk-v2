@@ -1,4 +1,5 @@
-﻿@model commercetools.Api.CheckoutApp.Models.HomeViewModel
+﻿@using commercetools.Api.CheckoutApp.Extensions
+@model commercetools.Api.CheckoutApp.Models.HomeViewModel
 @{
     ViewData["Title"] = $"Checkout App";
     Layout = "_Layout";
@@ -20,7 +21,7 @@
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td> @product.MasterData.Current.Name["en"]</td>
+                    <td> @product.GetDisplayName()</td>
                     <td>
                         <a id="btn_add" href="@Url.Action("AddToCart", "Home", product)" class="btn btn-info btn-lg">
                             <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart

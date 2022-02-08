@@ -8,5 +8,6 @@ namespace commercetools.Api.CheckoutApp.Services
         public const string PasswordKey = "CTP_Password";
         public const string AnonymousKey = "CTP_AnonymousId";
         public static string ProjectKey { get; set; }
+        public static string DefaultCurrency { get; set; }
     }
 }

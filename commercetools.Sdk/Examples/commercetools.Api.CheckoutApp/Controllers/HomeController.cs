@@ -23,13 +23,13 @@ namespace commercetools.Api.CheckoutApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var products = await _productServices.GetAllProducts();
+            var products = await _productServices.GetAllPublishedProducts();
             var customerProfile = await GetCurrentCustomerProfile();
             var homeModel = new HomeViewModel(products, customerProfile);
             return View(homeModel);
         }
 
-        public async Task<IActionResult> AddToCart(Product product)
+        public async Task<IActionResult> AddToCart(IProductProjection product)
         {
             var cartDraft = GetCartDraft();
             var cart = await _cartServices.CreateCartForCurrentCustomer(cartDraft);
@@ -41,7 +41,7 @@ namespace commercetools.Api.CheckoutApp.Controllers
         {
             var cartDraft = new MyCartDraft
             {
-                Currency = "EUR",
+                Currency = Settings.DefaultCurrency,
             };
             return cartDraft;
         }

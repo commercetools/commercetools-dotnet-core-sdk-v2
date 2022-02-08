@@ -18,6 +18,7 @@ namespace commercetools.Api.CheckoutApp
             this.configuration = configuration;
             var clientConfiguration = configuration.GetSection("SPA-Client").Get<ClientConfiguration>();
             Settings.ProjectKey = clientConfiguration.ProjectKey;
+            Settings.DefaultCurrency = configuration.GetSection("DefaultCurrency").Value;
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
