@@ -4,7 +4,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomerEmailSetMessage))]
-    public partial interface IOrderCustomerEmailSetMessage : IMessage
+    public partial interface IOrderCustomerEmailSetMessage : IOrderMessage
     {
         string Email { get; set; }
 

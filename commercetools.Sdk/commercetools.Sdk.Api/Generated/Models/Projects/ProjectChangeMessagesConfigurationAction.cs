@@ -7,7 +7,7 @@ namespace commercetools.Api.Models.Projects
     {
         public string Action { get; set; }
 
-        public IMessageConfigurationDraft MessagesConfiguration { get; set; }
+        public IMessagesConfigurationDraft MessagesConfiguration { get; set; }
         public ProjectChangeMessagesConfigurationAction()
         {
             this.Action = "changeMessagesConfiguration";

@@ -1,6 +1,6 @@
 namespace commercetools.Api.Models.Messages
 {
-    public partial class MessageConfiguration : IMessageConfiguration
+    public partial class MessagesConfiguration : IMessagesConfiguration
     {
         public bool Enabled { get; set; }
 

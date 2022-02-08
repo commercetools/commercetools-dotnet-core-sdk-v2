@@ -5,7 +5,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Api.Models.Messages
 {
     [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderLineItemAddedMessage))]
-    public partial interface IOrderLineItemAddedMessage : IMessage
+    public partial interface IOrderLineItemAddedMessage : IOrderMessage
     {
         ILineItem LineItem { get; set; }
 

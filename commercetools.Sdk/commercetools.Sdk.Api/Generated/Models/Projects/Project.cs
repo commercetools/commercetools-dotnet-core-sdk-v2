@@ -23,7 +23,7 @@ namespace commercetools.Api.Models.Projects
 
         public string TrialUntil { get; set; }
 
-        public IMessageConfiguration Messages { get; set; }
+        public IMessagesConfiguration Messages { get; set; }
 
         public IShippingRateInputType ShippingRateInputType { get; set; }
 

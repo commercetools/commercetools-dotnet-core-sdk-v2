@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
 {
-    public class MessageDeliveryConverter : JsonConverter<MessageDelivery>
+    public class MessageDeliveryConverter : JsonConverter<MessageDeliveryPayload>
     {
         private readonly ISerializerService _serializerService;
 
@@ -17,10 +17,10 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             this._serializerService = serializerService;
         }
 
-        public override MessageDelivery Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override MessageDeliveryPayload Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var jsonDocument = JsonDocument.ParseValue(ref reader);
-            MessageDelivery messageDelivery = new MessageDelivery();
+            MessageDeliveryPayload messageDelivery = new MessageDeliveryPayload();
             var rootElement = jsonDocument.RootElement;
             if (rootElement.ValueKind == JsonValueKind.Object)
             {
@@ -58,7 +58,7 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             return messageDelivery;
         }
 
-        public override void Write(Utf8JsonWriter writer, MessageDelivery value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, MessageDeliveryPayload value, JsonSerializerOptions options)
         {
             throw new NotImplementedException();
         }

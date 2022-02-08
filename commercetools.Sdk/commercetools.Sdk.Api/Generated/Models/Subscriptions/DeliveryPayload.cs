@@ -4,7 +4,7 @@ using commercetools.Api.Models.Messages;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class SubscriptionDelivery : ISubscriptionDelivery
+    public partial class DeliveryPayload : IDeliveryPayload
     {
         public string ProjectKey { get; set; }
 
