@@ -5,7 +5,7 @@ using System;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class ResourceUpdatedDelivery : IResourceUpdatedDelivery
+    public partial class ResourceDeletedDeliveryPayload : IResourceDeletedDeliveryPayload
     {
         public string ProjectKey { get; set; }
 
@@ -17,12 +17,12 @@ namespace commercetools.Api.Models.Subscriptions
 
         public long Version { get; set; }
 
-        public long OldVersion { get; set; }
-
         public DateTime ModifiedAt { get; set; }
-        public ResourceUpdatedDelivery()
+
+        public bool? DataErasure { get; set; }
+        public ResourceDeletedDeliveryPayload()
         {
-            this.NotificationType = "ResourceUpdated";
+            this.NotificationType = "ResourceDeleted";
         }
     }
 }
