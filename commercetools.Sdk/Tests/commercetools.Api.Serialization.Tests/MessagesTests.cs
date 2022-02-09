@@ -87,8 +87,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(payload);
             Assert.NotNull(payload.ResourceUserProvidedIdentifiers);
             Assert.Equal("test-ca15403ea56ec0e51137ff40a6f4607e", payload.ResourceUserProvidedIdentifiers.Key);
-            Assert.IsType<ResourceCreatedDelivery>(payload);
-            var customerCreatedPayload = payload as ResourceCreatedDelivery;
+            Assert.IsType<ResourceCreatedDeliveryPayload>(payload);
+            var customerCreatedPayload = payload as ResourceCreatedDeliveryPayload;
             Assert.NotNull(customerCreatedPayload);
             Assert.NotNull(customerCreatedPayload.Resource);
             Assert.IsType<CustomerReference>(customerCreatedPayload.Resource);
@@ -103,9 +103,9 @@ namespace commercetools.Api.Serialization.Tests
             var payloads = serializerService.Deserialize<List<IDeliveryPayload>>(serialized);
             Assert.NotNull(payloads);
             Assert.Equal(4, payloads.Count);
-            var resourceCreatedPayload = payloads[0] as ResourceCreatedDelivery;
-            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDelivery;
-            var resourceDeletedPayload = payloads[2] as ResourceDeletedDelivery;
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDeliveryPayload;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDeliveryPayload;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDeliveryPayload;
             var customerCreatedPayload = payloads[3] as MessageDeliveryPayload;
 
             Assert.NotNull(resourceCreatedPayload);
@@ -150,9 +150,9 @@ namespace commercetools.Api.Serialization.Tests
             var payloads = serializerService.Deserialize<List<IDeliveryPayload>>(serialized);
             Assert.NotNull(payloads);
             Assert.Equal(4, payloads.Count);
-            var resourceCreatedPayload = payloads[0] as ResourceCreatedDelivery;
-            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDelivery;
-            var resourceDeletedPayload = payloads[2] as ResourceDeletedDelivery;
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDeliveryPayload;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDeliveryPayload;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDeliveryPayload;
             var customerCreatedPayload = payloads[3] as MessageDeliveryPayload;
 
             Assert.NotNull(resourceCreatedPayload);

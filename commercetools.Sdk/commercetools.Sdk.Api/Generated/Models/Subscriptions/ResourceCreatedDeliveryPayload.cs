@@ -5,7 +5,7 @@ using System;
 
 namespace commercetools.Api.Models.Subscriptions
 {
-    public partial class ResourceDeletedDelivery : IResourceDeletedDelivery
+    public partial class ResourceCreatedDeliveryPayload : IResourceCreatedDeliveryPayload
     {
         public string ProjectKey { get; set; }
 
@@ -18,11 +18,9 @@ namespace commercetools.Api.Models.Subscriptions
         public long Version { get; set; }
 
         public DateTime ModifiedAt { get; set; }
-
-        public bool? DataErasure { get; set; }
-        public ResourceDeletedDelivery()
+        public ResourceCreatedDeliveryPayload()
         {
-            this.NotificationType = "ResourceDeleted";
+            this.NotificationType = "ResourceCreated";
         }
     }
 }

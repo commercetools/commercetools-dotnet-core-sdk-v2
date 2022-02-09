@@ -9,12 +9,12 @@ namespace commercetools.Api.CheckoutApp.Extensions
         public static string GetDisplayName(this IProductProjection product)
         {
             var key = product.Name.Keys.FirstOrDefault();
-            return key!=null? product.Name[key] : product.Id;
+            return key != null ? product.Name[key] : product.Id;
         }
         public static string GetDisplayName(this ILineItem lineItem)
         {
             var key = lineItem.Name.Keys.FirstOrDefault();
-            return key!=null? lineItem.Name[key] : lineItem.Id;
+            return key != null ? lineItem.Name[key] : lineItem.Id;
         }
     }
 }
