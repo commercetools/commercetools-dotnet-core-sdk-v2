@@ -4,11 +4,11 @@ namespace commercetools.Api.Models.Common
     {
         public IMoneyType Type { get; set; }
 
-        public int FractionDigits { get; set; }
+        public string CurrencyCode { get; set; }
 
         public long CentAmount { get; set; }
 
-        public string CurrencyCode { get; set; }
+        public int FractionDigits { get; set; }
 
         public long PreciseAmount { get; set; }
         public HighPrecisionMoney()

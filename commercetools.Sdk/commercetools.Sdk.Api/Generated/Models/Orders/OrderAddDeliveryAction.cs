@@ -15,7 +15,7 @@ namespace commercetools.Api.Models.Orders
 
         public List<IParcelDraft> Parcels { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
         public OrderAddDeliveryAction()
         {
             this.Action = "addDelivery";

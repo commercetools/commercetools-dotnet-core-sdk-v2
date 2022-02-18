@@ -7,6 +7,8 @@ namespace commercetools.Api.Models.Orders
     {
         public string Action { get; set; }
 
+        public string DeliveryId { get; set; }
+
         public string Name { get; set; }
 
         public Object Value { get; set; }

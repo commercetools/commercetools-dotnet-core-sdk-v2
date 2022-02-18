@@ -24,7 +24,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    .Me()
                    .Password()
                    .Reset()
-                   .Post()
+                   .Post(null)
                    .Build(),
                    "Post",
                    "/test_projectKey/me/password/reset",

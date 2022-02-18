@@ -8,6 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomFieldAction))]
     public partial interface IStagedOrderSetDeliveryCustomFieldAction : IStagedOrderUpdateAction
     {
+        string DeliveryId { get; set; }
+
         string Name { get; set; }
 
         Object Value { get; set; }

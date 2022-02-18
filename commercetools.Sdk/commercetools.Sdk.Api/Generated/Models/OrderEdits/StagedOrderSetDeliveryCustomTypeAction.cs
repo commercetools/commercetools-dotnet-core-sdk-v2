@@ -8,6 +8,8 @@ namespace commercetools.Api.Models.OrderEdits
     {
         public string Action { get; set; }
 
+        public string DeliveryId { get; set; }
+
         public ITypeResourceIdentifier Type { get; set; }
 
         public Object Fields { get; set; }

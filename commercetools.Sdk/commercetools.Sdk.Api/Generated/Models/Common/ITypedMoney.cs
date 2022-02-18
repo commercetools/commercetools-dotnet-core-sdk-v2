@@ -11,10 +11,10 @@ namespace commercetools.Api.Models.Common
     {
         IMoneyType Type { get; set; }
 
-        int FractionDigits { get; set; }
+        string CurrencyCode { get; set; }
 
         long CentAmount { get; set; }
 
-        string CurrencyCode { get; set; }
+        int FractionDigits { get; set; }
     }
 }
