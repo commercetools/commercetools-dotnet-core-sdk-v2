@@ -57,6 +57,9 @@ namespace commercetools.Api.Models.Types
         [Description("product-price")]
         ProductPrice,
 
+        [Description("product-selection")]
+        ProductSelection,
+
         [Description("review")]
         Review,
 
@@ -140,6 +143,9 @@ namespace commercetools.Api.Models.Types
         public static IResourceTypeId ProductPrice = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ProductPrice, JsonName = "product-price" };
 
+        public static IResourceTypeId ProductSelection = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.ProductSelection, JsonName = "product-selection" };
+
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Review, JsonName = "review" };
 
@@ -181,6 +187,7 @@ namespace commercetools.Api.Models.Types
                  Payment ,
                  PaymentInterfaceInteraction ,
                  ProductPrice ,
+                 ProductSelection ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,
