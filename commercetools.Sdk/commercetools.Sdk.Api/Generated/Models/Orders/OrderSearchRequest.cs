@@ -2,7 +2,7 @@ namespace commercetools.Api.Models.Orders
 {
     public partial class OrderSearchRequest : IOrderSearchRequest
     {
-        public object Query { get; set; }
+        public IOrderSearchQuery Query { get; set; }
 
         public string Sort { get; set; }
 
