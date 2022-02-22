@@ -44,6 +44,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return this.GetQueryParam("expand");
         }
 
+        public List<string> GetSort()
+        {
+            return this.GetQueryParam("sort");
+        }
+
         public ByProjectKeyShippingMethodsMatchingLocationGet WithCountry(string country)
         {
             return this.AddQueryParam("country", country);
@@ -62,6 +67,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
         public ByProjectKeyShippingMethodsMatchingLocationGet WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyShippingMethodsMatchingLocationGet WithSort(string sort)
+        {
+            return this.AddQueryParam("sort", sort);
         }
 
 

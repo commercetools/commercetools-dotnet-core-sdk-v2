@@ -68,6 +68,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .ShippingMethods()
                    .MatchingLocation()
                    .Get()
+                   .WithSort("sort")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/shipping-methods/matching-location?sort=sort",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/shipping-methods/matching-location",
