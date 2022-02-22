@@ -1,4 +1,3 @@
-using commercetools.Api.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
@@ -10,8 +9,8 @@ namespace commercetools.Api.Models.Projects
     {
         ISearchIndexingConfigurationStatus Status { get; set; }
 
-        DateTime? LastModifiedAt { get; set; }
+        DateTime LastModifiedAt { get; set; }
 
-        ILastModifiedBy LastModifiedBy { get; set; }
+        string LastModifiedBy { get; set; }
     }
 }
