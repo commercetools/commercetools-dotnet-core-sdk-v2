@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Api.Models.CartDiscounts
@@ -10,7 +9,7 @@ namespace commercetools.Api.Models.CartDiscounts
 
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public CartDiscountSetCustomTypeAction()
         {
             this.Action = "setCustomType";

@@ -1,6 +1,5 @@
 using commercetools.Api.Models.Orders;
 using commercetools.Api.Models.Types;
-using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,6 +12,6 @@ namespace commercetools.Api.Models.OrderEdits
 
         ITypeResourceIdentifier Type { get; set; }
 
-        Object Fields { get; set; }
+        IFieldContainer Fields { get; set; }
     }
 }
