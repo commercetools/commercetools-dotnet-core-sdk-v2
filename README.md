@@ -43,7 +43,7 @@ In addition, the SDK has the following directories:
 * `/Tests`: Unit Tests for serialization and request builders.
 * `/Examples`:
   1. `commercetools.Api.ConsoleApp` as an example of how to use the SDK in a console app and create a client using ClientFactory.
-  2. `commercetools.Api.CheckoutApp`, it's developed
+  2. `commercetools.Api.CheckoutApp`, [the example](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/tree/master/commercetools.Sdk/Examples/commercetools.Api.CheckoutApp) is developed
      to illustrate how to deal with the me endpoints, like listing and adding products
      to cart as anonymous user, user can login and switch to password token flow,
      it's storing the token in the cookie right now, cookies only used
