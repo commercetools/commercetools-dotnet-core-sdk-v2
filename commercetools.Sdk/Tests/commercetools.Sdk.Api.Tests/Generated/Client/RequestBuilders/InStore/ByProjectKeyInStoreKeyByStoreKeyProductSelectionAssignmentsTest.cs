@@ -24,6 +24,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .ProductSelectionAssignments()
                    .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductSelectionAssignments()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments",
