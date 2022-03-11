@@ -9,6 +9,8 @@ namespace commercetools.Api.Models.Inventories
     {
         public string Sku { get; set; }
 
+        public string Key { get; set; }
+
         public IChannelResourceIdentifier SupplyChannel { get; set; }
 
         public long QuantityOnStock { get; set; }

@@ -11,6 +11,7 @@ namespace commercetools.Api.Models.Inventories
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetCustomTypeAction))]
     [SubTypeDiscriminator("setExpectedDelivery", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetKeyAction))]
     [SubTypeDiscriminator("setRestockableInDays", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction))]
     [SubTypeDiscriminator("setSupplyChannel", typeof(commercetools.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
     public partial interface IInventoryEntryUpdateAction
