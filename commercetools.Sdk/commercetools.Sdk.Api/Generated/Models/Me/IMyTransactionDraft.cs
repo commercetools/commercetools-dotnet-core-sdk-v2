@@ -18,6 +18,6 @@ namespace commercetools.Api.Models.Me
 
         string InteractionId { get; set; }
 
-        ICustomFields Custom { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
     }
 }
