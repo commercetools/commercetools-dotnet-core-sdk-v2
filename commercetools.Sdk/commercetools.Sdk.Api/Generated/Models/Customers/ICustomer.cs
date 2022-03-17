@@ -69,5 +69,7 @@ namespace commercetools.Api.Models.Customers
         string Key { get; set; }
 
         List<IStoreKeyReference> Stores { get; set; }
+
+        IAuthenticationMode AuthenticationMode { get; set; }
     }
 }
