@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Api.Models.OrderEdits
@@ -12,7 +11,7 @@ namespace commercetools.Api.Models.OrderEdits
 
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public StagedOrderSetParcelCustomTypeAction()
         {
             this.Action = "setParcelCustomType";

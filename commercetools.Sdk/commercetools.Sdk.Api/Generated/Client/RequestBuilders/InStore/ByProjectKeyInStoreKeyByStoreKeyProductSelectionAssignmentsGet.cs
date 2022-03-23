@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
@@ -26,7 +27,15 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/product-selection-assignments";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
 
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
 
 
         public async Task<commercetools.Api.Models.ProductSelections.IProductsInStorePagedQueryResponse> ExecuteAsync()

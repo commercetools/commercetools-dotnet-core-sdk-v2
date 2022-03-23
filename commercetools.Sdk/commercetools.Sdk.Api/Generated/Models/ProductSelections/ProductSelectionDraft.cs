@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 
 
 namespace commercetools.Api.Models.ProductSelections
@@ -8,5 +9,7 @@ namespace commercetools.Api.Models.ProductSelections
         public string Key { get; set; }
 
         public ILocalizedString Name { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

@@ -7,5 +7,9 @@ namespace commercetools.Api.Models.ApiClients
         public string Scope { get; set; }
 
         public long? DeleteDaysAfterCreation { get; set; }
+
+        public int? AccessTokenValiditySeconds { get; set; }
+
+        public int? RefreshTokenValiditySeconds { get; set; }
     }
 }

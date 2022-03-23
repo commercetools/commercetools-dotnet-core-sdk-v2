@@ -35,7 +35,7 @@ namespace commercetools.Api.Models.Me
 
         long? DefaultBillingAddress { get; set; }
 
-        ICustomFields Custom { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
 
         string Locale { get; set; }
 

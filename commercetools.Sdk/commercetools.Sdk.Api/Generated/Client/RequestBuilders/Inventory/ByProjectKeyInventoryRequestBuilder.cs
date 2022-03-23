@@ -35,5 +35,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
         {
             return new ByProjectKeyInventoryByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyInventoryKeyByKeyRequestBuilder WithKey(string key)
+        {
+            return new ByProjectKeyInventoryKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
+        }
     }
 }

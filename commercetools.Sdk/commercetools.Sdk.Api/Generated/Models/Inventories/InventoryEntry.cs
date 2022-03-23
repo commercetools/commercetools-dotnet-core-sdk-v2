@@ -20,6 +20,8 @@ namespace commercetools.Api.Models.Inventories
 
         public ICreatedBy CreatedBy { get; set; }
 
+        public string Key { get; set; }
+
         public string Sku { get; set; }
 
         public IChannelReference SupplyChannel { get; set; }

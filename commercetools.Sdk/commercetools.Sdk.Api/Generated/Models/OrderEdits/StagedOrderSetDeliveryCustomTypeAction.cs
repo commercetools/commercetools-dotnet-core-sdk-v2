@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Api.Models.OrderEdits
@@ -8,9 +7,11 @@ namespace commercetools.Api.Models.OrderEdits
     {
         public string Action { get; set; }
 
+        public string DeliveryId { get; set; }
+
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public StagedOrderSetDeliveryCustomTypeAction()
         {
             this.Action = "setDeliveryCustomType";

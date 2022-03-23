@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Api.Models.Products
@@ -20,7 +19,7 @@ namespace commercetools.Api.Models.Products
 
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public ProductSetAssetCustomTypeAction()
         {
             this.Action = "setAssetCustomType";

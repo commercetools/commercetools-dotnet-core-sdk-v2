@@ -1,5 +1,4 @@
 using commercetools.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Api.Models.Stores
@@ -10,7 +9,7 @@ namespace commercetools.Api.Models.Stores
 
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public StoreSetCustomTypeAction()
         {
             this.Action = "setCustomType";

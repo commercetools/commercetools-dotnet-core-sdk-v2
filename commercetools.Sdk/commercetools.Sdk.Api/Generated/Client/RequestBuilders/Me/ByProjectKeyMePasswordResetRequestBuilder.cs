@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMePasswordResetPost Post()
+        public ByProjectKeyMePasswordResetPost Post(commercetools.Api.Models.Customers.IMyCustomerResetPassword myCustomerResetPassword)
         {
-            return new ByProjectKeyMePasswordResetPost(ApiHttpClient, SerializerService, ProjectKey);
+            return new ByProjectKeyMePasswordResetPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerResetPassword);
         }
 
     }

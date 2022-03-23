@@ -6,7 +6,7 @@ namespace commercetools.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSearchRequest))]
     public partial interface IOrderSearchRequest
     {
-        string Query { get; set; }
+        IOrderSearchQuery Query { get; set; }
 
         string Sort { get; set; }
 

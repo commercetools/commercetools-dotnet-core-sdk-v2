@@ -27,14 +27,14 @@ namespace commercetools.Api.Models.Projects
 
         IMessagesConfiguration Messages { get; set; }
 
+        ICartsConfiguration Carts { get; set; }
+
+        IShoppingListsConfiguration ShoppingLists { get; set; }
+
         IShippingRateInputType ShippingRateInputType { get; set; }
 
         IExternalOAuth ExternalOAuth { get; set; }
 
-        ICartsConfiguration Carts { get; set; }
-
         ISearchIndexingConfiguration SearchIndexing { get; set; }
-
-        IShoppingListsConfiguration ShoppingLists { get; set; }
     }
 }

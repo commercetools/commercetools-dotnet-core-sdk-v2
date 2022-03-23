@@ -1,4 +1,5 @@
 using commercetools.Api.Models.Common;
+using commercetools.Api.Models.Types;
 using System;
 
 
@@ -25,5 +26,7 @@ namespace commercetools.Api.Models.ProductSelections
         public int ProductCount { get; set; }
 
         public IProductSelectionTypeEnum Type { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

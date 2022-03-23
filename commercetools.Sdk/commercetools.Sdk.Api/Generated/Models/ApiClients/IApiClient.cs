@@ -20,5 +20,9 @@ namespace commercetools.Api.Models.ApiClients
         DateTime? DeleteAt { get; set; }
 
         DateTime? CreatedAt { get; set; }
+
+        int? AccessTokenValiditySeconds { get; set; }
+
+        int? RefreshTokenValiditySeconds { get; set; }
     }
 }

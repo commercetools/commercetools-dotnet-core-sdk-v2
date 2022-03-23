@@ -7,5 +7,7 @@ namespace commercetools.Api.Models.Common
     public partial interface IHighPrecisionMoneyDraft : ITypedMoneyDraft
     {
         long PreciseAmount { get; set; }
+
+        new long CentAmount { get; set; }
     }
 }
