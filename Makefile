@@ -7,11 +7,11 @@ CPUS := `./tools/numcpu.sh`
 
 .PHONY: build build_api_sdk build_import_sdk build_import_sdk build_ml_sdk build_history_sdk gen_api_sdk gen_import_sdk gen_ml_sdk gen_history_sdk
 
-build: codegen_install gen_api_sdk gen_import_sdk gen_ml_sdk gen_history_sdk verify
-build_api_sdk: codegen_install gen_api_sdk verify
-build_import_sdk: codegen_install gen_import_sdk verify
-build_ml_sdk: codegen_install gen_ml_sdk verify
-build_history_sdk: codegen_install gen_history_sdk verify
+build: codegen_install gen_api_sdk gen_import_sdk gen_ml_sdk gen_history_sdk prettify verify
+build_api_sdk: codegen_install gen_api_sdk prettify verify
+build_import_sdk: codegen_install gen_import_sdk prettify verify
+build_ml_sdk: codegen_install gen_ml_sdk prettify verify
+build_history_sdk: codegen_install gen_history_sdk prettify verify
 
 gen_api_sdk: generate_api
 gen_import_sdk: generate_import
@@ -39,3 +39,8 @@ generate_ml:
 
 generate_history:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
+
+prettify:
+	cd commercetools.Sdk && \
+	dotnet-format && \
+	dotnet-format --fix-style warn
