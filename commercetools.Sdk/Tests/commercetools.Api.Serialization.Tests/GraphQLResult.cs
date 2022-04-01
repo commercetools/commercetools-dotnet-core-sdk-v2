@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using commercetools.Sdk.Api.Models.Customers;
 
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public class GraphResultData
     {

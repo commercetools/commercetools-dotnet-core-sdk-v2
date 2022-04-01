@@ -5,9 +5,9 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Payments
+namespace commercetools.Api.IntegrationTests.Payments
 {
     public class PaymentsFixture
     {

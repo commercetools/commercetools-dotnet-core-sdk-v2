@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace commercetools.Sdk.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests
 {
     public static class TestingUtility
     {

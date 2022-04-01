@@ -6,11 +6,11 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
-using static commercetools.Sdk.Api.IntegrationTests.Products.ProductsFixture;
-using static commercetools.Sdk.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
-using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
+using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
+using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.ProductProjectionSearch
+namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
 {
     [Collection("Integration Tests")]
     public class ProductProjectionSearchIntegrationTests

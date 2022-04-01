@@ -6,7 +6,7 @@ using commercetools.Sdk.Api.Models.Subscriptions;
 using commercetools.Base.Serialization;
 using Xunit;
 
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public class MessagesTests : IClassFixture<SerializationFixture>
     {

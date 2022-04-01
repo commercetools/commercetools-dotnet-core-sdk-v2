@@ -4,9 +4,9 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.ProductTypes
+namespace commercetools.Api.IntegrationTests.ProductTypes
 {
     public class ProductTypesFixture
     {

@@ -1,4 +1,4 @@
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public static class Extensions
     {

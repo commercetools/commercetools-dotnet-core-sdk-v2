@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Sdk.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests
 {
     public class InMemoryLogger : ILogger
     {

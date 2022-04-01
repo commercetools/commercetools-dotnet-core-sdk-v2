@@ -6,7 +6,7 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
 
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public class AttributesTests : IClassFixture<SerializationFixture>
     {

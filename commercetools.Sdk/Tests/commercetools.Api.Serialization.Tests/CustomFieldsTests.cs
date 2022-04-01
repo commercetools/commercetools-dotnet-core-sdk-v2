@@ -8,7 +8,7 @@ using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base;
 using Xunit;
 
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public class CustomFieldsTests : IClassFixture<SerializationFixture>
     {

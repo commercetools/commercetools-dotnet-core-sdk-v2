@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Sdk.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests
 {
     public class ServiceProviderFixture
     {

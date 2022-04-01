@@ -8,9 +8,9 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
-using static commercetools.Sdk.Api.IntegrationTests.Categories.CategoriesFixture;
+using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Errors
+namespace commercetools.Api.IntegrationTests.Errors
 {
     [Collection("Integration Tests")]
     public class ErrorsIntegrationTests

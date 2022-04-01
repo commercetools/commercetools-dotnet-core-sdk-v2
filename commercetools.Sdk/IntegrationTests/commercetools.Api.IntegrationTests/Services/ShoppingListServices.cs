@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Services
+namespace commercetools.Api.IntegrationTests.Services
 {
     public class ShoppingListServices
     {

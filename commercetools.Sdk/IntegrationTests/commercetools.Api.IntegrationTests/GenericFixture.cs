@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 
-namespace commercetools.Sdk.Api.IntegrationTests
+namespace commercetools.Api.IntegrationTests
 {
     public static class GenericFixture
     {

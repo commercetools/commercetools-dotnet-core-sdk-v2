@@ -4,9 +4,9 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.Client;
 using Xunit;
-using static commercetools.Sdk.Api.IntegrationTests.Payments.PaymentsFixture;
+using static commercetools.Api.IntegrationTests.Payments.PaymentsFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Payments
+namespace commercetools.Api.IntegrationTests.Payments
 {
     [Collection("Integration Tests")]
     public class PaymentsIntegrationTests

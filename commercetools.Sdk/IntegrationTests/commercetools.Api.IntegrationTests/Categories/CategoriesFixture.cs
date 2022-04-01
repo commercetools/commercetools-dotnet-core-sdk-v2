@@ -5,9 +5,9 @@ using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Categories
+namespace commercetools.Api.IntegrationTests.Categories
 {
     public class CategoriesFixture
     {

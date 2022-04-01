@@ -6,7 +6,7 @@ using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace commercetools.Sdk.Api.Serialization.Tests
+namespace commercetools.Api.Serialization.Tests
 {
     public class CustomObjectsSerializationTests : IClassFixture<SerializationFixture>
     {

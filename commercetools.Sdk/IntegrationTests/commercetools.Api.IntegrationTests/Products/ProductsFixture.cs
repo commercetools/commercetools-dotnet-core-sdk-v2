@@ -7,10 +7,10 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
-using static commercetools.Sdk.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
+using static commercetools.Api.IntegrationTests.GenericFixture;
+using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
 
-namespace commercetools.Sdk.Api.IntegrationTests.Products
+namespace commercetools.Api.IntegrationTests.Products
 {
     public class ProductsFixture
     {
