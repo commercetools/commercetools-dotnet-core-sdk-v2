@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditDraft))]
     public partial interface IOrderEditDraft
     {
         string Key { get; set; }

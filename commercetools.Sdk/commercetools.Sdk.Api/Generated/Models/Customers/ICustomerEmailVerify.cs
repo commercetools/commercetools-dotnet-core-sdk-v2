@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerEmailVerify))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerEmailVerify))]
     public partial interface ICustomerEmailVerify
     {
         long? Version { get; set; }

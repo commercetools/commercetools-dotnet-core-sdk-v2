@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyCartChangeTaxModeAction : IMyCartChangeTaxModeAction
     {

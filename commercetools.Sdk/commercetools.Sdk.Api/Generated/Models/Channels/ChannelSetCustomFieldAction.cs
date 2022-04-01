@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
     public partial class ChannelSetCustomFieldAction : IChannelSetCustomFieldAction
     {

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
     public partial class ReviewTransitionStateAction : IReviewTransitionStateAction
     {

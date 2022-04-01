@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Zones
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
 {
     public partial class ByProjectKeyZonesPost : ApiMethod<ByProjectKeyZonesPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Zones.IZoneDraft ZoneDraft;
+        private commercetools.Sdk.Api.Models.Zones.IZoneDraft ZoneDraft;
 
-        public ByProjectKeyZonesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Zones.IZoneDraft zoneDraft)
+        public ByProjectKeyZonesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Zones.IZoneDraft zoneDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
         }
 
 
-        public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Zones.IZone> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZone>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Zones.IZone>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

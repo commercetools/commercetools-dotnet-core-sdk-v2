@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class MoneySerializationTests : IClassFixture<SerializationFixture>
     {

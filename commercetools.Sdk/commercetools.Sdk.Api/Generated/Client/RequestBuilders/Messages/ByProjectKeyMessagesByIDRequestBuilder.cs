@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Messages
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
 {
 
     public class ByProjectKeyMessagesByIDRequestBuilder

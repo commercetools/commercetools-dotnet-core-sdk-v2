@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
     public partial class ByProjectKeyMeShoppingListsPost : ApiMethod<ByProjectKeyMeShoppingListsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Me.IMyShoppingListDraft MyShoppingListDraft;
+        private commercetools.Sdk.Api.Models.Me.IMyShoppingListDraft MyShoppingListDraft;
 
-        public ByProjectKeyMeShoppingListsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.IMyShoppingListDraft myShoppingListDraft)
+        public ByProjectKeyMeShoppingListsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Me.IMyShoppingListDraft myShoppingListDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
         }
 
 
-        public async Task<commercetools.Api.Models.ShoppingLists.IShoppingList> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ShoppingLists.IShoppingList> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShoppingLists.IShoppingList>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ShoppingLists.IShoppingList>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
     public partial class AttributeSetType : IAttributeSetType
     {

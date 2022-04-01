@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.ItemShippingDetails))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ItemShippingDetails))]
     public partial interface IItemShippingDetails
     {
         List<IItemShippingTarget> Targets { get; set; }

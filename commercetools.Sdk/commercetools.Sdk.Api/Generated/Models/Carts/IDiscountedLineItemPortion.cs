@@ -1,11 +1,11 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CartDiscounts;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.DiscountedLineItemPortion))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.DiscountedLineItemPortion))]
     public partial interface IDiscountedLineItemPortion
     {
         ICartDiscountReference Discount { get; set; }

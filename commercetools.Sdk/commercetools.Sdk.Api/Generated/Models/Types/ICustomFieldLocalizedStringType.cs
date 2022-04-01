@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldLocalizedStringType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.CustomFieldLocalizedStringType))]
     public partial interface ICustomFieldLocalizedStringType : IFieldType
     {
     }

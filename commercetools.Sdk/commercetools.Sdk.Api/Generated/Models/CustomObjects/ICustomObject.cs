@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.CustomObjects
+namespace commercetools.Sdk.Api.Models.CustomObjects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomObjects.CustomObject))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObject))]
     public partial interface ICustomObject : IBaseResource
     {
         new string Id { get; set; }

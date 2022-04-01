@@ -1,7 +1,7 @@
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.TaxCategories;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     public partial class ShippingMethodChangeTaxCategoryAction : IShippingMethodChangeTaxCategoryAction
     {

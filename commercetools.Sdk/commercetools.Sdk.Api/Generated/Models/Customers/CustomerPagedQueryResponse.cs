@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerPagedQueryResponse : ICustomerPagedQueryResponse
     {

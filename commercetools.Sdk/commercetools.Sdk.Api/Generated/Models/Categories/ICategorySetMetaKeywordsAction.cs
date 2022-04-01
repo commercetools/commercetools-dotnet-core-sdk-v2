@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetMetaKeywordsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction))]
     public partial interface ICategorySetMetaKeywordsAction : ICategoryUpdateAction
     {
         ILocalizedString MetaKeywords { get; set; }

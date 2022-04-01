@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
     public partial class CustomFieldBooleanType : ICustomFieldBooleanType
     {

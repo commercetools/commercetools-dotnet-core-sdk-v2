@@ -1,10 +1,10 @@
-using commercetools.Api.Models.ProductSelections;
+using commercetools.Sdk.Api.Models.ProductSelections;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.ProductSelectionSettingDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.ProductSelectionSettingDraft))]
     public partial interface IProductSelectionSettingDraft
     {
         IProductSelectionResourceIdentifier ProductSelection { get; set; }

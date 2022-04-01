@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Payments
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
 {
 
     public class ByProjectKeyPaymentsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
             return new ByProjectKeyPaymentsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyPaymentsPost Post(commercetools.Api.Models.Payments.IPaymentDraft paymentDraft)
+        public ByProjectKeyPaymentsPost Post(commercetools.Sdk.Api.Models.Payments.IPaymentDraft paymentDraft)
         {
             return new ByProjectKeyPaymentsPost(ApiHttpClient, SerializerService, ProjectKey, paymentDraft);
         }

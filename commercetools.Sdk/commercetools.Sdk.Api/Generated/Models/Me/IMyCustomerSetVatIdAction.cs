@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerSetVatIdAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerSetVatIdAction))]
     public partial interface IMyCustomerSetVatIdAction : IMyCustomerUpdateAction
     {
         string VatId { get; set; }

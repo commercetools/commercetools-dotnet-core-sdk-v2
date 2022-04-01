@@ -1,7 +1,7 @@
-using commercetools.Api.Models.DiscountCodes;
+using commercetools.Sdk.Api.Models.DiscountCodes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public partial class CartRemoveDiscountCodeAction : ICartRemoveDiscountCodeAction
     {

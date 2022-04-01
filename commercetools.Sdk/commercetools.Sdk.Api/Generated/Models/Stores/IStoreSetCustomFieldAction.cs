@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetCustomFieldAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomFieldAction))]
     public partial interface IStoreSetCustomFieldAction : IStoreUpdateAction
     {
         string Name { get; set; }

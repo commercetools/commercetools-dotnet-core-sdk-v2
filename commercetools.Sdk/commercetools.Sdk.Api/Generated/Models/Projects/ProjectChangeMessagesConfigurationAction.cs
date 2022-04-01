@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Messages;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
     public partial class ProjectChangeMessagesConfigurationAction : IProjectChangeMessagesConfigurationAction
     {

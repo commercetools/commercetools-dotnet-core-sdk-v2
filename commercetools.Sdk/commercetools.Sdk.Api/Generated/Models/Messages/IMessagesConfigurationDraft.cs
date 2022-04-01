@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.MessagesConfigurationDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.MessagesConfigurationDraft))]
     public partial interface IMessagesConfigurationDraft
     {
         bool Enabled { get; set; }

@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductVariantChannelAvailability : IProductVariantChannelAvailability
     {

@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductVariantDeletedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessage))]
     public partial interface IProductVariantDeletedMessage : IMessage
     {
         IProductVariant Variant { get; set; }

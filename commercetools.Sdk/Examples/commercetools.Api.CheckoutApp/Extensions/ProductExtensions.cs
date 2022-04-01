@@ -1,6 +1,6 @@
 using System.Linq;
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Api.CheckoutApp.Extensions
 {

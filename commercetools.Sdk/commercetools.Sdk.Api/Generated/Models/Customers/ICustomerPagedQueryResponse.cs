@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerPagedQueryResponse))]
     public partial interface ICustomerPagedQueryResponse
     {
         long Limit { get; set; }

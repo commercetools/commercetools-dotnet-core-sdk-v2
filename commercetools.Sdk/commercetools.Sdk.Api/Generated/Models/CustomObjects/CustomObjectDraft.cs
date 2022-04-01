@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.CustomObjects
+namespace commercetools.Sdk.Api.Models.CustomObjects
 {
     public partial class CustomObjectDraft : ICustomObjectDraft
     {

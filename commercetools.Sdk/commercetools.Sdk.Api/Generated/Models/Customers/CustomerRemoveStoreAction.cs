@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerRemoveStoreAction : ICustomerRemoveStoreAction
     {

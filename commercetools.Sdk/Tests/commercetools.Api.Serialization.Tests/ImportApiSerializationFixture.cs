@@ -3,7 +3,7 @@ using commercetools.Sdk.ImportApi.Serialization;
 using commercetools.Sdk.ImportApi;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class ImportApiSerializationFixture
     {

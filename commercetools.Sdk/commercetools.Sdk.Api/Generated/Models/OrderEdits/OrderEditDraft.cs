@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class OrderEditDraft : IOrderEditDraft
     {

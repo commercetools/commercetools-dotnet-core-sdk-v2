@@ -4,7 +4,7 @@ using System.Text.Json;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Products
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
     public partial class ByProjectKeyProductsHead : ApiMethod<ByProjectKeyProductsHead>
     {

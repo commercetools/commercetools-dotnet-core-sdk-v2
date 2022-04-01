@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet, commercetools.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>
+    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet, commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>(requestMessage);
         }
 
     }

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class AddressTests : IClassFixture<SerializationFixture>
     {

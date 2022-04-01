@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Payments
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
 {
     public partial class ByProjectKeyPaymentsByIDPost : ApiMethod<ByProjectKeyPaymentsByIDPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Payments.IPaymentUpdate PaymentUpdate;
+        private commercetools.Sdk.Api.Models.Payments.IPaymentUpdate PaymentUpdate;
 
-        public ByProjectKeyPaymentsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Payments.IPaymentUpdate paymentUpdate)
+        public ByProjectKeyPaymentsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Payments.IPaymentUpdate paymentUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
         }
 
 
-        public async Task<commercetools.Api.Models.Payments.IPayment> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Payments.IPayment> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Payments.IPayment>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Payments.IPayment>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.PriceDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.PriceDraft))]
     public partial interface IPriceDraft
     {
         IMoney Value { get; set; }

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
 {
 
     public class ByProjectKeyShoppingListsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShoppingLists
             return new ByProjectKeyShoppingListsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyShoppingListsPost Post(commercetools.Api.Models.ShoppingLists.IShoppingListDraft shoppingListDraft)
+        public ByProjectKeyShoppingListsPost Post(commercetools.Sdk.Api.Models.ShoppingLists.IShoppingListDraft shoppingListDraft)
         {
             return new ByProjectKeyShoppingListsPost(ApiHttpClient, SerializerService, ProjectKey, shoppingListDraft);
         }

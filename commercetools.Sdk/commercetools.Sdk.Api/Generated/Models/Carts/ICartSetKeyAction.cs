@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetKeyAction))]
     public partial interface ICartSetKeyAction : ICartUpdateAction
     {
         string Key { get; set; }

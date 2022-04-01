@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using System;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderUpdateSyncInfoAction : IStagedOrderUpdateSyncInfoAction
     {

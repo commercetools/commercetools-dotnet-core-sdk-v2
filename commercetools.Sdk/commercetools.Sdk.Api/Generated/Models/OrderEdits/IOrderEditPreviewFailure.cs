@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewFailure))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewFailure))]
     public partial interface IOrderEditPreviewFailure : IOrderEditResult
     {
         List<IErrorObject> Errors { get; set; }

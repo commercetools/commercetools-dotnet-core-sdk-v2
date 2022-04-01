@@ -1,39 +1,39 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Categories;
-using commercetools.Api.Client.RequestBuilders.Carts;
-using commercetools.Api.Client.RequestBuilders.CartDiscounts;
-using commercetools.Api.Client.RequestBuilders.Channels;
-using commercetools.Api.Client.RequestBuilders.Customers;
-using commercetools.Api.Client.RequestBuilders.CustomerGroups;
-using commercetools.Api.Client.RequestBuilders.CustomObjects;
-using commercetools.Api.Client.RequestBuilders.DiscountCodes;
-using commercetools.Api.Client.RequestBuilders.Graphql;
-using commercetools.Api.Client.RequestBuilders.Inventory;
-using commercetools.Api.Client.RequestBuilders.Login;
-using commercetools.Api.Client.RequestBuilders.Messages;
-using commercetools.Api.Client.RequestBuilders.Orders;
-using commercetools.Api.Client.RequestBuilders.Payments;
-using commercetools.Api.Client.RequestBuilders.Products;
-using commercetools.Api.Client.RequestBuilders.ProductDiscounts;
-using commercetools.Api.Client.RequestBuilders.ProductProjections;
-using commercetools.Api.Client.RequestBuilders.ProductSelections;
-using commercetools.Api.Client.RequestBuilders.ProductTypes;
-using commercetools.Api.Client.RequestBuilders.Reviews;
-using commercetools.Api.Client.RequestBuilders.ShippingMethods;
-using commercetools.Api.Client.RequestBuilders.ShoppingLists;
-using commercetools.Api.Client.RequestBuilders.States;
-using commercetools.Api.Client.RequestBuilders.Subscriptions;
-using commercetools.Api.Client.RequestBuilders.TaxCategories;
-using commercetools.Api.Client.RequestBuilders.Types;
-using commercetools.Api.Client.RequestBuilders.Zones;
-using commercetools.Api.Client.RequestBuilders.Me;
-using commercetools.Api.Client.RequestBuilders.Extensions;
-using commercetools.Api.Client.RequestBuilders.ApiClients;
-using commercetools.Api.Client.RequestBuilders.Stores;
-using commercetools.Api.Client.RequestBuilders.InStore;
+using commercetools.Sdk.Api.Client.RequestBuilders.Categories;
+using commercetools.Sdk.Api.Client.RequestBuilders.Carts;
+using commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts;
+using commercetools.Sdk.Api.Client.RequestBuilders.Channels;
+using commercetools.Sdk.Api.Client.RequestBuilders.Customers;
+using commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups;
+using commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects;
+using commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes;
+using commercetools.Sdk.Api.Client.RequestBuilders.Graphql;
+using commercetools.Sdk.Api.Client.RequestBuilders.Inventory;
+using commercetools.Sdk.Api.Client.RequestBuilders.Login;
+using commercetools.Sdk.Api.Client.RequestBuilders.Messages;
+using commercetools.Sdk.Api.Client.RequestBuilders.Orders;
+using commercetools.Sdk.Api.Client.RequestBuilders.Payments;
+using commercetools.Sdk.Api.Client.RequestBuilders.Products;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
+using commercetools.Sdk.Api.Client.RequestBuilders.Reviews;
+using commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods;
+using commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists;
+using commercetools.Sdk.Api.Client.RequestBuilders.States;
+using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
+using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
+using commercetools.Sdk.Api.Client.RequestBuilders.Types;
+using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
+using commercetools.Sdk.Api.Client.RequestBuilders.Me;
+using commercetools.Sdk.Api.Client.RequestBuilders.Extensions;
+using commercetools.Sdk.Api.Client.RequestBuilders.ApiClients;
+using commercetools.Sdk.Api.Client.RequestBuilders.Stores;
+using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 
-namespace commercetools.Api.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
 
     public class ByProjectKeyRequestBuilder
@@ -57,7 +57,7 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
             return new ByProjectKeyGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyPost Post(commercetools.Api.Models.Projects.IProjectUpdate projectUpdate)
+        public ByProjectKeyPost Post(commercetools.Sdk.Api.Models.Projects.IProjectUpdate projectUpdate)
         {
             return new ByProjectKeyPost(ApiHttpClient, SerializerService, ProjectKey, projectUpdate);
         }

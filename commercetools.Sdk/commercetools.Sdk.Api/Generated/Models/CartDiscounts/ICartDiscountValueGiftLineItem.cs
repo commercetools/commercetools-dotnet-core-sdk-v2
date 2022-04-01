@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.CartDiscounts
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueGiftLineItem))]
     public partial interface ICartDiscountValueGiftLineItem : ICartDiscountValue
     {
         IProductReference Product { get; set; }

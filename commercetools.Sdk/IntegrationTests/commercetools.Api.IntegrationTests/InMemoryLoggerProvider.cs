@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.Sdk.Api.IntegrationTests
 {
     public class InMemoryLoggerProvider : ILoggerProvider
     {

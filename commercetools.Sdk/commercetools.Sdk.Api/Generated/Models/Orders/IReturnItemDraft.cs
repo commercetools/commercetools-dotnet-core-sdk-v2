@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.ReturnItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ReturnItemDraft))]
     public partial interface IReturnItemDraft
     {
         long Quantity { get; set; }

@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
     public partial class ByProjectKeyMeSignupPost : ApiMethod<ByProjectKeyMeSignupPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Me.IMyCustomerDraft MyCustomerDraft;
+        private commercetools.Sdk.Api.Models.Me.IMyCustomerDraft MyCustomerDraft;
 
-        public ByProjectKeyMeSignupPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.IMyCustomerDraft myCustomerDraft)
+        public ByProjectKeyMeSignupPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Me.IMyCustomerDraft myCustomerDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
 
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

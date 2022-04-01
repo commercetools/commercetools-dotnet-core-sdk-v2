@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.InvalidItemShippingDetailsError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.InvalidItemShippingDetailsError))]
     public partial interface IInvalidItemShippingDetailsError : IErrorObject
     {
         string Subject { get; set; }

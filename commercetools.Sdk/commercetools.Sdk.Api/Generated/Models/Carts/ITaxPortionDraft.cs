@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.TaxPortionDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.TaxPortionDraft))]
     public partial interface ITaxPortionDraft
     {
         string Name { get; set; }

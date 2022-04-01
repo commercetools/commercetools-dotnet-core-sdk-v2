@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetCategoryOrderHintAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetCategoryOrderHintAction))]
     public partial interface IProductSetCategoryOrderHintAction : IProductUpdateAction
     {
         string CategoryId { get; set; }

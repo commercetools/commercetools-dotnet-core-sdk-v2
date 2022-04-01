@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductTypes
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes
 {
-    public partial class ByProjectKeyProductTypesGet : ApiMethod<ByProjectKeyProductTypesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductTypesGet, commercetools.Api.Models.ProductTypes.IProductTypePagedQueryResponse>
+    public partial class ByProjectKeyProductTypesGet : ApiMethod<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductTypesGet, commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductTypes
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.ProductTypes.IProductTypePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductTypes.IProductTypePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse>(requestMessage);
         }
 
     }

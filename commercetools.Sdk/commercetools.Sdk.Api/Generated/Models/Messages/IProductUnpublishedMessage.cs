@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductUnpublishedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessage))]
     public partial interface IProductUnpublishedMessage : IMessage
     {
     }

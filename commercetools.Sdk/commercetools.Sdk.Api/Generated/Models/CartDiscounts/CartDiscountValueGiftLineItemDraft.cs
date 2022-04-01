@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Products;
 
 
-namespace commercetools.Api.Models.CartDiscounts
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
     public partial class CartDiscountValueGiftLineItemDraft : ICartDiscountValueGiftLineItemDraft
     {

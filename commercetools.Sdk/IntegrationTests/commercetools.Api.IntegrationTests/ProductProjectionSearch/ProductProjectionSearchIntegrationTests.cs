@@ -1,16 +1,16 @@
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
-using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
-using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
-using static commercetools.Api.IntegrationTests.GenericFixture;
+using static commercetools.Sdk.Api.IntegrationTests.Products.ProductsFixture;
+using static commercetools.Sdk.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
+using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
+namespace commercetools.Sdk.Api.IntegrationTests.ProductProjectionSearch
 {
     [Collection("Integration Tests")]
     public class ProductProjectionSearchIntegrationTests

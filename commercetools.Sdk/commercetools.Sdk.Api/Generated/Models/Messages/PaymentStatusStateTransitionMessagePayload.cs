@@ -1,7 +1,7 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class PaymentStatusStateTransitionMessagePayload : IPaymentStatusStateTransitionMessagePayload
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.AccessDeniedError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.AccessDeniedError))]
     public partial interface IAccessDeniedError : IErrorObject
     {
     }

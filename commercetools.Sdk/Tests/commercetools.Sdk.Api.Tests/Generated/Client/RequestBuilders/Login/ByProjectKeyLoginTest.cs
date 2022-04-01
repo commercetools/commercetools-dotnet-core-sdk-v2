@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Login
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Login
 {
     public class ByProjectKeyLoginTest : RequestBuilderParentTests
     {

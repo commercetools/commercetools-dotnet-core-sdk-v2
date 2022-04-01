@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelReference))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Channels.ChannelReference))]
     public partial interface IChannelReference : IReference
     {
         IChannel Obj { get; set; }

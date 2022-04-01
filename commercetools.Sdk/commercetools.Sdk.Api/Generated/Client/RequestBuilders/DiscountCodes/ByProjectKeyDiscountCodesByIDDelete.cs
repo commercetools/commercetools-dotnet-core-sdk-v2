@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
+namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
     public partial class ByProjectKeyDiscountCodesByIDDelete : ApiMethod<ByProjectKeyDiscountCodesByIDDelete>
     {
@@ -58,10 +58,10 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
         }
 
 
-        public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
         }
 
     }

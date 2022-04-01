@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetSalutationAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetSalutationAction))]
     public partial interface ICustomerSetSalutationAction : ICustomerUpdateAction
     {
         string Salutation { get; set; }

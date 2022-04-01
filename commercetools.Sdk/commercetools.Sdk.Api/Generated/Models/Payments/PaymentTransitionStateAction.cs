@@ -1,7 +1,7 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
     public partial class PaymentTransitionStateAction : IPaymentTransitionStateAction
     {

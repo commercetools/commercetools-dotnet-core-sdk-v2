@@ -1,10 +1,10 @@
-using commercetools.Api.Models.ProductSelections;
+using commercetools.Sdk.Api.Models.ProductSelections;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductSelectionCreatedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessage))]
     public partial interface IProductSelectionCreatedMessage : IMessage
     {
         IProductSelectionType ProductSelection { get; set; }

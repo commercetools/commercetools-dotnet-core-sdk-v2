@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetCustomLineItemShippingDetailsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSetCustomLineItemShippingDetailsAction))]
     public partial interface IOrderSetCustomLineItemShippingDetailsAction : IOrderUpdateAction
     {
         string CustomLineItemId { get; set; }

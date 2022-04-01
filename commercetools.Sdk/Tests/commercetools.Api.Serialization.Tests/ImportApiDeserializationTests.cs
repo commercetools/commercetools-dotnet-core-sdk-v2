@@ -6,7 +6,7 @@ using Xunit;
 using Attribute = commercetools.ImportApi.Models.Productvariants.Attribute;
 using DuplicateAttributeValueError = commercetools.ImportApi.Models.Errors.DuplicateAttributeValueError;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class ImportApiDeserializationTests : IClassFixture<ImportApiSerializationFixture>
     {

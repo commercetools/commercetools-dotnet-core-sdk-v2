@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetLineItemCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemCustomTypeAction))]
     public partial interface IMyCartSetLineItemCustomTypeAction : IMyCartUpdateAction
     {
         string LineItemId { get; set; }

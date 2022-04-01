@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
     public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost>
     {
@@ -21,9 +21,9 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
 
         private string StoreKey { get; }
 
-        private commercetools.Api.Models.Customers.ICustomerCreateEmailToken CustomerCreateEmailToken;
+        private commercetools.Sdk.Api.Models.Customers.ICustomerCreateEmailToken CustomerCreateEmailToken;
 
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Api.Models.Customers.ICustomerCreateEmailToken customerCreateEmailToken)
+        public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Sdk.Api.Models.Customers.ICustomerCreateEmailToken customerCreateEmailToken)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -36,10 +36,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
 
 
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerToken> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerToken> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerToken>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerToken>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

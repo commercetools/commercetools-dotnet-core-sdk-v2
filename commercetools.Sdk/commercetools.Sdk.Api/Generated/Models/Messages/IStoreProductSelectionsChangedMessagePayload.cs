@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
     public partial interface IStoreProductSelectionsChangedMessagePayload : IMessagePayload
     {
         List<IProductSelectionSetting> AddedProductSelections { get; set; }

@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Orders;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
     public partial interface IStagedOrderUpdateSyncInfoAction : IStagedOrderUpdateAction
     {
         IChannelResourceIdentifier Channel { get; set; }

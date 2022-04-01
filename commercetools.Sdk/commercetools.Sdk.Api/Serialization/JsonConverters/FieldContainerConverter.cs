@@ -1,6 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Type = System.Type;

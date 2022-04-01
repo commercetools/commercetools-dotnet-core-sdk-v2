@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class MissingRoleOnChannelError : IMissingRoleOnChannelError
     {

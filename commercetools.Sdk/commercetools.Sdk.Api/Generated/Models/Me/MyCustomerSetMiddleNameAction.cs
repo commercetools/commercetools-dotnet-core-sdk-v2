@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyCustomerSetMiddleNameAction : IMyCustomerSetMiddleNameAction
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.PriceTierDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.PriceTierDraft))]
     public partial interface IPriceTierDraft
     {
         long MinimumQuantity { get; set; }

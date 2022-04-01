@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.BaseResource))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.BaseResource))]
     public partial interface IBaseResource
     {
         string Id { get; set; }

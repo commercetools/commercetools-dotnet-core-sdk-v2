@@ -1,5 +1,5 @@
-using commercetools.Api.Client.RequestBuilders.InStore;
-using commercetools.Api.Client.RequestBuilders.Projects;
+using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
+using commercetools.Sdk.Api.Client.RequestBuilders.Projects;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 

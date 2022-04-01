@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
     public partial class HttpDestinationAuthentication : IHttpDestinationAuthentication
     {

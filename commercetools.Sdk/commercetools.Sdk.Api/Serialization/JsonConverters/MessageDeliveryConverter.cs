@@ -1,9 +1,9 @@
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Subscriptions;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Subscriptions;
 using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters

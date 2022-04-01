@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class OrderSetParcelMeasurementsAction : IOrderSetParcelMeasurementsAction
     {

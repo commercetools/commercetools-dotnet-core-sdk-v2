@@ -1,7 +1,7 @@
-using commercetools.Api.Models.DiscountCodes;
+using commercetools.Sdk.Api.Models.DiscountCodes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class OrderDiscountCodeAddedMessagePayload : IOrderDiscountCodeAddedMessagePayload
     {

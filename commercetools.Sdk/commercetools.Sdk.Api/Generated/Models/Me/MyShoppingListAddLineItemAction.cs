@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyShoppingListAddLineItemAction : IMyShoppingListAddLineItemAction
     {

@@ -1,11 +1,11 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderTransitionCustomLineItemStateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderTransitionCustomLineItemStateAction))]
     public partial interface IOrderTransitionCustomLineItemStateAction : IOrderUpdateAction
     {
         string CustomLineItemId { get; set; }

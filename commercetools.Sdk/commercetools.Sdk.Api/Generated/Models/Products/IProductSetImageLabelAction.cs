@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetImageLabelAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetImageLabelAction))]
     public partial interface IProductSetImageLabelAction : IProductUpdateAction
     {
         string Sku { get; set; }

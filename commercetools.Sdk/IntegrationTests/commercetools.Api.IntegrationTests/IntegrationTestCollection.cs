@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.Sdk.Api.IntegrationTests
 {
     [CollectionDefinition("Integration Tests")]
     public class IntegrationTestCollection : ICollectionFixture<ServiceProviderFixture>

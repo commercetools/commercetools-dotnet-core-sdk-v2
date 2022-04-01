@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetAssetKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetKeyAction))]
     public partial interface ICategorySetAssetKeyAction : ICategoryUpdateAction
     {
         string AssetId { get; set; }

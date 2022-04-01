@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.Zone))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.Zone))]
     public partial interface IZone : IBaseResource
     {
         new string Id { get; set; }

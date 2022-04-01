@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Customers
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
     public partial class ByProjectKeyCustomersPasswordTokenPost : ApiMethod<ByProjectKeyCustomersPasswordTokenPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Customers.ICustomerCreatePasswordResetToken CustomerCreatePasswordResetToken;
+        private commercetools.Sdk.Api.Models.Customers.ICustomerCreatePasswordResetToken CustomerCreatePasswordResetToken;
 
-        public ByProjectKeyCustomersPasswordTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerCreatePasswordResetToken customerCreatePasswordResetToken)
+        public ByProjectKeyCustomersPasswordTokenPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.ICustomerCreatePasswordResetToken customerCreatePasswordResetToken)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
 
 
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerToken> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerToken> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerToken>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerToken>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

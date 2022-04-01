@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.States;
 using System;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class OrderFromCartDraft : IOrderFromCartDraft
     {

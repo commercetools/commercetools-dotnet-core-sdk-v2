@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
 
     public class ByProjectKeyOrdersEditsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             return new ByProjectKeyOrdersEditsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyOrdersEditsByIDPost Post(commercetools.Api.Models.OrderEdits.IOrderEditUpdate orderEditUpdate)
+        public ByProjectKeyOrdersEditsByIDPost Post(commercetools.Sdk.Api.Models.OrderEdits.IOrderEditUpdate orderEditUpdate)
         {
             return new ByProjectKeyOrdersEditsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, orderEditUpdate);
         }

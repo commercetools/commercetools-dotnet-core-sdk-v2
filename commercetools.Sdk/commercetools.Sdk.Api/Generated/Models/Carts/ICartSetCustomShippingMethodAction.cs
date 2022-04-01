@@ -1,11 +1,11 @@
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetCustomShippingMethodAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomShippingMethodAction))]
     public partial interface ICartSetCustomShippingMethodAction : ICartUpdateAction
     {
         string ShippingMethodName { get; set; }

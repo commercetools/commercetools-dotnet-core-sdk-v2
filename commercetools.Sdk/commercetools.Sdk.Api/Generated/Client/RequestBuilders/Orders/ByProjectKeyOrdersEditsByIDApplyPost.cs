@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
     public partial class ByProjectKeyOrdersEditsByIDApplyPost : ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
 
         private string ID { get; }
 
-        private commercetools.Api.Models.OrderEdits.IOrderEditApply OrderEditApply;
+        private commercetools.Sdk.Api.Models.OrderEdits.IOrderEditApply OrderEditApply;
 
-        public ByProjectKeyOrdersEditsByIDApplyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.OrderEdits.IOrderEditApply orderEditApply)
+        public ByProjectKeyOrdersEditsByIDApplyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.OrderEdits.IOrderEditApply orderEditApply)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;

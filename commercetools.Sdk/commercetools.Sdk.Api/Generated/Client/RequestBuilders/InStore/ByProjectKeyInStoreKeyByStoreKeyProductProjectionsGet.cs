@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet, commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>
     {
 
 
@@ -162,10 +162,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>(requestMessage);
         }
 
     }

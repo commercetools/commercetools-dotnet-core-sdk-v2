@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
     public partial class InventoryEntryDraft : IInventoryEntryDraft
     {

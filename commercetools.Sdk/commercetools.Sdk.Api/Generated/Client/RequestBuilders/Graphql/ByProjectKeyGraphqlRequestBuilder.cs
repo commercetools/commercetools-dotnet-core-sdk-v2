@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Graphql
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
 {
 
     public class ByProjectKeyGraphqlRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyGraphqlPost Post(commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
+        public ByProjectKeyGraphqlPost Post(commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
         {
             return new ByProjectKeyGraphqlPost(ApiHttpClient, SerializerService, ProjectKey, graphQLRequest);
         }

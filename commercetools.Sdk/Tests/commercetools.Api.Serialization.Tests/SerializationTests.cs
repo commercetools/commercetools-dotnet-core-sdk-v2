@@ -1,13 +1,13 @@
 using System;
 using System.Globalization;
 using System.IO;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class SerializationTests : IClassFixture<SerializationFixture>
     {

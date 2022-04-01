@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
     public class ByProjectKeyMeCartsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeCartsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyMeCartsPost Post(commercetools.Api.Models.Me.IMyCartDraft myCartDraft)
+        public ByProjectKeyMeCartsPost Post(commercetools.Sdk.Api.Models.Me.IMyCartDraft myCartDraft)
         {
             return new ByProjectKeyMeCartsPost(ApiHttpClient, SerializerService, ProjectKey, myCartDraft);
         }

@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductSelections.ProductSelectionReference))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference))]
     public partial interface IProductSelectionReference : IReference
     {
         new string Id { get; set; }

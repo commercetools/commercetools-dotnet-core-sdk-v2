@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.SyncInfo))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.SyncInfo))]
     public partial interface ISyncInfo
     {
         IChannelReference Channel { get; set; }

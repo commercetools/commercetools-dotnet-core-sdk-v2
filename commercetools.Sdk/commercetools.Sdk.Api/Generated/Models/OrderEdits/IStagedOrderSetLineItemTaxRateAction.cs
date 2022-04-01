@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetLineItemTaxRateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetLineItemTaxRateAction))]
     public partial interface IStagedOrderSetLineItemTaxRateAction : IStagedOrderUpdateAction
     {
         string LineItemId { get; set; }

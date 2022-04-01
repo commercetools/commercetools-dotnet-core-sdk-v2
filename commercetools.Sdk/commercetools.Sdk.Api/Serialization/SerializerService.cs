@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using commercetools.Base.Serialization;

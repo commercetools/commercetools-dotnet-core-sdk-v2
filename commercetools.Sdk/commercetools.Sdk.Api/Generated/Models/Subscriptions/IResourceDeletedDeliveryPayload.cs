@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.ResourceDeletedDeliveryPayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.ResourceDeletedDeliveryPayload))]
     public partial interface IResourceDeletedDeliveryPayload : IDeliveryPayload
     {
         long Version { get; set; }

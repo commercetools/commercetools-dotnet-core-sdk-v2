@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Zones;
+using commercetools.Sdk.Api.Models.Zones;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     public partial class ShippingMethodRemoveZoneAction : IShippingMethodRemoveZoneAction
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerSetFirstNameAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerSetFirstNameAction))]
     public partial interface IMyCustomerSetFirstNameAction : IMyCustomerUpdateAction
     {
         string FirstName { get; set; }

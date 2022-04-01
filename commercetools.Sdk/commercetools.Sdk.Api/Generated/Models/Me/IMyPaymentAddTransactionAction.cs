@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPaymentAddTransactionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyPaymentAddTransactionAction))]
     public partial interface IMyPaymentAddTransactionAction : IMyPaymentUpdateAction
     {
         ITransactionDraft Transaction { get; set; }

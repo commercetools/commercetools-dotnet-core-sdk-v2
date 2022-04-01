@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.ExternalOAuth))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.ExternalOAuth))]
     public partial interface IExternalOAuth
     {
         string Url { get; set; }

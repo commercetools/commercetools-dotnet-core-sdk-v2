@@ -1,16 +1,16 @@
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using commercetools.Api.IntegrationTests.Services;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.IntegrationTests.Services;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Serialization;
 using Xunit;
 
-namespace commercetools.Api.IntegrationTests.Me
+namespace commercetools.Sdk.Api.IntegrationTests.Me
 {
     [Collection("Integration Tests")]
     public class MeIntegrationTests

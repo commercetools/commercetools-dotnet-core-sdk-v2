@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionInput))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionInput))]
     public partial interface IExtensionInput
     {
         IExtensionAction Action { get; set; }

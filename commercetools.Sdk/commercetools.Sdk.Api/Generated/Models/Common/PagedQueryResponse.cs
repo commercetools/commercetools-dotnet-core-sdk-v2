@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     public partial class PagedQueryResponse : IPagedQueryResponse
     {

@@ -1,14 +1,14 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
     [TypeDiscriminator(nameof(Action))]
-    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Extensions.ExtensionUpdateAction))]
-    [SubTypeDiscriminator("changeDestination", typeof(commercetools.Api.Models.Extensions.ExtensionChangeDestinationAction))]
-    [SubTypeDiscriminator("changeTriggers", typeof(commercetools.Api.Models.Extensions.ExtensionChangeTriggersAction))]
-    [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Extensions.ExtensionSetKeyAction))]
-    [SubTypeDiscriminator("setTimeoutInMs", typeof(commercetools.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionUpdateAction))]
+    [SubTypeDiscriminator("changeDestination", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction))]
+    [SubTypeDiscriminator("changeTriggers", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetKeyAction))]
+    [SubTypeDiscriminator("setTimeoutInMs", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
     public partial interface IExtensionUpdateAction
     {
         string Action { get; set; }

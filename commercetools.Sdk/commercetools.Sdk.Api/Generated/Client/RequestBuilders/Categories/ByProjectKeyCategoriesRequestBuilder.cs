@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Categories
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
 {
 
     public class ByProjectKeyCategoriesRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
             return new ByProjectKeyCategoriesGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyCategoriesPost Post(commercetools.Api.Models.Categories.ICategoryDraft categoryDraft)
+        public ByProjectKeyCategoriesPost Post(commercetools.Sdk.Api.Models.Categories.ICategoryDraft categoryDraft)
         {
             return new ByProjectKeyCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, categoryDraft);
         }

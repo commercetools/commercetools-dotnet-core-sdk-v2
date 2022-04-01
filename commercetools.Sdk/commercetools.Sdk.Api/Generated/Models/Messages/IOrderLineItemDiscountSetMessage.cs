@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderLineItemDiscountSetMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemDiscountSetMessage))]
     public partial interface IOrderLineItemDiscountSetMessage : IOrderMessage
     {
         string LineItemId { get; set; }

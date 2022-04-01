@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderStoreSetMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderStoreSetMessagePayload))]
     public partial interface IOrderStoreSetMessagePayload : IOrderMessagePayload
     {
         IStoreKeyReference Store { get; set; }

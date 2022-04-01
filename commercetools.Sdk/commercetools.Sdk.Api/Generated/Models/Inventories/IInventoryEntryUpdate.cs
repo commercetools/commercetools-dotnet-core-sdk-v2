@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryUpdate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryUpdate))]
     public partial interface IInventoryEntryUpdate
     {
         long Version { get; set; }

@@ -1,12 +1,12 @@
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.Client;
 using Xunit;
-using static commercetools.Api.IntegrationTests.Payments.PaymentsFixture;
+using static commercetools.Sdk.Api.IntegrationTests.Payments.PaymentsFixture;
 
-namespace commercetools.Api.IntegrationTests.Payments
+namespace commercetools.Sdk.Api.IntegrationTests.Payments
 {
     [Collection("Integration Tests")]
     public class PaymentsIntegrationTests

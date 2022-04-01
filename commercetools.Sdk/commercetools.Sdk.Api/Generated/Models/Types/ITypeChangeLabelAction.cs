@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeChangeLabelAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeChangeLabelAction))]
     public partial interface ITypeChangeLabelAction : ITypeUpdateAction
     {
         string FieldName { get; set; }

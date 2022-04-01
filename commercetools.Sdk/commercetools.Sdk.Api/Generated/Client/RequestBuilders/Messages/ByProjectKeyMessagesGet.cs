@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Messages
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
 {
-    public partial class ByProjectKeyMessagesGet : ApiMethod<ByProjectKeyMessagesGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyMessagesGet, commercetools.Api.Models.Messages.IMessagePagedQueryResponse>
+    public partial class ByProjectKeyMessagesGet : ApiMethod<ByProjectKeyMessagesGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyMessagesGet, commercetools.Sdk.Api.Models.Messages.IMessagePagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Messages.IMessagePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Messages.IMessagePagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Messages.IMessagePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Messages.IMessagePagedQueryResponse>(requestMessage);
         }
 
     }

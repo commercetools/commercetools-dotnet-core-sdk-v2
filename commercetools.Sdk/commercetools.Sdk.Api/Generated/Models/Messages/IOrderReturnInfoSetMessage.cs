@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderReturnInfoSetMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage))]
     public partial interface IOrderReturnInfoSetMessage : IOrderMessage
     {
         List<IReturnInfo> ReturnInfo { get; set; }

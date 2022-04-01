@@ -1,12 +1,12 @@
 using System;
 using System.Threading.Tasks;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Api.IntegrationTests.GenericFixture;
+using static commercetools.Sdk.Api.IntegrationTests.GenericFixture;
 
-namespace commercetools.Api.IntegrationTests.ProductTypes
+namespace commercetools.Sdk.Api.IntegrationTests.ProductTypes
 {
     public class ProductTypesFixture
     {

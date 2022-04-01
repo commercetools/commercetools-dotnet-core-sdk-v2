@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction))]
     public partial interface ITaxCategoryAddTaxRateAction : ITaxCategoryUpdateAction
     {
         ITaxRateDraft TaxRate { get; set; }

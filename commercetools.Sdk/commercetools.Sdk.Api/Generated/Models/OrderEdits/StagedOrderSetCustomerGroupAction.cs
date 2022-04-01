@@ -1,7 +1,7 @@
-using commercetools.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetCustomerGroupAction : IStagedOrderSetCustomerGroupAction
     {

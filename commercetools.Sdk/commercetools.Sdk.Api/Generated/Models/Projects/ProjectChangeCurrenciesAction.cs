@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
     public partial class ProjectChangeCurrenciesAction : IProjectChangeCurrenciesAction
     {

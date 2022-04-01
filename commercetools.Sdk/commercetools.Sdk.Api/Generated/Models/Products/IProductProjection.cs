@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductProjection))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductProjection))]
     public partial interface IProductProjection : IBaseResource
     {
         new string Id { get; set; }

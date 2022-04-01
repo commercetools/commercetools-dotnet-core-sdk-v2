@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
 
     public class ByProjectKeyInventoryByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
             return new ByProjectKeyInventoryByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyInventoryByIDPost Post(commercetools.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
+        public ByProjectKeyInventoryByIDPost Post(commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
         {
             return new ByProjectKeyInventoryByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, inventoryEntryUpdate);
         }

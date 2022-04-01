@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetTargetAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewSetTargetAction))]
     public partial interface IReviewSetTargetAction : IReviewUpdateAction
     {
         Object Target { get; set; }

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionTrigger))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionTrigger))]
     public partial interface IExtensionTrigger
     {
         IExtensionResourceTypeId ResourceTypeId { get; set; }

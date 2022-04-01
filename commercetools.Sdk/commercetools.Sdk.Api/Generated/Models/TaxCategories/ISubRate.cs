@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.SubRate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.SubRate))]
     public partial interface ISubRate
     {
         string Name { get; set; }

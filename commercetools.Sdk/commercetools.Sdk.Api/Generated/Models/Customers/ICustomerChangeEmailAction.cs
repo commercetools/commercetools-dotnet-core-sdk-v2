@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerChangeEmailAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerChangeEmailAction))]
     public partial interface ICustomerChangeEmailAction : ICustomerUpdateAction
     {
         string Email { get; set; }

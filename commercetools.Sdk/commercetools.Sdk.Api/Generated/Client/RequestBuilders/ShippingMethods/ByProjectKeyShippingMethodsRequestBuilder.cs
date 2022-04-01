@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
 
     public class ByProjectKeyShippingMethodsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyShippingMethodsPost Post(commercetools.Api.Models.ShippingMethods.IShippingMethodDraft shippingMethodDraft)
+        public ByProjectKeyShippingMethodsPost Post(commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodDraft shippingMethodDraft)
         {
             return new ByProjectKeyShippingMethodsPost(ApiHttpClient, SerializerService, ProjectKey, shippingMethodDraft);
         }

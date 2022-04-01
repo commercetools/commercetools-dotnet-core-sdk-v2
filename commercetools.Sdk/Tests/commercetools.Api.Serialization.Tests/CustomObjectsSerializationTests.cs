@@ -1,12 +1,12 @@
 using System.IO;
 using System.Text.Json;
-using commercetools.Api.Models.CustomObjects;
+using commercetools.Sdk.Api.Models.CustomObjects;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class CustomObjectsSerializationTests : IClassFixture<SerializationFixture>
     {

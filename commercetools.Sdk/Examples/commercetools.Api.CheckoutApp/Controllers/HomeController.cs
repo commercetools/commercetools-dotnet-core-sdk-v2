@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using commercetools.Api.CheckoutApp.Models;
 using commercetools.Api.CheckoutApp.Services;
-using commercetools.Api.Models.Me;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Me;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using Microsoft.AspNetCore.Mvc;

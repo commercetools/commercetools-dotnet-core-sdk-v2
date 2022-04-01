@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.AssetSource))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.AssetSource))]
     public partial interface IAssetSource
     {
         string Uri { get; set; }

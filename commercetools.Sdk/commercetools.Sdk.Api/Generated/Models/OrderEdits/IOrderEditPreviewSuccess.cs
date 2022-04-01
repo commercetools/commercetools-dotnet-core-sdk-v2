@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Messages;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
     public partial interface IOrderEditPreviewSuccess : IOrderEditResult
     {
         IStagedOrder Preview { get; set; }

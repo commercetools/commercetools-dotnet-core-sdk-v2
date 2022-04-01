@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAssetSourcesAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetAssetSourcesAction))]
     public partial interface IProductSetAssetSourcesAction : IProductUpdateAction
     {
         long? VariantId { get; set; }

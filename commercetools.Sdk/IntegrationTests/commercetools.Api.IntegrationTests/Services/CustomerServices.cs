@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 
-namespace commercetools.Api.IntegrationTests.Services
+namespace commercetools.Sdk.Api.IntegrationTests.Services
 {
     public class CustomerServices
     {

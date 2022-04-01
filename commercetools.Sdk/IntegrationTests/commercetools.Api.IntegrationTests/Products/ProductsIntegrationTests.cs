@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
-using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
+using static commercetools.Sdk.Api.IntegrationTests.Products.ProductsFixture;
 
-namespace commercetools.Api.IntegrationTests.Products
+namespace commercetools.Sdk.Api.IntegrationTests.Products
 {
     [Collection("Integration Tests")]
     public class ProductsIntegrationTests

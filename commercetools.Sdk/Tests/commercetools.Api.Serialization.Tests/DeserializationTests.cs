@@ -2,25 +2,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.GraphQl;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Projects;
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.GraphQl;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Projects;
+using commercetools.Sdk.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace commercetools.Api.Serialization.Tests
+namespace commercetools.Sdk.Api.Serialization.Tests
 {
     public class DeserializationTests : IClassFixture<SerializationFixture>
     {

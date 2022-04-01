@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerSetDefaultBillingAddressAction : ICustomerSetDefaultBillingAddressAction
     {

@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class OrderEditPreviewFailure : IOrderEditPreviewFailure
     {

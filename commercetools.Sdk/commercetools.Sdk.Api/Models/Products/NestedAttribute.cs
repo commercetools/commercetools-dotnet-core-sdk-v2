@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public class NestedAttribute : Attribute, IGenericAttribute<List<IAttribute>>
     {

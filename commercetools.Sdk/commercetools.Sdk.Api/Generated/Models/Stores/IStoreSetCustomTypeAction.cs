@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomTypeAction))]
     public partial interface IStoreSetCustomTypeAction : IStoreUpdateAction
     {
         ITypeResourceIdentifier Type { get; set; }

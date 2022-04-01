@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductAddedToCategoryMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductAddedToCategoryMessagePayload))]
     public partial interface IProductAddedToCategoryMessagePayload : IMessagePayload
     {
         ICategoryReference Category { get; set; }

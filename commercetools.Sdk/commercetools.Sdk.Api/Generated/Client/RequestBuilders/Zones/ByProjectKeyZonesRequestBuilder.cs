@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Zones
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
 {
 
     public class ByProjectKeyZonesRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
             return new ByProjectKeyZonesGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyZonesPost Post(commercetools.Api.Models.Zones.IZoneDraft zoneDraft)
+        public ByProjectKeyZonesPost Post(commercetools.Sdk.Api.Models.Zones.IZoneDraft zoneDraft)
         {
             return new ByProjectKeyZonesPost(ApiHttpClient, SerializerService, ProjectKey, zoneDraft);
         }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneAddLocationAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.ZoneAddLocationAction))]
     public partial interface IZoneAddLocationAction : IZoneUpdateAction
     {
         ILocation Location { get; set; }

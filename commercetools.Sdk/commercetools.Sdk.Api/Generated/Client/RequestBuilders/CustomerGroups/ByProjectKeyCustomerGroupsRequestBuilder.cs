@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
 
     public class ByProjectKeyCustomerGroupsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
             return new ByProjectKeyCustomerGroupsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyCustomerGroupsPost Post(commercetools.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
+        public ByProjectKeyCustomerGroupsPost Post(commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
         {
             return new ByProjectKeyCustomerGroupsPost(ApiHttpClient, SerializerService, ProjectKey, customerGroupDraft);
         }

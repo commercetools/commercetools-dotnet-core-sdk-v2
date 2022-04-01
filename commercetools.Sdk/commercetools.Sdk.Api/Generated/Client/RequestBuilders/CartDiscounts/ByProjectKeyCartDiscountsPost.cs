@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts
 {
     public partial class ByProjectKeyCartDiscountsPost : ApiMethod<ByProjectKeyCartDiscountsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.CartDiscounts.ICartDiscountDraft CartDiscountDraft;
+        private commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountDraft CartDiscountDraft;
 
-        public ByProjectKeyCartDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CartDiscounts.ICartDiscountDraft cartDiscountDraft)
+        public ByProjectKeyCartDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountDraft cartDiscountDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
         }
 
 
-        public async Task<commercetools.Api.Models.CartDiscounts.ICartDiscount> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.ICartDiscount>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

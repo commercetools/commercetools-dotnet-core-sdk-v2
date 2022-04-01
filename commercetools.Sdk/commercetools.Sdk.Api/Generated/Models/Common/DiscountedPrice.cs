@@ -1,7 +1,7 @@
-using commercetools.Api.Models.ProductDiscounts;
+using commercetools.Sdk.Api.Models.ProductDiscounts;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     public partial class DiscountedPrice : IDiscountedPrice
     {

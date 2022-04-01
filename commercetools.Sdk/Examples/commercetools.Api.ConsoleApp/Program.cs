@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;

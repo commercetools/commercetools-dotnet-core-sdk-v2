@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Inventories;
+using commercetools.Sdk.Api.Models.Inventories;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryCreatedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessagePayload))]
     public partial interface IInventoryEntryCreatedMessagePayload : IMessagePayload
     {
         IInventoryEntry InventoryEntry { get; set; }

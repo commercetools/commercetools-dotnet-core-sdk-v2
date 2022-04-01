@@ -1,12 +1,12 @@
 using System;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using commercetools.Api.Models.Errors;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;

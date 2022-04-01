@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     public partial class ProductSelectionSetCustomFieldAction : IProductSelectionSetCustomFieldAction
     {

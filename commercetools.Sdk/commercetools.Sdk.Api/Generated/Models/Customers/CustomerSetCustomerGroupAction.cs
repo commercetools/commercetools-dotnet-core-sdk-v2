@@ -1,7 +1,7 @@
-using commercetools.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerSetCustomerGroupAction : ICustomerSetCustomerGroupAction
     {

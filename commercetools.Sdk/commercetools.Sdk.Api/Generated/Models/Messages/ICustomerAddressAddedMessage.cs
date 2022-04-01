@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerAddressAddedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage))]
     public partial interface ICustomerAddressAddedMessage : IMessage
     {
         IAddress Address { get; set; }

@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.TaxedPriceDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.TaxedPriceDraft))]
     public partial interface ITaxedPriceDraft
     {
         IMoney TotalNet { get; set; }

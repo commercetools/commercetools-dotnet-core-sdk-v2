@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.ItemShippingTarget))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ItemShippingTarget))]
     public partial interface IItemShippingTarget
     {
         string AddressKey { get; set; }

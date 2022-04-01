@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
     public class ByProjectKeyMePaymentsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMePaymentsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyMePaymentsByIDPost Post(commercetools.Api.Models.Me.IMyPaymentUpdate myPaymentUpdate)
+        public ByProjectKeyMePaymentsByIDPost Post(commercetools.Sdk.Api.Models.Me.IMyPaymentUpdate myPaymentUpdate)
         {
             return new ByProjectKeyMePaymentsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, myPaymentUpdate);
         }

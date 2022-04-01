@@ -1,12 +1,12 @@
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 
-namespace commercetools.Api.IntegrationTests.Services
+namespace commercetools.Sdk.Api.IntegrationTests.Services
 {
     public class ShoppingListServices
     {

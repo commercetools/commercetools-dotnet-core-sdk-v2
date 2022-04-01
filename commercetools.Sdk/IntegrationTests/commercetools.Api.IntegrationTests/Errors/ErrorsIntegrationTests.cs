@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
-using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
+using static commercetools.Sdk.Api.IntegrationTests.Categories.CategoriesFixture;
 
-namespace commercetools.Api.IntegrationTests.Errors
+namespace commercetools.Sdk.Api.IntegrationTests.Errors
 {
     [Collection("Integration Tests")]
     public class ErrorsIntegrationTests

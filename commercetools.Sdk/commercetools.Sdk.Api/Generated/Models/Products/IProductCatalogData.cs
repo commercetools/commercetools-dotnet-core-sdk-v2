@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductCatalogData))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductCatalogData))]
     public partial interface IProductCatalogData
     {
         bool Published { get; set; }

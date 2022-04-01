@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreRemoveDistributionChannelAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction))]
     public partial interface IStoreRemoveDistributionChannelAction : IStoreUpdateAction
     {
         IChannelResourceIdentifier DistributionChannel { get; set; }

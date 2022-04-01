@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductLegacySetSkuAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductLegacySetSkuAction))]
     public partial interface IProductLegacySetSkuAction : IProductUpdateAction
     {
         string Sku { get; set; }

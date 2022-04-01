@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
     public partial interface ICartSetLineItemShippingDetailsAction : ICartUpdateAction
     {
         string LineItemId { get; set; }

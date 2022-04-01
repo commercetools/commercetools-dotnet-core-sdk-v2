@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SqsDestination))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SqsDestination))]
     public partial interface ISqsDestination : IDestination
     {
         string AccessKey { get; set; }

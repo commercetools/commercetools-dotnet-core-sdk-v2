@@ -1,7 +1,7 @@
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.TaxCategories;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductSetTaxCategoryAction : IProductSetTaxCategoryAction
     {

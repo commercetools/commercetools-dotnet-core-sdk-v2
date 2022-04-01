@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.ExtensionBadResponseError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
     public partial interface IExtensionBadResponseError : IErrorObject
     {
         ILocalizedString LocalizedMessage { get; set; }

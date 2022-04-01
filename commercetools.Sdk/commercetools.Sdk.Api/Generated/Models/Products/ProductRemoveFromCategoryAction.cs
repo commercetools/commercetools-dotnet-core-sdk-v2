@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Categories;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductRemoveFromCategoryAction : IProductRemoveFromCategoryAction
     {

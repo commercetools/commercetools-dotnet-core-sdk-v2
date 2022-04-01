@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.EventBridgeDestination))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.EventBridgeDestination))]
     public partial interface IEventBridgeDestination : IDestination
     {
         string Region { get; set; }

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Extensions
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
 
     public class ByProjectKeyExtensionsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
             return new ByProjectKeyExtensionsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyExtensionsPost Post(commercetools.Api.Models.Extensions.IExtensionDraft extensionDraft)
+        public ByProjectKeyExtensionsPost Post(commercetools.Sdk.Api.Models.Extensions.IExtensionDraft extensionDraft)
         {
             return new ByProjectKeyExtensionsPost(ApiHttpClient, SerializerService, ProjectKey, extensionDraft);
         }

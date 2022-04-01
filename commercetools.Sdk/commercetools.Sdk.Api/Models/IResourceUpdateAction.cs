@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models
+namespace commercetools.Sdk.Api.Models
 {
     public interface IResourceUpdateAction<out TAction> where TAction : IResourceUpdateAction<TAction>
     {

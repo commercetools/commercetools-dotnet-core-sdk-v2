@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     public partial class ShippingMethodSetCustomFieldAction : IShippingMethodSetCustomFieldAction
     {

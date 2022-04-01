@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Channels
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
 {
     public partial class ByProjectKeyChannelsByIDPost : ApiMethod<ByProjectKeyChannelsByIDPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Channels.IChannelUpdate ChannelUpdate;
+        private commercetools.Sdk.Api.Models.Channels.IChannelUpdate ChannelUpdate;
 
-        public ByProjectKeyChannelsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Channels.IChannelUpdate channelUpdate)
+        public ByProjectKeyChannelsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Channels.IChannelUpdate channelUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
         }
 
 
-        public async Task<commercetools.Api.Models.Channels.IChannel> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Channels.IChannel> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Channels.IChannel>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Channels.IChannel>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

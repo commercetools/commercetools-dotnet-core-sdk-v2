@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
+namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
 
     public class ByProjectKeyDiscountCodesByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
             return new ByProjectKeyDiscountCodesByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyDiscountCodesByIDPost Post(commercetools.Api.Models.DiscountCodes.IDiscountCodeUpdate discountCodeUpdate)
+        public ByProjectKeyDiscountCodesByIDPost Post(commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodeUpdate discountCodeUpdate)
         {
             return new ByProjectKeyDiscountCodesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, discountCodeUpdate);
         }

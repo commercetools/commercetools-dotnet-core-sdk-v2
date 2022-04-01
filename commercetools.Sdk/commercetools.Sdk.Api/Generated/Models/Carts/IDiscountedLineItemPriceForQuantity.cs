@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.DiscountedLineItemPriceForQuantity))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.DiscountedLineItemPriceForQuantity))]
     public partial interface IDiscountedLineItemPriceForQuantity
     {
         double Quantity { get; set; }

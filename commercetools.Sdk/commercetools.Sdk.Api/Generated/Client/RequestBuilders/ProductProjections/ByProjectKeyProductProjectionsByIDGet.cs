@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
     public partial class ByProjectKeyProductProjectionsByIDGet : ApiMethod<ByProjectKeyProductProjectionsByIDGet>
     {
@@ -108,10 +108,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
         }
 
 
-        public async Task<commercetools.Api.Models.Products.IProductProjection> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjection> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjection>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjection>(requestMessage);
         }
 
     }

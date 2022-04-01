@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.InvalidFieldError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.InvalidFieldError))]
     public partial interface IInvalidFieldError : IErrorObject
     {
         string Field { get; set; }

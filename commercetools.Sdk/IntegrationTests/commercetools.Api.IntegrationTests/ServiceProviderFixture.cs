@@ -1,4 +1,4 @@
-﻿using commercetools.Api.Models.Errors;
+﻿using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.Sdk.Api.IntegrationTests
 {
     public class ServiceProviderFixture
     {

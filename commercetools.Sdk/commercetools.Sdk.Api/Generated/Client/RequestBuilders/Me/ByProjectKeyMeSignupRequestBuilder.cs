@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
     public class ByProjectKeyMeSignupRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMeSignupPost Post(commercetools.Api.Models.Me.IMyCustomerDraft myCustomerDraft)
+        public ByProjectKeyMeSignupPost Post(commercetools.Sdk.Api.Models.Me.IMyCustomerDraft myCustomerDraft)
         {
             return new ByProjectKeyMeSignupPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerDraft);
         }

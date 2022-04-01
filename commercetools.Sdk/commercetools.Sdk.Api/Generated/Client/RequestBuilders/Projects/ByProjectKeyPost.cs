@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
     public partial class ByProjectKeyPost : ApiMethod<ByProjectKeyPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Projects.IProjectUpdate ProjectUpdate;
+        private commercetools.Sdk.Api.Models.Projects.IProjectUpdate ProjectUpdate;
 
-        public ByProjectKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Projects.IProjectUpdate projectUpdate)
+        public ByProjectKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Projects.IProjectUpdate projectUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
 
 
 
-        public async Task<commercetools.Api.Models.Projects.IProject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Projects.IProject> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Projects.IProject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Projects.IProject>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

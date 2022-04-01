@@ -1,10 +1,10 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
-using Attribute = commercetools.Api.Models.Products.Attribute;
+using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters

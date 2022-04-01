@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductPriceDiscountsSetMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage))]
     public partial interface IProductPriceDiscountsSetMessage : IMessage
     {
         List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }

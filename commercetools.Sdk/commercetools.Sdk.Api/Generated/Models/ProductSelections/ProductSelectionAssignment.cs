@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Products;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     public partial class ProductSelectionAssignment : IProductSelectionAssignment
     {

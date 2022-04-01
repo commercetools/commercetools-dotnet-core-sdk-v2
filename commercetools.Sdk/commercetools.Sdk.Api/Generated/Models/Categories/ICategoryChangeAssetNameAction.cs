@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryChangeAssetNameAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetNameAction))]
     public partial interface ICategoryChangeAssetNameAction : ICategoryUpdateAction
     {
         string AssetId { get; set; }

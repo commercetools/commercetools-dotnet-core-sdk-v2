@@ -1,11 +1,11 @@
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCustomerGroupAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetCustomerGroupAction))]
     public partial interface IStagedOrderSetCustomerGroupAction : IStagedOrderUpdateAction
     {
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }

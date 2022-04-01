@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
     public partial class ProductDiscountValueDraft : IProductDiscountValueDraft
     {

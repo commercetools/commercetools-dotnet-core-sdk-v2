@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerSetDateOfBirthAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerSetDateOfBirthAction))]
     public partial interface IMyCustomerSetDateOfBirthAction : IMyCustomerUpdateAction
     {
         DateTime? DateOfBirth { get; set; }
