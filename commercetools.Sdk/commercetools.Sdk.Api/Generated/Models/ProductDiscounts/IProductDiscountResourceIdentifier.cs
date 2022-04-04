@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountResourceIdentifier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountResourceIdentifier))]
     public partial interface IProductDiscountResourceIdentifier : IResourceIdentifier
     {
     }

@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public partial class CartSetItemShippingAddressCustomFieldAction : ICartSetItemShippingAddressCustomFieldAction
     {

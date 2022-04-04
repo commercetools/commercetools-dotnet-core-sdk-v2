@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Base.Validation;
 using Type = System.Type;

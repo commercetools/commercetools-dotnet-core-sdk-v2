@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Zones;
+using commercetools.Sdk.Api.Models.Zones;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ZoneRateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ZoneRateDraft))]
     public partial interface IZoneRateDraft
     {
         IZoneResourceIdentifier Zone { get; set; }

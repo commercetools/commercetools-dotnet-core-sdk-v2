@@ -1,8 +1,8 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CartDiscounts;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public partial class DiscountedLineItemPortion : IDiscountedLineItemPortion
     {

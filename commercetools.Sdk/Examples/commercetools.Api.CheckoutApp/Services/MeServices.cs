@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using commercetools.Api.CheckoutApp.Models;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 

@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum SubscriptionHealthStatus
     {

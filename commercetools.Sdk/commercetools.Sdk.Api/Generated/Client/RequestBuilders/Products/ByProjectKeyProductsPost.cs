@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Products
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
     public partial class ByProjectKeyProductsPost : ApiMethod<ByProjectKeyProductsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Products
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Products.IProductDraft ProductDraft;
+        private commercetools.Sdk.Api.Models.Products.IProductDraft ProductDraft;
 
-        public ByProjectKeyProductsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Products.IProductDraft productDraft)
+        public ByProjectKeyProductsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Products.IProductDraft productDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -102,10 +102,10 @@ namespace commercetools.Api.Client.RequestBuilders.Products
         }
 
 
-        public async Task<commercetools.Api.Models.Products.IProduct> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProduct> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProduct>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProduct>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

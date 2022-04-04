@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderTransitionStateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderTransitionStateAction))]
     public partial interface IStagedOrderTransitionStateAction : IStagedOrderUpdateAction
     {
         IStateResourceIdentifier State { get; set; }

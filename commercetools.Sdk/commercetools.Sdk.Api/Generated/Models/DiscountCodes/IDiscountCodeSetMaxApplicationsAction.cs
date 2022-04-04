@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction))]
     public partial interface IDiscountCodeSetMaxApplicationsAction : IDiscountCodeUpdateAction
     {
         long? MaxApplications { get; set; }

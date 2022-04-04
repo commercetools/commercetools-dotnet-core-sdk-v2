@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeChangeAttributeConstraintAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeAttributeConstraintAction))]
     public partial interface IProductTypeChangeAttributeConstraintAction : IProductTypeUpdateAction
     {
         string AttributeName { get; set; }

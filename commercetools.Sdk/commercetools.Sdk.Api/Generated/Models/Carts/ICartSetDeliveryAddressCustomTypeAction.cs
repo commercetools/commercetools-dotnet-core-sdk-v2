@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction))]
     public partial interface ICartSetDeliveryAddressCustomTypeAction : ICartUpdateAction
     {
         string DeliveryId { get; set; }

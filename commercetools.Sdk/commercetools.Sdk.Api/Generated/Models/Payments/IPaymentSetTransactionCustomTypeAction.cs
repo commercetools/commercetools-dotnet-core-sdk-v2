@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetTransactionCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction))]
     public partial interface IPaymentSetTransactionCustomTypeAction : IPaymentUpdateAction
     {
         string TransactionId { get; set; }

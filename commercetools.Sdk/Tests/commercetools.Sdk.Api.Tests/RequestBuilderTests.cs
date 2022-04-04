@@ -1,8 +1,8 @@
 using Xunit;
 using System.Net.Http;
 using System.Collections.Generic;
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Serialization;

@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerChangeAddressAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerChangeAddressAction))]
     public partial interface IMyCustomerChangeAddressAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set; }

@@ -1,4 +1,4 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;

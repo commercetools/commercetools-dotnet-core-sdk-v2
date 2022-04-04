@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
     public partial class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost>
     {
@@ -24,9 +24,9 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
 
         private string OrderNumber { get; }
 
-        private commercetools.Api.Models.Orders.IOrderUpdate OrderUpdate;
+        private commercetools.Sdk.Api.Models.Orders.IOrderUpdate OrderUpdate;
 
-        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string orderNumber, commercetools.Api.Models.Orders.IOrderUpdate orderUpdate)
+        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, string orderNumber, commercetools.Sdk.Api.Models.Orders.IOrderUpdate orderUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -48,10 +48,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
         }
 
 
-        public async Task<commercetools.Api.Models.Orders.IOrder> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrder> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Orders.IOrder>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrder>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

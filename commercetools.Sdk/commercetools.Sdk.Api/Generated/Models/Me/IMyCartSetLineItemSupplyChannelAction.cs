@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetLineItemSupplyChannelAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemSupplyChannelAction))]
     public partial interface IMyCartSetLineItemSupplyChannelAction : IMyCartUpdateAction
     {
         string LineItemId { get; set; }

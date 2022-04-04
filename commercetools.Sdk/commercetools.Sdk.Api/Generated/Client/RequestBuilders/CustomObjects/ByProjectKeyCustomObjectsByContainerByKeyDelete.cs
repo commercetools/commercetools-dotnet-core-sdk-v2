@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomObjects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
     public partial class ByProjectKeyCustomObjectsByContainerByKeyDelete : ApiMethod<ByProjectKeyCustomObjectsByContainerByKeyDelete>
     {
@@ -61,10 +61,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
         }
 
 
-        public async Task<commercetools.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.ICustomObject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage);
         }
 
     }

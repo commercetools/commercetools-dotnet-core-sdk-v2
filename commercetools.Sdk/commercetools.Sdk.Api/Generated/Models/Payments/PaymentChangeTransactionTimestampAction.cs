@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
     public partial class PaymentChangeTransactionTimestampAction : IPaymentChangeTransactionTimestampAction
     {

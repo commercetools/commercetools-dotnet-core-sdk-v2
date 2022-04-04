@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public partial class EventBridgeDestination : IEventBridgeDestination
     {

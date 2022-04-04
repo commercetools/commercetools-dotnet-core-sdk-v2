@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
     public partial class SearchIndexingConfigurationValues : ISearchIndexingConfigurationValues
     {

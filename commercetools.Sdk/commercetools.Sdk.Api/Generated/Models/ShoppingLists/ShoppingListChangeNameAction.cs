@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
     public partial class ShoppingListChangeNameAction : IShoppingListChangeNameAction
     {

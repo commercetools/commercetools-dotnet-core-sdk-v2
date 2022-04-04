@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
     public partial class ByProjectKeyMeCartsGet : ApiMethod<ByProjectKeyMeCartsGet>
     {
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Carts.ICartPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Carts.ICartPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICartPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Carts.ICartPagedQueryResponse>(requestMessage);
         }
 
     }

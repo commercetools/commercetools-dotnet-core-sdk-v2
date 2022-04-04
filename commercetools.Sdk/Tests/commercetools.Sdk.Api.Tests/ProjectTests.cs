@@ -1,6 +1,6 @@
 using System.IO;
 using Xunit;
-using commercetools.Api.Models.Projects;
+using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 

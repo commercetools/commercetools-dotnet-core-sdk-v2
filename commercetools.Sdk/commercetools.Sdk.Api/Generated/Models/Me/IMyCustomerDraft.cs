@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerDraft))]
     public partial interface IMyCustomerDraft
     {
         string Email { get; set; }

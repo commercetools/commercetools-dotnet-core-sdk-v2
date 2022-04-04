@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategoryPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryPagedQueryResponse))]
     public partial interface ITaxCategoryPagedQueryResponse
     {
         long Limit { get; set; }

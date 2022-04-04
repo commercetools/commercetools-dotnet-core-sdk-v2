@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetDiscountedPriceAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetDiscountedPriceAction))]
     public partial interface IProductSetDiscountedPriceAction : IProductUpdateAction
     {
         string PriceId { get; set; }

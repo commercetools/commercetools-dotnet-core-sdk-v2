@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
     public partial class ShoppingListAddTextLineItemAction : IShoppingListAddTextLineItemAction
     {

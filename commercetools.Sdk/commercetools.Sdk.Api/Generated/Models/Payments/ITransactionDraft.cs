@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.TransactionDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.TransactionDraft))]
     public partial interface ITransactionDraft
     {
         DateTime? Timestamp { get; set; }

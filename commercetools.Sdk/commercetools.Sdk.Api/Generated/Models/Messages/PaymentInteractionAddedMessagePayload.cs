@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class PaymentInteractionAddedMessagePayload : IPaymentInteractionAddedMessagePayload
     {

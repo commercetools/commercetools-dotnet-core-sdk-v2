@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
 {
     public class ByProjectKeyInStoreKeyByStoreKeyMeTest : RequestBuilderParentTests
     {

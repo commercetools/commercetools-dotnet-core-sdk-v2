@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountDraft))]
     public partial interface IProductDiscountDraft
     {
         ILocalizedString Name { get; set; }

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
     public partial class ByProjectKeyInStoreKeyByStoreKeyOrdersGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>
     {
@@ -92,10 +92,10 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Orders.IOrderPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrderPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Orders.IOrderPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrderPagedQueryResponse>(requestMessage);
         }
 
     }

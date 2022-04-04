@@ -1,7 +1,7 @@
-using commercetools.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class OrderCustomerGroupSetMessagePayload : IOrderCustomerGroupSetMessagePayload
     {

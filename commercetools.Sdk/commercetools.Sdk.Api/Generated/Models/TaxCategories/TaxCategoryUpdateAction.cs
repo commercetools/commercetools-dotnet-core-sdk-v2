@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
     public partial class TaxCategoryUpdateAction : ITaxCategoryUpdateAction
     {

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.CustomObjects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
 
     public class ByProjectKeyCustomObjectsRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
             return new ByProjectKeyCustomObjectsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyCustomObjectsPost Post(commercetools.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft)
+        public ByProjectKeyCustomObjectsPost Post(commercetools.Sdk.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft)
         {
             return new ByProjectKeyCustomObjectsPost(ApiHttpClient, SerializerService, ProjectKey, customObjectDraft);
         }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
     public partial class TaxRate : ITaxRate
     {

@@ -1,10 +1,10 @@
-using commercetools.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetShippingMethodAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodAction))]
     public partial interface ICartSetShippingMethodAction : ICartUpdateAction
     {
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }

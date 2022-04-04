@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
     public partial class ByProjectKeyCustomerGroupsPost : ApiMethod<ByProjectKeyCustomerGroupsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.CustomerGroups.ICustomerGroupDraft CustomerGroupDraft;
+        private commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupDraft CustomerGroupDraft;
 
-        public ByProjectKeyCustomerGroupsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
+        public ByProjectKeyCustomerGroupsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
         }
 
 
-        public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroup> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomerGroups.ICustomerGroup>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

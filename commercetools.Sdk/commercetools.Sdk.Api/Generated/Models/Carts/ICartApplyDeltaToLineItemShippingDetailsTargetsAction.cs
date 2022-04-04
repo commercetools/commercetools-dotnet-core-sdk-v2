@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartApplyDeltaToLineItemShippingDetailsTargetsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToLineItemShippingDetailsTargetsAction))]
     public partial interface ICartApplyDeltaToLineItemShippingDetailsTargetsAction : ICartUpdateAction
     {
         string LineItemId { get; set; }

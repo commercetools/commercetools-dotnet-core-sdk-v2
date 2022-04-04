@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetProductPriceCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductPriceCustomTypeAction))]
     public partial interface IProductSetProductPriceCustomTypeAction : IProductUpdateAction
     {
         string PriceId { get; set; }

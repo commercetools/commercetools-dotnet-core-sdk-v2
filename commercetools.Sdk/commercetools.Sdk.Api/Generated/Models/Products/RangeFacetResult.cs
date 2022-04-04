@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class RangeFacetResult : IRangeFacetResult
     {

@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPaymentSetTransactionCustomFieldAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyPaymentSetTransactionCustomFieldAction))]
     public partial interface IMyPaymentSetTransactionCustomFieldAction : IMyPaymentUpdateAction
     {
         string Name { get; set; }

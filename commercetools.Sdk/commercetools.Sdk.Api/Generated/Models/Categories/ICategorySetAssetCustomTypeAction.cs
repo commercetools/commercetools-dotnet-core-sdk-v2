@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetAssetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomTypeAction))]
     public partial interface ICategorySetAssetCustomTypeAction : ICategoryUpdateAction
     {
         string AssetId { get; set; }

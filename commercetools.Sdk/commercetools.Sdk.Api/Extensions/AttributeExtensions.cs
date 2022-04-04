@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
 
 namespace commercetools.Sdk.Api.Extensions
 {

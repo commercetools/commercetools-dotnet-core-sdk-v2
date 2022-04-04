@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAssetTagsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetAssetTagsAction))]
     public partial interface IProductSetAssetTagsAction : IProductUpdateAction
     {
         long? VariantId { get; set; }

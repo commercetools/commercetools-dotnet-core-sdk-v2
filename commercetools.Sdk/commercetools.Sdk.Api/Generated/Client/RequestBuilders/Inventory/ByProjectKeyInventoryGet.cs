@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInventoryGet, commercetools.Api.Models.Inventories.IInventoryPagedQueryResponse>
+    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInventoryGet, commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Inventories.IInventoryPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.IInventoryPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse>(requestMessage);
         }
 
     }

@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Validation;
-using Attribute = commercetools.Api.Models.Products.Attribute;
+using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 
 namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {

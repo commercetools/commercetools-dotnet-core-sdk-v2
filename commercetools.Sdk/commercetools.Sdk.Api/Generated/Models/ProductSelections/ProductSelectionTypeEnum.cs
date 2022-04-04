@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     public enum ProductSelectionTypeEnum
     {

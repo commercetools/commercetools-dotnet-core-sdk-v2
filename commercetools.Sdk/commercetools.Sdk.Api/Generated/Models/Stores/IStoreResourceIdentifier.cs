@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreResourceIdentifier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreResourceIdentifier))]
     public partial interface IStoreResourceIdentifier : IResourceIdentifier
     {
     }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     public partial class ShippingMethodUpdate : IShippingMethodUpdate
     {

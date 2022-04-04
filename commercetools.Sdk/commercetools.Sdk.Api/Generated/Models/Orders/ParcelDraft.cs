@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class ParcelDraft : IParcelDraft
     {

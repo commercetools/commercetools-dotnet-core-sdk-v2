@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     public partial class CreatedBy : ICreatedBy
     {

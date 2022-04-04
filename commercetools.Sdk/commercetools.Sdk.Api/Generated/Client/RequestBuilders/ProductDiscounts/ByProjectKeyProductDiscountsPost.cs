@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
     public partial class ByProjectKeyProductDiscountsPost : ApiMethod<ByProjectKeyProductDiscountsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.ProductDiscounts.IProductDiscountDraft ProductDiscountDraft;
+        private commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountDraft ProductDiscountDraft;
 
-        public ByProjectKeyProductDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.ProductDiscounts.IProductDiscountDraft productDiscountDraft)
+        public ByProjectKeyProductDiscountsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountDraft productDiscountDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
         }
 
 
-        public async Task<commercetools.Api.Models.ProductDiscounts.IProductDiscount> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscount> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductDiscounts.IProductDiscount>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscount>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

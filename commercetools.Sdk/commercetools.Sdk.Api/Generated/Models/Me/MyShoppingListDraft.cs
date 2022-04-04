@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyShoppingListDraft : IMyShoppingListDraft
     {

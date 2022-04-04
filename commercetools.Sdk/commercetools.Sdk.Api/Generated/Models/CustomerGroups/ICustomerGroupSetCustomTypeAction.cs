@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.CustomerGroups
+namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupSetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupSetCustomTypeAction))]
     public partial interface ICustomerGroupSetCustomTypeAction : ICustomerGroupUpdateAction
     {
         ITypeResourceIdentifier Type { get; set; }

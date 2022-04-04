@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetTitleAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewSetTitleAction))]
     public partial interface IReviewSetTitleAction : IReviewUpdateAction
     {
         string Title { get; set; }

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.OrderEdits;
+using commercetools.Sdk.Api.Models.OrderEdits;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class EditPreviewFailedError : IEditPreviewFailedError
     {

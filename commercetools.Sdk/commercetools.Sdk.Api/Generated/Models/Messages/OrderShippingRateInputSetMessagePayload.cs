@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class OrderShippingRateInputSetMessagePayload : IOrderShippingRateInputSetMessagePayload
     {

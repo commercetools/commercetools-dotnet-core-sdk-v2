@@ -1,4 +1,4 @@
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Extensions

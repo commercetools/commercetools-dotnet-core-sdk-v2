@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductSelections.ProductSelectionPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionPagedQueryResponse))]
     public partial interface IProductSelectionPagedQueryResponse
     {
         long Limit { get; set; }

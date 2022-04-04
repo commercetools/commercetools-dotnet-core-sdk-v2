@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     [TypeDiscriminator(nameof(Type))]
-    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Orders.ReturnItem))]
-    [SubTypeDiscriminator("CustomLineItemReturnItem", typeof(commercetools.Api.Models.Orders.CustomLineItemReturnItem))]
-    [SubTypeDiscriminator("LineItemReturnItem", typeof(commercetools.Api.Models.Orders.LineItemReturnItem))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Orders.ReturnItem))]
+    [SubTypeDiscriminator("CustomLineItemReturnItem", typeof(commercetools.Sdk.Api.Models.Orders.CustomLineItemReturnItem))]
+    [SubTypeDiscriminator("LineItemReturnItem", typeof(commercetools.Sdk.Api.Models.Orders.LineItemReturnItem))]
     public partial interface IReturnItem
     {
         string Id { get; set; }

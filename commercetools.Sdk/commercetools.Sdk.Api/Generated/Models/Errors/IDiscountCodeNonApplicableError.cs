@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.DiscountCodeNonApplicableError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DiscountCodeNonApplicableError))]
     public partial interface IDiscountCodeNonApplicableError : IErrorObject
     {
         string DiscountCode { get; set; }

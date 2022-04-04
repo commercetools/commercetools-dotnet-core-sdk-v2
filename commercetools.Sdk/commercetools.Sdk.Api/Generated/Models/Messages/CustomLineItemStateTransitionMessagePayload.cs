@@ -1,8 +1,8 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 using System;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class CustomLineItemStateTransitionMessagePayload : ICustomLineItemStateTransitionMessagePayload
     {

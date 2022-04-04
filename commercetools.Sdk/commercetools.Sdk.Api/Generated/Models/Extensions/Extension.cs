@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
     public partial class Extension : IExtension
     {

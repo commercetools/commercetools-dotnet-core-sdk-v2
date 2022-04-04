@@ -1,15 +1,15 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
     [TypeDiscriminator(nameof(Action))]
-    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Zones.ZoneUpdateAction))]
-    [SubTypeDiscriminator("addLocation", typeof(commercetools.Api.Models.Zones.ZoneAddLocationAction))]
-    [SubTypeDiscriminator("changeName", typeof(commercetools.Api.Models.Zones.ZoneChangeNameAction))]
-    [SubTypeDiscriminator("removeLocation", typeof(commercetools.Api.Models.Zones.ZoneRemoveLocationAction))]
-    [SubTypeDiscriminator("setDescription", typeof(commercetools.Api.Models.Zones.ZoneSetDescriptionAction))]
-    [SubTypeDiscriminator("setKey", typeof(commercetools.Api.Models.Zones.ZoneSetKeyAction))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Zones.ZoneUpdateAction))]
+    [SubTypeDiscriminator("addLocation", typeof(commercetools.Sdk.Api.Models.Zones.ZoneAddLocationAction))]
+    [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Zones.ZoneChangeNameAction))]
+    [SubTypeDiscriminator("removeLocation", typeof(commercetools.Sdk.Api.Models.Zones.ZoneRemoveLocationAction))]
+    [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Zones.ZoneSetDescriptionAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Zones.ZoneSetKeyAction))]
     public partial interface IZoneUpdateAction
     {
         string Action { get; set; }

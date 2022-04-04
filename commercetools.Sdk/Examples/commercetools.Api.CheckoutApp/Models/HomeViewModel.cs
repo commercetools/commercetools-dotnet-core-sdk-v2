@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Api.CheckoutApp.Models
 {

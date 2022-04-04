@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
     public partial class ChannelDraft : IChannelDraft
     {

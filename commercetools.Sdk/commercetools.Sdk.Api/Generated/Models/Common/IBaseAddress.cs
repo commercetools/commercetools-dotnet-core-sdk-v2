@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.BaseAddress))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.BaseAddress))]
     public partial interface IBaseAddress
     {
         string Id { get; set; }

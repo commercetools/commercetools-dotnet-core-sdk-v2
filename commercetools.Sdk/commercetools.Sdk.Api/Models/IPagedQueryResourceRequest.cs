@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.Api.Models
+namespace commercetools.Sdk.Api.Models
 {
     public interface IPagedQueryResourceRequest<T, TResult> : IRequestCommand<TResult>
         where T : IPagedQueryResourceRequest<T, TResult>

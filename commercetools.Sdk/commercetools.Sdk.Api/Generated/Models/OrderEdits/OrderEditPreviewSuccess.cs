@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Messages;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class OrderEditPreviewSuccess : IOrderEditPreviewSuccess
     {

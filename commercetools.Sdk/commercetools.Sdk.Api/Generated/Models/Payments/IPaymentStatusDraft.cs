@@ -1,10 +1,10 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentStatusDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentStatusDraft))]
     public partial interface IPaymentStatusDraft
     {
         string InterfaceCode { get; set; }

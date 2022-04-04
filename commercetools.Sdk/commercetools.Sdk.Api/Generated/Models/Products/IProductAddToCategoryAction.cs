@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductAddToCategoryAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductAddToCategoryAction))]
     public partial interface IProductAddToCategoryAction : IProductUpdateAction
     {
         ICategoryResourceIdentifier Category { get; set; }

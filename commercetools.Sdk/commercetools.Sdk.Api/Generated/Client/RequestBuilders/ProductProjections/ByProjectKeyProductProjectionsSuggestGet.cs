@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
     public partial class ByProjectKeyProductProjectionsSuggestGet : ApiMethod<ByProjectKeyProductProjectionsSuggestGet>
     {

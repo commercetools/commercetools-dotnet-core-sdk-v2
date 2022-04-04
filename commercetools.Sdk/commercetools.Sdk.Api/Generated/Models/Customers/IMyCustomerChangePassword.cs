@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.MyCustomerChangePassword))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.MyCustomerChangePassword))]
     public partial interface IMyCustomerChangePassword
     {
         long Version { get; set; }

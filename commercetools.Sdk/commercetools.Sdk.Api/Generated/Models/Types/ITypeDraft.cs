@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeDraft))]
     public partial interface ITypeDraft
     {
         string Key { get; set; }

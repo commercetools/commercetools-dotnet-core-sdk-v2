@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial interface IAttribute
     {

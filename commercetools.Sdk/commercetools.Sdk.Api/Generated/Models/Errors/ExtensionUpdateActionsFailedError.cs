@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class ExtensionUpdateActionsFailedError : IExtensionUpdateActionsFailedError
     {

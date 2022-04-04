@@ -1,14 +1,14 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.ShippingInfoImportDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ShippingInfoImportDraft))]
     public partial interface IShippingInfoImportDraft
     {
         string ShippingMethodName { get; set; }

@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxCategory))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategory))]
     public partial interface ITaxCategory : IBaseResource
     {
         new string Id { get; set; }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeSetType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.AttributeSetType))]
     public partial interface IAttributeSetType : IAttributeType
     {
         IAttributeType ElementType { get; set; }

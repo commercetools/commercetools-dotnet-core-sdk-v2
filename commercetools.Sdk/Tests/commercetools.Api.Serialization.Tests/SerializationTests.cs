@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 using System.IO;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;

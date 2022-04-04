@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerSignInResult : ICustomerSignInResult
     {

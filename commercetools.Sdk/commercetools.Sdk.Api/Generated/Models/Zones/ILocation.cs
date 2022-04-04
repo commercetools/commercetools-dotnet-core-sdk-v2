@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.Location))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.Location))]
     public partial interface ILocation
     {
         string Country { get; set; }

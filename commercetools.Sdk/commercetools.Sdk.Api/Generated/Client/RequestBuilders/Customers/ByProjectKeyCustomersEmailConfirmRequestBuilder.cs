@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Customers
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
 
     public class ByProjectKeyCustomersEmailConfirmRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Customers
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyCustomersEmailConfirmPost Post(commercetools.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
+        public ByProjectKeyCustomersEmailConfirmPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
         {
             return new ByProjectKeyCustomersEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, customerEmailVerify);
         }

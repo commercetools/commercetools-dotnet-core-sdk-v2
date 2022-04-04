@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class DiscountedLineItemPriceDraft : IDiscountedLineItemPriceDraft
     {

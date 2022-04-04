@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class CustomerCompanyNameSetMessage : ICustomerCompanyNameSetMessage
     {

@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload))]
     public partial interface IInventoryEntryQuantitySetMessagePayload : IMessagePayload
     {
         long OldQuantityOnStock { get; set; }

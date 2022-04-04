@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerEmailChangedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage))]
     public partial interface ICustomerEmailChangedMessage : IMessage
     {
         string Email { get; set; }

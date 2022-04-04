@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
     public partial class StoreUpdateAction : IStoreUpdateAction
     {

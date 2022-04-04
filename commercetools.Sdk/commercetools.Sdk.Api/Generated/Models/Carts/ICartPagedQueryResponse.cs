@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartPagedQueryResponse))]
     public partial interface ICartPagedQueryResponse
     {
         long Limit { get; set; }

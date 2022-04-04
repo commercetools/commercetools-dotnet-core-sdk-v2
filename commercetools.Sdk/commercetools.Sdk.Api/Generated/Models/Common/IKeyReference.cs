@@ -1,11 +1,11 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
-    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Common.KeyReference))]
-    [SubTypeDiscriminator("store", typeof(commercetools.Api.Models.Stores.StoreKeyReference))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Common.KeyReference))]
+    [SubTypeDiscriminator("store", typeof(commercetools.Sdk.Api.Models.Stores.StoreKeyReference))]
     public partial interface IKeyReference
     {
         IReferenceTypeId TypeId { get; set; }

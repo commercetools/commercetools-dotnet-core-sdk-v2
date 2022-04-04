@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.TrackingData))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.TrackingData))]
     public partial interface ITrackingData
     {
         string TrackingId { get; set; }

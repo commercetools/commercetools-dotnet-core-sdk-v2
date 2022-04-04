@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Subscriptions;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Subscriptions;
 using commercetools.Base.Serialization;
 using Xunit;
 

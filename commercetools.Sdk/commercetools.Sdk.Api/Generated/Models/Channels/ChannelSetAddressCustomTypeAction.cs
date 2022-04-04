@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
     public partial class ChannelSetAddressCustomTypeAction : IChannelSetAddressCustomTypeAction
     {

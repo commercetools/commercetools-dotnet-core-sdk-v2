@@ -1,6 +1,6 @@
 using System;
 using System.Net.Http;
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api;

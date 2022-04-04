@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryRemoveAssetAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategoryRemoveAssetAction))]
     public partial interface ICategoryRemoveAssetAction : ICategoryUpdateAction
     {
         string AssetId { get; set; }

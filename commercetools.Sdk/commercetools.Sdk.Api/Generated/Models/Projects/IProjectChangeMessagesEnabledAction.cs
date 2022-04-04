@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.ProjectChangeMessagesEnabledAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesEnabledAction))]
     public partial interface IProjectChangeMessagesEnabledAction : IProjectUpdateAction
     {
         bool MessagesEnabled { get; set; }

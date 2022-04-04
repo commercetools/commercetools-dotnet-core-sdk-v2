@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.FacetRange))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.FacetRange))]
     public partial interface IFacetRange
     {
         double From { get; set; }

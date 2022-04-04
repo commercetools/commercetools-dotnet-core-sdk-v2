@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
     public partial class ByProjectKeyMeEmailConfirmPost : ApiMethod<ByProjectKeyMeEmailConfirmPost>
     {

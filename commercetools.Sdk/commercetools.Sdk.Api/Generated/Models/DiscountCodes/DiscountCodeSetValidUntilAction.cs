@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
     public partial class DiscountCodeSetValidUntilAction : IDiscountCodeSetValidUntilAction
     {

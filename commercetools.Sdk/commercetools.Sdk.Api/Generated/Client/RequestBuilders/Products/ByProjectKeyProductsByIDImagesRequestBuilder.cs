@@ -2,7 +2,7 @@ using System.IO;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Products
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
 
     public class ByProjectKeyProductsByIDImagesRequestBuilder

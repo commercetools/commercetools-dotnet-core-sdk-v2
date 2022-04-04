@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     public partial class AssetDraft : IAssetDraft
     {

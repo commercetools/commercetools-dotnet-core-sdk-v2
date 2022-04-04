@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
-    public partial class ByProjectKeyOrdersGet : ApiMethod<ByProjectKeyOrdersGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyOrdersGet, commercetools.Api.Models.Orders.IOrderPagedQueryResponse>
+    public partial class ByProjectKeyOrdersGet : ApiMethod<ByProjectKeyOrdersGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyOrdersGet, commercetools.Sdk.Api.Models.Orders.IOrderPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Orders.IOrderPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrderPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Orders.IOrderPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrderPagedQueryResponse>(requestMessage);
         }
 
     }

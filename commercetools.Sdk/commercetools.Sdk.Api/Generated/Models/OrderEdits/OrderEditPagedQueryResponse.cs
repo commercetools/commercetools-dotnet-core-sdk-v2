@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class OrderEditPagedQueryResponse : IOrderEditPagedQueryResponse
     {

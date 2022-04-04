@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSearchRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSearchRequest))]
     public partial interface IOrderSearchRequest
     {
         IOrderSearchQuery Query { get; set; }

@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
     public partial class ReviewRatingStatistics : IReviewRatingStatistics
     {

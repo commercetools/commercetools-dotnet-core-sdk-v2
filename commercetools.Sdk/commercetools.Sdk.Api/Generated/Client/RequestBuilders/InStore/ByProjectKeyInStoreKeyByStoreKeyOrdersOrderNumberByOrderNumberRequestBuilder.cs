@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
     public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder
@@ -31,7 +31,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(ApiHttpClient, ProjectKey, StoreKey, OrderNumber);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Api.Models.Orders.IOrderUpdate orderUpdate)
+        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Sdk.Api.Models.Orders.IOrderUpdate orderUpdate)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, OrderNumber, orderUpdate);
         }

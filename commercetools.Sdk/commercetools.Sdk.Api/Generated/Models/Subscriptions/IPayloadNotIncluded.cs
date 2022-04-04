@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.PayloadNotIncluded))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.PayloadNotIncluded))]
     public partial interface IPayloadNotIncluded
     {
         string Reason { get; set; }

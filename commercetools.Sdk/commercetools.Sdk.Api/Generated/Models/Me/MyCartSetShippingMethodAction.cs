@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.ShippingMethods;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyCartSetShippingMethodAction : IMyCartSetShippingMethodAction
     {

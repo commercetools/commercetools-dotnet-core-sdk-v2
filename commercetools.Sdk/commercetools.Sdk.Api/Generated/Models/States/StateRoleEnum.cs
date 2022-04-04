@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.States
+namespace commercetools.Sdk.Api.Models.States
 {
     public enum StateRoleEnum
     {

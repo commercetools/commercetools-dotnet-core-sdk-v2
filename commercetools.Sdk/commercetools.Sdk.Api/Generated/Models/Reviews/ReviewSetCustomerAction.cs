@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
     public partial class ReviewSetCustomerAction : IReviewSetCustomerAction
     {

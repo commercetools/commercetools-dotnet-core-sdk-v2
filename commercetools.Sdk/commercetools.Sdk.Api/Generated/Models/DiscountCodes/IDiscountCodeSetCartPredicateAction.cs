@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeSetCartPredicateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCartPredicateAction))]
     public partial interface IDiscountCodeSetCartPredicateAction : IDiscountCodeUpdateAction
     {
         string CartPredicate { get; set; }

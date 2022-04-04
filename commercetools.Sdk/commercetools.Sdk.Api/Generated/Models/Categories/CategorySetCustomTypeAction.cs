@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
     public partial class CategorySetCustomTypeAction : ICategorySetCustomTypeAction
     {

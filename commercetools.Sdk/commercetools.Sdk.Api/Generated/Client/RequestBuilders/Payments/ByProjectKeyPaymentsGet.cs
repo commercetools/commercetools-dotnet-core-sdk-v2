@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Payments
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
 {
-    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyPaymentsGet, commercetools.Api.Models.Payments.IPaymentPagedQueryResponse>
+    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyPaymentsGet, commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Payments.IPaymentPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Payments.IPaymentPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>(requestMessage);
         }
 
     }

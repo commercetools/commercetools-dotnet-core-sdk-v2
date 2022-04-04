@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAssetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetAssetCustomTypeAction))]
     public partial interface IProductSetAssetCustomTypeAction : IProductUpdateAction
     {
         long? VariantId { get; set; }

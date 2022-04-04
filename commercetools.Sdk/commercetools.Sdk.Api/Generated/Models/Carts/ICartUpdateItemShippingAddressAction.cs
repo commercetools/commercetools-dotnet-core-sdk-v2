@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
     public partial interface ICartUpdateItemShippingAddressAction : ICartUpdateAction
     {
         IBaseAddress Address { get; set; }

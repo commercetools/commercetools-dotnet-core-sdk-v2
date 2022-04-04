@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
     public partial class ShoppingListSetStoreAction : IShoppingListSetStoreAction
     {

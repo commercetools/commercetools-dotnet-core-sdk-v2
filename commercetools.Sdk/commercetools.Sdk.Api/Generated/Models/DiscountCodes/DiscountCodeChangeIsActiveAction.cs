@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
     public partial class DiscountCodeChangeIsActiveAction : IDiscountCodeChangeIsActiveAction
     {

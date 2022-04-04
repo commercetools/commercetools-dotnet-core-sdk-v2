@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
     public partial class ZoneReference : IZoneReference
     {

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
     public partial class TypeChangeFieldDefinitionLabelAction : ITypeChangeFieldDefinitionLabelAction
     {

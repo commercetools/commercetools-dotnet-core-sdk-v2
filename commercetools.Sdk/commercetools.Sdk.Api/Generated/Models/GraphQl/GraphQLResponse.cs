@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
     public partial class GraphQLResponse : IGraphQLResponse
     {

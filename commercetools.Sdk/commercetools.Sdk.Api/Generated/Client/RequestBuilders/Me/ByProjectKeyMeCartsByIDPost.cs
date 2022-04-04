@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
     public partial class ByProjectKeyMeCartsByIDPost : ApiMethod<ByProjectKeyMeCartsByIDPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Me.IMyCartUpdate MyCartUpdate;
+        private commercetools.Sdk.Api.Models.Me.IMyCartUpdate MyCartUpdate;
 
-        public ByProjectKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate)
+        public ByProjectKeyMeCartsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Me.IMyCartUpdate myCartUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Me
         }
 
 
-        public async Task<commercetools.Api.Models.Carts.ICart> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Carts.ICart> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICart>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Carts.ICart>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductTransitionStateAction : IProductTransitionStateAction
     {

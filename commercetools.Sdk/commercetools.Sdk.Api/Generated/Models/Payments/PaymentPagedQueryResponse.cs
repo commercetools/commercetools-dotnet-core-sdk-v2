@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
     public partial class PaymentPagedQueryResponse : IPaymentPagedQueryResponse
     {

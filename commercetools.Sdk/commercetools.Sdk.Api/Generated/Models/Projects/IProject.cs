@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.Project))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.Project))]
     public partial interface IProject
     {
         long Version { get; set; }

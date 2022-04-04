@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
     public partial class ByProjectKeyShippingMethodsMatchingLocationGet : ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet>
     {
@@ -75,10 +75,10 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
         }
 
 
-        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage);
         }
 
     }

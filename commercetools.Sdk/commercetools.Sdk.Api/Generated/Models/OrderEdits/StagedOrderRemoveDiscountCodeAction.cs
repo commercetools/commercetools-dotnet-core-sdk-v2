@@ -1,7 +1,7 @@
-using commercetools.Api.Models.DiscountCodes;
+using commercetools.Sdk.Api.Models.DiscountCodes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderRemoveDiscountCodeAction : IStagedOrderRemoveDiscountCodeAction
     {

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionDraft))]
     public partial interface IExtensionDraft
     {
         string Key { get; set; }

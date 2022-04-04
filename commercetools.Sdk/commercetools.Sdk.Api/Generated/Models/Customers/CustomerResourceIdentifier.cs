@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerResourceIdentifier : ICustomerResourceIdentifier
     {

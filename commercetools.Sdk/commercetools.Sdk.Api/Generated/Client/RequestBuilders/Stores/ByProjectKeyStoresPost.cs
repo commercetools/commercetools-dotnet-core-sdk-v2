@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Stores
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Stores
 {
     public partial class ByProjectKeyStoresPost : ApiMethod<ByProjectKeyStoresPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.Stores
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Stores.IStoreDraft StoreDraft;
+        private commercetools.Sdk.Api.Models.Stores.IStoreDraft StoreDraft;
 
-        public ByProjectKeyStoresPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Stores.IStoreDraft storeDraft)
+        public ByProjectKeyStoresPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Stores.IStoreDraft storeDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.Stores
         }
 
 
-        public async Task<commercetools.Api.Models.Stores.IStore> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Stores.IStore> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Stores.IStore>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Stores.IStore>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

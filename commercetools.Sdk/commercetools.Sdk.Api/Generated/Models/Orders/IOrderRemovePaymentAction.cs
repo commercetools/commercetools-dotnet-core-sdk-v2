@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderRemovePaymentAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderRemovePaymentAction))]
     public partial interface IOrderRemovePaymentAction : IOrderUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }

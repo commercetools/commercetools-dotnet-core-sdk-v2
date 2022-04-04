@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.States
+namespace commercetools.Sdk.Api.Client.RequestBuilders.States
 {
 
     public class ByProjectKeyStatesKeyByKeyRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.States
             return new ByProjectKeyStatesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
-        public ByProjectKeyStatesKeyByKeyPost Post(commercetools.Api.Models.States.IStateUpdate stateUpdate)
+        public ByProjectKeyStatesKeyByKeyPost Post(commercetools.Sdk.Api.Models.States.IStateUpdate stateUpdate)
         {
             return new ByProjectKeyStatesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, stateUpdate);
         }

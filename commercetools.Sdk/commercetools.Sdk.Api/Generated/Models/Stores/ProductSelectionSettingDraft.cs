@@ -1,7 +1,7 @@
-using commercetools.Api.Models.ProductSelections;
+using commercetools.Sdk.Api.Models.ProductSelections;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
     public partial class ProductSelectionSettingDraft : IProductSelectionSettingDraft
     {

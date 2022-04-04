@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyCartSetLineItemDistributionChannelAction : IMyCartSetLineItemDistributionChannelAction
     {

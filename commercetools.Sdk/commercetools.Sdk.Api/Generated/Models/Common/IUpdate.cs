@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.Update))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.Update))]
     public partial interface IUpdate
     {
         long Version { get; set; }

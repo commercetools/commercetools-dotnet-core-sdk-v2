@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreReference))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreReference))]
     public partial interface IStoreReference : IReference
     {
         IStore Obj { get; set; }

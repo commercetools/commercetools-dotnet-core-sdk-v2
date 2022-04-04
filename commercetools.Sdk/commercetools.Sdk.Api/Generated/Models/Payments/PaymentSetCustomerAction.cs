@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
     public partial class PaymentSetCustomerAction : IPaymentSetCustomerAction
     {

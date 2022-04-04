@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.DeliveryItemsUpdatedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessagePayload))]
     public partial interface IDeliveryItemsUpdatedMessagePayload : IOrderMessagePayload
     {
         string DeliveryId { get; set; }

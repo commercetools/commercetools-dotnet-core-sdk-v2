@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.ApiClients
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
     public partial class ApiClientDraft : IApiClientDraft
     {

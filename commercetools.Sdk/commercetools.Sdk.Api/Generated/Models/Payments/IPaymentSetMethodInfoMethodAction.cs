@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetMethodInfoMethodAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoMethodAction))]
     public partial interface IPaymentSetMethodInfoMethodAction : IPaymentUpdateAction
     {
         string Method { get; set; }

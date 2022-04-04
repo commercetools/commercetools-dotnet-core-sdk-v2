@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ApiClients
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ApiClients.ApiClientDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClientDraft))]
     public partial interface IApiClientDraft
     {
         string Name { get; set; }

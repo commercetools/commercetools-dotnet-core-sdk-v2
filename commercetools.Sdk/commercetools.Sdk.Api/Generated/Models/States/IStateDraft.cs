@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.States
+namespace commercetools.Sdk.Api.Models.States
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.States.StateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.States.StateDraft))]
     public partial interface IStateDraft
     {
         string Key { get; set; }

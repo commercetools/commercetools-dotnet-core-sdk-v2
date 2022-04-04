@@ -1,13 +1,13 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntry))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntry))]
     public partial interface IInventoryEntry : IBaseResource
     {
         new string Id { get; set; }

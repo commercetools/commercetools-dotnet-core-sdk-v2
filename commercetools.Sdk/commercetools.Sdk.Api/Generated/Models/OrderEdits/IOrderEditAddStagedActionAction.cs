@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditAddStagedActionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditAddStagedActionAction))]
     public partial interface IOrderEditAddStagedActionAction : IOrderEditUpdateAction
     {
         IStagedOrderUpdateAction StagedAction { get; set; }

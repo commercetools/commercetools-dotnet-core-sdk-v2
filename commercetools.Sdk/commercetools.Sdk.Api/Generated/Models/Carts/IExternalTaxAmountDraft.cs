@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.ExternalTaxAmountDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ExternalTaxAmountDraft))]
     public partial interface IExternalTaxAmountDraft
     {
         IMoney TotalGross { get; set; }

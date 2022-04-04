@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderAddParcelToDeliveryAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderAddParcelToDeliveryAction))]
     public partial interface IOrderAddParcelToDeliveryAction : IOrderUpdateAction
     {
         string DeliveryId { get; set; }

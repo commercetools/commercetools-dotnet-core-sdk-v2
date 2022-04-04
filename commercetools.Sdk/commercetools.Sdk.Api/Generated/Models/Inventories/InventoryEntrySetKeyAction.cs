@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
     public partial class InventoryEntrySetKeyAction : IInventoryEntrySetKeyAction
     {

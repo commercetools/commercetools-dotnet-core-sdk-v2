@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
     public partial class ByProjectKeyInventoryKeyByKeyPost : ApiMethod<ByProjectKeyInventoryKeyByKeyPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
 
         private string Key { get; }
 
-        private commercetools.Api.Models.Inventories.IInventoryEntryUpdate InventoryEntryUpdate;
+        private commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate InventoryEntryUpdate;
 
-        public ByProjectKeyInventoryKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
+        public ByProjectKeyInventoryKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
         }
 
 
-        public async Task<commercetools.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.IInventoryEntry>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

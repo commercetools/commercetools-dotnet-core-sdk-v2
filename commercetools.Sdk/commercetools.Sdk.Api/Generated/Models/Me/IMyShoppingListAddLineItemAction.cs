@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListAddLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyShoppingListAddLineItemAction))]
     public partial interface IMyShoppingListAddLineItemAction : IMyShoppingListUpdateAction
     {
         string Sku { get; set; }

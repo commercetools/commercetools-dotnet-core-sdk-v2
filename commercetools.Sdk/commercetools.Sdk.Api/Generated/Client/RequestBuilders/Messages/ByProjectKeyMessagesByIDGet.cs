@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Messages
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
 {
     public partial class ByProjectKeyMessagesByIDGet : ApiMethod<ByProjectKeyMessagesByIDGet>
     {
@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
         }
 
 
-        public async Task<commercetools.Api.Models.Messages.IMessage> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Messages.IMessage> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Messages.IMessage>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Messages.IMessage>(requestMessage);
         }
 
     }

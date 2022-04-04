@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
     public class ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder
@@ -23,7 +23,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyLoginPost Post(commercetools.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyInStoreKeyByStoreKeyLoginPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerSignin customerSignin)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyLoginPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerSignin);
         }

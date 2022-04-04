@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeDefinition))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.AttributeDefinition))]
     public partial interface IAttributeDefinition
     {
         IAttributeType Type { get; set; }

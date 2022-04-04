@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Reviews
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
 
     public class ByProjectKeyReviewsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
             return new ByProjectKeyReviewsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyReviewsByIDPost Post(commercetools.Api.Models.Reviews.IReviewUpdate reviewUpdate)
+        public ByProjectKeyReviewsByIDPost Post(commercetools.Sdk.Api.Models.Reviews.IReviewUpdate reviewUpdate)
         {
             return new ByProjectKeyReviewsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, reviewUpdate);
         }

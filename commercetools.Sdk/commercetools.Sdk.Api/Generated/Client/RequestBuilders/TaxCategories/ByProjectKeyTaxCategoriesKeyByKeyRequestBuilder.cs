@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.TaxCategories
+namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
 
     public class ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
             return new ByProjectKeyTaxCategoriesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
-        public ByProjectKeyTaxCategoriesKeyByKeyPost Post(commercetools.Api.Models.TaxCategories.ITaxCategoryUpdate taxCategoryUpdate)
+        public ByProjectKeyTaxCategoriesKeyByKeyPost Post(commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryUpdate taxCategoryUpdate)
         {
             return new ByProjectKeyTaxCategoriesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, taxCategoryUpdate);
         }

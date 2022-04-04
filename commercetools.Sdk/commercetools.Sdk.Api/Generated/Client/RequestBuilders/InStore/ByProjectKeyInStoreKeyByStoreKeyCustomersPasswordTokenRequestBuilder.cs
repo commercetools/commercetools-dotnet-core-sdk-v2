@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
     public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenRequestBuilder
@@ -23,7 +23,7 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost Post(commercetools.Api.Models.Customers.ICustomerCreatePasswordResetToken customerCreatePasswordResetToken)
+        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerCreatePasswordResetToken customerCreatePasswordResetToken)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerCreatePasswordResetToken);
         }

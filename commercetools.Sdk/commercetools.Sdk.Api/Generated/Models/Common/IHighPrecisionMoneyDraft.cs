@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.HighPrecisionMoneyDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.HighPrecisionMoneyDraft))]
     public partial interface IHighPrecisionMoneyDraft : ITypedMoneyDraft
     {
         long PreciseAmount { get; set; }

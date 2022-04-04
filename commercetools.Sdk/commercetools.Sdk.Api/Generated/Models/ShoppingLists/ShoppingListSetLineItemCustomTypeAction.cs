@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
     public partial class ShoppingListSetLineItemCustomTypeAction : IShoppingListSetLineItemCustomTypeAction
     {

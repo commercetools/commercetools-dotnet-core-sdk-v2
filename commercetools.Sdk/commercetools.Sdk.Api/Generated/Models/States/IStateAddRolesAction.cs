@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.States
+namespace commercetools.Sdk.Api.Models.States
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.States.StateAddRolesAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.States.StateAddRolesAction))]
     public partial interface IStateAddRolesAction : IStateUpdateAction
     {
         List<IStateRoleEnum> Roles { get; set; }

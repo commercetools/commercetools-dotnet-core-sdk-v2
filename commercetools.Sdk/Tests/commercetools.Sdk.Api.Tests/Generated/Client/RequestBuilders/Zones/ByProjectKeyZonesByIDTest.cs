@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Zones
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Zones
 {
     public class ByProjectKeyZonesByIDTest : RequestBuilderParentTests
     {

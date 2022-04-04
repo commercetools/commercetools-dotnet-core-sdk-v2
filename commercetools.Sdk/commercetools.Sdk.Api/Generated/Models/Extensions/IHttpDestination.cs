@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.HttpDestination))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.HttpDestination))]
     public partial interface IHttpDestination : IExtensionDestination
     {
         string Url { get; set; }

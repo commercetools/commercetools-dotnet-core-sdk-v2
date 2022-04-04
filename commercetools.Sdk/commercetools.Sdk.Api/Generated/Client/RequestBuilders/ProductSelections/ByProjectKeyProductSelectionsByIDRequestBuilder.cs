@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ProductSelections
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
 {
 
     public class ByProjectKeyProductSelectionsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductSelections
             return new ByProjectKeyProductSelectionsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyProductSelectionsByIDPost Post(commercetools.Api.Models.ProductSelections.IProductSelectionUpdate productSelectionUpdate)
+        public ByProjectKeyProductSelectionsByIDPost Post(commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionUpdate productSelectionUpdate)
         {
             return new ByProjectKeyProductSelectionsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, productSelectionUpdate);
         }

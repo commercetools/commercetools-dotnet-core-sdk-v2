@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeDraft))]
     public partial interface IProductTypeDraft
     {
         string Key { get; set; }

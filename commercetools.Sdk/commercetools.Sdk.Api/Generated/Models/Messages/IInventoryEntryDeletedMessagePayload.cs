@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
     public partial interface IInventoryEntryDeletedMessagePayload : IMessagePayload
     {
         string Sku { get; set; }

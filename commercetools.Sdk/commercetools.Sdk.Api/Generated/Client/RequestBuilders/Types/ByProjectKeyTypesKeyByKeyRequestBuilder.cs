@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Types
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
 {
 
     public class ByProjectKeyTypesKeyByKeyRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Types
             return new ByProjectKeyTypesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
-        public ByProjectKeyTypesKeyByKeyPost Post(commercetools.Api.Models.Types.ITypeUpdate typeUpdate)
+        public ByProjectKeyTypesKeyByKeyPost Post(commercetools.Sdk.Api.Models.Types.ITypeUpdate typeUpdate)
         {
             return new ByProjectKeyTypesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, typeUpdate);
         }

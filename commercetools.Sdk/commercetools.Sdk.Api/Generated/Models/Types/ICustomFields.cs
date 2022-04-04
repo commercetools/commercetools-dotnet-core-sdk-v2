@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFields))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.CustomFields))]
     public partial interface ICustomFields
     {
         ITypeReference Type { get; set; }

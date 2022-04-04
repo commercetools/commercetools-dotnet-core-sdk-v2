@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class ShoppingListStoreSetMessagePayload : IShoppingListStoreSetMessagePayload
     {

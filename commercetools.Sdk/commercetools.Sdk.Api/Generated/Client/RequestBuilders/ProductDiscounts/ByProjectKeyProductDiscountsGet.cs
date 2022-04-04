@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
-    public partial class ByProjectKeyProductDiscountsGet : ApiMethod<ByProjectKeyProductDiscountsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductDiscountsGet, commercetools.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse>
+    public partial class ByProjectKeyProductDiscountsGet : ApiMethod<ByProjectKeyProductDiscountsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductDiscountsGet, commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountPagedQueryResponse>(requestMessage);
         }
 
     }

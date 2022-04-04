@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
     public partial class ByProjectKeyOrdersEditsKeyByKeyGet : ApiMethod<ByProjectKeyOrdersEditsKeyByKeyGet>
     {
@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
         }
 
 
-        public async Task<commercetools.Api.Models.OrderEdits.IOrderEdit> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.OrderEdits.IOrderEdit> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.OrderEdits.IOrderEdit>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.OrderEdits.IOrderEdit>(requestMessage);
         }
 
     }

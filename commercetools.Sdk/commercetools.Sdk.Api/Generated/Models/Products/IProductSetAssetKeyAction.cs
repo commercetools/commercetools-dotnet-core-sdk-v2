@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetAssetKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetAssetKeyAction))]
     public partial interface IProductSetAssetKeyAction : IProductUpdateAction
     {
         long? VariantId { get; set; }

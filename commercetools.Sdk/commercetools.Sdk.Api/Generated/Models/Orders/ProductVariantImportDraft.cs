@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class ProductVariantImportDraft : IProductVariantImportDraft
     {

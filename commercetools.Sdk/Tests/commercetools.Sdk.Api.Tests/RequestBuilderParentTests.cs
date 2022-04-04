@@ -1,6 +1,6 @@
 using commercetools.Sdk.Api.Client;
 
-namespace commercetools.Api.Tests.Client
+namespace commercetools.Sdk.Api.Tests.Client
 {
     public class RequestBuilderParentTests
     {

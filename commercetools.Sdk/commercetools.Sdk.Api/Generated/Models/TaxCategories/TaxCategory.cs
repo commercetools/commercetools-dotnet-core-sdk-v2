@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
     public partial class TaxCategory : ITaxCategory
     {

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.CustomObjects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
 
     public class ByProjectKeyCustomObjectsByContainerRequestBuilder

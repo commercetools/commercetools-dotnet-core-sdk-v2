@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.ImageDimensions))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.ImageDimensions))]
     public partial interface IImageDimensions
     {
         int W { get; set; }

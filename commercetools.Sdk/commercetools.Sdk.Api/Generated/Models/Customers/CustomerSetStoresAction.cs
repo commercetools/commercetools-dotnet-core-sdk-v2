@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public partial class CustomerSetStoresAction : ICustomerSetStoresAction
     {

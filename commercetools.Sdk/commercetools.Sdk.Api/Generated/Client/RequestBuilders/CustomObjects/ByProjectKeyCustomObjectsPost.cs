@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomObjects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
     public partial class ByProjectKeyCustomObjectsPost : ApiMethod<ByProjectKeyCustomObjectsPost>
     {
@@ -20,9 +20,9 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.CustomObjects.ICustomObjectDraft CustomObjectDraft;
+        private commercetools.Sdk.Api.Models.CustomObjects.ICustomObjectDraft CustomObjectDraft;
 
-        public ByProjectKeyCustomObjectsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft)
+        public ByProjectKeyCustomObjectsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.CustomObjects.ICustomObjectDraft customObjectDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +42,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
         }
 
 
-        public async Task<commercetools.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.ICustomObject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

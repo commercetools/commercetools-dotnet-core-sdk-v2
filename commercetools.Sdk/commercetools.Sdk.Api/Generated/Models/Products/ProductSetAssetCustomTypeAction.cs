@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductSetAssetCustomTypeAction : IProductSetAssetCustomTypeAction
     {

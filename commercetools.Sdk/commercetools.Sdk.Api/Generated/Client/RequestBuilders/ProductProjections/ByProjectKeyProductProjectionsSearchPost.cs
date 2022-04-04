@@ -8,7 +8,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
     public partial class ByProjectKeyProductProjectionsSearchPost : ApiMethod<ByProjectKeyProductProjectionsSearchPost>
     {
@@ -36,10 +36,10 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
 
 
 
-        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

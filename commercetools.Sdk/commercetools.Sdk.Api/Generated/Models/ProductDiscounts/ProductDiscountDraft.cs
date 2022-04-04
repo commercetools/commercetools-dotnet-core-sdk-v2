@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 
 
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
     public partial class ProductDiscountDraft : IProductDiscountDraft
     {

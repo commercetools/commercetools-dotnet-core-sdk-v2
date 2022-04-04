@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.Reviews;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class ReviewCreatedMessagePayload : IReviewCreatedMessagePayload
     {

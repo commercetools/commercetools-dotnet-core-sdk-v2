@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetExternalIdAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetExternalIdAction))]
     public partial interface IPaymentSetExternalIdAction : IPaymentUpdateAction
     {
         string ExternalId { get; set; }

@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.MessageDeliveryPayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.MessageDeliveryPayload))]
     public partial interface IMessageDeliveryPayload : IDeliveryPayload
     {
         string Id { get; set; }

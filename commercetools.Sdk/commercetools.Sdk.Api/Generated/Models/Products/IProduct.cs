@@ -1,15 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.Product))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.Product))]
     public partial interface IProduct : IBaseResource
     {
         new string Id { get; set; }

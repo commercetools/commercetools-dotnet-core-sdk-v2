@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Stores
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Stores
 {
 
     public class ByProjectKeyStoresRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.Api.Client.RequestBuilders.Stores
             return new ByProjectKeyStoresGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyStoresPost Post(commercetools.Api.Models.Stores.IStoreDraft storeDraft)
+        public ByProjectKeyStoresPost Post(commercetools.Sdk.Api.Models.Stores.IStoreDraft storeDraft)
         {
             return new ByProjectKeyStoresPost(ApiHttpClient, SerializerService, ProjectKey, storeDraft);
         }

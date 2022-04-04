@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CustomerDateOfBirthSetMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage))]
     public partial interface ICustomerDateOfBirthSetMessage : IMessage
     {
         DateTime? DateOfBirth { get; set; }

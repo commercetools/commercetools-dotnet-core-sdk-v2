@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetShippingMethodAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodAction))]
     public partial interface IStagedOrderSetShippingMethodAction : IStagedOrderUpdateAction
     {
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }

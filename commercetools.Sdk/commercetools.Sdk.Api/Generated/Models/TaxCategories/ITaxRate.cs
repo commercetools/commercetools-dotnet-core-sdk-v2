@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxRate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxRate))]
     public partial interface ITaxRate
     {
         string Id { get; set; }

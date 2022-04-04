@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
 
     public class ByProjectKeyShippingMethodsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyShippingMethodsByIDPost Post(commercetools.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate)
+        public ByProjectKeyShippingMethodsByIDPost Post(commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate)
         {
             return new ByProjectKeyShippingMethodsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, shippingMethodUpdate);
         }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewSetLocaleAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewSetLocaleAction))]
     public partial interface IReviewSetLocaleAction : IReviewUpdateAction
     {
         string Locale { get; set; }

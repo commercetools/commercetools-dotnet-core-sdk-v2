@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
     public partial class ByProjectKeySubscriptionsByIDPost : ApiMethod<ByProjectKeySubscriptionsByIDPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Subscriptions.ISubscriptionUpdate SubscriptionUpdate;
+        private commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionUpdate SubscriptionUpdate;
 
-        public ByProjectKeySubscriptionsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
+        public ByProjectKeySubscriptionsByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
         }
 
 
-        public async Task<commercetools.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.ISubscription>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

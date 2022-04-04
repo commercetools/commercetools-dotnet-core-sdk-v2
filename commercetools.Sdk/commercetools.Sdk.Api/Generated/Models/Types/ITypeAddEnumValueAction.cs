@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeAddEnumValueAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction))]
     public partial interface ITypeAddEnumValueAction : ITypeUpdateAction
     {
         string FieldName { get; set; }

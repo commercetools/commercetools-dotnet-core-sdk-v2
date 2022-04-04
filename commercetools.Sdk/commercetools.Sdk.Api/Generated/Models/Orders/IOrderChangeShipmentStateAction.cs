@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderChangeShipmentStateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderChangeShipmentStateAction))]
     public partial interface IOrderChangeShipmentStateAction : IOrderUpdateAction
     {
         IShipmentState ShipmentState { get; set; }

@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListChangeLineItemQuantityAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyShoppingListChangeLineItemQuantityAction))]
     public partial interface IMyShoppingListChangeLineItemQuantityAction : IMyShoppingListUpdateAction
     {
         string LineItemId { get; set; }

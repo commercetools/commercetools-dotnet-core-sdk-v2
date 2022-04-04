@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class InvalidFieldError : IInvalidFieldError
     {

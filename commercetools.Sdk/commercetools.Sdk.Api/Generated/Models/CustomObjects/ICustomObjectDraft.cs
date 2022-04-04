@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.CustomObjects
+namespace commercetools.Sdk.Api.Models.CustomObjects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomObjects.CustomObjectDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectDraft))]
     public partial interface ICustomObjectDraft
     {
         string Container { get; set; }

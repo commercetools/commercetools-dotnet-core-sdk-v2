@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
     public partial class InventoryEntrySetCustomTypeAction : IInventoryEntrySetCustomTypeAction
     {

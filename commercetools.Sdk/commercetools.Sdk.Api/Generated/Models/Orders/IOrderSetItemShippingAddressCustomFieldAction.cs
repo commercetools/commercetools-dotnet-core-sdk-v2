@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetItemShippingAddressCustomFieldAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSetItemShippingAddressCustomFieldAction))]
     public partial interface IOrderSetItemShippingAddressCustomFieldAction : IOrderUpdateAction
     {
         string AddressKey { get; set; }

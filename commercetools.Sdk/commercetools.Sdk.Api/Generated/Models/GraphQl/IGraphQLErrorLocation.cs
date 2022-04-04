@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.GraphQl.GraphQLErrorLocation))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.GraphQl.GraphQLErrorLocation))]
     public partial interface IGraphQLErrorLocation
     {
         int Line { get; set; }

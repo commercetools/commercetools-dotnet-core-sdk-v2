@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderSetDeliveryCustomFieldAction : IStagedOrderSetDeliveryCustomFieldAction
     {

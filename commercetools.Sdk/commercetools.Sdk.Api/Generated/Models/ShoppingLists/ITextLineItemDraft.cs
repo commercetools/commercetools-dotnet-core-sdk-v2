@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.TextLineItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.TextLineItemDraft))]
     public partial interface ITextLineItemDraft
     {
         DateTime? AddedAt { get; set; }

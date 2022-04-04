@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
     public partial class ByProjectKeyCustomerGroupsByIDDelete : ApiMethod<ByProjectKeyCustomerGroupsByIDDelete>
     {
@@ -48,10 +48,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
         }
 
 
-        public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroup> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomerGroups.ICustomerGroup>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup>(requestMessage);
         }
 
     }

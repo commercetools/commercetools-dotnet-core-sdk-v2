@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditResourceIdentifier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditResourceIdentifier))]
     public partial interface IOrderEditResourceIdentifier : IResourceIdentifier
     {
     }

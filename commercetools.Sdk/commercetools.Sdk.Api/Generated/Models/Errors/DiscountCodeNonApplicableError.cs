@@ -1,7 +1,7 @@
 using System;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class DiscountCodeNonApplicableError : IDiscountCodeNonApplicableError
     {

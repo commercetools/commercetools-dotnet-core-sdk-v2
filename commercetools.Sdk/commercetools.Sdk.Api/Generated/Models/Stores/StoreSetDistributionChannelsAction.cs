@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
     public partial class StoreSetDistributionChannelsAction : IStoreSetDistributionChannelsAction
     {

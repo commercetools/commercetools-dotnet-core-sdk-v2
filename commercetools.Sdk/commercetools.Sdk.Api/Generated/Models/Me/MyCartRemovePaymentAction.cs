@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Payments;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
     public partial class MyCartRemovePaymentAction : IMyCartRemovePaymentAction
     {

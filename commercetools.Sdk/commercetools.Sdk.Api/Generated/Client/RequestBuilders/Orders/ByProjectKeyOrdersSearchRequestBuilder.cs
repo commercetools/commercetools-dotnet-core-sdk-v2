@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
 
     public class ByProjectKeyOrdersSearchRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyOrdersSearchPost Post(commercetools.Api.Models.Orders.IOrderSearchRequest orderSearchRequest)
+        public ByProjectKeyOrdersSearchPost Post(commercetools.Sdk.Api.Models.Orders.IOrderSearchRequest orderSearchRequest)
         {
             return new ByProjectKeyOrdersSearchPost(ApiHttpClient, SerializerService, ProjectKey, orderSearchRequest);
         }

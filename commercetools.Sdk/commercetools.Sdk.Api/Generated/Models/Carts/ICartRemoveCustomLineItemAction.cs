@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartRemoveCustomLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveCustomLineItemAction))]
     public partial interface ICartRemoveCustomLineItemAction : ICartUpdateAction
     {
         string CustomLineItemId { get; set; }

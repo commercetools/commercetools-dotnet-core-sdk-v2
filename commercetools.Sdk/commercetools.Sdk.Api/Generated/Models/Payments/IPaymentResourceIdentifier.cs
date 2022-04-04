@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentResourceIdentifier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentResourceIdentifier))]
     public partial interface IPaymentResourceIdentifier : IResourceIdentifier
     {
     }

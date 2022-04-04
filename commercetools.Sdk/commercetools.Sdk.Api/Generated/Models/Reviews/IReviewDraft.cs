@@ -1,13 +1,13 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewDraft))]
     public partial interface IReviewDraft
     {
         string Key { get; set; }

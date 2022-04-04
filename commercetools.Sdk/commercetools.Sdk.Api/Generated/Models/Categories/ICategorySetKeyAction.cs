@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategorySetKeyAction))]
     public partial interface ICategorySetKeyAction : ICategoryUpdateAction
     {
         string Key { get; set; }

@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
     public partial class ShoppingListRemoveLineItemAction : IShoppingListRemoveLineItemAction
     {

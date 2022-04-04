@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Categories;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class CategoryCreatedMessagePayload : ICategoryCreatedMessagePayload
     {

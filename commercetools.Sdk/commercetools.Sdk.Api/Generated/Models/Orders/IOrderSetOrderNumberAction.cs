@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetOrderNumberAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSetOrderNumberAction))]
     public partial interface IOrderSetOrderNumberAction : IOrderUpdateAction
     {
         string OrderNumber { get; set; }

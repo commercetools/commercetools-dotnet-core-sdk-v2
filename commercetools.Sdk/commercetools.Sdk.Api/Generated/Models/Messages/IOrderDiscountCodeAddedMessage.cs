@@ -1,10 +1,10 @@
-using commercetools.Api.Models.DiscountCodes;
+using commercetools.Sdk.Api.Models.DiscountCodes;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDiscountCodeAddedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeAddedMessage))]
     public partial interface IOrderDiscountCodeAddedMessage : IOrderMessage
     {
         IDiscountCodeReference DiscountCode { get; set; }

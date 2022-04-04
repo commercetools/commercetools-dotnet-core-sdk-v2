@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
     public partial interface IExtensionSetTimeoutInMsAction : IExtensionUpdateAction
     {
         int? TimeoutInMs { get; set; }

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts
 {
-    public partial class ByProjectKeyCartDiscountsGet : ApiMethod<ByProjectKeyCartDiscountsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCartDiscountsGet, commercetools.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>
+    public partial class ByProjectKeyCartDiscountsGet : ApiMethod<ByProjectKeyCartDiscountsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCartDiscountsGet, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.CartDiscounts
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>(requestMessage);
         }
 
     }

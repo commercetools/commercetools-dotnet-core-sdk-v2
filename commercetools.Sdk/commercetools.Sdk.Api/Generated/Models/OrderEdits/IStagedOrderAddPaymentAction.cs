@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddPaymentAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderAddPaymentAction))]
     public partial interface IStagedOrderAddPaymentAction : IStagedOrderUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class InventoryEntryDeletedMessagePayload : IInventoryEntryDeletedMessagePayload
     {

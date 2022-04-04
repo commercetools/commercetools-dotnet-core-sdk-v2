@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
     public partial class ProductTypeChangeLocalizedEnumValueOrderAction : IProductTypeChangeLocalizedEnumValueOrderAction
     {

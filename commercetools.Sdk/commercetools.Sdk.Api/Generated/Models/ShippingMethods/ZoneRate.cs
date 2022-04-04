@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Zones;
+using commercetools.Sdk.Api.Models.Zones;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     public partial class ZoneRate : IZoneRate
     {

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
 
     public class ByProjectKeyProductDiscountsMatchingRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyProductDiscountsMatchingPost Post(commercetools.Api.Models.ProductDiscounts.IProductDiscountMatchQuery productDiscountMatchQuery)
+        public ByProjectKeyProductDiscountsMatchingPost Post(commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountMatchQuery productDiscountMatchQuery)
         {
             return new ByProjectKeyProductDiscountsMatchingPost(ApiHttpClient, SerializerService, ProjectKey, productDiscountMatchQuery);
         }

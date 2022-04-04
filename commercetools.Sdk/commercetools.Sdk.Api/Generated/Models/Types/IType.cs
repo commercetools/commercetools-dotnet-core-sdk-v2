@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.Type))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.Type))]
     public partial interface IType : IBaseResource
     {
         new string Id { get; set; }

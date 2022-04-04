@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Inventories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Inventories;
 using System;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class InventoryEntryCreatedMessage : IInventoryEntryCreatedMessage
     {

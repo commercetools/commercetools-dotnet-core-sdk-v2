@@ -1,13 +1,13 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.ScopedPrice))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.ScopedPrice))]
     public partial interface IScopedPrice
     {
         string Id { get; set; }

@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.Parcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.Parcel))]
     public partial interface IParcel
     {
         string Id { get; set; }

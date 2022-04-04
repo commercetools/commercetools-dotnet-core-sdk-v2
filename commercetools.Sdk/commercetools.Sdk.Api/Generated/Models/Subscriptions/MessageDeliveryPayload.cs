@@ -1,9 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Messages;
 using System;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public partial class MessageDeliveryPayload : IMessageDeliveryPayload
     {

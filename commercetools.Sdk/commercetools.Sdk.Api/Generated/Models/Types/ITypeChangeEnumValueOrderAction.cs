@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeChangeEnumValueOrderAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueOrderAction))]
     public partial interface ITypeChangeEnumValueOrderAction : ITypeUpdateAction
     {
         string FieldName { get; set; }

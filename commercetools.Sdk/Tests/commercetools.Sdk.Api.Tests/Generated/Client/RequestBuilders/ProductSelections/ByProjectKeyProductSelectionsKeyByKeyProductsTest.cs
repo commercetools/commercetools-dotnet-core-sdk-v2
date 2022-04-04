@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ProductSelections
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductSelections
 {
     public class ByProjectKeyProductSelectionsKeyByKeyProductsTest : RequestBuilderParentTests
     {

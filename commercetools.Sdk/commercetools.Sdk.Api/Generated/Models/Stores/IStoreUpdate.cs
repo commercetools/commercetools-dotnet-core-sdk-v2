@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreUpdate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreUpdate))]
     public partial interface IStoreUpdate
     {
         long Version { get; set; }

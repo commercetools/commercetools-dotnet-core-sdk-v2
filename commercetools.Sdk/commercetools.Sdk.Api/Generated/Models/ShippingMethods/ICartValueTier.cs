@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.CartValueTier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.CartValueTier))]
     public partial interface ICartValueTier : IShippingRatePriceTier
     {
         long MinimumCentAmount { get; set; }

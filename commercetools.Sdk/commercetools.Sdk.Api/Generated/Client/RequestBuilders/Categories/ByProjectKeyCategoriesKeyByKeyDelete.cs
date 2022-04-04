@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Categories
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
 {
     public partial class ByProjectKeyCategoriesKeyByKeyDelete : ApiMethod<ByProjectKeyCategoriesKeyByKeyDelete>
     {
@@ -48,10 +48,10 @@ namespace commercetools.Api.Client.RequestBuilders.Categories
         }
 
 
-        public async Task<commercetools.Api.Models.Categories.ICategory> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Categories.ICategory> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Categories.ICategory>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Categories.ICategory>(requestMessage);
         }
 
     }

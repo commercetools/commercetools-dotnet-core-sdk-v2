@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class CustomerCreatedMessagePayload : ICustomerCreatedMessagePayload
     {

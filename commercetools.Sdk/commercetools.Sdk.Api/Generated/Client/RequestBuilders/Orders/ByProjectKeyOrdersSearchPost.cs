@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
     public partial class ByProjectKeyOrdersSearchPost : ApiMethod<ByProjectKeyOrdersSearchPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Orders.IOrderSearchRequest OrderSearchRequest;
+        private commercetools.Sdk.Api.Models.Orders.IOrderSearchRequest OrderSearchRequest;
 
-        public ByProjectKeyOrdersSearchPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Orders.IOrderSearchRequest orderSearchRequest)
+        public ByProjectKeyOrdersSearchPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Orders.IOrderSearchRequest orderSearchRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
 
 
 
-        public async Task<commercetools.Api.Models.Orders.IOrderPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Orders.IOrderPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

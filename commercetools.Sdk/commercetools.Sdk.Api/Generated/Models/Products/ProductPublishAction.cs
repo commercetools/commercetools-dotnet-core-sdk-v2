@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class ProductPublishAction : IProductPublishAction
     {

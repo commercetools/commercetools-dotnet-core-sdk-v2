@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class OrderSetShippingAddressCustomTypeAction : IOrderSetShippingAddressCustomTypeAction
     {

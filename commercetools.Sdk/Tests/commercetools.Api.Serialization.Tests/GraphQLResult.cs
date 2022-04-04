@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 
 namespace commercetools.Api.Serialization.Tests
 {

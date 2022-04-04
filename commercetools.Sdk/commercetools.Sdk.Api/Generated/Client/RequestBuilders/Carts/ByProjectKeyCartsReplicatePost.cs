@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Carts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
 {
     public partial class ByProjectKeyCartsReplicatePost : ApiMethod<ByProjectKeyCartsReplicatePost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Carts.IReplicaCartDraft ReplicaCartDraft;
+        private commercetools.Sdk.Api.Models.Carts.IReplicaCartDraft ReplicaCartDraft;
 
-        public ByProjectKeyCartsReplicatePost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Carts.IReplicaCartDraft replicaCartDraft)
+        public ByProjectKeyCartsReplicatePost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Carts.IReplicaCartDraft replicaCartDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
 
 
 
-        public async Task<commercetools.Api.Models.Carts.ICart> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Carts.ICart> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICart>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Carts.ICart>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

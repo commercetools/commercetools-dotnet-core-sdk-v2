@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.ReturnInfoDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ReturnInfoDraft))]
     public partial interface IReturnInfoDraft
     {
         List<IReturnItemDraft> Items { get; set; }

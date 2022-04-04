@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
     public partial class ChannelReference : IChannelReference
     {

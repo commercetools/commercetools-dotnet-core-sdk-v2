@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.ReviewResourceIdentifier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewResourceIdentifier))]
     public partial interface IReviewResourceIdentifier : IResourceIdentifier
     {
     }

@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Channels
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
 {
 
     public class ByProjectKeyChannelsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Channels
             return new ByProjectKeyChannelsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeyChannelsByIDPost Post(commercetools.Api.Models.Channels.IChannelUpdate channelUpdate)
+        public ByProjectKeyChannelsByIDPost Post(commercetools.Sdk.Api.Models.Channels.IChannelUpdate channelUpdate)
         {
             return new ByProjectKeyChannelsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, channelUpdate);
         }

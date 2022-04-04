@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.Api.Models
+namespace commercetools.Sdk.Api.Models
 {
     public interface IResourceUpdate<out TUpdate, TAction> where TUpdate : IResourceUpdate<TUpdate, TAction>
                                           where TAction : IResourceUpdateAction<TAction>

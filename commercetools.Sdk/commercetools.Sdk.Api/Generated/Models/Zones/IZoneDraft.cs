@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.ZoneDraft))]
     public partial interface IZoneDraft
     {
         string Key { get; set; }

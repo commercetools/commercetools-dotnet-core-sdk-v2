@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Extensions
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
     public partial class ByProjectKeyExtensionsKeyByKeyGet : ApiMethod<ByProjectKeyExtensionsKeyByKeyGet>
     {
@@ -38,10 +38,10 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
         }
 
 
-        public async Task<commercetools.Api.Models.Extensions.IExtension> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Extensions.IExtension> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Extensions.IExtension>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Extensions.IExtension>(requestMessage);
         }
 
     }

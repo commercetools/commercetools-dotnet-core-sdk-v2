@@ -1,11 +1,11 @@
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
     public partial interface ILineItemStateTransitionMessagePayload : IOrderMessagePayload
     {
         string LineItemId { get; set; }

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.ProductSelections;
+using commercetools.Sdk.Api.Models.ProductSelections;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class ProductSelectionCreatedMessagePayload : IProductSelectionCreatedMessagePayload
     {

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.OrderEdits;
+using commercetools.Sdk.Api.Models.OrderEdits;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class OrderEditAppliedMessagePayload : IOrderEditAppliedMessagePayload
     {

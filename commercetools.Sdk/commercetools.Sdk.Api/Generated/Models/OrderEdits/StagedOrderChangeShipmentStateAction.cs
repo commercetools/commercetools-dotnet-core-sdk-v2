@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderChangeShipmentStateAction : IStagedOrderChangeShipmentStateAction
     {

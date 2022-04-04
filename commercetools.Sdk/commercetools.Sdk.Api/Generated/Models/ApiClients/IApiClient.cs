@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ApiClients
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ApiClients.ApiClient))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClient))]
     public partial interface IApiClient
     {
         string Id { get; set; }

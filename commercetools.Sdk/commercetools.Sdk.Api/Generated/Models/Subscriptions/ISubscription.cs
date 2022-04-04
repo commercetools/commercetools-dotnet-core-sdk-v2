@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.Subscription))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.Subscription))]
     public partial interface ISubscription : IBaseResource
     {
         new string Id { get; set; }

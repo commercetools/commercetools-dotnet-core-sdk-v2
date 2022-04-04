@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductSelectionProductAddedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessagePayload))]
     public partial interface IProductSelectionProductAddedMessagePayload : IMessagePayload
     {
         IProductReference Product { get; set; }

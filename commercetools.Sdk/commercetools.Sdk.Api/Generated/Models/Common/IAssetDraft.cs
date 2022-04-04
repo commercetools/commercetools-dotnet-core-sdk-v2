@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.AssetDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.AssetDraft))]
     public partial interface IAssetDraft
     {
         List<IAssetSource> Sources { get; set; }

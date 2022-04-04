@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace commercetools.Api.Models
+namespace commercetools.Sdk.Api.Models
 {
     public interface IRequestCommand<TResult>
     {

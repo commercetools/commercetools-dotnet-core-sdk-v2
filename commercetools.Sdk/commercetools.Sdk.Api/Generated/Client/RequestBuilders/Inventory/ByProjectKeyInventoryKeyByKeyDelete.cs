@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
     public partial class ByProjectKeyInventoryKeyByKeyDelete : ApiMethod<ByProjectKeyInventoryKeyByKeyDelete>
     {
@@ -48,10 +48,10 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
         }
 
 
-        public async Task<commercetools.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.IInventoryEntry>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>(requestMessage);
         }
 
     }

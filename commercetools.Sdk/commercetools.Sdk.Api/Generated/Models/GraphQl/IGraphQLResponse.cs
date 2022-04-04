@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.GraphQl.GraphQLResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.GraphQl.GraphQLResponse))]
     public partial interface IGraphQLResponse
     {
         Object Data { get; set; }

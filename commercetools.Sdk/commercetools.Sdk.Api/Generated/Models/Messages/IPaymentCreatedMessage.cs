@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentCreatedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.PaymentCreatedMessage))]
     public partial interface IPaymentCreatedMessage : IMessage
     {
         IPayment Payment { get; set; }

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
     public partial class ByProjectKeyShippingMethodsKeyByKeyPost : ApiMethod<ByProjectKeyShippingMethodsKeyByKeyPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
 
         private string Key { get; }
 
-        private commercetools.Api.Models.ShippingMethods.IShippingMethodUpdate ShippingMethodUpdate;
+        private commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodUpdate ShippingMethodUpdate;
 
-        public ByProjectKeyShippingMethodsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate)
+        public ByProjectKeyShippingMethodsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
         }
 
 
-        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethod> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethod> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethod>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethod>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
     public partial class OrderStateChangedMessagePayload : IOrderStateChangedMessagePayload
     {

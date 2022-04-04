@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
     public partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
     {

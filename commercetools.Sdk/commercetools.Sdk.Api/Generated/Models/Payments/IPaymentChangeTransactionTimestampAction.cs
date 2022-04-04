@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentChangeTransactionTimestampAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentChangeTransactionTimestampAction))]
     public partial interface IPaymentChangeTransactionTimestampAction : IPaymentUpdateAction
     {
         string TransactionId { get; set; }

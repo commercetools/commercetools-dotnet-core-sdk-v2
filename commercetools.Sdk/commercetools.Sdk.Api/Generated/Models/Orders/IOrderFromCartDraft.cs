@@ -1,12 +1,12 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.States;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderFromCartDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderFromCartDraft))]
     public partial interface IOrderFromCartDraft
     {
         [ObsoleteAttribute("This property is obsolete", false)]

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductRemoveVariantAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductRemoveVariantAction))]
     public partial interface IProductRemoveVariantAction : IProductUpdateAction
     {
         long? Id { get; set; }

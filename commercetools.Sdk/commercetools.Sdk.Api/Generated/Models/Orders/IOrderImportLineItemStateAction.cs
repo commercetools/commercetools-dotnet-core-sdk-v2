@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderImportLineItemStateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderImportLineItemStateAction))]
     public partial interface IOrderImportLineItemStateAction : IOrderUpdateAction
     {
         string LineItemId { get; set; }

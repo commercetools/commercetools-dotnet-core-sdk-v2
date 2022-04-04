@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Channels;
 using System;
 
 
-namespace commercetools.Api.Models.Orders
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public partial class OrderUpdateSyncInfoAction : IOrderUpdateSyncInfoAction
     {

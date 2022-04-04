@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneChangeNameAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.ZoneChangeNameAction))]
     public partial interface IZoneChangeNameAction : IZoneUpdateAction
     {
         string Name { get; set; }

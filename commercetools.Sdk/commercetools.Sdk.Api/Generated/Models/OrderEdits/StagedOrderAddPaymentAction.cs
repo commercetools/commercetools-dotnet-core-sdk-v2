@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Payments;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     public partial class StagedOrderAddPaymentAction : IStagedOrderAddPaymentAction
     {

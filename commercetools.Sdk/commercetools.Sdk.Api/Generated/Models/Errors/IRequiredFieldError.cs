@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.RequiredFieldError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.RequiredFieldError))]
     public partial interface IRequiredFieldError : IErrorObject
     {
         string Field { get; set; }

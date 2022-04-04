@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.MatchingPriceNotFoundError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     public partial interface IMatchingPriceNotFoundError : IErrorObject
     {
         string ProductId { get; set; }

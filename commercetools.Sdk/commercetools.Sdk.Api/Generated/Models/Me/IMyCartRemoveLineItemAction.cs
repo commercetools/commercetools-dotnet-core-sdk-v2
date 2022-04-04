@@ -1,11 +1,11 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartRemoveLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartRemoveLineItemAction))]
     public partial interface IMyCartRemoveLineItemAction : IMyCartUpdateAction
     {
         string LineItemId { get; set; }

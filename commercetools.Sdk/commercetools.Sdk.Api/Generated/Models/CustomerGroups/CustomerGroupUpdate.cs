@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.CustomerGroups
+namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
     public partial class CustomerGroupUpdate : ICustomerGroupUpdate
     {

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Types
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
 {
     public partial class ByProjectKeyTypesKeyByKeyPost : ApiMethod<ByProjectKeyTypesKeyByKeyPost>
     {
@@ -22,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Types
 
         private string Key { get; }
 
-        private commercetools.Api.Models.Types.ITypeUpdate TypeUpdate;
+        private commercetools.Sdk.Api.Models.Types.ITypeUpdate TypeUpdate;
 
-        public ByProjectKeyTypesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Types.ITypeUpdate typeUpdate)
+        public ByProjectKeyTypesKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Sdk.Api.Models.Types.ITypeUpdate typeUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -45,10 +45,10 @@ namespace commercetools.Api.Client.RequestBuilders.Types
         }
 
 
-        public async Task<commercetools.Api.Models.Types.IType> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Types.IType> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Types.IType>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Types.IType>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,8 +1,8 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public partial class CartAddShoppingListAction : ICartAddShoppingListAction
     {

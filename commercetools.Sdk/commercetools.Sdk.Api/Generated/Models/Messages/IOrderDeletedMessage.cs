@@ -1,10 +1,10 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderDeletedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderDeletedMessage))]
     public partial interface IOrderDeletedMessage : IOrderMessage
     {
         IOrder Order { get; set; }

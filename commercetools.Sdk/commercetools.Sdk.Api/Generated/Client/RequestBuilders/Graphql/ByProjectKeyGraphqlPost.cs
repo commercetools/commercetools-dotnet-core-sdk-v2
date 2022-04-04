@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Graphql
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
 {
     public partial class ByProjectKeyGraphqlPost : ApiMethod<ByProjectKeyGraphqlPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.GraphQl.IGraphQLRequest GraphQLRequest;
+        private commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest GraphQLRequest;
 
-        public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
+        public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
 
 
 
-        public async Task<commercetools.Api.Models.GraphQl.IGraphQLResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.GraphQl.IGraphQLResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

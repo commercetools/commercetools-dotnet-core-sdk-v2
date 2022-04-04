@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Carts
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
 {
 
     public class ByProjectKeyCartsReplicateRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Carts
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyCartsReplicatePost Post(commercetools.Api.Models.Carts.IReplicaCartDraft replicaCartDraft)
+        public ByProjectKeyCartsReplicatePost Post(commercetools.Sdk.Api.Models.Carts.IReplicaCartDraft replicaCartDraft)
         {
             return new ByProjectKeyCartsReplicatePost(ApiHttpClient, SerializerService, ProjectKey, replicaCartDraft);
         }

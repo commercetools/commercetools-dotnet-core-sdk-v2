@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.CartDiscounts
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
     public partial class MultiBuyLineItemsTarget : IMultiBuyLineItemsTarget
     {

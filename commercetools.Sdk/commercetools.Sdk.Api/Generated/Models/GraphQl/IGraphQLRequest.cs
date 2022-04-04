@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.GraphQl.GraphQLRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.GraphQl.GraphQLRequest))]
     public partial interface IGraphQLRequest
     {
         string Query { get; set; }

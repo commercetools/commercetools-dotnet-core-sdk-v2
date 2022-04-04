@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
     public partial class ByProjectKeyGet : ApiMethod<ByProjectKeyGet>
     {
@@ -26,10 +26,10 @@ namespace commercetools.Api.Client.RequestBuilders.Projects
 
 
 
-        public async Task<commercetools.Api.Models.Projects.IProject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Projects.IProject> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Projects.IProject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Projects.IProject>(requestMessage);
         }
 
     }

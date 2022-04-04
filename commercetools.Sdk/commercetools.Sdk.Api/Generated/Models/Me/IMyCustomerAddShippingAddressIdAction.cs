@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCustomerAddShippingAddressIdAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCustomerAddShippingAddressIdAction))]
     public partial interface IMyCustomerAddShippingAddressIdAction : IMyCustomerUpdateAction
     {
         string AddressId { get; set; }

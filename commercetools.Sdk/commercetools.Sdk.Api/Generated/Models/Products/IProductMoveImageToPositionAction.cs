@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductMoveImageToPositionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductMoveImageToPositionAction))]
     public partial interface IProductMoveImageToPositionAction : IProductUpdateAction
     {
         long? VariantId { get; set; }

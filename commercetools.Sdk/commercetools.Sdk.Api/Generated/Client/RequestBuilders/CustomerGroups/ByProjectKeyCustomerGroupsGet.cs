@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>, commercetools.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>
+    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>
     {
 
 
@@ -89,10 +89,10 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>(requestMessage);
         }
 
     }

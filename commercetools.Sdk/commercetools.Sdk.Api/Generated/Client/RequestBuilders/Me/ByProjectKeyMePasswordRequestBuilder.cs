@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
     public class ByProjectKeyMePasswordRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMePasswordPost Post(commercetools.Api.Models.Customers.IMyCustomerChangePassword myCustomerChangePassword)
+        public ByProjectKeyMePasswordPost Post(commercetools.Sdk.Api.Models.Customers.IMyCustomerChangePassword myCustomerChangePassword)
         {
             return new ByProjectKeyMePasswordPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerChangePassword);
         }

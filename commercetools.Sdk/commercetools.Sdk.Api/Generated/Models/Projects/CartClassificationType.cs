@@ -1,9 +1,9 @@
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
     public partial class CartClassificationType : ICartClassificationType
     {

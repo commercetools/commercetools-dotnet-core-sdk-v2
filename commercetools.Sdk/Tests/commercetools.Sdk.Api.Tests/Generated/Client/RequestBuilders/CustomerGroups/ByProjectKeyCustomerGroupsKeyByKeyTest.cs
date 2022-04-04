@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.CustomerGroups
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomerGroups
 {
     public class ByProjectKeyCustomerGroupsKeyByKeyTest : RequestBuilderParentTests
     {

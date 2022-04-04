@@ -1,4 +1,4 @@
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
     public partial class GraphQLRequest : IGraphQLRequest
     {

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Channels.ChannelPagedQueryResponse))]
     public partial interface IChannelPagedQueryResponse
     {
         long Limit { get; set; }

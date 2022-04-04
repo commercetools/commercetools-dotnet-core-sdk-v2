@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
     public class ByProjectKeySubscriptionsByIDRequestBuilder
@@ -28,7 +28,7 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
             return new ByProjectKeySubscriptionsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
-        public ByProjectKeySubscriptionsByIDPost Post(commercetools.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
+        public ByProjectKeySubscriptionsByIDPost Post(commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
         {
             return new ByProjectKeySubscriptionsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, subscriptionUpdate);
         }

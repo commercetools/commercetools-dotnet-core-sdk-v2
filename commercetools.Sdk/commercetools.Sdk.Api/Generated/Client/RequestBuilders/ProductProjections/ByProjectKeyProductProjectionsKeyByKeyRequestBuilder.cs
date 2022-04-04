@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 
     public class ByProjectKeyProductProjectionsKeyByKeyRequestBuilder

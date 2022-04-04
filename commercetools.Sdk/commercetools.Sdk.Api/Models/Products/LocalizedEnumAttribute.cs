@@ -1,7 +1,7 @@
 using System;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.ProductTypes;
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public class LocalizedEnumAttribute : Attribute, IGenericAttribute<IAttributeLocalizedEnumValue>
     {

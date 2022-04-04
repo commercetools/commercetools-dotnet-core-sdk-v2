@@ -1,8 +1,8 @@
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public partial class ExternalTaxRateDraft : IExternalTaxRateDraft
     {

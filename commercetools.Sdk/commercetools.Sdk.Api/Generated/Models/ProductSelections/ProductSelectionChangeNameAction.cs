@@ -1,7 +1,7 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     public partial class ProductSelectionChangeNameAction : IProductSelectionChangeNameAction
     {

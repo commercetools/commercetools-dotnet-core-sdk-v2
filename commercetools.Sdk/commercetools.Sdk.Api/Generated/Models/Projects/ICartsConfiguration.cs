@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.CartsConfiguration))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.CartsConfiguration))]
     public partial interface ICartsConfiguration
     {
         long? DeleteDaysAfterLastModification { get; set; }

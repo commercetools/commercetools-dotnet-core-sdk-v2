@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetLocaleAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLocaleAction))]
     public partial interface IMyCartSetLocaleAction : IMyCartUpdateAction
     {
         string Locale { get; set; }

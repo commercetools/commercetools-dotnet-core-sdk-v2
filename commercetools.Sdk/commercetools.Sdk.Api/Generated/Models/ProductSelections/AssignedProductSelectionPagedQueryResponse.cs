@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.Api.Models.ProductSelections
+namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     public partial class AssignedProductSelectionPagedQueryResponse : IAssignedProductSelectionPagedQueryResponse
     {
