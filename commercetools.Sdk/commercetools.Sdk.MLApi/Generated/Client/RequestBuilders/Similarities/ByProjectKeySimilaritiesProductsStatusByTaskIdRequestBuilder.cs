@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
 
     public class ByProjectKeySimilaritiesProductsStatusByTaskIdRequestBuilder

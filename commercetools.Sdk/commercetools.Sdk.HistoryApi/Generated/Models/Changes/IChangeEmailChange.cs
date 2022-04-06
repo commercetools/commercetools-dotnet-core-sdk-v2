@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeEmailChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeEmailChange))]
     public partial interface IChangeEmailChange : IChange
     {
         new string Type { get; set; }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Similarities
 {
     public class ByProjectKeySimilaritiesProductsStatusTest : RequestBuilderParentTests
     {

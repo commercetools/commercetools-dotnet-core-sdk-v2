@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Producttypes
+namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Producttypes.AttributeBooleanType))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Producttypes.AttributeBooleanType))]
     public partial interface IAttributeBooleanType : IAttributeType
     {
     }

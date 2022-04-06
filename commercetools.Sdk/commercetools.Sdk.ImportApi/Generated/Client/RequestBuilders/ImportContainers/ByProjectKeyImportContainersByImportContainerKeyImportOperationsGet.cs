@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
     public partial class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet>
     {
@@ -88,10 +88,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
         }
 
 
-        public async Task<commercetools.ImportApi.Models.Importoperations.IImportOperationPagedResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importoperations.IImportOperationPagedResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse>(requestMessage);
         }
 
     }

@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public partial class ShippingRatePriceTier : IShippingRatePriceTier
     {

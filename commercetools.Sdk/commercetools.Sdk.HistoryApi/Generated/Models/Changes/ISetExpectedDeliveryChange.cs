@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetExpectedDeliveryChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetExpectedDeliveryChange))]
     public partial interface ISetExpectedDeliveryChange : IChange
     {
         new string Type { get; set; }

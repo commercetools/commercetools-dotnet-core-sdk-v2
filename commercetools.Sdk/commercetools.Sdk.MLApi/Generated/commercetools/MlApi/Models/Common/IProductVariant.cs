@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.Common
+namespace commercetools.Sdk.MLApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.Common.ProductVariant))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.Common.ProductVariant))]
     public partial interface IProductVariant
     {
         IProductReference Product { get; set; }

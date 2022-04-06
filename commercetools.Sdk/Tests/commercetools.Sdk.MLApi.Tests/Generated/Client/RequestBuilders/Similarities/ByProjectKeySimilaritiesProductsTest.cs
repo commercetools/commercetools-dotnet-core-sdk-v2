@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Similarities
 {
     public class ByProjectKeySimilaritiesProductsTest : RequestBuilderParentTests
     {

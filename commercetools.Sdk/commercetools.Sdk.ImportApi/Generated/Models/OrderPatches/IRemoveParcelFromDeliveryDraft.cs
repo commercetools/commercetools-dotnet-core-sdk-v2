@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.RemoveParcelFromDeliveryDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.RemoveParcelFromDeliveryDraft))]
     public partial interface IRemoveParcelFromDeliveryDraft
     {
         string ParcelId { get; set; }

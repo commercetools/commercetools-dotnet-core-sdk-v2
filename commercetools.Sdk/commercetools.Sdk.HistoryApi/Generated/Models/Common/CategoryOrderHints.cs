@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public partial class CategoryOrderHints : Dictionary<string, string>, ICategoryOrderHints
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using Xunit;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ProductVariants
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ProductVariants
 {
     public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsTest : RequestBuilderParentTests
     {

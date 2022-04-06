@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
     public partial class ByProjectKeyImageSearchConfigPost : ApiMethod<ByProjectKeyImageSearchConfigPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
 
         private string ProjectKey { get; }
 
-        private commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest ImageSearchConfigRequest;
+        private commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest ImageSearchConfigRequest;
 
-        public ByProjectKeyImageSearchConfigPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest imageSearchConfigRequest)
+        public ByProjectKeyImageSearchConfigPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest imageSearchConfigRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
 
 
 
-        public async Task<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

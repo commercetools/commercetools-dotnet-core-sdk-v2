@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.DuplicateVariantValuesError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.DuplicateVariantValuesError))]
     public partial interface IDuplicateVariantValuesError : IErrorObject
     {
         IVariantValues VariantValues { get; set; }

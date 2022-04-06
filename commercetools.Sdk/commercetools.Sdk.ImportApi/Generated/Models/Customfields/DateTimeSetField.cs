@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
     public partial class DateTimeSetField : IDateTimeSetField
     {

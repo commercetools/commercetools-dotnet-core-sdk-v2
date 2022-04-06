@@ -1,11 +1,11 @@
-using commercetools.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeLocalizedEnumValueOrderChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLocalizedEnumValueOrderChange))]
     public partial interface IChangeLocalizedEnumValueOrderChange : IChange
     {
         new string Type { get; set; }

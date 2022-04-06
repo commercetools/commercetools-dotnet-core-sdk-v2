@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.ReferenceSetAttribute))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.ReferenceSetAttribute))]
     public partial interface IReferenceSetAttribute : IAttribute
     {
         List<IKeyReference> Value { get; set; }

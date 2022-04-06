@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
 {
     public partial class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost>
     {
@@ -21,9 +21,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
 
         private string ImportSinkKey { get; }
 
-        private commercetools.ImportApi.Models.Importrequests.IOrderPatchImportRequest OrderPatchImportRequest;
+        private commercetools.Sdk.ImportApi.Models.Importrequests.IOrderPatchImportRequest OrderPatchImportRequest;
 
-        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importrequests.IOrderPatchImportRequest orderPatchImportRequest)
+        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.Sdk.ImportApi.Models.Importrequests.IOrderPatchImportRequest orderPatchImportRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -36,10 +36,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

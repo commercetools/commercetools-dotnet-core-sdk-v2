@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetOrderTotalTaxChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetOrderTotalTaxChange))]
     public partial interface ISetOrderTotalTaxChange : IChange
     {
         new string Type { get; set; }

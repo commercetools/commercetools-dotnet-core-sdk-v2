@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
     public partial class OrderField : IOrderField
     {

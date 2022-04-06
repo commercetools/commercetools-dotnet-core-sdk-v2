@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.MissingAttributesSearchRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesSearchRequest))]
     public partial interface IMissingAttributesSearchRequest
     {
         int? Limit { get; set; }

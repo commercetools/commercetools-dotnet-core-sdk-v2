@@ -2,7 +2,7 @@ using System.IO;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
 
     public class ByProjectKeyImageSearchRequestBuilder

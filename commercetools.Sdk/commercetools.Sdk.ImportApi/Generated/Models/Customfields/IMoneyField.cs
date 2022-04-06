@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.MoneyField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.MoneyField))]
     public partial interface IMoneyField : ICustomField
     {
         ITypedMoney Value { get; set; }

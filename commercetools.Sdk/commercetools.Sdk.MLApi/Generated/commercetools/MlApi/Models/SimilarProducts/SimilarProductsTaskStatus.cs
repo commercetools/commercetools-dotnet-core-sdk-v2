@@ -1,8 +1,8 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using System;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
     public partial class SimilarProductsTaskStatus : ISimilarProductsTaskStatus
     {

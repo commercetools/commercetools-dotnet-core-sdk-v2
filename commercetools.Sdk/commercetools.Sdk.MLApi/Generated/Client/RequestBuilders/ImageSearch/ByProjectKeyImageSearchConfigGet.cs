@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
     public partial class ByProjectKeyImageSearchConfigGet : ApiMethod<ByProjectKeyImageSearchConfigGet>
     {
@@ -26,10 +26,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
 
 
 
-        public async Task<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
         }
 
     }

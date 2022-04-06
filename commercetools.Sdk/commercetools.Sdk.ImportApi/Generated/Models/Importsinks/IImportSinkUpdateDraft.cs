@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importsinks
+namespace commercetools.Sdk.ImportApi.Models.Importsinks
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importsinks.ImportSinkUpdateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importsinks.ImportSinkUpdateDraft))]
     public partial interface IImportSinkUpdateDraft
     {
         long Version { get; set; }

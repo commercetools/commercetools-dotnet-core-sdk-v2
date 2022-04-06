@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.ChangeValues
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.ShippingMethodChangeValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ShippingMethodChangeValue))]
     public partial interface IShippingMethodChangeValue
     {
         string Id { get; set; }

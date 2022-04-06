@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.Prices
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.Prices
 {
     public class ByProjectKeyPricesTest : RequestBuilderParentTests
     {

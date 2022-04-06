@@ -1,7 +1,7 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public partial class ClassificationShippingRateInput : IClassificationShippingRateInput
     {

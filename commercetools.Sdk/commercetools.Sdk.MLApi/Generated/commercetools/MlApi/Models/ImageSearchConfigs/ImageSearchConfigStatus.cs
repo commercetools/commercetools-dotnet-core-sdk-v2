@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.MLApi.Models.ImageSearchConfigs
+namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
 {
     public enum ImageSearchConfigStatus
     {

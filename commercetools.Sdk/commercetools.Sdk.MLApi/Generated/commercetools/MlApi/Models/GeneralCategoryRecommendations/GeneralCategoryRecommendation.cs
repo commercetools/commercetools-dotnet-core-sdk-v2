@@ -1,4 +1,4 @@
-namespace commercetools.MLApi.Models.GeneralCategoryRecommendations
+namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
 {
     public partial class GeneralCategoryRecommendation : IGeneralCategoryRecommendation
     {

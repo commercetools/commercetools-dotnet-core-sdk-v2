@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.DeliveryItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.DeliveryItem))]
     public partial interface IDeliveryItem
     {
         string Id { get; set; }

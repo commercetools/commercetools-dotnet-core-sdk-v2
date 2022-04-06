@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
     public partial class MoneySetAttribute : IMoneySetAttribute
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetRatingChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetRatingChange))]
     public partial interface ISetRatingChange : IChange
     {
         new string Type { get; set; }

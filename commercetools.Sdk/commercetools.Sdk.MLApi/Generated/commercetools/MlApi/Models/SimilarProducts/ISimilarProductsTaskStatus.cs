@@ -1,11 +1,11 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.SimilarProducts.SimilarProductsTaskStatus))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarProductsTaskStatus))]
     public partial interface ISimilarProductsTaskStatus
     {
         ITaskStatusEnum State { get; set; }

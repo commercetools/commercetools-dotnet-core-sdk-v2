@@ -1,12 +1,12 @@
-using commercetools.ImportApi.Models.Prices;
-using commercetools.ImportApi.Models.Productvariants;
+using commercetools.Sdk.ImportApi.Models.Prices;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.VariantValues))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.VariantValues))]
     public partial interface IVariantValues
     {
         string Sku { get; set; }

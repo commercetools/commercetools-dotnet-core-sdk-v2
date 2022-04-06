@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.RemoveAddressChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveAddressChange))]
     public partial interface IRemoveAddressChange : IChange
     {
         new string Change { get; set; }

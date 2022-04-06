@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportSummaries
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportSummaries
 {
     public class ByProjectKeyImportSummariesTest : RequestBuilderParentTests
     {

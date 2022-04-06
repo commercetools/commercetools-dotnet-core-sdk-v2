@@ -1,12 +1,12 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Products;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Products;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productdrafts
+namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productdrafts.ProductDraftImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productdrafts.ProductDraftImport))]
     public partial interface IProductDraftImport : IImportResource
     {
         IProductTypeKeyReference ProductType { get; set; }

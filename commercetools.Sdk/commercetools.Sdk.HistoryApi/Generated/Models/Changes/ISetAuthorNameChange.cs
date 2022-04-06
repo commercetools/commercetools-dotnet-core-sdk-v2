@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetAuthorNameChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAuthorNameChange))]
     public partial interface ISetAuthorNameChange : IChange
     {
         new string Type { get; set; }

@@ -1,12 +1,12 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productvariants;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productdrafts
+namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productdrafts.ProductVariantDraftImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productdrafts.ProductVariantDraftImport))]
     public partial interface IProductVariantDraftImport
     {
         string Sku { get; set; }

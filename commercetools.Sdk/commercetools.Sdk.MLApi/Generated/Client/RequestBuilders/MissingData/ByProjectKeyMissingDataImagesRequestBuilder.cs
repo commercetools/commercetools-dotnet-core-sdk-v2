@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
 
     public class ByProjectKeyMissingDataImagesRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMissingDataImagesPost Post(commercetools.MLApi.Models.MissingData.IMissingImagesSearchRequest missingImagesSearchRequest)
+        public ByProjectKeyMissingDataImagesPost Post(commercetools.Sdk.MLApi.Models.MissingData.IMissingImagesSearchRequest missingImagesSearchRequest)
         {
             return new ByProjectKeyMissingDataImagesPost(ApiHttpClient, SerializerService, ProjectKey, missingImagesSearchRequest);
         }

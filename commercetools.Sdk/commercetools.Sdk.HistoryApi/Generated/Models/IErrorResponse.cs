@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ErrorResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ErrorResponse))]
     public partial interface IErrorResponse
     {
         int StatusCode { get; set; }

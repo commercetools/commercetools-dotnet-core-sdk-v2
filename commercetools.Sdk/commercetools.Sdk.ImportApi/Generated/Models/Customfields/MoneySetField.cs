@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
     public partial class MoneySetField : IMoneySetField
     {

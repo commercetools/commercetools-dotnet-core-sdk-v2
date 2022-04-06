@@ -1,10 +1,10 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.MissingImages))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingImages))]
     public partial interface IMissingImages
     {
         IProductReference Product { get; set; }

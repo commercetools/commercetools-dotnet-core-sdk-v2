@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importsummaries
+namespace commercetools.Sdk.ImportApi.Models.Importsummaries
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importsummaries.OperationStates))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importsummaries.OperationStates))]
     public partial interface IOperationStates
     {
         long Processing { get; set; }

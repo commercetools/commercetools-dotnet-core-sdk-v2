@@ -1,8 +1,8 @@
-using commercetools.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System.Collections.Generic;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     public partial class ChangeShoppingListLineItemsOrderChange : IChangeShoppingListLineItemsOrderChange
     {

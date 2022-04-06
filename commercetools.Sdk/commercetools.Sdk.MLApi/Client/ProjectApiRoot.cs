@@ -1,9 +1,9 @@
 using commercetools.Base.Client;
-using commercetools.MLApi.Client.RequestBuilders.ImageSearch;
-using commercetools.MLApi.Client.RequestBuilders.MissingData;
-using commercetools.MLApi.Client.RequestBuilders.Projects;
-using commercetools.MLApi.Client.RequestBuilders.Recommendations;
-using commercetools.MLApi.Client.RequestBuilders.Similarities;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.Projects;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities;
 
 namespace commercetools.Sdk.MLApi.Client
 {

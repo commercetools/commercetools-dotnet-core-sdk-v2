@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
 
     public class ByProjectKeyMissingDataPricesStatusByTaskIdRequestBuilder

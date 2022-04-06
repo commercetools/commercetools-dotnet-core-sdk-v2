@@ -1,11 +1,11 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.RemoveFromCategoryChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveFromCategoryChange))]
     public partial interface IRemoveFromCategoryChange : IChange
     {
         new string Type { get; set; }

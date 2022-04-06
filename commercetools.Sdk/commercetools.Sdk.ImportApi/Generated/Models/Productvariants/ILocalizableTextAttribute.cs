@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.LocalizableTextAttribute))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.LocalizableTextAttribute))]
     public partial interface ILocalizableTextAttribute : IAttribute
     {
         ILocalizedString Value { get; set; }

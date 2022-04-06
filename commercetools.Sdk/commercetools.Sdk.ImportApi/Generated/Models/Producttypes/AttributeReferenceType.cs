@@ -1,7 +1,7 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Producttypes
+namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
     public partial class AttributeReferenceType : IAttributeReferenceType
     {

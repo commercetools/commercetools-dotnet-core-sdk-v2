@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.SimilarProducts.SimilarityMeasures))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarityMeasures))]
     public partial interface ISimilarityMeasures
     {
         long? Name { get; set; }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.Recommendations
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
 {
     public class ByProjectKeyRecommendationsTest : RequestBuilderParentTests
     {

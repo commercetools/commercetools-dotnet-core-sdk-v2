@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.TaxCategoryKeyReference))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.TaxCategoryKeyReference))]
     public partial interface ITaxCategoryKeyReference : IKeyReference
     {
     }

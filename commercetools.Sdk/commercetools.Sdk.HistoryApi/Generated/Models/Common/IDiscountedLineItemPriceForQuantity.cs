@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.DiscountedLineItemPriceForQuantity))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.DiscountedLineItemPriceForQuantity))]
     public partial interface IDiscountedLineItemPriceForQuantity
     {
         int Quantity { get; set; }

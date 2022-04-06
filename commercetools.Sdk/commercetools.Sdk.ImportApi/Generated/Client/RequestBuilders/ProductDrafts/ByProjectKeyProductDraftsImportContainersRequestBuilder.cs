@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductDrafts
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts
 {
 
     public class ByProjectKeyProductDraftsImportContainersRequestBuilder

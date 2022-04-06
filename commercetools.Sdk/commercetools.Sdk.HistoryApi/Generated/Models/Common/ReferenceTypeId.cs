@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public enum ReferenceTypeId
     {

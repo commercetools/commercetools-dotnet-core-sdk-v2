@@ -1,7 +1,7 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
     public partial class SimilarProduct : ISimilarProduct
     {

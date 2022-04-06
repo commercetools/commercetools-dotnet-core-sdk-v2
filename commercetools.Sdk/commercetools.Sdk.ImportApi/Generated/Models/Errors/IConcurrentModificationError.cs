@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.ConcurrentModificationError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.ConcurrentModificationError))]
     public partial interface IConcurrentModificationError : IErrorObject
     {
         long? SpecifiedVersion { get; set; }

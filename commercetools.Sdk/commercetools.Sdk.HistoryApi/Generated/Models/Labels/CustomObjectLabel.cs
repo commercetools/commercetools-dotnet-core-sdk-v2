@@ -1,4 +1,4 @@
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
     public partial class CustomObjectLabel : ICustomObjectLabel
     {

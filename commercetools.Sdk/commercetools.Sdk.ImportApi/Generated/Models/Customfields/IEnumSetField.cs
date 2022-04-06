@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.EnumSetField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.EnumSetField))]
     public partial interface IEnumSetField : ICustomField
     {
         List<string> Value { get; set; }

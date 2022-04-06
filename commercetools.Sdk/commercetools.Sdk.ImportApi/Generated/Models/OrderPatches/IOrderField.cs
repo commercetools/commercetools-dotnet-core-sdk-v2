@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.OrderField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.OrderField))]
     public partial interface IOrderField
     {
         IReturnInfo AddReturnInfo { get; set; }

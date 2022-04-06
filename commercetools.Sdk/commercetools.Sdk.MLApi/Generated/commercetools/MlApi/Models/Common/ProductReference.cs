@@ -1,4 +1,4 @@
-namespace commercetools.MLApi.Models.Common
+namespace commercetools.Sdk.MLApi.Models.Common
 {
     public partial class ProductReference : IProductReference
     {

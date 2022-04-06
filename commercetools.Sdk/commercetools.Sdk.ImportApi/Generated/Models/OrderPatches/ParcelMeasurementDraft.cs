@@ -1,7 +1,7 @@
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Orders;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
     public partial class ParcelMeasurementDraft : IParcelMeasurementDraft
     {

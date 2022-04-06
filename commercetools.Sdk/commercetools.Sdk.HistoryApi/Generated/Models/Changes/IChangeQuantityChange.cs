@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeQuantityChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeQuantityChange))]
     public partial interface IChangeQuantityChange : IChange
     {
         new string Change { get; set; }

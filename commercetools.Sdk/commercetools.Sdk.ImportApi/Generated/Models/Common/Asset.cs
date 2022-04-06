@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public partial class Asset : IAsset
     {

@@ -1,13 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customers
+namespace commercetools.Sdk.ImportApi.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customers.CustomerImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customers.CustomerImport))]
     public partial interface ICustomerImport : IImportResource
     {
         string CustomerNumber { get; set; }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.Money))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.Money))]
     public partial interface IMoney
     {
         string CurrencyCode { get; set; }

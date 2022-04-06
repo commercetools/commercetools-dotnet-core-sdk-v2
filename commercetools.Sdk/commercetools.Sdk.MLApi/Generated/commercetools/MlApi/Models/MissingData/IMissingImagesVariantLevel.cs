@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.MissingImagesVariantLevel))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingImagesVariantLevel))]
     public partial interface IMissingImagesVariantLevel : IMissingImagesCount
     {
         new long MissingImages { get; set; }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Importcontainers
+namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 {
     public partial class ImportContainerPagedResponse : IImportContainerPagedResponse
     {

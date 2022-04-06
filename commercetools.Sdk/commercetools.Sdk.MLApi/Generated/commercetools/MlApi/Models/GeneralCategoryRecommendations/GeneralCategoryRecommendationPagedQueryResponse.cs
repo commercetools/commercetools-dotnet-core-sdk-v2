@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.MLApi.Models.GeneralCategoryRecommendations
+namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
 {
     public partial class GeneralCategoryRecommendationPagedQueryResponse : IGeneralCategoryRecommendationPagedQueryResponse
     {

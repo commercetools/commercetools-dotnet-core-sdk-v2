@@ -2,7 +2,7 @@ using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportSummaries
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSummaries
 {
     [Obsolete("usage of this endpoint has been deprecated.", false)]
     public class ByProjectKeyImportSummariesRequestBuilder

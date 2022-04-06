@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Categories
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories
 {
     public partial class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsByIdGet : ApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsByIdGet>
     {
@@ -32,10 +32,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importoperations.IImportOperation> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperation> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importoperations.IImportOperation>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperation>(requestMessage);
         }
 
     }

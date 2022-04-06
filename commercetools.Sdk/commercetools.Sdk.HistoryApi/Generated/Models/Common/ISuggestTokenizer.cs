@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.SuggestTokenizer))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.SuggestTokenizer))]
     public partial interface ISuggestTokenizer
     {
         string Type { get; set; }

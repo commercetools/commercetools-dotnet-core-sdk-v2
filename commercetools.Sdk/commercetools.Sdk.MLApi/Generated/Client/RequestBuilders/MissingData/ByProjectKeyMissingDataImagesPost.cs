@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
     public partial class ByProjectKeyMissingDataImagesPost : ApiMethod<ByProjectKeyMissingDataImagesPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 
         private string ProjectKey { get; }
 
-        private commercetools.MLApi.Models.MissingData.IMissingImagesSearchRequest MissingImagesSearchRequest;
+        private commercetools.Sdk.MLApi.Models.MissingData.IMissingImagesSearchRequest MissingImagesSearchRequest;
 
-        public ByProjectKeyMissingDataImagesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.MLApi.Models.MissingData.IMissingImagesSearchRequest missingImagesSearchRequest)
+        public ByProjectKeyMissingDataImagesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.MLApi.Models.MissingData.IMissingImagesSearchRequest missingImagesSearchRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 
 
 
-        public async Task<commercetools.MLApi.Models.Common.ITaskToken> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.Common.ITaskToken> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.ITaskToken>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.Common.ITaskToken>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

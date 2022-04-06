@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
 
     public class ByProjectKeyMissingDataPricesRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMissingDataPricesPost Post(commercetools.MLApi.Models.MissingData.IMissingPricesSearchRequest missingPricesSearchRequest)
+        public ByProjectKeyMissingDataPricesPost Post(commercetools.Sdk.MLApi.Models.MissingData.IMissingPricesSearchRequest missingPricesSearchRequest)
         {
             return new ByProjectKeyMissingDataPricesPost(ApiHttpClient, SerializerService, ProjectKey, missingPricesSearchRequest);
         }

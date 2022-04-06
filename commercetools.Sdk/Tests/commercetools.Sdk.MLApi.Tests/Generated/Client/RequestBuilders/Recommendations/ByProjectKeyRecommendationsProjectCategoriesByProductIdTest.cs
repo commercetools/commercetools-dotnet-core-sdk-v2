@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.Recommendations
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
 {
     public class ByProjectKeyRecommendationsProjectCategoriesByProductIdTest : RequestBuilderParentTests
     {

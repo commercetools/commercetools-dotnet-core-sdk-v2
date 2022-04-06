@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
 {
     public partial class ByProjectKeyRecommendationsGeneralCategoriesGet : ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet>
     {
@@ -85,10 +85,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Recommendations
         }
 
 
-        public async Task<commercetools.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse>(requestMessage);
         }
 
     }

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.CategoryRecommendations
+namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationPagedQueryResponse))]
     public partial interface IProjectCategoryRecommendationPagedQueryResponse
     {
         long Count { get; set; }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Products
+namespace commercetools.Sdk.ImportApi.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Products.WhitespaceTokenizer))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Products.WhitespaceTokenizer))]
     public partial interface IWhitespaceTokenizer : ISuggestTokenizer
     {
     }

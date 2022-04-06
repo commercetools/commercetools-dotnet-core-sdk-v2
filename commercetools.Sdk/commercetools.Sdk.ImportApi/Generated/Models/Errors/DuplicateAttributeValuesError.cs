@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Productvariants;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
     public partial class DuplicateAttributeValuesError : IDuplicateAttributeValuesError
     {

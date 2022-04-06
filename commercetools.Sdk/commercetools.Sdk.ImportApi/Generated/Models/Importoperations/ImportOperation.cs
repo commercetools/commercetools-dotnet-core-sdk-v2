@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Errors;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Errors;
 using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
     public partial class ImportOperation : IImportOperation
     {

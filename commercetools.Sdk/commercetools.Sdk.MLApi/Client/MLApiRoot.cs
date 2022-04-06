@@ -1,5 +1,5 @@
 using commercetools.Base.Client;
-using commercetools.MLApi.Client.RequestBuilders.Projects;
+using commercetools.Sdk.MLApi.Client.RequestBuilders.Projects;
 
 namespace commercetools.Sdk.MLApi.Client
 {

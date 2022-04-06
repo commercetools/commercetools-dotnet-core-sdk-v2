@@ -1,7 +1,7 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Importsinks
+namespace commercetools.Sdk.ImportApi.Models.Importsinks
 {
     public partial class ImportSinkUpdateDraft : IImportSinkUpdateDraft
     {

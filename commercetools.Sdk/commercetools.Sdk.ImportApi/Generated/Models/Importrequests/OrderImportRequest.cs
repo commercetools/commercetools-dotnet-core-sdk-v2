@@ -1,9 +1,9 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Orders;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
     public partial class OrderImportRequest : IOrderImportRequest
     {

@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
     public partial class EnumAttribute : IEnumAttribute
     {

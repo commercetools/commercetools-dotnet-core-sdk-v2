@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.TaxedItemPrice))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.TaxedItemPrice))]
     public partial interface ITaxedItemPrice
     {
         IMoney TotalNet { get; set; }

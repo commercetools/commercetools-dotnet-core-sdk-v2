@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.CategoryRecommendations
+namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationMeta))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationMeta))]
     public partial interface IProjectCategoryRecommendationMeta
     {
         string ProductName { get; set; }

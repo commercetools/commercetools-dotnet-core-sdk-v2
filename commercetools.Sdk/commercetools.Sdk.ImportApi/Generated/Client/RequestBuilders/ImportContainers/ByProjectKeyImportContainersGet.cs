@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
     public partial class ByProjectKeyImportContainersGet : ApiMethod<ByProjectKeyImportContainersGet>
     {
@@ -55,10 +55,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
         }
 
 
-        public async Task<commercetools.ImportApi.Models.Importcontainers.IImportContainerPagedResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>(requestMessage);
         }
 
     }

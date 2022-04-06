@@ -1,6 +1,6 @@
 using commercetools.Base.Client;
-using commercetools.HistoryApi.Client.RequestBuilders.Projects;
-using commercetools.HistoryApi.Client.RequestBuilders.ResourceType;
+using commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects;
+using commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType;
 
 namespace commercetools.Sdk.HistoryApi.Client
 {

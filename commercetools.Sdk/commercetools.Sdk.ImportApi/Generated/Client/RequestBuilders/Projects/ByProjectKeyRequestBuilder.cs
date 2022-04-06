@@ -1,22 +1,22 @@
 using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.ImportApi.Client.RequestBuilders.ImportSinks;
-using commercetools.ImportApi.Client.RequestBuilders.ImportSummaries;
-using commercetools.ImportApi.Client.RequestBuilders.ImportContainers;
-using commercetools.ImportApi.Client.RequestBuilders.ImportOperations;
-using commercetools.ImportApi.Client.RequestBuilders.Categories;
-using commercetools.ImportApi.Client.RequestBuilders.Prices;
-using commercetools.ImportApi.Client.RequestBuilders.Products;
-using commercetools.ImportApi.Client.RequestBuilders.ProductDrafts;
-using commercetools.ImportApi.Client.RequestBuilders.ProductTypes;
-using commercetools.ImportApi.Client.RequestBuilders.ProductVariants;
-using commercetools.ImportApi.Client.RequestBuilders.ProductVariant;
-using commercetools.ImportApi.Client.RequestBuilders.Orders;
-using commercetools.ImportApi.Client.RequestBuilders.OrderPatches;
-using commercetools.ImportApi.Client.RequestBuilders.Customers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSummaries;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Products;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
 {
 
     public class ByProjectKeyRequestBuilder

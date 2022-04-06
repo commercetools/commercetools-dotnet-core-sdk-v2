@@ -1,5 +1,5 @@
 using commercetools.Base.Client;
-using commercetools.ImportApi.Models.Errors;
+using commercetools.Sdk.ImportApi.Models.Errors;
 
 namespace commercetools.Sdk.ImportApi.Extensions
 {

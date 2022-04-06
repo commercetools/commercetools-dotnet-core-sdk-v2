@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public enum MoneyType
     {

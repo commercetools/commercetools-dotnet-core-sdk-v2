@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
     public partial class ByProjectKeySimilaritiesProductsPost : ApiMethod<ByProjectKeySimilaritiesProductsPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
 
         private string ProjectKey { get; }
 
-        private commercetools.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest SimilarProductSearchRequest;
+        private commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest SimilarProductSearchRequest;
 
-        public ByProjectKeySimilaritiesProductsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest similarProductSearchRequest)
+        public ByProjectKeySimilaritiesProductsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest similarProductSearchRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
 
 
 
-        public async Task<commercetools.MLApi.Models.Common.ITaskToken> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.Common.ITaskToken> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.Common.ITaskToken>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.Common.ITaskToken>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

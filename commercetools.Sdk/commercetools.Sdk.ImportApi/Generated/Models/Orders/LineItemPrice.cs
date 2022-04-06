@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public partial class LineItemPrice : ILineItemPrice
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
     public partial class SimilarProductSearchRequest : ISimilarProductSearchRequest
     {

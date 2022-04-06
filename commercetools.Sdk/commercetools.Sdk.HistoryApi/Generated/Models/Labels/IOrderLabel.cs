@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Labels.OrderLabel))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Labels.OrderLabel))]
     public partial interface IOrderLabel : ILabel
     {
         new string Type { get; set; }

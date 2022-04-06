@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks
 {
     public partial class ByProjectKeyImportSinksPost : ApiMethod<ByProjectKeyImportSinksPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
 
         private string ProjectKey { get; }
 
-        private commercetools.ImportApi.Models.Importsinks.IImportSinkDraft ImportSinkDraft;
+        private commercetools.Sdk.ImportApi.Models.Importsinks.IImportSinkDraft ImportSinkDraft;
 
-        public ByProjectKeyImportSinksPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.ImportApi.Models.Importsinks.IImportSinkDraft importSinkDraft)
+        public ByProjectKeyImportSinksPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.ImportApi.Models.Importsinks.IImportSinkDraft importSinkDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importsinks.IImportSink> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importsinks.IImportSink> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.IImportSink>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsinks.IImportSink>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

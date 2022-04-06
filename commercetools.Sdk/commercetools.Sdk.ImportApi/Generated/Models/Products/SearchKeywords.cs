@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Products
+namespace commercetools.Sdk.ImportApi.Models.Products
 {
     public partial class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
     {

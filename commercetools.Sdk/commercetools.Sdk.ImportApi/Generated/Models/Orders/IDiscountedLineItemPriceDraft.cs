@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.DiscountedLineItemPriceDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.DiscountedLineItemPriceDraft))]
     public partial interface IDiscountedLineItemPriceDraft
     {
         IMoney Value { get; set; }

@@ -1,6 +1,6 @@
 using commercetools.Sdk.ImportApi.Client;
 
-namespace commercetools.ImportApi.Tests.Client
+namespace commercetools.Sdk.ImportApi.Tests.Client
 {
     public class RequestBuilderParentTests
     {

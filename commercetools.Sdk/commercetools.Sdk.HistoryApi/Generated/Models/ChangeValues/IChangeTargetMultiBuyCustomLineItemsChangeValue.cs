@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.ChangeValues
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
     public partial interface IChangeTargetMultiBuyCustomLineItemsChangeValue : IChangeTargetChangeValue
     {
         new string Type { get; set; }

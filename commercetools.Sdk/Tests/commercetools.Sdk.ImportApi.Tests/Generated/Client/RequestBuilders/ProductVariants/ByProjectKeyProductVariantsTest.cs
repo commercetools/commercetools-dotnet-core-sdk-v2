@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ProductVariants
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ProductVariants
 {
     public class ByProjectKeyProductVariantsTest : RequestBuilderParentTests
     {

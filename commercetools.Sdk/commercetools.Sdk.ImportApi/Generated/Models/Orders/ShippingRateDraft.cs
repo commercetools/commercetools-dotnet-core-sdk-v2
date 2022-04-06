@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public partial class ShippingRateDraft : IShippingRateDraft
     {

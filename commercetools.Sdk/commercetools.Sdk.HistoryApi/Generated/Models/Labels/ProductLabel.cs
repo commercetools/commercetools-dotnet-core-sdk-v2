@@ -1,7 +1,7 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 
 
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
     public partial class ProductLabel : IProductLabel
     {

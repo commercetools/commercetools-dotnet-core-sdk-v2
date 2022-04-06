@@ -1,4 +1,4 @@
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public partial class Money : IMoney
     {

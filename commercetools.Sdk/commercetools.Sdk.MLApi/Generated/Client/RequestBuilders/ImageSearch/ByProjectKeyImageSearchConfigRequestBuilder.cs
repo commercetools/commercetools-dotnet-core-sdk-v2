@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
 
     public class ByProjectKeyImageSearchConfigRequestBuilder
@@ -25,7 +25,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
             return new ByProjectKeyImageSearchConfigGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyImageSearchConfigPost Post(commercetools.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest imageSearchConfigRequest)
+        public ByProjectKeyImageSearchConfigPost Post(commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigRequest imageSearchConfigRequest)
         {
             return new ByProjectKeyImageSearchConfigPost(ApiHttpClient, SerializerService, ProjectKey, imageSearchConfigRequest);
         }

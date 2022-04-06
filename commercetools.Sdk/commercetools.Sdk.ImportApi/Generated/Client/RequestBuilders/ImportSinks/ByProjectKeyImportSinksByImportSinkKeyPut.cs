@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks
 {
     public partial class ByProjectKeyImportSinksByImportSinkKeyPut : ApiMethod<ByProjectKeyImportSinksByImportSinkKeyPut>
     {
@@ -17,9 +17,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
 
         private string ImportSinkKey { get; }
 
-        private commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft ImportSinkUpdateDraft;
+        private commercetools.Sdk.ImportApi.Models.Importsinks.IImportSinkUpdateDraft ImportSinkUpdateDraft;
 
-        public ByProjectKeyImportSinksByImportSinkKeyPut(IClient apiHttpClient, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft)
+        public ByProjectKeyImportSinksByImportSinkKeyPut(IClient apiHttpClient, string projectKey, string importSinkKey, commercetools.Sdk.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
@@ -31,10 +31,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importsinks.IImportSink> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importsinks.IImportSink> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsinks.IImportSink>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsinks.IImportSink>(requestMessage);
         }
 
     }

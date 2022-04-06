@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.MLApi.Models.Common
+namespace commercetools.Sdk.MLApi.Models.Common
 {
     public enum TaskStatusEnum
     {
