@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.ProductDiscountKeyReference))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.ProductDiscountKeyReference))]
     public partial interface IProductDiscountKeyReference : IKeyReference
     {
     }

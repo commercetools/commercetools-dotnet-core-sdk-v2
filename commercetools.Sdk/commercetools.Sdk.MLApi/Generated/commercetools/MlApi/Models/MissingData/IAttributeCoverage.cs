@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.AttributeCoverage))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.AttributeCoverage))]
     public partial interface IAttributeCoverage
     {
         double Names { get; set; }

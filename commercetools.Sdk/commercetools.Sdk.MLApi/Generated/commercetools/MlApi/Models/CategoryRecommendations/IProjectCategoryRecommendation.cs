@@ -1,10 +1,10 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.CategoryRecommendations
+namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendation))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendation))]
     public partial interface IProjectCategoryRecommendation
     {
         ICategoryReference Category { get; set; }

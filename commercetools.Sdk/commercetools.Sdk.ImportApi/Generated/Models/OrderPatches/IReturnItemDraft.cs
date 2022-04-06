@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.ReturnItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.ReturnItemDraft))]
     public partial interface IReturnItemDraft
     {
         double Quantity { get; set; }

@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
     public partial class LocalizedEnumField : ILocalizedEnumField
     {

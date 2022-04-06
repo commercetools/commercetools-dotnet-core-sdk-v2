@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
     public partial class ByProjectKeySimilaritiesProductsStatusByTaskIdGet : ApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet>
     {
@@ -29,10 +29,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
 
 
 
-        public async Task<commercetools.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage);
         }
 
     }

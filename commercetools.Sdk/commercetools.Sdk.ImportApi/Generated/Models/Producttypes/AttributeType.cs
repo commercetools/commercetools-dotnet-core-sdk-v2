@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Producttypes
+namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
     public partial class AttributeType : IAttributeType
     {

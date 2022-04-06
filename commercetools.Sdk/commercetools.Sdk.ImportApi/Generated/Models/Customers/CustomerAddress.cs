@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Customers
+namespace commercetools.Sdk.ImportApi.Models.Customers
 {
     public partial class CustomerAddress : ICustomerAddress
     {

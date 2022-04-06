@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
     public partial class ByProjectKeyMissingDataPricesStatusByTaskIdGet : ApiMethod<ByProjectKeyMissingDataPricesStatusByTaskIdGet>
     {
@@ -29,10 +29,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.MissingData
 
 
 
-        public async Task<commercetools.MLApi.Models.MissingData.IMissingPricesTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.MissingData.IMissingPricesTaskStatus> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.MissingData.IMissingPricesTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.MissingData.IMissingPricesTaskStatus>(requestMessage);
         }
 
     }

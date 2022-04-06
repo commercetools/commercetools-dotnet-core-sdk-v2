@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.Parcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.Parcel))]
     public partial interface IParcel
     {
         string Id { get; set; }

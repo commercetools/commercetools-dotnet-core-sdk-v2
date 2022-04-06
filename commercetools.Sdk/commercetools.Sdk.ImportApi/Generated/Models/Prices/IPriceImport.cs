@@ -1,13 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Prices
+namespace commercetools.Sdk.ImportApi.Models.Prices
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Prices.PriceImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Prices.PriceImport))]
     public partial interface IPriceImport : IImportResource
     {
         ITypedMoney Value { get; set; }

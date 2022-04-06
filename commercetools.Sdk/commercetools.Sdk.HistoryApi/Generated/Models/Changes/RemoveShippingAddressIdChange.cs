@@ -1,8 +1,8 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     public partial class RemoveShippingAddressIdChange : IRemoveShippingAddressIdChange
     {

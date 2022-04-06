@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Productdrafts;
+using commercetools.Sdk.ImportApi.Models.Productdrafts;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.ProductDraftImportRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductDraftImportRequest))]
     public partial interface IProductDraftImportRequest : IImportRequest
     {
         List<IProductDraftImport> Resources { get; set; }

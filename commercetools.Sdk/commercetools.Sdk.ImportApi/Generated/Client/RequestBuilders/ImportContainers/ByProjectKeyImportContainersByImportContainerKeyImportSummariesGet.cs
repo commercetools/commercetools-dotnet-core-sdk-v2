@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
     public partial class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>
     {
@@ -29,10 +29,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage);
         }
 
     }

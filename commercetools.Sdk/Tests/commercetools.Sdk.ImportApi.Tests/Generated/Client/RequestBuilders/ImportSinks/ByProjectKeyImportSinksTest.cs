@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportSinks
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportSinks
 {
     public class ByProjectKeyImportSinksTest : RequestBuilderParentTests
     {

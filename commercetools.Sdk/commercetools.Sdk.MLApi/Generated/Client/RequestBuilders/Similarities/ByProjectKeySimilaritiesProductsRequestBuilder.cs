@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.MLApi.Client.RequestBuilders.Similarities
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
 
     public class ByProjectKeySimilaritiesProductsRequestBuilder
@@ -20,7 +20,7 @@ namespace commercetools.MLApi.Client.RequestBuilders.Similarities
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeySimilaritiesProductsPost Post(commercetools.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest similarProductSearchRequest)
+        public ByProjectKeySimilaritiesProductsPost Post(commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductSearchRequest similarProductSearchRequest)
         {
             return new ByProjectKeySimilaritiesProductsPost(ApiHttpClient, SerializerService, ProjectKey, similarProductSearchRequest);
         }

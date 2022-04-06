@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.AddPropertyChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddPropertyChange))]
     public partial interface IAddPropertyChange : IChange
     {
         new string Type { get; set; }

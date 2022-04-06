@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.CustomFields))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.CustomFields))]
     public partial interface ICustomFields
     {
         IReference Type { get; set; }

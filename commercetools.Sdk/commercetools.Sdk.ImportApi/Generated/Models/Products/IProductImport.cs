@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Products
+namespace commercetools.Sdk.ImportApi.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Products.ProductImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Products.ProductImport))]
     public partial interface IProductImport : IImportResource
     {
         ILocalizedString Name { get; set; }

@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
     public enum ImportOperationState
     {

@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System;
 
 
-namespace commercetools.ImportApi.Models.Importcontainers
+namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 {
     public partial class ImportContainer : IImportContainer
     {

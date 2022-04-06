@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes
 {
     public partial class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost>
     {
@@ -21,9 +21,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
 
         private string ImportSinkKey { get; }
 
-        private commercetools.ImportApi.Models.Importrequests.IProductTypeImportRequest ProductTypeImportRequest;
+        private commercetools.Sdk.ImportApi.Models.Importrequests.IProductTypeImportRequest ProductTypeImportRequest;
 
-        public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
+        public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.Sdk.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -36,10 +36,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

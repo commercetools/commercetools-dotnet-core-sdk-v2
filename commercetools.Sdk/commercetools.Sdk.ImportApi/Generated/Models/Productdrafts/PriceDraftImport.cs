@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Productdrafts
+namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
     public partial class PriceDraftImport : IPriceDraftImport
     {

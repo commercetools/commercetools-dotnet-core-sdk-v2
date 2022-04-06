@@ -1,11 +1,11 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.TransitionLineItemStateChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionLineItemStateChange))]
     public partial interface ITransitionLineItemStateChange : IChange
     {
         new string Type { get; set; }

@@ -2,7 +2,7 @@ using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Products
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Products
 {
     [Obsolete("usage of this endpoint has been deprecated.", false)]
     public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyRequestBuilder
@@ -24,7 +24,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Products
             this.ImportSinkKey = importSinkKey;
         }
 
-        public ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost Post(commercetools.ImportApi.Models.Importrequests.IProductImportRequest productImportRequest)
+        public ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost Post(commercetools.Sdk.ImportApi.Models.Importrequests.IProductImportRequest productImportRequest)
         {
             return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost(ApiHttpClient, SerializerService, ProjectKey, ImportSinkKey, productImportRequest);
         }

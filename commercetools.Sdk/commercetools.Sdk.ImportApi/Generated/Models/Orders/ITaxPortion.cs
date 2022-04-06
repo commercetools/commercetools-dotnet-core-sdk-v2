@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.TaxPortion))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.TaxPortion))]
     public partial interface ITaxPortion
     {
         string Name { get; set; }

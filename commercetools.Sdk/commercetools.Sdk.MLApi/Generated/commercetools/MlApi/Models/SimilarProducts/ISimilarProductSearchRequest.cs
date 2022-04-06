@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.SimilarProducts.SimilarProductSearchRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarProductSearchRequest))]
     public partial interface ISimilarProductSearchRequest
     {
         long? Limit { get; set; }

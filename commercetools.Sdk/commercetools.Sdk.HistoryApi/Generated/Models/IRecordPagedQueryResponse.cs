@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.RecordPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.RecordPagedQueryResponse))]
     public partial interface IRecordPagedQueryResponse
     {
         int Limit { get; set; }

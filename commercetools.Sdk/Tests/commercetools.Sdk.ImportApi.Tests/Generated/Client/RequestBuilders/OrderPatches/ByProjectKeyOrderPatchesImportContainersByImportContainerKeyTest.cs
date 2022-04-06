@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.OrderPatches
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.OrderPatches
 {
     public class ByProjectKeyOrderPatchesImportContainersByImportContainerKeyTest : RequestBuilderParentTests
     {

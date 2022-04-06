@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
 {
 
     public class ByProjectKeyOrderPatchesImportContainersByImportContainerKeyRequestBuilder
@@ -23,7 +23,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
             this.ImportContainerKey = importContainerKey;
         }
 
-        public ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPost Post(commercetools.ImportApi.Models.Importrequests.IOrderPatchImportRequest orderPatchImportRequest)
+        public ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPost Post(commercetools.Sdk.ImportApi.Models.Importrequests.IOrderPatchImportRequest orderPatchImportRequest)
         {
             return new ByProjectKeyOrderPatchesImportContainersByImportContainerKeyPost(ApiHttpClient, SerializerService, ProjectKey, ImportContainerKey, orderPatchImportRequest);
         }

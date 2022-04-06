@@ -1,4 +1,4 @@
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
     public partial class SimilarityMeasures : ISimilarityMeasures
     {

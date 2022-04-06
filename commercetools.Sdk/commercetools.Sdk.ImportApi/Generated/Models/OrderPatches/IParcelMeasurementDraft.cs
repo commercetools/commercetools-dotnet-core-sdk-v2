@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.ParcelMeasurementDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.ParcelMeasurementDraft))]
     public partial interface IParcelMeasurementDraft
     {
         string ParcelId { get; set; }

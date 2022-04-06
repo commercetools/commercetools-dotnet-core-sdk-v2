@@ -1,6 +1,6 @@
 using commercetools.Base.Client;
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Importsinks;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Importsinks;
 using commercetools.Sdk.ImportApi.Extensions;
 using Xunit;
 

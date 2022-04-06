@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.OrderPatchImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.OrderPatchImport))]
     public partial interface IOrderPatchImport
     {
         string OrderNumber { get; set; }

@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ModifiedBy))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ModifiedBy))]
     public partial interface IModifiedBy
     {
         string Id { get; set; }

@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.ResourceCreationError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError))]
     public partial interface IResourceCreationError : IErrorObject
     {
         Object Resource { get; set; }

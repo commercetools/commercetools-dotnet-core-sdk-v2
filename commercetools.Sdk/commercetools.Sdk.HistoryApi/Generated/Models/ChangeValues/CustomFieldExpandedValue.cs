@@ -1,8 +1,8 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System;
 
 
-namespace commercetools.HistoryApi.Models.ChangeValues
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
     public partial class CustomFieldExpandedValue : ICustomFieldExpandedValue
     {

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importoperations.ImportOperationPagedResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importoperations.ImportOperationPagedResponse))]
     public partial interface IImportOperationPagedResponse
     {
         int Limit { get; set; }

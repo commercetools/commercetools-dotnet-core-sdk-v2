@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Labels.ProductLabel))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Labels.ProductLabel))]
     public partial interface IProductLabel : ILabel
     {
         new string Type { get; set; }

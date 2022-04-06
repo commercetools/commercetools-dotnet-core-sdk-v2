@@ -1,10 +1,10 @@
-using commercetools.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.RemoveEnumValuesChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveEnumValuesChange))]
     public partial interface IRemoveEnumValuesChange : IChange
     {
         new string Type { get; set; }

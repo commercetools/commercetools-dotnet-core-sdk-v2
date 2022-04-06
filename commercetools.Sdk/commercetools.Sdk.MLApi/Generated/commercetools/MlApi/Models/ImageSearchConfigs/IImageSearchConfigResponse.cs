@@ -2,9 +2,9 @@ using System;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.ImageSearchConfigs
+namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.ImageSearchConfigs.ImageSearchConfigResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.ImageSearchConfigs.ImageSearchConfigResponse))]
     public partial interface IImageSearchConfigResponse
     {
         IImageSearchConfigStatus Status { get; set; }

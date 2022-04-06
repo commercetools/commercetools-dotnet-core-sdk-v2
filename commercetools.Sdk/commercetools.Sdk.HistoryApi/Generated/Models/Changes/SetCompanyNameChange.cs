@@ -1,4 +1,4 @@
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     public partial class SetCompanyNameChange : ISetCompanyNameChange
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.ParcelMeasurements))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.ParcelMeasurements))]
     public partial interface IParcelMeasurements
     {
         double? HeightInMillimeter { get; set; }

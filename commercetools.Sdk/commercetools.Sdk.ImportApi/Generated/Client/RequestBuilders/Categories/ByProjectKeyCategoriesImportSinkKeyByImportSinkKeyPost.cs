@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Categories
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories
 {
     public partial class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost>
     {
@@ -21,9 +21,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
 
         private string ImportSinkKey { get; }
 
-        private commercetools.ImportApi.Models.Importrequests.ICategoryImportRequest CategoryImportRequest;
+        private commercetools.Sdk.ImportApi.Models.Importrequests.ICategoryImportRequest CategoryImportRequest;
 
-        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.ImportApi.Models.Importrequests.ICategoryImportRequest categoryImportRequest)
+        public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importSinkKey, commercetools.Sdk.ImportApi.Models.Importrequests.ICategoryImportRequest categoryImportRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -36,10 +36,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Categories
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

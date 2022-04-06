@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Labels.StringLabel))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Labels.StringLabel))]
     public partial interface IStringLabel : ILabel
     {
         new string Type { get; set; }

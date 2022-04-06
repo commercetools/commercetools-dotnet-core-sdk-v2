@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks
 {
 
     public class ByProjectKeyImportSinksByImportSinkKeyRequestBuilder
@@ -23,7 +23,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportSinks
             this.ImportSinkKey = importSinkKey;
         }
 
-        public ByProjectKeyImportSinksByImportSinkKeyPut Put(commercetools.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft)
+        public ByProjectKeyImportSinksByImportSinkKeyPut Put(commercetools.Sdk.ImportApi.Models.Importsinks.IImportSinkUpdateDraft importSinkUpdateDraft)
         {
             return new ByProjectKeyImportSinksByImportSinkKeyPut(ApiHttpClient, ProjectKey, ImportSinkKey, importSinkUpdateDraft);
         }

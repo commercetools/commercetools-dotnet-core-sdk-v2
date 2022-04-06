@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportOperations
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations
 {
 
     public class ByProjectKeyImportOperationsRequestBuilder

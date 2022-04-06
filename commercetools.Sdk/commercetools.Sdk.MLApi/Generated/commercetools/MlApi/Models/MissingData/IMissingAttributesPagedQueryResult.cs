@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.MissingAttributesPagedQueryResult))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesPagedQueryResult))]
     public partial interface IMissingAttributesPagedQueryResult
     {
         long Count { get; set; }

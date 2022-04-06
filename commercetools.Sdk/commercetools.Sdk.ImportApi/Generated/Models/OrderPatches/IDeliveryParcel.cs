@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Orders;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.DeliveryParcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.DeliveryParcel))]
     public partial interface IDeliveryParcel
     {
         string DeliveryId { get; set; }

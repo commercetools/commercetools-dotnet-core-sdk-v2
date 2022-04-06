@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductDrafts
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts
 {
     public partial class ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost : ApiMethod<ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost>
     {
@@ -21,9 +21,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductDrafts
 
         private string ImportContainerKey { get; }
 
-        private commercetools.ImportApi.Models.Importrequests.IProductDraftImportRequest ProductDraftImportRequest;
+        private commercetools.Sdk.ImportApi.Models.Importrequests.IProductDraftImportRequest ProductDraftImportRequest;
 
-        public ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importContainerKey, commercetools.ImportApi.Models.Importrequests.IProductDraftImportRequest productDraftImportRequest)
+        public ByProjectKeyProductDraftsImportContainersByImportContainerKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importContainerKey, commercetools.Sdk.ImportApi.Models.Importrequests.IProductDraftImportRequest productDraftImportRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -36,10 +36,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductDrafts
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

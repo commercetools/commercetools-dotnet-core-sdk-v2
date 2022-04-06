@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using commercetools.HistoryApi.Models;
+using commercetools.Sdk.HistoryApi.Models;
 using Xunit;
 
-namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
 {
     public class ByProjectKeyTest : RequestBuilderParentTests
     {

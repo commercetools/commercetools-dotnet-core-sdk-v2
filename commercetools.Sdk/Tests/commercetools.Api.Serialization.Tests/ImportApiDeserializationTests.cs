@@ -1,10 +1,10 @@
 using System.IO;
 using System.Linq;
-using commercetools.ImportApi.Models.Importoperations;
-using commercetools.ImportApi.Models.Importsummaries;
+using commercetools.Sdk.ImportApi.Models.Importoperations;
+using commercetools.Sdk.ImportApi.Models.Importsummaries;
 using Xunit;
-using Attribute = commercetools.ImportApi.Models.Productvariants.Attribute;
-using DuplicateAttributeValueError = commercetools.ImportApi.Models.Errors.DuplicateAttributeValueError;
+using Attribute = commercetools.Sdk.ImportApi.Models.Productvariants.Attribute;
+using DuplicateAttributeValueError = commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValueError;
 
 namespace commercetools.Api.Serialization.Tests
 {

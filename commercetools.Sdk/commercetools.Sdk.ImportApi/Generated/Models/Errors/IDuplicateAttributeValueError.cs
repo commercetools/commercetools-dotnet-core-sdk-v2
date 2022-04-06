@@ -1,10 +1,10 @@
-using commercetools.ImportApi.Models.Productvariants;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.DuplicateAttributeValueError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValueError))]
     public partial interface IDuplicateAttributeValueError : IErrorObject
     {
         IAttribute Attribute { get; set; }

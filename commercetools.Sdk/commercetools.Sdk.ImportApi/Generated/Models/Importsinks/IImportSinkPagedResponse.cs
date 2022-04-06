@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importsinks
+namespace commercetools.Sdk.ImportApi.Models.Importsinks
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importsinks.ImportSinkPagedResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importsinks.ImportSinkPagedResponse))]
     public partial interface IImportSinkPagedResponse
     {
         int Limit { get; set; }

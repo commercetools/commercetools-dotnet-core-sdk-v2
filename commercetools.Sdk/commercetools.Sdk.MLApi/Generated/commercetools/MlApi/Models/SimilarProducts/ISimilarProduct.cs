@@ -1,10 +1,10 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.SimilarProducts.SimilarProduct))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarProduct))]
     public partial interface ISimilarProduct
     {
         IProductReference Product { get; set; }

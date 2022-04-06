@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     public partial class MissingAttributesMeta : IMissingAttributesMeta
     {

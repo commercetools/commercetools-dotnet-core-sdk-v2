@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ProductTypes
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ProductTypes
 {
     public class ByProjectKeyProductTypesTest : RequestBuilderParentTests
     {

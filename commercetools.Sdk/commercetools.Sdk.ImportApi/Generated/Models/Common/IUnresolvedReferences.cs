@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.UnresolvedReferences))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.UnresolvedReferences))]
     public partial interface IUnresolvedReferences
     {
         string Key { get; set; }

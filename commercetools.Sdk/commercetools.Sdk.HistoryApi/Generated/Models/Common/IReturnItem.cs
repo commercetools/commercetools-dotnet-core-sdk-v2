@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.ReturnItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.ReturnItem))]
     public partial interface IReturnItem
     {
         string Id { get; set; }

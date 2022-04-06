@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
     public partial class LocalizableEnumSetAttribute : ILocalizableEnumSetAttribute
     {

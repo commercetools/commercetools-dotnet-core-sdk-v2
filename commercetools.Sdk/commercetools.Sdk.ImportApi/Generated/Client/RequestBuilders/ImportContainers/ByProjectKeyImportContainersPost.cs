@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
     public partial class ByProjectKeyImportContainersPost : ApiMethod<ByProjectKeyImportContainersPost>
     {
@@ -19,9 +19,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
 
         private string ProjectKey { get; }
 
-        private commercetools.ImportApi.Models.Importcontainers.IImportContainerDraft ImportContainerDraft;
+        private commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerDraft ImportContainerDraft;
 
-        public ByProjectKeyImportContainersPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.ImportApi.Models.Importcontainers.IImportContainerDraft importContainerDraft)
+        public ByProjectKeyImportContainersPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerDraft importContainerDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -33,10 +33,10 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importcontainers.IImportContainer> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainer> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importcontainers.IImportContainer>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainer>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.MissingData
 {
     public class ByProjectKeyMissingDataPricesStatusTest : RequestBuilderParentTests
     {

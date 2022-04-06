@@ -1,4 +1,4 @@
-namespace commercetools.HistoryApi.Models.ChangeValues
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
     public partial class ValidFromAndUntilValue : IValidFromAndUntilValue
     {

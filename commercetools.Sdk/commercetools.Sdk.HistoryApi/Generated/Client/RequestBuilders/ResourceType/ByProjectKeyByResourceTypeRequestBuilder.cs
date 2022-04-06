@@ -1,7 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
+namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
 
     public class ByProjectKeyByResourceTypeRequestBuilder

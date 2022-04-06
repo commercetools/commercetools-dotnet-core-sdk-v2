@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.MLApi.Models.ImageSearches
+namespace commercetools.Sdk.MLApi.Models.ImageSearches
 {
     public partial class ImageSearchResponse : IImageSearchResponse
     {

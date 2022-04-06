@@ -1,8 +1,8 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using System;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     public partial class MissingPricesTaskStatus : IMissingPricesTaskStatus
     {

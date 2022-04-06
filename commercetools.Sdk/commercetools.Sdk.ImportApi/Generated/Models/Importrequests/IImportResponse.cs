@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Importoperations;
+using commercetools.Sdk.ImportApi.Models.Importoperations;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.ImportResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ImportResponse))]
     public partial interface IImportResponse
     {
         List<IImportOperationStatus> OperationStatus { get; set; }

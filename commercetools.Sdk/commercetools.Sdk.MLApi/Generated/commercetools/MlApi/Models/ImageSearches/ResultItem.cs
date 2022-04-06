@@ -1,8 +1,8 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using System.Collections.Generic;
 
 
-namespace commercetools.MLApi.Models.ImageSearches
+namespace commercetools.Sdk.MLApi.Models.ImageSearches
 {
     public partial class ResultItem : IResultItem
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.MissingData
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.MissingData
 {
     public class ByProjectKeyMissingDataAttributesTest : RequestBuilderParentTests
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.MissingData
+namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.MissingData.MissingAttributesDetails))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesDetails))]
     public partial interface IMissingAttributesDetails
     {
         int Total { get; set; }

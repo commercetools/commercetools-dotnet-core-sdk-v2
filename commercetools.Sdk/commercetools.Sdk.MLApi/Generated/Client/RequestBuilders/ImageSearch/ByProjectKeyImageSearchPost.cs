@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
+namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
     public partial class ByProjectKeyImageSearchPost : ApiMethod<ByProjectKeyImageSearchPost>
     {
@@ -52,10 +52,10 @@ namespace commercetools.MLApi.Client.RequestBuilders.ImageSearch
         }
 
 
-        public async Task<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage);
         }
         public override HttpRequestMessage Build()
         {

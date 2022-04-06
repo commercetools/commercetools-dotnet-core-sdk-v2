@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     public partial class ChangeGroupsChange : IChangeGroupsChange
     {

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Labels
+namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Labels.ReviewLabel))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Labels.ReviewLabel))]
     public partial interface IReviewLabel : ILabel
     {
         new string Type { get; set; }

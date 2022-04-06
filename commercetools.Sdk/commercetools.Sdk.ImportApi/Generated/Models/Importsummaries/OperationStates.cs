@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Importsummaries
+namespace commercetools.Sdk.ImportApi.Models.Importsummaries
 {
     public partial class OperationStates : IOperationStates
     {

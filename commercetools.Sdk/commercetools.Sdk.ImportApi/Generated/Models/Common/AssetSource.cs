@@ -1,4 +1,4 @@
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public partial class AssetSource : IAssetSource
     {

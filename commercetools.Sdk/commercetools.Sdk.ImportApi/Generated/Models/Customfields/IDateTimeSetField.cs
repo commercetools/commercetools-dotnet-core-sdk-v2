@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.DateTimeSetField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.DateTimeSetField))]
     public partial interface IDateTimeSetField : ICustomField
     {
         List<DateTime> Value { get; set; }

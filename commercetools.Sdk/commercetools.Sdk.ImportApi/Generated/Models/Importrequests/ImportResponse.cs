@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Importoperations;
+using commercetools.Sdk.ImportApi.Models.Importoperations;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
     public partial class ImportResponse : IImportResponse
     {

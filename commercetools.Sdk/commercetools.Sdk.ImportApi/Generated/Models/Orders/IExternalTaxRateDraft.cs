@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Prices;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.ExternalTaxRateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.ExternalTaxRateDraft))]
     public partial interface IExternalTaxRateDraft
     {
         string Name { get; set; }

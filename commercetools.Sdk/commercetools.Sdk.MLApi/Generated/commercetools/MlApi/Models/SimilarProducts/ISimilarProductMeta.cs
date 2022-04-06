@@ -1,10 +1,10 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.SimilarProducts
+namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.SimilarProducts.SimilarProductMeta))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarProductMeta))]
     public partial interface ISimilarProductMeta
     {
         ILocalizedString Name { get; set; }

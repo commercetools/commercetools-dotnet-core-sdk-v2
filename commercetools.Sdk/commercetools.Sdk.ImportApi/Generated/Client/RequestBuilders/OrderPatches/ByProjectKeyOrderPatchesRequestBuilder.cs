@@ -2,7 +2,7 @@ using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.OrderPatches
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
 {
 
     public class ByProjectKeyOrderPatchesRequestBuilder

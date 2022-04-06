@@ -1,13 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Errors;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Errors;
 using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importoperations.ImportOperation))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importoperations.ImportOperation))]
     public partial interface IImportOperation
     {
         long Version { get; set; }

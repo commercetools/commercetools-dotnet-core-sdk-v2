@@ -1,11 +1,11 @@
-using commercetools.MLApi.Models.Common;
+using commercetools.Sdk.MLApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.ImageSearches
+namespace commercetools.Sdk.MLApi.Models.ImageSearches
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.ImageSearches.ResultItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.ImageSearches.ResultItem))]
     public partial interface IResultItem
     {
         string ImageUrl { get; set; }

@@ -1,11 +1,11 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.ReferenceSetField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.ReferenceSetField))]
     public partial interface IReferenceSetField : ICustomField
     {
         List<IKeyReference> Value { get; set; }

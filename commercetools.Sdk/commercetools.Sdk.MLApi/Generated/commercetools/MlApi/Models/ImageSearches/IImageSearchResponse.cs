@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.MLApi.Models.ImageSearches
+namespace commercetools.Sdk.MLApi.Models.ImageSearches
 {
-    [DeserializeAs(typeof(commercetools.MLApi.Models.ImageSearches.ImageSearchResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.ImageSearches.ImageSearchResponse))]
     public partial interface IImageSearchResponse
     {
         int Count { get; set; }

@@ -1,8 +1,8 @@
-using commercetools.ImportApi.Models.Errors;
+using commercetools.Sdk.ImportApi.Models.Errors;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
     public partial class ImportOperationStatus : IImportOperationStatus
     {

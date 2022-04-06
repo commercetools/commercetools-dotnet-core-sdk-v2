@@ -2,7 +2,7 @@ using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductVariant
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant
 {
 
     public class ByProjectKeyProductVariantPatchesRequestBuilder

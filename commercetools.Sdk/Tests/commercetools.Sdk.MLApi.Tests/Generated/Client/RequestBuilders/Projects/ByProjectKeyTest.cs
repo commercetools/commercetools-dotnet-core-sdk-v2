@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace commercetools.MLApi.Tests.Client.RequestBuilders.Projects
+namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Projects
 {
     public class ByProjectKeyTest : RequestBuilderParentTests
     {

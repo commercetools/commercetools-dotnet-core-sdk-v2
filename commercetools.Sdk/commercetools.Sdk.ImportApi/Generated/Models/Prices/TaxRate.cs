@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Prices
+namespace commercetools.Sdk.ImportApi.Models.Prices
 {
     public partial class TaxRate : ITaxRate
     {

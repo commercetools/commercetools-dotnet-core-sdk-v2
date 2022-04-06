@@ -1,13 +1,13 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using commercetools.HistoryApi.Models.Labels;
+using commercetools.Sdk.HistoryApi.Models.Changes;
+using commercetools.Sdk.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Labels;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Record))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Record))]
     public partial interface IRecord
     {
         int Version { get; set; }

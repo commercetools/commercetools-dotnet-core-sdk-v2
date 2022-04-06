@@ -1,9 +1,9 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 
 
-namespace commercetools.ImportApi.Models.Categories
+namespace commercetools.Sdk.ImportApi.Models.Categories
 {
     public partial class CategoryImport : ICategoryImport
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
-using commercetools.HistoryApi.Models;
+using commercetools.Sdk.HistoryApi.Models;
 
-namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
+namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
     public partial class ByProjectKeyByResourceTypeByIDGet : ApiMethod<ByProjectKeyByResourceTypeByIDGet>
     {
@@ -152,10 +152,10 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
         }
 
 
-        public async Task<commercetools.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.HistoryApi.Models.IRecordPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.HistoryApi.Models.IRecordPagedQueryResponse>(requestMessage);
         }
 
     }

@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customfields
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.BooleanField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.BooleanField))]
     public partial interface IBooleanField : ICustomField
     {
         bool Value { get; set; }

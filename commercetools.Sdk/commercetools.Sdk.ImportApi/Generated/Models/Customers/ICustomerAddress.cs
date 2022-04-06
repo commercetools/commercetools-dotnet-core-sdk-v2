@@ -1,9 +1,9 @@
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Customers
+namespace commercetools.Sdk.ImportApi.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customers.CustomerAddress))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customers.CustomerAddress))]
     public partial interface ICustomerAddress
     {
         string Key { get; set; }
