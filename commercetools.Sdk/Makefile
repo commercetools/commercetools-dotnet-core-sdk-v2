@@ -7,4 +7,4 @@ generate_sdk_main:
 	rmf-codegen generate -o "commercetools.Sdk.$(LIB_NAME)/Generated" -t CSHARP_CLIENT -b "commercetools.Sdk.$(LIB_NAME)" $(GEN_RAML_FILE)
 
 generate_sdk_test:
-	rmf-codegen generate -o "Tests/commercetools.Sdk.$(LIB_NAME).Tests/Generated" -t CSHARP_TEST -b "commercetools.Sdk.$(LIB_NAME).Tests" $(GEN_RAML_FILE)
+	rmf-codegen generate -o "Tests/commercetools.Sdk.$(LIB_NAME).Tests/Generated" -t CSHARP_TEST -b "commercetools.Sdk.$(LIB_NAME)" $(GEN_RAML_FILE)
