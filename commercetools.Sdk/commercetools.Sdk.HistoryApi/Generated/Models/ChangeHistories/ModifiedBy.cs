@@ -1,7 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 
 
-namespace commercetools.Sdk.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     public partial class ModifiedBy : IModifiedBy
     {

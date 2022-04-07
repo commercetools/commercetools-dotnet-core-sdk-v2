@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -37,11 +38,15 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IOrderState OrderState { get; set; }
 
+        IStateReference State { get; set; }
+
         IShipmentState ShipmentState { get; set; }
 
         IPaymentState PaymentState { get; set; }
 
         IShippingInfoImportDraft ShippingInfo { get; set; }
+
+        IPaymentInfo PaymentInfo { get; set; }
 
         DateTime? CompletedAt { get; set; }
 

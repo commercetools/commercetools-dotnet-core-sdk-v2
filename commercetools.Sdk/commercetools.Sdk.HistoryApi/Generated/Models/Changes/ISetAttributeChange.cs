@@ -1,4 +1,4 @@
-using System;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,8 +13,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string CatalogData { get; set; }
 
-        Object PreviousValue { get; set; }
+        IAttributeValue PreviousValue { get; set; }
 
-        Object NextValue { get; set; }
+        IAttributeValue NextValue { get; set; }
     }
 }

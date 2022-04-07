@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using commercetools.Sdk.HistoryApi.Models;
 using Xunit;
 
 namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
@@ -23,7 +22,7 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithResourceType(IChangeHistoryResourceType.FindEnum("resourceType"))
+                   .WithResourceType(commercetools.Sdk.HistoryApi.Models.ChangeHistories.IChangeHistoryResourceType.FindEnum("resourceType"))
                    .Build(),
                    "Get",
                    "/test_projectKey?resourceType=resourceType",
@@ -122,6 +121,15 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
+                   .WithStores("stores")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?stores=stores",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
                    .WithCustomerId("customerId")
                    .Build(),
                    "Get",
@@ -131,7 +139,7 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
+                   .WithExcludePlatformInitiatedChanges(commercetools.Sdk.HistoryApi.Models.ChangeHistories.IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
                    .Build(),
                    "Get",
                    "/test_projectKey?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges",

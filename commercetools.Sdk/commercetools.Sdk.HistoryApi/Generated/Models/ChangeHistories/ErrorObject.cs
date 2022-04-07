@@ -1,4 +1,4 @@
-namespace commercetools.Sdk.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     public partial class ErrorObject : IErrorObject
     {
