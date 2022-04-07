@@ -1,5 +1,5 @@
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Sdk.HistoryApi.Models.Common;
-using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,8 +14,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         ITaxMode TaxMode { get; set; }
 
-        Object NextValue { get; set; }
+        IShippingMethodTaxAmountChangeValue NextValue { get; set; }
 
-        Object PreviousValue { get; set; }
+        IShippingMethodTaxAmountChangeValue PreviousValue { get; set; }
     }
 }

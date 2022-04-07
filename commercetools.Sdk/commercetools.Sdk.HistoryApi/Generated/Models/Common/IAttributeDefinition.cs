@@ -1,4 +1,3 @@
-using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +6,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.AttributeDefinition))]
     public partial interface IAttributeDefinition
     {
-        Object Type { get; set; }
+        IAttributeType Type { get; set; }
 
         string Name { get; set; }
 

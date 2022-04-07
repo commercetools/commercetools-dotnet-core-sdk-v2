@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using commercetools.Sdk.ImportApi.Models.Common;
 using Xunit;
 
 namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContainers
@@ -74,7 +73,7 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContain
                    .WithImportContainerKeyValue("test_importContainerKey")
                    .ImportOperations()
                    .Get()
-                   .WithState(IProcessingState.FindEnum("state"))
+                   .WithState(commercetools.Sdk.ImportApi.Models.Common.IProcessingState.FindEnum("state"))
                    .Build(),
                    "Get",
                    "/test_projectKey/import-containers/test_importContainerKey/import-operations?state=state",

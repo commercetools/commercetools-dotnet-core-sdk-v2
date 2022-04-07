@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Sdk.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
-    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Record))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeHistories.Record))]
     public partial interface IRecord
     {
         int Version { get; set; }
@@ -27,6 +27,8 @@ namespace commercetools.Sdk.HistoryApi.Models
         List<IChange> Changes { get; set; }
 
         IReference Resource { get; set; }
+
+        List<IKeyReference> Stores { get; set; }
 
         bool WithoutChanges { get; set; }
     }

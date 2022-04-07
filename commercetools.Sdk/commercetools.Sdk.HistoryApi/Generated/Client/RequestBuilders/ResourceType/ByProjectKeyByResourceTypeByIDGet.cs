@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
-using commercetools.Sdk.HistoryApi.Models;
+using commercetools.Sdk.HistoryApi.Models.ChangeHistories;
 
 namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
@@ -76,6 +76,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("changes");
         }
 
+        public List<string> GetStores()
+        {
+            return this.GetQueryParam("stores");
+        }
+
         public List<string> GetCustomerId()
         {
             return this.GetQueryParam("customerId");
@@ -136,6 +141,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("changes", changes);
         }
 
+        public ByProjectKeyByResourceTypeByIDGet WithStores(string stores)
+        {
+            return this.AddQueryParam("stores", stores);
+        }
+
         public ByProjectKeyByResourceTypeByIDGet WithCustomerId(string customerId)
         {
             return this.AddQueryParam("customerId", customerId);
@@ -152,10 +162,10 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
         }
 
 
-        public async Task<commercetools.Sdk.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse> ExecuteAsync()
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.HistoryApi.Models.IRecordPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>(requestMessage);
         }
 
     }

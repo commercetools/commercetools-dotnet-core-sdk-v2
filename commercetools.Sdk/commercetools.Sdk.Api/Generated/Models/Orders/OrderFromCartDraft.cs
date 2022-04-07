@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 
 
@@ -23,5 +24,7 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IOrderState OrderState { get; set; }
 
         public IStateResourceIdentifier State { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

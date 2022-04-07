@@ -4,7 +4,7 @@ using commercetools.Sdk.HistoryApi.Models.Labels;
 using System.Collections.Generic;
 
 
-namespace commercetools.Sdk.HistoryApi.Models
+namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     public partial class Record : IRecord
     {
@@ -25,6 +25,8 @@ namespace commercetools.Sdk.HistoryApi.Models
         public List<IChange> Changes { get; set; }
 
         public IReference Resource { get; set; }
+
+        public List<IKeyReference> Stores { get; set; }
 
         public bool WithoutChanges { get; set; }
     }
