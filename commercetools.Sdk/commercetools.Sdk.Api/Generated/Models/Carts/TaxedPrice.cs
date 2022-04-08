@@ -11,5 +11,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ITypedMoney TotalGross { get; set; }
 
         public List<ITaxPortion> TaxPortions { get; set; }
+
+        public ITypedMoney TotalTax { get; set; }
     }
 }
