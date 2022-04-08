@@ -9,6 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string CustomLineItemId { get; set; }
 
-        double Quantity { get; set; }
+        long Quantity { get; set; }
     }
 }
