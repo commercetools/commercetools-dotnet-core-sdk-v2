@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ITypedMoney TotalNet { get; set; }
 
         public ITypedMoney TotalGross { get; set; }
+
+        public ITypedMoney TotalTax { get; set; }
     }
 }

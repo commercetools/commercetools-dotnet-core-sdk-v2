@@ -7,7 +7,7 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.SimilarProducts.SimilarProductPair))]
     public partial interface ISimilarProductPair
     {
-        double Confidence { get; set; }
+        decimal Confidence { get; set; }
 
         List<ISimilarProduct> Products { get; set; }
     }

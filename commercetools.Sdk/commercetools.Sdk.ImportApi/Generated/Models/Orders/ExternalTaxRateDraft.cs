@@ -8,7 +8,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     {
         public string Name { get; set; }
 
-        public double? Amount { get; set; }
+        public decimal? Amount { get; set; }
 
         public string Country { get; set; }
 

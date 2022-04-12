@@ -17,7 +17,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         ILineItemPrice Price { get; set; }
 
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
 
         List<IItemState> State { get; set; }
 

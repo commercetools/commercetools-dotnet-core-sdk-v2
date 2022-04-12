@@ -8,6 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     {
         string Id { get; set; }
 
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string LineItemId { get; set; }
 
-        double Quantity { get; set; }
+        long Quantity { get; set; }
 
         IMoney ExternalPrice { get; set; }
 

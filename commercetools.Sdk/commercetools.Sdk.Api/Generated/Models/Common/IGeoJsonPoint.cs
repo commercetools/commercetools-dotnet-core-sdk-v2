@@ -7,6 +7,6 @@ namespace commercetools.Sdk.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.GeoJsonPoint))]
     public partial interface IGeoJsonPoint : IGeoJson
     {
-        List<double> Coordinates { get; set; }
+        List<decimal> Coordinates { get; set; }
     }
 }

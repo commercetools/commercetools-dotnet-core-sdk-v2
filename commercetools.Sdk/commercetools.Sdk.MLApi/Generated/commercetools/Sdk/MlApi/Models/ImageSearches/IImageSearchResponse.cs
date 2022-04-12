@@ -9,7 +9,7 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearches
     {
         int Count { get; set; }
 
-        double Offset { get; set; }
+        decimal Offset { get; set; }
 
         int Total { get; set; }
 

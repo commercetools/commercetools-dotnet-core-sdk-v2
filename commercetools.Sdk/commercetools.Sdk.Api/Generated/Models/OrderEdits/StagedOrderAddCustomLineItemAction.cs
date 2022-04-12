@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public ILocalizedString Name { get; set; }
 
-        public double? Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         public string Slug { get; set; }
 

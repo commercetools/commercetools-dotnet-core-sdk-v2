@@ -8,6 +8,6 @@ namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
     {
         string CategoryName { get; set; }
 
-        double Confidence { get; set; }
+        decimal Confidence { get; set; }
     }
 }

@@ -19,8 +19,8 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 
         List<IProductSetSelector> ProductSetSelectors { get; set; }
 
-        double? ConfidenceMin { get; set; }
+        decimal? ConfidenceMin { get; set; }
 
-        double? ConfidenceMax { get; set; }
+        decimal? ConfidenceMax { get; set; }
     }
 }

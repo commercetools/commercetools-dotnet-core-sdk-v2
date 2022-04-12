@@ -7,7 +7,7 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     {
         public string Type { get; set; }
 
-        public List<double> Value { get; set; }
+        public List<decimal> Value { get; set; }
         public NumberSetField()
         {
             this.Type = "NumberSet";

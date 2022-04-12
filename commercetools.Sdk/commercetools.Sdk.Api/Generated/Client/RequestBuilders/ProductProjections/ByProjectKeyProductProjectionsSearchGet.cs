@@ -124,7 +124,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("fuzzy", fuzzy.ToString());
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(double fuzzyLevel)
+        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(decimal fuzzyLevel)
         {
             return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString());
         }

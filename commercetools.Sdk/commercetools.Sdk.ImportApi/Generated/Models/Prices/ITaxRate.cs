@@ -11,7 +11,7 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
 
         string Name { get; set; }
 
-        double Amount { get; set; }
+        decimal Amount { get; set; }
 
         bool IncludedInPrice { get; set; }
 

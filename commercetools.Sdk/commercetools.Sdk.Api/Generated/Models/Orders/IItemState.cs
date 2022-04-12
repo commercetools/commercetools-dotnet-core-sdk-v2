@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ItemState))]
     public partial interface IItemState
     {
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
 
         IStateReference State { get; set; }
     }

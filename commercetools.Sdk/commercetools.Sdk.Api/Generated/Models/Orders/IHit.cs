@@ -10,6 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         long Version { get; set; }
 
-        double Relevance { get; set; }
+        decimal Relevance { get; set; }
     }
 }

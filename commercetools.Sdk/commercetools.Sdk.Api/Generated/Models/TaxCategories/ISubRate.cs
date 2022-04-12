@@ -8,6 +8,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     {
         string Name { get; set; }
 
-        double Amount { get; set; }
+        decimal Amount { get; set; }
     }
 }

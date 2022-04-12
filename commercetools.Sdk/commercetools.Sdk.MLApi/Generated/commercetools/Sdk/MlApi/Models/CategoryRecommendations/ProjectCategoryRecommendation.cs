@@ -7,7 +7,7 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
     {
         public ICategoryReference Category { get; set; }
 
-        public double Confidence { get; set; }
+        public decimal Confidence { get; set; }
 
         public string Path { get; set; }
     }

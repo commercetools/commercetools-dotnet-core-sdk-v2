@@ -19,7 +19,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         string Slug { get; set; }
 
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
 
         List<IItemState> State { get; set; }
 

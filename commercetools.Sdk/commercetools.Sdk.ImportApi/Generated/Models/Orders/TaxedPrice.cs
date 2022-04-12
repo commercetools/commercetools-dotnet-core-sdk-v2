@@ -11,5 +11,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         public IMoney TotalGross { get; set; }
 
         public List<ITaxPortion> TaxPortions { get; set; }
+
+        public IMoney TotalTax { get; set; }
     }
 }

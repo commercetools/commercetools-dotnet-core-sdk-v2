@@ -17,9 +17,9 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         bool? IncludeVariants { get; set; }
 
-        double? CoverageMin { get; set; }
+        decimal? CoverageMin { get; set; }
 
-        double? CoverageMax { get; set; }
+        decimal? CoverageMax { get; set; }
 
         string SortBy { get; set; }
 

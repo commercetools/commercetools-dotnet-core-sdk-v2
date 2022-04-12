@@ -67,12 +67,12 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
             return this.AddQueryParam("staged", staged.ToString());
         }
 
-        public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMin(double confidenceMin)
+        public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMin(decimal confidenceMin)
         {
             return this.AddQueryParam("confidenceMin", confidenceMin.ToString());
         }
 
-        public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMax(double confidenceMax)
+        public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMax(decimal confidenceMax)
         {
             return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
         }

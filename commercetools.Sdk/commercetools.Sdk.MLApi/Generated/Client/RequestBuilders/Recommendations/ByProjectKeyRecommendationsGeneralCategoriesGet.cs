@@ -74,12 +74,12 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
             return this.AddQueryParam("offset", offset.ToString());
         }
 
-        public ByProjectKeyRecommendationsGeneralCategoriesGet WithConfidenceMin(double confidenceMin)
+        public ByProjectKeyRecommendationsGeneralCategoriesGet WithConfidenceMin(decimal confidenceMin)
         {
             return this.AddQueryParam("confidenceMin", confidenceMin.ToString());
         }
 
-        public ByProjectKeyRecommendationsGeneralCategoriesGet WithConfidenceMax(double confidenceMax)
+        public ByProjectKeyRecommendationsGeneralCategoriesGet WithConfidenceMax(decimal confidenceMax)
         {
             return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
         }

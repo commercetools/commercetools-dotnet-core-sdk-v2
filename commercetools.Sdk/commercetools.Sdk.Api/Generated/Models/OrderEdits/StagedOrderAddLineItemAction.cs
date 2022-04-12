@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public string Sku { get; set; }
 
-        public double? Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         public DateTime? AddedAt { get; set; }
 

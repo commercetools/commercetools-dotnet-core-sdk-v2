@@ -7,7 +7,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     {
         public string Name { get; set; }
 
-        public double Rate { get; set; }
+        public decimal Rate { get; set; }
 
         public ITypedMoney Amount { get; set; }
     }

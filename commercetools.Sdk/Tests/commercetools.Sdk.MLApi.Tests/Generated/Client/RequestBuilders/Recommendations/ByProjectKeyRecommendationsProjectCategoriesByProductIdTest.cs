@@ -61,7 +61,7 @@ namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
                    .ProjectCategories()
                    .WithProductId("test_productId")
                    .Get()
-                   .WithConfidenceMin(0.7340351)
+                   .WithConfidenceMin((decimal)0.7340351)
                    .Build(),
                    "Get",
                    "/test_projectKey/recommendations/project-categories/test_productId?confidenceMin=0.7340351",
@@ -73,7 +73,7 @@ namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
                    .ProjectCategories()
                    .WithProductId("test_productId")
                    .Get()
-                   .WithConfidenceMax(0.30089796)
+                   .WithConfidenceMax((decimal)0.30089796)
                    .Build(),
                    "Get",
                    "/test_projectKey/recommendations/project-categories/test_productId?confidenceMax=0.30089796",

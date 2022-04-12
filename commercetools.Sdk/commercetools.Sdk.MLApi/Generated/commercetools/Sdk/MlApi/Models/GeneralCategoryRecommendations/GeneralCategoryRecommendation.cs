@@ -4,6 +4,6 @@ namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
     {
         public string CategoryName { get; set; }
 
-        public double Confidence { get; set; }
+        public decimal Confidence { get; set; }
     }
 }
