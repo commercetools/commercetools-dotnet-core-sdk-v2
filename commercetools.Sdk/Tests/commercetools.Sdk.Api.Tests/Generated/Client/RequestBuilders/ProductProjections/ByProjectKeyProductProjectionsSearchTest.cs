@@ -45,7 +45,7 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithFuzzyLevel(0.110830665)
+                   .WithFuzzyLevel((decimal)0.110830665)
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?fuzzyLevel=0.110830665",

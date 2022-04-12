@@ -2,7 +2,7 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
     public partial class ReturnItemDraft : IReturnItemDraft
     {
-        public double Quantity { get; set; }
+        public decimal Quantity { get; set; }
 
         public string LineItemId { get; set; }
 

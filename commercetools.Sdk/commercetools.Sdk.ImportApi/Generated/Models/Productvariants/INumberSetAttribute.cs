@@ -7,6 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.NumberSetAttribute))]
     public partial interface INumberSetAttribute : IAttribute
     {
-        List<double> Value { get; set; }
+        List<decimal> Value { get; set; }
     }
 }

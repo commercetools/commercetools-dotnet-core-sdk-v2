@@ -2,12 +2,12 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public partial class ParcelMeasurements : IParcelMeasurements
     {
-        public double? HeightInMillimeter { get; set; }
+        public decimal? HeightInMillimeter { get; set; }
 
-        public double? LengthInMillimeter { get; set; }
+        public decimal? LengthInMillimeter { get; set; }
 
-        public double? WidthInMillimeter { get; set; }
+        public decimal? WidthInMillimeter { get; set; }
 
-        public double? WeightInGram { get; set; }
+        public decimal? WeightInGram { get; set; }
     }
 }

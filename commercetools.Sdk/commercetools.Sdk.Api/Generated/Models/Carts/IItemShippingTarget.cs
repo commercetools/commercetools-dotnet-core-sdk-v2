@@ -8,6 +8,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string AddressKey { get; set; }
 
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
     }
 }

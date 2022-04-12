@@ -57,12 +57,12 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
             return this.GetQueryParam("debug");
         }
 
-        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet WithLimit(double limit)
+        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet WithLimit(decimal limit)
         {
             return this.AddQueryParam("limit", limit.ToString());
         }
 
-        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet WithOffset(double offset)
+        public ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyImportOperationsGet WithOffset(decimal offset)
         {
             return this.AddQueryParam("offset", offset.ToString());
         }

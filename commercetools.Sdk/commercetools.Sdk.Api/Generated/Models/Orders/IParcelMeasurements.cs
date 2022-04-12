@@ -6,12 +6,12 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ParcelMeasurements))]
     public partial interface IParcelMeasurements
     {
-        double? HeightInMillimeter { get; set; }
+        decimal? HeightInMillimeter { get; set; }
 
-        double? LengthInMillimeter { get; set; }
+        decimal? LengthInMillimeter { get; set; }
 
-        double? WidthInMillimeter { get; set; }
+        decimal? WidthInMillimeter { get; set; }
 
-        double? WeightInGram { get; set; }
+        decimal? WeightInGram { get; set; }
     }
 }

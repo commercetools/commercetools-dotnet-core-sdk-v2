@@ -2,11 +2,11 @@ namespace commercetools.Sdk.Api.Models.Products
 {
     public partial class FacetRange : IFacetRange
     {
-        public double From { get; set; }
+        public decimal From { get; set; }
 
         public string FromStr { get; set; }
 
-        public double To { get; set; }
+        public decimal To { get; set; }
 
         public string ToStr { get; set; }
 
@@ -14,12 +14,12 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public long? ProductCount { get; set; }
 
-        public double Total { get; set; }
+        public decimal Total { get; set; }
 
-        public double Min { get; set; }
+        public decimal Min { get; set; }
 
-        public double Max { get; set; }
+        public decimal Max { get; set; }
 
-        public double Mean { get; set; }
+        public decimal Mean { get; set; }
     }
 }

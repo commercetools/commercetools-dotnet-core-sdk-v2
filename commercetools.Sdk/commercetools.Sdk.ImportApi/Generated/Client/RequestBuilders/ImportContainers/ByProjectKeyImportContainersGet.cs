@@ -39,12 +39,12 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             return this.GetQueryParam("sort");
         }
 
-        public ByProjectKeyImportContainersGet WithLimit(double limit)
+        public ByProjectKeyImportContainersGet WithLimit(decimal limit)
         {
             return this.AddQueryParam("limit", limit.ToString());
         }
 
-        public ByProjectKeyImportContainersGet WithOffset(double offset)
+        public ByProjectKeyImportContainersGet WithOffset(decimal offset)
         {
             return this.AddQueryParam("offset", offset.ToString());
         }

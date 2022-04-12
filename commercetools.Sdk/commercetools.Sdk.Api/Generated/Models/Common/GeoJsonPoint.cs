@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Common
     {
         public string Type { get; set; }
 
-        public List<double> Coordinates { get; set; }
+        public List<decimal> Coordinates { get; set; }
         public GeoJsonPoint()
         {
             this.Type = "Point";

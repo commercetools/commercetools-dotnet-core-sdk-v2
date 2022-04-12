@@ -7,11 +7,11 @@ namespace commercetools.Sdk.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewRatingStatistics))]
     public partial interface IReviewRatingStatistics
     {
-        double AverageRating { get; set; }
+        decimal AverageRating { get; set; }
 
-        double HighestRating { get; set; }
+        decimal HighestRating { get; set; }
 
-        double LowestRating { get; set; }
+        decimal LowestRating { get; set; }
 
         int Count { get; set; }
 

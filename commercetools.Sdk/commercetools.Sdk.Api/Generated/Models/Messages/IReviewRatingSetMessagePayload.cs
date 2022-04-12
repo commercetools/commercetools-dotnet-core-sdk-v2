@@ -7,9 +7,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessagePayload))]
     public partial interface IReviewRatingSetMessagePayload : IMessagePayload
     {
-        double? OldRating { get; set; }
+        decimal? OldRating { get; set; }
 
-        double? NewRating { get; set; }
+        decimal? NewRating { get; set; }
 
         bool IncludedInStatistics { get; set; }
 

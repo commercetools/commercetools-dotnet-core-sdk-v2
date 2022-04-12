@@ -4,7 +4,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         public string Type { get; set; }
 
-        public double Score { get; set; }
+        public decimal Score { get; set; }
         public ScoreShippingRateInput()
         {
             this.Type = "Score";

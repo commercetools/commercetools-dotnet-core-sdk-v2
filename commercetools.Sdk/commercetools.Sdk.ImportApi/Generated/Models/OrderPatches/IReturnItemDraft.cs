@@ -6,7 +6,7 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.ReturnItemDraft))]
     public partial interface IReturnItemDraft
     {
-        double Quantity { get; set; }
+        decimal Quantity { get; set; }
 
         string LineItemId { get; set; }
 

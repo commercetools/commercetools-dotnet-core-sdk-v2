@@ -6,7 +6,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         public string Type { get; set; }
 
-        public double Value { get; set; }
+        public decimal Value { get; set; }
         public NumberAttribute()
         {
             this.Type = "number";

@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         public string Name { get; set; }
 
-        public double? Amount { get; set; }
+        public decimal? Amount { get; set; }
 
         public string Country { get; set; }
 

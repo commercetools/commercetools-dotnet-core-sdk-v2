@@ -5,11 +5,11 @@ namespace commercetools.Sdk.Api.Models.Reviews
 {
     public partial class ReviewRatingStatistics : IReviewRatingStatistics
     {
-        public double AverageRating { get; set; }
+        public decimal AverageRating { get; set; }
 
-        public double HighestRating { get; set; }
+        public decimal HighestRating { get; set; }
 
-        public double LowestRating { get; set; }
+        public decimal LowestRating { get; set; }
 
         public int Count { get; set; }
 

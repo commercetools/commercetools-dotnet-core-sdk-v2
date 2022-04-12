@@ -28,9 +28,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public double? OldRating { get; set; }
+        public decimal? OldRating { get; set; }
 
-        public double? NewRating { get; set; }
+        public decimal? NewRating { get; set; }
 
         public bool IncludedInStatistics { get; set; }
 

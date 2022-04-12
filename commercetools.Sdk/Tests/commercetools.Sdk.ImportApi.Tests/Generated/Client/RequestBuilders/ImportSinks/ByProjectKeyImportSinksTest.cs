@@ -33,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportSinks
                    .WithProjectKeyValue("test_projectKey")
                    .ImportSinks()
                    .Get()
-                   .WithLimit(0.26748633)
+                   .WithLimit((decimal)0.26748633)
                    .Build(),
                    "Get",
                    "/test_projectKey/import-sinks?limit=0.26748633",
@@ -43,7 +43,7 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportSinks
                    .WithProjectKeyValue("test_projectKey")
                    .ImportSinks()
                    .Get()
-                   .WithOffset(0.7475848)
+                   .WithOffset((decimal)0.7475848)
                    .Build(),
                    "Get",
                    "/test_projectKey/import-sinks?offset=0.7475848",

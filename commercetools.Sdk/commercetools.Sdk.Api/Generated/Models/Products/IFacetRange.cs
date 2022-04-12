@@ -6,11 +6,11 @@ namespace commercetools.Sdk.Api.Models.Products
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.FacetRange))]
     public partial interface IFacetRange
     {
-        double From { get; set; }
+        decimal From { get; set; }
 
         string FromStr { get; set; }
 
-        double To { get; set; }
+        decimal To { get; set; }
 
         string ToStr { get; set; }
 
@@ -18,12 +18,12 @@ namespace commercetools.Sdk.Api.Models.Products
 
         long? ProductCount { get; set; }
 
-        double Total { get; set; }
+        decimal Total { get; set; }
 
-        double Min { get; set; }
+        decimal Min { get; set; }
 
-        double Max { get; set; }
+        decimal Max { get; set; }
 
-        double Mean { get; set; }
+        decimal Mean { get; set; }
     }
 }

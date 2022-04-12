@@ -9,7 +9,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         public string Type { get; set; }
 
-        public List<double> Value { get; set; }
+        public List<decimal> Value { get; set; }
         public NumberSetAttribute()
         {
             this.Type = "number-set";

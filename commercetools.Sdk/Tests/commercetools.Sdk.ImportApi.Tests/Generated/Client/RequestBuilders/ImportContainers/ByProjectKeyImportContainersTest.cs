@@ -32,7 +32,7 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContain
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
                    .Get()
-                   .WithLimit(0.26748633)
+                   .WithLimit((decimal)0.26748633)
                    .Build(),
                    "Get",
                    "/test_projectKey/import-containers?limit=0.26748633",
@@ -42,7 +42,7 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContain
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
                    .Get()
-                   .WithOffset(0.7475848)
+                   .WithOffset((decimal)0.7475848)
                    .Build(),
                    "Get",
                    "/test_projectKey/import-containers?offset=0.7475848",
