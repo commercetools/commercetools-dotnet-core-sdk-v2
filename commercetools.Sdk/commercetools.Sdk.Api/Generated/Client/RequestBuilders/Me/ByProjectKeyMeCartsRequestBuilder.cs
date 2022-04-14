@@ -40,5 +40,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         {
             return new ByProjectKeyMeCartsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyMeCartsReplicateRequestBuilder Replicate()
+        {
+            return new ByProjectKeyMeCartsReplicateRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
     }
 }
