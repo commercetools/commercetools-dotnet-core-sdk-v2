@@ -1,0 +1,69 @@
+\hypertarget{_attribute_converter_8cs_source}{}\doxysection{Attribute\+Converter.\+cs}
+\label{_attribute_converter_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Serialization/JsonConverters/AttributeConverter.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Serialization/JsonConverters/AttributeConverter.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00001}00001 \textcolor{keyword}{using} System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Text.Json.Serialization;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00003}00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk}{Sdk}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api}{Api}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_models}{Models}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products}{Products}};}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization}{Serialization}};}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization}{Serialization}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization_1_1_mapper_type_retrievers}{MapperTypeRetrievers}};}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk}{Sdk}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api}{Api}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_serialization}{Serialization}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_mapper_type_retrievers}{MapperTypeRetrievers}};}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00007}00007 \textcolor{keyword}{using} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_attribute}{Attribute}} = \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk}{Sdk}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api}{Api}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_models}{Models}}.\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products}{Products}}.\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_attribute}{Attribute}};}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00008}00008 \textcolor{keyword}{using} Type = System.Type;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00010}\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_serialization}{00010}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters}{commercetools.Sdk.Api.Serialization.JsonConverters}}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00012}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter}{AttributeConverter}} : JsonConverter<IAttribute>}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_mapper_type_retrievers_1_1_i_mapper_type_retriever}{IMapperTypeRetriever<IAttribute>}} \_mapperTypeRetriever;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00015}00015         \textcolor{keyword}{private} readonly \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_mapper_type_retrievers_1_1_attribute_type_retriever}{AttributeTypeRetriever}} \_attributeTypeRetriever;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00016}00016         \textcolor{keyword}{private} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_i_serializer_service}{ISerializerService}} serializerService;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00018}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_a6a9840fef3c72f28b12f5a4df0b744cb}{00018}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_a6a9840fef3c72f28b12f5a4df0b744cb}{AttributeConverter}}(\mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_mapper_type_retrievers_1_1_i_mapper_type_retriever}{IMapperTypeRetriever<IAttribute>}} mapperTypeRetriever, \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_mapper_type_retrievers_1_1_attribute_type_retriever}{AttributeTypeRetriever}} attributeTypeRetriever, \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_i_serializer_service}{ISerializerService}} serializerService)}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00020}00020             this.\_mapperTypeRetriever = mapperTypeRetriever;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00021}00021             this.\_attributeTypeRetriever = attributeTypeRetriever;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00022}00022             this.serializerService = serializerService;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00025}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_ad9660ebb37bfeb9a2c3f0aa6b4e7a8f8}{00025}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_ad9660ebb37bfeb9a2c3f0aa6b4e7a8f8}{CanConvert}}(Type typeToConvert)}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00027}00027             \textcolor{keywordflow}{return} typeof(\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute}{IAttribute}}).IsAssignableFrom(typeToConvert);}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00030}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_a656ac388f9708e428db6de44958c95b3}{00030}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute}{IAttribute}} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_a656ac388f9708e428db6de44958c95b3}{Read}}(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00032}00032             var jsonDocument = JsonDocument.ParseValue(ref reader);}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00033}00033             \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute}{IAttribute}} attribute;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00034}00034             var rootElement = jsonDocument.RootElement;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00035}00035             \textcolor{keywordflow}{if} (rootElement.ValueKind == JsonValueKind.Object)}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00036}00036             \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00037}00037                 var nameProp = rootElement.GetProperty(\textcolor{stringliteral}{"{}name"{}});}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00038}00038                 var valueProp = rootElement.GetProperty(\textcolor{stringliteral}{"{}value"{}});}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00039}00039                 attribute = \_attributeTypeRetriever.GetAttribute(valueProp);}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00040}00040                 attribute.\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute_a5c46f775745ae803942d911e583ebc19}{Name}} = nameProp.GetString();}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00041}00041                 var returnType = attribute is \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_generic_type_attribute}{IGenericTypeAttribute}} attributeValueType ?}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00042}00042                     attributeValueType.\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_generic_type_attribute_a4e2dac9606fda159ba10eefe7b0456a3}{GetValueType}}() :}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00043}00043                     \_mapperTypeRetriever.GetTypeForToken(valueProp);}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00044}00044                 attribute.\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute_af8697e9ec841a73ee8c28bb242dd7a52}{Value}} = valueProp.ToObject(returnType, serializerService); ;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00045}00045             \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00046}00046             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00047}00047             \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00048}00048                 attribute = \textcolor{keyword}{new} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_attribute}{Attribute}}();}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00049}00049             \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00051}00051             \textcolor{keywordflow}{return} attribute;}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00052}00052         \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00054}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_af1d114be1650cea0f759032a7cbfb9f2}{00054}}         \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_json_converters_1_1_attribute_converter_af1d114be1650cea0f759032a7cbfb9f2}{Write}}(Utf8JsonWriter writer, \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute}{IAttribute}} value, JsonSerializerOptions options)}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00055}00055         \{}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00056}00056             writer.WriteStartObject();}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00057}00057             writer.WriteString(\textcolor{stringliteral}{"{}name"{}}, value.\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute_a5c46f775745ae803942d911e583ebc19}{Name}});}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00058}00058             writer.WritePropertyName(\textcolor{stringliteral}{"{}value"{}});}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00059}00059             JsonSerializer.Serialize(writer, value.\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_attribute_af8697e9ec841a73ee8c28bb242dd7a52}{Value}}, options);}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00060}00060             writer.WriteEndObject();}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00061}00061         \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{_attribute_converter_8cs_source_l00063}00063 \}}
+
+\end{DoxyCode}

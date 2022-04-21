@@ -1,0 +1,30 @@
+\hypertarget{_enum_interface_creator_attribute_8cs_source}{}\doxysection{Enum\+Interface\+Creator\+Attribute.\+cs}
+\label{_enum_interface_creator_attribute_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Abstractions/CustomAttributes/EnumInterfaceCreatorAttribute.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Abstractions/CustomAttributes/EnumInterfaceCreatorAttribute.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_custom_attributes}{commercetools.Base.CustomAttributes}}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00005}00005     [AttributeUsage(AttributeTargets.Interface, AllowMultiple = \textcolor{keyword}{false})]}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00006}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute}{00006}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute}{EnumInterfaceCreatorAttribute}}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00007}00007         : Attribute}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00008}00008     \{}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00009}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_afdf9bf89c0f8d5fa8469aff776113098}{00009}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_afdf9bf89c0f8d5fa8469aff776113098}{EnumInterfaceCreatorAttribute}}(Type type, \textcolor{keywordtype}{string} method)}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00010}00010         \{}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00011}00011             this.Type = type;}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00012}00012             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_ade2a2e1ac10fdb81b6b7a1bbaa27aaa5}{Method}} = method;}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00013}00013         \}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00015}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_af04541cec8c5a004642b5035cfdbdb58}{00015}}         \textcolor{keyword}{public} Type Type \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00017}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_ade2a2e1ac10fdb81b6b7a1bbaa27aaa5}{00017}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_ade2a2e1ac10fdb81b6b7a1bbaa27aaa5}{Method}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00019}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_a649aed3b16d67f8c038ba8da64dd3e3a}{00019}}         \textcolor{keyword}{public} Delegate \mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_a649aed3b16d67f8c038ba8da64dd3e3a}{Creator}}()}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00021}00021             \textcolor{keywordflow}{return} Type.GetMethod(\mbox{\hyperlink{classcommercetools_1_1_base_1_1_custom_attributes_1_1_enum_interface_creator_attribute_ade2a2e1ac10fdb81b6b7a1bbaa27aaa5}{Method}})?.CreateDelegate(typeof(Func<string, object>));}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{_enum_interface_creator_attribute_8cs_source_l00024}00024 \}}
+
+\end{DoxyCode}

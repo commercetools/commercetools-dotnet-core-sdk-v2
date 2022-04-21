@@ -1,0 +1,65 @@
+\hypertarget{_service_collection_extensions_8cs_source}{}\doxysection{Service\+Collection\+Extensions.\+cs}
+\label{_service_collection_extensions_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Registration/ServiceCollectionExtensions.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Registration/ServiceCollectionExtensions.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.Extensions.DependencyInjection;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_registration}{commercetools.Base.Registration}}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00010}00010     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }ServiceCollectionExtensions}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00018}00018         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} RegisterAllTypes<T>(\textcolor{keyword}{this} IServiceCollection services, ServiceLifetime lifetime)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00020}00020             Type type = typeof(T);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00021}00021             RegisterAllTypes(services, type, lifetime);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00031}00031         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} RegisterAllTypes(\textcolor{keyword}{this} IServiceCollection services, Type type, ServiceLifetime lifetime)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00033}00033             Assembly assembly = Assembly.GetAssembly(type);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00034}00034             var typesToRegister = type.GetAllConcreteAssignableTypes(assembly);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00035}00035             \textcolor{keywordflow}{foreach} (var implementationType \textcolor{keywordflow}{in} typesToRegister)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00036}00036             \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00037}00037                 Type typeToRegister = type;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00038}00038                 \textcolor{keywordflow}{if} (type.IsGenericTypeDefinition)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00039}00039                 \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00040}00040                     typeToRegister = GetTypeForGenericTypeDefinition(type, implementationType);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00041}00041                 \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00043}00043                 services.Add(\textcolor{keyword}{new} ServiceDescriptor(typeToRegister, implementationType, lifetime));}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00044}00044             \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00055}00055         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} RegisterAllTypes(\textcolor{keyword}{this} IServiceCollection services, Assembly assembly, Type type, ServiceLifetime lifetime)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00056}00056         \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00057}00057             var typesToRegister = type.GetAllConcreteAssignableTypes(assembly);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00058}00058             \textcolor{keywordflow}{foreach} (var implementationType \textcolor{keywordflow}{in} typesToRegister)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00059}00059             \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00060}00060                 Type typeToRegister = type;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00061}00061                 \textcolor{keywordflow}{if} (type.IsGenericTypeDefinition)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00062}00062                 \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00063}00063                     typeToRegister = GetTypeForGenericTypeDefinition(type, implementationType);}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00064}00064                 \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00066}00066                 services.Add(\textcolor{keyword}{new} ServiceDescriptor(typeToRegister, implementationType, lifetime));}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00067}00067             \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00068}00068         \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00081}00081         \textcolor{keyword}{private} \textcolor{keyword}{static} Type GetTypeForGenericTypeDefinition(Type openGenericType, Type concreteType)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00082}00082         \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00083}00083             \textcolor{keywordflow}{foreach} (Type type \textcolor{keywordflow}{in} concreteType.GetAllAssignableTypes())}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00084}00084             \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00085}00085                 \textcolor{keywordflow}{if} (type.IsGenericType \&\& type.GetGenericTypeDefinition() == openGenericType)}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00086}00086                 \{}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00087}00087                     \textcolor{keywordflow}{return} type;}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00088}00088                 \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00089}00089             \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00091}00091             \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00092}00092         \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00093}00093     \}}
+\DoxyCodeLine{\Hypertarget{_service_collection_extensions_8cs_source_l00094}00094 \}}
+
+\end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['commercetools_2esdk_0',['commercetools.Sdk',['../index.html',1,'']]]
+  ['commercetools_20_2enet_20sdk_0',['commercetools .NET SDK',['../index.html',1,'']]]
 ];

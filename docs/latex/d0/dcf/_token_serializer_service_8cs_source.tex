@@ -1,0 +1,39 @@
+\hypertarget{_token_serializer_service_8cs_source}{}\doxysection{Token\+Serializer\+Service.\+cs}
+\label{_token_serializer_service_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/TokenSerializerService.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/TokenSerializerService.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{commercetools.Base.Client}}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00006}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service}{00006}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service}{TokenSerializerService}} : \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_token_serializer_service}{ITokenSerializerService}}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00008}00008         \textcolor{keyword}{private} readonly JsonSerializerOptions jsonSerializerOptions;}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00010}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a53f6e29ad0355f4dc07c773792d20399}{00010}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a53f6e29ad0355f4dc07c773792d20399}{TokenSerializerService}}()}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00011}00011         \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00012}00012             jsonSerializerOptions = \textcolor{keyword}{new} JsonSerializerOptions}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00013}00013             \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00014}00014                 PropertyNamingPolicy = \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_snake_case_naming_policy}{SnakeCaseNamingPolicy}}.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_snake_case_naming_policy_a6c5f832607066e6bf42efdea279671b0}{Instance}}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00015}00015             \};}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00016}00016         \}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00018}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a2af3d692bb9877a7760ac04c625509c3}{00018}}         \textcolor{keyword}{public} T \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a2af3d692bb9877a7760ac04c625509c3}{Deserialize<T>}}(\textcolor{keywordtype}{string} input)}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00020}00020             \textcolor{keywordflow}{return} JsonSerializer.Deserialize<T>(input, jsonSerializerOptions);}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00023}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_ab666b87971ddba116ca84520c4c3a3f5}{00023}}         \textcolor{keyword}{public} \textcolor{keywordtype}{object} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_ab666b87971ddba116ca84520c4c3a3f5}{Deserialize}}(Type returnType, \textcolor{keywordtype}{string} input)}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00025}00025             \textcolor{keywordflow}{return} JsonSerializer.Deserialize(input, returnType, jsonSerializerOptions);}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00028}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a5d66e4510be968a76eb69614c4b9d1bc}{00028}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_token_serializer_service_a5d66e4510be968a76eb69614c4b9d1bc}{Serialize<T>}}(T input)}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00029}00029         \{}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00030}00030             \textcolor{keywordflow}{return} JsonSerializer.Serialize<T>(input, jsonSerializerOptions);}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00031}00031         \}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_token_serializer_service_8cs_source_l00033}00033 \}}
+
+\end{DoxyCode}

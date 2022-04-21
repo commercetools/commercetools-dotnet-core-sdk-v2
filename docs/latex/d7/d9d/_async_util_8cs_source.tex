@@ -1,0 +1,36 @@
+\hypertarget{_async_util_8cs_source}{}\doxysection{Async\+Util.\+cs}
+\label{_async_util_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/AsyncUtil.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/AsyncUtil.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Diagnostics.CodeAnalysis;}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Threading;}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{commercetools.Base.Client}}}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00011}00011     [SuppressMessage(\textcolor{stringliteral}{"{}ReSharper"{}}, \textcolor{stringliteral}{"{}CA2008"{}}, Justification = \textcolor{stringliteral}{"{}library api"{}})]}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00012}00012     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }AsyncUtil}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00014}00014         \textcolor{keyword}{private} \textcolor{keyword}{static} readonly TaskFactory TaskFactory = \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00015}00015             TaskFactory(}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00016}00016                 CancellationToken.None,}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00017}00017                 TaskCreationOptions.None,}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00018}00018                 TaskContinuationOptions.None,}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00019}00019                 TaskScheduler.Default);}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00026}00026         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} RunSync(Func<Task> task)}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00027}00027             => TaskFactory.StartNew(task)}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00028}00028                 .Unwrap()}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00029}00029                 .GetAwaiter()}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00030}00030                 .GetResult();}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00039}00039         \textcolor{keyword}{public} \textcolor{keyword}{static} TResult RunSync<TResult>(Func<Task<TResult>> task)}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00040}00040             => TaskFactory.StartNew(task)}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00041}00041                 .Unwrap()}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00042}00042                 .GetAwaiter()}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00043}00043                 .GetResult();}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_async_util_8cs_source_l00045}00045 \}}
+
+\end{DoxyCode}

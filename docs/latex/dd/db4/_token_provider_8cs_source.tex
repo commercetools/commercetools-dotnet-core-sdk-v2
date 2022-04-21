@@ -1,0 +1,137 @@
+\hypertarget{_token_provider_8cs_source}{}\doxysection{Token\+Provider.\+cs}
+\label{_token_provider_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Tokens/TokenProvider.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Tokens/TokenProvider.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Net.Http;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{Client}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client_1_1_domain}{Domain}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization}{Serialization}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client_1_1_tokens}{commercetools.Base.Client.Tokens}}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00010}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider}{TokenProvider}}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00012}00012         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_i_serializer_service}{ISerializerService}} serializerService;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00013}00013         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_tokens_1_1_i_token_store_manager}{ITokenStoreManager}} tokenStoreManager;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00015}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_af766ee666100a5e3fc0be2131c58cde8}{00015}}         \textcolor{keyword}{protected} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_af766ee666100a5e3fc0be2131c58cde8}{TokenProvider}}(\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{HttpClient}} httpClient, \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_tokens_1_1_i_token_store_manager}{ITokenStoreManager}} tokenStoreManager, \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_token_serializer_service}{ITokenSerializerService}} serializerService, \textcolor{keywordtype}{string} tokenEndpointBaseAddress)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00017}00017             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{HttpClient}} = httpClient;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00018}00018             this.tokenStoreManager = tokenStoreManager;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00019}00019             this.serializerService = serializerService;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00020}00020             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ae3d59300bf652579839b94b8c70babc4}{TokenEndpointBaseAddress}} = tokenEndpointBaseAddress;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00023}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a7528cf64978d26e96960c6398b33b580}{00023}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{Token}} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{Token}}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00025}00025             \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00026}00026             \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00027}00027                 var token = this.tokenStoreManager.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a55ad4ecc2073eb789815f2d6c74e85c6}{Token}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00028}00028                 \textcolor{keywordflow}{if} (token == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00029}00029                 \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00030}00030                     lock (this.tokenStoreManager)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00031}00031                     \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00032}00032                         token = this.tokenStoreManager.Token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00033}00033                         \textcolor{keywordflow}{if} (token != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00034}00034                         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00035}00035                             \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00036}00036                         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00038}00038                         token = this.GetToken(this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a625ed0d61c4c4cdf4746e47f7672af0b}{GetRequestMessage}}());}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00039}00039                         this.tokenStoreManager.Token = token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00040}00040                     \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00042}00042                     \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00043}00043                 \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00045}00045                 \textcolor{keywordflow}{if} (!token.Expired)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00046}00046                 \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00047}00047                     \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00048}00048                 \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00050}00050                 lock (this.tokenStoreManager)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00051}00051                 \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00052}00052                     token = this.tokenStoreManager.Token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00053}00053                     \textcolor{keywordflow}{if} (!token.Expired)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00054}00054                     \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00055}00055                         \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00056}00056                     \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00058}00058                     var requestMessage = \textcolor{keywordtype}{string}.IsNullOrEmpty(token.RefreshToken)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00059}00059                         ? this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a625ed0d61c4c4cdf4746e47f7672af0b}{GetRequestMessage}}()}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00060}00060                         : this.GetRefreshTokenRequestMessage();}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00062}00062                     token = this.GetToken(requestMessage);}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00063}00063                     this.tokenStoreManager.Token = token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00064}00064                     \textcolor{keywordflow}{return} token;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00065}00065                 \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00066}00066             \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00069}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a17bc2a630f138596b9a5c0707c9d2bb0}{00069}}         \textcolor{keyword}{public} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client_configuration}{IClientConfiguration}} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration}{ClientConfiguration}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00071}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{00071}}         \textcolor{keyword}{protected} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{HttpClient}} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{HttpClient}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00073}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ae3d59300bf652579839b94b8c70babc4}{00073}}         \textcolor{keyword}{protected} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ae3d59300bf652579839b94b8c70babc4}{TokenEndpointBaseAddress}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00075}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a625ed0d61c4c4cdf4746e47f7672af0b}{00075}}         \textcolor{keyword}{public} \textcolor{keyword}{virtual} HttpRequestMessage \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_a625ed0d61c4c4cdf4746e47f7672af0b}{GetRequestMessage}}()}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00076}00076         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00077}00077             HttpRequestMessage request = \textcolor{keyword}{new} HttpRequestMessage}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00078}00078             \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00079}00079                 RequestUri = \textcolor{keyword}{new} Uri(this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ae3d59300bf652579839b94b8c70babc4}{TokenEndpointBaseAddress}}),}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00080}00080                 Content = \textcolor{keyword}{new} StringContent(\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ac2008d9f339c556f9570a1795bc41387}{BuildTokenRequestBody}}(), Encoding.UTF8, \textcolor{stringliteral}{"{}application/x-\/www-\/form-\/urlencoded"{}})}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00081}00081             \};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00082}00082             \textcolor{keywordtype}{string} credentials = \$\textcolor{stringliteral}{"{}\{this.ClientConfiguration.ClientId\}:\{this.ClientConfiguration.ClientSecret\}"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00083}00083             request.Headers.Add(\textcolor{stringliteral}{"{}Authorization"{}}, \textcolor{stringliteral}{"{}Basic "{}} + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00084}00084             request.Method = HttpMethod.Post;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00085}00085             \textcolor{keywordflow}{return} request;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00086}00086         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00088}00088         \textcolor{keyword}{private} HttpRequestMessage GetRefreshTokenRequestMessage()}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00089}00089         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00090}00090             var request = \textcolor{keyword}{new} HttpRequestMessage();}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00091}00091             var requestUri = this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration}{ClientConfiguration}}.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration_a49d085164ac64153ff71c591a79787fd}{AuthorizationBaseAddress}} + \textcolor{stringliteral}{"{}oauth/token?grant\_type=refresh\_token"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00092}00092             requestUri += \$\textcolor{stringliteral}{"{}\&refresh\_token=\{this.tokenStoreManager.Token.RefreshToken\}"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00093}00093             request.RequestUri = \textcolor{keyword}{new} Uri(requestUri);}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00094}00094             var credentials = \$\textcolor{stringliteral}{"{}\{this.ClientConfiguration.ClientId\}:\{this.ClientConfiguration.ClientSecret\}"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00095}00095             request.Headers.Add(\textcolor{stringliteral}{"{}Authorization"{}}, \textcolor{stringliteral}{"{}Basic "{}} + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00096}00096             request.Method = HttpMethod.Post;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00097}00097             \textcolor{keywordflow}{return} request;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00098}00098         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00100}00100         \textcolor{keyword}{private} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{Token}} GetToken(HttpRequestMessage requestMessage)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00101}00101         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00102}00102             \textcolor{keywordflow}{return} AsyncUtil.RunSync(() => this.GetTokenAsync(requestMessage));}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00103}00103         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00105}00105         \textcolor{keyword}{private} async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00106}00106         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00107}00107             var client = this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_acafc3ad0e5a8ffcf9f9bc99445a2831b}{HttpClient}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00108}00108             var result = await client.SendAsync(requestMessage).ConfigureAwait(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00109}00109             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00110}00110             \textcolor{keywordflow}{if} (result.IsSuccessStatusCode)}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00111}00111             \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00112}00112                 \textcolor{keywordflow}{return} this.serializerService.Deserialize<\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{Token}}>(content);}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00113}00113             \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00115}00115             var generalClientException =}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00116}00116                 \textcolor{keyword}{new} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_http_api_client_exception}{HttpApiClientException}}(result.ReasonPhrase, (\textcolor{keywordtype}{int})result.StatusCode);}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00117}00117             \textcolor{keywordflow}{throw} generalClientException;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00118}00118         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00119}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ac2008d9f339c556f9570a1795bc41387}{00119}}         \textcolor{keyword}{protected} \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_tokens_1_1_token_provider_ac2008d9f339c556f9570a1795bc41387}{BuildTokenRequestBody}}()}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00120}00120         \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00121}00121             var body = \textcolor{stringliteral}{"{}grant\_type=client\_credentials"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00122}00122             var scope = this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration}{ClientConfiguration}}.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration_a492256a99a489dcda0fbbdeb2751bbcc}{Scope}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00123}00123             \textcolor{keywordflow}{if} (!\textcolor{keywordtype}{string}.IsNullOrEmpty(scope))}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00124}00124             \{}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00125}00125                 body += \$\textcolor{stringliteral}{"{}\&scope=\{scope\}"{}};}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00128}00128             \textcolor{keywordflow}{return} body;}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00129}00129         \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00130}00130     \}}
+\DoxyCodeLine{\Hypertarget{_token_provider_8cs_source_l00131}00131 \}}
+
+\end{DoxyCode}

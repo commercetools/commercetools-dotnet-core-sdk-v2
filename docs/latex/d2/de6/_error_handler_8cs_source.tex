@@ -1,0 +1,36 @@
+\hypertarget{_error_handler_8cs_source}{}\doxysection{Error\+Handler.\+cs}
+\label{_error_handler_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/ErrorHandler.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/ErrorHandler.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Net.Http;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Threading;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{commercetools.Base.Client}}}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00008}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler}{00008}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler}{ErrorHandler}} : DelegatingHandler}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00009}00009     \{}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00010}00010         \textcolor{keyword}{private} Func<HttpResponseMessage, Object> errorResponseBodyMapper;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00012}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler_a1a40d562856ab67824a4bf384faadd12}{00012}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler_a1a40d562856ab67824a4bf384faadd12}{ErrorHandler}}(Func<HttpResponseMessage, Object> errorResponseBodyMapper)}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00013}00013         \{}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00014}00014             this.errorResponseBodyMapper = errorResponseBodyMapper;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00015}00015         \}}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00017}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler_a148db30edb00a2ff54faa8cc3897f113}{00017}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} async Task<HttpResponseMessage> \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_error_handler_a148db30edb00a2ff54faa8cc3897f113}{SendAsync}}(HttpRequestMessage request, CancellationToken cancellationToken)}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00019}00019             var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00021}00021             \textcolor{keywordflow}{if} (response != \textcolor{keyword}{null} \&\& !response.IsSuccessStatusCode)}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00022}00022             \{}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00023}00023                 var exception = \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_exception_factory}{ExceptionFactory}}.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_exception_factory_af4f4fe89012ed536a51ebe29e1d2444e}{Create}}(request, response, errorResponseBodyMapper);}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00024}00024                 \textcolor{keywordflow}{throw} exception;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00025}00025             \}}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00027}00027             \textcolor{keywordflow}{return} response;}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_error_handler_8cs_source_l00030}00030 \}}
+
+\end{DoxyCode}

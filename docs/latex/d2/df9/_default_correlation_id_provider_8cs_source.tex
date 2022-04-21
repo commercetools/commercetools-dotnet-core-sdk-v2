@@ -1,0 +1,21 @@
+\hypertarget{_default_correlation_id_provider_8cs_source}{}\doxysection{Default\+Correlation\+Id\+Provider.\+cs}
+\label{_default_correlation_id_provider_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Middlewares/DefaultCorrelationIdProvider.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Middlewares/DefaultCorrelationIdProvider.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client_1_1_middlewares}{commercetools.Base.Client.Middlewares}}}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00004}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider}{00004}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider}{DefaultCorrelationIdProvider}} : \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_correlation_id_provider}{ICorrelationIdProvider}}}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00005}00005     \{}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00006}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider_a081377aad2958df961c09477bc7e9d9f}{00006}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider_a081377aad2958df961c09477bc7e9d9f}{DefaultCorrelationIdProvider}}(\mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client_configuration}{IClientConfiguration}} clientConfiguration)}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00007}00007         \{}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00008}00008             \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration}{ClientConfiguration}} = clientConfiguration;}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00009}00009         \}}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00011}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider_a9ff862079dd16b918397d4591d078257}{00011}}         \textcolor{keyword}{public} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client_configuration}{IClientConfiguration}} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_client_configuration}{ClientConfiguration}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00013}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider_a8dcb313371009a059760462d3e8995fc}{00013}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_default_correlation_id_provider_a8dcb313371009a059760462d3e8995fc}{CorrelationId}} => \$\textcolor{stringliteral}{"{}\{this.ClientConfiguration.ProjectKey\}/\{Guid.NewGuid()\}"{}};}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00014}00014     \}}
+\DoxyCodeLine{\Hypertarget{_default_correlation_id_provider_8cs_source_l00015}00015 \}}
+
+\end{DoxyCode}

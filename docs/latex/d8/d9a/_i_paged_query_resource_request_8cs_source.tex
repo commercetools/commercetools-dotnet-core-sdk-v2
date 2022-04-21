@@ -1,0 +1,30 @@
+\hypertarget{_i_paged_query_resource_request_8cs_source}{}\doxysection{IPaged\+Query\+Resource\+Request.\+cs}
+\label{_i_paged_query_resource_request_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Models/IPagedQueryResourceRequest.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Models/IPagedQueryResourceRequest.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00001}00001 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_models}{commercetools.Sdk.Api.Models}}}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00005}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request}{00005}}     \textcolor{keyword}{public} \textcolor{keyword}{interface }\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request}{IPagedQueryResourceRequest}}<T, TResult> : \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_request_command}{IRequestCommand}}<TResult>}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00006}00006         where T : \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request}{IPagedQueryResourceRequest}}<T, TResult>}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00008}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a80297919e0db5a300983b4d2feaac869}{00008}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a80297919e0db5a300983b4d2feaac869}{WithLimit}}(\textcolor{keywordtype}{int} limit);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00010}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_aeea29584af6d0dbfcee623afd4434e09}{00010}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_aeea29584af6d0dbfcee623afd4434e09}{WithOffset}}(\textcolor{keywordtype}{int} offset);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00012}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_ab6fd0a2cde14c4868cc00c62601de540}{00012}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_ab6fd0a2cde14c4868cc00c62601de540}{WithSort}}(\textcolor{keywordtype}{string} sort);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00014}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a779dcf44704ac8043ecb0369ab921aa6}{00014}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a779dcf44704ac8043ecb0369ab921aa6}{WithWhere}}(\textcolor{keywordtype}{string} where);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00016}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_aa945a11baf0f27aba30c27ac0438a6f4}{00016}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_aa945a11baf0f27aba30c27ac0438a6f4}{WithExpand}}(\textcolor{keywordtype}{string} expand);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00018}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a470dd707f7d4ced5d732240e35c26d4c}{00018}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a470dd707f7d4ced5d732240e35c26d4c}{WithWithTotal}}(\textcolor{keywordtype}{bool} withTotal);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00020}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a0a3fab4910b780f87860f85b35b71c63}{00020}}         T \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_a0a3fab4910b780f87860f85b35b71c63}{WithPredicateVar}}(\textcolor{keywordtype}{string} varName, \textcolor{keywordtype}{string} predicateVar);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00022}\mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_ab0a6d5a679ac86e06d7ac1f576b4a15f}{00022}}         List<string> \mbox{\hyperlink{interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_i_paged_query_resource_request_ab0a6d5a679ac86e06d7ac1f576b4a15f}{GetQueryParam}}(\textcolor{keywordtype}{string} key);}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{_i_paged_query_resource_request_8cs_source_l00024}00024 \}}
+
+\end{DoxyCode}

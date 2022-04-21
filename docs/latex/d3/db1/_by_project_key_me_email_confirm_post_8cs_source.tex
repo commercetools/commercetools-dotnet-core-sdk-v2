@@ -1,0 +1,47 @@
+\hypertarget{_by_project_key_me_email_confirm_post_8cs_source}{}\doxysection{By\+Project\+Key\+Me\+Email\+Confirm\+Post.\+cs}
+\label{_by_project_key_me_email_confirm_post_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Generated/Client/RequestBuilders/Me/ByProjectKeyMeEmailConfirmPost.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Generated/Client/RequestBuilders/Me/ByProjectKeyMeEmailConfirmPost.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00001}00001 \textcolor{keyword}{using} System.Net.Http;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{Client}};}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization}{Serialization}};}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me}{commercetools.Sdk.Api.Client.RequestBuilders.Me}}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00010}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post}{ByProjectKeyMeEmailConfirmPost}} : \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method}{ApiMethod}}<ByProjectKeyMeEmailConfirmPost>}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00014}00014         \textcolor{keyword}{private} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_i_serializer_service}{ISerializerService}} SerializerService \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00016}00016         \textcolor{keyword}{private} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client}{IClient}} ApiHttpClient \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00018}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_aa99a1549e3a77dc0cb22f4f7776e3933}{00018}}         \textcolor{keyword}{public} \textcolor{keyword}{override} HttpMethod \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_aa99a1549e3a77dc0cb22f4f7776e3933}{Method}} => HttpMethod.Post;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00020}00020         \textcolor{keyword}{private} \textcolor{keywordtype}{string} ProjectKey \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00023}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_aeb1e1e03b5e9d46862127702340c2cbf}{00023}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_aeb1e1e03b5e9d46862127702340c2cbf}{ByProjectKeyMeEmailConfirmPost}}(\mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client}{IClient}} apiHttpClient, \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_serialization_1_1_i_serializer_service}{ISerializerService}} serializerService, \textcolor{keywordtype}{string} projectKey)}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00025}00025             this.ApiHttpClient = apiHttpClient;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00026}00026             this.SerializerService = serializerService;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00027}00027             this.ProjectKey = projectKey;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00028}00028             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method_a0ac3a2b9478529ab63e9b592ca26f1fc}{RequestUrl}} = \$\textcolor{stringliteral}{"{}/\{ProjectKey\}/me/email/confirm"{}};}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00029}00029         \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00034}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_a7bbad95a0aee1dc47f25b2904f7e5eae}{00034}}         \textcolor{keyword}{public} async Task<JsonElement> \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_me_1_1_by_project_key_me_email_confirm_post_a7bbad95a0aee1dc47f25b2904f7e5eae}{ExecuteAsync}}()}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00035}00035         \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00036}00036             var requestMessage = \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method_a14eedec7e6efeba30973caec61b6b68c}{Build}}();}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00037}00037             \textcolor{keywordflow}{return} await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_me_email_confirm_post_8cs_source_l00041}00041 \}}
+
+\end{DoxyCode}

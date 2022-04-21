@@ -1,0 +1,47 @@
+\hypertarget{_token_8cs_source}{}\doxysection{Token.\+cs}
+\label{_token_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Domain/Token.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Base.Client/Domain/Token.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client_1_1_domain}{commercetools.Base.Client.Domain}}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00004}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{00004}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token}{Token}}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00005}00005     \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00006}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a55ad4ecc2073eb789815f2d6c74e85c6}{00006}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a55ad4ecc2073eb789815f2d6c74e85c6}{Token}}()}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00007}00007         \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00008}00008             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7808e270b719957f942cb3d3baa7e87a}{CreationDate}} = DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00009}00009             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a3be1c5257816776bb7da8f49c2835792}{ExpirationDate}} = DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00010}00010         \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00011}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_aca01ae75ddd60417ae8b153fa565879f}{00011}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_aca01ae75ddd60417ae8b153fa565879f}{AccessToken}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00013}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_ad381817a0d31d40a66e28f5447f8831f}{00013}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_ad381817a0d31d40a66e28f5447f8831f}{TokenType}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00015}00015         \textcolor{keyword}{private} \textcolor{keywordtype}{long} expiresIn;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00017}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a41c97c9d8554d6a810517bc7db08ed21}{00017}}         \textcolor{keyword}{public} \textcolor{keywordtype}{long} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a41c97c9d8554d6a810517bc7db08ed21}{ExpiresIn}}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00019}00019             \textcolor{keyword}{get} => expiresIn;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00020}00020             \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00021}00021             \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00022}00022                 expiresIn = value;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00023}00023                 \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a35f7a74dd63a9048ebceab2e3e378d24}{RefreshExpirationDate}}();}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00024}00024             \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00027}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_adc7b106d64240ce5d377e64b50bc6bee}{00027}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_adc7b106d64240ce5d377e64b50bc6bee}{Scope}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00029}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7452f8eada5f118906444c0d6a03defe}{00029}}         \textcolor{keyword}{public} \textcolor{keywordtype}{string} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7452f8eada5f118906444c0d6a03defe}{RefreshToken}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00031}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7808e270b719957f942cb3d3baa7e87a}{00031}}         \textcolor{keyword}{public} DateTime \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7808e270b719957f942cb3d3baa7e87a}{CreationDate}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00032}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a3be1c5257816776bb7da8f49c2835792}{00032}}         \textcolor{keyword}{public} DateTime \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a3be1c5257816776bb7da8f49c2835792}{ExpirationDate}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{private} \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00034}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_aeb5427ecb7084c7d3fe02668da241473}{00034}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_aeb5427ecb7084c7d3fe02668da241473}{Expired}} => \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a3be1c5257816776bb7da8f49c2835792}{ExpirationDate}} < DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00036}\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a35f7a74dd63a9048ebceab2e3e378d24}{00036}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a35f7a74dd63a9048ebceab2e3e378d24}{RefreshExpirationDate}}()}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00037}00037         \{}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00038}00038             \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a3be1c5257816776bb7da8f49c2835792}{ExpirationDate}} = \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a7808e270b719957f942cb3d3baa7e87a}{CreationDate}}.AddSeconds(\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_domain_1_1_token_a41c97c9d8554d6a810517bc7db08ed21}{ExpiresIn}} -\/ 300);}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_token_8cs_source_l00041}00041 \}}
+
+\end{DoxyCode}

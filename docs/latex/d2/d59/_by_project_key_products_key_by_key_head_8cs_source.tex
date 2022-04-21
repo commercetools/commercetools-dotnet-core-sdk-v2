@@ -1,0 +1,46 @@
+\hypertarget{_by_project_key_products_key_by_key_head_8cs_source}{}\doxysection{By\+Project\+Key\+Products\+Key\+By\+Key\+Head.\+cs}
+\label{_by_project_key_products_key_by_key_head_8cs_source}\index{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Generated/Client/RequestBuilders/Products/ByProjectKeyProductsKeyByKeyHead.cs@{/Users/mgeorge/workspace/commercetools-\/dotnet-\/api-\/sdk/commercetools.Sdk/commercetools.Sdk.Api/Generated/Client/RequestBuilders/Products/ByProjectKeyProductsKeyByKeyHead.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00001}00001 \textcolor{keyword}{using} System.Net.Http;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Text.Json;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespacecommercetools}{commercetools}}.\mbox{\hyperlink{namespacecommercetools_1_1_base}{Base}}.\mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{Client}};}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products}{commercetools.Sdk.Api.Client.RequestBuilders.Products}}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00009}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head}{ByProjectKeyProductsKeyByKeyHead}} : \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method}{ApiMethod}}<ByProjectKeyProductsKeyByKeyHead>}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00013}00013         \textcolor{keyword}{private} \mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client}{IClient}} ApiHttpClient \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00015}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_a9d7ba30086b48cb7d067f2ddc72e4d51}{00015}}         \textcolor{keyword}{public} \textcolor{keyword}{override} HttpMethod \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_a9d7ba30086b48cb7d067f2ddc72e4d51}{Method}} => HttpMethod.Head;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00017}00017         \textcolor{keyword}{private} \textcolor{keywordtype}{string} ProjectKey \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00019}00019         \textcolor{keyword}{private} \textcolor{keywordtype}{string} Key \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00022}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_aef9464aba43f8d781ea74d183d10f7f7}{00022}}         \textcolor{keyword}{public} \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_aef9464aba43f8d781ea74d183d10f7f7}{ByProjectKeyProductsKeyByKeyHead}}(\mbox{\hyperlink{interfacecommercetools_1_1_base_1_1_client_1_1_i_client}{IClient}} apiHttpClient, \textcolor{keywordtype}{string} projectKey, \textcolor{keywordtype}{string} key)}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00023}00023         \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00024}00024             this.ApiHttpClient = apiHttpClient;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00025}00025             this.ProjectKey = projectKey;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00026}00026             this.Key = key;}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00027}00027             this.\mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method_a0ac3a2b9478529ab63e9b592ca26f1fc}{RequestUrl}} = \$\textcolor{stringliteral}{"{}/\{ProjectKey\}/products/key=\{Key\}"{}};}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00033}\mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_a9a9eab817ad5411e0bf938d2f8d40d0d}{00033}}         \textcolor{keyword}{public} async Task<JsonElement> \mbox{\hyperlink{classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_products_1_1_by_project_key_products_key_by_key_head_a9a9eab817ad5411e0bf938d2f8d40d0d}{ExecuteAsync}}()}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00034}00034         \{}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00035}00035             var requestMessage = \mbox{\hyperlink{classcommercetools_1_1_base_1_1_client_1_1_api_method_a14eedec7e6efeba30973caec61b6b68c}{Build}}();}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00036}00036             \textcolor{keywordflow}{return} await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{_by_project_key_products_key_by_key_head_8cs_source_l00040}00040 \}}
+
+\end{DoxyCode}
