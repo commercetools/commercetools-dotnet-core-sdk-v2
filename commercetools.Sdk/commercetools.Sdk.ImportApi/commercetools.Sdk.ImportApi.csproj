@@ -21,9 +21,6 @@
     <ItemGroup>
       <Folder Include="Generated\Client" />
       <Folder Include="Generated\Models" />
-      <Folder Include="Serialization\JsonConverters" />
-      <Folder Include="Serialization\Mappers\CustomFieldMappers" />
-      <Folder Include="Serialization\MapperTypeRetrievers" />
     </ItemGroup>
 
 </Project>
