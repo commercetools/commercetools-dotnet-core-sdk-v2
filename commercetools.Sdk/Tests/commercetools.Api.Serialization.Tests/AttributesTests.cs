@@ -229,5 +229,18 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<long>(attributes.Get("t").Value);
             Assert.Equal("{\"id\":0,\"attributes\":[{\"name\":\"t\",\"value\":13}]}", serializerService.Serialize(deserialized));
         }
+
+        [Fact]
+        public void DecimalSerialization()
+        {
+            var serializerService = this._serializationFixture.SerializerService;
+            var attributes = new List<Attribute>
+                {
+                    new DecimalAttribute() { Name = "double", Value = 13.0 },
+                    new LongAttribute() { Name = "long", Value = 13 }
+                };
+            Assert.Equal("[{\"name\":\"double\",\"value\":13.0}, {\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
+            
+        }
     }
 }
