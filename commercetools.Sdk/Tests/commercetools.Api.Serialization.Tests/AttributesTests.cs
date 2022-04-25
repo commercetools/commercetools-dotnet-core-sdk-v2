@@ -35,6 +35,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<bool>(attributes.Get("boolean").Value);
             Assert.IsType<long>(attributes.Get("integer").Value);
             Assert.IsType<decimal>(attributes.Get("double").Value);
+            Assert.IsType<decimal>(attributes.Get("double-zero").Value);
             Assert.IsType<ProductReference>(attributes.Get("reference").Value);
             Assert.IsAssignableFrom<ITypedMoney>(attributes.Get("money").Value);
             Assert.IsType<List<IAttribute>>(attributes.Get("nested").Value);
@@ -44,6 +45,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<LocalizedString>>(attributes.Get("set-ltext").Value);
             Assert.IsType<List<long>>(attributes.Get("set-integer").Value);
             Assert.IsType<List<decimal>>(attributes.Get("set-double").Value);
+            Assert.IsType<List<decimal>>(attributes.Get("set-double-zero").Value);
             Assert.IsType<List<IAttributePlainEnumValue>>(attributes.Get("set-enum").Value);
             Assert.IsType<List<IAttributeLocalizedEnumValue>>(attributes.Get("set-lenum").Value);
             Assert.IsType<List<ITypedMoney>>(attributes.Get("set-money").Value);
@@ -73,6 +75,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<BooleanAttribute>(attributes.Get<BooleanAttribute>("boolean"));
             Assert.IsType<LongAttribute>(attributes.Get<LongAttribute>("integer"));
             Assert.IsType<DecimalAttribute>(attributes.Get<DecimalAttribute>("double"));
+            Assert.IsType<DecimalAttribute>(attributes.Get<DecimalAttribute>("double-zero"));
             Assert.IsType<ReferenceAttribute>(attributes.Get<ReferenceAttribute>("reference"));
             Assert.IsType<MoneyAttribute>(attributes.Get<MoneyAttribute>("money"));
             Assert.IsType<NestedAttribute>(attributes.Get<NestedAttribute>("nested"));
@@ -82,6 +85,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SetAttribute<LocalizedString>>(attributes.Get<SetAttribute<LocalizedString>>("set-ltext"));
             Assert.IsType<SetAttribute<long>>(attributes.Get<SetAttribute<long>>("set-integer"));
             Assert.IsType<SetAttribute<decimal>>(attributes.Get<SetAttribute<decimal>>("set-double"));
+            Assert.IsType<SetAttribute<decimal>>(attributes.Get<SetAttribute<decimal>>("set-double-zero"));
             Assert.IsType<SetAttribute<IAttributePlainEnumValue>>(attributes.Get<SetAttribute<IAttributePlainEnumValue>>("set-enum"));
             Assert.IsType<SetAttribute<IAttributeLocalizedEnumValue>>(attributes.Get<SetAttribute<IAttributeLocalizedEnumValue>>("set-lenum"));
             Assert.IsType<SetAttribute<ITypedMoney>>(attributes.Get<SetAttribute<ITypedMoney>>("set-money"));
@@ -145,6 +149,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<BooleanAttribute>(attributes.Get("boolean").ToBooleanAttribute());
             Assert.IsType<LongAttribute>(attributes.Get("integer").ToLongAttribute());
             Assert.IsType<DecimalAttribute>(attributes.Get("double").ToDecimalAttribute());
+            Assert.IsType<DecimalAttribute>(attributes.Get("double-zero").ToDecimalAttribute());
             Assert.IsType<ReferenceAttribute>(attributes.Get("reference").ToReferenceAttribute());
             Assert.IsType<MoneyAttribute>(attributes.Get("money").ToMoneyAttribute());
             Assert.IsType<NestedAttribute>(attributes.Get("nested").ToNestedAttribute());
@@ -154,6 +159,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SetAttribute<LocalizedString>>(attributes.Get("set-ltext").ToSetLocalizedStringAttribute());
             Assert.IsType<SetAttribute<long>>(attributes.Get("set-integer").ToSetLongAttribute());
             Assert.IsType<SetAttribute<decimal>>(attributes.Get("set-double").ToSetDecimalAttribute());
+            Assert.IsType<SetAttribute<decimal>>(attributes.Get("set-double-zero").ToSetDecimalAttribute());
             Assert.IsType<SetAttribute<IAttributePlainEnumValue>>(attributes.Get("set-enum").ToSetPlainEnumAttribute());
             Assert.IsType<SetAttribute<IAttributeLocalizedEnumValue>>(attributes.Get("set-lenum").ToSetLocalizedEnumAttribute());
             Assert.IsType<SetAttribute<ITypedMoney>>(attributes.Get("set-money").ToSetMoneyAttribute());

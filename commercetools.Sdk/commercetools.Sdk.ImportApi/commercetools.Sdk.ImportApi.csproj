@@ -10,17 +10,12 @@
         <PackageTags>commercetools;dotnet-core;sdk</PackageTags>
         <Version>0.1.0</Version>
     </PropertyGroup>
-
+    
     <ItemGroup>
       <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
       <ProjectReference Include="..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
       <ProjectReference Include="..\commercetools.Base.Registration\commercetools.Base.Registration.csproj" />
       <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Generated\Client" />
-      <Folder Include="Generated\Models" />
     </ItemGroup>
 
 </Project>
