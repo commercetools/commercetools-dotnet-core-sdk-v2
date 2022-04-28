@@ -12,10 +12,12 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
     public class AttributeMapperTypeRetriever : MapperTypeRetriever<IAttribute>
     {
         private readonly ICultureValidator _cultureValidator;
+        private readonly ISerializationConfiguration _serializationConfiguration;
 
-        public AttributeMapperTypeRetriever(ICultureValidator cultureValidator)
+        public AttributeMapperTypeRetriever(ICultureValidator cultureValidator, ISerializationConfiguration serializationConfiguration = null)
         {
             this._cultureValidator = cultureValidator;
+            this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
         }
 
         public override Type GetTypeForToken(JsonElement element)
@@ -29,7 +31,14 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(bool);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    if (_serializationConfiguration.DeserializeNumberAttributeAsDecimalOnly)
+                    {
+                        tokenType = typeof(decimal);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    }
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(string);

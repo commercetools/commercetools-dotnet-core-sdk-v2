@@ -18,8 +18,13 @@ namespace commercetools.Sdk.Api.Extensions
             var t = attributes.FirstOrDefault(a => a.Name.Equals(name));
             if (t is LongAttribute l && typeof(T).IsAssignableFrom(typeof(DecimalAttribute)))
             {
-                var d = (DecimalAttribute)l;
-                return (T)(IAttribute)d;
+                var toD = (DecimalAttribute)l;
+                return (T)(IAttribute)toD;
+            }
+            if (t is DecimalAttribute d && typeof(T).IsAssignableFrom(typeof(LongAttribute)))
+            {
+                var toL = (LongAttribute)d;
+                return (T)(IAttribute)toL;
             }
             return (T)t;
         }

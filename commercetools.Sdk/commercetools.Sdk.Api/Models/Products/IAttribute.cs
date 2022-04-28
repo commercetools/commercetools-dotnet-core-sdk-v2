@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.ProductTypes;
 
@@ -54,8 +55,8 @@ namespace commercetools.Sdk.Api.Models.Products
         {
             switch (this)
             {
-                case DecimalAttribute t:
-                    return t;
+                case DecimalAttribute d:
+                    return d;
                 case LongAttribute l:
                     return (DecimalAttribute)l;
                 default:
@@ -65,7 +66,15 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public LongAttribute? ToLongAttribute()
         {
-            if (this is LongAttribute t) { return t; }
+            switch (this)
+            {
+                case DecimalAttribute d:
+                    return (LongAttribute)d;
+                case LongAttribute l:
+                    return l;
+                default:
+                    return null;
+            }
 
             return null;
         }
@@ -128,16 +137,36 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public SetAttribute<decimal>? ToSetDecimalAttribute()
         {
-            if (this is SetAttribute<decimal> t) { return t; }
-
-            return null;
+            switch (this)
+            {
+                case SetAttribute<decimal> l:
+                    return l;
+                case SetAttribute<long> d:
+                    return new SetAttribute<decimal>()
+                    {
+                        Name = d.Name,
+                        Value = d.GetValue().Select(Convert.ToDecimal).ToList()
+                    };
+                default:
+                    return null;
+            }
         }
 
         public SetAttribute<long>? ToSetLongAttribute()
         {
-            if (this is SetAttribute<long> t) { return t; }
-
-            return null;
+            switch (this)
+            {
+                case SetAttribute<long> l:
+                    return l;
+                case SetAttribute<decimal> d:
+                    return new SetAttribute<long>()
+                    {
+                        Name = d.Name,
+                        Value = d.GetValue().Select(Convert.ToInt64).ToList()
+                    };
+                default:
+                    return null;
+            }
         }
 
         public SetAttribute<IReference>? ToSetReferenceAttribute()
