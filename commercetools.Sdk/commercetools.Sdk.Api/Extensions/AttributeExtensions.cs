@@ -15,7 +15,13 @@ namespace commercetools.Sdk.Api.Extensions
 
         public static T Get<T>(this List<IAttribute> attributes, string name) where T : IAttribute
         {
-            return (T)attributes.FirstOrDefault(a => a.Name.Equals(name));
+            var t = attributes.FirstOrDefault(a => a.Name.Equals(name));
+            if (t is LongAttribute l && typeof(T).IsAssignableFrom(typeof(DecimalAttribute)))
+            {
+                var d = (DecimalAttribute)l;
+                return (T)(IAttribute)d;
+            }
+            return (T)t;
         }
 
         public static bool IsTextAttribute(this IAttribute attribute)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.ProductTypes;
@@ -51,9 +52,15 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public DecimalAttribute? ToDecimalAttribute()
         {
-            if (this is DecimalAttribute t) { return t; }
-
-            return null;
+            switch (this)
+            {
+                case DecimalAttribute t:
+                    return t;
+                case LongAttribute l:
+                    return (DecimalAttribute)l;
+                default:
+                    return null;
+            }
         }
 
         public LongAttribute? ToLongAttribute()

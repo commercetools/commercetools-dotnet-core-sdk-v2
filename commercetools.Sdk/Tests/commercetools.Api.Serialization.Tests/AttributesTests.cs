@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using commercetools.Sdk.Api.Models.Common;
@@ -5,6 +6,7 @@ using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
+using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 
 namespace commercetools.Api.Serialization.Tests
 {
@@ -74,12 +76,13 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<StringAttribute>(attributes.Get<StringAttribute>("datetime"));
             Assert.IsType<BooleanAttribute>(attributes.Get<BooleanAttribute>("boolean"));
             Assert.IsType<LongAttribute>(attributes.Get<LongAttribute>("integer"));
+            Assert.IsType<DecimalAttribute>(attributes.Get<DecimalAttribute>("integer"));
             Assert.IsType<DecimalAttribute>(attributes.Get<DecimalAttribute>("double"));
             Assert.IsType<DecimalAttribute>(attributes.Get<DecimalAttribute>("double-zero"));
             Assert.IsType<ReferenceAttribute>(attributes.Get<ReferenceAttribute>("reference"));
             Assert.IsType<MoneyAttribute>(attributes.Get<MoneyAttribute>("money"));
             Assert.IsType<NestedAttribute>(attributes.Get<NestedAttribute>("nested"));
-
+            
             Assert.IsType<SetAttribute<object>>(attributes.Get<SetAttribute<object>>("set-empty"));
             Assert.IsType<SetAttribute<string>>(attributes.Get<SetAttribute<string>>("set-text"));
             Assert.IsType<SetAttribute<LocalizedString>>(attributes.Get<SetAttribute<LocalizedString>>("set-ltext"));
@@ -95,7 +98,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SetAttribute<string>>(attributes.Get<SetAttribute<string>>("set-time"));
             Assert.IsType<SetAttribute<bool>>(attributes.Get<SetAttribute<bool>>("set-boolean"));
             Assert.IsType<SetAttribute<List<IAttribute>>>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested"));
-
+            
             Assert.IsType<string>(attributes.Get<StringAttribute>("text").GetValue());
             Assert.IsType<LocalizedString>(attributes.Get<LocalizedStringAttribute>("ltext").GetValue());
             Assert.IsAssignableFrom<IAttributePlainEnumValue>(attributes.Get<PlainEnumAttribute>("enum").GetValue());
@@ -105,11 +108,12 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<string>(attributes.Get<StringAttribute>("datetime").GetValue());
             Assert.IsType<bool>(attributes.Get<BooleanAttribute>("boolean").GetValue());
             Assert.IsType<long>(attributes.Get<LongAttribute>("integer").GetValue());
+            Assert.IsType<decimal>(attributes.Get<DecimalAttribute>("integer").GetValue());
             Assert.IsType<decimal>(attributes.Get<DecimalAttribute>("double").GetValue());
             Assert.IsType<ProductReference>(attributes.Get<ReferenceAttribute>("reference").GetValue());
             Assert.IsAssignableFrom<ITypedMoney>(attributes.Get<MoneyAttribute>("money").GetValue());
             Assert.IsType<List<IAttribute>>(attributes.Get<NestedAttribute>("nested").GetValue());
-
+            
             Assert.IsType<List<object>>(attributes.Get<SetAttribute<object>>("set-empty").GetValue());
             Assert.IsType<List<string>>(attributes.Get<SetAttribute<string>>("set-text").GetValue());
             Assert.IsType<List<LocalizedString>>(attributes.Get<SetAttribute<LocalizedString>>("set-ltext").GetValue());
@@ -124,7 +128,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<List<string>>(attributes.Get<SetAttribute<string>>("set-time").GetValue());
             Assert.IsType<List<bool>>(attributes.Get<SetAttribute<bool>>("set-boolean").GetValue());
             Assert.IsType<List<List<IAttribute>>>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue());
-
+            
             Assert.Equal("set-nested-enum", attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[0][0].Name);
             Assert.IsType<PlainEnumAttribute>(attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[0][0]);
             Assert.Equal("set-nested-reference", attributes.Get<SetAttribute<List<IAttribute>>>("set-nested").GetValue()[1][0].Name);
@@ -148,6 +152,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<StringAttribute>(attributes.Get("datetime").ToStringAttribute());
             Assert.IsType<BooleanAttribute>(attributes.Get("boolean").ToBooleanAttribute());
             Assert.IsType<LongAttribute>(attributes.Get("integer").ToLongAttribute());
+            Assert.IsType<DecimalAttribute>(attributes.Get("integer").ToDecimalAttribute());
             Assert.IsType<DecimalAttribute>(attributes.Get("double").ToDecimalAttribute());
             Assert.IsType<DecimalAttribute>(attributes.Get("double-zero").ToDecimalAttribute());
             Assert.IsType<ReferenceAttribute>(attributes.Get("reference").ToReferenceAttribute());
@@ -179,6 +184,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<string>(attributes.Get("datetime").ToStringAttribute()?.GetValue());
             Assert.IsType<bool>(attributes.Get("boolean").ToBooleanAttribute()?.GetValue());
             Assert.IsType<long>(attributes.Get("integer").ToLongAttribute()?.GetValue());
+            Assert.IsType<decimal>(attributes.Get("integer").ToDecimalAttribute()?.GetValue());
             Assert.IsType<decimal>(attributes.Get("double").ToDecimalAttribute()?.GetValue());
             Assert.IsType<ProductReference>(attributes.Get("reference").ToReferenceAttribute()?.GetValue());
             Assert.IsAssignableFrom<ITypedMoney>(attributes.Get("money").ToMoneyAttribute()?.GetValue());
@@ -236,10 +242,11 @@ namespace commercetools.Api.Serialization.Tests
             var serializerService = this._serializationFixture.SerializerService;
             var attributes = new List<Attribute>
                 {
-                    new DecimalAttribute() { Name = "double", Value = 13.0 },
+                    new DecimalAttribute() { Name = "decimal", Value = 13m },
+                    new DecimalAttribute() { Name = "double", Value = 13.0m },
                     new LongAttribute() { Name = "long", Value = 13 }
                 };
-            Assert.Equal("[{\"name\":\"double\",\"value\":13.0}, {\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
+            Assert.Equal("[{\"name\":\"decimal\",\"value\":13.0}{\"name\":\"double\",\"value\":13.0},{\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
             
         }
     }
