@@ -243,10 +243,12 @@ namespace commercetools.Api.Serialization.Tests
             var attributes = new List<Attribute>
                 {
                     new DecimalAttribute() { Name = "decimal", Value = 13m },
-                    new DecimalAttribute() { Name = "double", Value = 13.0m },
+                    new DecimalAttribute() { Name = "decimal-zero", Value = 13.0m },
+                    new DecimalAttribute() { Name = "double", Value = 13d },
+                    new DecimalAttribute() { Name = "double-zero", Value = 13.0d },
                     new LongAttribute() { Name = "long", Value = 13 }
                 };
-            Assert.Equal("[{\"name\":\"decimal\",\"value\":13.0}{\"name\":\"double\",\"value\":13.0},{\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
+            Assert.Equal("[{\"name\":\"decimal\",\"value\":13},{\"name\":\"decimal-zero\",\"value\":13.0},{\"name\":\"double\",\"value\":13},{\"name\":\"double-zero\",\"value\":13},{\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
             
         }
     }
