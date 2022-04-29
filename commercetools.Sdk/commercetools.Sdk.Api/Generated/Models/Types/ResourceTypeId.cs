@@ -48,6 +48,12 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("order-delivery")]
         OrderDelivery,
 
+        [Description("order-parcel")]
+        OrderParcel,
+
+        [Description("order-return-item")]
+        OrderReturnItem,
+
         [Description("payment")]
         Payment,
 
@@ -134,6 +140,12 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId OrderDelivery = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.OrderDelivery, JsonName = "order-delivery" };
 
+        public static IResourceTypeId OrderParcel = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.OrderParcel, JsonName = "order-parcel" };
+
+        public static IResourceTypeId OrderReturnItem = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.OrderReturnItem, JsonName = "order-return-item" };
+
         public static IResourceTypeId Payment = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Payment, JsonName = "payment" };
 
@@ -184,6 +196,8 @@ namespace commercetools.Sdk.Api.Models.Types
                  Order ,
                  OrderEdit ,
                  OrderDelivery ,
+                 OrderParcel ,
+                 OrderReturnItem ,
                  Payment ,
                  PaymentInterfaceInteraction ,
                  ProductPrice ,
