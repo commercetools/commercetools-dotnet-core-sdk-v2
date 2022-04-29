@@ -23,7 +23,8 @@ namespace commercetools.Sdk.Api
         public static IHttpClientBuilder UseCommercetoolsApi(this IServiceCollection services,
             IConfiguration configuration,
             string clientName = DefaultClientNames.Api,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
+            ISerializationConfiguration serializationConfiguration = null)
         {
             var clients = new List<string>()
             {
@@ -36,14 +37,15 @@ namespace commercetools.Sdk.Api
                 services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
             }
             return services.UseCommercetoolsApi(configuration, clients,
-                tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
+                tokenProviderSupplier ?? CreateDefaultTokenProvider, serializationConfiguration).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
+            ISerializationConfiguration serializationConfiguration = null)
         {
-            services.UseCommercetoolsApiSerialization();
+            services.UseCommercetoolsApiSerialization(serializationConfiguration);
 
             clients.ToList().ForEach(clientName =>
             {
@@ -58,10 +60,12 @@ namespace commercetools.Sdk.Api
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
 
-        public static void UseCommercetoolsApiSerialization(this IServiceCollection services)
+        public static void UseCommercetoolsApiSerialization(this IServiceCollection services,
+            ISerializationConfiguration serializationConfiguration = null)
         {
             services.UseRegistration();
             services.UseSerialization();
+            services.AddSingleton(serializationConfiguration ?? SerializationConfiguration.DefaultConfig);
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
             services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
             services.AddSingleton<AttributeTypeRetriever>();

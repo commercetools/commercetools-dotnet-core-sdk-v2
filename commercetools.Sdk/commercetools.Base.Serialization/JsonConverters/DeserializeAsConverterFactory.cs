@@ -10,7 +10,7 @@ namespace commercetools.Base.Serialization.JsonConverters
     public class DeserializeAsConverterFactory
         : JsonConverterFactory
     {
-        protected static ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
+        protected ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         public DeserializeAsConverterFactory(
             JsonNamingPolicy namingPolicy,

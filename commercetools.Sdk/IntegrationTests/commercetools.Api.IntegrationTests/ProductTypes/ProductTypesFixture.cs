@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Models.Common;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.ProductTypes
@@ -15,6 +18,34 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             productTypeDraft.Key = TestingUtility.RandomString();
             productTypeDraft.Name = TestingUtility.RandomString();
             productTypeDraft.Description = TestingUtility.RandomString();
+            productTypeDraft.Attributes = new List<IAttributeDefinitionDraft>()
+            {
+                new AttributeDefinitionDraft()
+                {
+                    Name = "number",
+                    Type = new AttributeNumberType(),
+                    IsRequired = false,
+                    IsSearchable = true,
+                    Label = new LocalizedString() { { "en", "number" } }
+                },
+                new AttributeDefinitionDraft()
+                {
+                    Name = "integer",
+                    Type = new AttributeNumberType(),
+                    IsRequired = false,
+                    IsSearchable = true,
+                    Label = new LocalizedString() { { "en", "integer" } }
+                },
+                new AttributeDefinitionDraft()
+                {
+                    Name = "text",
+                    Type = new AttributeTextType(),
+                    IsRequired = false,
+                    IsSearchable = true,
+                    Label = new LocalizedString() { { "en", "text" } }
+                }
+
+            };
             return productTypeDraft;
         }
 
@@ -22,7 +53,12 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
 
         public static async Task<IProductType> CreateProductType(IClient client, ProductTypeDraft productTypeDraft)
         {
-            return await client.WithApi().WithProjectKey(DefaultProjectKey)
+            return await CreateProductType(client.WithProject(DefaultProjectKey), productTypeDraft);
+        }
+
+        public static async Task<IProductType> CreateProductType(ProjectApiRoot apiRoot, ProductTypeDraft productTypeDraft)
+        {
+            return await apiRoot
                 .ProductTypes()
                 .Post(productTypeDraft)
                 .ExecuteAsync();
@@ -30,9 +66,14 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
 
         public static async Task DeleteProductType(IClient client, IProductType productType)
         {
+            await DeleteProductType(client.WithProject(DefaultProjectKey), productType);
+        }
+
+        public static async Task DeleteProductType(ProjectApiRoot apiRoot, IProductType productType)
+        {
             try
             {
-                await client.WithApi().WithProjectKey(DefaultProjectKey)
+                await apiRoot
                     .ProductTypes()
                     .WithId(productType.Id)
                     .Delete()
@@ -45,13 +86,17 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             }
         }
 
-        public static async Task<IProductType> CreateOrRetrieveProductType(IClient client, ProductTypeDraft productTypeDraft)
+        public static async Task<IProductType> CreateOrRetrieveProductType(IClient client,
+            ProductTypeDraft productTypeDraft)
         {
-            var projectKey = GenericFixture.DefaultProjectKey;
+            return await CreateOrRetrieveProductType(client.WithProject(DefaultProjectKey), productTypeDraft);
+        }
+        public static async Task<IProductType> CreateOrRetrieveProductType(ProjectApiRoot apiRoot, ProductTypeDraft productTypeDraft)
+        {
             IProductType productType = null;
             try
             {
-                productType = await client.WithApi().WithProjectKey(projectKey)
+                productType = await apiRoot
                     .ProductTypes()
                     .WithKey(productTypeDraft.Key)
                     .Get()
@@ -59,8 +104,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             }
             catch (NotFoundException)
             {
-                productType = await client.WithApi()
-                    .WithProjectKey(projectKey)
+                productType = await apiRoot
                     .ProductTypes()
                     .Post(productTypeDraft).ExecuteAsync();
             }
@@ -68,6 +112,12 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             return productType;
         }
         #endregion
+
+        public static async Task WithProductType(ProjectApiRoot apiRoot, Func<IProductType, Task> func)
+        {
+            await WithAsync(apiRoot, new ProductTypeDraft(), DefaultProductTypeDraft, func, CreateProductType, DeleteProductType);
+        }
+
         public static async Task WithProductType(IClient client, Func<IProductType, Task> func)
         {
             await WithAsync(client, new ProductTypeDraft(), DefaultProductTypeDraft, func, CreateProductType, DeleteProductType);

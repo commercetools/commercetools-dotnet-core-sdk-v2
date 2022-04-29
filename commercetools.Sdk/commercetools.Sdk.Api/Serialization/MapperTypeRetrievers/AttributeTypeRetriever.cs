@@ -12,10 +12,12 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
     public class AttributeTypeRetriever
     {
         private readonly ICultureValidator _cultureValidator;
+        private readonly ISerializationConfiguration _serializationConfiguration;
 
-        public AttributeTypeRetriever(ICultureValidator cultureValidator)
+        public AttributeTypeRetriever(ICultureValidator cultureValidator, ISerializationConfiguration serializationConfiguration = null)
         {
             this._cultureValidator = cultureValidator;
+            this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
         }
 
         private Type GetTypeForToken(JsonElement element)
@@ -29,7 +31,14 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(BooleanAttribute);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(LongAttribute) : typeof(DecimalAttribute);
+                    if (_serializationConfiguration.DeserializeNumberAttributeAsDecimalOnly)
+                    {
+                        tokenType = typeof(DecimalAttribute);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(LongAttribute) : typeof(DecimalAttribute);
+                    }
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(StringAttribute);
@@ -80,7 +89,14 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(bool);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    if (_serializationConfiguration.DeserializeNumberAttributeAsDecimalOnly)
+                    {
+                        tokenType = typeof(decimal);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    }
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(string);

@@ -26,6 +26,11 @@ namespace commercetools.Api.IntegrationTests
 
             return ran;
         }
+        public static decimal RandomDecimal()
+        {
+            return Convert.ToDecimal(Random.NextDouble());
+        }
+        
         public static string RandomSortOrder()
         {
             const int append = 5; //hack to not have a trailing 0 which is not accepted in sphere
