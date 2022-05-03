@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntryReference : IReference
     {
         IInventoryEntry Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

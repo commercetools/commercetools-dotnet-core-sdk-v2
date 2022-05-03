@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountReference : IReference
     {
         ICartDiscount Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

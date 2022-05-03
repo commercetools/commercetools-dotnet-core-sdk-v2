@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     public partial interface IShippingMethodReference : IReference
     {
         IShippingMethod Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

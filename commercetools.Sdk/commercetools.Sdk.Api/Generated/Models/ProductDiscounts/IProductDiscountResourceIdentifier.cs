@@ -7,5 +7,8 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountResourceIdentifier))]
     public partial interface IProductDiscountResourceIdentifier : IResourceIdentifier
     {
+        new string Id { get; set; }
+
+        new string Key { get; set; }
     }
 }

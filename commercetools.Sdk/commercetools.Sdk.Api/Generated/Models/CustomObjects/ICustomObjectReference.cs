@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
     public partial interface ICustomObjectReference : IReference
     {
         ICustomObject Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }
