@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Common
 
         public IMoneyType Type { get; set; }
 
-        public int? FractionDigits { get; set; }
+        public int FractionDigits { get; set; }
 
         public long PreciseAmount { get; set; }
         public HighPrecisionMoneyDraft()

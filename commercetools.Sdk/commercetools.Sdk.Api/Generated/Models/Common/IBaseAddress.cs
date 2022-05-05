@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
         string Key { get; set; }
 
+        string Country { get; set; }
+
         string Title { get; set; }
 
         string Salutation { get; set; }
@@ -31,8 +33,6 @@ namespace commercetools.Sdk.Api.Models.Common
         string Region { get; set; }
 
         string State { get; set; }
-
-        string Country { get; set; }
 
         string Company { get; set; }
 

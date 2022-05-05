@@ -7,5 +7,7 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IHighPrecisionMoney : ITypedMoney
     {
         long PreciseAmount { get; set; }
+
+        new int FractionDigits { get; set; }
     }
 }

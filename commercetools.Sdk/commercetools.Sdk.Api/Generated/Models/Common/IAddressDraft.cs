@@ -8,5 +8,9 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IAddressDraft : IBaseAddress
     {
         ICustomFieldsDraft Custom { get; set; }
+
+        new string Id { get; set; }
+
+        new string Key { get; set; }
     }
 }

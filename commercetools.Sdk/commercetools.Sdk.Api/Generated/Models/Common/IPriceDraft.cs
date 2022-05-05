@@ -23,10 +23,10 @@ namespace commercetools.Sdk.Api.Models.Common
 
         DateTime? ValidUntil { get; set; }
 
-        ICustomFieldsDraft Custom { get; set; }
+        IDiscountedPriceDraft Discounted { get; set; }
 
         List<IPriceTierDraft> Tiers { get; set; }
 
-        IDiscountedPriceDraft Discounted { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
     }
 }

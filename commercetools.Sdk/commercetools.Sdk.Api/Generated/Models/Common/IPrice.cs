@@ -27,8 +27,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
         IDiscountedPrice Discounted { get; set; }
 
-        ICustomFields Custom { get; set; }
-
         List<IPriceTier> Tiers { get; set; }
+
+        ICustomFields Custom { get; set; }
     }
 }
