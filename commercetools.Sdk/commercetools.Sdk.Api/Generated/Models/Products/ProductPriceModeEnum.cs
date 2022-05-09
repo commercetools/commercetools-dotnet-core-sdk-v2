@@ -1,0 +1,50 @@
+using System.ComponentModel;
+using System.Linq;
+using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
+namespace commercetools.Sdk.Api.Models.Products
+{
+    public enum ProductPriceModeEnum
+    {
+        [Description("Embedded")]
+        Embedded,
+
+        [Description("Standalone")]
+        Standalone
+    }
+
+    public class ProductPriceModeEnumWrapper : IProductPriceModeEnum
+    {
+        public string JsonName { get; internal set; }
+        public ProductPriceModeEnum? Value { get; internal set; }
+        public override string ToString()
+        {
+            return JsonName;
+        }
+    }
+
+    [EnumInterfaceCreator(typeof(IProductPriceModeEnum), "FindEnum")]
+    public interface IProductPriceModeEnum : IJsonName
+    {
+        public static IProductPriceModeEnum Embedded = new ProductPriceModeEnumWrapper
+        { Value = ProductPriceModeEnum.Embedded, JsonName = "Embedded" };
+
+        public static IProductPriceModeEnum Standalone = new ProductPriceModeEnumWrapper
+        { Value = ProductPriceModeEnum.Standalone, JsonName = "Standalone" };
+
+        ProductPriceModeEnum? Value { get; }
+
+        static IProductPriceModeEnum[] Values()
+        {
+            return new[]
+            {
+                 Embedded ,
+                 Standalone
+             };
+        }
+        static IProductPriceModeEnum FindEnum(string value)
+        {
+            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new ProductPriceModeEnumWrapper() { JsonName = value };
+        }
+    }
+}

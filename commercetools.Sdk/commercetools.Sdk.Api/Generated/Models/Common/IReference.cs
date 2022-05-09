@@ -24,6 +24,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("review", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewReference))]
     [SubTypeDiscriminator("shipping-method", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference))]
     [SubTypeDiscriminator("shopping-list", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference))]
+    [SubTypeDiscriminator("standalone-price", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference))]
     [SubTypeDiscriminator("state", typeof(commercetools.Sdk.Api.Models.States.StateReference))]
     [SubTypeDiscriminator("store", typeof(commercetools.Sdk.Api.Models.Stores.StoreReference))]
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference))]

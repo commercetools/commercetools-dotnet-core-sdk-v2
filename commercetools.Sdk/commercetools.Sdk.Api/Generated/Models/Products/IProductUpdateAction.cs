@@ -42,6 +42,7 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("setMetaDescription", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaDescriptionAction))]
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaKeywordsAction))]
     [SubTypeDiscriminator("setMetaTitle", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaTitleAction))]
+    [SubTypeDiscriminator("setPriceMode", typeof(commercetools.Sdk.Api.Models.Products.ProductSetPriceModeAction))]
     [SubTypeDiscriminator("setPrices", typeof(commercetools.Sdk.Api.Models.Products.ProductSetPricesAction))]
     [SubTypeDiscriminator("setProductPriceCustomField", typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductPriceCustomFieldAction))]
     [SubTypeDiscriminator("setProductPriceCustomType", typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductPriceCustomTypeAction))]

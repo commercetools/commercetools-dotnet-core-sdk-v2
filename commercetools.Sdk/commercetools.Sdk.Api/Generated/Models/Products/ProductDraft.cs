@@ -41,5 +41,7 @@ namespace commercetools.Sdk.Api.Models.Products
         public IStateResourceIdentifier State { get; set; }
 
         public bool? Publish { get; set; }
+
+        public IProductPriceModeEnum PriceMode { get; set; }
     }
 }

@@ -32,6 +32,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Extensions;
 using commercetools.Sdk.Api.Client.RequestBuilders.ApiClients;
 using commercetools.Sdk.Api.Client.RequestBuilders.Stores;
 using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
+using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
@@ -221,6 +222,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder InStoreKeyWithStoreKeyValue(string storeKey)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, storeKey);
+        }
+
+        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
+        {
+            return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }
