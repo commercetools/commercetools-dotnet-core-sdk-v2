@@ -9,11 +9,11 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<ICustomObject> Results { get; set; }
     }

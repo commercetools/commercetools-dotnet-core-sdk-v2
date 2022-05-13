@@ -27,6 +27,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.RequestUrl = $"/{ProjectKey}/custom-objects/{Container}";
         }
 
+        public List<string> GetSort()
+        {
+            return this.GetQueryParam("sort");
+        }
+
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
@@ -37,6 +42,26 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             return this.GetQueryParam("expand");
         }
 
+        public List<string> GetLimit()
+        {
+            return this.GetQueryParam("limit");
+        }
+
+        public List<string> GetOffset()
+        {
+            return this.GetQueryParam("offset");
+        }
+
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
+        public ByProjectKeyCustomObjectsByContainerGet WithSort(string sort)
+        {
+            return this.AddQueryParam("sort", sort);
+        }
+
         public ByProjectKeyCustomObjectsByContainerGet WithWhere(string where)
         {
             return this.AddQueryParam("where", where);
@@ -45,6 +70,21 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
         public ByProjectKeyCustomObjectsByContainerGet WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyCustomObjectsByContainerGet WithLimit(int limit)
+        {
+            return this.AddQueryParam("limit", limit.ToString());
+        }
+
+        public ByProjectKeyCustomObjectsByContainerGet WithOffset(int offset)
+        {
+            return this.AddQueryParam("offset", offset.ToString());
+        }
+
+        public ByProjectKeyCustomObjectsByContainerGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyCustomObjectsByContainerGet WithPredicateVar(string varName, string predicateVar)
