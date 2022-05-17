@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Models.Messages;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -453,6 +454,39 @@ namespace commercetools.Api.Serialization.Tests
                 };
             Assert.Equal("[{\"name\":\"decimal\",\"value\":13},{\"name\":\"decimal-zero\",\"value\":13.0},{\"name\":\"double\",\"value\":13},{\"name\":\"double-zero\",\"value\":13},{\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
 
+        }
+        
+        [Fact]
+        public void testAttributeSerialization()
+        {
+            var m = new ProductPublishedMessage()
+            {
+                ProductProjection = new ProductProjection()
+                {
+                    MasterVariant = new ProductVariant()
+                    {
+                        Attributes = new List<IAttribute>()
+                        {
+                            new LocalizedEnumAttribute()
+                            {
+                                Name = "product_classification",
+                                Value = new AttributeLocalizedEnumValue()
+                                {
+                                    Key = "NONE",
+                                    Label = new LocalizedString()
+                                    {
+                                        {"fr", ""},
+                                        {"de", "Regular product"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            var json = this._serializationFixture.SerializerService.Serialize(m);
+            
+            Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
         }
     }
 }
