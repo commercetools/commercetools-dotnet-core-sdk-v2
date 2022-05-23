@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListReference : IReference
     {
         IShoppingList Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

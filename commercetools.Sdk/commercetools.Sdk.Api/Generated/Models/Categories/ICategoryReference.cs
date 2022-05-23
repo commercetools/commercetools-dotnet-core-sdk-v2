@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategoryReference : IReference
     {
         ICategory Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

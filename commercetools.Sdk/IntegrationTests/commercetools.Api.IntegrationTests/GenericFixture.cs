@@ -211,7 +211,7 @@ namespace commercetools.Api.IntegrationTests
                 await deleteFunc(client, updatedResource != null ? updatedResource : resource);
             }
         }
-        
+
         public static async Task AssertEventuallyAsync(Func<Task> runnableBlock, int maxWaitTimeSecond = 300,
             int waitBeforeRetryMilliseconds = 100)
         {

@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IProductTypeReference : IReference
     {
         IProductType Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

@@ -35,14 +35,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetDataErasure()
-        {
-            return this.GetQueryParam("dataErasure");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
+        }
+
+        public List<string> GetDataErasure()
+        {
+            return this.GetQueryParam("dataErasure");
         }
 
         public ByProjectKeyCustomObjectsByContainerByKeyDelete WithVersion(long version)
@@ -50,14 +50,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             return this.AddQueryParam("version", version.ToString());
         }
 
-        public ByProjectKeyCustomObjectsByContainerByKeyDelete WithDataErasure(bool dataErasure)
-        {
-            return this.AddQueryParam("dataErasure", dataErasure.ToString());
-        }
-
         public ByProjectKeyCustomObjectsByContainerByKeyDelete WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyCustomObjectsByContainerByKeyDelete WithDataErasure(bool dataErasure)
+        {
+            return this.AddQueryParam("dataErasure", dataErasure.ToString());
         }
 
 

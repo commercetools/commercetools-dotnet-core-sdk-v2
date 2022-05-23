@@ -86,7 +86,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 .ExecuteAsync();
             return resource;
         }
-        
+
         public static async Task<IProduct> CreateProduct(IClient client, ProductDraft productDraft)
         {
             return await CreateProduct(client.WithProject(DefaultProjectKey), productDraft);
@@ -96,7 +96,7 @@ namespace commercetools.Api.IntegrationTests.Products
         {
             await DeleteProduct(client.WithProject(DefaultProjectKey), product);
         }
-        
+
         public static async Task DeleteProduct(ProjectApiRoot apiRoot, IProduct product)
         {
             try
@@ -160,7 +160,7 @@ namespace commercetools.Api.IntegrationTests.Products
         {
             await WithProduct(client.WithProject(DefaultProjectKey), func);
         }
-        
+
         public static async Task WithProduct(ProjectApiRoot apiRoot, Func<IProduct, Task> func)
         {
             await WithProductType(apiRoot, async productType =>

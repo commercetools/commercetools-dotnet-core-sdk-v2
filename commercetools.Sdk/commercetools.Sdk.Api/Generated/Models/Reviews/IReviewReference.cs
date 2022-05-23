@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewReference : IReference
     {
         IReview Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

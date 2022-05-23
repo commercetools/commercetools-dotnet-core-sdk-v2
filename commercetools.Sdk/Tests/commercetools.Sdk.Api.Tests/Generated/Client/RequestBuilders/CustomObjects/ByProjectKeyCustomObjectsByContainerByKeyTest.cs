@@ -56,10 +56,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomObjects
                    .CustomObjects()
                    .WithContainerAndKey("test_container", "test_key")
                    .Delete()
-                   .WithDataErasure(true)
+                   .WithExpand("expand")
                    .Build(),
                    "Delete",
-                   "/test_projectKey/custom-objects/test_container/test_key?dataErasure=true",
+                   "/test_projectKey/custom-objects/test_container/test_key?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -67,10 +67,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomObjects
                    .CustomObjects()
                    .WithContainerAndKey("test_container", "test_key")
                    .Delete()
-                   .WithExpand("expand")
+                   .WithDataErasure(true)
                    .Build(),
                    "Delete",
-                   "/test_projectKey/custom-objects/test_container/test_key?expand=expand",
+                   "/test_projectKey/custom-objects/test_container/test_key?dataErasure=true",
                },
                new Object[] {
                    ApiRoot

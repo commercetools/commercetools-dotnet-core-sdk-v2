@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IOrderEditReference : IReference
     {
         IOrderEdit Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

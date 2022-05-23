@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeReference : IReference
     {
         IDiscountCode Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

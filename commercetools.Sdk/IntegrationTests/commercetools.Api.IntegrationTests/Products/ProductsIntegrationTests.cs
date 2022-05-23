@@ -64,16 +64,17 @@ namespace commercetools.Api.IntegrationTests.Products
         {
             await WithProduct(_projectApiRoot,
                 draft => DefaultProductDraftWithMultipleVariants(draft, 2),
-                async product =>
+                product =>
                 {
                     Assert.IsType<DecimalAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("number"));
                     Assert.IsType<LongAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("integer"));
                     Assert.IsType<decimal>(product.MasterData.Staged.MasterVariant.Attributes.Get("number").Value);
                     Assert.IsType<long>(product.MasterData.Staged.MasterVariant.Attributes.Get("integer").Value);
+                    return Task.CompletedTask;
                 });
         }
-        
-        
+
+
         [Fact]
         public async Task DeserializeNumberAttributeNumberOnly()
         {
@@ -87,20 +88,21 @@ namespace commercetools.Api.IntegrationTests.Products
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client", serializationConfiguration: new SerializationConfiguration() { DeserializeNumberAttributeAsDecimalOnly = true});
+            services.UseCommercetoolsApi(configuration, "Client", serializationConfiguration: new SerializationConfiguration() { DeserializeNumberAttributeAsDecimalOnly = true });
             var serviceProvider = services.BuildServiceProvider();
             var projectApiRoot = serviceProvider.GetService<ProjectApiRoot>();
 
-            
+
             await WithProduct(projectApiRoot,
                 draft => DefaultProductDraftWithMultipleVariants(draft, 2),
-                async product =>
+                product =>
                 {
                     Assert.IsType<DecimalAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("number")
-                        .ToDecimalAttribute());
+                       .ToDecimalAttribute());
                     Assert.IsType<DecimalAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("integer"));
                     Assert.IsType<decimal>(product.MasterData.Staged.MasterVariant.Attributes.Get("number").Value);
                     Assert.IsType<decimal>(product.MasterData.Staged.MasterVariant.Attributes.Get("integer").Value);
+                    return Task.CompletedTask;
                 });
         }
     }

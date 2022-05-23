@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerReference : IReference
     {
         ICustomer Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

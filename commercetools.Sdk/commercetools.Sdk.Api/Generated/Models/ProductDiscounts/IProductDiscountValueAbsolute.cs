@@ -8,6 +8,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueAbsolute))]
     public partial interface IProductDiscountValueAbsolute : IProductDiscountValue
     {
-        List<ITypedMoney> Money { get; set; }
+        List<ICentPrecisionMoney> Money { get; set; }
     }
 }

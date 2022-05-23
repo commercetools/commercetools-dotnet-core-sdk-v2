@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentReference : IReference
     {
         IPayment Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }

@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartReference : IReference
     {
         ICart Obj { get; set; }
+
+        new string Id { get; set; }
     }
 }
