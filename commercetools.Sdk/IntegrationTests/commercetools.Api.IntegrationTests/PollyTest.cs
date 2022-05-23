@@ -1,10 +1,7 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api;
-using commercetools.Sdk.Api.Models.Errors;
-using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -17,7 +14,7 @@ namespace commercetools.Api.IntegrationTests
     public class PollyTest
     {
         [Fact]
-        public async Task polly()
+        public Task polly()
         {
             var services = new ServiceCollection();
             var configuration = new ConfigurationBuilder().
@@ -44,11 +41,12 @@ namespace commercetools.Api.IntegrationTests
 
             var queuePolicy = Policy.Bulkhead(20);
             registry.Add("queuePolicy", queuePolicy);
-            
+
             services.UseCommercetoolsApi(configuration, "Client")
                 .AddPolicyHandlerFromRegistry("retryPolicy")
                 .AddPolicyHandlerFromRegistry("timeoutPolicy")
                 .AddPolicyHandlerFromRegistry("queuePolicy");
+            return Task.CompletedTask;
         }
     }
 }

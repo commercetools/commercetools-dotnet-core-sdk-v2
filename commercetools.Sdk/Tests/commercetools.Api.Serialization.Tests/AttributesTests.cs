@@ -455,7 +455,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("[{\"name\":\"decimal\",\"value\":13},{\"name\":\"decimal-zero\",\"value\":13.0},{\"name\":\"double\",\"value\":13},{\"name\":\"double-zero\",\"value\":13},{\"name\":\"long\",\"value\":13}]", serializerService.Serialize(attributes));
 
         }
-        
+
         [Fact]
         public void testAttributeSerialization()
         {
@@ -485,7 +485,7 @@ namespace commercetools.Api.Serialization.Tests
                 }
             };
             var json = this._serializationFixture.SerializerService.Serialize(m);
-            
+
             Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
         }
     }
