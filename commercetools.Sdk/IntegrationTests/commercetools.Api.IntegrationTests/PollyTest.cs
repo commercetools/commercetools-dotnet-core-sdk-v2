@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
-using commercetools.Sdk.Api.Models.Errors;
-using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -17,7 +18,7 @@ namespace commercetools.Api.IntegrationTests
     public class PollyTest
     {
         [Fact]
-        public async Task polly()
+        public void polly()
         {
             var services = new ServiceCollection();
             var configuration = new ConfigurationBuilder().
@@ -44,11 +45,45 @@ namespace commercetools.Api.IntegrationTests
 
             var queuePolicy = Policy.Bulkhead(20);
             registry.Add("queuePolicy", queuePolicy);
-            
+
             services.UseCommercetoolsApi(configuration, "Client")
                 .AddPolicyHandlerFromRegistry("retryPolicy")
                 .AddPolicyHandlerFromRegistry("timeoutPolicy")
                 .AddPolicyHandlerFromRegistry("queuePolicy");
+        }
+
+        [Fact]
+        public async Task proxy()
+        {
+            var services = new ServiceCollection();
+            var configuration = new ConfigurationBuilder().
+                AddJsonFile("appsettings.test.Development.json", true).
+                AddEnvironmentVariables().
+                AddUserSecrets<ServiceProviderFixture>().
+                AddEnvironmentVariables("CTP_").
+                Build();
+
+            services.UseCommercetoolsApi(configuration, "Client")
+                .ConfigureHttpMessageHandlerBuilder(builder =>
+                {
+                    builder.PrimaryHandler = new HttpClientHandler
+                    {
+                        AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip,
+                        Proxy = new WebProxy("http://localhost:8080")
+                    };
+                });
+
+            var collection = services.BuildServiceProvider();
+            var client = collection.GetService<IClient>();
+
+            Assert.IsAssignableFrom<IClient>(client);
+
+            var exception = await Assert.ThrowsAsync<HttpRequestException>(testCode: async () =>
+            {
+                await client
+                    .ExecuteAsync<object>(new HttpRequestMessage(HttpMethod.Get, "https://www.example.com"));
+            });
+            Assert.Equal("Connection refused", exception.Message); 
         }
     }
 }
