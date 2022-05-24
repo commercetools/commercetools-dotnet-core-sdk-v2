@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Domain;
+using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
@@ -70,6 +72,36 @@ namespace commercetools.Sdk.Api.Tests
             //assert
             Assert.NotNull(validationEx);
             Assert.IsType<ValidationException>(validationEx);
+        }
+
+        [Fact]
+        public void ExistingToken()
+        {
+            var configuration = new ConfigurationBuilder().
+                AddJsonFile("appsettings.test.json", true).
+                Build();
+
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApiSerialization();
+            
+            s.UseCommercetoolsApi(configuration, "Test1", (clientName, config, serviceProvider) => new ExistingTokenProvider(new Token() { AccessToken = "abc" }));
+            var p = s.BuildServiceProvider();
+            var client = p.GetService<IClient>();
+            Assert.IsAssignableFrom<IClient>(client);
+        }
+
+        private class ExistingTokenProvider: ITokenProvider
+        {
+            public Token Token { get; }
+            private IClientConfiguration _configuration { get; }
+            public ExistingTokenProvider(Token token, IClientConfiguration configuration = null)
+            {
+                Token = token;
+                _configuration = configuration ?? new ClientConfiguration();
+            }
+
+            public TokenFlow TokenFlow => TokenFlow.ClientCredentials;
+            public IClientConfiguration ClientConfiguration { get => _configuration; set => throw new InvalidOperationException("client configuration is readonly"); }
         }
     }
 }
