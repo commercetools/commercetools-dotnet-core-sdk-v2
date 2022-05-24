@@ -9,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupSetCustomTypeAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupSetKeyAction))]
-    public partial interface ICustomerGroupUpdateAction
+    public partial interface ICustomerGroupUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICustomerGroupUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

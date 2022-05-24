@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionUpdate))]
-    public partial interface IProductSelectionUpdate
+    public partial interface IProductSelectionUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IProductSelectionUpdate, IProductSelectionUpdateAction>
     {
-        long Version { get; set; }
-
-        List<IProductSelectionUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<IProductSelectionUpdateAction> Actions { get; set; }
     }
 }

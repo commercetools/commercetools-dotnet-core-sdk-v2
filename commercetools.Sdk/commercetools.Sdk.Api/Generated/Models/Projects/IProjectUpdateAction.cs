@@ -18,8 +18,8 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeShoppingListsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
-    public partial interface IProjectUpdateAction
+    public partial interface IProjectUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProjectUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

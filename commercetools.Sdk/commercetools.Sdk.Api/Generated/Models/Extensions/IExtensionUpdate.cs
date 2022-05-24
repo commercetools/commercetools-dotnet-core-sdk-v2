@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Extensions
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionUpdate))]
-    public partial interface IExtensionUpdate
+    public partial interface IExtensionUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IExtensionUpdate, IExtensionUpdateAction>
     {
-        long Version { get; set; }
-
-        List<IExtensionUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<IExtensionUpdateAction> Actions { get; set; }
     }
 }

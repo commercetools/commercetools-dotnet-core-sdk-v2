@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Net.Sockets;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
@@ -83,7 +81,7 @@ namespace commercetools.Api.IntegrationTests
                 await client
                     .ExecuteAsync<object>(new HttpRequestMessage(HttpMethod.Get, "https://www.example.com"));
             });
-            Assert.Equal("Connection refused", exception.Message); 
+            Assert.Equal("Connection refused", exception.Message);
         }
     }
 }

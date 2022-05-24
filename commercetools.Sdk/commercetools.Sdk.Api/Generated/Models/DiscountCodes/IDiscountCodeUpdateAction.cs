@@ -18,8 +18,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidUntilAction))]
-    public partial interface IDiscountCodeUpdateAction
+    public partial interface IDiscountCodeUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IDiscountCodeUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

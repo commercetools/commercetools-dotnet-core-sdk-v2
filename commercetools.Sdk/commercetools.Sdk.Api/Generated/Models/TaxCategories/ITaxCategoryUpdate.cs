@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryUpdate))]
-    public partial interface ITaxCategoryUpdate
+    public partial interface ITaxCategoryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ITaxCategoryUpdate, ITaxCategoryUpdateAction>
     {
-        long Version { get; set; }
-
-        List<ITaxCategoryUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<ITaxCategoryUpdateAction> Actions { get; set; }
     }
 }

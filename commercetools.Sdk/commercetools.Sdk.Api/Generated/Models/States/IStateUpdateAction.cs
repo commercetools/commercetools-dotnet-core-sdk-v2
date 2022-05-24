@@ -14,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.States
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.States.StateSetNameAction))]
     [SubTypeDiscriminator("setRoles", typeof(commercetools.Sdk.Api.Models.States.StateSetRolesAction))]
     [SubTypeDiscriminator("setTransitions", typeof(commercetools.Sdk.Api.Models.States.StateSetTransitionsAction))]
-    public partial interface IStateUpdateAction
+    public partial interface IStateUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IStateUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

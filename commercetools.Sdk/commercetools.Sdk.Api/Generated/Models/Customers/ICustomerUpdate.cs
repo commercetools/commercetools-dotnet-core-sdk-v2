@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Customers
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerUpdate))]
-    public partial interface ICustomerUpdate
+    public partial interface ICustomerUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ICustomerUpdate, ICustomerUpdateAction>
     {
-        long Version { get; set; }
-
-        List<ICustomerUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<ICustomerUpdateAction> Actions { get; set; }
     }
 }

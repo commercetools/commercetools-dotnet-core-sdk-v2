@@ -10,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Zones
     [SubTypeDiscriminator("removeLocation", typeof(commercetools.Sdk.Api.Models.Zones.ZoneRemoveLocationAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Zones.ZoneSetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Zones.ZoneSetKeyAction))]
-    public partial interface IZoneUpdateAction
+    public partial interface IZoneUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IZoneUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

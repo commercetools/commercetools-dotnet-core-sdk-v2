@@ -9,11 +9,11 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<IDiscountCode> Results { get; set; }
     }

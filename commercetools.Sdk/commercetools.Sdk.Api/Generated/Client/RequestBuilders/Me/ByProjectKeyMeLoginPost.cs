@@ -19,14 +19,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Sdk.Api.Models.Customers.ICustomerSignin CustomerSignin;
+        private commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin MyCustomerSignin;
 
-        public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin myCustomerSignin)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
-            this.CustomerSignin = customerSignin;
+            this.MyCustomerSignin = myCustomerSignin;
             this.RequestUrl = $"/{ProjectKey}/me/login";
         }
 
@@ -43,7 +43,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(CustomerSignin);
+                var body = this.SerializerService.Serialize(MyCustomerSignin);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");
