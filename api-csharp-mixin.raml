@@ -1,0 +1,105 @@
+#%RAML 1.0 Extension
+usage: Adds dotnet SDK extended functionality
+extends: api.raml
+annotationTypes:
+  dotnet-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
+
+types:
+  CategoryUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICategoryUpdate, ICategoryUpdateAction>'
+  CategoryUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ICategoryUpdateAction>'
+  CartUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICartUpdate, ICartUpdateAction>'
+  CartUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ICartUpdateAction>'
+  CartDiscountUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICartDiscountUpdate, ICartDiscountUpdateAction>'
+  CartDiscountUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ICartDiscountUpdateAction>'
+  CustomerUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICustomerUpdate, ICustomerUpdateAction>'
+  CustomerUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ICustomerUpdateAction>'
+  CustomerGroupUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICustomerGroupUpdate, ICustomerGroupUpdateAction>'
+  CustomerGroupUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ICustomerGroupUpdateAction>'
+  DiscountCodeUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IDiscountCodeUpdate, IDiscountCodeUpdateAction>'
+  DiscountCodeUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IDiscountCodeUpdateAction>'
+  ExtensionUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IExtensionUpdate, IExtensionUpdateAction>'
+  ExtensionUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IExtensionUpdateAction>'
+  InventoryEntryUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IInventoryEntryUpdate, IInventoryEntryUpdateAction>'
+  InventoryEntryUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IInventoryEntryUpdateAction>'
+  OrderUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IOrderUpdate, IOrderUpdateAction>'
+  OrderUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IOrderUpdateAction>'
+  PaymentUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IPaymentUpdate, IPaymentUpdateAction>'
+  PaymentUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IPaymentUpdateAction>'
+  ProductUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IProductUpdate, IProductUpdateAction>'
+  ProductUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductUpdateAction>'
+  ProductDiscountUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IProductDiscountUpdate, IProductDiscountUpdateAction>'
+  ProductDiscountUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductDiscountUpdateAction>'
+  ProductSelectionUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IProductSelectionUpdate, IProductSelectionUpdateAction>'
+  ProductSelectionUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductSelectionUpdateAction>'
+  ProductTypeUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IProductTypeUpdate, IProductTypeUpdateAction>'
+  ProductTypeUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductTypeUpdateAction>'
+  ProjectUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IProjectUpdate, IProjectUpdateAction>'
+  ProjectUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IProjectUpdateAction>'
+  ReviewUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IReviewUpdate, IReviewUpdateAction>'
+  ReviewUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IReviewUpdateAction>'
+  ShippingMethodUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IShippingMethodUpdate, IShippingMethodUpdateAction>'
+  ShippingMethodUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IShippingMethodUpdateAction>'
+  ShoppingListUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IShoppingListUpdate, IShoppingListUpdateAction>'
+  ShoppingListUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IShoppingListUpdateAction>'
+  StateUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IStateUpdate, IStateUpdateAction>'
+  StateUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IStateUpdateAction>'
+  StoreUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IStoreUpdate, IStoreUpdateAction>'
+  StoreUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IStoreUpdateAction>'
+  SubscriptionUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ISubscriptionUpdate, ISubscriptionUpdateAction>'
+  SubscriptionUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ISubscriptionUpdateAction>'
+  TaxCategoryUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ITaxCategoryUpdate, ITaxCategoryUpdateAction>'
+  TaxCategoryUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ITaxCategoryUpdateAction>'
+  TypeUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ITypeUpdate, ITypeUpdateAction>'
+  TypeUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<ITypeUpdateAction>'
+  ZoneUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IZoneUpdate, IZoneUpdateAction>'
+  ZoneUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IZoneUpdateAction>'
