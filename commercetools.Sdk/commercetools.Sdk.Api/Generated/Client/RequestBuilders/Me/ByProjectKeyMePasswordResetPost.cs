@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMePasswordResetPost : ApiMethod<ByProjectKeyMePasswordResetPost>
+    public partial class ByProjectKeyMePasswordResetPost : ApiMethod<ByProjectKeyMePasswordResetPost>, IApiMethod<ByProjectKeyMePasswordResetPost, commercetools.Sdk.Api.Models.Customers.ICustomer>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMePasswordResetPost>
     {
 
 

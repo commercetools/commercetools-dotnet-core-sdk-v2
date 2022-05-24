@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryByIDGet : ApiMethod<ByProjectKeyInventoryByIDGet>
+    public partial class ByProjectKeyInventoryByIDGet : ApiMethod<ByProjectKeyInventoryByIDGet>, IApiMethod<ByProjectKeyInventoryByIDGet, commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryByIDGet>
     {
 
 

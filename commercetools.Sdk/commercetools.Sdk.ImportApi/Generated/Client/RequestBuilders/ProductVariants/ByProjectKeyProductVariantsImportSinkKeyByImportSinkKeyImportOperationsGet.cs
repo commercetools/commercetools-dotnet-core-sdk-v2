@@ -6,7 +6,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants
 {
-    public partial class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet : ApiMethod<ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet>
+    public partial class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet : ApiMethod<ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet>, IApiMethod<ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet, commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_productsTrait<ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet>
     {
 
 

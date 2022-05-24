@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
-    public partial class ByProjectKeyShippingMethodsMatchingOrdereditGet : ApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet>
+    public partial class ByProjectKeyShippingMethodsMatchingOrdereditGet : ApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet>, IApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsMatchingOrdereditGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShippingMethodsMatchingOrdereditGet>
     {
 
 

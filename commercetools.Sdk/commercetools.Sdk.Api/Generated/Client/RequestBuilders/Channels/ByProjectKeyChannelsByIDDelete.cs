@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
 {
-    public partial class ByProjectKeyChannelsByIDDelete : ApiMethod<ByProjectKeyChannelsByIDDelete>
+    public partial class ByProjectKeyChannelsByIDDelete : ApiMethod<ByProjectKeyChannelsByIDDelete>, IApiMethod<ByProjectKeyChannelsByIDDelete, commercetools.Sdk.Api.Models.Channels.IChannel>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyChannelsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyChannelsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyChannelsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyChannelsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyChannelsByIDDelete>
     {
 
 

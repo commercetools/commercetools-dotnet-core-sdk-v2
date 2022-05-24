@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
-    public partial class ByProjectKeyOrdersImportPost : ApiMethod<ByProjectKeyOrdersImportPost>
+    public partial class ByProjectKeyOrdersImportPost : ApiMethod<ByProjectKeyOrdersImportPost>, IApiMethod<ByProjectKeyOrdersImportPost, commercetools.Sdk.Api.Models.Orders.IOrder>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersImportPost>
     {
 
 

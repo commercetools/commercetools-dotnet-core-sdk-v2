@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories
 {
-    public partial class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost>
+    public partial class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost>, IApiMethod<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost, commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_productsTrait<ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsByIDGet : ApiMethod<ByProjectKeyCustomerGroupsByIDGet>
+    public partial class ByProjectKeyCustomerGroupsByIDGet : ApiMethod<ByProjectKeyCustomerGroupsByIDGet>, IApiMethod<ByProjectKeyCustomerGroupsByIDGet, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomerGroupsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomerGroupsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomerGroupsByIDGet>
     {
 
 

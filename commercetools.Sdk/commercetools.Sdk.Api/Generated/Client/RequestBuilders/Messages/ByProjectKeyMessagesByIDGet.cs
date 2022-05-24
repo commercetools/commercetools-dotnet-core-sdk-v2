@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
 {
-    public partial class ByProjectKeyMessagesByIDGet : ApiMethod<ByProjectKeyMessagesByIDGet>
+    public partial class ByProjectKeyMessagesByIDGet : ApiMethod<ByProjectKeyMessagesByIDGet>, IApiMethod<ByProjectKeyMessagesByIDGet, commercetools.Sdk.Api.Models.Messages.IMessage>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyMessagesByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMessagesByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyMessagesByIDGet>
     {
 
 

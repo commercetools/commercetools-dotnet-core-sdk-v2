@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
-    public partial class ByProjectKeyProductProjectionsKeyByKeyGet : ApiMethod<ByProjectKeyProductProjectionsKeyByKeyGet>
+    public partial class ByProjectKeyProductProjectionsKeyByKeyGet : ApiMethod<ByProjectKeyProductProjectionsKeyByKeyGet>, IApiMethod<ByProjectKeyProductProjectionsKeyByKeyGet, commercetools.Sdk.Api.Models.Products.IProductProjection>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsKeyByKeyGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsKeyByKeyGet>
     {
 
 

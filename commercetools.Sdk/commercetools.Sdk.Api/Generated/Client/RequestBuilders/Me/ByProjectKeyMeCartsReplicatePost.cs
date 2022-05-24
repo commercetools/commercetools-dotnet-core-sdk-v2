@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeCartsReplicatePost : ApiMethod<ByProjectKeyMeCartsReplicatePost>
+    public partial class ByProjectKeyMeCartsReplicatePost : ApiMethod<ByProjectKeyMeCartsReplicatePost>, IApiMethod<ByProjectKeyMeCartsReplicatePost, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeCartsReplicatePost>
     {
 
 

@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks
 {
-    public partial class ByProjectKeyImportSinksByImportSinkKeyDelete : ApiMethod<ByProjectKeyImportSinksByImportSinkKeyDelete>
+    public partial class ByProjectKeyImportSinksByImportSinkKeyDelete : ApiMethod<ByProjectKeyImportSinksByImportSinkKeyDelete>, IApiMethod<ByProjectKeyImportSinksByImportSinkKeyDelete, commercetools.Sdk.ImportApi.Models.Importsinks.IImportSink>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_import_sinksTrait<ByProjectKeyImportSinksByImportSinkKeyDelete>
     {
 
 

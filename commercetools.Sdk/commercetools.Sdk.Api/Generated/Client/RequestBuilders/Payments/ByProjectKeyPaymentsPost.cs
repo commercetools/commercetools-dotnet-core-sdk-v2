@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
 {
-    public partial class ByProjectKeyPaymentsPost : ApiMethod<ByProjectKeyPaymentsPost>
+    public partial class ByProjectKeyPaymentsPost : ApiMethod<ByProjectKeyPaymentsPost>, IApiMethod<ByProjectKeyPaymentsPost, commercetools.Sdk.Api.Models.Payments.IPayment>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyPaymentsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyPaymentsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyPaymentsPost>
     {
 
 

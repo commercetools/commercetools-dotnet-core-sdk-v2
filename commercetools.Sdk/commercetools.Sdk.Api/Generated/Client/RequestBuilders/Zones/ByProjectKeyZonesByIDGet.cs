@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
 {
-    public partial class ByProjectKeyZonesByIDGet : ApiMethod<ByProjectKeyZonesByIDGet>
+    public partial class ByProjectKeyZonesByIDGet : ApiMethod<ByProjectKeyZonesByIDGet>, IApiMethod<ByProjectKeyZonesByIDGet, commercetools.Sdk.Api.Models.Zones.IZone>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyZonesByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyZonesByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyZonesByIDGet>
     {
 
 

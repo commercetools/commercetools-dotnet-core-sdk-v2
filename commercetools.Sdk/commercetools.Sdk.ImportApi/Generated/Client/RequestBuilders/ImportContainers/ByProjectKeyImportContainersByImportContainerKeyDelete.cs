@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
-    public partial class ByProjectKeyImportContainersByImportContainerKeyDelete : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyDelete>
+    public partial class ByProjectKeyImportContainersByImportContainerKeyDelete : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyDelete>, IApiMethod<ByProjectKeyImportContainersByImportContainerKeyDelete, commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainer>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyDelete>
     {
 
 

@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeActiveCartGet : ApiMethod<ByProjectKeyMeActiveCartGet>
+    public partial class ByProjectKeyMeActiveCartGet : ApiMethod<ByProjectKeyMeActiveCartGet>, IApiMethod<ByProjectKeyMeActiveCartGet, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeActiveCartGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyMeActiveCartGet>
     {
 
 

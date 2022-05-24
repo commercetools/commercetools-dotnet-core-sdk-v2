@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost>
     {
 
 

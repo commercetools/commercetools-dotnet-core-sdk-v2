@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsPost : ApiMethod<ByProjectKeySubscriptionsPost>
+    public partial class ByProjectKeySubscriptionsPost : ApiMethod<ByProjectKeySubscriptionsPost>, IApiMethod<ByProjectKeySubscriptionsPost, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeySubscriptionsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsPost>
     {
 
 

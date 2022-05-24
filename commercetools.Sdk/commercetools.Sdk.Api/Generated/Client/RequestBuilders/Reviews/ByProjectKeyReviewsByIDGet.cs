@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
-    public partial class ByProjectKeyReviewsByIDGet : ApiMethod<ByProjectKeyReviewsByIDGet>
+    public partial class ByProjectKeyReviewsByIDGet : ApiMethod<ByProjectKeyReviewsByIDGet>, IApiMethod<ByProjectKeyReviewsByIDGet, commercetools.Sdk.Api.Models.Reviews.IReview>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyReviewsByIDGet>
     {
 
 

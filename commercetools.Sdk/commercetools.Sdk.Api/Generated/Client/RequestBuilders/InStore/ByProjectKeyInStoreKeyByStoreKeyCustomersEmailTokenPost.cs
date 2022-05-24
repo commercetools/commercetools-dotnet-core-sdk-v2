@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost, commercetools.Sdk.Api.Models.Customers.ICustomerToken>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost>
     {
 
 

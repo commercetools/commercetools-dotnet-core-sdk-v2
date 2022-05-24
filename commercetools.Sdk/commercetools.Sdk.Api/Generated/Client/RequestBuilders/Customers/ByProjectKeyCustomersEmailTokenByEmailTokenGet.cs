@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
-    public partial class ByProjectKeyCustomersEmailTokenByEmailTokenGet : ApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet>
+    public partial class ByProjectKeyCustomersEmailTokenByEmailTokenGet : ApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet>, IApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet, commercetools.Sdk.Api.Models.Customers.ICustomer>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomersEmailTokenByEmailTokenGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomersEmailTokenByEmailTokenGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomersEmailTokenByEmailTokenGet>
     {
 
 

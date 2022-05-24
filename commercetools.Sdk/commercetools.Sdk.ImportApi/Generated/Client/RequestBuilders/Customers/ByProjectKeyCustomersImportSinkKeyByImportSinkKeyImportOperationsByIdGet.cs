@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers
 {
-    public partial class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet : ApiMethod<ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet>
+    public partial class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet : ApiMethod<ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet>, IApiMethod<ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet, commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperation>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_customersTrait<ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet>
     {
 
 

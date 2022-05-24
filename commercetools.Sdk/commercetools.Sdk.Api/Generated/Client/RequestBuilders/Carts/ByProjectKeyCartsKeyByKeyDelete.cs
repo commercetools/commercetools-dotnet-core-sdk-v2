@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
 {
-    public partial class ByProjectKeyCartsKeyByKeyDelete : ApiMethod<ByProjectKeyCartsKeyByKeyDelete>
+    public partial class ByProjectKeyCartsKeyByKeyDelete : ApiMethod<ByProjectKeyCartsKeyByKeyDelete>, IApiMethod<ByProjectKeyCartsKeyByKeyDelete, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyCartsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyCartsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyCartsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCartsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCartsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCartsKeyByKeyDelete>
     {
 
 

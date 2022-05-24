@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
-    public partial class ByProjectKeyProductsHead : ApiMethod<ByProjectKeyProductsHead>
+    public partial class ByProjectKeyProductsHead : ApiMethod<ByProjectKeyProductsHead>, IApiMethod<ByProjectKeyProductsHead, JsonElement>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductsHead>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductsHead>
     {
 
 

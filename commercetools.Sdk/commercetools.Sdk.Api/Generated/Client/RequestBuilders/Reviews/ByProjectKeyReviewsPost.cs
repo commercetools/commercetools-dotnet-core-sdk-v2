@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
-    public partial class ByProjectKeyReviewsPost : ApiMethod<ByProjectKeyReviewsPost>
+    public partial class ByProjectKeyReviewsPost : ApiMethod<ByProjectKeyReviewsPost>, IApiMethod<ByProjectKeyReviewsPost, commercetools.Sdk.Api.Models.Reviews.IReview>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyReviewsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsPost>
     {
 
 

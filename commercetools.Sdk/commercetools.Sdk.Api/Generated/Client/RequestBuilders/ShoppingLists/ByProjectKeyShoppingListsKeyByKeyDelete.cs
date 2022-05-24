@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
 {
-    public partial class ByProjectKeyShoppingListsKeyByKeyDelete : ApiMethod<ByProjectKeyShoppingListsKeyByKeyDelete>
+    public partial class ByProjectKeyShoppingListsKeyByKeyDelete : ApiMethod<ByProjectKeyShoppingListsKeyByKeyDelete>, IApiMethod<ByProjectKeyShoppingListsKeyByKeyDelete, commercetools.Sdk.Api.Models.ShoppingLists.IShoppingList>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyShoppingListsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyShoppingListsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyShoppingListsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShoppingListsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShoppingListsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShoppingListsKeyByKeyDelete>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryByIDDelete : ApiMethod<ByProjectKeyInventoryByIDDelete>
+    public partial class ByProjectKeyInventoryByIDDelete : ApiMethod<ByProjectKeyInventoryByIDDelete>, IApiMethod<ByProjectKeyInventoryByIDDelete, commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyInventoryByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInventoryByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryByIDDelete>
     {
 
 

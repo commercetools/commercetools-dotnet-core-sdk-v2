@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
-    public partial class ByProjectKeyProductDiscountsByIDDelete : ApiMethod<ByProjectKeyProductDiscountsByIDDelete>
+    public partial class ByProjectKeyProductDiscountsByIDDelete : ApiMethod<ByProjectKeyProductDiscountsByIDDelete>, IApiMethod<ByProjectKeyProductDiscountsByIDDelete, commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscount>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyProductDiscountsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyProductDiscountsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductDiscountsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductDiscountsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductDiscountsByIDDelete>
     {
 
 

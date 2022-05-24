@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet>
     {
 
 

@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
-    public partial class ByProjectKeyMissingDataPricesStatusByTaskIdGet : ApiMethod<ByProjectKeyMissingDataPricesStatusByTaskIdGet>
+    public partial class ByProjectKeyMissingDataPricesStatusByTaskIdGet : ApiMethod<ByProjectKeyMissingDataPricesStatusByTaskIdGet>, IApiMethod<ByProjectKeyMissingDataPricesStatusByTaskIdGet, commercetools.Sdk.MLApi.Models.MissingData.IMissingPricesTaskStatus>
     {
 
 

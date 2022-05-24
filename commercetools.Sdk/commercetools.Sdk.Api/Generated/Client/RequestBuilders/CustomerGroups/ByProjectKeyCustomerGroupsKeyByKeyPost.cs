@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsKeyByKeyPost : ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyPost>
+    public partial class ByProjectKeyCustomerGroupsKeyByKeyPost : ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyPost>, IApiMethod<ByProjectKeyCustomerGroupsKeyByKeyPost, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomerGroupsKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomerGroupsKeyByKeyPost>
     {
 
 

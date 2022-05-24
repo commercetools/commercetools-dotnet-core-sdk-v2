@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
-    public partial class ByProjectKeyTaxCategoriesKeyByKeyPost : ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyPost>
+    public partial class ByProjectKeyTaxCategoriesKeyByKeyPost : ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyPost>, IApiMethod<ByProjectKeyTaxCategoriesKeyByKeyPost, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategory>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyTaxCategoriesKeyByKeyPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTaxCategoriesKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTaxCategoriesKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTaxCategoriesKeyByKeyPost>
     {
 
 
