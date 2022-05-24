@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
-    public partial class ByProjectKeyShippingMethodsMatchingLocationGet : ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet>
+    public partial class ByProjectKeyShippingMethodsMatchingLocationGet : ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet>, IApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShippingMethodsMatchingLocationGet>
     {
 
 

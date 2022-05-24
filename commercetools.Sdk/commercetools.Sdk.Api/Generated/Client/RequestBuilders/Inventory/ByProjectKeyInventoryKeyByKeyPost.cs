@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryKeyByKeyPost : ApiMethod<ByProjectKeyInventoryKeyByKeyPost>
+    public partial class ByProjectKeyInventoryKeyByKeyPost : ApiMethod<ByProjectKeyInventoryKeyByKeyPost>, IApiMethod<ByProjectKeyInventoryKeyByKeyPost, commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInventoryKeyByKeyPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryKeyByKeyPost>
     {
 
 

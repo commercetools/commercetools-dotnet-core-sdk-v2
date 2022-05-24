@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
-    public partial class ByProjectKeyImageSearchConfigPost : ApiMethod<ByProjectKeyImageSearchConfigPost>
+    public partial class ByProjectKeyImageSearchConfigPost : ApiMethod<ByProjectKeyImageSearchConfigPost>, IApiMethod<ByProjectKeyImageSearchConfigPost, commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>
     {
 
 

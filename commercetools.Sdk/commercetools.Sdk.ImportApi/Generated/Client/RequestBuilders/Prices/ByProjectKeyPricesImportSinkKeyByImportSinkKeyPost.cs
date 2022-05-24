@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices
 {
-    public partial class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost>
+    public partial class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost>, IApiMethod<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost, commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_productsTrait<ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost>
     {
 
 

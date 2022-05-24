@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMePaymentsKeyByKeyGet : ApiMethod<ByProjectKeyMePaymentsKeyByKeyGet>
+    public partial class ByProjectKeyMePaymentsKeyByKeyGet : ApiMethod<ByProjectKeyMePaymentsKeyByKeyGet>, IApiMethod<ByProjectKeyMePaymentsKeyByKeyGet, commercetools.Sdk.Api.Models.Me.IMyPayment>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyMePaymentsKeyByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMePaymentsKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyMePaymentsKeyByKeyGet>
     {
 
 

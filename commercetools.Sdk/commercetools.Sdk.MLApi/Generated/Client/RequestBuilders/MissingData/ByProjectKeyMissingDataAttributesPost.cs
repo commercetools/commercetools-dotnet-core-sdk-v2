@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
-    public partial class ByProjectKeyMissingDataAttributesPost : ApiMethod<ByProjectKeyMissingDataAttributesPost>
+    public partial class ByProjectKeyMissingDataAttributesPost : ApiMethod<ByProjectKeyMissingDataAttributesPost>, IApiMethod<ByProjectKeyMissingDataAttributesPost, commercetools.Sdk.MLApi.Models.Common.ITaskToken>
     {
 
 

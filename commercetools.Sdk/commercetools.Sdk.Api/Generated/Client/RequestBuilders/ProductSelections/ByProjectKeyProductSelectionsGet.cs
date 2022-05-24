@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
 {
-    public partial class ByProjectKeyProductSelectionsGet : ApiMethod<ByProjectKeyProductSelectionsGet>
+    public partial class ByProjectKeyProductSelectionsGet : ApiMethod<ByProjectKeyProductSelectionsGet>, IApiMethod<ByProjectKeyProductSelectionsGet, commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductSelectionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductSelectionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductSelectionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductSelectionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductSelectionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductSelectionsGet>
     {
 
 

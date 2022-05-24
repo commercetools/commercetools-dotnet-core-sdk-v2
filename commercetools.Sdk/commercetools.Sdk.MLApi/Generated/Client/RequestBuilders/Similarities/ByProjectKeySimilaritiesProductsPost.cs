@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
-    public partial class ByProjectKeySimilaritiesProductsPost : ApiMethod<ByProjectKeySimilaritiesProductsPost>
+    public partial class ByProjectKeySimilaritiesProductsPost : ApiMethod<ByProjectKeySimilaritiesProductsPost>, IApiMethod<ByProjectKeySimilaritiesProductsPost, commercetools.Sdk.MLApi.Models.Common.ITaskToken>
     {
 
 

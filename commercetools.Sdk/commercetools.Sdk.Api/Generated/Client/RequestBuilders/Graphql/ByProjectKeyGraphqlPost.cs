@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
 {
-    public partial class ByProjectKeyGraphqlPost : ApiMethod<ByProjectKeyGraphqlPost>
+    public partial class ByProjectKeyGraphqlPost : ApiMethod<ByProjectKeyGraphqlPost>, IApiMethod<ByProjectKeyGraphqlPost, commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyGraphqlPost>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
 {
-    public partial class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet : ApiMethod<ByProjectKeyRecommendationsProjectCategoriesByProductIdGet>
+    public partial class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet : ApiMethod<ByProjectKeyRecommendationsProjectCategoriesByProductIdGet>, IApiMethod<ByProjectKeyRecommendationsProjectCategoriesByProductIdGet, commercetools.Sdk.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse>
     {
 
 

@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
-    public partial class ByProjectKeyDiscountCodesPost : ApiMethod<ByProjectKeyDiscountCodesPost>
+    public partial class ByProjectKeyDiscountCodesPost : ApiMethod<ByProjectKeyDiscountCodesPost>, IApiMethod<ByProjectKeyDiscountCodesPost, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyDiscountCodesPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyDiscountCodesPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyDiscountCodesPost>
     {
 
 

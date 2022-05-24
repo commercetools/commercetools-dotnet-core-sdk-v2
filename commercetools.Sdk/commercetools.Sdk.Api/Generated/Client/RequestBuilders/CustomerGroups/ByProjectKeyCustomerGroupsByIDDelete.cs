@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsByIDDelete : ApiMethod<ByProjectKeyCustomerGroupsByIDDelete>
+    public partial class ByProjectKeyCustomerGroupsByIDDelete : ApiMethod<ByProjectKeyCustomerGroupsByIDDelete>, IApiMethod<ByProjectKeyCustomerGroupsByIDDelete, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroup>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyCustomerGroupsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyCustomerGroupsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomerGroupsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomerGroupsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomerGroupsByIDDelete>
     {
 
 

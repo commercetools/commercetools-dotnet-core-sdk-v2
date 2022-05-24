@@ -5,7 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSummaries
 {
-    public partial class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet : ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet>
+    public partial class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet : ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet>, IApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_sinksTrait<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet>
     {
 
 

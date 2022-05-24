@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
 {
-    public partial class ByProjectKeyChannelsGet : ApiMethod<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyChannelsGet, commercetools.Sdk.Api.Models.Channels.IChannelPagedQueryResponse>
+    public partial class ByProjectKeyChannelsGet : ApiMethod<ByProjectKeyChannelsGet>, IApiMethod<ByProjectKeyChannelsGet, commercetools.Sdk.Api.Models.Channels.IChannelPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyChannelsGet, commercetools.Sdk.Api.Models.Channels.IChannelPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyChannelsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyChannelsGet>
     {
 
 

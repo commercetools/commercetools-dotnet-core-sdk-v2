@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
-    public partial class ByProjectKeyProductDiscountsMatchingPost : ApiMethod<ByProjectKeyProductDiscountsMatchingPost>
+    public partial class ByProjectKeyProductDiscountsMatchingPost : ApiMethod<ByProjectKeyProductDiscountsMatchingPost>, IApiMethod<ByProjectKeyProductDiscountsMatchingPost, commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscount>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductDiscountsMatchingPost>
     {
 
 

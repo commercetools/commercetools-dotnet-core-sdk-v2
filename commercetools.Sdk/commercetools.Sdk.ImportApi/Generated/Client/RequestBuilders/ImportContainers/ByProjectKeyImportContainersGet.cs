@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
-    public partial class ByProjectKeyImportContainersGet : ApiMethod<ByProjectKeyImportContainersGet>
+    public partial class ByProjectKeyImportContainersGet : ApiMethod<ByProjectKeyImportContainersGet>, IApiMethod<ByProjectKeyImportContainersGet, commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_containersTrait<ByProjectKeyImportContainersGet>
     {
 
 

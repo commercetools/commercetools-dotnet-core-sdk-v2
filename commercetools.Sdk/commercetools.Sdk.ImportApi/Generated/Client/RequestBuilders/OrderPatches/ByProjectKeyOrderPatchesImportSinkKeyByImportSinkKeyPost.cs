@@ -7,7 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
 {
-    public partial class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost>
+    public partial class ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost : ApiMethod<ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost>, IApiMethod<ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost, commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_ordersTrait<ByProjectKeyOrderPatchesImportSinkKeyByImportSinkKeyPost>
     {
 
 

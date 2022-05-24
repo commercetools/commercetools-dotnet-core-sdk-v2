@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
-    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>
+    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
     {
 
 

@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.States
 {
-    public partial class ByProjectKeyStatesKeyByKeyDelete : ApiMethod<ByProjectKeyStatesKeyByKeyDelete>
+    public partial class ByProjectKeyStatesKeyByKeyDelete : ApiMethod<ByProjectKeyStatesKeyByKeyDelete>, IApiMethod<ByProjectKeyStatesKeyByKeyDelete, commercetools.Sdk.Api.Models.States.IState>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyStatesKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyStatesKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStatesKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStatesKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyStatesKeyByKeyDelete>
     {
 
 

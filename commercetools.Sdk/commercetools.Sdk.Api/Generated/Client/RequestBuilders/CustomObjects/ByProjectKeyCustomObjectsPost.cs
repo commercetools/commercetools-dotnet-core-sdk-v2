@@ -8,7 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
-    public partial class ByProjectKeyCustomObjectsPost : ApiMethod<ByProjectKeyCustomObjectsPost>
+    public partial class ByProjectKeyCustomObjectsPost : ApiMethod<ByProjectKeyCustomObjectsPost>, IApiMethod<ByProjectKeyCustomObjectsPost, commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomObjectsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyCustomObjectsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomObjectsPost>
     {
 
 

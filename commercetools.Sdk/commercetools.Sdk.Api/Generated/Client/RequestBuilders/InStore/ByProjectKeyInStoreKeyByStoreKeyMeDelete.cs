@@ -6,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyMeDelete : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeDelete>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyMeDelete : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeDelete>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeDelete, commercetools.Sdk.Api.Models.Customers.ICustomer>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyInStoreKeyByStoreKeyMeDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMeDelete>
     {
 
 
