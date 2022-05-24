@@ -34,7 +34,7 @@ namespace commercetools.Api.CheckoutApp.Services
                     .Me()
                     .Login()
                     .Post(
-                        new CustomerSignin
+                        new MyCustomerSignin
                         {
                             Email = email,
                             Password = password
