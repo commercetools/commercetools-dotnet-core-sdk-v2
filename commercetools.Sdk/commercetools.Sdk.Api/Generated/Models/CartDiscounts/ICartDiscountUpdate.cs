@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountUpdate))]
-    public partial interface ICartDiscountUpdate
+    public partial interface ICartDiscountUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ICartDiscountUpdate, ICartDiscountUpdateAction>
     {
-        long Version { get; set; }
-
-        List<ICartDiscountUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<ICartDiscountUpdateAction> Actions { get; set; }
     }
 }

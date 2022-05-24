@@ -11,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     [SubTypeDiscriminator("replaceTaxRate", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReplaceTaxRateAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetKeyAction))]
-    public partial interface ITaxCategoryUpdateAction
+    public partial interface ITaxCategoryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ITaxCategoryUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

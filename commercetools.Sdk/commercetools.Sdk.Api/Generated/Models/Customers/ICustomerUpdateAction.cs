@@ -36,8 +36,8 @@ namespace commercetools.Sdk.Api.Models.Customers
     [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetStoresAction))]
     [SubTypeDiscriminator("setTitle", typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetTitleAction))]
     [SubTypeDiscriminator("setVatId", typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetVatIdAction))]
-    public partial interface ICustomerUpdateAction
+    public partial interface ICustomerUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICustomerUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

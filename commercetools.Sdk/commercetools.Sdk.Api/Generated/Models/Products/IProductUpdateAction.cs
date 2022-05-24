@@ -52,8 +52,8 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("setTaxCategory", typeof(commercetools.Sdk.Api.Models.Products.ProductSetTaxCategoryAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Products.ProductTransitionStateAction))]
     [SubTypeDiscriminator("unpublish", typeof(commercetools.Sdk.Api.Models.Products.ProductUnpublishAction))]
-    public partial interface IProductUpdateAction
+    public partial interface IProductUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

@@ -16,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.Reviews
     [SubTypeDiscriminator("setText", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewSetTextAction))]
     [SubTypeDiscriminator("setTitle", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewSetTitleAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewTransitionStateAction))]
-    public partial interface IReviewUpdateAction
+    public partial interface IReviewUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IReviewUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

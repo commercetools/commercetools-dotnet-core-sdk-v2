@@ -83,14 +83,14 @@ namespace commercetools.Sdk.Api.Tests
 
             var s = new ServiceCollection();
             s.UseCommercetoolsApiSerialization();
-            
+
             s.UseCommercetoolsApi(configuration, "Test1", (clientName, config, serviceProvider) => new ExistingTokenProvider(new Token() { AccessToken = "abc" }));
             var p = s.BuildServiceProvider();
             var client = p.GetService<IClient>();
             Assert.IsAssignableFrom<IClient>(client);
         }
 
-        private class ExistingTokenProvider: ITokenProvider
+        private class ExistingTokenProvider : ITokenProvider
         {
             public Token Token { get; }
             private IClientConfiguration _configuration { get; }

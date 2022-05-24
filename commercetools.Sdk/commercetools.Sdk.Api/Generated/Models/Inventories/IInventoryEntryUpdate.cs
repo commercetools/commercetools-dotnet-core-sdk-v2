@@ -5,10 +5,9 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryUpdate))]
-    public partial interface IInventoryEntryUpdate
+    public partial interface IInventoryEntryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IInventoryEntryUpdate, IInventoryEntryUpdateAction>
     {
-        long Version { get; set; }
-
-        List<IInventoryEntryUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new List<IInventoryEntryUpdateAction> Actions { get; set; }
     }
 }

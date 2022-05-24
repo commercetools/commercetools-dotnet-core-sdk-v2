@@ -23,9 +23,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost Post(commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin myCustomerSignin)
         {
-            return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerSignin);
+            return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, myCustomerSignin);
         }
 
     }

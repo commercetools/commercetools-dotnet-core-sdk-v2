@@ -20,8 +20,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidUntilAction))]
-    public partial interface ICartDiscountUpdateAction
+    public partial interface ICartDiscountUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICartDiscountUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

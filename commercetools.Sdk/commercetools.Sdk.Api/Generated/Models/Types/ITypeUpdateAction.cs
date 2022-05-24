@@ -20,8 +20,8 @@ namespace commercetools.Sdk.Api.Models.Types
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeNameAction))]
     [SubTypeDiscriminator("removeFieldDefinition", typeof(commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction))]
-    public partial interface ITypeUpdateAction
+    public partial interface ITypeUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ITypeUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

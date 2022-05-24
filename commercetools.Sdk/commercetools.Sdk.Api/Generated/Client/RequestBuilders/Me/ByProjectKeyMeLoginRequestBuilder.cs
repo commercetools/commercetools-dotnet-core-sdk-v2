@@ -20,9 +20,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMeLoginPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyMeLoginPost Post(commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin myCustomerSignin)
         {
-            return new ByProjectKeyMeLoginPost(ApiHttpClient, SerializerService, ProjectKey, customerSignin);
+            return new ByProjectKeyMeLoginPost(ApiHttpClient, SerializerService, ProjectKey, myCustomerSignin);
         }
 
     }

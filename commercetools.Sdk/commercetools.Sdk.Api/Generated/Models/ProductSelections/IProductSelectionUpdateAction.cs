@@ -11,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetCustomTypeAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetKeyAction))]
-    public partial interface IProductSelectionUpdateAction
+    public partial interface IProductSelectionUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductSelectionUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }

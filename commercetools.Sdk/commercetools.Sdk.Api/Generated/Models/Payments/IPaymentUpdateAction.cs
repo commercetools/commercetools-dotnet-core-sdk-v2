@@ -29,8 +29,8 @@ namespace commercetools.Sdk.Api.Models.Payments
     [SubTypeDiscriminator("setTransactionCustomField", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomFieldAction))]
     [SubTypeDiscriminator("setTransactionCustomType", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Payments.PaymentTransitionStateAction))]
-    public partial interface IPaymentUpdateAction
+    public partial interface IPaymentUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IPaymentUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
     }
 }
