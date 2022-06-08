@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
         IExtensionResourceTypeId ResourceTypeId { get; set; }
 
         List<IExtensionAction> Actions { get; set; }
+
+        string Condition { get; set; }
     }
 }
