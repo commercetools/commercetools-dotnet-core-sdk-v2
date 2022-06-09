@@ -20,9 +20,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyMeEmailConfirmPost Post()
+        public ByProjectKeyMeEmailConfirmPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
         {
-            return new ByProjectKeyMeEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey);
+            return new ByProjectKeyMeEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, customerEmailVerify);
         }
 
     }
