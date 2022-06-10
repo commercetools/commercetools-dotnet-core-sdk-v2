@@ -1,4 +1,4 @@
-using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductSelections;
 
 
 namespace commercetools.Sdk.Api.Models.Stores
@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Stores
     {
         public string Action { get; set; }
 
-        public IResourceIdentifier ProductSelection { get; set; }
+        public IProductSelectionResourceIdentifier ProductSelection { get; set; }
         public StoreRemoveProductSelectionAction()
         {
             this.Action = "removeProductSelection";
