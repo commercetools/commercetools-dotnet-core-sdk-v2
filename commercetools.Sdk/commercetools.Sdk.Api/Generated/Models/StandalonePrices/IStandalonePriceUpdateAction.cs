@@ -8,6 +8,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [SubTypeDiscriminator("changeValue", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
+    [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction))]
     public partial interface IStandalonePriceUpdateAction
     {
         string Action { get; set; }
