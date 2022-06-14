@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
+using System;
 using System.Collections.Generic;
 
 
@@ -14,6 +15,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
 
         public ILocalizedString LocalizedName { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string Description { get; set; }
 
         public ILocalizedString LocalizedDescription { get; set; }
