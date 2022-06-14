@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     {
         public string Type { get; set; }
 
-        public List<ITypedMoney> Money { get; set; }
+        public List<ICentPrecisionMoney> Money { get; set; }
         public CartDiscountValueAbsolute()
         {
             this.Type = "absolute";

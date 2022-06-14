@@ -1,5 +1,4 @@
 using commercetools.Sdk.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Sdk.Api.Models.Categories
@@ -14,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         public ITypeResourceIdentifier Type { get; set; }
 
-        public Object Fields { get; set; }
+        public IFieldContainer Fields { get; set; }
         public CategorySetAssetCustomTypeAction()
         {
             this.Action = "setAssetCustomType";

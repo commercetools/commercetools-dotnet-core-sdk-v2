@@ -9,11 +9,11 @@ namespace commercetools.Sdk.Api.Models.Categories
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         List<ICategory> Results { get; set; }
     }

@@ -10,7 +10,6 @@ namespace commercetools.Sdk.Api.Models.Types
     [SubTypeDiscriminator("addLocalizedEnumValue", typeof(commercetools.Sdk.Api.Models.Types.TypeAddLocalizedEnumValueAction))]
     [SubTypeDiscriminator("changeEnumValueLabel", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueLabelAction))]
     [SubTypeDiscriminator("changeEnumValueOrder", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueOrderAction))]
-    [SubTypeDiscriminator("changeFieldDefinitionLabel", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeFieldDefinitionLabelAction))]
     [SubTypeDiscriminator("changeFieldDefinitionOrder", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeFieldDefinitionOrderAction))]
     [SubTypeDiscriminator("changeInputHint", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeInputHintAction))]
     [SubTypeDiscriminator("changeKey", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeKeyAction))]

@@ -11,7 +11,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeCurrencies", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction))]
     [SubTypeDiscriminator("changeLanguages", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeLanguagesAction))]
     [SubTypeDiscriminator("changeMessagesConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction))]
-    [SubTypeDiscriminator("changeMessagesEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesEnabledAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeNameAction))]
     [SubTypeDiscriminator("changeOrderSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeOrderSearchStatusAction))]
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]

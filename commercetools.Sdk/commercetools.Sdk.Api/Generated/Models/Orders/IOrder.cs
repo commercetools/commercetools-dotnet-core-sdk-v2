@@ -75,7 +75,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         List<IDiscountCodeInfo> DiscountCodes { get; set; }
 
-        long LastMessageSequenceNumber { get; set; }
+        [ObsoleteAttribute("This property is obsolete", false)]
+        long? LastMessageSequenceNumber { get; set; }
 
         ICartReference Cart { get; set; }
 

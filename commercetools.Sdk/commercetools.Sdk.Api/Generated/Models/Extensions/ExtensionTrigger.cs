@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
         public IExtensionResourceTypeId ResourceTypeId { get; set; }
 
         public List<IExtensionAction> Actions { get; set; }
+
+        public string Condition { get; set; }
     }
 }

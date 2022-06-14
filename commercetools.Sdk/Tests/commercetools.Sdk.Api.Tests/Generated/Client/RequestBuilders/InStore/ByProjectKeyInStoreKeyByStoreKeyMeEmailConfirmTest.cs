@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .Me()
                    .EmailConfirm()
-                   .Post()
+                   .Post(null)
                    .Build(),
                    "Post",
                    "/test_projectKey/in-store/key=test_storeKey/me/email/confirm",

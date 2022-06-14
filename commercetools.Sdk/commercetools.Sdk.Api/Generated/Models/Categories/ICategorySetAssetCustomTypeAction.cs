@@ -1,5 +1,4 @@
 using commercetools.Sdk.Api.Models.Types;
-using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,6 +13,6 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         ITypeResourceIdentifier Type { get; set; }
 
-        Object Fields { get; set; }
+        IFieldContainer Fields { get; set; }
     }
 }

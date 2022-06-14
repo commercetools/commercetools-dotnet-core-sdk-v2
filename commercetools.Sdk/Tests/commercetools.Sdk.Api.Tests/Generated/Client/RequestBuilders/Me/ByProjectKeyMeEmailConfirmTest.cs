@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .WithProjectKey("test_projectKey")
                    .Me()
                    .EmailConfirm()
-                   .Post()
+                   .Post(null)
                    .Build(),
                    "Post",
                    "/test_projectKey/me/email/confirm",

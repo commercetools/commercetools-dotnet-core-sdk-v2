@@ -10,7 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [SubTypeDiscriminator("addPlainEnumValue", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeAddPlainEnumValueAction))]
     [SubTypeDiscriminator("changeAttributeConstraint", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeAttributeConstraintAction))]
     [SubTypeDiscriminator("changeAttributeName", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeAttributeNameAction))]
-    [SubTypeDiscriminator("changeAttributeOrder", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeAttributeOrderAction))]
     [SubTypeDiscriminator("changeAttributeOrderByName", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeAttributeOrderByNameAction))]
     [SubTypeDiscriminator("changeDescription", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeDescriptionAction))]
     [SubTypeDiscriminator("changeEnumKey", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeEnumKeyAction))]
