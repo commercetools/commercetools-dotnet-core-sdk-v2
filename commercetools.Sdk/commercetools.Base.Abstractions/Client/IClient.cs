@@ -5,7 +5,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Base.Client
 {
     /// <summary>
-    /// This interface defines the way to communicate with commercetools API.
+    /// This interface defines the way to communicate with Composable Commerce API.
     /// </summary>
     public interface IClient
     {
