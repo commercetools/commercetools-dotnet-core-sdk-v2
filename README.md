@@ -81,7 +81,7 @@ services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```c#
 services.UseCommercetoolsMLApi(this.configuration, "MLClient");
 ```
-* `History API`:
+* `Change History API`:
 ```c#
 services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");
 ```
