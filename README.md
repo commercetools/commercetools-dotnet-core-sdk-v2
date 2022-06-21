@@ -119,7 +119,7 @@ var root2 = ImportApiFactory.Create(client);
 var root1 = client.WithMLApi();
 var root2 = MLApiFactory.Create(client);
 ```
-* `History API`:
+* `Change History API`:
 ```c#
 var root1 = client.WithHistoryApi();
 var root2 = HistoryApiFactory.Create(client);
