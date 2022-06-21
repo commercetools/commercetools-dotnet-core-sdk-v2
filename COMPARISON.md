@@ -20,7 +20,7 @@ After packages installation, you have to configure services using Dependency Inj
 
 | Package                | V2                                                                              | V1                                    |
 |------------------------|---------------------------------------------------------------------------------|---------------------------------------|
-| Composable Commerce    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```
+| HTTP API    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```
 |                        |                                                                                 |  ```this.configuration,"Client");```  |
 | Import API             | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                       |
 | ML API                 | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
