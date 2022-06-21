@@ -12,7 +12,7 @@ The SDK [V2](/) has some features which is not exists in [V1](https://github.com
 |------------------------|--------------------------------------------------------|-------------------------------------------------|
 | HTTP API   | ```dotnet add package commercetools.Sdk.Api```         | ```dotnet add package commercetools.Sdk.All```  |
 | Import API             | ```dotnet add package commercetools.Sdk.ImportApi```   |                                                 |
-| ML API                 | ```dotnet add package commercetools.Sdk.MLApi```       |                                                 |
+| Machine Learning API                 | ```dotnet add package commercetools.Sdk.MLApi```       |                                                 |
 | Change History API            | ```dotnet add package commercetools.Sdk.HistoryApi```  |                                                 |
 
 ## Comparison of SDK Services Configuration
