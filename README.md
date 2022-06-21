@@ -288,7 +288,7 @@ public async Task ExecuteAsync()
 ```
 If you are going to create the client using the ClientFactory, don't forget to call
 SetupClient extension method [here](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs#L92) while building
-the services container to attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
+the services container. This will attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
 ```c#
 services.SetupClient(
                 "MeClient",
