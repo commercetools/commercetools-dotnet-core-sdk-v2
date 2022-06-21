@@ -1,7 +1,7 @@
 # Comparison between DotNet Core SDK V2 and V1
 ## Why I should use V2 SDK
 The SDK [V2](/) has some features which is not exists in [V1](https://github.com/commercetools/commercetools-dotnet-core-sdk) like:
-* V1 supports only the Composable Commerce Api, but V2 has different packages to support things like Composable Commerce, Import API, Machine Learning API and History API.
+* V1 only supports the Composable Commerce HTTP API, but V2 has different packages to support the Import API, Machine Learning API, and the Change History API.
 * V2 SDK supports ME endpoints.
 * V2 SDK is auto generated from RAML files like other SDKS which means less maintainability and it will be always up-to-date with backend new features.
 * V2 SDK is faster than V1 SDK as it’s using System.Text.Json in Serialization and Deserialisation
