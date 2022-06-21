@@ -23,7 +23,7 @@ After packages installation, you have to configure services using Dependency Inj
 | HTTP API    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```
 |                        |                                                                                 |  ```this.configuration,"Client");```  |
 | Import API             | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                       |
-| ML API                 | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
+| Machine Learning API                 | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
 | Change History API            | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
 
 ## Comparison of how to make requests to the Composable Commerce HTTP API
