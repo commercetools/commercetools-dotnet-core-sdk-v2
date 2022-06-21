@@ -104,7 +104,7 @@ The client configuration needs to be added to appsettings.json in order for the 
 
 ##### Getting instance of ApiRoot
 you can use the instance inside the injected client or use ApiFactory to create a new instance.
-* `Composable Commerce API`:
+* `Composable Commerce HTTP API`:
 ```c#
 var root1 = client.WithApi();
 var root2 = ApiFactory.Create(client);
