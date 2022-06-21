@@ -14,7 +14,7 @@ This repository contains the .NET SDKs generated from the Composable Commerce AP
 | Change History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
 
 ## Example and Training material
-Feel free to explore these examples using this SDK for calling Composable Commerce, and Import API.
+Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API.
 [.NET Core SDK Training for V2 SDK](https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2)
 
 ## Installation
