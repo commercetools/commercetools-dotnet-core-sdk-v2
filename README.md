@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains the commercetools Composable Commerce, import-api and ml-api C# sdks generated from our api reference.
+This repository contains the .NET SDKs generated from the Composable Commerce API reference. 
 
 ## Packages
 
