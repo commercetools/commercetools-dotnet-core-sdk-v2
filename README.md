@@ -77,7 +77,7 @@ services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your
 ```c#
 services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```
-* `ML API`:
+* `Machine Learning API`:
 ```c#
 services.UseCommercetoolsMLApi(this.configuration, "MLClient");
 ```
