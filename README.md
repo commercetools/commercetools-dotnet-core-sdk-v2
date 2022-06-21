@@ -36,7 +36,7 @@ The SDK consists of the following projects:
 * `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
 * `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
 * `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the [Machine Learning API](https://docs.commercetools.com/api/ml).
-* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the history api.
+* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
