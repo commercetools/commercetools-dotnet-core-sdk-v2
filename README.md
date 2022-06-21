@@ -114,7 +114,7 @@ var root2 = ApiFactory.Create(client);
 var root1 = client.WithImportApi();
 var root2 = ImportApiFactory.Create(client);
 ```
-* `ML API`:
+* `Machine Learning API`:
 ```c#
 var root1 = client.WithMLApi();
 var root2 = MLApiFactory.Create(client);
