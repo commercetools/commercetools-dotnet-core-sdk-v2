@@ -24,7 +24,7 @@ After packages installation, you have to configure services using Dependency Inj
 |                        |                                                                                 |  ```this.configuration,"Client");```  |
 | Import API             | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                       |
 | ML API                 | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
-| History API            | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
+| Change History API            | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
 
 ## Comparison of how to make requests to Composable Commerce
 ```c#
