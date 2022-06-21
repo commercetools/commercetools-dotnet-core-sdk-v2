@@ -34,7 +34,7 @@ The SDK consists of the following projects:
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
 * `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
-* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [import api](https://docs.commercetools.com/import-api/).
+* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
 * `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the ml api.
 * `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the history api.
 
