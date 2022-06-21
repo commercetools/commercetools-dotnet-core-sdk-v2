@@ -69,7 +69,7 @@ At a high level, to make a basic call to the API, do the following:
 
  In the ConfigureServices method of Startup.cs add the following:
 
-* `Composable Commerce API`:
+* `Composable Commerce HTTP API`:
 ```c#
 services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration
 ```
