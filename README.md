@@ -11,7 +11,7 @@ This repository contains the .NET SDKs generated from the Composable Commerce AP
 | HTTP API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
 | Import API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
 | ML API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)|
-| History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
+| Change History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
 
 ## Example and Training material
 Feel free to explore these examples using this SDK for calling Composable Commerce, and Import API.
