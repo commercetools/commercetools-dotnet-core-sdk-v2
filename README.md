@@ -24,7 +24,7 @@ Feel free to explore these examples using this SDK for calling Composable Commer
 | [HTTP API](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```            |
 | [Import API](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)        | ```dotnet add package commercetools.Sdk.ImportApi```      |
 | [ML API](https://www.nuget.org/packages/commercetools.Sdk.MLApi)                | ```dotnet add package commercetools.Sdk.MLApi```          |
-| [History API](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)      | ```dotnet add package commercetools.Sdk.HistoryApi```     |
+| [Change History API](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)      | ```dotnet add package commercetools.Sdk.HistoryApi```     |
 
 ## Technical Overview
 
