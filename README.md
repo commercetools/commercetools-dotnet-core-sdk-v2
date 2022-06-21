@@ -1,42 +1,42 @@
-# commercetools .NET SDK
+# Composable Commerce .NET SDK
 
 ## Introduction
 
-This repository contains the commercetools platform, import-api and ml-api C# sdks generated from our api reference.
+This repository contains the .NET SDKs generated from the Composable Commerce API reference. 
 
 ## Packages
 
 | Package | Version|
 | --------| --------------------------------------------------------------------------------------------------------- |
-| Platform Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
-| Import Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
-| ML Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)|
-| History Api | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)| 
+| HTTP API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
+| Import API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
+| Machine Learning API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)|
+| Change History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
 
 ## Example and Training material
-Feel free to explore these examples using this SDK for calling Platform, and Import API.
+Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API.
 [.NET Core SDK Training for V2 SDK](https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2)
 
 ## Installation
 #### Download from [Nuget](https://www.nuget.org/profiles/commercetools)
-| Package                                                            | Installation                                                                                                   |
-| ------------------------------------------------------------------ | ----------------------------------------------------------|
-| [Platform Api](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```|
-| [Import Api](https://www.nuget.org/packages/commercetools.Sdk.ImportApi) | ```dotnet add package commercetools.Sdk.ImportApi```|
-| [ML Api](https://www.nuget.org/packages/commercetools.Sdk.MLApi) | ```dotnet add package commercetools.Sdk.MLApi```|
-| [History Api](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi) | ```dotnet add package commercetools.Sdk.HistoryApi```|
+| Package                                                                         | Installation                                                                                                                                  |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------|
+| [HTTP API](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```            |
+| [Import API](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)        | ```dotnet add package commercetools.Sdk.ImportApi```      |
+| [Machine Learning API](https://www.nuget.org/packages/commercetools.Sdk.MLApi)                | ```dotnet add package commercetools.Sdk.MLApi```          |
+| [Change History API](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)      | ```dotnet add package commercetools.Sdk.HistoryApi```     |
 
 ## Technical Overview
 
 The SDK consists of the following projects:
 * `commercetools.Base.Abstractions`: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.
-* `commercetools.Base.Client`: Contains CtpClient which communicate with the platform to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
+* `commercetools.Base.Client`: Contains CtpClient which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
-* `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with the [platform api](https://docs.commercetools.com/http-api.html).
-* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [import api](https://docs.commercetools.com/import-api/).
-* `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the ml api.
-* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the history api.
+* `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
+* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
+* `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the [Machine Learning API](https://docs.commercetools.com/api/ml).
+* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -52,7 +52,7 @@ In addition, the SDK has the following directories:
 ## Getting Started with the .NET SDK
 
 All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it and all the request builders accessible through ApiRoot.
-In order to use the client object, it needs to be setup first through dependency injection setup. 
+In order to use the client object, it needs to be setup first through dependency injection setup.
 
 ### Basic Workflow
 
@@ -69,19 +69,19 @@ At a high level, to make a basic call to the API, do the following:
 
  In the ConfigureServices method of Startup.cs add the following:
 
-* `Platform Api`:
+* `Composable Commerce HTTP API`:
 ```c#
 services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration
 ```
-* `Import Api`:
+* `Import API`:
 ```c#
 services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```
-* `ML Api`:
+* `Machine Learning API`:
 ```c#
 services.UseCommercetoolsMLApi(this.configuration, "MLClient");
 ```
-* `History Api`:
+* `Change History API`:
 ```c#
 services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");
 ```
@@ -104,33 +104,33 @@ The client configuration needs to be added to appsettings.json in order for the 
 
 ##### Getting instance of ApiRoot
 you can use the instance inside the injected client or use ApiFactory to create a new instance.
-* `Platform Api`:
+* `Composable Commerce HTTP API`:
 ```c#
 var root1 = client.WithApi();
 var root2 = ApiFactory.Create(client);
 ```
-* `Import Api`:
+* `Import API`:
 ```c#
 var root1 = client.WithImportApi();
 var root2 = ImportApiFactory.Create(client);
 ```
-* `ML Api`:
+* `Machine Learning API`:
 ```c#
 var root1 = client.WithMLApi();
 var root2 = MLApiFactory.Create(client);
 ```
-* `History Api`:
+* `Change History API`:
 ```c#
 var root1 = client.WithHistoryApi();
 var root2 = HistoryApiFactory.Create(client);
-``` 
+```
 
 ### Multiple Clients
-It is possible to use more than one client in the same application with different token providers. 
+It is possible to use more than one client in the same application with different token providers.
 The following code can be used to set it up 2 clients with the default ClientCredentials token provider:
 
 ```c#
-services.UseCommercetoolsApi(configuration, 
+services.UseCommercetoolsApi(configuration,
                 new List<string>{"AdminClient", "StoreClient"},
                 CreateTokenProvider);
 
@@ -149,7 +149,7 @@ The clients can then be injected by using IEnumerable and specific client can be
     {
         var storeClient = clients.FirstOrDefault(c => c.Name.Equals("StoreClient"));
     }
-``` 
+```
 
 ### Using SDK
 
@@ -161,7 +161,7 @@ public CategoryController(IClient client)
 {
     this.client = client;
 }
-public async Task CreatingRequests() 
+public async Task CreatingRequests()
 {
     // Create CategoryDraft
     var categoryDraft = new CategoryDraft
@@ -170,34 +170,34 @@ public async Task CreatingRequests()
                     Slug = new LocalizedString {{"en", "Slug"}},
                     Key = "Key"
                 };
-    
+
     // Use in the previous step configured client instance to send and receive a newly created Category
      var category = await client.WithApi().WithProjectKey("project-key")
                                     .Categories()
                                     .Post(categoryDraft)
                                     .ExecuteAsync();
-    
+
     // Get Category by id
     var queriedCategory = await client.WithApi().WithProjectKey("project-key")
                 .Categories()
                 .WithId(category.Id)
                 .Get()
                 .ExecuteAsync();
-                
+
     // Get Category by key
     var queriedCategory = await client.WithApi().WithProjectKey("project-key")
                 .Categories()
                 .WithKey(category.Key)
                 .Get()
                 .ExecuteAsync();
-    
+
     // Query Categories
     var response = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .Get()
             .WithWhere($"key = \"{category.Key}\"")
             .ExecuteAsync();
-    
+
     // Delete Category by id
     var deletedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
@@ -205,7 +205,7 @@ public async Task CreatingRequests()
             .Delete()
             .WithVersion(category.version)
             .ExecuteAsync();
-    
+
     // Update Category
     var newName = "newName";
     var action = new CategoryChangeNameAction
@@ -217,30 +217,30 @@ public async Task CreatingRequests()
                         Version = category.Version,
                         Actions = new List<ICategoryUpdateAction> {action}
                     };
-    
+
     var updatedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .WithId(category.Id)
             .Post(categoryUpdate)
             .ExecuteAsync();
-    
+
     // Delete Category by key
     var deletedCategory = await client.WithApi().WithProjectKey("project-key")
             .Categories()
             .WithKey(category.Key)
             .Delete()
             .WithVersion(category.Version)
-            .ExecuteAsync();        
+            .ExecuteAsync();
     }
-                
+
 ```
 ### Creating a client using ClientFactory
-You can get a client from injected services or you can create client on the fly using ClientFactory, 
+You can get a client from injected services or you can create client on the fly using ClientFactory,
 the example below illustrate how to create a client with password TokenFlow to get customer's orders:
 
 ```c#
 private readonly IServiceProvider serviceProvider;
-        
+
 public CustomerController(IServiceProvider serviceProvider)
 {
     this.serviceProvider = serviceProvider;
@@ -249,19 +249,19 @@ public async Task ExecuteAsync()
 {
     var email = "customerEmail";
     var password = "customerPassword";
-    
+
     var configuration = serviceProvider.GetService<IConfiguration>();
     var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
     var serializerService = serviceProvider.GetService<SerializerService>();
-    
+
     var clientConfiguration = configuration.GetSection("MeClient").Get<ClientConfiguration>();
-    
+
     //Create passwordFlow TokenProvider
     var passwordTokenProvider = TokenProviderFactory
         .CreatePasswordTokenProvider(clientConfiguration,
             httpClientFactory,
             new InMemoryUserCredentialsStoreManager(email, password));
-    
+
     //Create MeClient
     var meClient = ClientFactory.Create(
         "MeClient",
@@ -269,13 +269,13 @@ public async Task ExecuteAsync()
         httpClientFactory,
         serializerService,
         passwordTokenProvider);
-    
+
     //Get Customer Profile
     var myProfile = await meClient.WithApi().WithProjectKey("project-key")
         .Me()
         .Get()
         .ExecuteAsync();
-    
+
     //Get Customer Orders
     var myOrders = await
         meClient.WithApi()
@@ -286,9 +286,9 @@ public async Task ExecuteAsync()
             .ExecuteAsync();
 }
 ```
-If you are going to create the client using the ClientFactory, Don't forget to call 
-SetupClient extension method [here](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs#L92) while building 
-the services container to attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
+If you are going to create the client using the ClientFactory, don't forget to call
+SetupClient extension method [here](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs#L92) while building
+the services container. This will attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
 ```c#
 services.SetupClient(
                 "MeClient",
