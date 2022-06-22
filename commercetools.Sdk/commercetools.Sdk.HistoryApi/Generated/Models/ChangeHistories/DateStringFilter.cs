@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -18,10 +20,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IDateStringFilter), "FindEnum")]
-    public interface IDateStringFilter : IJsonName
+    public interface IDateStringFilter : IJsonName, IEnumerable<char>
     {
         public static IDateStringFilter Now = new DateStringFilterWrapper
         { Value = DateStringFilter.Now, JsonName = "now" };

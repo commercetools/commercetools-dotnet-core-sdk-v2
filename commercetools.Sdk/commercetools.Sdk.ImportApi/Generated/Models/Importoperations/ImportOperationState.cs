@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IImportOperationState), "FindEnum")]
-    public interface IImportOperationState : IJsonName
+    public interface IImportOperationState : IJsonName, IEnumerable<char>
     {
         public static IImportOperationState Processing = new ImportOperationStateWrapper
         { Value = ImportOperationState.Processing, JsonName = "processing" };

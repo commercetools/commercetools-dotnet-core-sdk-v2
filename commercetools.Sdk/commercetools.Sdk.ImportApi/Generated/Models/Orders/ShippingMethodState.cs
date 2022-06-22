@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
-    public interface IShippingMethodState : IJsonName
+    public interface IShippingMethodState : IJsonName, IEnumerable<char>
     {
         public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
         { Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart" };

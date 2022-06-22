@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -27,10 +29,20 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ISubscriptionHealthStatus), "FindEnum")]
-    public interface ISubscriptionHealthStatus : IJsonName
+    public interface ISubscriptionHealthStatus : IJsonName, IEnumerable<char>
     {
         public static ISubscriptionHealthStatus Healthy = new SubscriptionHealthStatusWrapper
         { Value = SubscriptionHealthStatus.Healthy, JsonName = "Healthy" };

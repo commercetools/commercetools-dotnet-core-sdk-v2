@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.Types
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ITypeTextInputHint), "FindEnum")]
-    public interface ITypeTextInputHint : IJsonName
+    public interface ITypeTextInputHint : IJsonName, IEnumerable<char>
     {
         public static ITypeTextInputHint SingleLine = new TypeTextInputHintWrapper
         { Value = TypeTextInputHint.SingleLine, JsonName = "SingleLine" };

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IRoundingMode), "FindEnum")]
-    public interface IRoundingMode : IJsonName
+    public interface IRoundingMode : IJsonName, IEnumerable<char>
     {
         public static IRoundingMode HalfEven = new RoundingModeWrapper
         { Value = RoundingMode.HalfEven, JsonName = "HalfEven" };

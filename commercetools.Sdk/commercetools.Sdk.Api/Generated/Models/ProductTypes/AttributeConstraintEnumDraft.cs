@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -18,10 +20,20 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IAttributeConstraintEnumDraft), "FindEnum")]
-    public interface IAttributeConstraintEnumDraft : IJsonName
+    public interface IAttributeConstraintEnumDraft : IJsonName, IEnumerable<char>
     {
         public static IAttributeConstraintEnumDraft None = new AttributeConstraintEnumDraftWrapper
         { Value = AttributeConstraintEnumDraft.None, JsonName = "None" };

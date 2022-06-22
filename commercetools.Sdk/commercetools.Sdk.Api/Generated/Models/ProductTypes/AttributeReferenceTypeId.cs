@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -51,10 +53,20 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IAttributeReferenceTypeId), "FindEnum")]
-    public interface IAttributeReferenceTypeId : IJsonName
+    public interface IAttributeReferenceTypeId : IJsonName, IEnumerable<char>
     {
         public static IAttributeReferenceTypeId Cart = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.Cart, JsonName = "cart" };

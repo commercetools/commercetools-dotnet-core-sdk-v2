@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -75,10 +77,20 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IReferenceType), "FindEnum")]
-    public interface IReferenceType : IJsonName
+    public interface IReferenceType : IJsonName, IEnumerable<char>
     {
         public static IReferenceType Cart = new ReferenceTypeWrapper
         { Value = ReferenceType.Cart, JsonName = "cart" };

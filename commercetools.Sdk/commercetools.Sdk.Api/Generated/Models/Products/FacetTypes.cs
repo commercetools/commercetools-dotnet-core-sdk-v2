@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.Api.Models.Products
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IFacetTypes), "FindEnum")]
-    public interface IFacetTypes : IJsonName
+    public interface IFacetTypes : IJsonName, IEnumerable<char>
     {
         public static IFacetTypes Terms = new FacetTypesWrapper
         { Value = FacetTypes.Terms, JsonName = "terms" };

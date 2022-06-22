@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -93,10 +95,20 @@ namespace commercetools.Sdk.Api.Models.Types
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IResourceTypeId), "FindEnum")]
-    public interface IResourceTypeId : IJsonName
+    public interface IResourceTypeId : IJsonName, IEnumerable<char>
     {
         public static IResourceTypeId Address = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Address, JsonName = "address" };

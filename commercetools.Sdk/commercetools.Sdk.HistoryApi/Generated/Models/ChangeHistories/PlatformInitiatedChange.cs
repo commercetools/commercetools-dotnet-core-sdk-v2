@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -33,10 +35,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IPlatformInitiatedChange), "FindEnum")]
-    public interface IPlatformInitiatedChange : IJsonName
+    public interface IPlatformInitiatedChange : IJsonName, IEnumerable<char>
     {
         public static IPlatformInitiatedChange ExcludeAll = new PlatformInitiatedChangeWrapper
         { Value = PlatformInitiatedChange.ExcludeAll, JsonName = "excludeAll" };

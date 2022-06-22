@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.Api.Models.Projects
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ISearchIndexingConfigurationStatus), "FindEnum")]
-    public interface ISearchIndexingConfigurationStatus : IJsonName
+    public interface ISearchIndexingConfigurationStatus : IJsonName, IEnumerable<char>
     {
         public static ISearchIndexingConfigurationStatus Activated = new SearchIndexingConfigurationStatusWrapper
         { Value = SearchIndexingConfigurationStatus.Activated, JsonName = "Activated" };
