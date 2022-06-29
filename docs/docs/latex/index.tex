@@ -1,0 +1,323 @@
+\hypertarget{index_autotoc_md1}{}\doxysection{Introduction}\label{index_autotoc_md1}
+This repository contains the .N\+ET S\+D\+Ks generated from the Composable Commerce A\+PI reference.\hypertarget{index_autotoc_md2}{}\doxysection{Packages}\label{index_autotoc_md2}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version  }\\\cline{1-2}
+\endhead
+H\+T\+TP A\+PI &\href{https://www.nuget.org/packages/commercetools.Sdk.Api}{\texttt{ }}  \\\cline{1-2}
+Import A\+PI &\href{https://www.nuget.org/packages/commercetools.Sdk.ImportApi}{\texttt{ }}  \\\cline{1-2}
+Machine Learning A\+PI &\href{https://www.nuget.org/packages/commercetools.Sdk.MLApi}{\texttt{ }}  \\\cline{1-2}
+Change History A\+PI &\href{https://www.nuget.org/packages/commercetools.Sdk.HistoryApi}{\texttt{ }}  \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md3}{}\doxysection{Example and Training material}\label{index_autotoc_md3}
+Feel free to explore these examples using this S\+DK for calling the Composable Commerce H\+T\+TP A\+PI, and Import A\+PI. \href{https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2}{\texttt{ .N\+ET Core S\+DK Training for V2 S\+DK}}\hypertarget{index_autotoc_md4}{}\doxysection{Installation}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Download from $<$a href=\char`\"{}https\+://www.\+nuget.\+org/profiles/commercetools\char`\"{}$>$\+Nuget$<$/a$>$}\label{index_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Installation  }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Package }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Installation  }\\\cline{1-2}
+\endhead
+\href{https://www.nuget.org/packages/commercetools.Sdk.Api}{\texttt{ H\+T\+TP A\+PI}} &{\ttfamily dotnet add package \mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_api}{commercetools.\+Sdk.\+Api}}}  \\\cline{1-2}
+\href{https://www.nuget.org/packages/commercetools.Sdk.ImportApi}{\texttt{ Import A\+PI}} &{\ttfamily dotnet add package \mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_import_api}{commercetools.\+Sdk.\+Import\+Api}}}  \\\cline{1-2}
+\href{https://www.nuget.org/packages/commercetools.Sdk.MLApi}{\texttt{ Machine Learning A\+PI}} &{\ttfamily dotnet add package \mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_m_l_api}{commercetools.\+Sdk.\+M\+L\+Api}}}  \\\cline{1-2}
+\href{https://www.nuget.org/packages/commercetools.Sdk.HistoryApi}{\texttt{ Change History A\+PI}} &{\ttfamily dotnet add package \mbox{\hyperlink{namespacecommercetools_1_1_sdk_1_1_history_api}{commercetools.\+Sdk.\+History\+Api}}}  \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md6}{}\doxysection{Technical Overview}\label{index_autotoc_md6}
+The S\+DK consists of the following projects\+:
+\begin{DoxyItemize}
+\item {\ttfamily commercetools.\+Base.\+Abstractions}\+: Contains common classes and interfaces that can be used in other S\+DK projects like I\+Client and I\+Serializer\+Service.
+\item {\ttfamily \mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_client}{commercetools.\+Base.\+Client}}}\+: Contains Ctp\+Client which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
+\item {\ttfamily \mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_registration}{commercetools.\+Base.\+Registration}}}\+: Helper classes for things like types retriever.
+\item {\ttfamily \mbox{\hyperlink{namespacecommercetools_1_1_base_1_1_serialization}{commercetools.\+Base.\+Serialization}}}\+: Serialization and deserialization services for responses and requests to the H\+T\+TP A\+PI using System.\+Text.\+Json.
+\item {\ttfamily commercetools.\+S\+D\+K.\+Api}\+: Contains all generated models and request builders to communicate with \href{https://docs.commercetools.com/http-api.html}{\texttt{ Composable Commerce H\+T\+TP A\+PI}}.
+\item {\ttfamily commercetools.\+S\+D\+K.\+Import\+Api}\+: Contains all generated models and request builders to communicate with the \href{https://docs.commercetools.com/import-api/}{\texttt{ Import A\+PI}}.
+\item {\ttfamily commercetools.\+S\+D\+K.\+M\+L\+Api}\+: Contains all generated models and request builders to communicate with the \href{https://docs.commercetools.com/api/ml}{\texttt{ Machine Learning A\+PI}}.
+\item {\ttfamily commercetools.\+S\+D\+K.\+History\+Api}\+: Contains all generated models and request builders to communicate with the \href{https://docs.commercetools.com/api/history/change-history}{\texttt{ Change History A\+PI}}.
+\end{DoxyItemize}
+
+In addition, the S\+DK has the following directories\+:
+\begin{DoxyItemize}
+\item {\ttfamily /\+Integration\+Tests}\+: Integration tests for the S\+DK. A good way for anyone using the .N\+ET S\+DK to understand it further.
+\item {\ttfamily /\+Tests}\+: Unit Tests for serialization and request builders.
+\item {\ttfamily /\+Examples}\+:
+\begin{DoxyEnumerate}
+\item {\ttfamily commercetools.\+Api.\+Console\+App} as an example of how to use the S\+DK in a console app and create a client using Client\+Factory.
+\item {\ttfamily commercetools.\+Api.\+Checkout\+App}, \href{https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/tree/master/commercetools.Sdk/Examples/commercetools.Api.CheckoutApp}{\texttt{ the example}} is developed to illustrate how to deal with the me endpoints, like listing and adding products to cart as anonymous user, user can login and switch to password token flow, it\textquotesingle{}s storing the token in the cookie right now, cookies only used as P\+OC, it maybe not the best option for production purposes.
+\end{DoxyEnumerate}
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysection{Getting Started with the .\+N\+E\+T S\+DK}\label{index_autotoc_md7}
+All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it and all the request builders accessible through Api\+Root. In order to use the client object, it needs to be setup first through dependency injection setup.\hypertarget{index_autotoc_md8}{}\doxysubsection{Basic Workflow}\label{index_autotoc_md8}
+At a high level, to make a basic call to the A\+PI, do the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Use the dependency injection class to set things up.
+\item get a client object from the services responsible for calling requests to the A\+PI
+\item use the Api\+Root instance inside the client and identify the project-\/key.
+\item If needed –~Create a draft object as a required for the request based on the documentation.
+\item Build your request and execute it using Execute\+Async.
+\item Receive the response as a model.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md9}{}\doxysubsubsection{Dependency Injection Setup}\label{index_autotoc_md9}
+In the Configure\+Services method of Startup.\+cs add the following\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Composable Commerce H\+T\+TP A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration}
+\end{DoxyCode}
+
+\item {\ttfamily Import A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.UseCommercetoolsImportApi(this.configuration, "ImportClient");}
+\end{DoxyCode}
+
+\item {\ttfamily Machine Learning A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.UseCommercetoolsMLApi(this.configuration, "MLClient");}
+\end{DoxyCode}
+
+\item {\ttfamily Change History A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxyparagraph{Configuration}\label{index_autotoc_md10}
+The client configuration needs to be added to appsettings.\+json in order for the client to work. The structure is as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "Client": \{}
+\DoxyCodeLine{        "ClientId": "", // replace with your client ID}
+\DoxyCodeLine{        "ClientSecret": "", // replace with your client secret}
+\DoxyCodeLine{        "AuthorizationBaseAddress": "https://auth.europe-\/west1.gcp.commercetools.com/", // replace if needed}
+\DoxyCodeLine{        "Scope": "", // replace with your scope}
+\DoxyCodeLine{        "ProjectKey": "", // replace with your project key}
+\DoxyCodeLine{        "ApiBaseAddress": "https://api.europe-\/west1.gcp.commercetools.com/"  // replace if needed}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md11}{}\doxyparagraph{Getting instance of Api\+Root}\label{index_autotoc_md11}
+you can use the instance inside the injected client or use Api\+Factory to create a new instance.
+\begin{DoxyItemize}
+\item {\ttfamily Composable Commerce H\+T\+TP A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{var root1 = client.WithApi();}
+\DoxyCodeLine{var root2 = ApiFactory.Create(client);}
+\end{DoxyCode}
+
+\item {\ttfamily Import A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{var root1 = client.WithImportApi();}
+\DoxyCodeLine{var root2 = ImportApiFactory.Create(client);}
+\end{DoxyCode}
+
+\item {\ttfamily Machine Learning A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{var root1 = client.WithMLApi();}
+\DoxyCodeLine{var root2 = MLApiFactory.Create(client);}
+\end{DoxyCode}
+
+\item {\ttfamily Change History A\+PI}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{var root1 = client.WithHistoryApi();}
+\DoxyCodeLine{var root2 = HistoryApiFactory.Create(client);}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{Multiple Clients}\label{index_autotoc_md12}
+It is possible to use more than one client in the same application with different token providers. The following code can be used to set it up 2 clients with the default Client\+Credentials token provider\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.UseCommercetoolsApi(configuration,}
+\DoxyCodeLine{                new List<string>\{"AdminClient", "StoreClient"\},}
+\DoxyCodeLine{                CreateTokenProvider);}
+\DoxyCodeLine{}
+\DoxyCodeLine{public static ITokenProvider CreateTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();}
+\DoxyCodeLine{            var clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();}
+\DoxyCodeLine{            return TokenProviderFactory.CreateClientCredentialsTokenProvider(clientConfiguration, httpClientFactory);}
+\DoxyCodeLine{        \}}
+\end{DoxyCode}
+
+
+you can choose different token provider based on the client\+Name, Also The appsettings.\+json then needs to contain the configuration sections named the same. The clients can then be injected by using I\+Enumerable and specific client can be selected by name. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{c\#\}}
+\DoxyCodeLine{   public MyController(IEnumerable<IClient> clients)}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{       var storeClient = clients.FirstOrDefault(c => c.Name.Equals("StoreClient"));}
+\DoxyCodeLine{   \}}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{Using S\+DK}\label{index_autotoc_md13}
+S\+DK follows a builder pattern when creating requests. Category resource will be used to demonstrate how to use the S\+DK. This behaviour is the same for all resources. The I\+Client interface can be used by injecting it and calling its Execute\+Async method for different requests. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{private readonly IClient client;}
+\DoxyCodeLine{public CategoryController(IClient client)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    this.client = client;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{public async Task CreatingRequests()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    // Create CategoryDraft}
+\DoxyCodeLine{    var categoryDraft = new CategoryDraft}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                    Name = new LocalizedString \{\{"en", "Name"\}\},}
+\DoxyCodeLine{                    Slug = new LocalizedString \{\{"en", "Slug"\}\},}
+\DoxyCodeLine{                    Key = "Key"}
+\DoxyCodeLine{                \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Use in the previous step configured client instance to send and receive a newly created Category}
+\DoxyCodeLine{     var category = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{                                    .Categories()}
+\DoxyCodeLine{                                    .Post(categoryDraft)}
+\DoxyCodeLine{                                    .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Get Category by id}
+\DoxyCodeLine{    var queriedCategory = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{                .Categories()}
+\DoxyCodeLine{                .WithId(category.Id)}
+\DoxyCodeLine{                .Get()}
+\DoxyCodeLine{                .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Get Category by key}
+\DoxyCodeLine{    var queriedCategory = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{                .Categories()}
+\DoxyCodeLine{                .WithKey(category.Key)}
+\DoxyCodeLine{                .Get()}
+\DoxyCodeLine{                .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Query Categories}
+\DoxyCodeLine{    var response = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{            .Categories()}
+\DoxyCodeLine{            .Get()}
+\DoxyCodeLine{            .WithWhere(\$"key = \(\backslash\)"\{category.Key\}\(\backslash\)"")}
+\DoxyCodeLine{            .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Delete Category by id}
+\DoxyCodeLine{    var deletedCategory = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{            .Categories()}
+\DoxyCodeLine{            .WithId(category.Id)}
+\DoxyCodeLine{            .Delete()}
+\DoxyCodeLine{            .WithVersion(category.version)}
+\DoxyCodeLine{            .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Update Category}
+\DoxyCodeLine{    var newName = "newName";}
+\DoxyCodeLine{    var action = new CategoryChangeNameAction}
+\DoxyCodeLine{                    \{}
+\DoxyCodeLine{                        Name = new LocalizedString \{\{"en", newName\}\}}
+\DoxyCodeLine{                    \};}
+\DoxyCodeLine{    var update = new CategoryUpdate}
+\DoxyCodeLine{                    \{}
+\DoxyCodeLine{                        Version = category.Version,}
+\DoxyCodeLine{                        Actions = new List<ICategoryUpdateAction> \{action\}}
+\DoxyCodeLine{                    \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    var updatedCategory = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{            .Categories()}
+\DoxyCodeLine{            .WithId(category.Id)}
+\DoxyCodeLine{            .Post(categoryUpdate)}
+\DoxyCodeLine{            .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // Delete Category by key}
+\DoxyCodeLine{    var deletedCategory = await client.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{            .Categories()}
+\DoxyCodeLine{            .WithKey(category.Key)}
+\DoxyCodeLine{            .Delete()}
+\DoxyCodeLine{            .WithVersion(category.Version)}
+\DoxyCodeLine{            .ExecuteAsync();}
+\DoxyCodeLine{    \}}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md14}{}\doxysubsection{Creating a client using Client\+Factory}\label{index_autotoc_md14}
+You can get a client from injected services or you can create client on the fly using Client\+Factory, the example below illustrate how to create a client with password Token\+Flow to get customer\textquotesingle{}s orders\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{private readonly IServiceProvider serviceProvider;}
+\DoxyCodeLine{}
+\DoxyCodeLine{public CustomerController(IServiceProvider serviceProvider)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    this.serviceProvider = serviceProvider;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{public async Task ExecuteAsync()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    var email = "customerEmail";}
+\DoxyCodeLine{    var password = "customerPassword";}
+\DoxyCodeLine{}
+\DoxyCodeLine{    var configuration = serviceProvider.GetService<IConfiguration>();}
+\DoxyCodeLine{    var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();}
+\DoxyCodeLine{    var serializerService = serviceProvider.GetService<SerializerService>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    var clientConfiguration = configuration.GetSection("MeClient").Get<ClientConfiguration>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //Create passwordFlow TokenProvider}
+\DoxyCodeLine{    var passwordTokenProvider = TokenProviderFactory}
+\DoxyCodeLine{        .CreatePasswordTokenProvider(clientConfiguration,}
+\DoxyCodeLine{            httpClientFactory,}
+\DoxyCodeLine{            new InMemoryUserCredentialsStoreManager(email, password));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //Create MeClient}
+\DoxyCodeLine{    var meClient = ClientFactory.Create(}
+\DoxyCodeLine{        "MeClient",}
+\DoxyCodeLine{        clientConfiguration,}
+\DoxyCodeLine{        httpClientFactory,}
+\DoxyCodeLine{        serializerService,}
+\DoxyCodeLine{        passwordTokenProvider);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //Get Customer Profile}
+\DoxyCodeLine{    var myProfile = await meClient.WithApi().WithProjectKey("project-\/key")}
+\DoxyCodeLine{        .Me()}
+\DoxyCodeLine{        .Get()}
+\DoxyCodeLine{        .ExecuteAsync();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //Get Customer Orders}
+\DoxyCodeLine{    var myOrders = await}
+\DoxyCodeLine{        meClient.WithApi()}
+\DoxyCodeLine{            .WithProjectKey("project-\/key")}
+\DoxyCodeLine{            .Me()}
+\DoxyCodeLine{            .Orders()}
+\DoxyCodeLine{            .Get()}
+\DoxyCodeLine{            .ExecuteAsync();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+If you are going to create the client using the Client\+Factory, don\textquotesingle{}t forget to call Setup\+Client extension method \href{https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs\#L92}{\texttt{ here}} while building the services container. This will attach the Default Handlers like Error\+Handler and Logger\+Handler to the Client like below\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{c\#\}}
+\DoxyCodeLine{services.SetupClient(}
+\DoxyCodeLine{                "MeClient",}
+\DoxyCodeLine{                errorTypeMapper => typeof(ErrorResponse),}
+\DoxyCodeLine{                s => s.GetService<SerializerService>()}
+\DoxyCodeLine{            );}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md15}{}\doxysubsection{Migration Guidelines}\label{index_autotoc_md15}
+To migrate from the 1.\+x to the 2.\+x, there is a guideline below\+:
+\begin{DoxyItemize}
+\item Migration guidelines from v1 to v2 
+\end{DoxyItemize}

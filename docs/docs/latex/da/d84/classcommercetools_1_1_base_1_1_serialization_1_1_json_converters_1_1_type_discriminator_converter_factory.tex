@@ -1,0 +1,122 @@
+\hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory}{}\doxysection{commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory Class Reference}
+\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory}\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+
+
+Inherits Json\+Converter\+Factory.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aeb4475bd651e103485e0ec3066cfbd73}{Type\+Discriminator\+Converter\+Factory}} (Json\+Naming\+Policy naming\+Policy, \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}{Json\+Serializer\+Options}} json\+Serializer\+Options)
+\begin{DoxyCompactList}\small\item\em Initializes a new Abstract\+Class\+Converter\+Factory \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_acf9bd004e169b827c266178208b88edd}{Can\+Convert}} (Type type\+To\+Convert)
+\item 
+override Json\+Converter \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_af88d60f5642a6b5baf78eda743b9d52a}{Create\+Converter}} (Type type\+To\+Convert, \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}{Json\+Serializer\+Options}} options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Concurrent\+Dictionary$<$ Type, Json\+Converter $>$ \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_afee431bc0eab40a67f0d0af5e17559f4}{Converters}} = new Concurrent\+Dictionary$<$Type, Json\+Converter$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Json\+Naming\+Policy \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_adc31ec2c0f72ee5cbe8043d6bb250e43}{Naming\+Policy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Json\+Serializer\+Options \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}{Json\+Serializer\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aeb4475bd651e103485e0ec3066cfbd73}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aeb4475bd651e103485e0ec3066cfbd73}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!TypeDiscriminatorConverterFactory@{TypeDiscriminatorConverterFactory}}
+\index{TypeDiscriminatorConverterFactory@{TypeDiscriminatorConverterFactory}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{TypeDiscriminatorConverterFactory()}{TypeDiscriminatorConverterFactory()}}
+{\footnotesize\ttfamily commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Type\+Discriminator\+Converter\+Factory (\begin{DoxyParamCaption}\item[{Json\+Naming\+Policy}]{naming\+Policy,  }\item[{\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}{Json\+Serializer\+Options}}}]{json\+Serializer\+Options }\end{DoxyParamCaption})}
+
+
+
+Initializes a new Abstract\+Class\+Converter\+Factory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em naming\+Policy} & The current Json\+Naming\+Policy\\
+\hline
+{\em json\+Serializer\+Options} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_acf9bd004e169b827c266178208b88edd}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_acf9bd004e169b827c266178208b88edd}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!CanConvert@{CanConvert}}
+\index{CanConvert@{CanConvert}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{CanConvert()}{CanConvert()}}
+{\footnotesize\ttfamily override bool commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Can\+Convert (\begin{DoxyParamCaption}\item[{Type}]{type\+To\+Convert }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_af88d60f5642a6b5baf78eda743b9d52a}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_af88d60f5642a6b5baf78eda743b9d52a}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!CreateConverter@{CreateConverter}}
+\index{CreateConverter@{CreateConverter}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{CreateConverter()}{CreateConverter()}}
+{\footnotesize\ttfamily override Json\+Converter commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Create\+Converter (\begin{DoxyParamCaption}\item[{Type}]{type\+To\+Convert,  }\item[{\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}{Json\+Serializer\+Options}}}]{options }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_afee431bc0eab40a67f0d0af5e17559f4}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_afee431bc0eab40a67f0d0af5e17559f4}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!Converters@{Converters}}
+\index{Converters@{Converters}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{Converters}{Converters}}
+{\footnotesize\ttfamily Concurrent\+Dictionary$<$Type, Json\+Converter$>$ commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Converters = new Concurrent\+Dictionary$<$Type, Json\+Converter$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_aaeaf545ca24c1627e7a3f2fffc942fdc}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!JsonSerializerOptions@{JsonSerializerOptions}}
+\index{JsonSerializerOptions@{JsonSerializerOptions}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{JsonSerializerOptions}{JsonSerializerOptions}}
+{\footnotesize\ttfamily Json\+Serializer\+Options commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Json\+Serializer\+Options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 15 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_adc31ec2c0f72ee5cbe8043d6bb250e43}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_type_discriminator_converter_factory_adc31ec2c0f72ee5cbe8043d6bb250e43}} 
+\index{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}!NamingPolicy@{NamingPolicy}}
+\index{NamingPolicy@{NamingPolicy}!commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory@{commercetools.Base.Serialization.JsonConverters.TypeDiscriminatorConverterFactory}}
+\doxysubsubsection{\texorpdfstring{NamingPolicy}{NamingPolicy}}
+{\footnotesize\ttfamily Json\+Naming\+Policy commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Type\+Discriminator\+Converter\+Factory.\+Naming\+Policy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Type\+Discriminator\+Converter\+Factory.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+commercetools.\+Sdk/commercetools.\+Base.\+Serialization/\+Json\+Converters/Type\+Discriminator\+Converter\+Factory.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory}{}\doxysection{commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory Class Reference}
+\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory}\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+
+
+Inherits Json\+Converter\+Factory.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a544811426390aa54b5373d7c7dd4d9b7}{Deserialize\+As\+Converter\+Factory}} (Json\+Naming\+Policy naming\+Policy, \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}{Json\+Serializer\+Options}} json\+Serializer\+Options)
+\item 
+override bool \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a7703ad2de36844eb5514130481b9ab8e}{Can\+Convert}} (Type type\+To\+Convert)
+\item 
+override Json\+Converter \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a4afb148e36f6cb546262f02f8bbec9cd}{Create\+Converter}} (Type type\+To\+Convert, \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}{Json\+Serializer\+Options}} options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Concurrent\+Dictionary$<$ Type, Json\+Converter $>$ \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_abb964f2b3847411a44a44d079e29a44e}{Converters}} = new Concurrent\+Dictionary$<$Type, Json\+Converter$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Json\+Naming\+Policy \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_ae4aaab1e8e356df3c5a8d8c24ccdb7ec}{Naming\+Policy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Json\+Serializer\+Options \mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}{Json\+Serializer\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a544811426390aa54b5373d7c7dd4d9b7}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a544811426390aa54b5373d7c7dd4d9b7}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!DeserializeAsConverterFactory@{DeserializeAsConverterFactory}}
+\index{DeserializeAsConverterFactory@{DeserializeAsConverterFactory}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{DeserializeAsConverterFactory()}{DeserializeAsConverterFactory()}}
+{\footnotesize\ttfamily commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Deserialize\+As\+Converter\+Factory (\begin{DoxyParamCaption}\item[{Json\+Naming\+Policy}]{naming\+Policy,  }\item[{\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}{Json\+Serializer\+Options}}}]{json\+Serializer\+Options }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a7703ad2de36844eb5514130481b9ab8e}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a7703ad2de36844eb5514130481b9ab8e}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!CanConvert@{CanConvert}}
+\index{CanConvert@{CanConvert}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{CanConvert()}{CanConvert()}}
+{\footnotesize\ttfamily override bool commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Can\+Convert (\begin{DoxyParamCaption}\item[{Type}]{type\+To\+Convert }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a4afb148e36f6cb546262f02f8bbec9cd}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a4afb148e36f6cb546262f02f8bbec9cd}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!CreateConverter@{CreateConverter}}
+\index{CreateConverter@{CreateConverter}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{CreateConverter()}{CreateConverter()}}
+{\footnotesize\ttfamily override Json\+Converter commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Create\+Converter (\begin{DoxyParamCaption}\item[{Type}]{type\+To\+Convert,  }\item[{\mbox{\hyperlink{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}{Json\+Serializer\+Options}}}]{options }\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+Definition at line 34 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_abb964f2b3847411a44a44d079e29a44e}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_abb964f2b3847411a44a44d079e29a44e}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!Converters@{Converters}}
+\index{Converters@{Converters}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{Converters}{Converters}}
+{\footnotesize\ttfamily Concurrent\+Dictionary$<$Type, Json\+Converter$>$ commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Converters = new Concurrent\+Dictionary$<$Type, Json\+Converter$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 13 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_a2f5e6e1320d1270c9cf6b3452d5e679c}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!JsonSerializerOptions@{JsonSerializerOptions}}
+\index{JsonSerializerOptions@{JsonSerializerOptions}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{JsonSerializerOptions}{JsonSerializerOptions}}
+{\footnotesize\ttfamily Json\+Serializer\+Options commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Json\+Serializer\+Options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+\mbox{\Hypertarget{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_ae4aaab1e8e356df3c5a8d8c24ccdb7ec}\label{classcommercetools_1_1_base_1_1_serialization_1_1_json_converters_1_1_deserialize_as_converter_factory_ae4aaab1e8e356df3c5a8d8c24ccdb7ec}} 
+\index{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}!NamingPolicy@{NamingPolicy}}
+\index{NamingPolicy@{NamingPolicy}!commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory@{commercetools.Base.Serialization.JsonConverters.DeserializeAsConverterFactory}}
+\doxysubsubsection{\texorpdfstring{NamingPolicy}{NamingPolicy}}
+{\footnotesize\ttfamily Json\+Naming\+Policy commercetools.\+Base.\+Serialization.\+Json\+Converters.\+Deserialize\+As\+Converter\+Factory.\+Naming\+Policy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Deserialize\+As\+Converter\+Factory.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+commercetools.\+Sdk/commercetools.\+Base.\+Serialization/\+Json\+Converters/Deserialize\+As\+Converter\+Factory.\+cs\end{DoxyCompactItemize}
