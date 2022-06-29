@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['failed_17876',['Failed',['../d0/dfc/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_payment_state.html#a5f711774905ee91000984311dbcfaeb5',1,'commercetools.Sdk.Api.Models.Orders.IPaymentState.Failed()'],['../df/db6/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_i_payment_state.html#a8b66b0c2a876d47c00c5c90685bb21d8',1,'commercetools.Sdk.ImportApi.Models.Orders.IPaymentState.Failed()'],['../d7/d1b/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_payment_state.html#a4dc96861b4d778ec1ae051046a19551f',1,'commercetools.Sdk.HistoryApi.Models.Common.IPaymentState.Failed()']]],
-  ['failure_17877',['Failure',['../dc/da0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_payments_1_1_i_transaction_state.html#ad3d880fe21c89968e8073c14a110189c',1,'commercetools.Sdk.Api.Models.Payments.ITransactionState.Failure()'],['../d1/d0e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_transaction_state.html#a09d96a813009496f58860f6a749e150a',1,'commercetools.Sdk.HistoryApi.Models.Common.ITransactionState.Failure()']]],
-  ['filter_17878',['Filter',['../dc/db6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_types.html#a96c47022c546485712313a1a54fd2665',1,'commercetools::Sdk::Api::Models::Products::IFacetTypes']]]
-];

@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['failed_18309',['Failed',['../d7/d15/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders.html#ab5afc31a2fbc95232348c97aad221595ad7c8c85bf79bbe1b7188497c32c3b0ca',1,'commercetools.Sdk.Api.Models.Orders.Failed()'],['../d5/d36/namespacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders.html#a152e77443c6c9f8e0505b940a31c6ecbad7c8c85bf79bbe1b7188497c32c3b0ca',1,'commercetools.Sdk.ImportApi.Models.Orders.Failed()'],['../d1/d02/namespacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common.html#a32f1df830167032005c42b7f0811a7e0ad7c8c85bf79bbe1b7188497c32c3b0ca',1,'commercetools.Sdk.HistoryApi.Models.Common.Failed()']]],
-  ['failure_18310',['Failure',['../d9/d15/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_payments.html#ad789e808bf71e40df7756509839f8cf6ae139a585510a502bbf1841cf589f5086',1,'commercetools.Sdk.Api.Models.Payments.Failure()'],['../d1/d02/namespacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common.html#afad8021f4d0a3f88c8dd8997a0d6d105ae139a585510a502bbf1841cf589f5086',1,'commercetools.Sdk.HistoryApi.Models.Common.Failure()']]],
-  ['filter_18311',['Filter',['../d1/d51/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products.html#a12437282e90b2ad78156c73948285b78ad7778d0c64b6ba21494c97f77a66885a',1,'commercetools::Sdk::Api::Models::Products']]]
-];
