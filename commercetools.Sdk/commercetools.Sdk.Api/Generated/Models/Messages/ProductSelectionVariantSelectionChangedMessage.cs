@@ -6,7 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
-    public partial class ProductSelectionProductAddedMessage : IProductSelectionProductAddedMessage
+    public partial class ProductSelectionVariantSelectionChangedMessage : IProductSelectionVariantSelectionChangedMessage
     {
         public string Id { get; set; }
 
@@ -32,10 +32,12 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IProductReference Product { get; set; }
 
-        public IProductVariantSelection VariantSelection { get; set; }
-        public ProductSelectionProductAddedMessage()
+        public IProductVariantSelection OldVariantSelection { get; set; }
+
+        public IProductVariantSelection NewVariantSelection { get; set; }
+        public ProductSelectionVariantSelectionChangedMessage()
         {
-            this.Type = "ProductSelectionProductAdded";
+            this.Type = "ProductSelectionVariantSelectionChanged";
         }
     }
 }
