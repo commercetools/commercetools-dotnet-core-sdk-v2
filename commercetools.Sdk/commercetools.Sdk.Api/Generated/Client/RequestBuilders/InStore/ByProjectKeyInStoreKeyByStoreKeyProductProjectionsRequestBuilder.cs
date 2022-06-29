@@ -23,10 +23,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet Get()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet(ApiHttpClient, ProjectKey, StoreKey);
-        }
 
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder WithKey(string key)
