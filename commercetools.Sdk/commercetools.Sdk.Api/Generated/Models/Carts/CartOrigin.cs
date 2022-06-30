@@ -12,7 +12,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         Customer,
 
         [Description("Merchant")]
-        Merchant
+        Merchant,
+
+        [Description("Quote")]
+        Quote
     }
 
     public class CartOriginWrapper : ICartOrigin
@@ -44,6 +47,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static ICartOrigin Merchant = new CartOriginWrapper
         { Value = CartOrigin.Merchant, JsonName = "Merchant" };
 
+        public static ICartOrigin Quote = new CartOriginWrapper
+        { Value = CartOrigin.Quote, JsonName = "Quote" };
+
         CartOrigin? Value { get; }
 
         static ICartOrigin[] Values()
@@ -51,7 +57,8 @@ namespace commercetools.Sdk.Api.Models.Carts
             return new[]
             {
                  Customer ,
-                 Merchant
+                 Merchant ,
+                 Quote
              };
         }
         static ICartOrigin FindEnum(string value)

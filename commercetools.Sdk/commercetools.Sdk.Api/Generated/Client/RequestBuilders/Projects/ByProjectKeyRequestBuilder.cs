@@ -19,6 +19,9 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
+using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
+using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
+using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.Reviews;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists;
@@ -157,6 +160,21 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyProductTypesRequestBuilder ProductTypes()
         {
             return new ByProjectKeyProductTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyQuotesRequestBuilder Quotes()
+        {
+            return new ByProjectKeyQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyQuoteRequestsRequestBuilder QuoteRequests()
+        {
+            return new ByProjectKeyQuoteRequestsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyStagedQuotesRequestBuilder StagedQuotes()
+        {
+            return new ByProjectKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyReviewsRequestBuilder Reviews()

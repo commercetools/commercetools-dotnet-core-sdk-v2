@@ -64,6 +64,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public List<IDiscountCodeInfo> DiscountCodes { get; set; }
 
+        public List<IDirectDiscount> DirectDiscounts { get; set; }
+
         public ICustomFields Custom { get; set; }
 
         public IPaymentInfo PaymentInfo { get; set; }
