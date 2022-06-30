@@ -36,7 +36,10 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         ProductVariantPatch,
 
         [Description("customer")]
-        Customer
+        Customer,
+
+        [Description("inventory")]
+        Inventory
     }
 
     public class ImportResourceTypeWrapper : IImportResourceType
@@ -92,6 +95,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Customer = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Customer, JsonName = "customer" };
 
+        public static IImportResourceType Inventory = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.Inventory, JsonName = "inventory" };
+
         ImportResourceType? Value { get; }
 
         static IImportResourceType[] Values()
@@ -107,7 +113,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductType ,
                  ProductVariant ,
                  ProductVariantPatch ,
-                 Customer
+                 Customer ,
+                 Inventory
              };
         }
         static IImportResourceType FindEnum(string value)

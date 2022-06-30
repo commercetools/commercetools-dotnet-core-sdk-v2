@@ -1,8 +1,5 @@
-using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSinks;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportSummaries;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories;
@@ -15,6 +12,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
 {
@@ -36,16 +34,6 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
         }
 
 
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyImportSinksRequestBuilder ImportSinks()
-        {
-            return new ByProjectKeyImportSinksRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyImportSummariesRequestBuilder ImportSummaries()
-        {
-            return new ByProjectKeyImportSummariesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
 
         public ByProjectKeyImportContainersRequestBuilder ImportContainers()
         {
@@ -105,6 +93,11 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyCustomersRequestBuilder Customers()
         {
             return new ByProjectKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyInventoriesRequestBuilder Inventories()
+        {
+            return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

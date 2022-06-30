@@ -8,6 +8,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ImportRequest))]
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest))]
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest))]
+    [SubTypeDiscriminator("inventory", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.InventoryImportRequest))]
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.OrderImportRequest))]
     [SubTypeDiscriminator("order-patch", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.OrderPatchImportRequest))]
     [SubTypeDiscriminator("price", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.PriceImportRequest))]
