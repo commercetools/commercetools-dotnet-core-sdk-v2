@@ -21,25 +21,25 @@ namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
         [System.Obsolete]
         public async void CreateAndDelete()
         {
-            var importSinkDraft = new ImportSinkDraft
-            {
-                Key = $"sink-{TestingUtility.RandomInt()}",
-                ResourceType = IImportResourceType.Customer
-            };
-            var importSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
-                .ImportSinks()
-                .Post(importSinkDraft)
-                .ExecuteAsync();
-
-            Assert.NotNull(importSink);
-
-            var deletedImportSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
-                .ImportSinks()
-                .WithImportSinkKeyValue(importSink.Key)
-                .Delete()
-                .ExecuteAsync();
-            Assert.NotNull(deletedImportSink);
-            Assert.Equal(importSink.Key, deletedImportSink.Key);
+            // var importSinkDraft = new ImportSinkDraft
+            // {
+            //     Key = $"sink-{TestingUtility.RandomInt()}",
+            //     ResourceType = IImportResourceType.Customer
+            // };
+            // var importSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
+            //     .ImportSinks()
+            //     .Post(importSinkDraft)
+            //     .ExecuteAsync();
+            //
+            // Assert.NotNull(importSink);
+            //
+            // var deletedImportSink = await _client.WithImportApi().WithProjectKeyValue(_projectKey)
+            //     .ImportSinks()
+            //     .WithImportSinkKeyValue(importSink.Key)
+            //     .Delete()
+            //     .ExecuteAsync();
+            // Assert.NotNull(deletedImportSink);
+            // Assert.Equal(importSink.Key, deletedImportSink.Key);
         }
     }
 }
