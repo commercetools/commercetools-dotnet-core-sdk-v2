@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.Customers
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IAnonymousCartSignInMode), "FindEnum")]
-    public interface IAnonymousCartSignInMode : IJsonName
+    public interface IAnonymousCartSignInMode : IJsonName, IEnumerable<char>
     {
         public static IAnonymousCartSignInMode MergeWithExistingCustomerCart = new AnonymousCartSignInModeWrapper
         { Value = AnonymousCartSignInMode.MergeWithExistingCustomerCart, JsonName = "MergeWithExistingCustomerCart" };

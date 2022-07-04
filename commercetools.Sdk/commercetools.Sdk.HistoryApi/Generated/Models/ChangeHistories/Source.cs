@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ISource), "FindEnum")]
-    public interface ISource : IJsonName
+    public interface ISource : IJsonName, IEnumerable<char>
     {
         public static ISource MerchantCenter = new SourceWrapper
         { Value = Source.MerchantCenter, JsonName = "MerchantCenter" };

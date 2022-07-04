@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.CartScoreTier))]
     public partial interface ICartScoreTier : IShippingRatePriceTier
     {
-        decimal Score { get; set; }
+        int Score { get; set; }
 
         IMoney Price { get; set; }
 

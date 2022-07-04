@@ -1,4 +1,3 @@
-using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -26,11 +25,6 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts
         public ByProjectKeyProductDraftsImportContainersRequestBuilder ImportContainers()
         {
             return new ByProjectKeyProductDraftsImportContainersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey)
-        {
-            return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);
         }
     }
 }

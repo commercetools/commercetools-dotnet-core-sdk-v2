@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductSelections;
 using commercetools.Sdk.Api.Models.Products;
 using System;
 
@@ -30,6 +31,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IProductReference Product { get; set; }
+
+        public IProductVariantSelection VariantSelection { get; set; }
         public ProductSelectionProductAddedMessage()
         {
             this.Type = "ProductSelectionProductAdded";

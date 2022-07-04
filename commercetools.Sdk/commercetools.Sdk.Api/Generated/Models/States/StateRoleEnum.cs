@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.States
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IStateRoleEnum), "FindEnum")]
-    public interface IStateRoleEnum : IJsonName
+    public interface IStateRoleEnum : IJsonName, IEnumerable<char>
     {
         public static IStateRoleEnum ReviewIncludedInStatistics = new StateRoleEnumWrapper
         { Value = StateRoleEnum.ReviewIncludedInStatistics, JsonName = "ReviewIncludedInStatistics" };

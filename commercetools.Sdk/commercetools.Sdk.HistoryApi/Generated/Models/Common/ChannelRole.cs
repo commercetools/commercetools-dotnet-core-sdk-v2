@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -30,10 +32,20 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IChannelRole), "FindEnum")]
-    public interface IChannelRole : IJsonName
+    public interface IChannelRole : IJsonName, IEnumerable<char>
     {
         public static IChannelRole InventorySupply = new ChannelRoleWrapper
         { Value = ChannelRole.InventorySupply, JsonName = "InventorySupply" };

@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     {
         public IShippingRateTierType Type { get; set; }
 
-        public decimal Score { get; set; }
+        public int Score { get; set; }
 
         public IMoney Price { get; set; }
 

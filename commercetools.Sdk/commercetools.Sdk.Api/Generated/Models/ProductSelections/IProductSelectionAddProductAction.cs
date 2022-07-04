@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public partial interface IProductSelectionAddProductAction : IProductSelectionUpdateAction
     {
         IProductResourceIdentifier Product { get; set; }
+
+        IProductVariantSelection VariantSelection { get; set; }
     }
 }

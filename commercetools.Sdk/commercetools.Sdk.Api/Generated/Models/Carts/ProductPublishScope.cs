@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IProductPublishScope), "FindEnum")]
-    public interface IProductPublishScope : IJsonName
+    public interface IProductPublishScope : IJsonName, IEnumerable<char>
     {
         public static IProductPublishScope All = new ProductPublishScopeWrapper
         { Value = ProductPublishScope.All, JsonName = "All" };

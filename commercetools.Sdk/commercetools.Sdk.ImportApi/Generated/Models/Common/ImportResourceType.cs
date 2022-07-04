@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -34,7 +36,10 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         ProductVariantPatch,
 
         [Description("customer")]
-        Customer
+        Customer,
+
+        [Description("inventory")]
+        Inventory
     }
 
     public class ImportResourceTypeWrapper : IImportResourceType
@@ -45,10 +50,20 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IImportResourceType), "FindEnum")]
-    public interface IImportResourceType : IJsonName
+    public interface IImportResourceType : IJsonName, IEnumerable<char>
     {
         public static IImportResourceType Category = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Category, JsonName = "category" };
@@ -80,6 +95,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Customer = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Customer, JsonName = "customer" };
 
+        public static IImportResourceType Inventory = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.Inventory, JsonName = "inventory" };
+
         ImportResourceType? Value { get; }
 
         static IImportResourceType[] Values()
@@ -95,7 +113,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductType ,
                  ProductVariant ,
                  ProductVariantPatch ,
-                 Customer
+                 Customer ,
+                 Inventory
              };
         }
         static IImportResourceType FindEnum(string value)

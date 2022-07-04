@@ -27,9 +27,39 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/product-selection-assignments";
         }
 
+        public List<string> GetLimit()
+        {
+            return this.GetQueryParam("limit");
+        }
+
+        public List<string> GetOffset()
+        {
+            return this.GetQueryParam("offset");
+        }
+
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithLimit(int limit)
+        {
+            return this.AddQueryParam("limit", limit.ToString());
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithOffset(int offset)
+        {
+            return this.AddQueryParam("offset", offset.ToString());
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithExpand(string expand)

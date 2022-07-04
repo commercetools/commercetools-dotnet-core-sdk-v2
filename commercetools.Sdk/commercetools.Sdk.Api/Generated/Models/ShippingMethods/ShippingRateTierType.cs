@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IShippingRateTierType), "FindEnum")]
-    public interface IShippingRateTierType : IJsonName
+    public interface IShippingRateTierType : IJsonName, IEnumerable<char>
     {
         public static IShippingRateTierType CartValue = new ShippingRateTierTypeWrapper
         { Value = ShippingRateTierType.CartValue, JsonName = "CartValue" };

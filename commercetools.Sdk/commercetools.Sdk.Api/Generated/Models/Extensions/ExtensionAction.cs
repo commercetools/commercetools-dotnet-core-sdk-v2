@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.Extensions
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IExtensionAction), "FindEnum")]
-    public interface IExtensionAction : IJsonName
+    public interface IExtensionAction : IJsonName, IEnumerable<char>
     {
         public static IExtensionAction Create = new ExtensionActionWrapper
         { Value = ExtensionAction.Create, JsonName = "Create" };

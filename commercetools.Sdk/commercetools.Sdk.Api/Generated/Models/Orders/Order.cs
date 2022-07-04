@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.CartDiscounts;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Quotes;
 using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
@@ -77,6 +78,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         public long? LastMessageSequenceNumber { get; set; }
 
         public ICartReference Cart { get; set; }
+
+        public IQuoteReference Quote { get; set; }
 
         public ICustomFields Custom { get; set; }
 

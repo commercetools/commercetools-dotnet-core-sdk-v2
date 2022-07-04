@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,10 +26,20 @@ namespace commercetools.Sdk.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
-    public interface IInventoryMode : IJsonName
+    public interface IInventoryMode : IJsonName, IEnumerable<char>
     {
         public static IInventoryMode TrackOnly = new InventoryModeWrapper
         { Value = InventoryMode.TrackOnly, JsonName = "TrackOnly" };

@@ -27,6 +27,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
 
         public ILocalizedString LocalizedName { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string Description { get; set; }
 
         public ILocalizedString LocalizedDescription { get; set; }

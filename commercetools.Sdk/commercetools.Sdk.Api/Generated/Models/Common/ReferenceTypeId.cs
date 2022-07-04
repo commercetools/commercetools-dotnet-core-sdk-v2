@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -60,6 +62,12 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("product-type")]
         ProductType,
 
+        [Description("quote")]
+        Quote,
+
+        [Description("quote-request")]
+        QuoteRequest,
+
         [Description("review")]
         Review,
 
@@ -68,6 +76,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         [Description("shopping-list")]
         ShoppingList,
+
+        [Description("staged-quote")]
+        StagedQuote,
 
         [Description("state")]
         State,
@@ -96,10 +107,20 @@ namespace commercetools.Sdk.Api.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
-    public interface IReferenceTypeId : IJsonName
+    public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
         public static IReferenceTypeId Cart = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Cart, JsonName = "cart" };
@@ -155,6 +176,12 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId ProductType = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductType, JsonName = "product-type" };
 
+        public static IReferenceTypeId Quote = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.Quote, JsonName = "quote" };
+
+        public static IReferenceTypeId QuoteRequest = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.QuoteRequest, JsonName = "quote-request" };
+
         public static IReferenceTypeId Review = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Review, JsonName = "review" };
 
@@ -163,6 +190,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         public static IReferenceTypeId ShoppingList = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ShoppingList, JsonName = "shopping-list" };
+
+        public static IReferenceTypeId StagedQuote = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.StagedQuote, JsonName = "staged-quote" };
 
         public static IReferenceTypeId State = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.State, JsonName = "state" };
@@ -206,9 +236,12 @@ namespace commercetools.Sdk.Api.Models.Common
                  ProductPrice ,
                  ProductSelection ,
                  ProductType ,
+                 Quote ,
+                 QuoteRequest ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,
+                 StagedQuote ,
                  State ,
                  Store ,
                  Subscription ,

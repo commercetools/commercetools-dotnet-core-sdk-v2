@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -33,10 +35,20 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IDiscountCodeState), "FindEnum")]
-    public interface IDiscountCodeState : IJsonName
+    public interface IDiscountCodeState : IJsonName, IEnumerable<char>
     {
         public static IDiscountCodeState NotActive = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.NotActive, JsonName = "NotActive" };

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -606,10 +608,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IUpdateType), "FindEnum")]
-    public interface IUpdateType : IJsonName
+    public interface IUpdateType : IJsonName, IEnumerable<char>
     {
         public static IUpdateType AddAddress = new UpdateTypeWrapper
         { Value = UpdateType.AddAddress, JsonName = "addAddress" };

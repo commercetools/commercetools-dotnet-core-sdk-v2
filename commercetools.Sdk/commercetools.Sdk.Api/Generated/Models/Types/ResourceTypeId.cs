@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -66,6 +68,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("product-selection")]
         ProductSelection,
 
+        [Description("quote")]
+        Quote,
+
         [Description("review")]
         Review,
 
@@ -93,10 +98,20 @@ namespace commercetools.Sdk.Api.Models.Types
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IResourceTypeId), "FindEnum")]
-    public interface IResourceTypeId : IJsonName
+    public interface IResourceTypeId : IJsonName, IEnumerable<char>
     {
         public static IResourceTypeId Address = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Address, JsonName = "address" };
@@ -158,6 +173,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId ProductSelection = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ProductSelection, JsonName = "product-selection" };
 
+        public static IResourceTypeId Quote = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.Quote, JsonName = "quote" };
+
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Review, JsonName = "review" };
 
@@ -202,6 +220,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  PaymentInterfaceInteraction ,
                  ProductPrice ,
                  ProductSelection ,
+                 Quote ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,

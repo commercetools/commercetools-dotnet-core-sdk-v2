@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -21,10 +23,20 @@ namespace commercetools.Sdk.Api.Models.Projects
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IOrderSearchStatus), "FindEnum")]
-    public interface IOrderSearchStatus : IJsonName
+    public interface IOrderSearchStatus : IJsonName, IEnumerable<char>
     {
         public static IOrderSearchStatus Activated = new OrderSearchStatusWrapper
         { Value = OrderSearchStatus.Activated, JsonName = "Activated" };

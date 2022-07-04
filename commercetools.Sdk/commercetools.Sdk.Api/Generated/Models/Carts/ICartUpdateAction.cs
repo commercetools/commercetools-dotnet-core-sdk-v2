@@ -45,6 +45,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomFieldAction))]
     [SubTypeDiscriminator("setDeliveryAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomTypeAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Carts.CartSetKeyAction))]

@@ -7,5 +7,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public partial interface IAssignedProductSelection
     {
         IProductSelectionReference ProductSelection { get; set; }
+
+        IProductVariantSelection VariantSelection { get; set; }
     }
 }
