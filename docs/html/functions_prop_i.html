@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">master</span>
+   &#160;<span id="projectnumber">4.0.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -80,10 +80,12 @@ $(function() {
 , <a class="el" href="d1/de6/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_cart_reference.html#a121b4030f23bd934ff353c457eaf613a">commercetools.Sdk.Api.Models.Carts.CartReference</a>
 , <a class="el" href="d5/d02/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_cart_resource_identifier.html#ac6b5c6d129e5286dc3a832508465a9ca">commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier</a>
 , <a class="el" href="de/df6/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_custom_line_item.html#a98b84357369159143ceca3d7e7f5e19d">commercetools.Sdk.Api.Models.Carts.CustomLineItem</a>
+, <a class="el" href="de/d63/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_direct_discount.html#a516a2b191c4174633340815638f02a9a">commercetools.Sdk.Api.Models.Carts.DirectDiscount</a>
 , <a class="el" href="d8/d69/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart.html#a7077d7f8ab8ab7968fd434321cec958f">commercetools.Sdk.Api.Models.Carts.ICart</a>
 , <a class="el" href="db/dd4/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_reference.html#a87fc00f806505e29049317f03d11b388">commercetools.Sdk.Api.Models.Carts.ICartReference</a>
 , <a class="el" href="de/df7/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_resource_identifier.html#af4943809a982189f76f38e38a655b0d4">commercetools.Sdk.Api.Models.Carts.ICartResourceIdentifier</a>
 , <a class="el" href="d1/d1e/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_custom_line_item.html#a72e297714fa79fd3e2c27568133dc029">commercetools.Sdk.Api.Models.Carts.ICustomLineItem</a>
+, <a class="el" href="d0/d02/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_direct_discount.html#ae4b1f9aa7216a8db0f47589a07ca5b57">commercetools.Sdk.Api.Models.Carts.IDirectDiscount</a>
 , <a class="el" href="db/dda/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_line_item.html#af419d32fb0cbaa762710558e1ac4fbcd">commercetools.Sdk.Api.Models.Carts.ILineItem</a>
 , <a class="el" href="d7/d2d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_line_item.html#ad95bc5ac9b22039bb46bcae3962b9584">commercetools.Sdk.Api.Models.Carts.LineItem</a>
 , <a class="el" href="db/d1a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_categories_1_1_category.html#a56730016c8b210a1d358b3d1fffc8a4d">commercetools.Sdk.Api.Models.Categories.Category</a>
@@ -242,14 +244,26 @@ $(function() {
 , <a class="el" href="da/d9f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_selection_deleted_message.html#a169ec0415f82ce534e0172cd95cdeb06">commercetools.Sdk.Api.Models.Messages.ProductSelectionDeletedMessage</a>
 , <a class="el" href="df/d81/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_selection_product_added_message.html#af587871f6ba1b7b90d361b62f3c6deda">commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessage</a>
 , <a class="el" href="d4/d66/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_selection_product_removed_message.html#a2ac25eca9449adee234d087d39361d6b">commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessage</a>
+, <a class="el" href="d8/df0/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_selection_variant_selection_changed_message.html#af8df345a39452177a5478110f99357da">commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantSelectionChangedMessage</a>
 , <a class="el" href="d3/d77/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_slug_changed_message.html#a6890f31c627fa1230e92d5c8d24a849c">commercetools.Sdk.Api.Models.Messages.ProductSlugChangedMessage</a>
 , <a class="el" href="d3/d12/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_state_transition_message.html#aa5d641124765bd8b58e5d292384df725">commercetools.Sdk.Api.Models.Messages.ProductStateTransitionMessage</a>
 , <a class="el" href="d5/d00/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_unpublished_message.html#ace71a885e8883eaf5cb523f7d32b7989">commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessage</a>
 , <a class="el" href="d4/d2e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_variant_added_message.html#a8f512ae2b610acac1ecd71b337b47b57">commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessage</a>
 , <a class="el" href="d4/dc7/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_product_variant_deleted_message.html#a027a340756e4344fb619087cd7beb4ee">commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessage</a>
+, <a class="el" href="db/d86/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_created_message.html#a315e421d8a102fee1ff6ada38cce6f33">commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessage</a>
+, <a class="el" href="d0/da5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_deleted_message.html#a7d1f26d9485462685b7b1e20a4e273fc">commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessage</a>
+, <a class="el" href="d0/dd2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_request_created_message.html#aca756287218bc137e31b981ef276d4fa">commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessage</a>
+, <a class="el" href="d7/d00/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_request_deleted_message.html#ae908905307e20873e0eb8d783a876e9d">commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessage</a>
+, <a class="el" href="d8/d88/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_request_state_changed_message.html#a04f0b398977a39f02e21d0ad9f97cf58">commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessage</a>
+, <a class="el" href="d9/d5d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_quote_state_changed_message.html#a5e903afba44b082d37551e02da9ce0a5">commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage</a>
 , <a class="el" href="d8/d7c/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_review_created_message.html#a9b177f26d3447df53ac08426edbeeca5">commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage</a>
 , <a class="el" href="de/d63/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_review_rating_set_message.html#aada22b7a86f2d45da40e2fbbc80b3306">commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage</a>
 , <a class="el" href="de/d96/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_review_state_transition_message.html#a7e02ff22919f12106d1eab3ba4c83268">commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessage</a>
+, <a class="el" href="d5/d16/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_created_message.html#a097dea0ee9713ac8f707c23f116cb440">commercetools.Sdk.Api.Models.Messages.StagedQuoteCreatedMessage</a>
+, <a class="el" href="d0/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_deleted_message.html#ad3d08a6943f67a6a0618d219b793ca2d">commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessage</a>
+, <a class="el" href="d5/d0b/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_seller_comment_set_message.html#a238e2047254fec3e638ba3465b639856">commercetools.Sdk.Api.Models.Messages.StagedQuoteSellerCommentSetMessage</a>
+, <a class="el" href="d1/dde/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_state_changed_message.html#a8e1d0b13982f0318a9e0ec33b30c723e">commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessage</a>
+, <a class="el" href="d6/d4b/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_valid_to_set_message.html#a57264a5892aa5a7709c8fe2f243da954">commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessage</a>
 , <a class="el" href="dc/d84/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_standalone_price_created_message.html#ab0c662a66e01727c235eff135114c73d">commercetools.Sdk.Api.Models.Messages.StandalonePriceCreatedMessage</a>
 , <a class="el" href="d3/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_standalone_price_deleted_message.html#a00b3cb134eb00d1718c8b5d0855de201">commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessage</a>
 , <a class="el" href="d1/d59/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_standalone_price_discount_set_message.html#a99f1b5e9723fdea2eb32b0049c28b378">commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessage</a>
@@ -323,6 +337,14 @@ $(function() {
 , <a class="el" href="d1/d89/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_types_1_1_product_type.html#acca91e3b0545586c95a8ad710e74c5ec">commercetools.Sdk.Api.Models.ProductTypes.ProductType</a>
 , <a class="el" href="df/de5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_types_1_1_product_type_reference.html#a1213e884169c67c260406f778c9ca2ce">commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference</a>
 , <a class="el" href="df/dd7/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_types_1_1_product_type_resource_identifier.html#ab3554a742dd717ac79f0752eaf0d8198">commercetools.Sdk.Api.Models.ProductTypes.ProductTypeResourceIdentifier</a>
+, <a class="el" href="d6/d86/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_i_quote_request.html#a40de1b2ab71306a0c2326de2dcaba1eb">commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest</a>
+, <a class="el" href="da/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_quote_request.html#a337b06790ebee713c382263f0cd638ab">commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequest</a>
+, <a class="el" href="d2/d35/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_quote_request_reference.html#a5e5b82f8d0bff0439b143fae4e26549c">commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference</a>
+, <a class="el" href="dd/d1d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_quote_request_resource_identifier.html#ab263324d99530600278f955d5b2b2835">commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier</a>
+, <a class="el" href="de/d21/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_i_quote.html#ade7cc44f4c80d313a77f7b6e30272435">commercetools.Sdk.Api.Models.Quotes.IQuote</a>
+, <a class="el" href="d4/d7f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_quote.html#ae879419f36d4316889ebddd2e769e6ac">commercetools.Sdk.Api.Models.Quotes.Quote</a>
+, <a class="el" href="dd/dde/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_quote_reference.html#a3400b18e5e97759c077543fc5702a315">commercetools.Sdk.Api.Models.Quotes.QuoteReference</a>
+, <a class="el" href="d0/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_quote_resource_identifier.html#ab032bec39af7f7550a331ac5f48c8bde">commercetools.Sdk.Api.Models.Quotes.QuoteResourceIdentifier</a>
 , <a class="el" href="d7/dd6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_reviews_1_1_i_review.html#a70b46f3378005ee2007682e8f4d86e4b">commercetools.Sdk.Api.Models.Reviews.IReview</a>
 , <a class="el" href="dd/da0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_reviews_1_1_i_review_reference.html#ab6712509fe09e54e9cb44761872b79ad">commercetools.Sdk.Api.Models.Reviews.IReviewReference</a>
 , <a class="el" href="d5/dd0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_reviews_1_1_i_review_resource_identifier.html#a91e0fb13fd1a009c1b1b8be96c9f7a27">commercetools.Sdk.Api.Models.Reviews.IReviewResourceIdentifier</a>
@@ -345,6 +367,10 @@ $(function() {
 , <a class="el" href="de/dab/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_shopping_lists_1_1_shopping_list_reference.html#af06424adf37d9d66d7356636cbbabf27">commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference</a>
 , <a class="el" href="df/d72/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_shopping_lists_1_1_shopping_list_resource_identifier.html#ada65b28fd6898f06ee1920467f87199e">commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListResourceIdentifier</a>
 , <a class="el" href="d9/ddb/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_shopping_lists_1_1_text_line_item.html#a24adbde3d9929c1cc4e36cd0c38198c3">commercetools.Sdk.Api.Models.ShoppingLists.TextLineItem</a>
+, <a class="el" href="dc/d3a/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_staged_quotes_1_1_i_staged_quote.html#a33e9146df81245cc4bf437d06eaf0b34">commercetools.Sdk.Api.Models.StagedQuotes.IStagedQuote</a>
+, <a class="el" href="d2/d15/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_staged_quotes_1_1_staged_quote.html#a1ff4a34d067f99483c8abee60e7cc154">commercetools.Sdk.Api.Models.StagedQuotes.StagedQuote</a>
+, <a class="el" href="d8/dec/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_staged_quotes_1_1_staged_quote_reference.html#a03a6b902aca691af5fa6ce55aa67d006">commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteReference</a>
+, <a class="el" href="da/d17/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_staged_quotes_1_1_staged_quote_resource_identifier.html#a6496ae56f8e204667a35bf6ba3cd7c7a">commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteResourceIdentifier</a>
 , <a class="el" href="d8/d60/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_i_standalone_price.html#a4083d49ff9d2f5c7f96d1a16f35bb32c">commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePrice</a>
 , <a class="el" href="de/d40/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price.html#a13592417a333824408809fbd317c4dad">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePrice</a>
 , <a class="el" href="d9/d36/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_reference.html#a97b08e15bf7be2814a0b4f98051a64e9">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference</a>
@@ -671,6 +697,10 @@ $(function() {
 , <a class="el" href="d8/dbc/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_import_draft.html#a0909af429449d8876a990be6d5409e7c">commercetools.Sdk.Api.Models.Orders.IOrderImportDraft</a>
 , <a class="el" href="d5/d50/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order.html#ac1f8827eb071d62d2ce50a93d6f48d46">commercetools.Sdk.Api.Models.Orders.Order</a>
 , <a class="el" href="d8/df1/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_import_draft.html#a1b09003f76586c26bf19f6fc935a779e">commercetools.Sdk.Api.Models.Orders.OrderImportDraft</a>
+, <a class="el" href="d6/d86/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_i_quote_request.html#ade1e2951a420ea97bd8a8832b18caabe">commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest</a>
+, <a class="el" href="da/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_quote_request.html#a78f3ed282bb3087911b0a13aa9f92ab0">commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequest</a>
+, <a class="el" href="de/d21/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_i_quote.html#ac6750828153fc07a4557166e9e6b0c45">commercetools.Sdk.Api.Models.Quotes.IQuote</a>
+, <a class="el" href="d4/d7f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_quote.html#a9227277f334c186468835d86b9dc5df5">commercetools.Sdk.Api.Models.Quotes.Quote</a>
 , <a class="el" href="d4/daa/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_i_order_import.html#aa6f317142540c4e0c935dc6131a5e9db">commercetools.Sdk.ImportApi.Models.Orders.IOrderImport</a>
 , <a class="el" href="d0/d00/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_order_import.html#a4ffdec362a5882175b406e0fea8549fb">commercetools.Sdk.ImportApi.Models.Orders.OrderImport</a>
 </li>
@@ -858,6 +888,10 @@ $(function() {
 , <a class="el" href="d8/dbc/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_import_draft.html#adca13061794833b91066e382d87a292b">commercetools.Sdk.Api.Models.Orders.IOrderImportDraft</a>
 , <a class="el" href="d5/d50/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order.html#abbf877b48fced1722a632ea1f5d1b0af">commercetools.Sdk.Api.Models.Orders.Order</a>
 , <a class="el" href="d8/df1/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_import_draft.html#a3a3f92a5ff34581b80c643baca936096">commercetools.Sdk.Api.Models.Orders.OrderImportDraft</a>
+, <a class="el" href="d6/d86/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_i_quote_request.html#a9bc02e23b6837ba03d1ec07b0e76c8f9">commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest</a>
+, <a class="el" href="da/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quote_requests_1_1_quote_request.html#a645492af3b5270def949b9870cecaa19">commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequest</a>
+, <a class="el" href="de/d21/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_i_quote.html#a019ebb13e3aa91278ab57301e00c9cd5">commercetools.Sdk.Api.Models.Quotes.IQuote</a>
+, <a class="el" href="d4/d7f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_quote.html#a8548061825cde23d5c48e3942b1d27bf">commercetools.Sdk.Api.Models.Quotes.Quote</a>
 , <a class="el" href="d4/daa/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_i_order_import.html#a36c4d16cd24d100b12582c8923499467">commercetools.Sdk.ImportApi.Models.Orders.IOrderImport</a>
 , <a class="el" href="d0/d00/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_order_import.html#a5631038289df9d36058dc8364a0e3d56">commercetools.Sdk.ImportApi.Models.Orders.OrderImport</a>
 </li>

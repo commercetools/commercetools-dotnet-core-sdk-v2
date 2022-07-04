@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_5fcorrelation_5fid_18115',['X_CORRELATION_ID',['../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a642bd809126fafef3664c013edcaf76f',1,'commercetools::Base::Client::ApiHttpHeaders']]]
+  ['waitformastervariant_18586',['WaitForMasterVariant',['../d4/db2/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_processing_state.html#a19110b4d1404fbee8fe67f585dced69a',1,'commercetools::Sdk::ImportApi::Models::Common::IProcessingState']]],
+  ['withdrawn_18587',['Withdrawn',['../d4/d33/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_i_quote_state.html#a7c91a30fe14ac661449fd3d2ac9b975a',1,'commercetools::Sdk::Api::Models::Quotes::IQuoteState']]]
 ];
