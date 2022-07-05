@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
+
     public partial class ByProjectKeyOrdersEditsKeyByKeyGet : ApiMethod<ByProjectKeyOrdersEditsKeyByKeyGet>, IApiMethod<ByProjectKeyOrdersEditsKeyByKeyGet, commercetools.Sdk.Api.Models.OrderEdits.IOrderEdit>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyOrdersEditsKeyByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersEditsKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyOrdersEditsKeyByKeyGet>
     {
 

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class Channel : IChannel
     {
         public string Id { get; set; }

@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts
 {
+
     public partial class ByProjectKeyCartDiscountsKeyByKeyGet : ApiMethod<ByProjectKeyCartDiscountsKeyByKeyGet>, IApiMethod<ByProjectKeyCartDiscountsKeyByKeyGet, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCartDiscountsKeyByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCartDiscountsKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCartDiscountsKeyByKeyGet>
     {
 

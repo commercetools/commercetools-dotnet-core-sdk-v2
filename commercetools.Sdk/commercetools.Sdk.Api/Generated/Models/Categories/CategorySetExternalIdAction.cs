@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategorySetExternalIdAction : ICategorySetExternalIdAction
     {
         public string Action { get; set; }

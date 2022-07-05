@@ -12,6 +12,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class Order : IOrder
     {
         public string Id { get; set; }

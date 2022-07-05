@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class AttributeDefinition : IAttributeDefinition
     {
         public IAttributeType Type { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSetTitleAction : ICustomerSetTitleAction
     {
         public string Action { get; set; }

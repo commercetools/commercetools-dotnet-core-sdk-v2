@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountReference : ICartDiscountReference
     {
         public IReferenceTypeId TypeId { get; set; }

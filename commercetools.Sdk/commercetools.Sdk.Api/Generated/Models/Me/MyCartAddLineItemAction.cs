@@ -7,6 +7,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCartAddLineItemAction : IMyCartAddLineItemAction
     {
         public string Action { get; set; }

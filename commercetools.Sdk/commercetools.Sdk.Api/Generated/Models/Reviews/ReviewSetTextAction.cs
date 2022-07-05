@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewSetTextAction : IReviewSetTextAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
+
     public partial class BooleanField : IBooleanField
     {
         public string Type { get; set; }

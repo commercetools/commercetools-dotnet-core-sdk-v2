@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategoryDraft : ICategoryDraft
     {
         public ILocalizedString Name { get; set; }

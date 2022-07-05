@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
 {
+
     public partial class ByProjectKeyChannelsByIDPost : ApiMethod<ByProjectKeyChannelsByIDPost>, IApiMethod<ByProjectKeyChannelsByIDPost, commercetools.Sdk.Api.Models.Channels.IChannel>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyChannelsByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyChannelsByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyChannelsByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyChannelsByIDPost>
     {
 

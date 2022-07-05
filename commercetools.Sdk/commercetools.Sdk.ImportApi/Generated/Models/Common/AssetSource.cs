@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class AssetSource : IAssetSource
     {
         public string Uri { get; set; }

@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
 {
+
     public partial class ByProjectKeyCategoriesByIDDelete : ApiMethod<ByProjectKeyCategoriesByIDDelete>, IApiMethod<ByProjectKeyCategoriesByIDDelete, commercetools.Sdk.Api.Models.Categories.ICategory>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCategoriesByIDDelete>
     {
 

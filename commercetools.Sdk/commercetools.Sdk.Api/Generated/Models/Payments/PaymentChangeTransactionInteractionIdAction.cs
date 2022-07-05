@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentChangeTransactionInteractionIdAction : IPaymentChangeTransactionInteractionIdAction
     {
         public string Action { get; set; }

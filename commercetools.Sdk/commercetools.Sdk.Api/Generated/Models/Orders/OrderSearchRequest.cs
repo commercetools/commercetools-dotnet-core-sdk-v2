@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSearchRequest : IOrderSearchRequest
     {
         public IOrderSearchQuery Query { get; set; }

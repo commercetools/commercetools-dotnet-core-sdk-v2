@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
+
     public partial class TimeField : ITimeField
     {
         public string Type { get; set; }

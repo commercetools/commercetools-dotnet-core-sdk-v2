@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class AttributeCount : IAttributeCount
     {
         public int ProductTypeAttributes { get; set; }

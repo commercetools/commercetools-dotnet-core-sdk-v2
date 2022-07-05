@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetDescriptionChange : ISetDescriptionChange
     {
         public string Type { get; set; }

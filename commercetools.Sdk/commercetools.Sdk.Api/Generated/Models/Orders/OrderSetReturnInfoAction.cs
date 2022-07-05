@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetReturnInfoAction : IOrderSetReturnInfoAction
     {
         public string Action { get; set; }

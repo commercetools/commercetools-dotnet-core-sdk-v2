@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class MessagePagedQueryResponse : IMessagePagedQueryResponse
     {
         public long Limit { get; set; }

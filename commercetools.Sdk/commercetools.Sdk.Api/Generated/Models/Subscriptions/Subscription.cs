@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class Subscription : ISubscription
     {
         public string Id { get; set; }

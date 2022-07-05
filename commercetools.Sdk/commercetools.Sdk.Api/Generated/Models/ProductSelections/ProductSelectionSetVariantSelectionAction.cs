@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
+
     public partial class ProductSelectionSetVariantSelectionAction : IProductSelectionSetVariantSelectionAction
     {
         public string Action { get; set; }

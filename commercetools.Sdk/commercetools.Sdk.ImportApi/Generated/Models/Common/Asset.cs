@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class Asset : IAsset
     {
         public string Key { get; set; }

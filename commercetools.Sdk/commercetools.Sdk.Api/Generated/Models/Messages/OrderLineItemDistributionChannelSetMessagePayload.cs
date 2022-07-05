@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Channels;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderLineItemDistributionChannelSetMessagePayload : IOrderLineItemDistributionChannelSetMessagePayload
     {
         public string Type { get; set; }

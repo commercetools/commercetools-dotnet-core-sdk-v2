@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewTransitionStateAction : IReviewTransitionStateAction
     {
         public string Action { get; set; }

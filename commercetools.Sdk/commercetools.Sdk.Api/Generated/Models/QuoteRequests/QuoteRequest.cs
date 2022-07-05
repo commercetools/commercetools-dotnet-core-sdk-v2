@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.QuoteRequests
 {
+
     public partial class QuoteRequest : IQuoteRequest
     {
         public string Id { get; set; }

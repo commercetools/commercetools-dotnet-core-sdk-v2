@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
+
     public partial class ByProjectKeyShippingMethodsPost : ApiMethod<ByProjectKeyShippingMethodsPost>, IApiMethod<ByProjectKeyShippingMethodsPost, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethod>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShippingMethodsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyShippingMethodsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsPost>
     {
 

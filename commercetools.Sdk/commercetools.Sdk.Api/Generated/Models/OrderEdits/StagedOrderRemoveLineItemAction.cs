@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderRemoveLineItemAction : IStagedOrderRemoveLineItemAction
     {
         public string Action { get; set; }

@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class ReviewRatingStatistics : IReviewRatingStatistics
     {
         public int AverageRating { get; set; }

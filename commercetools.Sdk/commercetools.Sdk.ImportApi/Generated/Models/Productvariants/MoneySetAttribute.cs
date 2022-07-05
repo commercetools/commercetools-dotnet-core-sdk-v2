@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class MoneySetAttribute : IMoneySetAttribute
     {
         public string Name { get; set; }

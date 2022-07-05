@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
+
     public partial class ByProjectKeyOrdersSearchHead : ApiMethod<ByProjectKeyOrdersSearchHead>, IApiMethod<ByProjectKeyOrdersSearchHead, JsonElement>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersSearchHead>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyOrdersSearchHead>
     {
 

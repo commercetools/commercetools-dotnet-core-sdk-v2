@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderChangeShipmentStateAction : IOrderChangeShipmentStateAction
     {
         public string Action { get; set; }

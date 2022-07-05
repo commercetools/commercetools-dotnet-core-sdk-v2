@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Stores
 {
+
     public partial class StoreSetCustomTypeAction : IStoreSetCustomTypeAction
     {
         public string Action { get; set; }

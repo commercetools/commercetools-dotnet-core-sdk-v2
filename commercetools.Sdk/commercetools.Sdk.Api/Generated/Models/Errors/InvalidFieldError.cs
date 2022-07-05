@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class InvalidFieldError : IInvalidFieldError
     {
         public string Code { get; set; }

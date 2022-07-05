@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductChangeAssetOrderAction : IProductChangeAssetOrderAction
     {
         public string Action { get; set; }

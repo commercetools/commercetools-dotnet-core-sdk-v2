@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Zones;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodAddZoneAction : IShippingMethodAddZoneAction
     {
         public string Action { get; set; }

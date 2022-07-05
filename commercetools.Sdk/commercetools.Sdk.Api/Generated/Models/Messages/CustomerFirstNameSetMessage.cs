@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CustomerFirstNameSetMessage : ICustomerFirstNameSetMessage
     {
         public string Id { get; set; }

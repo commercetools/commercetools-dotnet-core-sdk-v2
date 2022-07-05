@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Quotes
 {
+
     public partial class QuoteSetCustomTypeAction : IQuoteSetCustomTypeAction
     {
         public string Action { get; set; }

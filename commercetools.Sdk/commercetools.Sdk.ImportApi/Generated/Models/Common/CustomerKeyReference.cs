@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class CustomerKeyReference : ICustomerKeyReference
     {
         public string Key { get; set; }

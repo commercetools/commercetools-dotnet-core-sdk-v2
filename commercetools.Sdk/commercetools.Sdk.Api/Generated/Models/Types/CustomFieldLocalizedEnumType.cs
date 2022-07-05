@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class CustomFieldLocalizedEnumType : ICustomFieldLocalizedEnumType
     {
         public string Name { get; set; }

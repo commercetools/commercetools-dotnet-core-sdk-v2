@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroupSetCustomFieldAction : ICustomerGroupSetCustomFieldAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Importsummaries
 {
+
     public partial class OperationStates : IOperationStates
     {
         public long Processing { get; set; }

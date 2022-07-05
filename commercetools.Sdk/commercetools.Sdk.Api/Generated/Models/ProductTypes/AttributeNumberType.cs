@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class AttributeNumberType : IAttributeNumberType
     {
         public string Name { get; set; }

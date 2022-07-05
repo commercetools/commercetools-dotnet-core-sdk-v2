@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class TimeAttribute : ITimeAttribute
     {
         public string Name { get; set; }

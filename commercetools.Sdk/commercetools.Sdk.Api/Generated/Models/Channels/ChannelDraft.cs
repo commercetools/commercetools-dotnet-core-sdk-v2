@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelDraft : IChannelDraft
     {
         public string Key { get; set; }

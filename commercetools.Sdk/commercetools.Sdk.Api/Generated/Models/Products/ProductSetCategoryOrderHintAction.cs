@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetCategoryOrderHintAction : IProductSetCategoryOrderHintAction
     {
         public string Action { get; set; }

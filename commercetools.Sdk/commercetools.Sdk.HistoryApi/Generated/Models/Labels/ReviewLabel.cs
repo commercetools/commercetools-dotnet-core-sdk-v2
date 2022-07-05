@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
+
     public partial class ReviewLabel : IReviewLabel
     {
         public string Type { get; set; }

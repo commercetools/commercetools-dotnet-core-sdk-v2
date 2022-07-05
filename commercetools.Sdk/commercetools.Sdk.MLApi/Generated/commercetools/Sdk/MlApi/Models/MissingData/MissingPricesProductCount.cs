@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingPricesProductCount : IMissingPricesProductCount
     {
         public long Total { get; set; }

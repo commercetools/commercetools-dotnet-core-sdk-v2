@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetItemShippingAddressCustomFieldAction : ICartSetItemShippingAddressCustomFieldAction
     {
         public string Action { get; set; }

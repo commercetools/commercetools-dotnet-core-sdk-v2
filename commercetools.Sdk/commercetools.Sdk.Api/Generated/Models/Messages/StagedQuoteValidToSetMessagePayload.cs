@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class StagedQuoteValidToSetMessagePayload : IStagedQuoteValidToSetMessagePayload
     {
         public string Type { get; set; }

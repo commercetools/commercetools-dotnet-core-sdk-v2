@@ -7,6 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
+
     public partial class ByProjectKeyPost : ApiMethod<ByProjectKeyPost>, IApiMethod<ByProjectKeyPost, commercetools.Sdk.Api.Models.Projects.IProject>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyPost>
     {
 

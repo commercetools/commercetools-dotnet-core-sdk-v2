@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
+
     public partial class ProductSelectionDraft : IProductSelectionDraft
     {
         public string Key { get; set; }

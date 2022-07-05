@@ -7,6 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
+
     public partial class ByProjectKeyOrdersEditsByIDApplyPost : ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost>, IApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, commercetools.Sdk.Api.Models.OrderEdits.IOrderEdit>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersEditsByIDApplyPost>
     {
 

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZoneRemoveLocationAction : IZoneRemoveLocationAction
     {
         public string Action { get; set; }

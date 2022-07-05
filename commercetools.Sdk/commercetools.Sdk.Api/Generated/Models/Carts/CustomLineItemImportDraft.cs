@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CustomLineItemImportDraft : ICustomLineItemImportDraft
     {
         public ILocalizedString Name { get; set; }

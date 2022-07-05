@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodeSetDescriptionAction : IDiscountCodeSetDescriptionAction
     {
         public string Action { get; set; }

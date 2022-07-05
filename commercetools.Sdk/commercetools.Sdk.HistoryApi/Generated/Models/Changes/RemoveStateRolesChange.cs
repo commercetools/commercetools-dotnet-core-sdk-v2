@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class RemoveStateRolesChange : IRemoveStateRolesChange
     {
         public string Type { get; set; }

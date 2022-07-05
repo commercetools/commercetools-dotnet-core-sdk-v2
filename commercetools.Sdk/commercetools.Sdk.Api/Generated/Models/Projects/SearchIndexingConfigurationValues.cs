@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class SearchIndexingConfigurationValues : ISearchIndexingConfigurationValues
     {
         public ISearchIndexingConfigurationStatus Status { get; set; }

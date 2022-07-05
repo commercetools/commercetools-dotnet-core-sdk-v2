@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class TransitionLineItemStateChange : ITransitionLineItemStateChange
     {
         public string Type { get; set; }

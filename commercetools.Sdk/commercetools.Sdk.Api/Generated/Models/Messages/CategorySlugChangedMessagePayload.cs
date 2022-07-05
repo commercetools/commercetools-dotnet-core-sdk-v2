@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CategorySlugChangedMessagePayload : ICategorySlugChangedMessagePayload
     {
         public string Type { get; set; }

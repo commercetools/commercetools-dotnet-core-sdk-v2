@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class ProductVariantChannelAvailability : IProductVariantChannelAvailability
     {
         public bool IsOnStock { get; set; }

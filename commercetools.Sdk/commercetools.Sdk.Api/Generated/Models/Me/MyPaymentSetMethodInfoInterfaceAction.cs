@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyPaymentSetMethodInfoInterfaceAction : IMyPaymentSetMethodInfoInterfaceAction
     {
         public string Action { get; set; }

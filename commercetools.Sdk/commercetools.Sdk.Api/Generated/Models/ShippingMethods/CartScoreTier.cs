@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class CartScoreTier : ICartScoreTier
     {
         public IShippingRateTierType Type { get; set; }

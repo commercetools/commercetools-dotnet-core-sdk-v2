@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderExcerpt : IOrderExcerpt
     {
         public ITypedMoney TotalPrice { get; set; }

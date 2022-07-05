@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class Project : IProject
     {
         public long Version { get; set; }

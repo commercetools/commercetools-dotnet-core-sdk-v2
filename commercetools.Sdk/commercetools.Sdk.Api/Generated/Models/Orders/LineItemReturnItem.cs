@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class LineItemReturnItem : ILineItemReturnItem
     {
         public string Id { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class AddOrderLineItemChange : IAddOrderLineItemChange
     {
         public string Type { get; set; }

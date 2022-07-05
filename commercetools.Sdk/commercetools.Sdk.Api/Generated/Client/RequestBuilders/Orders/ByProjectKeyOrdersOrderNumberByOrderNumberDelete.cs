@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
+
     public partial class ByProjectKeyOrdersOrderNumberByOrderNumberDelete : ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, IApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, commercetools.Sdk.Api.Models.Orders.IOrder>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>
     {
 

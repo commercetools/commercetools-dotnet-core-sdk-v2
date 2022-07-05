@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategorySetAssetKeyAction : ICategorySetAssetKeyAction
     {
         public string Action { get; set; }

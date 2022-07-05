@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class StoreCreatedMessagePayload : IStoreCreatedMessagePayload
     {
         public string Type { get; set; }

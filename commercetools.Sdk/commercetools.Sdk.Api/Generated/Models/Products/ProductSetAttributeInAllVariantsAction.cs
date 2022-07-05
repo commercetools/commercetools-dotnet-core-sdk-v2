@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetAttributeInAllVariantsAction : IProductSetAttributeInAllVariantsAction
     {
         public string Action { get; set; }

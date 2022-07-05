@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartAddCustomLineItemAction : ICartAddCustomLineItemAction
     {
         public string Action { get; set; }

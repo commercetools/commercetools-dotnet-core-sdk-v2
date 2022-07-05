@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderRemoveItemShippingAddressAction : IOrderRemoveItemShippingAddressAction
     {
         public string Action { get; set; }

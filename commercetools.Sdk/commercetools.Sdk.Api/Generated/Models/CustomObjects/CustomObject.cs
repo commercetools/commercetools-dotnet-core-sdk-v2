@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CustomObjects
 {
+
     public partial class CustomObject : ICustomObject
     {
         public string Id { get; set; }

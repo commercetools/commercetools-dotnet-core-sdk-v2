@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountCustomLineItemsTarget : ICartDiscountCustomLineItemsTarget
     {
         public string Type { get; set; }

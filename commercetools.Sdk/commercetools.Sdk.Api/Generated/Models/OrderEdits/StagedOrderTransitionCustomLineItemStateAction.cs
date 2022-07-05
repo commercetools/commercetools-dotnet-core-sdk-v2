@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderTransitionCustomLineItemStateAction : IStagedOrderTransitionCustomLineItemStateAction
     {
         public string Action { get; set; }

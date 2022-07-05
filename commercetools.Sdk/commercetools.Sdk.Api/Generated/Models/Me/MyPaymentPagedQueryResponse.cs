@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyPaymentPagedQueryResponse : IMyPaymentPagedQueryResponse
     {
         public long Limit { get; set; }

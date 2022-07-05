@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class SnsDestination : ISnsDestination
     {
         public string Type { get; set; }

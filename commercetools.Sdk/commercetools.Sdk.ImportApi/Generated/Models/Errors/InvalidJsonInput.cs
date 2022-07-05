@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidJsonInput : IInvalidJsonInput
     {
         public string Code { get; set; }

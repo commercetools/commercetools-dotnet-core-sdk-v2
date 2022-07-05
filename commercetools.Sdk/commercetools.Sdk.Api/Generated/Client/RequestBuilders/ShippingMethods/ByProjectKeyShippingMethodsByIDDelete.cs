@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
+
     public partial class ByProjectKeyShippingMethodsByIDDelete : ApiMethod<ByProjectKeyShippingMethodsByIDDelete>, IApiMethod<ByProjectKeyShippingMethodsByIDDelete, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethod>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyShippingMethodsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyShippingMethodsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShippingMethodsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShippingMethodsByIDDelete>
     {
 

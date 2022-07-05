@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
+
     public partial class ProductVariantDraftImport : IProductVariantDraftImport
     {
         public string Sku { get; set; }

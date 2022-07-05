@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntryRemoveQuantityAction : IInventoryEntryRemoveQuantityAction
     {
         public string Action { get; set; }

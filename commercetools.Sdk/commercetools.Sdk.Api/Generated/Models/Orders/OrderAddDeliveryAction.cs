@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderAddDeliveryAction : IOrderAddDeliveryAction
     {
         public string Action { get; set; }

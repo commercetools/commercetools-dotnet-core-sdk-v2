@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class AnonymousIdAlreadyInUseError : IAnonymousIdAlreadyInUseError
     {
         public string Code { get; set; }

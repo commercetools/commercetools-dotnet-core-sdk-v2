@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductChangeMasterVariantAction : IProductChangeMasterVariantAction
     {
         public string Action { get; set; }

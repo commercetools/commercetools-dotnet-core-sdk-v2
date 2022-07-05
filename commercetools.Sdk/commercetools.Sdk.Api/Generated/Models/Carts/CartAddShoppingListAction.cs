@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.ShoppingLists;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartAddShoppingListAction : ICartAddShoppingListAction
     {
         public string Action { get; set; }

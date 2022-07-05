@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Categories;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductAddToCategoryAction : IProductAddToCategoryAction
     {
         public string Action { get; set; }

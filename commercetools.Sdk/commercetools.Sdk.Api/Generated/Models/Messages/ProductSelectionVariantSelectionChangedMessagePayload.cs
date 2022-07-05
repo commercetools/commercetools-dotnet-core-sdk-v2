@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductSelectionVariantSelectionChangedMessagePayload : IProductSelectionVariantSelectionChangedMessagePayload
     {
         public string Type { get; set; }

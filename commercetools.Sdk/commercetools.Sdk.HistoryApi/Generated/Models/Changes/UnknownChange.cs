@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class UnknownChange : IUnknownChange
     {
         public string Type { get; set; }

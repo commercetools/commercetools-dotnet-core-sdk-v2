@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class TextLineItemDraft : ITextLineItemDraft
     {
         public DateTime? AddedAt { get; set; }

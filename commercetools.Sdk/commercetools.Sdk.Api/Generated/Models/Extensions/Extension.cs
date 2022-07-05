@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class Extension : IExtension
     {
         public string Id { get; set; }

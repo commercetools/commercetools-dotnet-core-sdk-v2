@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class DeliveryAddedMessage : IDeliveryAddedMessage
     {
         public string Id { get; set; }

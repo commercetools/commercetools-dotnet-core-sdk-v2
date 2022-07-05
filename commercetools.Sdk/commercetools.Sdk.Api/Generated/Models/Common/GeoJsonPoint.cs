@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class GeoJsonPoint : IGeoJsonPoint
     {
         public string Type { get; set; }

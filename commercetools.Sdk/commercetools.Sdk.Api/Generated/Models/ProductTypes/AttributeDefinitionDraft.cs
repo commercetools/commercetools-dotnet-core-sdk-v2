@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class AttributeDefinitionDraft : IAttributeDefinitionDraft
     {
         public IAttributeType Type { get; set; }

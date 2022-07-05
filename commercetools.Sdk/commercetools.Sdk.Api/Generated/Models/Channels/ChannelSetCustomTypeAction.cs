@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelSetCustomTypeAction : IChannelSetCustomTypeAction
     {
         public string Action { get; set; }

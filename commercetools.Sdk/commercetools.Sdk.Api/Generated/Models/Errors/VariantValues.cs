@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class VariantValues : IVariantValues
     {
         public string Sku { get; set; }

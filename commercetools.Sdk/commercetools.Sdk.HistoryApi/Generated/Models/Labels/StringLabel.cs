@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
+
     public partial class StringLabel : IStringLabel
     {
         public string Type { get; set; }

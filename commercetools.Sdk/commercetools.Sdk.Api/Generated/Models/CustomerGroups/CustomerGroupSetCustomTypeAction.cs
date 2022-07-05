@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroupSetCustomTypeAction : ICustomerGroupSetCustomTypeAction
     {
         public string Action { get; set; }

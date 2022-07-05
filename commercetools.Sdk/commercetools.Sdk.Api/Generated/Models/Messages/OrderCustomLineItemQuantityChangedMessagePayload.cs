@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderCustomLineItemQuantityChangedMessagePayload : IOrderCustomLineItemQuantityChangedMessagePayload
     {
         public string Type { get; set; }

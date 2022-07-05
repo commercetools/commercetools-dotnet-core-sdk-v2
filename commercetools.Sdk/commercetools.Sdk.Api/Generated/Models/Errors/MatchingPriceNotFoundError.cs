@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.CustomerGroups;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
     {
         public string Code { get; set; }

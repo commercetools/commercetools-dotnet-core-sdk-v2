@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class ParcelItems : IParcelItems
     {
         public string ParcelId { get; set; }

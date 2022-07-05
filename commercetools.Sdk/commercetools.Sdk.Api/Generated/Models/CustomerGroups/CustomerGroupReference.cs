@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroupReference : ICustomerGroupReference
     {
         public IReferenceTypeId TypeId { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
+
     public partial class StandalonePriceReference : IStandalonePriceReference
     {
         public IReferenceTypeId TypeId { get; set; }

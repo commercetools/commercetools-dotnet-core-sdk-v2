@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZoneResourceIdentifier : IZoneResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

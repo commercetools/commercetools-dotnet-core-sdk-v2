@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
+
     public partial class SimilarityMeasures : ISimilarityMeasures
     {
         public long? Name { get; set; }

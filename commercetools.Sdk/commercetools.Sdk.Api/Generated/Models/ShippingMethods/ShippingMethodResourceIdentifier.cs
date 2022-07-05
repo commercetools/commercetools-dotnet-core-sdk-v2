@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodResourceIdentifier : IShippingMethodResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

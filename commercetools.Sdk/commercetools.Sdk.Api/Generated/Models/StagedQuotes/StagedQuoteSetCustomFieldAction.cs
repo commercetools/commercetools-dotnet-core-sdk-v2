@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.StagedQuotes
 {
+
     public partial class StagedQuoteSetCustomFieldAction : IStagedQuoteSetCustomFieldAction
     {
         public string Action { get; set; }

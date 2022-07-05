@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Customers
 {
+
     public partial class CustomerAddress : ICustomerAddress
     {
         public string Key { get; set; }

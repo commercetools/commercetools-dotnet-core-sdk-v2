@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class QuoteRequestCreatedMessage : IQuoteRequestCreatedMessage
     {
         public string Id { get; set; }

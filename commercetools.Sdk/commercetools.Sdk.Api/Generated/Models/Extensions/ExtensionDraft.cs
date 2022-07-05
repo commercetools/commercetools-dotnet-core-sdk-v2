@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class ExtensionDraft : IExtensionDraft
     {
         public string Key { get; set; }

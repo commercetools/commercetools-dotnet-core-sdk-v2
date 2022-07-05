@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingPricesSearchRequest : IMissingPricesSearchRequest
     {
         public long? Limit { get; set; }

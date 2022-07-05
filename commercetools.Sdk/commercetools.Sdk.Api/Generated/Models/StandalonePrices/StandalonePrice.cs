@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
+
     public partial class StandalonePrice : IStandalonePrice
     {
         public string Id { get; set; }

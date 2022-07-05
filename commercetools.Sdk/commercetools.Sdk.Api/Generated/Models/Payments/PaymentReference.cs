@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentReference : IPaymentReference
     {
         public IReferenceTypeId TypeId { get; set; }

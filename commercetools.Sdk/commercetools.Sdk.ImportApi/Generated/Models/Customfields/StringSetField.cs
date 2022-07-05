@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
+
     public partial class StringSetField : IStringSetField
     {
         public string Type { get; set; }

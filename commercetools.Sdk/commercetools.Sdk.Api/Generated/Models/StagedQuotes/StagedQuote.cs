@@ -8,6 +8,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.StagedQuotes
 {
+
     public partial class StagedQuote : IStagedQuote
     {
         public string Id { get; set; }

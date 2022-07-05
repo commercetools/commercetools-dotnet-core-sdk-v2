@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderReturnInfoSetMessage : IOrderReturnInfoSetMessage
     {
         public string Id { get; set; }

@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
 {
+
     public partial class ByProjectKeyStandalonePricesKeyByKeyGet : ApiMethod<ByProjectKeyStandalonePricesKeyByKeyGet>, IApiMethod<ByProjectKeyStandalonePricesKeyByKeyGet, commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePrice>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStandalonePricesKeyByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStandalonePricesKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyStandalonePricesKeyByKeyGet>
     {
 

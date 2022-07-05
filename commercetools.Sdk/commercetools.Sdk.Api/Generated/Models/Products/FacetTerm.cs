@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class FacetTerm : IFacetTerm
     {
         public Object Term { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Carts;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetCustomLineItemShippingDetailsAction : IOrderSetCustomLineItemShippingDetailsAction
     {
         public string Action { get; set; }

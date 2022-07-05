@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class MultiBuyCustomLineItemsTarget : IMultiBuyCustomLineItemsTarget
     {
         public string Type { get; set; }

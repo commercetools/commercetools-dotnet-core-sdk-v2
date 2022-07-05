@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditSetCustomFieldAction : IOrderEditSetCustomFieldAction
     {
         public string Action { get; set; }

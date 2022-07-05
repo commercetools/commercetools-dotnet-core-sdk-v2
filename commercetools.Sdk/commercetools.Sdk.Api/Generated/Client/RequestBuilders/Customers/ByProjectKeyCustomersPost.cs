@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
+
     public partial class ByProjectKeyCustomersPost : ApiMethod<ByProjectKeyCustomersPost>, IApiMethod<ByProjectKeyCustomersPost, commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomersPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyCustomersPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomersPost>
     {
 

@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyTransactionDraft : IMyTransactionDraft
     {
         public DateTime? Timestamp { get; set; }

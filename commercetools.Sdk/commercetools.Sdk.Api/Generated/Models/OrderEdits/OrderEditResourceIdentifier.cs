@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditResourceIdentifier : IOrderEditResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

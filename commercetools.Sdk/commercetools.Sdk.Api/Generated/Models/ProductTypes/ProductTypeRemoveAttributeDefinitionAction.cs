@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class ProductTypeRemoveAttributeDefinitionAction : IProductTypeRemoveAttributeDefinitionAction
     {
         public string Action { get; set; }

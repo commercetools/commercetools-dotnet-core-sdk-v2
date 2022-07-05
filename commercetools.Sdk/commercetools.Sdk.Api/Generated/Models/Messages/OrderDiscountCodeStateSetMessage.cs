@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderDiscountCodeStateSetMessage : IOrderDiscountCodeStateSetMessage
     {
         public string Id { get; set; }

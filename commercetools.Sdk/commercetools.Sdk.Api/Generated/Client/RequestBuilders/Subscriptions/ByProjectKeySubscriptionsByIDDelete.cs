@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
+
     public partial class ByProjectKeySubscriptionsByIDDelete : ApiMethod<ByProjectKeySubscriptionsByIDDelete>, IApiMethod<ByProjectKeySubscriptionsByIDDelete, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsByIDDelete>
     {
 

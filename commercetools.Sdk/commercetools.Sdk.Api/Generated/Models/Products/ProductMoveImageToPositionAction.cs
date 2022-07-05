@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductMoveImageToPositionAction : IProductMoveImageToPositionAction
     {
         public string Action { get; set; }

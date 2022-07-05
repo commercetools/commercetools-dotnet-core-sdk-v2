@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Orders;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetParcelMeasurementsAction : IStagedOrderSetParcelMeasurementsAction
     {
         public string Action { get; set; }

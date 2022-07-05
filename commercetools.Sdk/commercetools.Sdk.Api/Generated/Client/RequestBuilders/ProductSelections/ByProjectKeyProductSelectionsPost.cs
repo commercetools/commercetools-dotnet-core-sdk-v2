@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
 {
+
     public partial class ByProjectKeyProductSelectionsPost : ApiMethod<ByProjectKeyProductSelectionsPost>, IApiMethod<ByProjectKeyProductSelectionsPost, commercetools.Sdk.Api.Models.ProductSelections.IProductSelection>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductSelectionsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyProductSelectionsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductSelectionsPost>
     {
 

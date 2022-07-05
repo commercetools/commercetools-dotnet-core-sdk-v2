@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
 {
+
     public partial class ByProjectKeyShoppingListsGet : ApiMethod<ByProjectKeyShoppingListsGet>, IApiMethod<ByProjectKeyShoppingListsGet, commercetools.Sdk.Api.Models.ShoppingLists.IShoppingListPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyShoppingListsGet, commercetools.Sdk.Api.Models.ShoppingLists.IShoppingListPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShoppingListsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyShoppingListsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyShoppingListsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyShoppingListsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShoppingListsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShoppingListsGet>
     {
 

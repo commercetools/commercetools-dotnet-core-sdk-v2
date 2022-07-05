@@ -3,6 +3,7 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetMetaDescriptionChange : ISetMetaDescriptionChange
     {
         public string Type { get; set; }

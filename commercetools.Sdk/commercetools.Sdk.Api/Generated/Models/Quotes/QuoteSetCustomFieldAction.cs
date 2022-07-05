@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Quotes
 {
+
     public partial class QuoteSetCustomFieldAction : IQuoteSetCustomFieldAction
     {
         public string Action { get; set; }

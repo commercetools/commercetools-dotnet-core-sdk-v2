@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class FieldDefinition : IFieldDefinition
     {
         public IFieldType Type { get; set; }

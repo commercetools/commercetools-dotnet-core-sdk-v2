@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.CustomObjects
 {
+
     public partial class CustomObjectReference : ICustomObjectReference
     {
         public IReferenceTypeId TypeId { get; set; }

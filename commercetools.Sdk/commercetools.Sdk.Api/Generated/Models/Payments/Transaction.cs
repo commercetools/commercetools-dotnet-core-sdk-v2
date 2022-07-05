@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class Transaction : ITransaction
     {
         public string Id { get; set; }

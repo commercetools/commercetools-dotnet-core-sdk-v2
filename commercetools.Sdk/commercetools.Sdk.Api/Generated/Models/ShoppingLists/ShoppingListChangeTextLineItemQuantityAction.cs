@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListChangeTextLineItemQuantityAction : IShoppingListChangeTextLineItemQuantityAction
     {
         public string Action { get; set; }

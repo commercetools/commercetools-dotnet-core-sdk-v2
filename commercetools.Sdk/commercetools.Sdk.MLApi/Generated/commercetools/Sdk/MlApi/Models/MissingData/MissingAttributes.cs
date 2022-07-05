@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingAttributes : IMissingAttributes
     {
         public IProductReference Product { get; set; }

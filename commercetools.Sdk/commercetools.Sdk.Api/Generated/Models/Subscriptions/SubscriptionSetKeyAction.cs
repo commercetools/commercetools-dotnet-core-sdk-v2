@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class SubscriptionSetKeyAction : ISubscriptionSetKeyAction
     {
         public string Action { get; set; }

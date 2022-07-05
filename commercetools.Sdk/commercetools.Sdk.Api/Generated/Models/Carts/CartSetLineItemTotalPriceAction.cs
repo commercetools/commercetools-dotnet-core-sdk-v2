@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetLineItemTotalPriceAction : ICartSetLineItemTotalPriceAction
     {
         public string Action { get; set; }

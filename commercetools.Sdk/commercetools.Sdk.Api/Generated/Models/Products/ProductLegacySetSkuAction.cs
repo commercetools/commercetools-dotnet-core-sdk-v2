@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductLegacySetSkuAction : IProductLegacySetSkuAction
     {
         public string Action { get; set; }

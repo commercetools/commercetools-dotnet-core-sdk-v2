@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class EventBridgeDestination : IEventBridgeDestination
     {
         public string Type { get; set; }

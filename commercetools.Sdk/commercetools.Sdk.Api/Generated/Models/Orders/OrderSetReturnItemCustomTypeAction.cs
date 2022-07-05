@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetReturnItemCustomTypeAction : IOrderSetReturnItemCustomTypeAction
     {
         public string Action { get; set; }

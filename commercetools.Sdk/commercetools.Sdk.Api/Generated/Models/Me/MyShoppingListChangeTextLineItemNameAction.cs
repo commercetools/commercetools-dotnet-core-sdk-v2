@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyShoppingListChangeTextLineItemNameAction : IMyShoppingListChangeTextLineItemNameAction
     {
         public string Action { get; set; }

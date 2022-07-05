@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class AttributeDefinitionTypeConflictError : IAttributeDefinitionTypeConflictError
     {
         public string Code { get; set; }

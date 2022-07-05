@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetMaxApplicationsChange : ISetMaxApplicationsChange
     {
         public string Type { get; set; }

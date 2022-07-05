@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductStateTransitionMessage : IProductStateTransitionMessage
     {
         public string Id { get; set; }

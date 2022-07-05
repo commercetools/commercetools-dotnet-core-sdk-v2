@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZonePagedQueryResponse : IZonePagedQueryResponse
     {
         public long Limit { get; set; }

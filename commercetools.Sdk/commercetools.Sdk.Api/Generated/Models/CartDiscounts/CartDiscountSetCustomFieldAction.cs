@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountSetCustomFieldAction : ICartDiscountSetCustomFieldAction
     {
         public string Action { get; set; }

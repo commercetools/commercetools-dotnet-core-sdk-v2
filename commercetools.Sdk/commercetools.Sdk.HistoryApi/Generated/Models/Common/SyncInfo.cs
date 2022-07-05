@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class SyncInfo : ISyncInfo
     {
         public IReference Channel { get; set; }

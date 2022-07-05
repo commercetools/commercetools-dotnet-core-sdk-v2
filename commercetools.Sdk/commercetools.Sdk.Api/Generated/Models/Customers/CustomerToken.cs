@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerToken : ICustomerToken
     {
         public string Id { get; set; }

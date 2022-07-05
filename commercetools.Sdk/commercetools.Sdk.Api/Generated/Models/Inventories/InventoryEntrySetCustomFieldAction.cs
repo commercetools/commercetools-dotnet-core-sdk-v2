@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntrySetCustomFieldAction : IInventoryEntrySetCustomFieldAction
     {
         public string Action { get; set; }

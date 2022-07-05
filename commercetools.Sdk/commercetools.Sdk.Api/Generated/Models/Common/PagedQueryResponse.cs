@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class PagedQueryResponse : IPagedQueryResponse
     {
         public long Limit { get; set; }

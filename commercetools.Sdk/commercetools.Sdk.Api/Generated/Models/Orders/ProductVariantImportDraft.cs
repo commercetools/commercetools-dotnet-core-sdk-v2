@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class ProductVariantImportDraft : IProductVariantImportDraft
     {
         public long? Id { get; set; }

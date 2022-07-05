@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Payments;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderAddPaymentAction : IOrderAddPaymentAction
     {
         public string Action { get; set; }

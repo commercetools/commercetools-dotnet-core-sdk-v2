@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class StateReference : IStateReference
     {
         public IReferenceTypeId TypeId { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class CustomFieldEnumValue : ICustomFieldEnumValue
     {
         public string Key { get; set; }

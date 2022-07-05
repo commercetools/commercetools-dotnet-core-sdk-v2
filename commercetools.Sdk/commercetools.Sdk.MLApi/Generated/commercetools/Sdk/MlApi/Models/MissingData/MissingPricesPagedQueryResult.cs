@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingPricesPagedQueryResult : IMissingPricesPagedQueryResult
     {
         public long Count { get; set; }

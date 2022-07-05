@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class ExtensionSetKeyAction : IExtensionSetKeyAction
     {
         public string Action { get; set; }

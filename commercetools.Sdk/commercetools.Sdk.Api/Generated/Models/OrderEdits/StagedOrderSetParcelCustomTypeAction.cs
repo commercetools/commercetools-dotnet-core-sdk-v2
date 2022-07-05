@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetParcelCustomTypeAction : IStagedOrderSetParcelCustomTypeAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class AccessDeniedError : IAccessDeniedError
     {
         public string Code { get; set; }

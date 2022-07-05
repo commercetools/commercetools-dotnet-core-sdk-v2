@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
+
     public partial class ImportOperationPagedResponse : IImportOperationPagedResponse
     {
         public int Limit { get; set; }

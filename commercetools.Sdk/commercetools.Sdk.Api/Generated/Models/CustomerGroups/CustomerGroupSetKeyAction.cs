@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroupSetKeyAction : ICustomerGroupSetKeyAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductRemoveAssetAction : IProductRemoveAssetAction
     {
         public string Action { get; set; }

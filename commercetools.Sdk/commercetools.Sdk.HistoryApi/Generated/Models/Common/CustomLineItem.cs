@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class CustomLineItem : ICustomLineItem
     {
         public string Id { get; set; }

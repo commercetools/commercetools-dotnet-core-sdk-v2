@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ApiClients
 {
+
     public partial class ApiClientDraft : IApiClientDraft
     {
         public string Name { get; set; }

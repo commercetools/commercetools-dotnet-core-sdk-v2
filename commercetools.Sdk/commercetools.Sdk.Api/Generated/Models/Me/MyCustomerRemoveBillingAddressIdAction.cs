@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCustomerRemoveBillingAddressIdAction : IMyCustomerRemoveBillingAddressIdAction
     {
         public string Action { get; set; }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class CartClassificationTier : ICartClassificationTier
     {
         public IShippingRateTierType Type { get; set; }

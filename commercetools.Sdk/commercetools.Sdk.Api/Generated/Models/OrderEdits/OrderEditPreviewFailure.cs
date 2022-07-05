@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditPreviewFailure : IOrderEditPreviewFailure
     {
         public string Type { get; set; }

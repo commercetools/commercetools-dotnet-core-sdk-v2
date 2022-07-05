@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class DeliveryItemsUpdatedMessage : IDeliveryItemsUpdatedMessage
     {
         public string Id { get; set; }

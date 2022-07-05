@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
+
     public partial class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet : ApiMethod<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>, IApiMethod<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet, commercetools.Sdk.Api.Models.Customers.ICustomer>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomersPasswordTokenByPasswordTokenGet>
     {
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
+
     public partial class ImportOperationStatus : IImportOperationStatus
     {
         public string OperationId { get; set; }

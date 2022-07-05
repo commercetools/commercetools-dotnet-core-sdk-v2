@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyShoppingListSetTextLineItemCustomTypeAction : IMyShoppingListSetTextLineItemCustomTypeAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class HighPrecisionMoney : IHighPrecisionMoney
     {
         public IMoneyType Type { get; set; }

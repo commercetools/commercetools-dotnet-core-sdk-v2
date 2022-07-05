@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ReviewStateTransitionMessagePayload : IReviewStateTransitionMessagePayload
     {
         public string Type { get; set; }

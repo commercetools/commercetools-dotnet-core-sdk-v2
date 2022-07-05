@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListDraft : IShoppingListDraft
     {
         public ICustomFieldsDraft Custom { get; set; }

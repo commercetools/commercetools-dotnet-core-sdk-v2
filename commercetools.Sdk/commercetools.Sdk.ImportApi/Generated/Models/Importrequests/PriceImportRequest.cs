@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
+
     public partial class PriceImportRequest : IPriceImportRequest
     {
         public IImportResourceType Type { get; set; }

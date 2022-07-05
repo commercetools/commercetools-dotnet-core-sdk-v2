@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class CustomFieldTimeType : ICustomFieldTimeType
     {
         public string Name { get; set; }

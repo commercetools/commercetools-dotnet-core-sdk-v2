@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Channels;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCartSetLineItemSupplyChannelAction : IMyCartSetLineItemSupplyChannelAction
     {
         public string Action { get; set; }

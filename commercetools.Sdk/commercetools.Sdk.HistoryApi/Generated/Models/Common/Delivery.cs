@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class Delivery : IDelivery
     {
         public string Id { get; set; }

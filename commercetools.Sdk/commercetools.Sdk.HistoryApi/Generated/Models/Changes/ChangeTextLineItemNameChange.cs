@@ -4,6 +4,7 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class ChangeTextLineItemNameChange : IChangeTextLineItemNameChange
     {
         public string Type { get; set; }

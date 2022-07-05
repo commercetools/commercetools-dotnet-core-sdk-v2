@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class CustomFieldReferenceType : ICustomFieldReferenceType
     {
         public string Name { get; set; }

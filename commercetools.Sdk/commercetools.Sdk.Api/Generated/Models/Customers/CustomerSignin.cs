@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSignin : ICustomerSignin
     {
         public string Email { get; set; }

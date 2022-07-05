@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class RemoveImageChange : IRemoveImageChange
     {
         public string Type { get; set; }

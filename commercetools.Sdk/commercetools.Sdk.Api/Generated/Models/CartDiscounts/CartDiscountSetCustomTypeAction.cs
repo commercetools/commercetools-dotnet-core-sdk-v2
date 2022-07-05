@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountSetCustomTypeAction : ICartDiscountSetCustomTypeAction
     {
         public string Action { get; set; }

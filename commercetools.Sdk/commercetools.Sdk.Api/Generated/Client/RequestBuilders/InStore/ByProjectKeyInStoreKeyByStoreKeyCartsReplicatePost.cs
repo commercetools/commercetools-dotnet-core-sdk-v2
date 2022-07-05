@@ -7,6 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
+
     public partial class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost>
     {
 

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodeSetMaxApplicationsPerCustomerAction : IDiscountCodeSetMaxApplicationsPerCustomerAction
     {
         public string Action { get; set; }

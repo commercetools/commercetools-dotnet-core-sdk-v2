@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class InsufficientScopeError : IInsufficientScopeError
     {
         public string Code { get; set; }

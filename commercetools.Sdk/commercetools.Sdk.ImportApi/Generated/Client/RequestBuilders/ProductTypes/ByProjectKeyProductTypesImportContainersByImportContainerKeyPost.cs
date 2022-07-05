@@ -7,6 +7,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes
 {
+
     public partial class ByProjectKeyProductTypesImportContainersByImportContainerKeyPost : ApiMethod<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost>, IApiMethod<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost, commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_productsTrait<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost>
     {
 

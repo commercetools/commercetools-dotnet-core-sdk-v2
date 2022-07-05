@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderFromQuoteDraft : IOrderFromQuoteDraft
     {
         public IQuoteResourceIdentifier Quote { get; set; }

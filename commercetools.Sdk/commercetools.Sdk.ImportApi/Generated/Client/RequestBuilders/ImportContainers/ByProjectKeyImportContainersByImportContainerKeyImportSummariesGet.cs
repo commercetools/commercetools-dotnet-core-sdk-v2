@@ -5,6 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
+
     public partial class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>, IApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet, commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>
     {
 

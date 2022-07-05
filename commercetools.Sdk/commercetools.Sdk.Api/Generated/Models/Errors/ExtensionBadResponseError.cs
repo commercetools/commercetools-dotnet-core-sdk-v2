@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class ExtensionBadResponseError : IExtensionBadResponseError
     {
         public string Code { get; set; }

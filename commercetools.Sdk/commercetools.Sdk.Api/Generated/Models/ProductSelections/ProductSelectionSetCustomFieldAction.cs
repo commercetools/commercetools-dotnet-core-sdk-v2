@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
+
     public partial class ProductSelectionSetCustomFieldAction : IProductSelectionSetCustomFieldAction
     {
         public string Action { get; set; }

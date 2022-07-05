@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderUpdateSyncInfoAction : IOrderUpdateSyncInfoAction
     {
         public string Action { get; set; }

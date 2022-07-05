@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
 {
+
     public partial class ByProjectKeyStandalonePricesPost : ApiMethod<ByProjectKeyStandalonePricesPost>, IApiMethod<ByProjectKeyStandalonePricesPost, commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePrice>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStandalonePricesPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyStandalonePricesPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStandalonePricesPost>
     {
 

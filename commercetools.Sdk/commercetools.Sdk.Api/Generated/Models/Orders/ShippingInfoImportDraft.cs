@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class ShippingInfoImportDraft : IShippingInfoImportDraft
     {
         public string ShippingMethodName { get; set; }
@@ -21,7 +22,7 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
-        public List<IDelivery> Deliveries { get; set; }
+        public List<IDeliveryDraft> Deliveries { get; set; }
 
         public IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

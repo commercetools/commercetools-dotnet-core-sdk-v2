@@ -5,6 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations
 {
+
     public partial class ByProjectKeyImportOperationsByIdGet : ApiMethod<ByProjectKeyImportOperationsByIdGet>, IApiMethod<ByProjectKeyImportOperationsByIdGet, commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperation>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_containersTrait<ByProjectKeyImportOperationsByIdGet>
     {
 

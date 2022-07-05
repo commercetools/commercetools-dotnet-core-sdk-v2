@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
+
     public partial class StandalonePricePagedQueryResponse : IStandalonePricePagedQueryResponse
     {
         public long Limit { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
+
     public partial class EnumField : IEnumField
     {
         public string Type { get; set; }

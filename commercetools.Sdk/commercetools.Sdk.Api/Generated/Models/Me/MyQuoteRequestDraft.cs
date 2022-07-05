@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Carts;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyQuoteRequestDraft : IMyQuoteRequestDraft
     {
         public ICartResourceIdentifier Cart { get; set; }

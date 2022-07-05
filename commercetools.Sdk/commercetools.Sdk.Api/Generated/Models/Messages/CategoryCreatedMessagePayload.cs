@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Categories;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CategoryCreatedMessagePayload : ICategoryCreatedMessagePayload
     {
         public string Type { get; set; }

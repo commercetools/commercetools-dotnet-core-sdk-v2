@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
+
     public partial class TaxCategoryResourceIdentifier : ITaxCategoryResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

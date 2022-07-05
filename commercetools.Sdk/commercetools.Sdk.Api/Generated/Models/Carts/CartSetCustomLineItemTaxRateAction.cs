@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetCustomLineItemTaxRateAction : ICartSetCustomLineItemTaxRateAction
     {
         public string Action { get; set; }

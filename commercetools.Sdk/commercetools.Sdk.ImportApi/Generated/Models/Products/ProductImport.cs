@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Products
 {
+
     public partial class ProductImport : IProductImport
     {
         public string Key { get; set; }

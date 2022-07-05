@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Inventories
 {
+
     public partial class InventoryImport : IInventoryImport
     {
         public string Key { get; set; }

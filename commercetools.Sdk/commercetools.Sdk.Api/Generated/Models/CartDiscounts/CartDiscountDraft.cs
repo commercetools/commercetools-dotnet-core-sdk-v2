@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountDraft : ICartDiscountDraft
     {
         public ILocalizedString Name { get; set; }

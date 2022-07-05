@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class FilteredFacetResult : IFilteredFacetResult
     {
         public IFacetTypes Type { get; set; }

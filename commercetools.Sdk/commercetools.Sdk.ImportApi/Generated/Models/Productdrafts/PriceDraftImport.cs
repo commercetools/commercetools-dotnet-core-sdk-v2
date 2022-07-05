@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
+
     public partial class PriceDraftImport : IPriceDraftImport
     {
         public ITypedMoney Value { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class Image : IImage
     {
         public string Url { get; set; }

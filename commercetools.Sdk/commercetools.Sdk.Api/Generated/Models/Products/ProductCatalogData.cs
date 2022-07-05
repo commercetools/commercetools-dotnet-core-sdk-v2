@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductCatalogData : IProductCatalogData
     {
         public bool Published { get; set; }

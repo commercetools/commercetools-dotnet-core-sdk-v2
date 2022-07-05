@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
+
     public partial class ByProjectKeyProductsByIDImagesPost : ApiMethod<ByProjectKeyProductsByIDImagesPost>, IApiMethod<ByProjectKeyProductsByIDImagesPost, commercetools.Sdk.Api.Models.Products.IProduct>
     {
 

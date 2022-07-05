@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderLineItemDiscountSetMessage : IOrderLineItemDiscountSetMessage
     {
         public string Id { get; set; }

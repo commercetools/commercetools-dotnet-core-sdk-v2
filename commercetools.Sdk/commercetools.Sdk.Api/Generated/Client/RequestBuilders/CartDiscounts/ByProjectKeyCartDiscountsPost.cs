@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts
 {
+
     public partial class ByProjectKeyCartDiscountsPost : ApiMethod<ByProjectKeyCartDiscountsPost>, IApiMethod<ByProjectKeyCartDiscountsPost, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCartDiscountsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyCartDiscountsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCartDiscountsPost>
     {
 

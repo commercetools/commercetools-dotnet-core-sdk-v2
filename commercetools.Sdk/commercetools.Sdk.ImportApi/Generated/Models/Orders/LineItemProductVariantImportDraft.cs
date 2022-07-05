@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class LineItemProductVariantImportDraft : ILineItemProductVariantImportDraft
     {
         public IProductVariantKeyReference ProductVariant { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductVariantAddedMessagePayload : IProductVariantAddedMessagePayload
     {
         public string Type { get; set; }

@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyPaymentDraft : IMyPaymentDraft
     {
         public IMoney AmountPlanned { get; set; }
