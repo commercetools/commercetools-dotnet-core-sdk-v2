@@ -6,6 +6,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ScoreShippingRateInput))]
     public partial interface IScoreShippingRateInput : IShippingRateInput
     {
-        decimal Score { get; set; }
+        long Score { get; set; }
     }
 }
