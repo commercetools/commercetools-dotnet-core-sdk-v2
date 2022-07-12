@@ -59,6 +59,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         [Description("product-discount")]
         ProductDiscount,
 
+        [Description("product-selection")]
+        ProductSelection,
+
         [Description("product-type")]
         ProductType,
 
@@ -164,6 +167,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IReferenceTypeId ProductDiscount = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductDiscount, JsonName = "product-discount" };
 
+        public static IReferenceTypeId ProductSelection = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ProductSelection, JsonName = "product-selection" };
+
         public static IReferenceTypeId ProductType = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductType, JsonName = "product-type" };
 
@@ -217,6 +223,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
                  Payment ,
                  Product ,
                  ProductDiscount ,
+                 ProductSelection ,
                  ProductType ,
                  Review ,
                  ShippingMethod ,
