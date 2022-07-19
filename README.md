@@ -299,3 +299,7 @@ services.SetupClient(
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
 * [Migration guidelines from v1 to v2](COMPARISON.md)
+
+### Documentation
+
+* [Documentation](https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html)
