@@ -9,8 +9,10 @@ This example application demonstrates how the ME endpoints can be used with the 
 
 ## Installation
 
-1. Clone/Download the example folder.
-2. Open **\commercetools-dotnet-core-sdk-v2\commercetools.Sdk\Examples\Examples\commercetools.Api.CheckoutApp\appsettings.json** and replace the placeholder values with your API Client credentials.
+1. Clone/Download the Examples folder.
+2. Open **\Examples\commercetools.Api.CheckoutApp\appsettings.json** and replace the placeholder values with your API Client credentials.
+
+![image](https://user-images.githubusercontent.com/77231096/180888862-2e911f43-db94-4ae1-b2bc-479ae7e549e2.png)
 
 ## Using the ME Endpoint Checkout App
 
@@ -18,11 +20,14 @@ This example application demonstrates how the ME endpoints can be used with the 
 
 1. Open **\commercetools-dotnet-core-sdk-v2\commercetools.Sdk\commercetools.Sdk.sln**
 2. Select **commercetools.Api.CheckoutApp**
+
+![checkoutapp](https://user-images.githubusercontent.com/77231096/180888672-8045a167-6fc4-4fdb-8b11-2ea1bac10319.png)
+
 3. Start the app using **Debug** > **Start Debugging** or by pressing **F5**.
 4. A new web browser window opens and displays the Checkout app. A list of Products should appear.
 
 ### In Visual Studio Code
 
-1. Open the folder **\commercetools-dotnet-core-sdk-v2\commercetools.Sdk\Examples\commercetools.Api.CheckoutApp**
+1. Open the folder **\Examples\commercetools.Api.CheckoutApp**
 2. Start the app using **Run** > **Start Debugging** or by pressing **F5**.
 3. A new web browser window opens and displays the Checkout app. A list of Products should appear.
