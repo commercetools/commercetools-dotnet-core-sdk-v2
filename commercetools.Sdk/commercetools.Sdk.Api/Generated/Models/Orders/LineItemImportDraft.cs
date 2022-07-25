@@ -31,6 +31,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public ICustomFieldsDraft Custom { get; set; }
 
+        public IInventoryMode InventoryMode { get; set; }
+
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
     }
 }
