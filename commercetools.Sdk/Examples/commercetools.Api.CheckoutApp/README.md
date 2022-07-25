@@ -5,7 +5,9 @@ This example application demonstrates how the ME endpoints can be used with the 
 ## Requirements
 
 - A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/tutorials/getting-started#creating-an-api-client).
-- Your Project must have existing Products containing Variants with SKUs, and at least one Customer (if your Project is currently empty, you can install the [SUNRISE sample data](https://docs.commercetools.com/sdk/sunrise-data)).
+  - Your API Client must have the following scopes: `view_published_products`, `view_categories`, `manage_my_profile`, `manage_my_shopping_lists`, `manage_my_payments`, `manage_my_orders`
+- Your Project must have existing Products containing Variants with SKUs, and at least one Customer.
+  - If your Project is currently empty, you can install the [SUNRISE sample data](https://docs.commercetools.com/sdk/sunrise-data).
 
 ## Installation
 
