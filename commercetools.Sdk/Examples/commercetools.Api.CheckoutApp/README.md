@@ -20,7 +20,7 @@ This example application demonstrates how the ME endpoints can be used with the 
 
 ### In Visual Studio
 
-1. Open **\commercetools-dotnet-core-sdk-v2\commercetools.Sdk\commercetools.Sdk.sln**
+1. Open **\Examples\commercetools.Api.CheckoutApp\commercetools.Api.CheckoutApp.csproj**
 2. Select **commercetools.Api.CheckoutApp**
 
 ![checkoutapp](https://user-images.githubusercontent.com/77231096/180888672-8045a167-6fc4-4fdb-8b11-2ea1bac10319.png)
