@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSetAddressCustomTypeAction : ICustomerSetAddressCustomTypeAction
     {
         public string Action { get; set; }

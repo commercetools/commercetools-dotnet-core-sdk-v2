@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
+
     public partial class ByProjectKeyMeQuoteRequestsByIDPost : ApiMethod<ByProjectKeyMeQuoteRequestsByIDPost>, IApiMethod<ByProjectKeyMeQuoteRequestsByIDPost, commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyMeQuoteRequestsByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyMeQuoteRequestsByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyMeQuoteRequestsByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeQuoteRequestsByIDPost>
     {
 

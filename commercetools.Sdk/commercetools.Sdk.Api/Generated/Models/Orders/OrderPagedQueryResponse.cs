@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderPagedQueryResponse : IOrderPagedQueryResponse
     {
         public long Limit { get; set; }

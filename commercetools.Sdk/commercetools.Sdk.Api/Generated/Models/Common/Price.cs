@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class Price : IPrice
     {
         public string Id { get; set; }

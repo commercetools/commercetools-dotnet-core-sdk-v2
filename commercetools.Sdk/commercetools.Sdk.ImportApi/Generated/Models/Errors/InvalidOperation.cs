@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidOperation : IInvalidOperation
     {
         public string Code { get; set; }

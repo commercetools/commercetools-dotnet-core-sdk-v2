@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountSetKeyAction : ICartDiscountSetKeyAction
     {
         public string Action { get; set; }

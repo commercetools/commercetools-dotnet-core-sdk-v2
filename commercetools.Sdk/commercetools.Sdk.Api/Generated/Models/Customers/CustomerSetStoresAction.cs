@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSetStoresAction : ICustomerSetStoresAction
     {
         public string Action { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class StateRemoveRolesAction : IStateRemoveRolesAction
     {
         public string Action { get; set; }

@@ -13,6 +13,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Quotes
 {
+
     public partial class Quote : IQuote
     {
         public string Id { get; set; }

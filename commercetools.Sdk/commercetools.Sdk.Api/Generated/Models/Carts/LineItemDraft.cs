@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class LineItemDraft : ILineItemDraft
     {
         public string ProductId { get; set; }
@@ -29,6 +30,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IMoney ExternalPrice { get; set; }
 
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodPagedQueryResponse : IShippingMethodPagedQueryResponse
     {
         public long? Limit { get; set; }

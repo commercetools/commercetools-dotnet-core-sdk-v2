@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
+
     public partial class ByProjectKeyTaxCategoriesByIDGet : ApiMethod<ByProjectKeyTaxCategoriesByIDGet>, IApiMethod<ByProjectKeyTaxCategoriesByIDGet, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategory>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTaxCategoriesByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTaxCategoriesByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTaxCategoriesByIDGet>
     {
 

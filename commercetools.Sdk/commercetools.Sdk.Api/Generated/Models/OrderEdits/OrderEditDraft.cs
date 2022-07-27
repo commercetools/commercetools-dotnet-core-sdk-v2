@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditDraft : IOrderEditDraft
     {
         public string Key { get; set; }

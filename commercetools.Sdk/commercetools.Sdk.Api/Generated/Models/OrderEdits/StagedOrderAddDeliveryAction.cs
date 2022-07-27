@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddDeliveryAction : IStagedOrderAddDeliveryAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class SearchIndexingInProgressError : ISearchIndexingInProgressError
     {
         public string Code { get; set; }

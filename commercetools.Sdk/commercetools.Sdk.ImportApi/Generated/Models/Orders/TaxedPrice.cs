@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class TaxedPrice : ITaxedPrice
     {
         public IMoney TotalNet { get; set; }

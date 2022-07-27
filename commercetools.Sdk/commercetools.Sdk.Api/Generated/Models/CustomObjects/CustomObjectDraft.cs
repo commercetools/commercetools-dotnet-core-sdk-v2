@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CustomObjects
 {
+
     public partial class CustomObjectDraft : ICustomObjectDraft
     {
         public string Container { get; set; }

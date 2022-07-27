@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethod : IShippingMethod
     {
         public string Id { get; set; }

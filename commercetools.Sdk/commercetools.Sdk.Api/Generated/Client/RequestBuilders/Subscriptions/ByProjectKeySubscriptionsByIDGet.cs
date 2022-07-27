@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
+
     public partial class ByProjectKeySubscriptionsByIDGet : ApiMethod<ByProjectKeySubscriptionsByIDGet>, IApiMethod<ByProjectKeySubscriptionsByIDGet, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsByIDGet>
     {
 

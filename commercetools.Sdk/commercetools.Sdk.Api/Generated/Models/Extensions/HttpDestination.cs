@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class HttpDestination : IHttpDestination
     {
         public string Type { get; set; }

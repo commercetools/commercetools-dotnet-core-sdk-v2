@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class MyCustomerSignin : IMyCustomerSignin
     {
         public string Email { get; set; }

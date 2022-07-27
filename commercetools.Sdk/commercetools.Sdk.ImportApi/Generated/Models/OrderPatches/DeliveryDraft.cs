@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class DeliveryDraft : IDeliveryDraft
     {
         public List<IDeliveryItem> Items { get; set; }

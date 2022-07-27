@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class ProjectSetExternalOAuthAction : IProjectSetExternalOAuthAction
     {
         public string Action { get; set; }

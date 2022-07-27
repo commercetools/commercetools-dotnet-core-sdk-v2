@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderRemoveCustomLineItemAction : IStagedOrderRemoveCustomLineItemAction
     {
         public string Action { get; set; }

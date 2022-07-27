@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class TextAttribute : ITextAttribute
     {
         public string Name { get; set; }

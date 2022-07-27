@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class DuplicateVariantValuesError : IDuplicateVariantValuesError
     {
         public string Code { get; set; }

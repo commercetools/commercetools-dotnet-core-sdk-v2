@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewRatingStatistics : IReviewRatingStatistics
     {
         public decimal AverageRating { get; set; }

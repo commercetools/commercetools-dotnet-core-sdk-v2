@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductVariantDraft : IProductVariantDraft
     {
         public string Sku { get; set; }

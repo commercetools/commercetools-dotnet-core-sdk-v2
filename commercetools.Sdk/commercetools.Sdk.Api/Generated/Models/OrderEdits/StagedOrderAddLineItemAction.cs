@@ -7,6 +7,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddLineItemAction : IStagedOrderAddLineItemAction
     {
         public string Action { get; set; }

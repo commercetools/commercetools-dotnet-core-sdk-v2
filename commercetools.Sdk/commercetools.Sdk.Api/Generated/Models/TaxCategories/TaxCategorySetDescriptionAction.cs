@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
+
     public partial class TaxCategorySetDescriptionAction : ITaxCategorySetDescriptionAction
     {
         public string Action { get; set; }

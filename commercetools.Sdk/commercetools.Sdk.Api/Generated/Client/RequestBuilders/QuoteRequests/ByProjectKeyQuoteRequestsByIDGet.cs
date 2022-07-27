@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests
 {
+
     public partial class ByProjectKeyQuoteRequestsByIDGet : ApiMethod<ByProjectKeyQuoteRequestsByIDGet>, IApiMethod<ByProjectKeyQuoteRequestsByIDGet, commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyQuoteRequestsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyQuoteRequestsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyQuoteRequestsByIDGet>
     {
 

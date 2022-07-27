@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class PriceDraft : IPriceDraft
     {
         public IMoney Value { get; set; }

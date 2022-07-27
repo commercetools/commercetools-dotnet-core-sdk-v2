@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class TypeChangeEnumValueLabelAction : ITypeChangeEnumValueLabelAction
     {
         public string Action { get; set; }

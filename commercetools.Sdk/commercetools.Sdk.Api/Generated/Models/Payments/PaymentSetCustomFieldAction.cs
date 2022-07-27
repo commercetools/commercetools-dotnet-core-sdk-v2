@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentSetCustomFieldAction : IPaymentSetCustomFieldAction
     {
         public string Action { get; set; }

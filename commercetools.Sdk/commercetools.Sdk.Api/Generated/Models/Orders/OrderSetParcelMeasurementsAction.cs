@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetParcelMeasurementsAction : IOrderSetParcelMeasurementsAction
     {
         public string Action { get; set; }

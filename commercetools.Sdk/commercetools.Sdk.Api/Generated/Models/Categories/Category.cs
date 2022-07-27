@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class Category : ICategory
     {
         public string Id { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class LocalizableEnumSetAttribute : ILocalizableEnumSetAttribute
     {
         public string Name { get; set; }

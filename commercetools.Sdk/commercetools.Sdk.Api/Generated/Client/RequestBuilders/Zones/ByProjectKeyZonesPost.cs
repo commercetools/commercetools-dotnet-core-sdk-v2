@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
 {
+
     public partial class ByProjectKeyZonesPost : ApiMethod<ByProjectKeyZonesPost>, IApiMethod<ByProjectKeyZonesPost, commercetools.Sdk.Api.Models.Zones.IZone>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyZonesPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyZonesPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyZonesPost>
     {
 

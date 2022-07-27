@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class SyncInfo : ISyncInfo
     {
         public IChannelKeyReference Channel { get; set; }

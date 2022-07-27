@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class DuplicateAttributeValueError : IDuplicateAttributeValueError
     {
         public string Code { get; set; }

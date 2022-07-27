@@ -36,5 +36,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICustomFields Custom { get; set; }
 
         IItemShippingDetails ShippingDetails { get; set; }
+
+        ICustomLineItemPriceMode PriceMode { get; set; }
     }
 }

@@ -1,6 +1,4 @@
 using commercetools.Base.Client;
-using commercetools.Sdk.ImportApi.Models.Common;
-using commercetools.Sdk.ImportApi.Extensions;
 using Xunit;
 
 namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
@@ -19,7 +17,7 @@ namespace commercetools.ImportApi.IntegrationTests.ImportSinkTests
 
         [Fact]
         [System.Obsolete]
-        public async void CreateAndDelete()
+        public void CreateAndDelete()
         {
             // var importSinkDraft = new ImportSinkDraft
             // {

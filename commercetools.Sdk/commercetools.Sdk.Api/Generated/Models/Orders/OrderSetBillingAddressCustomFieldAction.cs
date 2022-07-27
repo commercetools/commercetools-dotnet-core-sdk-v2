@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetBillingAddressCustomFieldAction : IOrderSetBillingAddressCustomFieldAction
     {
         public string Action { get; set; }

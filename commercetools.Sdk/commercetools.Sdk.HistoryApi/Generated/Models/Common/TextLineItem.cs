@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class TextLineItem : ITextLineItem
     {
         public string AddedAt { get; set; }

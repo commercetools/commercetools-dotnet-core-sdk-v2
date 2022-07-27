@@ -3,6 +3,7 @@ using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class ChangeTargetChange : IChangeTargetChange
     {
         public string Type { get; set; }

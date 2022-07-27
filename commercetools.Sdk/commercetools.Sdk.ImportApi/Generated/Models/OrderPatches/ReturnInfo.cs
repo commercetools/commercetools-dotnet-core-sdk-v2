@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class ReturnInfo : IReturnInfo
     {
         public List<IReturnItemDraft> Items { get; set; }

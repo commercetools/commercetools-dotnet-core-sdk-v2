@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
+
     public partial class ChangeValueAbsoluteChangeValue : IChangeValueAbsoluteChangeValue
     {
         public string Type { get; set; }

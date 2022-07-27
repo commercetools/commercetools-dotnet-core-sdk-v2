@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategorySetAssetCustomTypeAction : ICategorySetAssetCustomTypeAction
     {
         public string Action { get; set; }

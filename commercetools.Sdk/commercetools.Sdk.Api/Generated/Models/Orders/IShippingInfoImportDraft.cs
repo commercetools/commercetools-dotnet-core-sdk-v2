@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
-        List<IDelivery> Deliveries { get; set; }
+        List<IDeliveryDraft> Deliveries { get; set; }
 
         IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodSetKeyAction : IShippingMethodSetKeyAction
     {
         public string Action { get; set; }

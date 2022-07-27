@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class Parcel : IParcel
     {
         public string Id { get; set; }

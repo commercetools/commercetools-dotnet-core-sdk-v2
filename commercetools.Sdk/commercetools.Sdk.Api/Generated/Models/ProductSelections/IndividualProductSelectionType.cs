@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
+
     public partial class IndividualProductSelectionType : IIndividualProductSelectionType
     {
         public IProductSelectionTypeEnum Type { get; set; }

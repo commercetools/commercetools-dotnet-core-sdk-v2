@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
 {
+
     public partial class ByProjectKeyProductSelectionsKeyByKeyDelete : ApiMethod<ByProjectKeyProductSelectionsKeyByKeyDelete>, IApiMethod<ByProjectKeyProductSelectionsKeyByKeyDelete, commercetools.Sdk.Api.Models.ProductSelections.IProductSelection>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyProductSelectionsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyProductSelectionsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductSelectionsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductSelectionsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductSelectionsKeyByKeyDelete>
     {
 

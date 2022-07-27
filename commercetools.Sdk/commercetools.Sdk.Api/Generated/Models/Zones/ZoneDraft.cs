@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZoneDraft : IZoneDraft
     {
         public string Key { get; set; }

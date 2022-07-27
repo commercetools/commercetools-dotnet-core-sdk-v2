@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.GraphQl
 {
+
     public partial class GraphQLRequest : IGraphQLRequest
     {
         public string Query { get; set; }

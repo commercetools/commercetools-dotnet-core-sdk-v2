@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class TermFacetResult : ITermFacetResult
     {
         public IFacetTypes Type { get; set; }

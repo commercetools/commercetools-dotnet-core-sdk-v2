@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetShoppingListLineItemCustomFieldChange : ISetShoppingListLineItemCustomFieldChange
     {
         public string Type { get; set; }

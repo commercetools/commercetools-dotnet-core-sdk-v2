@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListSetKeyAction : IShoppingListSetKeyAction
     {
         public string Action { get; set; }

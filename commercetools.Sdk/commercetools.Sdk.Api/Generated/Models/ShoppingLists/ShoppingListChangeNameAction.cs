@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListChangeNameAction : IShoppingListChangeNameAction
     {
         public string Action { get; set; }

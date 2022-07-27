@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
+
     public partial class ByProjectKeyProductProjectionsSuggestGet : ApiMethod<ByProjectKeyProductProjectionsSuggestGet>, IApiMethod<ByProjectKeyProductProjectionsSuggestGet, commercetools.Sdk.Api.Models.Products.ISuggestionResult>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet>
     {
 

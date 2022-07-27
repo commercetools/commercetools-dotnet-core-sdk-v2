@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class ProjectChangeProductSearchIndexingEnabledAction : IProjectChangeProductSearchIndexingEnabledAction
     {
         public string Action { get; set; }

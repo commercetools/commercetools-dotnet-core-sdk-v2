@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class ReturnItemDraft : IReturnItemDraft
     {
         public long Quantity { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CustomerLastNameSetMessagePayload : ICustomerLastNameSetMessagePayload
     {
         public string Type { get; set; }

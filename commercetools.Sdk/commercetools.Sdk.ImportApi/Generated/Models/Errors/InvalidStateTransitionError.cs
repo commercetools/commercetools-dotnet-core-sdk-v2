@@ -3,6 +3,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidStateTransitionError : IInvalidStateTransitionError
     {
         public string Code { get; set; }

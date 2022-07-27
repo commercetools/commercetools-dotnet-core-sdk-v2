@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class OrderKeyReference : IOrderKeyReference
     {
         public string Key { get; set; }

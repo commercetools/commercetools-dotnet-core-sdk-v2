@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
+
     public partial class TaxCategory : ITaxCategory
     {
         public string Id { get; set; }

@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Customers;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderCustomerSetMessagePayload : IOrderCustomerSetMessagePayload
     {
         public string Type { get; set; }

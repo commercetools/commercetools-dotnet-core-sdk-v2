@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
+
     public partial class TaxCategoryPagedQueryResponse : ITaxCategoryPagedQueryResponse
     {
         public long Limit { get; set; }

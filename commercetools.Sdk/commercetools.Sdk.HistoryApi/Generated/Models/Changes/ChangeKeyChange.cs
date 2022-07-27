@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class ChangeKeyChange : IChangeKeyChange
     {
         public string Type { get; set; }

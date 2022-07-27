@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetCustomerIdAction : ICartSetCustomerIdAction
     {
         public string Action { get; set; }

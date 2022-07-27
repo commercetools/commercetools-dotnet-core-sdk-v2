@@ -44,14 +44,26 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("product-discount")]
         ProductDiscount,
 
+        [Description("product-selection")]
+        ProductSelection,
+
         [Description("product-type")]
         ProductType,
+
+        [Description("quote-request")]
+        QuoteRequest,
+
+        [Description("quote")]
+        Quote,
 
         [Description("review")]
         Review,
 
         [Description("shopping-list")]
         ShoppingList,
+
+        [Description("staged-quote")]
+        StagedQuote,
 
         [Description("state")]
         State,
@@ -128,14 +140,26 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IChangeHistoryResourceType ProductDiscount = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.ProductDiscount, JsonName = "product-discount" };
 
+        public static IChangeHistoryResourceType ProductSelection = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.ProductSelection, JsonName = "product-selection" };
+
         public static IChangeHistoryResourceType ProductType = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.ProductType, JsonName = "product-type" };
+
+        public static IChangeHistoryResourceType QuoteRequest = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.QuoteRequest, JsonName = "quote-request" };
+
+        public static IChangeHistoryResourceType Quote = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.Quote, JsonName = "quote" };
 
         public static IChangeHistoryResourceType Review = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.Review, JsonName = "review" };
 
         public static IChangeHistoryResourceType ShoppingList = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.ShoppingList, JsonName = "shopping-list" };
+
+        public static IChangeHistoryResourceType StagedQuote = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.StagedQuote, JsonName = "staged-quote" };
 
         public static IChangeHistoryResourceType State = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.State, JsonName = "state" };
@@ -170,9 +194,13 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  Payment ,
                  Product ,
                  ProductDiscount ,
+                 ProductSelection ,
                  ProductType ,
+                 QuoteRequest ,
+                 Quote ,
                  Review ,
                  ShoppingList ,
+                 StagedQuote ,
                  State ,
                  Store ,
                  TaxCategory ,

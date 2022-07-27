@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class Customer : ICustomer
     {
         public string Id { get; set; }

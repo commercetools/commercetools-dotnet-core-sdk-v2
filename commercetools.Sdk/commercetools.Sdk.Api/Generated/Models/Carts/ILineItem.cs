@@ -55,6 +55,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICustomFields Custom { get; set; }
 
+        IInventoryMode InventoryMode { get; set; }
+
         IItemShippingDetails ShippingDetails { get; set; }
 
         DateTime? LastModifiedAt { get; set; }

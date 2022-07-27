@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class TypeDraft : ITypeDraft
     {
         public string Key { get; set; }

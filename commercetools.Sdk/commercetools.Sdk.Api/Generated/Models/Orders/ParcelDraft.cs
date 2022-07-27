@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class ParcelDraft : IParcelDraft
     {
         public IParcelMeasurements Measurements { get; set; }

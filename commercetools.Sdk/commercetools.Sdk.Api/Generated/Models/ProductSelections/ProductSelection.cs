@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
+
     public partial class ProductSelection : IProductSelection
     {
         public string Id { get; set; }

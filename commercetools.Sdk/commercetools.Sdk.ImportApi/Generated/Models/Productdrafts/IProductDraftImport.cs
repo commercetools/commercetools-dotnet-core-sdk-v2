@@ -36,5 +36,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         IStateKeyReference State { get; set; }
 
         bool? Publish { get; set; }
+
+        IProductPriceModeEnum PriceMode { get; set; }
     }
 }

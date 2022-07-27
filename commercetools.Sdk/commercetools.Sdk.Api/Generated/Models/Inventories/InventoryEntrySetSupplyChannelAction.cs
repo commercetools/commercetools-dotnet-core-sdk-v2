@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Channels;
 
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntrySetSupplyChannelAction : IInventoryEntrySetSupplyChannelAction
     {
         public string Action { get; set; }

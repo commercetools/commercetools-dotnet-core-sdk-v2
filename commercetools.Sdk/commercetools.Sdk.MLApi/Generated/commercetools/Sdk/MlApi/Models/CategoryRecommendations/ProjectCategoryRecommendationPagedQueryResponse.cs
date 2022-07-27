@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 {
+
     public partial class ProjectCategoryRecommendationPagedQueryResponse : IProjectCategoryRecommendationPagedQueryResponse
     {
         public long Count { get; set; }

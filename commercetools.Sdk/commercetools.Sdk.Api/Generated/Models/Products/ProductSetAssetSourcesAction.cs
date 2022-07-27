@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetAssetSourcesAction : IProductSetAssetSourcesAction
     {
         public string Action { get; set; }

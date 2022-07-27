@@ -8,6 +8,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class Product : IProduct
     {
         public string Id { get; set; }

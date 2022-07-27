@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidTokenError : IInvalidTokenError
     {
         public string Code { get; set; }

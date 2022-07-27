@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class FacetRange : IFacetRange
     {
         public decimal From { get; set; }

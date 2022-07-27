@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class TrackingData : ITrackingData
     {
         public string TrackingId { get; set; }

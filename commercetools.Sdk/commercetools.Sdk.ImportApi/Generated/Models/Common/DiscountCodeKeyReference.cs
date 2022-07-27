@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class DiscountCodeKeyReference : IDiscountCodeKeyReference
     {
         public string Key { get; set; }

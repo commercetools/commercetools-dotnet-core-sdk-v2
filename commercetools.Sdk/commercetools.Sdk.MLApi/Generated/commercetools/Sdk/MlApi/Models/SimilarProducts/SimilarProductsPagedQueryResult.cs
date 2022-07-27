@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
+
     public partial class SimilarProductsPagedQueryResult : ISimilarProductsPagedQueryResult
     {
         public long Count { get; set; }

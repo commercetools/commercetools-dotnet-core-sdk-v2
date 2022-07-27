@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductVariantDeletedMessagePayload : IProductVariantDeletedMessagePayload
     {
         public string Type { get; set; }

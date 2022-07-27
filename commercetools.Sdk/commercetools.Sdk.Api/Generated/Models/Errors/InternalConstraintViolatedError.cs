@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class InternalConstraintViolatedError : IInternalConstraintViolatedError
     {
         public string Code { get; set; }

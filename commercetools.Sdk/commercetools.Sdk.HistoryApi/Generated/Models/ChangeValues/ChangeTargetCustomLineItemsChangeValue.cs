@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
+
     public partial class ChangeTargetCustomLineItemsChangeValue : IChangeTargetCustomLineItemsChangeValue
     {
         public string Type { get; set; }

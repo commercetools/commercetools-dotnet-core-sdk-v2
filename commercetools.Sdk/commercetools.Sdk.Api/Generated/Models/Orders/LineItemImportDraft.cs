@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class LineItemImportDraft : ILineItemImportDraft
     {
         public string ProductId { get; set; }
@@ -29,6 +30,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         public ITaxRate TaxRate { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
     }

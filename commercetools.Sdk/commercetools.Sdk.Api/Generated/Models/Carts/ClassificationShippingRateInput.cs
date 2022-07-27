@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class ClassificationShippingRateInput : IClassificationShippingRateInput
     {
         public string Type { get; set; }

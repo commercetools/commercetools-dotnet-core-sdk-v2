@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Quotes
 {
+
     public partial class QuoteChangeQuoteStateAction : IQuoteChangeQuoteStateAction
     {
         public string Action { get; set; }

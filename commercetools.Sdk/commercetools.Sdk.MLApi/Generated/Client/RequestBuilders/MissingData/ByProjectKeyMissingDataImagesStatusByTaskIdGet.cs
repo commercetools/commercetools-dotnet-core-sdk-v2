@@ -5,6 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
+
     public partial class ByProjectKeyMissingDataImagesStatusByTaskIdGet : ApiMethod<ByProjectKeyMissingDataImagesStatusByTaskIdGet>, IApiMethod<ByProjectKeyMissingDataImagesStatusByTaskIdGet, commercetools.Sdk.MLApi.Models.MissingData.IMissingImagesTaskStatus>
     {
 

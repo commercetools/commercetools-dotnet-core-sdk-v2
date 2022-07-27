@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingRate : IShippingRate
     {
         public ITypedMoney Price { get; set; }

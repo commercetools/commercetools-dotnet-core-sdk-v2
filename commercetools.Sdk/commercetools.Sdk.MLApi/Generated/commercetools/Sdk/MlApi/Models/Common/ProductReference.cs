@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.MLApi.Models.Common
 {
+
     public partial class ProductReference : IProductReference
     {
         public IReferenceTypeId TypeId { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentAddInterfaceInteractionAction : IPaymentAddInterfaceInteractionAction
     {
         public string Action { get; set; }

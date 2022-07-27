@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountValueAbsoluteDraft : ICartDiscountValueAbsoluteDraft
     {
         public string Type { get; set; }

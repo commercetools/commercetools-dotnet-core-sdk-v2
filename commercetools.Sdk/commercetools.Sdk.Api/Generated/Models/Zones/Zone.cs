@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class Zone : IZone
     {
         public string Id { get; set; }

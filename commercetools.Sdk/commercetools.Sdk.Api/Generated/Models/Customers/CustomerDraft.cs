@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerDraft : ICustomerDraft
     {
         public string CustomerNumber { get; set; }

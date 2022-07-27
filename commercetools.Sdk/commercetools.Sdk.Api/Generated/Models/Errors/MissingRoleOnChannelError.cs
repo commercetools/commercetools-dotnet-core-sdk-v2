@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Channels;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class MissingRoleOnChannelError : IMissingRoleOnChannelError
     {
         public string Code { get; set; }

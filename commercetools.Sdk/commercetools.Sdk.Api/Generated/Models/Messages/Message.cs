@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class Message : IMessage
     {
         public string Id { get; set; }

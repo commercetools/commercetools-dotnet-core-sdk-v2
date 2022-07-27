@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSetDateOfBirthAction : ICustomerSetDateOfBirthAction
     {
         public string Action { get; set; }

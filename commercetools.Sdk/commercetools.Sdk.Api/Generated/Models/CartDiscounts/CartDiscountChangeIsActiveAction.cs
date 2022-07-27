@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountChangeIsActiveAction : ICartDiscountChangeIsActiveAction
     {
         public string Action { get; set; }

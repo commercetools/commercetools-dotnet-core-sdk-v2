@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class CartClassificationType : ICartClassificationType
     {
         public IShippingRateTierType Type { get; set; }

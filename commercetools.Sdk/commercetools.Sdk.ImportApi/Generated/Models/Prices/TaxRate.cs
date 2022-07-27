@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Prices
 {
+
     public partial class TaxRate : ITaxRate
     {
         public string Id { get; set; }

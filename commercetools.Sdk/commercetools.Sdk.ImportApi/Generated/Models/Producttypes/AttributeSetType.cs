@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
+
     public partial class AttributeSetType : IAttributeSetType
     {
         public string Name { get; set; }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -20,6 +21,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ProjectKey = projectKey;
         }
 
+        [Obsolete]
         public ByProjectKeyCustomObjectsGet Get()
         {
             return new ByProjectKeyCustomObjectsGet(ApiHttpClient, ProjectKey);

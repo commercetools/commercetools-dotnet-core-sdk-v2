@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartDraft : ICartDraft
     {
         public string Currency { get; set; }

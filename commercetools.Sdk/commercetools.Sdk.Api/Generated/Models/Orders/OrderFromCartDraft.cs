@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderFromCartDraft : IOrderFromCartDraft
     {
         [ObsoleteAttribute("This property is obsolete", false)]

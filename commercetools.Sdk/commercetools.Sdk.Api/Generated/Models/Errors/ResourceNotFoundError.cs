@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class ResourceNotFoundError : IResourceNotFoundError
     {
         public string Code { get; set; }

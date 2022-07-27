@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyShoppingListAddTextLineItemAction : IMyShoppingListAddTextLineItemAction
     {
         public string Action { get; set; }

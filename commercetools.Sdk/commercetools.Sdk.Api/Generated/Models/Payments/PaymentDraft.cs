@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentDraft : IPaymentDraft
     {
         public ICustomerResourceIdentifier Customer { get; set; }

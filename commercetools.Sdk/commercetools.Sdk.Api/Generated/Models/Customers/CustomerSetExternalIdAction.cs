@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerSetExternalIdAction : ICustomerSetExternalIdAction
     {
         public string Action { get; set; }

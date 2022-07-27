@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelAddRolesAction : IChannelAddRolesAction
     {
         public string Action { get; set; }

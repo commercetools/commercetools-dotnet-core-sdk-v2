@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingImagesTaskStatus : IMissingImagesTaskStatus
     {
         public ITaskStatusEnum State { get; set; }

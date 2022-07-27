@@ -5,6 +5,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 {
+
     public partial class ByProjectKeySimilaritiesProductsStatusByTaskIdGet : ApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet>, IApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet, commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>
     {
 

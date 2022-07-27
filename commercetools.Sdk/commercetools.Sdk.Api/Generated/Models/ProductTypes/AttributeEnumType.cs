@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class AttributeEnumType : IAttributeEnumType
     {
         public string Name { get; set; }

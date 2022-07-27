@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewSetCustomTypeAction : IReviewSetCustomTypeAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingPricesMeta : IMissingPricesMeta
     {
         public IMissingPricesProductLevel ProductLevel { get; set; }

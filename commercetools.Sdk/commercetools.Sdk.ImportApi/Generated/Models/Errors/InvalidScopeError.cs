@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidScopeError : IInvalidScopeError
     {
         public string Code { get; set; }

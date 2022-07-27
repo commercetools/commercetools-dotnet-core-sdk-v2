@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class ObjectNotFoundError : IObjectNotFoundError
     {
         public string Code { get; set; }

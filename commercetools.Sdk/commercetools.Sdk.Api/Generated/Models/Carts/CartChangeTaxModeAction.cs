@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartChangeTaxModeAction : ICartChangeTaxModeAction
     {
         public string Action { get; set; }

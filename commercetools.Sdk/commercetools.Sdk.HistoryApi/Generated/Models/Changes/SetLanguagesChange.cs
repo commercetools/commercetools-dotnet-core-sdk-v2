@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetLanguagesChange : ISetLanguagesChange
     {
         public string Type { get; set; }

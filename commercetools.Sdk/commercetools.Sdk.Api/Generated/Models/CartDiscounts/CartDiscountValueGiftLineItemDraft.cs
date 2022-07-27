@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Products;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountValueGiftLineItemDraft : ICartDiscountValueGiftLineItemDraft
     {
         public string Type { get; set; }

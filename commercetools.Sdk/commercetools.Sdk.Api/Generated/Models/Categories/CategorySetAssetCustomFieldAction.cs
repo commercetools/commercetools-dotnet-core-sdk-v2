@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategorySetAssetCustomFieldAction : ICategorySetAssetCustomFieldAction
     {
         public string Action { get; set; }

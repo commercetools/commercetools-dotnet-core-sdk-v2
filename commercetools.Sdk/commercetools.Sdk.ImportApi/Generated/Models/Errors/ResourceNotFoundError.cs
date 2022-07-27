@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class ResourceNotFoundError : IResourceNotFoundError
     {
         public string Code { get; set; }

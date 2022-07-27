@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
+
     public partial class StandalonePriceSetCustomFieldAction : IStandalonePriceSetCustomFieldAction
     {
         public string Action { get; set; }

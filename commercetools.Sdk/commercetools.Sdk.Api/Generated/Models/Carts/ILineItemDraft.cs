@@ -32,6 +32,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IInventoryMode InventoryMode { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
     }
 }

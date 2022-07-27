@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetCustomFieldChange : ISetCustomFieldChange
     {
         public string Type { get; set; }

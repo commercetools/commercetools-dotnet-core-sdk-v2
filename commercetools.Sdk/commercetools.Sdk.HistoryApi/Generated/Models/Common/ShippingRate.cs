@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class ShippingRate : IShippingRate
     {
         public IMoney Price { get; set; }

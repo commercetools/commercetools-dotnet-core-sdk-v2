@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class StagedQuoteCreatedMessage : IStagedQuoteCreatedMessage
     {
         public string Id { get; set; }

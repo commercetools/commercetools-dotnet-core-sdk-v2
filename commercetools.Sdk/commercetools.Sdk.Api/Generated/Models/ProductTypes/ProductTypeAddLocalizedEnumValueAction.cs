@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class ProductTypeAddLocalizedEnumValueAction : IProductTypeAddLocalizedEnumValueAction
     {
         public string Action { get; set; }

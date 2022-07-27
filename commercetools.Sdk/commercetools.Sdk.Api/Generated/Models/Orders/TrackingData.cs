@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class TrackingData : ITrackingData
     {
         public string TrackingId { get; set; }

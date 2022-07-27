@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class LineItemPrice : ILineItemPrice
     {
         public ITypedMoney Value { get; set; }

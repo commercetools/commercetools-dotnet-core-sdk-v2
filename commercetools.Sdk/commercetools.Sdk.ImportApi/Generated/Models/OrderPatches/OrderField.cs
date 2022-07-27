@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class OrderField : IOrderField
     {
         public IReturnInfo AddReturnInfo { get; set; }

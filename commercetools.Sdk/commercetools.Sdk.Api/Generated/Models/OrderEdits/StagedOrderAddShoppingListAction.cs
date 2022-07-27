@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.ShoppingLists;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddShoppingListAction : IStagedOrderAddShoppingListAction
     {
         public string Action { get; set; }

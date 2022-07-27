@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderSetDeliveryAddressCustomFieldAction : IOrderSetDeliveryAddressCustomFieldAction
     {
         public string Action { get; set; }

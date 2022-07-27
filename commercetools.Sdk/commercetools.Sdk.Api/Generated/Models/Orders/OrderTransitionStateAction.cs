@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderTransitionStateAction : IOrderTransitionStateAction
     {
         public string Action { get; set; }

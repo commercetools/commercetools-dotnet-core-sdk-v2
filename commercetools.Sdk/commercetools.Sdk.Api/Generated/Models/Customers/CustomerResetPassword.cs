@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerResetPassword : ICustomerResetPassword
     {
         public string TokenValue { get; set; }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Categories
 {
+
     public partial class CategoryImport : ICategoryImport
     {
         public string Key { get; set; }

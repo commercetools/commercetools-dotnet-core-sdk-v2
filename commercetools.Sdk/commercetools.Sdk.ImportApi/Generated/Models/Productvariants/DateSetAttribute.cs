@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class DateSetAttribute : IDateSetAttribute
     {
         public string Name { get; set; }

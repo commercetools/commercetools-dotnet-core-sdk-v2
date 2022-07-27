@@ -7,6 +7,7 @@ using commercetools.Sdk.HistoryApi.Models.ChangeHistories;
 
 namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
+
     public partial class ByProjectKeyByResourceTypeByIDGet : ApiMethod<ByProjectKeyByResourceTypeByIDGet>, IApiMethod<ByProjectKeyByResourceTypeByIDGet, commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>
     {
 

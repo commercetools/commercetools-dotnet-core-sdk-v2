@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductRevertedStagedChangesMessagePayload : IProductRevertedStagedChangesMessagePayload
     {
         public string Type { get; set; }

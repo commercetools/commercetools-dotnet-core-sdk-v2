@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetOrderNumberAction : IStagedOrderSetOrderNumberAction
     {
         public string Action { get; set; }

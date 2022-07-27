@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentTransitionStateAction : IPaymentTransitionStateAction
     {
         public string Action { get; set; }

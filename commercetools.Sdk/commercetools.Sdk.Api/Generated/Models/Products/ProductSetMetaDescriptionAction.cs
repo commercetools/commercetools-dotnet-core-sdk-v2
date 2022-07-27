@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetMetaDescriptionAction : IProductSetMetaDescriptionAction
     {
         public string Action { get; set; }

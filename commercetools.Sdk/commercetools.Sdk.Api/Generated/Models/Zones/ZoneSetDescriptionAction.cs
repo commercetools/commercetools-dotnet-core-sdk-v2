@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZoneSetDescriptionAction : IZoneSetDescriptionAction
     {
         public string Action { get; set; }

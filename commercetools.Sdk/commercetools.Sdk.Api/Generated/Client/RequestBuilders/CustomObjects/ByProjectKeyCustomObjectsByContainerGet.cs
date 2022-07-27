@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
+
     public partial class ByProjectKeyCustomObjectsByContainerGet : ApiMethod<ByProjectKeyCustomObjectsByContainerGet>, IApiMethod<ByProjectKeyCustomObjectsByContainerGet, commercetools.Sdk.Api.Models.CustomObjects.ICustomObjectPagedQueryResponse>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyCustomObjectsByContainerGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyCustomObjectsByContainerGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomObjectsByContainerGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyCustomObjectsByContainerGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomObjectsByContainerGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomObjectsByContainerGet>
     {
 

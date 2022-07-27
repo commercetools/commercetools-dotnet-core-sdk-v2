@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
+
     public partial class Record : IRecord
     {
         public int Version { get; set; }

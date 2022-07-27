@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetDeleteDaysAfterLastModificationAction : ICartSetDeleteDaysAfterLastModificationAction
     {
         public string Action { get; set; }

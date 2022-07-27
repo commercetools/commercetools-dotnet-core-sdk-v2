@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartSetCustomShippingMethodAction : ICartSetCustomShippingMethodAction
     {
         public string Action { get; set; }

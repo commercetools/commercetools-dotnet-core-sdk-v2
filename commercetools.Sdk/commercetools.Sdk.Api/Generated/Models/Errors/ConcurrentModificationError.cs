@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class ConcurrentModificationError : IConcurrentModificationError
     {
         public string Code { get; set; }

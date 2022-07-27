@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class ReturnItemDraft : IReturnItemDraft
     {
         public decimal Quantity { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.QuoteRequests;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class QuoteRequestStateChangedMessagePayload : IQuoteRequestStateChangedMessagePayload
     {
         public string Type { get; set; }

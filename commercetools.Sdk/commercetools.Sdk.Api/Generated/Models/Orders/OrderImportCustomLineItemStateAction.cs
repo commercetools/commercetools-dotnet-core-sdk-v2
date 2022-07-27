@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class OrderImportCustomLineItemStateAction : IOrderImportCustomLineItemStateAction
     {
         public string Action { get; set; }

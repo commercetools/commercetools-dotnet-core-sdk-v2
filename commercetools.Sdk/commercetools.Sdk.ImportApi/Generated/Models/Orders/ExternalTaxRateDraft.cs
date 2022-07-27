@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class ExternalTaxRateDraft : IExternalTaxRateDraft
     {
         public string Name { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class OutOfStockError : IOutOfStockError
     {
         public string Code { get; set; }

@@ -6,6 +6,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddCustomLineItemAction : IStagedOrderAddCustomLineItemAction
     {
         public string Action { get; set; }

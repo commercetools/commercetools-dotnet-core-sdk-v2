@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.ShippingMethods;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetShippingAddressAndShippingMethodAction : IStagedOrderSetShippingAddressAndShippingMethodAction
     {
         public string Action { get; set; }

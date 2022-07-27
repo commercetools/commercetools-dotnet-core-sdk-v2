@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
 {
+
     public partial class ByProjectKeyCartsGet : ApiMethod<ByProjectKeyCartsGet>, IApiMethod<ByProjectKeyCartsGet, commercetools.Sdk.Api.Models.Carts.ICartPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCartsGet, commercetools.Sdk.Api.Models.Carts.ICartPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCartsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyCartsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyCartsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyCartsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCartsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCartsGet>
     {
 

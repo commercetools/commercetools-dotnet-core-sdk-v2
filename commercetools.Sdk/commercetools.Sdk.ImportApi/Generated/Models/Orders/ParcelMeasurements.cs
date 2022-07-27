@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class ParcelMeasurements : IParcelMeasurements
     {
         public decimal? HeightInMillimeter { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class PriceTier : IPriceTier
     {
         public long MinimumQuantity { get; set; }

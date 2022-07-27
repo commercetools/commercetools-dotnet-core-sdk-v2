@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewSetCustomFieldAction : IReviewSetCustomFieldAction
     {
         public string Action { get; set; }

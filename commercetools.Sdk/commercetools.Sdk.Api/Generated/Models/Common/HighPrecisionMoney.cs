@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class HighPrecisionMoney : IHighPrecisionMoney
     {
         public long CentAmount { get; set; }

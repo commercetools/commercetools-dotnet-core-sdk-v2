@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductDraft : IProductDraft
     {
         public IProductTypeResourceIdentifier ProductType { get; set; }

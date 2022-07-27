@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class StateSetDescriptionAction : IStateSetDescriptionAction
     {
         public string Action { get; set; }

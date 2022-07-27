@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Carts;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetCustomLineItemTaxRateAction : IStagedOrderSetCustomLineItemTaxRateAction
     {
         public string Action { get; set; }

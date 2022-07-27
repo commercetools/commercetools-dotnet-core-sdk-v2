@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCustomerDraft : IMyCustomerDraft
     {
         public string Email { get; set; }

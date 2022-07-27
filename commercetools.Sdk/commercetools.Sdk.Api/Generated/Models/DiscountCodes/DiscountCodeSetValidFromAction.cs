@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodeSetValidFromAction : IDiscountCodeSetValidFromAction
     {
         public string Action { get; set; }

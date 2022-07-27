@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelSetAddressCustomFieldAction : IChannelSetAddressCustomFieldAction
     {
         public string Action { get; set; }

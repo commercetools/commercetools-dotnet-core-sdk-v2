@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Channels;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetLineItemDistributionChannelAction : IStagedOrderSetLineItemDistributionChannelAction
     {
         public string Action { get; set; }

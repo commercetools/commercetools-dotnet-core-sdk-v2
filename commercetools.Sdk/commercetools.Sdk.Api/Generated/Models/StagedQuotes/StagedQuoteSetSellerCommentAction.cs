@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.StagedQuotes
 {
+
     public partial class StagedQuoteSetSellerCommentAction : IStagedQuoteSetSellerCommentAction
     {
         public string Action { get; set; }

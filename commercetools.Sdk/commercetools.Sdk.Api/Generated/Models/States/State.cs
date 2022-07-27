@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class State : IState
     {
         public string Id { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetKeyAction : IProductSetKeyAction
     {
         public string Action { get; set; }

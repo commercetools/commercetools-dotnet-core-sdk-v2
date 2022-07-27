@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.QuoteRequests
 {
+
     public partial class QuoteRequestPagedQueryResponse : IQuoteRequestPagedQueryResponse
     {
         public long Limit { get; set; }

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntryReference : IInventoryEntryReference
     {
         public IReferenceTypeId TypeId { get; set; }

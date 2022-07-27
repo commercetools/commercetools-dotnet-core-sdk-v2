@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class TypeChangeFieldDefinitionOrderAction : ITypeChangeFieldDefinitionOrderAction
     {
         public string Action { get; set; }

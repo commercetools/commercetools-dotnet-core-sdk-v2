@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Orders;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderPaymentStateChangedMessagePayload : IOrderPaymentStateChangedMessagePayload
     {
         public string Type { get; set; }

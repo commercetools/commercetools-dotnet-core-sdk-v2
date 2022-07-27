@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
+
     public partial class ProductSetSelector : IProductSetSelector
     {
         public string ProjectKey { get; set; }

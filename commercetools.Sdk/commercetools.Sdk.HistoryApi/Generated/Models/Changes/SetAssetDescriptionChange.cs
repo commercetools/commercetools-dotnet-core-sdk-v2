@@ -4,6 +4,7 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetAssetDescriptionChange : ISetAssetDescriptionChange
     {
         public string Type { get; set; }

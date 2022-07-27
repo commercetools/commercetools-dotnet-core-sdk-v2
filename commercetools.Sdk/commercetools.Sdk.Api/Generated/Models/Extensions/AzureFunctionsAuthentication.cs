@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class AzureFunctionsAuthentication : IAzureFunctionsAuthentication
     {
         public string Type { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Orders
 {
+
     public partial class Hit : IHit
     {
         public string Id { get; set; }

@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class ResourceUpdatedDeliveryPayload : IResourceUpdatedDeliveryPayload
     {
         public string ProjectKey { get; set; }

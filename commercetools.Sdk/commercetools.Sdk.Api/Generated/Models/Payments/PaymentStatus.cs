@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.States;
 
 namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentStatus : IPaymentStatus
     {
         public string InterfaceCode { get; set; }

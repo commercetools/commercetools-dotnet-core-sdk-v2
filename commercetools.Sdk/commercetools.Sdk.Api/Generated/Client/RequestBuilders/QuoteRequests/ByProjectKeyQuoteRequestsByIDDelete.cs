@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests
 {
+
     public partial class ByProjectKeyQuoteRequestsByIDDelete : ApiMethod<ByProjectKeyQuoteRequestsByIDDelete>, IApiMethod<ByProjectKeyQuoteRequestsByIDDelete, commercetools.Sdk.Api.Models.QuoteRequests.IQuoteRequest>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyQuoteRequestsByIDDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyQuoteRequestsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyQuoteRequestsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyQuoteRequestsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyQuoteRequestsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyQuoteRequestsByIDDelete>
     {
 

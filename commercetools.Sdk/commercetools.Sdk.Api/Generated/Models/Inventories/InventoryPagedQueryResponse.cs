@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryPagedQueryResponse : IInventoryPagedQueryResponse
     {
         public long Limit { get; set; }

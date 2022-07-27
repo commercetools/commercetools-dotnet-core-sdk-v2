@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductRemoveVariantAction : IProductRemoveVariantAction
     {
         public string Action { get; set; }

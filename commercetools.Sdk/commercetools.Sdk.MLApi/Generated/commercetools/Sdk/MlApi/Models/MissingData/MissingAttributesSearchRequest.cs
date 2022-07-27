@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
+
     public partial class MissingAttributesSearchRequest : IMissingAttributesSearchRequest
     {
         public int? Limit { get; set; }

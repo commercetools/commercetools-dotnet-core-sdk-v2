@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
+
     public partial class CustomFieldExpandedValue : ICustomFieldExpandedValue
     {
         public string Name { get; set; }

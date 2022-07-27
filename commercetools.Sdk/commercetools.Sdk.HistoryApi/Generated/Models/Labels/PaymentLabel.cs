@@ -3,6 +3,7 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 
 namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
+
     public partial class PaymentLabel : IPaymentLabel
     {
         public string Type { get; set; }

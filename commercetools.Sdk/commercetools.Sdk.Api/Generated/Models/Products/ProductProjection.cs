@@ -10,6 +10,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductProjection : IProductProjection
     {
         public string Id { get; set; }

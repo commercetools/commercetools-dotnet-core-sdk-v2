@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditSetKeyAction : IOrderEditSetKeyAction
     {
         public string Action { get; set; }

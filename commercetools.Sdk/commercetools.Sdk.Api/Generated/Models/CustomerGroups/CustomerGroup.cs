@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroup : ICustomerGroup
     {
         public string Id { get; set; }

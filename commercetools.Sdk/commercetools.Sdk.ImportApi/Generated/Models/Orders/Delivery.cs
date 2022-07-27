@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class Delivery : IDelivery
     {
         public string Id { get; set; }

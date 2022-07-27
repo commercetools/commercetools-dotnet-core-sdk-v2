@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
+
     public partial class ByProjectKeyTaxCategoriesByIDDelete : ApiMethod<ByProjectKeyTaxCategoriesByIDDelete>, IApiMethod<ByProjectKeyTaxCategoriesByIDDelete, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategory>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyTaxCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyTaxCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTaxCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTaxCategoriesByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTaxCategoriesByIDDelete>
     {
 

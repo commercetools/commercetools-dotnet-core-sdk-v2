@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Stores
 {
+
     public partial class StoreResourceIdentifier : IStoreResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

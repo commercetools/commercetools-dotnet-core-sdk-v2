@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
+
     public partial class TransactionChangeValue : ITransactionChangeValue
     {
         public string Id { get; set; }

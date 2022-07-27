@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelPagedQueryResponse : IChannelPagedQueryResponse
     {
         public long Limit { get; set; }

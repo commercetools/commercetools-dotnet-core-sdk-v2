@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetStoresChange : ISetStoresChange
     {
         public string Type { get; set; }

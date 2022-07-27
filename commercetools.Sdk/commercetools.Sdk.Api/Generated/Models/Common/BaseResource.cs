@@ -3,6 +3,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class BaseResource : IBaseResource
     {
         public string Id { get; set; }

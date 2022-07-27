@@ -11,7 +11,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
     [SubTypeDiscriminator("OrderLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.OrderLabel))]
     [SubTypeDiscriminator("PaymentLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.PaymentLabel))]
     [SubTypeDiscriminator("ProductLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.ProductLabel))]
+    [SubTypeDiscriminator("QuoteLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.QuoteLabel))]
+    [SubTypeDiscriminator("QuoteRequestLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.QuoteRequestLabel))]
     [SubTypeDiscriminator("ReviewLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.ReviewLabel))]
+    [SubTypeDiscriminator("StagedQuoteLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.StagedQuoteLabel))]
     [SubTypeDiscriminator("StringLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.StringLabel))]
     public partial interface ILabel
     {

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderLineItemRemovedMessagePayload : IOrderLineItemRemovedMessagePayload
     {
         public string Type { get; set; }

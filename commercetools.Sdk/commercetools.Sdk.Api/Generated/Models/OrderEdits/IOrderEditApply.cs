@@ -6,8 +6,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditApply))]
     public partial interface IOrderEditApply
     {
-        int EditVersion { get; set; }
+        long EditVersion { get; set; }
 
-        int ResourceVersion { get; set; }
+        long ResourceVersion { get; set; }
     }
 }

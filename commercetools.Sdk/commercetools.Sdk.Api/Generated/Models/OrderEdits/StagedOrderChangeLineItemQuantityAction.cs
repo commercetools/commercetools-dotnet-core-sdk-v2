@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderChangeLineItemQuantityAction : IStagedOrderChangeLineItemQuantityAction
     {
         public string Action { get; set; }

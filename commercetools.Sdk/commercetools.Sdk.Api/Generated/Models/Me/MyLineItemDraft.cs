@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyLineItemDraft : IMyLineItemDraft
     {
         public string ProductId { get; set; }

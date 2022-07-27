@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 {
+
     public partial class ImportContainer : IImportContainer
     {
         public string Key { get; set; }

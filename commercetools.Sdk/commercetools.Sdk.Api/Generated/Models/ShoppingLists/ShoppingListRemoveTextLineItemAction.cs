@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListRemoveTextLineItemAction : IShoppingListRemoveTextLineItemAction
     {
         public string Action { get; set; }

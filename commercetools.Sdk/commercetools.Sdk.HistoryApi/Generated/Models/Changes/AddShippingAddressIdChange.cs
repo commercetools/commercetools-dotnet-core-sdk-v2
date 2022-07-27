@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class AddShippingAddressIdChange : IAddShippingAddressIdChange
     {
         public string Type { get; set; }

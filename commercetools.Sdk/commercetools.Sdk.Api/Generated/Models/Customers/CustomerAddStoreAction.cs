@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Stores;
 
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerAddStoreAction : ICustomerAddStoreAction
     {
         public string Action { get; set; }

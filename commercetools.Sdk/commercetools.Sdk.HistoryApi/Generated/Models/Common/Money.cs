@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class Money : IMoney
     {
         public string CurrencyCode { get; set; }

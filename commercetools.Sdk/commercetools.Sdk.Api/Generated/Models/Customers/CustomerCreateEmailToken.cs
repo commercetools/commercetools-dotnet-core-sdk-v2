@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerCreateEmailToken : ICustomerCreateEmailToken
     {
         public string Id { get; set; }

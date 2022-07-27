@@ -14,6 +14,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("applyDeltaToCustomLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction))]
     [SubTypeDiscriminator("applyDeltaToLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToLineItemShippingDetailsTargetsAction))]
     [SubTypeDiscriminator("changeCustomLineItemMoney", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeCustomLineItemMoneyAction))]
+    [SubTypeDiscriminator("changeCustomLineItemPriceMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeCustomLineItemPriceModeAction))]
     [SubTypeDiscriminator("changeCustomLineItemQuantity", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeCustomLineItemQuantityAction))]
     [SubTypeDiscriminator("changeLineItemQuantity", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeLineItemQuantityAction))]
     [SubTypeDiscriminator("changeTaxCalculationMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxCalculationModeAction))]

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewResourceIdentifier : IReviewResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }

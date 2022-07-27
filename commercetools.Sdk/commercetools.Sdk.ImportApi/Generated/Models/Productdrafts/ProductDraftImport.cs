@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
+
     public partial class ProductDraftImport : IProductDraftImport
     {
         public string Key { get; set; }
@@ -36,5 +37,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         public IStateKeyReference State { get; set; }
 
         public bool? Publish { get; set; }
+
+        public IProductPriceModeEnum PriceMode { get; set; }
     }
 }

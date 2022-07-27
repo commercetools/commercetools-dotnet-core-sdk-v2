@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class ProductTypeChangeAttributeConstraintAction : IProductTypeChangeAttributeConstraintAction
     {
         public string Action { get; set; }

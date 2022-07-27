@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class Address : IAddress
     {
         public string Id { get; set; }

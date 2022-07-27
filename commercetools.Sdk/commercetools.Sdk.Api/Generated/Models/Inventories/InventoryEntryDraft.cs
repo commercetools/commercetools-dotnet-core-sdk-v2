@@ -5,6 +5,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntryDraft : IInventoryEntryDraft
     {
         public string Sku { get; set; }

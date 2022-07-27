@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodeDraft : IDiscountCodeDraft
     {
         public ILocalizedString Name { get; set; }

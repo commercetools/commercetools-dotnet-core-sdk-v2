@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetCustomShippingMethodAction : IStagedOrderSetCustomShippingMethodAction
     {
         public string Action { get; set; }

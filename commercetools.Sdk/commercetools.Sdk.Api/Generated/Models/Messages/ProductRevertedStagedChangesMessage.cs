@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductRevertedStagedChangesMessage : IProductRevertedStagedChangesMessage
     {
         public string Id { get; set; }

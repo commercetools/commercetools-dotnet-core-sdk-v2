@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelChangeKeyAction : IChannelChangeKeyAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class Reservation : IReservation
     {
         public int Quantity { get; set; }

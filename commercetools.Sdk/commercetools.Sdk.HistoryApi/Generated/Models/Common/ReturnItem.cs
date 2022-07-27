@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class ReturnItem : IReturnItem
     {
         public string Id { get; set; }

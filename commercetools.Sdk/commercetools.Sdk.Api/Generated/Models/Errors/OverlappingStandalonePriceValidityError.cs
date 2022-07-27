@@ -6,6 +6,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class OverlappingStandalonePriceValidityError : IOverlappingStandalonePriceValidityError
     {
         public string Code { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductPriceDiscountsSetMessagePayload : IProductPriceDiscountsSetMessagePayload
     {
         public string Type { get; set; }

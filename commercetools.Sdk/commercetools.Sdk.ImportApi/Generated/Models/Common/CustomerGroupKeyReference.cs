@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class CustomerGroupKeyReference : ICustomerGroupKeyReference
     {
         public string Key { get; set; }

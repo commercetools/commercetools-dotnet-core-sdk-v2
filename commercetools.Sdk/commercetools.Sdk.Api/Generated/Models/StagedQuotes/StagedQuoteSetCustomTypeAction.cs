@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.StagedQuotes
 {
+
     public partial class StagedQuoteSetCustomTypeAction : IStagedQuoteSetCustomTypeAction
     {
         public string Action { get; set; }

@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class ParcelMeasurements : IParcelMeasurements
     {
         public int HeightInMillimeter { get; set; }

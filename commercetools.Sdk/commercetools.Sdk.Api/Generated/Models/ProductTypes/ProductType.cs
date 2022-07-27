@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class ProductType : IProductType
     {
         public string Id { get; set; }

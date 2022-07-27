@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductPriceDiscountsSetUpdatedPrice : IProductPriceDiscountsSetUpdatedPrice
     {
         public int VariantId { get; set; }

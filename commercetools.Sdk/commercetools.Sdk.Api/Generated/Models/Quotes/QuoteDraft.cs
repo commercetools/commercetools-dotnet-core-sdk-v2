@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.Quotes
 {
+
     public partial class QuoteDraft : IQuoteDraft
     {
         public IStagedQuoteResourceIdentifier StagedQuote { get; set; }

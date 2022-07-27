@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class ProjectChangeNameAction : IProjectChangeNameAction
     {
         public string Action { get; set; }

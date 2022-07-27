@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
+
     public partial class SimilarProductsTaskStatus : ISimilarProductsTaskStatus
     {
         public ITaskStatusEnum State { get; set; }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
+
     public partial class DeliveryChangeValue : IDeliveryChangeValue
     {
         public List<IDeliveryItem> Items { get; set; }

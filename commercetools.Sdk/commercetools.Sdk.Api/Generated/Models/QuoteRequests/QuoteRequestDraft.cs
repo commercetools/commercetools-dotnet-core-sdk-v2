@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Types;
 
 namespace commercetools.Sdk.Api.Models.QuoteRequests
 {
+
     public partial class QuoteRequestDraft : IQuoteRequestDraft
     {
         public ICartResourceIdentifier Cart { get; set; }

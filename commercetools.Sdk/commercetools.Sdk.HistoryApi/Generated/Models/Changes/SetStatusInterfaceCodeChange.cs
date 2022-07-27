@@ -1,5 +1,6 @@
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class SetStatusInterfaceCodeChange : ISetStatusInterfaceCodeChange
     {
         public string Type { get; set; }

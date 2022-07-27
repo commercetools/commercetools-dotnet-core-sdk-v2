@@ -4,6 +4,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductUnpublishedMessage : IProductUnpublishedMessage
     {
         public string Id { get; set; }

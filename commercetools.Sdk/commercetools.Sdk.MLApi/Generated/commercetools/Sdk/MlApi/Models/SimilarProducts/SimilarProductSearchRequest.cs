@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 {
+
     public partial class SimilarProductSearchRequest : ISimilarProductSearchRequest
     {
         public long? Limit { get; set; }

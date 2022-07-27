@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.QuoteRequests
 {
+
     public partial class QuoteRequestReference : IQuoteRequestReference
     {
         public IReferenceTypeId TypeId { get; set; }

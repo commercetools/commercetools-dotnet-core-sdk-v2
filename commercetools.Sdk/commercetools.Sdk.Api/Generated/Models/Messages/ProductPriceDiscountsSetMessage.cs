@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductPriceDiscountsSetMessage : IProductPriceDiscountsSetMessage
     {
         public string Id { get; set; }

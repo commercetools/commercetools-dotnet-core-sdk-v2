@@ -6,6 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
 {
+
     public partial class ByProjectKeyTypesByIDGet : ApiMethod<ByProjectKeyTypesByIDGet>, IApiMethod<ByProjectKeyTypesByIDGet, commercetools.Sdk.Api.Models.Types.IType>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTypesByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTypesByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTypesByIDGet>
     {
 

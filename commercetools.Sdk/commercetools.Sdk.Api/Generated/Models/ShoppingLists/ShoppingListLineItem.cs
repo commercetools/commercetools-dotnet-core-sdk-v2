@@ -7,6 +7,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class ShoppingListLineItem : IShoppingListLineItem
     {
         public DateTime AddedAt { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
+
     public partial class ErrorResponse : IErrorResponse
     {
         public int StatusCode { get; set; }

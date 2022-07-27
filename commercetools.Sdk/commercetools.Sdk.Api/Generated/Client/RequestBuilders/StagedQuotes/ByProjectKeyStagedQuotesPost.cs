@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
 {
+
     public partial class ByProjectKeyStagedQuotesPost : ApiMethod<ByProjectKeyStagedQuotesPost>, IApiMethod<ByProjectKeyStagedQuotesPost, commercetools.Sdk.Api.Models.StagedQuotes.IStagedQuote>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStagedQuotesPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyStagedQuotesPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStagedQuotesPost>
     {
 

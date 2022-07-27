@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class LineItem : ILineItem
     {
         public string Id { get; set; }
@@ -52,6 +53,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ILineItemMode LineItemMode { get; set; }
 
         public ICustomFields Custom { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetails ShippingDetails { get; set; }
 

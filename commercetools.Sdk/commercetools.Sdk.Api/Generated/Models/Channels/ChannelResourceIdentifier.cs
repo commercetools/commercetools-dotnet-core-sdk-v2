@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelResourceIdentifier : IChannelResourceIdentifier
     {
         public IReferenceTypeId TypeId { get; set; }
