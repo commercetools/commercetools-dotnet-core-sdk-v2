@@ -31,5 +31,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         ICustomerResourceIdentifier Customer { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

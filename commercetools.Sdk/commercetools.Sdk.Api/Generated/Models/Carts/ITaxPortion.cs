@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         decimal Rate { get; set; }
 
         ITypedMoney Amount { get; set; }
+
     }
 }

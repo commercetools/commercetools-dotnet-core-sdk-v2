@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,5 +14,36 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     public partial interface IStagedQuoteUpdateAction
     {
         string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteChangeStagedQuoteStateAction ChangeStagedQuoteState(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteChangeStagedQuoteStateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteChangeStagedQuoteStateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetSellerCommentAction SetSellerComment(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetSellerCommentAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetSellerCommentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction SetValidTo(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

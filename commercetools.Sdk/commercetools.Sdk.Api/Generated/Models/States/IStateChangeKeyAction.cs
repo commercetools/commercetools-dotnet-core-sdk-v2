@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateChangeKeyAction : IStateUpdateAction
     {
         string Key { get; set; }
+
     }
 }

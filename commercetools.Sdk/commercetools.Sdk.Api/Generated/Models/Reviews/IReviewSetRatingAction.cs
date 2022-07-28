@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetRatingAction : IReviewUpdateAction
     {
         int? Rating { get; set; }
+
     }
 }

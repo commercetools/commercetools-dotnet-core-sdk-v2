@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
         long? Total { get; set; }
 
         List<ICustomObject> Results { get; set; }
+
     }
 }

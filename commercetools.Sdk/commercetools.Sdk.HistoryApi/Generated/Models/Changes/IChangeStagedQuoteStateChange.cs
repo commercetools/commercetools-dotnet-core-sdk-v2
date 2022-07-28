@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IStagedQuoteState NextValue { get; set; }
 
         IStagedQuoteState PreviousValue { get; set; }
+
     }
 }

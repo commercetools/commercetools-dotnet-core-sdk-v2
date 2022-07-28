@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         new string Id { get; set; }
 
         new string Key { get; set; }
+
     }
 }

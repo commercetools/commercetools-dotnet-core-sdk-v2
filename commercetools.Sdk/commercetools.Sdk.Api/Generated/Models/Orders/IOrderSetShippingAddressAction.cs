@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetShippingAddressAction : IOrderUpdateAction
     {
         IBaseAddress Address { get; set; }
+
     }
 }

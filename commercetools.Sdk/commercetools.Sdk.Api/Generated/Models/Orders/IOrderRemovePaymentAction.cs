@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderRemovePaymentAction : IOrderUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }
+
     }
 }

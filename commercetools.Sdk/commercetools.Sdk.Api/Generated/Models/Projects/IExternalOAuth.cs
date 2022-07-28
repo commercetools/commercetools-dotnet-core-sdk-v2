@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Projects
         string Url { get; set; }
 
         string AuthorizationHeader { get; set; }
+
     }
 }

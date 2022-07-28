@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         string NewPassword { get; set; }
 
         long? Version { get; set; }
+
     }
 }

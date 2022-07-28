@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IOrderCustomLineItemAddedMessagePayload : IOrderMessagePayload
     {
         ICustomLineItem CustomLineItem { get; set; }
+
     }
 }

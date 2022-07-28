@@ -28,5 +28,6 @@ namespace commercetools.Sdk.Api.Models.Zones
         string Description { get; set; }
 
         List<ILocation> Locations { get; set; }
+
     }
 }

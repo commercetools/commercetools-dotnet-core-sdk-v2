@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public partial interface IProductSelectionChangeNameAction : IProductSelectionUpdateAction
     {
         ILocalizedString Name { get; set; }
+
     }
 }

@@ -53,5 +53,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         ICartOrigin Origin { get; set; }
 
         List<IAddress> ItemShippingAddresses { get; set; }
+
     }
 }

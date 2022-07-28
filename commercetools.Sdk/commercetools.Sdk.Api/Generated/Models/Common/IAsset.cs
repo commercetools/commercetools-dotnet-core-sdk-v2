@@ -21,5 +21,6 @@ namespace commercetools.Sdk.Api.Models.Common
         ICustomFields Custom { get; set; }
 
         string Key { get; set; }
+
     }
 }

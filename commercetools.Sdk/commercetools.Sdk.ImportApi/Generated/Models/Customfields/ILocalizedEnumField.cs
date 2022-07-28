@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface ILocalizedEnumField : ICustomField
     {
         string Value { get; set; }
+
     }
 }

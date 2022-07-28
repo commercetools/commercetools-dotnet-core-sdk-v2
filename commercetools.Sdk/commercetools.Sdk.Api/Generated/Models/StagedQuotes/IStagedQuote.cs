@@ -39,5 +39,6 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         string SellerComment { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

@@ -18,5 +18,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         bool? IncludeVariants { get; set; }
 
         long? ProductSetLimit { get; set; }
+
     }
 }

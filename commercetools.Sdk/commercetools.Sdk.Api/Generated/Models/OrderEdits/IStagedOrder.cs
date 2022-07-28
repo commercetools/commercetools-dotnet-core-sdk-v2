@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrder))]
     public partial interface IStagedOrder : IOrder
     {
+
     }
 }

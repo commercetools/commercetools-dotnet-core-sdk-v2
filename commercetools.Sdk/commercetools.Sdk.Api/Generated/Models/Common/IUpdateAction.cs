@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IUpdateAction
     {
         string Action { get; set; }
+
     }
 }

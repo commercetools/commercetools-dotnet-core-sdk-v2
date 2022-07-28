@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IImportResponse
     {
         List<IImportOperationStatus> OperationStatus { get; set; }
+
     }
 }

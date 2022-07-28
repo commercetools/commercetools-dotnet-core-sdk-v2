@@ -10,5 +10,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         IProductReference Product { get; set; }
 
         long VariantId { get; set; }
+
     }
 }

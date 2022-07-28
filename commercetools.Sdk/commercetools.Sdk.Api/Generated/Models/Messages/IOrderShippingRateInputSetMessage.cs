@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IShippingRateInput ShippingRateInput { get; set; }
 
         IShippingRateInput OldShippingRateInput { get; set; }
+
     }
 }

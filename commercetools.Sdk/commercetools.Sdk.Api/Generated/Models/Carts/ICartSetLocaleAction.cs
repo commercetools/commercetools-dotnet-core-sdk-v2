@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetLocaleAction : ICartUpdateAction
     {
         string Locale { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         string AttributeName { get; set; }
 
         List<IAttributeLocalizedEnumValue> Values { get; set; }
+
     }
 }

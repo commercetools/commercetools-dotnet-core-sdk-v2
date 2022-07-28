@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
         long Version { get; set; }
 
         List<IQuoteUpdateAction> Actions { get; set; }
+
     }
 }

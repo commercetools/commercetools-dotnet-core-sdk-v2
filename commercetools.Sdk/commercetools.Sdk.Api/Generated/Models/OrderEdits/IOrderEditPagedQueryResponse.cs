@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         long Offset { get; set; }
 
         List<IOrderEdit> Results { get; set; }
+
     }
 }

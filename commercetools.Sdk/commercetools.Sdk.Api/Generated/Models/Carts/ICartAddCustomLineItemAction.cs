@@ -22,5 +22,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICustomFieldsDraft Custom { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

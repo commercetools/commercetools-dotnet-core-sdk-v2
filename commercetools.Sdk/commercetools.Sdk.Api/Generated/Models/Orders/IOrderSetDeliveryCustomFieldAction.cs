@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

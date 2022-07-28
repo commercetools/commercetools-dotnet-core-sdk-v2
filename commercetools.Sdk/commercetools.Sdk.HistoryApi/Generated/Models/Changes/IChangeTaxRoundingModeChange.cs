@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IRoundingMode PreviousValue { get; set; }
 
         IRoundingMode NextValue { get; set; }
+
     }
 }

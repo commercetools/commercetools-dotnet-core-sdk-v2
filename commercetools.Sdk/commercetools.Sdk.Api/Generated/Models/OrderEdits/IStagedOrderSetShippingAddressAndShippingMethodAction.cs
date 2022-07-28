@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

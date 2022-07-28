@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetExternalIdAction : ICustomerUpdateAction
     {
         string ExternalId { get; set; }
+
     }
 }

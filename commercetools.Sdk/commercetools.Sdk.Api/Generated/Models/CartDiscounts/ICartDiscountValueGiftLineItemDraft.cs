@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string AddressKey { get; set; }
 
         IBaseAddress Address { get; set; }
+
     }
 }

@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Products
         List<IImage> Images { get; set; }
 
         List<IAssetDraft> Assets { get; set; }
+
     }
 }

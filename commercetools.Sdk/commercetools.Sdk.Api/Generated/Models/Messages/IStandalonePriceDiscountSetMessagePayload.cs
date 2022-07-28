@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IStandalonePriceDiscountSetMessagePayload : IMessagePayload
     {
         IDiscountedPrice Discounted { get; set; }
+
     }
 }

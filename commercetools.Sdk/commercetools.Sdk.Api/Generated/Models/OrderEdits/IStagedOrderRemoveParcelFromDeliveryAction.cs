@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderRemoveParcelFromDeliveryAction : IStagedOrderUpdateAction
     {
         string ParcelId { get; set; }
+
     }
 }

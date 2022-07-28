@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         DateTime ExpiresAt { get; set; }
 
         string Value { get; set; }
+
     }
 }

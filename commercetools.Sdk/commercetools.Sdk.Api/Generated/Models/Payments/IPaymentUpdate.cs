@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     {
         new long Version { get; set; }
         new List<IPaymentUpdateAction> Actions { get; set; }
+
     }
 }

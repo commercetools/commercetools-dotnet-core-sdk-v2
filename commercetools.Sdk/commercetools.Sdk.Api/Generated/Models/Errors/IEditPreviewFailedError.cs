@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IEditPreviewFailedError : IErrorObject
     {
         IOrderEditPreviewFailure Result { get; set; }
+
     }
 }

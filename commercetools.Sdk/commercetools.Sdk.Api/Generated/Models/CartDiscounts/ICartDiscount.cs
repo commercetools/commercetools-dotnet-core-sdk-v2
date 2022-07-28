@@ -49,5 +49,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         IStackingMode StackingMode { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

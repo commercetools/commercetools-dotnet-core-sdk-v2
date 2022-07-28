@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         string TokenValue { get; set; }
 
         string NewPassword { get; set; }
+
     }
 }

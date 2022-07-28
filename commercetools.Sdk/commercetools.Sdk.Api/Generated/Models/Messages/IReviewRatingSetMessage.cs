@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         bool IncludedInStatistics { get; set; }
 
         IReference Target { get; set; }
+
     }
 }

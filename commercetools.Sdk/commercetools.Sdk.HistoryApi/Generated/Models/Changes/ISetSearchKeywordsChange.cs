@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ISearchKeywords PreviousValue { get; set; }
 
         ISearchKeywords NextValue { get; set; }
+
     }
 }

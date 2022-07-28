@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Types
         long? Total { get; set; }
 
         List<IType> Results { get; set; }
+
     }
 }

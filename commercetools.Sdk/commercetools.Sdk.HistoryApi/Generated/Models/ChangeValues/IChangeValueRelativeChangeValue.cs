@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         new string Type { get; set; }
 
         int Permyriad { get; set; }
+
     }
 }

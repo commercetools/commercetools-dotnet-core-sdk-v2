@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface ICustomerAddressAddedMessage : IMessage
     {
         IAddress Address { get; set; }
+
     }
 }

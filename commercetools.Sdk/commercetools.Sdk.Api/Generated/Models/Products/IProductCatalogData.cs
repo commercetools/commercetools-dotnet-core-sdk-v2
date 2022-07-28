@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IProductData Staged { get; set; }
 
         bool HasStagedChanges { get; set; }
+
     }
 }

@@ -13,5 +13,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
         IImportOperationState State { get; set; }
 
         List<IErrorObject> Errors { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface ICustomerLastNameSetMessagePayload : IMessagePayload
     {
         string LastName { get; set; }
+
     }
 }

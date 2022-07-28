@@ -14,5 +14,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         IMoney Price { get; set; }
 
         long? VariantCount { get; set; }
+
     }
 }

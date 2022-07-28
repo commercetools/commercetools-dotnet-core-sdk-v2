@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
         Object Value { get; set; }
 
         long? Version { get; set; }
+
     }
 }

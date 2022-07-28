@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         DateTime ModifiedAt { get; set; }
 
         bool? DataErasure { get; set; }
+
     }
 }

@@ -19,5 +19,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         List<string> Tags { get; set; }
 
         ICustom Custom { get; set; }
+
     }
 }

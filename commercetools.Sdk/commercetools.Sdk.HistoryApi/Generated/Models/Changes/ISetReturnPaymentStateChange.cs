@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IReturnPaymentState NextValue { get; set; }
 
         IReturnPaymentState PreviousValue { get; set; }
+
     }
 }

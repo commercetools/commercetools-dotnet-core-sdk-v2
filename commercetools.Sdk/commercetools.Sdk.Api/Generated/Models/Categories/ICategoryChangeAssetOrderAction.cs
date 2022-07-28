@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategoryChangeAssetOrderAction : ICategoryUpdateAction
     {
         List<string> AssetOrder { get; set; }
+
     }
 }

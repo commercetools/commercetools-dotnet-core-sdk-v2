@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Stores
         long? Total { get; set; }
 
         List<IStore> Results { get; set; }
+
     }
 }

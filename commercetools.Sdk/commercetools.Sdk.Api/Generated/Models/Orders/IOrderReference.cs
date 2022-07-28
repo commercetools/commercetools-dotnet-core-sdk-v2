@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderReference : IReference
     {
         IOrder Obj { get; set; }
+
     }
 }

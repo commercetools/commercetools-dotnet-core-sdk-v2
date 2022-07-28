@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetVatIdAction : ICustomerUpdateAction
     {
         string VatId { get; set; }
+
     }
 }

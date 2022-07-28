@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,5 +10,12 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
     public partial interface IImageSearchConfigUpdateAction
     {
         string Action { get; set; }
+
+        static commercetools.Sdk.MLApi.Models.ImageSearchConfigs.ChangeStatusUpdateAction ChangeStatus(Action<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.ChangeStatusUpdateAction> init = null)
+        {
+            var t = new commercetools.Sdk.MLApi.Models.ImageSearchConfigs.ChangeStatusUpdateAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

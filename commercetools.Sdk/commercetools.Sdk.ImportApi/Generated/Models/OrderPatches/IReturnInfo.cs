@@ -13,5 +13,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string ReturnTrackingId { get; set; }
 
         DateTime? ReturnDate { get; set; }
+
     }
 }

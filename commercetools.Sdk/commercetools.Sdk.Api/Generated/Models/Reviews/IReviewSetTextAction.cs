@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetTextAction : IReviewUpdateAction
     {
         string Text { get; set; }
+
     }
 }

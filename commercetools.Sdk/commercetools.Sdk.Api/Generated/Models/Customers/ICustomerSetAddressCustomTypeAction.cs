@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         IFieldContainer Fields { get; set; }
 
         string AddressId { get; set; }
+
     }
 }

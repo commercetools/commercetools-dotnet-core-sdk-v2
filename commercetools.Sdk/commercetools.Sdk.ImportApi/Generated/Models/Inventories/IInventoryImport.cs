@@ -20,5 +20,6 @@ namespace commercetools.Sdk.ImportApi.Models.Inventories
         IChannelKeyReference SupplyChannel { get; set; }
 
         ICustom Custom { get; set; }
+
     }
 }

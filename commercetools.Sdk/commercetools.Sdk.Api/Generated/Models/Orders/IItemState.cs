@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         long Quantity { get; set; }
 
         IStateReference State { get; set; }
+
     }
 }

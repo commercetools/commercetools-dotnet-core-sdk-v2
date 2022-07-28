@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelAddRolesAction : IChannelUpdateAction
     {
         List<IChannelRoleEnum> Roles { get; set; }
+
     }
 }

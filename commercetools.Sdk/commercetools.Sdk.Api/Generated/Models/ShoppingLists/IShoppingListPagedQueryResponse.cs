@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         long Offset { get; set; }
 
         List<IShoppingList> Results { get; set; }
+
     }
 }

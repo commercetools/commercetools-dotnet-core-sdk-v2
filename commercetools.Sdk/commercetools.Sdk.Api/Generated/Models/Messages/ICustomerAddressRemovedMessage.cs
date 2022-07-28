@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface ICustomerAddressRemovedMessage : IMessage
     {
         IAddress Address { get; set; }
+
     }
 }

@@ -28,5 +28,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IStateResourceIdentifier State { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         string Error_description { get; set; }
 
         List<IErrorObject> Errors { get; set; }
+
     }
 }

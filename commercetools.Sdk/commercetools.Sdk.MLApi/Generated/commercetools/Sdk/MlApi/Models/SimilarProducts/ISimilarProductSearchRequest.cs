@@ -22,5 +22,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         decimal? ConfidenceMin { get; set; }
 
         decimal? ConfidenceMax { get; set; }
+
     }
 }

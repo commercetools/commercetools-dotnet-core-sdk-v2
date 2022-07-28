@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         bool IsMatching { get; set; }
 
         List<IShippingRatePriceTier> Tiers { get; set; }
+
     }
 }

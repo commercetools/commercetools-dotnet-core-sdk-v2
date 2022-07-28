@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         ITypedMoney Value { get; set; }
 
         IProductDiscountKeyReference Discount { get; set; }
+
     }
 }

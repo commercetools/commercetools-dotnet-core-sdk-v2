@@ -17,5 +17,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importsummaries
         long Imported { get; set; }
 
         long Rejected { get; set; }
+
     }
 }

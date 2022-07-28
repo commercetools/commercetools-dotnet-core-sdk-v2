@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeSetDescriptionAction : ITypeUpdateAction
     {
         ILocalizedString Description { get; set; }
+
     }
 }

@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         ICustomerGroupReference CustomerGroup { get; set; }
 
         IChannelReference Channel { get; set; }
+
     }
 }

@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         List<ISubRate> SubRates { get; set; }
 
         bool? IncludedInPrice { get; set; }
+
     }
 }

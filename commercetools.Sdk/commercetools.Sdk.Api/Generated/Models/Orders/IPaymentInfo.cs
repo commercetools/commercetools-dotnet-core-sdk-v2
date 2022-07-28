@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IPaymentInfo
     {
         List<IPaymentReference> Payments { get; set; }
+
     }
 }

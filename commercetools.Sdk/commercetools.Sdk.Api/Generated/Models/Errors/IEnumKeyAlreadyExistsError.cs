@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         string ConflictingEnumKey { get; set; }
 
         string ConflictingAttributeName { get; set; }
+
     }
 }

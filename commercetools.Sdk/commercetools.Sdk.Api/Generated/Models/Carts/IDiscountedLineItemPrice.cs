@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         ITypedMoney Value { get; set; }
 
         List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+
     }
 }

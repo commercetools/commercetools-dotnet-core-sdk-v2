@@ -14,5 +14,6 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearches
         int Total { get; set; }
 
         List<IResultItem> Results { get; set; }
+
     }
 }

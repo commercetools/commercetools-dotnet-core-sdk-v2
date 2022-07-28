@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     public partial interface ITaxCategoryAddTaxRateAction : ITaxCategoryUpdateAction
     {
         ITaxRateDraft TaxRate { get; set; }
+
     }
 }

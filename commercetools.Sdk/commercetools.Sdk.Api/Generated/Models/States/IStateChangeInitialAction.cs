@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateChangeInitialAction : IStateUpdateAction
     {
         bool Initial { get; set; }
+
     }
 }

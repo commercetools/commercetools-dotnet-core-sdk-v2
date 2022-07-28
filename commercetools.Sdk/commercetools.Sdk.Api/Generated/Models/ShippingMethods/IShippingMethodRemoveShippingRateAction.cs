@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IZoneResourceIdentifier Zone { get; set; }
 
         IShippingRateDraft ShippingRate { get; set; }
+
     }
 }

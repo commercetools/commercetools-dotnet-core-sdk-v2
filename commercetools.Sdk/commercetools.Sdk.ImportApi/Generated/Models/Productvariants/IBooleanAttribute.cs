@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface IBooleanAttribute : IAttribute
     {
         bool Value { get; set; }
+
     }
 }

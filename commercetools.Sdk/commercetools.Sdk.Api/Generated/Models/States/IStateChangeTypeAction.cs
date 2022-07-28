@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateChangeTypeAction : IStateUpdateAction
     {
         IStateTypeEnum Type { get; set; }
+
     }
 }

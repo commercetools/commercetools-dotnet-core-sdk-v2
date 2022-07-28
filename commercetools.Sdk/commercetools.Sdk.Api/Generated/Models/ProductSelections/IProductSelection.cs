@@ -30,5 +30,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         IProductSelectionTypeEnum Type { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

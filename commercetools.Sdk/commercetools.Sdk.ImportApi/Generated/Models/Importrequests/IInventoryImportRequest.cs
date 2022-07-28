@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IInventoryImportRequest : IImportRequest
     {
         List<IInventoryImport> Resources { get; set; }
+
     }
 }

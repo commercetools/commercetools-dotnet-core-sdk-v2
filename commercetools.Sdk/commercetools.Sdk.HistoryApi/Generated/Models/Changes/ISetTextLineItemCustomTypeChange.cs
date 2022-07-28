@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ICustomFields NextValue { get; set; }
 
         ICustomFields PreviousValue { get; set; }
+
     }
 }

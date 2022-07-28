@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetCustomerGroupAction : ICartUpdateAction
     {
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+
     }
 }

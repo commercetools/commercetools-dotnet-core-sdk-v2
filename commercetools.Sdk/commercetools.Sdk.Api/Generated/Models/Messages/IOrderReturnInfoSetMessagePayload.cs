@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IOrderReturnInfoSetMessagePayload : IOrderMessagePayload
     {
         List<IReturnInfo> ReturnInfo { get; set; }
+
     }
 }

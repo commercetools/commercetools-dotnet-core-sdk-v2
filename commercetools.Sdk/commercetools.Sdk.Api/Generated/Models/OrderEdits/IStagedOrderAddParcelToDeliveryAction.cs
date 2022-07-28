@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITrackingData TrackingData { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
     }
 }

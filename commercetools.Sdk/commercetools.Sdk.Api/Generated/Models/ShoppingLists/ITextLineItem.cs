@@ -20,5 +20,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         ILocalizedString Name { get; set; }
 
         int Quantity { get; set; }
+
     }
 }

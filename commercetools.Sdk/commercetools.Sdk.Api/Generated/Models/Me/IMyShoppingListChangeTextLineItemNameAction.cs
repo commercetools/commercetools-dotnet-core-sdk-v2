@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string TextLineItemId { get; set; }
 
         ILocalizedString Name { get; set; }
+
     }
 }

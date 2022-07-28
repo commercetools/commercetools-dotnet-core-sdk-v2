@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Me
         DateTime? AddedAt { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

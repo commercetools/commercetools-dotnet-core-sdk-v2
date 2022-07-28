@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IDuplicateEnumValuesError : IErrorObject
     {
         List<string> Duplicates { get; set; }
+
     }
 }

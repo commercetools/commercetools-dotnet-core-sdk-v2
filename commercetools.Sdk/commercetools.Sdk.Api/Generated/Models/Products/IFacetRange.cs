@@ -25,5 +25,6 @@ namespace commercetools.Sdk.Api.Models.Products
         decimal Max { get; set; }
 
         decimal Mean { get; set; }
+
     }
 }

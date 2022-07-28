@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
         long? Total { get; set; }
 
         List<IExtension> Results { get; set; }
+
     }
 }

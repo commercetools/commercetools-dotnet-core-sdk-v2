@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IDeliveryAddedMessage : IOrderMessage
     {
         IDelivery Delivery { get; set; }
+
     }
 }

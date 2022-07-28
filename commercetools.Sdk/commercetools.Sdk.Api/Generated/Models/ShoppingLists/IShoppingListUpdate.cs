@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     {
         new long Version { get; set; }
         new List<IShoppingListUpdateAction> Actions { get; set; }
+
     }
 }

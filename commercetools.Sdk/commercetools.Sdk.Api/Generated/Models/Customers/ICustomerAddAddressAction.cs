@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerAddAddressAction : ICustomerUpdateAction
     {
         IBaseAddress Address { get; set; }
+
     }
 }

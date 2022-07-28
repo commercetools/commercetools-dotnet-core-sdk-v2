@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string ImageUrl { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

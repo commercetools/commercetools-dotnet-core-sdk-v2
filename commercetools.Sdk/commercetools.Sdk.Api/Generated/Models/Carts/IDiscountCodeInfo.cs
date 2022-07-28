@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IDiscountCodeReference DiscountCode { get; set; }
 
         IDiscountCodeState State { get; set; }
+
     }
 }

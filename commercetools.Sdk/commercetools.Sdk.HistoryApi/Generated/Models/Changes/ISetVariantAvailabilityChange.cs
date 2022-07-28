@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IProductVariantAvailability PreviousValue { get; set; }
 
         IProductVariantAvailability NextValue { get; set; }
+
     }
 }

@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         string AccessSecret { get; set; }
 
         string TopicArn { get; set; }
+
     }
 }

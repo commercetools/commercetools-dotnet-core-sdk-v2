@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Sku { get; set; }
 
         string Key { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IBooleanSetField : ICustomField
     {
         List<bool> Value { get; set; }
+
     }
 }

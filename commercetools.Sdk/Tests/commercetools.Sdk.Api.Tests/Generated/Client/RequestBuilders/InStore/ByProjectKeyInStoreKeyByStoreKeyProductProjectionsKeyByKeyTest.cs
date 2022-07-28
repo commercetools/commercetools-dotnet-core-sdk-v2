@@ -25,6 +25,66 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ProductProjections()
                    .WithKey("test_key")
                    .Get()
+                   .WithPriceCurrency("priceCurrency")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCurrency=priceCurrency",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
+                   .WithPriceCountry("priceCountry")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCountry=priceCountry",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
+                   .WithPriceCustomerGroup("priceCustomerGroup")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCustomerGroup=priceCustomerGroup",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
+                   .WithPriceChannel("priceChannel")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
+                   .WithLocaleProjection("localeProjection")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?localeProjection=localeProjection",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

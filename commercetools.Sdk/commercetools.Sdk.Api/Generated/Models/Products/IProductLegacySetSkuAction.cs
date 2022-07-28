@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string Sku { get; set; }
 
         int VariantId { get; set; }
+
     }
 }

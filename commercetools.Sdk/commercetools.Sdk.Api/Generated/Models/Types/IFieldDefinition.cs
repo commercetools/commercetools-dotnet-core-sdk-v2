@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Types
         bool Required { get; set; }
 
         ITypeTextInputHint InputHint { get; set; }
+
     }
 }

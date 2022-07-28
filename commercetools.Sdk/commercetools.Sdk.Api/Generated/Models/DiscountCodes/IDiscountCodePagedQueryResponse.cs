@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
         long? Total { get; set; }
 
         List<IDiscountCode> Results { get; set; }
+
     }
 }

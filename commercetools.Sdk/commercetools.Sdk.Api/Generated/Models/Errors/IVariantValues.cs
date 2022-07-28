@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         List<IPriceDraft> Prices { get; set; }
 
         List<IAttribute> Attributes { get; set; }
+
     }
 }

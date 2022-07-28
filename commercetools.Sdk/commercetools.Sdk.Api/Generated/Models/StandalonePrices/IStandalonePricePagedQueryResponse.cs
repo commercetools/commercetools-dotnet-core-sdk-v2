@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         long? Total { get; set; }
 
         List<IStandalonePrice> Results { get; set; }
+
     }
 }

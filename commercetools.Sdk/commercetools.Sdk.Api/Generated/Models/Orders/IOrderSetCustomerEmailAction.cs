@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetCustomerEmailAction : IOrderUpdateAction
     {
         string Email { get; set; }
+
     }
 }

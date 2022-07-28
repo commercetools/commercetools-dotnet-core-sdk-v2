@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string ParcelId { get; set; }
 
         ITrackingData TrackingData { get; set; }
+
     }
 }

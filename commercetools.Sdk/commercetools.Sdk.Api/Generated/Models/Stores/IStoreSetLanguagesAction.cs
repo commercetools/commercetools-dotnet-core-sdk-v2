@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreSetLanguagesAction : IStoreUpdateAction
     {
         List<string> Languages { get; set; }
+
     }
 }

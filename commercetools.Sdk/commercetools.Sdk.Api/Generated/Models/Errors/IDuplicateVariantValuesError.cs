@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IDuplicateVariantValuesError : IErrorObject
     {
         IVariantValues VariantValues { get; set; }
+
     }
 }

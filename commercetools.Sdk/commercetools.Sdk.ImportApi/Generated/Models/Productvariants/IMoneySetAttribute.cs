@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface IMoneySetAttribute : IAttribute
     {
         List<ITypedMoney> Value { get; set; }
+
     }
 }

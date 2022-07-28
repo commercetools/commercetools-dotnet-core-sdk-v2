@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         int? MaxOccurrence { get; set; }
 
         ISelectionMode SelectionMode { get; set; }
+
     }
 }

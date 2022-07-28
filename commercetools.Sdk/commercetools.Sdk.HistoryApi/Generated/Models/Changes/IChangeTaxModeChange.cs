@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ITaxMode PreviousValue { get; set; }
 
         ITaxMode NextValue { get; set; }
+
     }
 }

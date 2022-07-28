@@ -12,5 +12,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         IAttributes Attributes { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

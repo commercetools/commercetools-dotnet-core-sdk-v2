@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelSetAddressAction : IChannelUpdateAction
     {
         IBaseAddress Address { get; set; }
+
     }
 }

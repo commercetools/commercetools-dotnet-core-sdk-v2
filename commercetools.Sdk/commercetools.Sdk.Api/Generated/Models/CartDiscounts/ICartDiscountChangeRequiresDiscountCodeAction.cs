@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountChangeRequiresDiscountCodeAction : ICartDiscountUpdateAction
     {
         bool RequiresDiscountCode { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IMoney TotalNet { get; set; }
 
         IMoney TotalGross { get; set; }
+
     }
 }

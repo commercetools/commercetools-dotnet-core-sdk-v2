@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IEnumField : ICustomField
     {
         string Value { get; set; }
+
     }
 }

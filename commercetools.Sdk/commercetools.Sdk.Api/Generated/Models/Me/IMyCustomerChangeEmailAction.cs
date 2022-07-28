@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCustomerChangeEmailAction : IMyCustomerUpdateAction
     {
         string Email { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetCustomerIdAction : IStagedOrderUpdateAction
     {
         string CustomerId { get; set; }
+
     }
 }

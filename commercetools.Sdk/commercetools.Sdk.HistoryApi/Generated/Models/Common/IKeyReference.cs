@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Key { get; set; }
 
         IReferenceTypeId TypeId { get; set; }
+
     }
 }

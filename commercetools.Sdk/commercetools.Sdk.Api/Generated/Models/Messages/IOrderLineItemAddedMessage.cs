@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         ILineItem LineItem { get; set; }
 
         long AddedQuantity { get; set; }
+
     }
 }

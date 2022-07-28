@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IMoney TotalPrice { get; set; }
 
         ITaxedItemPrice TaxedPrice { get; set; }
+
     }
 }

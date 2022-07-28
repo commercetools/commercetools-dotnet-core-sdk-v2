@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
     public partial interface ICustomerGroupSetKeyAction : ICustomerGroupUpdateAction
     {
         string Key { get; set; }
+
     }
 }

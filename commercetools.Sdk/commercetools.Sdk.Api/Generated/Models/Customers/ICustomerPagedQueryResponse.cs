@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         long Offset { get; set; }
 
         List<ICustomer> Results { get; set; }
+
     }
 }

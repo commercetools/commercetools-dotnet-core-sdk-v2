@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         new IProductVariantSelectionTypeEnum Type { get; set; }
 
         List<string> Skus { get; set; }
+
     }
 }

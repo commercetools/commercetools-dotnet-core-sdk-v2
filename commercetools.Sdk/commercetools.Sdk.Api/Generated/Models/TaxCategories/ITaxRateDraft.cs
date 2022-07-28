@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         string State { get; set; }
 
         List<ISubRate> SubRates { get; set; }
+
     }
 }

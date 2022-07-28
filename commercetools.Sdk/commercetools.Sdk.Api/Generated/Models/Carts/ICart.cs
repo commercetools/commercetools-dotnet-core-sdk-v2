@@ -85,5 +85,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         List<IAddress> ItemShippingAddresses { get; set; }
 
         long? TotalLineItemQuantity { get; set; }
+
     }
 }

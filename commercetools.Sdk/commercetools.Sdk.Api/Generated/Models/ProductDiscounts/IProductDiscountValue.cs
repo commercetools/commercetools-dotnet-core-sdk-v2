@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,5 +12,24 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountValue
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueAbsolute Absolute(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueAbsolute> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueAbsolute();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueExternal External(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueExternal> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueExternal();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueRelative Relative(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueRelative> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountValueRelative();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

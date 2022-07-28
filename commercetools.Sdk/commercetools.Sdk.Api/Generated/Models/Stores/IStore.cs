@@ -36,5 +36,6 @@ namespace commercetools.Sdk.Api.Models.Stores
         List<IProductSelectionSetting> ProductSelections { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

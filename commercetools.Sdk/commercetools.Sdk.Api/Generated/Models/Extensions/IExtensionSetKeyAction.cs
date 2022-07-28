@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionSetKeyAction : IExtensionUpdateAction
     {
         string Key { get; set; }
+
     }
 }

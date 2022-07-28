@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetDescriptionAction : IShoppingListUpdateAction
     {
         ILocalizedString Description { get; set; }
+
     }
 }

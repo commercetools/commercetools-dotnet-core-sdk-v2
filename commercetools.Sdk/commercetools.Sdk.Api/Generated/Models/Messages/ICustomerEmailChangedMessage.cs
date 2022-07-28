@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface ICustomerEmailChangedMessage : IMessage
     {
         string Email { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         string Id { get; set; }
 
         string Key { get; set; }
+
     }
 }

@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ITextInputHint NextValue { get; set; }
 
         ITextInputHint PreviousValue { get; set; }
+
     }
 }

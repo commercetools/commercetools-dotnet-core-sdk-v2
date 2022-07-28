@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

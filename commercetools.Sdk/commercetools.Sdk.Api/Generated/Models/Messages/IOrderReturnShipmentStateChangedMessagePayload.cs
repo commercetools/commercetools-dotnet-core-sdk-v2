@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string ReturnItemId { get; set; }
 
         IReturnShipmentState ReturnShipmentState { get; set; }
+
     }
 }

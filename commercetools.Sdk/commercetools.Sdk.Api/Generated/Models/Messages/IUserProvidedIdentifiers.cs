@@ -20,5 +20,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         ILocalizedString Slug { get; set; }
 
         IContainerAndKey ContainerAndKey { get; set; }
+
     }
 }

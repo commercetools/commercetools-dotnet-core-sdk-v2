@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ICategoryOrderHints PreviousValue { get; set; }
 
         ICategoryOrderHints NextValue { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,5 +10,12 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IGeoJson
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.Common.GeoJsonPoint Point(Action<commercetools.Sdk.Api.Models.Common.GeoJsonPoint> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Common.GeoJsonPoint();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IAddress Address { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

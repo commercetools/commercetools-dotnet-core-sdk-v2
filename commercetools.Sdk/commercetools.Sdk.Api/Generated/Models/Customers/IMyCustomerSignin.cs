@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         IAnonymousCartSignInMode ActiveCartSignInMode { get; set; }
 
         bool? UpdateProductData { get; set; }
+
     }
 }

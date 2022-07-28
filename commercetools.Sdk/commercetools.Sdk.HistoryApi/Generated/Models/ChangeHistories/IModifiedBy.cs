@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         string ClientId { get; set; }
 
         bool IsPlatformClient { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     public partial interface IImportResource
     {
         string Key { get; set; }
+
     }
 }

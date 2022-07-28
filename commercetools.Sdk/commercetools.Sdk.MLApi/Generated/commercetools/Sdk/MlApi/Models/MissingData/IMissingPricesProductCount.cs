@@ -9,5 +9,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         long Total { get; set; }
 
         long MissingPrices { get; set; }
+
     }
 }

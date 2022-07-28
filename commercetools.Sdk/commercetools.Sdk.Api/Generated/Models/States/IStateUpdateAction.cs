@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -17,5 +18,60 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IStateUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.States.StateAddRolesAction AddRoles(Action<commercetools.Sdk.Api.Models.States.StateAddRolesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateAddRolesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateChangeInitialAction ChangeInitial(Action<commercetools.Sdk.Api.Models.States.StateChangeInitialAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateChangeInitialAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateChangeKeyAction ChangeKey(Action<commercetools.Sdk.Api.Models.States.StateChangeKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateChangeKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateChangeTypeAction ChangeType(Action<commercetools.Sdk.Api.Models.States.StateChangeTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateChangeTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateRemoveRolesAction RemoveRoles(Action<commercetools.Sdk.Api.Models.States.StateRemoveRolesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateRemoveRolesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.States.StateSetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateSetNameAction SetName(Action<commercetools.Sdk.Api.Models.States.StateSetNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateSetNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateSetRolesAction SetRoles(Action<commercetools.Sdk.Api.Models.States.StateSetRolesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateSetRolesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateSetTransitionsAction SetTransitions(Action<commercetools.Sdk.Api.Models.States.StateSetTransitionsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateSetTransitionsAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

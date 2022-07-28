@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         IProcessingState CurrentState { get; set; }
 
         IProcessingState NewState { get; set; }
+
     }
 }

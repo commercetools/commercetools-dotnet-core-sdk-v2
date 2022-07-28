@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountSetKeyAction : ICartDiscountUpdateAction
     {
         string Key { get; set; }
+
     }
 }

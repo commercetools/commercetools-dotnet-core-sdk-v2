@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IAttributeConstraintEnum PreviousValue { get; set; }
 
         IAttributeConstraintEnum NextValue { get; set; }
+
     }
 }

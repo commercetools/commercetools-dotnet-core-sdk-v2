@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountValueAbsoluteDraft : IProductDiscountValueDraft
     {
         List<ICentPrecisionMoneyDraft> Money { get; set; }
+
     }
 }

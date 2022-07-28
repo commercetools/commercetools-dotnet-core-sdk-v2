@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Common
         long CentAmount { get; set; }
 
         string CurrencyCode { get; set; }
+
     }
 }

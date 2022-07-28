@@ -26,5 +26,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         string Name { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

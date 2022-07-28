@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         DateTime? ValidFrom { get; set; }
 
         DateTime? ValidUntil { get; set; }
+
     }
 }

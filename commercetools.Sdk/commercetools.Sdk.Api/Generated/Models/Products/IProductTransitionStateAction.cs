@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IStateResourceIdentifier State { get; set; }
 
         bool? Force { get; set; }
+
     }
 }

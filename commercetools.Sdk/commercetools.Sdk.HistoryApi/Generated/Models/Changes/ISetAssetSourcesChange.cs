@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IAssetSource> NextValue { get; set; }
 
         List<IAssetSource> PreviousValue { get; set; }
+
     }
 }

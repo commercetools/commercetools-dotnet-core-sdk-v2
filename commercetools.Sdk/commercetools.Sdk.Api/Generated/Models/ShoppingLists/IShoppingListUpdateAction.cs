@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -32,5 +33,150 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IShoppingListUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddLineItemAction AddLineItem(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddLineItemAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction AddTextLineItem(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemQuantityAction ChangeLineItemQuantity(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemQuantityAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemsOrderAction ChangeLineItemsOrder(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemsOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemsOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemNameAction ChangeTextLineItemName(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemQuantityAction ChangeTextLineItemQuantity(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemQuantityAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemsOrderAction ChangeTextLineItemsOrder(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemsOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeTextLineItemsOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveLineItemAction RemoveLineItem(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveLineItemAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveTextLineItemAction RemoveTextLineItem(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveTextLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveTextLineItemAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction SetAnonymousId(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomerAction SetCustomer(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomerAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomerAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDeleteDaysAfterLastModificationAction SetDeleteDaysAfterLastModification(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDeleteDaysAfterLastModificationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDeleteDaysAfterLastModificationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomFieldAction SetLineItemCustomField(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomTypeAction SetLineItemCustomType(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetLineItemCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetSlugAction SetSlug(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetSlugAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetSlugAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetStoreAction SetStore(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetStoreAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomFieldAction SetTextLineItemCustomField(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomTypeAction SetTextLineItemCustomType(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction SetTextLineItemDescription(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

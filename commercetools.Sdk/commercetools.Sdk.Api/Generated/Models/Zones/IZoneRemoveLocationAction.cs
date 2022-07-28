@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Zones
     public partial interface IZoneRemoveLocationAction : IZoneUpdateAction
     {
         ILocation Location { get; set; }
+
     }
 }

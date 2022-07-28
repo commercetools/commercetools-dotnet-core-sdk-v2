@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Zones
     public partial interface IZoneChangeNameAction : IZoneUpdateAction
     {
         string Name { get; set; }
+
     }
 }

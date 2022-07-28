@@ -31,5 +31,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IScopedPrice ScopedPrice { get; set; }
 
         bool? ScopedPriceDiscounted { get; set; }
+
     }
 }

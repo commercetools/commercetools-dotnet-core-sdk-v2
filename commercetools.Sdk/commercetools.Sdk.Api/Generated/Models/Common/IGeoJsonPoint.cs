@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IGeoJsonPoint : IGeoJson
     {
         List<decimal> Coordinates { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetCountryAction : IStagedOrderUpdateAction
     {
         string Country { get; set; }
+
     }
 }

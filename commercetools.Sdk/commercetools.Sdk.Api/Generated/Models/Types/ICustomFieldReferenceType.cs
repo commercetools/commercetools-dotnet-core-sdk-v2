@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ICustomFieldReferenceType : IFieldType
     {
         ICustomFieldReferenceValue ReferenceTypeId { get; set; }
+
     }
 }

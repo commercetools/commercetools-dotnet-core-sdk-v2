@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
         bool Staged { get; set; }
 
         IQueryPrice Price { get; set; }
+
     }
 }

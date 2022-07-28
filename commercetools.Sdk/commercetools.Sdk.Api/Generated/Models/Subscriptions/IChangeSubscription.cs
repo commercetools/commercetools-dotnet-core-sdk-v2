@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface IChangeSubscription
     {
         string ResourceTypeId { get; set; }
+
     }
 }

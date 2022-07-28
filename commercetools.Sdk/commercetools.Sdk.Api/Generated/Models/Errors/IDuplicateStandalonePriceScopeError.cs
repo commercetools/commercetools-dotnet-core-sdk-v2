@@ -25,5 +25,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         DateTime? ValidFrom { get; set; }
 
         DateTime? ValidUntil { get; set; }
+
     }
 }

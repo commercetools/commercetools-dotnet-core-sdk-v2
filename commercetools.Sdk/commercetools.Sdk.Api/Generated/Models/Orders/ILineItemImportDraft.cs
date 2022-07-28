@@ -35,5 +35,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IInventoryMode InventoryMode { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreSetProductSelectionsAction : IStoreUpdateAction
     {
         List<IProductSelectionSettingDraft> ProductSelections { get; set; }
+
     }
 }

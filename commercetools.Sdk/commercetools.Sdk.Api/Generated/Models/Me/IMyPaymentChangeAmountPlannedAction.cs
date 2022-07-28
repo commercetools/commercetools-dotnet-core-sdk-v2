@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyPaymentChangeAmountPlannedAction : IMyPaymentUpdateAction
     {
         IMoney Amount { get; set; }
+
     }
 }

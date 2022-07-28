@@ -78,5 +78,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
         List<IDirectDiscount> DirectDiscounts { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

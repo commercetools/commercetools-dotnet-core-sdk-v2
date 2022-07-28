@@ -18,5 +18,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         List<IParcel> Parcels { get; set; }
 
         IAddress Address { get; set; }
+
     }
 }

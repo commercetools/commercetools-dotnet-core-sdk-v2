@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         string Field { get; set; }
 
         Object DuplicateValue { get; set; }
+
     }
 }

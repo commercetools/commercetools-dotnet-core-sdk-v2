@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
     public partial interface ICustomerGroupChangeNameAction : ICustomerGroupUpdateAction
     {
         string Name { get; set; }
+
     }
 }

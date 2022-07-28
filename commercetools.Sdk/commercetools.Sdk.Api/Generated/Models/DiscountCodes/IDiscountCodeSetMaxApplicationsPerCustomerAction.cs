@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeSetMaxApplicationsPerCustomerAction : IDiscountCodeUpdateAction
     {
         long? MaxApplicationsPerCustomer { get; set; }
+
     }
 }

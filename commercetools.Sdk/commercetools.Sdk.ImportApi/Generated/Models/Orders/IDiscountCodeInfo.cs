@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IDiscountCodeKeyReference DiscountCode { get; set; }
 
         IDiscountCodeState State { get; set; }
+
     }
 }

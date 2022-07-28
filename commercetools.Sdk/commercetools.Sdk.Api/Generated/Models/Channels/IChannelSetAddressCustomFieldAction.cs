@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Channels
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

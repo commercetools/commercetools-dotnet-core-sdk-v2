@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         decimal Quantity { get; set; }
 
         IStateKeyReference State { get; set; }
+
     }
 }

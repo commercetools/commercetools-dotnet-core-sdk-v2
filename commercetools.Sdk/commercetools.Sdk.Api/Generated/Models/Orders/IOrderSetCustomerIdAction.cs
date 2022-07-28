@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetCustomerIdAction : IOrderUpdateAction
     {
         string CustomerId { get; set; }
+
     }
 }

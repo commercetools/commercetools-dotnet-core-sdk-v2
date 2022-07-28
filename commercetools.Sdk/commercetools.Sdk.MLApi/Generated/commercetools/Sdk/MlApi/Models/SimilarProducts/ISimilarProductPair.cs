@@ -10,5 +10,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         decimal Confidence { get; set; }
 
         List<ISimilarProduct> Products { get; set; }
+
     }
 }

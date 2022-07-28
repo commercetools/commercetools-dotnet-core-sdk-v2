@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string TextLineItemId { get; set; }
 
         long? Quantity { get; set; }
+
     }
 }

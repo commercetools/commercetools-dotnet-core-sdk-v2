@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     {
         new long Version { get; set; }
         new List<IStoreUpdateAction> Actions { get; set; }
+
     }
 }

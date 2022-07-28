@@ -61,5 +61,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IStoreResourceIdentifier Store { get; set; }
 
         ICartOrigin Origin { get; set; }
+
     }
 }

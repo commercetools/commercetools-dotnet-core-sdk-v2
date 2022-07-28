@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,5 +11,18 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionDestination
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.Extensions.AWSLambdaDestination AwsLambda(Action<commercetools.Sdk.Api.Models.Extensions.AWSLambdaDestination> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.AWSLambdaDestination();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.HttpDestination Http(Action<commercetools.Sdk.Api.Models.Extensions.HttpDestination> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.HttpDestination();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

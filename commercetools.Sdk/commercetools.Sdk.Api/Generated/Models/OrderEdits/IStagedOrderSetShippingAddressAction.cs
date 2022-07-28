@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetShippingAddressAction : IStagedOrderUpdateAction
     {
         IBaseAddress Address { get; set; }
+
     }
 }

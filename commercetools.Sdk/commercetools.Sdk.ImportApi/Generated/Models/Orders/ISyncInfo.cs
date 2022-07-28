@@ -13,5 +13,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         string ExternalId { get; set; }
 
         DateTime SyncedAt { get; set; }
+
     }
 }

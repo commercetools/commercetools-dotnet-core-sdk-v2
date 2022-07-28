@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,30 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface ISubscriptionUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ISubscriptionUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction ChangeDestination(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction SetChanges(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction SetMessages(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

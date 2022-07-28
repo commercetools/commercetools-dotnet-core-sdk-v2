@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCartRecalculateAction : IMyCartUpdateAction
     {
         bool? UpdateProductData { get; set; }
+
     }
 }

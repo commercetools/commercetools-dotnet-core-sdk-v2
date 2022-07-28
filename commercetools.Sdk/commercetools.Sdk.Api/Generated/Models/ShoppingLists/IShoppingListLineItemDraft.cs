@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         int? Quantity { get; set; }
 
         long? VariantId { get; set; }
+
     }
 }

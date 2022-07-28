@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     {
         new long Version { get; set; }
         new List<IProductDiscountUpdateAction> Actions { get; set; }
+
     }
 }

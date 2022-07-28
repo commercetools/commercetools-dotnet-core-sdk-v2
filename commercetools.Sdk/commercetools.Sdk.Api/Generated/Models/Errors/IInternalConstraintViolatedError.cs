@@ -6,5 +6,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.InternalConstraintViolatedError))]
     public partial interface IInternalConstraintViolatedError : IErrorObject
     {
+
     }
 }

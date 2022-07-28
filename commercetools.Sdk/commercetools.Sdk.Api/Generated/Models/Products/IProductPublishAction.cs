@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface IProductPublishAction : IProductUpdateAction
     {
         IProductPublishScope Scope { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IProjectNotConfiguredForLanguagesError : IErrorObject
     {
         List<string> Languages { get; set; }
+
     }
 }

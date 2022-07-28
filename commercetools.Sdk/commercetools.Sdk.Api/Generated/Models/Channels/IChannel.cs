@@ -38,5 +38,6 @@ namespace commercetools.Sdk.Api.Models.Channels
         ICustomFields Custom { get; set; }
 
         IGeoJson GeoLocation { get; set; }
+
     }
 }

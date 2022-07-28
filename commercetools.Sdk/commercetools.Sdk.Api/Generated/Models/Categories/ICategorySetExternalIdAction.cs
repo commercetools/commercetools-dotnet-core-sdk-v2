@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategorySetExternalIdAction : ICategoryUpdateAction
     {
         string ExternalId { get; set; }
+
     }
 }

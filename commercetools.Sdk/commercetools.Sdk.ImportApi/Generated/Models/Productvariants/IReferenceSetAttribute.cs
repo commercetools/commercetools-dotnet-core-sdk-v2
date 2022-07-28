@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface IReferenceSetAttribute : IAttribute
     {
         List<IKeyReference> Value { get; set; }
+
     }
 }

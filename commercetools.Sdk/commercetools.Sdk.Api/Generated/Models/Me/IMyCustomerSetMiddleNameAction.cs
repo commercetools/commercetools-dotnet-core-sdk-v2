@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCustomerSetMiddleNameAction : IMyCustomerUpdateAction
     {
         string MiddleName { get; set; }
+
     }
 }

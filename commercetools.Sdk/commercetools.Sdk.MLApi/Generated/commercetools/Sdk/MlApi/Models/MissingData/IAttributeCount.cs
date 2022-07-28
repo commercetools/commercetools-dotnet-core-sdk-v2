@@ -11,5 +11,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         int VariantAttributes { get; set; }
 
         int MissingAttributeValues { get; set; }
+
     }
 }

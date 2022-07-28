@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountChangeNameAction : IProductDiscountUpdateAction
     {
         ILocalizedString Name { get; set; }
+
     }
 }

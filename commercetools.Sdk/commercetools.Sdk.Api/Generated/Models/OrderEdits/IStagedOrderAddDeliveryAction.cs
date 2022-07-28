@@ -17,5 +17,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         List<IParcelDraft> Parcels { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

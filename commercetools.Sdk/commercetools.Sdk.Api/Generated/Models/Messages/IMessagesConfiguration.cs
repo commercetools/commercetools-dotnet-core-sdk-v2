@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         bool Enabled { get; set; }
 
         int? DeleteDaysAfterCreation { get; set; }
+
     }
 }

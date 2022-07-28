@@ -18,5 +18,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         List<IAttribute> Attributes { get; set; }
 
         List<IImage> Images { get; set; }
+
     }
 }

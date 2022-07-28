@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IMoney Price { get; set; }
 
         bool? IsMatching { get; set; }
+
     }
 }

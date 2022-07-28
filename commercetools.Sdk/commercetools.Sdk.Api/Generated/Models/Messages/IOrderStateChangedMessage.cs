@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IOrderState OrderState { get; set; }
 
         IOrderState OldOrderState { get; set; }
+
     }
 }

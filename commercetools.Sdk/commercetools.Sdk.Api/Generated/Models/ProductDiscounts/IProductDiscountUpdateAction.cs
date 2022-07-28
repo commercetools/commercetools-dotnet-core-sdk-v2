@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -18,5 +19,66 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductDiscountUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction ChangeIsActive(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangePredicateAction ChangePredicate(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangePredicateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangePredicateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeSortOrderAction ChangeSortOrder(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeSortOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeSortOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeValueAction ChangeValue(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeValueAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeValueAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAction SetValidFrom(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAndUntilAction SetValidFromAndUntil(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAndUntilAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidFromAndUntilAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidUntilAction SetValidUntil(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidUntilAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidUntilAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

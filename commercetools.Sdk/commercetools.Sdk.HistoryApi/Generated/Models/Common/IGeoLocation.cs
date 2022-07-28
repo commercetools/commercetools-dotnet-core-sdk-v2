@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Type { get; set; }
 
         List<int> Coordinates { get; set; }
+
     }
 }

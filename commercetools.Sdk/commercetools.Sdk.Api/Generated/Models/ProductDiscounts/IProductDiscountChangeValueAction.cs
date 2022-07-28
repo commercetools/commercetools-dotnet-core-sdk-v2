@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountChangeValueAction : IProductDiscountUpdateAction
     {
         IProductDiscountValueDraft Value { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,18 @@ namespace commercetools.Sdk.Api.Models.Common
         IMoneyType Type { get; set; }
 
         int FractionDigits { get; set; }
+
+        static commercetools.Sdk.Api.Models.Common.CentPrecisionMoney CentPrecision(Action<commercetools.Sdk.Api.Models.Common.CentPrecisionMoney> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Common.CentPrecisionMoney();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Common.HighPrecisionMoney HighPrecision(Action<commercetools.Sdk.Api.Models.Common.HighPrecisionMoney> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Common.HighPrecisionMoney();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

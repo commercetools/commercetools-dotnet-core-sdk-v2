@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         string PriceId { get; set; }
 
         IPrice NextValue { get; set; }
+
     }
 }

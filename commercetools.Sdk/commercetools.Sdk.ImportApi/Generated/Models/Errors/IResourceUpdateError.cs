@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
     public partial interface IResourceUpdateError : IErrorObject
     {
         Object Resource { get; set; }
+
     }
 }

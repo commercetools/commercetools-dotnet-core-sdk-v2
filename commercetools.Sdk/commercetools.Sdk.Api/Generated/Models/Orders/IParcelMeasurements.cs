@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         int? WidthInMillimeter { get; set; }
 
         int? WeightInGram { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,30 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountValueDraft
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueAbsoluteDraft Absolute(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueAbsoluteDraft> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueAbsoluteDraft();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueFixedDraft Fixed(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueFixedDraft> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueFixedDraft();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft GiftLineItem(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueRelativeDraft Relative(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueRelativeDraft> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueRelativeDraft();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IPriceFunction PriceFunction { get; set; }
 
         bool? IsMatching { get; set; }
+
     }
 }

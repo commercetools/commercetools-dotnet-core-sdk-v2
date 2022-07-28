@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreSetSupplyChannelsAction : IStoreUpdateAction
     {
         List<IChannelResourceIdentifier> SupplyChannels { get; set; }
+
     }
 }

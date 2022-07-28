@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string DeliveryId { get; set; }
 
         IAddress Address { get; set; }
+
     }
 }

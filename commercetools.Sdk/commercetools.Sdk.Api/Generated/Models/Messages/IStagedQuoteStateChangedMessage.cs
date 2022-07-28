@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IStagedQuoteState StagedQuoteState { get; set; }
 
         IStagedQuoteState OldStagedQuoteState { get; set; }
+
     }
 }

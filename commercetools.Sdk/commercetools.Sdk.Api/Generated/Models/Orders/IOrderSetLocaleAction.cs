@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetLocaleAction : IOrderUpdateAction
     {
         string Locale { get; set; }
+
     }
 }

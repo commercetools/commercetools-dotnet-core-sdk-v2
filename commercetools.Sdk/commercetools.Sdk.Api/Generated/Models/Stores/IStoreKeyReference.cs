@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreKeyReference : IKeyReference
     {
         new string Key { get; set; }
+
     }
 }

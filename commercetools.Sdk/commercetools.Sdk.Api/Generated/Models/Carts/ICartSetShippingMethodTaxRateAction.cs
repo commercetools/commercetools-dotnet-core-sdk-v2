@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetShippingMethodTaxRateAction : ICartUpdateAction
     {
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

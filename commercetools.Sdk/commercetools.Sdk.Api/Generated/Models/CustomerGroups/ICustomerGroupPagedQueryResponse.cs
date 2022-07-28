@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         long? Total { get; set; }
 
         List<ICustomerGroup> Results { get; set; }
+
     }
 }

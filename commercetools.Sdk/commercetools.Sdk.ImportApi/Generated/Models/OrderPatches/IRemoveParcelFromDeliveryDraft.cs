@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
     public partial interface IRemoveParcelFromDeliveryDraft
     {
         string ParcelId { get; set; }
+
     }
 }

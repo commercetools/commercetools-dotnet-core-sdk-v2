@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         List<IReturnItemDraft> Items { get; set; }
 
         DateTime? ReturnDate { get; set; }
+
     }
 }

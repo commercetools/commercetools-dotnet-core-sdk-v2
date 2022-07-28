@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategoryChangeSlugAction : ICategoryUpdateAction
     {
         ILocalizedString Slug { get; set; }
+
     }
 }

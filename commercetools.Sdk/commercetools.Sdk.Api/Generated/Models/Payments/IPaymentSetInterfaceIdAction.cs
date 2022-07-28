@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentSetInterfaceIdAction : IPaymentUpdateAction
     {
         string InterfaceId { get; set; }
+
     }
 }

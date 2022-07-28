@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<ILocalizedString> PreviousValue { get; set; }
 
         List<ILocalizedString> NextValue { get; set; }
+
     }
 }

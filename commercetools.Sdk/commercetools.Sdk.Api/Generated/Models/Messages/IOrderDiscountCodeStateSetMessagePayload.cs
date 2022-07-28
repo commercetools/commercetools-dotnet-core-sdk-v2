@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IDiscountCodeState State { get; set; }
 
         IDiscountCodeState OldState { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntrySetKeyAction : IInventoryEntryUpdateAction
     {
         string Key { get; set; }
+
     }
 }

@@ -20,5 +20,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string State { get; set; }
 
         List<ISubRate> SubRates { get; set; }
+
     }
 }

@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ITaxedPrice NextValue { get; set; }
 
         ITaxedPrice PreviousValue { get; set; }
+
     }
 }

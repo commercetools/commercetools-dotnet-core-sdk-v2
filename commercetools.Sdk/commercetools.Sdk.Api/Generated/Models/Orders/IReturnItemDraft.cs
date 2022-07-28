@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IReturnShipmentState ShipmentState { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

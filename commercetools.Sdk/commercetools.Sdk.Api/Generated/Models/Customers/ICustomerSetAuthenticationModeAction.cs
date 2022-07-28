@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         IAuthenticationMode AuthMode { get; set; }
 
         string Password { get; set; }
+
     }
 }

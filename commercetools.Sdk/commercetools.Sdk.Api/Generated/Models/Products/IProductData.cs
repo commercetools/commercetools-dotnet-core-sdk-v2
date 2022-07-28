@@ -30,5 +30,6 @@ namespace commercetools.Sdk.Api.Models.Products
         List<IProductVariant> Variants { get; set; }
 
         ISearchKeywords SearchKeywords { get; set; }
+
     }
 }

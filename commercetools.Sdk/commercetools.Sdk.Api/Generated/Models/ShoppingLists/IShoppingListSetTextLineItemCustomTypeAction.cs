@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

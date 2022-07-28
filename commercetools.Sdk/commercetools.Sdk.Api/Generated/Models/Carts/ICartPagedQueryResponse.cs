@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         long Offset { get; set; }
 
         List<ICart> Results { get; set; }
+
     }
 }

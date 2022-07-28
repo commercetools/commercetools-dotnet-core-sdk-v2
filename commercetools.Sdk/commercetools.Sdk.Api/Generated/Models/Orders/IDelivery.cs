@@ -21,5 +21,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IAddress Address { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

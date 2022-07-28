@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IReservation> NextValue { get; set; }
 
         List<IReservation> PreviousValue { get; set; }
+
     }
 }

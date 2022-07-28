@@ -22,5 +22,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
         DateTime? ExpectedDelivery { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

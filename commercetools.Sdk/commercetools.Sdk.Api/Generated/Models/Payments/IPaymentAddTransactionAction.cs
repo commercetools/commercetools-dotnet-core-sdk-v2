@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentAddTransactionAction : IPaymentUpdateAction
     {
         ITransactionDraft Transaction { get; set; }
+
     }
 }

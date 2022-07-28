@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ICustomFieldLocalizedEnumType : IFieldType
     {
         List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+
     }
 }

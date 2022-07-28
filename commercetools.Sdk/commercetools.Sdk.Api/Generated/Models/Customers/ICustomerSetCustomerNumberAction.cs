@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetCustomerNumberAction : ICustomerUpdateAction
     {
         string CustomerNumber { get; set; }
+
     }
 }

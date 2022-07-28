@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int Count { get; set; }
 
         Object RatingsDistribution { get; set; }
+
     }
 }

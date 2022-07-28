@@ -9,5 +9,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         IMissingPricesProductLevel ProductLevel { get; set; }
 
         IMissingPricesVariantLevel VariantLevel { get; set; }
+
     }
 }

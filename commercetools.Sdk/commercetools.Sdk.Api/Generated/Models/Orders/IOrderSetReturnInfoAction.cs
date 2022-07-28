@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetReturnInfoAction : IOrderUpdateAction
     {
         List<IReturnInfoDraft> Items { get; set; }
+
     }
 }

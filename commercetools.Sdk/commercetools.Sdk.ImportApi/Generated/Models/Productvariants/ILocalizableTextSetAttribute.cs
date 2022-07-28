@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface ILocalizableTextSetAttribute : IAttribute
     {
         List<ILocalizedString> Value { get; set; }
+
     }
 }

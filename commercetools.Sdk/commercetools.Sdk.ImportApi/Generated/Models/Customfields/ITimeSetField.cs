@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface ITimeSetField : ICustomField
     {
         List<TimeSpan> Value { get; set; }
+
     }
 }

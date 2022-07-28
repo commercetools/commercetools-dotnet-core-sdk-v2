@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Common
         IImageDimensions Dimensions { get; set; }
 
         string Label { get; set; }
+
     }
 }

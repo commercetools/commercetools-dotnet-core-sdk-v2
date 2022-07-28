@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         string Key { get; set; }
 
         string Title { get; set; }
+
     }
 }

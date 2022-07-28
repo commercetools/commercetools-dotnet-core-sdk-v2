@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         string CurrentPassword { get; set; }
 
         string NewPassword { get; set; }
+
     }
 }

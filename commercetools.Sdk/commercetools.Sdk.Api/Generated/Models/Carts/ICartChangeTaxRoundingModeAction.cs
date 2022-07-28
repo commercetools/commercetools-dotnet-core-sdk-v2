@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartChangeTaxRoundingModeAction : ICartUpdateAction
     {
         IRoundingMode TaxRoundingMode { get; set; }
+
     }
 }

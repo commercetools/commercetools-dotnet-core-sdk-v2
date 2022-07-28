@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         string ExtensionId { get; set; }
 
         string ExtensionKey { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     public partial interface IStagedQuoteReference : IReference
     {
         IStagedQuote Obj { get; set; }
+
     }
 }

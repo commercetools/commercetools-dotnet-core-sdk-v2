@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductSelectionProductRemovedMessage : IMessage
     {
         IProductReference Product { get; set; }
+
     }
 }

@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IStateResourceIdentifier State { get; set; }
 
         bool? Force { get; set; }
+
     }
 }

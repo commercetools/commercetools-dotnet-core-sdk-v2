@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IInventoryEntryCreatedMessage : IMessage
     {
         IInventoryEntry InventoryEntry { get; set; }
+
     }
 }

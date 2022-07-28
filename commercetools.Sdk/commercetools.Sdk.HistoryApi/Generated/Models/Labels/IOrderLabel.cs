@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         string CustomerEmail { get; set; }
 
         string OrderNumber { get; set; }
+
     }
 }

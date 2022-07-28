@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
     public partial interface IQuoteRequestReference : IReference
     {
         IQuoteRequest Obj { get; set; }
+
     }
 }

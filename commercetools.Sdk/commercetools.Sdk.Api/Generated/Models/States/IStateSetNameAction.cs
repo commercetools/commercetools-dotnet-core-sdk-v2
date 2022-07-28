@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateSetNameAction : IStateUpdateAction
     {
         ILocalizedString Name { get; set; }
+
     }
 }

@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.Products
         long Position { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

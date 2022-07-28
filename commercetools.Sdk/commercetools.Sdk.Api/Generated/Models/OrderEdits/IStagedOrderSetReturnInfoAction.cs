@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetReturnInfoAction : IStagedOrderUpdateAction
     {
         List<IReturnInfoDraft> Items { get; set; }
+
     }
 }

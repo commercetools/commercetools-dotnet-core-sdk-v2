@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSetStoreAction : IOrderUpdateAction
     {
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

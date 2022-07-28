@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IMoney ExternalTotalGross { get; set; }
 
         List<ITaxPortionDraft> ExternalTaxPortions { get; set; }
+
     }
 }

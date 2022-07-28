@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         Object ExtensionExtraInfo { get; set; }
 
         IErrorByExtension ErrorByExtension { get; set; }
+
     }
 }

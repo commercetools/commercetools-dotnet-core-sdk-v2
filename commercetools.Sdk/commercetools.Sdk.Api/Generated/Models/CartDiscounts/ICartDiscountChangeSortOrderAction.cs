@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountChangeSortOrderAction : ICartDiscountUpdateAction
     {
         string SortOrder { get; set; }
+
     }
 }

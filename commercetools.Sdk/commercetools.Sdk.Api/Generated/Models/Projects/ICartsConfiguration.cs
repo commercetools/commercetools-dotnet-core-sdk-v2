@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Projects
         long? DeleteDaysAfterLastModification { get; set; }
 
         bool? CountryTaxRateFallbackEnabled { get; set; }
+
     }
 }

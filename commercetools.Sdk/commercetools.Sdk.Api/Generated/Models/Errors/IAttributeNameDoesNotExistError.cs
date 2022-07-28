@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IAttributeNameDoesNotExistError : IErrorObject
     {
         string InvalidAttributeName { get; set; }
+
     }
 }

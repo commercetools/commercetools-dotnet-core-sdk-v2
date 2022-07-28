@@ -26,5 +26,6 @@ namespace commercetools.Sdk.Api.Models.Me
         List<ITransaction> Transactions { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
     public partial interface IQuoteChangeQuoteStateAction : IQuoteUpdateAction
     {
         IQuoteState QuoteState { get; set; }
+
     }
 }

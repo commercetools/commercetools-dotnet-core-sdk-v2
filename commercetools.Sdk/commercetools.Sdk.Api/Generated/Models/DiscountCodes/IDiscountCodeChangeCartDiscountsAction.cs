@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeChangeCartDiscountsAction : IDiscountCodeUpdateAction
     {
         List<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+
     }
 }

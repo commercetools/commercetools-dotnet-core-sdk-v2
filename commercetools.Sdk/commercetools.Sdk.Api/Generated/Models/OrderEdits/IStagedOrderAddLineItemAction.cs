@@ -35,5 +35,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

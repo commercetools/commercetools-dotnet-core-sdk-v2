@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IProductVariant Variant { get; set; }
 
         List<string> RemovedImageUrls { get; set; }
+
     }
 }

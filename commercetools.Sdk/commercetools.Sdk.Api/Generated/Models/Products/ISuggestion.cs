@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface ISuggestion
     {
         string Text { get; set; }
+
     }
 }

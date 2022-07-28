@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     {
         new long Version { get; set; }
         new List<IShippingMethodUpdateAction> Actions { get; set; }
+
     }
 }

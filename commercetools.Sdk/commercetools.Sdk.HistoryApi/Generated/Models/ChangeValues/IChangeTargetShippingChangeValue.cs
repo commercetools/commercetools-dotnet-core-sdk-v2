@@ -7,5 +7,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
     public partial interface IChangeTargetShippingChangeValue : IChangeTargetChangeValue
     {
         new string Type { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderChangePaymentStateAction : IStagedOrderUpdateAction
     {
         IPaymentState PaymentState { get; set; }
+
     }
 }

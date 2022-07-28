@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     public partial interface IAttributeEnumType : IAttributeType
     {
         List<IAttributePlainEnumValue> Values { get; set; }
+
     }
 }

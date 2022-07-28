@@ -13,5 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int FractionDigits { get; set; }
 
         IMoneyType Type { get; set; }
+
     }
 }

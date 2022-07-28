@@ -13,5 +13,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IMoney FreeAbove { get; set; }
 
         List<IShippingRatePriceTier> Tiers { get; set; }
+
     }
 }

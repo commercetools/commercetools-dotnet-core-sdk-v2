@@ -22,5 +22,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<IProductSelectionSetting> ProductSelections { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

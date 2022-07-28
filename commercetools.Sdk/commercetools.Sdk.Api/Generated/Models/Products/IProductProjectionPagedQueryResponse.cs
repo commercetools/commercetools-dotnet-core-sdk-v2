@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Products
         long Offset { get; set; }
 
         List<IProductProjection> Results { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IAttributeSetType : IAttributeType
     {
         IAttributeType ElementType { get; set; }
+
     }
 }

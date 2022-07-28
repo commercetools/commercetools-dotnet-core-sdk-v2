@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Stores
         IProductSelectionReference ProductSelection { get; set; }
 
         bool Active { get; set; }
+
     }
 }

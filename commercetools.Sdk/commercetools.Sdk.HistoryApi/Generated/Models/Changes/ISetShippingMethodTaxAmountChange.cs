@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IShippingMethodTaxAmountChangeValue NextValue { get; set; }
 
         IShippingMethodTaxAmountChangeValue PreviousValue { get; set; }
+
     }
 }

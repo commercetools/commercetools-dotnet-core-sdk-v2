@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,5 +10,12 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public partial interface IProductSelectionType
     {
         IProductSelectionTypeEnum Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.ProductSelections.IndividualProductSelectionType Individual(Action<commercetools.Sdk.Api.Models.ProductSelections.IndividualProductSelectionType> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductSelections.IndividualProductSelectionType();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

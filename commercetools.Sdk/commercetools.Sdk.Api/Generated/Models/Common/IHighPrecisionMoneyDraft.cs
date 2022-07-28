@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Common
         long PreciseAmount { get; set; }
 
         new long CentAmount { get; set; }
+
     }
 }

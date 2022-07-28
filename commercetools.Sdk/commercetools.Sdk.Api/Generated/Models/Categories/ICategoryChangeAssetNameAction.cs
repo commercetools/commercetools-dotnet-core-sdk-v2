@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         string AssetKey { get; set; }
 
         ILocalizedString Name { get; set; }
+
     }
 }

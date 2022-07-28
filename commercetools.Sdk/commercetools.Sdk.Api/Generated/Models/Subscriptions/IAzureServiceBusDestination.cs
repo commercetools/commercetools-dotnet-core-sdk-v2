@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface IAzureServiceBusDestination : IDestination
     {
         string ConnectionString { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

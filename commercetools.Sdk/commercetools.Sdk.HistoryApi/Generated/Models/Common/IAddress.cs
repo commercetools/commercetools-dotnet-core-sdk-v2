@@ -55,5 +55,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
     }
 }

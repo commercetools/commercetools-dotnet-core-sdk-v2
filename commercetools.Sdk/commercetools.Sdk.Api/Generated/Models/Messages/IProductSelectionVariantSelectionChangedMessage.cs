@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IProductVariantSelection OldVariantSelection { get; set; }
 
         IProductVariantSelection NewVariantSelection { get; set; }
+
     }
 }

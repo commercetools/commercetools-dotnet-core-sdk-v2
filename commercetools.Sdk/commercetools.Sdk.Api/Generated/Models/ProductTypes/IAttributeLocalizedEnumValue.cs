@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         string Key { get; set; }
 
         ILocalizedString Label { get; set; }
+
     }
 }

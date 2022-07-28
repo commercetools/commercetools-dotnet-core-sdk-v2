@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         long EditVersion { get; set; }
 
         long ResourceVersion { get; set; }
+
     }
 }

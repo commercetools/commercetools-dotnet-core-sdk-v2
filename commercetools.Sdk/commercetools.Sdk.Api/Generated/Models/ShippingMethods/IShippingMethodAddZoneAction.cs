@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     public partial interface IShippingMethodAddZoneAction : IShippingMethodUpdateAction
     {
         IZoneResourceIdentifier Zone { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Zones
         string Country { get; set; }
 
         string State { get; set; }
+
     }
 }

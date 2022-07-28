@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.States
         long? Total { get; set; }
 
         List<IState> Results { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetDirectDiscountsAction : ICartUpdateAction
     {
         List<IDirectDiscountDraft> Discounts { get; set; }
+
     }
 }

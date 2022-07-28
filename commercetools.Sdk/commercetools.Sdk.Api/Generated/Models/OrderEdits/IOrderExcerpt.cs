@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITaxedPrice TaxedPrice { get; set; }
 
         long Version { get; set; }
+
     }
 }

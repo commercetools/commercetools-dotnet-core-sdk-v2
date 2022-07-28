@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Me
         long Version { get; set; }
 
         string Comment { get; set; }
+
     }
 }

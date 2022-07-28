@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Common
         long Version { get; set; }
 
         List<IUpdateAction> Actions { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         new string Id { get; set; }
 
         IProductSelection Obj { get; set; }
+
     }
 }

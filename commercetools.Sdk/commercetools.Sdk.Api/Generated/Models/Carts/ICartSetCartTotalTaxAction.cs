@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IMoney ExternalTotalGross { get; set; }
 
         List<ITaxPortionDraft> ExternalTaxPortions { get; set; }
+
     }
 }

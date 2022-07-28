@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         long OldVersion { get; set; }
 
         DateTime ModifiedAt { get; set; }
+
     }
 }

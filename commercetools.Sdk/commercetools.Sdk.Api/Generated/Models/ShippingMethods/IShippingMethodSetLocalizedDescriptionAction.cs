@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     public partial interface IShippingMethodSetLocalizedDescriptionAction : IShippingMethodUpdateAction
     {
         ILocalizedString LocalizedDescription { get; set; }
+
     }
 }

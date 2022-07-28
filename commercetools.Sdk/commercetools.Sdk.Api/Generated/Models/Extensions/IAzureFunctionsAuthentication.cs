@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IAzureFunctionsAuthentication : IHttpDestinationAuthentication
     {
         string Key { get; set; }
+
     }
 }

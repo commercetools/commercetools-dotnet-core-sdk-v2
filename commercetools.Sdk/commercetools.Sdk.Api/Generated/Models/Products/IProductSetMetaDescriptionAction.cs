@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Products
         ILocalizedString MetaDescription { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

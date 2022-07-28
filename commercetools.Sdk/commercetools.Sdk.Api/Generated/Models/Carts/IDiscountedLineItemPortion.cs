@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICartDiscountReference Discount { get; set; }
 
         ITypedMoney DiscountedAmount { get; set; }
+
     }
 }

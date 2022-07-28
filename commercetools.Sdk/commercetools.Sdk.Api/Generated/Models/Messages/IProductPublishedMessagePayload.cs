@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IProductProjection ProductProjection { get; set; }
 
         IProductPublishScope Scope { get; set; }
+
     }
 }

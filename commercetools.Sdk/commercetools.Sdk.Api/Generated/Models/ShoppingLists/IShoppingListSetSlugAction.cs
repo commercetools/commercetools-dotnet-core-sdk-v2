@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetSlugAction : IShoppingListUpdateAction
     {
         ILocalizedString Slug { get; set; }
+
     }
 }

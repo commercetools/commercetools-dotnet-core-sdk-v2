@@ -20,5 +20,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string Comment { get; set; }
 
         bool? DryRun { get; set; }
+
     }
 }

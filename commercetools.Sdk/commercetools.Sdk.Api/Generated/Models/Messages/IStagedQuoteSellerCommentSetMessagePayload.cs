@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IStagedQuoteSellerCommentSetMessagePayload : IMessagePayload
     {
         string SellerComment { get; set; }
+
     }
 }

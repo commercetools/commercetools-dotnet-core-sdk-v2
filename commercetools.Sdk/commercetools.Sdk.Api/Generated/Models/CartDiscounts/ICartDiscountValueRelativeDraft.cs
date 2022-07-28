@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountValueRelativeDraft : ICartDiscountValueDraft
     {
         long Permyriad { get; set; }
+
     }
 }

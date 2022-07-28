@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IReference ProductSelection { get; set; }
 
         bool Active { get; set; }
+
     }
 }

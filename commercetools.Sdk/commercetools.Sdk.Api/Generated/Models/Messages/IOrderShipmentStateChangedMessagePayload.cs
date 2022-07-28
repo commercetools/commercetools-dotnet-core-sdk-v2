@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IShipmentState ShipmentState { get; set; }
 
         IShipmentState OldShipmentState { get; set; }
+
     }
 }

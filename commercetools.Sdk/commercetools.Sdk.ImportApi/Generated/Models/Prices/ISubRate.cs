@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
         string Name { get; set; }
 
         decimal Amount { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string DeliveryId { get; set; }
 
         IParcel Parcel { get; set; }
+
     }
 }

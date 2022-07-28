@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Zones
     {
         new long Version { get; set; }
         new List<IZoneUpdateAction> Actions { get; set; }
+
     }
 }

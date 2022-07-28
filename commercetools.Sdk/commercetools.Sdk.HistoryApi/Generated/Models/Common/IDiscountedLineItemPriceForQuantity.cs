@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int Quantity { get; set; }
 
         IDiscountedLineItemPrice DiscountedPrice { get; set; }
+
     }
 }

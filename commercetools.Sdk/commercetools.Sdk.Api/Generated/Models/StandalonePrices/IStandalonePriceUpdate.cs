@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         long Version { get; set; }
 
         List<IStandalonePriceUpdateAction> Actions { get; set; }
+
     }
 }

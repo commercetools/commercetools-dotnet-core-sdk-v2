@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelSetGeoLocationAction : IChannelUpdateAction
     {
         IGeoJson GeoLocation { get; set; }
+
     }
 }

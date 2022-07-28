@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetKeyAction : IReviewUpdateAction
     {
         string Key { get; set; }
+
     }
 }

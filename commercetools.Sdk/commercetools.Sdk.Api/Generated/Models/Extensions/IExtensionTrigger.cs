@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
         List<IExtensionAction> Actions { get; set; }
 
         string Condition { get; set; }
+
     }
 }

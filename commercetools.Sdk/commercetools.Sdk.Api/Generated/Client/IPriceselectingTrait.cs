@@ -12,10 +12,6 @@ namespace commercetools.Sdk.Api.Client
 
         List<string> GetPriceChannel();
 
-        List<string> GetLocaleProjection();
-
-        List<string> GetStoreProjection();
-
         /**
          * set priceCurrency with the specificied value
          */
@@ -35,16 +31,6 @@ namespace commercetools.Sdk.Api.Client
          * set priceChannel with the specificied value
          */
         T WithPriceChannel(string priceChannel);
-
-        /**
-         * set localeProjection with the specificied value
-         */
-        T WithLocaleProjection(string localeProjection);
-
-        /**
-         * set storeProjection with the specificied value
-         */
-        T WithStoreProjection(string storeProjection);
 
 
         IPriceselectingTrait<T> AsPriceselectingTrait()

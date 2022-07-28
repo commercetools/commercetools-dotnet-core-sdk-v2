@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         string ConflictingProductTypeName { get; set; }
 
         string ConflictingAttributeName { get; set; }
+
     }
 }

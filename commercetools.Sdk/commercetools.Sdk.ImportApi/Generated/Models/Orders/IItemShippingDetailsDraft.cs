@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     public partial interface IItemShippingDetailsDraft
     {
         List<IItemShippingTarget> Targets { get; set; }
+
     }
 }

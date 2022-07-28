@@ -9,5 +9,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         decimal Names { get; set; }
 
         decimal Values { get; set; }
+
     }
 }

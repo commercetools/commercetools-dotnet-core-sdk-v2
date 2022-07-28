@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string LineItemId { get; set; }
 
         List<IItemState> State { get; set; }
+
     }
 }

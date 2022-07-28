@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface ICustomerDateOfBirthSetMessage : IMessage
     {
         DateTime? DateOfBirth { get; set; }
+
     }
 }

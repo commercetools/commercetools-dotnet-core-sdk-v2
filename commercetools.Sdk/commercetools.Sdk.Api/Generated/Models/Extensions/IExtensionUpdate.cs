@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     {
         new long Version { get; set; }
         new List<IExtensionUpdateAction> Actions { get; set; }
+
     }
 }

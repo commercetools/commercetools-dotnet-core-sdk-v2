@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface IRangeFacetResult : IFacetResult
     {
         List<IFacetRange> Ranges { get; set; }
+
     }
 }

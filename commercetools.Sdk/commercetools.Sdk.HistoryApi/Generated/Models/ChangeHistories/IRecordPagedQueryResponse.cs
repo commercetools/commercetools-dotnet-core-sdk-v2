@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         int Offset { get; set; }
 
         List<IRecord> Results { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
     public partial interface ICustomShippingMethodChangeValue
     {
         string Name { get; set; }
+
     }
 }

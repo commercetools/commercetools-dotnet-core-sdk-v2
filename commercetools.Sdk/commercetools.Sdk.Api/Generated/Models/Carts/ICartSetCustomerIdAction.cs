@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetCustomerIdAction : ICartUpdateAction
     {
         string CustomerId { get; set; }
+
     }
 }

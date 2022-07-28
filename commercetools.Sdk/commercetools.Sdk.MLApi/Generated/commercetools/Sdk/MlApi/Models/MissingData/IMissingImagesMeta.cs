@@ -11,5 +11,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         IMissingImagesVariantLevel VariantLevel { get; set; }
 
         long Threshold { get; set; }
+
     }
 }

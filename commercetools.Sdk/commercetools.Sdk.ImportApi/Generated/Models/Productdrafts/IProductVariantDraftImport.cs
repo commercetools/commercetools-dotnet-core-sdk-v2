@@ -20,5 +20,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         List<IImage> Images { get; set; }
 
         List<IAsset> Assets { get; set; }
+
     }
 }

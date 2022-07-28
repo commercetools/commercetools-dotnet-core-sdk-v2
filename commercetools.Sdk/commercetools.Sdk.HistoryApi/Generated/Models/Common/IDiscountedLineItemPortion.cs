@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IReference Discount { get; set; }
 
         IMoney DiscountedAmount { get; set; }
+
     }
 }

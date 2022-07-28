@@ -25,5 +25,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IVariant Variant { get; set; }
 
         int VariantId { get; set; }
+
     }
 }

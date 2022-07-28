@@ -15,5 +15,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         ITrackingData TrackingData { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
     }
 }

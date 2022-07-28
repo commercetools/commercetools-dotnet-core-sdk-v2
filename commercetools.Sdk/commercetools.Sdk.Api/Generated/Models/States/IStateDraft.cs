@@ -21,5 +21,6 @@ namespace commercetools.Sdk.Api.Models.States
         List<IStateRoleEnum> Roles { get; set; }
 
         List<IStateResourceIdentifier> Transitions { get; set; }
+
     }
 }

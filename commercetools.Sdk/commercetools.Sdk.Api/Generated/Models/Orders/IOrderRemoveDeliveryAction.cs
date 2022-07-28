@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderRemoveDeliveryAction : IOrderUpdateAction
     {
         string DeliveryId { get; set; }
+
     }
 }

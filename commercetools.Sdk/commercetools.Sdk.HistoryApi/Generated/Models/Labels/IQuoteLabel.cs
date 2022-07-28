@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         IReference StagedQuote { get; set; }
 
         IReference QuoteRequest { get; set; }
+
     }
 }

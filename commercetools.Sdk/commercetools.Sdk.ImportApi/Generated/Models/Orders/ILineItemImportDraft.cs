@@ -28,5 +28,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         ITaxRate TaxRate { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

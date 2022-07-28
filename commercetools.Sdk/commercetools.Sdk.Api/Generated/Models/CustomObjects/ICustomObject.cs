@@ -25,5 +25,6 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
         string Key { get; set; }
 
         Object Value { get; set; }
+
     }
 }

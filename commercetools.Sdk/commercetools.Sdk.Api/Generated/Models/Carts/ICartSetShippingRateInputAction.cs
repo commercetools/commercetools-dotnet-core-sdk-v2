@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetShippingRateInputAction : ICartUpdateAction
     {
         IShippingRateInputDraft ShippingRateInput { get; set; }
+
     }
 }

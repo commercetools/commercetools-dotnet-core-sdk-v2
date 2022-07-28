@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
         string Url { get; set; }
 
         IHttpDestinationAuthentication Authentication { get; set; }
+
     }
 }

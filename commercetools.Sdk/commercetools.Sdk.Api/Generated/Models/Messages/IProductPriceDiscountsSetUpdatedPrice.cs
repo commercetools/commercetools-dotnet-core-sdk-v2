@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IDiscountedPrice Discounted { get; set; }
 
         bool Staged { get; set; }
+
     }
 }

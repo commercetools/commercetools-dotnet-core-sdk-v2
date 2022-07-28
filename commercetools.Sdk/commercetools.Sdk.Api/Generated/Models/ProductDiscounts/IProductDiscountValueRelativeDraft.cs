@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountValueRelativeDraft : IProductDiscountValueDraft
     {
         long Permyriad { get; set; }
+
     }
 }

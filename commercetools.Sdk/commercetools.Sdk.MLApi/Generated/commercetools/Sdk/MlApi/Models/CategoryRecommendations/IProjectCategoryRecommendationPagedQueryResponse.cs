@@ -16,5 +16,6 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
         List<IProjectCategoryRecommendation> Results { get; set; }
 
         IProjectCategoryRecommendationMeta Meta { get; set; }
+
     }
 }

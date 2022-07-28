@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IPaymentInteractionAddedMessage : IMessage
     {
         ICustomFields Interaction { get; set; }
+
     }
 }

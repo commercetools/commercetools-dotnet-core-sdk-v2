@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountChangeIsActiveAction : ICartDiscountUpdateAction
     {
         bool IsActive { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface ICustomLineItemReturnItem : IReturnItem
     {
         string CustomLineItemId { get; set; }
+
     }
 }

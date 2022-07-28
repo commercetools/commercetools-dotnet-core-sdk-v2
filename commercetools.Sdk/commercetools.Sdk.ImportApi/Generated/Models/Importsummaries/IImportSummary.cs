@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importsummaries
         IOperationStates States { get; set; }
 
         long Total { get; set; }
+
     }
 }

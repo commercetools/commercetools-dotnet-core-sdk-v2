@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCartAddPaymentAction : IMyCartUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }
+
     }
 }

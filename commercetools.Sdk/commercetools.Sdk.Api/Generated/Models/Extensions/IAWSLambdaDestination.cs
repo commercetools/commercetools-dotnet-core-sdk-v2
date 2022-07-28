@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
         string AccessKey { get; set; }
 
         string AccessSecret { get; set; }
+
     }
 }

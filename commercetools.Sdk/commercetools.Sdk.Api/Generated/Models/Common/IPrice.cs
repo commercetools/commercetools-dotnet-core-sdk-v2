@@ -30,5 +30,6 @@ namespace commercetools.Sdk.Api.Models.Common
         List<IPriceTier> Tiers { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

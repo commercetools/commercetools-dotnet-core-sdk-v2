@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         new string Type { get; set; }
 
         List<IMoney> Money { get; set; }
+
     }
 }

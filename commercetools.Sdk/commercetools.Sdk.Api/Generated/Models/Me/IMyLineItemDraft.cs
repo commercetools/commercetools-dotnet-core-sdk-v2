@@ -27,5 +27,6 @@ namespace commercetools.Sdk.Api.Models.Me
         IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         string Sku { get; set; }
+
     }
 }

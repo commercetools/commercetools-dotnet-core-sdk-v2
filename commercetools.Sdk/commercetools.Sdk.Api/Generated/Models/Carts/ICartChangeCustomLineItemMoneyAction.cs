@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         string CustomLineItemId { get; set; }
 
         IMoney Money { get; set; }
+
     }
 }

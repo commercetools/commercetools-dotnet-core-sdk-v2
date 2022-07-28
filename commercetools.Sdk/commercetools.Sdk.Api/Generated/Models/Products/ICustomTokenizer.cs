@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface ICustomTokenizer : ISuggestTokenizer
     {
         List<string> Inputs { get; set; }
+
     }
 }

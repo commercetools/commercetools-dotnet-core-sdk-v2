@@ -30,5 +30,6 @@ namespace commercetools.Sdk.Api.Models.Types
         List<IResourceTypeId> ResourceTypeIds { get; set; }
 
         List<IFieldDefinition> FieldDefinitions { get; set; }
+
     }
 }

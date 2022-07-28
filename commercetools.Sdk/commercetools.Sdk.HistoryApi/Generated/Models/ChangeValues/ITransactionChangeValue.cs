@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         string InteractionId { get; set; }
 
         string Timestamp { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         new string Id { get; set; }
 
         new string Key { get; set; }
+
     }
 }

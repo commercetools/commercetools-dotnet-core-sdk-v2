@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
 
         ITaxedItemPrice TaxedPrice { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface IProductSetKeyAction : IProductUpdateAction
     {
         string Key { get; set; }
+
     }
 }

@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         bool? IsMatching { get; set; }
 
         List<IShippingRatePriceTier> Tiers { get; set; }
+
     }
 }

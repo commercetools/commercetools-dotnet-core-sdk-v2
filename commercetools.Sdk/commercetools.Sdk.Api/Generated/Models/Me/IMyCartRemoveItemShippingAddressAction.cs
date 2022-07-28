@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCartRemoveItemShippingAddressAction : IMyCartUpdateAction
     {
         string AddressKey { get; set; }
+
     }
 }

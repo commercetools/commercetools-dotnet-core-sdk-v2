@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         long? Total { get; set; }
 
         List<ICartDiscount> Results { get; set; }
+
     }
 }

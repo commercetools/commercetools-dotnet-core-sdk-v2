@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelRemoveRolesAction : IChannelUpdateAction
     {
         List<IChannelRoleEnum> Roles { get; set; }
+
     }
 }

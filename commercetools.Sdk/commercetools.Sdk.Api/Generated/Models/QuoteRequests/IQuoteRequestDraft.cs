@@ -17,5 +17,6 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         string Comment { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         string AssetId { get; set; }
 
         string AssetKey { get; set; }
+
     }
 }

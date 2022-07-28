@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string AssetKey { get; set; }
 
         List<string> Tags { get; set; }
+
     }
 }

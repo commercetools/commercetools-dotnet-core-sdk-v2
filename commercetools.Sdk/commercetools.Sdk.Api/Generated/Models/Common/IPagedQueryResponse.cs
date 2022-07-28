@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Common
         List<IBaseResource> Results { get; set; }
 
         Object Meta { get; set; }
+
     }
 }

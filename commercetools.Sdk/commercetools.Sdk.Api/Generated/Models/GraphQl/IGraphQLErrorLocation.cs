@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.GraphQl
         int Line { get; set; }
 
         int Column { get; set; }
+
     }
 }

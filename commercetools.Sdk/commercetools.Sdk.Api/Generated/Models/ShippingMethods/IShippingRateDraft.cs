@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IMoney FreeAbove { get; set; }
 
         List<IShippingRatePriceTier> Tiers { get; set; }
+
     }
 }

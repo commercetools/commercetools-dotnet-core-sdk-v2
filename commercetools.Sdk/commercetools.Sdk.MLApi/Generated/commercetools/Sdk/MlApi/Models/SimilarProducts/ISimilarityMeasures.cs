@@ -15,5 +15,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         long? VariantCount { get; set; }
 
         long? Price { get; set; }
+
     }
 }

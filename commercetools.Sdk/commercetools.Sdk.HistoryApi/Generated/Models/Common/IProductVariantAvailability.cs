@@ -13,5 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int AvailableQuantity { get; set; }
 
         IProductVariantChannelAvailabilityMap Channels { get; set; }
+
     }
 }

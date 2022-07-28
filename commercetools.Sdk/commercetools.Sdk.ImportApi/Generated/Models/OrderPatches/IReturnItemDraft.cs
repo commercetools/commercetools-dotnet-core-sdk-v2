@@ -15,5 +15,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string Comment { get; set; }
 
         IReturnShipmentState ShipmentState { get; set; }
+
     }
 }

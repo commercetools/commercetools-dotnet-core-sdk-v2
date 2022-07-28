@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,5 +11,18 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface IDeliveryFormat
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.Subscriptions.CloudEventsFormat CloudEvents(Action<commercetools.Sdk.Api.Models.Subscriptions.CloudEventsFormat> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.CloudEventsFormat();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.PlatformFormat Platform(Action<commercetools.Sdk.Api.Models.Subscriptions.PlatformFormat> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.PlatformFormat();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

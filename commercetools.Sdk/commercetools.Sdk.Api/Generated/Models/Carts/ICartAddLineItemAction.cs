@@ -30,5 +30,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

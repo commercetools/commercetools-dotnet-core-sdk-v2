@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Types
         string FieldName { get; set; }
 
         ILocalizedString Label { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string PaymentId { get; set; }
 
         string InterfaceCode { get; set; }
+
     }
 }

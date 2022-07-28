@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public partial interface IProductSelectionSetKeyAction : IProductSelectionUpdateAction
     {
         string Key { get; set; }
+
     }
 }

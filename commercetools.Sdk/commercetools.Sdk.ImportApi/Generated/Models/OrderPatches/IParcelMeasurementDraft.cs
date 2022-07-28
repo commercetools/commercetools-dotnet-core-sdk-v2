@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string ParcelId { get; set; }
 
         IParcelMeasurements Measurements { get; set; }
+
     }
 }

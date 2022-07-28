@@ -29,5 +29,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         List<string> ProductIds { get; set; }
 
         List<string> ProductTypeIds { get; set; }
+
     }
 }

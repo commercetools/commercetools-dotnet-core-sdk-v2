@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string CustomLineItemId { get; set; }
 
         ICustomLineItem CustomLineItem { get; set; }
+
     }
 }

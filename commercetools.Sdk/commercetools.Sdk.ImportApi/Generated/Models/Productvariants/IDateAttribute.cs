@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface IDateAttribute : IAttribute
     {
         DateTime Value { get; set; }
+
     }
 }

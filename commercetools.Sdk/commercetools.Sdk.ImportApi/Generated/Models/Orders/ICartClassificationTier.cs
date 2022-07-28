@@ -15,5 +15,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         List<IShippingRatePriceTier> Tiers { get; set; }
 
         bool? IsMatching { get; set; }
+
     }
 }

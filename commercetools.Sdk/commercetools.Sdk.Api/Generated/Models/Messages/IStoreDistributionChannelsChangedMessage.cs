@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<IChannelReference> AddedDistributionChannels { get; set; }
 
         List<IChannelReference> RemovedDistributionChannels { get; set; }
+
     }
 }

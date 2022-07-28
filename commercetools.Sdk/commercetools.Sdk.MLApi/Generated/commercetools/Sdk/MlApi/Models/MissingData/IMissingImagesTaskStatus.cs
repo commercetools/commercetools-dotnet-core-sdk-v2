@@ -13,5 +13,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         DateTime Expires { get; set; }
 
         IMissingImagesPagedQueryResult Result { get; set; }
+
     }
 }

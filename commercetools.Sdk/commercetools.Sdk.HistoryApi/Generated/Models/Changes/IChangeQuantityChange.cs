@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IInventoryQuantityValue NextValue { get; set; }
 
         IInventoryQuantityValue PreviousValue { get; set; }
+
     }
 }

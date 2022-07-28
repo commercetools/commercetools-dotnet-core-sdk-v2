@@ -7,5 +7,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     public partial interface ISuggestTokenizer
     {
         string Type { get; set; }
+
     }
 }

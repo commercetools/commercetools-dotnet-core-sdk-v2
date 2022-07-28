@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         string LineItemId { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

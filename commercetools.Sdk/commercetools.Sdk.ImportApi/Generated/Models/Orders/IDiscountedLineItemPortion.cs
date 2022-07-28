@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         ICartDiscountKeyReference Discount { get; set; }
 
         IMoney DiscountedAmount { get; set; }
+
     }
 }

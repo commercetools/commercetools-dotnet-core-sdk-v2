@@ -100,5 +100,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         List<IAddress> ItemShippingAddresses { get; set; }
 
         List<ICartDiscountReference> RefusedGifts { get; set; }
+
     }
 }

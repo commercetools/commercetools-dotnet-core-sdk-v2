@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string ExternalId { get; set; }
 
         string SyncedAt { get; set; }
+
     }
 }

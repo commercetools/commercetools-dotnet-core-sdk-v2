@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         string Key { get; set; }
 
         IMoney AmountPlanned { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         string AddressKey { get; set; }
 
         long Quantity { get; set; }
+
     }
 }

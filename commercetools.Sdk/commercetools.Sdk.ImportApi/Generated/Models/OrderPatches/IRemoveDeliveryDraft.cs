@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
     public partial interface IRemoveDeliveryDraft
     {
         string Id { get; set; }
+
     }
 }

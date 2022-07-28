@@ -11,5 +11,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IMoney Value { get; set; }
 
         List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+
     }
 }

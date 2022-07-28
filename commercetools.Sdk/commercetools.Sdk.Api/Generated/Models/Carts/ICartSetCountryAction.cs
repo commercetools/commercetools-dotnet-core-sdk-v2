@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetCountryAction : ICartUpdateAction
     {
         string Country { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
     public partial interface ISimilarProductSearchRequestMeta
     {
         ISimilarityMeasures SimilarityMeasures { get; set; }
+
     }
 }

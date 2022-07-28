@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductSelectionDeletedMessage : IMessage
     {
         ILocalizedString Name { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetStoreAction : IShoppingListUpdateAction
     {
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

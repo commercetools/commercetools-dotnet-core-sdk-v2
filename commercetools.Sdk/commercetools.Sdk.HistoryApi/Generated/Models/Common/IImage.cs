@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IImageDimensions Dimensions { get; set; }
 
         string Label { get; set; }
+
     }
 }

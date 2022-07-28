@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IMaxResourceLimitExceededError : IErrorObject
     {
         IReferenceTypeId ExceededResource { get; set; }
+
     }
 }

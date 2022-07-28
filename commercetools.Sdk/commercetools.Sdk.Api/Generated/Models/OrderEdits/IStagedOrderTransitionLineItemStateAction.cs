@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IStateResourceIdentifier ToState { get; set; }
 
         DateTime? ActualTransitionDate { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Products
         string Text { get; set; }
 
         ISuggestTokenizer SuggestTokenizer { get; set; }
+
     }
 }

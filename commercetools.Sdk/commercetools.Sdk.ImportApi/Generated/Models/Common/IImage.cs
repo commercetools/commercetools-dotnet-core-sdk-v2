@@ -11,5 +11,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         IAssetDimensions Dimensions { get; set; }
 
         string Label { get; set; }
+
     }
 }
