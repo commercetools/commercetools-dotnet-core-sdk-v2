@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         long? Offset { get; set; }
 
         List<IShippingMethod> Results { get; set; }
+
     }
 }

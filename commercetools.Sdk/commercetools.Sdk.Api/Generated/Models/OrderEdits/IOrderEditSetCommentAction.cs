@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IOrderEditSetCommentAction : IOrderEditUpdateAction
     {
         string Comment { get; set; }
+
     }
 }

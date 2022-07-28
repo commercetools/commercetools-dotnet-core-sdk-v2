@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         ILocalizedString Name { get; set; }
 
         int VariantId { get; set; }
+
     }
 }

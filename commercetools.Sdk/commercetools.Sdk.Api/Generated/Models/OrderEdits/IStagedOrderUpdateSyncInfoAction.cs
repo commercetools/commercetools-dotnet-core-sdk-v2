@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string ExternalId { get; set; }
 
         DateTime? SyncedAt { get; set; }
+
     }
 }

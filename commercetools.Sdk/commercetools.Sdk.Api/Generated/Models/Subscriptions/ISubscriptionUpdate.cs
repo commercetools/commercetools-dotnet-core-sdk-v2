@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     {
         new long Version { get; set; }
         new List<ISubscriptionUpdateAction> Actions { get; set; }
+
     }
 }

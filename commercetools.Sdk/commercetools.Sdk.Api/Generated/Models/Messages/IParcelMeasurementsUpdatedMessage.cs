@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string ParcelId { get; set; }
 
         IParcelMeasurements Measurements { get; set; }
+
     }
 }

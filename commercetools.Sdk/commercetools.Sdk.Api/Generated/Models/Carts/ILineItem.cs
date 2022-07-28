@@ -60,5 +60,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IItemShippingDetails ShippingDetails { get; set; }
 
         DateTime? LastModifiedAt { get; set; }
+
     }
 }

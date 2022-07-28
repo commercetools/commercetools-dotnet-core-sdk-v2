@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         long Offset { get; set; }
 
         List<ISubscription> Results { get; set; }
+
     }
 }

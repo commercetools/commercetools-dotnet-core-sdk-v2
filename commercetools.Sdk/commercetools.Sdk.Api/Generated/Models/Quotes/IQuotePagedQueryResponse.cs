@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
         long? Total { get; set; }
 
         List<IQuote> Results { get; set; }
+
     }
 }

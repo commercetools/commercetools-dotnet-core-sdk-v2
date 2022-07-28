@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IOrderExcerpt ExcerptBeforeEdit { get; set; }
 
         IOrderExcerpt ExcerptAfterEdit { get; set; }
+
     }
 }

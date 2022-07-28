@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductPriceDiscountsSetMessage : IMessage
     {
         List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+
     }
 }

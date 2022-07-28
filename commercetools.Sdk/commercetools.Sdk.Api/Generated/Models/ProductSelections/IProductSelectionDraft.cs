@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         ILocalizedString Name { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

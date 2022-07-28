@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     public partial interface IStagedQuoteChangeStagedQuoteStateAction : IStagedQuoteUpdateAction
     {
         IStagedQuoteState StagedQuoteState { get; set; }
+
     }
 }

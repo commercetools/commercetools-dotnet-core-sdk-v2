@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface ITimeSetAttribute : IAttribute
     {
         List<TimeSpan> Value { get; set; }
+
     }
 }

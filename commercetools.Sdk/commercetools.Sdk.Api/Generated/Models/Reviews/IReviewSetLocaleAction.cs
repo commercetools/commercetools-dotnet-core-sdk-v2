@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetLocaleAction : IReviewUpdateAction
     {
         string Locale { get; set; }
+
     }
 }

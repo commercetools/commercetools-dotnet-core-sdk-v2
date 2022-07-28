@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetDeleteDaysAfterLastModificationAction : IShoppingListUpdateAction
     {
         long? DeleteDaysAfterLastModification { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,5 +10,12 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     public partial interface IShippingRatePriceTier
     {
         IShippingRateTierType Type { get; set; }
+
+        static commercetools.Sdk.ImportApi.Models.Orders.CartClassificationTier CartClassification(Action<commercetools.Sdk.ImportApi.Models.Orders.CartClassificationTier> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Orders.CartClassificationTier();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     {
         new long Version { get; set; }
         new List<IProductSelectionUpdateAction> Actions { get; set; }
+
     }
 }

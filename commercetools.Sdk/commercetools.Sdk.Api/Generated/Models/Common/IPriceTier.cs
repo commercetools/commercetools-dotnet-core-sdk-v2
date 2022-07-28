@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Common
         long MinimumQuantity { get; set; }
 
         ITypedMoney Value { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,30 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
     public partial interface IChangeValueChangeValue
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueAbsoluteChangeValue Absolute(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueAbsoluteChangeValue> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueAbsoluteChangeValue();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue External(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueGiftLineItemChangeValue GiftLineItem(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueGiftLineItemChangeValue> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueGiftLineItemChangeValue();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueRelativeChangeValue Relative(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueRelativeChangeValue> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueRelativeChangeValue();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

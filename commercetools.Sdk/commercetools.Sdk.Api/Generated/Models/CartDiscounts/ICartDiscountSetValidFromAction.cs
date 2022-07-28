@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountSetValidFromAction : ICartDiscountUpdateAction
     {
         DateTime? ValidFrom { get; set; }
+
     }
 }

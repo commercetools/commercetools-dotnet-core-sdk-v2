@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         string Uri { get; set; }
 
         string AccessKey { get; set; }
+
     }
 }

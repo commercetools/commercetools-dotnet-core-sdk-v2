@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeCartsConfigurationAction : IProjectUpdateAction
     {
         ICartsConfiguration CartsConfiguration { get; set; }
+
     }
 }

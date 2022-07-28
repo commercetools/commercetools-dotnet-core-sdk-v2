@@ -31,5 +31,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
         DateTime LastModifiedAt { get; set; }
 
         DateTime ExpiresAt { get; set; }
+
     }
 }

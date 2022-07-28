@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -30,5 +31,138 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface ICustomField
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.ImportApi.Models.Customfields.BooleanField Boolean(Action<commercetools.Sdk.ImportApi.Models.Customfields.BooleanField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.BooleanField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.BooleanSetField BooleanSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.BooleanSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.BooleanSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.DateField Date(Action<commercetools.Sdk.ImportApi.Models.Customfields.DateField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.DateField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.DateSetField DateSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.DateSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.DateSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.DateTimeField DateTime(Action<commercetools.Sdk.ImportApi.Models.Customfields.DateTimeField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.DateTimeField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.DateTimeSetField DateTimeSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.DateTimeSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.DateTimeSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.EnumField Enum(Action<commercetools.Sdk.ImportApi.Models.Customfields.EnumField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.EnumField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.EnumSetField EnumSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.EnumSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.EnumSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumField LocalizedEnum(Action<commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumSetField LocalizedEnumSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.LocalizedEnumSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringField LocalizedString(Action<commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringSetField LocalizedStringSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.LocalizedStringSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.MoneyField Money(Action<commercetools.Sdk.ImportApi.Models.Customfields.MoneyField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.MoneyField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.MoneySetField MoneySet(Action<commercetools.Sdk.ImportApi.Models.Customfields.MoneySetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.MoneySetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.NumberField Number(Action<commercetools.Sdk.ImportApi.Models.Customfields.NumberField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.NumberField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.NumberSetField NumberSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.NumberSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.NumberSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.ReferenceField Reference(Action<commercetools.Sdk.ImportApi.Models.Customfields.ReferenceField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.ReferenceField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.ReferenceSetField ReferenceSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.ReferenceSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.ReferenceSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.StringField String(Action<commercetools.Sdk.ImportApi.Models.Customfields.StringField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.StringField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.StringSetField StringSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.StringSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.StringSetField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.TimeField Time(Action<commercetools.Sdk.ImportApi.Models.Customfields.TimeField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.TimeField();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Customfields.TimeSetField TimeSet(Action<commercetools.Sdk.ImportApi.Models.Customfields.TimeSetField> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Customfields.TimeSetField();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

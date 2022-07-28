@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         new long Version { get; set; }
         new List<ICartUpdateAction> Actions { get; set; }
+
     }
 }

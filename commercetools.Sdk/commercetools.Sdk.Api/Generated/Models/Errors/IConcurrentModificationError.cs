@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IConcurrentModificationError : IErrorObject
     {
         long? CurrentVersion { get; set; }
+
     }
 }

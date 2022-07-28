@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListChangeLineItemsOrderAction : IShoppingListUpdateAction
     {
         List<string> LineItemOrder { get; set; }
+
     }
 }

@@ -17,5 +17,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IStateReference FromState { get; set; }
 
         IStateReference ToState { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartSetDeleteDaysAfterLastModificationAction : ICartUpdateAction
     {
         int? DeleteDaysAfterLastModification { get; set; }
+
     }
 }

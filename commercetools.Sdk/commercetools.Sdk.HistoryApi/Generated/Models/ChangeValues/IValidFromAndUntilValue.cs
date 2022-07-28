@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         string ValidFrom { get; set; }
 
         string ValidUntil { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         string Key { get; set; }
 
         ILocalizedString Label { get; set; }
+
     }
 }

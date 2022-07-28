@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IMoney TotalGross { get; set; }
 
         IExternalTaxRateDraft TaxRate { get; set; }
+
     }
 }

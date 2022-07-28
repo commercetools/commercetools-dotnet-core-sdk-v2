@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,5 +10,12 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyQuoteRequestUpdateAction
     {
         string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Me.MyQuoteRequestCancelAction CancelQuoteRequest(Action<commercetools.Sdk.Api.Models.Me.MyQuoteRequestCancelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyQuoteRequestCancelAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateSetTransitionsAction : IStateUpdateAction
     {
         List<IStateResourceIdentifier> Transitions { get; set; }
+
     }
 }

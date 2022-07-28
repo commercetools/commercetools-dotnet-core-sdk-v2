@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         long Offset { get; set; }
 
         List<IMessage> Results { get; set; }
+
     }
 }

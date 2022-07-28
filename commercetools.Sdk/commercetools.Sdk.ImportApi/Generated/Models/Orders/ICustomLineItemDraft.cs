@@ -32,5 +32,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         List<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         string GroupName { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

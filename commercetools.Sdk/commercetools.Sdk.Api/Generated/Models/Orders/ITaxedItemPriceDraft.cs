@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IMoney TotalNet { get; set; }
 
         IMoney TotalGross { get; set; }
+
     }
 }

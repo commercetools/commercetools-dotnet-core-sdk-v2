@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         Object DuplicateValue { get; set; }
 
         IReference ConflictingResource { get; set; }
+
     }
 }

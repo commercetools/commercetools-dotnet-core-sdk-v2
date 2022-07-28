@@ -13,5 +13,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         decimal? WidthInMillimeter { get; set; }
 
         decimal? WeightInGram { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderChangeOrderStateAction : IOrderUpdateAction
     {
         IOrderState OrderState { get; set; }
+
     }
 }

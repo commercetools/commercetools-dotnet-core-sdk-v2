@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface IProductSetTaxCategoryAction : IProductUpdateAction
     {
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
+
     }
 }

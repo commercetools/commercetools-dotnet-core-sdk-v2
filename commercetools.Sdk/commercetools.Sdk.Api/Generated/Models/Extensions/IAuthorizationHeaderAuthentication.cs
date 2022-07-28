@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IAuthorizationHeaderAuthentication : IHttpDestinationAuthentication
     {
         string HeaderValue { get; set; }
+
     }
 }

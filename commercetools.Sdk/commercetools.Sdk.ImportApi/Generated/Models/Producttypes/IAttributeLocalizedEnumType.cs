@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     public partial interface IAttributeLocalizedEnumType : IAttributeType
     {
         List<IAttributeLocalizedEnumValue> Values { get; set; }
+
     }
 }

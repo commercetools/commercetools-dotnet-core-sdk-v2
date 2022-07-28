@@ -24,5 +24,6 @@ namespace commercetools.Sdk.Api.Models.Me
         long? DeleteDaysAfterLastModification { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

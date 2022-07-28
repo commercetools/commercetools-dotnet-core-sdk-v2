@@ -8,5 +8,6 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
     public partial interface IImageSearchConfigRequest
     {
         List<IImageSearchConfigUpdateAction> Actions { get; set; }
+
     }
 }

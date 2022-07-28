@@ -21,5 +21,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         ITextInputHint InputHint { get; set; }
 
         bool IsSearchable { get; set; }
+
     }
 }

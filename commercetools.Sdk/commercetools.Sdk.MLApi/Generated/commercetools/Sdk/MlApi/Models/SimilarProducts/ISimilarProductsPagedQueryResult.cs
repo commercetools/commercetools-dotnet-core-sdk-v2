@@ -16,5 +16,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         List<ISimilarProductPair> Results { get; set; }
 
         ISimilarProductSearchRequestMeta Meta { get; set; }
+
     }
 }

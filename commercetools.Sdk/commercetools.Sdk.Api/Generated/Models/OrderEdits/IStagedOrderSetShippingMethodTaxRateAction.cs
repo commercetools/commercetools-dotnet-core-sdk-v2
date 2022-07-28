@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetShippingMethodTaxRateAction : IStagedOrderUpdateAction
     {
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

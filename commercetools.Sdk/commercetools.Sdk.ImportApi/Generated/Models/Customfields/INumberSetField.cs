@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface INumberSetField : ICustomField
     {
         List<decimal> Value { get; set; }
+
     }
 }

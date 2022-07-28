@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Country { get; set; }
 
         string State { get; set; }
+
     }
 }

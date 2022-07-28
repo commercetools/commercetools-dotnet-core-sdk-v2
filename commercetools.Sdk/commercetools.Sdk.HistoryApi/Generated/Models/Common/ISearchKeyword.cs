@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Text { get; set; }
 
         ISuggestTokenizer SuggestTokenizer { get; set; }
+
     }
 }

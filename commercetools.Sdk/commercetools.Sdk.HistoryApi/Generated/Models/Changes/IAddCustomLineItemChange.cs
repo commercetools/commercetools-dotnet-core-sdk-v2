@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ICustomLineItem NextValue { get; set; }
 
         ICustomLineItem PreviousValue { get; set; }
+
     }
 }

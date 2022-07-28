@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeCurrenciesAction : IProjectUpdateAction
     {
         List<string> Currencies { get; set; }
+
     }
 }

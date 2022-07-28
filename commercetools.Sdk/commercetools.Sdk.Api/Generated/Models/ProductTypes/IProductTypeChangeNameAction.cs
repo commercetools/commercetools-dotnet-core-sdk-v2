@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IProductTypeChangeNameAction : IProductTypeUpdateAction
     {
         string Name { get; set; }
+
     }
 }

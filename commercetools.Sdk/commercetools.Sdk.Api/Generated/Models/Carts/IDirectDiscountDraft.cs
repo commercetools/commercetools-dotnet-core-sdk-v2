@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICartDiscountValue Value { get; set; }
 
         ICartDiscountTarget Target { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         string InterfaceText { get; set; }
 
         IStateReference State { get; set; }
+
     }
 }

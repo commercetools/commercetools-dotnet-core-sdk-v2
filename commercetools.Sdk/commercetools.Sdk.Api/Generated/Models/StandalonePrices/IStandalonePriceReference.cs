@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     public partial interface IStandalonePriceReference : IReference
     {
         IStandalonePrice Obj { get; set; }
+
     }
 }

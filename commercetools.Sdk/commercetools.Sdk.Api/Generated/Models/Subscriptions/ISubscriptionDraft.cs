@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         List<IMessageSubscription> Messages { get; set; }
 
         IDeliveryFormat Format { get; set; }
+
     }
 }

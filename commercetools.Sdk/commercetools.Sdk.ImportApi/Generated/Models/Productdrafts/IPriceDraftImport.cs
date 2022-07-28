@@ -29,5 +29,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         List<IPriceTier> Tiers { get; set; }
 
         string Key { get; set; }
+
     }
 }

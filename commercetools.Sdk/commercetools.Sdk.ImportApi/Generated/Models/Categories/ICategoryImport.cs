@@ -30,5 +30,6 @@ namespace commercetools.Sdk.ImportApi.Models.Categories
         List<IAsset> Assets { get; set; }
 
         ICustom Custom { get; set; }
+
     }
 }

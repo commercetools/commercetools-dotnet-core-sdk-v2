@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductRevertedStagedChangesMessage : IMessage
     {
         List<string> RemovedImageUrls { get; set; }
+
     }
 }

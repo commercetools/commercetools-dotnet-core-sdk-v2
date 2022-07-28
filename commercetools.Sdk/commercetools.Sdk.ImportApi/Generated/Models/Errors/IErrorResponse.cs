@@ -16,5 +16,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         string Error_description { get; set; }
 
         List<IErrorObject> Errors { get; set; }
+
     }
 }

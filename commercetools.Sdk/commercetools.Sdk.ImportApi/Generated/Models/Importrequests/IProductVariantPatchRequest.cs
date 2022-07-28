@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IProductVariantPatchRequest : IImportRequest
     {
         List<IProductVariantPatch> Patches { get; set; }
+
     }
 }

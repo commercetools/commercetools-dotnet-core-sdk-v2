@@ -24,5 +24,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         IParcelTrackingData SetParcelTrackingData { get; set; }
 
         List<IParcelItems> SetParcelItems { get; set; }
+
     }
 }

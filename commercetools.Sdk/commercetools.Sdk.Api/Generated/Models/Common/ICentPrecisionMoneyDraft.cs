@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface ICentPrecisionMoneyDraft : ITypedMoneyDraft
     {
         new int? FractionDigits { get; set; }
+
     }
 }

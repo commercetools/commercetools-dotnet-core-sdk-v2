@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         string Key { get; set; }
 
         IReference Customer { get; set; }
+
     }
 }

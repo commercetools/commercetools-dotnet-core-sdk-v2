@@ -20,5 +20,6 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
         string State { get; set; }
 
         List<ISubRate> SubRates { get; set; }
+
     }
 }

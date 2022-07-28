@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         long Quantity { get; set; }
 
         IDiscountedLineItemPrice DiscountedPrice { get; set; }
+
     }
 }

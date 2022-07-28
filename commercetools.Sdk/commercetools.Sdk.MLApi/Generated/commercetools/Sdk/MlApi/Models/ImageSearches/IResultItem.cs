@@ -11,5 +11,6 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearches
         string ImageUrl { get; set; }
 
         List<IProductVariant> ProductVariants { get; set; }
+
     }
 }

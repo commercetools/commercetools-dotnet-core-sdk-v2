@@ -45,5 +45,6 @@ namespace commercetools.Sdk.Api.Models.Products
         bool? Publish { get; set; }
 
         IProductPriceModeEnum PriceMode { get; set; }
+
     }
 }

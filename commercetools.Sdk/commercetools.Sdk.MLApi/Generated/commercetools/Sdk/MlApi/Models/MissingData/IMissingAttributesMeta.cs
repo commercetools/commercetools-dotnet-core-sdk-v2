@@ -12,5 +12,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         IMissingAttributesDetails VariantLevel { get; set; }
 
         List<string> ProductTypeIds { get; set; }
+
     }
 }

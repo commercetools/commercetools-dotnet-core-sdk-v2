@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Zones
     public partial interface IZoneSetDescriptionAction : IZoneUpdateAction
     {
         string Description { get; set; }
+
     }
 }

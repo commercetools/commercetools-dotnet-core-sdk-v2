@@ -11,5 +11,6 @@ namespace commercetools.Sdk.MLApi.Models.Common
         bool Staged { get; set; }
 
         int VariantId { get; set; }
+
     }
 }

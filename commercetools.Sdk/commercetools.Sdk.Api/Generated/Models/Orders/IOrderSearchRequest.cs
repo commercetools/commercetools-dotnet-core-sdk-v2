@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         int? Limit { get; set; }
 
         int? Offset { get; set; }
+
     }
 }

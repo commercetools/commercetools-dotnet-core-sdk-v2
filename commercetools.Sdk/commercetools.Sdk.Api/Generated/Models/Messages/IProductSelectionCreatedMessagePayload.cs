@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductSelectionCreatedMessagePayload : IMessagePayload
     {
         IProductSelectionType ProductSelection { get; set; }
+
     }
 }

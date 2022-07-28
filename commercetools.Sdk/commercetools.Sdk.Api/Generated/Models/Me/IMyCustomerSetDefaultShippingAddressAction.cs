@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string AddressId { get; set; }
 
         string AddressKey { get; set; }
+
     }
 }

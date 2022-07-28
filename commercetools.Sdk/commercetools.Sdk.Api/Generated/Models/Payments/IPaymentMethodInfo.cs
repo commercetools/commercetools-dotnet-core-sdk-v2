@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         string Method { get; set; }
 
         ILocalizedString Name { get; set; }
+
     }
 }

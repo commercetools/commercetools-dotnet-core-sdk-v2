@@ -29,5 +29,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         DateTime? ConflictingValidFrom { get; set; }
 
         DateTime? ConflictingValidUntil { get; set; }
+
     }
 }

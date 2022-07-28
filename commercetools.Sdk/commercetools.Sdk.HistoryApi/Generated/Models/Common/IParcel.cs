@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         ITrackingData TrackingData { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
     }
 }

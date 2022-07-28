@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         string QueueUrl { get; set; }
 
         string Region { get; set; }
+
     }
 }

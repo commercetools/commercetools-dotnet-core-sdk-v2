@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IMoney NextValue { get; set; }
 
         IMoney PreviousValue { get; set; }
+
     }
 }

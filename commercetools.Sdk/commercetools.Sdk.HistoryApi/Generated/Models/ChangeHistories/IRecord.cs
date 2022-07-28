@@ -31,5 +31,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         List<IKeyReference> Stores { get; set; }
 
         bool WithoutChanges { get; set; }
+
     }
 }

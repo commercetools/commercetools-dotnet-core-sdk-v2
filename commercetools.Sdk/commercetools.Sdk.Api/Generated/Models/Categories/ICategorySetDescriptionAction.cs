@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategorySetDescriptionAction : ICategoryUpdateAction
     {
         ILocalizedString Description { get; set; }
+
     }
 }

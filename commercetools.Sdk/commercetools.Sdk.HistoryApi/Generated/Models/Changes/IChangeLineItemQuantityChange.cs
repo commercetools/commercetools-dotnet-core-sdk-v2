@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         int NextValue { get; set; }
 
         int PreviousValue { get; set; }
+
     }
 }

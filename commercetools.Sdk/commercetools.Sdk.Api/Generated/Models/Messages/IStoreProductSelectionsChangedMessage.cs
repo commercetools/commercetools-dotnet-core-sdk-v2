@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<IProductSelectionSetting> RemovedProductSelections { get; set; }
 
         List<IProductSelectionSetting> UpdatedProductSelections { get; set; }
+
     }
 }

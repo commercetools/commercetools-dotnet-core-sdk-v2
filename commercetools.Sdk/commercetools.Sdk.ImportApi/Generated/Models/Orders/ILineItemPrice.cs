@@ -27,5 +27,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         List<IPriceTier> Tiers { get; set; }
 
         ICustom Custom { get; set; }
+
     }
 }

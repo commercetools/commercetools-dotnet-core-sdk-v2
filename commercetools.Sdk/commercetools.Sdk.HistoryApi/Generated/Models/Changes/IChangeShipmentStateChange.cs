@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IShipmentState NextValue { get; set; }
 
         IShipmentState PreviousValue { get; set; }
+
     }
 }

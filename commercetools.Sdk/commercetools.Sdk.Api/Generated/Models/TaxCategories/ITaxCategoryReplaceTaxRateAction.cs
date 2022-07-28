@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         string TaxRateId { get; set; }
 
         ITaxRateDraft TaxRate { get; set; }
+
     }
 }

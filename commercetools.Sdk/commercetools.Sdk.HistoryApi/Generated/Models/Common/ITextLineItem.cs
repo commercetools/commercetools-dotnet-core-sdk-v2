@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         ILocalizedString Name { get; set; }
 
         int Quantity { get; set; }
+
     }
 }

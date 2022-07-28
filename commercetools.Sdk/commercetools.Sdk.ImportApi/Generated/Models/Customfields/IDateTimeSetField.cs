@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IDateTimeSetField : ICustomField
     {
         List<DateTime> Value { get; set; }
+
     }
 }

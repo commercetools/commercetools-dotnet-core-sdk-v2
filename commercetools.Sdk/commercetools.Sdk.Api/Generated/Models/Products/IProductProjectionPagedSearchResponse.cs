@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Products
         List<IProductProjection> Results { get; set; }
 
         IFacetResults Facets { get; set; }
+
     }
 }

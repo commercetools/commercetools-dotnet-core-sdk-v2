@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Types
         new string Id { get; set; }
 
         IType Obj { get; set; }
+
     }
 }

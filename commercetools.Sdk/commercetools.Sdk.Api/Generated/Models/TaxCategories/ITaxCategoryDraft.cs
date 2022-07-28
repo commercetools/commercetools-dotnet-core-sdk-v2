@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         List<ITaxRateDraft> Rates { get; set; }
 
         string Key { get; set; }
+
     }
 }

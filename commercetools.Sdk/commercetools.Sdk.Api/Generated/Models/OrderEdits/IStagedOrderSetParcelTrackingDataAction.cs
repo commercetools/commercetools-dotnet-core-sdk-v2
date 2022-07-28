@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string ParcelId { get; set; }
 
         ITrackingData TrackingData { get; set; }
+
     }
 }

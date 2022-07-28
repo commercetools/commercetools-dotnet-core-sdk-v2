@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<IDeliveryItem> Items { get; set; }
 
         List<IDeliveryItem> OldItems { get; set; }
+
     }
 }

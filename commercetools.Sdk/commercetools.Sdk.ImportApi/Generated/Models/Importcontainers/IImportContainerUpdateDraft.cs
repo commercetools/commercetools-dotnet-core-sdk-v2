@@ -10,5 +10,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
         long Version { get; set; }
 
         IImportResourceType ResourceType { get; set; }
+
     }
 }

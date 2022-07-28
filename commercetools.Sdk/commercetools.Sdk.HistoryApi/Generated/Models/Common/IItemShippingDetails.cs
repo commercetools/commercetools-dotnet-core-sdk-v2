@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         List<IItemShippingTarget> Targets { get; set; }
 
         bool Valid { get; set; }
+
     }
 }

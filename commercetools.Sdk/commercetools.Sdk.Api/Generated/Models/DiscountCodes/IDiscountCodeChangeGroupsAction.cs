@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeChangeGroupsAction : IDiscountCodeUpdateAction
     {
         List<string> Groups { get; set; }
+
     }
 }

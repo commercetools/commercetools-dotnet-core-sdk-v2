@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IReference Target { get; set; }
 
         bool Force { get; set; }
+
     }
 }

@@ -16,5 +16,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
         long Total { get; set; }
 
         List<IImportContainer> Results { get; set; }
+
     }
 }

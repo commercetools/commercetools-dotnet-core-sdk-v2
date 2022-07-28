@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IStateRole> PreviousValue { get; set; }
 
         List<IStateRole> NextValue { get; set; }
+
     }
 }

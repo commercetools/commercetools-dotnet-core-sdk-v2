@@ -19,5 +19,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Slug { get; set; }
 
         int Quantity { get; set; }
+
     }
 }

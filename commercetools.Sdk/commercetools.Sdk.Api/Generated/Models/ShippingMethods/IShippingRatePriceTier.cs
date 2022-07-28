@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,5 +12,24 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     public partial interface IShippingRatePriceTier
     {
         IShippingRateTierType Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.ShippingMethods.CartClassificationTier CartClassification(Action<commercetools.Sdk.Api.Models.ShippingMethods.CartClassificationTier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.CartClassificationTier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.CartScoreTier CartScore(Action<commercetools.Sdk.Api.Models.ShippingMethods.CartScoreTier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.CartScoreTier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.CartValueTier CartValue(Action<commercetools.Sdk.Api.Models.ShippingMethods.CartValueTier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.CartValueTier();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

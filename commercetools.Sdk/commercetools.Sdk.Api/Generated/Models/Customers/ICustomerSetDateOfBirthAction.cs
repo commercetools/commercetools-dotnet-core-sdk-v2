@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetDateOfBirthAction : ICustomerUpdateAction
     {
         DateTime? DateOfBirth { get; set; }
+
     }
 }

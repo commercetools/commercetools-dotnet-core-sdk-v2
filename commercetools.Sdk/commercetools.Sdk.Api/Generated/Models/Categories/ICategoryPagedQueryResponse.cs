@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         long? Total { get; set; }
 
         List<ICategory> Results { get; set; }
+
     }
 }

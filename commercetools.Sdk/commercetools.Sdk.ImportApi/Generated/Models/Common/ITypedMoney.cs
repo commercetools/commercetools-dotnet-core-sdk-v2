@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -16,5 +17,18 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         long CentAmount { get; set; }
 
         string CurrencyCode { get; set; }
+
+        static commercetools.Sdk.ImportApi.Models.Common.Money CentPrecision(Action<commercetools.Sdk.ImportApi.Models.Common.Money> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Common.Money();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Common.HighPrecisionMoney HighPrecision(Action<commercetools.Sdk.ImportApi.Models.Common.HighPrecisionMoney> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Common.HighPrecisionMoney();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

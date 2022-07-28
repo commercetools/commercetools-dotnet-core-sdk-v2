@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         string Description { get; set; }
 
         List<IAttributeDefinitionDraft> Attributes { get; set; }
+
     }
 }

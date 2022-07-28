@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IReferenceSetField : ICustomField
     {
         List<IKeyReference> Value { get; set; }
+
     }
 }

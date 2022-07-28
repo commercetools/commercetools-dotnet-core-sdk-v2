@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.GraphQl
         Object Data { get; set; }
 
         List<IGraphQLError> Errors { get; set; }
+
     }
 }

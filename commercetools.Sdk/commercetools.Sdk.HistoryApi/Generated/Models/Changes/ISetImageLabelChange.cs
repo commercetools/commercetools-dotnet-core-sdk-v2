@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IImage PreviousValue { get; set; }
 
         IImage NextValue { get; set; }
+
     }
 }

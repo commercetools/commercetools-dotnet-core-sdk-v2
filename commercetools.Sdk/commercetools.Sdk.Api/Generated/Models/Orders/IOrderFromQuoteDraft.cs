@@ -21,5 +21,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         IOrderState OrderState { get; set; }
 
         IStateResourceIdentifier State { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentSetCustomerAction : IPaymentUpdateAction
     {
         ICustomerResourceIdentifier Customer { get; set; }
+
     }
 }

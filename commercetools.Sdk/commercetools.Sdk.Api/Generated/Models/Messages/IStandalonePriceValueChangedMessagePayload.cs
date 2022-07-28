@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IStandalonePriceValueChangedMessagePayload : IMessagePayload
     {
         IMoney Value { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         ICustomerGroupReference CustomerGroup { get; set; }
 
         ICustomerGroupReference OldCustomerGroup { get; set; }
+
     }
 }

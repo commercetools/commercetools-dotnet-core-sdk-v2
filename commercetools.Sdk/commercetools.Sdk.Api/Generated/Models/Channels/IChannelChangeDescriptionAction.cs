@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelChangeDescriptionAction : IChannelUpdateAction
     {
         ILocalizedString Description { get; set; }
+
     }
 }

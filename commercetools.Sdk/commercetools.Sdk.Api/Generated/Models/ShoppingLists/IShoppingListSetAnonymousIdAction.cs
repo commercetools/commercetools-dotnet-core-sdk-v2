@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetAnonymousIdAction : IShoppingListUpdateAction
     {
         string AnonymousId { get; set; }
+
     }
 }

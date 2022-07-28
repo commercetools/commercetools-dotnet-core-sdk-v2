@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Common
         IAssetDimensions Dimensions { get; set; }
 
         string ContentType { get; set; }
+
     }
 }

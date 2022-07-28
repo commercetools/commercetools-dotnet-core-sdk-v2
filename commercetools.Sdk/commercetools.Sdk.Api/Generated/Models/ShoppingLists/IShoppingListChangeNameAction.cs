@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListChangeNameAction : IShoppingListUpdateAction
     {
         ILocalizedString Name { get; set; }
+
     }
 }

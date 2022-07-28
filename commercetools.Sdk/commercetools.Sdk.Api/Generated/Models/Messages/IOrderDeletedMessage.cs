@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IOrderDeletedMessage : IOrderMessage
     {
         IOrder Order { get; set; }
+
     }
 }

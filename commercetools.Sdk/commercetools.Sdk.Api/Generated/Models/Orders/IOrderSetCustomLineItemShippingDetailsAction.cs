@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string CustomLineItemId { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

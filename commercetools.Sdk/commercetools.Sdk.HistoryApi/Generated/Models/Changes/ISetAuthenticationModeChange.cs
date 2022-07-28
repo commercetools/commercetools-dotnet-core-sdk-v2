@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IAuthenticationMode PreviousValue { get; set; }
 
         IAuthenticationMode NextValue { get; set; }
+
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string OrderNumber { get; set; }
 
         IOrderField Fields { get; set; }
+
     }
 }

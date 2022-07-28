@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Channels
         long? Total { get; set; }
 
         List<IChannel> Results { get; set; }
+
     }
 }

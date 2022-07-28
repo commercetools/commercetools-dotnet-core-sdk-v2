@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IDuplicateAttributeValuesError : IErrorObject
     {
         List<IAttribute> Attributes { get; set; }
+
     }
 }

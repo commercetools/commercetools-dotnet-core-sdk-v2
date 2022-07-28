@@ -16,5 +16,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         List<IMissingImages> Results { get; set; }
 
         IMissingImagesMeta Meta { get; set; }
+
     }
 }

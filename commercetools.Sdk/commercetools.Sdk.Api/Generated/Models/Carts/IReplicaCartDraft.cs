@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         Object Reference { get; set; }
 
         string Key { get; set; }
+
     }
 }

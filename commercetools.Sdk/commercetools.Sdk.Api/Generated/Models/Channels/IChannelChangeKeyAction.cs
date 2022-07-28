@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     public partial interface IChannelChangeKeyAction : IChannelUpdateAction
     {
         string Key { get; set; }
+
     }
 }

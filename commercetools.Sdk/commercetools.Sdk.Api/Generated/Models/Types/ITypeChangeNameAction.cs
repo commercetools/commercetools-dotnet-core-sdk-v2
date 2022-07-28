@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeChangeNameAction : ITypeUpdateAction
     {
         ILocalizedString Name { get; set; }
+
     }
 }

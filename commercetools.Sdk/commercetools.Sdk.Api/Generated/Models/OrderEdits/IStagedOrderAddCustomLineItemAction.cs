@@ -24,5 +24,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ICustomFieldsDraft Custom { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

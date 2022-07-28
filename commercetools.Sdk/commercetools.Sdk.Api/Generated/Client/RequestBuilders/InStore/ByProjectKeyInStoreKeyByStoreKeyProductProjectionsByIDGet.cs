@@ -7,7 +7,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet, commercetools.Sdk.Api.Models.Products.IProductProjection>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet, commercetools.Sdk.Api.Models.Products.IProductProjection>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>
     {
 
 
@@ -31,9 +31,59 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/product-projections/{ID}";
         }
 
+        public List<string> GetPriceCurrency()
+        {
+            return this.GetQueryParam("priceCurrency");
+        }
+
+        public List<string> GetPriceCountry()
+        {
+            return this.GetQueryParam("priceCountry");
+        }
+
+        public List<string> GetPriceCustomerGroup()
+        {
+            return this.GetQueryParam("priceCustomerGroup");
+        }
+
+        public List<string> GetPriceChannel()
+        {
+            return this.GetQueryParam("priceChannel");
+        }
+
+        public List<string> GetLocaleProjection()
+        {
+            return this.GetQueryParam("localeProjection");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithPriceCurrency(string priceCurrency)
+        {
+            return this.AddQueryParam("priceCurrency", priceCurrency);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithPriceCountry(string priceCountry)
+        {
+            return this.AddQueryParam("priceCountry", priceCountry);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithPriceCustomerGroup(string priceCustomerGroup)
+        {
+            return this.AddQueryParam("priceCustomerGroup", priceCustomerGroup);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithPriceChannel(string priceChannel)
+        {
+            return this.AddQueryParam("priceChannel", priceChannel);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithLocaleProjection(string localeProjection)
+        {
+            return this.AddQueryParam("localeProjection", localeProjection);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithExpand(string expand)

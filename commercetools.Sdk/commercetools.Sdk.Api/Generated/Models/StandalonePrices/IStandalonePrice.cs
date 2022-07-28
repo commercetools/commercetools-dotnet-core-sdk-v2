@@ -45,5 +45,6 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         IDiscountedPrice Discounted { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

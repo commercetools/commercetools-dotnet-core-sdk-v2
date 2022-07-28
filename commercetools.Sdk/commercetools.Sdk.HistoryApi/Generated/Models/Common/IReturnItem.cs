@@ -21,5 +21,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string LastModifiedAt { get; set; }
 
         string CreatedAt { get; set; }
+
     }
 }

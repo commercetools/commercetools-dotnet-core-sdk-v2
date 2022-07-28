@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Types
         string FieldName { get; set; }
 
         List<string> Keys { get; set; }
+
     }
 }

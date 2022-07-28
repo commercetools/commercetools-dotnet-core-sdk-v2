@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Me
         ICustomFieldsDraft Custom { get; set; }
 
         IMyTransactionDraft Transaction { get; set; }
+
     }
 }

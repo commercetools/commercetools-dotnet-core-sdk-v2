@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -21,5 +22,84 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IDiscountCodeUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction ChangeCartDiscounts(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeGroupsAction ChangeGroups(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeGroupsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeGroupsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeIsActiveAction ChangeIsActive(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeIsActiveAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeIsActiveAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCartPredicateAction SetCartPredicate(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCartPredicateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCartPredicateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction SetMaxApplications(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsPerCustomerAction SetMaxApplicationsPerCustomer(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsPerCustomerAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsPerCustomerAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetNameAction SetName(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAction SetValidFrom(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAndUntilAction SetValidFromAndUntil(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAndUntilAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidFromAndUntilAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidUntilAction SetValidUntil(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidUntilAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidUntilAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

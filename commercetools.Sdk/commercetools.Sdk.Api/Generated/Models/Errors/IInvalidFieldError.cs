@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         Object InvalidValue { get; set; }
 
         List<Object> AllowedValues { get; set; }
+
     }
 }

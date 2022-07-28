@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         IChannelResourceIdentifier Channel { get; set; }
 
         IChannelRoleEnum MissingRole { get; set; }
+
     }
 }

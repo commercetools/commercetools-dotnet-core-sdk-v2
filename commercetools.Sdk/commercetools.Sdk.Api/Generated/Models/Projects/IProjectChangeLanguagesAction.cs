@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeLanguagesAction : IProjectUpdateAction
     {
         List<string> Languages { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Products
         bool? Staged { get; set; }
 
         IDiscountedPriceDraft Discounted { get; set; }
+
     }
 }

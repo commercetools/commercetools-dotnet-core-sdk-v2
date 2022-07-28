@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IZoneReference Zone { get; set; }
 
         List<IShippingRate> ShippingRates { get; set; }
+
     }
 }

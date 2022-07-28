@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Common
         DateTime CreatedAt { get; set; }
 
         DateTime LastModifiedAt { get; set; }
+
     }
 }

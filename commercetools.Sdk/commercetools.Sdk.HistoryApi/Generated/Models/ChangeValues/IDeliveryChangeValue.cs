@@ -13,5 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         IAddress Address { get; set; }
 
         List<IParcel> Parcels { get; set; }
+
     }
 }

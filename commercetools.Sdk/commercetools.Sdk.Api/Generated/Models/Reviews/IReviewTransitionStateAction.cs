@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         IStateResourceIdentifier State { get; set; }
 
         bool? Force { get; set; }
+
     }
 }

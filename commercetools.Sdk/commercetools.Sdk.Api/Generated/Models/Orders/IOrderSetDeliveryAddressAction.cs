@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string DeliveryId { get; set; }
 
         IBaseAddress Address { get; set; }
+
     }
 }

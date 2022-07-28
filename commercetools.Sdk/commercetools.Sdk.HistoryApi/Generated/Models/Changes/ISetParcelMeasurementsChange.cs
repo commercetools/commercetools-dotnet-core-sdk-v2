@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IParcelMeasurements NextValue { get; set; }
 
         IParcelMeasurements PreviousValue { get; set; }
+
     }
 }

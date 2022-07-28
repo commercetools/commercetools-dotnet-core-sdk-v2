@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string LineItemId { get; set; }
 
         List<IItemShippingTarget> TargetsDelta { get; set; }
+
     }
 }

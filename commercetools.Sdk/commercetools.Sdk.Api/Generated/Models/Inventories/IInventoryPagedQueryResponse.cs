@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
         long? Total { get; set; }
 
         List<IInventoryEntry> Results { get; set; }
+
     }
 }

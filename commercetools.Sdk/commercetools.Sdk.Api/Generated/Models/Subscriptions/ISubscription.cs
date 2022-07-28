@@ -32,5 +32,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         IDeliveryFormat Format { get; set; }
 
         ISubscriptionHealthStatus Status { get; set; }
+
     }
 }

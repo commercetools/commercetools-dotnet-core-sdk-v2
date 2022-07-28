@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

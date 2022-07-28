@@ -22,5 +22,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
         ITextInputHint InputHint { get; set; }
 
         bool? IsSearchable { get; set; }
+
     }
 }

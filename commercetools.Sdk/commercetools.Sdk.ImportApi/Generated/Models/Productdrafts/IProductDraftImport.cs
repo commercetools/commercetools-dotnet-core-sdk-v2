@@ -38,5 +38,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         bool? Publish { get; set; }
 
         IProductPriceModeEnum PriceMode { get; set; }
+
     }
 }

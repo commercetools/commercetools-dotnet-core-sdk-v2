@@ -26,5 +26,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 
         IShippingMethodState ShippingMethodState { get; set; }
+
     }
 }

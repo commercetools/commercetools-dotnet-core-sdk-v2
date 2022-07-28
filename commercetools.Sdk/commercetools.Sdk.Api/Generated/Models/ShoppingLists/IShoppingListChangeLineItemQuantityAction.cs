@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         string LineItemId { get; set; }
 
         long Quantity { get; set; }
+
     }
 }

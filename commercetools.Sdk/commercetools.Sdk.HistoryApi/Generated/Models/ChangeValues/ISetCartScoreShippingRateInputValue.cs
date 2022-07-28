@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         string Type { get; set; }
 
         int Score { get; set; }
+
     }
 }

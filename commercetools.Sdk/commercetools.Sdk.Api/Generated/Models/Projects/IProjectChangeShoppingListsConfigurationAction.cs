@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeShoppingListsConfigurationAction : IProjectUpdateAction
     {
         IShoppingListsConfiguration ShoppingListsConfiguration { get; set; }
+
     }
 }

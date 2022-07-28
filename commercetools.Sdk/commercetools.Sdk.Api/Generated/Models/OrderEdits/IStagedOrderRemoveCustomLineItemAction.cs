@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderRemoveCustomLineItemAction : IStagedOrderUpdateAction
     {
         string CustomLineItemId { get; set; }
+
     }
 }

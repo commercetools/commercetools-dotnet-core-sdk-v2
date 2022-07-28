@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Me
         long Offset { get; set; }
 
         List<IMyPayment> Results { get; set; }
+
     }
 }

@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         long? Total { get; set; }
 
         List<IAssignedProductSelection> Results { get; set; }
+
     }
 }

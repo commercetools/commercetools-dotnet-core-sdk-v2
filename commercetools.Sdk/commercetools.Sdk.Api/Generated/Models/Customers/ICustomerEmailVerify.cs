@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         long? Version { get; set; }
 
         string TokenValue { get; set; }
+
     }
 }

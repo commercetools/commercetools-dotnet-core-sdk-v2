@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     public partial interface IReferenceExistsError : IErrorObject
     {
         IReferenceTypeId ReferencedBy { get; set; }
+
     }
 }

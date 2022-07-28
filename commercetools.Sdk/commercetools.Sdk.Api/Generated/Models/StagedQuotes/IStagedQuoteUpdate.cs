@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         long Version { get; set; }
 
         List<IStagedQuoteUpdateAction> Actions { get; set; }
+
     }
 }

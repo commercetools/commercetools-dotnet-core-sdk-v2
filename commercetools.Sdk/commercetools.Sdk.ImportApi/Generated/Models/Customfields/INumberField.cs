@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface INumberField : ICustomField
     {
         decimal Value { get; set; }
+
     }
 }

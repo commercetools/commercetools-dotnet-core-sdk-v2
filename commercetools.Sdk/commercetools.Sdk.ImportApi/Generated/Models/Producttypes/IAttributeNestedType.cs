@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     public partial interface IAttributeNestedType : IAttributeType
     {
         IProductTypeKeyReference TypeReference { get; set; }
+
     }
 }

@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IDiscountedLineItemPrice NextValue { get; set; }
 
         IDiscountedLineItemPrice PreviousValue { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

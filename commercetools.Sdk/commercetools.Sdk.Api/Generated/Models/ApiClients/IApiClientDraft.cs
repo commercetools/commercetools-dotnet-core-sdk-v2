@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.ApiClients
         int? AccessTokenValiditySeconds { get; set; }
 
         int? RefreshTokenValiditySeconds { get; set; }
+
     }
 }

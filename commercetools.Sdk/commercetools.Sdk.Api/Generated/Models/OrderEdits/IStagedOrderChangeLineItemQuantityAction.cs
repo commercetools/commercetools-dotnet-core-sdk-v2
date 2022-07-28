@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
+
     }
 }

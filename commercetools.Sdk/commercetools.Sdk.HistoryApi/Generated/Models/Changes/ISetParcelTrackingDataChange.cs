@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ITrackingData NextValue { get; set; }
 
         ITrackingData PreviousValue { get; set; }
+
     }
 }

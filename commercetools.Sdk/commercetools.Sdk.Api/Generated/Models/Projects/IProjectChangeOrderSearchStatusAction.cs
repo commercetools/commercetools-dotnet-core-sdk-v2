@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeOrderSearchStatusAction : IProjectUpdateAction
     {
         IOrderSearchStatus Status { get; set; }
+
     }
 }

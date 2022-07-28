@@ -19,5 +19,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string AssetKey { get; set; }
 
         List<IAssetSource> Sources { get; set; }
+
     }
 }

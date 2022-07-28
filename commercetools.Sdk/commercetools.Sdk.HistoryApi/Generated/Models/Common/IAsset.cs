@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         ICustomFields Custom { get; set; }
 
         string Key { get; set; }
+
     }
 }

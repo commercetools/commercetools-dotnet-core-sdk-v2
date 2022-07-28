@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListSetKeyAction : IShoppingListUpdateAction
     {
         string Key { get; set; }
+
     }
 }

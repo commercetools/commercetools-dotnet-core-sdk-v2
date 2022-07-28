@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         string CurrencyCode { get; set; }
 
         string Function { get; set; }
+
     }
 }

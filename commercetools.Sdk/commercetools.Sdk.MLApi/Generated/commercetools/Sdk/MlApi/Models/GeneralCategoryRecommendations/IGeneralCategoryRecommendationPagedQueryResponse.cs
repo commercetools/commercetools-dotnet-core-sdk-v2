@@ -14,5 +14,6 @@ namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
         long Offset { get; set; }
 
         List<IGeneralCategoryRecommendation> Results { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountChangeValueAction : ICartDiscountUpdateAction
     {
         ICartDiscountValueDraft Value { get; set; }
+
     }
 }

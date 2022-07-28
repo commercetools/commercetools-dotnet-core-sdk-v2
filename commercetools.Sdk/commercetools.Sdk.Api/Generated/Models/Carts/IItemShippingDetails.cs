@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         List<IItemShippingTarget> Targets { get; set; }
 
         bool Valid { get; set; }
+
     }
 }

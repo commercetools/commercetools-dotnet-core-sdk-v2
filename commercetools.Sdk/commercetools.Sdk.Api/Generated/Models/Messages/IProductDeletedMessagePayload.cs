@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         List<string> RemovedImageUrls { get; set; }
 
         IProductProjection CurrentProjection { get; set; }
+
     }
 }

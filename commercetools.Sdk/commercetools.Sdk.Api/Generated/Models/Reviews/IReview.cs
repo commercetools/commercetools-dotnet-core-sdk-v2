@@ -46,5 +46,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         ICustomerReference Customer { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

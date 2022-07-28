@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Stores
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

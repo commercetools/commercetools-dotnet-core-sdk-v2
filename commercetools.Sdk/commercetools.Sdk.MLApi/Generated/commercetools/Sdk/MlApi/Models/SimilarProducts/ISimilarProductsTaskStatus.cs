@@ -13,5 +13,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         DateTime? Expires { get; set; }
 
         ISimilarProductsPagedQueryResult Result { get; set; }
+
     }
 }

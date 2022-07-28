@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Zones
         IZone Obj { get; set; }
 
         new string Id { get; set; }
+
     }
 }

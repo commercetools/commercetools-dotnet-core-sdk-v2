@@ -20,5 +20,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ITaxRate NextValue { get; set; }
 
         ITaxRate PreviousValue { get; set; }
+
     }
 }

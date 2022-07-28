@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         new string Id { get; set; }
 
         new string Key { get; set; }
+
     }
 }

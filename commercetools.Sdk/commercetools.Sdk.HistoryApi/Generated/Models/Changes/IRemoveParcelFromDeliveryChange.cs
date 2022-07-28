@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         string DeliveryId { get; set; }
 
         IParcel PreviousValue { get; set; }
+
     }
 }

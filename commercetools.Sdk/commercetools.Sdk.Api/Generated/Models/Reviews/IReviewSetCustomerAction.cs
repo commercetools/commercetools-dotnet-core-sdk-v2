@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetCustomerAction : IReviewUpdateAction
     {
         ICustomerResourceIdentifier Customer { get; set; }
+
     }
 }

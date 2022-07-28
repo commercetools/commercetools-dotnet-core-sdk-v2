@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface ICartClassificationType : IShippingRateInputType
     {
         List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+
     }
 }

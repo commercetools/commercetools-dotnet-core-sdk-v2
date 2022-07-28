@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Products
         long Count { get; set; }
 
         long? ProductCount { get; set; }
+
     }
 }

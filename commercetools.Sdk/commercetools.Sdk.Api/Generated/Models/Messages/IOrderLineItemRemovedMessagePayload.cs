@@ -25,5 +25,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IPrice NewPrice { get; set; }
 
         IItemShippingDetails NewShippingDetail { get; set; }
+
     }
 }

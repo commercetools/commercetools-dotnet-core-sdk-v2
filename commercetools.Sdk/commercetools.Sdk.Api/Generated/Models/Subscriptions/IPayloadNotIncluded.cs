@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         string Reason { get; set; }
 
         string PayloadType { get; set; }
+
     }
 }

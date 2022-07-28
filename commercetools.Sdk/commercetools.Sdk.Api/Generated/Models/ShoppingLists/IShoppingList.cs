@@ -45,5 +45,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         string AnonymousId { get; set; }
 
         IStoreKeyReference Store { get; set; }
+
     }
 }

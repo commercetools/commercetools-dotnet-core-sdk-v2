@@ -7,5 +7,6 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
     public partial interface IChangeStatusUpdateAction : IImageSearchConfigUpdateAction
     {
         IImageSearchConfigStatus Status { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartRemoveItemShippingAddressAction : ICartUpdateAction
     {
         string AddressKey { get; set; }
+
     }
 }

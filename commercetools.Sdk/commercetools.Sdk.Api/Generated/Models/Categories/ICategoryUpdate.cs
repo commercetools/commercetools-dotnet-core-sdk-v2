@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     {
         new long Version { get; set; }
         new List<ICategoryUpdateAction> Actions { get; set; }
+
     }
 }

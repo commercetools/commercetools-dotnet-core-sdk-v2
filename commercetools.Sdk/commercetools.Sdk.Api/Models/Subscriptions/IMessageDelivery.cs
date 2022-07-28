@@ -4,6 +4,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public partial interface IMessageDelivery : IDeliveryPayload
     {
-        IMessage Message { get; set; }
+        new IMessage Message { get; set; }
     }
 }

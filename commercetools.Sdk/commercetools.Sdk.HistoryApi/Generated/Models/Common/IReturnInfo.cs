@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string ReturnTrackingId { get; set; }
 
         string ReturnDate { get; set; }
+
     }
 }

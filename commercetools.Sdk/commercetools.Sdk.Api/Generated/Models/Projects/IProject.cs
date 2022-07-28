@@ -36,5 +36,6 @@ namespace commercetools.Sdk.Api.Models.Projects
         IExternalOAuth ExternalOAuth { get; set; }
 
         ISearchIndexingConfiguration SearchIndexing { get; set; }
+
     }
 }

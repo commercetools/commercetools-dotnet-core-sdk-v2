@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         ILocalizedString Slug { get; set; }
 
         ILocalizedString Name { get; set; }
+
     }
 }

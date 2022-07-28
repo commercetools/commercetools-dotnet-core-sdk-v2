@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string Id { get; set; }
 
         long Version { get; set; }
+
     }
 }

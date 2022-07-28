@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,5 +14,24 @@ namespace commercetools.Sdk.MLApi.Models.Common
         IReferenceTypeId TypeId { get; set; }
 
         string Id { get; set; }
+
+        static commercetools.Sdk.MLApi.Models.Common.CategoryReference Category(Action<commercetools.Sdk.MLApi.Models.Common.CategoryReference> init = null)
+        {
+            var t = new commercetools.Sdk.MLApi.Models.Common.CategoryReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.MLApi.Models.Common.ProductReference Product(Action<commercetools.Sdk.MLApi.Models.Common.ProductReference> init = null)
+        {
+            var t = new commercetools.Sdk.MLApi.Models.Common.ProductReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.MLApi.Models.Common.ProductTypeReference ProductType(Action<commercetools.Sdk.MLApi.Models.Common.ProductTypeReference> init = null)
+        {
+            var t = new commercetools.Sdk.MLApi.Models.Common.ProductTypeReference();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

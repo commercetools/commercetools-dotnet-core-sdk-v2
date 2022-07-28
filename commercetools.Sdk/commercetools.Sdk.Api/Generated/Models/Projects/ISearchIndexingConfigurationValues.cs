@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Projects
         DateTime? LastModifiedAt { get; set; }
 
         ILastModifiedBy LastModifiedBy { get; set; }
+
     }
 }

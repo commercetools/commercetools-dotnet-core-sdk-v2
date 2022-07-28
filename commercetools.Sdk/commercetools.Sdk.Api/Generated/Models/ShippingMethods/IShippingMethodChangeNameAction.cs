@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     public partial interface IShippingMethodChangeNameAction : IShippingMethodUpdateAction
     {
         string Name { get; set; }
+
     }
 }

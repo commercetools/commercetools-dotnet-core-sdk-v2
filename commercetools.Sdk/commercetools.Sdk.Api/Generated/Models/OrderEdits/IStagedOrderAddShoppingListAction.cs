@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

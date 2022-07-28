@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IPaymentState PaymentState { get; set; }
 
         IPaymentState OldPaymentState { get; set; }
+
     }
 }

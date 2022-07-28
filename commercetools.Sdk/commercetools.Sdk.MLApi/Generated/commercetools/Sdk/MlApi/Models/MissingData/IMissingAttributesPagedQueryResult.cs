@@ -16,5 +16,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         List<IMissingAttributes> Results { get; set; }
 
         IMissingAttributesMeta Meta { get; set; }
+
     }
 }

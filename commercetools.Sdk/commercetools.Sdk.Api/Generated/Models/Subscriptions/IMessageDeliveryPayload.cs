@@ -20,5 +20,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         long ResourceVersion { get; set; }
 
         IPayloadNotIncluded PayloadNotIncluded { get; set; }
+
     }
 }

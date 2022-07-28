@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         long? Total { get; set; }
 
         List<IQuoteRequest> Results { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     public partial interface IReviewSetTargetAction : IReviewUpdateAction
     {
         Object Target { get; set; }
+
     }
 }

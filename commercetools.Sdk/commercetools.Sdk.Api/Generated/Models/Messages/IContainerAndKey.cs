@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string Key { get; set; }
 
         string Container { get; set; }
+
     }
 }

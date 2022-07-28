@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     {
         new long Version { get; set; }
         new List<ITaxCategoryUpdateAction> Actions { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Products
         ICategoryResourceIdentifier Category { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

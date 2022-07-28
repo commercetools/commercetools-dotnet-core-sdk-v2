@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         new string Type { get; set; }
 
         ILocalizedString Value { get; set; }
+
     }
 }

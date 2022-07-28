@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.ApiClients
         long? Total { get; set; }
 
         List<IApiClient> Results { get; set; }
+
     }
 }

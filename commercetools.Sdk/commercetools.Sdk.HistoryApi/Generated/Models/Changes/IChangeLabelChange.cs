@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         ILocalizedString NextValue { get; set; }
 
         ILocalizedString PreviousValue { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeProductSearchIndexingEnabledAction : IProjectUpdateAction
     {
         bool Enabled { get; set; }
+
     }
 }

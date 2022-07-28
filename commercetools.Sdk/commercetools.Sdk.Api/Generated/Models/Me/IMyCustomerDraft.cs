@@ -40,5 +40,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string Locale { get; set; }
 
         List<IStoreResourceIdentifier> Stores { get; set; }
+
     }
 }

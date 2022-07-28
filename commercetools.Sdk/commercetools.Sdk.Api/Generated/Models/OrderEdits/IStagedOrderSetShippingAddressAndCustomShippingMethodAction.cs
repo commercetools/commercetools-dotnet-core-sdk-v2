@@ -20,5 +20,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

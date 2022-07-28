@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string TransactionId { get; set; }
 
         ITransactionState State { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IStateReference State { get; set; }
 
         bool Force { get; set; }
+
     }
 }

@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string Label { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

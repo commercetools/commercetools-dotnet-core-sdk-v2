@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         string AddressKey { get; set; }
 
         IBaseAddress Address { get; set; }
+
     }
 }

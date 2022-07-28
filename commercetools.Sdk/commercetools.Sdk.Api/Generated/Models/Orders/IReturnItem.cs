@@ -28,5 +28,18 @@ namespace commercetools.Sdk.Api.Models.Orders
         DateTime LastModifiedAt { get; set; }
 
         DateTime CreatedAt { get; set; }
+
+        static commercetools.Sdk.Api.Models.Orders.CustomLineItemReturnItem CustomLineItemReturnItem(Action<commercetools.Sdk.Api.Models.Orders.CustomLineItemReturnItem> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.CustomLineItemReturnItem();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.LineItemReturnItem LineItemReturnItem(Action<commercetools.Sdk.Api.Models.Orders.LineItemReturnItem> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.LineItemReturnItem();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         int W { get; set; }
 
         int H { get; set; }
+
     }
 }

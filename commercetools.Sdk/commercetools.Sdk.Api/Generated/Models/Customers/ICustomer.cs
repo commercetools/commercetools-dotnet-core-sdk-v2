@@ -71,5 +71,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         List<IStoreKeyReference> Stores { get; set; }
 
         IAuthenticationMode AuthenticationMode { get; set; }
+
     }
 }

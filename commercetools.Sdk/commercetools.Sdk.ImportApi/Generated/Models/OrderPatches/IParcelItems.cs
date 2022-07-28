@@ -11,5 +11,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         string ParcelId { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
     }
 }

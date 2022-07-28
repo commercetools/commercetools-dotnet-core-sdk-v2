@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IQuoteState NextValue { get; set; }
 
         IQuoteState PreviousValue { get; set; }
+
     }
 }

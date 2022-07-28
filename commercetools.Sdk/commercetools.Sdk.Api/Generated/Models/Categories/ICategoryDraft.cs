@@ -32,5 +32,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         List<IAssetDraft> Assets { get; set; }
 
         string Key { get; set; }
+
     }
 }

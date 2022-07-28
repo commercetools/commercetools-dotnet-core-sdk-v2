@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         ICategoryReference Category { get; set; }
 
         bool Staged { get; set; }
+
     }
 }

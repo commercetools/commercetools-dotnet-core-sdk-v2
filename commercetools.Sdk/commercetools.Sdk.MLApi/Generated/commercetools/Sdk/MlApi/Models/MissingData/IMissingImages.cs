@@ -12,5 +12,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         long VariantId { get; set; }
 
         long ImageCount { get; set; }
+
     }
 }

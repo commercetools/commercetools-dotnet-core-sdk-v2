@@ -68,28 +68,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithId("test_ID")
                    .Get()
-                   .WithLocaleProjection("localeProjection")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products/test_ID?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Get()
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -165,28 +143,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithId("test_ID")
                    .Post(null)
-                   .WithLocaleProjection("localeProjection")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/products/test_ID?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Post(null)
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Post(null)
                    .WithExpand("expand")
                    .Build(),
                    "Post",
@@ -245,28 +201,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Delete",
                    "/test_projectKey/products/test_ID?priceChannel=priceChannel",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithLocaleProjection("localeProjection")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/products/test_ID?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
                },
                new Object[] {
                    ApiRoot

@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Products
         long? AvailableQuantity { get; set; }
 
         IProductVariantChannelAvailabilityMap Channels { get; set; }
+
     }
 }

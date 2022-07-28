@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderAddPaymentAction : IStagedOrderUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }
+
     }
 }

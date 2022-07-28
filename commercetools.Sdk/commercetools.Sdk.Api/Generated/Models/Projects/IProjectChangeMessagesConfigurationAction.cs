@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeMessagesConfigurationAction : IProjectUpdateAction
     {
         IMessagesConfigurationDraft MessagesConfiguration { get; set; }
+
     }
 }

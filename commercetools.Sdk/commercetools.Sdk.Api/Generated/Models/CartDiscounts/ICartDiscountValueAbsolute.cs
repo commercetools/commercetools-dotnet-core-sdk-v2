@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountValueAbsolute : ICartDiscountValue
     {
         List<ICentPrecisionMoney> Money { get; set; }
+
     }
 }

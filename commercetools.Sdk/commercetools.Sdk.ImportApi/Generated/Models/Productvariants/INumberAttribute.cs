@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface INumberAttribute : IAttribute
     {
         decimal Value { get; set; }
+
     }
 }

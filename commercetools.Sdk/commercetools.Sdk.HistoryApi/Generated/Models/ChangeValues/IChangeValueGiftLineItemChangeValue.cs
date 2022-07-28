@@ -16,5 +16,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         IReference SupplyChannel { get; set; }
 
         IReference DistributionChannel { get; set; }
+
     }
 }

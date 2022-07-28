@@ -21,5 +21,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         bool? Publish { get; set; }
 
         IProductKeyReference Product { get; set; }
+
     }
 }

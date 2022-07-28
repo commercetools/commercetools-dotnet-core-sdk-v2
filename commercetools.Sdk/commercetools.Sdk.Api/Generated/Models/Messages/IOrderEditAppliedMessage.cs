@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IOrderEditReference Edit { get; set; }
 
         IOrderEditApplied Result { get; set; }
+
     }
 }

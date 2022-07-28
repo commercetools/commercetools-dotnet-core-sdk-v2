@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
+
     }
 }

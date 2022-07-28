@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IFieldDefinitionOrderValue> PreviousValue { get; set; }
 
         List<IFieldDefinitionOrderValue> NextValue { get; set; }
+
     }
 }

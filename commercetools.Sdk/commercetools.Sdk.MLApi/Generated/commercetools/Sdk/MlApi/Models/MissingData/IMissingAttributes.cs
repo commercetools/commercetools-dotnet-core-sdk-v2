@@ -21,5 +21,6 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         IAttributeCount AttributeCount { get; set; }
 
         IAttributeCoverage AttributeCoverage { get; set; }
+
     }
 }

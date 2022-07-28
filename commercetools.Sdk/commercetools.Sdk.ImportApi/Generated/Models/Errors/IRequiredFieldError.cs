@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
     public partial interface IRequiredFieldError : IErrorObject
     {
         string Field { get; set; }
+
     }
 }

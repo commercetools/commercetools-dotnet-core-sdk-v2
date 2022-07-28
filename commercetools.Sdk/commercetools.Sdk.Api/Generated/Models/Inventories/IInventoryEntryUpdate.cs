@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
     {
         new long Version { get; set; }
         new List<IInventoryEntryUpdateAction> Actions { get; set; }
+
     }
 }

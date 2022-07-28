@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         List<string> LineItems { get; set; }
 
         List<string> Skus { get; set; }
+
     }
 }

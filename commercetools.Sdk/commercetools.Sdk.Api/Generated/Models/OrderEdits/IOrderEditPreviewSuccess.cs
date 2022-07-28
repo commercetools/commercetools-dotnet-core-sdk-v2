@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IStagedOrder Preview { get; set; }
 
         List<IMessagePayload> MessagePayloads { get; set; }
+
     }
 }

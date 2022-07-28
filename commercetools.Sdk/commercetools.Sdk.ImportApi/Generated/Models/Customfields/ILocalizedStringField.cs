@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface ILocalizedStringField : ICustomField
     {
         ILocalizedString Value { get; set; }
+
     }
 }

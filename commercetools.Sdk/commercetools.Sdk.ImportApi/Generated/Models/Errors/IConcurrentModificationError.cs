@@ -12,5 +12,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         long CurrentVersion { get; set; }
 
         Object ConflictedResource { get; set; }
+
     }
 }

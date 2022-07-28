@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         string AttributeName { get; set; }
 
         bool IsSearchable { get; set; }
+
     }
 }

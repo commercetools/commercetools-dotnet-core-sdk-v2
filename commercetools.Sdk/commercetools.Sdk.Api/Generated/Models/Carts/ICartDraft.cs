@@ -61,5 +61,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         List<IBaseAddress> ItemShippingAddresses { get; set; }
 
         List<string> DiscountCodes { get; set; }
+
     }
 }

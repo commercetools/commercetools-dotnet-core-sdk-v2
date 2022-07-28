@@ -52,5 +52,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IStateReference State { get; set; }
 
         IReviewRatingStatistics ReviewRatingStatistics { get; set; }
+
     }
 }

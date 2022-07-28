@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IStringSetField : ICustomField
     {
         List<string> Value { get; set; }
+
     }
 }

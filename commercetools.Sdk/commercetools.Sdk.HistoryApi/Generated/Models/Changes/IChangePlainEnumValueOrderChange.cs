@@ -17,5 +17,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IEnumValue> NextValue { get; set; }
 
         List<IEnumValue> PreviousValue { get; set; }
+
     }
 }

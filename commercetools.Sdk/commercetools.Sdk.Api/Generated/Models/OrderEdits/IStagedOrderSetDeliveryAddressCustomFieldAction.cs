@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }

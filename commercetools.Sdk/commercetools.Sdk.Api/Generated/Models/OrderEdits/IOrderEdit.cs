@@ -34,5 +34,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IOrderEditResult Result { get; set; }
 
         string Comment { get; set; }
+
     }
 }

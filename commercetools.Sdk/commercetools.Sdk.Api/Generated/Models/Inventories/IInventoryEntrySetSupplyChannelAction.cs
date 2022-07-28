@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntrySetSupplyChannelAction : IInventoryEntryUpdateAction
     {
         IChannelResourceIdentifier SupplyChannel { get; set; }
+
     }
 }

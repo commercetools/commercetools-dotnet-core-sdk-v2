@@ -14,5 +14,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         List<IPriceImport> Prices { get; set; }
 
         List<IAttribute> Attributes { get; set; }
+
     }
 }

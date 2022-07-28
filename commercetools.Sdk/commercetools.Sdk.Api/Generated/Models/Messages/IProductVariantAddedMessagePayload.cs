@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IProductVariant Variant { get; set; }
 
         bool Staged { get; set; }
+
     }
 }

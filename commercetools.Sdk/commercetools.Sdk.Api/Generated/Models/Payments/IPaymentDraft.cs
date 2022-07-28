@@ -41,5 +41,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         ICustomFieldsDraft Custom { get; set; }
 
         string Key { get; set; }
+
     }
 }

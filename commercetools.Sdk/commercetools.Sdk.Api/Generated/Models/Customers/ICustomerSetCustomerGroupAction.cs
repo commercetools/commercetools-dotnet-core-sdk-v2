@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetCustomerGroupAction : ICustomerUpdateAction
     {
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+
     }
 }

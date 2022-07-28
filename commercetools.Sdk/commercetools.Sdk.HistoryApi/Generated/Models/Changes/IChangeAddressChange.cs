@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IAddress NextValue { get; set; }
 
         IAddress PreviousValue { get; set; }
+
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface ITextAttribute : IAttribute
     {
         string Value { get; set; }
+
     }
 }

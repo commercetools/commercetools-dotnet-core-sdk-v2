@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -22,5 +23,90 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ITypeUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction AddEnumValue(Action<commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeAddFieldDefinitionAction AddFieldDefinition(Action<commercetools.Sdk.Api.Models.Types.TypeAddFieldDefinitionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeAddFieldDefinitionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeAddLocalizedEnumValueAction AddLocalizedEnumValue(Action<commercetools.Sdk.Api.Models.Types.TypeAddLocalizedEnumValueAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeAddLocalizedEnumValueAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueLabelAction ChangeEnumValueLabel(Action<commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueLabelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueLabelAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueOrderAction ChangeEnumValueOrder(Action<commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeEnumValueOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeFieldDefinitionOrderAction ChangeFieldDefinitionOrder(Action<commercetools.Sdk.Api.Models.Types.TypeChangeFieldDefinitionOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeFieldDefinitionOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeInputHintAction ChangeInputHint(Action<commercetools.Sdk.Api.Models.Types.TypeChangeInputHintAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeInputHintAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeKeyAction ChangeKey(Action<commercetools.Sdk.Api.Models.Types.TypeChangeKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeLabelAction ChangeLabel(Action<commercetools.Sdk.Api.Models.Types.TypeChangeLabelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeLabelAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueLabelAction ChangeLocalizedEnumValueLabel(Action<commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueLabelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueLabelAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction ChangeLocalizedEnumValueOrder(Action<commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.Types.TypeChangeNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction RemoveFieldDefinition(Action<commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

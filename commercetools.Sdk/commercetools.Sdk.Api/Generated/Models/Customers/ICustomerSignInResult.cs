@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         ICustomer Customer { get; set; }
 
         ICart Cart { get; set; }
+
     }
 }

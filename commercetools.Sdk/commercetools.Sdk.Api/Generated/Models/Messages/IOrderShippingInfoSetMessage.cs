@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IShippingInfo ShippingInfo { get; set; }
 
         IShippingInfo OldShippingInfo { get; set; }
+
     }
 }

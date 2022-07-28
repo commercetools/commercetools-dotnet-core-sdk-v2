@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreSetDistributionChannelsAction : IStoreUpdateAction
     {
         List<IChannelResourceIdentifier> DistributionChannels { get; set; }
+
     }
 }

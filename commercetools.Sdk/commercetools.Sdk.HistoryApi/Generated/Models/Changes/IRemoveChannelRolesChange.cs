@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IChannelRole> PreviousValue { get; set; }
 
         List<IChannelRole> NextValue { get; set; }
+
     }
 }

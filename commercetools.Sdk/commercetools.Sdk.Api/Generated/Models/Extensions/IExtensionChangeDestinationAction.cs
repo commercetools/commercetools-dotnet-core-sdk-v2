@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionChangeDestinationAction : IExtensionUpdateAction
     {
         IExtensionDestination Destination { get; set; }
+
     }
 }

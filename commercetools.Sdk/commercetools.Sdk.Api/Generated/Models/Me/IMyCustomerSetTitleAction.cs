@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCustomerSetTitleAction : IMyCustomerUpdateAction
     {
         string Title { get; set; }
+
     }
 }

@@ -13,5 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int WidthInMillimeter { get; set; }
 
         int WeightInGram { get; set; }
+
     }
 }

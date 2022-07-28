@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface ISubscriptionChangeDestinationAction : ISubscriptionUpdateAction
     {
         IDestination Destination { get; set; }
+
     }
 }

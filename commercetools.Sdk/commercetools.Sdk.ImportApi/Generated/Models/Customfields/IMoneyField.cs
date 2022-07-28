@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     public partial interface IMoneyField : ICustomField
     {
         ITypedMoney Value { get; set; }
+
     }
 }

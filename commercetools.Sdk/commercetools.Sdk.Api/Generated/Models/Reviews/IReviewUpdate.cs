@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
     {
         new long Version { get; set; }
         new List<IReviewUpdateAction> Actions { get; set; }
+
     }
 }

@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         IReference Customer { get; set; }
 
         IReference QuoteRequest { get; set; }
+
     }
 }

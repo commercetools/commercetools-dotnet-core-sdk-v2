@@ -17,5 +17,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
         DateTime CreatedAt { get; set; }
 
         DateTime LastModifiedAt { get; set; }
+
     }
 }

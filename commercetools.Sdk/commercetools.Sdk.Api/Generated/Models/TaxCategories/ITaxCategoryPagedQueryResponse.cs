@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         long? Total { get; set; }
 
         List<ITaxCategory> Results { get; set; }
+
     }
 }

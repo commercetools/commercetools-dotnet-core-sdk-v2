@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         string CustomLineItemId { get; set; }
 
         ICustomLineItemPriceMode Mode { get; set; }
+
     }
 }

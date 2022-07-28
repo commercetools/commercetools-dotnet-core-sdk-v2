@@ -11,5 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         int RestockableInDays { get; set; }
 
         int AvailableQuantity { get; set; }
+
     }
 }

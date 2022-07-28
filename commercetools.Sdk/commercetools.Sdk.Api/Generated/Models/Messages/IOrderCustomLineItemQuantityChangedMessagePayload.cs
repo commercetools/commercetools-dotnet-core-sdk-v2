@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         long Quantity { get; set; }
 
         long OldQuantity { get; set; }
+
     }
 }

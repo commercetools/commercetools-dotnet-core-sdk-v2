@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Name { get; set; }
 
         int Amount { get; set; }
+
     }
 }

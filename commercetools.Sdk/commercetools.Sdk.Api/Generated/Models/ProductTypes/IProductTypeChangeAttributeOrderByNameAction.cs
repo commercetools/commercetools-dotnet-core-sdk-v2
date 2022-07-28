@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IProductTypeChangeAttributeOrderByNameAction : IProductTypeUpdateAction
     {
         List<string> AttributeNames { get; set; }
+
     }
 }

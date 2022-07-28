@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Zones
         long? Total { get; set; }
 
         List<IZone> Results { get; set; }
+
     }
 }

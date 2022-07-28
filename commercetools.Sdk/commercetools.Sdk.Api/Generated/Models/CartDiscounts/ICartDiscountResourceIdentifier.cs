@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         new string Id { get; set; }
 
         new string Key { get; set; }
+
     }
 }

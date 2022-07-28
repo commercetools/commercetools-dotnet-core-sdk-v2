@@ -12,5 +12,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         new string Type { get; set; }
 
         IAsset PreviousValue { get; set; }
+
     }
 }

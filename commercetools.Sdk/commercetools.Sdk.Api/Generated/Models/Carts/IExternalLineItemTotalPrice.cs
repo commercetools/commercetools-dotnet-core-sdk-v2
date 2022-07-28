@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IMoney Price { get; set; }
 
         IMoney TotalPrice { get; set; }
+
     }
 }

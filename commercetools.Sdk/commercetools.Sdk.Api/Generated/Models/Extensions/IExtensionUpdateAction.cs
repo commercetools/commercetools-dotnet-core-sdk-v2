@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,30 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IExtensionUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction ChangeDestination(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction ChangeTriggers(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction SetTimeoutInMs(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

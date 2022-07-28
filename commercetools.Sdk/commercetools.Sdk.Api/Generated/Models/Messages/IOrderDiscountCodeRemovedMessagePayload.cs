@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IOrderDiscountCodeRemovedMessagePayload : IOrderMessagePayload
     {
         IDiscountCodeReference DiscountCode { get; set; }
+
     }
 }

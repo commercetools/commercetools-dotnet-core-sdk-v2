@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.Products
         string AssetKey { get; set; }
 
         ILocalizedString Description { get; set; }
+
     }
 }

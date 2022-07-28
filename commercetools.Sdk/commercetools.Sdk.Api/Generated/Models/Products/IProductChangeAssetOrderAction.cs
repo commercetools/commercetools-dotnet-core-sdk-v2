@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Products
         bool? Staged { get; set; }
 
         List<string> AssetOrder { get; set; }
+
     }
 }

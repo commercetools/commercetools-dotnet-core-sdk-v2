@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string ParcelId { get; set; }
 
         List<IDeliveryItem> Items { get; set; }
+
     }
 }

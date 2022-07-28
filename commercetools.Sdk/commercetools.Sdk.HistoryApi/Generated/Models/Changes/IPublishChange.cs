@@ -9,5 +9,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         new string Type { get; set; }
 
         new string Change { get; set; }
+
     }
 }

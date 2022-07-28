@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeCountriesAction : IProjectUpdateAction
     {
         List<string> Countries { get; set; }
+
     }
 }

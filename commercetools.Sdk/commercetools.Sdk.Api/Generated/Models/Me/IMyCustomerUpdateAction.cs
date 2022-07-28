@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -29,5 +30,132 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCustomerUpdateAction
     {
         string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Me.MyCustomerAddAddressAction AddAddress(Action<commercetools.Sdk.Api.Models.Me.MyCustomerAddAddressAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerAddAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerAddBillingAddressIdAction AddBillingAddressId(Action<commercetools.Sdk.Api.Models.Me.MyCustomerAddBillingAddressIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerAddBillingAddressIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerAddShippingAddressIdAction AddShippingAddressId(Action<commercetools.Sdk.Api.Models.Me.MyCustomerAddShippingAddressIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerAddShippingAddressIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerChangeAddressAction ChangeAddress(Action<commercetools.Sdk.Api.Models.Me.MyCustomerChangeAddressAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerChangeAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerChangeEmailAction ChangeEmail(Action<commercetools.Sdk.Api.Models.Me.MyCustomerChangeEmailAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerChangeEmailAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerRemoveAddressAction RemoveAddress(Action<commercetools.Sdk.Api.Models.Me.MyCustomerRemoveAddressAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerRemoveAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerRemoveBillingAddressIdAction RemoveBillingAddressId(Action<commercetools.Sdk.Api.Models.Me.MyCustomerRemoveBillingAddressIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerRemoveBillingAddressIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerRemoveShippingAddressIdAction RemoveShippingAddressId(Action<commercetools.Sdk.Api.Models.Me.MyCustomerRemoveShippingAddressIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerRemoveShippingAddressIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetCompanyNameAction SetCompanyName(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetCompanyNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetCompanyNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetDateOfBirthAction SetDateOfBirth(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetDateOfBirthAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetDateOfBirthAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultBillingAddressAction SetDefaultBillingAddress(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultBillingAddressAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultBillingAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultShippingAddressAction SetDefaultShippingAddress(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultShippingAddressAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetDefaultShippingAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetFirstNameAction SetFirstName(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetFirstNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetFirstNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetLastNameAction SetLastName(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetLastNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetLastNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetLocaleAction SetLocale(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetLocaleAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetLocaleAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetMiddleNameAction SetMiddleName(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetMiddleNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetMiddleNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetSalutationAction SetSalutation(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetSalutationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetSalutationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetTitleAction SetTitle(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetTitleAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetTitleAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCustomerSetVatIdAction SetVatId(Action<commercetools.Sdk.Api.Models.Me.MyCustomerSetVatIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCustomerSetVatIdAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

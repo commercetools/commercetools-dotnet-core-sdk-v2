@@ -10,5 +10,6 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
         IImageSearchConfigStatus Status { get; set; }
 
         DateTime LastModifiedAt { get; set; }
+
     }
 }

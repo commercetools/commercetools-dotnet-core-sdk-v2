@@ -32,5 +32,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         string AnonymousId { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

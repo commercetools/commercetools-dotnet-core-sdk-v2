@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

@@ -45,16 +45,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("priceChannel");
         }
 
-        public List<string> GetLocaleProjection()
-        {
-            return this.GetQueryParam("localeProjection");
-        }
-
-        public List<string> GetStoreProjection()
-        {
-            return this.GetQueryParam("storeProjection");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -103,16 +93,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsGet WithPriceChannel(string priceChannel)
         {
             return this.AddQueryParam("priceChannel", priceChannel);
-        }
-
-        public ByProjectKeyProductsGet WithLocaleProjection(string localeProjection)
-        {
-            return this.AddQueryParam("localeProjection", localeProjection);
-        }
-
-        public ByProjectKeyProductsGet WithStoreProjection(string storeProjection)
-        {
-            return this.AddQueryParam("storeProjection", storeProjection);
         }
 
         public ByProjectKeyProductsGet WithExpand(string expand)

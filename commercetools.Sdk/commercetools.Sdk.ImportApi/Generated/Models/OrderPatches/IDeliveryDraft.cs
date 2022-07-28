@@ -14,5 +14,6 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         IAddress Address { get; set; }
 
         List<IDeliveryParcelDraft> Parcels { get; set; }
+
     }
 }

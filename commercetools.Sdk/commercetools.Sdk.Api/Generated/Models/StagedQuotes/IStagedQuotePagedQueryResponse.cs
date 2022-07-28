@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         long? Total { get; set; }
 
         List<IStagedQuote> Results { get; set; }
+
     }
 }

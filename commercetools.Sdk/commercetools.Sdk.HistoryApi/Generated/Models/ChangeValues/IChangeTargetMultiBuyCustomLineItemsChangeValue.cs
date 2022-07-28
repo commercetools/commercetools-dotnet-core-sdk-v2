@@ -18,5 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         int MaxOccurrence { get; set; }
 
         ISelectionMode SelectionMode { get; set; }
+
     }
 }

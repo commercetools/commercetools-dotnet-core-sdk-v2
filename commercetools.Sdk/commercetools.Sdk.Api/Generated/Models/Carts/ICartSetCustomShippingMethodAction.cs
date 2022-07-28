@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

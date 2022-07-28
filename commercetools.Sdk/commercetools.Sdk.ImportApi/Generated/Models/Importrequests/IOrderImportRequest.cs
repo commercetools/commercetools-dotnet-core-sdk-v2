@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IOrderImportRequest : IImportRequest
     {
         List<IOrderImport> Resources { get; set; }
+
     }
 }

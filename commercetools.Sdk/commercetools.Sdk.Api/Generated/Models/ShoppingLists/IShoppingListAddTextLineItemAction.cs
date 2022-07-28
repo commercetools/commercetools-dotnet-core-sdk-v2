@@ -18,5 +18,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         DateTime? AddedAt { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

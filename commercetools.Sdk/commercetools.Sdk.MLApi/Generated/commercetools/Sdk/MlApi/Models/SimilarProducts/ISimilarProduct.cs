@@ -12,5 +12,6 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
         long? VariantId { get; set; }
 
         ISimilarProductMeta Meta { get; set; }
+
     }
 }

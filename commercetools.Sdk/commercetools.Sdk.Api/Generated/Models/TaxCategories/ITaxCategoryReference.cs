@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         ITaxCategory Obj { get; set; }
 
         new string Id { get; set; }
+
     }
 }

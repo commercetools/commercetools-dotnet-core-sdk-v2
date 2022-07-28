@@ -139,5 +139,660 @@ namespace commercetools.Sdk.Api.Models.Messages
         string Type { get; set; }
 
         IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+
+        static commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage CategoryCreated(Action<commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage CategorySlugChanged(Action<commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage CustomerAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressChangedMessage CustomerAddressChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage CustomerAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessage CustomerCompanyNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage CustomerCreated(Action<commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage CustomerDateOfBirthSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage CustomerDeleted(Action<commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage CustomerEmailChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessage CustomerEmailVerified(Action<commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupSetMessage CustomerGroupSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessage CustomerLastNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage CustomerPasswordUpdated(Action<commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerTitleSetMessage CustomerTitleSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerTitleSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerTitleSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessage CustomLineItemStateTransition(Action<commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryAddedMessage DeliveryAdded(Action<commercetools.Sdk.Api.Models.Messages.DeliveryAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage DeliveryAddressSet(Action<commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessage DeliveryItemsUpdated(Action<commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage DeliveryRemoved(Action<commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage InventoryEntryCreated(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessage InventoryEntryDeleted(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessage InventoryEntryQuantitySet(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessage LineItemStateTransition(Action<commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderBillingAddressSetMessage OrderBillingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.OrderBillingAddressSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderBillingAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCreatedMessage OrderCreated(Action<commercetools.Sdk.Api.Models.Messages.OrderCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage OrderCustomerEmailSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomerGroupSetMessage OrderCustomerGroupSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomerGroupSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomerGroupSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage OrderCustomerSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage OrderCustomLineItemAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemDiscountSetMessage OrderCustomLineItemDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemDiscountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemQuantityChangedMessage OrderCustomLineItemQuantityChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemQuantityChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemQuantityChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage OrderCustomLineItemRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderDeletedMessage OrderDeleted(Action<commercetools.Sdk.Api.Models.Messages.OrderDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeAddedMessage OrderDiscountCodeAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeRemovedMessage OrderDiscountCodeRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeStateSetMessage OrderDiscountCodeStateSet(Action<commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeStateSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeStateSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage OrderEditApplied(Action<commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderImportedMessage OrderImported(Action<commercetools.Sdk.Api.Models.Messages.OrderImportedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderImportedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderLineItemAddedMessage OrderLineItemAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderLineItemAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderLineItemAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderLineItemDiscountSetMessage OrderLineItemDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.OrderLineItemDiscountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderLineItemDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderLineItemDistributionChannelSetMessage OrderLineItemDistributionChannelSet(Action<commercetools.Sdk.Api.Models.Messages.OrderLineItemDistributionChannelSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderLineItemDistributionChannelSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderLineItemRemovedMessage OrderLineItemRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderLineItemRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderLineItemRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessage OrderPaymentAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderPaymentStateChangedMessage OrderPaymentStateChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderPaymentStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderPaymentStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderReturnShipmentStateChangedMessage OrderReturnShipmentStateChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnShipmentStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnShipmentStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderShipmentStateChangedMessage OrderShipmentStateChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderShipmentStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderShipmentStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderShippingAddressSetMessage OrderShippingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.OrderShippingAddressSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderShippingAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderShippingInfoSetMessage OrderShippingInfoSet(Action<commercetools.Sdk.Api.Models.Messages.OrderShippingInfoSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderShippingInfoSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderShippingRateInputSetMessage OrderShippingRateInputSet(Action<commercetools.Sdk.Api.Models.Messages.OrderShippingRateInputSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderShippingRateInputSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderStateChangedMessage OrderStateChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderStateTransitionMessage OrderStateTransition(Action<commercetools.Sdk.Api.Models.Messages.OrderStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderStoreSetMessage OrderStoreSet(Action<commercetools.Sdk.Api.Models.Messages.OrderStoreSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderStoreSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ParcelAddedToDeliveryMessage ParcelAddedToDelivery(Action<commercetools.Sdk.Api.Models.Messages.ParcelAddedToDeliveryMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ParcelAddedToDeliveryMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ParcelItemsUpdatedMessage ParcelItemsUpdated(Action<commercetools.Sdk.Api.Models.Messages.ParcelItemsUpdatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ParcelItemsUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ParcelMeasurementsUpdatedMessage ParcelMeasurementsUpdated(Action<commercetools.Sdk.Api.Models.Messages.ParcelMeasurementsUpdatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ParcelMeasurementsUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ParcelRemovedFromDeliveryMessage ParcelRemovedFromDelivery(Action<commercetools.Sdk.Api.Models.Messages.ParcelRemovedFromDeliveryMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ParcelRemovedFromDeliveryMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ParcelTrackingDataUpdatedMessage ParcelTrackingDataUpdated(Action<commercetools.Sdk.Api.Models.Messages.ParcelTrackingDataUpdatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ParcelTrackingDataUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentCreatedMessage PaymentCreated(Action<commercetools.Sdk.Api.Models.Messages.PaymentCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage PaymentInteractionAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentStatusInterfaceCodeSetMessage PaymentStatusInterfaceCodeSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentStatusInterfaceCodeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentStatusInterfaceCodeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentStatusStateTransitionMessage PaymentStatusStateTransition(Action<commercetools.Sdk.Api.Models.Messages.PaymentStatusStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentStatusStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage PaymentTransactionAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentTransactionStateChangedMessage PaymentTransactionStateChanged(Action<commercetools.Sdk.Api.Models.Messages.PaymentTransactionStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentTransactionStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductAddedToCategoryMessage ProductAddedToCategory(Action<commercetools.Sdk.Api.Models.Messages.ProductAddedToCategoryMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductAddedToCategoryMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductCreatedMessage ProductCreated(Action<commercetools.Sdk.Api.Models.Messages.ProductCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductDeletedMessage ProductDeleted(Action<commercetools.Sdk.Api.Models.Messages.ProductDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessage ProductImageAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage ProductPriceDiscountsSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage ProductPriceExternalDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPublishedMessage ProductPublished(Action<commercetools.Sdk.Api.Models.Messages.ProductPublishedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPublishedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessage ProductRemovedFromCategory(Action<commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessage ProductRevertedStagedChanges(Action<commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessage ProductSelectionCreated(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionDeletedMessage ProductSelectionDeleted(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessage ProductSelectionProductAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessage ProductSelectionProductRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantSelectionChangedMessage ProductSelectionVariantSelectionChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantSelectionChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantSelectionChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSlugChangedMessage ProductSlugChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductSlugChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSlugChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductStateTransitionMessage ProductStateTransition(Action<commercetools.Sdk.Api.Models.Messages.ProductStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessage ProductUnpublished(Action<commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessage ProductVariantAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessage ProductVariantDeleted(Action<commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessage QuoteCreated(Action<commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessage QuoteDeleted(Action<commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessage QuoteRequestCreated(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessage QuoteRequestDeleted(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessage QuoteRequestStateChanged(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage QuoteStateChanged(Action<commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage ReviewCreated(Action<commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage ReviewRatingSet(Action<commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessage ReviewStateTransition(Action<commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteCreatedMessage StagedQuoteCreated(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessage StagedQuoteDeleted(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteSellerCommentSetMessage StagedQuoteSellerCommentSet(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteSellerCommentSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteSellerCommentSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessage StagedQuoteStateChanged(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessage StagedQuoteValidToSet(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceCreatedMessage StandalonePriceCreated(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessage StandalonePriceDeleted(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessage StandalonePriceDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessage StandalonePriceExternalDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessage StandalonePriceValueChanged(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreCreatedMessage StoreCreated(Action<commercetools.Sdk.Api.Models.Messages.StoreCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreDeletedMessage StoreDeleted(Action<commercetools.Sdk.Api.Models.Messages.StoreDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessage StoreDistributionChannelsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage StoreProductSelectionsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntrySetRestockableInDaysAction : IInventoryEntryUpdateAction
     {
         long? RestockableInDays { get; set; }
+
     }
 }

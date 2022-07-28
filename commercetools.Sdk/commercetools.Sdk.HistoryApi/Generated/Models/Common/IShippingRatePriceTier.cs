@@ -7,5 +7,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     public partial interface IShippingRatePriceTier
     {
         IShippingRateTierType Type { get; set; }
+
     }
 }

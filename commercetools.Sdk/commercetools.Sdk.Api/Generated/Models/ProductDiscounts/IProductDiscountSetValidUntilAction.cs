@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     public partial interface IProductDiscountSetValidUntilAction : IProductDiscountUpdateAction
     {
         DateTime? ValidUntil { get; set; }
+
     }
 }

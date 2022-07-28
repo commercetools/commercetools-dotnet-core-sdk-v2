@@ -31,5 +31,6 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         string Predicate { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

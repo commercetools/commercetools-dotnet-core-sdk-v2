@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectSetShippingRateInputTypeAction : IProjectUpdateAction
     {
         IShippingRateInputType ShippingRateInputType { get; set; }
+
     }
 }

@@ -13,5 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
         string LastName { get; set; }
 
         string CustomerNumber { get; set; }
+
     }
 }

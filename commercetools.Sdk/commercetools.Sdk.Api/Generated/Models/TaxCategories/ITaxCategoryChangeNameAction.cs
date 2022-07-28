@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     public partial interface ITaxCategoryChangeNameAction : ITaxCategoryUpdateAction
     {
         string Name { get; set; }
+
     }
 }

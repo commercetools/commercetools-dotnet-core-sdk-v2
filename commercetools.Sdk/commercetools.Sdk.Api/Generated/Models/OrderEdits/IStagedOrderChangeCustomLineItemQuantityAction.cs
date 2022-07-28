@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string CustomLineItemId { get; set; }
 
         long Quantity { get; set; }
+
     }
 }

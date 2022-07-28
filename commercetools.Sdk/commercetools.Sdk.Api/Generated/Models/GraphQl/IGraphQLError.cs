@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.GraphQl
         List<IGraphQLErrorLocation> Locations { get; set; }
 
         List<Object> Path { get; set; }
+
     }
 }

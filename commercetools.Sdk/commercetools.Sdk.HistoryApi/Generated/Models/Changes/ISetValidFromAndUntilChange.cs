@@ -14,5 +14,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IValidFromAndUntilValue PreviousValue { get; set; }
 
         IValidFromAndUntilValue NextValue { get; set; }
+
     }
 }

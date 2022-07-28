@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IStateReference OldState { get; set; }
 
         bool Force { get; set; }
+
     }
 }

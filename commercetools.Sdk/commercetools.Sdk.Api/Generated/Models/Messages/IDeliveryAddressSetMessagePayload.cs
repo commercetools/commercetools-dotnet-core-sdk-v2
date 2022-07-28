@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IAddress Address { get; set; }
 
         IAddress OldAddress { get; set; }
+
     }
 }

@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeChangeFieldDefinitionOrderAction : ITypeUpdateAction
     {
         List<string> FieldNames { get; set; }
+
     }
 }

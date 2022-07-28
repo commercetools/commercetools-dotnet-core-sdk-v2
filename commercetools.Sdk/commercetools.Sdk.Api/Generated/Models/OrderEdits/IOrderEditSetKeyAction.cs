@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IOrderEditSetKeyAction : IOrderEditUpdateAction
     {
         string Key { get; set; }
+
     }
 }

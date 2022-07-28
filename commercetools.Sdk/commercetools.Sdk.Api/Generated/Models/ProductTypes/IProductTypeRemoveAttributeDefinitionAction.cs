@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IProductTypeRemoveAttributeDefinitionAction : IProductTypeUpdateAction
     {
         string Name { get; set; }
+
     }
 }

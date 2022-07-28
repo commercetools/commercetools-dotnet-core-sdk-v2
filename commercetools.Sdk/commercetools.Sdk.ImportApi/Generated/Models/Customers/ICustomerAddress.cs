@@ -53,5 +53,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
     }
 }

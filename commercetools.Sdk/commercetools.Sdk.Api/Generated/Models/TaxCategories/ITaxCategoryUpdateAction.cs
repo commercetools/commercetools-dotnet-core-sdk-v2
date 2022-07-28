@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,5 +15,42 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     public partial interface ITaxCategoryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ITaxCategoryUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction AddTaxRate(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryChangeNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryRemoveTaxRateAction RemoveTaxRate(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryRemoveTaxRateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryRemoveTaxRateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReplaceTaxRateAction ReplaceTaxRate(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReplaceTaxRateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReplaceTaxRateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

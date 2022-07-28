@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Stores
     public partial interface IStoreRemoveDistributionChannelAction : IStoreUpdateAction
     {
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

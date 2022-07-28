@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeRemoveFieldDefinitionAction : ITypeUpdateAction
     {
         string FieldName { get; set; }
+
     }
 }

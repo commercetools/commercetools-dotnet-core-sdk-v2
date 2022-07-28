@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IImage Image { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

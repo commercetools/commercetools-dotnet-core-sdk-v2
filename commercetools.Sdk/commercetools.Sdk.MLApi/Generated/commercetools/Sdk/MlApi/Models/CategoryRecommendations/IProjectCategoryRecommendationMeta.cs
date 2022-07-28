@@ -12,5 +12,6 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
         string ProductImageUrl { get; set; }
 
         List<string> GeneralCategoryNames { get; set; }
+
     }
 }

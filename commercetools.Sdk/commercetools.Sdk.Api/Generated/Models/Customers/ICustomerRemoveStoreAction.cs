@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerRemoveStoreAction : ICustomerUpdateAction
     {
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

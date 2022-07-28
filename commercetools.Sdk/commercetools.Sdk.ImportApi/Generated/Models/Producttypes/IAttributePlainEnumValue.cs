@@ -9,5 +9,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
         string Key { get; set; }
 
         string Label { get; set; }
+
     }
 }

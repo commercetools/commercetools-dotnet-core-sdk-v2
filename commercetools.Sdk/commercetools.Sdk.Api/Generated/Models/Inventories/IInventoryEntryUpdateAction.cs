@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -17,5 +18,60 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IInventoryEntryUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntryAddQuantityAction AddQuantity(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryAddQuantityAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntryAddQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntryChangeQuantityAction ChangeQuantity(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryChangeQuantityAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntryChangeQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntryRemoveQuantityAction RemoveQuantity(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryRemoveQuantityAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntryRemoveQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction SetExpectedDelivery(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction SetRestockableInDays(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction SetSupplyChannel(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

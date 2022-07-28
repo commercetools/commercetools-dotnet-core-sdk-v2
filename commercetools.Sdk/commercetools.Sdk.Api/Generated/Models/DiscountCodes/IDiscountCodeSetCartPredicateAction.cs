@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     public partial interface IDiscountCodeSetCartPredicateAction : IDiscountCodeUpdateAction
     {
         string CartPredicate { get; set; }
+
     }
 }

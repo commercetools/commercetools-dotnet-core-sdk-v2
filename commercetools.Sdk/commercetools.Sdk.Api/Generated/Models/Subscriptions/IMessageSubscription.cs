@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         string ResourceTypeId { get; set; }
 
         List<string> Types { get; set; }
+
     }
 }

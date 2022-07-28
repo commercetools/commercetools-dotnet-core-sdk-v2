@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionChangeTriggersAction : IExtensionUpdateAction
     {
         List<IExtensionTrigger> Triggers { get; set; }
+
     }
 }

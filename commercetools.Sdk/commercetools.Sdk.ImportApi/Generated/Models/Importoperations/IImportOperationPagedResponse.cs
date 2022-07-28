@@ -16,5 +16,6 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
         long Total { get; set; }
 
         List<IImportOperation> Results { get; set; }
+
     }
 }

@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.GraphQl
         string OperationName { get; set; }
 
         IGraphQLVariablesMap Variables { get; set; }
+
     }
 }

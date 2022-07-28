@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountCustomLineItemsTarget : ICartDiscountTarget
     {
         string Predicate { get; set; }
+
     }
 }

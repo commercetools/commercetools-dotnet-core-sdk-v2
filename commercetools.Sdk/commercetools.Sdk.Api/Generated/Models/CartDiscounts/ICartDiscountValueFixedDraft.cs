@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountValueFixedDraft : ICartDiscountValueDraft
     {
         List<IMoney> Money { get; set; }
+
     }
 }

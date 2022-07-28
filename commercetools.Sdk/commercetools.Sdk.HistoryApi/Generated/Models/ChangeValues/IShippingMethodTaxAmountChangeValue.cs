@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         ITaxedPrice TaxedPrice { get; set; }
 
         ITaxRate TaxRate { get; set; }
+
     }
 }

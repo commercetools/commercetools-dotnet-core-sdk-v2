@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntryChangeQuantityAction : IInventoryEntryUpdateAction
     {
         long Quantity { get; set; }
+
     }
 }

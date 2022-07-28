@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         long Offset { get; set; }
 
         List<IReview> Results { get; set; }
+
     }
 }

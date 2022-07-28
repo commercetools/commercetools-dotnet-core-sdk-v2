@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentSetStatusInterfaceCodeAction : IPaymentUpdateAction
     {
         string InterfaceCode { get; set; }
+
     }
 }

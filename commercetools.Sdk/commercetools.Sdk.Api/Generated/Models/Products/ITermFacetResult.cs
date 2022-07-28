@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.Products
         long Total { get; set; }
 
         long Other { get; set; }
+        new List<IFacetTerm> Terms { get; set; }
 
-        List<IFacetTerm> Terms { get; set; }
     }
 }

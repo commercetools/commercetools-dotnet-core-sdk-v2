@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetSalutationAction : ICustomerUpdateAction
     {
         string Salutation { get; set; }
+
     }
 }

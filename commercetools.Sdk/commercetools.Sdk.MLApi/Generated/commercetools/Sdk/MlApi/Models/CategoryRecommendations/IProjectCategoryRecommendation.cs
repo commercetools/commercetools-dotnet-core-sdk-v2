@@ -12,5 +12,6 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
         decimal Confidence { get; set; }
 
         string Path { get; set; }
+
     }
 }

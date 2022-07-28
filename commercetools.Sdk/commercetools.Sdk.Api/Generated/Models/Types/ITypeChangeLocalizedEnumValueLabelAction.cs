@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Types
         string FieldName { get; set; }
 
         ICustomFieldLocalizedEnumValue Value { get; set; }
+
     }
 }

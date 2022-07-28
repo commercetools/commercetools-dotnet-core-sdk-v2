@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Common
         new string Id { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

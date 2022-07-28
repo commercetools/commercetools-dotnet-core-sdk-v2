@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyPaymentSetMethodInfoMethodAction : IMyPaymentUpdateAction
     {
         string Method { get; set; }
+
     }
 }

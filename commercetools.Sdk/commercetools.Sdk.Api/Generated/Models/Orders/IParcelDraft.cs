@@ -15,5 +15,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         List<IDeliveryItem> Items { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

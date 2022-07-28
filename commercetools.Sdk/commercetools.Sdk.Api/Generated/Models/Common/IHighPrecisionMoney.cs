@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Common
         long PreciseAmount { get; set; }
 
         new int FractionDigits { get; set; }
+
     }
 }

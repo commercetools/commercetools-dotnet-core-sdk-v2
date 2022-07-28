@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,5 +13,30 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IOrderEditResult
     {
         string Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.OrderEdits.OrderEditApplied Applied(Action<commercetools.Sdk.Api.Models.OrderEdits.OrderEditApplied> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.OrderEditApplied();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.OrderEditNotProcessed NotProcessed(Action<commercetools.Sdk.Api.Models.OrderEdits.OrderEditNotProcessed> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.OrderEditNotProcessed();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewFailure PreviewFailure(Action<commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewFailure> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewFailure();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewSuccess PreviewSuccess(Action<commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewSuccess> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewSuccess();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

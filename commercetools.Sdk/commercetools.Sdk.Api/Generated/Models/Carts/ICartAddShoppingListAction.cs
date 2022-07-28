@@ -13,5 +13,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

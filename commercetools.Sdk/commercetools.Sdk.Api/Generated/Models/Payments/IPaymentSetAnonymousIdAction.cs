@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Payments
     public partial interface IPaymentSetAnonymousIdAction : IPaymentUpdateAction
     {
         string AnonymousId { get; set; }
+
     }
 }

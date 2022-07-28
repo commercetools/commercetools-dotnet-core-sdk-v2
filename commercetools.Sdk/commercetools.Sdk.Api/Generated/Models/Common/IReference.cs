@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -38,5 +39,174 @@ namespace commercetools.Sdk.Api.Models.Common
         IReferenceTypeId TypeId { get; set; }
 
         string Id { get; set; }
+
+        static commercetools.Sdk.Api.Models.Carts.CartReference Cart(Action<commercetools.Sdk.Api.Models.Carts.CartReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountReference CartDiscount(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryReference Category(Action<commercetools.Sdk.Api.Models.Categories.CategoryReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Channels.ChannelReference Channel(Action<commercetools.Sdk.Api.Models.Channels.ChannelReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Channels.ChannelReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Customers.CustomerReference Customer(Action<commercetools.Sdk.Api.Models.Customers.CustomerReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Customers.CustomerReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference CustomerGroup(Action<commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference DiscountCode(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference InventoryEntry(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference KeyValueDocument(Action<commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.OrderReference Order(Action<commercetools.Sdk.Api.Models.Orders.OrderReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.OrderReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.OrderEditReference OrderEdit(Action<commercetools.Sdk.Api.Models.OrderEdits.OrderEditReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.OrderEditReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentReference Payment(Action<commercetools.Sdk.Api.Models.Payments.PaymentReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Products.ProductReference Product(Action<commercetools.Sdk.Api.Models.Products.ProductReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.ProductReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountReference ProductDiscount(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference ProductSelection(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference ProductType(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Quotes.QuoteReference Quote(Action<commercetools.Sdk.Api.Models.Quotes.QuoteReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Quotes.QuoteReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference QuoteRequest(Action<commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Reviews.ReviewReference Review(Action<commercetools.Sdk.Api.Models.Reviews.ReviewReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Reviews.ReviewReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference ShippingMethod(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference ShoppingList(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteReference StagedQuote(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference StandalonePrice(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.States.StateReference State(Action<commercetools.Sdk.Api.Models.States.StateReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.States.StateReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreReference Store(Action<commercetools.Sdk.Api.Models.Stores.StoreReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference TaxCategory(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Types.TypeReference Type(Action<commercetools.Sdk.Api.Models.Types.TypeReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Types.TypeReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Zones.ZoneReference Zone(Action<commercetools.Sdk.Api.Models.Zones.ZoneReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Zones.ZoneReference();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

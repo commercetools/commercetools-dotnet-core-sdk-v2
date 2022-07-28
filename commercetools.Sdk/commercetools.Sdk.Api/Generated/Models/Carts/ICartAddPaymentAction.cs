@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartAddPaymentAction : ICartUpdateAction
     {
         IPaymentResourceIdentifier Payment { get; set; }
+
     }
 }

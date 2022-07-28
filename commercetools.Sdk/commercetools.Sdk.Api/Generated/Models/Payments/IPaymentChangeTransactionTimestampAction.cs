@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         string TransactionId { get; set; }
 
         DateTime Timestamp { get; set; }
+
     }
 }

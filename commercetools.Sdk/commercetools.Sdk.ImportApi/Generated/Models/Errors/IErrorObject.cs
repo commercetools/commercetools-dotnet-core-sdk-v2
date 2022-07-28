@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -32,5 +33,138 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         string Code { get; set; }
 
         string Message { get; set; }
+
+        static commercetools.Sdk.ImportApi.Models.Errors.AccessDeniedError AccessDenied(Action<commercetools.Sdk.ImportApi.Models.Errors.AccessDeniedError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.AccessDeniedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.ImportApi.Models.Errors.ConcurrentModificationError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ContentionError Contention(Action<commercetools.Sdk.ImportApi.Models.Errors.ContentionError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ContentionError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValueError DuplicateAttributeValue(Action<commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValueError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValueError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValuesError DuplicateAttributeValues(Action<commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValuesError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValuesError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.DuplicateFieldError DuplicateField(Action<commercetools.Sdk.ImportApi.Models.Errors.DuplicateFieldError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.DuplicateFieldError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.DuplicateVariantValuesError DuplicateVariantValues(Action<commercetools.Sdk.ImportApi.Models.Errors.DuplicateVariantValuesError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.DuplicateVariantValuesError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.GenericError Generic(Action<commercetools.Sdk.ImportApi.Models.Errors.GenericError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.GenericError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InsufficientScopeError InsufficientScope(Action<commercetools.Sdk.ImportApi.Models.Errors.InsufficientScopeError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InsufficientScopeError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidScopeError InvalidScope(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidScopeError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidScopeError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidTokenError InvalidToken(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidTokenError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidTokenError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidCredentialsError InvalidCredentials(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidCredentialsError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidCredentialsError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError InvalidField(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidInput InvalidInput(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidInput> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidInput();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidJsonInput InvalidJsonInput(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidJsonInput> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidJsonInput();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation InvalidOperation(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError InvalidTransition(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.RequiredFieldError RequiredField(Action<commercetools.Sdk.ImportApi.Models.Errors.RequiredFieldError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.RequiredFieldError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError ResourceCreation(Action<commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ResourceDeletionError ResourceDeletion(Action<commercetools.Sdk.ImportApi.Models.Errors.ResourceDeletionError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ResourceDeletionError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ResourceNotFoundError ResourceNotFound(Action<commercetools.Sdk.ImportApi.Models.Errors.ResourceNotFoundError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ResourceNotFoundError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ResourceUpdateError ResourceUpdate(Action<commercetools.Sdk.ImportApi.Models.Errors.ResourceUpdateError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ResourceUpdateError();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

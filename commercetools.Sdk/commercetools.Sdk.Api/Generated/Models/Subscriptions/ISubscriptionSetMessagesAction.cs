@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     public partial interface ISubscriptionSetMessagesAction : ISubscriptionUpdateAction
     {
         List<IMessageSubscription> Messages { get; set; }
+
     }
 }

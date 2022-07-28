@@ -12,5 +12,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         IImage Image { get; set; }
 
         bool Staged { get; set; }
+
     }
 }

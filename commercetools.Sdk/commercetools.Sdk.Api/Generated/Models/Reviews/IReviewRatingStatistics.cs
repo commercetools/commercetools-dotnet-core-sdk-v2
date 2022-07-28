@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Reviews
         int Count { get; set; }
 
         Object RatingsDistribution { get; set; }
+
     }
 }

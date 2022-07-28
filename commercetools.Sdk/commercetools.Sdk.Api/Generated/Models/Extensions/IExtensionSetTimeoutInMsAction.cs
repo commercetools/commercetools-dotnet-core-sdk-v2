@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionSetTimeoutInMsAction : IExtensionUpdateAction
     {
         int? TimeoutInMs { get; set; }
+
     }
 }

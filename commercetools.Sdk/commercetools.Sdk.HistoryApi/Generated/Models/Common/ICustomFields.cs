@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IReference Type { get; set; }
 
         Object Fields { get; set; }
+
     }
 }

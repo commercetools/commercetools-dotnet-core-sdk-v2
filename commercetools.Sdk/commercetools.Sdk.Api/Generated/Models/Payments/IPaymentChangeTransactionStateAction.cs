@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Payments
         string TransactionId { get; set; }
 
         ITransactionState State { get; set; }
+
     }
 }

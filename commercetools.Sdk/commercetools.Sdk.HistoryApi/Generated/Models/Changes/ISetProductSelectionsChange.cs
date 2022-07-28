@@ -15,5 +15,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         List<IProductSelectionSetting> PreviousValue { get; set; }
 
         List<IProductSelectionSetting> NextValue { get; set; }
+
     }
 }

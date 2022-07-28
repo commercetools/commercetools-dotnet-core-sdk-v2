@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategorySetMetaTitleAction : ICategoryUpdateAction
     {
         ILocalizedString MetaTitle { get; set; }
+
     }
 }

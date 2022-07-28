@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Channels
     {
         new long Version { get; set; }
         new List<IChannelUpdateAction> Actions { get; set; }
+
     }
 }

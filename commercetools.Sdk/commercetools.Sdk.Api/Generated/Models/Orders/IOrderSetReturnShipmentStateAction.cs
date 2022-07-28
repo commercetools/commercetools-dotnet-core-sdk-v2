@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         string ReturnItemId { get; set; }
 
         IReturnShipmentState ShipmentState { get; set; }
+
     }
 }

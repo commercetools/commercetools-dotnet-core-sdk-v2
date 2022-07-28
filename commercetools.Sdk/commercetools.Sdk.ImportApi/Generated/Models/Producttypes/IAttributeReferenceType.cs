@@ -8,5 +8,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     public partial interface IAttributeReferenceType : IAttributeType
     {
         IReferenceType ReferenceTypeId { get; set; }
+
     }
 }

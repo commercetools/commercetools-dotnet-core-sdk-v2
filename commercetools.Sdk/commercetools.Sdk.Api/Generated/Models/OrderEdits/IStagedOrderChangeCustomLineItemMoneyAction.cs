@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string CustomLineItemId { get; set; }
 
         IMoney Money { get; set; }
+
     }
 }

@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Extensions
         List<IExtensionTrigger> Triggers { get; set; }
 
         int? TimeoutInMs { get; set; }
+
     }
 }

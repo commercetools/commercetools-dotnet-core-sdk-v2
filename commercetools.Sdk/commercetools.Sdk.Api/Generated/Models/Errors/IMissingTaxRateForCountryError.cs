@@ -11,5 +11,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         string Country { get; set; }
 
         string State { get; set; }
+
     }
 }

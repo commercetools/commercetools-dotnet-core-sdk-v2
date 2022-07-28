@@ -9,5 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IOrderEditSetStagedActionsAction : IOrderEditUpdateAction
     {
         List<IStagedOrderUpdateAction> StagedActions { get; set; }
+
     }
 }

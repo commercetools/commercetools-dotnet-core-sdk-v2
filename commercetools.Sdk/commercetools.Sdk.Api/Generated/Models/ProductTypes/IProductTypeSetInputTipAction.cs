@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         string AttributeName { get; set; }
 
         ILocalizedString InputTip { get; set; }
+
     }
 }

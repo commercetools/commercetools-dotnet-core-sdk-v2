@@ -9,5 +9,6 @@ namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
         string CategoryName { get; set; }
 
         decimal Confidence { get; set; }
+
     }
 }

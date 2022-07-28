@@ -8,5 +8,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     public partial interface IPaymentInfo
     {
         List<IReference> Payments { get; set; }
+
     }
 }

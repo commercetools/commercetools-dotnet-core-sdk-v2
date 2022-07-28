@@ -10,5 +10,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         string Sku { get; set; }
 
         IChannelReference SupplyChannel { get; set; }
+
     }
 }

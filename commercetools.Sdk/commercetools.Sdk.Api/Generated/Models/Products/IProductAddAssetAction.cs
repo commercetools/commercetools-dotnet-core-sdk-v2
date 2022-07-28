@@ -16,5 +16,6 @@ namespace commercetools.Sdk.Api.Models.Products
         IAssetDraft Asset { get; set; }
 
         int? Position { get; set; }
+
     }
 }

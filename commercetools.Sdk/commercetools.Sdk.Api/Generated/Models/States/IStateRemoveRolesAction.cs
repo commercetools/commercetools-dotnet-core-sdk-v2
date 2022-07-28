@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.States
     public partial interface IStateRemoveRolesAction : IStateUpdateAction
     {
         List<IStateRoleEnum> Roles { get; set; }
+
     }
 }

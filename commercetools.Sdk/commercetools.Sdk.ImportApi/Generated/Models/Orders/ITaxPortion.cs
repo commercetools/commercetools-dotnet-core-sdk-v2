@@ -12,5 +12,6 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         decimal Rate { get; set; }
 
         ITypedMoney Amount { get; set; }
+
     }
 }

@@ -10,5 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         IMoney Value { get; set; }
 
         List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+
     }
 }

@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Orders
         long? Limit { get; set; }
 
         List<IHit> Hits { get; set; }
+
     }
 }

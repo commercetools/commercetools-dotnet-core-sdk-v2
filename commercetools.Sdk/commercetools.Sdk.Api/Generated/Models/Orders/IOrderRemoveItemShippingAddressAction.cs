@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderRemoveItemShippingAddressAction : IOrderUpdateAction
     {
         string AddressKey { get; set; }
+
     }
 }

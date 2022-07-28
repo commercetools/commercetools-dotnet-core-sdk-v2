@@ -9,5 +9,6 @@ namespace commercetools.Sdk.MLApi.Models.Common
         string TaskId { get; set; }
 
         string UriPath { get; set; }
+
     }
 }

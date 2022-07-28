@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     public partial interface ICartAddItemShippingAddressAction : ICartUpdateAction
     {
         IBaseAddress Address { get; set; }
+
     }
 }

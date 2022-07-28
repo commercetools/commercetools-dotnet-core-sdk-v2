@@ -22,5 +22,6 @@ namespace commercetools.Sdk.Api.Models.Channels
         ICustomFieldsDraft Custom { get; set; }
 
         IGeoJson GeoLocation { get; set; }
+
     }
 }

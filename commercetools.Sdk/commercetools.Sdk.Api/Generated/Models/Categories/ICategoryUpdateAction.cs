@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -30,5 +31,138 @@ namespace commercetools.Sdk.Api.Models.Categories
     public partial interface ICategoryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICategoryUpdateAction>
     {
         new string Action { get; set; }
+
+        static commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction AddAsset(Action<commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetNameAction ChangeAssetName(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetOrderAction ChangeAssetOrder(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeNameAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeOrderHintAction ChangeOrderHint(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeOrderHintAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeOrderHintAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeParentAction ChangeParent(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeParentAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeParentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryChangeSlugAction ChangeSlug(Action<commercetools.Sdk.Api.Models.Categories.CategoryChangeSlugAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryChangeSlugAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryRemoveAssetAction RemoveAsset(Action<commercetools.Sdk.Api.Models.Categories.CategoryRemoveAssetAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryRemoveAssetAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomFieldAction SetAssetCustomField(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomTypeAction SetAssetCustomType(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetDescriptionAction SetAssetDescription(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetKeyAction SetAssetKey(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetSourcesAction SetAssetSources(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetSourcesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetSourcesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetAssetTagsAction SetAssetTags(Action<commercetools.Sdk.Api.Models.Categories.CategorySetAssetTagsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetAssetTagsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.Categories.CategorySetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.Categories.CategorySetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.Categories.CategorySetDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetExternalIdAction SetExternalId(Action<commercetools.Sdk.Api.Models.Categories.CategorySetExternalIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetExternalIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.Categories.CategorySetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetMetaDescriptionAction SetMetaDescription(Action<commercetools.Sdk.Api.Models.Categories.CategorySetMetaDescriptionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetMetaDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction SetMetaKeywords(Action<commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetMetaTitleAction SetMetaTitle(Action<commercetools.Sdk.Api.Models.Categories.CategorySetMetaTitleAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetMetaTitleAction();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

@@ -33,5 +33,6 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
         IProductVariantKeyReference ProductVariant { get; set; }
 
         IProductKeyReference Product { get; set; }
+
     }
 }

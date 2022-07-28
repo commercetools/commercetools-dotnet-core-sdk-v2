@@ -14,5 +14,6 @@ namespace commercetools.Sdk.Api.Models.Categories
         string Name { get; set; }
 
         Object Value { get; set; }
+
     }
 }
