@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Products
 
         string Key { get; set; }
 
-        List<IPriceDraft> Prices { get; set; }
+        List<IEmbeddedPriceDraft> Prices { get; set; }
 
         List<IImage> Images { get; set; }
 

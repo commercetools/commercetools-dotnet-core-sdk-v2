@@ -12,5 +12,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         long? AvailableQuantity { get; set; }
 
+        string Id { get; set; }
+
+        long Version { get; set; }
+
     }
 }

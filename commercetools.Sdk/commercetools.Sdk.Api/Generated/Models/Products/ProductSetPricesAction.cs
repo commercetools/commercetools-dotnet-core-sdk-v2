@@ -1,4 +1,3 @@
-using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 
 
@@ -13,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public string Sku { get; set; }
 
-        public List<IPriceDraft> Prices { get; set; }
+        public List<IEmbeddedPriceDraft> Prices { get; set; }
 
         public bool? Staged { get; set; }
         public ProductSetPricesAction()

@@ -1,6 +1,3 @@
-using commercetools.Sdk.Api.Models.Common;
-
-
 namespace commercetools.Sdk.Api.Models.Products
 {
 
@@ -10,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public string PriceId { get; set; }
 
-        public IPriceDraft Price { get; set; }
+        public IEmbeddedPriceDraft Price { get; set; }
 
         public bool? Staged { get; set; }
         public ProductChangePriceAction()
