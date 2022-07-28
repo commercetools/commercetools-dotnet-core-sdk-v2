@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -75,6 +75,7 @@ $(function() {
 : <a class="el" href="d0/dfc/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_payment_state.html#a5f711774905ee91000984311dbcfaeb5">commercetools.Sdk.Api.Models.Orders.IPaymentState</a>
 , <a class="el" href="d4/d33/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_quotes_1_1_i_quote_state.html#a37d9406fcc85a76eb0ea425fdb0688cd">commercetools.Sdk.Api.Models.Quotes.IQuoteState</a>
 , <a class="el" href="d7/d1b/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_payment_state.html#a4dc96861b4d778ec1ae051046a19551f">commercetools.Sdk.HistoryApi.Models.Common.IPaymentState</a>
+, <a class="el" href="d7/d83/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_quote_state.html#a8fef7ce3372450422ee6f22e1058f547">commercetools.Sdk.HistoryApi.Models.Common.IQuoteState</a>
 , <a class="el" href="df/db6/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_orders_1_1_i_payment_state.html#a8b66b0c2a876d47c00c5c90685bb21d8">commercetools.Sdk.ImportApi.Models.Orders.IPaymentState</a>
 </li>
 <li>Failure
@@ -92,6 +93,9 @@ $(function() {
 , <a class="el" href="da/db6/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_address.html#abdcc8b5c9a1a4b1da5a54dbcb483e0c5">commercetools.Sdk.ImportApi.Models.Common.IAddress</a>
 , <a class="el" href="d5/d47/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_customers_1_1_customer_address.html#acc185de2f847fa11f2aad1b5afada0c1">commercetools.Sdk.ImportApi.Models.Customers.CustomerAddress</a>
 , <a class="el" href="d3/da8/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_customers_1_1_i_customer_address.html#ac9a30732a6255c7e97d6adfe0d41a3cd">commercetools.Sdk.ImportApi.Models.Customers.ICustomerAddress</a>
+</li>
+<li>FeatureRemoved()
+: <a class="el" href="db/dd5/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_i_error_object.html#a50721b63b4533fbdb55f873ed69f4633">commercetools.Sdk.Api.Models.Errors.IErrorObject</a>
 </li>
 <li>FeatureRemovedError()
 : <a class="el" href="d1/d75/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_feature_removed_error.html#a066bff256337eaff431e2c07b3b81bf8">commercetools.Sdk.Api.Models.Errors.FeatureRemovedError</a>
@@ -300,8 +304,9 @@ $(function() {
 , <a class="el" href="d0/d7c/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_order_patches_1_1_i_order_patch_import.html#ab533d725addfc2b8a7ecddbc93a80a8a">commercetools.Sdk.ImportApi.Models.OrderPatches.IOrderPatchImport</a>
 , <a class="el" href="d3/d9b/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_order_patches_1_1_order_patch_import.html#aef189d55d16bb3b713bc661df73e7270">commercetools.Sdk.ImportApi.Models.OrderPatches.OrderPatchImport</a>
 </li>
-<li>Filter
-: <a class="el" href="dc/db6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_types.html#a96c47022c546485712313a1a54fd2665">commercetools.Sdk.Api.Models.Products.IFacetTypes</a>
+<li>Filter()
+: <a class="el" href="d9/d7f/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_result.html#a26e5c83bb527b3f5d239f2248b018e12">commercetools.Sdk.Api.Models.Products.IFacetResult</a>
+, <a class="el" href="dc/db6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_types.html#a96c47022c546485712313a1a54fd2665">commercetools.Sdk.Api.Models.Products.IFacetTypes</a>
 </li>
 <li>FilteredFacetResult()
 : <a class="el" href="da/d5c/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_filtered_facet_result.html#a6b0754338aac3a1aaadb37e3d3c72cf5">commercetools.Sdk.Api.Models.Products.FilteredFacetResult</a>
@@ -311,6 +316,7 @@ $(function() {
 , <a class="el" href="d2/dc6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_cart_discounts_1_1_i_stacking_mode.html#a580cba99e1a5efea02692abd739323f8">commercetools.Sdk.Api.Models.CartDiscounts.IStackingMode</a>
 , <a class="el" href="de/d3a/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_origin.html#a397ce786260f6cf9d64f45fcd9cc07fb">commercetools.Sdk.Api.Models.Carts.ICartOrigin</a>
 , <a class="el" href="d8/d7c/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_state.html#a04b93de1c21ddd72ddcd5ab9cd06ac17">commercetools.Sdk.Api.Models.Carts.ICartState</a>
+, <a class="el" href="d0/d1b/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_custom_line_item_price_mode.html#a2dd3c25379a3d94032a873f0956820c2">commercetools.Sdk.Api.Models.Carts.ICustomLineItemPriceMode</a>
 , <a class="el" href="d2/d5f/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_discount_code_state.html#ac75ac43399ff9d77a93eb0afa79dd85a">commercetools.Sdk.Api.Models.Carts.IDiscountCodeState</a>
 , <a class="el" href="d5/dac/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_inventory_mode.html#aa347ab84b1f2836d4f5221625eb8a141">commercetools.Sdk.Api.Models.Carts.IInventoryMode</a>
 , <a class="el" href="d2/d23/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_line_item_mode.html#a75f3b0b29f72a5bac06af3b3ca635d94">commercetools.Sdk.Api.Models.Carts.ILineItemMode</a>
@@ -361,11 +367,14 @@ $(function() {
 , <a class="el" href="df/d22/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_change_histories_1_1_i_source.html#a65b6cce6a73ef375b476487d82487f01">commercetools.Sdk.HistoryApi.Models.ChangeHistories.ISource</a>
 , <a class="el" href="d4/dfa/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_change_histories_1_1_i_update_type.html#a5db98d66e00b903310786e021f374113">commercetools.Sdk.HistoryApi.Models.ChangeHistories.IUpdateType</a>
 , <a class="el" href="df/d39/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_attribute_constraint_enum.html#a0bbc8501a83a13dc3f71200c6b50cf75">commercetools.Sdk.HistoryApi.Models.Common.IAttributeConstraintEnum</a>
+, <a class="el" href="dc/d5e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_authentication_mode.html#a880c73bfaedbbc7bb0e571365faf3062">commercetools.Sdk.HistoryApi.Models.Common.IAuthenticationMode</a>
 , <a class="el" href="d2/dd2/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_channel_role.html#ab8dde497e1b51b414bc5c385dcc247e7">commercetools.Sdk.HistoryApi.Models.Common.IChannelRole</a>
 , <a class="el" href="d8/dd4/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_discount_code_state.html#a1b6aded08766252f99e46fd0cdc52e95">commercetools.Sdk.HistoryApi.Models.Common.IDiscountCodeState</a>
 , <a class="el" href="d2/d60/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_money_type.html#aee49be35d035523f2e329d064aa9b343">commercetools.Sdk.HistoryApi.Models.Common.IMoneyType</a>
 , <a class="el" href="da/d42/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_order_state.html#add7af5f03c4fe128c53e4c2abd1f7a6b">commercetools.Sdk.HistoryApi.Models.Common.IOrderState</a>
 , <a class="el" href="d7/d1b/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_payment_state.html#adbad9379decf9ebf15d491168ded57c0">commercetools.Sdk.HistoryApi.Models.Common.IPaymentState</a>
+, <a class="el" href="dc/d16/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_quote_request_state.html#a05991c20e54d17702bfab98bea72a18b">commercetools.Sdk.HistoryApi.Models.Common.IQuoteRequestState</a>
+, <a class="el" href="d7/d83/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_quote_state.html#a44f4e2514cd16d03f70309fd20da8682">commercetools.Sdk.HistoryApi.Models.Common.IQuoteState</a>
 , <a class="el" href="dc/d3e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_reference_type_id.html#a9fbc1046bbf56f21372e1d2f78e479fa">commercetools.Sdk.HistoryApi.Models.Common.IReferenceTypeId</a>
 , <a class="el" href="d4/dd3/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_return_payment_state.html#a1528f32cef6c835568208dc993f9421c">commercetools.Sdk.HistoryApi.Models.Common.IReturnPaymentState</a>
 , <a class="el" href="de/d22/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_return_shipment_state.html#aa9843f2d436acb0601ba2a8c9454c599">commercetools.Sdk.HistoryApi.Models.Common.IReturnShipmentState</a>
@@ -374,6 +383,7 @@ $(function() {
 , <a class="el" href="d3/d16/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_shipment_state.html#aa3592df95784a1f912279e8d0225df1c">commercetools.Sdk.HistoryApi.Models.Common.IShipmentState</a>
 , <a class="el" href="d5/df4/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_shipping_rate_tier_type.html#a22e66c6a697ece9652752973adfaea6e">commercetools.Sdk.HistoryApi.Models.Common.IShippingRateTierType</a>
 , <a class="el" href="d6/d84/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_stacking_mode.html#ae40cccadd89bff3faa22027d839bdfb4">commercetools.Sdk.HistoryApi.Models.Common.IStackingMode</a>
+, <a class="el" href="dd/dc1/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_staged_quote_state.html#a66dd93d89f866d4200c45551b7f735de">commercetools.Sdk.HistoryApi.Models.Common.IStagedQuoteState</a>
 , <a class="el" href="d7/df5/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_state_role.html#afc19bd3818232b985f8fdb75a43cca91">commercetools.Sdk.HistoryApi.Models.Common.IStateRole</a>
 , <a class="el" href="db/d34/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_state_type.html#a8e398c672340f7e3beb850cf674807a1">commercetools.Sdk.HistoryApi.Models.Common.IStateType</a>
 , <a class="el" href="d6/de6/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_i_tax_calculation_mode.html#acfaff710685502652b4f9624782b35b1">commercetools.Sdk.HistoryApi.Models.Common.ITaxCalculationMode</a>
@@ -384,6 +394,7 @@ $(function() {
 , <a class="el" href="d8/d97/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_import_resource_type.html#a9797d15901f7dfca6c9bb7dff140666a">commercetools.Sdk.ImportApi.Models.Common.IImportResourceType</a>
 , <a class="el" href="db/d7b/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_money_type.html#a1ed6e1bd24786faf5aeb0c84dd57065a">commercetools.Sdk.ImportApi.Models.Common.IMoneyType</a>
 , <a class="el" href="d4/db2/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_processing_state.html#a031a038cfb8de190a04f19575b562594">commercetools.Sdk.ImportApi.Models.Common.IProcessingState</a>
+, <a class="el" href="da/d07/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_product_price_mode_enum.html#aefef0443f65d122120ea636ff7c10c50">commercetools.Sdk.ImportApi.Models.Common.IProductPriceModeEnum</a>
 , <a class="el" href="d3/d46/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_i_reference_type.html#a9216de955b55dfcf98087759df43afc4">commercetools.Sdk.ImportApi.Models.Common.IReferenceType</a>
 , <a class="el" href="d6/d4e/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_importoperations_1_1_i_import_operation_state.html#a370480d535cb62fe7066b897f279d221">commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationState</a>
 , <a class="el" href="d8/d3c/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_order_patches_1_1_i_return_shipment_state.html#a30287f793345adbaebd7de85b607e476">commercetools.Sdk.ImportApi.Models.OrderPatches.IReturnShipmentState</a>
@@ -434,6 +445,10 @@ $(function() {
 , <a class="el" href="d0/de1/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_customers_1_1_customer_import.html#a46a79ac77fe170a7e46b65ae5c1255ba">commercetools.Sdk.ImportApi.Models.Customers.CustomerImport</a>
 , <a class="el" href="d3/da8/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_customers_1_1_i_customer_address.html#ab8f7ae453a38c1526e91d4d5aa2626a1">commercetools.Sdk.ImportApi.Models.Customers.ICustomerAddress</a>
 , <a class="el" href="d6/d67/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_customers_1_1_i_customer_import.html#a165b9efda2b2aa1d659ec93f9a98523b">commercetools.Sdk.ImportApi.Models.Customers.ICustomerImport</a>
+</li>
+<li>Fixed()
+: <a class="el" href="d3/d59/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_cart_discounts_1_1_i_cart_discount_value.html#ad31542c9e4648dde0cdfea743ed5f465">commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountValue</a>
+, <a class="el" href="dc/d4d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_cart_discounts_1_1_i_cart_discount_value_draft.html#aa59371d61929ad0cef2cd7f07e3f2d13">commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountValueDraft</a>
 </li>
 <li>ForbiddenException()
 : <a class="el" href="dc/d50/classcommercetools_1_1_base_1_1_client_1_1_error_1_1_forbidden_exception.html#af428e94577b33044e8f8ea26e83cd815">commercetools.Base.Client.Error.ForbiddenException</a>
