@@ -9,6 +9,7 @@ namespace commercetools.Sdk.Api.Models.Quotes
     [SubTypeDiscriminator("changeQuoteState", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteChangeQuoteStateAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomTypeAction))]
+    [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteTransitionStateAction))]
     public partial interface IQuoteUpdateAction
     {
         string Action { get; set; }
@@ -28,6 +29,12 @@ namespace commercetools.Sdk.Api.Models.Quotes
         static commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Quotes.QuoteTransitionStateAction TransitionState(Action<commercetools.Sdk.Api.Models.Quotes.QuoteTransitionStateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Quotes.QuoteTransitionStateAction();
             init?.Invoke(t);
             return t;
         }

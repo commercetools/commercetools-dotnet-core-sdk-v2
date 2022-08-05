@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Types;
 
 
@@ -16,5 +17,7 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         public string Comment { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IStateReference State { get; set; }
     }
 }

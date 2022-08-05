@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetCustomTypeAction))]
     [SubTypeDiscriminator("setSellerComment", typeof(commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetSellerCommentAction))]
     [SubTypeDiscriminator("setValidTo", typeof(commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction))]
+    [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteTransitionStateAction))]
     public partial interface IStagedQuoteUpdateAction
     {
         string Action { get; set; }
@@ -42,6 +43,12 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction SetValidTo(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteSetValidToAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteTransitionStateAction TransitionState(Action<commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteTransitionStateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteTransitionStateAction();
             init?.Invoke(t);
             return t;
         }
