@@ -36,6 +36,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             return new ByProjectKeyOrdersImportRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyOrdersQuotesRequestBuilder OrderQuote()
+        {
+            return new ByProjectKeyOrdersQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder WithOrderNumber(string orderNumber)
         {
             return new ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, orderNumber);
