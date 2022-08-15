@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     {
         IMoney Value { get; set; }
 
+        bool? Staged { get; set; }
+
     }
 }

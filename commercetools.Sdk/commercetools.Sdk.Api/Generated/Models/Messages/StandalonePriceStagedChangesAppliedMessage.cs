@@ -1,11 +1,12 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.StandalonePrices;
 using System;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class StandalonePriceValueChangedMessage : IStandalonePriceValueChangedMessage
+    public partial class StandalonePriceStagedChangesAppliedMessage : IStandalonePriceStagedChangesAppliedMessage
     {
         public string Id { get; set; }
 
@@ -29,12 +30,10 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IMoney Value { get; set; }
-
-        public bool Staged { get; set; }
-        public StandalonePriceValueChangedMessage()
+        public IStagedStandalonePrice StagedChanges { get; set; }
+        public StandalonePriceStagedChangesAppliedMessage()
         {
-            this.Type = "StandalonePriceValueChanged";
+            this.Type = "StandalonePriceStagedChangesApplied";
         }
     }
 }

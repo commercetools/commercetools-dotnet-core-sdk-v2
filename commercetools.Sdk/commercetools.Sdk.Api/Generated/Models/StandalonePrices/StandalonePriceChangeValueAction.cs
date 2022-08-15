@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         public string Action { get; set; }
 
         public IMoney Value { get; set; }
+
+        public bool? Staged { get; set; }
         public StandalonePriceChangeValueAction()
         {
             this.Action = "changeValue";

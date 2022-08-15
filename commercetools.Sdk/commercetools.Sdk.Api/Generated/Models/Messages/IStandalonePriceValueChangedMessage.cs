@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         IMoney Value { get; set; }
 
+        bool Staged { get; set; }
+
     }
 }
