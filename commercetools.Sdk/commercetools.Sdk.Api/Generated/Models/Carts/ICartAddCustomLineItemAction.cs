@@ -23,5 +23,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
+        ICustomLineItemPriceMode PriceMode { get; set; }
+
     }
 }
