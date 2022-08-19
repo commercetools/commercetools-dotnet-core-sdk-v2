@@ -98,8 +98,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("QuoteRequestStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload))]
     [SubTypeDiscriminator("QuoteStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessagePayload))]
     [SubTypeDiscriminator("QuoteStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessagePayload))]
-    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload))]
-    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload))]
+    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload))]
+    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload))]
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessagePayload))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessagePayload))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload))]
@@ -676,15 +676,15 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

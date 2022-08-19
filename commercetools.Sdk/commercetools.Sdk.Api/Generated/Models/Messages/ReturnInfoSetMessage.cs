@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class OrderReturnInfoSetMessage : IOrderReturnInfoSetMessage
+    public partial class ReturnInfoSetMessage : IReturnInfoSetMessage
     {
         public string Id { get; set; }
 
@@ -32,7 +32,7 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public List<IReturnInfo> ReturnInfo { get; set; }
-        public OrderReturnInfoSetMessage()
+        public ReturnInfoSetMessage()
         {
             this.Type = "ReturnInfoSet";
         }

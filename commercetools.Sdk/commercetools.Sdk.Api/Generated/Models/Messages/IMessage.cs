@@ -99,8 +99,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("QuoteRequestStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessage))]
     [SubTypeDiscriminator("QuoteStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage))]
     [SubTypeDiscriminator("QuoteStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessage))]
-    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage))]
-    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage))]
+    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessage))]
+    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessage))]
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessage))]
@@ -696,15 +696,15 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessage ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessage> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessage();
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessage();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessage ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessage> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessage();
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessage();
             init?.Invoke(t);
             return t;
         }

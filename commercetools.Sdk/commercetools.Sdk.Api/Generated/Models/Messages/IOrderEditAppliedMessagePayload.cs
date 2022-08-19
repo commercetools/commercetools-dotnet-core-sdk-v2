@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessagePayload))]
     public partial interface IOrderEditAppliedMessagePayload : IOrderMessagePayload
     {
-        IOrderEditReference Edit { get; set; }
+        IOrderEdit Edit { get; set; }
 
         IOrderEditApplied Result { get; set; }
 

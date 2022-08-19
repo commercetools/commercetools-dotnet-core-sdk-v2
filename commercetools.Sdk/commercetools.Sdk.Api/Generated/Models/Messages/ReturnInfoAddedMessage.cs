@@ -6,7 +6,7 @@ using System;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class OrderReturnInfoAddedMessage : IOrderReturnInfoAddedMessage
+    public partial class ReturnInfoAddedMessage : IReturnInfoAddedMessage
     {
         public string Id { get; set; }
 
@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IReturnInfo ReturnInfo { get; set; }
-        public OrderReturnInfoAddedMessage()
+        public ReturnInfoAddedMessage()
         {
             this.Type = "ReturnInfoAdded";
         }

@@ -40,7 +40,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public List<IItemState> NewState { get; set; }
 
-        public ITypedMoney NewTotalPrice { get; set; }
+        public ICentPrecisionMoney NewTotalPrice { get; set; }
 
         public ITaxedItemPrice NewTaxedPrice { get; set; }
 

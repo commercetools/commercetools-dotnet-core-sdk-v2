@@ -5,12 +5,12 @@ using System.Collections.Generic;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class OrderReturnInfoSetMessagePayload : IOrderReturnInfoSetMessagePayload
+    public partial class ReturnInfoSetMessagePayload : IReturnInfoSetMessagePayload
     {
         public string Type { get; set; }
 
         public List<IReturnInfo> ReturnInfo { get; set; }
-        public OrderReturnInfoSetMessagePayload()
+        public ReturnInfoSetMessagePayload()
         {
             this.Type = "ReturnInfoSet";
         }

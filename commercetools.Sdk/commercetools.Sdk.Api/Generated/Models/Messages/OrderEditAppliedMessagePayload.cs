@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public IOrderEditReference Edit { get; set; }
+        public IOrderEdit Edit { get; set; }
 
         public IOrderEditApplied Result { get; set; }
         public OrderEditAppliedMessagePayload()

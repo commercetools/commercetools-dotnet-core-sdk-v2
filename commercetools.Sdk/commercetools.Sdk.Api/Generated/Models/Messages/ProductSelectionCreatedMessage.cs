@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IProductSelectionType ProductSelection { get; set; }
+        public IIndividualProductSelectionType ProductSelection { get; set; }
         public ProductSelectionCreatedMessage()
         {
             this.Type = "ProductSelectionCreated";
