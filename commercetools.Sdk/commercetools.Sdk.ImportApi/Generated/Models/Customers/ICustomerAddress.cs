@@ -1,3 +1,4 @@
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using commercetools.Base.CustomAttributes;
 
 
@@ -53,6 +54,8 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
+        ICustom Custom { get; set; }
 
     }
 }
