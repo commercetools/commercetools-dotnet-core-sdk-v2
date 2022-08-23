@@ -44,6 +44,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
 
         string SellerComment { get; set; }
 
+        string BuyerComment { get; set; }
+
         IStoreKeyReference Store { get; set; }
 
         List<ILineItem> LineItems { get; set; }
