@@ -63,9 +63,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Create
     </td>
     <td>
-    	var category = await client
-        							.WithApi()
-                                    .WithProjectKey("project-key")
+    	var category = await projectApiRoot
                                     .Categories()
                                     .Post(categoryDraft)
                                     .ExecuteAsync();
@@ -83,7 +81,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Get By Id
     </td>
     <td>
-    	var queriedCategory = await client.WithApi().WithProjectKey("project-key")
+    	var queriedCategory = await projectApiRoot
                         .Categories()
                         .WithId(category.Id)
                         .Get()
@@ -102,7 +100,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Get By Key
     </td>
     <td>
-    	var queriedCategory = await client.WithApi().WithProjectKey("project-key")
+    	var queriedCategory = await projectApiRoot
                         .Categories()
                         .WithKey(category.Key)
                         .Get()
@@ -121,7 +119,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Query
     </td>
     <td>
-    	var response = await client.WithApi().WithProjectKey("project-key")
+    	var response = await projectApiRoot
                     .Categories()
                     .Get()
                     .WithWhere($"key = \"{category.Key}\"")
@@ -141,7 +139,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Delete By Id
     </td>
     <td>
-    	var deletedCategory = await client.WithApi().WithProjectKey("project-key")
+    	var deletedCategory = await projectApiRoot
                     .Categories()
                     .WithId(category.Id)
                     .Delete()
@@ -161,7 +159,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Delete By Key
     </td>
     <td>
-    	var deletedCategory = await client.WithApi().WithProjectKey("project-key")
+    	var deletedCategory = await projectApiRoot
                     .Categories()
                     .WithKey(category.Key)
                     .Delete()
@@ -181,7 +179,7 @@ After packages installation, you have to configure services using Dependency Inj
     	Update
     </td>
     <td>
-    	var updatedCategory = await client.WithApi().WithProjectKey("project-key")
+    	var updatedCategory = await projectApiRoot
                     .Categories()
                     .WithId(category.Id)
                     .Post(categoryUpdate)

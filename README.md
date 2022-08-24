@@ -61,7 +61,7 @@ At a high level, to make a basic call to the API, do the following:
 1. Use the dependency injection class to set things up.
 2. get a client object from the services responsible for calling requests to the API
 3. use the ApiRoot instance inside the client and identify the project-key.
-4. If needed – Create a draft object as a required for the request based on the documentation.
+4. If needed - Create a draft object as a required for the request based on the documentation.
 5. Build your request and execute it using ExecuteAsync.
 6. Receive the response as a model.
 
@@ -125,6 +125,36 @@ var root1 = client.WithHistoryApi();
 var root2 = HistoryApiFactory.Create(client);
 ```
 
+##### Getting instance of ProjectApiRoot
+
+The ProjectApiRoot is scoped to the projectKey in order to not have to provide the project
+for building requests. You can use the instance inside the injected client or use ApiFactory
+to create a new instance.
+
+* `Composable Commerce HTTP API`:
+```c#
+ProjectApiRoot root1 = client.WithProject(projectKey);
+ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);
+```
+* `Import API`:
+```c#
+ProjectApiRoot root1 = client.WithImportApi(projectKey);
+ProjectApiRoot root2 = ImportApiFactory.Create(client, projectKey);
+```
+* `Machine Learning API`:
+```c#
+ProjectApiRoot root1 = client.WithMLApi(projectKey);
+ProjectApiRoot root2 = MLApiFactory.Create(client, projectKey);
+```
+* `Change History API`:
+```c#
+ProjectApiRoot root1 = client.WithHistoryApi(projectKey);
+ProjectApiRoot root2 = HistoryApiFactory.Create(client, projectKey);
+```
+
+When using the UseCommercetools methods a ProjectApiRoot will be registered to the ServiceProvider using
+the project key given in the configuration
+
 ### Multiple Clients
 It is possible to use more than one client in the same application with different token providers.
 The following code can be used to set it up 2 clients with the default ClientCredentials token provider:
@@ -163,6 +193,7 @@ public CategoryController(IClient client)
 }
 public async Task CreatingRequests()
 {
+    var projectApiRoot = client.WithProject("project-key")
     // Create CategoryDraft
     var categoryDraft = new CategoryDraft
                 {
@@ -172,34 +203,34 @@ public async Task CreatingRequests()
                 };
 
     // Use in the previous step configured client instance to send and receive a newly created Category
-     var category = await client.WithApi().WithProjectKey("project-key")
-                                    .Categories()
-                                    .Post(categoryDraft)
-                                    .ExecuteAsync();
+     var category = await projectApiRoot
+                .Categories()
+                .Post(categoryDraft)
+                .ExecuteAsync();
 
     // Get Category by id
-    var queriedCategory = await client.WithApi().WithProjectKey("project-key")
+    var queriedCategory = await projectApiRoot
                 .Categories()
                 .WithId(category.Id)
                 .Get()
                 .ExecuteAsync();
 
     // Get Category by key
-    var queriedCategory = await client.WithApi().WithProjectKey("project-key")
+    var queriedCategory = await projectApiRoot
                 .Categories()
                 .WithKey(category.Key)
                 .Get()
                 .ExecuteAsync();
 
     // Query Categories
-    var response = await client.WithApi().WithProjectKey("project-key")
+    var response = await projectApiRoot
             .Categories()
             .Get()
             .WithWhere($"key = \"{category.Key}\"")
             .ExecuteAsync();
 
     // Delete Category by id
-    var deletedCategory = await client.WithApi().WithProjectKey("project-key")
+    var deletedCategory = await projectApiRoot
             .Categories()
             .WithId(category.Id)
             .Delete()
@@ -218,14 +249,14 @@ public async Task CreatingRequests()
                         Actions = new List<ICategoryUpdateAction> {action}
                     };
 
-    var updatedCategory = await client.WithApi().WithProjectKey("project-key")
+    var updatedCategory = await projectApiRoot
             .Categories()
             .WithId(category.Id)
             .Post(categoryUpdate)
             .ExecuteAsync();
 
     // Delete Category by key
-    var deletedCategory = await client.WithApi().WithProjectKey("project-key")
+    var deletedCategory = await projectApiRoot
             .Categories()
             .WithKey(category.Key)
             .Delete()
