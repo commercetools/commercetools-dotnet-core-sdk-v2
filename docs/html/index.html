@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">4.1.0</span>
+   &#160;<span id="projectnumber">4.2.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -135,7 +135,7 @@ Basic Workflow</h2>
 <li>Use the dependency injection class to set things up.</li>
 <li>get a client object from the services responsible for calling requests to the API</li>
 <li>use the ApiRoot instance inside the client and identify the project-key.</li>
-<li>If needed –&#160;Create a draft object as a required for the request based on the documentation.</li>
+<li>If needed - Create a draft object as a required for the request based on the documentation.</li>
 <li>Build your request and execute it using ExecuteAsync.</li>
 <li>Receive the response as a model.</li>
 </ol>
@@ -190,7 +190,29 @@ Getting instance of ApiRoot</h4>
 <div class="line">var root2 = HistoryApiFactory.Create(client);</div>
 </div><!-- fragment --></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h4><a class="anchor" id="autotoc_md12"></a>
+Getting instance of ProjectApiRoot</h4>
+<p>The ProjectApiRoot is scoped to the projectKey in order to not have to provide the project for building requests. You can use the instance inside the injected client or use ApiFactory to create a new instance.</p>
+<ul>
+<li><code>Composable Commerce HTTP API</code>: <div class="fragment"><div class="line"> {c#}</div>
+<div class="line">ProjectApiRoot root1 = client.WithProject(projectKey);</div>
+<div class="line">ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);</div>
+</div><!-- fragment --></li>
+<li><code>Import API</code>: <div class="fragment"><div class="line"> {c#}</div>
+<div class="line">ProjectApiRoot root1 = client.WithImportApi(projectKey);</div>
+<div class="line">ProjectApiRoot root2 = ImportApiFactory.Create(client, projectKey);</div>
+</div><!-- fragment --></li>
+<li><code>Machine Learning API</code>: <div class="fragment"><div class="line"> {c#}</div>
+<div class="line">ProjectApiRoot root1 = client.WithMLApi(projectKey);</div>
+<div class="line">ProjectApiRoot root2 = MLApiFactory.Create(client, projectKey);</div>
+</div><!-- fragment --></li>
+<li><code>Change History API</code>: <div class="fragment"><div class="line"> {c#}</div>
+<div class="line">ProjectApiRoot root1 = client.WithHistoryApi(projectKey);</div>
+<div class="line">ProjectApiRoot root2 = HistoryApiFactory.Create(client, projectKey);</div>
+</div><!-- fragment --></li>
+</ul>
+<p>When using the UseCommercetools methods a ProjectApiRoot will be registered to the ServiceProvider using the project key given in the configuration</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Multiple Clients</h2>
 <p>It is possible to use more than one client in the same application with different token providers. The following code can be used to set it up 2 clients with the default ClientCredentials token provider:</p>
 <div class="fragment"><div class="line"> {c#}</div>
@@ -209,7 +231,7 @@ Multiple Clients</h2>
 <div class="line">   {</div>
 <div class="line">       var storeClient = clients.FirstOrDefault(c =&gt; c.Name.Equals(&quot;StoreClient&quot;));</div>
 <div class="line">   }</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
 Using SDK</h2>
 <p>SDK follows a builder pattern when creating requests. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources. The IClient interface can be used by injecting it and calling its ExecuteAsync method for different requests. </p><div class="fragment"><div class="line"> {c#}</div>
 <div class="line">private readonly IClient client;</div>
@@ -219,6 +241,7 @@ Using SDK</h2>
 <div class="line">}</div>
 <div class="line">public async Task CreatingRequests()</div>
 <div class="line">{</div>
+<div class="line">    var projectApiRoot = client.WithProject(&quot;project-key&quot;)</div>
 <div class="line">    // Create CategoryDraft</div>
 <div class="line">    var categoryDraft = new CategoryDraft</div>
 <div class="line">                {</div>
@@ -228,34 +251,34 @@ Using SDK</h2>
 <div class="line">                };</div>
 <div class="line"> </div>
 <div class="line">    // Use in the previous step configured client instance to send and receive a newly created Category</div>
-<div class="line">     var category = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
-<div class="line">                                    .Categories()</div>
-<div class="line">                                    .Post(categoryDraft)</div>
-<div class="line">                                    .ExecuteAsync();</div>
+<div class="line">     var category = await projectApiRoot</div>
+<div class="line">                .Categories()</div>
+<div class="line">                .Post(categoryDraft)</div>
+<div class="line">                .ExecuteAsync();</div>
 <div class="line"> </div>
 <div class="line">    // Get Category by id</div>
-<div class="line">    var queriedCategory = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var queriedCategory = await projectApiRoot</div>
 <div class="line">                .Categories()</div>
 <div class="line">                .WithId(category.Id)</div>
 <div class="line">                .Get()</div>
 <div class="line">                .ExecuteAsync();</div>
 <div class="line"> </div>
 <div class="line">    // Get Category by key</div>
-<div class="line">    var queriedCategory = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var queriedCategory = await projectApiRoot</div>
 <div class="line">                .Categories()</div>
 <div class="line">                .WithKey(category.Key)</div>
 <div class="line">                .Get()</div>
 <div class="line">                .ExecuteAsync();</div>
 <div class="line"> </div>
 <div class="line">    // Query Categories</div>
-<div class="line">    var response = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var response = await projectApiRoot</div>
 <div class="line">            .Categories()</div>
 <div class="line">            .Get()</div>
 <div class="line">            .WithWhere($&quot;key = \&quot;{category.Key}\&quot;&quot;)</div>
 <div class="line">            .ExecuteAsync();</div>
 <div class="line"> </div>
 <div class="line">    // Delete Category by id</div>
-<div class="line">    var deletedCategory = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var deletedCategory = await projectApiRoot</div>
 <div class="line">            .Categories()</div>
 <div class="line">            .WithId(category.Id)</div>
 <div class="line">            .Delete()</div>
@@ -274,21 +297,21 @@ Using SDK</h2>
 <div class="line">                        Actions = new List&lt;ICategoryUpdateAction&gt; {action}</div>
 <div class="line">                    };</div>
 <div class="line"> </div>
-<div class="line">    var updatedCategory = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var updatedCategory = await projectApiRoot</div>
 <div class="line">            .Categories()</div>
 <div class="line">            .WithId(category.Id)</div>
 <div class="line">            .Post(categoryUpdate)</div>
 <div class="line">            .ExecuteAsync();</div>
 <div class="line"> </div>
 <div class="line">    // Delete Category by key</div>
-<div class="line">    var deletedCategory = await client.WithApi().WithProjectKey(&quot;project-key&quot;)</div>
+<div class="line">    var deletedCategory = await projectApiRoot</div>
 <div class="line">            .Categories()</div>
 <div class="line">            .WithKey(category.Key)</div>
 <div class="line">            .Delete()</div>
 <div class="line">            .WithVersion(category.Version)</div>
 <div class="line">            .ExecuteAsync();</div>
 <div class="line">    }</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
 Creating a client using ClientFactory</h2>
 <p>You can get a client from injected services or you can create client on the fly using ClientFactory, the example below illustrate how to create a client with password TokenFlow to get customer's orders:</p>
 <div class="fragment"><div class="line"> {c#}</div>
@@ -344,12 +367,12 @@ Creating a client using ClientFactory</h2>
 <div class="line">                errorTypeMapper =&gt; typeof(ErrorResponse),</div>
 <div class="line">                s =&gt; s.GetService&lt;SerializerService&gt;()</div>
 <div class="line">            );</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md16"></a>
 Migration Guidelines</h2>
 <p>To migrate from the 1.x to the 2.x, there is a guideline below:</p><ul>
 <li>Migration guidelines from v1 to v2</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Documentation</h2>
 <ul>
 <li><a href="https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html">Documentation</a> </li>
