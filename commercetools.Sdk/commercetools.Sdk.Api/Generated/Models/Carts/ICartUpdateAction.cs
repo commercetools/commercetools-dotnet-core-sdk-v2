@@ -7,10 +7,12 @@ namespace commercetools.Sdk.Api.Models.Carts
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateAction))]
     [SubTypeDiscriminator("addCustomLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction))]
+    [SubTypeDiscriminator("addCustomShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartAddCustomShippingMethodAction))]
     [SubTypeDiscriminator("addDiscountCode", typeof(commercetools.Sdk.Api.Models.Carts.CartAddDiscountCodeAction))]
     [SubTypeDiscriminator("addItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartAddItemShippingAddressAction))]
     [SubTypeDiscriminator("addLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartAddLineItemAction))]
     [SubTypeDiscriminator("addPayment", typeof(commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction))]
+    [SubTypeDiscriminator("addShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartAddShippingMethodAction))]
     [SubTypeDiscriminator("addShoppingList", typeof(commercetools.Sdk.Api.Models.Carts.CartAddShoppingListAction))]
     [SubTypeDiscriminator("applyDeltaToCustomLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction))]
     [SubTypeDiscriminator("applyDeltaToLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToLineItemShippingDetailsTargetsAction))]
@@ -27,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("removeItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveItemShippingAddressAction))]
     [SubTypeDiscriminator("removeLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveLineItemAction))]
     [SubTypeDiscriminator("removePayment", typeof(commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction))]
+    [SubTypeDiscriminator("removeShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveShippingMethodAction))]
     [SubTypeDiscriminator("setAnonymousId", typeof(commercetools.Sdk.Api.Models.Carts.CartSetAnonymousIdAction))]
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressAction))]
     [SubTypeDiscriminator("setBillingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomFieldAction))]
@@ -64,6 +67,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setShippingCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomFieldAction))]
+    [SubTypeDiscriminator("setShippingCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomTypeAction))]
     [SubTypeDiscriminator("setShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodAction))]
     [SubTypeDiscriminator("setShippingMethodTaxAmount", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodTaxAmountAction))]
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodTaxRateAction))]
@@ -76,6 +81,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction AddCustomLineItem(Action<commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartAddCustomShippingMethodAction AddCustomShippingMethod(Action<commercetools.Sdk.Api.Models.Carts.CartAddCustomShippingMethodAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartAddCustomShippingMethodAction();
             init?.Invoke(t);
             return t;
         }
@@ -100,6 +111,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction AddPayment(Action<commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartAddShippingMethodAction AddShippingMethod(Action<commercetools.Sdk.Api.Models.Carts.CartAddShippingMethodAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartAddShippingMethodAction();
             init?.Invoke(t);
             return t;
         }
@@ -196,6 +213,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction RemovePayment(Action<commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartRemoveShippingMethodAction RemoveShippingMethod(Action<commercetools.Sdk.Api.Models.Carts.CartRemoveShippingMethodAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartRemoveShippingMethodAction();
             init?.Invoke(t);
             return t;
         }
@@ -418,6 +441,18 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction SetShippingAddressCustomType(Action<commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomFieldAction SetShippingCustomField(Action<commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomTypeAction SetShippingCustomType(Action<commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetShippingCustomTypeAction();
             init?.Invoke(t);
             return t;
         }

@@ -55,6 +55,12 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ICartOrigin Origin { get; set; }
 
+        public IShippingMode ShippingMode { get; set; }
+
+        public List<ICustomShippingDraft> CustomShipping { get; set; }
+
+        public List<IShippingDraft> Shipping { get; set; }
+
         public IShippingRateInputDraft ShippingRateInput { get; set; }
 
         public List<IBaseAddress> ItemShippingAddresses { get; set; }

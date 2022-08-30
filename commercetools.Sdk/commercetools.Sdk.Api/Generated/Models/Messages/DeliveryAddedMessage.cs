@@ -31,6 +31,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IDelivery Delivery { get; set; }
+
+        public string ShippingKey { get; set; }
         public DeliveryAddedMessage()
         {
             this.Type = "DeliveryAdded";

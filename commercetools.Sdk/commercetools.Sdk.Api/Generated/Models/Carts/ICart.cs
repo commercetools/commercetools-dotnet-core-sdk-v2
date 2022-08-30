@@ -44,11 +44,17 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ITaxedPrice TaxedPrice { get; set; }
 
+        ITaxedPrice TaxedShippingPrice { get; set; }
+
         ICartState CartState { get; set; }
 
         IAddress ShippingAddress { get; set; }
 
         IAddress BillingAddress { get; set; }
+
+        IShippingMode ShippingMode { get; set; }
+
+        List<IShipping> Shipping { get; set; }
 
         IInventoryMode InventoryMode { get; set; }
 

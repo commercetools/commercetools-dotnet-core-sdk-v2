@@ -48,9 +48,15 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public ITaxedPrice TaxedPrice { get; set; }
 
+        public ITaxedPrice TaxedShippingPrice { get; set; }
+
         public IAddress ShippingAddress { get; set; }
 
         public IAddress BillingAddress { get; set; }
+
+        public IShippingMode ShippingMode { get; set; }
+
+        public List<IShipping> Shipping { get; set; }
 
         public ITaxMode TaxMode { get; set; }
 

@@ -35,6 +35,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string ParcelId { get; set; }
 
         public IParcelMeasurements Measurements { get; set; }
+
+        public string ShippingKey { get; set; }
         public ParcelMeasurementsUpdatedMessage()
         {
             this.Type = "ParcelMeasurementsUpdated";

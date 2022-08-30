@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IAddress OldAddress { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

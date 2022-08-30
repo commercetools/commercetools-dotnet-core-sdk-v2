@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         long Quantity { get; set; }
 
+        string ShippingMethodKey { get; set; }
+
     }
 }

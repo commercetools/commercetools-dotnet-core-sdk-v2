@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IParcelMeasurements Measurements { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }
