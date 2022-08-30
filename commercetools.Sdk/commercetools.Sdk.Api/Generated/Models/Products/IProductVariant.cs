@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.Products
 
         string Key { get; set; }
 
-        List<IEmbeddedPrice> Prices { get; set; }
+        List<IPrice> Prices { get; set; }
 
         List<IAttribute> Attributes { get; set; }
 

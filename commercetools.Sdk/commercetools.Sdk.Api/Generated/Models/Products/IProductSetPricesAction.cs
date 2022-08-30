@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -11,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Products
 
         string Sku { get; set; }
 
-        List<IEmbeddedPriceDraft> Prices { get; set; }
+        List<IPriceDraft> Prices { get; set; }
 
         bool? Staged { get; set; }
 
