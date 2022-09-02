@@ -1,4 +1,5 @@
 using System;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.Api.Models.Customers
@@ -8,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.Customers
     {
         public string Action { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
         public CustomerSetDateOfBirthAction()
         {
             this.Action = "setDateOfBirth";
