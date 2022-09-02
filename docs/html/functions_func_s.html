@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">4.2.0</span>
+   &#160;<span id="projectnumber">5.0.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -1101,6 +1101,12 @@ $(function() {
 , <a class="el" href="d0/da3/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_update_action.html#a9bf58efc07a813edad676bbc81860c83">commercetools.Sdk.Api.Models.Orders.IOrderUpdateAction</a>
 , <a class="el" href="d3/d17/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_staged_order_update_action.html#a2e42b2512eda1864bffee7ab3ff8d71f">commercetools.Sdk.Api.Models.Orders.IStagedOrderUpdateAction</a>
 </li>
+<li>SetShippingCustomField()
+: <a class="el" href="d5/d95/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_update_action.html#a01433ddd2e7fc1a6510c4fad8a655710">commercetools.Sdk.Api.Models.Carts.ICartUpdateAction</a>
+</li>
+<li>SetShippingCustomType()
+: <a class="el" href="d5/d95/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_update_action.html#a7999e32fa575125a1e5b26f098bbe2c4">commercetools.Sdk.Api.Models.Carts.ICartUpdateAction</a>
+</li>
 <li>SetShippingInfoPriceChange()
 : <a class="el" href="d3/d1e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_i_change.html#aca9ebbe8a74f82ce23a33faf14aed26f">commercetools.Sdk.HistoryApi.Models.Changes.IChange</a>
 , <a class="el" href="d0/dda/classcommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_set_shipping_info_price_change.html#aa7d1c92869f8e287565106b4315ffb5c">commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange</a>
@@ -1858,6 +1864,19 @@ $(function() {
 <li>StagedQuoteStateChangedMessagePayload()
 : <a class="el" href="da/d81/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_state_changed_message_payload.html#ab836b2fc71d0487f03c1700f2ce837f1">commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessagePayload</a>
 </li>
+<li>StagedQuoteStateTransition()
+: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#ab27ac1868e763484bbaaeb3a71bbb063">commercetools.Sdk.Api.Models.Messages.IMessage</a>
+, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a7391003aeca54da399621c95838931d0">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
+</li>
+<li>StagedQuoteStateTransitionMessage()
+: <a class="el" href="d8/df6/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_state_transition_message.html#a9f9c16033af73b22a91778aa6ae3856a">commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessage</a>
+</li>
+<li>StagedQuoteStateTransitionMessagePayload()
+: <a class="el" href="d8/dac/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_staged_quote_state_transition_message_payload.html#ad6e8b337d379b4d2bb71b7b7db62ed41">commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessagePayload</a>
+</li>
+<li>StagedQuoteTransitionStateAction()
+: <a class="el" href="d5/d75/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_staged_quotes_1_1_staged_quote_transition_state_action.html#a2396d6ecb7760c87f83719589e57e493">commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteTransitionStateAction</a>
+</li>
 <li>StagedQuoteValidToSet()
 : <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a1208073fe9ca92be2ef66282888ef42f">commercetools.Sdk.Api.Models.Messages.IMessage</a>
 , <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a01d79f60d0701b173139e3cfa266c74a">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
@@ -1871,6 +1890,9 @@ $(function() {
 <li>StandalonePrice()
 : <a class="el" href="d3/deb/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_i_reference.html#a6e5461f0f2cbf43caea8f48df1672aec">commercetools.Sdk.Api.Models.Common.IReference</a>
 , <a class="el" href="db/d33/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_i_resource_identifier.html#a52a05e918c5e3349947303a7a3fcf9de">commercetools.Sdk.Api.Models.Common.IResourceIdentifier</a>
+</li>
+<li>StandalonePriceApplyStagedChangesAction()
+: <a class="el" href="d1/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_apply_staged_changes_action.html#af9a22dd8fa4f7bbc462bce97c95b584e">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction</a>
 </li>
 <li>StandalonePriceChangeValueAction()
 : <a class="el" href="d2/d47/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_change_value_action.html#a4126b811c7317c8c4ac59bda00dec792">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction</a>
@@ -1922,7 +1944,8 @@ $(function() {
 : <a class="el" href="dd/daf/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_resource_identifier.html#a5e7d948de236d893cb0204181c0e7691">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceResourceIdentifier</a>
 </li>
 <li>StandalonePrices()
-: <a class="el" href="d8/d19/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_projects_1_1_by_project_key_request_builder.html#aacc6ee89e786bdb7decfe979cfa9fc24">commercetools.Sdk.Api.Client.RequestBuilders.Projects.ByProjectKeyRequestBuilder</a>
+: <a class="el" href="de/da1/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_project_api_root.html#aaa0d2f25f9fa75b49106440142a404f9">commercetools.Sdk.Api.Client.ProjectApiRoot</a>
+, <a class="el" href="d8/d19/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_projects_1_1_by_project_key_request_builder.html#aacc6ee89e786bdb7decfe979cfa9fc24">commercetools.Sdk.Api.Client.RequestBuilders.Projects.ByProjectKeyRequestBuilder</a>
 </li>
 <li>StandalonePriceSetCustomFieldAction()
 : <a class="el" href="dc/da7/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_set_custom_field_action.html#aa1b48a3afb8707a7cf4f9e8d181479c9">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction</a>
@@ -1932,6 +1955,16 @@ $(function() {
 </li>
 <li>StandalonePriceSetDiscountedPriceAction()
 : <a class="el" href="dc/d5d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_standalone_price_set_discounted_price_action.html#a85c587a397c2fb43b068096c58100003">commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction</a>
+</li>
+<li>StandalonePriceStagedChangesApplied()
+: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a13d4493128ed6c1e3eb6d9cdf77f2468">commercetools.Sdk.Api.Models.Messages.IMessage</a>
+, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a280de21a6e1f15e4d1b39ffef9d9a759">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
+</li>
+<li>StandalonePriceStagedChangesAppliedMessage()
+: <a class="el" href="d1/d8e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_standalone_price_staged_changes_applied_message.html#ac67de9e6448bc48a2e49f63abcacaf6f">commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessage</a>
+</li>
+<li>StandalonePriceStagedChangesAppliedMessagePayload()
+: <a class="el" href="df/d13/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_standalone_price_staged_changes_applied_message_payload.html#a3a750e54b1369551120b649823a5f98f">commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload</a>
 </li>
 <li>StandalonePriceValueChanged()
 : <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a3be2d6d0fede9999b4a825d2f229fe16">commercetools.Sdk.Api.Models.Messages.IMessage</a>
@@ -2046,6 +2079,16 @@ $(function() {
 : <a class="el" href="d6/d5d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_stores_1_1_store_key_reference.html#a4d54374b6ac6d31e35d94b79997dab0d">commercetools.Sdk.Api.Models.Stores.StoreKeyReference</a>
 , <a class="el" href="d7/d3a/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_store_key_reference.html#a0a13501e1d2687a37e5e99d94cc7d3a5">commercetools.Sdk.ImportApi.Models.Common.StoreKeyReference</a>
 </li>
+<li>StoreLanguagesChanged()
+: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a0c14066905c8ebe22dfb878743a5ee26">commercetools.Sdk.Api.Models.Messages.IMessage</a>
+, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a45c10906ef5b870877684f52204a4832">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
+</li>
+<li>StoreLanguagesChangedMessage()
+: <a class="el" href="d9/d2d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_store_languages_changed_message.html#abd6d075a2799c377c91bcad0cd3125fc">commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage</a>
+</li>
+<li>StoreLanguagesChangedMessagePayload()
+: <a class="el" href="dc/d17/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_store_languages_changed_message_payload.html#ab9658467427d1763931dd9d8ef24a6f5">commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload</a>
+</li>
 <li>StoreProductSelectionsChanged()
 : <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a070207b739e415704e37cba9c7e5a902">commercetools.Sdk.Api.Models.Messages.IMessage</a>
 , <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#afaf0a9fdc577092bbb7732dd75ef25f7">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
@@ -2132,6 +2175,9 @@ $(function() {
 </li>
 <li>SubscriptionSetMessagesAction()
 : <a class="el" href="d8/dee/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_subscriptions_1_1_subscription_set_messages_action.html#ad3e05cf4e8914303ff602a51425ff3fa">commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction</a>
+</li>
+<li>Subtract()
+: <a class="el" href="db/dae/structcommercetools_1_1_base_1_1_models_1_1_date.html#af31fcbef9aabc07138db2609d7d57a58">commercetools.Base.Models.Date</a>
 </li>
 <li>SubTypeDiscriminatorAttribute()
 : <a class="el" href="d0/d48/classcommercetools_1_1_base_1_1_custom_attributes_1_1_sub_type_discriminator_attribute.html#a1a9b87ff80ac3e144f40c300144d3d4c">commercetools.Base.CustomAttributes.SubTypeDiscriminatorAttribute</a>
