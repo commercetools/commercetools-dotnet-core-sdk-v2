@@ -32,6 +32,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Types;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.Api.Models.StandalonePrices;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -216,6 +218,11 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder InStore(string storeKey)
         {
             return With().InStoreKeyWithStoreKeyValue(storeKey);
+        }
+
+        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
+        {
+            return With().StandalonePrices();
         }
     }
 }

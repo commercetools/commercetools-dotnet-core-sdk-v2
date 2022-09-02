@@ -1,6 +1,6 @@
 using System;
 using commercetools.Base.CustomAttributes;
-
+using commercetools.Base.Models;
 
 namespace commercetools.Sdk.Api.Models.ApiClients
 {
@@ -15,9 +15,9 @@ namespace commercetools.Sdk.Api.Models.ApiClients
 
         string Secret { get; set; }
 
-        DateTime? LastUsedAt { get; set; }
+        Date? LastUsedAt { get; set; }
 
-        DateTime? DeleteAt { get; set; }
+        Date? DeleteAt { get; set; }
 
         DateTime? CreatedAt { get; set; }
 

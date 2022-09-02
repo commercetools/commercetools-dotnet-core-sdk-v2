@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace commercetools.Sdk.Api.Models.Common
 {
@@ -10,7 +11,7 @@ namespace commercetools.Sdk.Api.Models.Common
             {
                 return highPrecisionMoney.PreciseAmount / (decimal)Math.Pow(10, highPrecisionMoney.FractionDigits);
             }
-            return typedMoney.CentAmount / 100M;
+            return typedMoney.CentAmount / (decimal)Math.Pow(10, typedMoney.FractionDigits);
         }
     }
 }

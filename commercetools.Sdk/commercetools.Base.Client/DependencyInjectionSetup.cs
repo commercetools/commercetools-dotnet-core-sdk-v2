@@ -91,12 +91,14 @@ namespace commercetools.Base.Client
 
         public static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName, Func<HttpResponseMessage, Type> errorResponseTypeMapper, Func<IServiceProvider, ISerializerService> serializerFactory)
         {
+            services.AddSingleton<IUserAgentProvider, UserAgentProvider>();
             var httpClientBuilder = services.AddHttpClient(clientName)
-                .ConfigureHttpClient(client =>
+                .ConfigureHttpClient((provider, client) =>
                 {
+                    var userAgentProvider = provider.GetService<IUserAgentProvider>() ?? new UserAgentProvider();
                     client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
                     client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
-                    client.DefaultRequestHeaders.UserAgent.ParseAdd(new UserAgentProvider().UserAgent);
+                    client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);
                 })
                 .ConfigureHttpMessageHandlerBuilder(builder =>
                 {

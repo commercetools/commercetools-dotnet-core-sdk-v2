@@ -486,7 +486,161 @@ namespace commercetools.Api.Serialization.Tests
             };
             var json = this._serializationFixture.SerializerService.Serialize(m);
 
-            Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
+            Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01T00:00:00Z\",\"lastModifiedAt\":\"0001-01-01T00:00:00Z\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01T00:00:00Z\",\"lastModifiedAt\":\"0001-01-01T00:00:00Z\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
+        }
+
+        [Fact]
+        public void testNestedSetList()
+        {
+            var product = new ProductDraft()
+            {
+                MasterVariant = new ProductVariantDraft()
+                {
+                    Attributes = new List<IAttribute>()
+                    {
+                        new SetAttribute<NestedAttribute>()
+                        {
+                            Name = "options",
+                            Value = new List<List<IAttribute>>()
+                            {
+                                new List<IAttribute>() {
+                                    new StringAttribute
+                                    {
+                                        Name = "id",
+                                        Value = "abc",
+                                    },
+                                    new LongAttribute
+                                    {
+                                        Name = "minamount",
+                                        Value = (long)0,
+                                    },
+                                    new LongAttribute
+                                    {
+                                        Name = "maxamount",
+                                        Value = (long)10,
+                                    },
+                                    new SetAttribute<NestedAttribute>()
+                                    {
+                                        Name = "products",
+                                        Value = new List<NestedAttribute>()
+                                    },
+                                    new LocalizedStringAttribute
+                                    {
+                                        Name = "title",
+                                        Value = new LocalizedString
+                                        {
+                                            { "nl-NL", "foo" }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            var json = this._serializationFixture.SerializerService.Serialize(product);
+            Assert.Equal("{\"masterVariant\":{\"attributes\":[{\"name\":\"options\",\"value\":[[{\"name\":\"id\",\"value\":\"abc\"},{\"name\":\"minamount\",\"value\":0},{\"name\":\"maxamount\",\"value\":10},{\"name\":\"products\",\"value\":[]},{\"name\":\"title\",\"value\":{\"nl-NL\":\"foo\"}}]]}]}}", json);
+        }
+
+        [Fact]
+        public void testNested()
+        {
+            var product = new ProductDraft()
+            {
+                MasterVariant = new ProductVariantDraft()
+                {
+                    Attributes = new List<IAttribute>()
+                    {
+                        new NestedAttribute()
+                        {
+                            Name = "options",
+                            Value = new List<IAttribute>() {
+                                new StringAttribute
+                                {
+                                    Name = "id",
+                                    Value = "abc",
+                                },
+                                new LongAttribute
+                                {
+                                    Name = "minamount",
+                                    Value = (long)0,
+                                },
+                                new LongAttribute
+                                {
+                                    Name = "maxamount",
+                                    Value = (long)10,
+                                },
+                                new SetAttribute<NestedAttribute>()
+                                {
+                                    Name = "products",
+                                    Value = new List<List<IAttribute>>()
+                                },
+                                new LocalizedStringAttribute
+                                {
+                                    Name = "title",
+                                    Value = new LocalizedString
+                                    {
+                                        { "nl-NL", "foo" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            var json = this._serializationFixture.SerializerService.Serialize(product);
+            Assert.Equal("{\"masterVariant\":{\"attributes\":[{\"name\":\"options\",\"value\":[{\"name\":\"id\",\"value\":\"abc\"},{\"name\":\"minamount\",\"value\":0},{\"name\":\"maxamount\",\"value\":10},{\"name\":\"products\",\"value\":[]},{\"name\":\"title\",\"value\":{\"nl-NL\":\"foo\"}}]}]}}", json);
+        }
+
+        [Fact]
+        public void testNestedList()
+        {
+            var product = new ProductDraft()
+            {
+                MasterVariant = new ProductVariantDraft()
+                {
+                    Attributes = new List<IAttribute>()
+                    {
+                        new NestedAttribute()
+                        {
+                            Name = "options",
+                            Value = new List<IAttribute>()
+                            {
+                                new StringAttribute
+                                {
+                                    Name = "id",
+                                    Value = "abc",
+                                },
+                                new LongAttribute
+                                {
+                                    Name = "minamount",
+                                    Value = (long)0,
+                                },
+                                new LongAttribute
+                                {
+                                    Name = "maxamount",
+                                    Value = (long)10,
+                                },
+                                new SetAttribute<NestedAttribute>()
+                                {
+                                    Name = "products",
+                                    Value = new List<List<IAttribute>>()
+                                },
+                                new LocalizedStringAttribute
+                                {
+                                    Name = "title",
+                                    Value = new LocalizedString
+                                    {
+                                        { "nl-NL", "foo" }
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+            };
+            var json = this._serializationFixture.SerializerService.Serialize(product);
+            Assert.Equal("{\"masterVariant\":{\"attributes\":[{\"name\":\"options\",\"value\":[{\"name\":\"id\",\"value\":\"abc\"},{\"name\":\"minamount\",\"value\":0},{\"name\":\"maxamount\",\"value\":10},{\"name\":\"products\",\"value\":[]},{\"name\":\"title\",\"value\":{\"nl-NL\":\"foo\"}}]}]}}", json);
         }
     }
 }
