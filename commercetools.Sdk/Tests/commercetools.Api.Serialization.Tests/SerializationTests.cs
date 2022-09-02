@@ -39,7 +39,7 @@ namespace commercetools.Api.Serialization.Tests
             
             var dateTime = DateTime.Parse("2020-06-04T00:00:00.000Z", CultureInfo.GetCultureInfo("de-DE"), DateTimeStyles.AdjustToUniversal);
             var dateTimeSerialized = serializerService.Serialize(dateTime);
-            Assert.Equal("\"2020-06-04\"", dateTimeSerialized);
+            Assert.Equal("\"2020-06-04T00:00:00Z\"", dateTimeSerialized);
             
             var d = DateTime.Parse("2020-06-04T00:00:00.000+02:00", CultureInfo.GetCultureInfo("de-DE"));
             var dSerialized = serializerService.Serialize(d);
