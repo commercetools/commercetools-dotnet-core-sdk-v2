@@ -1,4 +1,4 @@
-using System;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
@@ -10,7 +10,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         public string Type { get; set; }
 
-        public DateTime Value { get; set; }
+        public Date Value { get; set; }
         public DateAttribute()
         {
             this.Type = "date";

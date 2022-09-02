@@ -46,7 +46,7 @@ namespace commercetools.Sdk.Api.Tests
             var configuration = new ConfigurationBuilder().
                 AddJsonFile("appsettings.test.json", true).
                 Build();
-            
+
             var s = new ServiceCollection();
             s.UseCommercetoolsApi(configuration, "Test1");
 

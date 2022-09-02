@@ -19,8 +19,8 @@ namespace commercetools.Sdk.Api.Tests
             var serializerService = p.GetService<SerializerService>();
             return serializerService;
         }
-        
-        
+
+
         [Fact]
         public void DeserializeProjectDates()
         {
@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Tests
 
             var project = serializerService.Deserialize<Project>(projectResponse);
 
-            Assert.Equal(new DateTime(2019,1,9,10,41,27,308, DateTimeKind.Utc), project.CreatedAt);
+            Assert.Equal(new DateTime(2019, 1, 9, 10, 41, 27, 308, DateTimeKind.Utc), project.CreatedAt);
 
             var d = new Project()
             {
@@ -46,9 +46,9 @@ namespace commercetools.Sdk.Api.Tests
             var c = "{\"dateOfBirth\": \"2019-02-01\"}";
 
             var customer = serializerService.Deserialize<Customer>(c);
-            
+
             Assert.IsType<Date>(customer.DateOfBirth);
-            
+
             Assert.True(customer.DateOfBirth == new DateTime(2019, 2, 1));
 
             customer.DateOfBirth = DateTime.Today.ToDate();

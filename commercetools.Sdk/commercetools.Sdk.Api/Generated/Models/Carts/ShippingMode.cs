@@ -11,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         [Description("Single")]
         Single,
 
-        [Description("Multi")]
-        Multi
+        [Description("Multiple")]
+        Multiple
     }
 
     public class ShippingModeWrapper : IShippingMode
@@ -41,8 +41,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static IShippingMode Single = new ShippingModeWrapper
         { Value = ShippingMode.Single, JsonName = "Single" };
 
-        public static IShippingMode Multi = new ShippingModeWrapper
-        { Value = ShippingMode.Multi, JsonName = "Multi" };
+        public static IShippingMode Multiple = new ShippingModeWrapper
+        { Value = ShippingMode.Multiple, JsonName = "Multiple" };
 
         ShippingMode? Value { get; }
 
@@ -51,7 +51,7 @@ namespace commercetools.Sdk.Api.Models.Carts
             return new[]
             {
                  Single ,
-                 Multi
+                 Multiple
              };
         }
         static IShippingMode FindEnum(string value)

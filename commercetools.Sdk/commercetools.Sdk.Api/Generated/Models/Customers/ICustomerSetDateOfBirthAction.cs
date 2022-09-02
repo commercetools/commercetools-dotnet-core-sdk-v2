@@ -1,4 +1,3 @@
-using System;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 

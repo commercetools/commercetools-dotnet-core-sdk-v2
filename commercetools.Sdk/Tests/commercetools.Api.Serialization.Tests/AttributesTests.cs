@@ -633,7 +633,7 @@ namespace commercetools.Api.Serialization.Tests
                                     {
                                         { "nl-NL", "foo" }
                                     }
-                                } 
+                                }
                             }
                         }
                     }

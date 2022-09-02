@@ -37,10 +37,10 @@ namespace commercetools.Api.IntegrationTests.StandalonePricing
                         },
                         ValidFrom = validFrom
                     }).ExecuteAsync();
-                    
-                    Assert.Equal(new DateTime(2022,2,1,22,0,0, DateTimeKind.Utc), price.ValidFrom);
-                    
-                    
+
+                    Assert.Equal(new DateTime(2022, 2, 1, 22, 0, 0, DateTimeKind.Utc), price.ValidFrom);
+
+
                 }
             );
         }

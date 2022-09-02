@@ -1,9 +1,9 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
-using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.Api.Models.Me
@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string Title { get; set; }
 
-        DateTime? DateOfBirth { get; set; }
+        Date? DateOfBirth { get; set; }
 
         string CompanyName { get; set; }
 
