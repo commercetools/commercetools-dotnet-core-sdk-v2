@@ -486,7 +486,7 @@ namespace commercetools.Api.Serialization.Tests
             };
             var json = this._serializationFixture.SerializerService.Serialize(m);
 
-            Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01\",\"lastModifiedAt\":\"0001-01-01\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
+            Assert.Equal("{\"version\":0,\"createdAt\":\"0001-01-01T00:00:00Z\",\"lastModifiedAt\":\"0001-01-01T00:00:00Z\",\"sequenceNumber\":0,\"resourceVersion\":0,\"type\":\"ProductPublished\",\"productProjection\":{\"version\":0,\"createdAt\":\"0001-01-01T00:00:00Z\",\"lastModifiedAt\":\"0001-01-01T00:00:00Z\",\"masterVariant\":{\"id\":0,\"attributes\":[{\"name\":\"product_classification\",\"value\":{\"key\":\"NONE\",\"label\":{\"fr\":\"\",\"de\":\"Regular product\"}}}]}}}", json);
         }
 
         [Fact]

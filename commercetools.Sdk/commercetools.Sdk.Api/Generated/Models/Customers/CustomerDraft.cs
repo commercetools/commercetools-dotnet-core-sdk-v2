@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.Api.Models.Customers
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         public string AnonymousId { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
 
         public string CompanyName { get; set; }
 
