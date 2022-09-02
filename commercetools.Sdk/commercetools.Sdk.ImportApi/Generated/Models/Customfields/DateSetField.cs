@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Customfields
@@ -9,7 +9,7 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     {
         public string Type { get; set; }
 
-        public List<DateTime> Value { get; set; }
+        public List<Date> Value { get; set; }
         public DateSetField()
         {
             this.Type = "DateSet";

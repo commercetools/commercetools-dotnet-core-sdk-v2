@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.StagedQuotes;
 using System;
 
 
@@ -28,6 +29,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+
+        public IStagedQuote StagedQuote { get; set; }
         public StagedQuoteCreatedMessage()
         {
             this.Type = "StagedQuoteCreated";

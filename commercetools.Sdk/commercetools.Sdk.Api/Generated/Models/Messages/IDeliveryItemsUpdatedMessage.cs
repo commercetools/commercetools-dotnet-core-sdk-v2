@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         List<IDeliveryItem> OldItems { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

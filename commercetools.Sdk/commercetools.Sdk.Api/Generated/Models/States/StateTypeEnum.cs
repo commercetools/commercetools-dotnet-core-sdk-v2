@@ -21,7 +21,16 @@ namespace commercetools.Sdk.Api.Models.States
         ReviewState,
 
         [Description("PaymentState")]
-        PaymentState
+        PaymentState,
+
+        [Description("QuoteRequestState")]
+        QuoteRequestState,
+
+        [Description("StagedQuoteState")]
+        StagedQuoteState,
+
+        [Description("QuoteState")]
+        QuoteState
     }
 
     public class StateTypeEnumWrapper : IStateTypeEnum
@@ -62,6 +71,15 @@ namespace commercetools.Sdk.Api.Models.States
         public static IStateTypeEnum PaymentState = new StateTypeEnumWrapper
         { Value = StateTypeEnum.PaymentState, JsonName = "PaymentState" };
 
+        public static IStateTypeEnum QuoteRequestState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.QuoteRequestState, JsonName = "QuoteRequestState" };
+
+        public static IStateTypeEnum StagedQuoteState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.StagedQuoteState, JsonName = "StagedQuoteState" };
+
+        public static IStateTypeEnum QuoteState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.QuoteState, JsonName = "QuoteState" };
+
         StateTypeEnum? Value { get; }
 
         static IStateTypeEnum[] Values()
@@ -72,7 +90,10 @@ namespace commercetools.Sdk.Api.Models.States
                  LineItemState ,
                  ProductState ,
                  ReviewState ,
-                 PaymentState
+                 PaymentState ,
+                 QuoteRequestState ,
+                 StagedQuoteState ,
+                 QuoteState
              };
         }
         static IStateTypeEnum FindEnum(string value)

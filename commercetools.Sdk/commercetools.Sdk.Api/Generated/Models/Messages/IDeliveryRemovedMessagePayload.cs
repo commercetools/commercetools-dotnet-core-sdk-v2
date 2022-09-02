@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         IDelivery Delivery { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

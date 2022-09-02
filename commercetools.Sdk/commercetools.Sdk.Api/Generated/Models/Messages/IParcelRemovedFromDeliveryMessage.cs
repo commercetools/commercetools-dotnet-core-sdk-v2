@@ -11,5 +11,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IParcel Parcel { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

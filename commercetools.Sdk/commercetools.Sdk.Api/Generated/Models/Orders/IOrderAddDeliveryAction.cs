@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         List<IDeliveryItem> Items { get; set; }
 
+        string ShippingKey { get; set; }
+
         IBaseAddress Address { get; set; }
 
         List<IParcelDraft> Parcels { get; set; }

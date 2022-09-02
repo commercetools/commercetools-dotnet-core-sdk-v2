@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         ITrackingData TrackingData { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

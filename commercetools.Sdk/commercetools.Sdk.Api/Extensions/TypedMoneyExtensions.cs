@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 
 namespace commercetools.Sdk.Api.Models.Common
 {

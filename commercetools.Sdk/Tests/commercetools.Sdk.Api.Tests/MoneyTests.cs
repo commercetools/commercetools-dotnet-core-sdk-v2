@@ -5,7 +5,7 @@ namespace commercetools.Sdk.Api.Tests
 {
     public class MoneyTests
     {
-        
+
         [Fact]
         public void TypedMoney_ZeroFractionCulture()
         {

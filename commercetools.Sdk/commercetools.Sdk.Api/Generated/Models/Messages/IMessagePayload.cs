@@ -95,9 +95,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("QuoteRequestCreated", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestDeleted", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessagePayload))]
+    [SubTypeDiscriminator("QuoteRequestStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload))]
     [SubTypeDiscriminator("QuoteStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessagePayload))]
-    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload))]
-    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload))]
+    [SubTypeDiscriminator("QuoteStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessagePayload))]
+    [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload))]
+    [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload))]
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessagePayload))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessagePayload))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload))]
@@ -106,15 +108,18 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StagedQuoteDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessagePayload))]
     [SubTypeDiscriminator("StagedQuoteSellerCommentSet", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteSellerCommentSetMessagePayload))]
     [SubTypeDiscriminator("StagedQuoteStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteStateChangedMessagePayload))]
+    [SubTypeDiscriminator("StagedQuoteStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessagePayload))]
     [SubTypeDiscriminator("StagedQuoteValidToSet", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceCreated", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceCreatedMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceStagedChangesApplied", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValueChanged", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Sdk.Api.Models.Messages.StoreCreatedMessagePayload))]
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StoreDeletedMessagePayload))]
     [SubTypeDiscriminator("StoreDistributionChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessagePayload))]
+    [SubTypeDiscriminator("StoreLanguagesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload))]
     [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
     public partial interface IMessagePayload
     {
@@ -654,21 +659,33 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload QuoteRequestStateTransition(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessagePayload QuoteStateChanged(Action<commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessagePayload QuoteStateTransition(Action<commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoAddedMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessagePayload();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload ReturnInfoAdded(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.OrderReturnInfoSetMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload ReturnInfoSet(Action<commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
@@ -720,6 +737,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessagePayload StagedQuoteStateTransition(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteStateTransitionMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessagePayload StagedQuoteValidToSet(Action<commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StagedQuoteValidToSetMessagePayload();
@@ -750,6 +773,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload StandalonePriceStagedChangesApplied(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload StandalonePriceValueChanged(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload();
@@ -771,6 +800,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessagePayload StoreDistributionChannelsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload StoreLanguagesChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }

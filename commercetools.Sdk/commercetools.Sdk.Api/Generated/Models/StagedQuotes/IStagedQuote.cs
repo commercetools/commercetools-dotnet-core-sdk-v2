@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.QuoteRequests;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
@@ -39,6 +40,8 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         string SellerComment { get; set; }
 
         ICustomFields Custom { get; set; }
+
+        IStateReference State { get; set; }
 
     }
 }

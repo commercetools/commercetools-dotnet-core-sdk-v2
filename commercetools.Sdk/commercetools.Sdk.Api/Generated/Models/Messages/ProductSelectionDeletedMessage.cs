@@ -28,8 +28,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
-
-        public ILocalizedString Name { get; set; }
         public ProductSelectionDeletedMessage()
         {
             this.Type = "ProductSelectionDeleted";

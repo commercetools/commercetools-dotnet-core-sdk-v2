@@ -25,6 +25,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.RequestUrl = $"/{ProjectKey}/products";
         }
 
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
+        }
+
         public List<string> GetPriceCurrency()
         {
             return this.GetQueryParam("priceCurrency");
@@ -70,9 +75,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("withTotal");
         }
 
-        public List<string> GetWhere()
+        public ByProjectKeyProductsGet WithWhere(string where)
         {
-            return this.GetQueryParam("where");
+            return this.AddQueryParam("where", where);
         }
 
         public ByProjectKeyProductsGet WithPriceCurrency(string priceCurrency)
@@ -118,11 +123,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsGet WithWithTotal(bool withTotal)
         {
             return this.AddQueryParam("withTotal", withTotal.ToString());
-        }
-
-        public ByProjectKeyProductsGet WithWhere(string where)
-        {
-            return this.AddQueryParam("where", where);
         }
 
         public ByProjectKeyProductsGet WithPredicateVar(string varName, string predicateVar)

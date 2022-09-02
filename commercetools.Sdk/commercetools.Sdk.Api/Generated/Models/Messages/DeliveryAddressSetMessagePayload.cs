@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IAddress Address { get; set; }
 
         public IAddress OldAddress { get; set; }
+
+        public string ShippingKey { get; set; }
         public DeliveryAddressSetMessagePayload()
         {
             this.Type = "DeliveryAddressSet";

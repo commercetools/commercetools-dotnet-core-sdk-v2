@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.QuoteRequests;
 using System;
 
 
@@ -28,6 +29,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+
+        public IQuoteRequest QuoteRequest { get; set; }
         public QuoteRequestCreatedMessage()
         {
             this.Type = "QuoteRequestCreated";

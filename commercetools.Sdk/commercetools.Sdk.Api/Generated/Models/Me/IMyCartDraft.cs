@@ -40,7 +40,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         IStoreKeyReference Store { get; set; }
 
-        List<IDiscountCodeInfo> DiscountCodes { get; set; }
+        List<string> DiscountCodes { get; set; }
 
     }
 }

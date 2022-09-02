@@ -25,5 +25,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
+        ICustomLineItemPriceMode PriceMode { get; set; }
+
     }
 }

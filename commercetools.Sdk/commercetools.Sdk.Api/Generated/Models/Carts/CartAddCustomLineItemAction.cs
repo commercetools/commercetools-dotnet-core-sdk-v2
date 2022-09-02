@@ -23,6 +23,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ICustomFieldsDraft Custom { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public ICustomLineItemPriceMode PriceMode { get; set; }
         public CartAddCustomLineItemAction()
         {
             this.Action = "addCustomLineItem";

@@ -33,7 +33,6 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
-using commercetools.Sdk.Api.Models.StandalonePrices;
 
 namespace commercetools.Sdk.Api.Client
 {

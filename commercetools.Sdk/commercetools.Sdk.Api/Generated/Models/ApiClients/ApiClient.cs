@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Models.ApiClients
 
         public Date? LastUsedAt { get; set; }
 
-        public Date? DeleteAt { get; set; }
+        public DateTime? DeleteAt { get; set; }
 
         public DateTime? CreatedAt { get; set; }
 

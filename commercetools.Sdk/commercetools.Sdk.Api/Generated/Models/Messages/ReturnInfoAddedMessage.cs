@@ -1,13 +1,12 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
 using System;
-using System.Collections.Generic;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class OrderReturnInfoSetMessage : IOrderReturnInfoSetMessage
+    public partial class ReturnInfoAddedMessage : IReturnInfoAddedMessage
     {
         public string Id { get; set; }
 
@@ -31,10 +30,10 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<IReturnInfo> ReturnInfo { get; set; }
-        public OrderReturnInfoSetMessage()
+        public IReturnInfo ReturnInfo { get; set; }
+        public ReturnInfoAddedMessage()
         {
-            this.Type = "ReturnInfoSet";
+            this.Type = "ReturnInfoAdded";
         }
     }
 }

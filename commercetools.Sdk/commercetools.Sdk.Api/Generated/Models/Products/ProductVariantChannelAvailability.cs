@@ -8,5 +8,9 @@ namespace commercetools.Sdk.Api.Models.Products
         public long? RestockableInDays { get; set; }
 
         public long? AvailableQuantity { get; set; }
+
+        public string Id { get; set; }
+
+        public long Version { get; set; }
     }
 }

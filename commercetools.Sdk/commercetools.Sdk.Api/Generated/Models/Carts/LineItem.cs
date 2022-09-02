@@ -32,6 +32,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 
+        public List<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+
         public ITypedMoney TotalPrice { get; set; }
 
         public long Quantity { get; set; }
@@ -41,6 +43,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public List<IItemState> State { get; set; }
 
         public ITaxRate TaxRate { get; set; }
+
+        public List<IMethodTaxRate> PerMethodTaxRate { get; set; }
 
         public IChannelReference SupplyChannel { get; set; }
 

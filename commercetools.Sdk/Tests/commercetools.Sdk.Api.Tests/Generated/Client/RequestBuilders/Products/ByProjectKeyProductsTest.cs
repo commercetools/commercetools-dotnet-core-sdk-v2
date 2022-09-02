@@ -23,6 +23,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
+                   .WithWhere("where")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Get()
                    .WithPriceCurrency("priceCurrency")
                    .Build(),
                    "Get",
@@ -113,16 +123,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
-                   .WithWhere("where")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products?where=where",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .Get()
                    .WithPredicateVar("varName", "var.varName")
                    .Build(),
                    "Get",
@@ -136,6 +136,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Get",
                    "/test_projectKey/products",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/products?where=where",
                },
                new Object[] {
                    ApiRoot

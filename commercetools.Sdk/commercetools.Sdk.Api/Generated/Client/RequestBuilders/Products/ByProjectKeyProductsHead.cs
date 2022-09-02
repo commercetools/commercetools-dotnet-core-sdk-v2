@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
@@ -25,7 +26,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.RequestUrl = $"/{ProjectKey}/products";
         }
 
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
+        }
 
+        public ByProjectKeyProductsHead WithWhere(string where)
+        {
+            return this.AddQueryParam("where", where);
+        }
 
 
         public async Task<JsonElement> ExecuteAsync()

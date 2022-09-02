@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -72,6 +73,8 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         List<IDirectDiscount> DirectDiscounts { get; set; }
 
         ICustomFields Custom { get; set; }
+
+        IStateReference State { get; set; }
 
     }
 }

@@ -30,6 +30,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IMoney Value { get; set; }
+
+        public bool Staged { get; set; }
         public StandalonePriceValueChangedMessage()
         {
             this.Type = "StandalonePriceValueChanged";

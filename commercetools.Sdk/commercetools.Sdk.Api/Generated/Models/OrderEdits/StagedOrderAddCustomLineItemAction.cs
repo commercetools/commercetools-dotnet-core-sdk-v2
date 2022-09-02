@@ -24,6 +24,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public ICustomFieldsDraft Custom { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public ICustomLineItemPriceMode PriceMode { get; set; }
         public StagedOrderAddCustomLineItemAction()
         {
             this.Action = "addCustomLineItem";

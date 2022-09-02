@@ -1,8 +1,8 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
-using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Customers
@@ -30,7 +30,7 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
 
         string ExternalId { get; set; }
 
-        DateTime? DateOfBirth { get; set; }
+        Date? DateOfBirth { get; set; }
 
         string CompanyName { get; set; }
 

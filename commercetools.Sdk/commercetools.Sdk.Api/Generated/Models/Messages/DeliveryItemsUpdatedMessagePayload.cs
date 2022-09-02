@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public List<IDeliveryItem> Items { get; set; }
 
         public List<IDeliveryItem> OldItems { get; set; }
+
+        public string ShippingKey { get; set; }
         public DeliveryItemsUpdatedMessagePayload()
         {
             this.Type = "DeliveryItemsUpdated";

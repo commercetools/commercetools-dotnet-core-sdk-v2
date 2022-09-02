@@ -1,5 +1,5 @@
-using System;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
@@ -7,7 +7,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.DateAttribute))]
     public partial interface IDateAttribute : IAttribute
     {
-        DateTime Value { get; set; }
+        Date Value { get; set; }
 
     }
 }

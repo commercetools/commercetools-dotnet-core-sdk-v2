@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string ParcelId { get; set; }
 
         public ITrackingData TrackingData { get; set; }
+
+        public string ShippingKey { get; set; }
         public ParcelTrackingDataUpdatedMessagePayload()
         {
             this.Type = "ParcelTrackingDataUpdated";

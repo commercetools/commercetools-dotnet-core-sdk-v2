@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IDelivery Delivery { get; set; }
 
         public IParcel Parcel { get; set; }
+
+        public string ShippingKey { get; set; }
         public ParcelAddedToDeliveryMessagePayload()
         {
             this.Type = "ParcelAddedToDelivery";

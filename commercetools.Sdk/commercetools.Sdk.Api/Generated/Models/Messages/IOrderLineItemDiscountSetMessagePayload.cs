@@ -17,5 +17,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         ITaxedItemPrice TaxedPrice { get; set; }
 
+        List<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+
     }
 }

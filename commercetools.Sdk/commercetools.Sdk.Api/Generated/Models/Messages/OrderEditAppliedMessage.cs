@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IOrderEditReference Edit { get; set; }
+        public IOrderEdit Edit { get; set; }
 
         public IOrderEditApplied Result { get; set; }
         public OrderEditAppliedMessage()

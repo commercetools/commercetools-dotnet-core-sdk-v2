@@ -1,4 +1,5 @@
 using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
@@ -28,6 +29,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         ITaxRate TaxRate { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustom Custom { get; set; }
 
     }
 }

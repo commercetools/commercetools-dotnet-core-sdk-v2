@@ -2,6 +2,7 @@ using System;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 
+
 namespace commercetools.Sdk.Api.Models.ApiClients
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClient))]
@@ -17,7 +18,7 @@ namespace commercetools.Sdk.Api.Models.ApiClients
 
         Date? LastUsedAt { get; set; }
 
-        Date? DeleteAt { get; set; }
+        DateTime? DeleteAt { get; set; }
 
         DateTime? CreatedAt { get; set; }
 

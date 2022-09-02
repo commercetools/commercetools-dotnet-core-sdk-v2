@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IDelivery Delivery { get; set; }
+
+        public string ShippingKey { get; set; }
         public DeliveryAddedMessagePayload()
         {
             this.Type = "DeliveryAdded";

@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.StagedQuotes;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
@@ -15,6 +16,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
         string Key { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
+        IStateReference State { get; set; }
 
     }
 }

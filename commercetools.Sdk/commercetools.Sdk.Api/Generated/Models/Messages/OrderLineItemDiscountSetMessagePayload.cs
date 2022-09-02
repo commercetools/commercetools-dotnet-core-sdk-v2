@@ -17,6 +17,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IMoney TotalPrice { get; set; }
 
         public ITaxedItemPrice TaxedPrice { get; set; }
+
+        public List<IMethodTaxedPrice> TaxedPricePortions { get; set; }
         public OrderLineItemDiscountSetMessagePayload()
         {
             this.Type = "OrderLineItemDiscountSet";

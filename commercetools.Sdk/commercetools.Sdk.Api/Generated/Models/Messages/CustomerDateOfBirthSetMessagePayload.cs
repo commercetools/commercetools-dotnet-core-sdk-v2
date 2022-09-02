@@ -1,4 +1,4 @@
-using System;
+using commercetools.Base.Models;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
         public CustomerDateOfBirthSetMessagePayload()
         {
             this.Type = "CustomerDateOfBirthSet";
