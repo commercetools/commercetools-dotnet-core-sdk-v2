@@ -120,6 +120,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StoreDeletedMessage))]
     [SubTypeDiscriminator("StoreDistributionChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessage))]
     [SubTypeDiscriminator("StoreLanguagesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage))]
+    [SubTypeDiscriminator("StoreNameSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreNameSetMessage))]
     [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage))]
     public partial interface IMessage : IBaseResource
     {
@@ -820,6 +821,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage StoreLanguagesChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreNameSetMessage StoreNameSet(Action<commercetools.Sdk.Api.Models.Messages.StoreNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreNameSetMessage();
             init?.Invoke(t);
             return t;
         }
