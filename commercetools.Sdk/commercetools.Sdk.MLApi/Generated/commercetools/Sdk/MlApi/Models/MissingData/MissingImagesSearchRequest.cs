@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class MissingImagesSearchRequest : IMissingImagesSearchRequest
     {
         public long? Limit { get; set; }

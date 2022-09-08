@@ -1,9 +1,10 @@
+using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public class ByProjectKeyMissingDataImagesStatusRequestBuilder
     {
 
@@ -21,7 +22,7 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
         }
 
 
-
+        [Obsolete("usage of this endpoint has been deprecated.", false)]
         public ByProjectKeyMissingDataImagesStatusByTaskIdRequestBuilder WithTaskId(string taskId)
         {
             return new ByProjectKeyMissingDataImagesStatusByTaskIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, taskId);

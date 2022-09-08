@@ -15,6 +15,7 @@ namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.MissingData
             Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
         }
 
+        [Obsolete]
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {

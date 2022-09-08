@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
@@ -5,7 +6,7 @@ using commercetools.Base.Client;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class ByProjectKeyMissingDataAttributesStatusByTaskIdGet : ApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet>, IApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet, commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus>
     {
 

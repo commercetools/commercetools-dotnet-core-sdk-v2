@@ -6,6 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingPricesSearchRequest))]
+    [Obsolete]
     public partial interface IMissingPricesSearchRequest
     {
         long? Limit { get; set; }

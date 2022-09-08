@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -5,6 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesPagedQueryResult))]
+    [Obsolete]
     public partial interface IMissingAttributesPagedQueryResult
     {
         long Count { get; set; }
@@ -15,6 +17,7 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         List<IMissingAttributes> Results { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         IMissingAttributesMeta Meta { get; set; }
 
     }

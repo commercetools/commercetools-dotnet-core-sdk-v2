@@ -1,9 +1,10 @@
+using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public class ByProjectKeyMissingDataRequestBuilder
     {
 
@@ -21,17 +22,17 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
         }
 
 
-
+        [Obsolete("usage of this endpoint has been deprecated.", false)]
         public ByProjectKeyMissingDataAttributesRequestBuilder Attributes()
         {
             return new ByProjectKeyMissingDataAttributesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
-
+        [Obsolete("usage of this endpoint has been deprecated.", false)]
         public ByProjectKeyMissingDataImagesRequestBuilder Images()
         {
             return new ByProjectKeyMissingDataImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
-
+        [Obsolete("usage of this endpoint has been deprecated.", false)]
         public ByProjectKeyMissingDataPricesRequestBuilder Prices()
         {
             return new ByProjectKeyMissingDataPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
