@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceUpdateAction))]
     [SubTypeDiscriminator("applyStagedChanges", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction))]
+    [SubTypeDiscriminator("changeActive", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction))]
     [SubTypeDiscriminator("changeValue", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
@@ -18,6 +19,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction ApplyStagedChanges(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction ChangeActive(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction();
             init?.Invoke(t);
             return t;
         }

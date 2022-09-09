@@ -34,5 +34,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         ICustomFieldsDraft Custom { get; set; }
 
+        bool? Active { get; set; }
+
     }
 }
