@@ -80,6 +80,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("staged-quote")]
         StagedQuote,
 
+        [Description("standalone-price")]
+        StandalonePrice,
+
         [Description("state")]
         State,
 
@@ -194,6 +197,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId StagedQuote = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.StagedQuote, JsonName = "staged-quote" };
 
+        public static IReferenceTypeId StandalonePrice = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.StandalonePrice, JsonName = "standalone-price" };
+
         public static IReferenceTypeId State = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.State, JsonName = "state" };
 
@@ -242,6 +248,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  ShippingMethod ,
                  ShoppingList ,
                  StagedQuote ,
+                 StandalonePrice ,
                  State ,
                  Store ,
                  Subscription ,
