@@ -11,6 +11,9 @@ namespace commercetools.Sdk.Api.Models.Orders
         [Description("Shipped")]
         Shipped,
 
+        [Description("Delivered")]
+        Delivered,
+
         [Description("Ready")]
         Ready,
 
@@ -53,6 +56,9 @@ namespace commercetools.Sdk.Api.Models.Orders
         public static IShipmentState Shipped = new ShipmentStateWrapper
         { Value = ShipmentState.Shipped, JsonName = "Shipped" };
 
+        public static IShipmentState Delivered = new ShipmentStateWrapper
+        { Value = ShipmentState.Delivered, JsonName = "Delivered" };
+
         public static IShipmentState Ready = new ShipmentStateWrapper
         { Value = ShipmentState.Ready, JsonName = "Ready" };
 
@@ -75,6 +81,7 @@ namespace commercetools.Sdk.Api.Models.Orders
             return new[]
             {
                  Shipped ,
+                 Delivered ,
                  Ready ,
                  Pending ,
                  Delayed ,

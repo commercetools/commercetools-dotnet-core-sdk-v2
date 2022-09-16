@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch;
@@ -35,7 +36,7 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Projects
         {
             return new ByProjectKeyRecommendationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
-
+        [Obsolete("usage of this endpoint has been deprecated.", false)]
         public ByProjectKeyMissingDataRequestBuilder MissingData()
         {
             return new ByProjectKeyMissingDataRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);

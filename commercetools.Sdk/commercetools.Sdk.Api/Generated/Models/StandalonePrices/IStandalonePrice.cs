@@ -48,5 +48,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         IStagedStandalonePrice Staged { get; set; }
 
+        bool Active { get; set; }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -5,6 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingImagesSearchRequest))]
+    [Obsolete]
     public partial interface IMissingImagesSearchRequest
     {
         long? Limit { get; set; }
