@@ -123,6 +123,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StoreLanguagesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessagePayload))]
     [SubTypeDiscriminator("StoreNameSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreNameSetMessagePayload))]
     [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
+    [SubTypeDiscriminator("StoreSupplyChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload))]
     public partial interface IMessagePayload
     {
         string Type { get; set; }
@@ -826,6 +827,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload StoreProductSelectionsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload StoreSupplyChannelsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }
