@@ -50,7 +50,7 @@ namespace commercetools.Sdk.Api.Client
             this.ClientName = apiHttpClient.Name;
         }
 
-        private ByProjectKeyRequestBuilder With()
+        public ByProjectKeyRequestBuilder With()
         {
             return new ApiRoot(ApiHttpClient).WithProjectKey(ProjectKey);
         }
