@@ -33,6 +33,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -148,6 +149,12 @@ namespace commercetools.Sdk.Api.Client
         {
             return With().ProductProjections();
         }
+
+        public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
+        {
+            return With().ProductSelections();
+        }
+
 
         public ByProjectKeyProductTypesRequestBuilder ProductTypes()
         {
