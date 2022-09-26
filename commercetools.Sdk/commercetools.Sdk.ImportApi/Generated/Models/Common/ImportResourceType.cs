@@ -39,7 +39,10 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         Customer,
 
         [Description("inventory")]
-        Inventory
+        Inventory,
+
+        [Description("standalone-price")]
+        StandalonePrice
     }
 
     public class ImportResourceTypeWrapper : IImportResourceType
@@ -98,6 +101,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Inventory = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Inventory, JsonName = "inventory" };
 
+        public static IImportResourceType StandalonePrice = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.StandalonePrice, JsonName = "standalone-price" };
+
         ImportResourceType? Value { get; }
 
         static IImportResourceType[] Values()
@@ -114,7 +120,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductVariant ,
                  ProductVariantPatch ,
                  Customer ,
-                 Inventory
+                 Inventory ,
+                 StandalonePrice
              };
         }
         static IImportResourceType FindEnum(string value)
