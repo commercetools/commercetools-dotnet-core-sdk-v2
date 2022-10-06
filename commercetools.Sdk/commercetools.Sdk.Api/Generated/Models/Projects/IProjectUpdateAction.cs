@@ -12,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeCurrencies", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction))]
     [SubTypeDiscriminator("changeLanguages", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeLanguagesAction))]
     [SubTypeDiscriminator("changeMessagesConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction))]
+    [SubTypeDiscriminator("changeMyBusinessUnitStatusOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeNameAction))]
     [SubTypeDiscriminator("changeOrderSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeOrderSearchStatusAction))]
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]
@@ -55,6 +56,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction ChangeMessagesConfiguration(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction ChangeMyBusinessUnitStatusOnCreation(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction();
             init?.Invoke(t);
             return t;
         }

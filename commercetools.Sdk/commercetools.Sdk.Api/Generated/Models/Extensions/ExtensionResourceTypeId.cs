@@ -27,7 +27,10 @@ namespace commercetools.Sdk.Api.Models.Extensions
         StagedQuote,
 
         [Description("quote")]
-        Quote
+        Quote,
+
+        [Description("business-unit")]
+        BusinessUnit
     }
 
     public class ExtensionResourceTypeIdWrapper : IExtensionResourceTypeId
@@ -74,6 +77,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
         public static IExtensionResourceTypeId Quote = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Quote, JsonName = "quote" };
 
+        public static IExtensionResourceTypeId BusinessUnit = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.BusinessUnit, JsonName = "business-unit" };
+
         ExtensionResourceTypeId? Value { get; }
 
         static IExtensionResourceTypeId[] Values()
@@ -86,7 +92,8 @@ namespace commercetools.Sdk.Api.Models.Extensions
                  Customer ,
                  QuoteRequest ,
                  StagedQuote ,
-                 Quote
+                 Quote ,
+                 BusinessUnit
              };
         }
         static IExtensionResourceTypeId FindEnum(string value)

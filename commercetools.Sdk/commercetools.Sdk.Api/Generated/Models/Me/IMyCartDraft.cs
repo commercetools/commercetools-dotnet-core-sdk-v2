@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.ShippingMethods;
@@ -37,6 +38,8 @@ namespace commercetools.Sdk.Api.Models.Me
         long? DeleteDaysAfterLastModification { get; set; }
 
         List<IBaseAddress> ItemShippingAddresses { get; set; }
+
+        IBusinessUnitKeyReference BusinessUnit { get; set; }
 
         IStoreKeyReference Store { get; set; }
 

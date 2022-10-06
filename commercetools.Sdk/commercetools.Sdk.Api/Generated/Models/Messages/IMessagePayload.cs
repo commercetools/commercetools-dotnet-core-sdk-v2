@@ -6,6 +6,29 @@ namespace commercetools.Sdk.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Messages.MessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAssociateAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAssociateChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAssociateRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAssociatesSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociatesSetMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitBillingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitBillingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitContactEmailSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCreated", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitDefaultBillingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultBillingAddressSetMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitDeleted", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitNameChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitParentUnitChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitShippingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitShippingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitStatusChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitStoreModeChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessagePayload))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessagePayload))]
@@ -128,6 +151,144 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string Type { get; set; }
 
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload BusinessUnitAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload BusinessUnitAddressChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload BusinessUnitAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateAddedMessagePayload BusinessUnitAssociateAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateChangedMessagePayload BusinessUnitAssociateChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateRemovedMessagePayload BusinessUnitAssociateRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociatesSetMessagePayload BusinessUnitAssociatesSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociatesSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociatesSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressAddedMessagePayload BusinessUnitBillingAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessagePayload BusinessUnitBillingAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessagePayload BusinessUnitContactEmailSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload BusinessUnitCreated(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultBillingAddressSetMessagePayload BusinessUnitDefaultBillingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultBillingAddressSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultBillingAddressSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload BusinessUnitDefaultShippingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload BusinessUnitDeleted(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessagePayload BusinessUnitNameChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload BusinessUnitParentUnitChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessagePayload BusinessUnitShippingAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessagePayload BusinessUnitShippingAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessagePayload BusinessUnitStatusChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreAddedMessagePayload BusinessUnitStoreAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessagePayload BusinessUnitStoreModeChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessagePayload BusinessUnitStoreRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessagePayload BusinessUnitStoresSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload CategoryCreated(Action<commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload();

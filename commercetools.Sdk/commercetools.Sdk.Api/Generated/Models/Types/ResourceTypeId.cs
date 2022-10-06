@@ -14,6 +14,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("asset")]
         Asset,
 
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart-discount")]
         CartDiscount,
 
@@ -119,6 +122,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Asset = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Asset, JsonName = "asset" };
 
+        public static IResourceTypeId BusinessUnit = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.BusinessUnit, JsonName = "business-unit" };
+
         public static IResourceTypeId CartDiscount = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.CartDiscount, JsonName = "cart-discount" };
 
@@ -202,6 +208,7 @@ namespace commercetools.Sdk.Api.Models.Types
             {
                  Address ,
                  Asset ,
+                 BusinessUnit ,
                  CartDiscount ,
                  Category ,
                  Channel ,

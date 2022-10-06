@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
@@ -57,6 +58,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         IRoundingMode TaxRoundingMode { get; set; }
 
         List<IBaseAddress> ItemShippingAddresses { get; set; }
+
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
 

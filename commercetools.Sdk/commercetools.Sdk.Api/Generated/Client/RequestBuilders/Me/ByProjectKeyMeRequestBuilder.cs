@@ -61,6 +61,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeActiveCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyMeBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyMeBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyMeCartsRequestBuilder Carts()
         {
             return new ByProjectKeyMeCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
