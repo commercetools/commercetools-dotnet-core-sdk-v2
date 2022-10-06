@@ -86,6 +86,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("shopping-list-text-line-item")]
         ShoppingListTextLineItem,
 
+        [Description("standalone-price")]
+        StandalonePrice,
+
         [Description("store")]
         Store,
 
@@ -194,6 +197,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId ShoppingListTextLineItem = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ShoppingListTextLineItem, JsonName = "shopping-list-text-line-item" };
 
+        public static IResourceTypeId StandalonePrice = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.StandalonePrice, JsonName = "standalone-price" };
+
         public static IResourceTypeId Store = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Store, JsonName = "store" };
 
@@ -232,6 +238,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  ShippingMethod ,
                  ShoppingList ,
                  ShoppingListTextLineItem ,
+                 StandalonePrice ,
                  Store ,
                  Transaction
              };
