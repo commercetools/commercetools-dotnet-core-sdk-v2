@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.PriceDraft))]
     public partial interface IPriceDraft
     {
+        string Key { get; set; }
+
         IMoney Value { get; set; }
 
         string Country { get; set; }
