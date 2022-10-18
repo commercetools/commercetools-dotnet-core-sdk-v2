@@ -54,5 +54,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         List<IAddress> ItemShippingAddresses { get; set; }
 
+        IStoreKeyReference Store { get; set; }
+
     }
 }
