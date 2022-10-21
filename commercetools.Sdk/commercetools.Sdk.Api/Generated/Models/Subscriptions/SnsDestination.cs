@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public string AccessSecret { get; set; }
 
         public string TopicArn { get; set; }
+
+        public IAwsAuthenticationMode AuthenticationMode { get; set; }
         public SnsDestination()
         {
             this.Type = "SNS";

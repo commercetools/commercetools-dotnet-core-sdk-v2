@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         string Region { get; set; }
 
+        IAwsAuthenticationMode AuthenticationMode { get; set; }
+
     }
 }

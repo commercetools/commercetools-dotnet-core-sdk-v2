@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public string QueueUrl { get; set; }
 
         public string Region { get; set; }
+
+        public IAwsAuthenticationMode AuthenticationMode { get; set; }
         public SqsDestination()
         {
             this.Type = "SQS";

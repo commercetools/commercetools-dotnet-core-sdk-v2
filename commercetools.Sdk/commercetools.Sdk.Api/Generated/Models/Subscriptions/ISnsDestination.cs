@@ -12,5 +12,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         string TopicArn { get; set; }
 
+        IAwsAuthenticationMode AuthenticationMode { get; set; }
+
     }
 }
