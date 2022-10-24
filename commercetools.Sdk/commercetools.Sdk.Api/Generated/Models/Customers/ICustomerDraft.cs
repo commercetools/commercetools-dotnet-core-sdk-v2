@@ -14,7 +14,11 @@ namespace commercetools.Sdk.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerDraft))]
     public partial interface ICustomerDraft
     {
+        string Key { get; set; }
+
         string CustomerNumber { get; set; }
+
+        string ExternalId { get; set; }
 
         string Email { get; set; }
 
@@ -53,8 +57,6 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         bool? IsEmailVerified { get; set; }
 
-        string ExternalId { get; set; }
-
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
@@ -62,8 +64,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         string Locale { get; set; }
 
         string Salutation { get; set; }
-
-        string Key { get; set; }
 
         List<IStoreResourceIdentifier> Stores { get; set; }
 

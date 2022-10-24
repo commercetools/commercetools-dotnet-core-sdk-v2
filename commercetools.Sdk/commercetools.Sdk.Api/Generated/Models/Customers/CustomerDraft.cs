@@ -13,7 +13,11 @@ namespace commercetools.Sdk.Api.Models.Customers
 
     public partial class CustomerDraft : ICustomerDraft
     {
+        public string Key { get; set; }
+
         public string CustomerNumber { get; set; }
+
+        public string ExternalId { get; set; }
 
         public string Email { get; set; }
 
@@ -52,8 +56,6 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         public bool? IsEmailVerified { get; set; }
 
-        public string ExternalId { get; set; }
-
         public ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
@@ -61,8 +63,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         public string Locale { get; set; }
 
         public string Salutation { get; set; }
-
-        public string Key { get; set; }
 
         public List<IStoreResourceIdentifier> Stores { get; set; }
 

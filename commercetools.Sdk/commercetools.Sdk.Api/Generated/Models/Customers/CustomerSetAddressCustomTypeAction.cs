@@ -8,11 +8,11 @@ namespace commercetools.Sdk.Api.Models.Customers
     {
         public string Action { get; set; }
 
+        public string AddressId { get; set; }
+
         public ITypeResourceIdentifier Type { get; set; }
 
         public IFieldContainer Fields { get; set; }
-
-        public string AddressId { get; set; }
         public CustomerSetAddressCustomTypeAction()
         {
             this.Action = "setAddressCustomType";

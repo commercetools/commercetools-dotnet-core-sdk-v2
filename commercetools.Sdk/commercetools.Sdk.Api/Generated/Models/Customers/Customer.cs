@@ -20,11 +20,15 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         public DateTime LastModifiedAt { get; set; }
 
+        public string Key { get; set; }
+
+        public string CustomerNumber { get; set; }
+
+        public string ExternalId { get; set; }
+
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }
-
-        public string CustomerNumber { get; set; }
 
         public string Email { get; set; }
 
@@ -56,8 +60,6 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         public bool IsEmailVerified { get; set; }
 
-        public string ExternalId { get; set; }
-
         public ICustomerGroupReference CustomerGroup { get; set; }
 
         public ICustomFields Custom { get; set; }
@@ -65,8 +67,6 @@ namespace commercetools.Sdk.Api.Models.Customers
         public string Locale { get; set; }
 
         public string Salutation { get; set; }
-
-        public string Key { get; set; }
 
         public List<IStoreKeyReference> Stores { get; set; }
 

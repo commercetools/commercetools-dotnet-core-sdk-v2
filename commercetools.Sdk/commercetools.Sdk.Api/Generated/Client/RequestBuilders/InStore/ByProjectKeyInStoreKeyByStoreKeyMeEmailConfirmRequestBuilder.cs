@@ -23,9 +23,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost Post(commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
+        public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost Post(commercetools.Sdk.Api.Models.Customers.IMyCustomerEmailVerify myCustomerEmailVerify)
         {
-            return new ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerEmailVerify);
+            return new ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, myCustomerEmailVerify);
         }
 
     }
