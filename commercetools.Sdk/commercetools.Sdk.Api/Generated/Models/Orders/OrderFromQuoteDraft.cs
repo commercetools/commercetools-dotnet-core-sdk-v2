@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public long Version { get; set; }
 
+        public bool? QuoteStateToAccepted { get; set; }
+
         public string OrderNumber { get; set; }
 
         public IPaymentState PaymentState { get; set; }
