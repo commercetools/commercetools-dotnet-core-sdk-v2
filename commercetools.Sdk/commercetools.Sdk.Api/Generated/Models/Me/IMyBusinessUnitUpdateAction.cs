@@ -10,9 +10,9 @@ namespace commercetools.Sdk.Api.Models.Me
     [SubTypeDiscriminator("addBillingAddressId", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitAddBillingAddressIdAction))]
     [SubTypeDiscriminator("addShippingAddressId", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitAddShippingAddressIdAction))]
     [SubTypeDiscriminator("changeAddress", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeAddressAction))]
-    [SubTypeDiscriminator("changeAssociate", typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeAssociateAction))]
-    [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeNameAction))]
-    [SubTypeDiscriminator("changeParentUnit", typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeParentUnitAction))]
+    [SubTypeDiscriminator("changeAssociate", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeAssociateAction))]
+    [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeNameAction))]
+    [SubTypeDiscriminator("changeParentUnit", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeParentUnitAction))]
     [SubTypeDiscriminator("removeAddress", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitRemoveAddressAction))]
     [SubTypeDiscriminator("removeAssociate", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitRemoveAssociateAction))]
     [SubTypeDiscriminator("removeBillingAddressId", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitRemoveBillingAddressIdAction))]
@@ -22,8 +22,8 @@ namespace commercetools.Sdk.Api.Models.Me
     [SubTypeDiscriminator("setContactEmail", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetContactEmailAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetCustomTypeAction))]
-    [SubTypeDiscriminator("setDefaultBillingAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultBillingAddressAction))]
-    [SubTypeDiscriminator("setDefaultShippingAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultShippingAddressAction))]
+    [SubTypeDiscriminator("setDefaultBillingAddress", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultBillingAddressAction))]
+    [SubTypeDiscriminator("setDefaultShippingAddress", typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultShippingAddressAction))]
     public partial interface IMyBusinessUnitUpdateAction
     {
         string Action { get; set; }
@@ -52,21 +52,21 @@ namespace commercetools.Sdk.Api.Models.Me
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeAssociateAction ChangeAssociate(Action<commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeAssociateAction> init = null)
+        static commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeAssociateAction ChangeAssociate(Action<commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeAssociateAction> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeAssociateAction();
+            var t = new commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeAssociateAction();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeNameAction> init = null)
+        static commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeNameAction> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeNameAction();
+            var t = new commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeNameAction();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeParentUnitAction ChangeParentUnit(Action<commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeParentUnitAction> init = null)
+        static commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeParentUnitAction ChangeParentUnit(Action<commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeParentUnitAction> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitChangeParentUnitAction();
+            var t = new commercetools.Sdk.Api.Models.Me.MyBusinessUnitChangeParentUnitAction();
             init?.Invoke(t);
             return t;
         }
@@ -124,15 +124,15 @@ namespace commercetools.Sdk.Api.Models.Me
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultBillingAddressAction SetDefaultBillingAddress(Action<commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultBillingAddressAction> init = null)
+        static commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultBillingAddressAction SetDefaultBillingAddress(Action<commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultBillingAddressAction> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultBillingAddressAction();
+            var t = new commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultBillingAddressAction();
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultShippingAddressAction SetDefaultShippingAddress(Action<commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultShippingAddressAction> init = null)
+        static commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultShippingAddressAction SetDefaultShippingAddress(Action<commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultShippingAddressAction> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultShippingAddressAction();
+            var t = new commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultShippingAddressAction();
             init?.Invoke(t);
             return t;
         }

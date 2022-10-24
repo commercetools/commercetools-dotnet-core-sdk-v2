@@ -1,4 +1,7 @@
-namespace commercetools.Sdk.Api.Models.BusinessUnits
+using commercetools.Sdk.Api.Models.BusinessUnits;
+
+
+namespace commercetools.Sdk.Api.Models.Me
 {
 
     public partial class MyBusinessUnitChangeAssociateAction : IMyBusinessUnitChangeAssociateAction

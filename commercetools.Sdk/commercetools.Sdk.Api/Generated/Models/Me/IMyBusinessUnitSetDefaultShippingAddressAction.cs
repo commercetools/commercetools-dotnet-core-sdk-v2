@@ -1,10 +1,9 @@
-using commercetools.Sdk.Api.Models.Me;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Sdk.Api.Models.BusinessUnits
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.BusinessUnits.MyBusinessUnitSetDefaultShippingAddressAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyBusinessUnitSetDefaultShippingAddressAction))]
     public partial interface IMyBusinessUnitSetDefaultShippingAddressAction : IMyBusinessUnitUpdateAction
     {
         string AddressId { get; set; }

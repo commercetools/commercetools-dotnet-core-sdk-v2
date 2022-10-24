@@ -1,4 +1,4 @@
-namespace commercetools.Sdk.Api.Models.BusinessUnits
+namespace commercetools.Sdk.Api.Models.Me
 {
 
     public partial class MyBusinessUnitSetDefaultBillingAddressAction : IMyBusinessUnitSetDefaultBillingAddressAction
