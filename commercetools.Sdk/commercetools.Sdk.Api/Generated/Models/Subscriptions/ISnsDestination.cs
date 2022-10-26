@@ -4,6 +4,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SnsDestination))]
+    [System.Obsolete]
     public partial interface ISnsDestination : IDestination
     {
         string AccessKey { get; set; }

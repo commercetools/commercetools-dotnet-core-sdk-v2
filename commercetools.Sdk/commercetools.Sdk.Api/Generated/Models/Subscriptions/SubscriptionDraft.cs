@@ -8,6 +8,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     {
         public List<IChangeSubscription> Changes { get; set; }
 
+        [System.Obsolete]
         public IDestination Destination { get; set; }
 
         public string Key { get; set; }
