@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }

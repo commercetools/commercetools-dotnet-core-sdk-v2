@@ -32,7 +32,7 @@ namespace commercetools.Sdk.Api.Models.Products
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
