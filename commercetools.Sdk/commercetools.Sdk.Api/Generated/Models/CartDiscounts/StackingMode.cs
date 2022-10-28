@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
