@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Models.Customers
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }

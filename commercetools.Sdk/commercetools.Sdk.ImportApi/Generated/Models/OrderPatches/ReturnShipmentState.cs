@@ -35,7 +35,7 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
