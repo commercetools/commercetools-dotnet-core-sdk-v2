@@ -84,7 +84,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: master
 
       - name: "remove API reference commit SHA"
         run: rm -rf reference.txt
