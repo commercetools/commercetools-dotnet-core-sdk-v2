@@ -41,7 +41,7 @@ namespace commercetools.Sdk.Api.Models.Quotes
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
