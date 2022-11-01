@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+
+
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -5,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         public IOrderSearchQuery Query { get; set; }
 
-        public string Sort { get; set; }
+        public List<IOrderSearchSorting> Sort { get; set; }
 
         public int? Limit { get; set; }
 

@@ -22,15 +22,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 
         private string StoreKey { get; }
 
-        private commercetools.Sdk.Api.Models.Customers.IMyCustomerResetPassword MyCustomerResetPassword;
+        private commercetools.Sdk.Api.Models.Customers.ICustomerResetPassword CustomerResetPassword;
 
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Sdk.Api.Models.Customers.IMyCustomerResetPassword myCustomerResetPassword)
+        public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Sdk.Api.Models.Customers.ICustomerResetPassword customerResetPassword)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
-            this.MyCustomerResetPassword = myCustomerResetPassword;
+            this.CustomerResetPassword = customerResetPassword;
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/password/reset";
         }
 
@@ -47,7 +47,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(MyCustomerResetPassword);
+                var body = this.SerializerService.Serialize(CustomerResetPassword);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");

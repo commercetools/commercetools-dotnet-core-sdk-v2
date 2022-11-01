@@ -5,6 +5,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     {
         public string Action { get; set; }
 
+        [System.Obsolete]
         public IDestination Destination { get; set; }
         public SubscriptionChangeDestinationAction()
         {

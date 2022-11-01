@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.ShippingMethods;
@@ -23,6 +24,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
 
         string AnonymousId { get; set; }
+
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
 

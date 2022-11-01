@@ -1,5 +1,6 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
+using commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits;
 using commercetools.Sdk.Api.Client.RequestBuilders.Categories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Carts;
 using commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts;
@@ -36,6 +37,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ApiClients;
 using commercetools.Sdk.Api.Client.RequestBuilders.Stores;
 using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
@@ -66,6 +68,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
             return new ByProjectKeyPost(ApiHttpClient, SerializerService, ProjectKey, projectUpdate);
         }
 
+
+        public ByProjectKeyBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
 
         public ByProjectKeyCategoriesRequestBuilder Categories()
         {
@@ -245,6 +252,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
         {
             return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder InBusinessUnitKeyWithBusinessUnitKeyValue(string businessUnitKey)
+        {
+            return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, businessUnitKey);
         }
     }
 }

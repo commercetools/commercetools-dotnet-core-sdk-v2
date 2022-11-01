@@ -6,6 +6,7 @@ namespace commercetools.Sdk.Api.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Common.ResourceIdentifier))]
+    [SubTypeDiscriminator("business-unit", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitResourceIdentifier))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountResourceIdentifier))]
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.Api.Models.Categories.CategoryResourceIdentifier))]
@@ -41,6 +42,12 @@ namespace commercetools.Sdk.Api.Models.Common
 
         string Key { get; set; }
 
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitResourceIdentifier BusinessUnit(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier Cart(Action<commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier();

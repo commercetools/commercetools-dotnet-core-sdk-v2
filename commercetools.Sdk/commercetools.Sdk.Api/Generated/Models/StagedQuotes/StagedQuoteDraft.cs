@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
 
         public long QuoteRequestVersion { get; set; }
 
+        public bool? QuoteRequestStateToAccepted { get; set; }
+
         public string Key { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }

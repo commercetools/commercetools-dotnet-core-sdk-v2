@@ -83,7 +83,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }

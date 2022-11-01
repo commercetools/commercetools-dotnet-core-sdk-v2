@@ -22,15 +22,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 
         private string StoreKey { get; }
 
-        private commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify CustomerEmailVerify;
+        private commercetools.Sdk.Api.Models.Customers.IMyCustomerEmailVerify MyCustomerEmailVerify;
 
-        public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
+        public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string storeKey, commercetools.Sdk.Api.Models.Customers.IMyCustomerEmailVerify myCustomerEmailVerify)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
-            this.CustomerEmailVerify = customerEmailVerify;
+            this.MyCustomerEmailVerify = myCustomerEmailVerify;
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/email/confirm";
         }
 
@@ -47,7 +47,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(CustomerEmailVerify);
+                var body = this.SerializerService.Serialize(MyCustomerEmailVerify);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");

@@ -10,6 +10,8 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Prices.PriceImport))]
     public partial interface IPriceImport : IImportResource
     {
+        new string Key { get; set; }
+
         ITypedMoney Value { get; set; }
 
         string Country { get; set; }

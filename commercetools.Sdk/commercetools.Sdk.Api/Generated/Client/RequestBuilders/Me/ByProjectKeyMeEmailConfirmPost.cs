@@ -20,14 +20,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify CustomerEmailVerify;
+        private commercetools.Sdk.Api.Models.Customers.IMyCustomerEmailVerify MyCustomerEmailVerify;
 
-        public ByProjectKeyMeEmailConfirmPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.ICustomerEmailVerify customerEmailVerify)
+        public ByProjectKeyMeEmailConfirmPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.IMyCustomerEmailVerify myCustomerEmailVerify)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
-            this.CustomerEmailVerify = customerEmailVerify;
+            this.MyCustomerEmailVerify = myCustomerEmailVerify;
             this.RequestUrl = $"/{ProjectKey}/me/email/confirm";
         }
 
@@ -44,7 +44,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(CustomerEmailVerify);
+                var body = this.SerializerService.Serialize(MyCustomerEmailVerify);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");

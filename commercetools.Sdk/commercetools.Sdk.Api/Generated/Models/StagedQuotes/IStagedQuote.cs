@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
@@ -42,6 +43,8 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         ICustomFields Custom { get; set; }
 
         IStateReference State { get; set; }
+
+        IBusinessUnitKeyReference BusinessUnit { get; set; }
 
     }
 }

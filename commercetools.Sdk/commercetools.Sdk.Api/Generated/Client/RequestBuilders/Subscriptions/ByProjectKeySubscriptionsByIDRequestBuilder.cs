@@ -38,5 +38,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             return new ByProjectKeySubscriptionsByIDDelete(ApiHttpClient, ProjectKey, ID);
         }
 
+
+        public ByProjectKeySubscriptionsByIDHealthRequestBuilder WithIdHealth()
+        {
+            return new ByProjectKeySubscriptionsByIDHealthRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
     }
 }

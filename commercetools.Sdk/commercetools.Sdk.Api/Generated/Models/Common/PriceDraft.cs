@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
     public partial class PriceDraft : IPriceDraft
     {
+        public string Key { get; set; }
+
         public IMoney Value { get; set; }
 
         public string Country { get; set; }

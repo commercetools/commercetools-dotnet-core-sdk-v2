@@ -14,6 +14,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("asset")]
         Asset,
 
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart-discount")]
         CartDiscount,
 
@@ -83,6 +86,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("shopping-list-text-line-item")]
         ShoppingListTextLineItem,
 
+        [Description("standalone-price")]
+        StandalonePrice,
+
         [Description("store")]
         Store,
 
@@ -104,7 +110,7 @@ namespace commercetools.Sdk.Api.Models.Types
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
@@ -118,6 +124,9 @@ namespace commercetools.Sdk.Api.Models.Types
 
         public static IResourceTypeId Asset = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Asset, JsonName = "asset" };
+
+        public static IResourceTypeId BusinessUnit = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.BusinessUnit, JsonName = "business-unit" };
 
         public static IResourceTypeId CartDiscount = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.CartDiscount, JsonName = "cart-discount" };
@@ -188,6 +197,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId ShoppingListTextLineItem = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ShoppingListTextLineItem, JsonName = "shopping-list-text-line-item" };
 
+        public static IResourceTypeId StandalonePrice = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.StandalonePrice, JsonName = "standalone-price" };
+
         public static IResourceTypeId Store = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Store, JsonName = "store" };
 
@@ -202,6 +214,7 @@ namespace commercetools.Sdk.Api.Models.Types
             {
                  Address ,
                  Asset ,
+                 BusinessUnit ,
                  CartDiscount ,
                  Category ,
                  Channel ,
@@ -225,6 +238,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  ShippingMethod ,
                  ShoppingList ,
                  ShoppingListTextLineItem ,
+                 StandalonePrice ,
                  Store ,
                  Transaction
              };

@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Common
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         ITypedMoney Value { get; set; }
 
         string Country { get; set; }

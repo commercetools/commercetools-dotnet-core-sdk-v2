@@ -61,6 +61,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeActiveCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyMeBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyMeBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyMeCartsRequestBuilder Carts()
         {
             return new ByProjectKeyMeCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
@@ -79,6 +84,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         public ByProjectKeyMeQuoteRequestsRequestBuilder QuoteRequests()
         {
             return new ByProjectKeyMeQuoteRequestsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMeQuotesRequestBuilder Quotes()
+        {
+            return new ByProjectKeyMeQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyMeShoppingListsRequestBuilder ShoppingLists()

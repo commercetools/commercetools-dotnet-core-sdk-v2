@@ -23,6 +23,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string Title { get; set; }
 
+        string Salutation { get; set; }
+
         Date? DateOfBirth { get; set; }
 
         string CompanyName { get; set; }

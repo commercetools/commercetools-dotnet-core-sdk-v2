@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.CartDiscounts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
@@ -32,6 +33,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public string CustomerEmail { get; set; }
 
         public string AnonymousId { get; set; }
+
+        public IBusinessUnitKeyReference BusinessUnit { get; set; }
 
         public IStoreKeyReference Store { get; set; }
 
