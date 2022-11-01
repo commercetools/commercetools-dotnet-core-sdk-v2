@@ -22,7 +22,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         public List<IChangeSubscription> Changes { get; set; }
 
-        [Obsolete]
         public IDestination Destination { get; set; }
 
         public string Key { get; set; }
