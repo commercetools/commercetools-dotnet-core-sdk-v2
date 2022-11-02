@@ -6,7 +6,6 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesPagedQueryResult))]
-    [Obsolete]
     public partial interface IMissingAttributesPagedQueryResult
     {
         long Count { get; set; }

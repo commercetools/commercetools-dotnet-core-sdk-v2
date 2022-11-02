@@ -6,7 +6,6 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributesMeta))]
-    [Obsolete]
     public partial interface IMissingAttributesMeta
     {
         [ObsoleteAttribute("This property is obsolete", false)]

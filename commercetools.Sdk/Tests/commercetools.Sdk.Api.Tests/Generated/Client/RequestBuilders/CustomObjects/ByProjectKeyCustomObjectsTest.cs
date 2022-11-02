@@ -15,7 +15,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomObjects
             Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
         }
 
-        [Obsolete]
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
