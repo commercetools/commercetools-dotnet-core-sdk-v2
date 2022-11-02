@@ -13,7 +13,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [SubTypeDiscriminator("IronMQ", typeof(commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination))]
     [SubTypeDiscriminator("SNS", typeof(commercetools.Sdk.Api.Models.Subscriptions.SnsDestination))]
     [SubTypeDiscriminator("SQS", typeof(commercetools.Sdk.Api.Models.Subscriptions.SqsDestination))]
-    [Obsolete]
     public partial interface IDestination
     {
         string Type { get; set; }
@@ -42,8 +41,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
             init?.Invoke(t);
             return t;
         }
-
-        [Obsolete]
         static commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination IronMq(Action<commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination();

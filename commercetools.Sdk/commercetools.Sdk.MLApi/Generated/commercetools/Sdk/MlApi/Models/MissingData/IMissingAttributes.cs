@@ -7,7 +7,6 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.MLApi.Models.MissingData
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.MissingData.MissingAttributes))]
-    [Obsolete]
     public partial interface IMissingAttributes
     {
         IProductReference Product { get; set; }

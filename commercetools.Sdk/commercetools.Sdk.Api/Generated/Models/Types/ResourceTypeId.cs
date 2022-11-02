@@ -110,7 +110,7 @@ namespace commercetools.Sdk.Api.Models.Types
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }

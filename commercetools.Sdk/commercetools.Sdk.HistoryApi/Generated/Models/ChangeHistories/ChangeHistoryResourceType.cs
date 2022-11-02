@@ -95,7 +95,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
             return GetEnumerator();
         }
 
-        public new IEnumerator<char> GetEnumerator()
+        public IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
