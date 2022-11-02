@@ -3,3 +3,5 @@ root = true
 [*.cs]
 # remove all unnecessary imports
 dotnet_diagnostic.IDE0005.severity = warning
+# don't propagate obsolete flag
+dotnet_diagnostic.CS0618.severity = none
