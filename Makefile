@@ -42,5 +42,4 @@ generate_history:
 
 prettify:
 	cd commercetools.Sdk && \
-	dotnet-format && \
-	dotnet-format --fix-style warn
+	dotnet-format -w -s warn -a warn
