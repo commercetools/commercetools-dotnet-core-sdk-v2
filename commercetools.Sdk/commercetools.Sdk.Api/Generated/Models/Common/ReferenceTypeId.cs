@@ -8,6 +8,9 @@ namespace commercetools.Sdk.Api.Models.Common
 {
     public enum ReferenceTypeId
     {
+        [Description("attribute-group")]
+        AttributeGroup,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -128,6 +131,9 @@ namespace commercetools.Sdk.Api.Models.Common
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IReferenceTypeId AttributeGroup = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.AttributeGroup, JsonName = "attribute-group" };
+
         public static IReferenceTypeId BusinessUnit = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.BusinessUnit, JsonName = "business-unit" };
 
@@ -230,6 +236,7 @@ namespace commercetools.Sdk.Api.Models.Common
         {
             return new[]
             {
+                 AttributeGroup ,
                  BusinessUnit ,
                  Cart ,
                  CartDiscount ,

@@ -6,6 +6,7 @@ namespace commercetools.Sdk.Api.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Common.Reference))]
+    [SubTypeDiscriminator("attribute-group", typeof(commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupReference))]
     [SubTypeDiscriminator("business-unit", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitReference))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Sdk.Api.Models.Carts.CartReference))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountReference))]
@@ -41,6 +42,12 @@ namespace commercetools.Sdk.Api.Models.Common
 
         string Id { get; set; }
 
+        static commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupReference AttributeGroup(Action<commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupReference();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitReference BusinessUnit(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitReference();
