@@ -38,6 +38,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Stores;
 using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
+using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
@@ -257,6 +258,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder InBusinessUnitKeyWithBusinessUnitKeyValue(string businessUnitKey)
         {
             return new ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, businessUnitKey);
+        }
+
+        public ByProjectKeyAttributeGroupsRequestBuilder AttributeGroups()
+        {
+            return new ByProjectKeyAttributeGroupsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

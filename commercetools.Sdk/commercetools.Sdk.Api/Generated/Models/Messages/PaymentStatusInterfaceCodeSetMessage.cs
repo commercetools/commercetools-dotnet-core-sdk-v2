@@ -29,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string PaymentId { get; set; }
 
         public string InterfaceCode { get; set; }

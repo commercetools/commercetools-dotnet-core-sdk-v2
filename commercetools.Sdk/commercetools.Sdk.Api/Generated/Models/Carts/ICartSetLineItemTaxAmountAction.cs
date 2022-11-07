@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

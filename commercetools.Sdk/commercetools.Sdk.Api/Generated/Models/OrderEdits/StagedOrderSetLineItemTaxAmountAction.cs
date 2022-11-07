@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public string LineItemId { get; set; }
 
         public IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
+
+        public string ShippingKey { get; set; }
         public StagedOrderSetLineItemTaxAmountAction()
         {
             this.Action = "setLineItemTaxAmount";
