@@ -1,8 +1,5 @@
-using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.StoreCountries;
-using commercetools.Sdk.Api.Models.Stores;
-using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 
@@ -10,7 +7,7 @@ using System.Collections.Generic;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class StoreCreatedMessage : IStoreCreatedMessage
+    public partial class StoreCountriesChangedMessage : IStoreCountriesChangedMessage
     {
         public string Id { get; set; }
 
@@ -34,22 +31,12 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public ILocalizedString Name { get; set; }
+        public List<IStoreCountry> AddedCountries { get; set; }
 
-        public List<string> Languages { get; set; }
-
-        public List<IStoreCountry> Countries { get; set; }
-
-        public List<IChannelReference> DistributionChannels { get; set; }
-
-        public List<IChannelReference> SupplyChannels { get; set; }
-
-        public List<IProductSelectionSetting> ProductSelections { get; set; }
-
-        public ICustomFields Custom { get; set; }
-        public StoreCreatedMessage()
+        public List<IStoreCountry> RemovedCountries { get; set; }
+        public StoreCountriesChangedMessage()
         {
-            this.Type = "StoreCreated";
+            this.Type = "StoreCountriesChanged";
         }
     }
 }

@@ -6,13 +6,16 @@ namespace commercetools.Sdk.Api.Models.Stores
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Stores.StoreUpdateAction))]
+    [SubTypeDiscriminator("addCountry", typeof(commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction))]
     [SubTypeDiscriminator("addDistributionChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreAddDistributionChannelAction))]
     [SubTypeDiscriminator("addProductSelection", typeof(commercetools.Sdk.Api.Models.Stores.StoreAddProductSelectionAction))]
     [SubTypeDiscriminator("addSupplyChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreAddSupplyChannelAction))]
     [SubTypeDiscriminator("changeProductSelectionActive", typeof(commercetools.Sdk.Api.Models.Stores.StoreChangeProductSelectionAction))]
+    [SubTypeDiscriminator("removeCountry", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveCountryAction))]
     [SubTypeDiscriminator("removeDistributionChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction))]
     [SubTypeDiscriminator("removeProductSelection", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveProductSelectionAction))]
     [SubTypeDiscriminator("removeSupplyChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveSupplyChannelAction))]
+    [SubTypeDiscriminator("setCountries", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomTypeAction))]
     [SubTypeDiscriminator("setDistributionChannels", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetDistributionChannelsAction))]
@@ -24,6 +27,12 @@ namespace commercetools.Sdk.Api.Models.Stores
     {
         new string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction AddCountry(Action<commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreAddDistributionChannelAction AddDistributionChannel(Action<commercetools.Sdk.Api.Models.Stores.StoreAddDistributionChannelAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreAddDistributionChannelAction();
@@ -48,6 +57,12 @@ namespace commercetools.Sdk.Api.Models.Stores
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Stores.StoreRemoveCountryAction RemoveCountry(Action<commercetools.Sdk.Api.Models.Stores.StoreRemoveCountryAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreRemoveCountryAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction RemoveDistributionChannel(Action<commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction();
@@ -63,6 +78,12 @@ namespace commercetools.Sdk.Api.Models.Stores
         static commercetools.Sdk.Api.Models.Stores.StoreRemoveSupplyChannelAction RemoveSupplyChannel(Action<commercetools.Sdk.Api.Models.Stores.StoreRemoveSupplyChannelAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreRemoveSupplyChannelAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction SetCountries(Action<commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction();
             init?.Invoke(t);
             return t;
         }

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.StoreCountries;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public ILocalizedString Name { get; set; }
 
         public List<string> Languages { get; set; }
+
+        public List<IStoreCountry> Countries { get; set; }
 
         public List<IChannelReference> DistributionChannels { get; set; }
 
