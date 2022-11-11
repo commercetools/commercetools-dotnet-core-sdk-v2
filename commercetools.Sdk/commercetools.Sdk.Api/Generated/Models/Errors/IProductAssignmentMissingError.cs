@@ -4,14 +4,14 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValueError))]
-    public partial interface IDuplicateAttributeValueError : IErrorObject
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError))]
+    public partial interface IProductAssignmentMissingError : IErrorObject
     {
         new string Code { get; set; }
 
         new string Message { get; set; }
 
-        IAttribute Attribute { get; set; }
+        IProductReference Product { get; set; }
 
     }
 }

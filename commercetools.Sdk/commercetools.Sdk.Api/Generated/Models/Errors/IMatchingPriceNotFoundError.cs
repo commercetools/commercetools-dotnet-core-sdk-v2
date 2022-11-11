@@ -8,6 +8,10 @@ namespace commercetools.Sdk.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     public partial interface IMatchingPriceNotFoundError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         string ProductId { get; set; }
 
         int VariantId { get; set; }

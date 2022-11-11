@@ -6,6 +6,10 @@ namespace commercetools.Sdk.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     public partial interface IAttributeNameDoesNotExistError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         string InvalidAttributeName { get; set; }
 
     }

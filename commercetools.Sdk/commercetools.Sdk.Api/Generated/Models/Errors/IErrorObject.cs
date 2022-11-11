@@ -6,13 +6,13 @@ namespace commercetools.Sdk.Api.Models.Errors
 {
     [TypeDiscriminator(nameof(Code))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Errors.ErrorObject))]
-    [SubTypeDiscriminator("access_denied", typeof(commercetools.Sdk.Api.Models.Errors.AccessDeniedError))]
     [SubTypeDiscriminator("AnonymousIdAlreadyInUse", typeof(commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError))]
     [SubTypeDiscriminator("AttributeDefinitionAlreadyExists", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionAlreadyExistsError))]
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
+    [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValueError))]
     [SubTypeDiscriminator("DuplicateAttributeValues", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValuesError))]
@@ -29,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("EnumValuesMustMatch", typeof(commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError))]
+    [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError))]
     [SubTypeDiscriminator("ExtensionUpdateActionsFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionUpdateActionsFailedError))]
     [SubTypeDiscriminator("ExternalOAuthFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExternalOAuthFailedError))]
     [SubTypeDiscriminator("FeatureRemoved", typeof(commercetools.Sdk.Api.Models.Errors.FeatureRemovedError))]
@@ -57,6 +58,8 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("OverlappingStandalonePriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError))]
     [SubTypeDiscriminator("PendingOperation", typeof(commercetools.Sdk.Api.Models.Errors.PendingOperationError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.PriceChangedError))]
+    [SubTypeDiscriminator("ProductAssignmentMissing", typeof(commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError))]
+    [SubTypeDiscriminator("ProductPresentWithDifferentVariantSelection", typeof(commercetools.Sdk.Api.Models.Errors.ProductPresentWithDifferentVariantSelectionError))]
     [SubTypeDiscriminator("ProjectNotConfiguredForLanguages", typeof(commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError))]
     [SubTypeDiscriminator("QueryComplexityLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.QueryComplexityLimitExceededError))]
     [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Sdk.Api.Models.Errors.QueryTimedOutError))]
@@ -72,19 +75,12 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.SemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
-    [SubTypeDiscriminator("WeakPassword", typeof(commercetools.Sdk.Api.Models.Errors.WeakPasswordError))]
     public partial interface IErrorObject
     {
         string Code { get; set; }
 
         string Message { get; set; }
 
-        static commercetools.Sdk.Api.Models.Errors.AccessDeniedError AccessDenied(Action<commercetools.Sdk.Api.Models.Errors.AccessDeniedError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.AccessDeniedError();
-            init?.Invoke(t);
-            return t;
-        }
         static commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError AnonymousIdAlreadyInUse(Action<commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError();
@@ -118,6 +114,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore CountryNotConfiguredInStore(Action<commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore();
             init?.Invoke(t);
             return t;
         }
@@ -214,6 +216,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError ExtensionNoResponse(Action<commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError ExtensionPredicateEvaluationFailed(Action<commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError();
             init?.Invoke(t);
             return t;
         }
@@ -385,6 +393,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError ProductAssignmentMissing(Action<commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ProductPresentWithDifferentVariantSelectionError ProductPresentWithDifferentVariantSelection(Action<commercetools.Sdk.Api.Models.Errors.ProductPresentWithDifferentVariantSelectionError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ProductPresentWithDifferentVariantSelectionError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError ProjectNotConfiguredForLanguages(Action<commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError();
@@ -472,12 +492,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.SyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SyntaxErrorError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.WeakPasswordError WeakPassword(Action<commercetools.Sdk.Api.Models.Errors.WeakPasswordError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.WeakPasswordError();
             init?.Invoke(t);
             return t;
         }
