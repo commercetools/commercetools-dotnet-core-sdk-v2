@@ -8,6 +8,36 @@ on:
 name: CI
 
 jobs:
+  licenses:
+    name: License update
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Support longpaths
+        run: git config --global core.longpaths true
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup dotnet 3.1
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '3.1.x' # SDK Version to use.
+      - run: dotnet restore --configfile Nuget.config --packages ../packages
+        working-directory: ./commercetools.Sdk
+      - run: dotnet build --no-restore --source ../packages -c Release
+        working-directory: ./commercetools.Sdk
+      - run:  dotnet tool install --global dotnet-project-licenses
+      - run: dotnet-project-licenses --input commercetools.Sdk/commercetools.Sdk.sln  --unique --json --output-directory licenses --outfile index.json
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: github.event_name == 'push'
+        with:
+          file_pattern: 'licenses/index.json licenses/**/index.json'
+          commit_message: "TASK: Updating license information"
+          commit_user_name: automation-commercetools
+          commit_user_email: automation@commercetools.com
+          commit_author: Auto Mation <automation@commercetools.com>
+          disable_globbing: true
+        
   unittests:
     name: Unit tests
 
