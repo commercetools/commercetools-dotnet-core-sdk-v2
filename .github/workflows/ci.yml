@@ -31,7 +31,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         if: github.event_name == 'push'
         with:
-          file_pattern: 'licenses/index.json licenses/**/index.json'
+          file_pattern: 'licenses/index.json'
           commit_message: "TASK: Updating license information"
           commit_user_name: automation-commercetools
           commit_user_email: automation@commercetools.com
