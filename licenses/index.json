@@ -925,13 +925,13 @@
   },
   {
     "PackageName": "System.Runtime.CompilerServices.Unsafe",
-    "PackageVersion": "4.5.3",
+    "PackageVersion": "4.5.2",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n02b11eeee1fbc5f3ef43a1452fe07efd25fa1715 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
@@ -945,6 +945,18 @@
     ],
     "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "4.5.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
   {
