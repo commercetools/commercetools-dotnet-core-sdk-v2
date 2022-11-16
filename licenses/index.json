@@ -1,1 +1,1322 @@
-[{"PackageName":"commercetools.Sdk.All","PackageVersion":"1.1.3","PackageUrl":"https://github.com/commercetools/commercetools-dotnet-core-sdk","Copyright":"Copyright commercetools 2019","Authors":["commercetools"],"Description":"The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"commercetools.Sdk.SimpleInjector","PackageVersion":"1.1.3","PackageUrl":"https://github.com/commercetools/commercetools-dotnet-core-sdk","Copyright":"Copyright commercetools 2019","Authors":["commercetools"],"Description":"The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"coverlet.collector","PackageVersion":"1.3.0","PackageUrl":"https://github.com/coverlet-coverage/coverlet","Copyright":"","Authors":["tonerdo"],"Description":"Coverlet is a cross platform code coverage library for .NET, with support for line, branch and method coverage.","LicenseUrl":"https://licenses.nuget.org/MIT","LicenseType":"MIT"},{"PackageName":"FluentAssertions","PackageVersion":"5.10.3","PackageUrl":"https://www.fluentassertions.com/","Copyright":"Copyright Dennis Doomen 2010-2020","Authors":["Dennis Doomen","Jonas Nyrup"],"Description":"A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD or\r\n      BDD-style unit tests. Targets .NET Framework 4.5 and 4.7, as well as .NET Core 2.0, .NET Core 3.0, .NET Core 2.1, .NET Standard 1.3, 1.6, 2.0 and 2.1.\r\n      Supports the unit test frameworks MSTest, MSTest2, Gallio, NUnit, XUnit, MBUnit, MSpec, and NSpec.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"JsonSubTypes","PackageVersion":"1.8.0","PackageUrl":"https://github.com/manuc66/JsonSubTypes","Copyright":"manuc66","Authors":["Emmanuel Counasse"],"Description":"Discriminated Json Subtypes Converter implementation for .NET","LicenseUrl":"https://www.nuget.org/packages/JsonSubTypes/1.8.0/License","LicenseType":"LICENSE"},{"PackageName":"Microsoft.AspNetCore.Http.Extensions","PackageVersion":"2.2.0","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"ASP.NET Core common extension methods for HTTP abstractions, HTTP headers, HTTP request/response, and session state.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489","LicenseUrl":"https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt","LicenseType":""},{"PackageName":"Microsoft.AspNetCore.WebUtilities","PackageVersion":"2.2.0","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"ASP.NET Core utilities, such as for working with forms, multipart messages, and query strings.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489","LicenseUrl":"https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt","LicenseType":""},{"PackageName":"Microsoft.Extensions.Configuration","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Configuration.EnvironmentVariables","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"Environment variables configuration provider implementation for Microsoft.Extensions.Configuration.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Configuration.Json","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"JSON configuration provider implementation for Microsoft.Extensions.Configuration.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Configuration.UserSecrets","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"User secrets configuration provider implementation for Microsoft.Extensions.Configuration.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.DependencyInjection","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Http","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n      Commonly used types:\r\n      System.Net.Http.IHttpClientFactory","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Http.Polly","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. This package integrates IHttpClientFactory with the Polly library, to add transient-fault-handling and resiliency through fluent policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.Extensions.Logging","PackageVersion":"3.1.14","PackageUrl":"https://asp.net/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"Logging infrastructure default implementation for Microsoft.Extensions.Logging.","LicenseUrl":"https://licenses.nuget.org/Apache-2.0","LicenseType":"Apache-2.0"},{"PackageName":"Microsoft.NET.Test.Sdk","PackageVersion":"16.9.4","PackageUrl":"https://github.com/microsoft/vstest/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"The MSbuild targets and properties for building .NET test projects.","LicenseUrl":"https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/16.9.4/License","LicenseType":"LICENSE_NET.txt"},{"PackageName":"Microsoft.NET.Test.Sdk","PackageVersion":"15.9.2","PackageUrl":"https://github.com/microsoft/vstest/","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"The MSbuild targets and properties for building .NET test projects.","LicenseUrl":"http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm","LicenseType":"MS-EULA"},{"PackageName":"Moq","PackageVersion":"4.16.1","PackageUrl":"https://github.com/moq/moq4","Copyright":"","Authors":["Daniel Cazzulino"," kzu"],"Description":"Moq is the most popular and friendly mocking framework for .NET.\r\n\r\nBuilt from https://github.com/moq/moq4/tree/fc484fb85","LicenseUrl":"https://raw.githubusercontent.com/moq/moq4/master/License.txt","LicenseType":""},{"PackageName":"System.Text.Json","PackageVersion":"4.7.2","PackageUrl":"https://github.com/dotnet/corefx","Copyright":"© Microsoft Corporation. All rights reserved.","Authors":["Microsoft"],"Description":"Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nCommonly Used Types:\r\nSystem.Text.Json.JsonSerializer\r\nSystem.Text.Json.JsonDocument\r\nSystem.Text.Json.JsonElement\r\nSystem.Text.Json.Utf8JsonWriter\r\nSystem.Text.Json.Utf8JsonReader\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.","LicenseUrl":"https://licenses.nuget.org/MIT","LicenseType":"MIT"},{"PackageName":"xunit","PackageVersion":"2.4.1","PackageUrl":"https://github.com/xunit/xunit","Copyright":"","Authors":["James Newkirk","Brad Wilson"],"Description":"xUnit.net is a developer testing framework, built to support Test Driven Development, with a design goal of extreme simplicity and alignment with framework features.\r\n\r\nInstalling this package installs xunit.core, xunit.assert, and xunit.analyzers.","LicenseUrl":"https://raw.githubusercontent.com/xunit/xunit/master/license.txt","LicenseType":""},{"PackageName":"xunit.runner.visualstudio","PackageVersion":"2.4.3","PackageUrl":"https://github.com/xunit/visualstudio.xunit","Copyright":"Copyright (c) .NET Foundation and Contributors.","Authors":[".NET Foundation and Contributors"],"Description":"Visual Studio 2017 15.9+ Test Explorer runner for the xUnit.net framework. Capable of running xUnit.net v1.9.2 and v2.0+ tests. Supports .NET 2.0 or later, .NET Core 2.1 or later, and Universal Windows 10.0.16299 or later.","LicenseUrl":"https://licenses.nuget.org/MIT","LicenseType":"MIT"}]
+[
+  {
+    "PackageName": "JsonSubTypes",
+    "PackageVersion": "2.0.1",
+    "PackageUrl": "https://github.com/manuc66/JsonSubTypes",
+    "Copyright": "manuc66",
+    "Authors": [
+      "Emmanuel Counasse"
+    ],
+    "Description": "Discriminated Json Subtypes Converter implementation for .NET",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.AspNetCore.WebUtilities",
+    "PackageVersion": "2.2.0",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "ASP.NET Core utilities, such as for working with forms, multipart messages, and query strings.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489",
+    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "1.1.0",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.\r\n\r\nCommonly Used Types:\r\nSystem.IAsyncDisposable\r\nSystem.Collections.Generic.IAsyncEnumerable\r\nSystem.Collections.Generic.IAsyncEnumerator\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "1.1.1",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.\r\n\r\nCommonly Used Types:\r\nSystem.IAsyncDisposable\r\nSystem.Collections.Generic.IAsyncEnumerable\r\nSystem.Collections.Generic.IAsyncEnumerator\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.CSharp",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides support for compilation and code generation, including dynamic, using the C# language.\r\n\r\nCommonly Used Types:\r\nMicrosoft.CSharp.RuntimeBinder.Binder\r\nMicrosoft.CSharp.RuntimeBinder.RuntimeBinderException\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfo\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags\r\nMicrosoft.CSharp.RuntimeBinder.CSharpBinderFlags\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Abstractions",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions of key-value pair based configuration.\r\nCommonly used types:\r\nMicrosoft.Extensions.Configuration.IConfiguration\r\nMicrosoft.Extensions.Configuration.IConfigurationBuilder\r\nMicrosoft.Extensions.Configuration.IConfigurationProvider\r\nMicrosoft.Extensions.Configuration.IConfigurationRoot\r\nMicrosoft.Extensions.Configuration.IConfigurationSection",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\nCommonly used types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Http",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n      Commonly used types:\r\n      System.Net.Http.IHttpClientFactory",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging.Abstractions",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging abstractions for Microsoft.Extensions.Logging.\r\nCommonly used types:\r\nMicrosoft.Extensions.Logging.ILogger\r\nMicrosoft.Extensions.Logging.ILoggerFactory\r\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\r\nMicrosoft.Extensions.Logging.LogLevel\r\nMicrosoft.Extensions.Logging.Logger<T>\r\nMicrosoft.Extensions.Logging.LoggerMessage\r\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "2.2.0",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment\r\n\r\nThis package was built from the source code at https://github.com/aspnet/Extensions/tree/9bc79b2f25a3724376d7af19617c33749a30ea3a",
+    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "3.1.14",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.Net.Http.Headers",
+    "PackageVersion": "2.2.0",
+    "PackageUrl": "https://asp.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "HTTP header parser implementations.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489",
+    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
+    "LicenseType": "Apache-2.0"
+  },
+  {
+    "PackageName": "Microsoft.NETCore.Platforms",
+    "PackageVersion": "1.1.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides runtime information required to resolve target framework, platform, and runtime specific implementations of .NETCore packages. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "Microsoft.NETCore.Targets",
+    "PackageVersion": "1.1.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides supporting infrastructure for portable projects: support identifiers that define framework and runtime for support targets and packages that reference the minimum supported package versions when targeting these. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "Microsoft.Win32.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common types for Win32-based libraries.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.Win32Exception\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "NETStandard.Library",
+    "PackageVersion": "1.6.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "A set of standard .NET APIs that are prescribed to be used and supported together. This includes all of the APIs in the NETStandard.Platform package plus additional libraries that are core to .NET but built on top of NETStandard.Platform. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "Newtonsoft.Json",
+    "PackageVersion": "13.0.1",
+    "PackageUrl": "https://www.newtonsoft.com/json",
+    "Copyright": "Copyright © James Newton-King 2008",
+    "Authors": [
+      "James Newton-King"
+    ],
+    "Description": "Json.NET is a popular high-performance JSON framework for .NET",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "runtime.native.System",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "runtime.native.System.IO.Compression",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "runtime.native.System.Net.Http",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "runtime.native.System.Security.Cryptography.Apple",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "runtime.native.System.Security.Cryptography.OpenSsl",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.AppContext",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.AppContext class, which allows access to the BaseDirectory property and other application specific data.\r\n\r\nCommonly Used Types:\r\nSystem.AppContext\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Buffers",
+    "PackageVersion": "4.4.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Buffers",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Buffers",
+    "PackageVersion": "4.5.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Buffers",
+    "PackageVersion": "4.5.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Collections",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that define generic collections, which allow developers to create strongly typed collections that provide better type safety and performance than non-generic strongly typed collections.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.Generic.List<T>\r\nSystem.Collections.Generic.Dictionary<TKey, TValue>\r\nSystem.Collections.Generic.Queue<T>\r\nSystem.Collections.Generic.Stack<T>\r\nSystem.Collections.Generic.HashSet<T>\r\nSystem.Collections.Generic.LinkedList<T>\r\nSystem.Collections.Generic.EqualityComparer<T>\r\nSystem.Collections.Generic.Comparer<T>\r\nSystem.Collections.Generic.SortedDictionary<TKey, TValue>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Collections.Concurrent",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides several thread-safe collection classes that should be used in place of the corresponding types in the System.Collections.NonGeneric and System.Collections packages whenever multiple threads are accessing the collection concurrently.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>\r\nSystem.Collections.Concurrent.ConcurrentQueue<T>\r\nSystem.Collections.Concurrent.ConcurrentBag<T>\r\nSystem.Collections.Concurrent.BlockingCollection<T>\r\nSystem.Collections.Concurrent.ConcurrentStack<T>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Collections.NonGeneric",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that define older non-generic collections of objects, such as lists, queues, hash tables and dictionaries. Developers should prefer the generic collections in the System.Collections package.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.ArrayList\r\nSystem.Collections.Hashtable\r\nSystem.Collections.CollectionBase\r\nSystem.Collections.ReadOnlyCollectionBase\r\nSystem.Collections.Stack\r\nSystem.Collections.SortedList\r\nSystem.Collections.DictionaryBase\r\nSystem.Collections.Queue\r\nSystem.Collections.Comparer\r\nSystem.Collections.CaseInsensitiveComparer\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Collections.Specialized",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides older specialized non-generic collections; for example, a linked list dictionary, a bit vector, and collections that contain only strings.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.Specialized.NameValueCollection\r\nSystem.Collections.Specialized.NameObjectCollectionBase\r\nSystem.Collections.Specialized.StringCollection\r\nSystem.Collections.Specialized.IOrderedDictionary\r\nSystem.Collections.Specialized.HybridDictionary\r\nSystem.Collections.Specialized.OrderedDictionary\r\nSystem.Collections.Specialized.ListDictionary\r\nSystem.Collections.Specialized.StringDictionary\r\nSystem.Collections.Specialized.BitVector32\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.ComponentModel",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides interfaces for the editing and change tracking of objects used as data sources.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.CancelEventArgs\r\nSystem.IServiceProvider\r\nSystem.ComponentModel.IEditableObject\r\nSystem.ComponentModel.IChangeTracking\r\nSystem.ComponentModel.IRevertibleChangeTracking\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.ComponentModel.Annotations",
+    "PackageVersion": "4.7.0",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides attributes that are used to define metadata for objects used as data sources.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.DataAnnotations.ValidationResult\r\nSystem.ComponentModel.DataAnnotations.IValidatableObject\r\nSystem.ComponentModel.DataAnnotations.ValidationAttribute\r\nSystem.ComponentModel.DataAnnotations.RequiredAttribute\r\nSystem.ComponentModel.DataAnnotations.StringLengthAttribute\r\nSystem.ComponentModel.DataAnnotations.DisplayAttribute\r\nSystem.ComponentModel.DataAnnotations.RegularExpressionAttribute\r\nSystem.ComponentModel.DataAnnotations.DataTypeAttribute\r\nSystem.ComponentModel.DataAnnotations.RangeAttribute\r\nSystem.ComponentModel.DataAnnotations.KeyAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.ComponentModel.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides interfaces that are used to implement the run-time and design-time behavior of components.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.IComponent\r\nSystem.ComponentModel.IContainer\r\nSystem.ComponentModel.ISite\r\nSystem.ComponentModel.ComponentCollection\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.ComponentModel.TypeConverter",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.ComponentModel.TypeConverter class, which represents a unified way of converting types of values to other types.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.TypeConverter\r\nSystem.ComponentModel.TypeConverterAttribute\r\nSystem.ComponentModel.PropertyDescriptor\r\nSystem.ComponentModel.StringConverter\r\nSystem.ComponentModel.ITypeDescriptorContext\r\nSystem.ComponentModel.EnumConverter\r\nSystem.ComponentModel.TypeDescriptor\r\nSystem.ComponentModel.Int32Converter\r\nSystem.ComponentModel.BooleanConverter\r\nSystem.ComponentModel.DoubleConverter\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Console",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Console class, which represents the standard input, output and error streams for console applications.\r\n\r\nCommonly Used Types:\r\nSystem.Console\r\nSystem.ConsoleColor\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Diagnostics.Contracts",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides static classes for representing program contracts such as preconditions, postconditions, and invariants.\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.Contracts.Contract\r\nSystem.Diagnostics.Contracts.ContractClassAttribute\r\nSystem.Diagnostics.Contracts.ContractClassForAttribute\r\nSystem.Diagnostics.Contracts.ContractFailureKind\r\nSystem.Runtime.CompilerServices.ContractHelper\r\nSystem.Diagnostics.Contracts.ContractInvariantMethodAttribute\r\nSystem.Diagnostics.Contracts.PureAttribute\r\nSystem.Diagnostics.Contracts.ContractArgumentValidatorAttribute\r\nSystem.Diagnostics.Contracts.ContractVerificationAttribute\r\nSystem.Diagnostics.Contracts.ContractOptionAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Diagnostics.Debug",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes and attributes that allows basic interaction with a debugger.\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.Debug\r\nSystem.Diagnostics.DebuggerStepThroughAttribute\r\nSystem.Diagnostics.Debugger\r\nSystem.Diagnostics.DebuggerDisplayAttribute\r\nSystem.Diagnostics.DebuggerBrowsableAttribute\r\nSystem.Diagnostics.DebuggerBrowsableState\r\nSystem.Diagnostics.DebuggerHiddenAttribute\r\nSystem.Diagnostics.DebuggerNonUserCodeAttribute\r\nSystem.Diagnostics.DebuggerTypeProxyAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Diagnostics.DiagnosticSource",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.DiagnosticListener\r\nSystem.Diagnostics.DiagnosticSource",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Diagnostics.Tools",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides attributes, such as GeneratedCodeAttribute and SuppresMessageAttribute, that are emitted or consumed by analysis tools.\r\n\r\nCommonly Used Types:\r\nSystem.CodeDom.Compiler.GeneratedCodeAttribute\r\nSystem.Diagnostics.CodeAnalysis.SuppressMessageAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Diagnostics.Tracing",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides class that enable you to create high performance tracing events to be captured by event tracing for Windows (ETW).\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.Tracing.EventSource\r\nSystem.Diagnostics.Tracing.EventListener\r\nSystem.Diagnostics.Tracing.EventLevel\r\nSystem.Diagnostics.Tracing.EventKeywords\r\nSystem.Diagnostics.Tracing.EventWrittenEventArgs\r\nSystem.Diagnostics.Tracing.EventAttribute\r\nSystem.Diagnostics.Tracing.EventSourceAttribute\r\nSystem.Diagnostics.Tracing.NonEventAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Dynamic.Runtime",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes and interfaces that support the Dynamic Language Runtime (DLR).\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.CallSite\r\nSystem.Runtime.CompilerServices.CallSite<T>\r\nSystem.Dynamic.IDynamicMetaObjectProvider\r\nSystem.Dynamic.DynamicMetaObject\r\nSystem.Dynamic.SetMemberBinder\r\nSystem.Dynamic.GetMemberBinder\r\nSystem.Dynamic.ExpandoObject\r\nSystem.Dynamic.DynamicObject\r\nSystem.Runtime.CompilerServices.CallSiteBinder\r\nSystem.Runtime.CompilerServices.ConditionalWeakTable<TKey, TValue>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Globalization",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings.\r\n\r\nCommonly Used Types:\r\nSystem.Globalization.DateTimeFormatInfo\r\nSystem.Globalization.CultureInfo\r\nSystem.Globalization.NumberFormatInfo\r\nSystem.Globalization.CalendarWeekRule\r\nSystem.Globalization.TextInfo\r\nSystem.Globalization.Calendar\r\nSystem.Globalization.CompareInfo\r\nSystem.Globalization.CompareOptions\r\nSystem.Globalization.UnicodeCategory\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Globalization.Calendars",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes for performing date calculations using specific calendars, including the Gregorian, Julian, Hijri and Korean calendars.\r\n\r\nCommonly Used Types:\r\nSystem.Globalization.HijriCalendar\r\nSystem.Globalization.GregorianCalendar\r\nSystem.Globalization.HebrewCalendar\r\nSystem.Globalization.KoreanCalendar\r\nSystem.Globalization.ThaiBuddhistCalendar\r\nSystem.Globalization.TaiwanCalendar\r\nSystem.Globalization.JapaneseCalendar\r\nSystem.Globalization.GregorianCalendarTypes\r\nSystem.Globalization.PersianCalendar\r\nSystem.Globalization.UmAlQuraCalendar\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Globalization.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes for performing Unicode string normalization, culture-specific string comparisons and support the use of non-ASCII characters for Internet domain names.\r\n\r\nCommonly Used Types:\r\nSystem.StringNormalizationExtensions\r\nSystem.Text.NormalizationForm\r\nSystem.Globalization.IdnMapping\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.IO",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader and System.IO.StreamWriter, that allow reading and writing to data streams\r\n\r\nCommonly Used Types:\r\nSystem.IO.Stream\r\nSystem.IO.EndOfStreamException\r\nSystem.IO.MemoryStream\r\nSystem.IO.StreamReader\r\nSystem.IO.StreamWriter\r\nSystem.IO.StringWriter\r\nSystem.IO.TextWriter\r\nSystem.IO.TextReader\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.IO.Compression",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that support the compression and decompression of streams.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Compression.DeflateStream\r\nSystem.IO.Compression.GZipStream\r\nSystem.IO.Compression.CompressionMode\r\nSystem.IO.Compression.CompressionLevel\r\nSystem.IO.Compression.ZipArchiveEntry\r\nSystem.IO.Compression.ZipArchive\r\nSystem.IO.Compression.ZipArchiveMode\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.IO.Compression.ZipFile",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that support the compression and decompression of streams using file system paths.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Compression.ZipFile\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.IO.FileSystem",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types that allow reading and writing to files and types that provide basic file and directory support.\r\n\r\nCommonly Used Types:\r\nSystem.IO.FileStream\r\nSystem.IO.FileInfo\r\nSystem.IO.DirectoryInfo\r\nSystem.IO.FileSystemInfo\r\nSystem.IO.File\r\nSystem.IO.Directory\r\nSystem.IO.SearchOption\r\nSystem.IO.FileOptions\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.IO.FileSystem.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common enumerations and exceptions for path-based I/O libraries.\r\n\r\nCommonly Used Types:\r\nSystem.IO.DirectoryNotFoundException\r\nSystem.IO.FileAccess\r\nSystem.IO.FileLoadException\r\nSystem.IO.PathTooLongException\r\nSystem.IO.FileMode\r\nSystem.IO.FileShare\r\nSystem.IO.FileAttributes\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Linq",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes and interfaces that supports queries that use Language-Integrated Query (LINQ).\r\n\r\nCommonly Used Types:\r\nSystem.Linq.Enumerable\r\nSystem.Linq.IGrouping<TKey, TElement>\r\nSystem.Linq.IOrderedEnumerable<TElement>\r\nSystem.Linq.ILookup<TKey, TElement>\r\nSystem.Linq.Lookup<TKey, TElement>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Linq.Expressions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes, interfaces and enumerations that enable language-level code expressions to be represented as objects in the form of expression trees.\r\n\r\nCommonly Used Types:\r\nSystem.Linq.IQueryable<T>\r\nSystem.Linq.IQueryable\r\nSystem.Linq.Expressions.Expression<TDelegate>\r\nSystem.Linq.Expressions.Expression\r\nSystem.Linq.Expressions.ExpressionVisitor\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Memory",
+    "PackageVersion": "4.5.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n7ee84596d92e178bce54c986df31ccc52479e772 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Memory",
+    "PackageVersion": "4.5.4",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Memory",
+    "PackageVersion": "4.5.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n99ce22c306b07f99ddae60f443d23a983ae78f7b \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Net.Http",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a programming interface for modern HTTP applications, including HTTP client components that allow applications to consume web services over HTTP and HTTP components that can be used by both clients and servers for parsing HTTP headers.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Http.HttpResponseMessage\r\nSystem.Net.Http.DelegatingHandler\r\nSystem.Net.Http.HttpRequestException\r\nSystem.Net.Http.HttpClient\r\nSystem.Net.Http.MultipartContent\r\nSystem.Net.Http.Headers.HttpContentHeaders\r\nSystem.Net.Http.HttpClientHandler\r\nSystem.Net.Http.StreamContent\r\nSystem.Net.Http.FormUrlEncodedContent\r\nSystem.Net.Http.HttpMessageHandler\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Net.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common types for network-based libraries, including System.Net.IPAddress, System.Net.IPEndPoint, and System.Net.CookieContainer.\r\n\r\nCommonly Used Types:\r\nSystem.Net.HttpStatusCode\r\nSystem.Net.Sockets.SocketError\r\nSystem.Net.Cookie\r\nSystem.Net.Sockets.SocketException\r\nSystem.Net.IPEndPoint\r\nSystem.Net.ICredentials\r\nSystem.Net.NetworkCredential\r\nSystem.Net.IPAddress\r\nSystem.Net.CookieCollection\r\nSystem.Net.CookieContainer\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Net.Sockets",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes such as Socket, TcpClient and UdpClient, which enable developers to send and receive data over the network.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Sockets.Socket\r\nSystem.Net.Sockets.SocketAsyncEventArgs\r\nSystem.Net.Sockets.LingerOption\r\nSystem.Net.Sockets.SocketAsyncOperation\r\nSystem.Net.Sockets.ProtocolType\r\nSystem.Net.Sockets.NetworkStream\r\nSystem.Net.Sockets.TcpClient\r\nSystem.Net.Sockets.SocketType\r\nSystem.Net.Sockets.UdpClient\r\nSystem.Net.Sockets.SocketShutdown\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Numerics.Vectors",
+    "PackageVersion": "4.4.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Numerics.Vectors",
+    "PackageVersion": "4.5.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.ObjectModel",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types and interfaces that allow the creation of observable types that provide notifications to clients when changes are made to it.\r\n\r\nCommonly Used Types:\r\nSystem.ComponentModel.INotifyPropertyChanged\r\nSystem.Collections.ObjectModel.ObservableCollection<T>\r\nSystem.ComponentModel.PropertyChangedEventHandler\r\nSystem.Windows.Input.ICommand\r\nSystem.Collections.Specialized.INotifyCollectionChanged\r\nSystem.Collections.Specialized.NotifyCollectionChangedEventArgs\r\nSystem.Collections.Specialized.NotifyCollectionChangedEventHandler\r\nSystem.Collections.ObjectModel.KeyedCollection<TKey, TItem>\r\nSystem.ComponentModel.PropertyChangedEventArgs\r\nSystem.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types that retrieve information about assemblies, modules, members, parameters, and other entities in managed code by examining their metadata. These types also can be used to manipulate instances of loaded types, for example to hook up events or to invoke methods.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.MethodInfo\r\nSystem.Reflection.PropertyInfo\r\nSystem.Reflection.ParameterInfo\r\nSystem.Reflection.FieldInfo\r\nSystem.Reflection.ConstructorInfo\r\nSystem.Reflection.Assembly\r\nSystem.Reflection.MemberInfo\r\nSystem.Reflection.EventInfo\r\nSystem.Reflection.Module\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.Emit",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that allow a compiler or tool to emit metadata and optionally generate a PE file on disk. The primary clients of these classes are script engines and compilers.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.Emit.AssemblyBuilder\r\nSystem.Reflection.Emit.FieldBuilder\r\nSystem.Reflection.Emit.TypeBuilder\r\nSystem.Reflection.Emit.MethodBuilder\r\nSystem.Reflection.Emit.ConstructorBuilder\r\nSystem.Reflection.Emit.GenericTypeParameterBuilder\r\nSystem.Reflection.Emit.ModuleBuilder\r\nSystem.Reflection.Emit.PropertyBuilder\r\nSystem.Reflection.Emit.AssemblyBuilderAccess\r\nSystem.Reflection.Emit.EventBuilder\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.Emit.ILGeneration",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes that allow a compiler or tool to emit Microsoft intermediate language (MSIL). The primary clients of these classes are script engines and compilers.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.Emit.ILGenerator\r\nSystem.Reflection.Emit.Label\r\nSystem.Reflection.Emit.CustomAttributeBuilder\r\nSystem.Reflection.Emit.LocalBuilder\r\nSystem.Reflection.Emit.ParameterBuilder\r\nSystem.Reflection.Emit.SignatureHelper\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.Emit.Lightweight",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Reflection.Emit.DynamicMethod class, which represents a dynamic method that can be compiled, executed, and discarded. Discarded methods are available for garbage collection.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.Emit.DynamicMethod\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides custom attribute extension methods for System.Reflection types.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.InterfaceMapping\r\nSystem.Reflection.CustomAttributeExtensions\r\nSystem.Reflection.RuntimeReflectionExtensions\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common enumerations for reflection-based libraries.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.FieldAttributes\r\nSystem.Reflection.Emit.OpCode\r\nSystem.Reflection.TypeAttributes\r\nSystem.Reflection.MethodAttributes\r\nSystem.Reflection.CallingConventions\r\nSystem.Reflection.PropertyAttributes\r\nSystem.Reflection.EventAttributes\r\nSystem.Reflection.ParameterAttributes\r\nSystem.Reflection.GenericParameterAttributes\r\nSystem.Reflection.MethodImplAttributes\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Reflection.TypeExtensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides extensions methods for System.Type that are designed to be source-compatible with older framework reflection-based APIs.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.TypeExtensions\r\nSystem.Reflection.BindingFlags\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Resources.ResourceManager",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides classes and attributes that allow developers to create, store, and manage various culture-specific resources used in an application.\r\n\r\nCommonly Used Types:\r\nSystem.Resources.ResourceManager\r\nSystem.Resources.NeutralResourcesLanguageAttribute\r\nSystem.Resources.SatelliteContractVersionAttribute\r\nSystem.Resources.MissingManifestResourceException\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.\r\n\r\nCommonly Used Types:\r\nSystem.Object\r\nSystem.Exception\r\nSystem.Int16\r\nSystem.Int32\r\nSystem.Int64\r\nSystem.Enum\r\nSystem.String\r\nSystem.Char\r\nSystem.Boolean\r\nSystem.SByte\r\nSystem.Byte\r\nSystem.DateTime\r\nSystem.DateTimeOffset\r\nSystem.Single\r\nSystem.Double\r\nSystem.UInt16\r\nSystem.UInt32\r\nSystem.UInt64\r\nSystem.IDisposable\r\nSystem.Uri\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "4.5.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "4.5.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n7ee84596d92e178bce54c986df31ccc52479e772 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "4.5.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "4.7.1",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Runtime.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides commonly-used classes for performing mathematical functions, conversions, string comparisons and querying environment information.\r\n\r\nCommonly Used Types:\r\nSystem.Math\r\nSystem.Environment\r\nSystem.Random\r\nSystem.Progress<T>\r\nSystem.Convert\r\nSystem.Diagnostics.Stopwatch\r\nSystem.Runtime.Versioning.FrameworkName\r\nSystem.StringComparer\r\nSystem.IO.Path\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.Handles",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides base classes, including System.Runtime.InteropServices.CriticalHandle and System.Runtime.InteropServices.SafeHandle, for types that represent operating system handles.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.InteropServices.SafeHandle\r\nMicrosoft.Win32.SafeHandles.SafeWaitHandle\r\nSystem.Runtime.InteropServices.CriticalHandle\r\nSystem.Threading.WaitHandleExtensions\r\nSystem.IO.HandleInheritability\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.InteropServices",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types that support COM interop and platform invoke services.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.InteropServices.GCHandle\r\nSystem.Runtime.InteropServices.GuidAttribute\r\nSystem.Runtime.InteropServices.COMException\r\nSystem.DllNotFoundException\r\nSystem.Runtime.InteropServices.DllImportAttribute\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.InteropServices.RuntimeInformation",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides APIs to query about runtime and OS information.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.InteropServices.RuntimeInformation\r\nSystem.Runtime.InteropServices.OSPlatform\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.Numerics",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the numeric types System.Numerics.BigInteger and System.Numerics.Complex, which complement the numeric primitives, such as System.Byte, System.Double and System.Int32.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.BigInteger\r\nSystem.Numerics.Complex\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.Serialization.Formatters",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common types for libraries that support runtime serialization.\r\n\r\nCommonly Used Types:\r\nSystem.SerializableAttribute\r\nSystem.Runtime.Serialization.ISerializable\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.Serialization.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common types, including System.Runtime.Serialization.DataContractAttribute, for libraries that support data contract serialization.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.Serialization.StreamingContext\r\nSystem.Runtime.Serialization.OnDeserializingAttribute\r\nSystem.Runtime.Serialization.OnDeserializedAttribute\r\nSystem.Runtime.Serialization.OnSerializingAttribute\r\nSystem.Runtime.Serialization.OnSerializedAttribute\r\nSystem.Runtime.Serialization.EnumMemberAttribute\r\nSystem.Runtime.Serialization.DataMemberAttribute\r\nSystem.Runtime.Serialization.DataContractAttribute\r\nSystem.Runtime.Serialization.IgnoreDataMemberAttribute\r\nSystem.Runtime.Serialization.SerializationException\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Runtime.WindowsRuntime",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides extensions methods that improve interoperation between managed code and the Windows Runtime.\r\n\r\nCommonly Used Types:\r\nSystem.WindowsRuntimeSystemExtensions\r\nSystem.IO.WindowsRuntimeStorageExtensions\r\nSystem.IO.WindowsRuntimeStreamExtensions\r\nSystem.Runtime.InteropServices.WindowsRuntime.AsyncInfo\r\nSystem.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBuffer\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.Algorithms",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides base types for cryptographic algorithms, including hashing, encryption, and signing operations.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.Aes\r\nSystem.Security.Cryptography.RSA\r\nSystem.Security.Cryptography.RSAParameters\r\nSystem.Security.Cryptography.HMACSHA1\r\nSystem.Security.Cryptography.SHA256\r\nSystem.Security.Cryptography.SHA1\r\nSystem.Security.Cryptography.SHA512\r\nSystem.Security.Cryptography.SHA384\r\nSystem.Security.Cryptography.HMACSHA256\r\nSystem.Security.Cryptography.MD5\r\nSystem.Security.Cryptography.HMACSHA384\r\nSystem.Security.Cryptography.HMACSHA512\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.Cng",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides cryptographic algorithm implementations and key management with Windows Cryptographic Next Generation API (CNG).\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.RSACng\r\nSystem.Security.Cryptography.ECDsaCng\r\nSystem.Security.Cryptography.CngKey\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.Csp",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides cryptographic algorithm implementations and key management with Windows Cryptographic API (CryptoAPI).\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.RSACryptoServiceProvider\r\nSystem.Security.Cryptography.CspParameters\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.Encoding",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for representing Abstract Syntax Notation One (ASN.1)-encoded data.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.AsnEncodedData\r\nSystem.Security.Cryptography.Oid\r\nSystem.Security.Cryptography.OidCollection\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.OpenSsl",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides cryptographic algorithm implementations and key management for non-Windows systems with OpenSSL.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.RSAOpenSsl\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.Primitives",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides common types for the cryptographic libraries.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.ICryptoTransform\r\nSystem.Security.Cryptography.AsymmetricAlgorithm\r\nSystem.Security.Cryptography.SymmetricAlgorithm\r\nSystem.Security.Cryptography.HashAlgorithm\r\nSystem.Security.Cryptography.KeyedHashAlgorithm\r\nSystem.Security.Cryptography.HMAC\r\nSystem.Security.Cryptography.KeySizes\r\nSystem.Security.Cryptography.CryptographicException\r\nSystem.Security.Cryptography.CipherMode\r\nSystem.Security.Cryptography.PaddingMode\r\nSystem.Security.Cryptography.CryptoStream\r\nSystem.Security.Cryptography.CryptoStreamMode\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Security.Cryptography.X509Certificates",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for reading, exporting and verifying Authenticode X.509 v3 certificates. These certificates are signed with a private key that uniquely and positively identifies the holder of the certificate.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.X509Certificates.X509Certificate2\r\nSystem.Security.Cryptography.X509Certificates.X509Certificate\r\nSystem.Security.Cryptography.X509Certificates.X509ContentType\r\nSystem.Security.Cryptography.X509Certificates.StoreLocation\r\nSystem.Security.Cryptography.X509Certificates.StoreName\r\nSystem.Security.Cryptography.X509Certificates.X509FindType\r\nSystem.Security.Cryptography.X509Certificates.X509ChainStatus\r\nSystem.Security.Cryptography.X509Certificates.X509Certificate2Collection\r\nSystem.Security.Cryptography.X509Certificates.X509EnhancedKeyUsageExtension\r\nSystem.Security.Cryptography.X509Certificates.X509Chain\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Text.Encoding",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides base abstract encoding classes for converting blocks of characters to and from blocks of bytes.\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encoding\r\nSystem.Text.DecoderFallbackException\r\nSystem.Text.Decoder\r\nSystem.Text.EncoderFallbackException\r\nSystem.Text.Encoder\r\nSystem.Text.EncoderFallback\r\nSystem.Text.EncoderFallbackBuffer\r\nSystem.Text.DecoderFallback\r\nSystem.Text.DecoderFallbackBuffer\r\nSystem.Text.DecoderExceptionFallback\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Text.Encoding.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides support for specific encodings, including ASCII, UTF-7, UTF-8, UTF-16, and UTF-32.\r\n\r\nCommonly Used Types:\r\nSystem.Text.UTF8Encoding\r\nSystem.Text.UnicodeEncoding\r\nSystem.Text.ASCIIEncoding\r\nSystem.Text.UTF7Encoding\r\nSystem.Text.UTF32Encoding\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Text.Encodings.Web",
+    "PackageVersion": "4.5.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Encodings.Web",
+    "PackageVersion": "4.7.1",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Json",
+    "PackageVersion": "4.7.2",
+    "PackageUrl": "https://github.com/dotnet/corefx",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nCommonly Used Types:\r\nSystem.Text.Json.JsonSerializer\r\nSystem.Text.Json.JsonDocument\r\nSystem.Text.Json.JsonElement\r\nSystem.Text.Json.Utf8JsonWriter\r\nSystem.Text.Json.Utf8JsonReader\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.RegularExpressions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Text.RegularExpressions.Regex class, an implementation of a regular expression engine.\r\n\r\nCommonly Used Types:\r\nSystem.Text.RegularExpressions.Regex\r\nSystem.Text.RegularExpressions.RegexOptions\r\nSystem.Text.RegularExpressions.Match\r\nSystem.Text.RegularExpressions.Group\r\nSystem.Text.RegularExpressions.Capture\r\nSystem.Text.RegularExpressions.MatchEvaluator\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Threading",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the fundamental synchronization primitives, including System.Threading.Monitor and System.Threading.Mutex, that are required when writing asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Monitor\r\nSystem.Threading.SynchronizationContext\r\nSystem.Threading.ManualResetEvent\r\nSystem.Threading.AutoResetEvent\r\nSystem.Threading.ThreadLocal<T>\r\nSystem.Threading.EventWaitHandle\r\nSystem.Threading.SemaphoreSlim\r\nSystem.Threading.Mutex\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Threading.Tasks",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.Task<TResult>\r\nSystem.Runtime.CompilerServices.TaskAwaiter<TResult>\r\nSystem.Threading.Tasks.TaskCompletionSource<TResult>\r\nSystem.Threading.Tasks.Task\r\nSystem.OperationCanceledException\r\nSystem.AggregateException\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Threading.Tasks.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Threading.Tasks.Extensions",
+    "PackageVersion": "4.5.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>\r\n \r\n99ce22c306b07f99ddae60f443d23a983ae78f7b",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Threading.Tasks.Extensions",
+    "PackageVersion": "4.5.4",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Threading.Timer",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Threading.Timer class, which is a mechanism for executing a method at specified intervals.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Timer\r\nSystem.Threading.TimerCallback\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.ValueTuple",
+    "PackageVersion": "4.5.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.ValueTuple structs, which implement the underlying types for tuples in C# and Visual Basic.\r\n\r\nCommonly Used Types:\r\nSystem.ValueTuple\r\nSystem.ValueTuple<T1>\r\nSystem.ValueTuple<T1, T2>\r\nSystem.ValueTuple<T1, T2, T3>\r\nSystem.ValueTuple<T1, T2, T3, T4>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Xml.ReaderWriter",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides provides a fast, non-cached, forward-only way to read and write Extensible Markup Language (XML) data.\r\n\r\nCommonly Used Types:\r\nSystem.Xml.XmlNodeType\r\nSystem.Xml.XmlException\r\nSystem.Xml.XmlReader\r\nSystem.Xml.XmlWriter\r\nSystem.Xml.IXmlLineInfo\r\nSystem.Xml.XmlNameTable\r\nSystem.Xml.IXmlNamespaceResolver\r\nSystem.Xml.XmlNamespaceManager\r\nSystem.Xml.XmlQualifiedName\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Xml.XDocument",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the classes for Language-Integrated Query (LINQ) to Extensible Markup Language (XML). LINQ to XML is an in-memory XML programming interface that enables you to modify XML documents efficiently and easily.\r\n\r\nCommonly Used Types:\r\nSystem.Xml.Linq.XElement\r\nSystem.Xml.Linq.XAttribute\r\nSystem.Xml.Linq.XDocument\r\nSystem.Xml.Linq.XText\r\nSystem.Xml.Linq.XNode\r\nSystem.Xml.Linq.XContainer\r\nSystem.Xml.Linq.XComment\r\nSystem.Xml.Linq.XObject\r\nSystem.Xml.Linq.XProcessingInstruction\r\nSystem.Xml.Linq.XDocumentType\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Xml.XmlDocument",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides an older in-memory Extensible Markup Language (XML) programming interface that enables you to modify XML documents. Developers should prefer the classes in the System.Xml.XDocument package.\r\n\r\nCommonly Used Types:\r\nSystem.Xml.XmlNode\r\nSystem.Xml.XmlElement\r\nSystem.Xml.XmlAttribute\r\nSystem.Xml.XmlDocument\r\nSystem.Xml.XmlDeclaration\r\nSystem.Xml.XmlText\r\nSystem.Xml.XmlComment\r\nSystem.Xml.XmlNodeList\r\nSystem.Xml.XmlWhitespace\r\nSystem.Xml.XmlCDataSection\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  }
+]
