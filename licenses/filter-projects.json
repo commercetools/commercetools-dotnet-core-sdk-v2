@@ -1,0 +1,15 @@
+[
+  "commercetools.Api.Serialization.Tests",
+  "commercetools.Sdk.Api.Serialization.Tests",
+  "commercetools.Sdk.Api.Tests",
+  "commercetools.Sdk.Api.Benchmarks",
+  "commercetools.Api.IntegrationTests",
+  "commercetools.ImportApi.IntegrationTests",
+  "commercetools.Sdk.HistoryApi.Tests",
+  "commercetools.Sdk.ImportApi.Tests",
+  "commercetools.Sdk.MLApi.Tests",
+  "commercetools.Api.CheckoutApp",
+  "commercetools.Api.ConsoleApp",
+  "commercetools.Sdk.BCTest",
+  "commercetools.Sdk.V2Compat"
+]

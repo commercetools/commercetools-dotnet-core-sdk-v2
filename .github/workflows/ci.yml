@@ -11,7 +11,8 @@ jobs:
   licenses:
     name: License update
     runs-on: ubuntu-latest
-    
+    if: github.event_name == 'push'
+
     steps:
       - name: Support longpaths
         run: git config --global core.longpaths true
@@ -26,10 +27,9 @@ jobs:
       - run: dotnet build --no-restore --source ../packages -c Release
         working-directory: ./commercetools.Sdk
       - run:  dotnet tool install --global dotnet-project-licenses
-      - run: dotnet-project-licenses --input commercetools.Sdk/commercetools.Sdk.sln  --unique --json --output-directory licenses --outfile index.json
+      - run: ./license-check.sh
 
       - uses: stefanzweifel/git-auto-commit-action@v4
-        if: github.event_name == 'push'
         with:
           file_pattern: 'licenses/index.json'
           commit_message: "TASK: Updating license information"
