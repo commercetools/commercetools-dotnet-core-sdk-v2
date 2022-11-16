@@ -16,6 +16,28 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         new long Version { get; set; }
 
+        ILocalizedString Name { get; set; }
+
+        string Key { get; set; }
+
+        ICustomerReference Customer { get; set; }
+
+        ILocalizedString Slug { get; set; }
+
+        ILocalizedString Description { get; set; }
+
+        List<IShoppingListLineItem> LineItems { get; set; }
+
+        List<ITextLineItem> TextLineItems { get; set; }
+
+        long? DeleteDaysAfterLastModification { get; set; }
+
+        string AnonymousId { get; set; }
+
+        IStoreKeyReference Store { get; set; }
+
+        ICustomFields Custom { get; set; }
+
         new DateTime CreatedAt { get; set; }
 
         new DateTime LastModifiedAt { get; set; }
@@ -23,28 +45,6 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         ILastModifiedBy LastModifiedBy { get; set; }
 
         ICreatedBy CreatedBy { get; set; }
-
-        ICustomFields Custom { get; set; }
-
-        ICustomerReference Customer { get; set; }
-
-        long? DeleteDaysAfterLastModification { get; set; }
-
-        ILocalizedString Description { get; set; }
-
-        string Key { get; set; }
-
-        List<IShoppingListLineItem> LineItems { get; set; }
-
-        ILocalizedString Name { get; set; }
-
-        ILocalizedString Slug { get; set; }
-
-        List<ITextLineItem> TextLineItems { get; set; }
-
-        string AnonymousId { get; set; }
-
-        IStoreKeyReference Store { get; set; }
 
     }
 }

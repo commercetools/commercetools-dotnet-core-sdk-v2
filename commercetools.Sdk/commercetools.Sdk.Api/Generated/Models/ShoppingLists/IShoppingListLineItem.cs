@@ -23,15 +23,15 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         string ProductId { get; set; }
 
-        ILocalizedString ProductSlug { get; set; }
-
         IProductTypeReference ProductType { get; set; }
 
-        int Quantity { get; set; }
+        long Quantity { get; set; }
+
+        long? VariantId { get; set; }
 
         IProductVariant Variant { get; set; }
 
-        long? VariantId { get; set; }
+        ILocalizedString ProductSlug { get; set; }
 
     }
 }

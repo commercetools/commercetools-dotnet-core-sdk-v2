@@ -28,6 +28,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
             this.RequestUrl = $"/{ProjectKey}/shopping-lists/{ID}";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
+
         public List<string> GetDataErasure()
         {
             return this.GetQueryParam("dataErasure");
@@ -38,9 +43,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetExpand()
+        public ByProjectKeyShoppingListsByIDDelete WithExpand(string expand)
         {
-            return this.GetQueryParam("expand");
+            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeyShoppingListsByIDDelete WithDataErasure(bool dataErasure)
@@ -51,11 +56,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists
         public ByProjectKeyShoppingListsByIDDelete WithVersion(long version)
         {
             return this.AddQueryParam("version", version.ToString());
-        }
-
-        public ByProjectKeyShoppingListsByIDDelete WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
 

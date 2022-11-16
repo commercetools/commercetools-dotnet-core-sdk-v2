@@ -76,6 +76,19 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ShoppingLists()
                    .WithId("test_ID")
                    .Delete()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists/test_ID?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Me()
+                   .ShoppingLists()
+                   .WithId("test_ID")
+                   .Delete()
                    .WithDataErasure(true)
                    .Build(),
                    "Delete",
@@ -93,19 +106,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .Build(),
                    "Delete",
                    "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists/test_ID?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .InStoreKeyWithStoreKeyValue("test_storeKey")
-                   .Me()
-                   .ShoppingLists()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/in-store/key=test_storeKey/me/shopping-lists/test_ID?expand=expand",
                },
                new Object[] {
                    ApiRoot
