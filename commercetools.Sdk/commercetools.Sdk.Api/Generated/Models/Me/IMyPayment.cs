@@ -19,7 +19,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string AnonymousId { get; set; }
 
-        ITypedMoney AmountPlanned { get; set; }
+        ICentPrecisionMoney AmountPlanned { get; set; }
 
         IPaymentMethodInfo PaymentMethodInfo { get; set; }
 

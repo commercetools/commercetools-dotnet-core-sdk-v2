@@ -1,6 +1,3 @@
-using System;
-
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -8,7 +5,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        [ObsoleteAttribute("This property is obsolete", false)]
         public string PaymentId { get; set; }
 
         public string InterfaceCode { get; set; }

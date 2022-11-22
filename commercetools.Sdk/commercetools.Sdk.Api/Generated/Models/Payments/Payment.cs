@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         public string InterfaceId { get; set; }
 
-        public ITypedMoney AmountPlanned { get; set; }
+        public ICentPrecisionMoney AmountPlanned { get; set; }
 
         public ITypedMoney AmountAuthorized { get; set; }
 
