@@ -7,7 +7,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 
-    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IStoreprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
+    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IStoreprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
     {
 
 
@@ -38,11 +38,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public List<string> GetMarkMatchingVariants()
         {
             return this.GetQueryParam("markMatchingVariants");
-        }
-
-        public List<string> GetStaged()
-        {
-            return this.GetQueryParam("staged");
         }
 
         public List<string> GetFilter()
@@ -83,6 +78,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public List<string> GetWithTotal()
         {
             return this.GetQueryParam("withTotal");
+        }
+
+        public List<string> GetStaged()
+        {
+            return this.GetQueryParam("staged");
         }
 
         public List<string> GetPriceCurrency()
@@ -135,11 +135,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("markMatchingVariants", markMatchingVariants.ToString());
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithStaged(bool staged)
-        {
-            return this.AddQueryParam("staged", staged.ToString());
-        }
-
         public ByProjectKeyProductProjectionsSearchGet WithFilter(string filter)
         {
             return this.AddQueryParam("filter", filter);
@@ -178,6 +173,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsSearchGet WithWithTotal(bool withTotal)
         {
             return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+        public ByProjectKeyProductProjectionsSearchGet WithStaged(bool staged)
+        {
+            return this.AddQueryParam("staged", staged.ToString());
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithPriceCurrency(string priceCurrency)

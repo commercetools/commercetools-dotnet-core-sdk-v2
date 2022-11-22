@@ -7,7 +7,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 
-    public partial class ByProjectKeyProductProjectionsSuggestGet : ApiMethod<ByProjectKeyProductProjectionsSuggestGet>, IApiMethod<ByProjectKeyProductProjectionsSuggestGet, commercetools.Sdk.Api.Models.Products.ISuggestionResult>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet>
+    public partial class ByProjectKeyProductProjectionsSuggestGet : ApiMethod<ByProjectKeyProductProjectionsSuggestGet>, IApiMethod<ByProjectKeyProductProjectionsSuggestGet, commercetools.Sdk.Api.Models.Products.ISuggestionResult>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet>
     {
 
 
@@ -30,11 +30,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("fuzzy");
         }
 
-        public List<string> GetStaged()
-        {
-            return this.GetQueryParam("staged");
-        }
-
         public List<string> GetSort()
         {
             return this.GetQueryParam("sort");
@@ -55,14 +50,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("withTotal");
         }
 
+        public List<string> GetStaged()
+        {
+            return this.GetQueryParam("staged");
+        }
+
         public ByProjectKeyProductProjectionsSuggestGet WithFuzzy(bool fuzzy)
         {
             return this.AddQueryParam("fuzzy", fuzzy.ToString());
-        }
-
-        public ByProjectKeyProductProjectionsSuggestGet WithStaged(bool staged)
-        {
-            return this.AddQueryParam("staged", staged.ToString());
         }
 
         public ByProjectKeyProductProjectionsSuggestGet WithSort(string sort)
@@ -83,6 +78,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsSuggestGet WithWithTotal(bool withTotal)
         {
             return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+        public ByProjectKeyProductProjectionsSuggestGet WithStaged(bool staged)
+        {
+            return this.AddQueryParam("staged", staged.ToString());
         }
 
         public ByProjectKeyProductProjectionsSuggestGet WithSearchKeywords(string locale, string searchKeywords)

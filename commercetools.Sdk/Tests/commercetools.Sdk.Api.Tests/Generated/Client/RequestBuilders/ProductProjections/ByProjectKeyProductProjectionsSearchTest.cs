@@ -67,17 +67,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithStaged(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?staged=true",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
                    .WithFilter("filter")
                    .Build(),
                    "Get",
@@ -170,6 +159,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Search()
+                   .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/search?staged=true",
                },
                new Object[] {
                    ApiRoot
