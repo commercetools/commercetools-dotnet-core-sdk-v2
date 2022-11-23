@@ -34,10 +34,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 
 
 
-        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomer> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomer> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomer>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomer>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

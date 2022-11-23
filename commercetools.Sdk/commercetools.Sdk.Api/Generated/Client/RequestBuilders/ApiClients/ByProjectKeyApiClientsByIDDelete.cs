@@ -30,10 +30,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ApiClients
 
 
 
-        public async Task<commercetools.Sdk.Api.Models.ApiClients.IApiClient> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ApiClients.IApiClient> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ApiClients.IApiClient>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ApiClients.IApiClient>(requestMessage, cancellationToken);
         }
 
     }

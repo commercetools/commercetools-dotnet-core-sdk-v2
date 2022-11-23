@@ -90,10 +90,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

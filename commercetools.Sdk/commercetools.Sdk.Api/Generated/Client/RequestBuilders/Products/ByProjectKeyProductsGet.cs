@@ -130,10 +130,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

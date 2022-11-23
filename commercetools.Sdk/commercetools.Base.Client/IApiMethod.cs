@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace commercetools.Base.Client
@@ -14,6 +15,6 @@ namespace commercetools.Base.Client
         T AddHeader(string key, string value);
         T WithHeaders(ApiHttpHeaders headers);
         HttpRequestMessage Build();
-        public Task<TResult> ExecuteAsync();
+        public Task<TResult> ExecuteAsync(CancellationToken cancellationToken = default);
     }
 }

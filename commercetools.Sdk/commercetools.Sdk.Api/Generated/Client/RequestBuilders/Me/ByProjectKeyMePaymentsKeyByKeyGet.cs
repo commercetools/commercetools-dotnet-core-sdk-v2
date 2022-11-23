@@ -39,10 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Me.IMyPayment> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Me.IMyPayment> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Me.IMyPayment>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Me.IMyPayment>(requestMessage, cancellationToken);
         }
 
     }

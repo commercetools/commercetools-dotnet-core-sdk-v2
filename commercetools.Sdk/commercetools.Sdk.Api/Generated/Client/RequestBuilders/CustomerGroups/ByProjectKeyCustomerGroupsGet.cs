@@ -90,10 +90,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

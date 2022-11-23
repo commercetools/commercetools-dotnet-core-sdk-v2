@@ -62,10 +62,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage, cancellationToken);
         }
 
     }

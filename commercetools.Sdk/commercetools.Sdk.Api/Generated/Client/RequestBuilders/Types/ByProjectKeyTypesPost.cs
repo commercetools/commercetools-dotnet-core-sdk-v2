@@ -43,10 +43,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Types.IType> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Types.IType> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Types.IType>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Types.IType>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

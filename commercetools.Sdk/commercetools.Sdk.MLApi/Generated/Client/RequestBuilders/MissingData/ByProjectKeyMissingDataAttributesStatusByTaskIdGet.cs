@@ -31,10 +31,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus>(requestMessage, cancellationToken);
         }
 
     }

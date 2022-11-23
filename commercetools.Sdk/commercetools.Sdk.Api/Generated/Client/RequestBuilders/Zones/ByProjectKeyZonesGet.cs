@@ -90,10 +90,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.Zones.IZonePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Zones.IZonePagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Zones.IZonePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Zones.IZonePagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

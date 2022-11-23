@@ -79,10 +79,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
         }
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.CategoryRecommendations.IProjectCategoryRecommendationPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

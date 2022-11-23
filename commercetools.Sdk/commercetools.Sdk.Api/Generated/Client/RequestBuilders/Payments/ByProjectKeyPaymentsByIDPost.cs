@@ -46,10 +46,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Payments.IPayment> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Payments.IPayment> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Payments.IPayment>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Payments.IPayment>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

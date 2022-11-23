@@ -39,10 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.States
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.States.IState> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.States.IState> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.States.IState>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.States.IState>(requestMessage, cancellationToken);
         }
 
     }

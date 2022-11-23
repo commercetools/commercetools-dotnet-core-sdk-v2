@@ -37,10 +37,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         }
 
 
-        public async Task<JsonElement> ExecuteAsync()
+        public async Task<JsonElement> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage, cancellationToken);
         }
 
     }

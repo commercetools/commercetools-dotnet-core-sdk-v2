@@ -39,10 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Categories.ICategory> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Categories.ICategory> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Categories.ICategory>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Categories.ICategory>(requestMessage, cancellationToken);
         }
 
     }

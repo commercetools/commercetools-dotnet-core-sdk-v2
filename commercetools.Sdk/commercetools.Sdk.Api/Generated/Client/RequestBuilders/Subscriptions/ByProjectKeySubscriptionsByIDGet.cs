@@ -39,10 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage, cancellationToken);
         }
 
     }

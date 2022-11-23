@@ -49,10 +49,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Orders.IOrder> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrder> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrder>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrder>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

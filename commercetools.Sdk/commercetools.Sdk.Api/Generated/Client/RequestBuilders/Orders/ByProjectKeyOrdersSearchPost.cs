@@ -34,10 +34,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 
 
 
-        public async Task<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrderPagedSearchResponse>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

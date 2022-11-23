@@ -4,6 +4,6 @@ namespace commercetools.Sdk.Api.Models
 {
     public interface IRequestCommand<TResult>
     {
-        Task<TResult> ExecuteAsync();
+        Task<TResult> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default);
     }
 }

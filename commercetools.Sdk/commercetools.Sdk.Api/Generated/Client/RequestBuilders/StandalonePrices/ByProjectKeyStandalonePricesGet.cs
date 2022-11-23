@@ -90,10 +90,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePricePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePricePagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePricePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePricePagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

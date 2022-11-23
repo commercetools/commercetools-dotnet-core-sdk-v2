@@ -30,10 +30,10 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 
 
 
-        public async Task<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage, cancellationToken);
         }
 
     }

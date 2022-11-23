@@ -43,10 +43,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Reviews.IReview> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Reviews.IReview> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Reviews.IReview>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Reviews.IReview>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

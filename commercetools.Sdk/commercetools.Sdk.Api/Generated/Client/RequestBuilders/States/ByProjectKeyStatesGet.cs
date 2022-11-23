@@ -90,10 +90,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.States
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

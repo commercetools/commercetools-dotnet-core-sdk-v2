@@ -53,10 +53,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
         }
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearches.IImageSearchResponse>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

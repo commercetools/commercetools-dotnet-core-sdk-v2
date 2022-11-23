@@ -43,10 +43,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Extensions.IExtension> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Extensions.IExtension> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Extensions.IExtension>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Extensions.IExtension>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

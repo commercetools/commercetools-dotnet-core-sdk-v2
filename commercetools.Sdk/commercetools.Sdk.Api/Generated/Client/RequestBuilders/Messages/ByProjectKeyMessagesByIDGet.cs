@@ -39,10 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Messages.IMessage> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Messages.IMessage> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Messages.IMessage>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Messages.IMessage>(requestMessage, cancellationToken);
         }
 
     }

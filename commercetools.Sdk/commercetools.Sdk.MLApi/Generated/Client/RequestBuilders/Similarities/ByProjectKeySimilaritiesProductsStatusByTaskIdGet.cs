@@ -30,10 +30,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync(System.Threading.CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage, cancellationToken);
         }
 
     }
