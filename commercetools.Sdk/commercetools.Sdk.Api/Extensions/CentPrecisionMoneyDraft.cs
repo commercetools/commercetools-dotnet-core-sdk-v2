@@ -10,8 +10,7 @@ namespace commercetools.Sdk.Api.Models.Common
             return new CentPrecisionMoneyDraft
             {
                 CurrencyCode = currencyCode,
-                CentAmount = (long)amount,
-                FractionDigits = 2
+                CentAmount = (long)amount
             };
         }
         
