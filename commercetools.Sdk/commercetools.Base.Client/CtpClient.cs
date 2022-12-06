@@ -31,15 +31,15 @@ namespace commercetools.Base.Client
         public ISerializerService SerializerService { get; }
         private Middleware MiddlewareStack { get; }
 
-        public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
+        public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var content = await ExecuteAsJsonAsync(requestMessage);
+            var content = await ExecuteAsJsonAsync(requestMessage, cancellationToken);
             return this.SerializerService.Deserialize<T>(content);
         }
 
-        public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)
+        public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var result = await this.MiddlewareStack.SendAsync(requestMessage, CancellationToken.None).ConfigureAwait(false);
+            var result = await this.MiddlewareStack.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             return content;
         }

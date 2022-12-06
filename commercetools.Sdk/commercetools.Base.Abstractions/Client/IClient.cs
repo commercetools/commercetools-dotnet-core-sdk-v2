@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Base.Serialization;
 
@@ -19,8 +20,8 @@ namespace commercetools.Base.Client
         string Name { get; set; }
 
 
-        Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage);
+        Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
 
-        Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage);
+        Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
     }
 }
