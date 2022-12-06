@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -19,7 +20,9 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         string Slug { get; set; }
 
-        List<IItemState> State { get; set; }
+        IList<IItemState> State { get; set; }
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         ITaxRate TaxRate { get; set; }
 

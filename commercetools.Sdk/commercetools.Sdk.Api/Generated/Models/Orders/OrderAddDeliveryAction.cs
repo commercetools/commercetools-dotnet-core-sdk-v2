@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -10,13 +11,17 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         public string Action { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         public string ShippingKey { get; set; }
 
         public IBaseAddress Address { get; set; }
 
-        public List<IParcelDraft> Parcels { get; set; }
+        public IList<IParcelDraft> Parcels { get; set; }
+        public IEnumerable<IParcelDraft> ParcelsEnumerable { set => Parcels = value.ToList(); }
+
 
         public ICustomFieldsDraft Custom { get; set; }
         public OrderAddDeliveryAction()

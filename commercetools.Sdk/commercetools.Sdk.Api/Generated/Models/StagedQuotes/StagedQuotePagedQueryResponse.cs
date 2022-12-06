@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.StagedQuotes
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
 
         public long? Total { get; set; }
 
-        public List<IStagedQuote> Results { get; set; }
+        public IList<IStagedQuote> Results { get; set; }
+        public IEnumerable<IStagedQuote> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

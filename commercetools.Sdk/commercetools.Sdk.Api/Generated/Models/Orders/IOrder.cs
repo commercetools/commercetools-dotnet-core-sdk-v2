@@ -9,6 +9,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -43,9 +44,13 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IStoreKeyReference Store { get; set; }
 
-        List<ILineItem> LineItems { get; set; }
+        IList<ILineItem> LineItems { get; set; }
+        IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItem> CustomLineItems { get; set; }
+
+        IList<ICustomLineItem> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -59,7 +64,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IShippingMode ShippingMode { get; set; }
 
-        List<IShipping> Shipping { get; set; }
+        IList<IShipping> Shipping { get; set; }
+        IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
+
 
         ITaxMode TaxMode { get; set; }
 
@@ -79,11 +86,17 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IShippingInfo ShippingInfo { get; set; }
 
-        List<ISyncInfo> SyncInfo { get; set; }
+        IList<ISyncInfo> SyncInfo { get; set; }
+        IEnumerable<ISyncInfo> SyncInfoEnumerable { set => SyncInfo = value.ToList(); }
 
-        List<IReturnInfo> ReturnInfo { get; set; }
 
-        List<IDiscountCodeInfo> DiscountCodes { get; set; }
+        IList<IReturnInfo> ReturnInfo { get; set; }
+        IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
+
+
+        IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+        IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
 
         [ObsoleteAttribute("This property is obsolete", false)]
         long? LastMessageSequenceNumber { get; set; }
@@ -106,9 +119,13 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IShippingRateInput ShippingRateInput { get; set; }
 
-        List<IAddress> ItemShippingAddresses { get; set; }
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-        List<ICartDiscountReference> RefusedGifts { get; set; }
+
+        IList<ICartDiscountReference> RefusedGifts { get; set; }
+        IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     {
         long Version { get; set; }
 
-        List<IStagedQuoteUpdateAction> Actions { get; set; }
+        IList<IStagedQuoteUpdateAction> Actions { get; set; }
+        IEnumerable<IStagedQuoteUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

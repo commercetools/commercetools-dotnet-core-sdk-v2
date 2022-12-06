@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -36,7 +37,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
 
         ITaxCategoryReference TaxCategory { get; set; }
 
-        List<IZoneRate> ZoneRates { get; set; }
+        IList<IZoneRate> ZoneRates { get; set; }
+        IEnumerable<IZoneRate> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
+
 
         bool IsDefault { get; set; }
 

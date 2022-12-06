@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -23,7 +24,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
-        List<IDeliveryDraft> Deliveries { get; set; }
+        IList<IDeliveryDraft> Deliveries { get; set; }
+        IEnumerable<IDeliveryDraft> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Products
@@ -14,7 +15,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public long Offset { get; set; }
 
-        public List<IProductProjection> Results { get; set; }
+        public IList<IProductProjection> Results { get; set; }
+        public IEnumerable<IProductProjection> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         public IFacetResults Facets { get; set; }
     }

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Categories
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         public string AssetKey { get; set; }
 
-        public List<IAssetSource> Sources { get; set; }
+        public IList<IAssetSource> Sources { get; set; }
+        public IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
+
         public CategorySetAssetSourcesAction()
         {
             this.Action = "setAssetSources";

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     public partial interface IShoppingListUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IShoppingListUpdate, IShoppingListUpdateAction>
     {
         new long Version { get; set; }
-        new List<IShoppingListUpdateAction> Actions { get; set; }
+        new IList<IShoppingListUpdateAction> Actions { get; set; }
+        IEnumerable<IShoppingListUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

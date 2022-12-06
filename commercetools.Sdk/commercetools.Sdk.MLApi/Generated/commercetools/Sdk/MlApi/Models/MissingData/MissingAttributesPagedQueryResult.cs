@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         public long Offset { get; set; }
 
-        public List<IMissingAttributes> Results { get; set; }
+        public IList<IMissingAttributes> Results { get; set; }
+        public IEnumerable<IMissingAttributes> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         [ObsoleteAttribute("This property is obsolete", false)]
         public IMissingAttributesMeta Meta { get; set; }

@@ -6,6 +6,7 @@ using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Products
@@ -31,7 +32,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public ILocalizedString Slug { get; set; }
 
-        public List<ICategoryReference> Categories { get; set; }
+        public IList<ICategoryReference> Categories { get; set; }
+        public IEnumerable<ICategoryReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         public ICategoryOrderHints CategoryOrderHints { get; set; }
 
@@ -49,7 +52,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public IProductVariant MasterVariant { get; set; }
 
-        public List<IProductVariant> Variants { get; set; }
+        public IList<IProductVariant> Variants { get; set; }
+        public IEnumerable<IProductVariant> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
         public ITaxCategoryReference TaxCategory { get; set; }
 

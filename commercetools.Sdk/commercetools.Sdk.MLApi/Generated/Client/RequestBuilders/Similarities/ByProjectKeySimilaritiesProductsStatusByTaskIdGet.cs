@@ -1,5 +1,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -30,10 +31,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities
 
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.SimilarProducts.ISimilarProductsTaskStatus>(requestMessage, cancellationToken);
         }
 
     }

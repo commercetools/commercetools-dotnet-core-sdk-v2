@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Customers
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Customers
     {
         public string Action { get; set; }
 
-        public List<IStoreResourceIdentifier> Stores { get; set; }
+        public IList<IStoreResourceIdentifier> Stores { get; set; }
+        public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
         public CustomerSetStoresAction()
         {
             this.Action = "setStores";

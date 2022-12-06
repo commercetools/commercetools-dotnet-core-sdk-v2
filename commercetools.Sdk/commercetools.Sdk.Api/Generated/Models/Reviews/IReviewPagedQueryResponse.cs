@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.Reviews
 
         long Offset { get; set; }
 
-        List<IReview> Results { get; set; }
+        IList<IReview> Results { get; set; }
+        IEnumerable<IReview> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         long? Total { get; set; }
 
-        List<ICartDiscount> Results { get; set; }
+        IList<ICartDiscount> Results { get; set; }
+        IEnumerable<ICartDiscount> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

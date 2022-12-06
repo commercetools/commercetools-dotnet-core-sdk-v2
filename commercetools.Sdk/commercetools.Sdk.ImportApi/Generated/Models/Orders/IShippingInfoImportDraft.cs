@@ -1,6 +1,7 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -21,7 +22,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         IShippingMethodKeyReference ShippingMethod { get; set; }
 
-        List<IDelivery> Deliveries { get; set; }
+        IList<IDelivery> Deliveries { get; set; }
+        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     {
         IMessageSubscriptionResourceTypeId ResourceTypeId { get; set; }
 
-        List<string> Types { get; set; }
+        IList<string> Types { get; set; }
+        IEnumerable<string> TypesEnumerable { set => Types = value.ToList(); }
+
 
     }
 }

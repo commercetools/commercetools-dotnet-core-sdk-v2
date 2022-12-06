@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -13,9 +14,13 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public DateTime CreatedAt { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
-        public List<IParcel> Parcels { get; set; }
+
+        public IList<IParcel> Parcels { get; set; }
+        public IEnumerable<IParcel> ParcelsEnumerable { set => Parcels = value.ToList(); }
+
 
         public IAddress Address { get; set; }
 

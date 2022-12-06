@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Extensions
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
     {
         public string Action { get; set; }
 
-        public List<IExtensionTrigger> Triggers { get; set; }
+        public IList<IExtensionTrigger> Triggers { get; set; }
+        public IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
         public ExtensionChangeTriggersAction()
         {
             this.Action = "changeTriggers";

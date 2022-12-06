@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -17,7 +18,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public long NewQuantity { get; set; }
 
-        public List<IItemState> NewState { get; set; }
+        public IList<IItemState> NewState { get; set; }
+        public IEnumerable<IItemState> NewStateEnumerable { set => NewState = value.ToList(); }
+
 
         public ICentPrecisionMoney NewTotalPrice { get; set; }
 

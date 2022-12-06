@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Errors
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         public string Message { get; set; }
 
-        public List<string> Duplicates { get; set; }
+        public IList<string> Duplicates { get; set; }
+        public IEnumerable<string> DuplicatesEnumerable { set => Duplicates = value.ToList(); }
+
         public DuplicateEnumValuesError()
         {
             this.Code = "DuplicateEnumValues";

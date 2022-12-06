@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -30,7 +31,9 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         IBusinessUnitStatus Status { get; set; }
 
-        List<IStoreKeyReference> Stores { get; set; }
+        IList<IStoreKeyReference> Stores { get; set; }
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         IBusinessUnitStoreMode StoreMode { get; set; }
 
@@ -42,17 +45,25 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         ICustomFields Custom { get; set; }
 
-        List<IAddress> Addresses { get; set; }
+        IList<IAddress> Addresses { get; set; }
+        IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-        List<string> ShippingAddressIds { get; set; }
+
+        IList<string> ShippingAddressIds { get; set; }
+        IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
+
 
         string DefaultShipingAddressId { get; set; }
 
-        List<string> BillingAddressIds { get; set; }
+        IList<string> BillingAddressIds { get; set; }
+        IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
+
 
         string DefaultBillingAddressId { get; set; }
 
-        List<IAssociate> Associates { get; set; }
+        IList<IAssociate> Associates { get; set; }
+        IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
+
 
         IBusinessUnitKeyReference ParentUnit { get; set; }
 

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -27,7 +28,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         IDiscountedPriceDraft Discounted { get; set; }
 
-        List<IPriceTierDraft> Tiers { get; set; }
+        IList<IPriceTierDraft> Tiers { get; set; }
+        IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         ICustomFieldsDraft Custom { get; set; }
 

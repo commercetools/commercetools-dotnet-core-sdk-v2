@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Me
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         public long Version { get; set; }
 
-        public List<IMyCustomerUpdateAction> Actions { get; set; }
+        public IList<IMyCustomerUpdateAction> Actions { get; set; }
+        public IEnumerable<IMyCustomerUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

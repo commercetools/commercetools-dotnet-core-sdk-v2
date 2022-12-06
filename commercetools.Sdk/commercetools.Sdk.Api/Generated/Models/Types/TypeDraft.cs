@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Types
@@ -13,8 +14,12 @@ namespace commercetools.Sdk.Api.Models.Types
 
         public ILocalizedString Description { get; set; }
 
-        public List<IResourceTypeId> ResourceTypeIds { get; set; }
+        public IList<IResourceTypeId> ResourceTypeIds { get; set; }
+        public IEnumerable<IResourceTypeId> ResourceTypeIdsEnumerable { set => ResourceTypeIds = value.ToList(); }
 
-        public List<IFieldDefinition> FieldDefinitions { get; set; }
+
+        public IList<IFieldDefinition> FieldDefinitions { get; set; }
+        public IEnumerable<IFieldDefinition> FieldDefinitionsEnumerable { set => FieldDefinitions = value.ToList(); }
+
     }
 }

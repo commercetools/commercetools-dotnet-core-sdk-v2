@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         long Offset { get; set; }
 
-        List<IShoppingList> Results { get; set; }
+        IList<IShoppingList> Results { get; set; }
+        IEnumerable<IShoppingList> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

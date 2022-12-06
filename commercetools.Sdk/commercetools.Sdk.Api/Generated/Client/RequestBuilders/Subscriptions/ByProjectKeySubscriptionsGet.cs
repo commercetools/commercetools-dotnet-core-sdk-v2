@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -90,10 +91,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Zones;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     {
         IZoneResourceIdentifier Zone { get; set; }
 
-        List<IShippingRateDraft> ShippingRates { get; set; }
+        IList<IShippingRateDraft> ShippingRates { get; set; }
+        IEnumerable<IShippingRateDraft> ShippingRatesEnumerable { set => ShippingRates = value.ToList(); }
+
 
     }
 }

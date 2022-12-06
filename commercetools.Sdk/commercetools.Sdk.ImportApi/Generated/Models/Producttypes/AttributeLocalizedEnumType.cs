@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Producttypes
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     {
         public string Name { get; set; }
 
-        public List<IAttributeLocalizedEnumValue> Values { get; set; }
+        public IList<IAttributeLocalizedEnumValue> Values { get; set; }
+        public IEnumerable<IAttributeLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
         public AttributeLocalizedEnumType()
         {
             this.Name = "lenum";

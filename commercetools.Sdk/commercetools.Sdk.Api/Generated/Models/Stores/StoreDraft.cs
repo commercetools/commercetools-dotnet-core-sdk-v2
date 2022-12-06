@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.StoreCountries;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Stores
@@ -14,15 +15,25 @@ namespace commercetools.Sdk.Api.Models.Stores
 
         public ILocalizedString Name { get; set; }
 
-        public List<string> Languages { get; set; }
+        public IList<string> Languages { get; set; }
+        public IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
 
-        public List<IStoreCountry> Countries { get; set; }
 
-        public List<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        public IList<IStoreCountry> Countries { get; set; }
+        public IEnumerable<IStoreCountry> CountriesEnumerable { set => Countries = value.ToList(); }
 
-        public List<IChannelResourceIdentifier> SupplyChannels { get; set; }
 
-        public List<IProductSelectionSettingDraft> ProductSelections { get; set; }
+        public IList<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        public IEnumerable<IChannelResourceIdentifier> DistributionChannelsEnumerable { set => DistributionChannels = value.ToList(); }
+
+
+        public IList<IChannelResourceIdentifier> SupplyChannels { get; set; }
+        public IEnumerable<IChannelResourceIdentifier> SupplyChannelsEnumerable { set => SupplyChannels = value.ToList(); }
+
+
+        public IList<IProductSelectionSettingDraft> ProductSelections { get; set; }
+        public IEnumerable<IProductSelectionSettingDraft> ProductSelectionsEnumerable { set => ProductSelections = value.ToList(); }
+
 
         public ICustomFieldsDraft Custom { get; set; }
     }

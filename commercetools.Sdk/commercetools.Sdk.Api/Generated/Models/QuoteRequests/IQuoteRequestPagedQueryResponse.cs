@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         long? Total { get; set; }
 
-        List<IQuoteRequest> Results { get; set; }
+        IList<IQuoteRequest> Results { get; set; }
+        IEnumerable<IQuoteRequest> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

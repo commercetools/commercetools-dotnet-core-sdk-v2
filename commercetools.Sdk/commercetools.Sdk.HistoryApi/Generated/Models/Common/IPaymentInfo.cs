@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.PaymentInfo))]
     public partial interface IPaymentInfo
     {
-        List<IReference> Payments { get; set; }
+        IList<IReference> Payments { get; set; }
+        IEnumerable<IReference> PaymentsEnumerable { set => Payments = value.ToList(); }
+
 
     }
 }

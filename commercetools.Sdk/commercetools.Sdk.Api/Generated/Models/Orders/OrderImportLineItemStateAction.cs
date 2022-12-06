@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string LineItemId { get; set; }
 
-        public List<IItemState> State { get; set; }
+        public IList<IItemState> State { get; set; }
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
         public OrderImportLineItemStateAction()
         {
             this.Action = "importLineItemState";

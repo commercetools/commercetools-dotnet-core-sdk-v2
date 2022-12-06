@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         public IMoney Price { get; set; }
 
-        public List<IShippingRatePriceTier> Tiers { get; set; }
+        public IList<IShippingRatePriceTier> Tiers { get; set; }
+        public IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         public bool? IsMatching { get; set; }
         public CartClassificationTier()

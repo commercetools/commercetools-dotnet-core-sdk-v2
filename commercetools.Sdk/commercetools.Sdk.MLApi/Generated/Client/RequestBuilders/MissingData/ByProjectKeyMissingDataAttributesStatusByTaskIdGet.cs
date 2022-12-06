@@ -1,6 +1,7 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -31,10 +32,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData
 
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.MissingData.IMissingDataTaskStatus>(requestMessage, cancellationToken);
         }
 
     }

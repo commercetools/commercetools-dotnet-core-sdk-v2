@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 
@@ -45,15 +46,21 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         string VatId { get; set; }
 
-        List<IBaseAddress> Addresses { get; set; }
+        IList<IBaseAddress> Addresses { get; set; }
+        IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
+
 
         int? DefaultShippingAddress { get; set; }
 
-        List<int> ShippingAddresses { get; set; }
+        IList<int> ShippingAddresses { get; set; }
+        IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
+
 
         int? DefaultBillingAddress { get; set; }
 
-        List<int> BillingAddresses { get; set; }
+        IList<int> BillingAddresses { get; set; }
+        IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
+
 
         bool? IsEmailVerified { get; set; }
 
@@ -65,7 +72,9 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         string Salutation { get; set; }
 
-        List<IStoreResourceIdentifier> Stores { get; set; }
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         IAuthenticationMode AuthenticationMode { get; set; }
 

@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -18,7 +19,9 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         IBusinessUnitStatus Status { get; set; }
 
-        List<IStoreKeyReference> Stores { get; set; }
+        IList<IStoreKeyReference> Stores { get; set; }
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         IBusinessUnitStoreMode StoreMode { get; set; }
 
@@ -28,15 +31,23 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         string ContactEmail { get; set; }
 
-        List<IAssociateDraft> Associates { get; set; }
+        IList<IAssociateDraft> Associates { get; set; }
+        IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
-        List<IBaseAddress> Addresses { get; set; }
 
-        List<int> ShippingAddresses { get; set; }
+        IList<IBaseAddress> Addresses { get; set; }
+        IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
+
+
+        IList<int> ShippingAddresses { get; set; }
+        IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
+
 
         int? DefaultShipingAddress { get; set; }
 
-        List<int> BillingAddresses { get; set; }
+        IList<int> BillingAddresses { get; set; }
+        IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
+
 
         int? DefaultBillingAddress { get; set; }
 

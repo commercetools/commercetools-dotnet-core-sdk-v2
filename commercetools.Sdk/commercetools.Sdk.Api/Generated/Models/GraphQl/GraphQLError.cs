@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.GraphQl
@@ -9,8 +10,12 @@ namespace commercetools.Sdk.Api.Models.GraphQl
     {
         public string Message { get; set; }
 
-        public List<IGraphQLErrorLocation> Locations { get; set; }
+        public IList<IGraphQLErrorLocation> Locations { get; set; }
+        public IEnumerable<IGraphQLErrorLocation> LocationsEnumerable { set => Locations = value.ToList(); }
 
-        public List<Object> Path { get; set; }
+
+        public IList<Object> Path { get; set; }
+        public IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
+
     }
 }

@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -38,9 +39,13 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxCalculationMode TaxCalculationMode { get; set; }
 
-        public List<ILineItemDraft> LineItems { get; set; }
+        public IList<ILineItemDraft> LineItems { get; set; }
+        public IEnumerable<ILineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        public List<ICustomLineItemDraft> CustomLineItems { get; set; }
+
+        public IList<ICustomLineItemDraft> CustomLineItems { get; set; }
+        public IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         public IBaseAddress ShippingAddress { get; set; }
 
@@ -60,14 +65,22 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IShippingMode ShippingMode { get; set; }
 
-        public List<ICustomShippingDraft> CustomShipping { get; set; }
+        public IList<ICustomShippingDraft> CustomShipping { get; set; }
+        public IEnumerable<ICustomShippingDraft> CustomShippingEnumerable { set => CustomShipping = value.ToList(); }
 
-        public List<IShippingDraft> Shipping { get; set; }
+
+        public IList<IShippingDraft> Shipping { get; set; }
+        public IEnumerable<IShippingDraft> ShippingEnumerable { set => Shipping = value.ToList(); }
+
 
         public IShippingRateInputDraft ShippingRateInput { get; set; }
 
-        public List<IBaseAddress> ItemShippingAddresses { get; set; }
+        public IList<IBaseAddress> ItemShippingAddresses { get; set; }
+        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-        public List<string> DiscountCodes { get; set; }
+
+        public IList<string> DiscountCodes { get; set; }
+        public IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
     }
 }

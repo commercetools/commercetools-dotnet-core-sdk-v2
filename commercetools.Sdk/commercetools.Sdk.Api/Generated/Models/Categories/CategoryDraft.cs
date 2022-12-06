@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Categories
@@ -28,7 +29,9 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         public ICustomFieldsDraft Custom { get; set; }
 
-        public List<IAssetDraft> Assets { get; set; }
+        public IList<IAssetDraft> Assets { get; set; }
+        public IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         public string Key { get; set; }
     }

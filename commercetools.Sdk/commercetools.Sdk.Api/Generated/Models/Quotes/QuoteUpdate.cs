@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Quotes
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
     {
         public long Version { get; set; }
 
-        public List<IQuoteUpdateAction> Actions { get; set; }
+        public IList<IQuoteUpdateAction> Actions { get; set; }
+        public IEnumerable<IQuoteUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

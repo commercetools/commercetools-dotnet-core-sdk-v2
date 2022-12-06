@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Me
@@ -19,13 +20,19 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public ICustomFields Custom { get; set; }
 
-        public List<IBaseAddress> Addresses { get; set; }
+        public IList<IBaseAddress> Addresses { get; set; }
+        public IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-        public List<int> ShippingAddresses { get; set; }
+
+        public IList<int> ShippingAddresses { get; set; }
+        public IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
+
 
         public int? DefaultShipingAddress { get; set; }
 
-        public List<int> BillingAddresses { get; set; }
+        public IList<int> BillingAddresses { get; set; }
+        public IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
+
 
         public int? DefaultBillingAddress { get; set; }
 

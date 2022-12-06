@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.ReturnInfo))]
     public partial interface IReturnInfo
     {
-        List<IReturnItem> Items { get; set; }
+        IList<IReturnItem> Items { get; set; }
+        IEnumerable<IReturnItem> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         string ReturnTrackingId { get; set; }
 

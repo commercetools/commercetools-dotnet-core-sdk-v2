@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -25,7 +26,9 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         string Description { get; set; }
 
-        List<ITaxRate> Rates { get; set; }
+        IList<ITaxRate> Rates { get; set; }
+        IEnumerable<ITaxRate> RatesEnumerable { set => Rates = value.ToList(); }
+
 
         string Key { get; set; }
 

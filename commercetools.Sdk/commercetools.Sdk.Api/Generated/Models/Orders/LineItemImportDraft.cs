@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -21,7 +22,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public long Quantity { get; set; }
 
-        public List<IItemState> State { get; set; }
+        public IList<IItemState> State { get; set; }
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         public IChannelResourceIdentifier SupplyChannel { get; set; }
 

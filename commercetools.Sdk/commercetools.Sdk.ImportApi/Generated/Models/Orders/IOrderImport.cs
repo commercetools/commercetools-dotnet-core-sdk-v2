@@ -2,6 +2,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -16,9 +17,13 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         string CustomerEmail { get; set; }
 
-        List<ILineItemImportDraft> LineItems { get; set; }
+        IList<ILineItemImportDraft> LineItems { get; set; }
+        IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItemDraft> CustomLineItems { get; set; }
+
+        IList<ICustomLineItemDraft> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -52,7 +57,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         ICartOrigin Origin { get; set; }
 
-        List<IAddress> ItemShippingAddresses { get; set; }
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
 
         IStoreKeyReference Store { get; set; }
 

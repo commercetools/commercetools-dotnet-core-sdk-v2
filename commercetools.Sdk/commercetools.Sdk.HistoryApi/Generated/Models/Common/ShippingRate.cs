@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
@@ -12,6 +13,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public bool IsMatching { get; set; }
 
-        public List<IShippingRatePriceTier> Tiers { get; set; }
+        public IList<IShippingRatePriceTier> Tiers { get; set; }
+        public IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
     }
 }

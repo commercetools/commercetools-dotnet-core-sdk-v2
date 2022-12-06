@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Types
     public partial interface ITypeUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ITypeUpdate, ITypeUpdateAction>
     {
         new long Version { get; set; }
-        new List<ITypeUpdateAction> Actions { get; set; }
+        new IList<ITypeUpdateAction> Actions { get; set; }
+        IEnumerable<ITypeUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

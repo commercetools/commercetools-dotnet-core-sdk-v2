@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ProductTypes
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     {
         public string Action { get; set; }
 
-        public List<string> AttributeNames { get; set; }
+        public IList<string> AttributeNames { get; set; }
+        public IEnumerable<string> AttributeNamesEnumerable { set => AttributeNames = value.ToList(); }
+
         public ProductTypeChangeAttributeOrderByNameAction()
         {
             this.Action = "changeAttributeOrderByName";

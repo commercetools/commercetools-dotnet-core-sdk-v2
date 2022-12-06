@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
     {
         IExtensionResourceTypeId ResourceTypeId { get; set; }
 
-        List<IExtensionAction> Actions { get; set; }
+        IList<IExtensionAction> Actions { get; set; }
+        IEnumerable<IExtensionAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
         string Condition { get; set; }
 

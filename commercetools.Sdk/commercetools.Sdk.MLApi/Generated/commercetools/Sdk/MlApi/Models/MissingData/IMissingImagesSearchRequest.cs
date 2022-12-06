@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -21,9 +22,13 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         long? Threshold { get; set; }
 
-        List<string> ProductIds { get; set; }
+        IList<string> ProductIds { get; set; }
+        IEnumerable<string> ProductIdsEnumerable { set => ProductIds = value.ToList(); }
 
-        List<string> ProductTypeIds { get; set; }
+
+        IList<string> ProductTypeIds { get; set; }
+        IEnumerable<string> ProductTypeIdsEnumerable { set => ProductTypeIds = value.ToList(); }
+
 
     }
 }

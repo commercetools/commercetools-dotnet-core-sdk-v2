@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Projects
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.CartClassificationType))]
     public partial interface ICartClassificationType : IShippingRateInputType
     {
-        List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        IList<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        IEnumerable<ICustomFieldLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
 
     }
 }

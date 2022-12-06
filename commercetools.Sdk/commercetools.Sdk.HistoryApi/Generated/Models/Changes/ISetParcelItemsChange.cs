@@ -1,6 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,9 +16,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IParcelChangeValue Parcel { get; set; }
 
-        List<IDeliveryItem> NextValue { get; set; }
+        IList<IDeliveryItem> NextValue { get; set; }
+        IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
-        List<IDeliveryItem> PreviousValue { get; set; }
+
+        IList<IDeliveryItem> PreviousValue { get; set; }
+        IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
     }
 }

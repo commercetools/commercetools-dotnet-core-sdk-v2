@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 
         IDeliveryParcel AddParcelToDelivery { get; set; }
 
-        List<IDeliveryDraft> AddDeliveries { get; set; }
+        IList<IDeliveryDraft> AddDeliveries { get; set; }
+        IEnumerable<IDeliveryDraft> AddDeliveriesEnumerable { set => AddDeliveries = value.ToList(); }
+
 
         IRemoveDeliveryDraft RemoveDelivery { get; set; }
 
@@ -23,7 +26,9 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 
         IParcelTrackingData SetParcelTrackingData { get; set; }
 
-        List<IParcelItems> SetParcelItems { get; set; }
+        IList<IParcelItems> SetParcelItems { get; set; }
+        IEnumerable<IParcelItems> SetParcelItemsEnumerable { set => SetParcelItems = value.ToList(); }
+
 
     }
 }

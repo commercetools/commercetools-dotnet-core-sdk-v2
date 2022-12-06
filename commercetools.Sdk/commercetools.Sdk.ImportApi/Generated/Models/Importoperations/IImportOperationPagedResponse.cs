@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
 
         long Total { get; set; }
 
-        List<IImportOperation> Results { get; set; }
+        IList<IImportOperation> Results { get; set; }
+        IEnumerable<IImportOperation> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

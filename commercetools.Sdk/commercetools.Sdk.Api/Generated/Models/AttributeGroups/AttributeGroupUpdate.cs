@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.AttributeGroups
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.AttributeGroups
     {
         public long Version { get; set; }
 
-        public List<IAttributeGroupUpdateAction> Actions { get; set; }
+        public IList<IAttributeGroupUpdateAction> Actions { get; set; }
+        public IEnumerable<IAttributeGroupUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

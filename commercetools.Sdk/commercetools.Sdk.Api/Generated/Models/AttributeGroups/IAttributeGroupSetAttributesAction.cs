@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.AttributeGroups
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupSetAttributesAction))]
     public partial interface IAttributeGroupSetAttributesAction : IAttributeGroupUpdateAction
     {
-        List<IAttributeReference> Attributes { get; set; }
+        IList<IAttributeReference> Attributes { get; set; }
+        IEnumerable<IAttributeReference> AttributesEnumerable { set => Attributes = value.ToList(); }
+
 
     }
 }

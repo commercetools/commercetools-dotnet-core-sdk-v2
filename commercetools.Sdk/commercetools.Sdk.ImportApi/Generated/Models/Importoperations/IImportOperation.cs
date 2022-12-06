@@ -2,6 +2,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Errors;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -22,9 +23,13 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
 
         long? ResourceVersion { get; set; }
 
-        List<IErrorObject> Errors { get; set; }
+        IList<IErrorObject> Errors { get; set; }
+        IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
 
-        List<IUnresolvedReferences> UnresolvedReferences { get; set; }
+
+        IList<IUnresolvedReferences> UnresolvedReferences { get; set; }
+        IEnumerable<IUnresolvedReferences> UnresolvedReferencesEnumerable { set => UnresolvedReferences = value.ToList(); }
+
 
         DateTime CreatedAt { get; set; }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
     public partial class ReturnInfo : IReturnInfo
     {
-        public List<IReturnItem> Items { get; set; }
+        public IList<IReturnItem> Items { get; set; }
+        public IEnumerable<IReturnItem> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         public string ReturnTrackingId { get; set; }
 

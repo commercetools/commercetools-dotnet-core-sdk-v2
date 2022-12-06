@@ -1,5 +1,6 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,9 +13,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        List<string> NextValue { get; set; }
+        IList<string> NextValue { get; set; }
+        IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
 
-        List<string> PreviousValue { get; set; }
+
+        IList<string> PreviousValue { get; set; }
+        IEnumerable<string> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         IAddress Address { get; set; }
 

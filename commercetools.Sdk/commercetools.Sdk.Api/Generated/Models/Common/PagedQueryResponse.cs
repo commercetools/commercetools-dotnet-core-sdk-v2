@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Common
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         public long? Total { get; set; }
 
-        public List<IBaseResource> Results { get; set; }
+        public IList<IBaseResource> Results { get; set; }
+        public IEnumerable<IBaseResource> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         public Object Meta { get; set; }
     }

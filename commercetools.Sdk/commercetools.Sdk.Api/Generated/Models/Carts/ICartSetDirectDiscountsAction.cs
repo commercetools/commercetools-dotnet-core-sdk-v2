@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction))]
     public partial interface ICartSetDirectDiscountsAction : ICartUpdateAction
     {
-        List<IDirectDiscountDraft> Discounts { get; set; }
+        IList<IDirectDiscountDraft> Discounts { get; set; }
+        IEnumerable<IDirectDiscountDraft> DiscountsEnumerable { set => Discounts = value.ToList(); }
+
 
     }
 }

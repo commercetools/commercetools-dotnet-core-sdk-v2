@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -30,9 +31,13 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<string> AddedLanguages { get; set; }
+        public IList<string> AddedLanguages { get; set; }
+        public IEnumerable<string> AddedLanguagesEnumerable { set => AddedLanguages = value.ToList(); }
 
-        public List<string> RemovedLanguages { get; set; }
+
+        public IList<string> RemovedLanguages { get; set; }
+        public IEnumerable<string> RemovedLanguagesEnumerable { set => RemovedLanguages = value.ToList(); }
+
         public StoreLanguagesChangedMessage()
         {
             this.Type = "StoreLanguagesChanged";

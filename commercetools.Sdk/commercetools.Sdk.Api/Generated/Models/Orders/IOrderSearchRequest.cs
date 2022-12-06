@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         IOrderSearchQuery Query { get; set; }
 
-        List<IOrderSearchSorting> Sort { get; set; }
+        IList<IOrderSearchSorting> Sort { get; set; }
+        IEnumerable<IOrderSearchSorting> SortEnumerable { set => Sort = value.ToList(); }
+
 
         int? Limit { get; set; }
 

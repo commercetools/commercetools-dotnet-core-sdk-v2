@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.ImageSearches
@@ -12,6 +13,8 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearches
 
         public int Total { get; set; }
 
-        public List<IResultItem> Results { get; set; }
+        public IList<IResultItem> Results { get; set; }
+        public IEnumerable<IResultItem> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

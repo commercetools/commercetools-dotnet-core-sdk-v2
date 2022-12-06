@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ProductDiscounts
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     {
         public string Type { get; set; }
 
-        public List<IMoney> Money { get; set; }
+        public IList<IMoney> Money { get; set; }
+        public IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
+
         public ProductDiscountValueAbsoluteDraft()
         {
             this.Type = "absolute";

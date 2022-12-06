@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -11,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IMoney TotalGross { get; set; }
 
-        public List<ITaxPortionDraft> TaxPortions { get; set; }
+        public IList<ITaxPortionDraft> TaxPortions { get; set; }
+        public IEnumerable<ITaxPortionDraft> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
+
     }
 }

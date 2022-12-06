@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
 
         long? Total { get; set; }
 
-        List<IAssignedProductReference> Results { get; set; }
+        IList<IAssignedProductReference> Results { get; set; }
+        IEnumerable<IAssignedProductReference> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

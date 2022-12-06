@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.ApiClients
 
         long? Total { get; set; }
 
-        List<IApiClient> Results { get; set; }
+        IList<IApiClient> Results { get; set; }
+        IEnumerable<IApiClient> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

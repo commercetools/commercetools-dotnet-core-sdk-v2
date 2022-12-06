@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Categories;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest))]
     public partial interface ICategoryImportRequest : IImportRequest
     {
-        List<ICategoryImport> Resources { get; set; }
+        IList<ICategoryImport> Resources { get; set; }
+        IEnumerable<ICategoryImport> ResourcesEnumerable { set => Resources = value.ToList(); }
+
 
     }
 }

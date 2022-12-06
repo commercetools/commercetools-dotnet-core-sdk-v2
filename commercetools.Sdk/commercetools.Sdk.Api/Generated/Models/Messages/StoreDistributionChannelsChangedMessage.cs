@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -31,9 +32,13 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<IChannelReference> AddedDistributionChannels { get; set; }
+        public IList<IChannelReference> AddedDistributionChannels { get; set; }
+        public IEnumerable<IChannelReference> AddedDistributionChannelsEnumerable { set => AddedDistributionChannels = value.ToList(); }
 
-        public List<IChannelReference> RemovedDistributionChannels { get; set; }
+
+        public IList<IChannelReference> RemovedDistributionChannels { get; set; }
+        public IEnumerable<IChannelReference> RemovedDistributionChannelsEnumerable { set => RemovedDistributionChannels = value.ToList(); }
+
         public StoreDistributionChannelsChangedMessage()
         {
             this.Type = "StoreDistributionChannelsChanged";

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         string Description { get; set; }
 
-        List<ITaxRateDraft> Rates { get; set; }
+        IList<ITaxRateDraft> Rates { get; set; }
+        IEnumerable<ITaxRateDraft> RatesEnumerable { set => Rates = value.ToList(); }
+
 
         string Key { get; set; }
 

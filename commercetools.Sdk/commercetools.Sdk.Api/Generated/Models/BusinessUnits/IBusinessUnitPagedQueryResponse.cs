@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         long? Total { get; set; }
 
-        List<IBusinessUnit> Results { get; set; }
+        IList<IBusinessUnit> Results { get; set; }
+        IEnumerable<IBusinessUnit> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

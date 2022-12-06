@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -39,9 +40,13 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ITaxCalculationMode TaxCalculationMode { get; set; }
 
-        List<ILineItemDraft> LineItems { get; set; }
+        IList<ILineItemDraft> LineItems { get; set; }
+        IEnumerable<ILineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItemDraft> CustomLineItems { get; set; }
+
+        IList<ICustomLineItemDraft> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         IBaseAddress ShippingAddress { get; set; }
 
@@ -61,15 +66,23 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IShippingMode ShippingMode { get; set; }
 
-        List<ICustomShippingDraft> CustomShipping { get; set; }
+        IList<ICustomShippingDraft> CustomShipping { get; set; }
+        IEnumerable<ICustomShippingDraft> CustomShippingEnumerable { set => CustomShipping = value.ToList(); }
 
-        List<IShippingDraft> Shipping { get; set; }
+
+        IList<IShippingDraft> Shipping { get; set; }
+        IEnumerable<IShippingDraft> ShippingEnumerable { set => Shipping = value.ToList(); }
+
 
         IShippingRateInputDraft ShippingRateInput { get; set; }
 
-        List<IBaseAddress> ItemShippingAddresses { get; set; }
+        IList<IBaseAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-        List<string> DiscountCodes { get; set; }
+
+        IList<string> DiscountCodes { get; set; }
+        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
 
     }
 }

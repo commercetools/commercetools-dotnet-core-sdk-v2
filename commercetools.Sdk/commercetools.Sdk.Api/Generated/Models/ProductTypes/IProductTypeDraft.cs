@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
 
         string Description { get; set; }
 
-        List<IAttributeDefinitionDraft> Attributes { get; set; }
+        IList<IAttributeDefinitionDraft> Attributes { get; set; }
+        IEnumerable<IAttributeDefinitionDraft> AttributesEnumerable { set => Attributes = value.ToList(); }
+
 
     }
 }

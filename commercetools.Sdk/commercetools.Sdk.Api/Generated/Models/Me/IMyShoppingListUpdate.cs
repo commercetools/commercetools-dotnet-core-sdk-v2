@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         long Version { get; set; }
 
-        List<IMyShoppingListUpdateAction> Actions { get; set; }
+        IList<IMyShoppingListUpdateAction> Actions { get; set; }
+        IEnumerable<IMyShoppingListUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

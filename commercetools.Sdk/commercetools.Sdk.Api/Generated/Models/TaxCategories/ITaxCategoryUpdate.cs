@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     public partial interface ITaxCategoryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ITaxCategoryUpdate, ITaxCategoryUpdateAction>
     {
         new long Version { get; set; }
-        new List<ITaxCategoryUpdateAction> Actions { get; set; }
+        new IList<ITaxCategoryUpdateAction> Actions { get; set; }
+        IEnumerable<ITaxCategoryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

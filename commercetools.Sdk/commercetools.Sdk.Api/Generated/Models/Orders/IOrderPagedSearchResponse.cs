@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         long? Limit { get; set; }
 
-        List<IHit> Hits { get; set; }
+        IList<IHit> Hits { get; set; }
+        IEnumerable<IHit> HitsEnumerable { set => Hits = value.ToList(); }
+
 
     }
 }

@@ -2,6 +2,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
@@ -19,7 +20,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         public decimal Quantity { get; set; }
 
-        public List<IItemState> State { get; set; }
+        public IList<IItemState> State { get; set; }
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         public IChannelKeyReference SupplyChannel { get; set; }
 

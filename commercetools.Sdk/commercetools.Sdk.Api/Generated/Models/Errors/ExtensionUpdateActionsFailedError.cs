@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Errors
@@ -16,7 +17,9 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         public Object ExtensionExtraInfo { get; set; }
 
-        public List<IExtensionError> ExtensionErrors { get; set; }
+        public IList<IExtensionError> ExtensionErrors { get; set; }
+        public IEnumerable<IExtensionError> ExtensionErrorsEnumerable { set => ExtensionErrors = value.ToList(); }
+
         public ExtensionUpdateActionsFailedError()
         {
             this.Code = "ExtensionUpdateActionsFailed";

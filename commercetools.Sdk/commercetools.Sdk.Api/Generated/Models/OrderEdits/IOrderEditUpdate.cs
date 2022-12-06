@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         long Version { get; set; }
 
-        List<IOrderEditUpdateAction> Actions { get; set; }
+        IList<IOrderEditUpdateAction> Actions { get; set; }
+        IEnumerable<IOrderEditUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
         bool? DryRun { get; set; }
 

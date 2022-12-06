@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.Products
     {
         ILocalizedString Name { get; set; }
 
-        List<ICategoryReference> Categories { get; set; }
+        IList<ICategoryReference> Categories { get; set; }
+        IEnumerable<ICategoryReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         ICategoryOrderHints CategoryOrderHints { get; set; }
 
@@ -27,7 +30,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         IProductVariant MasterVariant { get; set; }
 
-        List<IProductVariant> Variants { get; set; }
+        IList<IProductVariant> Variants { get; set; }
+        IEnumerable<IProductVariant> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
         ISearchKeywords SearchKeywords { get; set; }
 

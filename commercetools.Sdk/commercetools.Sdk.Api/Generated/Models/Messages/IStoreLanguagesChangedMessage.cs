@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,9 +8,13 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage))]
     public partial interface IStoreLanguagesChangedMessage : IMessage
     {
-        List<string> AddedLanguages { get; set; }
+        IList<string> AddedLanguages { get; set; }
+        IEnumerable<string> AddedLanguagesEnumerable { set => AddedLanguages = value.ToList(); }
 
-        List<string> RemovedLanguages { get; set; }
+
+        IList<string> RemovedLanguages { get; set; }
+        IEnumerable<string> RemovedLanguagesEnumerable { set => RemovedLanguages = value.ToList(); }
+
 
     }
 }

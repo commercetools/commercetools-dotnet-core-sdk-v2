@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     {
         public long Version { get; set; }
 
-        public List<IStandalonePriceUpdateAction> Actions { get; set; }
+        public IList<IStandalonePriceUpdateAction> Actions { get; set; }
+        public IEnumerable<IStandalonePriceUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

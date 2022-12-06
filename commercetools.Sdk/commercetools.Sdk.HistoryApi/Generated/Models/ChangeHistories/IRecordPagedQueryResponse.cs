@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         int Offset { get; set; }
 
-        List<IRecord> Results { get; set; }
+        IList<IRecord> Results { get; set; }
+        IEnumerable<IRecord> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

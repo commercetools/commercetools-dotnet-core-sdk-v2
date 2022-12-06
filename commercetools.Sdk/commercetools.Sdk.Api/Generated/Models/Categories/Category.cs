@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Categories
@@ -27,7 +28,9 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         public ILocalizedString Description { get; set; }
 
-        public List<ICategoryReference> Ancestors { get; set; }
+        public IList<ICategoryReference> Ancestors { get; set; }
+        public IEnumerable<ICategoryReference> AncestorsEnumerable { set => Ancestors = value.ToList(); }
+
 
         public ICategoryReference Parent { get; set; }
 
@@ -43,7 +46,9 @@ namespace commercetools.Sdk.Api.Models.Categories
 
         public ICustomFields Custom { get; set; }
 
-        public List<IAsset> Assets { get; set; }
+        public IList<IAsset> Assets { get; set; }
+        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         public string Key { get; set; }
     }

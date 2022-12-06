@@ -1,5 +1,6 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -13,9 +14,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public IReference Category { get; set; }
 
-        public List<IReference> PreviousValue { get; set; }
+        public IList<IReference> PreviousValue { get; set; }
+        public IEnumerable<IReference> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        public List<IReference> NextValue { get; set; }
+
+        public IList<IReference> NextValue { get; set; }
+        public IEnumerable<IReference> NextValueEnumerable { set => NextValue = value.ToList(); }
+
         public AddToCategoryChange()
         {
             this.Type = "AddToCategoryChange";

@@ -1,6 +1,7 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Products;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -17,7 +18,9 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 
         ILocalizedString Description { get; set; }
 
-        List<ICategoryKeyReference> Categories { get; set; }
+        IList<ICategoryKeyReference> Categories { get; set; }
+        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         ILocalizedString MetaTitle { get; set; }
 
@@ -27,7 +30,9 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 
         IProductVariantDraftImport MasterVariant { get; set; }
 
-        List<IProductVariantDraftImport> Variants { get; set; }
+        IList<IProductVariantDraftImport> Variants { get; set; }
+        IEnumerable<IProductVariantDraftImport> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
         ITaxCategoryKeyReference TaxCategory { get; set; }
 
