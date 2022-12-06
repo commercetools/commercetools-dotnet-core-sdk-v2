@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -30,7 +31,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+        public IList<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+        public IEnumerable<IProductPriceDiscountsSetUpdatedPrice> UpdatedPricesEnumerable { set => UpdatedPrices = value.ToList(); }
+
         public ProductPriceDiscountsSetMessage()
         {
             this.Type = "ProductPriceDiscountsSet";

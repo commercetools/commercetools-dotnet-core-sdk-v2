@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -26,9 +27,13 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         ILocalizedString Description { get; set; }
 
-        List<IShoppingListLineItem> LineItems { get; set; }
+        IList<IShoppingListLineItem> LineItems { get; set; }
+        IEnumerable<IShoppingListLineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ITextLineItem> TextLineItems { get; set; }
+
+        IList<ITextLineItem> TextLineItems { get; set; }
+        IEnumerable<ITextLineItem> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
+
 
         long? DeleteDaysAfterLastModification { get; set; }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,9 +11,13 @@ namespace commercetools.Sdk.Api.Models.GraphQl
     {
         string Message { get; set; }
 
-        List<IGraphQLErrorLocation> Locations { get; set; }
+        IList<IGraphQLErrorLocation> Locations { get; set; }
+        IEnumerable<IGraphQLErrorLocation> LocationsEnumerable { set => Locations = value.ToList(); }
 
-        List<Object> Path { get; set; }
+
+        IList<Object> Path { get; set; }
+        IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
+
 
     }
 }

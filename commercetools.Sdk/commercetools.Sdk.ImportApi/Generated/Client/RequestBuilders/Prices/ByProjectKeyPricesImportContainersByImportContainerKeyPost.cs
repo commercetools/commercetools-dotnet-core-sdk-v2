@@ -1,6 +1,7 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -37,10 +38,10 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices
 
 
 
-        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

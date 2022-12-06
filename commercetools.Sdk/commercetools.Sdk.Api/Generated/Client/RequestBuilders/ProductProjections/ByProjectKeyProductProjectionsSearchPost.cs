@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -37,10 +38,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 
 
 
-        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

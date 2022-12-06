@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,7 +14,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         bool? Staged { get; set; }
 
-        List<string> AssetOrder { get; set; }
+        IList<string> AssetOrder { get; set; }
+        IEnumerable<string> AssetOrderEnumerable { set => AssetOrder = value.ToList(); }
+
 
     }
 }

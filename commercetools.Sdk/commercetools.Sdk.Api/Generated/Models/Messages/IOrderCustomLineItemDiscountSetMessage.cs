@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Carts;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string CustomLineItemId { get; set; }
 
-        List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+        IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+        IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
+
 
         ITaxedItemPrice TaxedPrice { get; set; }
 

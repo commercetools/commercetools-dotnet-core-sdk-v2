@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Types
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Types
     {
         public string Action { get; set; }
 
-        public List<string> FieldNames { get; set; }
+        public IList<string> FieldNames { get; set; }
+        public IEnumerable<string> FieldNamesEnumerable { set => FieldNames = value.ToList(); }
+
         public TypeChangeFieldDefinitionOrderAction()
         {
             this.Action = "changeFieldDefinitionOrder";

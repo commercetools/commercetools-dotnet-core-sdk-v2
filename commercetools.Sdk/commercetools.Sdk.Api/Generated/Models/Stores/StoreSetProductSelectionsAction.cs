@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Stores
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Stores
     {
         public string Action { get; set; }
 
-        public List<IProductSelectionSettingDraft> ProductSelections { get; set; }
+        public IList<IProductSelectionSettingDraft> ProductSelections { get; set; }
+        public IEnumerable<IProductSelectionSettingDraft> ProductSelectionsEnumerable { set => ProductSelections = value.ToList(); }
+
         public StoreSetProductSelectionsAction()
         {
             this.Action = "setProductSelections";

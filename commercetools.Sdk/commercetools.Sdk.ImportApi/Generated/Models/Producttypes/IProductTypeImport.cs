@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
 
         string Description { get; set; }
 
-        List<IAttributeDefinition> Attributes { get; set; }
+        IList<IAttributeDefinition> Attributes { get; set; }
+        IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
+
 
     }
 }

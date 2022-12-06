@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public long Offset { get; set; }
 
-        public List<IOrder> Results { get; set; }
+        public IList<IOrder> Results { get; set; }
+        public IEnumerable<IOrder> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

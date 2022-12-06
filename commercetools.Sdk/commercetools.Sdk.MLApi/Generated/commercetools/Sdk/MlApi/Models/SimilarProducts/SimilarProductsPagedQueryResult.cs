@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 
         public long Offset { get; set; }
 
-        public List<ISimilarProductPair> Results { get; set; }
+        public IList<ISimilarProductPair> Results { get; set; }
+        public IEnumerable<ISimilarProductPair> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         public ISimilarProductSearchRequestMeta Meta { get; set; }
     }

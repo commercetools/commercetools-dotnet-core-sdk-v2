@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ReturnInfoDraft))]
     public partial interface IReturnInfoDraft
     {
-        List<IReturnItemDraft> Items { get; set; }
+        IList<IReturnItemDraft> Items { get; set; }
+        IEnumerable<IReturnItemDraft> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         string ReturnTrackingId { get; set; }
 

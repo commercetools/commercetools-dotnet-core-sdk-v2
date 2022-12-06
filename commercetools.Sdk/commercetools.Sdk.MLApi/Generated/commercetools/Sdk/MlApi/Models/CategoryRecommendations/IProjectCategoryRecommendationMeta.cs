@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 
         string ProductImageUrl { get; set; }
 
-        List<string> GeneralCategoryNames { get; set; }
+        IList<string> GeneralCategoryNames { get; set; }
+        IEnumerable<string> GeneralCategoryNamesEnumerable { set => GeneralCategoryNames = value.ToList(); }
+
 
     }
 }

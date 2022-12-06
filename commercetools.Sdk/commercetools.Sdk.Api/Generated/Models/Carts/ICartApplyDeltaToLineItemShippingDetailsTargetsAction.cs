@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string LineItemId { get; set; }
 
-        List<IItemShippingTarget> TargetsDelta { get; set; }
+        IList<IItemShippingTarget> TargetsDelta { get; set; }
+        IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
+
 
     }
 }

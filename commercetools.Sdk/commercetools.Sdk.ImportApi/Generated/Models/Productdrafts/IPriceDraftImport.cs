@@ -2,6 +2,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -26,7 +27,9 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 
         IDiscountedPrice Discounted { get; set; }
 
-        List<IPriceTier> Tiers { get; set; }
+        IList<IPriceTier> Tiers { get; set; }
+        IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         string Key { get; set; }
 

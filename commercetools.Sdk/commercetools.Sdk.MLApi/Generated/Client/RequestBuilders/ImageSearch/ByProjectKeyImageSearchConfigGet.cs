@@ -1,5 +1,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -27,10 +28,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.ImageSearchConfigs.IImageSearchConfigResponse>(requestMessage, cancellationToken);
         }
 
     }

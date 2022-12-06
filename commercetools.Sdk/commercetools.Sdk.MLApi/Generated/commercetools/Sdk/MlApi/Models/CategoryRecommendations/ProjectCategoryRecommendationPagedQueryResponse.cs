@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 
         public long Offset { get; set; }
 
-        public List<IProjectCategoryRecommendation> Results { get; set; }
+        public IList<IProjectCategoryRecommendation> Results { get; set; }
+        public IEnumerable<IProjectCategoryRecommendation> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         public IProjectCategoryRecommendationMeta Meta { get; set; }
     }

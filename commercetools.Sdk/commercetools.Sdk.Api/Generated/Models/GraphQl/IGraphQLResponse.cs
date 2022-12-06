@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.GraphQl
     {
         Object Data { get; set; }
 
-        List<IGraphQLError> Errors { get; set; }
+        IList<IGraphQLError> Errors { get; set; }
+        IEnumerable<IGraphQLError> ErrorsEnumerable { set => Errors = value.ToList(); }
+
 
     }
 }

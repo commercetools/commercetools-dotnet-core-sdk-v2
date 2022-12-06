@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
@@ -10,9 +11,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public string CreatedAt { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
-        public List<IParcel> Parcels { get; set; }
+
+        public IList<IParcel> Parcels { get; set; }
+        public IEnumerable<IParcel> ParcelsEnumerable { set => Parcels = value.ToList(); }
+
 
         public IAddress Address { get; set; }
 

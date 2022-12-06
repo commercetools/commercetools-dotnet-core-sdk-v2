@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         public string Type { get; set; }
 
-        public List<string> Value { get; set; }
+        public IList<string> Value { get; set; }
+        public IEnumerable<string> ValueEnumerable { set => Value = value.ToList(); }
+
         public EnumSetAttribute()
         {
             this.Type = "enum-set";

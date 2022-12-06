@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string LineItemId { get; set; }
 
-        List<IItemState> State { get; set; }
+        IList<IItemState> State { get; set; }
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
     }
 }

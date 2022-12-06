@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public int Offset { get; set; }
 
-        public List<IRecord> Results { get; set; }
+        public IList<IRecord> Results { get; set; }
+        public IEnumerable<IRecord> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

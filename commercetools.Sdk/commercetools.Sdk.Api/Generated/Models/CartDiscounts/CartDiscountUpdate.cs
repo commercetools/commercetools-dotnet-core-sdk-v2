@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     {
         public long Version { get; set; }
 
-        public List<ICartDiscountUpdateAction> Actions { get; set; }
+        public IList<ICartDiscountUpdateAction> Actions { get; set; }
+        public IEnumerable<ICartDiscountUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

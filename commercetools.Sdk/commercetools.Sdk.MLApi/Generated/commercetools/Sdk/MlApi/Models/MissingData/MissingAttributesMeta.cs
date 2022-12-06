@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
@@ -13,6 +14,8 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
         [ObsoleteAttribute("This property is obsolete", false)]
         public IMissingAttributesDetails VariantLevel { get; set; }
 
-        public List<string> ProductTypeIds { get; set; }
+        public IList<string> ProductTypeIds { get; set; }
+        public IEnumerable<string> ProductTypeIdsEnumerable { set => ProductTypeIds = value.ToList(); }
+
     }
 }

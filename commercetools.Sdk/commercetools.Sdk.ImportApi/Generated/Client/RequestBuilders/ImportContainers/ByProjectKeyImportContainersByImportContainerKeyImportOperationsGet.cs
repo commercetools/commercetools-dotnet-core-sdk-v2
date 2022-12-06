@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Sdk.ImportApi.Models.Common;
 
@@ -89,10 +90,10 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
         }
 
 
-        public async Task<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importoperations.IImportOperationPagedResponse>(requestMessage, cancellationToken);
         }
 
     }

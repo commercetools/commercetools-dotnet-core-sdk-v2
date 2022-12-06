@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Zones
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Zones
 
         public long? Total { get; set; }
 
-        public List<IZone> Results { get; set; }
+        public IList<IZone> Results { get; set; }
+        public IEnumerable<IZone> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

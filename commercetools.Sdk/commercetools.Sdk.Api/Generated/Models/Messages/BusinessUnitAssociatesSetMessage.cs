@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -31,7 +32,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<IAssociate> Associates { get; set; }
+        public IList<IAssociate> Associates { get; set; }
+        public IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
+
         public BusinessUnitAssociatesSetMessage()
         {
             this.Type = "BusinessUnitAssociatesSet";

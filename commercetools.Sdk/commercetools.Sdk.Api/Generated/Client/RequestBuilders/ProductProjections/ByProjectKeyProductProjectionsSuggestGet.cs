@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -90,10 +91,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam($"searchKeywords.{locale}", searchKeywords);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.Products.ISuggestionResult> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.ISuggestionResult> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.ISuggestionResult>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.ISuggestionResult>(requestMessage, cancellationToken);
         }
 
     }

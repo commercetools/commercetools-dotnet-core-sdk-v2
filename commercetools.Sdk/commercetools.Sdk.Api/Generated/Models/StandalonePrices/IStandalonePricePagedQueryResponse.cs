@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         long? Total { get; set; }
 
-        List<IStandalonePrice> Results { get; set; }
+        IList<IStandalonePrice> Results { get; set; }
+        IEnumerable<IStandalonePrice> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

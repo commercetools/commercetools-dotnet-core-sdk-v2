@@ -1,5 +1,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Text.Json;
 using commercetools.Base.Client;
 
@@ -31,10 +32,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 
 
 
-        public async Task<JsonElement> ExecuteAsync()
+        public async Task<JsonElement> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage, cancellationToken);
         }
 
     }

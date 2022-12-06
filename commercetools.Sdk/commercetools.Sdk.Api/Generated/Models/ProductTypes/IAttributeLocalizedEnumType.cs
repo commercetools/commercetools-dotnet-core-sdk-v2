@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.AttributeLocalizedEnumType))]
     public partial interface IAttributeLocalizedEnumType : IAttributeType
     {
-        List<IAttributeLocalizedEnumValue> Values { get; set; }
+        IList<IAttributeLocalizedEnumValue> Values { get; set; }
+        IEnumerable<IAttributeLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
 
     }
 }

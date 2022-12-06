@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         IMoney TotalGross { get; set; }
 
-        List<ITaxPortion> TaxPortions { get; set; }
+        IList<ITaxPortion> TaxPortions { get; set; }
+        IEnumerable<ITaxPortion> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
+
 
     }
 }

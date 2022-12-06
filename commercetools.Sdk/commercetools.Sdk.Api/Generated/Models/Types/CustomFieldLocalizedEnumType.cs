@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Types
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Types
     {
         public string Name { get; set; }
 
-        public List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        public IList<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        public IEnumerable<ICustomFieldLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
         public CustomFieldLocalizedEnumType()
         {
             this.Name = "LocalizedEnum";

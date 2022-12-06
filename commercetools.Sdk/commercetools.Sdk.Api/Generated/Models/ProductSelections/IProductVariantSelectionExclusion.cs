@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     {
         new IProductVariantSelectionTypeEnum Type { get; set; }
 
-        List<string> Skus { get; set; }
+        IList<string> Skus { get; set; }
+        IEnumerable<string> SkusEnumerable { set => Skus = value.ToList(); }
+
 
     }
 }

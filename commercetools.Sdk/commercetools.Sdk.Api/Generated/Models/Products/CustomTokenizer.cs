@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Products
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Products
     {
         public string Type { get; set; }
 
-        public List<string> Inputs { get; set; }
+        public IList<string> Inputs { get; set; }
+        public IEnumerable<string> InputsEnumerable { set => Inputs = value.ToList(); }
+
         public CustomTokenizer()
         {
             this.Type = "custom";

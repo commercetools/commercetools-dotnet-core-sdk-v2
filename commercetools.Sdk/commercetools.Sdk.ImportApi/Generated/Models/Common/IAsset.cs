@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -10,13 +11,17 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     {
         string Key { get; set; }
 
-        List<IAssetSource> Sources { get; set; }
+        IList<IAssetSource> Sources { get; set; }
+        IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
+
 
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }
 
-        List<string> Tags { get; set; }
+        IList<string> Tags { get; set; }
+        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
+
 
         ICustom Custom { get; set; }
 

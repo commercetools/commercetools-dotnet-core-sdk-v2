@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Inventories
     public partial interface IInventoryEntryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IInventoryEntryUpdate, IInventoryEntryUpdateAction>
     {
         new long Version { get; set; }
-        new List<IInventoryEntryUpdateAction> Actions { get; set; }
+        new IList<IInventoryEntryUpdateAction> Actions { get; set; }
+        IEnumerable<IInventoryEntryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

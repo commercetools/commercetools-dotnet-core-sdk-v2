@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public IOrderReference Resource { get; set; }
 
-        public List<IStagedOrderUpdateAction> StagedActions { get; set; }
+        public IList<IStagedOrderUpdateAction> StagedActions { get; set; }
+        public IEnumerable<IStagedOrderUpdateAction> StagedActionsEnumerable { set => StagedActions = value.ToList(); }
+
 
         public ICustomFieldsDraft Custom { get; set; }
 

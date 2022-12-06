@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
@@ -46,10 +47,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
         }
 
 
-        public async Task<commercetools.Sdk.Api.Models.Orders.IOrder> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Orders.IOrder> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrder>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Orders.IOrder>(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

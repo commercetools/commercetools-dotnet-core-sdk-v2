@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         public IMoney Value { get; set; }
 
-        public List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        public IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        public IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+
     }
 }

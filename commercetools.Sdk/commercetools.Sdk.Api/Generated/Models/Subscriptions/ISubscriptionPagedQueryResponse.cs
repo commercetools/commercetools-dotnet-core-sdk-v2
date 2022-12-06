@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         long? Total { get; set; }
 
-        List<ISubscription> Results { get; set; }
+        IList<ISubscription> Results { get; set; }
+        IEnumerable<ISubscription> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

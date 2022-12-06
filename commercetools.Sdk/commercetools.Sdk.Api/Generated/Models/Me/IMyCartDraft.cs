@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -21,7 +22,9 @@ namespace commercetools.Sdk.Api.Models.Me
 
         IInventoryMode InventoryMode { get; set; }
 
-        List<IMyLineItemDraft> LineItems { get; set; }
+        IList<IMyLineItemDraft> LineItems { get; set; }
+        IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
+
 
         IBaseAddress ShippingAddress { get; set; }
 
@@ -37,13 +40,17 @@ namespace commercetools.Sdk.Api.Models.Me
 
         long? DeleteDaysAfterLastModification { get; set; }
 
-        List<IBaseAddress> ItemShippingAddresses { get; set; }
+        IList<IBaseAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
 
         IBusinessUnitKeyReference BusinessUnit { get; set; }
 
         IStoreKeyReference Store { get; set; }
 
-        List<string> DiscountCodes { get; set; }
+        IList<string> DiscountCodes { get; set; }
+        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
 
     }
 }

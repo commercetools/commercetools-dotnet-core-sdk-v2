@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -32,7 +33,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public ILocalizedString Name { get; set; }
 
-        public List<ILocalizedString> NameAllLocales { get; set; }
+        public IList<ILocalizedString> NameAllLocales { get; set; }
+        public IEnumerable<ILocalizedString> NameAllLocalesEnumerable { set => NameAllLocales = value.ToList(); }
+
         public StoreNameSetMessage()
         {
             this.Type = "StoreNameSet";

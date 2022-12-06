@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,11 +16,17 @@ namespace commercetools.Sdk.Api.Models.Projects
 
         string Name { get; set; }
 
-        List<string> Countries { get; set; }
+        IList<string> Countries { get; set; }
+        IEnumerable<string> CountriesEnumerable { set => Countries = value.ToList(); }
 
-        List<string> Currencies { get; set; }
 
-        List<string> Languages { get; set; }
+        IList<string> Currencies { get; set; }
+        IEnumerable<string> CurrenciesEnumerable { set => Currencies = value.ToList(); }
+
+
+        IList<string> Languages { get; set; }
+        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
+
 
         DateTime CreatedAt { get; set; }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.SimilarProducts
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
     {
         public decimal Confidence { get; set; }
 
-        public List<ISimilarProduct> Products { get; set; }
+        public IList<ISimilarProduct> Products { get; set; }
+        public IEnumerable<ISimilarProduct> ProductsEnumerable { set => Products = value.ToList(); }
+
     }
 }

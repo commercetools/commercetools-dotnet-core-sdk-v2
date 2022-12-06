@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -17,7 +18,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         string AssetKey { get; set; }
 
-        List<string> Tags { get; set; }
+        IList<string> Tags { get; set; }
+        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.Zones
 
         long? Total { get; set; }
 
-        List<IZone> Results { get; set; }
+        IList<IZone> Results { get; set; }
+        IEnumerable<IZone> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

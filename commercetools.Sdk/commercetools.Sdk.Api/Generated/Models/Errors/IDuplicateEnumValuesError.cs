@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         new string Message { get; set; }
 
-        List<string> Duplicates { get; set; }
+        IList<string> Duplicates { get; set; }
+        IEnumerable<string> DuplicatesEnumerable { set => Duplicates = value.ToList(); }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
     public partial interface IExtensionUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IExtensionUpdate, IExtensionUpdateAction>
     {
         new long Version { get; set; }
-        new List<IExtensionUpdateAction> Actions { get; set; }
+        new IList<IExtensionUpdateAction> Actions { get; set; }
+        IEnumerable<IExtensionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
 
     }
 }

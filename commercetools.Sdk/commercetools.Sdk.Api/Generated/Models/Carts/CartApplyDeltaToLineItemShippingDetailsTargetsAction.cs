@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public string LineItemId { get; set; }
 
-        public List<IItemShippingTarget> TargetsDelta { get; set; }
+        public IList<IItemShippingTarget> TargetsDelta { get; set; }
+        public IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
+
         public CartApplyDeltaToLineItemShippingDetailsTargetsAction()
         {
             this.Action = "applyDeltaToLineItemShippingDetailsTargets";

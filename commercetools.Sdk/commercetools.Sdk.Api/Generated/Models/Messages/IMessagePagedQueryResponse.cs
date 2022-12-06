@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         long Offset { get; set; }
 
-        List<IMessage> Results { get; set; }
+        IList<IMessage> Results { get; set; }
+        IEnumerable<IMessage> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

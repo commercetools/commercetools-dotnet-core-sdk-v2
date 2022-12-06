@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.ImportApi.Models.Orders
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         public string State { get; set; }
 
-        public List<ISubRate> SubRates { get; set; }
+        public IList<ISubRate> SubRates { get; set; }
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
 
         public bool? IncludedInPrice { get; set; }
     }

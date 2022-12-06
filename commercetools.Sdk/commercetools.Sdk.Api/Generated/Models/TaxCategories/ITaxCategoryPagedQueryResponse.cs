@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         long? Total { get; set; }
 
-        List<ITaxCategory> Results { get; set; }
+        IList<ITaxCategory> Results { get; set; }
+        IEnumerable<ITaxCategory> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

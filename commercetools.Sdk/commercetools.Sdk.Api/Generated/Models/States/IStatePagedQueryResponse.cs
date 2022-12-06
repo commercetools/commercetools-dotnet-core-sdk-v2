@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,7 +16,9 @@ namespace commercetools.Sdk.Api.Models.States
 
         long? Total { get; set; }
 
-        List<IState> Results { get; set; }
+        IList<IState> Results { get; set; }
+        IEnumerable<IState> ResultsEnumerable { set => Results = value.ToList(); }
+
 
     }
 }

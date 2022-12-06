@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Me
@@ -14,9 +15,13 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public ILocalizedString Description { get; set; }
 
-        public List<IShoppingListLineItemDraft> LineItems { get; set; }
+        public IList<IShoppingListLineItemDraft> LineItems { get; set; }
+        public IEnumerable<IShoppingListLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        public List<ITextLineItemDraft> TextLineItems { get; set; }
+
+        public IList<ITextLineItemDraft> TextLineItems { get; set; }
+        public IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
+
 
         public ICustomFieldsDraft Custom { get; set; }
 

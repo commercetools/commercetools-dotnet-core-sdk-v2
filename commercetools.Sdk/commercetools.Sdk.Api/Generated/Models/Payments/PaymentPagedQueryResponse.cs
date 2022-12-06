@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Payments
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         public long Offset { get; set; }
 
-        public List<IPayment> Results { get; set; }
+        public IList<IPayment> Results { get; set; }
+        public IEnumerable<IPayment> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

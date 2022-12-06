@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.DiscountCodes
@@ -28,13 +29,17 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
 
         public string Code { get; set; }
 
-        public List<ICartDiscountReference> CartDiscounts { get; set; }
+        public IList<ICartDiscountReference> CartDiscounts { get; set; }
+        public IEnumerable<ICartDiscountReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
 
         public string CartPredicate { get; set; }
 
         public bool IsActive { get; set; }
 
-        public List<IReference> References { get; set; }
+        public IList<IReference> References { get; set; }
+        public IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
+
 
         public long? MaxApplications { get; set; }
 
@@ -42,7 +47,9 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
 
         public ICustomFields Custom { get; set; }
 
-        public List<string> Groups { get; set; }
+        public IList<string> Groups { get; set; }
+        public IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
+
 
         public DateTime? ValidFrom { get; set; }
 

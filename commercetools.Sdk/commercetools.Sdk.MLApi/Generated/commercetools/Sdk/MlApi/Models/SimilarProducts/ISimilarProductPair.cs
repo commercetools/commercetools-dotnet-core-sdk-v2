@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
     {
         decimal Confidence { get; set; }
 
-        List<ISimilarProduct> Products { get; set; }
+        IList<ISimilarProduct> Products { get; set; }
+        IEnumerable<ISimilarProduct> ProductsEnumerable { set => Products = value.ToList(); }
+
 
     }
 }

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -18,9 +19,13 @@ namespace commercetools.Sdk.Api.Models.States
 
         bool? Initial { get; set; }
 
-        List<IStateRoleEnum> Roles { get; set; }
+        IList<IStateRoleEnum> Roles { get; set; }
+        IEnumerable<IStateRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
-        List<IStateResourceIdentifier> Transitions { get; set; }
+
+        IList<IStateResourceIdentifier> Transitions { get; set; }
+        IEnumerable<IStateResourceIdentifier> TransitionsEnumerable { set => Transitions = value.ToList(); }
+
 
     }
 }

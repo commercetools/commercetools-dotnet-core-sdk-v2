@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -35,7 +36,9 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
 
         bool IsActive { get; set; }
 
-        List<IReference> References { get; set; }
+        IList<IReference> References { get; set; }
+        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
+
 
         DateTime? ValidFrom { get; set; }
 

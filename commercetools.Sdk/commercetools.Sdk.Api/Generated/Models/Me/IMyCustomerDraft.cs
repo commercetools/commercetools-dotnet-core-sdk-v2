@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 
@@ -31,7 +32,9 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string VatId { get; set; }
 
-        List<IBaseAddress> Addresses { get; set; }
+        IList<IBaseAddress> Addresses { get; set; }
+        IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
+
 
         long? DefaultShippingAddress { get; set; }
 
@@ -41,7 +44,9 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string Locale { get; set; }
 
-        List<IStoreResourceIdentifier> Stores { get; set; }
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
 
     }
 }

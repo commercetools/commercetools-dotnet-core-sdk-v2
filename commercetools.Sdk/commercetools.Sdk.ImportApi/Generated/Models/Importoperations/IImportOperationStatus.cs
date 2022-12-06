@@ -1,5 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Errors;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.ImportApi.Models.Importoperations
 
         IImportOperationState State { get; set; }
 
-        List<IErrorObject> Errors { get; set; }
+        IList<IErrorObject> Errors { get; set; }
+        IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
+
 
     }
 }

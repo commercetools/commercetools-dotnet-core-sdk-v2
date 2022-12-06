@@ -2,6 +2,7 @@ using commercetools.Sdk.HistoryApi.Models.Changes;
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Sdk.HistoryApi.Models.Labels;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
@@ -23,11 +24,15 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public ILabel PreviousLabel { get; set; }
 
-        public List<IChange> Changes { get; set; }
+        public IList<IChange> Changes { get; set; }
+        public IEnumerable<IChange> ChangesEnumerable { set => Changes = value.ToList(); }
+
 
         public IReference Resource { get; set; }
 
-        public List<IKeyReference> Stores { get; set; }
+        public IList<IKeyReference> Stores { get; set; }
+        public IEnumerable<IKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         public bool WithoutChanges { get; set; }
     }

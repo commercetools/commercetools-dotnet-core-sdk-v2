@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Channels
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Channels
 
         public long? Total { get; set; }
 
-        public List<IChannel> Results { get; set; }
+        public IList<IChannel> Results { get; set; }
+        public IEnumerable<IChannel> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

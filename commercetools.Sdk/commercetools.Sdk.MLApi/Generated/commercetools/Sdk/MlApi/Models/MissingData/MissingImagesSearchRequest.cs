@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.MLApi.Models.MissingData
@@ -21,8 +22,12 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         public long? Threshold { get; set; }
 
-        public List<string> ProductIds { get; set; }
+        public IList<string> ProductIds { get; set; }
+        public IEnumerable<string> ProductIdsEnumerable { set => ProductIds = value.ToList(); }
 
-        public List<string> ProductTypeIds { get; set; }
+
+        public IList<string> ProductTypeIds { get; set; }
+        public IEnumerable<string> ProductTypeIdsEnumerable { set => ProductTypeIds = value.ToList(); }
+
     }
 }

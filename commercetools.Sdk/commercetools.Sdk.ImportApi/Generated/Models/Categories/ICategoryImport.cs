@@ -1,6 +1,7 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -27,7 +28,9 @@ namespace commercetools.Sdk.ImportApi.Models.Categories
 
         ILocalizedString MetaKeywords { get; set; }
 
-        List<IAsset> Assets { get; set; }
+        IList<IAsset> Assets { get; set; }
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         ICustom Custom { get; set; }
 

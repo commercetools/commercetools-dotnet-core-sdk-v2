@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,7 +15,9 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         long Offset { get; set; }
 
-        List<IMissingImages> Results { get; set; }
+        IList<IMissingImages> Results { get; set; }
+        IEnumerable<IMissingImages> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         [ObsoleteAttribute("This property is obsolete", false)]
         IMissingImagesMeta Meta { get; set; }

@@ -9,6 +9,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -41,9 +42,13 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         IStoreKeyReference Store { get; set; }
 
-        List<ILineItem> LineItems { get; set; }
+        IList<ILineItem> LineItems { get; set; }
+        IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItem> CustomLineItems { get; set; }
+
+        IList<ICustomLineItem> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -69,9 +74,13 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         IShippingRateInput ShippingRateInput { get; set; }
 
-        List<IAddress> ItemShippingAddresses { get; set; }
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-        List<IDirectDiscount> DirectDiscounts { get; set; }
+
+        IList<IDirectDiscount> DirectDiscounts { get; set; }
+        IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
+
 
         ICustomFields Custom { get; set; }
 

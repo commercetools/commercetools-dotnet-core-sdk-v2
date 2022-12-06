@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -93,10 +94,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Sdk.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ProductSelections.IAssignedProductSelectionPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -86,10 +87,10 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
         }
 
 
-        public async Task<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.IGeneralCategoryRecommendationPagedQueryResponse>(requestMessage, cancellationToken);
         }
 
     }

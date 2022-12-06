@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.OrderEdits
@@ -12,7 +13,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public IMoney ExternalTotalGross { get; set; }
 
-        public List<ITaxPortionDraft> ExternalTaxPortions { get; set; }
+        public IList<ITaxPortionDraft> ExternalTaxPortions { get; set; }
+        public IEnumerable<ITaxPortionDraft> ExternalTaxPortionsEnumerable { set => ExternalTaxPortions = value.ToList(); }
+
         public StagedOrderSetOrderTotalTaxAction()
         {
             this.Action = "setOrderTotalTax";

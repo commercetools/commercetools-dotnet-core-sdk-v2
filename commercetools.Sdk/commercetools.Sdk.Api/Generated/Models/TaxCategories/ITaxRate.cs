@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -19,7 +20,9 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         string State { get; set; }
 
-        List<ISubRate> SubRates { get; set; }
+        IList<ISubRate> SubRates { get; set; }
+        IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
 
     }
 }

@@ -7,6 +7,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -39,9 +40,13 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IStoreKeyReference Store { get; set; }
 
-        List<ILineItem> LineItems { get; set; }
+        IList<ILineItem> LineItems { get; set; }
+        IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItem> CustomLineItems { get; set; }
+
+        IList<ICustomLineItem> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -57,7 +62,9 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IShippingMode ShippingMode { get; set; }
 
-        List<IShipping> Shipping { get; set; }
+        IList<IShipping> Shipping { get; set; }
+        IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
+
 
         IInventoryMode InventoryMode { get; set; }
 
@@ -73,9 +80,13 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IShippingInfo ShippingInfo { get; set; }
 
-        List<IDiscountCodeInfo> DiscountCodes { get; set; }
+        IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+        IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
-        List<IDirectDiscount> DirectDiscounts { get; set; }
+
+        IList<IDirectDiscount> DirectDiscounts { get; set; }
+        IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
+
 
         ICustomFields Custom { get; set; }
 
@@ -85,13 +96,17 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         int? DeleteDaysAfterLastModification { get; set; }
 
-        List<ICartDiscountReference> RefusedGifts { get; set; }
+        IList<ICartDiscountReference> RefusedGifts { get; set; }
+        IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
+
 
         ICartOrigin Origin { get; set; }
 
         IShippingRateInput ShippingRateInput { get; set; }
 
-        List<IAddress> ItemShippingAddresses { get; set; }
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
 
         long? TotalLineItemQuantity { get; set; }
 

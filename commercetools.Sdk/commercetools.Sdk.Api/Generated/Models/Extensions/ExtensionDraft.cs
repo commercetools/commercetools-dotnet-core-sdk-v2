@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Extensions
@@ -10,7 +11,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
 
         public IExtensionDestination Destination { get; set; }
 
-        public List<IExtensionTrigger> Triggers { get; set; }
+        public IList<IExtensionTrigger> Triggers { get; set; }
+        public IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
 
         public int? TimeoutInMs { get; set; }
     }

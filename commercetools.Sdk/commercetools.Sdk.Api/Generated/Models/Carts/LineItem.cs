@@ -7,6 +7,7 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -32,7 +33,9 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 
-        public List<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+        public IList<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+        public IEnumerable<IMethodTaxedPrice> TaxedPricePortionsEnumerable { set => TaxedPricePortions = value.ToList(); }
+
 
         public ITypedMoney TotalPrice { get; set; }
 
@@ -40,17 +43,23 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public DateTime? AddedAt { get; set; }
 
-        public List<IItemState> State { get; set; }
+        public IList<IItemState> State { get; set; }
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         public ITaxRate TaxRate { get; set; }
 
-        public List<IMethodTaxRate> PerMethodTaxRate { get; set; }
+        public IList<IMethodTaxRate> PerMethodTaxRate { get; set; }
+        public IEnumerable<IMethodTaxRate> PerMethodTaxRateEnumerable { set => PerMethodTaxRate = value.ToList(); }
+
 
         public IChannelReference SupplyChannel { get; set; }
 
         public IChannelReference DistributionChannel { get; set; }
 
-        public List<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+        public IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+        public IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
+
 
         public ILineItemPriceMode PriceMode { get; set; }
 

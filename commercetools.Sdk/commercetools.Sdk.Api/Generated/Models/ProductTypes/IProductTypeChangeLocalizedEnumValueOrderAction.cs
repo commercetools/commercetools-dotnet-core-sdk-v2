@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     {
         string AttributeName { get; set; }
 
-        List<IAttributeLocalizedEnumValue> Values { get; set; }
+        IList<IAttributeLocalizedEnumValue> Values { get; set; }
+        IEnumerable<IAttributeLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
 
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -17,7 +18,9 @@ namespace commercetools.Sdk.MLApi.Models.SimilarProducts
 
         ISimilarityMeasures SimilarityMeasures { get; set; }
 
-        List<IProductSetSelector> ProductSetSelectors { get; set; }
+        IList<IProductSetSelector> ProductSetSelectors { get; set; }
+        IEnumerable<IProductSetSelector> ProductSetSelectorsEnumerable { set => ProductSetSelectors = value.ToList(); }
+
 
         decimal? ConfidenceMin { get; set; }
 

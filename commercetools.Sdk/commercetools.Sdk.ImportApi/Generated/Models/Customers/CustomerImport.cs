@@ -1,6 +1,7 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.Models;
 
 
@@ -17,7 +18,9 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
 
         public string Password { get; set; }
 
-        public List<IStoreKeyReference> Stores { get; set; }
+        public IList<IStoreKeyReference> Stores { get; set; }
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         public string FirstName { get; set; }
 
@@ -41,15 +44,21 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
 
         public ICustomerGroupKeyReference CustomerGroup { get; set; }
 
-        public List<ICustomerAddress> Addresses { get; set; }
+        public IList<ICustomerAddress> Addresses { get; set; }
+        public IEnumerable<ICustomerAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
+
 
         public int? DefaultBillingAddress { get; set; }
 
-        public List<int> BillingAddresses { get; set; }
+        public IList<int> BillingAddresses { get; set; }
+        public IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
+
 
         public int? DefaultShippingAddress { get; set; }
 
-        public List<int> ShippingAddresses { get; set; }
+        public IList<int> ShippingAddresses { get; set; }
+        public IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
+
 
         public string Locale { get; set; }
 

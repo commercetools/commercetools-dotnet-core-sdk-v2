@@ -1,5 +1,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 using commercetools.Base.Client;
 
 
@@ -27,10 +28,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 
 
 
-        public async Task<commercetools.Sdk.Api.Models.Projects.IProject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Projects.IProject> ExecuteAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Projects.IProject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Projects.IProject>(requestMessage, cancellationToken);
         }
 
     }

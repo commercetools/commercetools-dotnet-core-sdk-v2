@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Payments
@@ -44,9 +45,13 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         public IPaymentStatus PaymentStatus { get; set; }
 
-        public List<ITransaction> Transactions { get; set; }
+        public IList<ITransaction> Transactions { get; set; }
+        public IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
-        public List<ICustomFields> InterfaceInteractions { get; set; }
+
+        public IList<ICustomFields> InterfaceInteractions { get; set; }
+        public IEnumerable<ICustomFields> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
+
 
         public ICustomFields Custom { get; set; }
 

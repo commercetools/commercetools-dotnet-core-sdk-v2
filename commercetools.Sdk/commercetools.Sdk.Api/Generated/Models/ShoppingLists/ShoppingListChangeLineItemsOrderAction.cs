@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ShoppingLists
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     {
         public string Action { get; set; }
 
-        public List<string> LineItemOrder { get; set; }
+        public IList<string> LineItemOrder { get; set; }
+        public IEnumerable<string> LineItemOrderEnumerable { set => LineItemOrder = value.ToList(); }
+
         public ShoppingListChangeLineItemsOrderAction()
         {
             this.Action = "changeLineItemsOrder";

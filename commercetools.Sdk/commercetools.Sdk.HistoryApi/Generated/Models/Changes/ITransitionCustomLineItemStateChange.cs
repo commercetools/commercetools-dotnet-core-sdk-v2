@@ -1,5 +1,6 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -16,9 +17,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string StateId { get; set; }
 
-        List<IItemState> NextValue { get; set; }
+        IList<IItemState> NextValue { get; set; }
+        IEnumerable<IItemState> NextValueEnumerable { set => NextValue = value.ToList(); }
 
-        List<IItemState> PreviousValue { get; set; }
+
+        IList<IItemState> PreviousValue { get; set; }
+        IEnumerable<IItemState> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
     }
 }

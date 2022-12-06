@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         IMoney Value { get; set; }
 
-        List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+
 
     }
 }

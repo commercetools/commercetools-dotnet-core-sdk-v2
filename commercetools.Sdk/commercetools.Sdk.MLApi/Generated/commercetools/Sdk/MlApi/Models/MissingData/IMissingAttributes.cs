@@ -1,6 +1,7 @@
 using commercetools.Sdk.MLApi.Models.Common;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -15,9 +16,13 @@ namespace commercetools.Sdk.MLApi.Models.MissingData
 
         int VariantId { get; set; }
 
-        List<string> MissingAttributeValues { get; set; }
+        IList<string> MissingAttributeValues { get; set; }
+        IEnumerable<string> MissingAttributeValuesEnumerable { set => MissingAttributeValues = value.ToList(); }
 
-        List<string> MissingAttributeNames { get; set; }
+
+        IList<string> MissingAttributeNames { get; set; }
+        IEnumerable<string> MissingAttributeNamesEnumerable { set => MissingAttributeNames = value.ToList(); }
+
 
         [ObsoleteAttribute("This property is obsolete", false)]
         IAttributeCount AttributeCount { get; set; }

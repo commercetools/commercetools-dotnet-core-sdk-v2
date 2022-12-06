@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.StandalonePrices
@@ -27,7 +28,9 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         public DateTime? ValidUntil { get; set; }
 
-        public List<IPriceTierDraft> Tiers { get; set; }
+        public IList<IPriceTierDraft> Tiers { get; set; }
+        public IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         public IDiscountedPriceDraft Discounted { get; set; }
 

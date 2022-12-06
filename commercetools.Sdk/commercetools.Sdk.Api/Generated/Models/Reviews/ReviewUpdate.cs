@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Reviews
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Reviews
     {
         public long Version { get; set; }
 
-        public List<IReviewUpdateAction> Actions { get; set; }
+        public IList<IReviewUpdateAction> Actions { get; set; }
+        public IEnumerable<IReviewUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

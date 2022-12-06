@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         public long? Total { get; set; }
 
-        public List<ICartDiscount> Results { get; set; }
+        public IList<ICartDiscount> Results { get; set; }
+        public IEnumerable<ICartDiscount> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

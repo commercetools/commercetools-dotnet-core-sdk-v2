@@ -7,6 +7,7 @@ using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Orders
@@ -20,9 +21,13 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string CustomerEmail { get; set; }
 
-        public List<ILineItemImportDraft> LineItems { get; set; }
+        public IList<ILineItemImportDraft> LineItems { get; set; }
+        public IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        public List<ICustomLineItemImportDraft> CustomLineItems { get; set; }
+
+        public IList<ICustomLineItemImportDraft> CustomLineItems { get; set; }
+        public IEnumerable<ICustomLineItemImportDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         public IMoney TotalPrice { get; set; }
 
@@ -56,7 +61,9 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public IRoundingMode TaxRoundingMode { get; set; }
 
-        public List<IBaseAddress> ItemShippingAddresses { get; set; }
+        public IList<IBaseAddress> ItemShippingAddresses { get; set; }
+        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
 
         public IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         new string Message { get; set; }
 
-        List<string> Languages { get; set; }
+        IList<string> Languages { get; set; }
+        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
+
 
     }
 }

@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -44,7 +45,9 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         bool RequiresDiscountCode { get; set; }
 
-        List<IReference> References { get; set; }
+        IList<IReference> References { get; set; }
+        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
+
 
         IStackingMode StackingMode { get; set; }
 

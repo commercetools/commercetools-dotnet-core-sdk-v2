@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     {
         public IProductVariantSelectionTypeEnum Type { get; set; }
 
-        public List<string> Skus { get; set; }
+        public IList<string> Skus { get; set; }
+        public IEnumerable<string> SkusEnumerable { set => Skus = value.ToList(); }
+
         public ProductVariantSelectionInclusion()
         {
             this.Type = IProductVariantSelectionTypeEnum.FindEnum("inclusion");

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Subscriptions
@@ -14,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         public long? Total { get; set; }
 
-        public List<ISubscription> Results { get; set; }
+        public IList<ISubscription> Results { get; set; }
+        public IEnumerable<ISubscription> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

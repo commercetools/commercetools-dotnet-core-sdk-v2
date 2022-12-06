@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -11,7 +12,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string ReturnTrackingId { get; set; }
 
-        List<IReturnItemDraft> Items { get; set; }
+        IList<IReturnItemDraft> Items { get; set; }
+        IEnumerable<IReturnItemDraft> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         DateTime? ReturnDate { get; set; }
 
