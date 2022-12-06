@@ -13,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.Common
                 CentAmount = (long)amount
             };
         }
-        
+
         public static IMoney FromDecimal(string currencyCode, decimal value, int fractionDigits, MidpointRounding midpointRounding = MidpointRounding.ToEven)
         {
             var amount = Math.Round(value * (decimal)Math.Pow(10, fractionDigits), 0, midpointRounding);

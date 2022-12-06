@@ -63,7 +63,7 @@ namespace commercetools.Api.IntegrationTests.Products
         public async Task DeserializeNumberAttribute()
         {
             await WithProduct(_projectApiRoot,
-                draft => DefaultProductDraftWithMultipleVariants(draft, 2),
+                draft => DefaultProductDraftWithMultipleVariants((ProductDraft)draft, 2),
                 product =>
                 {
                     Assert.IsType<DecimalAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("number"));
@@ -94,7 +94,7 @@ namespace commercetools.Api.IntegrationTests.Products
 
 
             await WithProduct(projectApiRoot,
-                draft => DefaultProductDraftWithMultipleVariants(draft, 2),
+                draft => DefaultProductDraftWithMultipleVariants((ProductDraft)draft, 2),
                 product =>
                 {
                     Assert.IsType<DecimalAttribute>(product.MasterData.Staged.MasterVariant.Attributes.Get("number")

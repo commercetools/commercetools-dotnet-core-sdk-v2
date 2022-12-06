@@ -8,12 +8,12 @@ namespace commercetools.Sdk.Api.Extensions
 {
     public static class AttributeExtensions
     {
-        public static IAttribute Get(this List<IAttribute> attributes, string name)
+        public static IAttribute Get(this IList<IAttribute> attributes, string name)
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
 
-        public static T Get<T>(this List<IAttribute> attributes, string name) where T : IAttribute
+        public static T Get<T>(this IList<IAttribute> attributes, string name) where T : IAttribute
         {
             var t = attributes.FirstOrDefault(a => a.Name.Equals(name));
             if (t is LongAttribute l && typeof(T).IsAssignableFrom(typeof(DecimalAttribute)))
@@ -153,7 +153,7 @@ namespace commercetools.Sdk.Api.Extensions
         public static bool IsSetAttribute<T>(this IAttribute attribute)
         {
             return
-                attribute is IGenericAttribute<List<T>>;
+                attribute is IGenericAttribute<IList<T>>;
         }
     }
 }

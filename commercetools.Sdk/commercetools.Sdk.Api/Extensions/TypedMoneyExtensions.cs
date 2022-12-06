@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Common
             }
             return typedMoney.CentAmount / (decimal)Math.Pow(10, typedMoney.FractionDigits);
         }
-        
+
         public static IHighPrecisionMoneyDraft ToDraft(this IHighPrecisionMoney highPrecisionMoney)
         {
             return new HighPrecisionMoneyDraft()
@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.Common
                 FractionDigits = highPrecisionMoney.FractionDigits
             };
         }
-        
+
         public static ICentPrecisionMoneyDraft ToDraft(this ICentPrecisionMoney highPrecisionMoney)
         {
             return new CentPrecisionMoneyDraft()
@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Models.Common
                 FractionDigits = highPrecisionMoney.FractionDigits
             };
         }
-        
+
         public static ITypedMoneyDraft ToDraft(this ITypedMoney money)
         {
             if (money is IHighPrecisionMoney)

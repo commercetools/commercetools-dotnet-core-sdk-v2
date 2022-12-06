@@ -22,7 +22,7 @@ namespace commercetools.Api.CheckoutApp.Services
                 .ProductProjections()
                 .Get()
                 .ExecuteAsync();
-            return response.Results;
+            return (List<IProductProjection>)response.Results;
         }
     }
 }

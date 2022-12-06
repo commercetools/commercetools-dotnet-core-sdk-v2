@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models
     {
         public long Version { get; set; }
 
-        public List<TAction> Actions { get; set; }
+        public IList<TAction> Actions { get; set; }
 
         TUpdate Get()
         {
