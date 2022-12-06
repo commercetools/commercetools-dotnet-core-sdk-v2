@@ -99,8 +99,13 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductCreated", typeof(commercetools.Sdk.Api.Models.Messages.ProductCreatedMessage))]
     [SubTypeDiscriminator("ProductDeleted", typeof(commercetools.Sdk.Api.Models.Messages.ProductDeletedMessage))]
     [SubTypeDiscriminator("ProductImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessage))]
+    [SubTypeDiscriminator("ProductPriceAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessage))]
+    [SubTypeDiscriminator("ProductPriceChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage))]
     [SubTypeDiscriminator("ProductPriceDiscountsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage))]
     [SubTypeDiscriminator("ProductPriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage))]
+    [SubTypeDiscriminator("ProductPriceModeSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessage))]
+    [SubTypeDiscriminator("ProductPriceRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessage))]
+    [SubTypeDiscriminator("ProductPriceSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage))]
     [SubTypeDiscriminator("ProductPublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductPublishedMessage))]
     [SubTypeDiscriminator("ProductRemovedFromCategory", typeof(commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessage))]
     [SubTypeDiscriminator("ProductRevertedStagedChanges", typeof(commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessage))]
@@ -724,6 +729,18 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessage ProductPriceAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage ProductPriceChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage ProductPriceDiscountsSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage();
@@ -733,6 +750,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage ProductPriceExternalDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessage ProductPriceModeSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessage ProductPriceRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage ProductPriceSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage();
             init?.Invoke(t);
             return t;
         }
