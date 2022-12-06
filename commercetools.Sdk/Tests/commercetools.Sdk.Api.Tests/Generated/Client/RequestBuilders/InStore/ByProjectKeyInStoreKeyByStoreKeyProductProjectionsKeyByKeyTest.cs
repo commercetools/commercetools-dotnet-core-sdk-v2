@@ -25,6 +25,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ProductProjections()
                    .WithKey("test_key")
                    .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?staged=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
                    .WithPriceCurrency("priceCurrency")
                    .Build(),
                    "Get",

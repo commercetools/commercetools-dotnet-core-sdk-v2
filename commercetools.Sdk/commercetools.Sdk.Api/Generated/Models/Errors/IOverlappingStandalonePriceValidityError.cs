@@ -10,6 +10,10 @@ namespace commercetools.Sdk.Api.Models.Errors
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError))]
     public partial interface IOverlappingStandalonePriceValidityError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         IStandalonePriceReference ConflictingStandalonePrice { get; set; }
 
         string Sku { get; set; }

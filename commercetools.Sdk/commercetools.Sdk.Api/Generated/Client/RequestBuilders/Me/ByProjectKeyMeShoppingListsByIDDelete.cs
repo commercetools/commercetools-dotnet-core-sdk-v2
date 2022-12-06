@@ -28,24 +28,24 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.RequestUrl = $"/{ProjectKey}/me/shopping-lists/{ID}";
         }
 
-        public List<string> GetVersion()
-        {
-            return this.GetQueryParam("version");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
         }
 
-        public ByProjectKeyMeShoppingListsByIDDelete WithVersion(long version)
+        public List<string> GetVersion()
         {
-            return this.AddQueryParam("version", version.ToString());
+            return this.GetQueryParam("version");
         }
 
         public ByProjectKeyMeShoppingListsByIDDelete WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyMeShoppingListsByIDDelete WithVersion(long version)
+        {
+            return this.AddQueryParam("version", version.ToString());
         }
 
 

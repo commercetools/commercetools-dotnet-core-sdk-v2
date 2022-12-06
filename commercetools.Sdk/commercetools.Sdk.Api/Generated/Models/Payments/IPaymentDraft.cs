@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Types;
-using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -15,7 +14,6 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         string AnonymousId { get; set; }
 
-        [ObsoleteAttribute("This property is obsolete", false)]
         string ExternalId { get; set; }
 
         string InterfaceId { get; set; }

@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Models.Reviews;
 using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.TaxCategories;
+using System;
 using System.Collections.Generic;
 using commercetools.Base.CustomAttributes;
 
@@ -18,6 +19,10 @@ namespace commercetools.Sdk.Api.Models.Products
         new long Version { get; set; }
 
         string Key { get; set; }
+
+        new DateTime CreatedAt { get; set; }
+
+        new DateTime LastModifiedAt { get; set; }
 
         IProductTypeReference ProductType { get; set; }
 
@@ -52,6 +57,8 @@ namespace commercetools.Sdk.Api.Models.Products
         IStateReference State { get; set; }
 
         IReviewRatingStatistics ReviewRatingStatistics { get; set; }
+
+        IProductPriceModeEnum PriceMode { get; set; }
 
     }
 }

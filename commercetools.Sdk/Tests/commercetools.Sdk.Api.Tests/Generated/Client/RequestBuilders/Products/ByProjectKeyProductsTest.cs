@@ -73,6 +73,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
+                   .WithLocaleProjection("localeProjection")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products?localeProjection=localeProjection",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -195,6 +205,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Post(null)
+                   .WithLocaleProjection("localeProjection")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/products?localeProjection=localeProjection",
                },
                new Object[] {
                    ApiRoot

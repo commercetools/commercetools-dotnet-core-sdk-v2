@@ -31,6 +31,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/shopping-lists/key={Key}";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
+
         public List<string> GetDataErasure()
         {
             return this.GetQueryParam("dataErasure");
@@ -41,9 +46,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetExpand()
+        public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithExpand(string expand)
         {
-            return this.GetQueryParam("expand");
+            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithDataErasure(bool dataErasure)
@@ -54,11 +59,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithVersion(long version)
         {
             return this.AddQueryParam("version", version.ToString());
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
 

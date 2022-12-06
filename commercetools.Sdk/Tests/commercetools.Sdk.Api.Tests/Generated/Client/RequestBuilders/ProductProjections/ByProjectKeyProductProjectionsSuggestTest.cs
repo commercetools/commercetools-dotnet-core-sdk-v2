@@ -35,17 +35,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Suggest()
                    .Get()
-                   .WithStaged(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/suggest?staged=true",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Suggest()
-                   .Get()
                    .WithSearchKeywords("locale", "searchKeywords.locale")
                    .Build(),
                    "Get",
@@ -94,6 +83,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/suggest?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Suggest()
+                   .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/suggest?staged=true",
                },
                new Object[] {
                    ApiRoot

@@ -56,5 +56,7 @@ namespace commercetools.Sdk.Api.Models.Products
         public IStateReference State { get; set; }
 
         public IReviewRatingStatistics ReviewRatingStatistics { get; set; }
+
+        public IProductPriceModeEnum PriceMode { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         public string Reason { get; set; }
 
-        public string DicountCodeId { get; set; }
+        public string DiscountCodeId { get; set; }
 
         public DateTime? ValidFrom { get; set; }
 

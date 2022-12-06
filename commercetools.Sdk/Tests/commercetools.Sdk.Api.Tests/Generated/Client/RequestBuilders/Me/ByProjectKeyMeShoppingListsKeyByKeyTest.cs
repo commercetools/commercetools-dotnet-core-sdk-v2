@@ -71,10 +71,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .ShoppingLists()
                    .WithKey("test_key")
                    .Delete()
-                   .WithVersion(2)
+                   .WithExpand("expand")
                    .Build(),
                    "Delete",
-                   "/test_projectKey/me/shopping-lists/key=test_key?version=2",
+                   "/test_projectKey/me/shopping-lists/key=test_key?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -83,10 +83,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .ShoppingLists()
                    .WithKey("test_key")
                    .Delete()
-                   .WithExpand("expand")
+                   .WithVersion(2)
                    .Build(),
                    "Delete",
-                   "/test_projectKey/me/shopping-lists/key=test_key?expand=expand",
+                   "/test_projectKey/me/shopping-lists/key=test_key?version=2",
                },
                new Object[] {
                    ApiRoot
