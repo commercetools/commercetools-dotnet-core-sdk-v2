@@ -28,8 +28,8 @@ namespace commercetools.Sdk.Api.Models.Products
 
         public bool? Staged { get; set; }
 
-        public IList<IAsset> Assets { get; set; }
-        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+        public IList<IAssetDraft> Assets { get; set; }
+        public IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
         public ProductAddVariantAction()
         {
