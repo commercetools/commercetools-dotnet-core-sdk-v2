@@ -34,6 +34,9 @@ using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
+using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
+using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
+using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -160,6 +163,16 @@ namespace commercetools.Sdk.Api.Client
         {
             return With().ProductTypes();
         }
+        
+        public ByProjectKeyQuotesRequestBuilder Quotes()
+        {
+            return With().Quotes();
+        }
+        
+        public ByProjectKeyQuoteRequestsRequestBuilder QuoteRequests()
+        {
+            return With().QuoteRequests();
+        }
 
         public ByProjectKeyReviewsRequestBuilder Reviews()
         {
@@ -174,6 +187,11 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyShoppingListsRequestBuilder ShoppingLists()
         {
             return With().ShoppingLists();
+        }
+        
+        public ByProjectKeyStagedQuotesRequestBuilder StagedQuotesRequests()
+        {
+            return With().StagedQuotes();
         }
 
         public ByProjectKeyStatesRequestBuilder States()
