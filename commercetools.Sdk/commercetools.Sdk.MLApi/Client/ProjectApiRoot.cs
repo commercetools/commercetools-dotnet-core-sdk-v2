@@ -41,11 +41,5 @@ namespace commercetools.Sdk.MLApi.Client
         {
             return With().ImageSearch();
         }
-
-        [System.Obsolete]
-        public ByProjectKeyMissingDataRequestBuilder MissingData()
-        {
-            return With().MissingData();
-        }
     }
 }
