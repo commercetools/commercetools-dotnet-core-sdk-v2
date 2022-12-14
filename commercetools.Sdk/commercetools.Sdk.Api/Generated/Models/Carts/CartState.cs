@@ -15,7 +15,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         Merged,
 
         [Description("Ordered")]
-        Ordered
+        Ordered,
+
+        [Description("Frozen")]
+        Frozen
     }
 
     public class CartStateWrapper : ICartState
@@ -50,6 +53,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static ICartState Ordered = new CartStateWrapper
         { Value = CartState.Ordered, JsonName = "Ordered" };
 
+        public static ICartState Frozen = new CartStateWrapper
+        { Value = CartState.Frozen, JsonName = "Frozen" };
+
         CartState? Value { get; }
 
         static ICartState[] Values()
@@ -58,7 +64,8 @@ namespace commercetools.Sdk.Api.Models.Carts
             {
                  Active ,
                  Merged ,
-                 Ordered
+                 Ordered ,
+                 Frozen
              };
         }
         static ICartState FindEnum(string value)

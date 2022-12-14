@@ -4,8 +4,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DuplicatePriceScopeError))]
-    public partial interface IDuplicatePriceScopeError : IErrorObject
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DuplicatePriceKeyError))]
+    public partial interface IDuplicatePriceKeyError : IErrorObject
     {
         new string Code { get; set; }
 

@@ -1,9 +1,7 @@
-using System;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations;
-using commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities;
 
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Projects
@@ -35,11 +33,6 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Projects
         public ByProjectKeyRecommendationsRequestBuilder Recommendations()
         {
             return new ByProjectKeyRecommendationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyMissingDataRequestBuilder MissingData()
-        {
-            return new ByProjectKeyMissingDataRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeySimilaritiesRequestBuilder Similarities()

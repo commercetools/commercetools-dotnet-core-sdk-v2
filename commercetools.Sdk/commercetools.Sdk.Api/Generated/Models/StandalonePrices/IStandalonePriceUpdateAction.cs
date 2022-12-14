@@ -12,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
     [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction))]
     public partial interface IStandalonePriceUpdateAction
     {
         string Action { get; set; }
@@ -49,6 +50,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction SetDiscountedPrice(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction();
             init?.Invoke(t);
             return t;
         }

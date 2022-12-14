@@ -43,6 +43,7 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("setMetaDescription", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaDescriptionAction))]
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaKeywordsAction))]
     [SubTypeDiscriminator("setMetaTitle", typeof(commercetools.Sdk.Api.Models.Products.ProductSetMetaTitleAction))]
+    [SubTypeDiscriminator("setPriceKey", typeof(commercetools.Sdk.Api.Models.Products.ProductSetPriceKeyAction))]
     [SubTypeDiscriminator("setPriceMode", typeof(commercetools.Sdk.Api.Models.Products.ProductSetPriceModeAction))]
     [SubTypeDiscriminator("setPrices", typeof(commercetools.Sdk.Api.Models.Products.ProductSetPricesAction))]
     [SubTypeDiscriminator("setProductPriceCustomField", typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductPriceCustomFieldAction))]
@@ -276,6 +277,12 @@ namespace commercetools.Sdk.Api.Models.Products
         static commercetools.Sdk.Api.Models.Products.ProductSetMetaTitleAction SetMetaTitle(Action<commercetools.Sdk.Api.Models.Products.ProductSetMetaTitleAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Products.ProductSetMetaTitleAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Products.ProductSetPriceKeyAction SetPriceKey(Action<commercetools.Sdk.Api.Models.Products.ProductSetPriceKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.ProductSetPriceKeyAction();
             init?.Invoke(t);
             return t;
         }

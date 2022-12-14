@@ -23,6 +23,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("changeTaxCalculationMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxCalculationModeAction))]
     [SubTypeDiscriminator("changeTaxMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxModeAction))]
     [SubTypeDiscriminator("changeTaxRoundingMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction))]
+    [SubTypeDiscriminator("freezeCart", typeof(commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction))]
     [SubTypeDiscriminator("recalculate", typeof(commercetools.Sdk.Api.Models.Carts.CartRecalculateAction))]
     [SubTypeDiscriminator("removeCustomLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveCustomLineItemAction))]
     [SubTypeDiscriminator("removeDiscountCode", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveDiscountCodeAction))]
@@ -73,6 +74,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setShippingMethodTaxAmount", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodTaxAmountAction))]
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodTaxRateAction))]
     [SubTypeDiscriminator("setShippingRateInput", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction))]
+    [SubTypeDiscriminator("unfreezeCart", typeof(commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
     public partial interface ICartUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICartUpdateAction>
     {
@@ -177,6 +179,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction ChangeTaxRoundingMode(Action<commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction FreezeCart(Action<commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction();
             init?.Invoke(t);
             return t;
         }
@@ -477,6 +485,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction SetShippingRateInput(Action<commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction UnfreezeCart(Action<commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction();
             init?.Invoke(t);
             return t;
         }
