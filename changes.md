@@ -1,16 +1,24 @@
 **Api changes**
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Added Type(s)</summary>
 
-- added enum `Frozen` to type `CartState` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/cart/CartState.raml:9:4)
+- added type `CartFreezeCartAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:178:0)
+- added type `CartUnfreezeCartAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:229:0)
+- added type `DuplicatePriceKeyError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:424:0)
+- added type `ProductPriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:755:0)
+- added type `StandalonePriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:796:0)
+- added type `ProductPriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:916:0)
+- added type `StandalonePriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:960:0)
+- added type `ProductSetPriceKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1421:0)
+- added type `StandalonePriceSetKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1611:0)
 </details>
 
 
 <details>
-<summary>Changed Property(s)</summary>
+<summary>Removed Property(s)</summary>
 
-- :warning: changed property `assets` of type `ProductAddVariantAction` from type `Asset[]` to `AssetDraft[]` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/product/updates/ProductAddVariantAction.raml:33:2)
+- :warning: removed property `conflictingPrices` from type `DuplicatePriceScopeError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/error/DuplicatePriceScopeError.raml:16:2)
 </details>
 
 
@@ -23,24 +31,16 @@
 
 
 <details>
-<summary>Removed Property(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- :warning: removed property `conflictingPrices` from type `DuplicatePriceScopeError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference-previous/api-specs/api/types/error/DuplicatePriceScopeError.raml:16:2)
+- :warning: changed property `assets` of type `ProductAddVariantAction` from type `Asset[]` to `AssetDraft[]` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/product/updates/ProductAddVariantAction.raml:33:2)
 </details>
 
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added type `CartFreezeCartAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:178:0)
-- added type `CartUnfreezeCartAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:229:0)
-- added type `DuplicatePriceKeyError` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:424:0)
-- added type `ProductPriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:755:0)
-- added type `StandalonePriceKeySetMessage` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:796:0)
-- added type `ProductPriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:916:0)
-- added type `StandalonePriceKeySetMessagePayload` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:960:0)
-- added type `ProductSetPriceKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1421:0)
-- added type `StandalonePriceSetKeyAction` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/types.raml:1611:0)
+- added enum `Frozen` to type `CartState` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/cart/CartState.raml:9:4)
 </details>
 
 **ML changes**
