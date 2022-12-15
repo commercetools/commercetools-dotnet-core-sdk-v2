@@ -106,7 +106,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductPriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessage))]
     [SubTypeDiscriminator("ProductPriceModeSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessage))]
     [SubTypeDiscriminator("ProductPriceRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessage))]
-    [SubTypeDiscriminator("ProductPriceSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage))]
+    [SubTypeDiscriminator("ProductPricesSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessage))]
     [SubTypeDiscriminator("ProductPublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductPublishedMessage))]
     [SubTypeDiscriminator("ProductRemovedFromCategory", typeof(commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessage))]
     [SubTypeDiscriminator("ProductRevertedStagedChanges", typeof(commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessage))]
@@ -773,9 +773,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage ProductPriceSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessage ProductPricesSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessage> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage();
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessage();
             init?.Invoke(t);
             return t;
         }

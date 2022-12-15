@@ -6,7 +6,7 @@ using System.Linq;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class ProductPriceSetMessagePayload : IProductPriceSetMessagePayload
+    public partial class ProductPricesSetMessagePayload : IProductPricesSetMessagePayload
     {
         public string Type { get; set; }
 
@@ -17,9 +17,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
 
         public bool Staged { get; set; }
-        public ProductPriceSetMessagePayload()
+        public ProductPricesSetMessagePayload()
         {
-            this.Type = "ProductPriceSet";
+            this.Type = "ProductPricesSet";
         }
     }
 }

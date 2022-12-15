@@ -7,7 +7,7 @@ using System.Linq;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class ProductPriceSetMessage : IProductPriceSetMessage
+    public partial class ProductPricesSetMessage : IProductPricesSetMessage
     {
         public string Id { get; set; }
 
@@ -38,9 +38,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
 
         public bool Staged { get; set; }
-        public ProductPriceSetMessage()
+        public ProductPricesSetMessage()
         {
-            this.Type = "ProductPriceSet";
+            this.Type = "ProductPricesSet";
         }
     }
 }

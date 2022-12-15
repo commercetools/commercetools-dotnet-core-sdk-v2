@@ -6,8 +6,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessage))]
-    public partial interface IProductPriceSetMessage : IMessage
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessage))]
+    public partial interface IProductPricesSetMessage : IMessage
     {
         long VariantId { get; set; }
 
