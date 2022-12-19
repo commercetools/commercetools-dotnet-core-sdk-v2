@@ -10,6 +10,7 @@
 <details>
 <summary>Changed Property(s)</summary>
 
+- :warning: changed property `amount` of type `Transaction` from type `TypedMoney` to `CentPrecisionMoney` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/payment/Transaction.raml:18:2)
 - :warning: changed property `assets` of type `ProductAddVariantAction` from type `Asset[]` to `AssetDraft[]` (file:/home/runner/work/commercetools-api-reference/commercetools-api-reference/commercetools-api-reference/api-specs/api/types/product/updates/ProductAddVariantAction.raml:33:2)
 </details>
 

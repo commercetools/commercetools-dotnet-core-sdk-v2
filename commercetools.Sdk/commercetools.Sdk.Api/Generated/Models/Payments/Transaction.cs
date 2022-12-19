@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         public ITransactionType Type { get; set; }
 
-        public ITypedMoney Amount { get; set; }
+        public ICentPrecisionMoney Amount { get; set; }
 
         public string InteractionId { get; set; }
 
