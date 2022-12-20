@@ -92,6 +92,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
 
         ICustomFields Custom { get; set; }
 
+        IQuoteState QuoteState { get; set; }
+
         IStateReference State { get; set; }
 
         IBusinessUnitKeyReference BusinessUnit { get; set; }
