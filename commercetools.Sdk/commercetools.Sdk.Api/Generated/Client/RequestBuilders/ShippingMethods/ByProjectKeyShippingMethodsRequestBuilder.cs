@@ -41,6 +41,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsMatchingCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder MatchingCartLocation()
+        {
+            return new ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder MatchingOrderedit()
         {
             return new ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
