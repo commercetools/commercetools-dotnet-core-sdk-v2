@@ -49,7 +49,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
 
-        public string DefaultShipingAddressId { get; set; }
+        public string DefaultShippingAddressId { get; set; }
 
         public IList<string> BillingAddressIds { get; set; }
         public IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }

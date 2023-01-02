@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Models.Me
         IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
 
 
-        int? DefaultShipingAddress { get; set; }
+        int? DefaultShippingAddress { get; set; }
 
         IList<int> BillingAddresses { get; set; }
         IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
