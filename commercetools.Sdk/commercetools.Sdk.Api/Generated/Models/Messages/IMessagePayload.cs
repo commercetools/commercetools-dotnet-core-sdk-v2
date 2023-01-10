@@ -102,9 +102,10 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductPriceChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessagePayload))]
     [SubTypeDiscriminator("ProductPriceDiscountsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceModeSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceRemovedMessagePayload))]
-    [SubTypeDiscriminator("ProductPriceSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessagePayload))]
+    [SubTypeDiscriminator("ProductPricesSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessagePayload))]
     [SubTypeDiscriminator("ProductPublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductPublishedMessagePayload))]
     [SubTypeDiscriminator("ProductRemovedFromCategory", typeof(commercetools.Sdk.Api.Models.Messages.ProductRemovedFromCategoryMessagePayload))]
     [SubTypeDiscriminator("ProductRevertedStagedChanges", typeof(commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessagePayload))]
@@ -143,6 +144,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StandalonePriceDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceDeletedMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceDiscountSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceStagedChangesApplied", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValueChanged", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload))]
     [SubTypeDiscriminator("StoreCountriesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessagePayload))]
@@ -733,6 +735,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessagePayload ProductPriceKeySet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessagePayload ProductPriceModeSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceModeSetMessagePayload();
@@ -745,9 +753,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessagePayload ProductPriceSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessagePayload ProductPricesSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceSetMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPricesSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
@@ -976,6 +984,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload StandalonePriceExternalDiscountSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload StandalonePriceKeySet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload();
             init?.Invoke(t);
             return t;
         }

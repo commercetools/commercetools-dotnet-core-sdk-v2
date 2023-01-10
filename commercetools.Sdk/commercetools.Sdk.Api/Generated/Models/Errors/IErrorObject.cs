@@ -19,6 +19,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("DuplicateEnumValues", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateEnumValuesError))]
     [SubTypeDiscriminator("DuplicateField", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateFieldError))]
     [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateFieldWithConflictingResourceError))]
+    [SubTypeDiscriminator("DuplicatePriceKey", typeof(commercetools.Sdk.Api.Models.Errors.DuplicatePriceKeyError))]
     [SubTypeDiscriminator("DuplicatePriceScope", typeof(commercetools.Sdk.Api.Models.Errors.DuplicatePriceScopeError))]
     [SubTypeDiscriminator("DuplicateStandalonePriceScope", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateStandalonePriceScopeError))]
     [SubTypeDiscriminator("DuplicateVariantValues", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateVariantValuesError))]
@@ -156,6 +157,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.DuplicateFieldWithConflictingResourceError DuplicateFieldWithConflictingResource(Action<commercetools.Sdk.Api.Models.Errors.DuplicateFieldWithConflictingResourceError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.DuplicateFieldWithConflictingResourceError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.DuplicatePriceKeyError DuplicatePriceKey(Action<commercetools.Sdk.Api.Models.Errors.DuplicatePriceKeyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.DuplicatePriceKeyError();
             init?.Invoke(t);
             return t;
         }

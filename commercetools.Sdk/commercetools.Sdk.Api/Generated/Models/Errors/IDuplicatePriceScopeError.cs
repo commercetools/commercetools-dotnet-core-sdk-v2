@@ -1,6 +1,4 @@
 using commercetools.Sdk.Api.Models.Common;
-using System.Collections.Generic;
-using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 
@@ -13,9 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         new string Message { get; set; }
 
-        IList<IPrice> ConflictingPrices { get; set; }
-        IEnumerable<IPrice> ConflictingPricesEnumerable { set => ConflictingPrices = value.ToList(); }
-
+        IPrice ConflictingPrice { get; set; }
 
     }
 }

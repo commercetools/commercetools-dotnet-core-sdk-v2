@@ -1,4 +1,3 @@
-using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,9 +6,9 @@ namespace commercetools.Sdk.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyQuoteRequestDraft))]
     public partial interface IMyQuoteRequestDraft
     {
-        ICartResourceIdentifier Cart { get; set; }
+        string CartId { get; set; }
 
-        long Version { get; set; }
+        long CartVersion { get; set; }
 
         string Comment { get; set; }
 

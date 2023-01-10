@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -9,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         IProductSelectionReference ProductSelection { get; set; }
 
         IProductVariantSelection VariantSelection { get; set; }
+
+        DateTime CreatedAt { get; set; }
 
     }
 }

@@ -27,8 +27,8 @@ namespace commercetools.Sdk.Api.Models.Products
 
         bool? Staged { get; set; }
 
-        IList<IAsset> Assets { get; set; }
-        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+        IList<IAssetDraft> Assets { get; set; }
+        IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
 
     }

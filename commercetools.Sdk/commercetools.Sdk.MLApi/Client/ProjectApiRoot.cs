@@ -1,6 +1,5 @@
 using commercetools.Base.Client;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch;
-using commercetools.Sdk.MLApi.Client.RequestBuilders.MissingData;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Projects;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities;
@@ -40,12 +39,6 @@ namespace commercetools.Sdk.MLApi.Client
         public ByProjectKeyImageSearchRequestBuilder ImageSearch()
         {
             return With().ImageSearch();
-        }
-
-        [System.Obsolete]
-        public ByProjectKeyMissingDataRequestBuilder MissingData()
-        {
-            return With().MissingData();
         }
     }
 }

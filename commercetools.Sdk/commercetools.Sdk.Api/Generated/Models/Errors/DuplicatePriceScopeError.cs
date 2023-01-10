@@ -1,6 +1,4 @@
 using commercetools.Sdk.Api.Models.Common;
-using System.Collections.Generic;
-using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Errors
@@ -12,9 +10,7 @@ namespace commercetools.Sdk.Api.Models.Errors
 
         public string Message { get; set; }
 
-        public IList<IPrice> ConflictingPrices { get; set; }
-        public IEnumerable<IPrice> ConflictingPricesEnumerable { set => ConflictingPrices = value.ToList(); }
-
+        public IPrice ConflictingPrice { get; set; }
         public DuplicatePriceScopeError()
         {
             this.Code = "DuplicatePriceScope";

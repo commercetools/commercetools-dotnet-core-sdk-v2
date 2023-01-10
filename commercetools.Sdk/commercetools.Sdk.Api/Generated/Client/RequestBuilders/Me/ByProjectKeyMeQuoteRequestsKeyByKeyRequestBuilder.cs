@@ -23,11 +23,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.Key = key;
         }
 
-        public ByProjectKeyMeQuoteRequestsKeyByKeyGet Get()
-        {
-            return new ByProjectKeyMeQuoteRequestsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
-        }
-
         public ByProjectKeyMeQuoteRequestsKeyByKeyPost Post(commercetools.Sdk.Api.Models.Me.IMyQuoteRequestUpdate myQuoteRequestUpdate)
         {
             return new ByProjectKeyMeQuoteRequestsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, myQuoteRequestUpdate);
@@ -36,6 +31,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         public ByProjectKeyMeQuoteRequestsKeyByKeyDelete Delete()
         {
             return new ByProjectKeyMeQuoteRequestsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
+        }
+
+        public ByProjectKeyMeQuoteRequestsKeyByKeyGet Get()
+        {
+            return new ByProjectKeyMeQuoteRequestsKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
     }
