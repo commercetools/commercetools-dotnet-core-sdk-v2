@@ -10,7 +10,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [SubTypeDiscriminator("EventBridge", typeof(commercetools.Sdk.Api.Models.Subscriptions.EventBridgeDestination))]
     [SubTypeDiscriminator("EventGrid", typeof(commercetools.Sdk.Api.Models.Subscriptions.AzureEventGridDestination))]
     [SubTypeDiscriminator("GoogleCloudPubSub", typeof(commercetools.Sdk.Api.Models.Subscriptions.GoogleCloudPubSubDestination))]
-    [SubTypeDiscriminator("IronMQ", typeof(commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination))]
     [SubTypeDiscriminator("SNS", typeof(commercetools.Sdk.Api.Models.Subscriptions.SnsDestination))]
     [SubTypeDiscriminator("SQS", typeof(commercetools.Sdk.Api.Models.Subscriptions.SqsDestination))]
     public partial interface IDestination
@@ -38,12 +37,6 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         static commercetools.Sdk.Api.Models.Subscriptions.GoogleCloudPubSubDestination GoogleCloudPubSub(Action<commercetools.Sdk.Api.Models.Subscriptions.GoogleCloudPubSubDestination> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Subscriptions.GoogleCloudPubSubDestination();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination IronMq(Action<commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Subscriptions.IronMqDestination();
             init?.Invoke(t);
             return t;
         }
