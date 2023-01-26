@@ -85,6 +85,8 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         public IStateReference State { get; set; }
 
+        public string PurchaseOrderNumber { get; set; }
+
         public IBusinessUnitKeyReference BusinessUnit { get; set; }
     }
 }

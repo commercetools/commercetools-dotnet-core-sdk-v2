@@ -19,6 +19,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         string OrderNumber { get; set; }
 
+        string PurchaseOrderNumber { get; set; }
+
         IPaymentState PaymentState { get; set; }
 
         IShipmentState ShipmentState { get; set; }
