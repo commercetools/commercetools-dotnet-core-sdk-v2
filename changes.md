@@ -1,19 +1,11 @@
 **Api changes**
 
 <details>
-<summary>Deprecated Type(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- type `IronMqDestination` is removed
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `OrderPurchaseOrderNumberSetMessage`
-- added type `OrderPurchaseOrderNumberSetMessagePayload`
-- added type `StagedOrderSetPurchaseOrderNumberAction`
-- added type `OrderSetPurchaseOrderNumberAction`
+- :warning: changed property `stores` of type `BusinessUnitDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
+- :warning: changed property `stores` of type `CompanyDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
+- :warning: changed property `stores` of type `DivisionDraft` from type `StoreKeyReference[]` to `StoreResourceIdentifier[]`
 </details>
 
 
@@ -27,5 +19,22 @@
 - added property `purchaseOrderNumber` to type `QuoteRequestDraft`
 - added property `purchaseOrderNumber` to type `Quote`
 - added property `purchaseOrderNumber` to type `StagedQuote`
+</details>
+
+
+<details>
+<summary>Deprecated Type(s)</summary>
+
+- type `IronMqDestination` is removed
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `OrderPurchaseOrderNumberSetMessage`
+- added type `OrderPurchaseOrderNumberSetMessagePayload`
+- added type `StagedOrderSetPurchaseOrderNumberAction`
+- added type `OrderSetPurchaseOrderNumberAction`
 </details>
 
