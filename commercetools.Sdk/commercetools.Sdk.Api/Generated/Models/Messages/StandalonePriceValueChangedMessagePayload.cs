@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IMoney Value { get; set; }
 
         public bool Staged { get; set; }
+
+        public IMoney OldValue { get; set; }
         public StandalonePriceValueChangedMessagePayload()
         {
             this.Type = "StandalonePriceValueChanged";
