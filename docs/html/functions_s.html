@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">6.1.0</span>
+   &#160;<span id="projectnumber">6.2.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -305,6 +305,7 @@ $(function() {
 , <a class="el" href="df/d9e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_message.html#a57f781586854f0f4fc21f466d6428595">commercetools.Sdk.Api.Models.Messages.OrderMessage</a>
 , <a class="el" href="dc/d48/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_payment_added_message.html#ac1e4637b14577ad0ca9ec086d0e5213e">commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessage</a>
 , <a class="el" href="d3/d2e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_payment_state_changed_message.html#a71048b17207776f2291c486318f12376">commercetools.Sdk.Api.Models.Messages.OrderPaymentStateChangedMessage</a>
+, <a class="el" href="d6/d51/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_purchase_order_number_set_message.html#aaea5faf44879ca0fce8f1be0895c733c">commercetools.Sdk.Api.Models.Messages.OrderPurchaseOrderNumberSetMessage</a>
 , <a class="el" href="dc/d30/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_return_shipment_state_changed_message.html#ad1ffc12814f3fca36cff975fc5cd5250">commercetools.Sdk.Api.Models.Messages.OrderReturnShipmentStateChangedMessage</a>
 , <a class="el" href="dd/d6f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_shipment_state_changed_message.html#a1e04fe8e3e49648191046049fa448013">commercetools.Sdk.Api.Models.Messages.OrderShipmentStateChangedMessage</a>
 , <a class="el" href="db/d9d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_order_shipping_address_set_message.html#a927537fe331267097e09b5e069dd54ba">commercetools.Sdk.Api.Models.Messages.OrderShippingAddressSetMessage</a>
@@ -1396,6 +1397,10 @@ $(function() {
 <li>SetPropertyChange()
 : <a class="el" href="d3/d1e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_i_change.html#a4041127626a28eb5a25725d5a4e83268">commercetools.Sdk.HistoryApi.Models.Changes.IChange</a>
 , <a class="el" href="d6/d2c/classcommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_set_property_change.html#a864ab7b03eb7bbeb4a4659fcc723d24f">commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange</a>
+</li>
+<li>SetPurchaseOrderNumber()
+: <a class="el" href="d0/da3/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_update_action.html#a8b81c7710663efdcc235964c1b35a47c">commercetools.Sdk.Api.Models.Orders.IOrderUpdateAction</a>
+, <a class="el" href="d3/d17/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_staged_order_update_action.html#af085307ae7f0964445f0a610ebc0efd5">commercetools.Sdk.Api.Models.Orders.IStagedOrderUpdateAction</a>
 </li>
 <li>SetRating()
 : <a class="el" href="d2/d07/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_reviews_1_1_i_review_update_action.html#af79f0056cc7d63528a10ac4ccba44d51">commercetools.Sdk.Api.Models.Reviews.IReviewUpdateAction</a>
@@ -3022,6 +3027,9 @@ $(function() {
 <li>StagedOrderSetParcelTrackingDataAction()
 : <a class="el" href="d0/dac/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_order_edits_1_1_staged_order_set_parcel_tracking_data_action.html#a1ffa77bcbaba2a69ab4177724bb6a4fa">commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction</a>
 </li>
+<li>StagedOrderSetPurchaseOrderNumberAction()
+: <a class="el" href="dc/df0/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_order_edits_1_1_staged_order_set_purchase_order_number_action.html#ae70a701d05b1e296c606b18ec16b466f">commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetPurchaseOrderNumberAction</a>
+</li>
 <li>StagedOrderSetReturnInfoAction()
 : <a class="el" href="d9/d21/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_order_edits_1_1_staged_order_set_return_info_action.html#a7b7dd8a194e177c155e0a7fd213bdfbd">commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetReturnInfoAction</a>
 </li>
@@ -3831,15 +3839,15 @@ $(function() {
 : <a class="el" href="de/da1/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_project_api_root.html#a6d5ad4cbc1037a12fe3650ffe6195464">commercetools.Sdk.Api.Client.ProjectApiRoot</a>
 , <a class="el" href="d8/d19/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_projects_1_1_by_project_key_request_builder.html#a62737b35dda9fae4702d709a5a0ba380">commercetools.Sdk.Api.Client.RequestBuilders.Projects.ByProjectKeyRequestBuilder</a>
 , <a class="el" href="de/d13/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit.html#a04a41a774ef65cb6aa003ac1c1711ef4">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnit</a>
-, <a class="el" href="d8/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_draft.html#a2cf1305e4cd39a1b105a51a182948da8">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitDraft</a>
+, <a class="el" href="d8/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_draft.html#adf610fc135cb347c7f5aa41bcd2becea">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitDraft</a>
 , <a class="el" href="d4/d9a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_set_store_mode_action.html#ad574c3d3034145944b44e912044e080c">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoreModeAction</a>
 , <a class="el" href="dc/d03/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_set_stores_action.html#a41213e17f559786c7fca94628b8cea91">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction</a>
 , <a class="el" href="d3/d52/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company.html#a33bef0915854bbb324f51037265e1cac">commercetools.Sdk.Api.Models.BusinessUnits.Company</a>
-, <a class="el" href="d8/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company_draft.html#a07c4c58740aa31bfbf6f62225bc9b06a">commercetools.Sdk.Api.Models.BusinessUnits.CompanyDraft</a>
+, <a class="el" href="d8/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company_draft.html#a3499562f714f21746bc00598210fb354">commercetools.Sdk.Api.Models.BusinessUnits.CompanyDraft</a>
 , <a class="el" href="d2/dfa/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division.html#a5036c643641728b87e210e78860748ae">commercetools.Sdk.Api.Models.BusinessUnits.Division</a>
-, <a class="el" href="d7/d48/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division_draft.html#afd9115f4ba58a8fdbc3fe121ab1c95b8">commercetools.Sdk.Api.Models.BusinessUnits.DivisionDraft</a>
+, <a class="el" href="d7/d48/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division_draft.html#a0e7ea7300f1952eaf3fd6b273de31cdc">commercetools.Sdk.Api.Models.BusinessUnits.DivisionDraft</a>
 , <a class="el" href="d4/dfb/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit.html#af087cc7c6a7ce75da922b37daf2bb5ca">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit</a>
-, <a class="el" href="da/d1d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_draft.html#a192463a34a2df37ed637f3412758d263">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitDraft</a>
+, <a class="el" href="da/d1d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_draft.html#afed4096badc1ae07dc1e1049705ca96b">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitDraft</a>
 , <a class="el" href="d3/df1/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_set_store_mode_action.html#ac79a323718dc09ae9b56d11603ff0709">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitSetStoreModeAction</a>
 , <a class="el" href="d0/db4/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_set_stores_action.html#a8d1ae8ed1bcb0898029da01f97e8b36f">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitSetStoresAction</a>
 , <a class="el" href="db/d53/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_customers_1_1_customer.html#a5be781fed0de6249ba68bc191db76f00">commercetools.Sdk.Api.Models.Customers.Customer</a>
@@ -3865,15 +3873,15 @@ $(function() {
 </li>
 <li>StoresEnumerable
 : <a class="el" href="de/d13/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit.html#a4a17bf592471ea81bfd9176b3ff08a2d">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnit</a>
-, <a class="el" href="d8/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_draft.html#acb513cf57dc1789dcbf6c06d7dc05b9c">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitDraft</a>
+, <a class="el" href="d8/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_draft.html#ab8de2b08dd5d646e6ddddbc381e2ca30">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitDraft</a>
 , <a class="el" href="d4/d9a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_set_store_mode_action.html#ab3f205659731a4afbb0fcb06dec7cf66">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoreModeAction</a>
 , <a class="el" href="dc/d03/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_business_unit_set_stores_action.html#a61e945e0dfa824d7c42b4762a7595530">commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction</a>
 , <a class="el" href="d3/d52/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company.html#a7f14a91a6955ff7494f1f30ca5789faf">commercetools.Sdk.Api.Models.BusinessUnits.Company</a>
-, <a class="el" href="d8/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company_draft.html#a4430c418215ecc5182ee1e80480c4746">commercetools.Sdk.Api.Models.BusinessUnits.CompanyDraft</a>
+, <a class="el" href="d8/d0e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_company_draft.html#adb99d566c6437792de55364bfe8232aa">commercetools.Sdk.Api.Models.BusinessUnits.CompanyDraft</a>
 , <a class="el" href="d2/dfa/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division.html#a6ebcd01b02c61ec020785b736866b3b6">commercetools.Sdk.Api.Models.BusinessUnits.Division</a>
-, <a class="el" href="d7/d48/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division_draft.html#a1b0957ca52dccf24dd139a19ed3e920d">commercetools.Sdk.Api.Models.BusinessUnits.DivisionDraft</a>
+, <a class="el" href="d7/d48/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_division_draft.html#a86fc90b4204ab404d0c70ac4794e542d">commercetools.Sdk.Api.Models.BusinessUnits.DivisionDraft</a>
 , <a class="el" href="d4/dfb/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit.html#a8c84f5e4c785d36248137de2aa8e25f3">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit</a>
-, <a class="el" href="da/d1d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_draft.html#a5ec955677e663ef5d6f9ab882fcbc93e">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitDraft</a>
+, <a class="el" href="da/d1d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_draft.html#acb128294c9b9ac8586d056c634124509">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitDraft</a>
 , <a class="el" href="d3/df1/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_set_store_mode_action.html#a5a2ce088a9a9f74ca3b55330947f3c48">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitSetStoreModeAction</a>
 , <a class="el" href="d0/db4/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_business_unit_set_stores_action.html#a42a046f2f65560edd0b2d8b71950d28d">commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitSetStoresAction</a>
 , <a class="el" href="db/d53/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_customers_1_1_customer.html#ab8a96879b2ca22f2bf8816e771eb2839">commercetools.Sdk.Api.Models.Customers.Customer</a>
