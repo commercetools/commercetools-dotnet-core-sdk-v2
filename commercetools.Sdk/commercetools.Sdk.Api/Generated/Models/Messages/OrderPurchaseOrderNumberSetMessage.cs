@@ -5,7 +5,7 @@ using System;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class StandalonePriceValueChangedMessage : IStandalonePriceValueChangedMessage
+    public partial class OrderPurchaseOrderNumberSetMessage : IOrderPurchaseOrderNumberSetMessage
     {
         public string Id { get; set; }
 
@@ -29,14 +29,12 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IMoney Value { get; set; }
+        public string PurchaseOrderNumber { get; set; }
 
-        public bool Staged { get; set; }
-
-        public IMoney OldValue { get; set; }
-        public StandalonePriceValueChangedMessage()
+        public string OldPurchaseOrderNumber { get; set; }
+        public OrderPurchaseOrderNumberSetMessage()
         {
-            this.Type = "StandalonePriceValueChanged";
+            this.Type = "OrderPurchaseOrderNumberSet";
         }
     }
 }

@@ -48,6 +48,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setParcelItems", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetParcelItemsAction))]
     [SubTypeDiscriminator("setParcelMeasurements", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetParcelMeasurementsAction))]
     [SubTypeDiscriminator("setParcelTrackingData", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetParcelTrackingDataAction))]
+    [SubTypeDiscriminator("setPurchaseOrderNumber", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetPurchaseOrderNumberAction))]
     [SubTypeDiscriminator("setReturnInfo", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetReturnInfoAction))]
     [SubTypeDiscriminator("setReturnItemCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetReturnItemCustomFieldAction))]
     [SubTypeDiscriminator("setReturnItemCustomType", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetReturnItemCustomTypeAction))]
@@ -315,6 +316,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.Orders.OrderSetParcelTrackingDataAction SetParcelTrackingData(Action<commercetools.Sdk.Api.Models.Orders.OrderSetParcelTrackingDataAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Orders.OrderSetParcelTrackingDataAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.OrderSetPurchaseOrderNumberAction SetPurchaseOrderNumber(Action<commercetools.Sdk.Api.Models.Orders.OrderSetPurchaseOrderNumberAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.OrderSetPurchaseOrderNumberAction();
             init?.Invoke(t);
             return t;
         }

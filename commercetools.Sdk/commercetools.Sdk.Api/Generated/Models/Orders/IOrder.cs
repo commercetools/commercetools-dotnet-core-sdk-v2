@@ -94,6 +94,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
 
 
+        string PurchaseOrderNumber { get; set; }
+
         IList<IDiscountCodeInfo> DiscountCodes { get; set; }
         IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 

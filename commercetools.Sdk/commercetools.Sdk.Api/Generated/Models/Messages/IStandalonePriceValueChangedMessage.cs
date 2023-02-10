@@ -11,5 +11,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         bool Staged { get; set; }
 
+        IMoney OldValue { get; set; }
+
     }
 }

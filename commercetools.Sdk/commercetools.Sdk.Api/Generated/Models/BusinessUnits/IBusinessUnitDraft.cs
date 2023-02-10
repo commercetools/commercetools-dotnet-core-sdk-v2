@@ -19,8 +19,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         IBusinessUnitStatus Status { get; set; }
 
-        IList<IStoreKeyReference> Stores { get; set; }
-        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
 
         IBusinessUnitStoreMode StoreMode { get; set; }

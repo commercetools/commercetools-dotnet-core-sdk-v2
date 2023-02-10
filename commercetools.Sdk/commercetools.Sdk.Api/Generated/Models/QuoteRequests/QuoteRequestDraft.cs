@@ -19,5 +19,7 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
         public ICustomFieldsDraft Custom { get; set; }
 
         public IStateReference State { get; set; }
+
+        public string PurchaseOrderNumber { get; set; }
     }
 }
