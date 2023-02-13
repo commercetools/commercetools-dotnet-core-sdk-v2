@@ -14,12 +14,12 @@ namespace commercetools.Sdk.Api.Tests
             s.UseCommercetoolsApiSerialization();
 
             var r = new ProductTypeReference();
-            
+
             var p = s.BuildServiceProvider();
             //arrange
             var serializerService = p.GetService<SerializerService>();
             var t = serializerService.Serialize(r);
-            
+
             Assert.Equal("{\"typeId\":\"product-type\"}", t);
         }
     }
