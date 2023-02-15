@@ -9,8 +9,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.BusinessUnits.Associate))]
     public partial interface IAssociate
     {
-        IList<IAssociateRole> Roles { get; set; }
-        IEnumerable<IAssociateRole> RolesEnumerable { set => Roles = value.ToList(); }
+        IList<IAssociateRoleAssignment> AssociateRoleAssignments { get; set; }
+        IEnumerable<IAssociateRoleAssignment> AssociateRoleAssignmentsEnumerable { set => AssociateRoleAssignments = value.ToList(); }
+
+
+        IList<IAssociateRoleDeprecated> Roles { get; set; }
+        IEnumerable<IAssociateRoleDeprecated> RolesEnumerable { set => Roles = value.ToList(); }
 
 
         ICustomerReference Customer { get; set; }

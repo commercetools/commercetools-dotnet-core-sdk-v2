@@ -1,0 +1,42 @@
+using commercetools.Base.Client;
+using commercetools.Base.Serialization;
+
+namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
+{
+
+    public class ByProjectKeyAssociateRolesByIDRequestBuilder
+    {
+
+        private IClient ApiHttpClient { get; }
+
+        private ISerializerService SerializerService { get; }
+
+        private string ProjectKey { get; }
+
+        private string ID { get; }
+
+        public ByProjectKeyAssociateRolesByIDRequestBuilder(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id)
+        {
+            this.ApiHttpClient = apiHttpClient;
+            this.SerializerService = serializerService;
+            this.ProjectKey = projectKey;
+            this.ID = id;
+        }
+
+        public ByProjectKeyAssociateRolesByIDGet Get()
+        {
+            return new ByProjectKeyAssociateRolesByIDGet(ApiHttpClient, ProjectKey, ID);
+        }
+
+        public ByProjectKeyAssociateRolesByIDPost Post(commercetools.Sdk.Api.Models.AssociateRoles.IAssociateRoleUpdate associateRoleUpdate)
+        {
+            return new ByProjectKeyAssociateRolesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, associateRoleUpdate);
+        }
+
+        public ByProjectKeyAssociateRolesByIDDelete Delete()
+        {
+            return new ByProjectKeyAssociateRolesByIDDelete(ApiHttpClient, ProjectKey, ID);
+        }
+
+    }
+}

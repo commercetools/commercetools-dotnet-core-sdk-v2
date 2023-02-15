@@ -14,6 +14,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("asset")]
         Asset,
 
+        [Description("associate-role")]
+        AssociateRole,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -125,6 +128,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Asset = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Asset, JsonName = "asset" };
 
+        public static IResourceTypeId AssociateRole = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.AssociateRole, JsonName = "associate-role" };
+
         public static IResourceTypeId BusinessUnit = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.BusinessUnit, JsonName = "business-unit" };
 
@@ -214,6 +220,7 @@ namespace commercetools.Sdk.Api.Models.Types
             {
                  Address ,
                  Asset ,
+                 AssociateRole ,
                  BusinessUnit ,
                  CartDiscount ,
                  Category ,

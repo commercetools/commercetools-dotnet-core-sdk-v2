@@ -8,8 +8,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
     public partial class Associate : IAssociate
     {
-        public IList<IAssociateRole> Roles { get; set; }
-        public IEnumerable<IAssociateRole> RolesEnumerable { set => Roles = value.ToList(); }
+        public IList<IAssociateRoleAssignment> AssociateRoleAssignments { get; set; }
+        public IEnumerable<IAssociateRoleAssignment> AssociateRoleAssignmentsEnumerable { set => AssociateRoleAssignments = value.ToList(); }
+
+
+        public IList<IAssociateRoleDeprecated> Roles { get; set; }
+        public IEnumerable<IAssociateRoleDeprecated> RolesEnumerable { set => Roles = value.ToList(); }
 
 
         public ICustomerReference Customer { get; set; }

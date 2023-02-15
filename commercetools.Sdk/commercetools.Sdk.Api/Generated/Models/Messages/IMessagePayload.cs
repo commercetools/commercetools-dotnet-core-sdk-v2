@@ -6,6 +6,13 @@ namespace commercetools.Sdk.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Messages.MessagePayload))]
+    [SubTypeDiscriminator("AssociateRoleBuyerAssignableChanged", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRoleCreated", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRoleDeleted", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRoleNameChanged", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRolePermissionAdded", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRolePermissionRemoved", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRolePermissionsSet", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload))]
@@ -160,6 +167,48 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string Type { get; set; }
 
+        static commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload AssociateRoleBuyerAssignableChanged(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload AssociateRoleCreated(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload AssociateRoleDeleted(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload AssociateRoleNameChanged(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload AssociateRolePermissionAdded(Action<commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload AssociateRolePermissionRemoved(Action<commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload AssociateRolePermissionsSet(Action<commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload BusinessUnitAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload();

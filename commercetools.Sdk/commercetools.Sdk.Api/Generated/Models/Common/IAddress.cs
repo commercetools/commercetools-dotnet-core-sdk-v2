@@ -7,8 +7,6 @@ namespace commercetools.Sdk.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.Address))]
     public partial interface IAddress : IBaseAddress
     {
-        new string Id { get; set; }
-
         ICustomFields Custom { get; set; }
 
     }
