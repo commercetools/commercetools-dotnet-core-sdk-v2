@@ -2,6 +2,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;
@@ -73,7 +74,7 @@ namespace commercetools.Api.IntegrationTests.Products
                         .WithFilename("logo.gif")
                         .WithVariant(variantId)
                         .WithStaged(true)
-                        .AddHeader("content-type", "image/gif")
+                        .AddHeader(ApiHttpHeaders.CONTENT_TYPE, "image/gif")
                         .ExecuteAsync();
 
                     Assert.NotNull(updateProduct);
@@ -81,6 +82,24 @@ namespace commercetools.Api.IntegrationTests.Products
                     var img = updateProduct.MasterData.Staged.Variants[1].Images.FirstOrDefault();
                     Assert.NotNull(img);
                     Assert.Contains("logo", img.Url);
+                    
+                    var logoPngPath = @"Resources/ct-logo.png";
+                    var filePng = new FileStream(logoPath, FileMode.Open, FileAccess.Read);
+
+                    var updateProductPng = await _projectApiRoot
+                        .Products()
+                        .WithId(product.Id)
+                        .Images()
+                        .Post(filePng)
+                        .WithFilename("ct-logo.png")
+                        .WithVariant(variantId)
+                        .WithStaged(true)
+                        .AddHeader(ApiHttpHeaders.CONTENT_TYPE, "image/png")
+                        .ExecuteAsync();
+                    Assert.NotNull(updateProductPng);
+                    var imgPng = updateProductPng.MasterData.Staged.Variants[1].Images.FirstOrDefault(image => image.Url.EndsWith("png"));
+                    Assert.NotNull(imgPng);
+                    Assert.Contains("ct-logo", imgPng.Url);
                 });
         }
 
