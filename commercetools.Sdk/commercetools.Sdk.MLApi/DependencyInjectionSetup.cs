@@ -18,7 +18,8 @@ namespace commercetools.Sdk.MLApi
         public static IHttpClientBuilder UseCommercetoolsMLApi(this IServiceCollection services,
             IConfiguration configuration,
             string clientName = DefaultClientNames.MLApi,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
+            ClientOptions options = null)
         {
             var clients = new List<string>()
             {
@@ -31,12 +32,13 @@ namespace commercetools.Sdk.MLApi
                 services.AddSingleton(c => MLApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
             }
 
-            return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
+            return services.UseCommercetoolsMLApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider, options).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsMLApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
+            ClientOptions options = null)
         {
             services.AddSingleton(configuration);
             services.UseCommercetoolsMLApiSerialization();
@@ -50,7 +52,8 @@ namespace commercetools.Sdk.MLApi
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(Object),
-                tokenProviderSupplier ?? CreateDefaultTokenProvider);
+                tokenProviderSupplier ?? CreateDefaultTokenProvider,
+                options);
         }
 
         public static void UseCommercetoolsMLApiSerialization(this IServiceCollection services)

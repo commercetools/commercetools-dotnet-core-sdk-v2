@@ -24,7 +24,8 @@ namespace commercetools.Sdk.Api
             IConfiguration configuration,
             string clientName = DefaultClientNames.Api,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
-            ISerializationConfiguration serializationConfiguration = null)
+            ISerializationConfiguration serializationConfiguration = null,
+            ClientOptions options = null)
         {
             var clients = new List<string>()
             {
@@ -37,13 +38,14 @@ namespace commercetools.Sdk.Api
                 services.AddSingleton(c => ApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
             }
             return services.UseCommercetoolsApi(configuration, clients,
-                tokenProviderSupplier ?? CreateDefaultTokenProvider, serializationConfiguration).Single().Value;
+                tokenProviderSupplier ?? CreateDefaultTokenProvider, serializationConfiguration, options).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
-            ISerializationConfiguration serializationConfiguration = null)
+            ISerializationConfiguration serializationConfiguration = null,
+            ClientOptions options = null)
         {
             services.UseCommercetoolsApiSerialization(serializationConfiguration);
 
@@ -57,7 +59,8 @@ namespace commercetools.Sdk.Api
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(ErrorResponse),
-                tokenProviderSupplier ?? CreateDefaultTokenProvider);
+                tokenProviderSupplier ?? CreateDefaultTokenProvider,
+                options);
         }
 
         public static void UseCommercetoolsApiSerialization(this IServiceCollection services,

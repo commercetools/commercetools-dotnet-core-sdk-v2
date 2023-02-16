@@ -19,7 +19,8 @@ namespace commercetools.Sdk.ImportApi
         public static IHttpClientBuilder UseCommercetoolsImportApi(this IServiceCollection services,
             IConfiguration configuration,
             string clientName = DefaultClientNames.ImportApi,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
+            ClientOptions options = null)
         {
             var clients = new List<string>()
             {
@@ -32,11 +33,12 @@ namespace commercetools.Sdk.ImportApi
                 services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
             }
 
-            return services.UseCommercetoolsImportApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider).Single().Value;
+            return services.UseCommercetoolsImportApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider, options).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsImportApi(this IServiceCollection services,
-            IConfiguration configuration, IList<string> clients, Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            IConfiguration configuration, IList<string> clients, Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
+            ClientOptions options = null)
         {
             services.UseCommercetoolsImportApiSerialization();
             clients.ToList().ForEach(clientName =>
@@ -49,7 +51,8 @@ namespace commercetools.Sdk.ImportApi
             return services.UseHttpApi(configuration, clients,
                 serviceProvider => serviceProvider.GetService<SerializerService>(),
                 message => typeof(ErrorResponse),
-                tokenProviderSupplier ?? CreateDefaultTokenProvider);
+                tokenProviderSupplier ?? CreateDefaultTokenProvider,
+                options);
         }
 
         public static void UseCommercetoolsImportApiSerialization(this IServiceCollection services)
