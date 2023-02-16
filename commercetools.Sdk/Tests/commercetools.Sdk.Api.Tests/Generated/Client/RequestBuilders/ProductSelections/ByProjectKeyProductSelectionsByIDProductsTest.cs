@@ -73,6 +73,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductSelections
                    .WithId("test_ID")
                    .Products()
                    .Get()
+                   .WithSort("sort")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-selections/test_ID/products?sort=sort",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductSelections()
+                   .WithId("test_ID")
+                   .Products()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/product-selections/test_ID/products",
