@@ -23,5 +23,10 @@ namespace commercetools.Base.Client
         Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
 
         Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+        
+        Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
+        Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
     }
 }

@@ -1,6 +1,7 @@
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Client;
 using IClient = commercetools.Sdk.Client.IClient;
@@ -25,7 +26,17 @@ namespace commercetools.Sdk.V2Compat
             return await client.ExecuteAsync(new HttpRequestCommand<T>(requestMessage));
         }
 
-        public Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             throw new System.NotImplementedException();
         }
