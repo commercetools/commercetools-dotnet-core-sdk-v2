@@ -25,7 +25,7 @@ namespace commercetools.Api.IntegrationTests.Products
             this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
-        
+
         [Fact]
         public async Task HeadRequest()
         {
@@ -47,7 +47,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 });
             });
         }
-        
+
         [Fact]
         public async Task UploadProductImage()
         {

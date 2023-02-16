@@ -1,14 +1,13 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
-using System.Text.Json;
 using commercetools.Base.Client;
 
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes
 {
 
-    public partial class ByProjectKeyProductTypesKeyByKeyHead : ApiMethod<ByProjectKeyProductTypesKeyByKeyHead>, IApiMethod<ByProjectKeyProductTypesKeyByKeyHead, JsonElement>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductTypesKeyByKeyHead>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductTypesKeyByKeyHead>
+    public partial class ByProjectKeyProductTypesKeyByKeyHead : ApiMethod<ByProjectKeyProductTypesKeyByKeyHead>, IApiMethod<ByProjectKeyProductTypesKeyByKeyHead, string>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductTypesKeyByKeyHead>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductTypesKeyByKeyHead>
     {
 
 
@@ -32,10 +31,30 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes
 
 
 
-        public async Task<JsonElement> ExecuteAsync(CancellationToken cancellationToken = default)
+        public async Task<string> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            return await ExecuteAsJsonAsync(cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<JsonElement>(requestMessage, cancellationToken);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<string>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            return await SendAsJsonAsync(cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }
