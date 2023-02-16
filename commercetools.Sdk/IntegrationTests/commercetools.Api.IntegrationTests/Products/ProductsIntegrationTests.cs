@@ -1,6 +1,8 @@
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
@@ -23,6 +25,29 @@ namespace commercetools.Api.IntegrationTests.Products
             this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
+        
+        [Fact]
+        public async Task HeadRequest()
+        {
+            await WithProduct(_projectApiRoot, async product =>
+            {
+                var execute = await _projectApiRoot.Products().WithKey(product.Key).Head().ExecuteAsync();
+                Assert.Equal("", execute);
+                var send = await _projectApiRoot.Products().WithKey(product.Key).Head().SendAsync();
+                Assert.Equal(HttpStatusCode.OK, send.StatusCode);
+
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head()
+                        .ExecuteAsync();
+                });
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
+                });
+            });
+        }
+        
         [Fact]
         public async Task UploadProductImage()
         {

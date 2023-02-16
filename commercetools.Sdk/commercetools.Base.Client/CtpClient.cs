@@ -33,15 +33,28 @@ namespace commercetools.Base.Client
 
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var content = await ExecuteAsJsonAsync(requestMessage, cancellationToken);
-            return this.SerializerService.Deserialize<T>(content);
+            var content = await SendAsync<T>(requestMessage, cancellationToken);
+            return content.Body;
         }
 
         public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
+            var result = await SendAsJsonAsync(requestMessage, cancellationToken);
+            return result.Body;
+        }
+
+        public async Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            var result = await SendAsJsonAsync(requestMessage, cancellationToken);
+            var body = this.SerializerService.Deserialize<T>(result.Body);
+            return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.HttpHeaders, body);
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
             var result = await this.MiddlewareStack.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
-            return content;
+            return new ApiResponse<string>(result.StatusCode, result.ReasonPhrase, result.Headers, content);
         }
     }
 }
