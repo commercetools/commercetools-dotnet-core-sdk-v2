@@ -26,17 +26,17 @@ namespace commercetools.Sdk.V2Compat
             return await client.ExecuteAsync(new HttpRequestCommand<T>(requestMessage));
         }
 
-        public async Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        public Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             throw new System.NotImplementedException();
         }
 
-        public async Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        public Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             throw new System.NotImplementedException();
         }
 
-        public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        public Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             throw new System.NotImplementedException();
         }

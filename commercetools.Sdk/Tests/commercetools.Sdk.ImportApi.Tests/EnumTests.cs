@@ -14,11 +14,11 @@ namespace commercetools.Sdk.ImportApi.Tests
             s.UseCommercetoolsImportApiSerialization();
 
             var r = new ProductVariantImportRequest();
-            
+
             var p = s.BuildServiceProvider();
             var serializerService = p.GetService<SerializerService>();
             var t = serializerService.Serialize(r);
-            
+
             Assert.Equal("{\"type\":\"product-variant\"}", t);
         }
     }

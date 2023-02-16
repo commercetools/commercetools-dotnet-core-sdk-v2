@@ -9,9 +9,5 @@ namespace commercetools.Sdk.Api.Models.Common
     {
         ICustomFieldsDraft Custom { get; set; }
 
-        new string Id { get; set; }
-
-        new string Key { get; set; }
-
     }
 }

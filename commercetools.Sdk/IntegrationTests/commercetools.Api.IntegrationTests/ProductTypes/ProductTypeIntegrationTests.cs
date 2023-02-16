@@ -6,8 +6,6 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using Xunit;
-using Xunit.Sdk;
-using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
 
 namespace commercetools.Api.IntegrationTests.ProductTypes
 {
@@ -29,7 +27,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
             {
                 storeProductType = await _projectApiRoot.ProductTypes().WithKey("Store").Get().ExecuteAsync();
             }
-            catch (NotFoundException exception)
+            catch (NotFoundException)
             {
                 var storeProductTypeDraft = new ProductTypeDraft()
                 {
@@ -62,13 +60,13 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                     .ExecuteAsync()
                     .Result;
             }
-            
+
             IProductType bestsellerProductType;
             try
             {
                 bestsellerProductType = await _projectApiRoot.ProductTypes().WithKey("BestSeller").Get().ExecuteAsync();
             }
-            catch (NotFoundException exception)
+            catch (NotFoundException)
             {
                 var bestsellerProductTypeDraft = new ProductTypeDraft()
                 {
@@ -103,19 +101,19 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                     .ProductTypes()
                     .Post(bestsellerProductTypeDraft)
                     .ExecuteAsync()
-                    .Result;        
+                    .Result;
             }
-           
+
             IProductType styleColourProductType;
             try
             {
                 styleColourProductType = await _projectApiRoot.ProductTypes().WithKey("StyleColour").Get().ExecuteAsync();
             }
-            catch (NotFoundException exception)
+            catch (NotFoundException)
             {
                 var styleColourProductTypeDraft = new ProductTypeDraft()
                 {
-                   
+
                     Key = "StyleColour",
                     Name = "StyleColour",
                     Description = "The description of StyleColour",
@@ -167,7 +165,7 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                     .ProductTypes()
                     .Post(styleColourProductTypeDraft)
                     .ExecuteAsync()
-                    .Result; 
+                    .Result;
             }
 
             var random = TestingUtility.RandomString();
@@ -236,13 +234,13 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                 }
 
             };
-            
+
             var product = _projectApiRoot
                 .Products()
                 .Post(newProductDetails)
                 .ExecuteAsync()
                 .Result;
-            
+
             Assert.Equal($"17551191-{random}", product.Key);
 
             await _projectApiRoot.Products().WithId(product.Id).Delete().WithVersion(product.Version).ExecuteAsync();

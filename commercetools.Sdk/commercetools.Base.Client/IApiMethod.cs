@@ -16,11 +16,11 @@ namespace commercetools.Base.Client
         T WithHeaders(ApiHttpHeaders headers);
         HttpRequestMessage Build();
         public Task<TResult> ExecuteAsync(CancellationToken cancellationToken = default);
-        
+
         public Task<IApiResponse<TResult>> SendAsync(CancellationToken cancellationToken = default);
-        
+
         public Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default);
-        
+
         public Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default);
 
     }
