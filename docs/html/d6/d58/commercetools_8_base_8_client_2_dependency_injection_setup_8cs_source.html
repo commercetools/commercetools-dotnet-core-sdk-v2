@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">6.3.0-alpha-associate-roles</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -99,103 +99,113 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            IConfiguration configuration, IList&lt;string&gt; clients,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (clients.Count() == 1)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">return</span> services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> IDictionary&lt;string, IHttpClientBuilder&gt; UseMultipleClients(<span class="keyword">this</span> IServiceCollection services,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            IConfiguration configuration, IList&lt;string&gt; clients,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            var builders = <span class="keyword">new</span> ConcurrentDictionary&lt;string, IHttpClientBuilder&gt;();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            clients.ToList().ForEach(clientName =&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                IClientConfiguration clientConfiguration =</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    configuration.GetSection(clientName).Get&lt;ClientConfiguration&gt;();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                Validator.ValidateObject(clientConfiguration, <span class="keyword">new</span> ValidationContext(clientConfiguration), <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                services.AddSingleton(serviceProvider =&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    var client = ClientFactory.Create(clientName, clientConfiguration,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        serviceProvider.GetService&lt;IHttpClientFactory&gt;(),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        serializerFactory(serviceProvider),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        tokenProviderSupplier(clientName, configuration, serviceProvider));</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    client.Name = clientName;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    return client;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                });</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            });</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> builders;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> IDictionary&lt;string, IHttpClientBuilder&gt; UseSingleClient(<span class="keyword">this</span> IServiceCollection services,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            IConfiguration configuration, <span class="keywordtype">string</span> clientName,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get&lt;ClientConfiguration&gt;();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            Validator.ValidateObject(clientConfiguration, <span class="keyword">new</span> ValidationContext(clientConfiguration), <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            services.AddSingleton(serviceProvider =&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                var client = ClientFactory.Create(clientName, clientConfiguration,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    serviceProvider.GetService&lt;IHttpClientFactory&gt;(),</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    serializerFactory(serviceProvider),</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    tokenProviderSupplier(clientName, configuration, serviceProvider));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                client.Name = clientName;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">return</span> client;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            });</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            var builders = <span class="keyword">new</span> ConcurrentDictionary&lt;string, IHttpClientBuilder&gt;();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            ClientOptions options = <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (clients.Count() == 1)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">return</span> services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> IDictionary&lt;string, IHttpClientBuilder&gt; UseMultipleClients(<span class="keyword">this</span> IServiceCollection services,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            IConfiguration configuration, IList&lt;string&gt; clients,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            ClientOptions options = <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            var builders = <span class="keyword">new</span> ConcurrentDictionary&lt;string, IHttpClientBuilder&gt;();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            clients.ToList().ForEach(clientName =&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                IClientConfiguration clientConfiguration =</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    configuration.GetSection(clientName).Get&lt;ClientConfiguration&gt;();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                Validator.ValidateObject(clientConfiguration, <span class="keyword">new</span> ValidationContext(clientConfiguration), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                services.AddSingleton(serviceProvider =&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    var client = ClientFactory.Create(clientName, clientConfiguration,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        serviceProvider.GetService&lt;IHttpClientFactory&gt;(),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        serializerFactory(serviceProvider),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        tokenProviderSupplier(clientName, configuration, serviceProvider));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    client.Name = clientName;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    return client;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                });</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            });</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> builders;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> IDictionary&lt;string, IHttpClientBuilder&gt; UseSingleClient(<span class="keyword">this</span> IServiceCollection services,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            IConfiguration configuration, <span class="keywordtype">string</span> clientName,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            Func&lt;string, IConfiguration, IServiceProvider, ITokenProvider&gt; tokenProviderSupplier,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            ClientOptions options = <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get&lt;ClientConfiguration&gt;();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            Validator.ValidateObject(clientConfiguration, <span class="keyword">new</span> ValidationContext(clientConfiguration), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            services.AddSingleton(serviceProvider =&gt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                var client = ClientFactory.Create(clientName, clientConfiguration,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    serviceProvider.GetService&lt;IHttpClientFactory&gt;(),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    serializerFactory(serviceProvider),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    tokenProviderSupplier(clientName, configuration, serviceProvider));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                client.Name = clientName;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">return</span> client;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            });</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> builders;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            var builders = <span class="keyword">new</span> ConcurrentDictionary&lt;string, IHttpClientBuilder&gt;();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IHttpClientBuilder SetupClient(<span class="keyword">this</span> IServiceCollection services, <span class="keywordtype">string</span> clientName, Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper, Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            services.AddSingleton&lt;<a class="code" href="../../d2/d69/interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider.html">IUserAgentProvider</a>, <a class="code" href="../../d6/dfe/classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider.html">UserAgentProvider</a>&gt;();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            var httpClientBuilder = services.AddHttpClient(clientName)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                .ConfigureHttpClient((provider, client) =&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    var userAgentProvider = provider.GetService&lt;<a class="code" href="../../d2/d69/interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider.html">IUserAgentProvider</a>&gt;() ?? <span class="keyword">new</span> <a class="code" href="../../d6/dfe/classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider.html">UserAgentProvider</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd(<span class="stringliteral">&quot;gzip&quot;</span>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd(<span class="stringliteral">&quot;deflate&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                })</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                .ConfigureHttpMessageHandlerBuilder(builder =&gt;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    builder.PrimaryHandler = <span class="keyword">new</span> HttpClientHandler</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    };</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                })</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                .AddHttpMessageHandler(c =&gt; <span class="keyword">new</span> ErrorHandler(message =&gt; serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())))</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                .AddHttpMessageHandler(c =&gt; <span class="keyword">new</span> LoggerHandler(c.GetService&lt;ILoggerFactory&gt;()));</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> httpClientBuilder;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> builders;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> IHttpClientBuilder SetupClient(<span class="keyword">this</span> IServiceCollection services, <span class="keywordtype">string</span> clientName, Func&lt;HttpResponseMessage, Type&gt; errorResponseTypeMapper, Func&lt;IServiceProvider, ISerializerService&gt; serializerFactory, ClientOptions options = <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            options ??= <span class="keyword">new</span> ClientOptions();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            services.AddSingleton&lt;<a class="code" href="../../d2/d69/interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider.html">IUserAgentProvider</a>, <a class="code" href="../../d6/dfe/classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider.html">UserAgentProvider</a>&gt;();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            var httpClientBuilder = services.AddHttpClient(clientName)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                .ConfigureHttpClient((provider, client) =&gt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">if</span> (options.DecompressionMethods.HasFlag(DecompressionMethods.GZip))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        client.DefaultRequestHeaders.AcceptEncoding.ParseAdd(<span class="stringliteral">&quot;gzip&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keywordflow">if</span> (options.DecompressionMethods.HasFlag(DecompressionMethods.Deflate))</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        client.DefaultRequestHeaders.AcceptEncoding.ParseAdd(<span class="stringliteral">&quot;deflate&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    var userAgentProvider = provider.GetService&lt;<a class="code" href="../../d2/d69/interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider.html">IUserAgentProvider</a>&gt;() ?? <span class="keyword">new</span> <a class="code" href="../../d6/dfe/classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider.html">UserAgentProvider</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                })</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                .ConfigureHttpMessageHandlerBuilder(builder =&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    builder.PrimaryHandler = <span class="keyword">new</span> HttpClientHandler</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        AutomaticDecompression = options.DecompressionMethods</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                })</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                .AddHttpMessageHandler(c =&gt; <span class="keyword">new</span> ErrorHandler(message =&gt; serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())))</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                .AddHttpMessageHandler(c =&gt; <span class="keyword">new</span> LoggerHandler(c.GetService&lt;ILoggerFactory&gt;()));</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> httpClientBuilder;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 <div class="ttc" id="aclasscommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider_html"><div class="ttname"><a href="../../d6/dfe/classcommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_user_agent_provider.html">commercetools.Base.Client.Middlewares.UserAgentProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d6c/_user_agent_provider_8cs_source.html#l00007">UserAgentProvider.cs:8</a></div></div>
 <div class="ttc" id="aclasscommercetools_1_1_base_1_1_serialization_1_1_extensions_html"><div class="ttname"><a href="../../d0/d63/classcommercetools_1_1_base_1_1_serialization_1_1_extensions.html">commercetools.Base.Serialization.Extensions</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd6/commercetools_8_base_8_serialization_2_extensions_8cs_source.html#l00006">Extensions.cs:7</a></div></div>
 <div class="ttc" id="ainterfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider_html"><div class="ttname"><a href="../../d2/d69/interfacecommercetools_1_1_base_1_1_client_1_1_middlewares_1_1_i_user_agent_provider.html">commercetools.Base.Client.Middlewares.IUserAgentProvider</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d41/_i_user_agent_provider_8cs_source.html#l00003">IUserAgentProvider.cs:4</a></div></div>
 <div class="ttc" id="anamespacecommercetools_1_1_base_1_1_client_1_1_middlewares_html"><div class="ttname"><a href="../../db/dc0/namespacecommercetools_1_1_base_1_1_client_1_1_middlewares.html">commercetools.Base.Client.Middlewares</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d59/_authorization_middleware_8cs_source.html#l00007">AuthorizationMiddleware.cs:8</a></div></div>
 <div class="ttc" id="anamespacecommercetools_1_1_base_1_1_client_1_1_tokens_html"><div class="ttname"><a href="../../d0/d92/namespacecommercetools_1_1_base_1_1_client_1_1_tokens.html">commercetools.Base.Client.Tokens</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dcf/_anonymous_session_token_provider_8cs_source.html#l00003">AnonymousSessionTokenProvider.cs:4</a></div></div>
-<div class="ttc" id="anamespacecommercetools_1_1_base_1_1_client_html"><div class="ttname"><a href="../../d4/d7f/namespacecommercetools_1_1_base_1_1_client.html">commercetools.Base.Client</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5e/_i_client_8cs_source.html#l00006">IClient.cs:7</a></div></div>
+<div class="ttc" id="anamespacecommercetools_1_1_base_1_1_client_html"><div class="ttname"><a href="../../d4/d7f/namespacecommercetools_1_1_base_1_1_client.html">commercetools.Base.Client</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d00/_i_api_response_8cs_source.html#l00004">IApiResponse.cs:5</a></div></div>
 <div class="ttc" id="anamespacecommercetools_1_1_base_1_1_serialization_html"><div class="ttname"><a href="../../d8/d12/namespacecommercetools_1_1_base_1_1_serialization.html">commercetools.Base.Serialization</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df5/_i_serializer_service_8cs_source.html#l00003">ISerializerService.cs:4</a></div></div>
-<div class="ttc" id="anamespacecommercetools_1_1_base_html"><div class="ttname"><a href="../../dd/de7/namespacecommercetools_1_1_base.html">commercetools.Base</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5e/_i_client_8cs_source.html#l00006">IClient.cs:7</a></div></div>
+<div class="ttc" id="anamespacecommercetools_1_1_base_html"><div class="ttname"><a href="../../dd/de7/namespacecommercetools_1_1_base.html">commercetools.Base</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d00/_i_api_response_8cs_source.html#l00004">IApiResponse.cs:5</a></div></div>
 <div class="ttc" id="anamespacecommercetools_html"><div class="ttname"><a href="../../d4/d1f/namespacecommercetools.html">commercetools</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4e/_api_factory_8cs_source.html#l00005">ApiFactory.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">6.3.0-alpha-associate-roles</span>
+   &#160;<span id="projectnumber">6.3.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -259,9 +259,6 @@ $(function() {
 : <a class="el" href="d0/d29/classcommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_add_payment_change.html#a33b049771260843cbf9de23db14c391e">commercetools.Sdk.HistoryApi.Models.Changes.AddPaymentChange</a>
 , <a class="el" href="d3/d1e/interfacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_changes_1_1_i_change.html#adc8a613d55158b2925cf20e007457776">commercetools.Sdk.HistoryApi.Models.Changes.IChange</a>
 </li>
-<li>AddPermission()
-: <a class="el" href="df/d78/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_i_associate_role_update_action.html#a01965dd705eff0763477c8d503d2472d">commercetools.Sdk.Api.Models.AssociateRoles.IAssociateRoleUpdateAction</a>
-</li>
 <li>AddPlainEnumValue()
 : <a class="el" href="d9/dd0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_types_1_1_i_product_type_update_action.html#a2212d6dee69adb4c89dd7c8a5819b2fa">commercetools.Sdk.Api.Models.ProductTypes.IProductTypeUpdateAction</a>
 </li>
@@ -410,10 +407,13 @@ $(function() {
 : <a class="el" href="d0/d3b/classcommercetools_1_1_base_1_1_client_1_1_api_http_exception.html#a9bc283d68c9e2ef463db54350d18f251">commercetools.Base.Client.ApiHttpException</a>
 </li>
 <li>ApiHttpHeaders()
-: <a class="el" href="d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#abd49e95183279d10df8063f638951e59">commercetools.Base.Client.ApiHttpHeaders</a>
+: <a class="el" href="d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#aa23c75c2f566138a2b9ae52b0d20c47e">commercetools.Base.Client.ApiHttpHeaders</a>
 </li>
 <li>ApiMethod()
 : <a class="el" href="d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a29557b3ee20ffd84b7b1f4f43dcb3e25">commercetools.Base.Client.ApiMethod&lt; T &gt;</a>
+</li>
+<li>ApiResponse()
+: <a class="el" href="d5/d1a/classcommercetools_1_1_base_1_1_client_1_1_api_response.html#a3f6aa859d8360857bf2f9254e301734c">commercetools.Base.Client.ApiResponse&lt; T &gt;</a>
 </li>
 <li>ApiRoot()
 : <a class="el" href="d0/d4c/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_api_root.html#a85dd772439f0e19eded0ee70bbcabd80">commercetools.Sdk.Api.Client.ApiRoot</a>
@@ -436,9 +436,6 @@ $(function() {
 </li>
 <li>ApplyStagedChanges()
 : <a class="el" href="d7/d80/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_standalone_prices_1_1_i_standalone_price_update_action.html#a6f41653777d62edf0ba658df1475c010">commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePriceUpdateAction</a>
-</li>
-<li>AsAssociate()
-: <a class="el" href="d8/d19/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_projects_1_1_by_project_key_request_builder.html#a77eb9a48dcbc4f3f7c11d78c172e6f07">commercetools.Sdk.Api.Client.RequestBuilders.Projects.ByProjectKeyRequestBuilder</a>
 </li>
 <li>AsConflictingTrait()
 : <a class="el" href="d9/d34/interfacecommercetools_1_1_sdk_1_1_api_1_1_client_1_1_i_conflicting_trait.html#a80345de4f57cef737d15c8e8caa97320">commercetools.Sdk.Api.Client.IConflictingTrait&lt; T &gt;</a>
@@ -559,114 +556,6 @@ $(function() {
 </li>
 <li>AsSecured_by_view_productsTraitToBaseType()
 : <a class="el" href="d4/d26/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_client_1_1_i_secured__by__view__products_trait.html#afe483733b0234cc4413ee5afb7ab91b5">commercetools.Sdk.ImportApi.Client.ISecured_by_view_productsTrait&lt; T &gt;</a>
-</li>
-<li>AssociateRole()
-: <a class="el" href="d4/d9c/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_i_key_reference.html#a4c2c242c94108ad81588bf25237aed02">commercetools.Sdk.Api.Models.Common.IKeyReference</a>
-, <a class="el" href="d3/deb/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_i_reference.html#a5f73a9cdc64fa1f235417deaab1e38d2">commercetools.Sdk.Api.Models.Common.IReference</a>
-, <a class="el" href="db/d33/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_i_resource_identifier.html#a0e825be060b1dd8e0302829bd377eea8">commercetools.Sdk.Api.Models.Common.IResourceIdentifier</a>
-</li>
-<li>AssociateRoleAddPermissionAction()
-: <a class="el" href="d0/d7a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_add_permission_action.html#a92c96dc9866644973a0f420aea147ca4">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleAddPermissionAction</a>
-</li>
-<li>AssociateRoleBuyerAssignableChanged()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a8fbf3d64c5ab5ae2b360bcb1febecba5">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a8820970973878a0820983d046450cd54">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRoleBuyerAssignableChangedMessage()
-: <a class="el" href="d6/dfc/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_buyer_assignable_changed_message.html#abba5c68d250a22e8f8d2f09b4995d5f5">commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessage</a>
-</li>
-<li>AssociateRoleBuyerAssignableChangedMessagePayload()
-: <a class="el" href="d7/d5a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_buyer_assignable_changed_message_payload.html#af3e53edde7db9913c782f2fca5ad23b4">commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload</a>
-</li>
-<li>AssociateRoleChangeBuyerAssignableAction()
-: <a class="el" href="de/da2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_change_buyer_assignable_action.html#ab0cf16de5041bab2510cd74ca6b63d2a">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleChangeBuyerAssignableAction</a>
-</li>
-<li>AssociateRoleCreated()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a1fe5f8f485e299f928092bcd3ad495ab">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#af1f5a6781c09b0bcb5e324c3f8ce6e3a">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRoleCreatedMessage()
-: <a class="el" href="d0/d65/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_created_message.html#a8669329131826d8367c85c32f72d4596">commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessage</a>
-</li>
-<li>AssociateRoleCreatedMessagePayload()
-: <a class="el" href="db/d8b/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_created_message_payload.html#a09acd3ca5f63b7ee59714029c9416e47">commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload</a>
-</li>
-<li>AssociateRoleDeleted()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a64f0a0636b7e6177a3a518ee51d01172">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#ad54bd6c3a3e9f256cd2375688d6514aa">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRoleDeletedMessage()
-: <a class="el" href="dd/dc4/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_deleted_message.html#a9b69d11bd38fce0feefc1b52eeec2697">commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessage</a>
-</li>
-<li>AssociateRoleDeletedMessagePayload()
-: <a class="el" href="d4/d04/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_deleted_message_payload.html#a526df78a6bd9c5c0ba1a6626db832930">commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload</a>
-</li>
-<li>AssociateRoleKeyReference()
-: <a class="el" href="dc/d10/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_key_reference.html#a0e7d5439f17f51bc8418b4469d39941e">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleKeyReference</a>
-</li>
-<li>AssociateRoleNameChanged()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#afd3ab704f10bb519f3bea339c829ff34">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a8ec8669666bb3d147158131686e575bd">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRoleNameChangedMessage()
-: <a class="el" href="de/da5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_name_changed_message.html#a4ef1615b7c1fa7499a29ea06a832b7e7">commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessage</a>
-</li>
-<li>AssociateRoleNameChangedMessagePayload()
-: <a class="el" href="dd/ddd/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_name_changed_message_payload.html#a1d12db71d340cfd6c96a80df32ead691">commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload</a>
-</li>
-<li>AssociateRolePermissionAdded()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a67598db3ea8d78657c6d242b3a9612f8">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#ab0391a85956f5c07b3955144d3334554">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRolePermissionAddedMessage()
-: <a class="el" href="d3/de5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permission_added_message.html#acfb51210b50d6f513e151b25d6db4abc">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessage</a>
-</li>
-<li>AssociateRolePermissionAddedMessagePayload()
-: <a class="el" href="da/ddb/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permission_added_message_payload.html#a13b12295d6938b9e6db0f0cf5ce68745">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload</a>
-</li>
-<li>AssociateRolePermissionRemoved()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a0a3d5baf4884e0f93c55c48deb61bf9a">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#ac8aceea0b2d003058f5d9458ed349ae3">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRolePermissionRemovedMessage()
-: <a class="el" href="d2/d8f/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permission_removed_message.html#a0c73c74eb2275952711481923493b091">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessage</a>
-</li>
-<li>AssociateRolePermissionRemovedMessagePayload()
-: <a class="el" href="dc/d62/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permission_removed_message_payload.html#ad79999185c7b0b2b73c4f2efb5427d32">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload</a>
-</li>
-<li>AssociateRolePermissionsSet()
-: <a class="el" href="d0/dd2/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message.html#a3a3a0f0da6739bb21ec5e31d27c0c125">commercetools.Sdk.Api.Models.Messages.IMessage</a>
-, <a class="el" href="d7/d81/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_i_message_payload.html#a00962cbb5f23b423fcc58246a24ac6cb">commercetools.Sdk.Api.Models.Messages.IMessagePayload</a>
-</li>
-<li>AssociateRolePermissionsSetMessage()
-: <a class="el" href="d6/d5e/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permissions_set_message.html#ae4ccb13574970ac200d12450fdca9e5b">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessage</a>
-</li>
-<li>AssociateRolePermissionsSetMessagePayload()
-: <a class="el" href="d9/d10/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_messages_1_1_associate_role_permissions_set_message_payload.html#af3abc96fda18902e5ea11c89a184c65c">commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload</a>
-</li>
-<li>AssociateRoleReference()
-: <a class="el" href="d5/db9/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_reference.html#a1b9aef12da24b4dfc43738b76b847148">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleReference</a>
-</li>
-<li>AssociateRoleRemovePermissionAction()
-: <a class="el" href="d1/d43/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_remove_permission_action.html#ad8a9e5a5994d6f7cfb889d25f832a2fd">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleRemovePermissionAction</a>
-</li>
-<li>AssociateRoleResourceIdentifier()
-: <a class="el" href="da/dee/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_resource_identifier.html#a8528f2e8df428b7b1da8a1017ce475df">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleResourceIdentifier</a>
-</li>
-<li>AssociateRoles()
-: <a class="el" href="d8/d19/classcommercetools_1_1_sdk_1_1_api_1_1_client_1_1_request_builders_1_1_projects_1_1_by_project_key_request_builder.html#ad373e8b55df495bd93463459660961af">commercetools.Sdk.Api.Client.RequestBuilders.Projects.ByProjectKeyRequestBuilder</a>
-</li>
-<li>AssociateRoleSetCustomFieldAction()
-: <a class="el" href="d2/deb/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_set_custom_field_action.html#acb3b21770b37a46dc620c05e52a99f70">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleSetCustomFieldAction</a>
-</li>
-<li>AssociateRoleSetCustomTypeAction()
-: <a class="el" href="d1/dc9/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_set_custom_type_action.html#a104d71a537fcb1c27d31d96c025230bd">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleSetCustomTypeAction</a>
-</li>
-<li>AssociateRoleSetNameAction()
-: <a class="el" href="d2/d57/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_set_name_action.html#a561ee473f832ecb1b0ed030b526ad2bf">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleSetNameAction</a>
-</li>
-<li>AssociateRoleSetPermissionsAction()
-: <a class="el" href="d2/d78/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_associate_roles_1_1_associate_role_set_permissions_action.html#ac4a7db80f839b4f622c6f57f7672a70c">commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleSetPermissionsAction</a>
 </li>
 <li>AsSortableTrait()
 : <a class="el" href="d8/d8d/interfacecommercetools_1_1_sdk_1_1_api_1_1_client_1_1_i_sortable_trait.html#a003e2102283071ceb385e1558a7580c3">commercetools.Sdk.Api.Client.ISortableTrait&lt; T &gt;</a>
