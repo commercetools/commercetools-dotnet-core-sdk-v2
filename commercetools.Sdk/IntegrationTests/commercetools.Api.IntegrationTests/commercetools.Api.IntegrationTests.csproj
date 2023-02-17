@@ -35,7 +35,7 @@
       </None>
     </ItemGroup>
     <ItemGroup>
-        <None Update="Resources\ct_logo_farbe.gif">
+        <None Update="Resources\*">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
