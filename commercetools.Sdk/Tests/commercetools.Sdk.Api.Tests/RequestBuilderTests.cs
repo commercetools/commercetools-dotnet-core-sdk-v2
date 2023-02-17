@@ -55,7 +55,7 @@ namespace commercetools.Sdk.Api.Tests
         public void HeaderCaseInsensitive()
         {
             var headers = new ApiHttpHeaders();
-                
+
             headers.AddHeader("content-type", "text/plain");
             Assert.True(headers.HasHeader("Content-Type"));
             Assert.True(headers.HasHeader("content-type"));
@@ -65,7 +65,7 @@ namespace commercetools.Sdk.Api.Tests
             Assert.Equal(2, headers.GetHeaderValue("Content-type").Count);
             Assert.Equal(2, headers.GetHeaders("Content-type").Count);
         }
-        
+
         [Fact]
         public void TestQueryRequest()
         {
