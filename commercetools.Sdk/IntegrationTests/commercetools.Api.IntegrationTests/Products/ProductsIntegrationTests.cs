@@ -82,7 +82,9 @@ namespace commercetools.Api.IntegrationTests.Products
                     var img = updateProduct.MasterData.Staged.Variants[1].Images.FirstOrDefault();
                     Assert.NotNull(img);
                     Assert.Contains("logo", img.Url);
-                    var filePng = new FileStream(logoPath, FileMode.Open, FileAccess.Read);
+
+                    var logoPngPath = @"Resources/ct-logo.png";
+                    var filePng = new FileStream(logoPngPath, FileMode.Open, FileAccess.Read);
 
                     var updateProductPng = await _projectApiRoot
                         .Products()
