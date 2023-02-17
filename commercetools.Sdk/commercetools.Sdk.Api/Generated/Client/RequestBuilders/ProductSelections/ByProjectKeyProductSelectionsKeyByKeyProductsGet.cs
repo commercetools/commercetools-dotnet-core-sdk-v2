@@ -8,7 +8,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
 {
 
-    public partial class ByProjectKeyProductSelectionsKeyByKeyProductsGet : ApiMethod<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, IApiMethod<ByProjectKeyProductSelectionsKeyByKeyProductsGet, commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionProductPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>
+    public partial class ByProjectKeyProductSelectionsKeyByKeyProductsGet : ApiMethod<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, IApiMethod<ByProjectKeyProductSelectionsKeyByKeyProductsGet, commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionProductPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductSelectionsKeyByKeyProductsGet>
     {
 
 
@@ -49,6 +49,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
             return this.GetQueryParam("withTotal");
         }
 
+        public List<string> GetSort()
+        {
+            return this.GetQueryParam("sort");
+        }
+
         public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
@@ -67,6 +72,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
         public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithWithTotal(bool withTotal)
         {
             return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithSort(string sort)
+        {
+            return this.AddQueryParam("sort", sort);
         }
 
 

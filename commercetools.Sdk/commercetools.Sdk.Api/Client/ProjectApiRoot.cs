@@ -163,12 +163,12 @@ namespace commercetools.Sdk.Api.Client
         {
             return With().ProductTypes();
         }
-        
+
         public ByProjectKeyQuotesRequestBuilder Quotes()
         {
             return With().Quotes();
         }
-        
+
         public ByProjectKeyQuoteRequestsRequestBuilder QuoteRequests()
         {
             return With().QuoteRequests();
@@ -188,7 +188,7 @@ namespace commercetools.Sdk.Api.Client
         {
             return With().ShoppingLists();
         }
-        
+
         public ByProjectKeyStagedQuotesRequestBuilder StagedQuotesRequests()
         {
             return With().StagedQuotes();
