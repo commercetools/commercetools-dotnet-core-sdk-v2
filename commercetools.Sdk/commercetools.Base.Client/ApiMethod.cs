@@ -14,7 +14,7 @@ namespace commercetools.Base.Client
 
         private List<KeyValuePair<string, string>> QueryParams { get; set; }
 
-        private ApiHttpHeaders Headers { get; set; }
+        protected ApiHttpHeaders Headers { get; set; }
 
         public ApiMethod()
         {

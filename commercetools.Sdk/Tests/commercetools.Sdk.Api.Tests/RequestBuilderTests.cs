@@ -52,6 +52,21 @@ namespace commercetools.Sdk.Api.Tests
         }
 
         [Fact]
+        public void HeaderCaseInsensitive()
+        {
+            var headers = new ApiHttpHeaders();
+                
+            headers.AddHeader("content-type", "text/plain");
+            Assert.True(headers.HasHeader("Content-Type"));
+            Assert.True(headers.HasHeader("content-type"));
+            Assert.True(headers.HasHeader("content-Type"));
+            Assert.Equal("text/plain", headers.GetFirst("conTent-type"));
+            headers.AddHeader("Content-Type", "image/png");
+            Assert.Equal(2, headers.GetHeaderValue("Content-type").Count);
+            Assert.Equal(2, headers.GetHeaders("Content-type").Count);
+        }
+        
+        [Fact]
         public void TestQueryRequest()
         {
             //arrange

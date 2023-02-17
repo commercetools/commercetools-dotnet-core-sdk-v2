@@ -91,7 +91,6 @@ namespace commercetools.Api.IntegrationTests.Products
                         .WithId(product.Id)
                         .Images()
                         .Post(filePng)
-                        .WithFilename("ct-logo.png")
                         .WithVariant(variantId)
                         .WithStaged(true)
                         .AddHeader(ApiHttpHeaders.CONTENT_TYPE, "image/png")
@@ -99,7 +98,7 @@ namespace commercetools.Api.IntegrationTests.Products
                     Assert.NotNull(updateProductPng);
                     var imgPng = updateProductPng.MasterData.Staged.Variants[1].Images.FirstOrDefault(image => image.Url.EndsWith("png"));
                     Assert.NotNull(imgPng);
-                    Assert.Contains("ct-logo", imgPng.Url);
+                    Assert.Contains("img", imgPng.Url);
                 });
         }
 

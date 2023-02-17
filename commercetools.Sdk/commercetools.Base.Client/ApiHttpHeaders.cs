@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace commercetools.Base.Client
@@ -31,20 +32,25 @@ namespace commercetools.Base.Client
                 new KeyValuePair<string, string>(key, value));
         }
 
+        public bool HasHeader(string key)
+        {
+            return this.Headers.Any(h => String.Equals(h.Key, key, StringComparison.CurrentCultureIgnoreCase));
+        }
+
         public List<string> GetHeaderValue(string key)
         {
-            return Headers.Where(h => h.Key.Equals(key))
+            return Headers.Where(h => String.Equals(h.Key, key, StringComparison.CurrentCultureIgnoreCase))
                 .Select(h => h.Value).ToList();
         }
 
         public string GetFirst(string key)
         {
-            return Headers.Where(h => h.Key.Equals(key))
+            return Headers.Where(h => String.Equals(h.Key, key, StringComparison.CurrentCultureIgnoreCase))
                 .Select(h => h.Value).FirstOrDefault();
         }
         public List<KeyValuePair<string, string>> GetHeaders(string key)
         {
-            return Headers.Where(h => h.Key.Equals(key)).ToList();
+            return Headers.Where(h => String.Equals(h.Key, key, StringComparison.CurrentCultureIgnoreCase)).ToList();
         }
     }
 }

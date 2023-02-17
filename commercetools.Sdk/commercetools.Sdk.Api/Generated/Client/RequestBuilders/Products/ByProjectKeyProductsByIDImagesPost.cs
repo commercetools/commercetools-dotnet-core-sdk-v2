@@ -1,6 +1,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Threading;
 using commercetools.Base.Client;
@@ -110,6 +111,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             if (Stream != null && Stream.Length > 0)
             {
                 request.Content = new StreamContent(Stream);
+                if (Headers.HasHeader(ApiHttpHeaders.CONTENT_TYPE))
+                {
+                    var contentType = Headers.GetFirst(ApiHttpHeaders.CONTENT_TYPE);
+                    request.Content.Headers.ContentType =
+                        new MediaTypeHeaderValue(contentType);
+                }
             }
             return request;
         }
