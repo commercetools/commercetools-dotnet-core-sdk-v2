@@ -32,19 +32,19 @@ namespace commercetools.Sdk.ImportApi.Tests
             var apiConfig = configuration.GetSection("Client").Get<ClientConfiguration>();
             var importApiRoot = p.GetService<ImportProjectApiRoot>();
             var apiRoot = p.GetService<ProjectApiRoot>();
-            
+
             Assert.Equal("Import", importApiRoot.ClientName);
             Assert.Equal("Client", apiRoot.ClientName);
             var project = await apiRoot.Get().ExecuteAsync().ConfigureAwait(false);
-            
+
             Assert.Equal(apiConfig.ProjectKey, project.Key);
 
             var importContainers = await importApiRoot.ImportContainers().Get().ExecuteAsync().ConfigureAwait(false);
             Assert.NotNull(importContainers);
-            
-            
+
+
         }
-        
+
         [Fact]
         public async void api_and_import_create_root()
         {
@@ -64,24 +64,24 @@ namespace commercetools.Sdk.ImportApi.Tests
 
             var importConfig = configuration.GetSection("Import").Get<ClientConfiguration>();
             var apiConfig = configuration.GetSection("Client").Get<ClientConfiguration>();
-            
+
             var importApiRoot = clients.First(client => client.Name == "Import")
                 .WithImportApi(importConfig.ProjectKey);
             var apiRoot = clients.First(client => client.Name == "Client")
                 .WithProject(apiConfig.ProjectKey);
-            
+
             Assert.Equal("Import", importApiRoot.ClientName);
             Assert.Equal("Client", apiRoot.ClientName);
 
             var project = await apiRoot.Get().ExecuteAsync().ConfigureAwait(false);
-            
+
             Assert.Equal(apiConfig.ProjectKey, project.Key);
 
             var importContainers = await importApiRoot.ImportContainers().Get().ExecuteAsync().ConfigureAwait(false);
             Assert.NotNull(importContainers);
-            
-            
+
+
         }
-        
+
     }
 }
