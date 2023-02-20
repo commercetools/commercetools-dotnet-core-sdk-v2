@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">6.3.1</span>
+   &#160;<span id="projectnumber">6.4.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -187,16 +187,15 @@ $(function() {
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                request.Content = <span class="keyword">new</span> StreamContent(Stream);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a7e6ea39bf74fd589639ac3c087469591">Headers</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a2e087122ba298c4cdf3be935d31377b0">HasHeader</a>(<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html">ApiHttpHeaders</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a04229a6179beb1fda408fc4231db9861">CONTENT_TYPE</a>))</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    var contentType = <a class="code" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a7e6ea39bf74fd589639ac3c087469591">Headers</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a4946d8517e912be865f919b7f695e162">GetFirst</a>(<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html">ApiHttpHeaders</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a04229a6179beb1fda408fc4231db9861">CONTENT_TYPE</a>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    request.Content.Headers.ContentType =</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        <span class="keyword">new</span> MediaTypeHeaderValue(contentType);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> request;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    request.Content.Headers.ContentType =</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                        <span class="keyword">new</span> MediaTypeHeaderValue(<a class="code" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a7e6ea39bf74fd589639ac3c087469591">Headers</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a4946d8517e912be865f919b7f695e162">GetFirst</a>(<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html">ApiHttpHeaders</a>.<a class="code" href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a04229a6179beb1fda408fc4231db9861">CONTENT_TYPE</a>));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">return</span> request;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="ttc" id="aclasscommercetools_1_1_base_1_1_client_1_1_api_http_headers_html"><div class="ttname"><a href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html">commercetools.Base.Client.ApiHttpHeaders</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/_api_http_headers_8cs_source.html#l00007">ApiHttpHeaders.cs:8</a></div></div>
 <div class="ttc" id="aclasscommercetools_1_1_base_1_1_client_1_1_api_http_headers_html_a04229a6179beb1fda408fc4231db9861"><div class="ttname"><a href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a04229a6179beb1fda408fc4231db9861">commercetools.Base.Client.ApiHttpHeaders.CONTENT_TYPE</a></div><div class="ttdeci">const string CONTENT_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/_api_http_headers_8cs_source.html#l00013">ApiHttpHeaders.cs:13</a></div></div>
 <div class="ttc" id="aclasscommercetools_1_1_base_1_1_client_1_1_api_http_headers_html_a2e087122ba298c4cdf3be935d31377b0"><div class="ttname"><a href="../../d0/d95/classcommercetools_1_1_base_1_1_client_1_1_api_http_headers.html#a2e087122ba298c4cdf3be935d31377b0">commercetools.Base.Client.ApiHttpHeaders.HasHeader</a></div><div class="ttdeci">bool HasHeader(string key)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de5/_api_http_headers_8cs_source.html#l00035">ApiHttpHeaders.cs:35</a></div></div>
