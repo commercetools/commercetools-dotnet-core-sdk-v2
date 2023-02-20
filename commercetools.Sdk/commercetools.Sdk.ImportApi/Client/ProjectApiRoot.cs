@@ -3,6 +3,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices;
@@ -12,6 +13,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
 
 namespace commercetools.Sdk.ImportApi.Client
 {
@@ -94,5 +96,16 @@ namespace commercetools.Sdk.ImportApi.Client
         {
             return With().Customers();
         }
+        
+        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
+        {
+            return With().StandalonePrices();
+        }
+
+        public ByProjectKeyInventoriesRequestBuilder Inventories()
+        {
+            return With().Inventories();
+        }
+
     }
 }

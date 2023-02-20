@@ -32,6 +32,9 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Types;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
+using commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits;
+using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
 using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
@@ -239,9 +242,29 @@ namespace commercetools.Sdk.Api.Client
             return With().Stores();
         }
 
+        public ByProjectKeyBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return With().BusinessUnits();
+        }
+
+        public ByProjectKeyStagedQuotesRequestBuilder StagedQuotes()
+        {
+            return With().StagedQuotes();
+        }
+
+        public ByProjectKeyAttributeGroupsRequestBuilder AttributeGroups()
+        {
+            return With().AttributeGroups();
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder InStore(string storeKey)
         {
             return With().InStoreKeyWithStoreKeyValue(storeKey);
+        }
+
+        public ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder InBusinessUnit(string businessUnitKey)
+        {
+            return With().InBusinessUnitKeyWithBusinessUnitKeyValue(businessUnitKey);
         }
 
         public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
