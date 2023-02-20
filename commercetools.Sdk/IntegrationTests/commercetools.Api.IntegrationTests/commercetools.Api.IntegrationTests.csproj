@@ -28,6 +28,7 @@
       <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
       <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
+      <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
     </ItemGroup>
     <ItemGroup>
       <None Update="appsettings.test.Development.json">
@@ -35,7 +36,7 @@
       </None>
     </ItemGroup>
     <ItemGroup>
-        <None Update="Resources\ct_logo_farbe.gif">
+        <None Update="Resources\*">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>

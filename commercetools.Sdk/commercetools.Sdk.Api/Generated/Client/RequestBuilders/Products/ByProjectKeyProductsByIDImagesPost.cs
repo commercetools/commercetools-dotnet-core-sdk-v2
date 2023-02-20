@@ -113,9 +113,8 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
                 request.Content = new StreamContent(Stream);
                 if (Headers.HasHeader(ApiHttpHeaders.CONTENT_TYPE))
                 {
-                    var contentType = Headers.GetFirst(ApiHttpHeaders.CONTENT_TYPE);
                     request.Content.Headers.ContentType =
-                        new MediaTypeHeaderValue(contentType);
+                        new MediaTypeHeaderValue(Headers.GetFirst(ApiHttpHeaders.CONTENT_TYPE));
                 }
             }
             return request;

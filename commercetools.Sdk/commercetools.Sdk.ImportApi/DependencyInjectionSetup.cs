@@ -26,11 +26,11 @@ namespace commercetools.Sdk.ImportApi
             {
                 clientName
             };
-            services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>()));
+            services.AddSingleton(c => ImportApiFactory.Create(c.GetServices<IClient>().Single(client => client.Name == clientName)));
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             if (clientConfiguration.ProjectKey != null)
             {
-                services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+                services.AddSingleton(c => ImportApiFactory.Create(c.GetServices<IClient>().Single(client => client.Name == clientName), clientConfiguration.ProjectKey));
             }
 
             return services.UseCommercetoolsImportApi(configuration, clients, tokenProviderSupplier ?? CreateDefaultTokenProvider, options).Single().Value;
@@ -45,7 +45,7 @@ namespace commercetools.Sdk.ImportApi
             {
                 IClientConfiguration clientConfiguration =
                     configuration.GetSection(clientName).Get<ClientConfiguration>();
-                services.AddSingleton(c => ImportApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+                services.AddSingleton(c => ImportApiFactory.Create(c.GetServices<IClient>().Single(client => client.Name == clientName), clientConfiguration.ProjectKey));
             });
 
             return services.UseHttpApi(configuration, clients,

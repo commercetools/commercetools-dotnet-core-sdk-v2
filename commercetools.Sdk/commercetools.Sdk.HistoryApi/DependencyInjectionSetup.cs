@@ -46,7 +46,7 @@ namespace commercetools.Sdk.HistoryApi
             {
                 IClientConfiguration clientConfiguration =
                     configuration.GetSection(clientName).Get<ClientConfiguration>();
-                services.AddSingleton(c => HistoryApiFactory.Create(c.GetService<IClient>(), clientConfiguration.ProjectKey));
+                services.AddSingleton(c => HistoryApiFactory.Create(c.GetServices<IClient>().Single(client => client.Name == clientName), clientConfiguration.ProjectKey));
             });
 
             return services.UseHttpApi(configuration, clients,
