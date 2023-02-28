@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         decimal? Amount { get; set; }
 
+        bool? IncludedInPrice { get; set; }
+
         string Country { get; set; }
 
         string State { get; set; }
@@ -20,8 +22,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         IList<ISubRate> SubRates { get; set; }
         IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
-
-        bool? IncludedInPrice { get; set; }
 
     }
 }

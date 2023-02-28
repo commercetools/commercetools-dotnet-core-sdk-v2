@@ -12,12 +12,6 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         public string Action { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
-        public IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        public IExternalTaxRateDraft ExternalTaxRate { get; set; }
-
         public string ProductId { get; set; }
 
         public long? VariantId { get; set; }
@@ -26,15 +20,21 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public long? Quantity { get; set; }
 
+        public IChannelResourceIdentifier DistributionChannel { get; set; }
+
         public IChannelResourceIdentifier SupplyChannel { get; set; }
 
         public IMoney ExternalPrice { get; set; }
 
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         public DateTime? AddedAt { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
         public MyCartAddLineItemAction()
         {
             this.Action = "addLineItem";

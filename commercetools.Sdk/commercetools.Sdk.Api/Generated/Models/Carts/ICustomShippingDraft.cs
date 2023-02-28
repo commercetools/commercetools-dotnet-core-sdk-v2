@@ -2,6 +2,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -24,13 +25,13 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
-        string ExternalTaxRate { get; set; }
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
-        IList<IDelivery> Deliveries { get; set; }
-        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+        IList<IDeliveryDraft> Deliveries { get; set; }
+        IEnumerable<IDeliveryDraft> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
 
-        string Custom { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

@@ -25,8 +25,6 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
         public IMoney ExternalPrice { get; set; }
 
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
@@ -34,5 +32,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

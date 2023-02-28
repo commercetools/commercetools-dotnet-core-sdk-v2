@@ -11,12 +11,6 @@ namespace commercetools.Sdk.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartAddLineItemAction))]
     public partial interface IMyCartAddLineItemAction : IMyCartUpdateAction
     {
-        ICustomFieldsDraft Custom { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
-
         string ProductId { get; set; }
 
         long? VariantId { get; set; }
@@ -25,15 +19,21 @@ namespace commercetools.Sdk.Api.Models.Me
 
         long? Quantity { get; set; }
 
+        IChannelResourceIdentifier DistributionChannel { get; set; }
+
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         DateTime? AddedAt { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

@@ -9,12 +9,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartAddLineItemAction))]
     public partial interface ICartAddLineItemAction : ICartUpdateAction
     {
-        ICustomFieldsDraft Custom { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
-
         string ProductId { get; set; }
 
         long? VariantId { get; set; }
@@ -23,13 +17,19 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         long? Quantity { get; set; }
 
+        IChannelResourceIdentifier DistributionChannel { get; set; }
+
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

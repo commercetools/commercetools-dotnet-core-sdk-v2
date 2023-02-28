@@ -11,9 +11,9 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IShoppingListResourceIdentifier ShoppingList { get; set; }
 
-        public IChannelResourceIdentifier SupplyChannel { get; set; }
-
         public IChannelResourceIdentifier DistributionChannel { get; set; }
+
+        public IChannelResourceIdentifier SupplyChannel { get; set; }
         public CartAddShoppingListAction()
         {
             this.Action = "addShoppingList";

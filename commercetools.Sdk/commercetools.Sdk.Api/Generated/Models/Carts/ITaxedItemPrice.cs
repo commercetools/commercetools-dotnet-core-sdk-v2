@@ -7,11 +7,11 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.TaxedItemPrice))]
     public partial interface ITaxedItemPrice
     {
-        ITypedMoney TotalNet { get; set; }
+        ICentPrecisionMoney TotalNet { get; set; }
 
-        ITypedMoney TotalGross { get; set; }
+        ICentPrecisionMoney TotalGross { get; set; }
 
-        ITypedMoney TotalTax { get; set; }
+        ICentPrecisionMoney TotalTax { get; set; }
 
     }
 }

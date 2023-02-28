@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
-    [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore))]
+    [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValueError))]
     [SubTypeDiscriminator("DuplicateAttributeValues", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValuesError))]
@@ -118,9 +118,9 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore CountryNotConfiguredInStore(Action<commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore> init = null)
+        static commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError CountryNotConfiguredInStore(Action<commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore();
+            var t = new commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError();
             init?.Invoke(t);
             return t;
         }

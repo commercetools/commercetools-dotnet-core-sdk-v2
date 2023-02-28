@@ -11,6 +11,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         [Description("NotActive")]
         NotActive,
 
+        [Description("NotValid")]
+        NotValid,
+
         [Description("DoesNotMatchCart")]
         DoesNotMatchCart,
 
@@ -21,10 +24,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         MaxApplicationReached,
 
         [Description("ApplicationStoppedByPreviousDiscount")]
-        ApplicationStoppedByPreviousDiscount,
-
-        [Description("NotValid")]
-        NotValid
+        ApplicationStoppedByPreviousDiscount
     }
 
     public class DiscountCodeStateWrapper : IDiscountCodeState
@@ -53,6 +53,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static IDiscountCodeState NotActive = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.NotActive, JsonName = "NotActive" };
 
+        public static IDiscountCodeState NotValid = new DiscountCodeStateWrapper
+        { Value = DiscountCodeState.NotValid, JsonName = "NotValid" };
+
         public static IDiscountCodeState DoesNotMatchCart = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.DoesNotMatchCart, JsonName = "DoesNotMatchCart" };
 
@@ -65,9 +68,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static IDiscountCodeState ApplicationStoppedByPreviousDiscount = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.ApplicationStoppedByPreviousDiscount, JsonName = "ApplicationStoppedByPreviousDiscount" };
 
-        public static IDiscountCodeState NotValid = new DiscountCodeStateWrapper
-        { Value = DiscountCodeState.NotValid, JsonName = "NotValid" };
-
         DiscountCodeState? Value { get; }
 
         static IDiscountCodeState[] Values()
@@ -75,11 +75,11 @@ namespace commercetools.Sdk.Api.Models.Carts
             return new[]
             {
                  NotActive ,
+                 NotValid ,
                  DoesNotMatchCart ,
                  MatchesCart ,
                  MaxApplicationReached ,
-                 ApplicationStoppedByPreviousDiscount ,
-                 NotValid
+                 ApplicationStoppedByPreviousDiscount
              };
         }
         static IDiscountCodeState FindEnum(string value)

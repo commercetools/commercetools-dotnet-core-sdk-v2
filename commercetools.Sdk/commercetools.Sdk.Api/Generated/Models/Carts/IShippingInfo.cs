@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string ShippingMethodName { get; set; }
 
-        ITypedMoney Price { get; set; }
+        ICentPrecisionMoney Price { get; set; }
 
         IShippingRate ShippingRate { get; set; }
 

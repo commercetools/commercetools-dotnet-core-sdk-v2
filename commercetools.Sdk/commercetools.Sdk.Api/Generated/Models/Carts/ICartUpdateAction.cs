@@ -35,6 +35,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressAction))]
     [SubTypeDiscriminator("setBillingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setBillingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setBusinessUnit", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBusinessUnitAction))]
     [SubTypeDiscriminator("setCartTotalTax", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCartTotalTaxAction))]
     [SubTypeDiscriminator("setCountry", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCountryAction))]
     [SubTypeDiscriminator("setCustomerEmail", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomerEmailAction))]
@@ -251,6 +252,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomTypeAction SetBillingAddressCustomType(Action<commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetBusinessUnitAction SetBusinessUnit(Action<commercetools.Sdk.Api.Models.Carts.CartSetBusinessUnitAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetBusinessUnitAction();
             init?.Invoke(t);
             return t;
         }

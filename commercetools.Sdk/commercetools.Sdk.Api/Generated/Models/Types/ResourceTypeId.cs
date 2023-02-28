@@ -77,6 +77,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("review")]
         Review,
 
+        [Description("shipping")]
+        Shipping,
+
         [Description("shipping-method")]
         ShippingMethod,
 
@@ -188,6 +191,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Review, JsonName = "review" };
 
+        public static IResourceTypeId Shipping = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.Shipping, JsonName = "shipping" };
+
         public static IResourceTypeId ShippingMethod = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ShippingMethod, JsonName = "shipping-method" };
 
@@ -235,6 +241,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  ProductSelection ,
                  Quote ,
                  Review ,
+                 Shipping ,
                  ShippingMethod ,
                  ShoppingList ,
                  ShoppingListTextLineItem ,

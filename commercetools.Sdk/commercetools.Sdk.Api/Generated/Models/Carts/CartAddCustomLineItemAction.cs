@@ -14,15 +14,17 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ILocalizedString Name { get; set; }
 
-        public long Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         public string Slug { get; set; }
 
         public ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
 
         public ICustomLineItemPriceMode PriceMode { get; set; }
         public CartAddCustomLineItemAction()

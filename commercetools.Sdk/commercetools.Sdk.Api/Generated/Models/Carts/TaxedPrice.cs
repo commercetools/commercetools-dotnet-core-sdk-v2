@@ -8,14 +8,14 @@ namespace commercetools.Sdk.Api.Models.Carts
 
     public partial class TaxedPrice : ITaxedPrice
     {
-        public ITypedMoney TotalNet { get; set; }
+        public ICentPrecisionMoney TotalNet { get; set; }
 
-        public ITypedMoney TotalGross { get; set; }
+        public ICentPrecisionMoney TotalGross { get; set; }
 
         public IList<ITaxPortion> TaxPortions { get; set; }
         public IEnumerable<ITaxPortion> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
 
 
-        public ITypedMoney TotalTax { get; set; }
+        public ICentPrecisionMoney TotalTax { get; set; }
     }
 }
