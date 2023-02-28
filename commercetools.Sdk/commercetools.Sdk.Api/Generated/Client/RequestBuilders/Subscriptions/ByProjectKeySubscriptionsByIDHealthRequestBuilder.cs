@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
-    public class ByProjectKeySubscriptionsByIDHealthRequestBuilder
+    public partial class ByProjectKeySubscriptionsByIDHealthRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

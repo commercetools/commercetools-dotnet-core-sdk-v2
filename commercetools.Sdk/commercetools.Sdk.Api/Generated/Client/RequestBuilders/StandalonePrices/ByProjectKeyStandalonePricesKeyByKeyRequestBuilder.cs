@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
 {
 
-    public class ByProjectKeyStandalonePricesKeyByKeyRequestBuilder
+    public partial class ByProjectKeyStandalonePricesKeyByKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
-    public class ByProjectKeyMeQuotesByIDRequestBuilder
+    public partial class ByProjectKeyMeQuotesByIDRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

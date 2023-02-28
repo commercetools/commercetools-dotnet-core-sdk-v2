@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants
 {
 
-    public class ByProjectKeyProductVariantsRequestBuilder
+    public partial class ByProjectKeyProductVariantsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

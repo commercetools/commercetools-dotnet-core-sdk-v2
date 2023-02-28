@@ -5,7 +5,7 @@ using commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType;
 namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
 {
 
-    public class ByProjectKeyRequestBuilder
+    public partial class ByProjectKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

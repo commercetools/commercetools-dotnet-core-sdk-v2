@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests
                 .Where(name => !ignoreMethods.Contains(name))
                 .Where(name => !projectApiRootMethods.Contains(name))
                 .ToList();
-            
+
             Assert.Empty(resourceMethods);
         }
     }

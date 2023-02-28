@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Login
 {
 
-    public class ByProjectKeyLoginRequestBuilder
+    public partial class ByProjectKeyLoginRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

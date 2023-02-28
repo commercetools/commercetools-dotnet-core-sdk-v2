@@ -18,7 +18,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
 {
 
-    public class ByProjectKeyRequestBuilder
+    public partial class ByProjectKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
