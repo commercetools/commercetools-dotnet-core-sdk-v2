@@ -63,5 +63,7 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
         public string Locale { get; set; }
 
         public ICustom Custom { get; set; }
+
+        public IAuthenticationMode AuthenticationMode { get; set; }
     }
 }
