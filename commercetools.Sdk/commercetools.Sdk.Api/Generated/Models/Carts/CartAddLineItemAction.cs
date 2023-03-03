@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
+using System;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -18,6 +19,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public long? Quantity { get; set; }
 
+        public DateTime? AddedAt { get; set; }
+
         public IChannelResourceIdentifier DistributionChannel { get; set; }
 
         public IChannelResourceIdentifier SupplyChannel { get; set; }
@@ -27,6 +30,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 

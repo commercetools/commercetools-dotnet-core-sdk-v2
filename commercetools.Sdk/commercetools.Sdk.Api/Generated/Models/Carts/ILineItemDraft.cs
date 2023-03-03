@@ -20,15 +20,15 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         DateTime? AddedAt { get; set; }
 
-        IChannelResourceIdentifier SupplyChannel { get; set; }
-
         IChannelResourceIdentifier DistributionChannel { get; set; }
 
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
+
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
         IInventoryMode InventoryMode { get; set; }
 
