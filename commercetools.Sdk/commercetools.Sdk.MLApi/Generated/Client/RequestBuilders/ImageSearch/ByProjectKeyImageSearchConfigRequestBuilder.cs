@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
 
-    public class ByProjectKeyImageSearchConfigRequestBuilder
+    public partial class ByProjectKeyImageSearchConfigRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

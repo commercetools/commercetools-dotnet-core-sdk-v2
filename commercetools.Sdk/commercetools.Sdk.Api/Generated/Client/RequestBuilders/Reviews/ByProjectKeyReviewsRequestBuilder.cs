@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
 
-    public class ByProjectKeyReviewsRequestBuilder
+    public partial class ByProjectKeyReviewsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

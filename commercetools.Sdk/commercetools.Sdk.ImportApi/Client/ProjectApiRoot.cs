@@ -96,7 +96,7 @@ namespace commercetools.Sdk.ImportApi.Client
         {
             return With().Customers();
         }
-        
+
         public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
         {
             return With().StandalonePrices();

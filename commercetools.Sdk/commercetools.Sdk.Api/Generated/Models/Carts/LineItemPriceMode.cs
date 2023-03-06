@@ -11,11 +11,11 @@ namespace commercetools.Sdk.Api.Models.Carts
         [Description("Platform")]
         Platform,
 
-        [Description("ExternalTotal")]
-        ExternalTotal,
-
         [Description("ExternalPrice")]
-        ExternalPrice
+        ExternalPrice,
+
+        [Description("ExternalTotal")]
+        ExternalTotal
     }
 
     public class LineItemPriceModeWrapper : ILineItemPriceMode
@@ -44,11 +44,11 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static ILineItemPriceMode Platform = new LineItemPriceModeWrapper
         { Value = LineItemPriceMode.Platform, JsonName = "Platform" };
 
-        public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
-        { Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal" };
-
         public static ILineItemPriceMode ExternalPrice = new LineItemPriceModeWrapper
         { Value = LineItemPriceMode.ExternalPrice, JsonName = "ExternalPrice" };
+
+        public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
+        { Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal" };
 
         LineItemPriceMode? Value { get; }
 
@@ -57,8 +57,8 @@ namespace commercetools.Sdk.Api.Models.Carts
             return new[]
             {
                  Platform ,
-                 ExternalTotal ,
-                 ExternalPrice
+                 ExternalPrice ,
+                 ExternalTotal
              };
         }
         static ILineItemPriceMode FindEnum(string value)

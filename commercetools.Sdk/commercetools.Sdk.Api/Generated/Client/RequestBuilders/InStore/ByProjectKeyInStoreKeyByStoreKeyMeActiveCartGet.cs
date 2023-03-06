@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -7,7 +8,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet>
     {
 
 
@@ -28,7 +29,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/me/active-cart";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
 
+        public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
 
 
         public async Task<commercetools.Sdk.Api.Models.Carts.ICart> ExecuteAsync(CancellationToken cancellationToken = default)

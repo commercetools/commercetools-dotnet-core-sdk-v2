@@ -10,6 +10,6 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public decimal Rate { get; set; }
 
-        public ITypedMoney Amount { get; set; }
+        public ICentPrecisionMoney Amount { get; set; }
     }
 }

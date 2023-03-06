@@ -18,39 +18,39 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string CustomerEmail { get; set; }
 
-        string Country { get; set; }
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
-        IInventoryMode InventoryMode { get; set; }
+        IStoreResourceIdentifier Store { get; set; }
 
         IList<IMyLineItemDraft> LineItems { get; set; }
         IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
 
-        IBaseAddress ShippingAddress { get; set; }
+        ITaxMode TaxMode { get; set; }
+
+        IInventoryMode InventoryMode { get; set; }
 
         IBaseAddress BillingAddress { get; set; }
 
+        IBaseAddress ShippingAddress { get; set; }
+
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
-
-        string Locale { get; set; }
-
-        ITaxMode TaxMode { get; set; }
-
-        long? DeleteDaysAfterLastModification { get; set; }
 
         IList<IBaseAddress> ItemShippingAddresses { get; set; }
         IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
 
-        IBusinessUnitKeyReference BusinessUnit { get; set; }
-
-        IStoreKeyReference Store { get; set; }
-
         IList<string> DiscountCodes { get; set; }
         IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+
+        string Country { get; set; }
+
+        string Locale { get; set; }
+
+        long? DeleteDaysAfterLastModification { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

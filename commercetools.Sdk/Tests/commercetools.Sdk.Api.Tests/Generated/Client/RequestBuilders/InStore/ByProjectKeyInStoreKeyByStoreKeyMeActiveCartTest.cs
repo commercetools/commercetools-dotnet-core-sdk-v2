@@ -25,6 +25,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .Me()
                    .ActiveCart()
                    .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/me/active-cart?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Me()
+                   .ActiveCart()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/me/active-cart",

@@ -20,7 +20,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ITaxedItemPrice TaxedPrice { get; set; }
 
-        ITypedMoney TotalPrice { get; set; }
+        ICentPrecisionMoney TotalPrice { get; set; }
 
         string Slug { get; set; }
 

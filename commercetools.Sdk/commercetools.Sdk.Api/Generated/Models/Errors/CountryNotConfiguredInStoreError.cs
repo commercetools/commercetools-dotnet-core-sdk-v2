@@ -5,7 +5,7 @@ using System.Linq;
 namespace commercetools.Sdk.Api.Models.Errors
 {
 
-    public partial class CountryNotConfiguredInStore : ICountryNotConfiguredInStore
+    public partial class CountryNotConfiguredInStoreError : ICountryNotConfiguredInStoreError
     {
         public string Code { get; set; }
 
@@ -16,7 +16,7 @@ namespace commercetools.Sdk.Api.Models.Errors
 
 
         public string Country { get; set; }
-        public CountryNotConfiguredInStore()
+        public CountryNotConfiguredInStoreError()
         {
             this.Code = "CountryNotConfiguredInStore";
         }

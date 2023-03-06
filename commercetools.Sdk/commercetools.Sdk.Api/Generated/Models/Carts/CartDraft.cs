@@ -29,16 +29,6 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IStoreResourceIdentifier Store { get; set; }
 
-        public string Country { get; set; }
-
-        public IInventoryMode InventoryMode { get; set; }
-
-        public ITaxMode TaxMode { get; set; }
-
-        public IRoundingMode TaxRoundingMode { get; set; }
-
-        public ITaxCalculationMode TaxCalculationMode { get; set; }
-
         public IList<ILineItemDraft> LineItems { get; set; }
         public IEnumerable<ILineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
@@ -47,21 +37,23 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
 
-        public IBaseAddress ShippingAddress { get; set; }
-
-        public IBaseAddress BillingAddress { get; set; }
-
-        public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
+        public ITaxMode TaxMode { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRateForShippingMethod { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
+        public IRoundingMode TaxRoundingMode { get; set; }
 
-        public string Locale { get; set; }
+        public ITaxCalculationMode TaxCalculationMode { get; set; }
 
-        public long? DeleteDaysAfterLastModification { get; set; }
+        public IInventoryMode InventoryMode { get; set; }
 
-        public ICartOrigin Origin { get; set; }
+        public IBaseAddress BillingAddress { get; set; }
+
+        public IBaseAddress ShippingAddress { get; set; }
+
+        public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
+
+        public IShippingRateInputDraft ShippingRateInput { get; set; }
 
         public IShippingMode ShippingMode { get; set; }
 
@@ -73,8 +65,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IEnumerable<IShippingDraft> ShippingEnumerable { set => Shipping = value.ToList(); }
 
 
-        public IShippingRateInputDraft ShippingRateInput { get; set; }
-
         public IList<IBaseAddress> ItemShippingAddresses { get; set; }
         public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
@@ -82,5 +72,15 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IList<string> DiscountCodes { get; set; }
         public IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+
+        public string Country { get; set; }
+
+        public string Locale { get; set; }
+
+        public ICartOrigin Origin { get; set; }
+
+        public long? DeleteDaysAfterLastModification { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

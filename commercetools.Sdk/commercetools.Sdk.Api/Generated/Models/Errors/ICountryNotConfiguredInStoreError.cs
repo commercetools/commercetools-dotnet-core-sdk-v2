@@ -5,8 +5,8 @@ using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStore))]
-    public partial interface ICountryNotConfiguredInStore : IErrorObject
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
+    public partial interface ICountryNotConfiguredInStoreError : IErrorObject
     {
         new string Code { get; set; }
 

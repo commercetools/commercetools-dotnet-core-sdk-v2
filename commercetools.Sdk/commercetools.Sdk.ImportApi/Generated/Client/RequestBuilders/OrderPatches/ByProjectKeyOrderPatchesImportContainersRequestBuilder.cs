@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
 {
 
-    public class ByProjectKeyOrderPatchesImportContainersRequestBuilder
+    public partial class ByProjectKeyOrderPatchesImportContainersRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

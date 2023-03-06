@@ -13,7 +13,9 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public long? VariantId { get; set; }
 
-        public long Quantity { get; set; }
+        public string Sku { get; set; }
+
+        public long? Quantity { get; set; }
 
         public DateTime? AddedAt { get; set; }
 
@@ -21,10 +23,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public IChannelResourceIdentifier DistributionChannel { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 
-        public string Sku { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

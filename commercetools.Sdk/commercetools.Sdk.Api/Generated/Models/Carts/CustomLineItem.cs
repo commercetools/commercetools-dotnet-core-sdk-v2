@@ -19,7 +19,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 
-        public ITypedMoney TotalPrice { get; set; }
+        public ICentPrecisionMoney TotalPrice { get; set; }
 
         public string Slug { get; set; }
 

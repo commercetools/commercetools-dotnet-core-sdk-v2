@@ -63,5 +63,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         IStoreKeyReference Store { get; set; }
 
+        IStateKeyReference State { get; set; }
+
     }
 }

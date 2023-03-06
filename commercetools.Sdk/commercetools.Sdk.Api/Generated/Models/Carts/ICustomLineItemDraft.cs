@@ -11,7 +11,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         ILocalizedString Name { get; set; }
 
-        long Quantity { get; set; }
+        long? Quantity { get; set; }
 
         IMoney Money { get; set; }
 

@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices
 {
 
-    public class ByProjectKeyPricesImportContainersRequestBuilder
+    public partial class ByProjectKeyPricesImportContainersRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

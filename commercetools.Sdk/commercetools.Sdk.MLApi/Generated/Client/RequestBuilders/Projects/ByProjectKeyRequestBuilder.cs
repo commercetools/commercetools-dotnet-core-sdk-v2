@@ -7,7 +7,7 @@ using commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities;
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Projects
 {
 
-    public class ByProjectKeyRequestBuilder
+    public partial class ByProjectKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

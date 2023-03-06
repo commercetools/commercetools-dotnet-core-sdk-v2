@@ -32,17 +32,19 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IPrice Price { get; set; }
 
+        long Quantity { get; set; }
+
+        ICentPrecisionMoney TotalPrice { get; set; }
+
+        IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+        IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
+
+
         ITaxedItemPrice TaxedPrice { get; set; }
 
         IList<IMethodTaxedPrice> TaxedPricePortions { get; set; }
         IEnumerable<IMethodTaxedPrice> TaxedPricePortionsEnumerable { set => TaxedPricePortions = value.ToList(); }
 
-
-        ITypedMoney TotalPrice { get; set; }
-
-        long Quantity { get; set; }
-
-        DateTime? AddedAt { get; set; }
 
         IList<IItemState> State { get; set; }
         IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
@@ -58,19 +60,17 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IChannelReference DistributionChannel { get; set; }
 
-        IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
-        IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
-
-
         ILineItemPriceMode PriceMode { get; set; }
 
         ILineItemMode LineItemMode { get; set; }
 
-        ICustomFields Custom { get; set; }
-
         IInventoryMode InventoryMode { get; set; }
 
         IItemShippingDetails ShippingDetails { get; set; }
+
+        ICustomFields Custom { get; set; }
+
+        DateTime? AddedAt { get; set; }
 
         DateTime? LastModifiedAt { get; set; }
 

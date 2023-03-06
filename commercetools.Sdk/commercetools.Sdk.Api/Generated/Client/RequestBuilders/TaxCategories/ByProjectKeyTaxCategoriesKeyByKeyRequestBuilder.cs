@@ -4,7 +4,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
 
-    public class ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder
+    public partial class ByProjectKeyTaxCategoriesKeyByKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
