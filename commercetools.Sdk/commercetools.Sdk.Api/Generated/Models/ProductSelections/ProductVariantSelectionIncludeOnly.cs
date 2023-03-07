@@ -1,21 +1,20 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
-    [Obsolete("usage of this endpoint has been deprecated.", false)]
-    public partial class ProductVariantSelectionInclusion : IProductVariantSelectionInclusion
+
+    public partial class ProductVariantSelectionIncludeOnly : IProductVariantSelectionIncludeOnly
     {
         public IProductVariantSelectionTypeEnum Type { get; set; }
 
         public IList<string> Skus { get; set; }
         public IEnumerable<string> SkusEnumerable { set => Skus = value.ToList(); }
 
-        public ProductVariantSelectionInclusion()
+        public ProductVariantSelectionIncludeOnly()
         {
-            this.Type = IProductVariantSelectionTypeEnum.FindEnum("inclusion");
+            this.Type = IProductVariantSelectionTypeEnum.FindEnum("includeOnly");
         }
     }
 }
