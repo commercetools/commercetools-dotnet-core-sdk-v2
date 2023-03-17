@@ -1,12 +1,13 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.ProductSelections;
+using commercetools.Sdk.Api.Models.Products;
 using System;
 
 
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class ProductSelectionCreatedMessage : IProductSelectionCreatedMessage
+    public partial class ProductSelectionVariantExclusionChangedMessage : IProductSelectionVariantExclusionChangedMessage
     {
         public string Id { get; set; }
 
@@ -30,10 +31,14 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IProductSelectionType ProductSelection { get; set; }
-        public ProductSelectionCreatedMessage()
+        public IProductReference Product { get; set; }
+
+        public IProductVariantExclusion OldVariantExclusion { get; set; }
+
+        public IProductVariantExclusion NewVariantExclusion { get; set; }
+        public ProductSelectionVariantExclusionChangedMessage()
         {
-            this.Type = "ProductSelectionCreated";
+            this.Type = "ProductSelectionVariantExclusionChanged";
         }
     }
 }

@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
 
         ICustomFieldsDraft Custom { get; set; }
 
+        IProductSelectionTypeEnum Type { get; set; }
+
     }
 }

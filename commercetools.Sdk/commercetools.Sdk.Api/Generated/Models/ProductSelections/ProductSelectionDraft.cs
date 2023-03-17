@@ -12,5 +12,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         public ILocalizedString Name { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IProductSelectionTypeEnum Type { get; set; }
     }
 }
