@@ -1,3 +1,4 @@
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IList<IDeliveryItem> Items { get; set; }
         IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
+
+        ICustom Custom { get; set; }
 
     }
 }
