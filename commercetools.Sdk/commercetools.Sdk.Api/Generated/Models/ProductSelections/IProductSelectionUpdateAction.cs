@@ -8,10 +8,12 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionUpdateAction))]
     [SubTypeDiscriminator("addProduct", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionAddProductAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionChangeNameAction))]
+    [SubTypeDiscriminator("excludeProduct", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionExcludeProductAction))]
     [SubTypeDiscriminator("removeProduct", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionRemoveProductAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetCustomTypeAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetKeyAction))]
+    [SubTypeDiscriminator("setVariantExclusion", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantExclusionAction))]
     [SubTypeDiscriminator("setVariantSelection", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantSelectionAction))]
     public partial interface IProductSelectionUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductSelectionUpdateAction>
     {
@@ -26,6 +28,12 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionChangeNameAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionChangeNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionExcludeProductAction ExcludeProduct(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionExcludeProductAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionExcludeProductAction();
             init?.Invoke(t);
             return t;
         }
@@ -50,6 +58,12 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantExclusionAction SetVariantExclusion(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantExclusionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantExclusionAction();
             init?.Invoke(t);
             return t;
         }

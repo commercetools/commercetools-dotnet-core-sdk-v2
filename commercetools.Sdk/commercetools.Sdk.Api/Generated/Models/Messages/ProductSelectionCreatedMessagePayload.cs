@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public IIndividualProductSelectionType ProductSelection { get; set; }
+        public IProductSelectionType ProductSelection { get; set; }
         public ProductSelectionCreatedMessagePayload()
         {
             this.Type = "ProductSelectionCreated";

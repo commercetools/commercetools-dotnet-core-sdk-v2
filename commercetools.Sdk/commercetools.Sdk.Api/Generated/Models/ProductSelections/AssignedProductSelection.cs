@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
 
         public IProductVariantSelection VariantSelection { get; set; }
 
+        public IProductVariantExclusion VariantExclusion { get; set; }
+
         public DateTime CreatedAt { get; set; }
     }
 }

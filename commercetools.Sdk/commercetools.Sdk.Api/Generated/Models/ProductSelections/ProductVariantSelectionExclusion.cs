@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class ProductVariantSelectionExclusion : IProductVariantSelectionExclusion
     {
         public IProductVariantSelectionTypeEnum Type { get; set; }

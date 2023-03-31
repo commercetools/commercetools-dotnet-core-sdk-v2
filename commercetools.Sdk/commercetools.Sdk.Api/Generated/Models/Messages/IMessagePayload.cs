@@ -113,7 +113,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductSelectionCreated", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessagePayload))]
     [SubTypeDiscriminator("ProductSelectionDeleted", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionDeletedMessagePayload))]
     [SubTypeDiscriminator("ProductSelectionProductAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionProductAddedMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionProductExcluded", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionProductExcludedMessagePayload))]
     [SubTypeDiscriminator("ProductSelectionProductRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessagePayload))]
+    [SubTypeDiscriminator("ProductSelectionVariantExclusionChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantExclusionChangedMessagePayload))]
     [SubTypeDiscriminator("ProductSelectionVariantSelectionChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantSelectionChangedMessagePayload))]
     [SubTypeDiscriminator("ProductSlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductSlugChangedMessagePayload))]
     [SubTypeDiscriminator("ProductStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.ProductStateTransitionMessagePayload))]
@@ -802,9 +804,21 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionProductExcludedMessagePayload ProductSelectionProductExcluded(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionProductExcludedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionProductExcludedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessagePayload ProductSelectionProductRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionProductRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantExclusionChangedMessagePayload ProductSelectionVariantExclusionChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantExclusionChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductSelectionVariantExclusionChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }

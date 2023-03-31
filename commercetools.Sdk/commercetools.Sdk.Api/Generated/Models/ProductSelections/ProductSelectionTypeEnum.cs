@@ -9,7 +9,10 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     public enum ProductSelectionTypeEnum
     {
         [Description("individual")]
-        Individual
+        Individual,
+
+        [Description("individualExclusion")]
+        IndividualExclusion
     }
 
     public class ProductSelectionTypeEnumWrapper : IProductSelectionTypeEnum
@@ -38,13 +41,17 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         public static IProductSelectionTypeEnum Individual = new ProductSelectionTypeEnumWrapper
         { Value = ProductSelectionTypeEnum.Individual, JsonName = "individual" };
 
+        public static IProductSelectionTypeEnum IndividualExclusion = new ProductSelectionTypeEnumWrapper
+        { Value = ProductSelectionTypeEnum.IndividualExclusion, JsonName = "individualExclusion" };
+
         ProductSelectionTypeEnum? Value { get; }
 
         static IProductSelectionTypeEnum[] Values()
         {
             return new[]
             {
-                 Individual
+                 Individual ,
+                 IndividualExclusion
              };
         }
         static IProductSelectionTypeEnum FindEnum(string value)

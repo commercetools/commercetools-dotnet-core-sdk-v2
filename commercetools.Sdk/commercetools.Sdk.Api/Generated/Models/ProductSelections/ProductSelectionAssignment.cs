@@ -11,5 +11,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         public IProductSelectionReference ProductSelection { get; set; }
 
         public IProductVariantSelection VariantSelection { get; set; }
+
+        public IProductVariantExclusion VariantExclusion { get; set; }
     }
 }

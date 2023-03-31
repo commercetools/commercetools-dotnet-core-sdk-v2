@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,7 @@ namespace commercetools.Sdk.Api.Models.GraphQl
         public IList<Object> Path { get; set; }
         public IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
 
+
+        public IGraphQLErrorObject Extensions { get; set; }
     }
 }
