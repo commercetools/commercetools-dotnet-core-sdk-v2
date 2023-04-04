@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         public string Action { get; set; }
 
         public string TaxRateId { get; set; }
+
+        public string TaxRateKey { get; set; }
         public TaxCategoryRemoveTaxRateAction()
         {
             this.Action = "removeTaxRate";

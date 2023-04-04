@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         string Name { get; set; }
 
         decimal Amount { get; set; }

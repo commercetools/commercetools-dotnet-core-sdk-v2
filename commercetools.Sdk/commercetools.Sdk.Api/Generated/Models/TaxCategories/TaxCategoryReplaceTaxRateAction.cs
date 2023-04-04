@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         public string TaxRateId { get; set; }
 
+        public string TaxRateKey { get; set; }
+
         public ITaxRateDraft TaxRate { get; set; }
         public TaxCategoryReplaceTaxRateAction()
         {
