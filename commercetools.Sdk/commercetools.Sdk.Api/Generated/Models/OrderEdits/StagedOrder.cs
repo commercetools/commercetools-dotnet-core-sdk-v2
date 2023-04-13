@@ -64,6 +64,10 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public IShippingMode ShippingMode { get; set; }
 
+        public string ShippingKey { get; set; }
+
+        public ICustomFields ShippingCustomFields { get; set; }
+
         public IList<IShipping> Shipping { get; set; }
         public IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
 

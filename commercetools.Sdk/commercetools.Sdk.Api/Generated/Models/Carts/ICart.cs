@@ -66,13 +66,17 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IShippingMode ShippingMode { get; set; }
 
+        string ShippingKey { get; set; }
+
         IShippingInfo ShippingInfo { get; set; }
+
+        IShippingRateInput ShippingRateInput { get; set; }
+
+        ICustomFields ShippingCustomFields { get; set; }
 
         IList<IShipping> Shipping { get; set; }
         IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
 
-
-        IShippingRateInput ShippingRateInput { get; set; }
 
         IList<IAddress> ItemShippingAddresses { get; set; }
         IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
