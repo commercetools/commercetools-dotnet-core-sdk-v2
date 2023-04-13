@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     {
         string TaxRateId { get; set; }
 
+        string TaxRateKey { get; set; }
+
     }
 }

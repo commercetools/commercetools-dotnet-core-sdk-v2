@@ -22,5 +22,7 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
 
+        string Key { get; set; }
+
     }
 }
