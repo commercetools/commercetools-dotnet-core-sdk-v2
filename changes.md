@@ -1,25 +1,22 @@
 **Api changes**
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added property `shippingKey` to type `Cart`
-- added property `shippingCustomFields` to type `Cart`
-- added property `shippingKey` to type `StagedOrder`
-- added property `shippingCustomFields` to type `StagedOrder`
-- added property `shippingKey` to type `Order`
-- added property `shippingCustomFields` to type `Order`
-- added property `key` to type `TaxRate`
-- added property `key` to type `TaxRateDraft`
-- added property `taxRateKey` to type `TaxCategoryRemoveTaxRateAction`
-- added property `taxRateKey` to type `TaxCategoryReplaceTaxRateAction`
+- added enum `direct-discount` to type `ReferenceTypeId`
 </details>
 
 
 <details>
-<summary>Required Property(s)</summary>
+<summary>Added Type(s)</summary>
 
-- changed property `taxRateId` of type `TaxCategoryRemoveTaxRateAction` to be optional
-- changed property `taxRateId` of type `TaxCategoryReplaceTaxRateAction` to be optional
+- added type `DirectDiscountReference`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `discount` of type `DiscountedLineItemPortion` from type `CartDiscountReference` to `Reference`
 </details>
 

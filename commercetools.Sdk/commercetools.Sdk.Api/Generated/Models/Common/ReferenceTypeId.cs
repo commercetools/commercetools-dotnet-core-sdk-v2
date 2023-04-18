@@ -32,6 +32,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("customer-group")]
         CustomerGroup,
 
+        [Description("direct-discount")]
+        DirectDiscount,
+
         [Description("discount-code")]
         DiscountCode,
 
@@ -155,6 +158,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId CustomerGroup = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.CustomerGroup, JsonName = "customer-group" };
 
+        public static IReferenceTypeId DirectDiscount = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.DirectDiscount, JsonName = "direct-discount" };
+
         public static IReferenceTypeId DiscountCode = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.DiscountCode, JsonName = "discount-code" };
 
@@ -244,6 +250,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  Channel ,
                  Customer ,
                  CustomerGroup ,
+                 DirectDiscount ,
                  DiscountCode ,
                  Extension ,
                  InventoryEntry ,

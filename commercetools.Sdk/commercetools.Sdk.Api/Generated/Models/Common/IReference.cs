@@ -14,6 +14,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("channel", typeof(commercetools.Sdk.Api.Models.Channels.ChannelReference))]
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.Api.Models.Customers.CustomerReference))]
     [SubTypeDiscriminator("customer-group", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference))]
+    [SubTypeDiscriminator("direct-discount", typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountReference))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference))]
     [SubTypeDiscriminator("inventory-entry", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference))]
     [SubTypeDiscriminator("key-value-document", typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference))]
@@ -87,6 +88,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference CustomerGroup(Action<commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.DirectDiscountReference DirectDiscount(Action<commercetools.Sdk.Api.Models.Carts.DirectDiscountReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.DirectDiscountReference();
             init?.Invoke(t);
             return t;
         }
