@@ -26,7 +26,10 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
 
         public int ProductCount { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public IProductSelectionTypeEnum Type { get; set; }
+
+        public IProductSelectionMode Mode { get; set; }
 
         public ICustomFields Custom { get; set; }
     }

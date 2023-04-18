@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
+using System;
 using commercetools.Base.CustomAttributes;
 
 
@@ -14,7 +15,10 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
 
         ICustomFieldsDraft Custom { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         IProductSelectionTypeEnum Type { get; set; }
+
+        IProductSelectionMode Mode { get; set; }
 
     }
 }
