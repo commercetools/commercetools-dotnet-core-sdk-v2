@@ -19,5 +19,7 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         ICustomFieldsDraft Custom { get; set; }
 
+        string Key { get; set; }
+
     }
 }
