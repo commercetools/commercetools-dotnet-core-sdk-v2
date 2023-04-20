@@ -9,8 +9,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string ParcelId { get; set; }
 
-        string ParcelKey { get; set; }
-
         IParcelMeasurements Measurements { get; set; }
 
     }

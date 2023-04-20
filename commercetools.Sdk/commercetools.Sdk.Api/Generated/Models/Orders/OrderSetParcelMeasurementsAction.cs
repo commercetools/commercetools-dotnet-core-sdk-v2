@@ -7,8 +7,6 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string ParcelId { get; set; }
 
-        public string ParcelKey { get; set; }
-
         public IParcelMeasurements Measurements { get; set; }
         public OrderSetParcelMeasurementsAction()
         {

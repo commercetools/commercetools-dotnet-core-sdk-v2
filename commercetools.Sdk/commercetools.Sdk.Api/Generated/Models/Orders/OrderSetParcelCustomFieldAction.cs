@@ -10,8 +10,6 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string ParcelId { get; set; }
 
-        public string ParcelKey { get; set; }
-
         public string Name { get; set; }
 
         public Object Value { get; set; }

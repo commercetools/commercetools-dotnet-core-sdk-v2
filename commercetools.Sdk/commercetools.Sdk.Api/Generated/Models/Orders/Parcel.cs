@@ -11,8 +11,6 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         public string Id { get; set; }
 
-        public string Key { get; set; }
-
         public DateTime CreatedAt { get; set; }
 
         public IParcelMeasurements Measurements { get; set; }
