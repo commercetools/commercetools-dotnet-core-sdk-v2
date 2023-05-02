@@ -10,6 +10,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     [SubTypeDiscriminator("individualExclusion", typeof(commercetools.Sdk.Api.Models.ProductSelections.IndividualExclusionProductSelectionType))]
     public partial interface IProductSelectionType
     {
+        [ObsoleteAttribute("This property is obsolete", false)]
         IProductSelectionTypeEnum Type { get; set; }
 
         static commercetools.Sdk.Api.Models.ProductSelections.IndividualProductSelectionType Individual(Action<commercetools.Sdk.Api.Models.ProductSelections.IndividualProductSelectionType> init = null)

@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductSelectionCreatedMessage))]
     public partial interface IProductSelectionCreatedMessage : IMessage
     {
-        IProductSelectionType ProductSelection { get; set; }
+        IProductSelection ProductSelection { get; set; }
 
     }
 }
