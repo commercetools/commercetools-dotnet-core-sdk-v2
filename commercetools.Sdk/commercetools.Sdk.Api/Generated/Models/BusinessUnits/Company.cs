@@ -57,8 +57,14 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         public string DefaultBillingAddressId { get; set; }
 
+        public IBusinessUnitAssociateMode AssociateMode { get; set; }
+
         public IList<IAssociate> Associates { get; set; }
         public IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
+
+
+        public IList<IInheritedAssociate> InheritedAssociates { get; set; }
+        public IEnumerable<IInheritedAssociate> InheritedAssociatesEnumerable { set => InheritedAssociates = value.ToList(); }
 
 
         public IBusinessUnitKeyReference ParentUnit { get; set; }

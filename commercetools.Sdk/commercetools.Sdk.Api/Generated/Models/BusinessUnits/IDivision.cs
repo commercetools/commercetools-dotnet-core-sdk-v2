@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         new IBusinessUnitStoreMode StoreMode { get; set; }
 
+        new IBusinessUnitAssociateMode AssociateMode { get; set; }
+
     }
 }

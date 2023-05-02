@@ -26,6 +26,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         public string ContactEmail { get; set; }
 
+        public IBusinessUnitAssociateMode AssociateMode { get; set; }
+
         public IList<IAssociateDraft> Associates { get; set; }
         public IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 

@@ -18,6 +18,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]
     [SubTypeDiscriminator("changeShoppingListsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
+    [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
     public partial interface IProjectUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProjectUpdateAction>
     {
@@ -92,6 +93,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction SetExternalOAuth(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction SetMyBusinessUnitAssociateRoleOnCreation(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction();
             init?.Invoke(t);
             return t;
         }
