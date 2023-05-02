@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">commercetools.Sdk
-   &#160;<span id="projectnumber">7.2.0</span>
+   &#160;<span id="projectnumber">7.3.0</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -118,6 +118,16 @@ $(function() {
 , <a class="el" href="da/d85/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_invalid_field_error.html#a6d748575cdb4c5cca2cfe129e68b8e43">commercetools.Sdk.Api.Models.Errors.InvalidFieldError</a>
 , <a class="el" href="d5/dc7/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_i_required_field_error.html#a598fb6b1fd78e20f4b006ef20f3b31f1">commercetools.Sdk.Api.Models.Errors.IRequiredFieldError</a>
 , <a class="el" href="d1/d78/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_required_field_error.html#a4cc4f29a92cfbadf9a14f5b90fdc7501">commercetools.Sdk.Api.Models.Errors.RequiredFieldError</a>
+, <a class="el" href="dd/d9d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_query_expression_value.html#a63789cceaba20726a80c8017fd60bfba">commercetools.Sdk.Api.Models.Orders.IOrderSearchQueryExpressionValue</a>
+, <a class="el" href="d2/d90/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_sorting.html#a9cfccd3e3a36d88066a5181b2c76fdae">commercetools.Sdk.Api.Models.Orders.IOrderSearchSorting</a>
+, <a class="el" href="d4/d9a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_any_value.html#aa7d067ad7e19b8a32370ce7c87eddc06">commercetools.Sdk.Api.Models.Orders.OrderSearchAnyValue</a>
+, <a class="el" href="d2/d1d/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_date_range_value.html#ad6d36275a2da7d6cd50a8f43d76c1814">commercetools.Sdk.Api.Models.Orders.OrderSearchDateRangeValue</a>
+, <a class="el" href="db/d20/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_full_text_value.html#ae984e149f980d0a5254a2c29b4e95a2d">commercetools.Sdk.Api.Models.Orders.OrderSearchFullTextValue</a>
+, <a class="el" href="dc/d14/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_long_range_value.html#a1d037c3ed0cb9b6d199e979e4f9737ed">commercetools.Sdk.Api.Models.Orders.OrderSearchLongRangeValue</a>
+, <a class="el" href="da/d66/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_number_range_value.html#abb9308881c716c7a65d50d9f37a93ad8">commercetools.Sdk.Api.Models.Orders.OrderSearchNumberRangeValue</a>
+, <a class="el" href="d9/d4a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_query_expression_value.html#a75166bcdab9ea8251c00ce8a9c8879a5">commercetools.Sdk.Api.Models.Orders.OrderSearchQueryExpressionValue</a>
+, <a class="el" href="d8/d26/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_sorting.html#af895eb0b442ae68f683733b051f328e4">commercetools.Sdk.Api.Models.Orders.OrderSearchSorting</a>
+, <a class="el" href="d4/d4a/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_string_value.html#a8d9b7f08ca45c08409a384962cad7316">commercetools.Sdk.Api.Models.Orders.OrderSearchStringValue</a>
 , <a class="el" href="d9/d38/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_errors_1_1_duplicate_field_error.html#a76a6bb3eb11ba9e66625b710e01948d5">commercetools.Sdk.ImportApi.Models.Errors.DuplicateFieldError</a>
 , <a class="el" href="df/df9/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_errors_1_1_i_duplicate_field_error.html#aefa170efbc064af18a2ebed41e990b2d">commercetools.Sdk.ImportApi.Models.Errors.IDuplicateFieldError</a>
 , <a class="el" href="d6/dca/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_errors_1_1_i_invalid_field_error.html#a5478bf80b8ca47c54f59a98e02aa5647">commercetools.Sdk.ImportApi.Models.Errors.IInvalidFieldError</a>
@@ -333,12 +343,20 @@ $(function() {
 , <a class="el" href="d0/d7c/interfacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_order_patches_1_1_i_order_patch_import.html#ab533d725addfc2b8a7ecddbc93a80a8a">commercetools.Sdk.ImportApi.Models.OrderPatches.IOrderPatchImport</a>
 , <a class="el" href="d3/d9b/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_order_patches_1_1_order_patch_import.html#aef189d55d16bb3b713bc661df73e7270">commercetools.Sdk.ImportApi.Models.OrderPatches.OrderPatchImport</a>
 </li>
-<li>Filter()
-: <a class="el" href="d9/d7f/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_result.html#a26e5c83bb527b3f5d239f2248b018e12">commercetools.Sdk.Api.Models.Products.IFacetResult</a>
+<li>Filter
+: <a class="el" href="da/d7a/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_filter_expression.html#ab4d7ee3b844058f3aa41acf2817ba3b7">commercetools.Sdk.Api.Models.Orders.IOrderSearchFilterExpression</a>
+, <a class="el" href="d2/d90/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_sorting.html#abbecf70e9deaca23a5d51b7562b8fc02">commercetools.Sdk.Api.Models.Orders.IOrderSearchSorting</a>
+, <a class="el" href="d3/daa/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_filter_expression.html#a2193b9a844e01808abd2ab21dc64d3ca">commercetools.Sdk.Api.Models.Orders.OrderSearchFilterExpression</a>
+, <a class="el" href="d8/d26/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_sorting.html#a2cdf2a82389cddda03d28d67831c4bde">commercetools.Sdk.Api.Models.Orders.OrderSearchSorting</a>
+, <a class="el" href="d9/d7f/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_result.html#a26e5c83bb527b3f5d239f2248b018e12">commercetools.Sdk.Api.Models.Products.IFacetResult</a>
 , <a class="el" href="dc/db6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_types.html#a96c47022c546485712313a1a54fd2665">commercetools.Sdk.Api.Models.Products.IFacetTypes</a>
 </li>
 <li>FilteredFacetResult()
 : <a class="el" href="da/d5c/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_filtered_facet_result.html#a6b0754338aac3a1aaadb37e3d3c72cf5">commercetools.Sdk.Api.Models.Products.FilteredFacetResult</a>
+</li>
+<li>FilterEnumerable
+: <a class="el" href="da/d7a/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_filter_expression.html#a7ff4205b3ecab8ece312c38f97cd4d06">commercetools.Sdk.Api.Models.Orders.IOrderSearchFilterExpression</a>
+, <a class="el" href="d3/daa/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_filter_expression.html#ab004704192727e13ad5db758995d4ed0">commercetools.Sdk.Api.Models.Orders.OrderSearchFilterExpression</a>
 </li>
 <li>FindEnum()
 : <a class="el" href="d1/dd0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_business_units_1_1_i_associate_role.html#a9a77de99b38466877e3ee3e362912c0b">commercetools.Sdk.Api.Models.BusinessUnits.IAssociateRole</a>
@@ -368,6 +386,9 @@ $(function() {
 , <a class="el" href="d1/dbd/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_extensions_1_1_i_extension_action.html#a876845128e97669a33467b64f2797b0a">commercetools.Sdk.Api.Models.Extensions.IExtensionAction</a>
 , <a class="el" href="d9/de0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_extensions_1_1_i_extension_resource_type_id.html#a16e36c4f3ef36ef961093ecbb1908938">commercetools.Sdk.Api.Models.Extensions.IExtensionResourceTypeId</a>
 , <a class="el" href="d8/df3/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_me_1_1_i_my_quote_state.html#a070e4513b096b508b475530cfaa45f5d">commercetools.Sdk.Api.Models.Me.IMyQuoteState</a>
+, <a class="el" href="de/d50/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_match_type.html#a47b5d8ed41cdded61c8dcef86743ff02">commercetools.Sdk.Api.Models.Orders.IOrderSearchMatchType</a>
+, <a class="el" href="d5/de8/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_sort_mode.html#a431d798c5b5cbe6eb3cb2dd080a749ed">commercetools.Sdk.Api.Models.Orders.IOrderSearchSortMode</a>
+, <a class="el" href="d6/d79/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_sort_order.html#a051c40dcc7585c4065f8aded430c16de">commercetools.Sdk.Api.Models.Orders.IOrderSearchSortOrder</a>
 , <a class="el" href="d5/d78/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_state.html#a1bdeaa3b967095213bb0c854003e5543">commercetools.Sdk.Api.Models.Orders.IOrderState</a>
 , <a class="el" href="d0/dfc/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_payment_state.html#a13334e72fba59a9a1200313f84d2c0aa">commercetools.Sdk.Api.Models.Orders.IPaymentState</a>
 , <a class="el" href="de/da1/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_return_payment_state.html#aa7653e2babc95ef1a0925e713da1711e">commercetools.Sdk.Api.Models.Orders.IReturnPaymentState</a>
@@ -378,6 +399,7 @@ $(function() {
 , <a class="el" href="dc/db6/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_facet_types.html#a92c1280ab56164bce06f8f5ba78cad4d">commercetools.Sdk.Api.Models.Products.IFacetTypes</a>
 , <a class="el" href="dd/de0/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_product_price_mode_enum.html#a5a18d7b83874fcad55f664801523fb3b">commercetools.Sdk.Api.Models.Products.IProductPriceModeEnum</a>
 , <a class="el" href="d8/daf/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_i_term_facet_result_type.html#afb1b80c7ca1759875a68d7d0d5894f0c">commercetools.Sdk.Api.Models.Products.ITermFacetResultType</a>
+, <a class="el" href="d1/da3/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_selections_1_1_i_product_selection_mode.html#af9653165a08208b1c7393db2d38449cd">commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionMode</a>
 , <a class="el" href="de/d2b/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_selections_1_1_i_product_selection_type_enum.html#a8737f2d2f694064c0b64b171242b01dc">commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionTypeEnum</a>
 , <a class="el" href="d4/da9/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_selections_1_1_i_product_variant_selection_type_enum.html#a199ef383cfbd8b82ee6318980bb94312">commercetools.Sdk.Api.Models.ProductSelections.IProductVariantSelectionTypeEnum</a>
 , <a class="el" href="d3/d31/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_types_1_1_i_attribute_constraint_enum.html#a02f8f704ec22a0d9490b09a30ac1f1c5">commercetools.Sdk.Api.Models.ProductTypes.IAttributeConstraintEnum</a>
@@ -616,6 +638,10 @@ $(function() {
 </li>
 <li>Frozen
 : <a class="el" href="d8/d7c/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_i_cart_state.html#a1b29e9f68236405d079faf6956bbca48">commercetools.Sdk.Api.Models.Carts.ICartState</a>
+</li>
+<li>FullText
+: <a class="el" href="df/d27/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_i_order_search_full_text_expression.html#a498fbdef1820d7b534f870e9e836ebd2">commercetools.Sdk.Api.Models.Orders.IOrderSearchFullTextExpression</a>
+, <a class="el" href="d2/d55/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_orders_1_1_order_search_full_text_expression.html#aaffa13d552af2dd1a1792d8affb6da7d">commercetools.Sdk.Api.Models.Orders.OrderSearchFullTextExpression</a>
 </li>
 <li>Function
 : <a class="el" href="d7/d5d/interfacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_shipping_methods_1_1_i_price_function.html#a2a5eb3518e65ba5abff7068431df3ce2">commercetools.Sdk.Api.Models.ShippingMethods.IPriceFunction</a>
