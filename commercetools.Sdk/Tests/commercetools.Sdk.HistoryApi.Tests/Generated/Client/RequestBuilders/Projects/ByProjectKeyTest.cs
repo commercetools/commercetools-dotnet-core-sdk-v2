@@ -22,10 +22,10 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithResourceType(commercetools.Sdk.HistoryApi.Models.ChangeHistories.IChangeHistoryResourceType.FindEnum("resourceType"))
+                   .WithResourceTypes(commercetools.Sdk.HistoryApi.Models.ChangeHistories.IChangeHistoryResourceType.FindEnum("resourceTypes"))
                    .Build(),
                    "Get",
-                   "/test_projectKey?resourceType=resourceType",
+                   "/test_projectKey?resourceTypes=resourceTypes",
                },
                new Object[] {
                    ApiRoot
