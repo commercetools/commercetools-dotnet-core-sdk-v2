@@ -85,6 +85,7 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         }
         #endregion
 
+        #region WithSubscription
         public static async Task WithSubscription(ProjectApiRoot apiRoot, Func<ISubscription, Task> func)
         {
             await WithAsync(apiRoot, new SubscriptionDraft(), DefaultSubscriptionDraft, func, CreateSubscription, DeleteSubscription);
@@ -94,5 +95,11 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         {
             await WithAsync(client, new SubscriptionDraft(), DefaultSubscriptionDraft, func, CreateSubscription, DeleteSubscription);
         }
+
+        public static async Task WithUpdateableSubscription(IClient client, Func<ISubscription, Task<ISubscription>> func)
+        {
+            await WithUpdateableAsync(client, new SubscriptionDraft(), DefaultSubscriptionDraft, func, CreateSubscription, DeleteSubscription);
+        }
+        #endregion
     }
 }
