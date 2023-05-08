@@ -40,6 +40,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
 using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
 using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
+using commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate;
+using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -270,6 +272,16 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
         {
             return With().StandalonePrices();
+        }
+
+        public ByProjectKeyAsAssociateRequestBuilder AsAssociate()
+        {
+            return With().AsAssociate();
+        }
+
+        public ByProjectKeyAssociateRolesRequestBuilder AssociateRoles()
+        {
+            return With().AssociateRoles();
         }
     }
 }
