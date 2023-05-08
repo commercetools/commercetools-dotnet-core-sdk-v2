@@ -27,9 +27,9 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             this.RequestUrl = $"/{ProjectKey}";
         }
 
-        public List<string> GetResourceType()
+        public List<string> GetResourceTypes()
         {
-            return this.GetQueryParam("resourceType");
+            return this.GetQueryParam("resourceTypes");
         }
 
         public List<string> GetDateFrom()
@@ -102,9 +102,9 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return this.GetQueryParam("expand");
         }
 
-        public ByProjectKeyGet WithResourceType(IChangeHistoryResourceType resourceType)
+        public ByProjectKeyGet WithResourceTypes(IChangeHistoryResourceType resourceTypes)
         {
-            return this.AddQueryParam("resourceType", resourceType.ToString());
+            return this.AddQueryParam("resourceTypes", resourceTypes.ToString());
         }
 
         public ByProjectKeyGet WithDateFrom(Object dateFrom)

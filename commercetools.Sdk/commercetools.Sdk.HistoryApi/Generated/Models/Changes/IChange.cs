@@ -144,6 +144,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetCategoryOrderHintChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCategoryOrderHintChange))]
     [SubTypeDiscriminator("SetChannelRolesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetChannelRolesChange))]
     [SubTypeDiscriminator("SetCompanyNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCompanyNameChange))]
+    [SubTypeDiscriminator("SetCountriesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCountriesChange))]
     [SubTypeDiscriminator("SetCountryChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCountryChange))]
     [SubTypeDiscriminator("SetCustomerChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomerChange))]
     [SubTypeDiscriminator("SetCustomerEmailChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomerEmailChange))]
@@ -222,6 +223,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetProductSelectionsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetProductSelectionsChange))]
     [SubTypeDiscriminator("SetProductVariantKeyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetProductVariantKeyChange))]
     [SubTypeDiscriminator("SetPropertyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange))]
+    [SubTypeDiscriminator("SetPurchaseOrderNumberChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetPurchaseOrderNumberChange))]
     [SubTypeDiscriminator("SetRatingChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetRatingChange))]
     [SubTypeDiscriminator("SetReservationsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange))]
     [SubTypeDiscriminator("SetRestockableInDaysChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetRestockableInDaysChange))]
@@ -1105,6 +1107,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetCountriesChange SetCountriesChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetCountriesChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetCountriesChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetCountryChange SetCountryChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetCountryChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetCountryChange();
@@ -1570,6 +1578,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange SetPropertyChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetPurchaseOrderNumberChange SetPurchaseOrderNumberChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetPurchaseOrderNumberChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetPurchaseOrderNumberChange();
             init?.Invoke(t);
             return t;
         }

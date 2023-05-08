@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.AssociateRoles;
 using commercetools.Base.CustomAttributes;
 
 
@@ -7,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IBusinessUnitConfiguration
     {
         IBusinessUnitConfigurationStatus MyBusinessUnitStatusOnCreation { get; set; }
+
+        IAssociateRoleKeyReference MyBusinessUnitAssociateRoleOnCreation { get; set; }
 
     }
 }

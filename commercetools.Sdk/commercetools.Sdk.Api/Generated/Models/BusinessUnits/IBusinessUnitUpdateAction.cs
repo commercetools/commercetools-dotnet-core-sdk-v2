@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddStoreAction))]
     [SubTypeDiscriminator("changeAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction))]
     [SubTypeDiscriminator("changeAssociate", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateAction))]
+    [SubTypeDiscriminator("changeAssociateMode", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateModeAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeNameAction))]
     [SubTypeDiscriminator("changeParentUnit", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeParentUnitAction))]
     [SubTypeDiscriminator("changeStatus", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeStatusAction))]
@@ -74,6 +75,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateAction ChangeAssociate(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateModeAction ChangeAssociateMode(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateModeAction();
             init?.Invoke(t);
             return t;
         }

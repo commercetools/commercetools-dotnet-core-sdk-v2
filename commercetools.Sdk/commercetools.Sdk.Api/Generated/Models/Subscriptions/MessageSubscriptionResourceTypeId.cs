@@ -8,6 +8,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum MessageSubscriptionResourceTypeId
     {
+        [Description("associate-role")]
+        AssociateRole,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -74,6 +77,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IMessageSubscriptionResourceTypeId), "FindEnum")]
     public interface IMessageSubscriptionResourceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IMessageSubscriptionResourceTypeId AssociateRole = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.AssociateRole, JsonName = "associate-role" };
+
         public static IMessageSubscriptionResourceTypeId BusinessUnit = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.BusinessUnit, JsonName = "business-unit" };
 
@@ -122,6 +128,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 AssociateRole ,
                  BusinessUnit ,
                  Category ,
                  Customer ,
