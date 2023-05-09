@@ -65,5 +65,39 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
                 return updatedSubscription;
             });
         }
+
+        [Fact]
+        public async Task MessageSubscription()
+        {
+            await WithUpdateableSubscription(_client, async subscription => 
+            {
+                Assert.NotNull(subscription);
+
+                List<IMessageSubscription> messageSubscriptionList = new List<IMessageSubscription>
+                {
+                    new MessageSubscription { ResourceTypeId = IMessageSubscriptionResourceTypeId.Product }
+                };
+
+                var action = new SubscriptionSetMessagesAction
+                {
+                    Messages = messageSubscriptionList
+                };
+                var update = new SubscriptionUpdate
+                {
+                    Version = subscription.Version,
+                    Actions = new List<ISubscriptionUpdateAction> { action }
+                };
+
+                var updatedSubscription = await _client.WithApi().WithProjectKey(_projectKey)
+                    .Subscriptions()
+                    .WithId(subscription.Id)
+                    .Post(update)
+                    .ExecuteAsync();
+
+                Assert.NotNull(updatedSubscription);
+                Assert.Equal(subscription.Id, updatedSubscription.Id);
+                return updatedSubscription;
+            });
+        }
     }
 }
