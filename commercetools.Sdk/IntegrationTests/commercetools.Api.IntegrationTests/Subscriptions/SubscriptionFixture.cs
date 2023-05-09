@@ -16,7 +16,12 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         {
             subscriptionDraft.Key = TestingUtility.RandomString();
             subscriptionDraft.Destination = new AzureServiceBusDestination();
-            subscriptionDraft.Messages = new List<IMessageSubscription>();
+
+            List<IMessageSubscription> messageSubscriptionList = new List<IMessageSubscription>
+            {
+                new MessageSubscription { ResourceTypeId = IMessageSubscriptionResourceTypeId.Review }
+            };
+            subscriptionDraft.Messages = messageSubscriptionList;
             
             return subscriptionDraft;
         }
