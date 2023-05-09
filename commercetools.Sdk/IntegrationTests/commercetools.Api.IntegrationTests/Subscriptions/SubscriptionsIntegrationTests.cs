@@ -42,14 +42,14 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         [Fact]
         public async Task ChangeSubscription()
         {
-            List<IChangeSubscription> changeSubscriptionList = new List<IChangeSubscription>
-            {
-                new ChangeSubscription { ResourceTypeId = IChangeSubscriptionResourceTypeId.Product }
-            };
-
             await WithUpdateableSubscription(_client, async subscription => 
             {
                 Assert.NotNull(subscription);
+
+                List<IChangeSubscription> changeSubscriptionList = new List<IChangeSubscription>
+                {
+                    new ChangeSubscription { ResourceTypeId = IChangeSubscriptionResourceTypeId.Product }
+                };
 
                 var action = new SubscriptionSetChangesAction
                 {
