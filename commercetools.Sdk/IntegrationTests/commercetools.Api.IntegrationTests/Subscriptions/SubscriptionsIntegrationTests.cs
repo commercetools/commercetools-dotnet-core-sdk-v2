@@ -33,7 +33,7 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         }
 
         [Fact]
-        public async Task ChangeSubscription()
+        public async Task SubscriptionSetChanges()
         {
             await WithUpdateableSubscription(_client, async subscription => 
             {
@@ -67,7 +67,7 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
         }
 
         [Fact]
-        public async Task MessageSubscription()
+        public async Task SubscriptionSetMessages()
         {
             await WithUpdateableSubscription(_client, async subscription => 
             {
