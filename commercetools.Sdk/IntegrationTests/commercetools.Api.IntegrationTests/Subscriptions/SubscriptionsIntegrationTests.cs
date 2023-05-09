@@ -10,37 +10,50 @@ using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 using Xunit;
 using commercetools.Sdk.Api.Models.Subscriptions;
+
 using static commercetools.Api.IntegrationTests.Subscriptions.SubscriptionFixture;
 
 
 namespace commercetools.Api.IntegrationTests.Subscriptions
-
+{
     [Collection("Integration Tests")]
     public class SubscriptionsIntegrationTests
     {
-        private readonly ProjectApiRoot _projectApiRoot;
+        // private readonly ProjectApiRoot _projectApiRoot;
+
+        // public ProductTypeIntegrationTests(ServiceProviderFixture serviceProviderFixture)
+        // {
+        //     this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
+        // }
+
+        private readonly IClient _client;
+        private readonly string _projectKey;
 
         public SubscriptionsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
+            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
+            this._client = serviceProviderFixture.GetService<IClient>();
+            this._projectKey = clientConfiguration.ProjectKey;
         }
 
         [Fact]
         public async Task ChangeSubscription()
         {
+            List<IChangeSubscription> changeSubscriptionList = new List<IChangeSubscription>
+            {
+                new ChangeSubscription { ResourceTypeId = IChangeSubscriptionResourceTypeId.Product }
+            };
+
             await WithUpdateableSubscription(_client, async subscription => 
             {
                 Assert.NotNull(subscription);
 
                 var action = new SubscriptionSetChangesAction
                 {
-                    Changes = new List<IChangeSubscription> {
-                            {
-                                ResourceTypeId = "product"
-                            }
-                        }
+                    Changes = changeSubscriptionList
                 };
                 var update = new SubscriptionUpdate
                 {
@@ -48,16 +61,16 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
                     Actions = new List<ISubscriptionUpdateAction> { action }
                 };
 
-                var updatedSubscription = await _projectApiRoot
+                var updatedSubscription = await _client.WithApi().WithProjectKey(_projectKey)
                     .Subscriptions()
-                    .WithKey(subscription.Key)
+                    .WithId(subscription.Id)
                     .Post(update)
                     .ExecuteAsync();
 
                 Assert.NotNull(updatedSubscription);
-                Assert.Equal(subscription.key, updatedSubscription.key);
+                Assert.Equal(subscription.Id, updatedSubscription.Id);
                 return updatedSubscription;
             });
         }
-        #endregion
     }
+}
