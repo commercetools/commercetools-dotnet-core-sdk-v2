@@ -5,8 +5,8 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
-using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Models.Subscriptions;
+using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Subscriptions
 {
@@ -25,12 +25,7 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
 
         public static async Task<ISubscription> CreateSubscription(IClient client, SubscriptionDraft subscriptionDraft)
         {
-            return await CreateSubscription(client.WithProject(DefaultProjectKey), subscriptionDraft);
-        }
-
-        public static async Task<ISubscription> CreateSubscription(ProjectApiRoot apiRoot, SubscriptionDraft subscriptionDraft)
-        {
-            return await apiRoot
+            return await client.WithApi().WithProjectKey(DefaultProjectKey)
                 .Subscriptions()
                 .Post(subscriptionDraft)
                 .ExecuteAsync();
@@ -38,14 +33,9 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
 
         public static async Task DeleteSubscription(IClient client, ISubscription subscription)
         {
-            await DeleteSubscription(client.WithProject(DefaultProjectKey), subscription);
-        }
-
-        public static async Task DeleteSubscription(ProjectApiRoot apiRoot, ISubscription subscription)
-        {
             try
             {
-                await apiRoot
+                await client.WithApi().WithProjectKey(DefaultProjectKey)
                     .Subscriptions()
                     .WithId(subscription.Id)
                     .Delete()
@@ -58,39 +48,17 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
             }
         }
 
-        public static async Task<ISubscription> CreateOrRetrieveSubscription(IClient client,
-            SubscriptionDraft subscriptionDraft)
-        {
-            return await CreateOrRetrieveSubscription(client.WithProject(DefaultProjectKey), subscriptionDraft);
-        }
-        public static async Task<ISubscription> CreateOrRetrieveSubscription(ProjectApiRoot apiRoot, SubscriptionDraft subscriptionDraft)
-        {
-            ISubscription subscription = null;
-            try
-            {
-                subscription = await apiRoot
-                    .Subscriptions()
-                    .WithKey(subscriptionDraft.Key)
-                    .Get()
-                    .ExecuteAsync();
-            }
-            catch (NotFoundException)
-            {
-                subscription = await apiRoot
-                    .Subscriptions()
-                    .Post(subscriptionDraft).ExecuteAsync();
-            }
-
-            return subscription;
-        }
         #endregion
 
         #region WithSubscription
-        public static async Task WithSubscription(ProjectApiRoot apiRoot, Func<ISubscription, Task> func)
+        public static async Task WithSubscription(IClient client, Func<SubscriptionDraft, SubscriptionDraft> draftAction, Action<ISubscription> func)
         {
-            await WithAsync(apiRoot, new SubscriptionDraft(), DefaultSubscriptionDraft, func, CreateSubscription, DeleteSubscription);
+            await With(client, new SubscriptionDraft(), draftAction, func, CreateSubscription, DeleteSubscription);
         }
-
+        public static async Task WithSubscription(IClient client, Func<SubscriptionDraft, SubscriptionDraft> draftAction, Func<ISubscription, Task> func)
+        {
+            await WithAsync(client, new SubscriptionDraft(), draftAction, func, CreateSubscription, DeleteSubscription);
+        }
         public static async Task WithSubscription(IClient client, Func<ISubscription, Task> func)
         {
             await WithAsync(client, new SubscriptionDraft(), DefaultSubscriptionDraft, func, CreateSubscription, DeleteSubscription);
