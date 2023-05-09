@@ -22,13 +22,6 @@ namespace commercetools.Api.IntegrationTests.Subscriptions
     [Collection("Integration Tests")]
     public class SubscriptionsIntegrationTests
     {
-        // private readonly ProjectApiRoot _projectApiRoot;
-
-        // public ProductTypeIntegrationTests(ServiceProviderFixture serviceProviderFixture)
-        // {
-        //     this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
-        // }
-
         private readonly IClient _client;
         private readonly string _projectKey;
 
