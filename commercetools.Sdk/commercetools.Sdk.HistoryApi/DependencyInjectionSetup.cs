@@ -50,7 +50,7 @@ namespace commercetools.Sdk.HistoryApi
             });
 
             return services.UseHttpApi(configuration, clients,
-                serviceProvider => serviceProvider.GetService<SerializerService>(),
+                serviceProvider => serviceProvider.GetService<IHistorySerializerService>(),
                 message => typeof(Object),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider);
         }
@@ -60,6 +60,7 @@ namespace commercetools.Sdk.HistoryApi
             services.UseRegistration();
             services.UseSerialization();
             services.AddSingleton<SerializerService>();
+            services.AddSingleton<IHistorySerializerService, SerializerService>();
         }
 
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)

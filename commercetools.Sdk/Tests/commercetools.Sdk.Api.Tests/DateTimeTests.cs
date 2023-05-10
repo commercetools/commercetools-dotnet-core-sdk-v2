@@ -11,12 +11,12 @@ namespace commercetools.Sdk.Api.Tests
 {
     public class DateTimeTests
     {
-        private SerializerService getSerializerService()
+        private IApiSerializerService getSerializerService()
         {
             var s = new ServiceCollection();
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
-            var serializerService = p.GetService<SerializerService>();
+            var serializerService = p.GetService<IApiSerializerService>();
             return serializerService;
         }
 

@@ -16,7 +16,7 @@ namespace commercetools.Sdk.ImportApi.Tests
             var r = new ProductVariantImportRequest();
 
             var p = s.BuildServiceProvider();
-            var serializerService = p.GetService<SerializerService>();
+            var serializerService = p.GetService<IImportSerializerService>();
             var t = serializerService.Serialize(r);
 
             Assert.Equal("{\"type\":\"product-variant\"}", t);

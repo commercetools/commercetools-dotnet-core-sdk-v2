@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Tests
 
             var p = s.BuildServiceProvider();
             //arrange
-            var serializerService = p.GetService<SerializerService>();
+            var serializerService = p.GetService<IApiSerializerService>();
             var t = serializerService.Serialize(r);
 
             Assert.Equal("{\"typeId\":\"product-type\"}", t);

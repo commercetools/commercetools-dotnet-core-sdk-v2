@@ -33,7 +33,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
                 var tokenProvider = serviceProvider.GetService<ITokenProvider>();
                 var client = ClientFactory.Create(clientName, clientConfiguration,
                     serviceProvider.GetService<IHttpClientFactory>(),
-                    serviceProvider.GetService<SerializerService>(),
+                    serviceProvider.GetService<IApiSerializerService>(),
                     tokenProvider);
                 client.Name = clientName;
                 return client;
@@ -42,7 +42,7 @@ namespace commercetools.Api.CheckoutApp.Extensions
             //Add the httpClient and setup the Middlewares
             return services.SetupClient(clientName,
                 errorTypeMapper => typeof(ErrorResponse),
-                serviceProvider => serviceProvider.GetService<SerializerService>());
+                serviceProvider => serviceProvider.GetService<IApiSerializerService>());
         }
 
 

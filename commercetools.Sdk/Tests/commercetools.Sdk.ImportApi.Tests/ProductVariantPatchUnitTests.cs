@@ -8,14 +8,14 @@ namespace commercetools.Sdk.ImportApi.Tests
 {
     public class ProductVariantPatchUnitTests
     {
-        private readonly SerializerService _serializer;
+        private readonly IImportSerializerService _serializer;
 
         public ProductVariantPatchUnitTests()
         {
             var services = new ServiceCollection();
             services.UseCommercetoolsImportApiSerialization();
             var serviceProvider = services.BuildServiceProvider();
-            this._serializer = serviceProvider.GetService<SerializerService>();
+            this._serializer = serviceProvider.GetService<IImportSerializerService>();
         }
 
 

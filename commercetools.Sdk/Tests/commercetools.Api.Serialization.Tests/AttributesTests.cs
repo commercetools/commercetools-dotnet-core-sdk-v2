@@ -214,12 +214,12 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<ReferenceAttribute>(attributes.Get("set-nested").ToSetOfNestedAttribute()?.GetValue()[1][0]);
         }
 
-        private SerializerService configSerializerService()
+        private IApiSerializerService configSerializerService()
         {
             var services = new ServiceCollection();
             services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { DeserializeNumberAttributeAsDecimalOnly = true });
             var serviceProvider = services.BuildServiceProvider();
-            return serviceProvider.GetService<SerializerService>();
+            return serviceProvider.GetService<IApiSerializerService>();
         }
 
         [Fact]
