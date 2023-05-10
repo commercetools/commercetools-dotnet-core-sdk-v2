@@ -5,7 +5,7 @@ using Type = System.Type;
 
 namespace commercetools.Sdk.ImportApi.Serialization
 {
-    public class SerializerService : ISerializerService
+    public class SerializerService : IImportSerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
 

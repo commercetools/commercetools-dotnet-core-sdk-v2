@@ -16,7 +16,7 @@ namespace commercetools.Sdk.Api.Tests
             var p = s.BuildServiceProvider();
             //arrange
             var projectResponse = File.ReadAllText("Resources/project.json");
-            var serializerService = p.GetService<SerializerService>();
+            var serializerService = p.GetService<IApiSerializerService>();
 
             //act
             var project = serializerService.Deserialize<Project>(projectResponse);

@@ -5,7 +5,7 @@ using Type = System.Type;
 
 namespace commercetools.Sdk.HistoryApi.Serialization
 {
-    public class SerializerService : ISerializerService
+    public class SerializerService : IHistorySerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
 
