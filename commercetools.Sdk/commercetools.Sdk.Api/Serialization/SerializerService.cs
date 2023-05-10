@@ -12,7 +12,7 @@ using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization
 {
-    public class SerializerService : ISerializerService
+    public class SerializerService : IApiSerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
 

@@ -12,7 +12,7 @@ namespace commercetools.Api.Serialization.Tests
             var services = new ServiceCollection();
             services.UseCommercetoolsApiSerialization();
             var serviceProvider = services.BuildServiceProvider();
-            this.SerializerService = serviceProvider.GetService<SerializerService>();
+            this.SerializerService = serviceProvider.GetService<IApiSerializerService>();
         }
 
         public ISerializerService SerializerService { get; private set; }

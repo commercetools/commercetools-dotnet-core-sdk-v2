@@ -5,7 +5,7 @@ using Type = System.Type;
 
 namespace commercetools.Sdk.MLApi.Serialization
 {
-    public class SerializerService : ISerializerService
+    public class SerializerService : IMLSerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
 

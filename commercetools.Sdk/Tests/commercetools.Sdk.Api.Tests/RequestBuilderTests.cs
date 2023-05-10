@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Tests
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
 
-            return new CtpClient(null, p.GetService<SerializerService>());
+            return new CtpClient(null, p.GetService<IApiSerializerService>());
         }
 
         [Fact]

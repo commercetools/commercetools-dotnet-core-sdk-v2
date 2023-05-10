@@ -30,7 +30,7 @@ namespace commercetools.Api.IntegrationTests
             services.SetupClient(
                 "MeClient",
                 errorTypeMapper => typeof(ErrorResponse),
-                s => s.GetService<SerializerService>()
+                s => s.GetService<IApiSerializerService>()
             );
             this.serviceProvider = services.BuildServiceProvider();
 

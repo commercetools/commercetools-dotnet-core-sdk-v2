@@ -57,7 +57,7 @@ namespace commercetools.Sdk.Api
             });
 
             return services.UseHttpApi(configuration, clients,
-                serviceProvider => serviceProvider.GetService<SerializerService>(),
+                serviceProvider => serviceProvider.GetService<IApiSerializerService>(),
                 message => typeof(ErrorResponse),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider,
                 options);
@@ -73,6 +73,7 @@ namespace commercetools.Sdk.Api
             services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
             services.AddSingleton<AttributeTypeRetriever>();
             services.AddSingleton<SerializerService>();
+            services.AddSingleton<IApiSerializerService, SerializerService>();
         }
 
         public static ITokenProvider CreateDefaultTokenProvider(string clientName, IConfiguration configuration, IServiceProvider serviceProvider)

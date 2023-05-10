@@ -21,7 +21,7 @@ namespace commercetools.Api.ConsoleApp
             collection.SetupClient(
                 clientName,
                 errorTypeMapper => typeof(ErrorResponse),
-                s => s.GetService<SerializerService>()
+                s => s.GetService<IApiSerializerService>()
             );
 
             var serviceProvider = collection.BuildServiceProvider();
@@ -36,7 +36,7 @@ namespace commercetools.Api.ConsoleApp
                 clientName,
                 config,
                 clientFactory,
-                serviceProvider.GetService<SerializerService>(),
+                serviceProvider.GetService<IApiSerializerService>(),
                 TokenProviderFactory.CreateClientCredentialsTokenProvider(config, clientFactory)
             );
             var project = await new ApiRoot(client)

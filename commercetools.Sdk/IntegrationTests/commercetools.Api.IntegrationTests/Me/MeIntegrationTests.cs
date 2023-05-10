@@ -102,7 +102,7 @@ namespace commercetools.Api.IntegrationTests.Me
         {
             var meClientConfig = _serviceProviderFixture.GetClientConfiguration("MeClient");
             var httpClientFactory = _serviceProviderFixture.GetService<IHttpClientFactory>();
-            var serializerService = _serviceProviderFixture.GetService<SerializerService>();
+            var serializerService = _serviceProviderFixture.GetService<IApiSerializerService>();
 
             //Create passwordFlow TokenProvider
             var passwordTokenProvider = TokenProviderFactory

@@ -68,7 +68,7 @@ namespace commercetools.Sdk.Api.Tests
             var s = new ServiceCollection();
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
-            var serializerService = p.GetService<SerializerService>();
+            var serializerService = p.GetService<IApiSerializerService>();
             var clientConfig = new ClientConfiguration
             {
                 ClientId = "ClientId",
