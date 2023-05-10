@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [TypeDiscriminator(nameof(Code))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Errors.GraphQLErrorObject))]
     [SubTypeDiscriminator("AnonymousIdAlreadyInUse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAnonymousIdAlreadyInUseError))]
+    [SubTypeDiscriminator("AssociateMissingPermission", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAssociateMissingPermissionError))]
     [SubTypeDiscriminator("AttributeDefinitionAlreadyExists", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeDefinitionAlreadyExistsError))]
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
@@ -83,6 +84,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLAnonymousIdAlreadyInUseError AnonymousIdAlreadyInUse(Action<commercetools.Sdk.Api.Models.Errors.GraphQLAnonymousIdAlreadyInUseError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLAnonymousIdAlreadyInUseError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLAssociateMissingPermissionError AssociateMissingPermission(Action<commercetools.Sdk.Api.Models.Errors.GraphQLAssociateMissingPermissionError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLAssociateMissingPermissionError();
             init?.Invoke(t);
             return t;
         }

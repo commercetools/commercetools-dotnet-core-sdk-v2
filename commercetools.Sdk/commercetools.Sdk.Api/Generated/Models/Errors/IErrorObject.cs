@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [TypeDiscriminator(nameof(Code))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Errors.ErrorObject))]
     [SubTypeDiscriminator("AnonymousIdAlreadyInUse", typeof(commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError))]
+    [SubTypeDiscriminator("AssociateMissingPermission", typeof(commercetools.Sdk.Api.Models.Errors.AssociateMissingPermissionError))]
     [SubTypeDiscriminator("AttributeDefinitionAlreadyExists", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionAlreadyExistsError))]
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
@@ -85,6 +86,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError AnonymousIdAlreadyInUse(Action<commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.AnonymousIdAlreadyInUseError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.AssociateMissingPermissionError AssociateMissingPermission(Action<commercetools.Sdk.Api.Models.Errors.AssociateMissingPermissionError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.AssociateMissingPermissionError();
             init?.Invoke(t);
             return t;
         }
