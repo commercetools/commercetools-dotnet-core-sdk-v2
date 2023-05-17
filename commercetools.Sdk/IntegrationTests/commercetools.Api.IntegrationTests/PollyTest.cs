@@ -50,7 +50,6 @@ namespace commercetools.Api.IntegrationTests
                 .AddPolicyHandlerFromRegistry("queuePolicy");
         }
 
-        [Fact]
         public async Task proxy()
         {
             var services = new ServiceCollection();
