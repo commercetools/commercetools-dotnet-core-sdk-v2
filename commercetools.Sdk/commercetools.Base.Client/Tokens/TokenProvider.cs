@@ -16,6 +16,8 @@ namespace commercetools.Base.Client.Tokens
         private Task<Token> _tokenTask;
 
         private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
+        
+        private static readonly object LockObject = new object();
 
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
@@ -32,7 +34,7 @@ namespace commercetools.Base.Client.Tokens
                 var token = _tokenStoreManager.Token;
                 if (token == null)
                 {
-                    lock (this._tokenTask)
+                    lock (LockObject)
                     {
                         if (_tokenTask == null || _tokenTask.IsCompleted)
                         {
@@ -49,8 +51,7 @@ namespace commercetools.Base.Client.Tokens
                 {
                     return token;
                 }
-
-                lock (this._tokenTask)
+                lock (LockObject)
                 {
                     if (_tokenTask == null || _tokenTask.IsCompleted)
                     {
