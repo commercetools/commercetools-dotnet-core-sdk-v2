@@ -41,7 +41,7 @@ namespace commercetools.Base.Client.Tokens
                             _tokenTask = this.SetToken();
                         }
                     }
-                    if (!_tokenTask.Wait(WaitTimeout))
+                    if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
                     {
                         throw new TimeoutException("OAuth token not retrieved in time");
                     }
@@ -58,7 +58,7 @@ namespace commercetools.Base.Client.Tokens
                         _tokenTask = this.RefreshToken(token);
                     }
                 }
-                if (!_tokenTask.Wait(WaitTimeout))
+                if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
                 {
                     throw new TimeoutException("OAuth token not retrieved in time");
                 }
