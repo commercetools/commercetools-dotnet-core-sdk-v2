@@ -70,7 +70,7 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client", (s, configuration1, arg3) => new TestTokenProvider())
+            services.UseCommercetoolsApi(configuration, "Client")
                 .ConfigureHttpMessageHandlerBuilder(builder =>
                 {
                     builder.PrimaryHandler = new HttpClientHandler
