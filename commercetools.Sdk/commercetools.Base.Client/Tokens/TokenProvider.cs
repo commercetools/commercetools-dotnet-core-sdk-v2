@@ -17,7 +17,7 @@ namespace commercetools.Base.Client.Tokens
 
         private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
         
-        private static readonly object LockObject = new object();
+        private readonly object _lockObject = new object();
 
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
@@ -34,14 +34,14 @@ namespace commercetools.Base.Client.Tokens
                 var token = _tokenStoreManager.Token;
                 if (token == null)
                 {
-                    lock (LockObject)
+                    lock (_lockObject)
                     {
                         if (_tokenTask == null || _tokenTask.IsCompleted)
                         {
                             _tokenTask = this.SetToken();
                         }
                     }
-                    if (!_tokenTask.IsCompleted && !_tokenTask.Wait(Timeout.Infinite))
+                    if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
                     {
                         throw new TimeoutException("OAuth token not retrieved in time");
                     }
@@ -51,14 +51,14 @@ namespace commercetools.Base.Client.Tokens
                 {
                     return token;
                 }
-                lock (LockObject)
+                lock (_lockObject)
                 {
                     if (_tokenTask == null || _tokenTask.IsCompleted)
                     {
                         _tokenTask = this.RefreshToken(token);
                     }
                 }
-                if (!_tokenTask.IsCompleted && !_tokenTask.Wait(Timeout.Infinite))
+                if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
                 {
                     throw new TimeoutException("OAuth token not retrieved in time");
                 }
