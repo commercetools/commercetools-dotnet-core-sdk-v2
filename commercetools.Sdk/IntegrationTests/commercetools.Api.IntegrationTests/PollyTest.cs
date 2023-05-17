@@ -3,6 +3,8 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Domain;
+using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -50,6 +52,14 @@ namespace commercetools.Api.IntegrationTests
                 .AddPolicyHandlerFromRegistry("queuePolicy");
         }
 
+        class TestTokenProvider : ITokenProvider
+        {
+            public Token Token => new Token();
+            public TokenFlow TokenFlow => TokenFlow.ClientCredentials;
+            public IClientConfiguration ClientConfiguration { get; set; }
+        }
+        
+        [Fact]
         public async Task proxy()
         {
             var services = new ServiceCollection();
@@ -60,7 +70,7 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client")
+            services.UseCommercetoolsApi(configuration, "Client", (s, configuration1, arg3) => new TestTokenProvider())
                 .ConfigureHttpMessageHandlerBuilder(builder =>
                 {
                     builder.PrimaryHandler = new HttpClientHandler
