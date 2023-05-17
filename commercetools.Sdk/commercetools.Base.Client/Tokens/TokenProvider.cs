@@ -34,7 +34,7 @@ namespace commercetools.Base.Client.Tokens
                 {
                     lock (this._tokenTask)
                     {
-                        if (!(_tokenTask is { Status: TaskStatus.Running }))
+                        if (_tokenTask == null || _tokenTask.IsCompleted)
                         {
                             _tokenTask = this.SetToken();
                         }
@@ -52,7 +52,7 @@ namespace commercetools.Base.Client.Tokens
 
                 lock (this._tokenTask)
                 {
-                    if (!(_tokenTask is { Status: TaskStatus.Running }))
+                    if (_tokenTask == null || _tokenTask.IsCompleted)
                     {
                         _tokenTask = this.RefreshToken(token);
                     }
