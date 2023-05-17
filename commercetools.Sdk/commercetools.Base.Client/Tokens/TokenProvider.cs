@@ -17,7 +17,7 @@ namespace commercetools.Base.Client.Tokens
 
         private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
         
-        private readonly object _lockObject = new object();
+        private static readonly object _lockObject = new object();
 
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
@@ -99,7 +99,7 @@ namespace commercetools.Base.Client.Tokens
 
         private async Task<Token> SetToken()
         {
-            var token = await GetTokenAsync(this.GetRequestMessage());
+            var token = await GetTokenAsync(this.GetRequestMessage()).ConfigureAwait(false);
             _tokenStoreManager.Token = token;
             return token;
         }
@@ -110,7 +110,7 @@ namespace commercetools.Base.Client.Tokens
                 ? GetRequestMessage()
                 : GetRefreshTokenRequestMessage();
 
-            token = await GetTokenAsync(requestMessage);
+            token = await GetTokenAsync(requestMessage).ConfigureAwait(false);
             _tokenStoreManager.Token = token;
             return token;
         }
