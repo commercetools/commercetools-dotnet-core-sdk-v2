@@ -52,13 +52,6 @@ namespace commercetools.Api.IntegrationTests
                 .AddPolicyHandlerFromRegistry("queuePolicy");
         }
 
-        class TestTokenProvider : ITokenProvider
-        {
-            public Token Token => new Token();
-            public TokenFlow TokenFlow => TokenFlow.ClientCredentials;
-            public IClientConfiguration ClientConfiguration { get; set; }
-        }
-        
         [Fact]
         public async Task proxy()
         {
