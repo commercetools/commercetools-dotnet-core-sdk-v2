@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Serialization;
@@ -9,14 +10,18 @@ namespace commercetools.Base.Client.Tokens
 {
     public abstract class TokenProvider
     {
-        private readonly ISerializerService serializerService;
-        private readonly ITokenStoreManager tokenStoreManager;
+        private readonly ISerializerService _serializerService;
+        private readonly ITokenStoreManager _tokenStoreManager;
+        
+        private Task<Token> _tokenTask;
+
+        private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
 
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
             this.HttpClient = httpClient;
-            this.tokenStoreManager = tokenStoreManager;
-            this.serializerService = serializerService;
+            this._tokenStoreManager = tokenStoreManager;
+            this._serializerService = serializerService;
             this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
 
@@ -24,45 +29,39 @@ namespace commercetools.Base.Client.Tokens
         {
             get
             {
-                var token = this.tokenStoreManager.Token;
+                var token = _tokenStoreManager.Token;
                 if (token == null)
                 {
-                    lock (this.tokenStoreManager)
+                    lock (this._tokenTask)
                     {
-                        token = this.tokenStoreManager.Token;
-                        if (token != null)
+                        if (!(_tokenTask is { Status: TaskStatus.Running }))
                         {
-                            return token;
+                            _tokenTask = this.SetToken();
                         }
-
-                        token = this.GetToken(this.GetRequestMessage());
-                        this.tokenStoreManager.Token = token;
                     }
-
-                    return token;
+                    if (!_tokenTask.Wait(WaitTimeout))
+                    {
+                        throw new TimeoutException("OAuth token not retrieved in time");
+                    }
                 }
-
+                token = _tokenStoreManager.Token;
                 if (!token.Expired)
                 {
                     return token;
                 }
 
-                lock (this.tokenStoreManager)
+                lock (this._tokenTask)
                 {
-                    token = this.tokenStoreManager.Token;
-                    if (!token.Expired)
+                    if (!(_tokenTask is { Status: TaskStatus.Running }))
                     {
-                        return token;
+                        _tokenTask = this.RefreshToken(token);
                     }
-
-                    var requestMessage = string.IsNullOrEmpty(token.RefreshToken)
-                        ? this.GetRequestMessage()
-                        : this.GetRefreshTokenRequestMessage();
-
-                    token = this.GetToken(requestMessage);
-                    this.tokenStoreManager.Token = token;
-                    return token;
                 }
+                if (!_tokenTask.Wait(WaitTimeout))
+                {
+                    throw new TimeoutException("OAuth token not retrieved in time");
+                }
+                return _tokenStoreManager.Token;
             }
         }
 
@@ -89,7 +88,7 @@ namespace commercetools.Base.Client.Tokens
         {
             var request = new HttpRequestMessage();
             var requestUri = this.ClientConfiguration.AuthorizationBaseAddress + "oauth/token?grant_type=refresh_token";
-            requestUri += $"&refresh_token={this.tokenStoreManager.Token.RefreshToken}";
+            requestUri += $"&refresh_token={this._tokenStoreManager.Token.RefreshToken}";
             request.RequestUri = new Uri(requestUri);
             var credentials = $"{this.ClientConfiguration.ClientId}:{this.ClientConfiguration.ClientSecret}";
             request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(credentials)));
@@ -97,11 +96,24 @@ namespace commercetools.Base.Client.Tokens
             return request;
         }
 
-        private Token GetToken(HttpRequestMessage requestMessage)
+        private async Task<Token> SetToken()
         {
-            return AsyncUtil.RunSync(() => this.GetTokenAsync(requestMessage));
+            var token = await GetTokenAsync(this.GetRequestMessage());
+            _tokenStoreManager.Token = token;
+            return token;
         }
+        
+        private async Task<Token> RefreshToken(Token token)
+        {
+            var requestMessage = string.IsNullOrEmpty(token.RefreshToken)
+                ? GetRequestMessage()
+                : GetRefreshTokenRequestMessage();
 
+            token = await GetTokenAsync(requestMessage);
+            _tokenStoreManager.Token = token;
+            return token;
+        }
+        
         private async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)
         {
             var client = this.HttpClient;
@@ -109,7 +121,7 @@ namespace commercetools.Base.Client.Tokens
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (result.IsSuccessStatusCode)
             {
-                return this.serializerService.Deserialize<Token>(content);
+                return this._serializerService.Deserialize<Token>(content);
             }
 
             var generalClientException =
