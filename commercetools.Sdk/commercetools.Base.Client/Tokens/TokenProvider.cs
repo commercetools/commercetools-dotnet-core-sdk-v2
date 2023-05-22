@@ -28,7 +28,7 @@ namespace commercetools.Base.Client.Tokens
             this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
         
-        [Obsolete("use GetToken method as synchronous call can run into timeout")]
+        [Obsolete("use GetToken method instead")]
         public Token Token
         {
             get

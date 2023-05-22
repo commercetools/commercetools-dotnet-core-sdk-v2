@@ -6,7 +6,7 @@ namespace commercetools.Base.Client.Tokens
 {
     public interface ITokenProvider
     {
-        [Obsolete("use GetToken method as synchronous call can run into timeout")]
+        [Obsolete("use GetToken method instead")]
         Token Token { get; }
 
         TokenFlow TokenFlow { get; }
