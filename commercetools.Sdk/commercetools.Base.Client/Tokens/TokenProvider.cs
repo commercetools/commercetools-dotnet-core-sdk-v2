@@ -162,9 +162,16 @@ namespace commercetools.Base.Client.Tokens
 
         private async Task GetToken(TaskCompletionSource<Token> tokenTask)
         {
-            var token = await GetTokenAsync(this.GetRequestMessage()).ConfigureAwait(false);
-            _tokenStoreManager.Token = token;
-            tokenTask.SetResult(token);
+            try
+            {
+                var token = await GetTokenAsync(this.GetRequestMessage()).ConfigureAwait(false);
+                _tokenStoreManager.Token = token;
+                tokenTask.SetResult(token);
+            }
+            catch (Exception e)
+            {
+                tokenTask.TrySetException(e);
+            }
         }
         
         private async Task RefreshToken(TaskCompletionSource<Token> tokenTask, Token token)
@@ -173,9 +180,16 @@ namespace commercetools.Base.Client.Tokens
                 ? GetRequestMessage()
                 : GetRefreshTokenRequestMessage();
 
-            var newToken = await GetTokenAsync(requestMessage).ConfigureAwait(false);
-            _tokenStoreManager.Token = newToken;
-            tokenTask.SetResult(newToken);
+            try
+            {
+                var newToken = await GetTokenAsync(requestMessage).ConfigureAwait(false);
+                _tokenStoreManager.Token = newToken;
+                tokenTask.SetResult(newToken);
+            }
+            catch (Exception e)
+            {
+                tokenTask.TrySetException(e);
+            }
         }
         
         private async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)
