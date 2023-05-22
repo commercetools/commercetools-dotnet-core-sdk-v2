@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -13,12 +14,12 @@ namespace commercetools.Base.Client.Tokens
         private readonly ISerializerService _serializerService;
         private readonly ITokenStoreManager _tokenStoreManager;
         
-        private Task<Token> _tokenTask;
-
+        private volatile Task<Token> _tokenTask;
+        
+        private readonly ReaderWriterLockSlim _cacheLock = new ReaderWriterLockSlim();
+        
         private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
         
-        private static readonly object _lockObject = new object();
-
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
             this.HttpClient = httpClient;
@@ -26,7 +27,8 @@ namespace commercetools.Base.Client.Tokens
             this._serializerService = serializerService;
             this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
-
+        
+        [Obsolete("use GetToken method as synchronous call can run into timeout")]
         public Token Token
         {
             get
@@ -34,33 +36,52 @@ namespace commercetools.Base.Client.Tokens
                 var token = _tokenStoreManager.Token;
                 if (token == null)
                 {
-                    lock (_lockObject)
+                    _cacheLock.EnterWriteLock();
+                    try
                     {
-                        if (_tokenTask == null || _tokenTask.IsCompleted)
+                        if (_tokenTask == null || _tokenTask.IsCompleted && _tokenTask.Result.Expired)
                         {
-                            _tokenTask = this.SetToken();
+                            var t = new TaskCompletionSource<Token>();
+                            GetToken(t);
+                            _tokenTask = t.Task;
                         }
                     }
-                    if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
+                    finally
+                    {
+                        _cacheLock.ExitWriteLock();
+                    }
+                    if (!_tokenTask.Wait(WaitTimeout))
                     {
                         throw new TimeoutException("OAuth token not retrieved in time");
                     }
+                    token = _tokenTask.Result;
                 }
-                token = _tokenStoreManager.Token;
                 if (!token.Expired)
                 {
                     return token;
                 }
-                lock (_lockObject)
+                _cacheLock.EnterWriteLock();
+                try
                 {
-                    if (_tokenTask == null || _tokenTask.IsCompleted)
+                    if (_tokenTask == null || _tokenTask.IsCompleted && _tokenTask.Result.Expired)
                     {
-                        _tokenTask = this.RefreshToken(token);
+                        var t = new TaskCompletionSource<Token>();
+                        RefreshToken(t, token);
+                        _tokenTask = t.Task;
                     }
                 }
-                if (!_tokenTask.IsCompleted && !_tokenTask.Wait(WaitTimeout))
+                finally
+                {
+                    _cacheLock.ExitWriteLock();
+                }
+                if (!_tokenTask.Wait(WaitTimeout))
                 {
                     throw new TimeoutException("OAuth token not retrieved in time");
+                }
+                token = _tokenTask.Result;
+                if (!token.Expired)
+                {
+                    return token;
                 }
                 return _tokenStoreManager.Token;
             }
@@ -97,22 +118,64 @@ namespace commercetools.Base.Client.Tokens
             return request;
         }
 
-        private async Task<Token> SetToken()
+        public async Task<Token> GetToken()
+        {
+            var token = _tokenStoreManager.Token;
+            if (token == null)
+            {
+                _cacheLock.EnterWriteLock();
+                try
+                {
+                    if (_tokenTask == null || _tokenTask.IsCompleted && _tokenTask.Result.Expired)
+                    {
+                        var t = new TaskCompletionSource<Token>();
+                        GetToken(t);
+                        _tokenTask = t.Task;
+                    }
+                }
+                finally
+                {
+                    _cacheLock.ExitWriteLock();
+                }
+                return await _tokenTask.ConfigureAwait(false);
+            }
+            if (!token.Expired)
+            {
+                return token;
+            }
+            _cacheLock.EnterWriteLock();
+            try
+            {
+                if (_tokenTask == null || _tokenTask.IsCompleted && _tokenTask.Result.Expired)
+                {
+                    var t = new TaskCompletionSource<Token>();
+                    RefreshToken(t, token);
+                    _tokenTask = t.Task;
+                }
+            }
+            finally
+            {
+                _cacheLock.ExitWriteLock();
+            }
+            return await _tokenTask.ConfigureAwait(false);
+        }
+
+        private async Task GetToken(TaskCompletionSource<Token> tokenTask)
         {
             var token = await GetTokenAsync(this.GetRequestMessage()).ConfigureAwait(false);
             _tokenStoreManager.Token = token;
-            return token;
+            tokenTask.SetResult(token);
         }
         
-        private async Task<Token> RefreshToken(Token token)
+        private async Task RefreshToken(TaskCompletionSource<Token> tokenTask, Token token)
         {
             var requestMessage = string.IsNullOrEmpty(token.RefreshToken)
                 ? GetRequestMessage()
                 : GetRefreshTokenRequestMessage();
 
-            token = await GetTokenAsync(requestMessage).ConfigureAwait(false);
-            _tokenStoreManager.Token = token;
-            return token;
+            var newToken = await GetTokenAsync(requestMessage).ConfigureAwait(false);
+            _tokenStoreManager.Token = newToken;
+            tokenTask.SetResult(newToken);
         }
         
         private async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)

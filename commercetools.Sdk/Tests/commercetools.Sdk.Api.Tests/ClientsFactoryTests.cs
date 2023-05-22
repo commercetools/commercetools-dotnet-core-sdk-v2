@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Client.Middlewares;
@@ -116,6 +117,7 @@ namespace commercetools.Sdk.Api.Tests
         private class ExistingTokenProvider : ITokenProvider
         {
             public Token Token { get; }
+
             private IClientConfiguration _configuration { get; }
             public ExistingTokenProvider(Token token, IClientConfiguration configuration = null)
             {
@@ -125,6 +127,11 @@ namespace commercetools.Sdk.Api.Tests
 
             public TokenFlow TokenFlow => TokenFlow.ClientCredentials;
             public IClientConfiguration ClientConfiguration { get => _configuration; set => throw new InvalidOperationException("client configuration is readonly"); }
+
+            public async Task<Token> GetToken()
+            {
+                return await Task.FromResult(Token);
+            }
         }
     }
 }
