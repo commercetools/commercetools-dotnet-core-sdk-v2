@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string DeliveryId { get; set; }
 
+        string DeliveryKey { get; set; }
+
         IBaseAddress Address { get; set; }
 
     }

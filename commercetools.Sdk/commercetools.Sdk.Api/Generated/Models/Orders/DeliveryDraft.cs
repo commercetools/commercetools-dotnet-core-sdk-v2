@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
     public partial class DeliveryDraft : IDeliveryDraft
     {
+        public string Key { get; set; }
+
         public IList<IDeliveryItem> Items { get; set; }
         public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
