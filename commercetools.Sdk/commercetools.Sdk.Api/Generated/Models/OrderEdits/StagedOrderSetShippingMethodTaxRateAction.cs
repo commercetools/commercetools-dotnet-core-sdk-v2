@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         public string Action { get; set; }
 
+        public string ShippingKey { get; set; }
+
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
         public StagedOrderSetShippingMethodTaxRateAction()
         {
