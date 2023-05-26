@@ -61,6 +61,12 @@
 
 - added type `AssociateMissingPermissionError`
 - added type `GraphQLAssociateMissingPermissionError`
+- added type `QuoteCustomerChangedMessage`
+- added type `QuoteRequestCustomerChangedMessage`
+- added type `QuoteCustomerChangedMessagePayload`
+- added type `QuoteRequestCustomerChangedMessagePayload`
+- added type `QuoteRequestChangeCustomerAction`
+- added type `QuoteChangeCustomerAction`
 </details>
 
 
@@ -68,6 +74,14 @@
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts/replicate`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `ReassignMyQuotes` to type `Permission`
+- added enum `ReassignOthersQuotes` to type `Permission`
 </details>
 
 
