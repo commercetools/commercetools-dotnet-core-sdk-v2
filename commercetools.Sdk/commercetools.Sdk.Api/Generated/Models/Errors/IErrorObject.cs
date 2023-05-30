@@ -52,6 +52,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
+    [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError))]
     [SubTypeDiscriminator("NotEnabled", typeof(commercetools.Sdk.Api.Models.Errors.NotEnabledError))]
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError))]
@@ -356,6 +357,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError MissingTaxRateForCountry(Action<commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.MoneyOverflowError MoneyOverflow(Action<commercetools.Sdk.Api.Models.Errors.MoneyOverflowError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.MoneyOverflowError();
             init?.Invoke(t);
             return t;
         }

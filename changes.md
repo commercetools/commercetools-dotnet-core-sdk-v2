@@ -60,7 +60,9 @@
 <summary>Added Type(s)</summary>
 
 - added type `AssociateMissingPermissionError`
+- added type `MoneyOverflowError`
 - added type `GraphQLAssociateMissingPermissionError`
+- added type `GraphQLMoneyOverflowError`
 - added type `QuoteCustomerChangedMessage`
 - added type `QuoteRequestCustomerChangedMessage`
 - added type `QuoteCustomerChangedMessagePayload`
