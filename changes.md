@@ -59,6 +59,7 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `CartSetLineItemInventoryModeAction`
 - added type `AssociateMissingPermissionError`
 - added type `MoneyOverflowError`
 - added type `GraphQLAssociateMissingPermissionError`
