@@ -63,6 +63,7 @@
 - added type `MoneyOverflowError`
 - added type `GraphQLAssociateMissingPermissionError`
 - added type `GraphQLMoneyOverflowError`
+- added type `MyCartSetDirectDiscountsAction`
 - added type `QuoteCustomerChangedMessage`
 - added type `QuoteRequestCustomerChangedMessage`
 - added type `QuoteCustomerChangedMessagePayload`
