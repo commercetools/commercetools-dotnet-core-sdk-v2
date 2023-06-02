@@ -17,6 +17,9 @@ namespace commercetools.Sdk.Api.Models.Quotes
         [Description("DeclinedForRenegotiation")]
         DeclinedForRenegotiation,
 
+        [Description("RenegotiationAddressed")]
+        RenegotiationAddressed,
+
         [Description("Accepted")]
         Accepted,
 
@@ -59,6 +62,9 @@ namespace commercetools.Sdk.Api.Models.Quotes
         public static IQuoteState DeclinedForRenegotiation = new QuoteStateWrapper
         { Value = QuoteState.DeclinedForRenegotiation, JsonName = "DeclinedForRenegotiation" };
 
+        public static IQuoteState RenegotiationAddressed = new QuoteStateWrapper
+        { Value = QuoteState.RenegotiationAddressed, JsonName = "RenegotiationAddressed" };
+
         public static IQuoteState Accepted = new QuoteStateWrapper
         { Value = QuoteState.Accepted, JsonName = "Accepted" };
 
@@ -77,6 +83,7 @@ namespace commercetools.Sdk.Api.Models.Quotes
                  Pending ,
                  Declined ,
                  DeclinedForRenegotiation ,
+                 RenegotiationAddressed ,
                  Accepted ,
                  Failed ,
                  Withdrawn

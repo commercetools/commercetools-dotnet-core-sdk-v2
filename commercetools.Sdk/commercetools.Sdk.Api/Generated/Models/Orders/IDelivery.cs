@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         DateTime CreatedAt { get; set; }
 
         IList<IDeliveryItem> Items { get; set; }

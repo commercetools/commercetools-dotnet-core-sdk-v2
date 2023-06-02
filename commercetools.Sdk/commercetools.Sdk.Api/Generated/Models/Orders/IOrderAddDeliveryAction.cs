@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderAddDeliveryAction))]
     public partial interface IOrderAddDeliveryAction : IOrderUpdateAction
     {
+        string DeliveryKey { get; set; }
+
         IList<IDeliveryItem> Items { get; set; }
         IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 

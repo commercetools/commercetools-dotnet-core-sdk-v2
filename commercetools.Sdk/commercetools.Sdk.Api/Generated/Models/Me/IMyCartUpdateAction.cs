@@ -25,6 +25,7 @@ namespace commercetools.Sdk.Api.Models.Me
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction))]
+    [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetDirectDiscountsAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemDistributionChannelAction))]
@@ -149,6 +150,12 @@ namespace commercetools.Sdk.Api.Models.Me
         static commercetools.Sdk.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction SetDeleteDaysAfterLastModification(Action<commercetools.Sdk.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCartSetDirectDiscountsAction SetDirectDiscounts(Action<commercetools.Sdk.Api.Models.Me.MyCartSetDirectDiscountsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCartSetDirectDiscountsAction();
             init?.Invoke(t);
             return t;
         }

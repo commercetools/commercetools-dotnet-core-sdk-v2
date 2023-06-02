@@ -92,6 +92,12 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         [Description("RenegotiateOthersQuotes")]
         RenegotiateOthersQuotes,
 
+        [Description("ReassignMyQuotes")]
+        ReassignMyQuotes,
+
+        [Description("ReassignOthersQuotes")]
+        ReassignOthersQuotes,
+
         [Description("ViewMyQuoteRequests")]
         ViewMyQuoteRequests,
 
@@ -218,6 +224,12 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public static IPermission RenegotiateOthersQuotes = new PermissionWrapper
         { Value = Permission.RenegotiateOthersQuotes, JsonName = "RenegotiateOthersQuotes" };
 
+        public static IPermission ReassignMyQuotes = new PermissionWrapper
+        { Value = Permission.ReassignMyQuotes, JsonName = "ReassignMyQuotes" };
+
+        public static IPermission ReassignOthersQuotes = new PermissionWrapper
+        { Value = Permission.ReassignOthersQuotes, JsonName = "ReassignOthersQuotes" };
+
         public static IPermission ViewMyQuoteRequests = new PermissionWrapper
         { Value = Permission.ViewMyQuoteRequests, JsonName = "ViewMyQuoteRequests" };
 
@@ -270,6 +282,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
                  DeclineOthersQuotes ,
                  RenegotiateMyQuotes ,
                  RenegotiateOthersQuotes ,
+                 ReassignMyQuotes ,
+                 ReassignOthersQuotes ,
                  ViewMyQuoteRequests ,
                  ViewOthersQuoteRequests ,
                  UpdateMyQuoteRequests ,

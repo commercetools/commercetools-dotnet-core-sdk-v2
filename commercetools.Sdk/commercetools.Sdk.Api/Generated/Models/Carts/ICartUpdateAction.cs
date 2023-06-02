@@ -59,6 +59,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
+    [SubTypeDiscriminator("setLineItemInventoryMode", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemInventoryModeAction))]
     [SubTypeDiscriminator("setLineItemPrice", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemPriceAction))]
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
     [SubTypeDiscriminator("setLineItemSupplyChannel", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemSupplyChannelAction))]
@@ -396,6 +397,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction SetLineItemDistributionChannel(Action<commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetLineItemInventoryModeAction SetLineItemInventoryMode(Action<commercetools.Sdk.Api.Models.Carts.CartSetLineItemInventoryModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetLineItemInventoryModeAction();
             init?.Invoke(t);
             return t;
         }

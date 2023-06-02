@@ -19,6 +19,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     [SubTypeDiscriminator("product-variant", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductVariantImportRequest))]
     [SubTypeDiscriminator("product-variant-patch", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductVariantPatchRequest))]
     [SubTypeDiscriminator("standalone-price", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.StandalonePriceImportRequest))]
+    [SubTypeDiscriminator("type", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.TypeImportRequest))]
     public partial interface IImportRequest
     {
         IImportResourceType Type { get; set; }
@@ -92,6 +93,12 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
         static commercetools.Sdk.ImportApi.Models.Importrequests.StandalonePriceImportRequest StandalonePrice(Action<commercetools.Sdk.ImportApi.Models.Importrequests.StandalonePriceImportRequest> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Importrequests.StandalonePriceImportRequest();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Importrequests.TypeImportRequest _Type(Action<commercetools.Sdk.ImportApi.Models.Importrequests.TypeImportRequest> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Importrequests.TypeImportRequest();
             init?.Invoke(t);
             return t;
         }

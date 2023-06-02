@@ -131,8 +131,10 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductVariantAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessagePayload))]
     [SubTypeDiscriminator("ProductVariantDeleted", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessagePayload))]
     [SubTypeDiscriminator("QuoteCreated", typeof(commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessagePayload))]
+    [SubTypeDiscriminator("QuoteCustomerChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteCustomerChangedMessagePayload))]
     [SubTypeDiscriminator("QuoteDeleted", typeof(commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestCreated", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessagePayload))]
+    [SubTypeDiscriminator("QuoteRequestCustomerChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestCustomerChangedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestDeleted", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestDeletedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateChangedMessagePayload))]
     [SubTypeDiscriminator("QuoteRequestStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessagePayload))]
@@ -920,6 +922,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.QuoteCustomerChangedMessagePayload QuoteCustomerChanged(Action<commercetools.Sdk.Api.Models.Messages.QuoteCustomerChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteCustomerChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessagePayload QuoteDeleted(Action<commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessagePayload();
@@ -929,6 +937,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessagePayload QuoteRequestCreated(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.QuoteRequestCustomerChangedMessagePayload QuoteRequestCustomerChanged(Action<commercetools.Sdk.Api.Models.Messages.QuoteRequestCustomerChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.QuoteRequestCustomerChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }

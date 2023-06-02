@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string DeliveryId { get; set; }
 
+        string DeliveryKey { get; set; }
+
     }
 }

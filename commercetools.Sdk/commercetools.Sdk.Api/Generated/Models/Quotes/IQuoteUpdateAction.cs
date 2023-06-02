@@ -6,6 +6,7 @@ namespace commercetools.Sdk.Api.Models.Quotes
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Quotes.QuoteUpdateAction))]
+    [SubTypeDiscriminator("changeCustomer", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteChangeCustomerAction))]
     [SubTypeDiscriminator("changeQuoteState", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteChangeQuoteStateAction))]
     [SubTypeDiscriminator("requestQuoteRenegotiation", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteRequestQuoteRenegotiationAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteSetCustomFieldAction))]
@@ -15,6 +16,12 @@ namespace commercetools.Sdk.Api.Models.Quotes
     {
         string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.Quotes.QuoteChangeCustomerAction ChangeCustomer(Action<commercetools.Sdk.Api.Models.Quotes.QuoteChangeCustomerAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Quotes.QuoteChangeCustomerAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Quotes.QuoteChangeQuoteStateAction ChangeQuoteState(Action<commercetools.Sdk.Api.Models.Quotes.QuoteChangeQuoteStateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Quotes.QuoteChangeQuoteStateAction();

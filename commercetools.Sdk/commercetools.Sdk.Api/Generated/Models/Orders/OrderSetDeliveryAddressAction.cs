@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string DeliveryId { get; set; }
 
+        public string DeliveryKey { get; set; }
+
         public IBaseAddress Address { get; set; }
         public OrderSetDeliveryAddressAction()
         {

@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string DeliveryId { get; set; }
 
+        string DeliveryKey { get; set; }
+
         IParcelMeasurements Measurements { get; set; }
 
         ITrackingData TrackingData { get; set; }
