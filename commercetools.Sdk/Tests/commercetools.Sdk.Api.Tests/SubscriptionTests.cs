@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Tests
             };
 
             var json = serializerService.Serialize(subscriptionDraft);
-            
+
             Assert.Equal("{\"changes\":[{\"resourceTypeId\":\"product\"}],\"destination\":{\"type\":\"AzureServiceBus\",\"connectionString\":\"\"},\"key\":\"azure-product-subscription\"}", json);
         }
     }

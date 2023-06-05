@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -8,7 +6,6 @@ using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Domain;
 using commercetools.Base.Client.Tokens;
-using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -38,7 +35,7 @@ namespace commercetools.Sdk.Api.Tests
         {
             public int Called { get; private set; }
             public String lastUrl { get; private set; }
-            
+
             protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
             {
                 Called++;
@@ -54,7 +51,7 @@ namespace commercetools.Sdk.Api.Tests
                 };
             }
         }
-        
+
         [Fact]
         public async void expiredTokens()
         {
@@ -64,7 +61,7 @@ namespace commercetools.Sdk.Api.Tests
 
             var s = new ServiceCollection();
             var p = s.BuildServiceProvider();
-            
+
             var factory = p.GetService<IHttpClientFactory>();
 
             var tokenManager = new InMemoryTokenStoreManager();
@@ -78,7 +75,7 @@ namespace commercetools.Sdk.Api.Tests
             );
 
             var token = await provider.GetToken();
-            
+
             Assert.NotNull(token);
             Assert.Equal(1, testHandler.Called);
             Assert.Equal("http://auth.commercetools.com/oauth/token", testHandler.lastUrl);
@@ -93,14 +90,14 @@ namespace commercetools.Sdk.Api.Tests
 
             var r = new Random();
             var taskList = new Task[1000000];
-            
+
             for (int i = 0; i < 1000000; i++)
             {
                 tokenManager.Token.ExpiresIn = r.Next(500);
                 taskList[i] = provider.GetToken();
             }
             Task.WaitAll(taskList, TimeSpan.FromSeconds(3));
-            
+
             token = await provider.GetToken();
             Assert.NotNull(token);
         }

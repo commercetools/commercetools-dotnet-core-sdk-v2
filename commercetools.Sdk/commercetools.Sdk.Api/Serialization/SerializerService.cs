@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
-using commercetools.Base.Serialization;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Sdk.Api.Serialization.JsonConverters;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;

@@ -1,6 +1,5 @@
 ﻿using System.Text.Json;
 using commercetools.Base.Serialization.JsonConverters;
-using commercetools.Base.Serialization;
 using Type = System.Type;
 
 namespace commercetools.Sdk.ImportApi.Serialization
