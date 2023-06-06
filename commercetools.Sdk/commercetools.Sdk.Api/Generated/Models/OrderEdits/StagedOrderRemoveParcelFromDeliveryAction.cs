@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public string Action { get; set; }
 
         public string ParcelId { get; set; }
+
+        public string ParcelKey { get; set; }
         public StagedOrderRemoveParcelFromDeliveryAction()
         {
             this.Action = "removeParcelFromDelivery";

@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string DeliveryKey { get; set; }
 
+        public string ParcelKey { get; set; }
+
         public IParcelMeasurements Measurements { get; set; }
 
         public ITrackingData TrackingData { get; set; }
