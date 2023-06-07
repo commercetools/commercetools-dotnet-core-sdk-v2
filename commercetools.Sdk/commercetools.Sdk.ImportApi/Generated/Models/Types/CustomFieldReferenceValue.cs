@@ -8,6 +8,12 @@ namespace commercetools.Sdk.ImportApi.Models.Types
 {
     public enum CustomFieldReferenceValue
     {
+        [Description("associate-role")]
+        AssociateRole,
+
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart")]
         Cart,
 
@@ -68,6 +74,12 @@ namespace commercetools.Sdk.ImportApi.Models.Types
     [EnumInterfaceCreator(typeof(ICustomFieldReferenceValue), "FindEnum")]
     public interface ICustomFieldReferenceValue : IJsonName, IEnumerable<char>
     {
+        public static ICustomFieldReferenceValue AssociateRole = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.AssociateRole, JsonName = "associate-role" };
+
+        public static ICustomFieldReferenceValue BusinessUnit = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.BusinessUnit, JsonName = "business-unit" };
+
         public static ICustomFieldReferenceValue Cart = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Cart, JsonName = "cart" };
 
@@ -110,6 +122,8 @@ namespace commercetools.Sdk.ImportApi.Models.Types
         {
             return new[]
             {
+                 AssociateRole ,
+                 BusinessUnit ,
                  Cart ,
                  Category ,
                  Channel ,
