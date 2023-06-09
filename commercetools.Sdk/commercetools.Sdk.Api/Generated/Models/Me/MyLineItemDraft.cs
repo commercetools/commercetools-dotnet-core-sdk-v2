@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
     public partial class MyLineItemDraft : IMyLineItemDraft
     {
+        public string Key { get; set; }
+
         public string ProductId { get; set; }
 
         public long? VariantId { get; set; }

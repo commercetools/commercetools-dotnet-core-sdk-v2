@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderAddLineItemAction))]
     public partial interface IStagedOrderAddLineItemAction : IStagedOrderUpdateAction
     {
+        string Key { get; set; }
+
         ICustomFieldsDraft Custom { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }

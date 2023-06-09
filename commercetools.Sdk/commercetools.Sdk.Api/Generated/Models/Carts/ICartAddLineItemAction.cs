@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartAddLineItemAction))]
     public partial interface ICartAddLineItemAction : ICartUpdateAction
     {
+        string Key { get; set; }
+
         string ProductId { get; set; }
 
         long? VariantId { get; set; }

@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyLineItemDraft))]
     public partial interface IMyLineItemDraft
     {
+        string Key { get; set; }
+
         string ProductId { get; set; }
 
         long? VariantId { get; set; }

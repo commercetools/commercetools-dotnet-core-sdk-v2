@@ -18,6 +18,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         string ProductId { get; set; }
 
         string ProductKey { get; set; }

@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         public string Action { get; set; }
 
+        public string Key { get; set; }
+
         public ICustomFieldsDraft Custom { get; set; }
 
         public IChannelResourceIdentifier DistributionChannel { get; set; }
