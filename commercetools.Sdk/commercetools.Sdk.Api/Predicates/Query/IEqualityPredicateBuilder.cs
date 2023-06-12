@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @return a combination predicate
          */
         CombinationQueryPredicate<T> Is(TValue value) {
-        return Is(PredicateOperator.IsEqual, value);
+            return Is(PredicateOperator.IsEqual, value);
         }
 
         /**

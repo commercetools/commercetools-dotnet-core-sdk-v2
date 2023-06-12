@@ -2,7 +2,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    class ComparableCollectionPredicateBuilder<T, TValue> : CollectionPredicateBuilder<T>, IComparablePredicateBuilder<T, TValue> {
+    public class ComparableCollectionPredicateBuilder<T, TValue> : CollectionPredicateBuilder<T>, IComparablePredicateBuilder<T, TValue> {
 
         private readonly Func<TValue, ConstantQueryPredicate> _formatter;
 

@@ -9,9 +9,9 @@ namespace commercetools.Sdk.Api.Predicates.Query
 
         private readonly Func<TValue, ConstantQueryPredicate> _formatter;
 
-        public ComparablePredicateBuilder( BinaryQueryPredicate predicate,
-         Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn,
-         Func<TValue, ConstantQueryPredicate> formatter) {
+        public ComparablePredicateBuilder( BinaryQueryPredicate predicate, 
+            Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn, 
+            Func<TValue, ConstantQueryPredicate> formatter) {
             this._predicate = predicate;
             this._combinationFn = combinationFn;
             this._formatter = formatter;

@@ -15,7 +15,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
              * @param value the comparison value
              * @return a combination predicate
              */ 
-        CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value) {
+        public virtual CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value) {
             return CombinationFn().Invoke(Predicate().Operator(op.ToString()).Right(Format(value)));
         }
 
@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param value the variable name predicate
          * @return a combination predicate
          */
-        CombinationQueryPredicate<T> Is(PredicateOperator op, VariableQueryPredicate value) {
+        public CombinationQueryPredicate<T> Is(PredicateOperator op, VariableQueryPredicate value) {
             return CombinationFn().Invoke(Predicate().Operator(op.ToString()).Right(value));
         }
     }
