@@ -2,14 +2,14 @@ using System;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class ComparablePredicateBuilder<T, TValue> : IComparablePredicateBuilder<T, TValue> {
+    public class ComparisonPredicateBuilder<T, TValue> : IComparisonPredicateBuilder<T, TValue> {
         private readonly BinaryQueryPredicate _predicate;
 
         private readonly Func<IQueryPredicate, CombinationQueryPredicate<T>> _combinationFn;
 
         private readonly Func<TValue, ConstantQueryPredicate> _formatter;
 
-        public ComparablePredicateBuilder( BinaryQueryPredicate predicate, 
+        public ComparisonPredicateBuilder( BinaryQueryPredicate predicate, 
             Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn, 
             Func<TValue, ConstantQueryPredicate> formatter) {
             this._predicate = predicate;

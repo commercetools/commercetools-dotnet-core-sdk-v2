@@ -1,33 +1,34 @@
+using System.Collections;
 using System.ComponentModel;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public enum PredicateOperator
+    public class PredicateOperator
     {
-        [Description("=")]
-        IsEqual,
-        [Description("!=")]
-        IsNotEqual,
-        [Description("<>")]
-        IsNot,
-        [Description("<")]
-        IsLessThan,
-        [Description("<=")]
-        IsLessThanOrEqual,
-        [Description(">")]
-        IsGreaterThan,
-        [Description(">=")]
-        IsGreaterThanOrEqual,
-        [Description("in")]
-        IsIn,
-
-        [Description("is")]
-        Is,
-
-        [Description("contains")]
-        Contains,
-        [Description("within")]
-        Within
+        public static PredicateOperator IsEqual => new PredicateOperator("=");
+        public static PredicateOperator IsNotEqual => new PredicateOperator("!=");
+        public static PredicateOperator IsNot => new PredicateOperator("<>");
+        public static PredicateOperator IsLessThan => new PredicateOperator("<");
+        public static PredicateOperator IsLessThanOrEqual => new PredicateOperator("<=");
+        public static PredicateOperator IsGreaterThan => new PredicateOperator(">");
+        public static PredicateOperator IsGreaterThanOrEqual => new PredicateOperator(">=");
+        public static PredicateOperator IsIn => new PredicateOperator("in");
         
+        public static PredicateOperator Is => new PredicateOperator("is");
+        
+        public static PredicateOperator Contains => new PredicateOperator("contains");
+        public static PredicateOperator Within => new PredicateOperator("within");
+
+        private readonly string _name;
+        
+        public PredicateOperator(string name)
+        {
+            _name = name;
+        }
+
+        public override string ToString()
+        {
+            return _name;
+        }
     }
 }

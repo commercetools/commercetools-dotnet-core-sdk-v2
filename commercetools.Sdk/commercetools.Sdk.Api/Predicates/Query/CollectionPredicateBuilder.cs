@@ -2,7 +2,7 @@ using System;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class CollectionPredicateBuilder<T> : IEmptyPredicateBuilder<T> {
+    public class CollectionPredicateBuilder<T> : ICollectionPredicateBuilder<T> {
         private readonly BinaryQueryPredicate _predicate;
 
         private readonly Func<IQueryPredicate, CombinationQueryPredicate<T>> _combinationFn;

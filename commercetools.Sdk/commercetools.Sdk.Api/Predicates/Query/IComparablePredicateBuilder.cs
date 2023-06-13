@@ -1,21 +1,18 @@
 using System;
+using commercetools.Sdk.Api.Models;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public interface IComparablePredicateBuilder<T, in TValue> {
-        BinaryQueryPredicate Predicate();
-
-        Func<IQueryPredicate, CombinationQueryPredicate<T>> CombinationFn();
-
+    public interface IComparablePredicateBuilder<T, in TValue> : IPredicateBuilder<T> {
         ConstantQueryPredicate Format(TValue value);
 
-            /**
-             * create a predicate with the supplied operator and value
-             * @param operator the predicate operator
-             * @param value the comparison value
-             * @return a combination predicate
-             */ 
-        public virtual CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value) {
+        /**
+         * create a predicate with the supplied operator and value
+         * @param operator the predicate operator
+         * @param value the comparison value
+         * @return a combination predicate
+         */ 
+        public CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value) {
             return CombinationFn().Invoke(Predicate().Operator(op.ToString()).Right(Format(value)));
         }
 

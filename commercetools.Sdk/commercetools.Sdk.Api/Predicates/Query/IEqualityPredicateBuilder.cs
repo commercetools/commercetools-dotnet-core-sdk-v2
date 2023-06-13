@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @return a combination predicate
          */
         CombinationQueryPredicate<T> IsVar(string variable) {
-            return Is(PredicateOperator.IsEqual, new VariableQueryPredicate().Constant(variable));
+            return Is(PredicateOperator.IsEqual, new VariableQueryPredicate().Variable(variable));
         }
     }
 }

@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
     static class PredicateFormatter
     {
         private const string DefaultDateTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK";
+        private const string DefaultDateFormat = "yyyy'-'MM'-'dd";
 
         public static ConstantQueryPredicate Format(Boolean value) {
             return new ConstantQueryPredicate().Constant($"{value}");
@@ -14,7 +15,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
 
         public static ConstantQueryPredicate Format(Date value) {
             return new ConstantQueryPredicate()
-                .Constant($"\"{value.ToString()}\"");
+                .Constant($"\"{value.ToString(DefaultDateFormat)}\"");
         }
 
         public static ConstantQueryPredicate Format(DateTime value) {

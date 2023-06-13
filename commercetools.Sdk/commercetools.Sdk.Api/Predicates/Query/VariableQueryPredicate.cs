@@ -1,22 +1,30 @@
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class VariableQueryPredicate : ConstantQueryPredicate {
+    public class VariableQueryPredicate : IQueryPredicate {
+    
+        private readonly string _variable;
 
-        public VariableQueryPredicate(string variable): base(variable) {
+        public VariableQueryPredicate(string variable) {
+            this._variable = variable;
         }
 
-        public VariableQueryPredicate() : base(){
+        public VariableQueryPredicate() {
+            this._variable = null;
         }
 
-        public new VariableQueryPredicate Constant(string variable) {
+        public string Variable() {
+            return _variable;
+        }
+
+        public VariableQueryPredicate Variable(string variable) {
             return new VariableQueryPredicate(variable);
         }
 
-        public new string Render() {
-            return ":" + base.Render();
+        public string Render() {
+            return $":{_variable}";
         }
         
-        public new static VariableQueryPredicate Of()
+        public static VariableQueryPredicate Of()
         {
             return new VariableQueryPredicate();
         }

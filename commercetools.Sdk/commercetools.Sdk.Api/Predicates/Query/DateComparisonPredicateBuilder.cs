@@ -4,7 +4,7 @@ using commercetools.Base.Models;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class DateComparisonPredicateBuilder<T> : ComparablePredicateBuilder<T, Date> {
+    public class DateComparisonPredicateBuilder<T> : ComparisonPredicateBuilder<T, Date> {
         public DateComparisonPredicateBuilder(BinaryQueryPredicate predicate, Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn): base(predicate, combinationFn, PredicateFormatter.Format) {
         }
 

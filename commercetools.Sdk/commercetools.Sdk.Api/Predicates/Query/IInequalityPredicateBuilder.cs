@@ -18,19 +18,19 @@ namespace commercetools.Sdk.Api.Predicates.Query
         }
 
         CombinationQueryPredicate<T> IsLessThanVar(string variable) {
-            return Is(PredicateOperator.IsLessThan, new VariableQueryPredicate().Constant(variable));
+            return Is(PredicateOperator.IsLessThan, new VariableQueryPredicate().Variable(variable));
         }
 
         CombinationQueryPredicate<T> IsGreaterThanVar(string variable) {
-            return Is(PredicateOperator.IsGreaterThan, new VariableQueryPredicate().Constant(variable));
+            return Is(PredicateOperator.IsGreaterThan, new VariableQueryPredicate().Variable(variable));
         }
 
         CombinationQueryPredicate<T> IsLessThanOrEqualVar(string variable) {
-            return Is(PredicateOperator.IsLessThanOrEqual, new VariableQueryPredicate().Constant(variable));
+            return Is(PredicateOperator.IsLessThanOrEqual, new VariableQueryPredicate().Variable(variable));
         }
 
         CombinationQueryPredicate<T> IsGreaterThanOrEqualVar(string variable) {
-            return Is(PredicateOperator.IsGreaterThanOrEqual, new VariableQueryPredicate().Constant(variable));
+            return Is(PredicateOperator.IsGreaterThanOrEqual, new VariableQueryPredicate().Variable(variable));
         }
     }
 }
