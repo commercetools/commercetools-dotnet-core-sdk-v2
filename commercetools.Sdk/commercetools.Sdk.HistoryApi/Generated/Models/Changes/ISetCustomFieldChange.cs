@@ -11,13 +11,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        string Name { get; set; }
-
-        string CustomTypeId { get; set; }
+        Object PreviousValue { get; set; }
 
         Object NextValue { get; set; }
 
-        Object PreviousValue { get; set; }
+        string Name { get; set; }
+
+        string CustomTypeId { get; set; }
 
     }
 }

@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string DeliveryId { get; set; }
-
         IParcel NextValue { get; set; }
+
+        string DeliveryId { get; set; }
 
     }
 }

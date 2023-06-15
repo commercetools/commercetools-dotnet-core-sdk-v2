@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        IReviewRatingStatistics NextValue { get; set; }
-
         IReviewRatingStatistics PreviousValue { get; set; }
+
+        IReviewRatingStatistics NextValue { get; set; }
 
     }
 }

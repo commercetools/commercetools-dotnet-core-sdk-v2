@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ITaxMode TaxMode { get; set; }
+        public IShippingMethodTaxAmountChangeValue PreviousValue { get; set; }
 
         public IShippingMethodTaxAmountChangeValue NextValue { get; set; }
 
-        public IShippingMethodTaxAmountChangeValue PreviousValue { get; set; }
+        public ITaxMode TaxMode { get; set; }
         public SetShippingMethodTaxAmountChange()
         {
             this.Type = "SetShippingMethodTaxAmountChange";

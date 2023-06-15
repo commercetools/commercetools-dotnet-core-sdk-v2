@@ -12,17 +12,17 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
+        Object PreviousValue { get; set; }
+
+        Object NextValue { get; set; }
+
         string CustomTypeId { get; set; }
 
         string Name { get; set; }
 
-        string Variant { get; set; }
-
         ILocalizedString LineItem { get; set; }
 
-        Object NextValue { get; set; }
-
-        Object PreviousValue { get; set; }
+        string Variant { get; set; }
 
     }
 }

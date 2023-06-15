@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string AttributeName { get; set; }
-
         IAttributeConstraintEnum PreviousValue { get; set; }
 
         IAttributeConstraintEnum NextValue { get; set; }
+
+        string AttributeName { get; set; }
 
     }
 }

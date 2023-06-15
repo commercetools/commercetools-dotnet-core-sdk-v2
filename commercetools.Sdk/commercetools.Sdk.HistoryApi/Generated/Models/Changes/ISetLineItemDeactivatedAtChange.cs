@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IShoppingListLineItemValue LineItem { get; set; }
-
         string PreviousValue { get; set; }
 
         string NextValue { get; set; }
+
+        IShoppingListLineItemValue LineItem { get; set; }
 
     }
 }

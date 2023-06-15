@@ -12,11 +12,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IParcelChangeValue Parcel { get; set; }
+        IParcelMeasurements PreviousValue { get; set; }
 
         IParcelMeasurements NextValue { get; set; }
 
-        IParcelMeasurements PreviousValue { get; set; }
+        IParcelChangeValue Parcel { get; set; }
 
     }
 }

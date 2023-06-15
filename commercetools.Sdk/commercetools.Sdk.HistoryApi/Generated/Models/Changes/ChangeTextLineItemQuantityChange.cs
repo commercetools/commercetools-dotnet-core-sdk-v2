@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ITextLineItemValue TextLineItem { get; set; }
-
         public int PreviousValue { get; set; }
 
         public int NextValue { get; set; }
+
+        public ITextLineItemValue TextLineItem { get; set; }
         public ChangeTextLineItemQuantityChange()
         {
             this.Type = "ChangeTextLineItemQuantityChange";

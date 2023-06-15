@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string DeliveryId { get; set; }
-
         public IParcel PreviousValue { get; set; }
+
+        public string DeliveryId { get; set; }
         public RemoveParcelFromDeliveryChange()
         {
             this.Type = "RemoveParcelFromDeliveryChange";

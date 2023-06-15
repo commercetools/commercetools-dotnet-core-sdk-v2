@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string ChannelId { get; set; }
-
         ISyncInfo NextValue { get; set; }
+
+        string ChannelId { get; set; }
 
     }
 }

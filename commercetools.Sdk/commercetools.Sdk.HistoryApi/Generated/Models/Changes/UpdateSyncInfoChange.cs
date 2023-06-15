@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string ChannelId { get; set; }
-
         public ISyncInfo NextValue { get; set; }
+
+        public string ChannelId { get; set; }
         public UpdateSyncInfoChange()
         {
             this.Type = "UpdateSyncInfoChange";

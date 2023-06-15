@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string FieldName { get; set; }
-
         public IEnumValue NextValue { get; set; }
+
+        public string FieldName { get; set; }
         public AddEnumValueChange()
         {
             this.Type = "AddEnumValueChange";

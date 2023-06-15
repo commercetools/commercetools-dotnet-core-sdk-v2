@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string AttributeName { get; set; }
+        public ILocalizedString PreviousValue { get; set; }
 
         public ILocalizedString NextValue { get; set; }
 
-        public ILocalizedString PreviousValue { get; set; }
+        public string AttributeName { get; set; }
         public SetInputTipChange()
         {
             this.Type = "SetInputTipChange";

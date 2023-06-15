@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IShippingMethodChangeValue NextValue { get; set; }
-
         public IShippingMethodChangeValue PreviousValue { get; set; }
+
+        public IShippingMethodChangeValue NextValue { get; set; }
         public SetShippingMethodChange()
         {
             this.Type = "SetShippingMethodChange";

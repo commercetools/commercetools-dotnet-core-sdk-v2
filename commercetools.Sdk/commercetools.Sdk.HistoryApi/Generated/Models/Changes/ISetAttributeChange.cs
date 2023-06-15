@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string CatalogData { get; set; }
-
         IAttributeValue PreviousValue { get; set; }
 
         IAttributeValue NextValue { get; set; }
+
+        string CatalogData { get; set; }
 
     }
 }

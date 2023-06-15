@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string AttributeName { get; set; }
-
         ILocalizedEnumValue PreviousValue { get; set; }
+
+        string AttributeName { get; set; }
 
     }
 }

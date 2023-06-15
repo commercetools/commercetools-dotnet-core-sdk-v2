@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
+        public IPrice NextValue { get; set; }
+
         public string CatalogData { get; set; }
 
         public string PriceId { get; set; }
-
-        public IPrice NextValue { get; set; }
         public AddPriceChange()
         {
             this.Type = "AddPriceChange";

@@ -11,15 +11,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
+        ITaxRate PreviousValue { get; set; }
+
+        ITaxRate NextValue { get; set; }
+
         ILocalizedString CustomLineItem { get; set; }
 
         string CustomLineItemId { get; set; }
 
         ITaxMode TaxMode { get; set; }
-
-        ITaxRate NextValue { get; set; }
-
-        ITaxRate PreviousValue { get; set; }
 
     }
 }

@@ -10,13 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ILocalizedString CustomLineItem { get; set; }
-
-        public string CustomLineItemId { get; set; }
+        public int PreviousValue { get; set; }
 
         public int NextValue { get; set; }
 
-        public int PreviousValue { get; set; }
+        public ILocalizedString CustomLineItem { get; set; }
+
+        public string CustomLineItemId { get; set; }
         public ChangeCustomLineItemQuantityChange()
         {
             this.Type = "ChangeCustomLineItemQuantityChange";

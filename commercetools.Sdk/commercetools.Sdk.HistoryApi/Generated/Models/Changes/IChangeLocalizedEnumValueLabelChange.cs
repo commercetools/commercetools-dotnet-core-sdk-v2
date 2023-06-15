@@ -11,15 +11,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
+        ILocalizedString PreviousValue { get; set; }
+
+        ILocalizedString NextValue { get; set; }
+
         string FieldName { get; set; }
 
         string AttributeName { get; set; }
 
         string ValueKey { get; set; }
-
-        ILocalizedString PreviousValue { get; set; }
-
-        ILocalizedString NextValue { get; set; }
 
     }
 }

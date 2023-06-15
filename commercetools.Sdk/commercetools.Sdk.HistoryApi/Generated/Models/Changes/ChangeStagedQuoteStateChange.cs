@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IStagedQuoteState NextValue { get; set; }
-
         public IStagedQuoteState PreviousValue { get; set; }
+
+        public IStagedQuoteState NextValue { get; set; }
         public ChangeStagedQuoteStateChange()
         {
             this.Type = "ChangeStagedQuoteStateChange";

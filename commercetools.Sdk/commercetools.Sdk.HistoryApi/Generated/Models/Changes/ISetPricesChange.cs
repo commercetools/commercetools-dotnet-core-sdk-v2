@@ -13,10 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string CatalogData { get; set; }
-
-        string Variant { get; set; }
-
         IList<IPrice> PreviousValue { get; set; }
         IEnumerable<IPrice> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
@@ -24,6 +20,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IList<IPrice> NextValue { get; set; }
         IEnumerable<IPrice> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+
+        string CatalogData { get; set; }
+
+        string Variant { get; set; }
 
     }
 }

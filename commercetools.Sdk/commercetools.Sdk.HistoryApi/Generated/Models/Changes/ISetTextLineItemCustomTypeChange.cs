@@ -12,11 +12,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ITextLineItemValue TextLineItem { get; set; }
+        ICustomFields PreviousValue { get; set; }
 
         ICustomFields NextValue { get; set; }
 
-        ICustomFields PreviousValue { get; set; }
+        ITextLineItemValue TextLineItem { get; set; }
 
     }
 }

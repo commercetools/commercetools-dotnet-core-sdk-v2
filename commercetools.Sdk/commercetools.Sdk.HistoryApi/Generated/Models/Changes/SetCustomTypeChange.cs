@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ICustomFields NextValue { get; set; }
-
         public ICustomFields PreviousValue { get; set; }
+
+        public ICustomFields NextValue { get; set; }
         public SetCustomTypeChange()
         {
             this.Type = "SetCustomTypeChange";

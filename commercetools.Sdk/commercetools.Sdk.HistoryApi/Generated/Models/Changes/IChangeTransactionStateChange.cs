@@ -12,11 +12,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        ITransactionChangeValue Transaction { get; set; }
+        ITransactionState PreviousValue { get; set; }
 
         ITransactionState NextValue { get; set; }
 
-        ITransactionState PreviousValue { get; set; }
+        ITransactionChangeValue Transaction { get; set; }
 
     }
 }

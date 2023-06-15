@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ILocalizedString LineItem { get; set; }
+        IPrice PreviousValue { get; set; }
 
         IPrice NextValue { get; set; }
 
-        IPrice PreviousValue { get; set; }
+        ILocalizedString LineItem { get; set; }
 
     }
 }

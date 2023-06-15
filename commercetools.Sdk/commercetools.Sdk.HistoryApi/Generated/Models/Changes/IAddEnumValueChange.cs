@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string FieldName { get; set; }
-
         IEnumValue NextValue { get; set; }
+
+        string FieldName { get; set; }
 
     }
 }

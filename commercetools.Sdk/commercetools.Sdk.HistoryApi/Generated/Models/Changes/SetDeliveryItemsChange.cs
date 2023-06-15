@@ -12,15 +12,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string DeliveryId { get; set; }
+        public IList<IDeliveryItem> PreviousValue { get; set; }
+        public IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         public IList<IDeliveryItem> NextValue { get; set; }
         public IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        public IList<IDeliveryItem> PreviousValue { get; set; }
-        public IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
-
+        public string DeliveryId { get; set; }
         public SetDeliveryItemsChange()
         {
             this.Type = "SetDeliveryItemsChange";

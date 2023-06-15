@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        IChangeValueChangeValue NextValue { get; set; }
-
         IChangeValueChangeValue PreviousValue { get; set; }
+
+        IChangeValueChangeValue NextValue { get; set; }
 
     }
 }

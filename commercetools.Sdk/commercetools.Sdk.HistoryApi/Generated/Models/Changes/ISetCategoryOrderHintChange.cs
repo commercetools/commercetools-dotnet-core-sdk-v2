@@ -11,13 +11,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string CatalogData { get; set; }
-
-        string CategoryId { get; set; }
-
         ICategoryOrderHints PreviousValue { get; set; }
 
         ICategoryOrderHints NextValue { get; set; }
+
+        string CatalogData { get; set; }
+
+        string CategoryId { get; set; }
 
     }
 }

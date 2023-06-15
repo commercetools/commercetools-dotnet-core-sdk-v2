@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        IInventoryQuantityValue NextValue { get; set; }
-
         IInventoryQuantityValue PreviousValue { get; set; }
+
+        IInventoryQuantityValue NextValue { get; set; }
 
     }
 }

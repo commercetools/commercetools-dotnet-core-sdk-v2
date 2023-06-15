@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ICustomShippingMethodChangeValue NextValue { get; set; }
-
         ICustomShippingMethodChangeValue PreviousValue { get; set; }
+
+        ICustomShippingMethodChangeValue NextValue { get; set; }
 
     }
 }

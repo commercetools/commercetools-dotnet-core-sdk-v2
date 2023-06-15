@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string CatalogData { get; set; }
-
         public IImage PreviousValue { get; set; }
 
         public IImage NextValue { get; set; }
+
+        public string CatalogData { get; set; }
         public SetImageLabelChange()
         {
             this.Type = "SetImageLabelChange";
