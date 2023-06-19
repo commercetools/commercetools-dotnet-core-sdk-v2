@@ -1,20 +1,20 @@
-using System;
-
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class BinaryQueryPredicate: IBinaryPredicate<IQueryPredicate>, IQueryPredicate
+    public class BinaryQueryPredicate : IBinaryPredicate<IQueryPredicate>, IQueryPredicate
     {
         private readonly IQueryPredicate _left;
         private readonly IQueryPredicate _right;
         private readonly string _op;
-        
-        public BinaryQueryPredicate(IQueryPredicate left, IQueryPredicate right, string op) {
+
+        public BinaryQueryPredicate(IQueryPredicate left, IQueryPredicate right, string op)
+        {
             this._left = left;
             this._right = right;
             this._op = op;
         }
 
-        public BinaryQueryPredicate() {
+        public BinaryQueryPredicate()
+        {
             this._left = null;
             this._right = null;
             this._op = null;
@@ -39,16 +39,19 @@ namespace commercetools.Sdk.Api.Predicates.Query
         {
             return _op;
         }
-        
-        public BinaryQueryPredicate Left(IQueryPredicate predicate) {
+
+        public BinaryQueryPredicate Left(IQueryPredicate predicate)
+        {
             return new BinaryQueryPredicate(predicate, _right, _op);
         }
 
-        public BinaryQueryPredicate Right(IQueryPredicate predicate) {
+        public BinaryQueryPredicate Right(IQueryPredicate predicate)
+        {
             return new BinaryQueryPredicate(_left, predicate, _op);
         }
 
-        public BinaryQueryPredicate Operator(string op) {
+        public BinaryQueryPredicate Operator(string op)
+        {
             return new BinaryQueryPredicate(_left, _right, op);
         }
 

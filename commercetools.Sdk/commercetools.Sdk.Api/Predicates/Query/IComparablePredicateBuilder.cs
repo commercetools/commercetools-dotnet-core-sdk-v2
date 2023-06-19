@@ -1,9 +1,7 @@
-using System;
-using commercetools.Sdk.Api.Models;
-
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public interface IComparablePredicateBuilder<T, in TValue> : IPredicateBuilder<T> {
+    public interface IComparablePredicateBuilder<T, in TValue> : IPredicateBuilder<T>
+    {
         ConstantQueryPredicate Format(TValue value);
 
         /**
@@ -11,8 +9,9 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param operator the predicate operator
          * @param value the comparison value
          * @return a combination predicate
-         */ 
-        public CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value) {
+         */
+        public CombinationQueryPredicate<T> Is(PredicateOperator op, TValue value)
+        {
             return CombinationFn().Invoke(Predicate().Operator(op.ToString()).Right(Format(value)));
         }
 
@@ -22,7 +21,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param value the variable name predicate
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> Is(PredicateOperator op, VariableQueryPredicate value) {
+        public CombinationQueryPredicate<T> Is(PredicateOperator op, VariableQueryPredicate value)
+        {
             return CombinationFn().Invoke(Predicate().Operator(op.ToString()).Right(value));
         }
     }

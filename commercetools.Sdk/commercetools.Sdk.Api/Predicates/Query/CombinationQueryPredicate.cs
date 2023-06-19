@@ -2,12 +2,14 @@ using System;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class CombinationQueryPredicate<T>: IQueryPredicate {
+    public class CombinationQueryPredicate<T> : IQueryPredicate
+    {
         private readonly IQueryPredicate _predicate;
 
         private readonly Func<T> _modelSupplier;
 
-        public CombinationQueryPredicate(IQueryPredicate predicate, Func<T> modelSupplier) {
+        public CombinationQueryPredicate(IQueryPredicate predicate, Func<T> modelSupplier)
+        {
             this._predicate = predicate;
             this._modelSupplier = modelSupplier;
         }
@@ -17,7 +19,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param fn predicate builder function
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> And(Func<T, CombinationQueryPredicate<T>> fn) {
+        public CombinationQueryPredicate<T> And(Func<T, CombinationQueryPredicate<T>> fn)
+        {
             return new CombinationQueryPredicate<T>(
                 new BinaryQueryPredicate().Left(_predicate).Right(fn.Invoke(_modelSupplier.Invoke())).Operator("and"),
                 _modelSupplier);
@@ -28,7 +31,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param second predicate
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> And(CombinationQueryPredicate<T> second) {
+        public CombinationQueryPredicate<T> And(CombinationQueryPredicate<T> second)
+        {
             return new CombinationQueryPredicate<T>(new BinaryQueryPredicate().Left(_predicate).Right(second).Operator("and"),
                 _modelSupplier);
         }
@@ -38,7 +42,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param fn predicate builder function
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> Or(Func<T, CombinationQueryPredicate<T>> fn) {
+        public CombinationQueryPredicate<T> Or(Func<T, CombinationQueryPredicate<T>> fn)
+        {
             return new CombinationQueryPredicate<T>(
                 new BinaryQueryPredicate().Left(_predicate).Right(fn.Invoke(_modelSupplier.Invoke())).Operator("or"),
                 _modelSupplier);
@@ -49,7 +54,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param second predicate
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> Or(CombinationQueryPredicate<T> second) {
+        public CombinationQueryPredicate<T> Or(CombinationQueryPredicate<T> second)
+        {
             return new CombinationQueryPredicate<T>(new BinaryQueryPredicate().Left(_predicate).Right(second).Operator("or"),
                 _modelSupplier);
         }
@@ -58,7 +64,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * puts the resulting predicate in parentheses
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> Group() {
+        public CombinationQueryPredicate<T> Group()
+        {
             return new CombinationQueryPredicate<T>(new ContainerQueryPredicate().Inner(_predicate), _modelSupplier);
         }
 
@@ -66,13 +73,15 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * negates the previous predicate with the NOT predicate
          * @return a combination predicate
          */
-        public CombinationQueryPredicate<T> Not() {
+        public CombinationQueryPredicate<T> Not()
+        {
             return new CombinationQueryPredicate<T>(
                 new ContainerQueryPredicate().Parent(new ConstantQueryPredicate().Constant("not")).Inner(_predicate),
                 _modelSupplier);
         }
 
-        public string Render() {
+        public string Render()
+        {
             return _predicate.Render();
         }
     }

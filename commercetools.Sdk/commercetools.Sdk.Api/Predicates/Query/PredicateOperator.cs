@@ -1,6 +1,3 @@
-using System.Collections;
-using System.ComponentModel;
-
 namespace commercetools.Sdk.Api.Predicates.Query
 {
     public class PredicateOperator
@@ -13,14 +10,14 @@ namespace commercetools.Sdk.Api.Predicates.Query
         public static PredicateOperator IsGreaterThan => new PredicateOperator(">");
         public static PredicateOperator IsGreaterThanOrEqual => new PredicateOperator(">=");
         public static PredicateOperator IsIn => new PredicateOperator("in");
-        
+
         public static PredicateOperator Is => new PredicateOperator("is");
-        
+
         public static PredicateOperator Contains => new PredicateOperator("contains");
         public static PredicateOperator Within => new PredicateOperator("within");
 
         private readonly string _name;
-        
+
         public PredicateOperator(string name)
         {
             _name = name;

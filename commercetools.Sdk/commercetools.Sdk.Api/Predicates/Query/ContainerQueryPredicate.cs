@@ -64,7 +64,7 @@ namespace commercetools.Sdk.Api.Predicates.Query
                 ? $"{Parent()?.Render()} {Inner()?.Render()}".Trim()
                 : $"{Parent()?.Render()}({Inner()?.Render()})".Trim();
         }
-        
+
         public static ContainerQueryPredicate Of()
         {
             return new ContainerQueryPredicate();

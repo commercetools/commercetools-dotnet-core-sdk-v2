@@ -1,6 +1,6 @@
 namespace commercetools.Sdk.Api.Predicates
 {
-    public interface IContainerPredicate<out T>: IPredicate where T: IPredicate 
+    public interface IContainerPredicate<out T> : IPredicate where T : IPredicate
     {
         public T Parent();
 

@@ -4,8 +4,10 @@ using commercetools.Base.Models;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
-    public class DateComparisonPredicateBuilder<T> : ComparisonPredicateBuilder<T, Date> {
-        public DateComparisonPredicateBuilder(BinaryQueryPredicate predicate, Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn): base(predicate, combinationFn, PredicateFormatter.Format) {
+    public class DateComparisonPredicateBuilder<T> : ComparisonPredicateBuilder<T, Date>
+    {
+        public DateComparisonPredicateBuilder(BinaryQueryPredicate predicate, Func<IQueryPredicate, CombinationQueryPredicate<T>> combinationFn) : base(predicate, combinationFn, PredicateFormatter.Format)
+        {
         }
 
         public CombinationQueryPredicate<T> IsNot(Date value)
@@ -13,5 +15,5 @@ namespace commercetools.Sdk.Api.Predicates.Query
             return ((IComparablePredicateBuilder<T, Date>)this).Is(PredicateOperator.IsNotEqual, value);
         }
     }
-    
+
 }

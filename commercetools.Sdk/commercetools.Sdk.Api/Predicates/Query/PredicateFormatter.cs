@@ -9,37 +9,45 @@ namespace commercetools.Sdk.Api.Predicates.Query
         private const string DefaultDateTimeFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK";
         private const string DefaultDateFormat = "yyyy'-'MM'-'dd";
 
-        public static ConstantQueryPredicate Format(Boolean value) {
+        public static ConstantQueryPredicate Format(Boolean value)
+        {
             return new ConstantQueryPredicate().Constant($"{value}");
         }
 
-        public static ConstantQueryPredicate Format(Date value) {
+        public static ConstantQueryPredicate Format(Date value)
+        {
             return new ConstantQueryPredicate()
                 .Constant($"\"{value.ToString(DefaultDateFormat)}\"");
         }
 
-        public static ConstantQueryPredicate Format(DateTime value) {
+        public static ConstantQueryPredicate Format(DateTime value)
+        {
             return new ConstantQueryPredicate()
                 .Constant($"\"{value.ToUniversalTime().ToString(DefaultDateTimeFormat)}\"");
         }
 
-        public static ConstantQueryPredicate Format(double value) {
+        public static ConstantQueryPredicate Format(double value)
+        {
             return new ConstantQueryPredicate(value.ToString(CultureInfo.InvariantCulture));
         }
 
-        public static ConstantQueryPredicate Format(decimal value) {
+        public static ConstantQueryPredicate Format(decimal value)
+        {
             return new ConstantQueryPredicate(value.ToString(CultureInfo.InvariantCulture));
         }
 
-        public static ConstantQueryPredicate Format(long value) {
+        public static ConstantQueryPredicate Format(long value)
+        {
             return new ConstantQueryPredicate().Constant($"{value}");
         }
 
-        public static ConstantQueryPredicate Format(string value) {
+        public static ConstantQueryPredicate Format(string value)
+        {
             return new ConstantQueryPredicate().Constant($"\"{value.Escape()}\"");
         }
 
-        public static ConstantQueryPredicate Format(TimeSpan value) {
+        public static ConstantQueryPredicate Format(TimeSpan value)
+        {
             return new ConstantQueryPredicate()
                 .Constant($"\"{value:'HH':'mm'}\"");
         }
@@ -49,7 +57,8 @@ namespace commercetools.Sdk.Api.Predicates.Query
          * @param s the unescaped String
          * @return the escaped string
          */
-        public static string Escape(this string s) {
+        public static string Escape(this string s)
+        {
             return s.Replace("\"", "\\\"");
         }
     }
