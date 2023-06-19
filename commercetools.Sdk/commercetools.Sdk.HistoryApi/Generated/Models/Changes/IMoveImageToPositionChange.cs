@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.MoveImageToPositionChange))]
@@ -13,8 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string CatalogData { get; set; }
-
         IList<IImage> PreviousValue { get; set; }
         IEnumerable<IImage> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
@@ -22,6 +20,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         IList<IImage> NextValue { get; set; }
         IEnumerable<IImage> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+
+        string CatalogData { get; set; }
 
     }
 }

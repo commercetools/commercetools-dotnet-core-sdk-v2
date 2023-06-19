@@ -1,7 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomLineItemShippingDetailsChange))]
@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string CustomLineItemId { get; set; }
+        IItemShippingDetails PreviousValue { get; set; }
 
         IItemShippingDetails NextValue { get; set; }
 
-        IItemShippingDetails PreviousValue { get; set; }
+        string CustomLineItemId { get; set; }
 
     }
 }

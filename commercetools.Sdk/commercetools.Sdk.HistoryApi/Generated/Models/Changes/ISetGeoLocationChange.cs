@@ -1,7 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetGeoLocationChange))]
@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        IGeoLocation NextValue { get; set; }
-
         IGeoLocation PreviousValue { get; set; }
+
+        IGeoLocation NextValue { get; set; }
 
     }
 }

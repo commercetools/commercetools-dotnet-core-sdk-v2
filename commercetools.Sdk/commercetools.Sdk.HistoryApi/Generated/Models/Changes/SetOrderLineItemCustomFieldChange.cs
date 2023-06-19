@@ -11,17 +11,17 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
+        public Object PreviousValue { get; set; }
+
+        public Object NextValue { get; set; }
+
         public string CustomTypeId { get; set; }
 
         public string Name { get; set; }
 
-        public string Variant { get; set; }
-
         public ILocalizedString LineItem { get; set; }
 
-        public Object NextValue { get; set; }
-
-        public Object PreviousValue { get; set; }
+        public string Variant { get; set; }
         public SetOrderLineItemCustomFieldChange()
         {
             this.Type = "SetOrderLineItemCustomFieldChange";

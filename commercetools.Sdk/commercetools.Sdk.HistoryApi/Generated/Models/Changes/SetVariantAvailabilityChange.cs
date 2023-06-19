@@ -10,13 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string CatalogData { get; set; }
-
-        public string Variant { get; set; }
-
         public IProductVariantAvailability PreviousValue { get; set; }
 
         public IProductVariantAvailability NextValue { get; set; }
+
+        public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public SetVariantAvailabilityChange()
         {
             this.Type = "SetVariantAvailabilityChange";

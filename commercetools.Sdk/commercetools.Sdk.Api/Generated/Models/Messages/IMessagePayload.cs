@@ -1,7 +1,7 @@
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
@@ -159,6 +159,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StandalonePriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceStagedChangesApplied", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceValidFromAndUntilSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromAndUntilSetMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceValidFromSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceValidUntilSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValueChanged", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessagePayload))]
     [SubTypeDiscriminator("StoreCountriesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessagePayload))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Sdk.Api.Models.Messages.StoreCreatedMessagePayload))]
@@ -1087,6 +1090,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload StandalonePriceStagedChangesApplied(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromAndUntilSetMessagePayload StandalonePriceValidFromAndUntilSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromAndUntilSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromAndUntilSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessagePayload StandalonePriceValidFromSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessagePayload StandalonePriceValidUntilSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

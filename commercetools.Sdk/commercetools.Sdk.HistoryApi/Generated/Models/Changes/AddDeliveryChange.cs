@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IDeliveryChangeValue NextValue { get; set; }
-
         public IDeliveryChangeValue PreviousValue { get; set; }
+
+        public IDeliveryChangeValue NextValue { get; set; }
         public AddDeliveryChange()
         {
             this.Type = "AddDeliveryChange";

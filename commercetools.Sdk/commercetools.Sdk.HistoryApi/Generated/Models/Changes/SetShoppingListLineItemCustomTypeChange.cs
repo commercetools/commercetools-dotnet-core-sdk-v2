@@ -11,11 +11,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IShoppingListLineItemValue LineItem { get; set; }
+        public ICustomFields PreviousValue { get; set; }
 
         public ICustomFields NextValue { get; set; }
 
-        public ICustomFields PreviousValue { get; set; }
+        public IShoppingListLineItemValue LineItem { get; set; }
         public SetShoppingListLineItemCustomTypeChange()
         {
             this.Type = "SetShoppingListLineItemCustomTypeChange";

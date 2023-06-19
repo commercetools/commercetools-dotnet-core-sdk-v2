@@ -10,13 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ILocalizedString CustomLineItem { get; set; }
-
-        public string CustomLineItemId { get; set; }
+        public IReference PreviousValue { get; set; }
 
         public IReference NextValue { get; set; }
 
-        public IReference PreviousValue { get; set; }
+        public ILocalizedString CustomLineItem { get; set; }
+
+        public string CustomLineItemId { get; set; }
         public SetCustomLineItemTaxCategoryChange()
         {
             this.Type = "SetCustomLineItemTaxCategoryChange";

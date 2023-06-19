@@ -1,3 +1,4 @@
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client
 {
     public interface IConflictingTrait<T> where T : IConflictingTrait<T>

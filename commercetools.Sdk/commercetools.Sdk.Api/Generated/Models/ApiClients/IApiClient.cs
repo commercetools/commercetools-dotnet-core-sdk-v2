@@ -2,7 +2,7 @@ using System;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ApiClients
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClient))]

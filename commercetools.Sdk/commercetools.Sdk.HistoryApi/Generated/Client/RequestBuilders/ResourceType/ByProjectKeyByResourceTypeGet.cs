@@ -6,6 +6,7 @@ using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Sdk.HistoryApi.Models.ChangeHistories;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
 

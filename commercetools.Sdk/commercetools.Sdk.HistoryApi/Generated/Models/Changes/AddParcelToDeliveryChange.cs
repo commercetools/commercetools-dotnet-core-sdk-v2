@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string DeliveryId { get; set; }
-
         public IParcel NextValue { get; set; }
+
+        public string DeliveryId { get; set; }
         public AddParcelToDeliveryChange()
         {
             this.Type = "AddParcelToDeliveryChange";

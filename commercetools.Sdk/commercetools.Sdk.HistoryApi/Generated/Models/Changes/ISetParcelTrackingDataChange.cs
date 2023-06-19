@@ -2,7 +2,7 @@ using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetParcelTrackingDataChange))]
@@ -12,11 +12,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IParcelChangeValue Parcel { get; set; }
+        ITrackingData PreviousValue { get; set; }
 
         ITrackingData NextValue { get; set; }
 
-        ITrackingData PreviousValue { get; set; }
+        IParcelChangeValue Parcel { get; set; }
 
     }
 }

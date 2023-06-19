@@ -4,10 +4,18 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
+
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Types
 {
     public enum CustomFieldReferenceValue
     {
+        [Description("associate-role")]
+        AssociateRole,
+
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart")]
         Cart,
 
@@ -68,6 +76,12 @@ namespace commercetools.Sdk.Api.Models.Types
     [EnumInterfaceCreator(typeof(ICustomFieldReferenceValue), "FindEnum")]
     public interface ICustomFieldReferenceValue : IJsonName, IEnumerable<char>
     {
+        public static ICustomFieldReferenceValue AssociateRole = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.AssociateRole, JsonName = "associate-role" };
+
+        public static ICustomFieldReferenceValue BusinessUnit = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.BusinessUnit, JsonName = "business-unit" };
+
         public static ICustomFieldReferenceValue Cart = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Cart, JsonName = "cart" };
 
@@ -110,6 +124,8 @@ namespace commercetools.Sdk.Api.Models.Types
         {
             return new[]
             {
+                 AssociateRole ,
+                 BusinessUnit ,
                  Cart ,
                  Category ,
                  Channel ,

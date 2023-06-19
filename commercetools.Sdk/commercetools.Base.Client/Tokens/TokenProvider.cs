@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -13,13 +12,13 @@ namespace commercetools.Base.Client.Tokens
     {
         private readonly ISerializerService _serializerService;
         private readonly ITokenStoreManager _tokenStoreManager;
-        
+
         private volatile Task<Token> _tokenTask;
-        
+
         private readonly ReaderWriterLockSlim _cacheLock = new ReaderWriterLockSlim();
-        
+
         private static readonly TimeSpan WaitTimeout = TimeSpan.FromSeconds(10);
-        
+
         protected TokenProvider(HttpClient httpClient, ITokenStoreManager tokenStoreManager, ITokenSerializerService serializerService, string tokenEndpointBaseAddress)
         {
             this.HttpClient = httpClient;
@@ -27,7 +26,7 @@ namespace commercetools.Base.Client.Tokens
             this._serializerService = serializerService;
             this.TokenEndpointBaseAddress = tokenEndpointBaseAddress;
         }
-        
+
         [Obsolete("use GetToken method instead")]
         public Token Token
         {
@@ -173,7 +172,7 @@ namespace commercetools.Base.Client.Tokens
                 tokenTask.TrySetException(e);
             }
         }
-        
+
         private async Task RefreshToken(TaskCompletionSource<Token> tokenTask, Token token)
         {
             var requestMessage = string.IsNullOrEmpty(token.RefreshToken)
@@ -191,7 +190,7 @@ namespace commercetools.Base.Client.Tokens
                 tokenTask.TrySetException(e);
             }
         }
-        
+
         private async Task<Token> GetTokenAsync(HttpRequestMessage requestMessage)
         {
             var client = this.HttpClient;

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
+
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public enum StateType

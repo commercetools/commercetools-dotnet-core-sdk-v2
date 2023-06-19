@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePlainEnumValueOrderChange))]
@@ -13,15 +13,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string AttributeName { get; set; }
+        IList<IEnumValue> PreviousValue { get; set; }
+        IEnumerable<IEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         IList<IEnumValue> NextValue { get; set; }
         IEnumerable<IEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        IList<IEnumValue> PreviousValue { get; set; }
-        IEnumerable<IEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
-
+        string AttributeName { get; set; }
 
     }
 }

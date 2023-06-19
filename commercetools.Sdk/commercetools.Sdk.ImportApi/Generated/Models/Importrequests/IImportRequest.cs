@@ -2,7 +2,7 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
     [TypeDiscriminator(nameof(Type))]

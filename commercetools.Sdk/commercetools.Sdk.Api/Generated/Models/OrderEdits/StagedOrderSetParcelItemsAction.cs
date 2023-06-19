@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public string ParcelId { get; set; }
 
+        public string ParcelKey { get; set; }
+
         public IList<IDeliveryItem> Items { get; set; }
         public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 

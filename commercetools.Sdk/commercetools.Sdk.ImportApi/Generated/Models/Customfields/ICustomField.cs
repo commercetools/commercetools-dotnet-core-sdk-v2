@@ -1,7 +1,7 @@
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
     [TypeDiscriminator(nameof(Type))]

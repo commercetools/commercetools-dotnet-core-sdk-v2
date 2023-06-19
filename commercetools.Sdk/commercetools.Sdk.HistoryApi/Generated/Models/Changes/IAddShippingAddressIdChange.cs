@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddShippingAddressIdChange))]
@@ -13,12 +13,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Type { get; set; }
 
-        IList<string> NextValue { get; set; }
-        IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
-
-
         IList<string> PreviousValue { get; set; }
         IEnumerable<string> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
+
+        IList<string> NextValue { get; set; }
+        IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
         IAddress Address { get; set; }

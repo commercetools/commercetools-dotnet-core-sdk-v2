@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client
 {
     public interface IDataerasureTrait<T> where T : IDataerasureTrait<T>

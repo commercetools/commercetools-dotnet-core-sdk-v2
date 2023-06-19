@@ -1,12 +1,13 @@
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Subscriptions.Destination))]
     [SubTypeDiscriminator("AzureServiceBus", typeof(commercetools.Sdk.Api.Models.Subscriptions.AzureServiceBusDestination))]
+    [SubTypeDiscriminator("ConfluentCloud", typeof(commercetools.Sdk.Api.Models.Subscriptions.ConfluentCloudDestination))]
     [SubTypeDiscriminator("EventBridge", typeof(commercetools.Sdk.Api.Models.Subscriptions.EventBridgeDestination))]
     [SubTypeDiscriminator("EventGrid", typeof(commercetools.Sdk.Api.Models.Subscriptions.AzureEventGridDestination))]
     [SubTypeDiscriminator("GoogleCloudPubSub", typeof(commercetools.Sdk.Api.Models.Subscriptions.GoogleCloudPubSubDestination))]
@@ -19,6 +20,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         static commercetools.Sdk.Api.Models.Subscriptions.AzureServiceBusDestination AzureServiceBus(Action<commercetools.Sdk.Api.Models.Subscriptions.AzureServiceBusDestination> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Subscriptions.AzureServiceBusDestination();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.ConfluentCloudDestination ConfluentCloud(Action<commercetools.Sdk.Api.Models.Subscriptions.ConfluentCloudDestination> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.ConfluentCloudDestination();
             init?.Invoke(t);
             return t;
         }

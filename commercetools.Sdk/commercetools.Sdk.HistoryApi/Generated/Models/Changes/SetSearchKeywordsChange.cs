@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string CatalogData { get; set; }
-
         public ISearchKeywords PreviousValue { get; set; }
 
         public ISearchKeywords NextValue { get; set; }
+
+        public string CatalogData { get; set; }
         public SetSearchKeywordsChange()
         {
             this.Type = "SetSearchKeywordsChange";

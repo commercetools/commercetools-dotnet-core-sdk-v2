@@ -5,6 +5,7 @@ using System.Threading;
 using commercetools.Base.Client;
 
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
 

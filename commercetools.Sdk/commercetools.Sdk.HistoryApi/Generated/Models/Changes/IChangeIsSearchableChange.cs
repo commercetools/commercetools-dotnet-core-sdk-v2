@@ -1,6 +1,6 @@
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeIsSearchableChange))]
@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string AttributeName { get; set; }
+        bool PreviousValue { get; set; }
 
         bool NextValue { get; set; }
 
-        bool PreviousValue { get; set; }
+        string AttributeName { get; set; }
 
     }
 }

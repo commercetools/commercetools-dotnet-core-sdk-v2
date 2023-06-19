@@ -10,11 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string LineItemId { get; set; }
+        public IItemShippingDetails PreviousValue { get; set; }
 
         public IItemShippingDetails NextValue { get; set; }
 
-        public IItemShippingDetails PreviousValue { get; set; }
+        public string LineItemId { get; set; }
         public SetLineItemShippingDetailsChange()
         {
             this.Type = "SetLineItemShippingDetailsChange";

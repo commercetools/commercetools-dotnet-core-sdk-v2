@@ -1,7 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomLineItemTaxRateChange))]
@@ -11,15 +11,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
+        ITaxRate PreviousValue { get; set; }
+
+        ITaxRate NextValue { get; set; }
+
         ILocalizedString CustomLineItem { get; set; }
 
         string CustomLineItemId { get; set; }
 
         ITaxMode TaxMode { get; set; }
-
-        ITaxRate NextValue { get; set; }
-
-        ITaxRate PreviousValue { get; set; }
 
     }
 }

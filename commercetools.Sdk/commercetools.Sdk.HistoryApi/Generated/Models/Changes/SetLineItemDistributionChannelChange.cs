@@ -10,13 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ILocalizedString LineItem { get; set; }
-
-        public string Variant { get; set; }
+        public IReference PreviousValue { get; set; }
 
         public IReference NextValue { get; set; }
 
-        public IReference PreviousValue { get; set; }
+        public ILocalizedString LineItem { get; set; }
+
+        public string Variant { get; set; }
         public SetLineItemDistributionChannelChange()
         {
             this.Type = "SetLineItemDistributionChannelChange";

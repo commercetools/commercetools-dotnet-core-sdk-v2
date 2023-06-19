@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IPaymentInfo NextValue { get; set; }
-
         public IPaymentInfo PreviousValue { get; set; }
+
+        public IPaymentInfo NextValue { get; set; }
         public RemovePaymentChange()
         {
             this.Type = "RemovePaymentChange";

@@ -1,6 +1,6 @@
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.GeneralCategoryRecommendations.GeneralCategoryRecommendation))]

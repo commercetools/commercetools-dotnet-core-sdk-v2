@@ -1,3 +1,4 @@
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client
 {
     public interface IDeprecatable200Trait<T> where T : IDeprecatable200Trait<T>

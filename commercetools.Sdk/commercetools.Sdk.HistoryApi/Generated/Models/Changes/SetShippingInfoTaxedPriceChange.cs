@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ITaxedPrice NextValue { get; set; }
-
         public ITaxedPrice PreviousValue { get; set; }
+
+        public ITaxedPrice NextValue { get; set; }
         public SetShippingInfoTaxedPriceChange()
         {
             this.Type = "SetShippingInfoTaxedPriceChange";

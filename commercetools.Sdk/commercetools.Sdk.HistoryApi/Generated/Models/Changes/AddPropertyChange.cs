@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string Path { get; set; }
-
         public Object NextValue { get; set; }
+
+        public string Path { get; set; }
         public AddPropertyChange()
         {
             this.Type = "AddPropertyChange";

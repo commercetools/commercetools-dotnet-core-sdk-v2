@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         public string Action { get; set; }
 
+        public string Key { get; set; }
+
         public string ProductId { get; set; }
 
         public long? VariantId { get; set; }

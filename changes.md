@@ -1,173 +1,88 @@
 **Api changes**
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Deprecated Property(s)</summary>
 
-- added property `shippingKey` to type `CartSetShippingMethodTaxAmountAction`
-- added property `shippingKey` to type `CartSetShippingMethodTaxRateAction`
-- added property `associateRoleAssignments` to type `MyBusinessUnitAssociateDraft`
-- added property `deliveryKey` to type `StagedOrderAddDeliveryAction`
-- added property `deliveryKey` to type `StagedOrderAddParcelToDeliveryAction`
-- added property `deliveryKey` to type `StagedOrderRemoveDeliveryAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryAddressAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryAddressCustomFieldAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryAddressCustomTypeAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryCustomFieldAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryCustomTypeAction`
-- added property `deliveryKey` to type `StagedOrderSetDeliveryItemsAction`
-- added property `shippingKey` to type `StagedOrderSetShippingMethodTaxAmountAction`
-- added property `shippingKey` to type `StagedOrderSetShippingMethodTaxRateAction`
-- added property `key` to type `Delivery`
-- added property `key` to type `DeliveryDraft`
-- added property `deliveryKey` to type `OrderAddDeliveryAction`
-- added property `deliveryKey` to type `OrderAddParcelToDeliveryAction`
-- added property `deliveryKey` to type `OrderRemoveDeliveryAction`
-- added property `deliveryKey` to type `OrderSetDeliveryAddressAction`
-- added property `deliveryKey` to type `OrderSetDeliveryAddressCustomFieldAction`
-- added property `deliveryKey` to type `OrderSetDeliveryAddressCustomTypeAction`
-- added property `deliveryKey` to type `OrderSetDeliveryCustomFieldAction`
-- added property `deliveryKey` to type `OrderSetDeliveryCustomTypeAction`
-- added property `deliveryKey` to type `OrderSetDeliveryItemsAction`
-- added property `sku` to type `ProductRemovePriceAction`
-- added property `variantId` to type `ProductRemovePriceAction`
-- added property `price` to type `ProductRemovePriceAction`
+- property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
+- property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
 </details>
 
 
 <details>
 <summary>Required Property(s)</summary>
 
-- changed property `deliveryId` of type `StagedOrderAddParcelToDeliveryAction` to be optional
-- changed property `deliveryId` of type `StagedOrderRemoveDeliveryAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryAddressAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryAddressCustomFieldAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryAddressCustomTypeAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryCustomFieldAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryCustomTypeAction` to be optional
-- changed property `deliveryId` of type `StagedOrderSetDeliveryItemsAction` to be optional
-- changed property `deliveryId` of type `OrderAddParcelToDeliveryAction` to be optional
-- changed property `deliveryId` of type `OrderRemoveDeliveryAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryAddressAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryAddressCustomFieldAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryAddressCustomTypeAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryCustomFieldAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryCustomTypeAction` to be optional
-- changed property `deliveryId` of type `OrderSetDeliveryItemsAction` to be optional
+- changed property `parcelId` of type `StagedOrderRemoveParcelFromDeliveryAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelCustomFieldAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelCustomTypeAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelItemsAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelMeasurementsAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelTrackingDataAction` to be optional
+- changed property `parcelId` of type `OrderRemoveParcelFromDeliveryAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelCustomFieldAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelCustomTypeAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelItemsAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelMeasurementsAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelTrackingDataAction` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `key` to type `LineItem`
+- added property `key` to type `LineItemDraft`
+- added property `key` to type `CartAddLineItemAction`
+- added property `key` to type `MyLineItemDraft`
+- added property `key` to type `MyCartAddLineItemAction`
+- added property `key` to type `StagedOrderAddLineItemAction`
+- added property `parcelKey` to type `StagedOrderAddParcelToDeliveryAction`
+- added property `parcelKey` to type `StagedOrderRemoveParcelFromDeliveryAction`
+- added property `parcelKey` to type `StagedOrderSetParcelCustomFieldAction`
+- added property `parcelKey` to type `StagedOrderSetParcelCustomTypeAction`
+- added property `parcelKey` to type `StagedOrderSetParcelItemsAction`
+- added property `parcelKey` to type `StagedOrderSetParcelMeasurementsAction`
+- added property `parcelKey` to type `StagedOrderSetParcelTrackingDataAction`
+- added property `key` to type `Parcel`
+- added property `key` to type `ParcelDraft`
+- added property `parcelKey` to type `OrderAddParcelToDeliveryAction`
+- added property `parcelKey` to type `OrderRemoveParcelFromDeliveryAction`
+- added property `parcelKey` to type `OrderSetParcelCustomFieldAction`
+- added property `parcelKey` to type `OrderSetParcelCustomTypeAction`
+- added property `parcelKey` to type `OrderSetParcelItemsAction`
+- added property `parcelKey` to type `OrderSetParcelMeasurementsAction`
+- added property `parcelKey` to type `OrderSetParcelTrackingDataAction`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `CartSetLineItemInventoryModeAction`
-- added type `AssociateMissingPermissionError`
-- added type `MoneyOverflowError`
-- added type `GraphQLAssociateMissingPermissionError`
-- added type `GraphQLMoneyOverflowError`
-- added type `MyCartSetDirectDiscountsAction`
-- added type `QuoteCustomerChangedMessage`
-- added type `QuoteRequestCustomerChangedMessage`
-- added type `QuoteCustomerChangedMessagePayload`
-- added type `QuoteRequestCustomerChangedMessagePayload`
-- added type `QuoteRequestChangeCustomerAction`
-- added type `QuoteChangeCustomerAction`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts/replicate`
+- added type `StandalonePriceValidFromAndUntilSetMessage`
+- added type `StandalonePriceValidFromSetMessage`
+- added type `StandalonePriceValidUntilSetMessage`
+- added type `StandalonePriceValidFromAndUntilSetMessagePayload`
+- added type `StandalonePriceValidFromSetMessagePayload`
+- added type `StandalonePriceValidUntilSetMessagePayload`
+- added type `StandalonePriceSetValidFromAction`
+- added type `StandalonePriceSetValidFromAndUntilAction`
+- added type `StandalonePriceSetValidUntilAction`
+- added type `ConfluentCloudDestination`
 </details>
 
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `ReassignMyQuotes` to type `Permission`
-- added enum `ReassignOthersQuotes` to type `Permission`
-- added enum `RenegotiationAddressed` to type `QuoteState`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().carts().replicate().post()`
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 
 **Import changes**
 
 <details>
-<summary>Added Type(s)</summary>
-
-- added type `TypeImportRequest`
-- added type `TypeTextInputHint`
-- added type `ResourceTypeId`
-- added type `FieldType`
-- added type `CustomFieldBooleanType`
-- added type `CustomFieldDateTimeType`
-- added type `CustomFieldDateType`
-- added type `CustomFieldEnumType`
-- added type `CustomFieldEnumValue`
-- added type `CustomFieldLocalizedEnumType`
-- added type `CustomFieldLocalizedEnumValue`
-- added type `CustomFieldLocalizedStringType`
-- added type `CustomFieldMoneyType`
-- added type `CustomFieldNumberType`
-- added type `CustomFieldReferenceType`
-- added type `CustomFieldReferenceValue`
-- added type `CustomFieldSetType`
-- added type `CustomFieldStringType`
-- added type `CustomFieldTimeType`
-- added type `FieldDefinition`
-- added type `TypeImport`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/types`
-- added resource `/{projectKey}/types/import-containers`
-- added resource `/{projectKey}/types/import-containers/{importContainerKey}`
-</details>
-
-
-<details>
 <summary>Added Enum(s)</summary>
 
-- added enum `type` to type `ImportResourceType`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKeyValue().types().importContainers().withImportContainerKeyValue().post()`
-</details>
-
-**History changes**
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `SetCountriesChange`
-- added type `SetPurchaseOrderNumberChange`
-- added type `StoreCountry`
-</details>
-
-
-<details>
-<summary>Removed QueryParameter(s)</summary>
-
-- :warning: removed query parameter `resourceType` from method `get /{projectKey}`
-</details>
-
-
-<details>
-<summary>Added QueryParameter(s)</summary>
-
-- added query parameter `resourceTypes` to method `get /{projectKey}`
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 

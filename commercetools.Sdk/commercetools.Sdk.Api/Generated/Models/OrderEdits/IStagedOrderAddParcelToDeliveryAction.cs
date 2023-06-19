@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderAddParcelToDeliveryAction))]
@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         string DeliveryId { get; set; }
 
         string DeliveryKey { get; set; }
+
+        string ParcelKey { get; set; }
 
         IParcelMeasurements Measurements { get; set; }
 

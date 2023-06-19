@@ -1,6 +1,7 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant
 {
 

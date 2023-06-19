@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 

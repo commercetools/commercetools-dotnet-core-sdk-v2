@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDeliveryItemsChange))]
@@ -13,15 +13,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string DeliveryId { get; set; }
+        IList<IDeliveryItem> PreviousValue { get; set; }
+        IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         IList<IDeliveryItem> NextValue { get; set; }
         IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        IList<IDeliveryItem> PreviousValue { get; set; }
-        IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
-
+        string DeliveryId { get; set; }
 
     }
 }

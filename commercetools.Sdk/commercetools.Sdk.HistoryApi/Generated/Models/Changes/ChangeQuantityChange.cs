@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IInventoryQuantityValue NextValue { get; set; }
-
         public IInventoryQuantityValue PreviousValue { get; set; }
+
+        public IInventoryQuantityValue NextValue { get; set; }
         public ChangeQuantityChange()
         {
             this.Type = "ChangeQuantityChange";

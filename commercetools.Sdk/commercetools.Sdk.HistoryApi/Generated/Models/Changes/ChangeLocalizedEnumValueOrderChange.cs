@@ -12,17 +12,17 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string FieldName { get; set; }
+        public IList<ILocalizedEnumValue> PreviousValue { get; set; }
+        public IEnumerable<ILocalizedEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        public string AttributeName { get; set; }
 
         public IList<ILocalizedEnumValue> NextValue { get; set; }
         public IEnumerable<ILocalizedEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        public IList<ILocalizedEnumValue> PreviousValue { get; set; }
-        public IEnumerable<ILocalizedEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+        public string FieldName { get; set; }
 
+        public string AttributeName { get; set; }
         public ChangeLocalizedEnumValueOrderChange()
         {
             this.Type = "ChangeLocalizedEnumValueOrderChange";

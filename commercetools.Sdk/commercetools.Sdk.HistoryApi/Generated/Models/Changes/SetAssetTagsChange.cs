@@ -12,15 +12,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IAssetChangeValue Asset { get; set; }
+        public IList<string> PreviousValue { get; set; }
+        public IEnumerable<string> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         public IList<string> NextValue { get; set; }
         public IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        public IList<string> PreviousValue { get; set; }
-        public IEnumerable<string> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
-
+        public IAssetChangeValue Asset { get; set; }
         public SetAssetTagsChange()
         {
             this.Type = "SetAssetTagsChange";

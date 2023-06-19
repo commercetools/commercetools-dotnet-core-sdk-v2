@@ -4,6 +4,7 @@ using commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations;
 using commercetools.Sdk.MLApi.Client.RequestBuilders.Similarities;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Projects
 {
 

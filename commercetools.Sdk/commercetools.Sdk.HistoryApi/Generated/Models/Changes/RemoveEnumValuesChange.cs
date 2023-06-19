@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string AttributeName { get; set; }
-
         public IEnumValue PreviousValue { get; set; }
+
+        public string AttributeName { get; set; }
         public RemoveEnumValuesChange()
         {
             this.Type = "RemoveEnumValuesChange";

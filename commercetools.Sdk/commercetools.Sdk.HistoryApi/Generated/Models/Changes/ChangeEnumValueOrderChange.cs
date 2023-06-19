@@ -12,15 +12,15 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public string FieldName { get; set; }
+        public IList<IEnumValue> PreviousValue { get; set; }
+        public IEnumerable<IEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
 
         public IList<IEnumValue> NextValue { get; set; }
         public IEnumerable<IEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
-        public IList<IEnumValue> PreviousValue { get; set; }
-        public IEnumerable<IEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
-
+        public string FieldName { get; set; }
         public ChangeEnumValueOrderChange()
         {
             this.Type = "ChangeEnumValueOrderChange";

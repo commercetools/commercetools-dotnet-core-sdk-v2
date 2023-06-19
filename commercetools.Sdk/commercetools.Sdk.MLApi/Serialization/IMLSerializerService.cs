@@ -4,6 +4,6 @@ namespace commercetools.Sdk.MLApi.Serialization
 {
     public interface IMLSerializerService : ISerializerService
     {
-        
+
     }
 }

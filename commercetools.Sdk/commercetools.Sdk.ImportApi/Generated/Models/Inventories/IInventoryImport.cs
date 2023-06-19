@@ -3,7 +3,7 @@ using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Inventories.InventoryImport))]

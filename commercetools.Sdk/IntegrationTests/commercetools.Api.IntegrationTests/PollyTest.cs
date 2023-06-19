@@ -3,8 +3,6 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
-using commercetools.Base.Client.Domain;
-using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

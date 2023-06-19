@@ -4,6 +4,6 @@ namespace commercetools.Sdk.ImportApi.Serialization
 {
     public interface IImportSerializerService : ISerializerService
     {
-        
+
     }
 }

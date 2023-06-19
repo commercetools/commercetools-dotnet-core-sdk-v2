@@ -1,7 +1,7 @@
 using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeInputHintChange))]
@@ -11,13 +11,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        string FieldName { get; set; }
-
-        string AttributeName { get; set; }
+        ITextInputHint PreviousValue { get; set; }
 
         ITextInputHint NextValue { get; set; }
 
-        ITextInputHint PreviousValue { get; set; }
+        string FieldName { get; set; }
+
+        string AttributeName { get; set; }
 
     }
 }

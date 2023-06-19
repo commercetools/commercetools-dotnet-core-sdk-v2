@@ -5,6 +5,7 @@ using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Sdk.ImportApi.Models.Common;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
 
