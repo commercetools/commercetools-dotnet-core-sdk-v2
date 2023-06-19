@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace commercetools.Sdk.Api.Models
 {
-    public interface IPagedQueryResourceRequest<T, TResult> : IRequestCommand<TResult>
+    public interface IPagedQueryResourceRequest<out T, TResult> : IRequestCommand<TResult>
         where T : IPagedQueryResourceRequest<T, TResult>
     {
         T WithLimit(int limit);

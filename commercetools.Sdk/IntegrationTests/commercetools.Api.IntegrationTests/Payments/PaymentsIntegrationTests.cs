@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Payments;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Payments.PaymentsFixture;
 
@@ -12,10 +13,12 @@ namespace commercetools.Api.IntegrationTests.Payments
     public class PaymentsIntegrationTests
     {
         private readonly IClient _client;
+        private readonly ProjectApiRoot _apiRoot;
 
         public PaymentsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
             this._client = serviceProviderFixture.GetService<IClient>();
+            this._apiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -41,6 +44,19 @@ namespace commercetools.Api.IntegrationTests.Payments
                     Assert.Equal(amount.CurrencyCode, retrievedAmount.CurrencyCode);
                     Assert.IsType<CentPrecisionMoney>(retrievedAmount);
                 });
+        }
+
+        [Fact]
+        public async Task QueryPayment()
+        {
+            await WithPayment(
+                _client, draft => DefaultPaymentDraft(draft), async payment =>
+                {
+                    var queryPayment = await _apiRoot.Payments().Get().WithQuery(d => d.Id().Is(payment.Id))
+                        .ExecuteAsync();
+                    Assert.Equal(payment.Id, queryPayment.Results.FirstOrDefault().Id);
+                }
+            );
         }
     }
 }
