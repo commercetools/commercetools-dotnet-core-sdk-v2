@@ -4,7 +4,7 @@ using commercetools.Sdk.Api.Models.StandalonePrices;
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError))]

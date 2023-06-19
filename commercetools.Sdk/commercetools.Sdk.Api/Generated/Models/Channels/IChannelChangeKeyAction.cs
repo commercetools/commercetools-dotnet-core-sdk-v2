@@ -1,6 +1,6 @@
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Channels
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Channels.ChannelChangeKeyAction))]

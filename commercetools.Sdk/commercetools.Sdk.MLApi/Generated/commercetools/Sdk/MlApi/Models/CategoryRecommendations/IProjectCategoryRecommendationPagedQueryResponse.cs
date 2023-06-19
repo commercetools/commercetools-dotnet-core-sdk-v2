@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.MLApi.Models.CategoryRecommendations
 {
     [DeserializeAs(typeof(commercetools.Sdk.MLApi.Models.CategoryRecommendations.ProjectCategoryRecommendationPagedQueryResponse))]

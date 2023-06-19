@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.Products
 {
     public class ByProjectKeyProductsImportContainersByImportContainerKeyTest : RequestBuilderParentTests

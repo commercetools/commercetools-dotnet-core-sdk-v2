@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
+
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public enum TaxMode

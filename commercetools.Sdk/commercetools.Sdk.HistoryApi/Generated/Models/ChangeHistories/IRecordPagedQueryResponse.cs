@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeHistories.RecordPagedQueryResponse))]

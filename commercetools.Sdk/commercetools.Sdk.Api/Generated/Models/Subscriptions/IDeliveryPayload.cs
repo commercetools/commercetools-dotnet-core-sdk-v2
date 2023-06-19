@@ -3,7 +3,7 @@ using commercetools.Sdk.Api.Models.Messages;
 using System;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     [TypeDiscriminator(nameof(NotificationType))]

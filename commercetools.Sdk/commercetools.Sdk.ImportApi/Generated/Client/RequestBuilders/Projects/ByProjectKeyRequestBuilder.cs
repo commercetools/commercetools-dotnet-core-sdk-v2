@@ -16,6 +16,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
 {
 

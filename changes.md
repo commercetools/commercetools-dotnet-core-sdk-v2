@@ -1,6 +1,14 @@
 **Api changes**
 
 <details>
+<summary>Deprecated Property(s)</summary>
+
+- property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
+- property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
+</details>
+
+
+<details>
 <summary>Required Property(s)</summary>
 
 - changed property `parcelId` of type `StagedOrderRemoveParcelFromDeliveryAction` to be optional
@@ -15,14 +23,6 @@
 - changed property `parcelId` of type `OrderSetParcelItemsAction` to be optional
 - changed property `parcelId` of type `OrderSetParcelMeasurementsAction` to be optional
 - changed property `parcelId` of type `OrderSetParcelTrackingDataAction` to be optional
-</details>
-
-
-<details>
-<summary>Deprecated Property(s)</summary>
-
-- property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
-- property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
 </details>
 
 
@@ -55,14 +55,6 @@
 
 
 <details>
-<summary>Added Enum(s)</summary>
-
-- added enum `associate-role` to type `CustomFieldReferenceValue`
-- added enum `business-unit` to type `CustomFieldReferenceValue`
-</details>
-
-
-<details>
 <summary>Added Type(s)</summary>
 
 - added type `StandalonePriceValidFromAndUntilSetMessage`
@@ -75,6 +67,14 @@
 - added type `StandalonePriceSetValidFromAndUntilAction`
 - added type `StandalonePriceSetValidUntilAction`
 - added type `ConfluentCloudDestination`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 
 **Import changes**

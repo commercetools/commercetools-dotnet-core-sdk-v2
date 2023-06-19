@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Xunit;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Carts
 {
     public class ByProjectKeyCartsKeyByKeyTest : RequestBuilderParentTests

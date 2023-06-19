@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using commercetools.Base.Models;
 using commercetools.Sdk.Api.Models.Common;
-using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Predicates.Query;
 using commercetools.Sdk.Api.Predicates.Query.CartDiscounts;
 using commercetools.Sdk.Api.Predicates.Query.Carts;
@@ -75,7 +74,7 @@ namespace commercetools.Sdk.Api.Tests
                     "createdAt = \"2018-10-12T14:00:00Z\"",
                 },
                 new Object[] { CartQueryBuilderDsl.Of().Key().IsNot("foo"), "key != \"foo\"", },
-                
+
                 new Object[] { CartQueryBuilderDsl.Of().Version().IsLessThan(10L), "version < 10", },
                 new Object[] { CartQueryBuilderDsl.Of().Version().IsGreaterThan(10L), "version > 10", },
                 new Object[] { CartQueryBuilderDsl.Of().Version().IsLessThanOrEqual(10L), "version <= 10", },

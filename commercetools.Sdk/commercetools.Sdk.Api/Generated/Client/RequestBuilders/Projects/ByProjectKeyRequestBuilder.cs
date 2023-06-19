@@ -42,6 +42,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
 {
 

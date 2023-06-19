@@ -1,3 +1,4 @@
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client
 {
     public interface ISecured_by_view_customersTrait<T> where T : ISecured_by_view_customersTrait<T>

@@ -4,6 +4,7 @@ using System.Threading;
 using commercetools.Base.Client;
 
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.MLApi.Client.RequestBuilders.ImageSearch
 {
 

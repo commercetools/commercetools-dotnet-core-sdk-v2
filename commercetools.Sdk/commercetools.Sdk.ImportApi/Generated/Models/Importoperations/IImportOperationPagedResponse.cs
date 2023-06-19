@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 
-
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importoperations.ImportOperationPagedResponse))]

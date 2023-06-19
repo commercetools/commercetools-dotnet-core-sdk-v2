@@ -2,6 +2,7 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
 {
 

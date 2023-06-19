@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Projects
 {
     public class ByProjectKeyTest : RequestBuilderParentTests

@@ -6,6 +6,7 @@ using System.Threading;
 using commercetools.Base.Client;
 
 
+// ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
     [Obsolete("usage of this endpoint has been deprecated.", false)]
