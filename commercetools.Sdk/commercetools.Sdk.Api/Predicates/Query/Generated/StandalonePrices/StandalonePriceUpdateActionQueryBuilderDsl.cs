@@ -22,6 +22,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsAddPriceTier(
+            Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceAddPriceTierActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceAddPriceTierActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceAddPriceTierActionQueryBuilderDsl.Of()),
+                StandalonePriceUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsApplyStagedChanges(
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceApplyStagedChangesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceApplyStagedChangesActionQueryBuilderDsl>> fn)
         {
@@ -38,6 +44,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceChangeValueActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceChangeValueActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceChangeValueActionQueryBuilderDsl.Of()),
+                StandalonePriceUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsRemovePriceTier(
+            Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemovePriceTierActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemovePriceTierActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemovePriceTierActionQueryBuilderDsl.Of()),
                 StandalonePriceUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetCustomField(
@@ -62,6 +74,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetKeyActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetKeyActionQueryBuilderDsl.Of()),
+                StandalonePriceUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetPriceTier(
+            Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl.Of()),
                 StandalonePriceUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetValidFrom(
