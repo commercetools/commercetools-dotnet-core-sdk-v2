@@ -1,4 +1,3 @@
-using commercetools.Sdk.Api.Models.ApiClients;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Predicates.Query.Carts;
 
