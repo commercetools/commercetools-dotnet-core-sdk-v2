@@ -28,6 +28,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+
+        public string Sku { get; set; }
         public StandalonePriceDeletedMessage()
         {
             this.Type = "StandalonePriceDeleted";
