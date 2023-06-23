@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartSetLineItemInventoryModeActionQueryBuilderDsl>(p, CartSetLineItemInventoryModeActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartSetLineItemInventoryModeActionQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<CartSetLineItemInventoryModeActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<CartSetLineItemInventoryModeActionQueryBuilderDsl>(p, CartSetLineItemInventoryModeActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CartSetLineItemInventoryModeActionQueryBuilderDsl, string> InventoryMode()
         {
             return new ComparisonPredicateBuilder<CartSetLineItemInventoryModeActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("inventoryMode")),

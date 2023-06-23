@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
 
         string ShippingKey { get; set; }

@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public IList<IItemShippingTarget> TargetsDelta { get; set; }
         public IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
 

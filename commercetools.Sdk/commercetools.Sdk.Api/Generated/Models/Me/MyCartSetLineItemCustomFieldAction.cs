@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public string Name { get; set; }
 
         public Object Value { get; set; }

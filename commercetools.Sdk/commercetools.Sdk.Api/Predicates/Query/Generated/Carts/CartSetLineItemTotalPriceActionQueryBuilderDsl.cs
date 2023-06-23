@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartSetLineItemTotalPriceActionQueryBuilderDsl>(p, CartSetLineItemTotalPriceActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartSetLineItemTotalPriceActionQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<CartSetLineItemTotalPriceActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<CartSetLineItemTotalPriceActionQueryBuilderDsl>(p, CartSetLineItemTotalPriceActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<CartSetLineItemTotalPriceActionQueryBuilderDsl> ExternalTotalPrice(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalLineItemTotalPriceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalLineItemTotalPriceQueryBuilderDsl>> fn)
         {

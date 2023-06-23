@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<StagedOrderSetLineItemTaxRateActionQueryBuilderDsl>(p, StagedOrderSetLineItemTaxRateActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<StagedOrderSetLineItemTaxRateActionQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderSetLineItemTaxRateActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<StagedOrderSetLineItemTaxRateActionQueryBuilderDsl>(p, StagedOrderSetLineItemTaxRateActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<StagedOrderSetLineItemTaxRateActionQueryBuilderDsl> ExternalTaxRate(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalTaxRateDraftQueryBuilderDsl>> fn)
         {

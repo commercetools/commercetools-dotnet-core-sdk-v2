@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             p => new CombinationQueryPredicate<MyCartSetLineItemDistributionChannelActionQueryBuilderDsl>(p, MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<MyCartSetLineItemDistributionChannelActionQueryBuilderDsl>(p, MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<MyCartSetLineItemDistributionChannelActionQueryBuilderDsl> DistributionChannel(
             Func<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl>> fn)
         {

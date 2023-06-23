@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
 
     }
