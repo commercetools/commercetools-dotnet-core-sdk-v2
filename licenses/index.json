@@ -1330,5 +1330,17 @@
     "Description": "Provides an older in-memory Extensible Markup Language (XML) programming interface that enables you to modify XML documents. Developers should prefer the classes in the System.Xml.XDocument package.\r\n\r\nCommonly Used Types:\r\nSystem.Xml.XmlNode\r\nSystem.Xml.XmlElement\r\nSystem.Xml.XmlAttribute\r\nSystem.Xml.XmlDocument\r\nSystem.Xml.XmlDeclaration\r\nSystem.Xml.XmlText\r\nSystem.Xml.XmlComment\r\nSystem.Xml.XmlNodeList\r\nSystem.Xml.XmlWhitespace\r\nSystem.Xml.XmlCDataSection\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
     "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "ZeroQL",
+    "PackageVersion": "5.0.0-preview.5",
+    "PackageUrl": "https://github.com/byme8/ZeroQL",
+    "Copyright": "",
+    "Authors": [
+      "Stanislav Silin"
+    ],
+    "Description": "The GraphQL client with LINQ like interface.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
   }
 ]
