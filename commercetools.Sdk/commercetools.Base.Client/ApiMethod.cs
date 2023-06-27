@@ -42,7 +42,7 @@ namespace commercetools.Base.Client
         {
             return this.QueryParams;
         }
-        
+
         public List<string> GetQueryParam(string key)
         {
             return this.QueryParams.Where(

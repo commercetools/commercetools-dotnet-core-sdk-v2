@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Client
         where TQuery : new()
     {
         T WithLimit(int limit);
-        
+
         T WithOffset(int offset);
 
         T WithSort(string sort);
@@ -21,7 +21,7 @@ namespace commercetools.Sdk.Api.Client
 
         T WithPredicateVar(string varName,
             string predicateVar);
-        
+
         ICollection<KeyValuePair<string, string>> GetQueryParams();
 
         List<string> GetQueryParam(string key);
