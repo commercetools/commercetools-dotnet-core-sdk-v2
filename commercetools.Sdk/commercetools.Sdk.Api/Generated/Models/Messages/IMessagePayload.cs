@@ -159,6 +159,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StandalonePriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceExternalDiscountSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceKeySetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceStagedChangesApplied", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceTierAdded", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceTierAddedMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceTierRemoved", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceTierRemovedMessagePayload))]
+    [SubTypeDiscriminator("StandalonePriceTiersSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceTiersSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValidFromAndUntilSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromAndUntilSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValidFromSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessagePayload))]
     [SubTypeDiscriminator("StandalonePriceValidUntilSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessagePayload))]
@@ -1090,6 +1093,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload StandalonePriceStagedChangesApplied(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceStagedChangesAppliedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceTierAddedMessagePayload StandalonePriceTierAdded(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceTierAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceTierAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceTierRemovedMessagePayload StandalonePriceTierRemoved(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceTierRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceTierRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StandalonePriceTiersSetMessagePayload StandalonePriceTiersSet(Action<commercetools.Sdk.Api.Models.Messages.StandalonePriceTiersSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StandalonePriceTiersSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

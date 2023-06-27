@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IList<IItemShippingTarget> TargetsDelta { get; set; }
         IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
 

@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public IMoney ExternalPrice { get; set; }
         public CartSetLineItemPriceAction()
         {

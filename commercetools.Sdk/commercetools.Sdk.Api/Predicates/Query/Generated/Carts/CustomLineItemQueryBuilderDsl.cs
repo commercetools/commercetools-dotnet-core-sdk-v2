@@ -100,6 +100,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> PerMethodTaxRate(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxRateQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxRateQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomLineItemQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("perMethodTaxRate"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxRateQueryBuilderDsl.Of())),
+                CustomLineItemQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CustomLineItemQueryBuilderDsl> PerMethodTaxRate()
+        {
+            return new CollectionPredicateBuilder<CustomLineItemQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("perMethodTaxRate")),
+                    p => new CombinationQueryPredicate<CustomLineItemQueryBuilderDsl>(p, CustomLineItemQueryBuilderDsl.Of));
+        }
         public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> DiscountedPricePerQuantity(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPriceForQuantityQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPriceForQuantityQueryBuilderDsl>> fn)
         {

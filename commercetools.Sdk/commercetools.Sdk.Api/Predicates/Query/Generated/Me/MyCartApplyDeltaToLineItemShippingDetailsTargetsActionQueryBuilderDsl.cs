@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             p => new CombinationQueryPredicate<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl>(p, MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl>(p, MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl> TargetsDelta(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.ItemShippingTargetQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ItemShippingTargetQueryBuilderDsl>> fn)
         {

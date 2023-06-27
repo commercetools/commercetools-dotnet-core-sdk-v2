@@ -136,12 +136,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl.Of()),
                 MyCartUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetDirectDiscounts(
-            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetDirectDiscountsActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetDirectDiscountsActionQueryBuilderDsl.Of()),
-                MyCartUpdateActionQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetLineItemCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl>> fn)
         {

@@ -33,6 +33,10 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxRate TaxRate { get; set; }
 
+        public IList<IMethodTaxRate> PerMethodTaxRate { get; set; }
+        public IEnumerable<IMethodTaxRate> PerMethodTaxRateEnumerable { set => PerMethodTaxRate = value.ToList(); }
+
+
         public IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
         public IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 

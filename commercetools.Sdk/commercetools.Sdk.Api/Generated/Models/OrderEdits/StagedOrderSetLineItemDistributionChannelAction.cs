@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public IChannelResourceIdentifier DistributionChannel { get; set; }
         public StagedOrderSetLineItemDistributionChannelAction()
         {

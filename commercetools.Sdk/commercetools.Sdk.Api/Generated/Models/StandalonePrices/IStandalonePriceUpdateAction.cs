@@ -6,13 +6,16 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceUpdateAction))]
+    [SubTypeDiscriminator("addPriceTier", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceAddPriceTierAction))]
     [SubTypeDiscriminator("applyStagedChanges", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction))]
     [SubTypeDiscriminator("changeActive", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction))]
     [SubTypeDiscriminator("changeValue", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction))]
+    [SubTypeDiscriminator("removePriceTier", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
     [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction))]
+    [SubTypeDiscriminator("setPriceTier", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction))]
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidUntilAction))]
@@ -20,6 +23,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     {
         string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceAddPriceTierAction AddPriceTier(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceAddPriceTierAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceAddPriceTierAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction ApplyStagedChanges(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceApplyStagedChangesAction();
@@ -35,6 +44,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction ChangeValue(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction RemovePriceTier(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction();
             init?.Invoke(t);
             return t;
         }
@@ -59,6 +74,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction SetPriceTier(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction();
             init?.Invoke(t);
             return t;
         }

@@ -93,6 +93,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 StandalonePriceDeletedMessageQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<StandalonePriceDeletedMessageQueryBuilderDsl, string> Sku()
+        {
+            return new ComparisonPredicateBuilder<StandalonePriceDeletedMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("sku")),
+            p => new CombinationQueryPredicate<StandalonePriceDeletedMessageQueryBuilderDsl>(p, StandalonePriceDeletedMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
