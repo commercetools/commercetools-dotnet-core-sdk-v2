@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Categories.CategoriesFixture;
@@ -89,7 +90,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                         .Categories()
                         .Get()
-                        .WithWhere($"key = \"{category.Key}\"")
+                        .WithQuery(q => q.Key().Is(category.Key))
                         .ExecuteAsync();
                     Assert.Single(returnedSet.Results);
                     Assert.Equal(key, returnedSet.Results[0].Key);
@@ -110,7 +111,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
-                            .WithWhere($"key = \"{category.Key}\"")
+                            .WithQuery(q => q.Key().Is(category.Key))
                             .WithExpand("parent")
                             .ExecuteAsync();
 
@@ -143,7 +144,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
-                            .WithWhere($"parent(id = \"{parentCategory.Id}\")")
+                            .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
                             .WithExpand("parent")
                             .WithSort("name.en asc")
                             .ExecuteAsync();
@@ -175,7 +176,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                             .Categories()
                             .Get()
-                            .WithWhere($"parent(id = \"{parentCategory.Id}\")")
+                            .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
                             .WithExpand("parent")
                             .WithSort("name.en desc")
                             .ExecuteAsync();
@@ -208,7 +209,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                             var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
                                 .Categories()
                                 .Get()
-                                .WithWhere($"parent(id = \"{parentCategory.Id}\")")
+                                .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
                                 .WithExpand("parent")
                                 .WithLimit(limit)
                                 .WithWithTotal(true)

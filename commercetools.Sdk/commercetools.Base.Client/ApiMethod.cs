@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -37,11 +38,23 @@ namespace commercetools.Base.Client
             return (T)this;
         }
 
+        public ICollection<KeyValuePair<string, string>> GetQueryParams()
+        {
+            return this.QueryParams;
+        }
+        
         public List<string> GetQueryParam(string key)
         {
             return this.QueryParams.Where(
                     p => p.Key.Equals(key))
                 .Select(p => p.Value).ToList();
+        }
+
+        public string? GetFirstQueryParam(string key)
+        {
+            return this.QueryParams.Where(
+                    p => p.Key.Equals(key))
+                .Select(p => p.Value).FirstOrDefault();
         }
 
         public T AddHeader(string key, string value)
