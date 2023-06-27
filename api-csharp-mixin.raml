@@ -7,6 +7,10 @@ annotationTypes:
     allowedTargets: TypeDeclaration
 
 types:
+  ChannelUpdate:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<IChannelUpdate, IChannelUpdateAction>'
+  ChannelUpdateAction:
+    (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdateAction<IChannelUpdateAction>'
   CategoryUpdate:
     (csharp-extends): 'commercetools.Sdk.Api.Models.IResourceUpdate<ICategoryUpdate, ICategoryUpdateAction>'
   CategoryUpdateAction:
