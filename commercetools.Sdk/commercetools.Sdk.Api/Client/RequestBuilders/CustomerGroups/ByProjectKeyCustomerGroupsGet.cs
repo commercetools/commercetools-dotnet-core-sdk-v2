@@ -3,8 +3,8 @@ using commercetools.Sdk.Api.Predicates.Query.CustomerGroups;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
-    public partial class ByProjectKeyCustomerGroupsGet: IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, ICustomerGroupPagedQueryResponse, CustomerGroupQueryBuilderDsl>
+    public partial class ByProjectKeyCustomerGroupsGet : IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, ICustomerGroupPagedQueryResponse, CustomerGroupQueryBuilderDsl>
     {
-        
+
     }
 }
