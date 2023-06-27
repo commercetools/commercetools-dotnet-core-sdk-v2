@@ -2,7 +2,10 @@
 usage: Adds dotnet SDK extended functionality
 extends: api.raml
 annotationTypes:
-  dotnet-mixin:
+  csharp-implements:
+    type: string
+    allowedTargets: TypeDeclaration
+  csharp-extends:
     type: string
     allowedTargets: TypeDeclaration
 
