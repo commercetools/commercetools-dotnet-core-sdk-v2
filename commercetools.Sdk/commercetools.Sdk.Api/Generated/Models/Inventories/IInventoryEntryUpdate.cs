@@ -6,10 +6,11 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Inventories
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryUpdate))]
-    public partial interface IInventoryEntryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IInventoryEntryUpdate, IInventoryEntryUpdateAction>
+    public partial interface IInventoryEntryUpdate
     {
-        new long Version { get; set; }
-        new IList<IInventoryEntryUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<IInventoryEntryUpdateAction> Actions { get; set; }
         IEnumerable<IInventoryEntryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

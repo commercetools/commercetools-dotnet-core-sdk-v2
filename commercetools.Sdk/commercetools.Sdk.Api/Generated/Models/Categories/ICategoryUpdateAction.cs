@@ -28,9 +28,9 @@ namespace commercetools.Sdk.Api.Models.Categories
     [SubTypeDiscriminator("setMetaDescription", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaDescriptionAction))]
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction))]
     [SubTypeDiscriminator("setMetaTitle", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaTitleAction))]
-    public partial interface ICategoryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICategoryUpdateAction>
+    public partial interface ICategoryUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction AddAsset(Action<commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction> init = null)
         {

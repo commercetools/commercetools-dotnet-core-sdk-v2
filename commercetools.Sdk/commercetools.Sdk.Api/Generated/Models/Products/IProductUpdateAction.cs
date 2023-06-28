@@ -54,9 +54,9 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("setTaxCategory", typeof(commercetools.Sdk.Api.Models.Products.ProductSetTaxCategoryAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Products.ProductTransitionStateAction))]
     [SubTypeDiscriminator("unpublish", typeof(commercetools.Sdk.Api.Models.Products.ProductUnpublishAction))]
-    public partial interface IProductUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductUpdateAction>
+    public partial interface IProductUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Products.ProductAddAssetAction AddAsset(Action<commercetools.Sdk.Api.Models.Products.ProductAddAssetAction> init = null)
         {

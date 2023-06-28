@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
 
-    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>, IApiMethod<ByProjectKeyReviewsGet, commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyReviewsGet, commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyReviewsGet>
+    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>, IApiMethod<ByProjectKeyReviewsGet, commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyReviewsGet>
     {
 
 

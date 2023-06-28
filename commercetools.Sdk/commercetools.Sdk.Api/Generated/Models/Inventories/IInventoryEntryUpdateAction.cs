@@ -15,9 +15,9 @@ namespace commercetools.Sdk.Api.Models.Inventories
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction))]
     [SubTypeDiscriminator("setRestockableInDays", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction))]
     [SubTypeDiscriminator("setSupplyChannel", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
-    public partial interface IInventoryEntryUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IInventoryEntryUpdateAction>
+    public partial interface IInventoryEntryUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Inventories.InventoryEntryAddQuantityAction AddQuantity(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryAddQuantityAction> init = null)
         {

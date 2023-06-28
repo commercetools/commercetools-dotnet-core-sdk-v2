@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
 
-    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>, IApiMethod<ByProjectKeyDiscountCodesGet, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyDiscountCodesGet, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyDiscountCodesGet>
+    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>, IApiMethod<ByProjectKeyDiscountCodesGet, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyDiscountCodesGet>
     {
 
 

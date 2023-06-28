@@ -6,10 +6,11 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryUpdate))]
-    public partial interface ITaxCategoryUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ITaxCategoryUpdate, ITaxCategoryUpdateAction>
+    public partial interface ITaxCategoryUpdate
     {
-        new long Version { get; set; }
-        new IList<ITaxCategoryUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<ITaxCategoryUpdateAction> Actions { get; set; }
         IEnumerable<ITaxCategoryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

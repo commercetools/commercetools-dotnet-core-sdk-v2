@@ -10,9 +10,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [SubTypeDiscriminator("setChanges", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetKeyAction))]
     [SubTypeDiscriminator("setMessages", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
-    public partial interface ISubscriptionUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ISubscriptionUpdateAction>
+    public partial interface ISubscriptionUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction ChangeDestination(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction> init = null)
         {

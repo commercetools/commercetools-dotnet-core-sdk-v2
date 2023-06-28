@@ -20,9 +20,9 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
-    public partial interface IProjectUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProjectUpdateAction>
+    public partial interface IProjectUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction ChangeCartsConfiguration(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction> init = null)
         {

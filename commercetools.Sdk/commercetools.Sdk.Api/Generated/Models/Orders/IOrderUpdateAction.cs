@@ -63,9 +63,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Orders.OrderTransitionStateAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Orders.OrderUpdateItemShippingAddressAction))]
     [SubTypeDiscriminator("updateSyncInfo", typeof(commercetools.Sdk.Api.Models.Orders.OrderUpdateSyncInfoAction))]
-    public partial interface IOrderUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IOrderUpdateAction>
+    public partial interface IOrderUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Orders.OrderAddDeliveryAction AddDelivery(Action<commercetools.Sdk.Api.Models.Orders.OrderAddDeliveryAction> init = null)
         {
