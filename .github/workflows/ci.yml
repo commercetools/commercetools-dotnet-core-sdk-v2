@@ -24,6 +24,8 @@ jobs:
           dotnet-version: |
             3.1.x
             7.0.x
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -63,6 +65,8 @@ jobs:
           dotnet-version: |
             3.1.x
             7.0.x
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -112,6 +116,8 @@ jobs:
           dotnet-version: |
             3.1.x
             7.0.x
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -168,6 +174,8 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: ./patch_csproj.rb --version 0.1.0-alpha-${{ github.run_number }} --patch **/*.csproj
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
