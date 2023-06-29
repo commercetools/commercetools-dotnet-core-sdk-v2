@@ -94,10 +94,10 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithProjectKeyValue("test_projectKey")
                    .WithResourceTypeValue("test_resourceType")
                    .Get()
-                   .WithResourceId("resourceId")
+                   .WithResourceKey("resourceKey")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType?resourceId=resourceId",
+                   "/test_projectKey/test_resourceType?resourceKey=resourceKey",
                },
                new Object[] {
                    ApiRoot

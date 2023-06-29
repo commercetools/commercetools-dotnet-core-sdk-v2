@@ -73,6 +73,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return this.GetQueryParam("resourceId");
         }
 
+        public List<string> GetResourceKey()
+        {
+            return this.GetQueryParam("resourceKey");
+        }
+
         public List<string> GetSource()
         {
             return this.GetQueryParam("source");
@@ -146,6 +151,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
         public ByProjectKeyGet WithResourceId(string resourceId)
         {
             return this.AddQueryParam("resourceId", resourceId);
+        }
+
+        public ByProjectKeyGet WithResourceKey(string resourceKey)
+        {
+            return this.AddQueryParam("resourceKey", resourceKey);
         }
 
         public ByProjectKeyGet WithSource(string source)

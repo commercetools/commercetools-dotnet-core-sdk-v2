@@ -8,6 +8,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeModel))]
     [SubTypeDiscriminator("AddAddressChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddAddressChange))]
     [SubTypeDiscriminator("AddAssetChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddAssetChange))]
+    [SubTypeDiscriminator("AddAssociateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddAssociateChange))]
     [SubTypeDiscriminator("AddAttributeDefinitionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddAttributeDefinitionChange))]
     [SubTypeDiscriminator("AddBillingAddressIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddBillingAddressIdChange))]
     [SubTypeDiscriminator("AddChannelRolesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddChannelRolesChange))]
@@ -27,6 +28,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("AddPlainEnumValueChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddPlainEnumValueChange))]
     [SubTypeDiscriminator("AddPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddPriceChange))]
     [SubTypeDiscriminator("AddProductChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddProductChange))]
+    [SubTypeDiscriminator("AddProductSelectionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddProductSelectionChange))]
     [SubTypeDiscriminator("AddPropertyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddPropertyChange))]
     [SubTypeDiscriminator("AddReturnInfoChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddReturnInfoChange))]
     [SubTypeDiscriminator("AddShippingAddressIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddShippingAddressIdChange))]
@@ -42,6 +44,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeAmountPlannedChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAmountPlannedChange))]
     [SubTypeDiscriminator("ChangeAssetNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetNameChange))]
     [SubTypeDiscriminator("ChangeAssetOrderChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetOrderChange))]
+    [SubTypeDiscriminator("ChangeAssociateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateChange))]
+    [SubTypeDiscriminator("ChangeAssociateModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateModeChange))]
     [SubTypeDiscriminator("ChangeAttributeConstraintChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAttributeConstraintChange))]
     [SubTypeDiscriminator("ChangeAttributeOrderByNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAttributeOrderByNameChange))]
     [SubTypeDiscriminator("ChangeCartDiscountsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCartDiscountsChange))]
@@ -69,11 +73,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeOrderHintChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeOrderHintChange))]
     [SubTypeDiscriminator("ChangeOrderStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeOrderStateChange))]
     [SubTypeDiscriminator("ChangeParentChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeParentChange))]
+    [SubTypeDiscriminator("ChangeParentUnitChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeParentUnitChange))]
     [SubTypeDiscriminator("ChangePaymentStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePaymentStateChange))]
     [SubTypeDiscriminator("ChangePlainEnumValueLabelChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePlainEnumValueLabelChange))]
     [SubTypeDiscriminator("ChangePlainEnumValueOrderChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePlainEnumValueOrderChange))]
     [SubTypeDiscriminator("ChangePredicateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePredicateChange))]
     [SubTypeDiscriminator("ChangePriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangePriceChange))]
+    [SubTypeDiscriminator("ChangeProductSelectionActiveChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeProductSelectionActiveChange))]
     [SubTypeDiscriminator("ChangeQuantityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeQuantityChange))]
     [SubTypeDiscriminator("ChangeQuoteRequestStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeQuoteRequestStateChange))]
     [SubTypeDiscriminator("ChangeQuoteStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeQuoteStateChange))]
@@ -87,6 +93,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeStackingModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeStackingModeChange))]
     [SubTypeDiscriminator("ChangeStagedQuoteStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeStagedQuoteStateChange))]
     [SubTypeDiscriminator("ChangeStateTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeStateTypeChange))]
+    [SubTypeDiscriminator("ChangeStatusChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeStatusChange))]
     [SubTypeDiscriminator("ChangeTargetChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeTargetChange))]
     [SubTypeDiscriminator("ChangeTaxCalculationModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeTaxCalculationModeChange))]
     [SubTypeDiscriminator("ChangeTaxModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeTaxModeChange))]
@@ -102,6 +109,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("PublishChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.PublishChange))]
     [SubTypeDiscriminator("RemoveAddressChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveAddressChange))]
     [SubTypeDiscriminator("RemoveAssetChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssetChange))]
+    [SubTypeDiscriminator("RemoveAssociateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssociateChange))]
     [SubTypeDiscriminator("RemoveAttributeDefinitionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveAttributeDefinitionChange))]
     [SubTypeDiscriminator("RemoveBillingAddressIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveBillingAddressIdChange))]
     [SubTypeDiscriminator("RemoveChannelRolesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveChannelRolesChange))]
@@ -120,6 +128,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("RemovePaymentChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemovePaymentChange))]
     [SubTypeDiscriminator("RemovePriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemovePriceChange))]
     [SubTypeDiscriminator("RemoveProductChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveProductChange))]
+    [SubTypeDiscriminator("RemoveProductSelectionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveProductSelectionChange))]
     [SubTypeDiscriminator("RemovePropertyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemovePropertyChange))]
     [SubTypeDiscriminator("RemoveShippingAddressIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveShippingAddressIdChange))]
     [SubTypeDiscriminator("RemoveShoppingListLineItemChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveShoppingListLineItemChange))]
@@ -127,7 +136,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("RemoveTaxRateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveTaxRateChange))]
     [SubTypeDiscriminator("RemoveTextLineItemChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveTextLineItemChange))]
     [SubTypeDiscriminator("RemoveVariantChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RemoveVariantChange))]
+    [SubTypeDiscriminator("RequestQuoteRenegotiationChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.RequestQuoteRenegotiationChange))]
     [SubTypeDiscriminator("SetAddressChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAddressChange))]
+    [SubTypeDiscriminator("SetAddressCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomFieldChange))]
+    [SubTypeDiscriminator("SetAddressCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomTypeChange))]
     [SubTypeDiscriminator("SetAnonymousIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAnonymousIdChange))]
     [SubTypeDiscriminator("SetApplicationVersionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetApplicationVersionChange))]
     [SubTypeDiscriminator("SetAssetCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAssetCustomFieldChange))]
@@ -144,6 +156,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetCategoryOrderHintChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCategoryOrderHintChange))]
     [SubTypeDiscriminator("SetChannelRolesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetChannelRolesChange))]
     [SubTypeDiscriminator("SetCompanyNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCompanyNameChange))]
+    [SubTypeDiscriminator("SetContactEmailChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetContactEmailChange))]
     [SubTypeDiscriminator("SetCountriesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCountriesChange))]
     [SubTypeDiscriminator("SetCountryChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCountryChange))]
     [SubTypeDiscriminator("SetCustomerChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomerChange))]
@@ -248,6 +261,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetStatusInterfaceCodeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetStatusInterfaceCodeChange))]
     [SubTypeDiscriminator("SetStatusInterfaceTextChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetStatusInterfaceTextChange))]
     [SubTypeDiscriminator("SetStoreChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetStoreChange))]
+    [SubTypeDiscriminator("SetStoreModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetStoreModeChange))]
     [SubTypeDiscriminator("SetStoresChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetStoresChange))]
     [SubTypeDiscriminator("SetSupplyChannelChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetSupplyChannelChange))]
     [SubTypeDiscriminator("SetSupplyChannelsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetSupplyChannelsChange))]
@@ -265,6 +279,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetValidUntilChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetValidUntilChange))]
     [SubTypeDiscriminator("SetValueChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetValueChange))]
     [SubTypeDiscriminator("SetVariantAvailabilityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVariantAvailabilityChange))]
+    [SubTypeDiscriminator("SetVariantSelectionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVariantSelectionChange))]
     [SubTypeDiscriminator("SetVatIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVatIdChange))]
     [SubTypeDiscriminator("TransitionCustomLineItemStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionCustomLineItemStateChange))]
     [SubTypeDiscriminator("TransitionLineItemStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionLineItemStateChange))]
@@ -288,6 +303,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.AddAssetChange AddAssetChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.AddAssetChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.AddAssetChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.AddAssociateChange AddAssociateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.AddAssociateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.AddAssociateChange();
             init?.Invoke(t);
             return t;
         }
@@ -405,6 +426,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.AddProductSelectionChange AddProductSelectionChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.AddProductSelectionChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.AddProductSelectionChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.AddPropertyChange AddPropertyChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.AddPropertyChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.AddPropertyChange();
@@ -492,6 +519,18 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetOrderChange ChangeAssetOrderChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetOrderChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetOrderChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateChange ChangeAssociateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateModeChange ChangeAssociateModeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateModeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssociateModeChange();
             init?.Invoke(t);
             return t;
         }
@@ -657,6 +696,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeParentUnitChange ChangeParentUnitChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeParentUnitChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeParentUnitChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangePaymentStateChange ChangePaymentStateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangePaymentStateChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangePaymentStateChange();
@@ -684,6 +729,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangePriceChange ChangePriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangePriceChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangePriceChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeProductSelectionActiveChange ChangeProductSelectionActiveChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeProductSelectionActiveChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeProductSelectionActiveChange();
             init?.Invoke(t);
             return t;
         }
@@ -762,6 +813,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeStateTypeChange ChangeStateTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeStateTypeChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeStateTypeChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeStatusChange ChangeStatusChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeStatusChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeStatusChange();
             init?.Invoke(t);
             return t;
         }
@@ -852,6 +909,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssetChange RemoveAssetChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssetChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssetChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssociateChange RemoveAssociateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssociateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.RemoveAssociateChange();
             init?.Invoke(t);
             return t;
         }
@@ -963,6 +1026,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.RemoveProductSelectionChange RemoveProductSelectionChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.RemoveProductSelectionChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.RemoveProductSelectionChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.RemovePropertyChange RemovePropertyChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.RemovePropertyChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.RemovePropertyChange();
@@ -1005,9 +1074,27 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.RequestQuoteRenegotiationChange RequestQuoteRenegotiationChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.RequestQuoteRenegotiationChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.RequestQuoteRenegotiationChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetAddressChange SetAddressChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetAddressChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetAddressChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomFieldChange SetAddressCustomFieldChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomFieldChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomFieldChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomTypeChange SetAddressCustomTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomTypeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetAddressCustomTypeChange();
             init?.Invoke(t);
             return t;
         }
@@ -1104,6 +1191,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetCompanyNameChange SetCompanyNameChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetCompanyNameChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetCompanyNameChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetContactEmailChange SetContactEmailChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetContactEmailChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetContactEmailChange();
             init?.Invoke(t);
             return t;
         }
@@ -1731,6 +1824,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetStoreModeChange SetStoreModeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetStoreModeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetStoreModeChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetStoresChange SetStoresChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetStoresChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetStoresChange();
@@ -1830,6 +1929,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetVariantAvailabilityChange SetVariantAvailabilityChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetVariantAvailabilityChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetVariantAvailabilityChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetVariantSelectionChange SetVariantSelectionChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetVariantSelectionChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetVariantSelectionChange();
             init?.Invoke(t);
             return t;
         }

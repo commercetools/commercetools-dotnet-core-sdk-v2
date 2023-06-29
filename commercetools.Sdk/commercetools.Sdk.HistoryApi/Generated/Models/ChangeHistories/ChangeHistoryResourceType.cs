@@ -10,6 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     public enum ChangeHistoryResourceType
     {
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart-discount")]
         CartDiscount,
 
@@ -106,6 +109,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
     [EnumInterfaceCreator(typeof(IChangeHistoryResourceType), "FindEnum")]
     public interface IChangeHistoryResourceType : IJsonName, IEnumerable<char>
     {
+        public static IChangeHistoryResourceType BusinessUnit = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.BusinessUnit, JsonName = "business-unit" };
+
         public static IChangeHistoryResourceType CartDiscount = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.CartDiscount, JsonName = "cart-discount" };
 
@@ -184,6 +190,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return new[]
             {
+                 BusinessUnit ,
                  CartDiscount ,
                  Category ,
                  Channel ,

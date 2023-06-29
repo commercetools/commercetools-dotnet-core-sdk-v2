@@ -4,16 +4,16 @@ using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddProductChange))]
-    public partial interface IAddProductChange : IChange
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeStatusChange))]
+    public partial interface IChangeStatusChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
-        IReference NextValue { get; set; }
+        IBusinessUnitStatus PreviousValue { get; set; }
 
-        IProductVariantSelection VariantSelection { get; set; }
+        IBusinessUnitStatus NextValue { get; set; }
 
     }
 }
