@@ -10,6 +10,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public enum ReferenceTypeId
     {
+        [Description("associate-role")]
+        AssociateRole,
+
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart")]
         Cart,
 
@@ -127,6 +133,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IReferenceTypeId AssociateRole = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.AssociateRole, JsonName = "associate-role" };
+
+        public static IReferenceTypeId BusinessUnit = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.BusinessUnit, JsonName = "business-unit" };
+
         public static IReferenceTypeId Cart = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Cart, JsonName = "cart" };
 
@@ -226,6 +238,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         {
             return new[]
             {
+                 AssociateRole ,
+                 BusinessUnit ,
                  Cart ,
                  CartDiscount ,
                  Category ,

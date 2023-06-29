@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.Stores
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetNameAction))]
     [SubTypeDiscriminator("setProductSelections", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetProductSelectionsAction))]
     [SubTypeDiscriminator("setSupplyChannels", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction))]
-    public partial interface IStoreUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IStoreUpdateAction>
+    public partial interface IStoreUpdateAction
     {
         new string Action { get; set; }
 

@@ -6,6 +6,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.HistoryApi.Models.Labels.Label))]
+    [SubTypeDiscriminator("BusinessUnitLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.BusinessUnitLabel))]
     [SubTypeDiscriminator("CustomerLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.CustomerLabel))]
     [SubTypeDiscriminator("CustomObjectLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.CustomObjectLabel))]
     [SubTypeDiscriminator("LocalizedLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.LocalizedLabel))]
@@ -21,6 +22,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
     {
         string Type { get; set; }
 
+        static commercetools.Sdk.HistoryApi.Models.Labels.BusinessUnitLabel BusinessUnitLabel(Action<commercetools.Sdk.HistoryApi.Models.Labels.BusinessUnitLabel> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Labels.BusinessUnitLabel();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Labels.CustomerLabel CustomerLabel(Action<commercetools.Sdk.HistoryApi.Models.Labels.CustomerLabel> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Labels.CustomerLabel();
