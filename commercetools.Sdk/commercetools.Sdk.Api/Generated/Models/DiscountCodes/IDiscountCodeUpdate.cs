@@ -6,7 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeUpdate))]
-    public partial interface IDiscountCodeUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IDiscountCodeUpdate, IDiscountCodeUpdateAction>
+    public partial interface IDiscountCodeUpdate
     {
         new long Version { get; set; }
         new IList<IDiscountCodeUpdateAction> Actions { get; set; }

@@ -6,7 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupUpdate))]
-    public partial interface ICustomerGroupUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ICustomerGroupUpdate, ICustomerGroupUpdateAction>
+    public partial interface ICustomerGroupUpdate
     {
         new long Version { get; set; }
         new IList<ICustomerGroupUpdateAction> Actions { get; set; }
