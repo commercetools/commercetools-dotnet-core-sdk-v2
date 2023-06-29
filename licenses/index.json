@@ -1284,18 +1284,6 @@
     "LicenseType": "MS-EULA"
   },
   {
-    "PackageName": "System.ValueTuple",
-    "PackageVersion": "4.5.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides the System.ValueTuple structs, which implement the underlying types for tuples in C# and Visual Basic.\r\n\r\nCommonly Used Types:\r\nSystem.ValueTuple\r\nSystem.ValueTuple<T1>\r\nSystem.ValueTuple<T1, T2>\r\nSystem.ValueTuple<T1, T2, T3>\r\nSystem.ValueTuple<T1, T2, T3, T4>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
     "PackageName": "System.Xml.ReaderWriter",
     "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
