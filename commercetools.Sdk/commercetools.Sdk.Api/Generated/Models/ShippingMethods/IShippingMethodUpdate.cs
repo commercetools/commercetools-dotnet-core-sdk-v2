@@ -6,11 +6,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodUpdate))]
-    public partial interface IShippingMethodUpdate
+    public partial interface IShippingMethodUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IShippingMethodUpdate, IShippingMethodUpdateAction>
     {
-        long Version { get; set; }
-
-        IList<IShippingMethodUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<IShippingMethodUpdateAction> Actions { get; set; }
         IEnumerable<IShippingMethodUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

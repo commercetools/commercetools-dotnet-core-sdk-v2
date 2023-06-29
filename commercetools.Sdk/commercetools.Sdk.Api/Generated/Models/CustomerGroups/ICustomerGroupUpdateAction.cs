@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupSetKeyAction))]
     public partial interface ICustomerGroupUpdateAction
     {
-        string Action { get; set; }
+        new string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupChangeNameAction ChangeName(Action<commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupChangeNameAction> init = null)
         {

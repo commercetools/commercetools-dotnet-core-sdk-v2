@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidUntilAction))]
     public partial interface ICartDiscountUpdateAction
     {
-        string Action { get; set; }
+        new string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction ChangeCartPredicate(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction> init = null)
         {

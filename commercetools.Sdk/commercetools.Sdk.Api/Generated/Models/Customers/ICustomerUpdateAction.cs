@@ -39,7 +39,7 @@ namespace commercetools.Sdk.Api.Models.Customers
     [SubTypeDiscriminator("setVatId", typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetVatIdAction))]
     public partial interface ICustomerUpdateAction
     {
-        string Action { get; set; }
+        new string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Customers.CustomerAddAddressAction AddAddress(Action<commercetools.Sdk.Api.Models.Customers.CustomerAddAddressAction> init = null)
         {

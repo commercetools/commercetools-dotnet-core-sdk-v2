@@ -6,11 +6,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Products
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductUpdate))]
-    public partial interface IProductUpdate
+    public partial interface IProductUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IProductUpdate, IProductUpdateAction>
     {
-        long Version { get; set; }
-
-        IList<IProductUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<IProductUpdateAction> Actions { get; set; }
         IEnumerable<IProductUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

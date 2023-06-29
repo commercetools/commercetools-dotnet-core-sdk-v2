@@ -6,11 +6,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionUpdate))]
-    public partial interface ISubscriptionUpdate
+    public partial interface ISubscriptionUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<ISubscriptionUpdate, ISubscriptionUpdateAction>
     {
-        long Version { get; set; }
-
-        IList<ISubscriptionUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<ISubscriptionUpdateAction> Actions { get; set; }
         IEnumerable<ISubscriptionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

@@ -8,9 +8,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeUpdate))]
     public partial interface IDiscountCodeUpdate
     {
-        long Version { get; set; }
-
-        IList<IDiscountCodeUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<IDiscountCodeUpdateAction> Actions { get; set; }
         IEnumerable<IDiscountCodeUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

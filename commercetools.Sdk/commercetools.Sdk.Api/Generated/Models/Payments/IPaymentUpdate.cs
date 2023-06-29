@@ -6,11 +6,10 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Payments
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentUpdate))]
-    public partial interface IPaymentUpdate
+    public partial interface IPaymentUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IPaymentUpdate, IPaymentUpdateAction>
     {
-        long Version { get; set; }
-
-        IList<IPaymentUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<IPaymentUpdateAction> Actions { get; set; }
         IEnumerable<IPaymentUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

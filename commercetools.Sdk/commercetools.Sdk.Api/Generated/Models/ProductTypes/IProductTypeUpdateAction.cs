@@ -26,9 +26,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [SubTypeDiscriminator("removeEnumValues", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveEnumValuesAction))]
     [SubTypeDiscriminator("setInputTip", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetInputTipAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction))]
-    public partial interface IProductTypeUpdateAction
+    public partial interface IProductTypeUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IProductTypeUpdateAction>
     {
-        string Action { get; set; }
+        new string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeAddAttributeDefinitionAction AddAttributeDefinition(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeAddAttributeDefinitionAction> init = null)
         {

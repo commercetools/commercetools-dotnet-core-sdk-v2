@@ -8,9 +8,8 @@ namespace commercetools.Sdk.Api.Models.Categories
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategoryUpdate))]
     public partial interface ICategoryUpdate
     {
-        long Version { get; set; }
-
-        IList<ICategoryUpdateAction> Actions { get; set; }
+        new long Version { get; set; }
+        new IList<ICategoryUpdateAction> Actions { get; set; }
         IEnumerable<ICategoryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

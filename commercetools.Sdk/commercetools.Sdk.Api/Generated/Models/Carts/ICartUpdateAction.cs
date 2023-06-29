@@ -80,7 +80,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
     public partial interface ICartUpdateAction
     {
-        string Action { get; set; }
+        new string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction AddCustomLineItem(Action<commercetools.Sdk.Api.Models.Carts.CartAddCustomLineItemAction> init = null)
         {
