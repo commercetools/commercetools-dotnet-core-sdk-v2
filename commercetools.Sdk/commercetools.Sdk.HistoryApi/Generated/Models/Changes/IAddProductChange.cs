@@ -13,5 +13,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IReference NextValue { get; set; }
 
+        IProductVariantSelection VariantSelection { get; set; }
+
     }
 }

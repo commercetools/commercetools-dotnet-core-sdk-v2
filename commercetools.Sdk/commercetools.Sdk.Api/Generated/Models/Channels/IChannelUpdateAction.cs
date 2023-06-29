@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Models.Channels
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Channels.ChannelSetCustomTypeAction))]
     [SubTypeDiscriminator("setGeoLocation", typeof(commercetools.Sdk.Api.Models.Channels.ChannelSetGeoLocationAction))]
     [SubTypeDiscriminator("setRoles", typeof(commercetools.Sdk.Api.Models.Channels.ChannelSetRolesAction))]
-    public partial interface IChannelUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<IChannelUpdateAction>
+    public partial interface IChannelUpdateAction
     {
         new string Action { get; set; }
 

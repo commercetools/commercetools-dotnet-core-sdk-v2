@@ -104,6 +104,15 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
+                   .WithResourceKey("resourceKey")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?resourceKey=resourceKey",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
                    .WithSource("source")
                    .Build(),
                    "Get",

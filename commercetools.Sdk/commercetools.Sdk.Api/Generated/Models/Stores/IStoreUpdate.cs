@@ -6,7 +6,7 @@ using commercetools.Base.CustomAttributes;
 namespace commercetools.Sdk.Api.Models.Stores
 {
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreUpdate))]
-    public partial interface IStoreUpdate : commercetools.Sdk.Api.Models.IResourceUpdate<IStoreUpdate, IStoreUpdateAction>
+    public partial interface IStoreUpdate
     {
         new long Version { get; set; }
         new IList<IStoreUpdateAction> Actions { get; set; }

@@ -29,7 +29,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         IEnumerable<IChange> ChangesEnumerable { set => Changes = value.ToList(); }
 
 
-        IReference Resource { get; set; }
+        IResourceIdentifier Resource { get; set; }
 
         IList<IKeyReference> Stores { get; set; }
         IEnumerable<IKeyReference> StoresEnumerable { set => Stores = value.ToList(); }

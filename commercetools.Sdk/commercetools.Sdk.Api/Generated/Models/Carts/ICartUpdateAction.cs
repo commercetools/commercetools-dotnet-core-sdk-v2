@@ -78,7 +78,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setShippingRateInput", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction))]
     [SubTypeDiscriminator("unfreezeCart", typeof(commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
-    public partial interface ICartUpdateAction : commercetools.Sdk.Api.Models.IResourceUpdateAction<ICartUpdateAction>
+    public partial interface ICartUpdateAction
     {
         new string Action { get; set; }
 
