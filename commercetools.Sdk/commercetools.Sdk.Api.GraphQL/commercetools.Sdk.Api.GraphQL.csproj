@@ -6,7 +6,12 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="ZeroQL" Version="5.0.0-preview.5" />
+        <PackageReference Include="ZeroQL" Version="5.0.0-preview.6" />
     </ItemGroup>
-
+    <ItemGroup>
+      <Folder Include="Generated\" />
+    </ItemGroup>
+    <Target Name="GenerateQLClient" BeforeTargets="BeforeCompile">
+        <Exec Command="dotnet zeroql generate -c ./zeroql.json" />
+    </Target>
 </Project>

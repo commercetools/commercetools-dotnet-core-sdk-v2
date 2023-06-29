@@ -1,7 +1,3 @@
-schema {
-  query: Query
-  mutation: Mutation
-}
 
 "API Clients can be used to obtain OAuth 2 access tokens. The secret is only shown once in the response of creating the API Client."
 type APIClientWithSecret {

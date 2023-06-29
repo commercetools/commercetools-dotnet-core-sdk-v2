@@ -3,7 +3,7 @@
   "graphql": "./schema.graphqls",
   "namespace": "commercetools.Sdk.Api.GraphQL",
   "clientName": "ZeroQLClient",
-  "output": "./commercetools.Sdk.Api.GraphQl/Generated/GraphQL.g.cs",
+  "output": "./Generated/GraphQL.g.cs",
   "scalars": {
     "BigDecimal": "System.Decimal",
     "Country": "System.String",
