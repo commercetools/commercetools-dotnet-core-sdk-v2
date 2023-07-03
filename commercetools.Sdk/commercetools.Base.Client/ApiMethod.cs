@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using Microsoft.AspNetCore.WebUtilities;
 
 namespace commercetools.Base.Client
 {
@@ -19,6 +18,7 @@ namespace commercetools.Base.Client
 
         public ApiMethod()
         {
+            this.RequestUrl = "";
             this.QueryParams = new List<KeyValuePair<string, string>>();
             this.Headers = new ApiHttpHeaders();
         }
@@ -71,14 +71,22 @@ namespace commercetools.Base.Client
 
         public virtual HttpRequestMessage Build()
         {
-            var requestPath = RequestUrl;
-            QueryParams.ForEach(x => { requestPath = QueryHelpers.AddQueryString(requestPath, x.Key, x.Value); });
-
+            var requestPath = new Uri(RequestUrl + ToQueryString(QueryParams), UriKind.Relative);
             var request = new HttpRequestMessage();
             request.Method = this.Method;
-            request.RequestUri = new Uri(requestPath, UriKind.Relative);
+            request.RequestUri = requestPath;
             request.AddHeaders(Headers);
             return request;
+        }
+        
+        private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
+        {
+            var keyValuePairs = queryParams.ToList();
+            if (keyValuePairs.Any()) 
+                return "?" + string.Join("&",
+                    keyValuePairs.Select(pair =>
+                        $"{Uri.EscapeDataString(pair.Key)}={Uri.EscapeDataString(pair.Value)}"));
+            return "";
         }
     }
 }
