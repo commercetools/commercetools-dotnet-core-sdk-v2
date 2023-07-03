@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Web;
 
 namespace commercetools.Base.Client
 {
@@ -86,7 +85,7 @@ namespace commercetools.Base.Client
             if (keyValuePairs.Any()) 
                 return "?" + string.Join("&",
                     keyValuePairs.Select(pair =>
-                        $"{HttpUtility.UrlEncode(pair.Key)}={HttpUtility.UrlEncode(pair.Value)}"));
+                        $"{Uri.EscapeDataString(pair.Key)}={Uri.EscapeDataString(pair.Value)}"));
             return "";
         }
     }

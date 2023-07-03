@@ -92,7 +92,7 @@ namespace commercetools.Sdk.Api.Tests
 
             var expectedRequestUrl = $"/{projectKey}/categories?" +
                 $"expand={expand}&limit={limit}&offset={offset}" +
-                $"&withTotal={withTotal}&where=name+%3d+%22food%22";
+                $"&withTotal={withTotal}&where=name%20%3D%20%22food%22";
 
             //assert
             Assert.NotNull(request);
