@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <IsPackable>false</IsPackable>
         <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
     </PropertyGroup>
@@ -29,6 +29,7 @@
       <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
+      <ProjectReference Include="..\..\commercetools.Sdk.Api.GraphQL\commercetools.Sdk.Api.GraphQL.csproj" />
     </ItemGroup>
     <ItemGroup>
       <None Update="appsettings.test.Development.json">

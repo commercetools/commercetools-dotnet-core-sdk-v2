@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="ZeroQL" Version="5.0.0-preview.6" />
+        <PackageReference Include="ZeroQL" Version="5.0.0-preview.9" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Generated\" />

@@ -52,9 +52,14 @@ namespace commercetools.Base.Client
 
         public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var result = await this.MiddlewareStack.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
+            var result = await SendAsAsync(requestMessage, cancellationToken);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             return new ApiResponse<string>(result.StatusCode, result.ReasonPhrase, result.Headers, content);
+        }
+        
+        public async Task<HttpResponseMessage> SendAsAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            return await this.MiddlewareStack.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);
         }
     }
 }
