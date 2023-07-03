@@ -83,7 +83,7 @@ namespace commercetools.Base.Client
         private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
         {
             var keyValuePairs = queryParams.ToList();
-            if (keyValuePairs.Count() > 1) 
+            if (keyValuePairs.Any()) 
                 return "?" + string.Join("&",
                     keyValuePairs.Select(pair =>
                         $"{HttpUtility.UrlEncode(pair.Key)}={HttpUtility.UrlEncode(pair.Value)}"));
