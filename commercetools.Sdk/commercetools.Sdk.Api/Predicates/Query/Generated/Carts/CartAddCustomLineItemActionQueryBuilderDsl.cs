@@ -39,6 +39,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartAddCustomLineItemActionQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CartAddCustomLineItemActionQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<CartAddCustomLineItemActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<CartAddCustomLineItemActionQueryBuilderDsl>(p, CartAddCustomLineItemActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CartAddCustomLineItemActionQueryBuilderDsl, long> Quantity()
         {
             return new ComparisonPredicateBuilder<CartAddCustomLineItemActionQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("quantity")),

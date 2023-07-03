@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ILocalizedString Name { get; set; }
 
+        string Key { get; set; }
+
         long? Quantity { get; set; }
 
         string Slug { get; set; }
