@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ITypedMoney Money { get; set; }

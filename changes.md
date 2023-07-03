@@ -3,9 +3,12 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `key` to type `CustomLineItem`
 - added property `perMethodTaxRate` to type `CustomLineItem`
+- added property `key` to type `CustomLineItemDraft`
 - added property `key` to type `LineItem`
 - added property `key` to type `LineItemDraft`
+- added property `key` to type `CartAddCustomLineItemAction`
 - added property `key` to type `CartAddLineItemAction`
 - added property `lineItemKey` to type `CartApplyDeltaToLineItemShippingDetailsTargetsAction`
 - added property `lineItemKey` to type `CartChangeLineItemQuantityAction`
@@ -33,6 +36,7 @@
 - added property `lineItemKey` to type `MyShoppingListChangeLineItemQuantityAction`
 - added property `sku` to type `StandalonePriceDeletedMessage`
 - added property `sku` to type `StandalonePriceDeletedMessagePayload`
+- added property `key` to type `StagedOrderAddCustomLineItemAction`
 - added property `key` to type `StagedOrderAddLineItemAction`
 - added property `parcelKey` to type `StagedOrderAddParcelToDeliveryAction`
 - added property `lineItemKey` to type `StagedOrderChangeLineItemQuantityAction`
@@ -124,6 +128,14 @@
 
 - property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
 - property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
+</details>
+
+
+<details>
+<summary>Deprecated Type(s)</summary>
+
+- type `ProductVariantSelectionExclusion` is removed
+- type `ProductVariantSelectionInclusion` is removed
 </details>
 
 
