@@ -16,7 +16,6 @@
     <Folder Include="Domain\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.14" />
   </ItemGroup>
