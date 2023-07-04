@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes
 {
 
-    public partial class ByProjectKeyProductTypesGet : ApiMethod<ByProjectKeyProductTypesGet>, IApiMethod<ByProjectKeyProductTypesGet, commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyProductTypesGet, commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductTypesGet>
+    public partial class ByProjectKeyProductTypesGet : ApiMethod<ByProjectKeyProductTypesGet>, IApiMethod<ByProjectKeyProductTypesGet, commercetools.Sdk.Api.Models.ProductTypes.IProductTypePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductTypesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductTypesGet>
     {
 
 

@@ -12,18 +12,6 @@
     "LicenseType": "MIT"
   },
   {
-    "PackageName": "Microsoft.AspNetCore.WebUtilities",
-    "PackageVersion": "2.2.0",
-    "PackageUrl": "https://asp.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "ASP.NET Core utilities, such as for working with forms, multipart messages, and query strings.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489",
-    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
-    "LicenseType": "Apache-2.0"
-  },
-  {
     "PackageName": "Microsoft.Bcl.AsyncInterfaces",
     "PackageVersion": "1.1.0",
     "PackageUrl": "https://github.com/dotnet/corefx",
@@ -169,18 +157,6 @@
   },
   {
     "PackageName": "Microsoft.Extensions.Primitives",
-    "PackageVersion": "2.2.0",
-    "PackageUrl": "https://asp.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment\r\n\r\nThis package was built from the source code at https://github.com/aspnet/Extensions/tree/9bc79b2f25a3724376d7af19617c33749a30ea3a",
-    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
-    "LicenseType": "Apache-2.0"
-  },
-  {
-    "PackageName": "Microsoft.Extensions.Primitives",
     "PackageVersion": "3.1.14",
     "PackageUrl": "https://asp.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -189,18 +165,6 @@
     ],
     "Description": "Primitives shared by framework extensions. Commonly used types include:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
     "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
-    "LicenseType": "Apache-2.0"
-  },
-  {
-    "PackageName": "Microsoft.Net.Http.Headers",
-    "PackageVersion": "2.2.0",
-    "PackageUrl": "https://asp.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "HTTP header parser implementations.\r\n\r\nThis package was built from the source code at https://github.com/aspnet/HttpAbstractions/tree/91db78cf926939821bc96e8e60616cf5dde0b489",
-    "LicenseUrl": "https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt",
     "LicenseType": "Apache-2.0"
   },
   {
@@ -337,13 +301,13 @@
   },
   {
     "PackageName": "System.Buffers",
-    "PackageVersion": "4.4.0",
+    "PackageVersion": "4.5.1",
     "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
@@ -361,25 +325,13 @@
   },
   {
     "PackageName": "System.Buffers",
-    "PackageVersion": "4.5.0",
+    "PackageVersion": "4.4.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation.  All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Buffers",
-    "PackageVersion": "4.5.1",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
@@ -685,18 +637,6 @@
   },
   {
     "PackageName": "System.Memory",
-    "PackageVersion": "4.5.1",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n7ee84596d92e178bce54c986df31ccc52479e772 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Memory",
     "PackageVersion": "4.5.4",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -757,18 +697,6 @@
   },
   {
     "PackageName": "System.Numerics.Vectors",
-    "PackageVersion": "4.4.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Numerics.Vectors",
     "PackageVersion": "4.5.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation.  All rights reserved.",
@@ -776,6 +704,18 @@
       "Microsoft"
     ],
     "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Numerics.Vectors",
+    "PackageVersion": "4.4.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
@@ -898,30 +838,6 @@
     "Description": "Provides the fundamental primitives, classes and base classes that define commonly-used value and reference data types, events and event handlers, interfaces, attributes, and exceptions. This packages represents the core package, and provides the minimal set of types required to build a managed application.\r\n\r\nCommonly Used Types:\r\nSystem.Object\r\nSystem.Exception\r\nSystem.Int16\r\nSystem.Int32\r\nSystem.Int64\r\nSystem.Enum\r\nSystem.String\r\nSystem.Char\r\nSystem.Boolean\r\nSystem.SByte\r\nSystem.Byte\r\nSystem.DateTime\r\nSystem.DateTimeOffset\r\nSystem.Single\r\nSystem.Double\r\nSystem.UInt16\r\nSystem.UInt32\r\nSystem.UInt64\r\nSystem.IDisposable\r\nSystem.Uri\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
     "LicenseType": "MS-EULA"
-  },
-  {
-    "PackageName": "System.Runtime.CompilerServices.Unsafe",
-    "PackageVersion": "4.5.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Runtime.CompilerServices.Unsafe",
-    "PackageVersion": "4.5.1",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.\r\n\r\nCommonly Used Types:\r\nSystem.Runtime.CompilerServices.Unsafe\r\n \r\n7ee84596d92e178bce54c986df31ccc52479e772 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
   },
   {
     "PackageName": "System.Runtime.CompilerServices.Unsafe",
@@ -1165,18 +1081,6 @@
   },
   {
     "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "4.5.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Encodings.Web",
     "PackageVersion": "4.7.1",
     "PackageUrl": "https://github.com/dotnet/corefx",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -1237,18 +1141,6 @@
   },
   {
     "PackageName": "System.Threading.Tasks.Extensions",
-    "PackageVersion": "4.3.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
-  },
-  {
-    "PackageName": "System.Threading.Tasks.Extensions",
     "PackageVersion": "4.5.2",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -1258,6 +1150,18 @@
     "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>\r\n \r\n99ce22c306b07f99ddae60f443d23a983ae78f7b",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Threading.Tasks.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
   },
   {
     "PackageName": "System.Threading.Tasks.Extensions",

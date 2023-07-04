@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
 
-    public partial class ByProjectKeyOrdersEditsGet : ApiMethod<ByProjectKeyOrdersEditsGet>, IApiMethod<ByProjectKeyOrdersEditsGet, commercetools.Sdk.Api.Models.OrderEdits.IOrderEditPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyOrdersEditsGet, commercetools.Sdk.Api.Models.OrderEdits.IOrderEditPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyOrdersEditsGet>
+    public partial class ByProjectKeyOrdersEditsGet : ApiMethod<ByProjectKeyOrdersEditsGet>, IApiMethod<ByProjectKeyOrdersEditsGet, commercetools.Sdk.Api.Models.OrderEdits.IOrderEditPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyOrdersEditsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyOrdersEditsGet>
     {
 
 

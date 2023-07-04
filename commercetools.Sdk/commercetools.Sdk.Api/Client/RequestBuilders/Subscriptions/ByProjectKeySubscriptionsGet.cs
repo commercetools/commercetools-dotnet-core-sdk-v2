@@ -3,7 +3,8 @@ using commercetools.Sdk.Api.Predicates.Query.Subscriptions;
 
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsGet : IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet, ISubscriptionPagedQueryResponse, SubscriptionQueryBuilderDsl>
+    public partial class ByProjectKeySubscriptionsGet : IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet, ISubscriptionPagedQueryResponse, SubscriptionQueryBuilderDsl>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeySubscriptionsGet,
+        commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>
     {
 
     }

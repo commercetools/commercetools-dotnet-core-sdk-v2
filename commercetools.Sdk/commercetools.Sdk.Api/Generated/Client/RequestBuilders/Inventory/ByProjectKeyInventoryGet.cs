@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
 
-    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>, IApiMethod<ByProjectKeyInventoryGet, commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyInventoryGet, commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryGet>
+    public partial class ByProjectKeyInventoryGet : ApiMethod<ByProjectKeyInventoryGet>, IApiMethod<ByProjectKeyInventoryGet, commercetools.Sdk.Api.Models.Inventories.IInventoryPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryGet>
     {
 
 
