@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
 
-    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>, IApiMethod<ByProjectKeyCustomerGroupsGet, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomerGroupsGet>
+    public partial class ByProjectKeyCustomerGroupsGet : ApiMethod<ByProjectKeyCustomerGroupsGet>, IApiMethod<ByProjectKeyCustomerGroupsGet, commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomerGroupsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomerGroupsGet>
     {
 
 
