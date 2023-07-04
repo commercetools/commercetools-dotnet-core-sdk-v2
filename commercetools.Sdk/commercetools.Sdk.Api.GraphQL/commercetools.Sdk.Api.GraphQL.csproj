@@ -11,10 +11,6 @@
         <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
         <ProjectReference Include="..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Generated\" />
-    </ItemGroup>
     <Target Name="GenerateQLClient" BeforeTargets="BeforeCompile">
         <Exec Command="dotnet zeroql generate -c ./zeroql.json" />
     </Target>

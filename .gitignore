@@ -284,3 +284,4 @@ appsettings.Development.json
 
 
 docs/
+/commercetools.Sdk/commercetools.Sdk.Api.GraphQL/Generated/GraphQLClient.g.cs
