@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/byme8/ZeroQL/main/schema.verified.json",
   "graphql": "./schema.graphqls",
   "namespace": "commercetools.Sdk.Api.GraphQL",
-  "clientName": "ZeroQLClient",
-  "output": "./Generated/GraphQL.g.cs",
+  "clientName": "GraphQLClient",
+  "output": "./Generated/GraphQLClient.g.cs",
   "scalars": {
     "BigDecimal": "System.Decimal",
     "Country": "System.String",
@@ -13,6 +13,7 @@
     "Set": "System.String",
     "Time": "System.String",
     "YearMonth": "System.String",
-    "Date": "System.String"
+    "Date": "System.String",
+    "Currency": "System.String"
   }
 }

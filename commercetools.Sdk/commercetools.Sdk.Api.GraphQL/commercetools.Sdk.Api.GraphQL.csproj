@@ -4,10 +4,14 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>latestmajor</LangVersion>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="ZeroQL" Version="5.0.0-preview.9" />
+        <PackageReference Include="ZeroQL" Version="5.0.0" />
+        <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
+        <ProjectReference Include="..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
     </ItemGroup>
+
     <ItemGroup>
       <Folder Include="Generated\" />
     </ItemGroup>

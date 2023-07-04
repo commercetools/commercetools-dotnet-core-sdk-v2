@@ -49,7 +49,7 @@ namespace commercetools.Sdk.Api.Client
     {
         public string ClientName { get; }
         public string ProjectKey { get; }
-        private IClient ApiHttpClient { get; }
+        public IClient ApiHttpClient { get; }
 
         public ProjectApiRoot(IClient apiHttpClient, string projectKey)
         {

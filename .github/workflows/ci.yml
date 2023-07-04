@@ -157,6 +157,26 @@ jobs:
           CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
           CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
           CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES_PR }}
+      - run: dotnet test IntegrationTests/commercetools.Api.GraphQL.IntegrationTests --verbosity=normal --no-build -c Release
+        if: github.event_name == 'push'
+        working-directory: ./commercetools.Sdk
+      - run: dotnet test IntegrationTests/commercetools.Api.GraphQL.IntegrationTests --verbosity=normal --no-build -c Release
+        if: github.event_name == 'pull_request'
+        working-directory: ./commercetools.Sdk
+        env:
+          CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID_PR }}
+          CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+          CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
+          CTP_Client__Scope: ${{ secrets.CTP_SCOPE_PR }}
+          CTP_Import__ClientId: ${{ secrets.CTP_CLIENT_ID_PR }}
+          CTP_Import__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+          CTP_Import__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
+          CTP_Import__Scope: ${{ secrets.CTP_SCOPE_PR }}
+          CTP_Import__ApiBaseAddress: "https://import.europe-west1.gcp.commercetools.com/"
+          CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID_PR }}
+          CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
+          CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
+          CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES_PR }}
 
   artifacts:
     name: Create artifacts

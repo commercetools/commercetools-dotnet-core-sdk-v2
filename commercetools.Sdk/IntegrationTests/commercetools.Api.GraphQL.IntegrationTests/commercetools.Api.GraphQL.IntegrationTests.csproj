@@ -1,10 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
         <IsPackable>false</IsPackable>
-        <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
         <IsTestProject>true</IsTestProject>
+        <LangVersion>latestmajor</LangVersion>
+        <UserSecretsId>6e42aa04-1612-4e1c-8bb2-190e5c88343f</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,29 +21,20 @@
         <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.14" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
         <PackageReference Include="xunit" Version="2.4.1" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
-
     <ItemGroup>
-      <Folder Include="Categories\" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
-      <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
-      <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
-      <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
+        <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
+        <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
+        <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
+        <ProjectReference Include="..\..\commercetools.Sdk.Api.GraphQL\commercetools.Sdk.Api.GraphQL.csproj" />
     </ItemGroup>
     <ItemGroup>
       <None Update="appsettings.test.Development.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
-    <ItemGroup>
-        <None Update="Resources\*">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
+
 </Project>
