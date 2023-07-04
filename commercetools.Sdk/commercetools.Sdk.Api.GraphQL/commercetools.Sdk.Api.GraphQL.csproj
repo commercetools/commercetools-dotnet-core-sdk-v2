@@ -10,8 +10,8 @@
         <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
         <ProjectReference Include="..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
     </ItemGroup>
-    <Target Name="GenerateQLClient" BeforeTargets="BeforeBuild;BeforeRebuild">
-        <Exec Command="dotnet zeroql generate -c ./zeroql.json" Outputs="Generated/*.cs">
+    <Target Name="GenerateQLClient" BeforeTargets="BeforeCompile">
+        <Exec Command="dotnet zeroql generate -c ./zeroql.json" Outputs="Generated/GraphQLClient.g.cs">
             <Output ItemName="Generated" TaskParameter="Outputs" />
         </Exec>
         <ItemGroup>
