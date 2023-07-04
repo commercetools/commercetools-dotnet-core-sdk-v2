@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
 
-    public partial class ByProjectKeyTaxCategoriesGet : ApiMethod<ByProjectKeyTaxCategoriesGet>, IApiMethod<ByProjectKeyTaxCategoriesGet, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTaxCategoriesGet>
+    public partial class ByProjectKeyTaxCategoriesGet : ApiMethod<ByProjectKeyTaxCategoriesGet>, IApiMethod<ByProjectKeyTaxCategoriesGet, commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTaxCategoriesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTaxCategoriesGet>
     {
 
 

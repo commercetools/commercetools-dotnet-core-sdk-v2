@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.States
 {
 
-    public partial class ByProjectKeyStatesGet : ApiMethod<ByProjectKeyStatesGet>, IApiMethod<ByProjectKeyStatesGet, commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse>, commercetools.Sdk.Api.Models.IPagedQueryResourceRequest<ByProjectKeyStatesGet, commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyStatesGet>
+    public partial class ByProjectKeyStatesGet : ApiMethod<ByProjectKeyStatesGet>, IApiMethod<ByProjectKeyStatesGet, commercetools.Sdk.Api.Models.States.IStatePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyStatesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyStatesGet>
     {
 
 
