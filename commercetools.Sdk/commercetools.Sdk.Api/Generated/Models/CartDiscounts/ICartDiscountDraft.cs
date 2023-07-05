@@ -1,6 +1,9 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -22,6 +25,10 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         ICartDiscountTarget Target { get; set; }
 
         string SortOrder { get; set; }
+
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         bool? IsActive { get; set; }
 

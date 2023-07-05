@@ -111,6 +111,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             p => new CombinationQueryPredicate<CartDiscountQueryBuilderDsl>(p, CartDiscountQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<CartDiscountQueryBuilderDsl> Stores(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("stores"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl.Of())),
+                CartDiscountQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CartDiscountQueryBuilderDsl> Stores()
+        {
+            return new CollectionPredicateBuilder<CartDiscountQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
+                    p => new CombinationQueryPredicate<CartDiscountQueryBuilderDsl>(p, CartDiscountQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<CartDiscountQueryBuilderDsl, bool> IsActive()
         {
             return new ComparisonPredicateBuilder<CartDiscountQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("isActive")),

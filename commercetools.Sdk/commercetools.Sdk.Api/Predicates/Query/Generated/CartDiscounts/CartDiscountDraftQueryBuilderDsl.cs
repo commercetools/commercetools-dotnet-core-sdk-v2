@@ -69,6 +69,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             p => new CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl>(p, CartDiscountDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> Stores(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("stores"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl.Of())),
+                CartDiscountDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CartDiscountDraftQueryBuilderDsl> Stores()
+        {
+            return new CollectionPredicateBuilder<CartDiscountDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
+                    p => new CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl>(p, CartDiscountDraftQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<CartDiscountDraftQueryBuilderDsl, bool> IsActive()
         {
             return new ComparisonPredicateBuilder<CartDiscountDraftQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("isActive")),
