@@ -157,10 +157,10 @@ jobs:
           CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
           CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
           CTP_MeClient__Scope: ${{ secrets.CTP_MESCOPES_PR }}
-      - run: dotnet test IntegrationTests/commercetools.Api.GraphQL.IntegrationTests --verbosity=normal --no-build -c Release
+      - run: dotnet test IntegrationTests/commercetools.GraphQL.Api.IntegrationTests --verbosity=normal --no-build -c Release
         if: github.event_name == 'push'
         working-directory: ./commercetools.Sdk
-      - run: dotnet test IntegrationTests/commercetools.Api.GraphQL.IntegrationTests --verbosity=normal --no-build -c Release
+      - run: dotnet test IntegrationTests/commercetools.GraphQL.Api.IntegrationTests --verbosity=normal --no-build -c Release
         if: github.event_name == 'pull_request'
         working-directory: ./commercetools.Sdk
         env:
