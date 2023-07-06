@@ -14,6 +14,7 @@
 
 - added property `stores` to type `CartDiscount`
 - added property `stores` to type `CartDiscountDraft`
+- added property `shippingKey` to type `StagedOrderAddDeliveryAction`
 </details>
 
 
