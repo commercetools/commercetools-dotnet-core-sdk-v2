@@ -283,5 +283,5 @@ appsettings.test.Development.json
 appsettings.Development.json
 
 
-docs/
-/commercetools.Sdk/commercetools.Sdk.Api.GraphQL/Generated/GraphQLClient.g.cs
+build_docs/
+commercetools.Sdk/commercetools.Sdk.Api.GraphQL/Generated/GraphQLClient.g.cs
