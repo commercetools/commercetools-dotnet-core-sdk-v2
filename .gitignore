@@ -283,4 +283,4 @@ appsettings.test.Development.json
 appsettings.Development.json
 
 
-docs/
+build/docs/
