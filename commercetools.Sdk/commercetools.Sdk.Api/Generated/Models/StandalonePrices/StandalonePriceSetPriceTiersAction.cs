@@ -15,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         public StandalonePriceSetPriceTiersAction()
         {
-            this.Action = "setPriceTier";
+            this.Action = "setPriceTiers";
         }
     }
 }

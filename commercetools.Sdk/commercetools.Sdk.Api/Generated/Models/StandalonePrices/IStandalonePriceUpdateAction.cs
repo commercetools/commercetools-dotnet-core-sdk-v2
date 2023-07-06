@@ -15,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
     [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetKeyAction))]
-    [SubTypeDiscriminator("setPriceTier", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction))]
+    [SubTypeDiscriminator("setPriceTiers", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction))]
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetValidUntilAction))]
@@ -77,7 +77,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction SetPriceTier(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction> init = null)
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction SetPriceTiers(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetPriceTiersAction();
             init?.Invoke(t);
