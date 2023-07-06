@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Api.GraphQL.IntegrationTests
+namespace commercetools.GraphQL.Api.IntegrationTests
 {
     public class ServiceProviderFixture
     {

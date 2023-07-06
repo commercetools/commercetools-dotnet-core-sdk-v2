@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace commercetools.Api.GraphQL.IntegrationTests
+namespace commercetools.GraphQL.Api.IntegrationTests
 {
     [CollectionDefinition("Integration Tests")]
     public class IntegrationTestCollection : ICollectionFixture<ServiceProviderFixture>

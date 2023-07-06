@@ -6,7 +6,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 
-namespace commercetools.Api.GraphQL.IntegrationTests
+namespace commercetools.GraphQL.Api.IntegrationTests
 {
     public static class GenericFixture
     {

@@ -1,12 +1,12 @@
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.GraphQL;
+using commercetools.Sdk.GraphQL.Api;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace commercetools.Api.GraphQL.IntegrationTests.GraphQL;
+namespace commercetools.GraphQL.Api.IntegrationTests.GraphQL;
 
 public class GraphQLTest
 {

@@ -29,7 +29,7 @@
         <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
         <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
         <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
-        <ProjectReference Include="..\..\commercetools.Sdk.Api.GraphQL\commercetools.Sdk.Api.GraphQL.csproj" />
+        <ProjectReference Include="..\..\commercetools.Sdk.GraphQL.Api\commercetools.Sdk.GraphQL.Api.csproj" />
     </ItemGroup>
     <ItemGroup>
       <None Update="appsettings.test.Development.json">

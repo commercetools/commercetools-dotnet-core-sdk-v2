@@ -2,7 +2,7 @@ using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using ZeroQL;
 
-namespace commercetools.Sdk.Api.GraphQL;
+namespace commercetools.Sdk.GraphQL.Api;
 
 public static class GraphQlClientExtensions
 {

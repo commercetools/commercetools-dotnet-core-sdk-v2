@@ -46,9 +46,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.ImportApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.CheckoutApp", "Examples\commercetools.Api.CheckoutApp\commercetools.Api.CheckoutApp.csproj", "{6178E865-9D39-45D3-B789-B14CD41218C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.Api.GraphQL", "commercetools.Sdk.Api.GraphQL\commercetools.Sdk.Api.GraphQL.csproj", "{B0A62C3A-F072-4364-8981-8EE065DFC953}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.GraphQL.Api", "commercetools.Sdk.GraphQL.Api\commercetools.Sdk.GraphQL.Api.csproj", "{B0A62C3A-F072-4364-8981-8EE065DFC953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.GraphQL.IntegrationTests", "IntegrationTests\commercetools.Api.GraphQL.IntegrationTests\commercetools.Api.GraphQL.IntegrationTests.csproj", "{9DB83F62-709B-45CD-BB58-FC507C5535A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.GraphQL.Api.IntegrationTests", "IntegrationTests\commercetools.GraphQL.Api.IntegrationTests\commercetools.GraphQL.Api.IntegrationTests.csproj", "{9DB83F62-709B-45CD-BB58-FC507C5535A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
