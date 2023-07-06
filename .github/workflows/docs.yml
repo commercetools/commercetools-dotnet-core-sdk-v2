@@ -27,9 +27,9 @@ jobs:
           path: doc
           ref: gh-pages
 
-      - name: Install Doxygen
-        run: sudo apt-get install doxygen -y
-        shell: bash
+      - uses: ssciwr/doxygen-install@022351b889a5d2639382a0d55a1834a413ec6a23
+        with:
+          version: "1.9.7"
 
       - name: Generate Doxygen Documentation
         run: doxygen doxygen_config
