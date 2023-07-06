@@ -50,8 +50,6 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setCustomShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomShippingMethodAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction))]
-    [SubTypeDiscriminator("setDeliveryAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomFieldAction))]
-    [SubTypeDiscriminator("setDeliveryAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction))]
     [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomTypeAction))]
@@ -343,18 +341,6 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction SetDeleteDaysAfterLastModification(Action<commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomFieldAction SetDeliveryAddressCustomField(Action<commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomFieldAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomFieldAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction SetDeliveryAddressCustomType(Action<commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Carts.CartSetDeliveryAddressCustomTypeAction();
             init?.Invoke(t);
             return t;
         }

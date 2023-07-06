@@ -286,18 +286,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeleteDaysAfterLastModificationActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetDeliveryAddressCustomField(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl.Of()),
-                CartUpdateActionQueryBuilderDsl.Of);
-        }
-        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetDeliveryAddressCustomType(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl.Of()),
-                CartUpdateActionQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetDirectDiscounts(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsActionQueryBuilderDsl>> fn)
         {
