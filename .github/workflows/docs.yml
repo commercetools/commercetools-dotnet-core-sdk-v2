@@ -38,7 +38,7 @@ jobs:
         env:
           PROJECT_NUMBER: ${{ github.ref_name }}
 
-      - run: rsync -r --delete ./sdk/build_docs ./doc
+      - run: rsync -r --delete ./sdk/build_docs/ ./doc
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
