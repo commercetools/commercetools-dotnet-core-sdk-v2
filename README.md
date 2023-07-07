@@ -327,6 +327,11 @@ services.SetupClient(
                 s => s.GetService<SerializerService>()
             );
 ```
+
+### Predicates
+
+* [Query Predicate Builders](./docs/Predicates.md)
+
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
 * [Migration guidelines from v1 to v2](./docs/COMPARISON.md)
