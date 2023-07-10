@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, commercetools.Sdk.Api.Models.ProductSelections.IProductsInStorePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, commercetools.Sdk.Api.Models.ProductSelections.IProductsInStorePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>
     {
 
 
@@ -50,6 +50,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("expand");
         }
 
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithLimit(int limit)
         {
             return this.AddQueryParam("limit", limit.ToString());
@@ -70,6 +75,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam("expand", expand);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithWhere(string where)
+        {
+            return this.AddQueryParam("where", where);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithPredicateVar(string varName, string predicateVar)
+        {
+            return this.AddQueryParam($"var.{varName}", predicateVar);
+        }
 
         public async Task<commercetools.Sdk.Api.Models.ProductSelections.IProductsInStorePagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
