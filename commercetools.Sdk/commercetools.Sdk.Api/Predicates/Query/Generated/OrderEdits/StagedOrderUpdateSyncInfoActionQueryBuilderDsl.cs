@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<StagedOrderUpdateSyncInfoActionQueryBuilderDsl>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, string> ExternalId()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("externalId")),
+            p => new CombinationQueryPredicate<StagedOrderUpdateSyncInfoActionQueryBuilderDsl>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateSyncInfoActionQueryBuilderDsl> Channel(
             Func<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl>> fn)
         {
@@ -30,12 +36,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
                 StagedOrderUpdateSyncInfoActionQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, string> ExternalId()
-        {
-            return new ComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("externalId")),
-            p => new CombinationQueryPredicate<StagedOrderUpdateSyncInfoActionQueryBuilderDsl>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, DateTime> SyncedAt()
         {
             return new ComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("syncedAt")),

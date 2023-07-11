@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderUpdateSyncInfoActionQueryBuilderDsl>(p, OrderUpdateSyncInfoActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, string> ExternalId()
+        {
+            return new ComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("externalId")),
+            p => new CombinationQueryPredicate<OrderUpdateSyncInfoActionQueryBuilderDsl>(p, OrderUpdateSyncInfoActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<OrderUpdateSyncInfoActionQueryBuilderDsl> Channel(
             Func<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelResourceIdentifierQueryBuilderDsl>> fn)
         {
@@ -30,12 +36,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 OrderUpdateSyncInfoActionQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, string> ExternalId()
-        {
-            return new ComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("externalId")),
-            p => new CombinationQueryPredicate<OrderUpdateSyncInfoActionQueryBuilderDsl>(p, OrderUpdateSyncInfoActionQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, DateTime> SyncedAt()
         {
             return new ComparisonPredicateBuilder<OrderUpdateSyncInfoActionQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("syncedAt")),

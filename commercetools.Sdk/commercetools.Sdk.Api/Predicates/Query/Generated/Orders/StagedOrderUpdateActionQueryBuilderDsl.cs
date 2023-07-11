@@ -310,6 +310,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDeliveryItemsActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetDirectDiscounts(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetItemShippingAddressCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn)
         {
@@ -506,6 +512,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingRateInputActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingRateInputActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingRateInputActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetStore(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetStoreActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetStoreActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsTransitionCustomLineItemState(

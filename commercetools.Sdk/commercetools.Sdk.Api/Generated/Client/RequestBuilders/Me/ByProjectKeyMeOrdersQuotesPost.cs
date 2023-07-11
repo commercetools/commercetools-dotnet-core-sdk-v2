@@ -10,7 +10,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
-    public partial class ByProjectKeyMeOrdersQuotesPost : ApiMethod<ByProjectKeyMeOrdersQuotesPost>, IApiMethod<ByProjectKeyMeOrdersQuotesPost, commercetools.Sdk.Api.Models.Orders.IOrder>
+    public partial class ByProjectKeyMeOrdersQuotesPost : ApiMethod<ByProjectKeyMeOrdersQuotesPost>, IApiMethod<ByProjectKeyMeOrdersQuotesPost, commercetools.Sdk.Api.Models.Orders.IOrder>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeOrdersQuotesPost>
     {
 
 

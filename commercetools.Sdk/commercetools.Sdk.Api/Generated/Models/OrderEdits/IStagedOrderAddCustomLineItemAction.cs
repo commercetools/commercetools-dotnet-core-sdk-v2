@@ -23,11 +23,13 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
-        ICustomFieldsDraft Custom { get; set; }
-
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
+        IItemShippingDetailsDraft ShippingDetails { get; set; }
+
         ICustomLineItemPriceMode PriceMode { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

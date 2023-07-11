@@ -26,17 +26,15 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public DateTime LastModifiedAt { get; set; }
 
-        public ILastModifiedBy LastModifiedBy { get; set; }
-
-        public ICreatedBy CreatedBy { get; set; }
-
-        public DateTime? CompletedAt { get; set; }
-
         public string OrderNumber { get; set; }
+
+        public string PurchaseOrderNumber { get; set; }
 
         public string CustomerId { get; set; }
 
         public string CustomerEmail { get; set; }
+
+        public ICustomerGroupReference CustomerGroup { get; set; }
 
         public string AnonymousId { get; set; }
 
@@ -58,13 +56,25 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public ITaxedPrice TaxedShippingPrice { get; set; }
 
-        public IAddress ShippingAddress { get; set; }
+        public ITaxMode TaxMode { get; set; }
+
+        public IRoundingMode TaxRoundingMode { get; set; }
+
+        public ITaxCalculationMode TaxCalculationMode { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
 
         public IAddress BillingAddress { get; set; }
+
+        public IAddress ShippingAddress { get; set; }
 
         public IShippingMode ShippingMode { get; set; }
 
         public string ShippingKey { get; set; }
+
+        public IShippingInfo ShippingInfo { get; set; }
+
+        public IShippingRateInput ShippingRateInput { get; set; }
 
         public ICustomFields ShippingCustomFields { get; set; }
 
@@ -72,23 +82,41 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
 
 
-        public ITaxMode TaxMode { get; set; }
+        public IList<IAddress> ItemShippingAddresses { get; set; }
+        public IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-        public IRoundingMode TaxRoundingMode { get; set; }
 
-        public ICustomerGroupReference CustomerGroup { get; set; }
+        public IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+        public IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
+
+        public IList<IDirectDiscount> DirectDiscounts { get; set; }
+        public IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
+
+
+        public IList<ICartDiscountReference> RefusedGifts { get; set; }
+        public IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
+
+
+        public IPaymentInfo PaymentInfo { get; set; }
 
         public string Country { get; set; }
 
-        public IOrderState OrderState { get; set; }
+        public string Locale { get; set; }
 
-        public IStateReference State { get; set; }
+        public ICartOrigin Origin { get; set; }
+
+        public ICartReference Cart { get; set; }
+
+        public IQuoteReference Quote { get; set; }
+
+        public IOrderState OrderState { get; set; }
 
         public IShipmentState ShipmentState { get; set; }
 
         public IPaymentState PaymentState { get; set; }
 
-        public IShippingInfo ShippingInfo { get; set; }
+        public IStateReference State { get; set; }
 
         public IList<ISyncInfo> SyncInfo { get; set; }
         public IEnumerable<ISyncInfo> SyncInfoEnumerable { set => SyncInfo = value.ToList(); }
@@ -98,39 +126,15 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
 
 
-        public string PurchaseOrderNumber { get; set; }
-
-        public IList<IDiscountCodeInfo> DiscountCodes { get; set; }
-        public IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
-
-
         [ObsoleteAttribute("This property is obsolete", false)]
         public long? LastMessageSequenceNumber { get; set; }
 
-        public ICartReference Cart { get; set; }
-
-        public IQuoteReference Quote { get; set; }
-
         public ICustomFields Custom { get; set; }
 
-        public IPaymentInfo PaymentInfo { get; set; }
+        public DateTime? CompletedAt { get; set; }
 
-        public string Locale { get; set; }
+        public ILastModifiedBy LastModifiedBy { get; set; }
 
-        public IInventoryMode InventoryMode { get; set; }
-
-        public ICartOrigin Origin { get; set; }
-
-        public ITaxCalculationMode TaxCalculationMode { get; set; }
-
-        public IShippingRateInput ShippingRateInput { get; set; }
-
-        public IList<IAddress> ItemShippingAddresses { get; set; }
-        public IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
-
-
-        public IList<ICartDiscountReference> RefusedGifts { get; set; }
-        public IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
-
+        public ICreatedBy CreatedBy { get; set; }
     }
 }

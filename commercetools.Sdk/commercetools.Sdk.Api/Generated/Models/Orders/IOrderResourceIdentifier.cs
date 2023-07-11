@@ -7,6 +7,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderResourceIdentifier))]
     public partial interface IOrderResourceIdentifier : IResourceIdentifier
     {
+        new string Id { get; set; }
+
+        new string Key { get; set; }
 
     }
 }

@@ -39,33 +39,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> LastModifiedBy(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("lastModifiedBy"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> CreatedBy(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("createdBy"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, DateTime> CompletedAt()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("completedAt")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> OrderNumber()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("orderNumber")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> PurchaseOrderNumber()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("purchaseOrderNumber")),
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
@@ -81,6 +63,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> CustomerGroup(
+            Func<commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroup"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> AnonymousId()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("anonymousId")),
@@ -158,20 +149,44 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 OrderQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingAddress(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxMode()
         {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("shippingAddress"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxMode")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
         }
-
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxRoundingMode()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingMode")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxCalculationMode()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxCalculationMode")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> InventoryMode()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("inventoryMode")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<OrderQueryBuilderDsl> BillingAddress(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("billingAddress"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingAddress(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("shippingAddress"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
@@ -188,6 +203,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingInfo(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("shippingInfo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingRateInput(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("shippingRateInput"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingCustomFields(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {
@@ -210,24 +243,64 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shipping")),
                     p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
         }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxMode()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxMode")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxRoundingMode()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingMode")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> CustomerGroup(
-            Func<commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl>> fn)
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> ItemShippingAddresses(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("customerGroup"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CustomerGroups.CustomerGroupReferenceQueryBuilderDsl.Of())),
+                .Parent(ConstantQueryPredicate.Of().Constant("itemShippingAddresses"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> ItemShippingAddresses()
+        {
+            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("itemShippingAddresses")),
+                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> DiscountCodes(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("discountCodes"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> DiscountCodes()
+        {
+            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("discountCodes")),
+                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> DirectDiscounts(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DirectDiscountQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DirectDiscountQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("directDiscounts"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DirectDiscountQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> DirectDiscounts()
+        {
+            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscounts")),
+                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> RefusedGifts(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("refusedGifts"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> RefusedGifts()
+        {
+            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("refusedGifts")),
+                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> PaymentInfo(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("paymentInfo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
 
@@ -237,21 +310,42 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> Locale()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("locale")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> Origin()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("origin")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> Cart(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("cart"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> Quote(
+            Func<commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("quote"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl.Of())),
+                OrderQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> OrderState()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("orderState")),
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> State(
-            Func<commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("state"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> ShipmentState()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shipmentState")),
@@ -264,12 +358,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingInfo(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl>> fn)
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> State(
+            Func<commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("shippingInfo"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.ShippingInfoQueryBuilderDsl.Of())),
+                .Parent(ConstantQueryPredicate.Of().Constant("state"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.States.StateReferenceQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
 
@@ -299,49 +393,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("returnInfo")),
                     p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
         }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> PurchaseOrderNumber()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("purchaseOrderNumber")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> DiscountCodes(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("discountCodes"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountCodeInfoQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> DiscountCodes()
-        {
-            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("discountCodes")),
-                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
-        }
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, long> LastMessageSequenceNumber()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lastMessageSequenceNumber")),
             p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> Cart(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("cart"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> Quote(
-            Func<commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("quote"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Quotes.QuoteReferenceQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-
         public CombinationQueryPredicate<OrderQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {
@@ -351,74 +408,30 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 OrderQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> PaymentInfo(
-            Func<commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl>> fn)
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, DateTime> CompletedAt()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("completedAt")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> LastModifiedBy(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("paymentInfo"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.PaymentInfoQueryBuilderDsl.Of())),
+                .Parent(ConstantQueryPredicate.Of().Constant("lastModifiedBy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> Locale()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("locale")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> InventoryMode()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("inventoryMode")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> Origin()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("origin")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxCalculationMode()
-        {
-            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxCalculationMode")),
-            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> ShippingRateInput(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl>> fn)
+        public CombinationQueryPredicate<OrderQueryBuilderDsl> CreatedBy(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("shippingRateInput"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.ShippingRateInputQueryBuilderDsl.Of())),
+                .Parent(ConstantQueryPredicate.Of().Constant("createdBy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> ItemShippingAddresses(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("itemShippingAddresses"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> ItemShippingAddresses()
-        {
-            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("itemShippingAddresses")),
-                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
-        }
-        public CombinationQueryPredicate<OrderQueryBuilderDsl> RefusedGifts(
-            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("refusedGifts"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl.Of())),
-                OrderQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<OrderQueryBuilderDsl> RefusedGifts()
-        {
-            return new CollectionPredicateBuilder<OrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("refusedGifts")),
-                    p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
-        }
 
         public CombinationQueryPredicate<OrderQueryBuilderDsl> AsStagedOrder(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderQueryBuilderDsl>> fn)

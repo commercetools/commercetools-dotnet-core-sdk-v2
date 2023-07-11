@@ -37,7 +37,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeOrdersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
 
-        public ByProjectKeyMeOrdersQuotesRequestBuilder Quotes()
+        public ByProjectKeyMeOrdersQuotesRequestBuilder OrderQuote()
         {
             return new ByProjectKeyMeOrdersQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }

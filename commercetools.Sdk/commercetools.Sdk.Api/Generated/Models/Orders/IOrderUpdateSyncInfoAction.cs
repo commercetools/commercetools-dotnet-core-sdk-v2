@@ -8,9 +8,9 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderUpdateSyncInfoAction))]
     public partial interface IOrderUpdateSyncInfoAction : IOrderUpdateAction
     {
-        IChannelResourceIdentifier Channel { get; set; }
-
         string ExternalId { get; set; }
+
+        IChannelResourceIdentifier Channel { get; set; }
 
         DateTime? SyncedAt { get; set; }
 

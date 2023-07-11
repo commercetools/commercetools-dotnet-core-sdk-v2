@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string LineItemId { get; set; }
 
+        new long Quantity { get; set; }
+
     }
 }

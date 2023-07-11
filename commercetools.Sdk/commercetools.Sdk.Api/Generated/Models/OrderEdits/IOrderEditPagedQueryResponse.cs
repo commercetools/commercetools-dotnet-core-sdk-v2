@@ -10,11 +10,11 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         long Limit { get; set; }
 
+        long Offset { get; set; }
+
         long Count { get; set; }
 
         long? Total { get; set; }
-
-        long Offset { get; set; }
 
         IList<IOrderEdit> Results { get; set; }
         IEnumerable<IOrderEdit> ResultsEnumerable { set => Results = value.ToList(); }

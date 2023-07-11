@@ -16,14 +16,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         new long Version { get; set; }
 
-        new DateTime CreatedAt { get; set; }
-
-        new DateTime LastModifiedAt { get; set; }
-
-        ILastModifiedBy LastModifiedBy { get; set; }
-
-        ICreatedBy CreatedBy { get; set; }
-
         string Key { get; set; }
 
         IOrderReference Resource { get; set; }
@@ -32,11 +24,19 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IEnumerable<IStagedOrderUpdateAction> StagedActionsEnumerable { set => StagedActions = value.ToList(); }
 
 
-        ICustomFields Custom { get; set; }
-
         IOrderEditResult Result { get; set; }
 
         string Comment { get; set; }
+
+        ICustomFields Custom { get; set; }
+
+        new DateTime CreatedAt { get; set; }
+
+        new DateTime LastModifiedAt { get; set; }
+
+        ILastModifiedBy LastModifiedBy { get; set; }
+
+        ICreatedBy CreatedBy { get; set; }
 
     }
 }
