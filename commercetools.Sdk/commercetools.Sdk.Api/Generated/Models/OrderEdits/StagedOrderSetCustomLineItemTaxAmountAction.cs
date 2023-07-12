@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public IExternalTaxAmountDraft ExternalTaxAmount { get; set; }
         public StagedOrderSetCustomLineItemTaxAmountAction()
         {

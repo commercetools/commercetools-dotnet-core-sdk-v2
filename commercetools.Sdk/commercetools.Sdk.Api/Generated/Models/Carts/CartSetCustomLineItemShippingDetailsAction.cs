@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
         public CartSetCustomLineItemShippingDetailsAction()
         {

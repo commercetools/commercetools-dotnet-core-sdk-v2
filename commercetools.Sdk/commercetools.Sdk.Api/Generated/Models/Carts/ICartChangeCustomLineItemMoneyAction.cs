@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string CustomLineItemId { get; set; }
 
+        string CustomLineItemKey { get; set; }
+
         IMoney Money { get; set; }
 
     }
