@@ -207,7 +207,7 @@ jobs:
         run: ls -la pack
       - name: Publish Nuget to GitHub registry
         if: github.ref == 'refs/heads/master'
-        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v2
