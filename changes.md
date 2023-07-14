@@ -137,6 +137,13 @@
 
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().get()`
