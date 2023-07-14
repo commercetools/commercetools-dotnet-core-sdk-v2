@@ -34,6 +34,8 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
         public IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 

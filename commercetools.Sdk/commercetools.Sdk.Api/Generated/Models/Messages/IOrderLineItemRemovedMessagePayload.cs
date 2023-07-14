@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         long RemovedQuantity { get; set; }
 
         long NewQuantity { get; set; }

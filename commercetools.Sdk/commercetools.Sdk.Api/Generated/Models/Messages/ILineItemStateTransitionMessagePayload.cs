@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         DateTime TransitionDate { get; set; }
 
         long Quantity { get; set; }

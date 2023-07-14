@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         long Quantity { get; set; }
 
         IStateResourceIdentifier FromState { get; set; }

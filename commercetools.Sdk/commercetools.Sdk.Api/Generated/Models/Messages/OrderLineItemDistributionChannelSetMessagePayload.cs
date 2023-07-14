@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public IChannelReference DistributionChannel { get; set; }
         public OrderLineItemDistributionChannelSetMessagePayload()
         {
