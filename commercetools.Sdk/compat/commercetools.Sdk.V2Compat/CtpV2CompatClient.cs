@@ -40,5 +40,10 @@ namespace commercetools.Sdk.V2Compat
         {
             throw new System.NotImplementedException();
         }
+
+        public async Task<HttpResponseMessage> SendAsAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

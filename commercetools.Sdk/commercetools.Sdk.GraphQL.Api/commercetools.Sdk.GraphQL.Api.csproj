@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="ZeroQL" Version="5.0.0" />
+        <ProjectReference Include="..\commercetools.Base.Abstractions\commercetools.Base.Abstractions.csproj" />
+        <ProjectReference Include="..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
+    </ItemGroup>
+    <Target Name="GenerateQLClient" BeforeTargets="BeforeCompile">
+        <Exec Command="dotnet zeroql generate -c ./zeroql.json" Outputs="Generated/GraphQLClient.g.cs">
+            <Output ItemName="Generated" TaskParameter="Outputs" />
+        </Exec>
+        <ItemGroup>
+            <Compile Remove="@(Generated)" />
+            <Compile Include="@(Generated)" />
+            <FileWrites Include="@(Generated)" /> <!-- For clean to work properly -->
+        </ItemGroup>
+    </Target>
+</Project>
