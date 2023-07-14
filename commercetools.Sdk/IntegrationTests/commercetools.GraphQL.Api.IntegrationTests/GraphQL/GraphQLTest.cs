@@ -26,14 +26,12 @@ public class GraphQLTest
         s.UseCommercetoolsApi(configuration, "Client");
         var provider = s.BuildServiceProvider();
 
-        var c = provider.GetService<IClient>();
 
-        var g = provider.GetService<ProjectApiRoot>().Graphql();
         var client = provider.GetService<ProjectApiRoot>().GraphQLClient();
         
-        var t = await client.Query( o => o.Products(selector: r => new { results = r.Results(product => new { product.Id }) }));
+        var response = await client.Query( o => o.Products(selector: r => new { results = r.Results(product => new { product.Id }) }));
 
-        Assert.NotNull(t.Data?.results);
-        Assert.Null(t.Errors);
+        Assert.NotNull(response.Data?.results);
+        Assert.Null(response.Errors);
     }
 }
