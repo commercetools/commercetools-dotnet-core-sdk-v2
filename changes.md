@@ -119,6 +119,7 @@
 
 - :warning: removed type `CartSetDeliveryAddressCustomFieldAction`
 - :warning: removed type `CartSetDeliveryAddressCustomTypeAction`
+- :warning: removed type `OrderResourceIdentifier`
 </details>
 
 
