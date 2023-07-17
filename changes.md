@@ -159,3 +159,11 @@
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withId().delete()`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `key` of type `PriceDraftImport` to be required
+</details>
+
