@@ -1,7 +1,7 @@
 using System;
 
 // ReSharper disable CheckNamespace
-namespace commercetools.Sdk.Api.Predicates.Query.Carts
+namespace commercetools.Sdk.Api.Predicates.Query.Orders
 {
 
     public partial class CustomLineItemImportDraftQueryBuilderDsl
@@ -24,6 +24,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> Slug()
+        {
+            return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("slug")),
+            p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, long> Quantity()
         {
             return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("quantity")),
@@ -39,25 +45,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> Slug()
-        {
-            return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("slug")),
-            p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> State(
-            Func<commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("state"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl.Of())),
-                CustomLineItemImportDraftQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl> State()
-        {
-            return new CollectionPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("state")),
-                    p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of));
-        }
         public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> TaxRate(
             Func<commercetools.Sdk.Api.Predicates.Query.TaxCategories.TaxRateQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.TaxCategories.TaxRateQueryBuilderDsl>> fn)
         {
@@ -76,15 +63,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> Custom(
-            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl>> fn)
+        public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> PriceMode()
         {
-            return new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl.Of())),
-                CustomLineItemImportDraftQueryBuilderDsl.Of);
+            return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceMode")),
+            p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
         }
-
         public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> ShippingDetails(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.ItemShippingDetailsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ItemShippingDetailsDraftQueryBuilderDsl>> fn)
         {
@@ -94,12 +78,28 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> PriceMode()
+        public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> State(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl>> fn)
         {
-            return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceMode")),
-            p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
+            return new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("state"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.ItemStateQueryBuilderDsl.Of())),
+                CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
+        public ICollectionPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl> State()
+        {
+            return new CollectionPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("state")),
+                    p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl.Of())),
+                CustomLineItemImportDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }

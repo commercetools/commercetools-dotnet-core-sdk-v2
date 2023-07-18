@@ -13,31 +13,31 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.LineItemImportDraft))]
     public partial interface ILineItemImportDraft
     {
-        string ProductId { get; set; }
-
         ILocalizedString Name { get; set; }
 
         IProductVariantImportDraft Variant { get; set; }
 
-        IPriceDraft Price { get; set; }
+        string ProductId { get; set; }
 
         long Quantity { get; set; }
+
+        IPriceDraft Price { get; set; }
+
+        ITaxRate TaxRate { get; set; }
+
+        IChannelResourceIdentifier DistributionChannel { get; set; }
+
+        IChannelResourceIdentifier SupplyChannel { get; set; }
+
+        IInventoryMode InventoryMode { get; set; }
+
+        IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         IList<IItemState> State { get; set; }
         IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
 
-        IChannelResourceIdentifier SupplyChannel { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        ITaxRate TaxRate { get; set; }
-
         ICustomFieldsDraft Custom { get; set; }
-
-        IInventoryMode InventoryMode { get; set; }
-
-        IItemShippingDetailsDraft ShippingDetails { get; set; }
 
     }
 }

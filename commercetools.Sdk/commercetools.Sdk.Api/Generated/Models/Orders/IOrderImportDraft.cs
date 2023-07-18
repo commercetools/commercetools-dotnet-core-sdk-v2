@@ -18,9 +18,17 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string OrderNumber { get; set; }
 
+        string PurchaseOrderNumber { get; set; }
+
         string CustomerId { get; set; }
 
         string CustomerEmail { get; set; }
+
+        ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
+
+        IStoreResourceIdentifier Store { get; set; }
 
         IList<ILineItemImportDraft> LineItems { get; set; }
         IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
@@ -34,43 +42,39 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         ITaxedPriceDraft TaxedPrice { get; set; }
 
-        IBaseAddress ShippingAddress { get; set; }
+        IRoundingMode TaxRoundingMode { get; set; }
 
-        IBaseAddress BillingAddress { get; set; }
-
-        ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
-
-        string Country { get; set; }
-
-        IOrderState OrderState { get; set; }
-
-        IStateReference State { get; set; }
-
-        IShipmentState ShipmentState { get; set; }
-
-        IPaymentState PaymentState { get; set; }
-
-        IShippingInfoImportDraft ShippingInfo { get; set; }
-
-        IPaymentInfo PaymentInfo { get; set; }
-
-        DateTime? CompletedAt { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
+        ITaxCalculationMode TaxCalculationMode { get; set; }
 
         IInventoryMode InventoryMode { get; set; }
 
-        IRoundingMode TaxRoundingMode { get; set; }
+        IBaseAddress BillingAddress { get; set; }
+
+        IBaseAddress ShippingAddress { get; set; }
 
         IList<IBaseAddress> ItemShippingAddresses { get; set; }
         IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
 
-        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
+        IShippingInfoImportDraft ShippingInfo { get; set; }
 
-        IStoreResourceIdentifier Store { get; set; }
+        IPaymentInfo PaymentInfo { get; set; }
+
+        IPaymentState PaymentState { get; set; }
+
+        IShipmentState ShipmentState { get; set; }
+
+        IOrderState OrderState { get; set; }
+
+        IStateReference State { get; set; }
+
+        string Country { get; set; }
 
         ICartOrigin Origin { get; set; }
+
+        DateTime? CompletedAt { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }
