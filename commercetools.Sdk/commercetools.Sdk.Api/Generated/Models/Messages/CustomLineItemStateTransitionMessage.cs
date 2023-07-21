@@ -32,6 +32,8 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public DateTime TransitionDate { get; set; }
 
         public long Quantity { get; set; }

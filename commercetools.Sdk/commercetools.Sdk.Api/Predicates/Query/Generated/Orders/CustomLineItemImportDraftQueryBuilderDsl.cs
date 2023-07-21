@@ -24,6 +24,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(p, CustomLineItemImportDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string> Slug()
         {
             return new ComparisonPredicateBuilder<CustomLineItemImportDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("slug")),

@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string CustomLineItemId { get; set; }
 
+        string CustomLineItemKey { get; set; }
+
         IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
         IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 

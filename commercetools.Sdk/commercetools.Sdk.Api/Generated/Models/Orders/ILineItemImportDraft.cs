@@ -15,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         ILocalizedString Name { get; set; }
 
+        string Key { get; set; }
+
         IProductVariantImportDraft Variant { get; set; }
 
         string ProductId { get; set; }

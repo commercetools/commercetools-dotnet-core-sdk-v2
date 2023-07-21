@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public IList<IItemState> State { get; set; }
         public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 

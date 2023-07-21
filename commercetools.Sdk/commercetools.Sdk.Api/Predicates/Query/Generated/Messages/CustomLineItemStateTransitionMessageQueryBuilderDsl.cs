@@ -99,6 +99,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<CustomLineItemStateTransitionMessageQueryBuilderDsl>(p, CustomLineItemStateTransitionMessageQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl, string> CustomLineItemKey()
+        {
+            return new ComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customLineItemKey")),
+            p => new CombinationQueryPredicate<CustomLineItemStateTransitionMessageQueryBuilderDsl>(p, CustomLineItemStateTransitionMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl, DateTime> TransitionDate()
         {
             return new ComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("transitionDate")),

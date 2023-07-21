@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         ILocalizedString Name { get; set; }
 
+        string Key { get; set; }
+
         string Slug { get; set; }
 
         long Quantity { get; set; }
