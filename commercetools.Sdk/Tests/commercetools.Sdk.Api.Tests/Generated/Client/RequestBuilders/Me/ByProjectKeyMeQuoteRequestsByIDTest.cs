@@ -25,6 +25,29 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Me()
                    .QuoteRequests()
                    .WithId("test_ID")
+                   .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/me/quote-requests/test_ID?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .QuoteRequests()
+                   .WithId("test_ID")
+                   .Get()
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/me/quote-requests/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .QuoteRequests()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
@@ -75,29 +98,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Delete()
                    .Build(),
                    "Delete",
-                   "/test_projectKey/me/quote-requests/test_ID",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .QuoteRequests()
-                   .WithId("test_ID")
-                   .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/me/quote-requests/test_ID?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .QuoteRequests()
-                   .WithId("test_ID")
-                   .Get()
-                   .Build(),
-                   "Get",
                    "/test_projectKey/me/quote-requests/test_ID",
                }
        };

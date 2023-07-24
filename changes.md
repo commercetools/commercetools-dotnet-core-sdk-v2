@@ -87,6 +87,7 @@
 - changed property `customLineItemId` of type `CartSetCustomLineItemShippingDetailsAction` to be optional
 - changed property `customLineItemId` of type `CartSetCustomLineItemTaxAmountAction` to be optional
 - changed property `customLineItemId` of type `CartSetCustomLineItemTaxRateAction` to be optional
+- changed property `comment` of type `MyQuoteRequestDraft` to be optional
 - changed property `customLineItemId` of type `StagedOrderChangeCustomLineItemMoneyAction` to be optional
 - changed property `customLineItemId` of type `StagedOrderChangeCustomLineItemQuantityAction` to be optional
 - changed property `customLineItemId` of type `StagedOrderImportCustomLineItemStateAction` to be optional
@@ -107,6 +108,7 @@
 - changed property `customLineItemId` of type `OrderSetCustomLineItemShippingDetailsAction` to be optional
 - changed property `customLineItemId` of type `OrderTransitionCustomLineItemStateAction` to be optional
 - changed property `lineItemId` of type `OrderTransitionLineItemStateAction` to be optional
+- changed property `comment` of type `QuoteRequestDraft` to be optional
 - :warning: changed property `paymentState` of type `StagedOrderChangePaymentStateAction` to be required
 - :warning: changed property `shipmentState` of type `StagedOrderChangeShipmentStateAction` to be required
 - :warning: changed property `paymentState` of type `OrderChangePaymentStateAction` to be required

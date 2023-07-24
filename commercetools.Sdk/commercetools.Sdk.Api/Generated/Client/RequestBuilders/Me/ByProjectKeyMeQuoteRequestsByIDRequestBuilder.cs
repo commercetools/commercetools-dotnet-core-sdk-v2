@@ -24,6 +24,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.ID = id;
         }
 
+        public ByProjectKeyMeQuoteRequestsByIDGet Get()
+        {
+            return new ByProjectKeyMeQuoteRequestsByIDGet(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyMeQuoteRequestsByIDPost Post(commercetools.Sdk.Api.Models.Me.IMyQuoteRequestUpdate myQuoteRequestUpdate)
         {
             return new ByProjectKeyMeQuoteRequestsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, myQuoteRequestUpdate);
@@ -32,11 +37,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         public ByProjectKeyMeQuoteRequestsByIDDelete Delete()
         {
             return new ByProjectKeyMeQuoteRequestsByIDDelete(ApiHttpClient, ProjectKey, ID);
-        }
-
-        public ByProjectKeyMeQuoteRequestsByIDGet Get()
-        {
-            return new ByProjectKeyMeQuoteRequestsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
     }
