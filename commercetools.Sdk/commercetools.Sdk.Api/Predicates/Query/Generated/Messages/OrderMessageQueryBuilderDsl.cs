@@ -142,6 +142,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedMessageQueryBuilderDsl.Of()),
                 OrderMessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomFieldAdded(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldAddedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldAddedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldAddedMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomFieldChanged(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldChangedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldChangedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldChangedMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomFieldRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldRemovedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomFieldRemovedMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomLineItemAdded(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomLineItemAddedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomLineItemAddedMessageQueryBuilderDsl>> fn)
         {
@@ -164,6 +182,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomLineItemRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomLineItemRemovedMessageQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomLineItemRemovedMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomTypeRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeRemovedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeRemovedMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomTypeSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCustomTypeSetMessageQueryBuilderDsl.Of()),
                 OrderMessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCustomerEmailSet(
