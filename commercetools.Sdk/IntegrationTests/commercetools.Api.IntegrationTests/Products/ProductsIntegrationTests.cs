@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -147,6 +148,26 @@ namespace commercetools.Api.IntegrationTests.Products
                     Assert.IsType<decimal>(product.MasterData.Staged.MasterVariant.Attributes.Get("integer").Value);
                     return Task.CompletedTask;
                 });
+        }
+
+        [Fact]
+        public async Task Unpublish()
+        {
+            await WithUpdateableProduct(_projectApiRoot, async product =>
+            {
+                var updatedProduct = await _projectApiRoot.Products().WithId(product.Id).Post(new ProductUpdate()
+                {
+                    Version = product.Version,
+                    Actions = new List<IProductUpdateAction>()
+                    {
+                        new ProductUnpublishAction()
+                    }
+                }).ExecuteAsync();
+
+                Assert.False(updatedProduct.MasterData.Published);
+                return updatedProduct;
+            });
+
         }
     }
 }
