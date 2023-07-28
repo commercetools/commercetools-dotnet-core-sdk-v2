@@ -143,6 +143,8 @@
 
 - :warning: removed type `CartSetDeliveryAddressCustomFieldAction`
 - :warning: removed type `CartSetDeliveryAddressCustomTypeAction`
+- :warning: removed type `BusinessUnitParentUnitChangedMessage`
+- :warning: removed type `BusinessUnitParentUnitChangedMessagePayload`
 - :warning: removed type `OrderResourceIdentifier`
 </details>
 
@@ -159,6 +161,8 @@
 - added type `GraphQLMaxCartDiscountsReachedError`
 - added type `GraphQLMaxStoreReferencesReachedError`
 - added type `GraphQLStoreCartDiscountsLimitReachedError`
+- added type `BusinessUnitParentChangedMessage`
+- added type `BusinessUnitParentChangedMessagePayload`
 - added type `StagedOrderSetDirectDiscountsAction`
 - added type `StagedOrderSetStoreAction`
 </details>

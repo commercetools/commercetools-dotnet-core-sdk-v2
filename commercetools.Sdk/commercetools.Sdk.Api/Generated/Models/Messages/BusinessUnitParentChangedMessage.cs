@@ -6,7 +6,7 @@ using System;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class BusinessUnitParentUnitChangedMessage : IBusinessUnitParentUnitChangedMessage
+    public partial class BusinessUnitParentChangedMessage : IBusinessUnitParentChangedMessage
     {
         public string Id { get; set; }
 
@@ -33,9 +33,9 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IBusinessUnitKeyReference OldParentUnit { get; set; }
 
         public IBusinessUnitKeyReference NewParentUnit { get; set; }
-        public BusinessUnitParentUnitChangedMessage()
+        public BusinessUnitParentChangedMessage()
         {
-            this.Type = "BusinessUnitParentUnitChanged";
+            this.Type = "BusinessUnitParentChanged";
         }
     }
 }

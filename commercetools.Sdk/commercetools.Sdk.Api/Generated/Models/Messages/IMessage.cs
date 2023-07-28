@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessage))]
     [SubTypeDiscriminator("BusinessUnitDeleted", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessage))]
     [SubTypeDiscriminator("BusinessUnitNameChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessage))]
-    [SubTypeDiscriminator("BusinessUnitParentUnitChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage))]
+    [SubTypeDiscriminator("BusinessUnitParentChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessage))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessage))]
     [SubTypeDiscriminator("BusinessUnitStatusChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessage))]
@@ -336,9 +336,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage BusinessUnitParentUnitChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage> init = null)
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage BusinessUnitParentChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage();
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage();
             init?.Invoke(t);
             return t;
         }

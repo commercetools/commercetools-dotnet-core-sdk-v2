@@ -4,8 +4,8 @@ using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage))]
-    public partial interface IBusinessUnitParentUnitChangedMessage : IMessage
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage))]
+    public partial interface IBusinessUnitParentChangedMessage : IMessage
     {
         IBusinessUnitKeyReference OldParentUnit { get; set; }
 

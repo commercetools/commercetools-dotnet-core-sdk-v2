@@ -232,10 +232,10 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitNameChangedMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsBusinessUnitParentUnitChanged(
-            Func<commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentUnitChangedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentUnitChangedMessageQueryBuilderDsl>> fn)
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsBusinessUnitParentChanged(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentChangedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentChangedMessageQueryBuilderDsl>> fn)
         {
-            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentUnitChangedMessageQueryBuilderDsl.Of()),
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitParentChangedMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsBusinessUnitShippingAddressAdded(

@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitDeleted", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitNameChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessagePayload))]
-    [SubTypeDiscriminator("BusinessUnitParentUnitChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitParentChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitStatusChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessagePayload))]
@@ -316,9 +316,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload BusinessUnitParentUnitChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessagePayload BusinessUnitParentChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessagePayload();
             init?.Invoke(t);
             return t;
         }
