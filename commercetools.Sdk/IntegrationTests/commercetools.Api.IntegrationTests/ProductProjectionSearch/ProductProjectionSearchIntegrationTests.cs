@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
@@ -21,11 +23,13 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
 
         private readonly IClient _client;
         private readonly string _projectKey;
+        private readonly ProjectApiRoot _apiRoot;
 
         public ProductProjectionSearchIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
             var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
             this._client = serviceProviderFixture.GetService<IClient>();
+            this._apiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
             this._projectKey = clientConfiguration.ProjectKey;
         }
 
@@ -74,6 +78,18 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                 Assert.Equal(localizedName["en"], searchResult.Results[0].Name["en"]);
 
             });
+
+            var r = _apiRoot.StandalonePrices().Get()
+                .WithQuery(q => q.Key().IsInVar("keys"), new Dictionary<string, IEnumerable<string>>()
+                {
+                    {
+                        "keys", new []
+                        {
+                            "166380","166382","166388","166390"
+                        }
+                    }
+                }).Build();
+            Assert.Contains("standalone-prices?where=key%20in%20%3Akeys&var.keys=166380&var.keys=166382&var.keys=166388&var.keys=166390",r.RequestUri.ToString());
         }
 
         [Fact]

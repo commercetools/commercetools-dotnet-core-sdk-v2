@@ -34,6 +34,11 @@ namespace commercetools.Api.IntegrationTests
             return null;
         }
 
+        public static void Clear()
+        {
+            LogMessages?.Clear();
+        }
+
         public static string GetLogMessages()
         {
             if (LogMessages == null)

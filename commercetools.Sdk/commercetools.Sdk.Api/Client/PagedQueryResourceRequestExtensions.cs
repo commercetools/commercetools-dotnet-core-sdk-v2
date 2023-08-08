@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client
             return (T)target;
         }
 
-        static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, string predicateVar,
+        public static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, string predicateVar,
             string predicateVarValue)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client
             return target.WithWhere(fn.Invoke(target.QueryDsl()).Render()).WithPredicateVar(predicateVar, predicateVarValue);
         }
 
-        static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, Dictionary<string, IEnumerable<string>> predicateVar)
+        public static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, Dictionary<string, IEnumerable<string>> predicateVar)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
         {
@@ -47,7 +47,7 @@ namespace commercetools.Sdk.Api.Client
         }
 
 
-        static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, IEnumerable<KeyValuePair<string, string>> predicateVar)
+        public static T WithQuery<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, Func<TQuery, IQueryPredicate> fn, IEnumerable<KeyValuePair<string, string>> predicateVar)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
         {
@@ -61,14 +61,14 @@ namespace commercetools.Sdk.Api.Client
         }
 
 
-        static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, string predicateVar, string predicateVarValue)
+        public static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, string predicateVar, string predicateVarValue)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
         {
             return target.WithWhere(where).WithPredicateVar(predicateVar, predicateVarValue);
         }
 
-        static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, Dictionary<string, IEnumerable<string>> predicateVar)
+        public static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, Dictionary<string, IEnumerable<string>> predicateVar)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
         {
@@ -81,7 +81,7 @@ namespace commercetools.Sdk.Api.Client
             return request;
         }
 
-        static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, IEnumerable<KeyValuePair<string, string>> predicateVar)
+        public static T WithWhere<T, TResult, TQuery>(this IPagedQueryResourceRequest<T, TResult, TQuery> target, string where, IEnumerable<KeyValuePair<string, string>> predicateVar)
             where T : IPagedQueryResourceRequest<T, TResult, TQuery>
             where TQuery : new()
         {
