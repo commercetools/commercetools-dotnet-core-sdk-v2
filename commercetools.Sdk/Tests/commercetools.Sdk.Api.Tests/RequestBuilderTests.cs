@@ -67,6 +67,30 @@ namespace commercetools.Sdk.Api.Tests
         }
 
         [Fact]
+        public void TestWhereRequest()
+        {
+            //arrange
+            var projectKey = "test-proj";
+            var where = $"key in (\"abc-def-ghi\",\"abc-def-ghi-2\")";
+
+            //act
+            var request = GetClient().WithProject(projectKey)
+                .StandalonePrices()
+                .Get()
+                .WithWhere(where)
+                .Build();
+            
+            var expectedRequestUrl = $"/{projectKey}/standalone-prices?" +
+                                     $"where=key%20in%20%28%22abc-def-ghi%22%2C%22abc-def-ghi-2%22%29";
+
+            //assert
+            Assert.NotNull(request);
+            Assert.Equal(HttpMethod.Get, request.Method);
+            Assert.Equal(expectedRequestUrl, request.RequestUri.ToString());
+        }
+
+        // 
+        [Fact]
         public void TestQueryRequest()
         {
             //arrange

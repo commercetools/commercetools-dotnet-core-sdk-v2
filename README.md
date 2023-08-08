@@ -70,26 +70,26 @@ At a high level, to make a basic call to the API, do the following:
  In the ConfigureServices method of Startup.cs add the following:
 
 * `Composable Commerce HTTP API`:
-```c#
+```csharp
 services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration
 ```
 * `Import API`:
-```c#
+```csharp
 services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```
 * `Machine Learning API`:
-```c#
+```csharp
 services.UseCommercetoolsMLApi(this.configuration, "MLClient");
 ```
 * `Change History API`:
-```c#
+```csharp
 services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");
 ```
 
 ##### Configuration
 The client configuration needs to be added to appsettings.json in order for the client to work. The structure is as follows:
 
-```c#
+```csharp
 {
     "Client": {
         "ClientId": "", // replace with your client ID
@@ -105,22 +105,22 @@ The client configuration needs to be added to appsettings.json in order for the 
 ##### Getting instance of ApiRoot
 you can use the instance inside the injected client or use ApiFactory to create a new instance.
 * `Composable Commerce HTTP API`:
-```c#
+```csharp
 var root1 = client.WithApi();
 var root2 = ApiFactory.Create(client);
 ```
 * `Import API`:
-```c#
+```csharp
 var root1 = client.WithImportApi();
 var root2 = ImportApiFactory.Create(client);
 ```
 * `Machine Learning API`:
-```c#
+```csharp
 var root1 = client.WithMLApi();
 var root2 = MLApiFactory.Create(client);
 ```
 * `Change History API`:
-```c#
+```csharp
 var root1 = client.WithHistoryApi();
 var root2 = HistoryApiFactory.Create(client);
 ```
@@ -132,22 +132,22 @@ for building requests. You can use the instance inside the injected client or us
 to create a new instance.
 
 * `Composable Commerce HTTP API`:
-```c#
+```csharp
 ProjectApiRoot root1 = client.WithProject(projectKey);
 ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);
 ```
 * `Import API`:
-```c#
+```csharp
 ProjectApiRoot root1 = client.WithImportApi(projectKey);
 ProjectApiRoot root2 = ImportApiFactory.Create(client, projectKey);
 ```
 * `Machine Learning API`:
-```c#
+```csharp
 ProjectApiRoot root1 = client.WithMLApi(projectKey);
 ProjectApiRoot root2 = MLApiFactory.Create(client, projectKey);
 ```
 * `Change History API`:
-```c#
+```csharp
 ProjectApiRoot root1 = client.WithHistoryApi(projectKey);
 ProjectApiRoot root2 = HistoryApiFactory.Create(client, projectKey);
 ```
@@ -159,7 +159,7 @@ the project key given in the configuration
 It is possible to use more than one client in the same application with different token providers.
 The following code can be used to set it up 2 clients with the default ClientCredentials token provider:
 
-```c#
+```csharp
 services.UseCommercetoolsApi(configuration,
                 new List<string>{"AdminClient", "StoreClient"},
                 CreateTokenProvider);
@@ -174,7 +174,7 @@ public static ITokenProvider CreateTokenProvider(string clientName, IConfigurati
 
 you can choose different token provider based on the clientName, Also The appsettings.json then needs to contain the configuration sections named the same.
 The clients can then be injected by using IEnumerable and specific client can be selected by name.
-```c#
+```csharp
     public MyController(IEnumerable<IClient> clients)
     {
         var storeClient = clients.FirstOrDefault(c => c.Name.Equals("StoreClient"));
@@ -185,7 +185,7 @@ The clients can then be injected by using IEnumerable and specific client can be
 
 SDK follows a builder pattern when creating requests. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources.
 The IClient interface can be used by injecting it and calling its ExecuteAsync method for different requests.
-```c#
+```csharp
 private readonly IClient client;
 public CategoryController(IClient client)
 {
@@ -269,7 +269,7 @@ public async Task CreatingRequests()
 You can get a client from injected services or you can create client on the fly using ClientFactory,
 the example below illustrate how to create a client with password TokenFlow to get customer's orders:
 
-```c#
+```csharp
 private readonly IServiceProvider serviceProvider;
 
 public CustomerController(IServiceProvider serviceProvider)
@@ -320,16 +320,21 @@ public async Task ExecuteAsync()
 If you are going to create the client using the ClientFactory, don't forget to call
 SetupClient extension method [here](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/commercetools.Base.Client/DependencyInjectionSetup.cs#L92) while building
 the services container. This will attach the Default Handlers like ErrorHandler and LoggerHandler to the Client like below:
-```c#
+```csharp
 services.SetupClient(
                 "MeClient",
                 errorTypeMapper => typeof(ErrorResponse),
                 s => s.GetService<SerializerService>()
             );
 ```
+
+### Predicates
+
+* [Query Predicate Builders](./docs/Predicates.md)
+
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
-* [Migration guidelines from v1 to v2](COMPARISON.md)
+* [Migration guidelines from v1 to v2](./docs/COMPARISON.md)
 
 ### Documentation
 

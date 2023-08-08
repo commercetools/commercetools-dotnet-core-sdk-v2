@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace commercetools.Api.IntegrationTests
+namespace commercetools.GraphQL.Api.IntegrationTests
 {
     public class InMemoryLogger : ILogger
     {
@@ -32,11 +32,6 @@ namespace commercetools.Api.IntegrationTests
         public IDisposable BeginScope<TState>(TState state)
         {
             return null;
-        }
-
-        public static void Clear()
-        {
-            LogMessages?.Clear();
         }
 
         public static string GetLogMessages()

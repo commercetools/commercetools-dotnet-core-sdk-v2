@@ -27,7 +27,7 @@ After packages installation, you have to configure services using Dependency Inj
 | Change History API            | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
 
 ## Comparison of how to make requests to the Composable Commerce HTTP API
-```c#
+```csharp
     // Create CategoryDraft
     var categoryDraft = new CategoryDraft
                 {

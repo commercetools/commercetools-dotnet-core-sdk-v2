@@ -163,15 +163,7 @@ namespace commercetools.Api.IntegrationTests.Products
 
         public static async Task WithProduct(ProjectApiRoot apiRoot, Func<IProduct, Task> func)
         {
-            await WithProductType(apiRoot, async productType =>
-            {
-                var productDraftWithProductType = new ProductDraft
-                {
-                    ProductType = new ProductTypeResourceIdentifier { Key = productType.Key }
-                };
-                await WithAsync(apiRoot, productDraftWithProductType,
-                    DefaultProductDraft, func, CreateProduct, DeleteProduct);
-            });
+            await WithProduct(apiRoot, DefaultProductDraft, func);
         }
 
         public static async Task WithProduct(IClient client, Func<ProductDraft, ProductDraft> draftAction,
@@ -192,6 +184,25 @@ namespace commercetools.Api.IntegrationTests.Products
                 await WithAsync(apiRoot, productDraftWithProductType, draftAction, func, CreateProduct, DeleteProduct);
             });
         }
+        
+        public static async Task WithUpdateableProduct(ProjectApiRoot apiRoot, Func<IProduct, Task<IProduct>> func)
+        {
+            await WithUpdateableProduct(apiRoot, DefaultProductDraft, func);
+        }
+        
+        public static async Task WithUpdateableProduct(ProjectApiRoot apiRoot, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task<IProduct>> func)
+        {
+            await WithProductType(apiRoot, async productType =>
+            {
+                var productDraftWithProductType = new ProductDraft
+                {
+                    ProductType = new ProductTypeResourceIdentifier { Key = productType.Key }
+                };
+
+                await WithUpdateableAsync(apiRoot, productDraftWithProductType, draftAction, func, CreateProduct, DeleteProduct);
+            });
+        }
+
 
     }
 }

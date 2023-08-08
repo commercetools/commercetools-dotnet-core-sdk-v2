@@ -283,4 +283,5 @@ appsettings.test.Development.json
 appsettings.Development.json
 
 
-docs/
+build_docs/
+**/Generated/GraphQLClient.g.cs
