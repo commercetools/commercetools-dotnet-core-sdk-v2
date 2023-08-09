@@ -26,7 +26,7 @@ verify:
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.MLApi.Tests -c Release
 
 codegen_install:
-	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
+#	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
 
 generate_api:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="Api" GEN_RAML_FILE=../$(API_RAML) generate_sdk_with_predicates
@@ -41,5 +41,4 @@ generate_history:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
 
 prettify:
-	cd commercetools.Sdk && \
-	dotnet-format -w -s warn -a warn
+	dotnet format commercetools.Sdk --severity warn
