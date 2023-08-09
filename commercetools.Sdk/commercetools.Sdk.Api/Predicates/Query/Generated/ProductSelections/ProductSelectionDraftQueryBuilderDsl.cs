@@ -39,12 +39,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSelections
                 ProductSelectionDraftQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl, string> Type()
-        {
-            return new ComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("type")),
-            p => new CombinationQueryPredicate<ProductSelectionDraftQueryBuilderDsl>(p, ProductSelectionDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl, string> Mode()
         {
             return new ComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("mode")),

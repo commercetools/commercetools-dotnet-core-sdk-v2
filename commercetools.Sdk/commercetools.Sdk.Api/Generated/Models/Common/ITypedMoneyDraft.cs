@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
         int? FractionDigits { get; set; }
 
+        new long CentAmount { get; set; }
+
         static commercetools.Sdk.Api.Models.Common.CentPrecisionMoneyDraft CentPrecision(Action<commercetools.Sdk.Api.Models.Common.CentPrecisionMoneyDraft> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Common.CentPrecisionMoneyDraft();

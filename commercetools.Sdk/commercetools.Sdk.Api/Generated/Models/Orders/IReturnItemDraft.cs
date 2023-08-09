@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ReturnItemDraft))]
     public partial interface IReturnItemDraft
     {
+        string Key { get; set; }
+
         long Quantity { get; set; }
 
         string LineItemId { get; set; }

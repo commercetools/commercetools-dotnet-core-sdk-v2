@@ -5,8 +5,6 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public string PaymentId { get; set; }
-
         public string InterfaceCode { get; set; }
         public PaymentStatusInterfaceCodeSetMessagePayload()
         {

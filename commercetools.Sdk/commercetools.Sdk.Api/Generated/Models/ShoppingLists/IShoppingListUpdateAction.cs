@@ -32,7 +32,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     [SubTypeDiscriminator("setTextLineItemDescription", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetTextLineItemDescriptionAction))]
     public partial interface IShoppingListUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddLineItemAction AddLineItem(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddLineItemAction> init = null)
         {

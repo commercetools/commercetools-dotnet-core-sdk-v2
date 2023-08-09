@@ -1,5 +1,4 @@
 using System.Collections.Concurrent;
-using System.Linq;
 using Microsoft.Extensions.Logging;
 
 namespace commercetools.GraphQL.Api.IntegrationTests

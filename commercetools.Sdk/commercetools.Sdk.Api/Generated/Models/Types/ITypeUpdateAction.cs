@@ -22,7 +22,7 @@ namespace commercetools.Sdk.Api.Models.Types
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction))]
     public partial interface ITypeUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction AddEnumValue(Action<commercetools.Sdk.Api.Models.Types.TypeAddEnumValueAction> init = null)
         {

@@ -56,7 +56,7 @@ namespace commercetools.Base.Client
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             return new ApiResponse<string>(result.StatusCode, result.ReasonPhrase, result.Headers, content);
         }
-        
+
         public async Task<HttpResponseMessage> SendAsAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             return await this.MiddlewareStack.SendAsync(requestMessage, cancellationToken).ConfigureAwait(false);

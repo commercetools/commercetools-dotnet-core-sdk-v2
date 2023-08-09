@@ -22,11 +22,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<CartDiscountValueFixedDraftQueryBuilderDsl> Money(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CartDiscountValueFixedDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("money"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl.Of())),
                 CartDiscountValueFixedDraftQueryBuilderDsl.Of);
         }
         public ICollectionPredicateBuilder<CartDiscountValueFixedDraftQueryBuilderDsl> Money()

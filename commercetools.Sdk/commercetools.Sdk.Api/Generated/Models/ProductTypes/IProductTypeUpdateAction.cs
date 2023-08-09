@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction))]
     public partial interface IProductTypeUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeAddAttributeDefinitionAction AddAttributeDefinition(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeAddAttributeDefinitionAction> init = null)
         {

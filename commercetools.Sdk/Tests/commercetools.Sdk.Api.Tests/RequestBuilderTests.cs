@@ -79,7 +79,7 @@ namespace commercetools.Sdk.Api.Tests
                 .Get()
                 .WithWhere(where)
                 .Build();
-            
+
             var expectedRequestUrl = $"/{projectKey}/standalone-prices?" +
                                      $"where=key%20in%20%28%22abc-def-ghi%22%2C%22abc-def-ghi-2%22%29";
 

@@ -1,7 +1,3 @@
-using commercetools.Sdk.Api.Models.Carts;
-using commercetools.Sdk.Api.Models.Common;
-
-
 namespace commercetools.Sdk.Api.Models.Me
 {
 
@@ -14,10 +10,6 @@ namespace commercetools.Sdk.Api.Models.Me
         public string LineItemKey { get; set; }
 
         public long Quantity { get; set; }
-
-        public IMoney ExternalPrice { get; set; }
-
-        public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
         public MyCartChangeLineItemQuantityAction()
         {
             this.Action = "changeLineItemQuantity";

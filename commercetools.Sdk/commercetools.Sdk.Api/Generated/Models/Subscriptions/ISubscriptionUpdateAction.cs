@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [SubTypeDiscriminator("setMessages", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
     public partial interface ISubscriptionUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction ChangeDestination(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction> init = null)
         {

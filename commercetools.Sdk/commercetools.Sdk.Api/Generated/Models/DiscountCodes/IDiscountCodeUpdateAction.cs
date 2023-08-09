@@ -21,7 +21,7 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetValidUntilAction))]
     public partial interface IDiscountCodeUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction ChangeCartDiscounts(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction> init = null)
         {

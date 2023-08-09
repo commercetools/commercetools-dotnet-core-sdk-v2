@@ -1,6 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
-using System;
 
 
 namespace commercetools.Sdk.Api.Models.ProductSelections
@@ -13,9 +12,6 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
         public ILocalizedString Name { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
-
-        [ObsoleteAttribute("This property is obsolete", false)]
-        public IProductSelectionTypeEnum Type { get; set; }
 
         public IProductSelectionMode Mode { get; set; }
     }

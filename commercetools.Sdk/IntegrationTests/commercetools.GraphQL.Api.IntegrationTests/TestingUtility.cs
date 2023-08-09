@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-
 namespace commercetools.GraphQL.Api.IntegrationTests
 {
     public static class TestingUtility

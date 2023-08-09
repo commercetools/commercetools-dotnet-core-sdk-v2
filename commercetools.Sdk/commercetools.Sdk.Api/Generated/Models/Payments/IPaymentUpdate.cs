@@ -8,8 +8,9 @@ namespace commercetools.Sdk.Api.Models.Payments
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentUpdate))]
     public partial interface IPaymentUpdate
     {
-        new long Version { get; set; }
-        new IList<IPaymentUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<IPaymentUpdateAction> Actions { get; set; }
         IEnumerable<IPaymentUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

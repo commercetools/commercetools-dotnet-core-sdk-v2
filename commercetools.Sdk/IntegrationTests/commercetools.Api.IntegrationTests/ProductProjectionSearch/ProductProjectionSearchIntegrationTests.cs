@@ -89,7 +89,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
                         }
                     }
                 }).Build();
-            Assert.Contains("standalone-prices?where=key%20in%20%3Akeys&var.keys=166380&var.keys=166382&var.keys=166388&var.keys=166390",r.RequestUri.ToString());
+            Assert.Contains("standalone-prices?where=key%20in%20%3Akeys&var.keys=166380&var.keys=166382&var.keys=166388&var.keys=166390", r.RequestUri.ToString());
         }
 
         [Fact]

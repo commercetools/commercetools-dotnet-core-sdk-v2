@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public string CustomLineItemKey { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public string ShippingKey { get; set; }
         public StagedOrderSetCustomLineItemTaxRateAction()
         {
             this.Action = "setCustomLineItemTaxRate";

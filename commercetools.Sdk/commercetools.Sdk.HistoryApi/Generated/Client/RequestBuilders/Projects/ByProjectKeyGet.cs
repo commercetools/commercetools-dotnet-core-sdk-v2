@@ -58,7 +58,7 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return this.GetQueryParam("userId");
         }
 
-        public new List<string> GetType()
+        public List<string> GetType()
         {
             return this.GetQueryParam("type");
         }

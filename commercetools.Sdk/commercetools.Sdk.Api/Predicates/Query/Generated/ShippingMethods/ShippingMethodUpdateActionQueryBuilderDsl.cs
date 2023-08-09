@@ -76,8 +76,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCustomTypeActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
-
-        [Obsolete]
         public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsSetDescription(
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetDescriptionActionQueryBuilderDsl>> fn)
         {

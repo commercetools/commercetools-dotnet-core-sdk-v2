@@ -24,16 +24,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
                    .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/subscriptions?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Subscriptions()
-                   .Get()
                    .WithSort("sort")
                    .Build(),
                    "Get",
@@ -97,16 +87,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
                    .Build(),
                    "Get",
                    "/test_projectKey/subscriptions",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Subscriptions()
-                   .Post(null)
-                   .WithExpand("expand")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/subscriptions?expand=expand",
                },
                new Object[] {
                    ApiRoot

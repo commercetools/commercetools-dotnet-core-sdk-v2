@@ -42,6 +42,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string> ShippingKey()
+        {
+            return new ComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
+            p => new CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

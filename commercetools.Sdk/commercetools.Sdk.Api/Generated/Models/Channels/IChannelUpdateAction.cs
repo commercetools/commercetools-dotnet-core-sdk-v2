@@ -20,7 +20,7 @@ namespace commercetools.Sdk.Api.Models.Channels
     [SubTypeDiscriminator("setRoles", typeof(commercetools.Sdk.Api.Models.Channels.ChannelSetRolesAction))]
     public partial interface IChannelUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Channels.ChannelAddRolesAction AddRoles(Action<commercetools.Sdk.Api.Models.Channels.ChannelAddRolesAction> init = null)
         {

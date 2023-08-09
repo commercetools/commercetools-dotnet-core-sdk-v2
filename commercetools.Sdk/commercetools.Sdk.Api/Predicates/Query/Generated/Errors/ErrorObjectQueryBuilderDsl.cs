@@ -70,6 +70,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ConcurrentModificationErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsContentTooLarge(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ContentTooLargeErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ContentTooLargeErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ContentTooLargeErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsCountryNotConfiguredInStore(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.CountryNotConfiguredInStoreErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.CountryNotConfiguredInStoreErrorQueryBuilderDsl>> fn)
         {

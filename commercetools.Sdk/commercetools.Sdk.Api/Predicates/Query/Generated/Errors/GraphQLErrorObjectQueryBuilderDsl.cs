@@ -64,6 +64,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLConcurrentModificationErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsContentTooLarge(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLContentTooLargeErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLContentTooLargeErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLContentTooLargeErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsCountryNotConfiguredInStore(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLCountryNotConfiguredInStoreErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLCountryNotConfiguredInStoreErrorQueryBuilderDsl>> fn)
         {

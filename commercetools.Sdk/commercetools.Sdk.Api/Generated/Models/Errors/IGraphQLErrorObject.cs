@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
+    [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCountryNotConfiguredInStoreError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLDiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLDuplicateAttributeValueError))]
@@ -124,6 +125,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError ContentTooLarge(Action<commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError();
             init?.Invoke(t);
             return t;
         }

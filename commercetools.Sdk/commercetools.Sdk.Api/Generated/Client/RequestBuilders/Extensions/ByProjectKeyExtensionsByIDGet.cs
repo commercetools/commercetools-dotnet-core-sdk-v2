@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -9,7 +8,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
 
-    public partial class ByProjectKeyExtensionsByIDGet : ApiMethod<ByProjectKeyExtensionsByIDGet>, IApiMethod<ByProjectKeyExtensionsByIDGet, commercetools.Sdk.Api.Models.Extensions.IExtension>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyExtensionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsByIDGet>
+    public partial class ByProjectKeyExtensionsByIDGet : ApiMethod<ByProjectKeyExtensionsByIDGet>, IApiMethod<ByProjectKeyExtensionsByIDGet, commercetools.Sdk.Api.Models.Extensions.IExtension>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsByIDGet>
     {
 
 
@@ -30,15 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.RequestUrl = $"/{ProjectKey}/extensions/{ID}";
         }
 
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
 
-        public ByProjectKeyExtensionsByIDGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
 
 
         public async Task<commercetools.Sdk.Api.Models.Extensions.IExtension> ExecuteAsync(CancellationToken cancellationToken = default)

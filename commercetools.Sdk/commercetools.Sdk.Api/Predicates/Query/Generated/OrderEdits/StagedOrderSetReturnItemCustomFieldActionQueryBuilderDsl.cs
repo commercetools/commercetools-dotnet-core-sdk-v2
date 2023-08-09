@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl>(p, StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl, string> ReturnItemKey()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("returnItemKey")),
+            p => new CombinationQueryPredicate<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl>(p, StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl, string> Name()
         {
             return new ComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("name")),

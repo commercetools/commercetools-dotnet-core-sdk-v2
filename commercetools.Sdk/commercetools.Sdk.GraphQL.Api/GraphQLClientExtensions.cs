@@ -17,7 +17,7 @@ public static class GraphQlClientExtensions
     {
         return new GraphQLClient(client.ToHandler(projectKey));
     }
-    
+
     private static IHttpHandler ToHandler(this IClient client, string projectKey)
     {
         return new ClientHandler(client, projectKey);
@@ -41,7 +41,7 @@ internal class ClientHandler : IHttpHandler
 
     public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
     {
-        request.RequestUri =  _graphQlUri;
+        request.RequestUri = _graphQlUri;
         return await _client.SendAsAsync(request, cancellationToken);
     }
 }

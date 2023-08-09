@@ -8,8 +8,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodUpdate))]
     public partial interface IShippingMethodUpdate
     {
-        new long Version { get; set; }
-        new IList<IShippingMethodUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<IShippingMethodUpdateAction> Actions { get; set; }
         IEnumerable<IShippingMethodUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

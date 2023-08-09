@@ -8,8 +8,9 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartUpdate))]
     public partial interface ICartUpdate
     {
-        new long Version { get; set; }
-        new IList<ICartUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<ICartUpdateAction> Actions { get; set; }
         IEnumerable<ICartUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

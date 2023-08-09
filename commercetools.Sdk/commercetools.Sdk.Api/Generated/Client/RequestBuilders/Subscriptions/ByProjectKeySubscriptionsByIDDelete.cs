@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
-    public partial class ByProjectKeySubscriptionsByIDDelete : ApiMethod<ByProjectKeySubscriptionsByIDDelete>, IApiMethod<ByProjectKeySubscriptionsByIDDelete, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsByIDDelete>
+    public partial class ByProjectKeySubscriptionsByIDDelete : ApiMethod<ByProjectKeySubscriptionsByIDDelete>, IApiMethod<ByProjectKeySubscriptionsByIDDelete, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsByIDDelete>
     {
 
 
@@ -35,19 +35,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
         public ByProjectKeySubscriptionsByIDDelete WithVersion(long version)
         {
             return this.AddQueryParam("version", version.ToString());
-        }
-
-        public ByProjectKeySubscriptionsByIDDelete WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
 

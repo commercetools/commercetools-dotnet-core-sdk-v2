@@ -24,16 +24,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
                    .WithProjectKey("test_projectKey")
                    .Extensions()
                    .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/extensions?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .Get()
                    .WithSort("sort")
                    .Build(),
                    "Get",
@@ -97,16 +87,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
                    .Build(),
                    "Get",
                    "/test_projectKey/extensions",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .Post(null)
-                   .WithExpand("expand")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/extensions?expand=expand",
                },
                new Object[] {
                    ApiRoot

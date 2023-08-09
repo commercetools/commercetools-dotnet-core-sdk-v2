@@ -46,10 +46,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithFuzzyLevel((decimal)0.110830665)
+                   .WithFuzzyLevel(9)
                    .Build(),
                    "Get",
-                   "/test_projectKey/product-projections/search?fuzzyLevel=0.110830665",
+                   "/test_projectKey/product-projections/search?fuzzyLevel=9",
                },
                new Object[] {
                    ApiRoot

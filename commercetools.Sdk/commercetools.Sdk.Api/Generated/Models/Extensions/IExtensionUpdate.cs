@@ -8,8 +8,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionUpdate))]
     public partial interface IExtensionUpdate
     {
-        new long Version { get; set; }
-        new IList<IExtensionUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<IExtensionUpdateAction> Actions { get; set; }
         IEnumerable<IExtensionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

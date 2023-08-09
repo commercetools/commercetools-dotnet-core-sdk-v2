@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

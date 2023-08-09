@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
+    [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValueError))]
@@ -126,6 +127,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ContentTooLargeError ContentTooLarge(Action<commercetools.Sdk.Api.Models.Errors.ContentTooLargeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ContentTooLargeError();
             init?.Invoke(t);
             return t;
         }

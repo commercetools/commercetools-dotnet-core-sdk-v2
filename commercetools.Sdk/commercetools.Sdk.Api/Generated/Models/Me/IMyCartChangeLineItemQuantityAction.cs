@@ -1,5 +1,3 @@
-using commercetools.Sdk.Api.Models.Carts;
-using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -13,10 +11,6 @@ namespace commercetools.Sdk.Api.Models.Me
         string LineItemKey { get; set; }
 
         long Quantity { get; set; }
-
-        IMoney ExternalPrice { get; set; }
-
-        IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
     }
 }

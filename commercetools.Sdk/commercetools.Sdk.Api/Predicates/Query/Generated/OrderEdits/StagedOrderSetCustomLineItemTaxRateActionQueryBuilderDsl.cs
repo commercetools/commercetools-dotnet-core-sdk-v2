@@ -42,6 +42,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
                 StagedOrderSetCustomLineItemTaxRateActionQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<StagedOrderSetCustomLineItemTaxRateActionQueryBuilderDsl, string> ShippingKey()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderSetCustomLineItemTaxRateActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
+            p => new CombinationQueryPredicate<StagedOrderSetCustomLineItemTaxRateActionQueryBuilderDsl>(p, StagedOrderSetCustomLineItemTaxRateActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
