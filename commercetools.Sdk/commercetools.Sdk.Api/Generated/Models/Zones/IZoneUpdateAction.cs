@@ -13,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.Zones
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Zones.ZoneSetKeyAction))]
     public partial interface IZoneUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Zones.ZoneAddLocationAction AddLocation(Action<commercetools.Sdk.Api.Models.Zones.ZoneAddLocationAction> init = null)
         {

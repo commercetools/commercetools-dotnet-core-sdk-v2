@@ -65,7 +65,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("updateSyncInfo", typeof(commercetools.Sdk.Api.Models.Orders.OrderUpdateSyncInfoAction))]
     public partial interface IOrderUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Orders.OrderAddDeliveryAction AddDelivery(Action<commercetools.Sdk.Api.Models.Orders.OrderAddDeliveryAction> init = null)
         {

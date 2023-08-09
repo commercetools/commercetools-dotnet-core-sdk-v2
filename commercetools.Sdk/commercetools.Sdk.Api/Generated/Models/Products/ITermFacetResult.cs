@@ -15,7 +15,8 @@ namespace commercetools.Sdk.Api.Models.Products
         long Total { get; set; }
 
         long Other { get; set; }
-        new IList<IFacetTerm> Terms { get; set; }
+
+        IList<IFacetTerm> Terms { get; set; }
         IEnumerable<IFacetTerm> TermsEnumerable { set => Terms = value.ToList(); }
 
 

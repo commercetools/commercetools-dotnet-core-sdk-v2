@@ -78,11 +78,11 @@ namespace commercetools.Base.Client
             request.AddHeaders(Headers);
             return request;
         }
-        
+
         private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
         {
             var keyValuePairs = queryParams.ToList();
-            if (keyValuePairs.Any()) 
+            if (keyValuePairs.Any())
                 return "?" + string.Join("&",
                     keyValuePairs.Select(pair =>
                         $"{Uri.EscapeDataString(pair.Key)}={Uri.EscapeDataString(pair.Value)}"));

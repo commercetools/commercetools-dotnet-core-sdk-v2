@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategorySetKeyAction))]
     public partial interface ITaxCategoryUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction AddTaxRate(Action<commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryAddTaxRateAction> init = null)
         {

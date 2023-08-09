@@ -42,6 +42,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             p => new CombinationQueryPredicate<ClientLoggingQueryBuilderDsl>(p, ClientLoggingQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ClientLoggingQueryBuilderDsl> Associate(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ClientLoggingQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("associate"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerReferenceQueryBuilderDsl.Of())),
+                ClientLoggingQueryBuilderDsl.Of);
+        }
+
 
         public CombinationQueryPredicate<ClientLoggingQueryBuilderDsl> AsCreatedBy(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CreatedByQueryBuilderDsl>> fn)

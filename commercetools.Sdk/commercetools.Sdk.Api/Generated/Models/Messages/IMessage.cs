@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessage))]
     [SubTypeDiscriminator("BusinessUnitDeleted", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessage))]
     [SubTypeDiscriminator("BusinessUnitNameChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitNameChangedMessage))]
-    [SubTypeDiscriminator("BusinessUnitParentUnitChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage))]
+    [SubTypeDiscriminator("BusinessUnitParentChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressAddedMessage))]
     [SubTypeDiscriminator("BusinessUnitShippingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitShippingAddressRemovedMessage))]
     [SubTypeDiscriminator("BusinessUnitStatusChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStatusChangedMessage))]
@@ -68,10 +68,15 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("OrderCustomerEmailSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage))]
     [SubTypeDiscriminator("OrderCustomerGroupSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerGroupSetMessage))]
     [SubTypeDiscriminator("OrderCustomerSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage))]
+    [SubTypeDiscriminator("OrderCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("OrderCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("OrderCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomFieldRemovedMessage))]
     [SubTypeDiscriminator("OrderCustomLineItemAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage))]
     [SubTypeDiscriminator("OrderCustomLineItemDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemDiscountSetMessage))]
     [SubTypeDiscriminator("OrderCustomLineItemQuantityChanged", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemQuantityChangedMessage))]
     [SubTypeDiscriminator("OrderCustomLineItemRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage))]
+    [SubTypeDiscriminator("OrderCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("OrderCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomTypeSetMessage))]
     [SubTypeDiscriminator("OrderDeleted", typeof(commercetools.Sdk.Api.Models.Messages.OrderDeletedMessage))]
     [SubTypeDiscriminator("OrderDiscountCodeAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeAddedMessage))]
     [SubTypeDiscriminator("OrderDiscountCodeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeRemovedMessage))]
@@ -336,9 +341,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage BusinessUnitParentUnitChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage> init = null)
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage BusinessUnitParentChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentUnitChangedMessage();
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitParentChangedMessage();
             init?.Invoke(t);
             return t;
         }
@@ -564,6 +569,24 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomFieldAddedMessage OrderCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomFieldChangedMessage OrderCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomFieldRemovedMessage OrderCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage OrderCustomLineItemAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemAddedMessage();
@@ -585,6 +608,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage OrderCustomLineItemRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomLineItemRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomTypeRemovedMessage OrderCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderCustomTypeSetMessage OrderCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomTypeSetMessage();
             init?.Invoke(t);
             return t;
         }

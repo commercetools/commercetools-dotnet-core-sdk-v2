@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetValidUntilAction))]
     public partial interface IProductDiscountUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction ChangeIsActive(Action<commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountChangeIsActiveAction> init = null)
         {

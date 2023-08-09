@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
 
-    public partial class ByProjectKeyExtensionsByIDDelete : ApiMethod<ByProjectKeyExtensionsByIDDelete>, IApiMethod<ByProjectKeyExtensionsByIDDelete, commercetools.Sdk.Api.Models.Extensions.IExtension>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsByIDDelete>
+    public partial class ByProjectKeyExtensionsByIDDelete : ApiMethod<ByProjectKeyExtensionsByIDDelete>, IApiMethod<ByProjectKeyExtensionsByIDDelete, commercetools.Sdk.Api.Models.Extensions.IExtension>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsByIDDelete>
     {
 
 
@@ -35,19 +35,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
         public ByProjectKeyExtensionsByIDDelete WithVersion(long version)
         {
             return this.AddQueryParam("version", version.ToString());
-        }
-
-        public ByProjectKeyExtensionsByIDDelete WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
 

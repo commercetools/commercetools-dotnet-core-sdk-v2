@@ -10,6 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
     public enum ChangeHistoryResourceType
     {
+        [Description("associate-role")]
+        AssociateRole,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -100,7 +103,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
@@ -109,6 +112,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
     [EnumInterfaceCreator(typeof(IChangeHistoryResourceType), "FindEnum")]
     public interface IChangeHistoryResourceType : IJsonName, IEnumerable<char>
     {
+        public static IChangeHistoryResourceType AssociateRole = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.AssociateRole, JsonName = "associate-role" };
+
         public static IChangeHistoryResourceType BusinessUnit = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.BusinessUnit, JsonName = "business-unit" };
 
@@ -190,6 +196,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         {
             return new[]
             {
+                 AssociateRole ,
                  BusinessUnit ,
                  CartDiscount ,
                  Category ,

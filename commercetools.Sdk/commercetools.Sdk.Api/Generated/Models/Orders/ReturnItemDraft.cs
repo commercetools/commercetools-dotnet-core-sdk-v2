@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
     public partial class ReturnItemDraft : IReturnItemDraft
     {
+        public string Key { get; set; }
+
         public long Quantity { get; set; }
 
         public string LineItemId { get; set; }

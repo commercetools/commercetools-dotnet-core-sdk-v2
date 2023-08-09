@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.Common
         public ICustomerReference Customer { get; set; }
 
         public string AnonymousId { get; set; }
+
+        public ICustomerReference Associate { get; set; }
     }
 }

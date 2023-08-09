@@ -31,7 +31,7 @@ namespace commercetools.Sdk.MLApi.Models.ImageSearchConfigs
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }

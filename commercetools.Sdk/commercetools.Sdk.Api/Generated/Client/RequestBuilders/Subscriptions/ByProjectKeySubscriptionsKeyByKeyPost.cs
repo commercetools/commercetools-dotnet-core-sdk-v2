@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +10,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
-    public partial class ByProjectKeySubscriptionsKeyByKeyPost : ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost>, IApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsKeyByKeyPost>
+    public partial class ByProjectKeySubscriptionsKeyByKeyPost : ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost>, IApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsKeyByKeyPost>
     {
 
 
@@ -37,15 +36,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.RequestUrl = $"/{ProjectKey}/subscriptions/key={Key}";
         }
 
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
 
-        public ByProjectKeySubscriptionsKeyByKeyPost WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
 
 
         public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync(CancellationToken cancellationToken = default)

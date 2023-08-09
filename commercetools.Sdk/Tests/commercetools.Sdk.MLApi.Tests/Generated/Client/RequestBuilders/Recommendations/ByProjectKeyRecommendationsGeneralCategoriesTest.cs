@@ -69,7 +69,7 @@ namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
                    .Recommendations()
                    .GeneralCategories()
                    .Get()
-                   .WithConfidenceMin((decimal)0.7340351)
+                   .WithConfidenceMin(0.7340351m)
                    .Build(),
                    "Get",
                    "/test_projectKey/recommendations/general-categories?confidenceMin=0.7340351",
@@ -80,7 +80,7 @@ namespace commercetools.Sdk.MLApi.Tests.Client.RequestBuilders.Recommendations
                    .Recommendations()
                    .GeneralCategories()
                    .Get()
-                   .WithConfidenceMax((decimal)0.30089796)
+                   .WithConfidenceMax(0.30089796m)
                    .Build(),
                    "Get",
                    "/test_projectKey/recommendations/general-categories?confidenceMax=0.30089796",

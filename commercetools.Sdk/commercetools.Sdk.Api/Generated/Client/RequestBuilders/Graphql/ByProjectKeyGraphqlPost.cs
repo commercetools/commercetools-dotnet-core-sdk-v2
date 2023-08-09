@@ -63,7 +63,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
             var requestMessage = Build();
             return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
-        
         public override HttpRequestMessage Build()
         {
             var request = base.Build();

@@ -11,9 +11,9 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public IShoppingListResourceIdentifier ShoppingList { get; set; }
 
-        public IChannelResourceIdentifier SupplyChannel { get; set; }
-
         public IChannelResourceIdentifier DistributionChannel { get; set; }
+
+        public IChannelResourceIdentifier SupplyChannel { get; set; }
         public StagedOrderAddShoppingListAction()
         {
             this.Action = "addShoppingList";

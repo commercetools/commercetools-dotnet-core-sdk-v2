@@ -69,6 +69,28 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .ProductSelectionAssignments()
                    .Get()
+                   .WithWhere("where")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductSelectionAssignments()
+                   .Get()
+                   .WithPredicateVar("varName", "var.varName")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?var.varName=var.varName",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductSelectionAssignments()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments",

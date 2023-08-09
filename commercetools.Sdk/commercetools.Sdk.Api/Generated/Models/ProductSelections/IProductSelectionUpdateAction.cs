@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     [SubTypeDiscriminator("setVariantSelection", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionSetVariantSelectionAction))]
     public partial interface IProductSelectionUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionAddProductAction AddProduct(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionAddProductAction> init = null)
         {

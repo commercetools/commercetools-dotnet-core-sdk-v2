@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;

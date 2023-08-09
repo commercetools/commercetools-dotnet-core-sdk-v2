@@ -22,6 +22,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsAddStore(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountAddStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountAddStoreActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountAddStoreActionQueryBuilderDsl.Of()),
+                CartDiscountUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsChangeCartPredicate(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountChangeCartPredicateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountChangeCartPredicateActionQueryBuilderDsl>> fn)
         {
@@ -70,6 +76,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountChangeValueActionQueryBuilderDsl.Of()),
                 CartDiscountUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsRemoveStore(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountRemoveStoreActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountRemoveStoreActionQueryBuilderDsl.Of()),
+                CartDiscountUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetCustomFieldActionQueryBuilderDsl>> fn)
         {
@@ -92,6 +104,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl.Of()),
+                CartDiscountUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetStores(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetStoresActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetStoresActionQueryBuilderDsl.Of()),
                 CartDiscountUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetValidFrom(

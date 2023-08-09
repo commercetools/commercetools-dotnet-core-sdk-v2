@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string CustomLineItemId { get; set; }
 
+        string CustomLineItemKey { get; set; }
+
         long Quantity { get; set; }
 
         long OldQuantity { get; set; }

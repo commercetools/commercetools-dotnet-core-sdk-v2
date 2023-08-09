@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,10 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public ICartDiscountTarget Target { get; set; }
 
         public string SortOrder { get; set; }
+
+        public IList<IStoreKeyReference> Stores { get; set; }
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
+
 
         public bool IsActive { get; set; }
 

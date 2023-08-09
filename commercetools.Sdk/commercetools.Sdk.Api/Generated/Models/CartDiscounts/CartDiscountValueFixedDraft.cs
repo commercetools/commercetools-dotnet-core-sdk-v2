@@ -10,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     {
         public string Type { get; set; }
 
-        public IList<IMoney> Money { get; set; }
-        public IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
+        public IList<ITypedMoneyDraft> Money { get; set; }
+        public IEnumerable<ITypedMoneyDraft> MoneyEnumerable { set => Money = value.ToList(); }
 
         public CartDiscountValueFixedDraft()
         {

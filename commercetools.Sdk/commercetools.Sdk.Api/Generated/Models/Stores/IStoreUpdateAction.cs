@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Models.Stores
     [SubTypeDiscriminator("setSupplyChannels", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction))]
     public partial interface IStoreUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction AddCountry(Action<commercetools.Sdk.Api.Models.Stores.StoreAddCountryAction> init = null)
         {

@@ -6,6 +6,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountUpdateAction))]
+    [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountAddStoreAction))]
     [SubTypeDiscriminator("changeCartPredicate", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction))]
     [SubTypeDiscriminator("changeIsActive", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeIsActiveAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeNameAction))]
@@ -14,17 +15,25 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("changeStackingMode", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeStackingModeAction))]
     [SubTypeDiscriminator("changeTarget", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeTargetAction))]
     [SubTypeDiscriminator("changeValue", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeValueAction))]
+    [SubTypeDiscriminator("removeStore", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountRemoveStoreAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomTypeAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction))]
+    [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction))]
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAndUntilAction))]
     [SubTypeDiscriminator("setValidUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidUntilAction))]
     public partial interface ICartDiscountUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountAddStoreAction AddStore(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountAddStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountAddStoreAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction ChangeCartPredicate(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountChangeCartPredicateAction();
@@ -73,6 +82,12 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountRemoveStoreAction RemoveStore(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountRemoveStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountRemoveStoreAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomFieldAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomFieldAction();
@@ -94,6 +109,12 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction SetStores(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction();
             init?.Invoke(t);
             return t;
         }

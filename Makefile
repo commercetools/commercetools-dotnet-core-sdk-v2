@@ -41,5 +41,4 @@ generate_history:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
 
 prettify:
-	cd commercetools.Sdk && \
-	dotnet-format -w -s warn -a warn
+	dotnet format commercetools.Sdk --severity warn

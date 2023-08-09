@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public string ReturnItemId { get; set; }
 
+        public string ReturnItemKey { get; set; }
+
         public IReturnShipmentState ShipmentState { get; set; }
         public OrderSetReturnShipmentStateAction()
         {

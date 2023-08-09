@@ -29,8 +29,6 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public string PaymentId { get; set; }
-
         public string InterfaceCode { get; set; }
         public PaymentStatusInterfaceCodeSetMessage()
         {

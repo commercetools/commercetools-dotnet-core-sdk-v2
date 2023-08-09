@@ -21,6 +21,10 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 
+        public IList<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+        public IEnumerable<IMethodTaxedPrice> TaxedPricePortionsEnumerable { set => TaxedPricePortions = value.ToList(); }
+
+
         public ICentPrecisionMoney TotalPrice { get; set; }
 
         public string Slug { get; set; }

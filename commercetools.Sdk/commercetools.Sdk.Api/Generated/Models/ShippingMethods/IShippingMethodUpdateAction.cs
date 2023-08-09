@@ -22,7 +22,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [SubTypeDiscriminator("setPredicate", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction))]
     public partial interface IShippingMethodUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction AddShippingRate(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction> init = null)
         {

@@ -14,12 +14,6 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string Key { get; set; }
 
-        ICustomFieldsDraft Custom { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
-
         string ProductId { get; set; }
 
         long? VariantId { get; set; }
@@ -30,13 +24,21 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         DateTime? AddedAt { get; set; }
 
+        IChannelResourceIdentifier DistributionChannel { get; set; }
+
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        IInventoryMode InventoryMode { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

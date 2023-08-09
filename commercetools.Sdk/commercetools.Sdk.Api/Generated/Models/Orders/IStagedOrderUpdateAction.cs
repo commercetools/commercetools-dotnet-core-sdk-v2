@@ -54,6 +54,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setDeliveryCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomFieldAction))]
     [SubTypeDiscriminator("setDeliveryCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomTypeAction))]
     [SubTypeDiscriminator("setDeliveryItems", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDeliveryItemsAction))]
+    [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetLineItemCustomFieldAction))]
@@ -87,6 +88,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setShippingMethodTaxAmount", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodTaxAmountAction))]
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodTaxRateAction))]
     [SubTypeDiscriminator("setShippingRateInput", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingRateInputAction))]
+    [SubTypeDiscriminator("setStore", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetStoreAction))]
     [SubTypeDiscriminator("transitionCustomLineItemState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderTransitionCustomLineItemStateAction))]
     [SubTypeDiscriminator("transitionLineItemState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderTransitionLineItemStateAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderTransitionStateAction))]
@@ -384,6 +386,12 @@ namespace commercetools.Sdk.Api.Models.Orders
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction SetDirectDiscounts(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction SetItemShippingAddressCustomField(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction();
@@ -579,6 +587,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingRateInputAction SetShippingRateInput(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingRateInputAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingRateInputAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetStoreAction SetStore(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetStoreAction();
             init?.Invoke(t);
             return t;
         }

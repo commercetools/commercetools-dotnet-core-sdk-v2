@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
+    [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCountryNotConfiguredInStoreError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLDiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLDuplicateAttributeValueError))]
@@ -49,7 +50,9 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("InvalidSubject", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLInvalidSubjectError))]
     [SubTypeDiscriminator("LanguageUsedInStores", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLLanguageUsedInStoresError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMatchingPriceNotFoundError))]
+    [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
+    [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMoneyOverflowError))]
@@ -77,6 +80,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchIndexingInProgress", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchIndexingInProgressError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
     public partial interface IGraphQLErrorObject
     {
@@ -121,6 +125,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError ContentTooLarge(Action<commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError();
             init?.Invoke(t);
             return t;
         }
@@ -340,9 +350,21 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError MaxCartDiscountsReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError MaxResourceLimitExceeded(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError MaxStoreReferencesReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError();
             init?.Invoke(t);
             return t;
         }
@@ -505,6 +527,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError ShippingMethodDoesNotMatchCart(Action<commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError StoreCartDiscountsLimitReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError();
             init?.Invoke(t);
             return t;
         }

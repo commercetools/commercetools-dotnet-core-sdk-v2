@@ -8,8 +8,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionUpdate))]
     public partial interface ISubscriptionUpdate
     {
-        new long Version { get; set; }
-        new IList<ISubscriptionUpdateAction> Actions { get; set; }
+        long Version { get; set; }
+
+        IList<ISubscriptionUpdateAction> Actions { get; set; }
         IEnumerable<ISubscriptionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
 

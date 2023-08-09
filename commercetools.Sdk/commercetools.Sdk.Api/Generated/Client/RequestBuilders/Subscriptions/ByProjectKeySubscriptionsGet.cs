@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
-    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>, IApiMethod<ByProjectKeySubscriptionsGet, commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsGet>
+    public partial class ByProjectKeySubscriptionsGet : ApiMethod<ByProjectKeySubscriptionsGet>, IApiMethod<ByProjectKeySubscriptionsGet, commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionPagedQueryResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsGet>
     {
 
 
@@ -25,11 +25,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.RequestUrl = $"/{ProjectKey}/subscriptions";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
         }
 
         public List<string> GetSort()
@@ -55,11 +50,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
-        }
-
-        public ByProjectKeySubscriptionsGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeySubscriptionsGet WithSort(string sort)

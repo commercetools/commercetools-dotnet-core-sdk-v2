@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<StagedOrderAddDeliveryActionQueryBuilderDsl>(p, StagedOrderAddDeliveryActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<StagedOrderAddDeliveryActionQueryBuilderDsl, string> ShippingKey()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderAddDeliveryActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
+            p => new CombinationQueryPredicate<StagedOrderAddDeliveryActionQueryBuilderDsl>(p, StagedOrderAddDeliveryActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<StagedOrderAddDeliveryActionQueryBuilderDsl> Items(
             Func<commercetools.Sdk.Api.Predicates.Query.Orders.DeliveryItemQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.DeliveryItemQueryBuilderDsl>> fn)
         {

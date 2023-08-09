@@ -25,31 +25,9 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
                    .Extensions()
                    .WithId("test_ID")
                    .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/extensions/test_ID?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .WithId("test_ID")
-                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/extensions/test_ID",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .WithId("test_ID")
-                   .Post(null)
-                   .WithExpand("expand")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/extensions/test_ID?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -71,17 +49,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
                    .Build(),
                    "Delete",
                    "/test_projectKey/extensions/test_ID?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/extensions/test_ID?expand=expand",
                },
                new Object[] {
                    ApiRoot

@@ -1,5 +1,3 @@
-using System;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Predicates.Query.Me
 {
@@ -39,24 +37,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             p => new CombinationQueryPredicate<MyCartChangeLineItemQuantityActionQueryBuilderDsl>(p, MyCartChangeLineItemQuantityActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<MyCartChangeLineItemQuantityActionQueryBuilderDsl> ExternalPrice(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MyCartChangeLineItemQuantityActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("externalPrice"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
-                MyCartChangeLineItemQuantityActionQueryBuilderDsl.Of);
-        }
-
-        public CombinationQueryPredicate<MyCartChangeLineItemQuantityActionQueryBuilderDsl> ExternalTotalPrice(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalLineItemTotalPriceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalLineItemTotalPriceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MyCartChangeLineItemQuantityActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("externalTotalPrice"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.ExternalLineItemTotalPriceQueryBuilderDsl.Of())),
-                MyCartChangeLineItemQuantityActionQueryBuilderDsl.Of);
-        }
-
 
     }
 }

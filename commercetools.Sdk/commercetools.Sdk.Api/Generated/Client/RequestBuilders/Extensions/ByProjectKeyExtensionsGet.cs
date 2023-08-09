@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
 
-    public partial class ByProjectKeyExtensionsGet : ApiMethod<ByProjectKeyExtensionsGet>, IApiMethod<ByProjectKeyExtensionsGet, commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsGet>
+    public partial class ByProjectKeyExtensionsGet : ApiMethod<ByProjectKeyExtensionsGet>, IApiMethod<ByProjectKeyExtensionsGet, commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsGet>
     {
 
 
@@ -25,11 +25,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.RequestUrl = $"/{ProjectKey}/extensions";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
         }
 
         public List<string> GetSort()
@@ -55,11 +50,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
-        }
-
-        public ByProjectKeyExtensionsGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeyExtensionsGet WithSort(string sort)

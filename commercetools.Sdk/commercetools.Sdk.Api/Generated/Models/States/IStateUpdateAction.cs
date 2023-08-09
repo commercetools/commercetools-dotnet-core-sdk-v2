@@ -17,7 +17,7 @@ namespace commercetools.Sdk.Api.Models.States
     [SubTypeDiscriminator("setTransitions", typeof(commercetools.Sdk.Api.Models.States.StateSetTransitionsAction))]
     public partial interface IStateUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.States.StateAddRolesAction AddRoles(Action<commercetools.Sdk.Api.Models.States.StateAddRolesAction> init = null)
         {

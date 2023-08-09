@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string> CustomLineItemKey()
+        {
+            return new ComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customLineItemKey")),
+            p => new CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl> ExternalTaxRate(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.ExternalTaxRateDraftQueryBuilderDsl>> fn)
         {
@@ -36,6 +42,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string> ShippingKey()
+        {
+            return new ComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
+            p => new CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

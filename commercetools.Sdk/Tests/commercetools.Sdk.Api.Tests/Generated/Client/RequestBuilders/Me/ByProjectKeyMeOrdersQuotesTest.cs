@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .WithProjectKey("test_projectKey")
                    .Me()
                    .Orders()
-                   .Quotes()
+                   .OrderQuote()
                    .Post(null)
                    .Build(),
                    "Post",

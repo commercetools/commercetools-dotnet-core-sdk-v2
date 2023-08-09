@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IList<IItemState> State { get; set; }
         IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 

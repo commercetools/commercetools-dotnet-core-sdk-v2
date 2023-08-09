@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<OrderLineItemRemovedMessagePayloadQueryBuilderDsl>(p, OrderLineItemRemovedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl, string> LineItemKey()
+        {
+            return new ComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lineItemKey")),
+            p => new CombinationQueryPredicate<OrderLineItemRemovedMessagePayloadQueryBuilderDsl>(p, OrderLineItemRemovedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl, long> RemovedQuantity()
         {
             return new ComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("removedQuantity")),

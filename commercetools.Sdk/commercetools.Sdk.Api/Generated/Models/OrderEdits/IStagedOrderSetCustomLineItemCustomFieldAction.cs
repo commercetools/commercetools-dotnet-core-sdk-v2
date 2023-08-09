@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string CustomLineItemId { get; set; }
 
+        string CustomLineItemKey { get; set; }
+
         string Name { get; set; }
 
         Object Value { get; set; }

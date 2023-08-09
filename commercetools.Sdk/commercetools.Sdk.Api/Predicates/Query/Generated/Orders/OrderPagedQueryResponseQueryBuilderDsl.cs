@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderPagedQueryResponseQueryBuilderDsl>(p, OrderPagedQueryResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long> Offset()
+        {
+            return new ComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
+            p => new CombinationQueryPredicate<OrderPagedQueryResponseQueryBuilderDsl>(p, OrderPagedQueryResponseQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long> Count()
         {
             return new ComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("count")),
@@ -30,12 +36,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
         public IComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long> Total()
         {
             return new ComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("total")),
-            p => new CombinationQueryPredicate<OrderPagedQueryResponseQueryBuilderDsl>(p, OrderPagedQueryResponseQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long> Offset()
-        {
-            return new ComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
             p => new CombinationQueryPredicate<OrderPagedQueryResponseQueryBuilderDsl>(p, OrderPagedQueryResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

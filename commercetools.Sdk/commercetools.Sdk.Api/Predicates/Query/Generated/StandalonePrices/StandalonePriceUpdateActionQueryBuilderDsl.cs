@@ -76,7 +76,7 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetKeyActionQueryBuilderDsl.Of()),
                 StandalonePriceUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetPriceTier(
+        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetPriceTiers(
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetPriceTiersActionQueryBuilderDsl.Of()),

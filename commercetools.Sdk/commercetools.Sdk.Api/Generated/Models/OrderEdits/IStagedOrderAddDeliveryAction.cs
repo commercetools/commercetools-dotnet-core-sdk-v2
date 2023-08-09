@@ -13,6 +13,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string DeliveryKey { get; set; }
 
+        string ShippingKey { get; set; }
+
         IList<IDeliveryItem> Items { get; set; }
         IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 

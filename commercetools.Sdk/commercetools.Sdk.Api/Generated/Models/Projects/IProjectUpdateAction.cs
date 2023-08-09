@@ -22,7 +22,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
     public partial interface IProjectUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction ChangeCartsConfiguration(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction> init = null)
         {

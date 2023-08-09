@@ -27,19 +27,9 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         public string AnonymousId { get; set; }
 
-        public string ExternalId { get; set; }
-
         public string InterfaceId { get; set; }
 
         public ICentPrecisionMoney AmountPlanned { get; set; }
-
-        public ITypedMoney AmountAuthorized { get; set; }
-
-        public string AuthorizedUntil { get; set; }
-
-        public ITypedMoney AmountPaid { get; set; }
-
-        public ITypedMoney AmountRefunded { get; set; }
 
         public IPaymentMethodInfo PaymentMethodInfo { get; set; }
 

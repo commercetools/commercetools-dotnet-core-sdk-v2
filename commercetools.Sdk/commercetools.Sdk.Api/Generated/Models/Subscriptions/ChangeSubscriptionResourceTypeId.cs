@@ -10,6 +10,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum ChangeSubscriptionResourceTypeId
     {
+        [Description("associate-role")]
+        AssociateRole,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -127,7 +130,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
             return GetEnumerator();
         }
 
-        public IEnumerator<char> GetEnumerator()
+        public new IEnumerator<char> GetEnumerator()
         {
             return JsonName.GetEnumerator();
         }
@@ -136,6 +139,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IChangeSubscriptionResourceTypeId), "FindEnum")]
     public interface IChangeSubscriptionResourceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IChangeSubscriptionResourceTypeId AssociateRole = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.AssociateRole, JsonName = "associate-role" };
+
         public static IChangeSubscriptionResourceTypeId BusinessUnit = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.BusinessUnit, JsonName = "business-unit" };
 
@@ -244,6 +250,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 AssociateRole ,
                  BusinessUnit ,
                  Cart ,
                  CartDiscount ,

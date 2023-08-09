@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     {
         string ReturnItemId { get; set; }
 
+        string ReturnItemKey { get; set; }
+
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }

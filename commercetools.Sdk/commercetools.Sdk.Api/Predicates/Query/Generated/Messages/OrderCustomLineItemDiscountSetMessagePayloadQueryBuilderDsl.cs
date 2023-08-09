@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl>(p, OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl, string> CustomLineItemKey()
+        {
+            return new ComparisonPredicateBuilder<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customLineItemKey")),
+            p => new CombinationQueryPredicate<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl>(p, OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl> DiscountedPricePerQuantity(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPriceForQuantityQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPriceForQuantityQueryBuilderDsl>> fn)
         {

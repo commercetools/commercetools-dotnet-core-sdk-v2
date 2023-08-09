@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public string Action { get; set; }
 
         public string CustomLineItemId { get; set; }
+
+        public string CustomLineItemKey { get; set; }
         public StagedOrderRemoveCustomLineItemAction()
         {
             this.Action = "removeCustomLineItem";

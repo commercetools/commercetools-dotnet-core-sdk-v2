@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     {
         string CustomLineItemId { get; set; }
 
+        string CustomLineItemKey { get; set; }
+
         long Quantity { get; set; }
 
     }

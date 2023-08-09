@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<LineItemReturnItemQueryBuilderDsl>(p, LineItemReturnItemQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<LineItemReturnItemQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<LineItemReturnItemQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<LineItemReturnItemQueryBuilderDsl>(p, LineItemReturnItemQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<LineItemReturnItemQueryBuilderDsl, long> Quantity()
         {
             return new ComparisonPredicateBuilder<LineItemReturnItemQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("quantity")),

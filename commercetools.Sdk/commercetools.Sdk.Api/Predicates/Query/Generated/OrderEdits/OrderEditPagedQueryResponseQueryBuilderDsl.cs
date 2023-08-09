@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<OrderEditPagedQueryResponseQueryBuilderDsl>(p, OrderEditPagedQueryResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long> Offset()
+        {
+            return new ComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
+            p => new CombinationQueryPredicate<OrderEditPagedQueryResponseQueryBuilderDsl>(p, OrderEditPagedQueryResponseQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long> Count()
         {
             return new ComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("count")),
@@ -30,12 +36,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
         public IComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long> Total()
         {
             return new ComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("total")),
-            p => new CombinationQueryPredicate<OrderEditPagedQueryResponseQueryBuilderDsl>(p, OrderEditPagedQueryResponseQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long> Offset()
-        {
-            return new ComparisonPredicateBuilder<OrderEditPagedQueryResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
             p => new CombinationQueryPredicate<OrderEditPagedQueryResponseQueryBuilderDsl>(p, OrderEditPagedQueryResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

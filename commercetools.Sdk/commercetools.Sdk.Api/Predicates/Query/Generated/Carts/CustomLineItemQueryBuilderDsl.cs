@@ -54,6 +54,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CustomLineItemQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> TaxedPricePortions(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxedPriceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxedPriceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomLineItemQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("taxedPricePortions"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.MethodTaxedPriceQueryBuilderDsl.Of())),
+                CustomLineItemQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CustomLineItemQueryBuilderDsl> TaxedPricePortions()
+        {
+            return new CollectionPredicateBuilder<CustomLineItemQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxedPricePortions")),
+                    p => new CombinationQueryPredicate<CustomLineItemQueryBuilderDsl>(p, CustomLineItemQueryBuilderDsl.Of));
+        }
         public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> TotalPrice(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl>> fn)
         {

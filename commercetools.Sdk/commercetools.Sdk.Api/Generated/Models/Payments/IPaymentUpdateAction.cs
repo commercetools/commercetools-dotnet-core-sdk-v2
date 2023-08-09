@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Models.Payments
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Payments.PaymentTransitionStateAction))]
     public partial interface IPaymentUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Payments.PaymentAddInterfaceInteractionAction AddInterfaceInteraction(Action<commercetools.Sdk.Api.Models.Payments.PaymentAddInterfaceInteractionAction> init = null)
         {

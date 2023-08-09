@@ -30,12 +30,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Payments
             p => new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(p, PaymentDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string> ExternalId()
-        {
-            return new ComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("externalId")),
-            p => new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(p, PaymentDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string> InterfaceId()
         {
             return new ComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("interfaceId")),
@@ -47,39 +41,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Payments
         {
             return new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("amountPlanned"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
-                PaymentDraftQueryBuilderDsl.Of);
-        }
-
-        public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> AmountAuthorized(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("amountAuthorized"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
-                PaymentDraftQueryBuilderDsl.Of);
-        }
-
-        public IComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string> AuthorizedUntil()
-        {
-            return new ComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("authorizedUntil")),
-            p => new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(p, PaymentDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> AmountPaid(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("amountPaid"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
-                PaymentDraftQueryBuilderDsl.Of);
-        }
-
-        public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> AmountRefunded(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<PaymentDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("amountRefunded"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
                 PaymentDraftQueryBuilderDsl.Of);
         }

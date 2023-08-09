@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             p => new CombinationQueryPredicate<StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl>(p, StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl, string> CustomLineItemKey()
+        {
+            return new ComparisonPredicateBuilder<StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customLineItemKey")),
+            p => new CombinationQueryPredicate<StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl>(p, StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<StagedOrderChangeCustomLineItemMoneyActionQueryBuilderDsl> Money(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
         {

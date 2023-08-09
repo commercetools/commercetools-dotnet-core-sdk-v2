@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         IOrder Obj { get; set; }
 
+        new string Id { get; set; }
+
     }
 }

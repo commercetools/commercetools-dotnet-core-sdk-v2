@@ -12,11 +12,11 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         string DeliveryKey { get; set; }
 
+        string ShippingKey { get; set; }
+
         IList<IDeliveryItem> Items { get; set; }
         IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
-
-        string ShippingKey { get; set; }
 
         IBaseAddress Address { get; set; }
 

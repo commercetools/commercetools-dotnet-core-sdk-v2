@@ -28,12 +28,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CollectionPredicateBuilder<AssociateDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("associateRoleAssignments")),
                     p => new CombinationQueryPredicate<AssociateDraftQueryBuilderDsl>(p, AssociateDraftQueryBuilderDsl.Of));
         }
-        public IComparableCollectionPredicateBuilder<AssociateDraftQueryBuilderDsl, string> Roles()
-        {
-            return new ComparableCollectionPredicateBuilder<AssociateDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("roles")),
-            p => new CombinationQueryPredicate<AssociateDraftQueryBuilderDsl>(p, AssociateDraftQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public CombinationQueryPredicate<AssociateDraftQueryBuilderDsl> Customer(
             Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerResourceIdentifierQueryBuilderDsl>> fn)
         {

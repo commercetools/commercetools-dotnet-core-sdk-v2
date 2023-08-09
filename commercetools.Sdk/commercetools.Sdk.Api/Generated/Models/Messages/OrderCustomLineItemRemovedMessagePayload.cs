@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public ICustomLineItem CustomLineItem { get; set; }
         public OrderCustomLineItemRemovedMessagePayload()
         {

@@ -19,12 +19,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl>(p, PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl, string> PaymentId()
-        {
-            return new ComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("paymentId")),
-            p => new CombinationQueryPredicate<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl>(p, PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl, string> InterfaceCode()
         {
             return new ComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("interfaceCode")),

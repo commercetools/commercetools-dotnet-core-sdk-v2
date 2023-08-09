@@ -1,336 +1,311 @@
 **Api changes**
 
 <details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `money` of type `CartDiscountValueFixed` from type `CentPrecisionMoney[]` to `TypedMoney[]`
+- :warning: changed property `money` of type `CartDiscountValueFixedDraft` from type `Money[]` to `TypedMoneyDraft[]`
+- :warning: changed property `country` of type `StagedOrder` from type `string` to `CountryCode`
+- :warning: changed property `locale` of type `StagedOrder` from type `string` to `Locale`
+- :warning: changed property `country` of type `StagedOrderSetCountryAction` from type `string` to `CountryCode`
+- :warning: changed property `locale` of type `StagedOrderSetLocaleAction` from type `string` to `Locale`
+- :warning: changed property `country` of type `Order` from type `string` to `CountryCode`
+- :warning: changed property `locale` of type `Order` from type `string` to `Locale`
+- :warning: changed property `country` of type `OrderImportDraft` from type `string` to `CountryCode`
+- :warning: changed property `locale` of type `OrderSetLocaleAction` from type `string` to `Locale`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
-- added property `key` to type `CustomLineItem`
-- added property `perMethodTaxRate` to type `CustomLineItem`
-- added property `key` to type `CustomLineItemDraft`
-- added property `key` to type `LineItem`
-- added property `key` to type `LineItemDraft`
-- added property `key` to type `CartAddCustomLineItemAction`
-- added property `key` to type `CartAddLineItemAction`
-- added property `lineItemKey` to type `CartApplyDeltaToLineItemShippingDetailsTargetsAction`
-- added property `lineItemKey` to type `CartChangeLineItemQuantityAction`
-- added property `lineItemKey` to type `CartRemoveLineItemAction`
-- added property `lineItemKey` to type `CartSetLineItemCustomFieldAction`
-- added property `lineItemKey` to type `CartSetLineItemCustomTypeAction`
-- added property `lineItemKey` to type `CartSetLineItemDistributionChannelAction`
-- added property `lineItemKey` to type `CartSetLineItemInventoryModeAction`
-- added property `lineItemKey` to type `CartSetLineItemPriceAction`
-- added property `lineItemKey` to type `CartSetLineItemShippingDetailsAction`
-- added property `lineItemKey` to type `CartSetLineItemSupplyChannelAction`
-- added property `lineItemKey` to type `CartSetLineItemTaxAmountAction`
-- added property `lineItemKey` to type `CartSetLineItemTaxRateAction`
-- added property `lineItemKey` to type `CartSetLineItemTotalPriceAction`
-- added property `key` to type `MyLineItemDraft`
-- added property `key` to type `MyCartAddLineItemAction`
-- added property `lineItemKey` to type `MyCartApplyDeltaToLineItemShippingDetailsTargetsAction`
-- added property `lineItemKey` to type `MyCartChangeLineItemQuantityAction`
-- added property `lineItemKey` to type `MyCartRemoveLineItemAction`
-- added property `lineItemKey` to type `MyCartSetLineItemCustomFieldAction`
-- added property `lineItemKey` to type `MyCartSetLineItemCustomTypeAction`
-- added property `lineItemKey` to type `MyCartSetLineItemDistributionChannelAction`
-- added property `lineItemKey` to type `MyCartSetLineItemShippingDetailsAction`
-- added property `lineItemKey` to type `MyCartSetLineItemSupplyChannelAction`
-- added property `lineItemKey` to type `MyShoppingListChangeLineItemQuantityAction`
-- added property `sku` to type `StandalonePriceDeletedMessage`
-- added property `sku` to type `StandalonePriceDeletedMessagePayload`
-- added property `key` to type `StagedOrderAddCustomLineItemAction`
-- added property `key` to type `StagedOrderAddLineItemAction`
-- added property `parcelKey` to type `StagedOrderAddParcelToDeliveryAction`
-- added property `lineItemKey` to type `StagedOrderChangeLineItemQuantityAction`
-- added property `lineItemKey` to type `StagedOrderRemoveLineItemAction`
-- added property `parcelKey` to type `StagedOrderRemoveParcelFromDeliveryAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemCustomFieldAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemCustomTypeAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemDistributionChannelAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemPriceAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemShippingDetailsAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemTaxAmountAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemTaxRateAction`
-- added property `lineItemKey` to type `StagedOrderSetLineItemTotalPriceAction`
-- added property `parcelKey` to type `StagedOrderSetParcelCustomFieldAction`
-- added property `parcelKey` to type `StagedOrderSetParcelCustomTypeAction`
-- added property `parcelKey` to type `StagedOrderSetParcelItemsAction`
-- added property `parcelKey` to type `StagedOrderSetParcelMeasurementsAction`
-- added property `parcelKey` to type `StagedOrderSetParcelTrackingDataAction`
-- added property `key` to type `Parcel`
-- added property `key` to type `ParcelDraft`
-- added property `parcelKey` to type `OrderAddParcelToDeliveryAction`
-- added property `parcelKey` to type `OrderRemoveParcelFromDeliveryAction`
-- added property `lineItemKey` to type `OrderSetLineItemCustomFieldAction`
-- added property `lineItemKey` to type `OrderSetLineItemCustomTypeAction`
-- added property `lineItemKey` to type `OrderSetLineItemShippingDetailsAction`
-- added property `parcelKey` to type `OrderSetParcelCustomFieldAction`
-- added property `parcelKey` to type `OrderSetParcelCustomTypeAction`
-- added property `parcelKey` to type `OrderSetParcelItemsAction`
-- added property `parcelKey` to type `OrderSetParcelMeasurementsAction`
-- added property `parcelKey` to type `OrderSetParcelTrackingDataAction`
+- added property `stores` to type `CartDiscount`
+- added property `stores` to type `CartDiscountDraft`
+- added property `taxedPricePortions` to type `CustomLineItem`
+- added property `customLineItemKey` to type `CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction`
+- added property `customLineItemKey` to type `CartChangeCustomLineItemMoneyAction`
+- added property `customLineItemKey` to type `CartChangeCustomLineItemPriceModeAction`
+- added property `customLineItemKey` to type `CartChangeCustomLineItemQuantityAction`
+- added property `customLineItemKey` to type `CartRemoveCustomLineItemAction`
+- added property `customLineItemKey` to type `CartSetCustomLineItemCustomFieldAction`
+- added property `customLineItemKey` to type `CartSetCustomLineItemCustomTypeAction`
+- added property `customLineItemKey` to type `CartSetCustomLineItemShippingDetailsAction`
+- added property `customLineItemKey` to type `CartSetCustomLineItemTaxAmountAction`
+- added property `shippingKey` to type `CartSetCustomLineItemTaxAmountAction`
+- added property `customLineItemKey` to type `CartSetCustomLineItemTaxRateAction`
+- added property `shippingKey` to type `CartSetCustomLineItemTaxRateAction`
+- added property `associate` to type `ClientLogging`
+- added property `associate` to type `CreatedBy`
+- added property `associate` to type `LastModifiedBy`
+- added property `customLineItemKey` to type `CustomLineItemStateTransitionMessage`
+- added property `lineItemKey` to type `LineItemStateTransitionMessage`
+- added property `customLineItemKey` to type `OrderCustomLineItemDiscountSetMessage`
+- added property `customLineItemKey` to type `OrderCustomLineItemQuantityChangedMessage`
+- added property `customLineItemKey` to type `OrderCustomLineItemRemovedMessage`
+- added property `lineItemKey` to type `OrderLineItemDiscountSetMessage`
+- added property `lineItemKey` to type `OrderLineItemDistributionChannelSetMessage`
+- added property `lineItemKey` to type `OrderLineItemRemovedMessage`
+- added property `customLineItemKey` to type `CustomLineItemStateTransitionMessagePayload`
+- added property `lineItemKey` to type `LineItemStateTransitionMessagePayload`
+- added property `customLineItemKey` to type `OrderCustomLineItemDiscountSetMessagePayload`
+- added property `customLineItemKey` to type `OrderCustomLineItemQuantityChangedMessagePayload`
+- added property `customLineItemKey` to type `OrderCustomLineItemRemovedMessagePayload`
+- added property `lineItemKey` to type `OrderLineItemDiscountSetMessagePayload`
+- added property `lineItemKey` to type `OrderLineItemDistributionChannelSetMessagePayload`
+- added property `lineItemKey` to type `OrderLineItemRemovedMessagePayload`
+- added property `directDiscounts` to type `StagedOrder`
+- added property `shippingDetails` to type `StagedOrderAddCustomLineItemAction`
+- added property `shippingKey` to type `StagedOrderAddDeliveryAction`
+- added property `inventoryMode` to type `StagedOrderAddLineItemAction`
+- added property `customLineItemKey` to type `StagedOrderChangeCustomLineItemMoneyAction`
+- added property `customLineItemKey` to type `StagedOrderChangeCustomLineItemQuantityAction`
+- added property `customLineItemKey` to type `StagedOrderImportCustomLineItemStateAction`
+- added property `lineItemKey` to type `StagedOrderImportLineItemStateAction`
+- added property `customLineItemKey` to type `StagedOrderRemoveCustomLineItemAction`
+- added property `customLineItemKey` to type `StagedOrderSetCustomLineItemCustomFieldAction`
+- added property `customLineItemKey` to type `StagedOrderSetCustomLineItemCustomTypeAction`
+- added property `customLineItemKey` to type `StagedOrderSetCustomLineItemShippingDetailsAction`
+- added property `customLineItemKey` to type `StagedOrderSetCustomLineItemTaxAmountAction`
+- added property `shippingKey` to type `StagedOrderSetCustomLineItemTaxAmountAction`
+- added property `customLineItemKey` to type `StagedOrderSetCustomLineItemTaxRateAction`
+- added property `shippingKey` to type `StagedOrderSetCustomLineItemTaxRateAction`
+- added property `returnItemKey` to type `StagedOrderSetReturnItemCustomFieldAction`
+- added property `returnItemKey` to type `StagedOrderSetReturnItemCustomTypeAction`
+- added property `returnItemKey` to type `StagedOrderSetReturnPaymentStateAction`
+- added property `returnItemKey` to type `StagedOrderSetReturnShipmentStateAction`
+- added property `customLineItemKey` to type `StagedOrderTransitionCustomLineItemStateAction`
+- added property `lineItemKey` to type `StagedOrderTransitionLineItemStateAction`
+- added property `key` to type `CustomLineItemImportDraft`
+- added property `key` to type `CustomLineItemReturnItem`
+- added property `key` to type `LineItemImportDraft`
+- added property `key` to type `LineItemReturnItem`
+- added property `directDiscounts` to type `Order`
+- added property `purchaseOrderNumber` to type `OrderImportDraft`
+- added property `taxCalculationMode` to type `OrderImportDraft`
+- added property `key` to type `ReturnItem`
+- added property `key` to type `ReturnItemDraft`
+- added property `customLineItemKey` to type `OrderImportCustomLineItemStateAction`
+- added property `lineItemKey` to type `OrderImportLineItemStateAction`
+- added property `customLineItemKey` to type `OrderSetCustomLineItemCustomFieldAction`
+- added property `customLineItemKey` to type `OrderSetCustomLineItemCustomTypeAction`
+- added property `customLineItemKey` to type `OrderSetCustomLineItemShippingDetailsAction`
+- added property `returnItemKey` to type `OrderSetReturnItemCustomFieldAction`
+- added property `returnItemKey` to type `OrderSetReturnItemCustomTypeAction`
+- added property `returnItemKey` to type `OrderSetReturnPaymentStateAction`
+- added property `returnItemKey` to type `OrderSetReturnShipmentStateAction`
+- added property `customLineItemKey` to type `OrderTransitionCustomLineItemStateAction`
+- added property `lineItemKey` to type `OrderTransitionLineItemStateAction`
 </details>
 
 
 <details>
 <summary>Required Property(s)</summary>
 
-- changed property `lineItemId` of type `CartApplyDeltaToLineItemShippingDetailsTargetsAction` to be optional
-- changed property `lineItemId` of type `CartChangeLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `CartRemoveLineItemAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemCustomFieldAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemCustomTypeAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemDistributionChannelAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemInventoryModeAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemPriceAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemShippingDetailsAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemSupplyChannelAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemTaxAmountAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemTaxRateAction` to be optional
-- changed property `lineItemId` of type `CartSetLineItemTotalPriceAction` to be optional
-- changed property `lineItemId` of type `MyCartApplyDeltaToLineItemShippingDetailsTargetsAction` to be optional
-- changed property `lineItemId` of type `MyCartChangeLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `MyCartRemoveLineItemAction` to be optional
-- changed property `lineItemId` of type `MyCartSetLineItemCustomFieldAction` to be optional
-- changed property `lineItemId` of type `MyCartSetLineItemCustomTypeAction` to be optional
-- changed property `lineItemId` of type `MyCartSetLineItemDistributionChannelAction` to be optional
-- changed property `lineItemId` of type `MyCartSetLineItemShippingDetailsAction` to be optional
-- changed property `lineItemId` of type `MyCartSetLineItemSupplyChannelAction` to be optional
-- changed property `lineItemId` of type `MyShoppingListChangeLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `StagedOrderChangeLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `StagedOrderRemoveLineItemAction` to be optional
-- changed property `parcelId` of type `StagedOrderRemoveParcelFromDeliveryAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemCustomFieldAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemCustomTypeAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemDistributionChannelAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemPriceAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemShippingDetailsAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemTaxAmountAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemTaxRateAction` to be optional
-- changed property `lineItemId` of type `StagedOrderSetLineItemTotalPriceAction` to be optional
-- changed property `parcelId` of type `StagedOrderSetParcelCustomFieldAction` to be optional
-- changed property `parcelId` of type `StagedOrderSetParcelCustomTypeAction` to be optional
-- changed property `parcelId` of type `StagedOrderSetParcelItemsAction` to be optional
-- changed property `parcelId` of type `StagedOrderSetParcelMeasurementsAction` to be optional
-- changed property `parcelId` of type `StagedOrderSetParcelTrackingDataAction` to be optional
-- changed property `parcelId` of type `OrderRemoveParcelFromDeliveryAction` to be optional
-- changed property `lineItemId` of type `OrderSetLineItemCustomFieldAction` to be optional
-- changed property `lineItemId` of type `OrderSetLineItemCustomTypeAction` to be optional
-- changed property `lineItemId` of type `OrderSetLineItemShippingDetailsAction` to be optional
-- changed property `parcelId` of type `OrderSetParcelCustomFieldAction` to be optional
-- changed property `parcelId` of type `OrderSetParcelCustomTypeAction` to be optional
-- changed property `parcelId` of type `OrderSetParcelItemsAction` to be optional
-- changed property `parcelId` of type `OrderSetParcelMeasurementsAction` to be optional
-- changed property `parcelId` of type `OrderSetParcelTrackingDataAction` to be optional
+- :warning: changed property `associateRoleAssignments` of type `AssociateDraft` to be required
+- :warning: changed property `paymentState` of type `StagedOrderChangePaymentStateAction` to be required
+- :warning: changed property `shipmentState` of type `StagedOrderChangeShipmentStateAction` to be required
+- :warning: changed property `paymentState` of type `OrderChangePaymentStateAction` to be required
+- :warning: changed property `shipmentState` of type `OrderChangeShipmentStateAction` to be required
+- changed property `roles` of type `Associate` to be optional
+- changed property `customLineItemId` of type `CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction` to be optional
+- changed property `customLineItemId` of type `CartChangeCustomLineItemMoneyAction` to be optional
+- changed property `customLineItemId` of type `CartChangeCustomLineItemPriceModeAction` to be optional
+- changed property `customLineItemId` of type `CartChangeCustomLineItemQuantityAction` to be optional
+- changed property `customLineItemId` of type `CartRemoveCustomLineItemAction` to be optional
+- changed property `customLineItemId` of type `CartSetCustomLineItemCustomFieldAction` to be optional
+- changed property `customLineItemId` of type `CartSetCustomLineItemCustomTypeAction` to be optional
+- changed property `customLineItemId` of type `CartSetCustomLineItemShippingDetailsAction` to be optional
+- changed property `customLineItemId` of type `CartSetCustomLineItemTaxAmountAction` to be optional
+- changed property `customLineItemId` of type `CartSetCustomLineItemTaxRateAction` to be optional
+- changed property `centAmount` of type `CentPrecisionMoneyDraft` to be optional
+- changed property `centAmount` of type `TypedMoneyDraft` to be optional
+- changed property `comment` of type `MyQuoteRequestDraft` to be optional
+- changed property `customLineItemId` of type `StagedOrderChangeCustomLineItemMoneyAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderChangeCustomLineItemQuantityAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderImportCustomLineItemStateAction` to be optional
+- changed property `lineItemId` of type `StagedOrderImportLineItemStateAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderRemoveCustomLineItemAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderSetCustomLineItemCustomFieldAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderSetCustomLineItemCustomTypeAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderSetCustomLineItemShippingDetailsAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderSetCustomLineItemTaxAmountAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderSetCustomLineItemTaxRateAction` to be optional
+- changed property `returnItemId` of type `StagedOrderSetReturnItemCustomFieldAction` to be optional
+- changed property `returnItemId` of type `StagedOrderSetReturnItemCustomTypeAction` to be optional
+- changed property `returnItemId` of type `StagedOrderSetReturnPaymentStateAction` to be optional
+- changed property `returnItemId` of type `StagedOrderSetReturnShipmentStateAction` to be optional
+- changed property `customLineItemId` of type `StagedOrderTransitionCustomLineItemStateAction` to be optional
+- changed property `lineItemId` of type `StagedOrderTransitionLineItemStateAction` to be optional
+- changed property `priceMode` of type `CustomLineItemImportDraft` to be optional
+- changed property `customLineItemId` of type `OrderImportCustomLineItemStateAction` to be optional
+- changed property `lineItemId` of type `OrderImportLineItemStateAction` to be optional
+- changed property `customLineItemId` of type `OrderSetCustomLineItemCustomFieldAction` to be optional
+- changed property `customLineItemId` of type `OrderSetCustomLineItemCustomTypeAction` to be optional
+- changed property `customLineItemId` of type `OrderSetCustomLineItemShippingDetailsAction` to be optional
+- changed property `returnItemId` of type `OrderSetReturnItemCustomFieldAction` to be optional
+- changed property `returnItemId` of type `OrderSetReturnItemCustomTypeAction` to be optional
+- changed property `returnItemId` of type `OrderSetReturnPaymentStateAction` to be optional
+- changed property `returnItemId` of type `OrderSetReturnShipmentStateAction` to be optional
+- changed property `customLineItemId` of type `OrderTransitionCustomLineItemStateAction` to be optional
+- changed property `lineItemId` of type `OrderTransitionLineItemStateAction` to be optional
+- changed property `comment` of type `QuoteRequestDraft` to be optional
 </details>
 
 
 <details>
 <summary>Deprecated Property(s)</summary>
 
-- property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
-- property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
-</details>
-
-
-<details>
-<summary>Deprecated Type(s)</summary>
-
-- type `ProductVariantSelectionExclusion` is removed
-- type `ProductVariantSelectionInclusion` is removed
-</details>
-
-
-<details>
-<summary>Removed Type(s)</summary>
-
-- :warning: removed type `MyCartSetDirectDiscountsAction`
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `StandalonePriceTierAddedMessage`
-- added type `StandalonePriceTierRemovedMessage`
-- added type `StandalonePriceTiersSetMessage`
-- added type `StandalonePriceValidFromAndUntilSetMessage`
-- added type `StandalonePriceValidFromSetMessage`
-- added type `StandalonePriceValidUntilSetMessage`
-- added type `StandalonePriceTierAddedMessagePayload`
-- added type `StandalonePriceTierRemovedMessagePayload`
-- added type `StandalonePriceTiersSetMessagePayload`
-- added type `StandalonePriceValidFromAndUntilSetMessagePayload`
-- added type `StandalonePriceValidFromSetMessagePayload`
-- added type `StandalonePriceValidUntilSetMessagePayload`
-- added type `StandalonePriceAddPriceTierAction`
-- added type `StandalonePriceRemovePriceTierAction`
-- added type `StandalonePriceSetPriceTiersAction`
-- added type `StandalonePriceSetValidFromAction`
-- added type `StandalonePriceSetValidFromAndUntilAction`
-- added type `StandalonePriceSetValidUntilAction`
-- added type `ConfluentCloudDestination`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `associate-role` to type `CustomFieldReferenceValue`
-- added enum `business-unit` to type `CustomFieldReferenceValue`
-</details>
-
-**Import changes**
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `associate-role` to type `CustomFieldReferenceValue`
-- added enum `business-unit` to type `CustomFieldReferenceValue`
-</details>
-
-**History changes**
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `variantSelection` to type `AddProductChange`
-</details>
-
-
-<details>
-<summary>Changed Property(s)</summary>
-
-- :warning: changed property `resource` of type `Record` from type `Reference` to `ResourceIdentifier`
+- property `Associate::roles` is removed
+- property `AssociateDraft::roles` is removed
+- property `IndividualExclusionProductSelectionType::type` is removed
+- property `IndividualProductSelectionType::type` is removed
+- property `ProductSelection::type` is removed
+- property `ProductSelectionDraft::type` is removed
+- property `ProductSelectionType::type` is removed
 </details>
 
 
 <details>
 <summary>Added QueryParameter(s)</summary>
 
-- added query parameter `resourceKey` to method `get /{projectKey}`
-- added query parameter `resourceKey` to method `get /{projectKey}/{resourceType}`
+- added query parameter `where` to method `get /{projectKey}/in-store/key={storeKey}/product-selection-assignments`
+- added query parameter `/^var[.][a-zA-Z0-9]+$/` to method `get /{projectKey}/in-store/key={storeKey}/product-selection-assignments`
 </details>
 
 
 <details>
 <summary>Removed QueryParameter(s)</summary>
 
-- :warning: removed query parameter `resourceId` from method `get /{projectKey}/{resourceType}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions/{ID}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions/{ID}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/extensions/{ID}`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `AddAssociateChange`
-- added type `AddProductSelectionChange`
-- added type `Associate`
-- added type `AssociateRoleAssignment`
-- added type `AssociateRoleInheritanceMode`
-- added type `BusinessUnitAssociateMode`
-- added type `BusinessUnitLabel`
-- added type `BusinessUnitStatus`
-- added type `BusinessUnitStoreMode`
-- added type `ChangeAssociateChange`
-- added type `ChangeAssociateModeChange`
-- added type `ChangeParentUnitChange`
-- added type `ChangeProductSelectionActiveChange`
-- added type `ChangeStatusChange`
-- added type `ProductVariantSelection`
-- added type `ProductVariantSelectionTypeEnum`
-- added type `RemoveAssociateChange`
-- added type `RemoveProductSelectionChange`
-- added type `RequestQuoteRenegotiationChange`
-- added type `ResourceIdentifier`
-- added type `SetAddressCustomFieldChange`
-- added type `SetAddressCustomTypeChange`
-- added type `SetContactEmailChange`
-- added type `SetStoreModeChange`
-- added type `SetVariantSelectionChange`
+- added type `CartDiscountAddStoreAction`
+- added type `CartDiscountRemoveStoreAction`
+- added type `CartDiscountSetStoresAction`
+- added type `ContentTooLargeError`
+- added type `MaxCartDiscountsReachedError`
+- added type `MaxStoreReferencesReachedError`
+- added type `StoreCartDiscountsLimitReachedError`
+- added type `GraphQLContentTooLargeError`
+- added type `GraphQLMaxCartDiscountsReachedError`
+- added type `GraphQLMaxStoreReferencesReachedError`
+- added type `GraphQLStoreCartDiscountsLimitReachedError`
+- added type `BusinessUnitParentChangedMessage`
+- added type `OrderCustomFieldAddedMessage`
+- added type `OrderCustomFieldChangedMessage`
+- added type `OrderCustomFieldRemovedMessage`
+- added type `OrderCustomTypeRemovedMessage`
+- added type `OrderCustomTypeSetMessage`
+- added type `BusinessUnitParentChangedMessagePayload`
+- added type `OrderCustomFieldAddedMessagePayload`
+- added type `OrderCustomFieldChangedMessagePayload`
+- added type `OrderCustomFieldRemovedMessagePayload`
+- added type `OrderCustomTypeRemovedMessagePayload`
+- added type `OrderCustomTypeSetMessagePayload`
+- added type `StagedOrderSetDirectDiscountsAction`
+- added type `StagedOrderSetStoreAction`
+</details>
+
+
+<details>
+<summary>Deprecated Type(s)</summary>
+
+- type `AssociateRoleDeprecated` is removed
+- type `IndividualExclusionProductSelectionType` is removed
+- type `IndividualProductSelectionType` is removed
+- type `ProductSelectionTypeEnum` is removed
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `CartSetDeliveryAddressCustomFieldAction`
+- :warning: removed type `CartSetDeliveryAddressCustomTypeAction`
+- :warning: removed type `BusinessUnitParentUnitChangedMessage`
+- :warning: removed type `BusinessUnitParentUnitChangedMessagePayload`
+- :warning: removed type `OrderResourceIdentifier`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withId().delete()`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/cart-discounts`
+- added resource `/{projectKey}/in-store/key={storeKey}/cart-discounts/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/cart-discounts/{ID}`
 </details>
 
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `business-unit` to type `ChangeHistoryResourceType`
-- added enum `addAssociate` to type `UpdateType`
-- added enum `addCustomLineItem` to type `UpdateType`
-- added enum `addDiscountCode` to type `UpdateType`
-- added enum `addProduct` to type `UpdateType`
-- added enum `addProductSelection` to type `UpdateType`
-- added enum `addProperty` to type `UpdateType`
-- added enum `changeAmountAuthorized` to type `UpdateType`
-- added enum `changeAssociate` to type `UpdateType`
-- added enum `changeAssociateMode` to type `UpdateType`
-- added enum `changeCustomLineItemQuantity` to type `UpdateType`
-- added enum `changeLineItemName` to type `UpdateType`
-- added enum `changeParentUnit` to type `UpdateType`
-- added enum `changeProductSelectionActive` to type `UpdateType`
-- added enum `changeQuoteRequestState` to type `UpdateType`
-- added enum `changeQuoteState` to type `UpdateType`
-- added enum `changeStagedQuoteState` to type `UpdateType`
-- added enum `changeStatus` to type `UpdateType`
-- added enum `changeTaxCalculationMode` to type `UpdateType`
-- added enum `changeTaxMode` to type `UpdateType`
-- added enum `changeTaxRoundingMode` to type `UpdateType`
-- added enum `moveImageToPosition` to type `UpdateType`
-- added enum `removeAssociate` to type `UpdateType`
-- added enum `removeCustomLineItem` to type `UpdateType`
-- added enum `removeDiscountCode` to type `UpdateType`
-- added enum `removeProduct` to type `UpdateType`
-- added enum `removeProductSelection` to type `UpdateType`
-- added enum `removeProperty` to type `UpdateType`
-- added enum `requestQuoteRenegotiation` to type `UpdateType`
-- added enum `setAddressCustomField` to type `UpdateType`
-- added enum `setAddressCustomType` to type `UpdateType`
-- added enum `setApplicationVersion` to type `UpdateType`
-- added enum `setAuthenticationMode` to type `UpdateType`
-- added enum `setContactEmail` to type `UpdateType`
-- added enum `setCountries` to type `UpdateType`
-- added enum `setCountry` to type `UpdateType`
-- added enum `setCustomLineItemMoney` to type `UpdateType`
-- added enum `setCustomLineItemTaxAmount` to type `UpdateType`
-- added enum `setCustomLineItemTaxCategory` to type `UpdateType`
-- added enum `setCustomLineItemTaxRate` to type `UpdateType`
-- added enum `setCustomLineItemTaxedPrice` to type `UpdateType`
-- added enum `setCustomLineItemTotalPrice` to type `UpdateType`
-- added enum `setCustomShippingMethod` to type `UpdateType`
-- added enum `setIsValid` to type `UpdateType`
-- added enum `setLineItemDeactivatedAt` to type `UpdateType`
-- added enum `setLineItemDiscountedPrice` to type `UpdateType`
-- added enum `setLineItemDiscountedPricePerQuantity` to type `UpdateType`
-- added enum `setLineItemDistributionChannel` to type `UpdateType`
-- added enum `setLineItemPrice` to type `UpdateType`
-- added enum `setLineItemProductKey` to type `UpdateType`
-- added enum `setLineItemProductSlug` to type `UpdateType`
-- added enum `setLineItemTaxAmount` to type `UpdateType`
-- added enum `setLineItemTaxRate` to type `UpdateType`
-- added enum `setLineItemTaxedPrice` to type `UpdateType`
-- added enum `setLineItemTotalPrice` to type `UpdateType`
-- added enum `setOrderTaxedPrice` to type `UpdateType`
-- added enum `setOrderTotalPrice` to type `UpdateType`
-- added enum `setOrderTotalTax` to type `UpdateType`
-- added enum `setPrices` to type `UpdateType`
-- added enum `setProductCount` to type `UpdateType`
-- added enum `setProductSelections` to type `UpdateType`
-- added enum `setProperty` to type `UpdateType`
-- added enum `setPurchaseOrderNumber` to type `UpdateType`
-- added enum `setReservations` to type `UpdateType`
-- added enum `setSellerComment` to type `UpdateType`
-- added enum `setShippingInfoPrice` to type `UpdateType`
-- added enum `setShippingInfoTaxedPrice` to type `UpdateType`
-- added enum `setShippingMethod` to type `UpdateType`
-- added enum `setShippingMethodTaxAmount` to type `UpdateType`
-- added enum `setShippingMethodTaxRate` to type `UpdateType`
-- added enum `setShippingRate` to type `UpdateType`
-- added enum `setShippingRateInput` to type `UpdateType`
-- added enum `setStoreMode` to type `UpdateType`
-- added enum `setSupplyChannels` to type `UpdateType`
-- added enum `setValidTo` to type `UpdateType`
-- added enum `setValue` to type `UpdateType`
-- added enum `setVariantSelection` to type `UpdateType`
-- added enum `DeclinedForRenegotiation` to type `QuoteState`
-- added enum `associate-role` to type `ReferenceTypeId`
-- added enum `business-unit` to type `ReferenceTypeId`
+- added enum `associate-role` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `key` of type `PriceDraftImport` to be required
+- changed property `addresses` of type `CustomerImport` to be optional
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AddInheritedAssociateChange`
+- added type `AssociateRoleLabel`
+- added type `ChangeBuyerAssignableChange`
+- added type `ChangeInheritedAssociateChange`
+- added type `InheritedAssociate`
+- added type `InheritedAssociateRoleAssignment`
+- added type `Permission`
+- added type `RemoveInheritedAssociateChange`
+- added type `SetLocalizedNameChange`
+- added type `SetPermissionsChange`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `ChangeHistoryResourceType`
 </details>
 

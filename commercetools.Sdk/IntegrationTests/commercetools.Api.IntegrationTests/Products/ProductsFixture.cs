@@ -184,12 +184,12 @@ namespace commercetools.Api.IntegrationTests.Products
                 await WithAsync(apiRoot, productDraftWithProductType, draftAction, func, CreateProduct, DeleteProduct);
             });
         }
-        
+
         public static async Task WithUpdateableProduct(ProjectApiRoot apiRoot, Func<IProduct, Task<IProduct>> func)
         {
             await WithUpdateableProduct(apiRoot, DefaultProductDraft, func);
         }
-        
+
         public static async Task WithUpdateableProduct(ProjectApiRoot apiRoot, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task<IProduct>> func)
         {
             await WithProductType(apiRoot, async productType =>

@@ -12,7 +12,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
     [SubTypeDiscriminator("setTimeoutInMs", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
     public partial interface IExtensionUpdateAction
     {
-        new string Action { get; set; }
+        string Action { get; set; }
 
         static commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction ChangeDestination(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction> init = null)
         {

@@ -7,7 +7,11 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public string CustomLineItemId { get; set; }
 
+        public string CustomLineItemKey { get; set; }
+
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public string ShippingKey { get; set; }
         public CartSetCustomLineItemTaxRateAction()
         {
             this.Action = "setCustomLineItemTaxRate";

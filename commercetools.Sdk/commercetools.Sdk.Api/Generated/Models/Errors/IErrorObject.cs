@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
+    [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
     [SubTypeDiscriminator("DiscountCodeNonApplicable", typeof(commercetools.Sdk.Api.Models.Errors.DiscountCodeNonApplicableError))]
     [SubTypeDiscriminator("DuplicateAttributeValue", typeof(commercetools.Sdk.Api.Models.Errors.DuplicateAttributeValueError))]
@@ -49,7 +50,9 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("InvalidSubject", typeof(commercetools.Sdk.Api.Models.Errors.InvalidSubjectError))]
     [SubTypeDiscriminator("LanguageUsedInStores", typeof(commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
+    [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
+    [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
@@ -77,6 +80,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchIndexingInProgress", typeof(commercetools.Sdk.Api.Models.Errors.SearchIndexingInProgressError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.SemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
     public partial interface IErrorObject
     {
@@ -123,6 +127,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError ConcurrentModification(Action<commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ContentTooLargeError ContentTooLarge(Action<commercetools.Sdk.Api.Models.Errors.ContentTooLargeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ContentTooLargeError();
             init?.Invoke(t);
             return t;
         }
@@ -342,9 +352,21 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError MaxCartDiscountsReached(Action<commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError MaxResourceLimitExceeded(Action<commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError MaxStoreReferencesReached(Action<commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError();
             init?.Invoke(t);
             return t;
         }
@@ -507,6 +529,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError ShippingMethodDoesNotMatchCart(Action<commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError StoreCartDiscountsLimitReached(Action<commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError();
             init?.Invoke(t);
             return t;
         }

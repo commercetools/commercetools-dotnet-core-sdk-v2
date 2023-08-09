@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             p => new CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl>(p, OrderAddDeliveryActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl, string> ShippingKey()
+        {
+            return new ComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
+            p => new CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl>(p, OrderAddDeliveryActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl> Items(
             Func<commercetools.Sdk.Api.Predicates.Query.Orders.DeliveryItemQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.DeliveryItemQueryBuilderDsl>> fn)
         {
@@ -39,12 +45,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
         {
             return new CollectionPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("items")),
                     p => new CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl>(p, OrderAddDeliveryActionQueryBuilderDsl.Of));
-        }
-        public IComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl, string> ShippingKey()
-        {
-            return new ComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingKey")),
-            p => new CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl>(p, OrderAddDeliveryActionQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl> Address(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.BaseAddressQueryBuilderDsl>> fn)

@@ -17,9 +17,17 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         public string OrderNumber { get; set; }
 
+        public string PurchaseOrderNumber { get; set; }
+
         public string CustomerId { get; set; }
 
         public string CustomerEmail { get; set; }
+
+        public ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+
+        public IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
+
+        public IStoreResourceIdentifier Store { get; set; }
 
         public IList<ILineItemImportDraft> LineItems { get; set; }
         public IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
@@ -33,42 +41,38 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public ITaxedPriceDraft TaxedPrice { get; set; }
 
-        public IBaseAddress ShippingAddress { get; set; }
+        public IRoundingMode TaxRoundingMode { get; set; }
 
-        public IBaseAddress BillingAddress { get; set; }
-
-        public ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
-
-        public string Country { get; set; }
-
-        public IOrderState OrderState { get; set; }
-
-        public IStateReference State { get; set; }
-
-        public IShipmentState ShipmentState { get; set; }
-
-        public IPaymentState PaymentState { get; set; }
-
-        public IShippingInfoImportDraft ShippingInfo { get; set; }
-
-        public IPaymentInfo PaymentInfo { get; set; }
-
-        public DateTime? CompletedAt { get; set; }
-
-        public ICustomFieldsDraft Custom { get; set; }
+        public ITaxCalculationMode TaxCalculationMode { get; set; }
 
         public IInventoryMode InventoryMode { get; set; }
 
-        public IRoundingMode TaxRoundingMode { get; set; }
+        public IBaseAddress BillingAddress { get; set; }
+
+        public IBaseAddress ShippingAddress { get; set; }
 
         public IList<IBaseAddress> ItemShippingAddresses { get; set; }
         public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
 
-        public IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
+        public IShippingInfoImportDraft ShippingInfo { get; set; }
 
-        public IStoreResourceIdentifier Store { get; set; }
+        public IPaymentInfo PaymentInfo { get; set; }
+
+        public IPaymentState PaymentState { get; set; }
+
+        public IShipmentState ShipmentState { get; set; }
+
+        public IOrderState OrderState { get; set; }
+
+        public IStateReference State { get; set; }
+
+        public string Country { get; set; }
 
         public ICartOrigin Origin { get; set; }
+
+        public DateTime? CompletedAt { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }
