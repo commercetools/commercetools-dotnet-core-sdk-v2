@@ -232,6 +232,7 @@
 - type `AssociateRoleDeprecated` is removed
 - type `IndividualExclusionProductSelectionType` is removed
 - type `IndividualProductSelectionType` is removed
+- type `ProductSelectionType` is removed
 - type `ProductSelectionTypeEnum` is removed
 </details>
 
