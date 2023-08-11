@@ -27,6 +27,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             p => new CombinationQueryPredicate<MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl>(p, MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl, string> TextLineItemKey()
+        {
+            return new ComparisonPredicateBuilder<MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("textLineItemKey")),
+            p => new CombinationQueryPredicate<MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl>(p, MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<MyShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl> Description(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl>> fn)
         {

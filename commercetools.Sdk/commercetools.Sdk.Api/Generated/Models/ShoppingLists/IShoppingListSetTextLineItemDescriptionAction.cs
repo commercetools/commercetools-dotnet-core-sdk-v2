@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     {
         string TextLineItemId { get; set; }
 
+        string TextLineItemKey { get; set; }
+
         ILocalizedString Description { get; set; }
 
     }

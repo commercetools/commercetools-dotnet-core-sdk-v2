@@ -30,6 +30,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
                 ShoppingListAddTextLineItemActionQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<ShoppingListAddTextLineItemActionQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<ShoppingListAddTextLineItemActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<ShoppingListAddTextLineItemActionQueryBuilderDsl>(p, ShoppingListAddTextLineItemActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<ShoppingListAddTextLineItemActionQueryBuilderDsl> Description(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl>> fn)
         {

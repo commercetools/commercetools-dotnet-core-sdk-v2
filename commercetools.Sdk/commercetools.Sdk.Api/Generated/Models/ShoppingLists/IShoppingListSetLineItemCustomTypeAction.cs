@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }

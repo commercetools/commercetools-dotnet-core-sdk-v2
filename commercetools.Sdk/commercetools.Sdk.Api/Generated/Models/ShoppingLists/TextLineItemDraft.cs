@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
     public partial class TextLineItemDraft : ITextLineItemDraft
     {
+        public string Key { get; set; }
+
         public DateTime? AddedAt { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }

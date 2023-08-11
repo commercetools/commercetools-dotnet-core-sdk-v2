@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.TextLineItemDraft))]
     public partial interface ITextLineItemDraft
     {
+        string Key { get; set; }
+
         DateTime? AddedAt { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }

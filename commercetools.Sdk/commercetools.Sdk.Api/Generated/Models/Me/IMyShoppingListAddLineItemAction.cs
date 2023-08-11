@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.Me
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyShoppingListAddLineItemAction))]
     public partial interface IMyShoppingListAddLineItemAction : IMyShoppingListUpdateAction
     {
+        string Key { get; set; }
+
         string Sku { get; set; }
 
         string ProductId { get; set; }

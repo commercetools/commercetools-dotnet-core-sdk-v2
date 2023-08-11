@@ -15,6 +15,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
             return new TextLineItemDraftQueryBuilderDsl();
         }
 
+        public IComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<TextLineItemDraftQueryBuilderDsl>(p, TextLineItemDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl, DateTime> AddedAt()
         {
             return new ComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("addedAt")),

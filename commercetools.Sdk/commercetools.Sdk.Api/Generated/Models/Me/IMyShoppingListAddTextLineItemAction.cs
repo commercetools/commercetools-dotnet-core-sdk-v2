@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         ILocalizedString Name { get; set; }
 
+        string Key { get; set; }
+
         ILocalizedString Description { get; set; }
 
         long? Quantity { get; set; }

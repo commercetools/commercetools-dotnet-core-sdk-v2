@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public string TextLineItemId { get; set; }
 
+        public string TextLineItemKey { get; set; }
+
         public ILocalizedString Description { get; set; }
         public MyShoppingListSetTextLineItemDescriptionAction()
         {

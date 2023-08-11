@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         string TextLineItemId { get; set; }
 
+        string TextLineItemKey { get; set; }
+
         long? Quantity { get; set; }
 
     }

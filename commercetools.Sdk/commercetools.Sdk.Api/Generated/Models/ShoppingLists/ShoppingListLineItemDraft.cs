@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
     public partial class ShoppingListLineItemDraft : IShoppingListLineItemDraft
     {
+        public string Key { get; set; }
+
         public string ProductId { get; set; }
 
         public long? VariantId { get; set; }

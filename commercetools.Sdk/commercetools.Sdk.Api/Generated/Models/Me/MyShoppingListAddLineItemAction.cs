@@ -9,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         public string Action { get; set; }
 
+        public string Key { get; set; }
+
         public string Sku { get; set; }
 
         public string ProductId { get; set; }
