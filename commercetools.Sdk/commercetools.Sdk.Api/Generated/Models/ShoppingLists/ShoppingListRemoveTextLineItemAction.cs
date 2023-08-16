@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         public string TextLineItemId { get; set; }
 
+        public string TextLineItemKey { get; set; }
+
         public long? Quantity { get; set; }
         public ShoppingListRemoveTextLineItemAction()
         {

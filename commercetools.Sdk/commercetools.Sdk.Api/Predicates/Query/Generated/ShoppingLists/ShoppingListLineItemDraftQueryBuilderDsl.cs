@@ -15,6 +15,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
             return new ShoppingListLineItemDraftQueryBuilderDsl();
         }
 
+        public IComparisonPredicateBuilder<ShoppingListLineItemDraftQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<ShoppingListLineItemDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<ShoppingListLineItemDraftQueryBuilderDsl>(p, ShoppingListLineItemDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ShoppingListLineItemDraftQueryBuilderDsl, string> ProductId()
         {
             return new ComparisonPredicateBuilder<ShoppingListLineItemDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("productId")),

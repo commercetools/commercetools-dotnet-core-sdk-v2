@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         public string LineItemId { get; set; }
 
+        public string LineItemKey { get; set; }
+
         public long Quantity { get; set; }
         public ShoppingListChangeLineItemQuantityAction()
         {

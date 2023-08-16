@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListLineItemDraft))]
     public partial interface IShoppingListLineItemDraft
     {
+        string Key { get; set; }
+
         string ProductId { get; set; }
 
         long? VariantId { get; set; }
