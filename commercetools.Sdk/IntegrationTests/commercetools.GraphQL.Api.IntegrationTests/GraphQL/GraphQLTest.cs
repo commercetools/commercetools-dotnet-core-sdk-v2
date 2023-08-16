@@ -25,7 +25,6 @@ public class GraphQLTest
         s.UseCommercetoolsApi(configuration, "Client");
         var provider = s.BuildServiceProvider();
 
-
         var client = provider.GetService<ProjectApiRoot>().GraphQLClient();
 
         var response = await client.Query(o => o.Products(selector: r => new { results = r.Results(product => new { product.Id }) }));

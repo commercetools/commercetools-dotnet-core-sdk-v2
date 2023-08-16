@@ -3,7 +3,6 @@
   "graphql": "./schema.graphqls",
   "namespace": "commercetools.Sdk.GraphQL.Api",
   "clientName": "GraphQLClient",
-  "output": "./Generated/GraphQLClient.g.cs",
   "scalars": {
     "BigDecimal": "System.Decimal",
     "Country": "System.String",
