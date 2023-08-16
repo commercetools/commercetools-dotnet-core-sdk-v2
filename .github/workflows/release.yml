@@ -73,7 +73,7 @@ jobs:
       - name: List packages
         run: ls -la pack
       - name: Publish Nuget to GitHub registry
-        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v2
@@ -81,7 +81,7 @@ jobs:
           name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
       - name: Push generated package to NuGet
-        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
   update_ref:
     runs-on: ubuntu-latest
 
