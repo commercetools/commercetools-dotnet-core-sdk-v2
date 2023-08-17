@@ -33,10 +33,11 @@ The SDK consists of the following projects:
 * `commercetools.Base.Client`: Contains CtpClient which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
-* `commercetools.SDK.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
-* `commercetools.SDK.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
-* `commercetools.SDK.MLApi`: Contains all generated models and request builders to communicate with the [Machine Learning API](https://docs.commercetools.com/api/ml).
-* `commercetools.SDK.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
+* `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
+* `commercetools.Sdk.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
+* `commercetools.Sdk.MLApi`: Contains all generated models and request builders to communicate with the [Machine Learning API](https://docs.commercetools.com/api/ml).
+* `commercetools.Sdk.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
+* `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -331,6 +332,10 @@ services.SetupClient(
 ### Predicates
 
 * [Query Predicate Builders](./docs/Predicates.md)
+
+### GraphQL
+
+* [GraphQL package](./docs/GraphQL.md)
 
 ### Migration Guidelines
 To migrate from the 1.x to the 2.x, there is a guideline below:
