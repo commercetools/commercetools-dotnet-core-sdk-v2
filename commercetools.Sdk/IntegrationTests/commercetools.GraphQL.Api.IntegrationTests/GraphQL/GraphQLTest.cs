@@ -27,9 +27,9 @@ public class GraphQLTest
 
         var client = provider.GetService<ProjectApiRoot>().GraphQLClient();
 
-        var response = await client.Query(o => o.Products(selector: r => new { results = r.Results(product => new { product.Id }) }));
+        var response = await client.Query( o => o.Products(selector: r => new { results = r.Results(product => new { product.Id }) }));
 
-        Assert.NotNull(response.Data?.results);
         Assert.Null(response.Errors);
+        Assert.NotNull(response.Data?.results);
     }
 }

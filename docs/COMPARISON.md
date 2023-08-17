@@ -18,13 +18,13 @@ The SDK [V2](/) has some features which is not exists in [V1](https://github.com
 ## Comparison of SDK Services Configuration
 After packages installation, you have to configure services using Dependency Injection Setup in the application Startup.cs
 
-| Package                | V2                                                                              | V1                                    |
-|------------------------|---------------------------------------------------------------------------------|---------------------------------------|
-| HTTP API    | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```
-|                        |                                                                                 |  ```this.configuration,"Client");```  |
-| Import API             | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                       |
-| Machine Learning API                 | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                       |
-| Change History API            | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                       |
+| Package              | V2                                                                              | V1                                  |
+|----------------------|---------------------------------------------------------------------------------|-------------------------------------|
+| HTTP API             | ```services.UseCommercetoolsApi(this.configuration, "Client");```               | ```services.UseCommercetools(```    |
+|                      |                                                                                 | ```this.configuration,"Client");``` |
+| Import API           | ```services.UseCommercetoolsImportApi(this.configuration, "ImportClient");```   |                                     |
+| Machine Learning API | ```services.UseCommercetoolsMLApi(this.configuration, "MLClient");```           |                                     |
+| Change History API   | ```services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");``` |                                     |
 
 ## Comparison of how to make requests to the Composable Commerce HTTP API
 ```csharp
