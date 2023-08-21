@@ -74,20 +74,40 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithProjectKeyValue("test_projectKey")
                    .WithResourceTypeValue("test_resourceType")
                    .Get()
-                   .WithType("type")
+                   .WithClientId("clientId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType?type=type",
+                   "/test_projectKey/test_resourceType?clientId=clientId",
                },
                new Object[] {
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .WithResourceTypeValue("test_resourceType")
                    .Get()
-                   .WithClientId("clientId")
+                   .WithCustomerId("customerId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType?clientId=clientId",
+                   "/test_projectKey/test_resourceType?customerId=customerId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .Get()
+                   .WithAssociateId("associateId")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType?associateId=associateId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .Get()
+                   .WithType("type")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType?type=type",
                },
                new Object[] {
                    ApiRoot
@@ -128,16 +148,6 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .Build(),
                    "Get",
                    "/test_projectKey/test_resourceType?stores=stores",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKeyValue("test_projectKey")
-                   .WithResourceTypeValue("test_resourceType")
-                   .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/test_resourceType?customerId=customerId",
                },
                new Object[] {
                    ApiRoot

@@ -77,19 +77,37 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithType("type")
+                   .WithClientId("clientId")
                    .Build(),
                    "Get",
-                   "/test_projectKey?type=type",
+                   "/test_projectKey?clientId=clientId",
                },
                new Object[] {
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithClientId("clientId")
+                   .WithCustomerId("customerId")
                    .Build(),
                    "Get",
-                   "/test_projectKey?clientId=clientId",
+                   "/test_projectKey?customerId=customerId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
+                   .WithAssociateId("associateId")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?associateId=associateId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
+                   .WithType("type")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?type=type",
                },
                new Object[] {
                    ApiRoot
@@ -135,15 +153,6 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    .Build(),
                    "Get",
                    "/test_projectKey?stores=stores",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKeyValue("test_projectKey")
-                   .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey?customerId=customerId",
                },
                new Object[] {
                    ApiRoot
