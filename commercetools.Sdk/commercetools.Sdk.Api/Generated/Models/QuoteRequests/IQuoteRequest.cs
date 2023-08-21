@@ -88,6 +88,8 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         string PurchaseOrderNumber { get; set; }
 
+        ICartReference Cart { get; set; }
+
         IBusinessUnitKeyReference BusinessUnit { get; set; }
 
     }

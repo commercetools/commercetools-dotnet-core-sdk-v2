@@ -271,6 +271,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.QuoteRequests
             p => new CombinationQueryPredicate<QuoteRequestQueryBuilderDsl>(p, QuoteRequestQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<QuoteRequestQueryBuilderDsl> Cart(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<QuoteRequestQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("cart"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartReferenceQueryBuilderDsl.Of())),
+                QuoteRequestQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<QuoteRequestQueryBuilderDsl> BusinessUnit(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl>> fn)
         {
