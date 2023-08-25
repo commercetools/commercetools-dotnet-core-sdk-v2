@@ -2,6 +2,8 @@ using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace commercetools.Sdk.Api.Models.Carts
@@ -30,6 +32,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public IList<IMethodExternalTaxRateDraft> PerMethodExternalTaxRate { get; set; }
+        public IEnumerable<IMethodExternalTaxRateDraft> PerMethodExternalTaxRateEnumerable { set => PerMethodExternalTaxRate = value.ToList(); }
+
 
         public IInventoryMode InventoryMode { get; set; }
 

@@ -3,6 +3,7 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `MethodExternalTaxRateDraft`
 - added type `QuoteRenegotiationRequestedMessage`
 - added type `QuoteRenegotiationRequestedMessagePayload`
 </details>
@@ -11,6 +12,7 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `perMethodExternalTaxRate` to type `LineItemDraft`
 - added property `cart` to type `QuoteRequest`
 </details>
 
