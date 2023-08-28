@@ -40,7 +40,7 @@ For experimenting with OpenTelemetry the example Checkout application is configu
 using OpenTelemetry. By default the data will be reported to the console.
 
 To send the data to an OpenTelemetry endpoint you have to configure the
-[appsettings.json](../commercetools.Sdk/Examples/commercetools.Api.CheckoutApp/commercetools.Api.CheckoutApp.csproj) file.
+[appsettings.json](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/master/commercetools.Sdk/Examples/commercetools.Api.CheckoutApp/appsettings.json) file.
 
 ```json
 {
@@ -54,7 +54,7 @@ Setting the exporter options to `otlp` will send the data to a local OTLP endpoi
 make sure to have a OpenTelemetry collector listening. You can override the endpoint address by configuring
 `Otlp:Endpoint` in your appsettings.json file.
 
-This repository includes a [docker compose setup](../../../../otel/README.md) for starting a local OpenTelemetry
+This repository includes a [docker compose setup](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/tree/master/otel) for starting a local OpenTelemetry
 collector in combination with Prometheus, Grafana, JaegerUI and NewRelic as exporter target.
 
 
