@@ -1,8 +1,8 @@
 # OpenTelemetry
 
 This folder contains a preconfigured docker compose file for local experiments
-with OpenTelemetry. It includes a OpenTelemetry collector, a Jaeger UI, Prometheus
-and Grafana.
+with OpenTelemetry. It includes a OpenTelemetry collector, a Jaeger UI, Prometheus, Grafana, and
+NewRelic as export target.
 
 To start it use the following command:
 
