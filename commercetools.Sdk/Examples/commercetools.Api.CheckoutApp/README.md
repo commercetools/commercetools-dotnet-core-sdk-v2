@@ -33,3 +33,28 @@ This example application demonstrates how the ME endpoints can be used with the 
 1. Open the folder **\Examples\commercetools.Api.CheckoutApp**
 2. Start the app using **Run** > **Start Debugging** or by pressing **F5**.
 3. A new web browser window opens and displays the Checkout app. A list of Products should appear.
+
+## OpenTelemetry
+
+For experimenting with OpenTelemetry the example Checkout application is configured for exporting logs, metrics and traces
+using OpenTelemetry. By default the data will be reported to the console.
+
+To send the data to an OpenTelemetry endpoint you have to configure the
+[appsettings.json](../commercetools.Sdk/Examples/commercetools.Api.CheckoutApp/commercetools.Api.CheckoutApp.csproj) file.
+
+```json
+{
+  "UseLogExporter": "otlp",
+  "UseTracingExporter": "otlp",
+  "UseMetricExporter": "otlp"
+}
+```
+
+Setting the exporter options to `otlp` will send the data to a local OTLP endpoint at `http://localhost:4317`. Please
+make sure to have a OpenTelemetry collector listening. You can override the endpoint address by configuring
+`Otlp:Endpoint` in your appsettings.json file.
+
+This repository includes a [docker compose setup](../../../../otel/README.md) for starting a local OpenTelemetry
+collector in combination with Prometheus, Grafana, JaegerUI and NewRelic as exporter target.
+
+
