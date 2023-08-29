@@ -16,6 +16,13 @@
 - added property `cart` to type `QuoteRequest`
 </details>
 
+
+<details>
+<summary>Removed Enum(s)</summary>
+
+- :warning: removed enum `Failed` from type `QuoteState`
+</details>
+
 **Import changes**
 
 <details>
