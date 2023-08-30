@@ -18,11 +18,11 @@ jobs:
         run: git config --global core.longpaths true
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup dotnet 3.1
+      - name: Setup dotnet
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            3.1.x
+            6.0.x
             7.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
@@ -59,11 +59,11 @@ jobs:
         run: git config --global core.longpaths true
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup dotnet 3.1
+      - name: Setup dotnet
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            3.1.x
+            6.0.x
             7.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
@@ -110,11 +110,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup
+      - name: Setup dotnet
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            3.1.x
+            6.0.x
             7.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
@@ -188,7 +188,7 @@ jobs:
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            3.1.x
+            6.0.x
             7.0.x
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
