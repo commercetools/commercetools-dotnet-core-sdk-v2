@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -44,12 +45,12 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 
         public ByProjectKeyImportContainersGet WithLimit(decimal limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyImportContainersGet WithOffset(decimal offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyImportContainersGet WithSort(string sort)

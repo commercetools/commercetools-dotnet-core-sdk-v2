@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -72,12 +73,12 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
 
         public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMin(decimal confidenceMin)
         {
-            return this.AddQueryParam("confidenceMin", confidenceMin.ToString());
+            return this.AddQueryParam("confidenceMin", confidenceMin.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithConfidenceMax(decimal confidenceMax)
         {
-            return this.AddQueryParam("confidenceMax", confidenceMax.ToString());
+            return this.AddQueryParam("confidenceMax", confidenceMax.ToString(CultureInfo.InvariantCulture));
         }
 
 

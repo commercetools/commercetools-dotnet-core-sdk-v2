@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace commercetools.Sdk.Api.Predicates.Query
 {
@@ -20,9 +21,9 @@ namespace commercetools.Sdk.Api.Predicates.Query
         public CombinationQueryPredicate<T> WithinCircle(decimal longitude, decimal latitude,
         long distance)
         {
-            IEnumerable<IQueryPredicate> p = new[]{ ConstantQueryPredicate.Of().Constant(longitude.ToString()),
-                ConstantQueryPredicate.Of().Constant(latitude.ToString()),
-                ConstantQueryPredicate.Of().Constant(distance.ToString())};
+            IEnumerable<IQueryPredicate> p = new[]{ ConstantQueryPredicate.Of().Constant(longitude.ToString(CultureInfo.InvariantCulture)),
+                ConstantQueryPredicate.Of().Constant(latitude.ToString(CultureInfo.InvariantCulture)),
+                ConstantQueryPredicate.Of().Constant(distance.ToString(CultureInfo.InvariantCulture))};
             return combinationFn.Invoke(predicate.Operator(PredicateOperator.Within.ToString())
                 .Right(ContainerQueryPredicate.Of()
                     .Parent(ConstantQueryPredicate.Of().Constant("circle"))
