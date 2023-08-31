@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System.Globalization;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -58,12 +58,12 @@ namespace commercetools.Sdk.MLApi.Client.RequestBuilders.Recommendations
 
         public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithLimit(int limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithOffset(int offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet WithStaged(bool staged)

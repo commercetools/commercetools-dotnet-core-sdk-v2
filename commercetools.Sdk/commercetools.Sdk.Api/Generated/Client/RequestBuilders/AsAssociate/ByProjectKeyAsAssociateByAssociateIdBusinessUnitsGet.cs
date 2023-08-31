@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -72,12 +73,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
 
         public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet WithLimit(int limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet WithOffset(int offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet WithWithTotal(bool withTotal)

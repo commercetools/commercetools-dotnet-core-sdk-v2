@@ -700,6 +700,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceStagedChangesAppliedMessagePayloadQueryBuilderDsl.Of()),
                 MessagePayloadQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsStandalonePriceStagedChangesRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceStagedChangesRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceStagedChangesRemovedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceStagedChangesRemovedMessagePayloadQueryBuilderDsl.Of()),
+                MessagePayloadQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsStandalonePriceTierAdded(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceTierAddedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.StandalonePriceTierAddedMessagePayloadQueryBuilderDsl>> fn)
         {

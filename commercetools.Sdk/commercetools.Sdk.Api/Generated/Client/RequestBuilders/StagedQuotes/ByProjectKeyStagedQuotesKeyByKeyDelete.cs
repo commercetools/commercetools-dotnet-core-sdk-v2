@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
 
         public ByProjectKeyStagedQuotesKeyByKeyDelete WithVersion(long version)
         {
-            return this.AddQueryParam("version", version.ToString());
+            return this.AddQueryParam("version", version.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyStagedQuotesKeyByKeyDelete WithExpand(string expand)

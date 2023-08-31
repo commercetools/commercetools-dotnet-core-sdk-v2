@@ -36,6 +36,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
 
         public ICustomFieldsDraft Custom { get; set; }
 
+        public IStagedPriceDraft Staged { get; set; }
+
         public bool? Active { get; set; }
     }
 }

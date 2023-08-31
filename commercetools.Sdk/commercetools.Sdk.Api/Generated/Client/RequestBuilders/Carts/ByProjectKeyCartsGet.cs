@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -69,12 +70,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
 
         public ByProjectKeyCartsGet WithLimit(int limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyCartsGet WithOffset(int offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyCartsGet WithWithTotal(bool withTotal)

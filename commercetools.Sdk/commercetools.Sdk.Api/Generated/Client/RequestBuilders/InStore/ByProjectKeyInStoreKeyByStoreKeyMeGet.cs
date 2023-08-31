@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -67,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 
         public ByProjectKeyInStoreKeyByStoreKeyMeGet WithLimit(int limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyMeGet WithOffset(int offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyMeGet WithWithTotal(bool withTotal)
