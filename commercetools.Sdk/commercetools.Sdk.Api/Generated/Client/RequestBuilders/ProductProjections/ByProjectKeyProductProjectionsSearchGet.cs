@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -129,7 +130,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 
         public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(int fuzzyLevel)
         {
-            return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString());
+            return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithMarkMatchingVariants(bool markMatchingVariants)
@@ -164,12 +165,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 
         public ByProjectKeyProductProjectionsSearchGet WithLimit(int limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithOffset(int offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithWithTotal(bool withTotal)

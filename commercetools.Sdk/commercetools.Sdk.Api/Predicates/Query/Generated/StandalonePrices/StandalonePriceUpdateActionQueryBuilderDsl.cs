@@ -52,6 +52,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemovePriceTierActionQueryBuilderDsl.Of()),
                 StandalonePriceUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsRemoveStagedChanges(
+            Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl.Of()),
+                StandalonePriceUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StandalonePriceSetCustomFieldActionQueryBuilderDsl>> fn)
         {

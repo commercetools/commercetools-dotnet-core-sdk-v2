@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [SubTypeDiscriminator("changeActive", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeActiveAction))]
     [SubTypeDiscriminator("changeValue", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceChangeValueAction))]
     [SubTypeDiscriminator("removePriceTier", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction))]
+    [SubTypeDiscriminator("removeStagedChanges", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemoveStagedChangesAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetCustomTypeAction))]
     [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceSetDiscountedPriceAction))]
@@ -50,6 +51,12 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction RemovePriceTier(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemovePriceTierAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemoveStagedChangesAction RemoveStagedChanges(Action<commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemoveStagedChangesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceRemoveStagedChangesAction();
             init?.Invoke(t);
             return t;
         }

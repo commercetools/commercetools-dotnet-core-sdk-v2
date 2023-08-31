@@ -9,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueFixedDraft))]
     public partial interface ICartDiscountValueFixedDraft : ICartDiscountValueDraft
     {
-        IList<ITypedMoneyDraft> Money { get; set; }
-        IEnumerable<ITypedMoneyDraft> MoneyEnumerable { set => Money = value.ToList(); }
+        IList<IMoney> Money { get; set; }
+        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
 
     }

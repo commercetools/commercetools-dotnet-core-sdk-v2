@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -65,7 +66,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 
         public ByProjectKeyProductsByIDImagesPost WithVariant(long variant)
         {
-            return this.AddQueryParam("variant", variant.ToString());
+            return this.AddQueryParam("variant", variant.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductsByIDImagesPost WithSku(string sku)

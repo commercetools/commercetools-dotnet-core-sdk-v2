@@ -103,6 +103,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
                 StandalonePriceDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> Staged(
+            Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StagedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StagedPriceDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("staged"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StagedPriceDraftQueryBuilderDsl.Of())),
+                StandalonePriceDraftQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<StandalonePriceDraftQueryBuilderDsl, bool> Active()
         {
             return new ComparisonPredicateBuilder<StandalonePriceDraftQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("active")),
