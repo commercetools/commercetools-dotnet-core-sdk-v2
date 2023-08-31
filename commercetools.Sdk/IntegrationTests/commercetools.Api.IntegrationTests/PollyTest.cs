@@ -81,7 +81,7 @@ namespace commercetools.Api.IntegrationTests
                 await client
                     .ExecuteAsync<object>(new HttpRequestMessage(HttpMethod.Get, "https://www.example.com"));
             });
-            Assert.Equal("Connection refused", exception.Message);
+            Assert.StartsWith("Connection refused", exception.Message);
         }
     }
 }

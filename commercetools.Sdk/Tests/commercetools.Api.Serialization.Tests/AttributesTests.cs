@@ -444,7 +444,7 @@ namespace commercetools.Api.Serialization.Tests
         public void DecimalSerialization()
         {
             var serializerService = this._serializationFixture.SerializerService;
-            var attributes = new List<Attribute>
+            var attributes = new List<IAttribute>
                 {
                     new DecimalAttribute() { Name = "decimal", Value = 13m },
                     new DecimalAttribute() { Name = "decimal-zero", Value = 13.0m },
@@ -522,7 +522,7 @@ namespace commercetools.Api.Serialization.Tests
                                     new SetAttribute<NestedAttribute>()
                                     {
                                         Name = "products",
-                                        Value = new List<NestedAttribute>()
+                                        Value = new List<IAttribute>()
                                     },
                                     new LocalizedStringAttribute
                                     {

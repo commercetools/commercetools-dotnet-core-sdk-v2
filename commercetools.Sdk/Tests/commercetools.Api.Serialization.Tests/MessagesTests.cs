@@ -195,10 +195,9 @@ namespace commercetools.Api.Serialization.Tests
 
             var changeSubscription1 = serializerService.Deserialize<ChangeSubscription>(serialized1);
             var changeSubscription2 = serializerService.Deserialize<ChangeSubscription>(serialized2);
-            Assert.Equal("cart-discount", changeSubscription1.ResourceTypeId);
-            Assert.Equal("new-type", changeSubscription2.ResourceTypeId);
+            Assert.Equal("cart-discount", changeSubscription1.ResourceTypeId.ToString());
+            Assert.Equal("new-type", changeSubscription2.ResourceTypeId.ToString());
         }
-
 
         [Fact]
         public void DeserializeOfSubscriptions()
