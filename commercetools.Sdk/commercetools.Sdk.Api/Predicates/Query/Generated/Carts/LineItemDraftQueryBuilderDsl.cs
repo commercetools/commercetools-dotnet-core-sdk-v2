@@ -96,6 +96,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 LineItemDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<LineItemDraftQueryBuilderDsl> PerMethodExternalTaxRate(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.MethodExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.MethodExternalTaxRateDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<LineItemDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("perMethodExternalTaxRate"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.MethodExternalTaxRateDraftQueryBuilderDsl.Of())),
+                LineItemDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<LineItemDraftQueryBuilderDsl> PerMethodExternalTaxRate()
+        {
+            return new CollectionPredicateBuilder<LineItemDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("perMethodExternalTaxRate")),
+                    p => new CombinationQueryPredicate<LineItemDraftQueryBuilderDsl>(p, LineItemDraftQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<LineItemDraftQueryBuilderDsl, string> InventoryMode()
         {
             return new ComparisonPredicateBuilder<LineItemDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("inventoryMode")),

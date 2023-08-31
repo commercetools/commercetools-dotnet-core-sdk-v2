@@ -80,10 +80,10 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithType("type")
+                   .WithClientId("clientId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType/test_ID?type=type",
+                   "/test_projectKey/test_resourceType/test_ID?clientId=clientId",
                },
                new Object[] {
                    ApiRoot
@@ -91,10 +91,32 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithClientId("clientId")
+                   .WithCustomerId("customerId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType/test_ID?clientId=clientId",
+                   "/test_projectKey/test_resourceType/test_ID?customerId=customerId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
+                   .WithAssociateId("associateId")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?associateId=associateId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
+                   .WithType("type")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?type=type",
                },
                new Object[] {
                    ApiRoot
@@ -128,17 +150,6 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .Build(),
                    "Get",
                    "/test_projectKey/test_resourceType/test_ID?stores=stores",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKeyValue("test_projectKey")
-                   .WithResourceTypeValue("test_resourceType")
-                   .WithIDValue("test_ID")
-                   .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/test_resourceType/test_ID?customerId=customerId",
                },
                new Object[] {
                    ApiRoot

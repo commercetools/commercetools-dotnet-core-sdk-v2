@@ -26,7 +26,10 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         Imported,
 
         [Description("rejected")]
-        Rejected
+        Rejected,
+
+        [Description("canceled")]
+        Canceled
     }
 
     public class ProcessingStateWrapper : IProcessingState
@@ -70,6 +73,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IProcessingState Rejected = new ProcessingStateWrapper
         { Value = ProcessingState.Rejected, JsonName = "rejected" };
 
+        public static IProcessingState Canceled = new ProcessingStateWrapper
+        { Value = ProcessingState.Canceled, JsonName = "canceled" };
+
         ProcessingState? Value { get; }
 
         static IProcessingState[] Values()
@@ -81,7 +87,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  Unresolved ,
                  WaitForMasterVariant ,
                  Imported ,
-                 Rejected
+                 Rejected ,
+                 Canceled
              };
         }
         static IProcessingState FindEnum(string value)

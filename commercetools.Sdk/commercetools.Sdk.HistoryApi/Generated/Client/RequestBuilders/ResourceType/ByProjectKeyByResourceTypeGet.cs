@@ -56,14 +56,24 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("userId");
         }
 
-        public List<string> GetType()
-        {
-            return this.GetQueryParam("type");
-        }
-
         public List<string> GetClientId()
         {
             return this.GetQueryParam("clientId");
+        }
+
+        public List<string> GetCustomerId()
+        {
+            return this.GetQueryParam("customerId");
+        }
+
+        public List<string> GetAssociateId()
+        {
+            return this.GetQueryParam("associateId");
+        }
+
+        public List<string> GetType()
+        {
+            return this.GetQueryParam("type");
         }
 
         public List<string> GetResourceKey()
@@ -84,11 +94,6 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
         public List<string> GetStores()
         {
             return this.GetQueryParam("stores");
-        }
-
-        public List<string> GetCustomerId()
-        {
-            return this.GetQueryParam("customerId");
         }
 
         public List<string> GetExcludePlatformInitiatedChanges()
@@ -126,14 +131,24 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("userId", userId);
         }
 
-        public ByProjectKeyByResourceTypeGet WithType(string type)
-        {
-            return this.AddQueryParam("type", type);
-        }
-
         public ByProjectKeyByResourceTypeGet WithClientId(string clientId)
         {
             return this.AddQueryParam("clientId", clientId);
+        }
+
+        public ByProjectKeyByResourceTypeGet WithCustomerId(string customerId)
+        {
+            return this.AddQueryParam("customerId", customerId);
+        }
+
+        public ByProjectKeyByResourceTypeGet WithAssociateId(string associateId)
+        {
+            return this.AddQueryParam("associateId", associateId);
+        }
+
+        public ByProjectKeyByResourceTypeGet WithType(string type)
+        {
+            return this.AddQueryParam("type", type);
         }
 
         public ByProjectKeyByResourceTypeGet WithResourceKey(string resourceKey)
@@ -154,11 +169,6 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
         public ByProjectKeyByResourceTypeGet WithStores(string stores)
         {
             return this.AddQueryParam("stores", stores);
-        }
-
-        public ByProjectKeyByResourceTypeGet WithCustomerId(string customerId)
-        {
-            return this.AddQueryParam("customerId", customerId);
         }
 
         public ByProjectKeyByResourceTypeGet WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange excludePlatformInitiatedChanges)

@@ -10,11 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public string Type { get; set; }
 
-        public IReference Customer { get; set; }
+        public string ClientId { get; set; }
 
         public string AnonymousId { get; set; }
 
-        public string ClientId { get; set; }
+        public IReference Customer { get; set; }
+
+        public IReference Associate { get; set; }
 
         public bool IsPlatformClient { get; set; }
     }

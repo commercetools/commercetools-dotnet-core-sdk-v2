@@ -622,6 +622,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.QuoteDeletedMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsQuoteRenegotiationRequested(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.QuoteRenegotiationRequestedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.QuoteRenegotiationRequestedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.QuoteRenegotiationRequestedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsQuoteRequestCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.QuoteRequestCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.QuoteRequestCreatedMessageQueryBuilderDsl>> fn)
         {

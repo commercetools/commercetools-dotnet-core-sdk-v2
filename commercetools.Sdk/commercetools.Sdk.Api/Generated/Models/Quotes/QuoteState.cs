@@ -25,9 +25,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
         [Description("Accepted")]
         Accepted,
 
-        [Description("Failed")]
-        Failed,
-
         [Description("Withdrawn")]
         Withdrawn
     }
@@ -70,9 +67,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
         public static IQuoteState Accepted = new QuoteStateWrapper
         { Value = QuoteState.Accepted, JsonName = "Accepted" };
 
-        public static IQuoteState Failed = new QuoteStateWrapper
-        { Value = QuoteState.Failed, JsonName = "Failed" };
-
         public static IQuoteState Withdrawn = new QuoteStateWrapper
         { Value = QuoteState.Withdrawn, JsonName = "Withdrawn" };
 
@@ -87,7 +81,6 @@ namespace commercetools.Sdk.Api.Models.Quotes
                  DeclinedForRenegotiation ,
                  RenegotiationAddressed ,
                  Accepted ,
-                 Failed ,
                  Withdrawn
              };
         }
