@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graphql_20endpoint_0',['GraphQL endpoint',['../dc/da2/md_docs_2_graph_q_l.html',1,'']]]
+  ['query_20predicate_20builders_0',['Query Predicate Builders',['../d6/d45/md_docs_2_predicates.html',1,'']]]
 ];

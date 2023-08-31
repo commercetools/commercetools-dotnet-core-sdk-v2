@@ -22,7 +22,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ct-logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">commercetools.Sdk<span id="projectnumber">&#160;master</span>
+   <div id="projectname">commercetools.Sdk<span id="projectnumber">&#160;9.0.1</span>
    </div>
    <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
   </td>
@@ -75,10 +75,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> </p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Introduction</h1>
 <p>This repository contains the .NET SDKs generated from the Composable Commerce API reference.</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Packages</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -92,12 +92,12 @@ Packages</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Change History API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Example and Training material</h1>
 <p>Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API. <a href="https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2">.NET Core SDK Training for V2 SDK</a></p>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Installation</h1>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 Download from &lt;a href="https://www.nuget.org/profiles/commercetools" &gt;Nuget&lt;/a&gt;</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -111,18 +111,17 @@ Download from &lt;a href="https://www.nuget.org/profiles/commercetools" &gt;Nuge
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi">Change History API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 Technical Overview</h1>
 <p>The SDK consists of the following projects:</p><ul>
 <li><code>commercetools.Base.Abstractions</code>: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.</li>
 <li><code><a class="el" href="d4/d7f/namespacecommercetools_1_1_base_1_1_client.html">commercetools.Base.Client</a></code>: Contains CtpClient which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.</li>
 <li><code><a class="el" href="d7/d99/namespacecommercetools_1_1_base_1_1_registration.html">commercetools.Base.Registration</a></code>: Helper classes for things like types retriever.</li>
 <li><code><a class="el" href="d8/d12/namespacecommercetools_1_1_base_1_1_serialization.html">commercetools.Base.Serialization</a></code>: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.</li>
-<li><code><a class="el" href="d0/d46/namespacecommercetools_1_1_sdk_1_1_api.html">commercetools.Sdk.Api</a></code>: Contains all generated models and request builders to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
-<li><code><a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/import-api/">Import API</a>.</li>
-<li><code><a class="el" href="d1/d31/namespacecommercetools_1_1_sdk_1_1_m_l_api.html">commercetools.Sdk.MLApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/ml">Machine Learning API</a>.</li>
-<li><code><a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/history/change-history">Change History API</a>.</li>
-<li><code>commercetools.Sdk.GraphQL.Api</code>: Contains a type safe GraphQL client to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
+<li><code>commercetools.SDK.Api</code>: Contains all generated models and request builders to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
+<li><code>commercetools.SDK.ImportApi</code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/import-api/">Import API</a>.</li>
+<li><code>commercetools.SDK.MLApi</code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/ml">Machine Learning API</a>.</li>
+<li><code>commercetools.SDK.HistoryApi</code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/history/change-history">Change History API</a>.</li>
 </ul>
 <p>In addition, the SDK has the following directories:</p><ul>
 <li><code>/IntegrationTests</code>: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.</li>
@@ -133,10 +132,10 @@ Technical Overview</h1>
 </ol>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Getting Started with the .NET SDK</h1>
 <p>All operations (get, query, create, update, delete and others) are available in the generated request builders, so you can build the request and use the client to execute it and all the request builders accessible through ApiRoot. In order to use the client object, it needs to be setup first through dependency injection setup.</p>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Basic Workflow</h2>
 <p>At a high level, to make a basic call to the API, do the following:</p>
 <ol type="1">
@@ -147,7 +146,7 @@ Basic Workflow</h2>
 <li>Build your request and execute it using ExecuteAsync.</li>
 <li>Receive the response as a model.</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md18"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 Dependency Injection Setup</h3>
 <p>In the ConfigureServices method of Startup.cs add the following:</p>
 <ul>
@@ -160,7 +159,7 @@ Dependency Injection Setup</h3>
 <li><code>Change History API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsHistoryApi(this.configuration, <span class="stringliteral">&quot;HistoryClient&quot;</span>);</div>
 </div><!-- fragment --></li>
 </ul>
-<h4><a class="anchor" id="autotoc_md19"></a>
+<h4><a class="anchor" id="autotoc_md17"></a>
 Configuration</h4>
 <p>The client configuration needs to be added to appsettings.json in order for the client to work. The structure is as follows:</p>
 <div class="fragment"><div class="line">{</div>
@@ -173,7 +172,7 @@ Configuration</h4>
 <div class="line">        <span class="stringliteral">&quot;ApiBaseAddress&quot;</span>: <span class="stringliteral">&quot;https://api.europe-west1.gcp.commercetools.com/&quot;</span>  <span class="comment">// replace if needed</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md20"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md18"></a>
 Getting instance of ApiRoot</h4>
 <p>you can use the instance inside the injected client or use ApiFactory to create a new instance.</p><ul>
 <li><code>Composable Commerce HTTP API</code>: <div class="fragment"><div class="line">var root1 = client.WithApi();</div>
@@ -189,7 +188,7 @@ Getting instance of ApiRoot</h4>
 <div class="line">var root2 = HistoryApiFactory.Create(client);</div>
 </div><!-- fragment --></li>
 </ul>
-<h4><a class="anchor" id="autotoc_md21"></a>
+<h4><a class="anchor" id="autotoc_md19"></a>
 Getting instance of ProjectApiRoot</h4>
 <p>The ProjectApiRoot is scoped to the projectKey in order to not have to provide the project for building requests. You can use the instance inside the injected client or use ApiFactory to create a new instance.</p>
 <ul>
@@ -207,7 +206,7 @@ Getting instance of ProjectApiRoot</h4>
 </div><!-- fragment --></li>
 </ul>
 <p>When using the UseCommercetools methods a ProjectApiRoot will be registered to the ServiceProvider using the project key given in the configuration</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Multiple Clients</h2>
 <p>It is possible to use more than one client in the same application with different token providers. The following code can be used to set it up 2 clients with the default ClientCredentials token provider:</p>
 <div class="fragment"><div class="line">services.UseCommercetoolsApi(configuration,</div>
@@ -224,7 +223,7 @@ Multiple Clients</h2>
 <div class="line">{</div>
 <div class="line">    var storeClient = clients.FirstOrDefault(c =&gt; c.Name.Equals(<span class="stringliteral">&quot;StoreClient&quot;</span>));</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
 Using SDK</h2>
 <p>SDK follows a builder pattern when creating requests. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources. The IClient interface can be used by injecting it and calling its ExecuteAsync method for different requests. </p><div class="fragment"><div class="line"><span class="keyword">private</span> readonly IClient client;</div>
 <div class="line"><span class="keyword">public</span> CategoryController(IClient client)</div>
@@ -303,7 +302,7 @@ Using SDK</h2>
 <div class="line">            .WithVersion(category.Version)</div>
 <div class="line">            .ExecuteAsync();</div>
 <div class="line">    }</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md22"></a>
 Creating a client using ClientFactory</h2>
 <p>You can get a client from injected services or you can create client on the fly using ClientFactory, the example below illustrate how to create a client with password TokenFlow to get customer's orders:</p>
 <div class="fragment"><div class="line"><span class="keyword">private</span> readonly IServiceProvider serviceProvider;</div>
@@ -357,22 +356,17 @@ Creating a client using ClientFactory</h2>
 <div class="line">                errorTypeMapper =&gt; typeof(ErrorResponse),</div>
 <div class="line">                s =&gt; s.GetService&lt;SerializerService&gt;()</div>
 <div class="line">            );</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
 Predicates</h2>
 <ul>
 <li><a class="el" href="d6/d45/md_docs_2_predicates.html">Query Predicate Builders</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md26"></a>
-GraphQL</h2>
-<ul>
-<li><a class="el" href="dc/da2/md_docs_2_graph_q_l.html">GraphQL package</a></li>
-</ul>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Migration Guidelines</h2>
 <p>To migrate from the 1.x to the 2.x, there is a guideline below:</p><ul>
 <li><a class="el" href="de/d55/md_docs_2_c_o_m_p_a_r_i_s_o_n.html">Migration guidelines from v1 to v2</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Documentation</h2>
 <ul>
 <li><a href="https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html">Documentation</a> </li>
