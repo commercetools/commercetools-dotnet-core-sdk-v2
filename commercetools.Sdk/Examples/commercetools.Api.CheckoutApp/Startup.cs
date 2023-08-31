@@ -27,12 +27,12 @@ namespace commercetools.Api.CheckoutApp
             Settings.ProjectKey = clientConfiguration.ProjectKey;
             Settings.DefaultCurrency = configuration.GetSection("DefaultCurrency").Value;
         }
-        
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            
+
             services.UseCommercetoolsScopedClient(configuration, "SPA-Client");
             services.AddScoped<InCookiesStoreManager>();
             services.AddScoped<InSessionStoreManager>();
@@ -52,10 +52,10 @@ namespace commercetools.Api.CheckoutApp
 
             // Note: Switch between Prometheus/OTLP/Console by setting UseMetricsExporter in appsettings.json.
             var metricsExporter = configuration.GetValue("UseMetricsExporter", defaultValue: "console")!.ToLowerInvariant();
-            
+
             // Note: Switch between Explicit/Exponential by setting HistogramAggregation in appsettings.json
             var histogramAggregation = configuration.GetValue("HistogramAggregation", defaultValue: "explicit")!.ToLowerInvariant();
-            
+
             services.AddSingleton<Instrumentation>();
 
             services.AddOpenTelemetry()

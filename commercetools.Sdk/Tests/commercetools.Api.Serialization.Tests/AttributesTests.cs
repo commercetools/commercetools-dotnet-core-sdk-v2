@@ -9,7 +9,6 @@ using commercetools.Sdk.Api.Models.Messages;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
-using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 
 namespace commercetools.Api.Serialization.Tests
 {

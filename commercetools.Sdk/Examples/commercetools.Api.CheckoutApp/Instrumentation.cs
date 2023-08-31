@@ -40,7 +40,7 @@ namespace commercetools.Api.CheckoutApp
         }
 
         public ActivitySource ActivitySource { get; }
-        
+
         public void Dispose()
         {
             this.ActivitySource.Dispose();
