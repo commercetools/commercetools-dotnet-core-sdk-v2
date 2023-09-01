@@ -42,9 +42,19 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage))]
     [SubTypeDiscriminator("CustomerAddressChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressChangedMessage))]
+    [SubTypeDiscriminator("CustomerAddressCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("CustomerAddressCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("CustomerAddressCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("CustomerAddressCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("CustomerAddressCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeSetMessage))]
     [SubTypeDiscriminator("CustomerAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage))]
     [SubTypeDiscriminator("CustomerCompanyNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessage))]
     [SubTypeDiscriminator("CustomerCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage))]
+    [SubTypeDiscriminator("CustomerCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("CustomerCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("CustomerCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("CustomerCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("CustomerCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeSetMessage))]
     [SubTypeDiscriminator("CustomerDateOfBirthSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage))]
     [SubTypeDiscriminator("CustomerDeleted", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage))]
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage))]
@@ -415,6 +425,36 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldAddedMessage CustomerAddressCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldChangedMessage CustomerAddressCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldRemovedMessage CustomerAddressCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeRemovedMessage CustomerAddressCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeSetMessage CustomerAddressCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage CustomerAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessage();
@@ -430,6 +470,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage CustomerCreated(Action<commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldAddedMessage CustomerCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldChangedMessage CustomerCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldRemovedMessage CustomerCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeRemovedMessage CustomerCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeSetMessage CustomerCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeSetMessage();
             init?.Invoke(t);
             return t;
         }
