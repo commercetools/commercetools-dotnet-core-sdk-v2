@@ -32,11 +32,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
         }
 
 
-        public ByProjectKeyMePaymentsKeyByKeyRequestBuilder WithKey(string key)
-        {
-            return new ByProjectKeyMePaymentsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
-        }
-
         public ByProjectKeyMePaymentsByIDRequestBuilder WithId(string ID)
         {
             return new ByProjectKeyMePaymentsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
