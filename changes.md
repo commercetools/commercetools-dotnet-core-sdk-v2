@@ -3,55 +3,42 @@
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `MethodExternalTaxRateDraft`
-- added type `QuoteRenegotiationRequestedMessage`
-- added type `QuoteRenegotiationRequestedMessagePayload`
+- added type `CustomerAddressCustomFieldAddedMessage`
+- added type `CustomerAddressCustomFieldChangedMessage`
+- added type `CustomerAddressCustomFieldRemovedMessage`
+- added type `CustomerAddressCustomTypeRemovedMessage`
+- added type `CustomerAddressCustomTypeSetMessage`
+- added type `CustomerCustomFieldAddedMessage`
+- added type `CustomerCustomFieldChangedMessage`
+- added type `CustomerCustomFieldRemovedMessage`
+- added type `CustomerCustomTypeRemovedMessage`
+- added type `CustomerCustomTypeSetMessage`
+- added type `CustomerAddressCustomFieldAddedMessagePayload`
+- added type `CustomerAddressCustomFieldChangedMessagePayload`
+- added type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added type `CustomerAddressCustomTypeSetMessagePayload`
+- added type `CustomerCustomFieldAddedMessagePayload`
+- added type `CustomerCustomFieldChangedMessagePayload`
+- added type `CustomerCustomFieldRemovedMessagePayload`
+- added type `CustomerCustomTypeRemovedMessagePayload`
+- added type `CustomerCustomTypeSetMessagePayload`
+- added type `CustomerMessagePayload`
 </details>
 
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Removed Method(s)</summary>
 
-- added property `perMethodExternalTaxRate` to type `LineItemDraft`
-- added property `cart` to type `QuoteRequest`
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().delete()`
 </details>
 
 
 <details>
-<summary>Removed Enum(s)</summary>
+<summary>Removed Resource(s)</summary>
 
-- :warning: removed enum `Failed` from type `QuoteState`
-</details>
-
-**Import changes**
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `canceled` to type `OperationStates`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `canceled` to type `ProcessingState`
-</details>
-
-**History changes**
-
-<details>
-<summary>Added QueryParameter(s)</summary>
-
-- added query parameter `associateId` to method `get /{projectKey}`
-- added query parameter `associateId` to method `get /{projectKey}/{resourceType}`
-- added query parameter `associateId` to method `get /{projectKey}/{resourceType}/{ID}`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `associate` to type `ModifiedBy`
+- :warning: removed resource `/{projectKey}/me/payments/key={key}`
 </details>
 
