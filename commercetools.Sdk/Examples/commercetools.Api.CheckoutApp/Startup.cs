@@ -1,5 +1,7 @@
 using System;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Net;
 using commercetools.Api.CheckoutApp.Extensions;
 using commercetools.Api.CheckoutApp.Services;
 using commercetools.Base.Client;
@@ -13,6 +15,7 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using OpenTelemetry.Instrumentation.AspNetCore;
 using OpenTelemetry.Metrics;
+using OpenTelemetry.ResourceDetectors.Container;
 
 namespace commercetools.Api.CheckoutApp
 {
@@ -68,8 +71,29 @@ namespace commercetools.Api.CheckoutApp
                         builder
                             .AddSource(Instrumentation.ActivitySourceName)
                             .SetSampler(new AlwaysOnSampler())
-                            .AddHttpClientInstrumentation()
-                            .AddAspNetCoreInstrumentation();
+                            .AddHttpClientInstrumentation(b =>
+                            {
+                                b.EnrichWithHttpRequestMessage = (activity, message) =>
+                                {
+                                    activity.DisplayName =
+                                        $"{message.Method.Method} {message.RequestUri?.Host}";
+                                };
+                                b.EnrichWithHttpResponseMessage = (activity, message) =>
+                                {
+                                    activity.SetStatus(message.StatusCode <= HttpStatusCode.BadRequest
+                                        ? ActivityStatusCode.Ok
+                                        : ActivityStatusCode.Error);
+                                };
+                            })
+                            .AddAspNetCoreInstrumentation(o =>
+                            {
+                                o.EnrichWithHttpResponse = (activity, response) =>
+                                {
+                                    activity.SetStatus(response.StatusCode <= 400
+                                        ? ActivityStatusCode.Ok
+                                        : ActivityStatusCode.Error);
+                                };
+                            });
 
                         // Use IConfiguration binding for AspNetCore instrumentation options.
                         services.Configure<AspNetCoreInstrumentationOptions>(
@@ -142,7 +166,12 @@ namespace commercetools.Api.CheckoutApp
                 });
         }
 
-        public static void ConfigureResource(ResourceBuilder r) => r.AddService(serviceName: "commercetools-checkout-demo", serviceVersion: typeof(Program).Assembly.GetName().Version?.ToString() ?? "unknown", serviceInstanceId: Environment.MachineName);
+        public static void ConfigureResource(ResourceBuilder r) => r
+            .AddTelemetrySdk()
+            .AddService(serviceName: "commercetools-checkout-service", serviceVersion: typeof(Program).Assembly.GetName().Version?.ToString() ?? "unknown", serviceInstanceId: Environment.MachineName)
+            .AddEnvironmentVariableDetector()
+            .AddDetector(new ContainerResourceDetector())
+        ;
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
