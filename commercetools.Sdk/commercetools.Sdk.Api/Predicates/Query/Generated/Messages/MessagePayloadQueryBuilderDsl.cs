@@ -352,12 +352,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerLastNameSetMessagePayloadQueryBuilderDsl.Of()),
                 MessagePayloadQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsCustomerMessagePayload(
-            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerMessagePayloadQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerMessagePayloadQueryBuilderDsl.Of()),
-                MessagePayloadQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsCustomerPasswordUpdated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerPasswordUpdatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerPasswordUpdatedMessagePayloadQueryBuilderDsl>> fn)
         {

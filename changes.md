@@ -23,7 +23,6 @@
 - added type `CustomerCustomFieldRemovedMessagePayload`
 - added type `CustomerCustomTypeRemovedMessagePayload`
 - added type `CustomerCustomTypeSetMessagePayload`
-- added type `CustomerMessagePayload`
 </details>
 
 
