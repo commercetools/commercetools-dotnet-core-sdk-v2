@@ -29,7 +29,7 @@ jobs:
 
       - uses: ssciwr/doxygen-install@022351b889a5d2639382a0d55a1834a413ec6a23
         with:
-          version: "1.9.7"
+          version: "1.9.8"
 
       - name: Generate Doxygen Documentation
         run: doxygen doxygen_config
