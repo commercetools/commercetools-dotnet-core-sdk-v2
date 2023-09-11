@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['highprecisionmoney_0',['HighPrecisionMoney',['../d5/da5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_high_precision_money.html',1,'commercetools.Sdk.Api.Models.Common.HighPrecisionMoney'],['../dc/d7a/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_high_precision_money.html',1,'commercetools.Sdk.ImportApi.Models.Common.HighPrecisionMoney']]],
+  ['highprecisionmoney_0',['highprecisionmoney',['../d5/da5/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_high_precision_money.html',1,'commercetools.Sdk.Api.Models.Common.HighPrecisionMoney'],['../dc/d7a/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_common_1_1_high_precision_money.html',1,'commercetools.Sdk.ImportApi.Models.Common.HighPrecisionMoney']]],
   ['highprecisionmoneydraft_1',['HighPrecisionMoneyDraft',['../db/daa/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_common_1_1_high_precision_money_draft.html',1,'commercetools::Sdk::Api::Models::Common']]],
   ['highprecisionmoneydraftquerybuilderdsl_2',['HighPrecisionMoneyDraftQueryBuilderDsl',['../d8/d15/classcommercetools_1_1_sdk_1_1_api_1_1_predicates_1_1_query_1_1_common_1_1_high_precision_money_draft_query_builder_dsl.html',1,'commercetools::Sdk::Api::Predicates::Query::Common']]],
   ['highprecisionmoneyquerybuilderdsl_3',['HighPrecisionMoneyQueryBuilderDsl',['../d8/d66/classcommercetools_1_1_sdk_1_1_api_1_1_predicates_1_1_query_1_1_common_1_1_high_precision_money_query_builder_dsl.html',1,'commercetools::Sdk::Api::Predicates::Query::Common']]],
