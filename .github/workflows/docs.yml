@@ -38,7 +38,7 @@ jobs:
         env:
           PROJECT_NUMBER: ${{ github.ref_name }}
           
-      - run: rm -r build_docs/html/**/*-members.html
+      - run: find . -type f -name '*-members.html' -exec rm -f {} +
         working-directory: sdk
         shell: bash
 
