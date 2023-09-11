@@ -37,6 +37,10 @@ jobs:
         working-directory: sdk
         env:
           PROJECT_NUMBER: ${{ github.ref_name }}
+          
+      - run: rm -r build_docs/html/**/*-members.html
+        working-directory: sdk
+        shell: bash
 
       - run: rsync -r --delete ./sdk/build_docs/ ./doc/docs
 
