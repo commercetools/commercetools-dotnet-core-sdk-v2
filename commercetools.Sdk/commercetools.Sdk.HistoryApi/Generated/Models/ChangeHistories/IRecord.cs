@@ -35,6 +35,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         IEnumerable<IKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
 
+        IKeyReference BusinessUnit { get; set; }
+
         bool WithoutChanges { get; set; }
 
     }
