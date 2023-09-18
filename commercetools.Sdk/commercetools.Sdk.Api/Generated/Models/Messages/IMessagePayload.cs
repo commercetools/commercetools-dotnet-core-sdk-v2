@@ -69,6 +69,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessagePayload))]
     [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupSetMessagePayload))]
     [SubTypeDiscriminator("CustomerLastNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessagePayload))]
     [SubTypeDiscriminator("CustomerPasswordUpdated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload))]
@@ -580,6 +585,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload CustomerGroupCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload CustomerGroupCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload CustomerGroupCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload CustomerGroupCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload CustomerGroupCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
