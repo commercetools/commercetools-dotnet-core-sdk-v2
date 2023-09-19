@@ -6,6 +6,18 @@ namespace commercetools.Sdk.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Messages.MessagePayload))]
+    [SubTypeDiscriminator("ApprovalFlowApproved", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessagePayload))]
+    [SubTypeDiscriminator("ApprovalFlowCompleted", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessagePayload))]
+    [SubTypeDiscriminator("ApprovalFlowCreated", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessagePayload))]
+    [SubTypeDiscriminator("ApprovalFlowRejected", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleApproversSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleCreated", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleDescriptionSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleNameSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRulePredicateSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleRequestersSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessagePayload))]
+    [SubTypeDiscriminator("ApprovalRuleStatusSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessagePayload))]
     [SubTypeDiscriminator("AssociateRoleBuyerAssignableChanged", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload))]
     [SubTypeDiscriminator("AssociateRoleCreated", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload))]
     [SubTypeDiscriminator("AssociateRoleDeleted", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload))]
@@ -15,6 +27,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("AssociateRolePermissionsSet", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressAddedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitAddressCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressRemovedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAssociateAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateAddedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitAssociateChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitAssociateChangedMessagePayload))]
@@ -25,6 +42,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitBillingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitContactEmailSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitCreated", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldAddedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldChangedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeRemovedMessagePayload))]
+    [SubTypeDiscriminator("BusinessUnitCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitDefaultBillingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultBillingAddressSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDefaultShippingAddressSetMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitDeleted", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitDeletedMessagePayload))]
@@ -59,6 +81,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessagePayload))]
     [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupSetMessagePayload))]
     [SubTypeDiscriminator("CustomerLastNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessagePayload))]
     [SubTypeDiscriminator("CustomerPasswordUpdated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload))]
@@ -195,6 +222,78 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string Type { get; set; }
 
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessagePayload ApprovalFlowApproved(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessagePayload ApprovalFlowCompleted(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessagePayload ApprovalFlowCreated(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessagePayload ApprovalFlowRejected(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessagePayload ApprovalRuleApproversSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessagePayload ApprovalRuleCreated(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessagePayload ApprovalRuleDescriptionSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessagePayload ApprovalRuleKeySet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessagePayload ApprovalRuleNameSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessagePayload ApprovalRulePredicateSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessagePayload ApprovalRuleRequestersSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessagePayload ApprovalRuleStatusSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload AssociateRoleBuyerAssignableChanged(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload();
@@ -246,6 +345,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload BusinessUnitAddressChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldAddedMessagePayload BusinessUnitAddressCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldChangedMessagePayload BusinessUnitAddressCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldRemovedMessagePayload BusinessUnitAddressCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomFieldRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeRemovedMessagePayload BusinessUnitAddressCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeSetMessagePayload BusinessUnitAddressCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitAddressCustomTypeSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
@@ -306,6 +435,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload BusinessUnitCreated(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldAddedMessagePayload BusinessUnitCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldChangedMessagePayload BusinessUnitCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldRemovedMessagePayload BusinessUnitCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeRemovedMessagePayload BusinessUnitCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeSetMessagePayload BusinessUnitCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomTypeSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
@@ -510,6 +669,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload CustomerGroupCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload CustomerGroupCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload CustomerGroupCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload CustomerGroupCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload CustomerGroupCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomTypeSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

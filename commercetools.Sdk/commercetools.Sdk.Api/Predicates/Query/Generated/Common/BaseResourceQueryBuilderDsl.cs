@@ -40,6 +40,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsApprovalFlow(
+            Func<commercetools.Sdk.Api.Predicates.Query.ApprovalFlows.ApprovalFlowQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ApprovalFlows.ApprovalFlowQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ApprovalFlows.ApprovalFlowQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsApprovalRule(
+            Func<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsAssociateRole(
             Func<commercetools.Sdk.Api.Predicates.Query.AssociateRoles.AssociateRoleQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.AssociateRoles.AssociateRoleQueryBuilderDsl>> fn)
         {

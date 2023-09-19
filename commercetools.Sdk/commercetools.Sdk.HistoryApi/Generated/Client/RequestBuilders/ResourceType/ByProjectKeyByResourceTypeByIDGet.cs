@@ -75,6 +75,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("associateId");
         }
 
+        public List<string> GetBusinessUnit()
+        {
+            return this.GetQueryParam("businessUnit");
+        }
+
         public List<string> GetType()
         {
             return this.GetQueryParam("type");
@@ -143,6 +148,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
         public ByProjectKeyByResourceTypeByIDGet WithAssociateId(string associateId)
         {
             return this.AddQueryParam("associateId", associateId);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithBusinessUnit(string businessUnit)
+        {
+            return this.AddQueryParam("businessUnit", businessUnit);
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithType(string type)
