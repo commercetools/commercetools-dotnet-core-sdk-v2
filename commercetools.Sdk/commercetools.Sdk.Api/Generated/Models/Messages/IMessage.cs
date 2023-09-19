@@ -7,6 +7,18 @@ namespace commercetools.Sdk.Api.Models.Messages
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Messages.Message))]
+    [SubTypeDiscriminator("ApprovalFlowApproved", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessage))]
+    [SubTypeDiscriminator("ApprovalFlowCompleted", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessage))]
+    [SubTypeDiscriminator("ApprovalFlowCreated", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessage))]
+    [SubTypeDiscriminator("ApprovalFlowRejected", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessage))]
+    [SubTypeDiscriminator("ApprovalRuleApproversSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessage))]
+    [SubTypeDiscriminator("ApprovalRuleCreated", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessage))]
+    [SubTypeDiscriminator("ApprovalRuleDescriptionSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessage))]
+    [SubTypeDiscriminator("ApprovalRuleKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessage))]
+    [SubTypeDiscriminator("ApprovalRuleNameSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessage))]
+    [SubTypeDiscriminator("ApprovalRulePredicateSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessage))]
+    [SubTypeDiscriminator("ApprovalRuleRequestersSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessage))]
+    [SubTypeDiscriminator("ApprovalRuleStatusSet", typeof(commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessage))]
     [SubTypeDiscriminator("AssociateRoleBuyerAssignableChanged", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessage))]
     [SubTypeDiscriminator("AssociateRoleCreated", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessage))]
     [SubTypeDiscriminator("AssociateRoleDeleted", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessage))]
@@ -230,6 +242,78 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessage ApprovalFlowApproved(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowApprovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessage ApprovalFlowCompleted(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowCompletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessage ApprovalFlowCreated(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessage ApprovalFlowRejected(Action<commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalFlowRejectedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessage ApprovalRuleApproversSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleApproversSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessage ApprovalRuleCreated(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessage ApprovalRuleDescriptionSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleDescriptionSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessage ApprovalRuleKeySet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleKeySetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessage ApprovalRuleNameSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessage ApprovalRulePredicateSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRulePredicateSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessage ApprovalRuleRequestersSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleRequestersSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessage ApprovalRuleStatusSet(Action<commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ApprovalRuleStatusSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessage AssociateRoleBuyerAssignableChanged(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessage();

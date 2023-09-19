@@ -116,7 +116,16 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         CreateMyQuoteRequestsFromMyCarts,
 
         [Description("CreateQuoteRequestsFromOthersCarts")]
-        CreateQuoteRequestsFromOthersCarts
+        CreateQuoteRequestsFromOthersCarts,
+
+        [Description("CreateApprovalRules")]
+        CreateApprovalRules,
+
+        [Description("UpdateApprovalRules")]
+        UpdateApprovalRules,
+
+        [Description("UpdateApprovalFlows")]
+        UpdateApprovalFlows
     }
 
     public class PermissionWrapper : IPermission
@@ -250,6 +259,15 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public static IPermission CreateQuoteRequestsFromOthersCarts = new PermissionWrapper
         { Value = Permission.CreateQuoteRequestsFromOthersCarts, JsonName = "CreateQuoteRequestsFromOthersCarts" };
 
+        public static IPermission CreateApprovalRules = new PermissionWrapper
+        { Value = Permission.CreateApprovalRules, JsonName = "CreateApprovalRules" };
+
+        public static IPermission UpdateApprovalRules = new PermissionWrapper
+        { Value = Permission.UpdateApprovalRules, JsonName = "UpdateApprovalRules" };
+
+        public static IPermission UpdateApprovalFlows = new PermissionWrapper
+        { Value = Permission.UpdateApprovalFlows, JsonName = "UpdateApprovalFlows" };
+
         Permission? Value { get; }
 
         static IPermission[] Values()
@@ -291,7 +309,10 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
                  UpdateMyQuoteRequests ,
                  UpdateOthersQuoteRequests ,
                  CreateMyQuoteRequestsFromMyCarts ,
-                 CreateQuoteRequestsFromOthersCarts
+                 CreateQuoteRequestsFromOthersCarts ,
+                 CreateApprovalRules ,
+                 UpdateApprovalRules ,
+                 UpdateApprovalFlows
              };
         }
         static IPermission FindEnum(string value)
