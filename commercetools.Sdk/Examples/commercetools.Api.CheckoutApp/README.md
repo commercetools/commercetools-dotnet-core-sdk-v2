@@ -54,7 +54,7 @@ Setting the exporter options to `otlp` will send the data to a local OTLP endpoi
 make sure to have a OpenTelemetry collector listening. You can override the endpoint address by configuring
 `Otlp:Endpoint` in your appsettings.json file.
 
-This repository includes a [docker compose setup](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/tree/master/otel) for starting a local OpenTelemetry
+The [OpenTelemetry collector example](https://github.com/commercetools/opentelemetry-collector-example) repository includes a docker compose setup for starting a local OpenTelemetry
 collector in combination with Prometheus, Grafana, JaegerUI and NewRelic as exporter target.
 
 
