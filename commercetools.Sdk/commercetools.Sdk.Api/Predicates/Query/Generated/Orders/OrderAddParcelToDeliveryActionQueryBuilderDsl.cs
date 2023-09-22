@@ -70,6 +70,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CollectionPredicateBuilder<OrderAddParcelToDeliveryActionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("items")),
                     p => new CombinationQueryPredicate<OrderAddParcelToDeliveryActionQueryBuilderDsl>(p, OrderAddParcelToDeliveryActionQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<OrderAddParcelToDeliveryActionQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderAddParcelToDeliveryActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl.Of())),
+                OrderAddParcelToDeliveryActionQueryBuilderDsl.Of);
+        }
+
 
     }
 }
