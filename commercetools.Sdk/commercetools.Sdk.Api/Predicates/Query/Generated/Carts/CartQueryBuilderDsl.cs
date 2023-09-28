@@ -149,6 +149,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartQueryBuilderDsl> DiscountOnTotalPrice(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountOnTotalPriceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountOnTotalPriceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("discountOnTotalPrice"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountOnTotalPriceQueryBuilderDsl.Of())),
+                CartQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<CartQueryBuilderDsl, string> TaxMode()
         {
             return new ComparisonPredicateBuilder<CartQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxMode")),
