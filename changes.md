@@ -19,3 +19,11 @@
 - added type `DiscountedTotalPricePortion`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `product` to type `ProductVariantPatch`
+</details>
+
