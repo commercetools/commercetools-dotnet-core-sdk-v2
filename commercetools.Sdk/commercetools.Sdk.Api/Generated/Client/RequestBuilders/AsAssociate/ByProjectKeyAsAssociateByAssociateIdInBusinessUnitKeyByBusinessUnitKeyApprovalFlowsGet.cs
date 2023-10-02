@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -11,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
 {
 
-    public partial class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet : ApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, IApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet, Object>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>
+    public partial class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet : ApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, IApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet, commercetools.Sdk.Api.Models.ApprovalFlows.IApprovalFlowPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>
     {
 
 
@@ -100,11 +99,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<Object> ExecuteAsync(CancellationToken cancellationToken = default)
+        public async Task<commercetools.Sdk.Api.Models.ApprovalFlows.IApprovalFlowPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Object>(requestMessage, cancellationToken);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ApprovalFlows.IApprovalFlowPagedQueryResponse>(requestMessage, cancellationToken);
 
         }
 
@@ -114,11 +113,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
         }
 
-        public async Task<IApiResponse<Object>> SendAsync(CancellationToken cancellationToken = default)
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.ApprovalFlows.IApprovalFlowPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.SendAsync<Object>(requestMessage, cancellationToken);
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.ApprovalFlows.IApprovalFlowPagedQueryResponse>(requestMessage, cancellationToken);
 
         }
 

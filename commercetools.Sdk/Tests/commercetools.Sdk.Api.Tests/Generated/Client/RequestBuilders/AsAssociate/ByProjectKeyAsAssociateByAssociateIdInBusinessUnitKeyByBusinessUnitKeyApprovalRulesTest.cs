@@ -26,31 +26,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AsAssociate
                    .WithAssociateIdValue("test_associateId")
                    .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                    .ApprovalRules()
-                   .Post(null)
-                   .WithExpand("expand")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .AsAssociate()
-                   .WithAssociateIdValue("test_associateId")
-                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                   .ApprovalRules()
-                   .Post(null)
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .AsAssociate()
-                   .WithAssociateIdValue("test_associateId")
-                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                   .ApprovalRules()
                    .Get()
                    .WithExpand("expand")
                    .Build(),
@@ -145,6 +120,31 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AsAssociate
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .ApprovalRules()
+                   .Post(null)
+                   .WithExpand("expand")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .ApprovalRules()
+                   .Post(null)
+                   .Build(),
+                   "Post",
                    "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules",
                }
        };

@@ -27,14 +27,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.BusinessUnitKey = businessUnitKey;
         }
 
-        public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost Post(commercetools.Sdk.Api.Models.ApprovalRules.IApprovalRuleDraft approvalRuleDraft)
-        {
-            return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost(ApiHttpClient, SerializerService, ProjectKey, AssociateId, BusinessUnitKey, approvalRuleDraft);
-        }
-
         public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet Get()
         {
             return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet(ApiHttpClient, ProjectKey, AssociateId, BusinessUnitKey);
+        }
+
+        public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost Post(commercetools.Sdk.Api.Models.ApprovalRules.IApprovalRuleDraft approvalRuleDraft)
+        {
+            return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost(ApiHttpClient, SerializerService, ProjectKey, AssociateId, BusinessUnitKey, approvalRuleDraft);
         }
 
 
