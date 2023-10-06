@@ -11,13 +11,17 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {
     public class AttributeTypeRetriever
     {
-        private readonly ICultureValidator _cultureValidator;
         private readonly ISerializationConfiguration _serializationConfiguration;
 
-        public AttributeTypeRetriever(ICultureValidator cultureValidator, ISerializationConfiguration serializationConfiguration = null)
+        public AttributeTypeRetriever(ISerializationConfiguration serializationConfiguration = null)
         {
-            this._cultureValidator = cultureValidator;
             this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
+        }
+
+        [Obsolete("use constructor without cultureValidator")]
+        public AttributeTypeRetriever(ICultureValidator cultureValidator,
+            ISerializationConfiguration serializationConfiguration = null) : this(serializationConfiguration)
+        {
         }
 
         private Type GetTypeForToken(JsonElement element)
@@ -56,10 +60,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(MoneyAttribute);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(ReferenceAttribute);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedStringAttribute);
-                    else
+                    else if (element.IsNestedElement())
                         tokenType = typeof(Attribute);
+                    else
+                        tokenType = typeof(LocalizedStringAttribute);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();
@@ -114,12 +118,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(ITypedMoney);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(IReference);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedString);
                     else if (element.IsNestedElement())
                         tokenType = typeof(IAttribute);
                     else
-                        tokenType = typeof(object);
+                        tokenType = typeof(LocalizedString);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();

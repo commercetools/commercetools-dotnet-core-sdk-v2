@@ -69,9 +69,9 @@ namespace commercetools.Sdk.Api
             services.UseRegistration();
             services.UseSerialization();
             services.AddSingleton(serializationConfiguration ?? SerializationConfiguration.DefaultConfig);
-            services.AddSingleton<IMapperTypeRetriever<IFieldContainer>, FieldMapperTypeRetriever>();
-            services.AddSingleton<IMapperTypeRetriever<IAttribute>, AttributeMapperTypeRetriever>();
-            services.AddSingleton<AttributeTypeRetriever>();
+            services.AddSingleton<IMapperTypeRetriever<IFieldContainer>>(new FieldMapperTypeRetriever());
+            services.AddSingleton<IMapperTypeRetriever<IAttribute>>(new AttributeMapperTypeRetriever());
+            services.AddSingleton(new AttributeTypeRetriever());
             services.AddSingleton<SerializerService>();
             services.AddSingleton<IApiSerializerService, SerializerService>();
         }
