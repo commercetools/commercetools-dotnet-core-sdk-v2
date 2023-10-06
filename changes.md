@@ -27,6 +27,10 @@
 - added type `CartDiscountTotalPriceTarget`
 - added type `DiscountOnTotalPrice`
 - added type `DiscountedTotalPricePortion`
+- added type `CustomerEmailTokenCreatedMessage`
+- added type `CustomerPasswordTokenCreatedMessage`
+- added type `CustomerEmailTokenCreatedMessagePayload`
+- added type `CustomerPasswordTokenCreatedMessagePayload`
 </details>
 
 **Import changes**
