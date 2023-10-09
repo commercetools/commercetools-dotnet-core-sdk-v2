@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("multiBuyCustomLineItems", typeof(commercetools.Sdk.Api.Models.CartDiscounts.MultiBuyCustomLineItemsTarget))]
     [SubTypeDiscriminator("multiBuyLineItems", typeof(commercetools.Sdk.Api.Models.CartDiscounts.MultiBuyLineItemsTarget))]
     [SubTypeDiscriminator("shipping", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountShippingCostTarget))]
+    [SubTypeDiscriminator("totalPrice", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountTotalPriceTarget))]
     public partial interface ICartDiscountTarget
     {
         string Type { get; set; }
@@ -42,6 +43,12 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountShippingCostTarget Shipping(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountShippingCostTarget> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountShippingCostTarget();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountTotalPriceTarget TotalPrice(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountTotalPriceTarget> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountTotalPriceTarget();
             init?.Invoke(t);
             return t;
         }

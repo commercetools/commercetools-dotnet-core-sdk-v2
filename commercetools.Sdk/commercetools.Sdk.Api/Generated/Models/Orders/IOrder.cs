@@ -52,6 +52,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         ITaxedPrice TaxedShippingPrice { get; set; }
 
+        IDiscountOnTotalPrice DiscountOnTotalPrice { get; set; }
+
         ITaxMode TaxMode { get; set; }
 
         IRoundingMode TaxRoundingMode { get; set; }

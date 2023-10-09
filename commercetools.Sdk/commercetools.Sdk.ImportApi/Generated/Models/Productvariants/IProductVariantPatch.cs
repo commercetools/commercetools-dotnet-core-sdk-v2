@@ -13,5 +13,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         bool? Staged { get; set; }
 
+        IProductKeyReference Product { get; set; }
+
     }
 }

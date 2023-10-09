@@ -40,6 +40,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             return new CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountShippingCostTargetQueryBuilderDsl.Of()),
                 CartDiscountTargetQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> AsTotalPrice(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountTotalPriceTargetQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountTotalPriceTargetQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountTotalPriceTargetQueryBuilderDsl.Of()),
+                CartDiscountTargetQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> AsMultiBuyCustomLineItems(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.MultiBuyCustomLineItemsTargetQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.MultiBuyCustomLineItemsTargetQueryBuilderDsl>> fn)
         {
