@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using commercetools.Sdk.Api.Models.Common;
@@ -11,13 +12,16 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {
     public class AttributeMapperTypeRetriever : MapperTypeRetriever<IAttribute>
     {
-        private readonly ICultureValidator _cultureValidator;
         private readonly ISerializationConfiguration _serializationConfiguration;
 
-        public AttributeMapperTypeRetriever(ICultureValidator cultureValidator, ISerializationConfiguration serializationConfiguration = null)
+        public AttributeMapperTypeRetriever(ISerializationConfiguration serializationConfiguration = null)
         {
-            this._cultureValidator = cultureValidator;
             this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
+        }
+
+        [Obsolete("use constructor without cultureValidator")]
+        public AttributeMapperTypeRetriever(ICultureValidator cultureValidator, ISerializationConfiguration serializationConfiguration = null) : this(serializationConfiguration)
+        {
         }
 
         public override Type GetTypeForToken(JsonElement element)
@@ -56,12 +60,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(ITypedMoney);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(IReference);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedString);
                     else if (element.IsNestedElement())
                         tokenType = typeof(IAttribute);
                     else
-                        tokenType = typeof(object);
+                        tokenType = typeof(LocalizedString);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();
