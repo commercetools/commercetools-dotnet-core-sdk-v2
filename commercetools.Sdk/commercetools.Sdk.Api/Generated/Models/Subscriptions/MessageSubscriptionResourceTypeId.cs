@@ -22,6 +22,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("customer")]
         Customer,
 
+        [Description("customer-email-token")]
+        CustomerEmailToken,
+
+        [Description("customer-group")]
+        CustomerGroup,
+
+        [Description("customer-password-token")]
+        CustomerPasswordToken,
+
         [Description("inventory-entry")]
         InventoryEntry,
 
@@ -91,6 +100,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IMessageSubscriptionResourceTypeId Customer = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.Customer, JsonName = "customer" };
 
+        public static IMessageSubscriptionResourceTypeId CustomerEmailToken = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerEmailToken, JsonName = "customer-email-token" };
+
+        public static IMessageSubscriptionResourceTypeId CustomerGroup = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerGroup, JsonName = "customer-group" };
+
+        public static IMessageSubscriptionResourceTypeId CustomerPasswordToken = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerPasswordToken, JsonName = "customer-password-token" };
+
         public static IMessageSubscriptionResourceTypeId InventoryEntry = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.InventoryEntry, JsonName = "inventory-entry" };
 
@@ -134,6 +152,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  BusinessUnit ,
                  Category ,
                  Customer ,
+                 CustomerEmailToken ,
+                 CustomerGroup ,
+                 CustomerPasswordToken ,
                  InventoryEntry ,
                  Order ,
                  Payment ,
