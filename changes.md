@@ -188,3 +188,12 @@
 - added type `CustomerPasswordTokenReference`
 </details>
 
+**History changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `previousValue` of type `SetNameChange` from type `LocalizedString` to `string`
+- :warning: changed property `nextValue` of type `SetNameChange` from type `LocalizedString` to `string`
+</details>
+

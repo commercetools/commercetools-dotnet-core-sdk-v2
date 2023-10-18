@@ -1,4 +1,3 @@
-using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -11,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ILocalizedString PreviousValue { get; set; }
+        string PreviousValue { get; set; }
 
-        ILocalizedString NextValue { get; set; }
+        string NextValue { get; set; }
 
     }
 }
