@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Payments
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Payments()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/payments?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Payments()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/payments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Payments()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

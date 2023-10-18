@@ -30,6 +30,14 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Projects
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
                    .Post(null)
                    .Build(),
                    "Post",

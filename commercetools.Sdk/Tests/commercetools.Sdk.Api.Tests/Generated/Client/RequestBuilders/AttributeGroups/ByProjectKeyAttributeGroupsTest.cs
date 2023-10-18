@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AttributeGroups
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .AttributeGroups()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/attribute-groups?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AttributeGroups()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/attribute-groups",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AttributeGroups()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

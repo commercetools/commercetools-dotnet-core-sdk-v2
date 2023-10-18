@@ -111,6 +111,27 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .WithProjectKey("test_projectKey")
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .Orders()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/orders?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Orders()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/orders",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Orders()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

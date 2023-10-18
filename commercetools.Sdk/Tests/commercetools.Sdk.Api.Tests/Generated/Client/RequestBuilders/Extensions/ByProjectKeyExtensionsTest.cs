@@ -92,6 +92,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Extensions()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/extensions?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Extensions()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/extensions",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Extensions()
                    .Post(null)
                    .Build(),
                    "Post",

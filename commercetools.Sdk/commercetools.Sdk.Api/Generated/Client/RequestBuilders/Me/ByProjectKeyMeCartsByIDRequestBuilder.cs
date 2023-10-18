@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeCartsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyMeCartsByIDHead Head()
+        {
+            return new ByProjectKeyMeCartsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyMeCartsByIDPost Post(commercetools.Sdk.Api.Models.Me.IMyCartUpdate myCartUpdate)
         {
             return new ByProjectKeyMeCartsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, myCartUpdate);

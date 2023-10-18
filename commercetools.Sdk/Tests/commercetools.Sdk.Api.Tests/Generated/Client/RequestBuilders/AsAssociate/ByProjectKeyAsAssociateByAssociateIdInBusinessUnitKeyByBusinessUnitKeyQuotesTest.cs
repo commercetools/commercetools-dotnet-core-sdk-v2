@@ -121,6 +121,31 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AsAssociate
                    .Build(),
                    "Get",
                    "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .Quotes()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .Quotes()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes",
                }
        };
         }

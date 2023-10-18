@@ -45,6 +45,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Types
                    .WithProjectKey("test_projectKey")
                    .Types()
                    .WithKey("test_key")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/types/key=test_key",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Types()
+                   .WithKey("test_key")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.StagedQuotes
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .StagedQuotes()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/staged-quotes?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .StagedQuotes()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/staged-quotes",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .StagedQuotes()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

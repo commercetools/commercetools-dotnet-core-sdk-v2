@@ -48,6 +48,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Me()
                    .Carts()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/carts/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .Carts()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

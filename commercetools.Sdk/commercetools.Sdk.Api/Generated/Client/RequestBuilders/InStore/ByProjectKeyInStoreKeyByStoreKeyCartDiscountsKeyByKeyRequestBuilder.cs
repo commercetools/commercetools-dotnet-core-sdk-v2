@@ -32,6 +32,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyGet(ApiHttpClient, ProjectKey, StoreKey, Key);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyHead(ApiHttpClient, ProjectKey, StoreKey, Key);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyPost Post(commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountUpdate cartDiscountUpdate)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, Key, cartDiscountUpdate);

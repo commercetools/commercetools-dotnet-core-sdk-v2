@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductSelections
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ProductSelections()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/product-selections?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductSelections()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/product-selections",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductSelections()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

@@ -45,6 +45,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Orders
                    .WithProjectKey("test_projectKey")
                    .Orders()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/orders/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Orders()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

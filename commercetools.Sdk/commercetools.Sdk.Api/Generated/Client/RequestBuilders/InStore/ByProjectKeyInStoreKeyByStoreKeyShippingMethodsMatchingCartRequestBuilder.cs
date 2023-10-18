@@ -29,5 +29,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(ApiHttpClient, ProjectKey, StoreKey);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead(ApiHttpClient, ProjectKey, StoreKey);
+        }
+
     }
 }

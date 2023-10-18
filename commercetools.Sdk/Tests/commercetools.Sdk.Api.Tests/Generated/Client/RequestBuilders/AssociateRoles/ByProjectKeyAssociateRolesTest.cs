@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AssociateRoles
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .AssociateRoles()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/associate-roles?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AssociateRoles()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/associate-roles",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AssociateRoles()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

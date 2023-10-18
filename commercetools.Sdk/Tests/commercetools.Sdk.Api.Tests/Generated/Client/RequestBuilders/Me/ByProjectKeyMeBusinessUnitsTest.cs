@@ -111,6 +111,27 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .WithProjectKey("test_projectKey")
                    .Me()
                    .BusinessUnits()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/business-units?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .BusinessUnits()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/business-units",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .BusinessUnits()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

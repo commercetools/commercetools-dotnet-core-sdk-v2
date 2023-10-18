@@ -34,6 +34,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/subscriptions/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Subscriptions()
+                   .WithId("test_ID")
                    .Post(null)
                    .Build(),
                    "Post",

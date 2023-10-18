@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomerGroups
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomerGroups()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/customer-groups?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomerGroups()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/customer-groups",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomerGroups()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

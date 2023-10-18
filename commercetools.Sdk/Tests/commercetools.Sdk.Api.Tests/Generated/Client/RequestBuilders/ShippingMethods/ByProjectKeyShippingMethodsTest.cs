@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShippingMethods()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

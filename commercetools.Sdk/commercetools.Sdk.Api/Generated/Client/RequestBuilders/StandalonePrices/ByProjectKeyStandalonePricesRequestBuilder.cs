@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             return new ByProjectKeyStandalonePricesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyStandalonePricesHead Head()
+        {
+            return new ByProjectKeyStandalonePricesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyStandalonePricesPost Post(commercetools.Sdk.Api.Models.StandalonePrices.IStandalonePriceDraft standalonePriceDraft)
         {
             return new ByProjectKeyStandalonePricesPost(ApiHttpClient, SerializerService, ProjectKey, standalonePriceDraft);

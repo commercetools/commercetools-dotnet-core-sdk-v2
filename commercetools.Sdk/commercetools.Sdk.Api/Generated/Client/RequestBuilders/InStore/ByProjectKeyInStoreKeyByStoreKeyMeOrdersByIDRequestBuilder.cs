@@ -32,5 +32,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(ApiHttpClient, ProjectKey, StoreKey, ID);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead(ApiHttpClient, ProjectKey, StoreKey, ID);
+        }
+
     }
 }

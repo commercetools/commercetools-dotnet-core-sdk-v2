@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
             return new ByProjectKeyProductSelectionsGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyProductSelectionsHead Head()
+        {
+            return new ByProjectKeyProductSelectionsHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyProductSelectionsPost Post(commercetools.Sdk.Api.Models.ProductSelections.IProductSelectionDraft productSelectionDraft)
         {
             return new ByProjectKeyProductSelectionsPost(ApiHttpClient, SerializerService, ProjectKey, productSelectionDraft);

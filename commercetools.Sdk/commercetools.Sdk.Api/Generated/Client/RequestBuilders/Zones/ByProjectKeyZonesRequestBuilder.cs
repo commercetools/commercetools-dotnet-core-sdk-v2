@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             return new ByProjectKeyZonesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyZonesHead Head()
+        {
+            return new ByProjectKeyZonesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyZonesPost Post(commercetools.Sdk.Api.Models.Zones.IZoneDraft zoneDraft)
         {
             return new ByProjectKeyZonesPost(ApiHttpClient, SerializerService, ProjectKey, zoneDraft);

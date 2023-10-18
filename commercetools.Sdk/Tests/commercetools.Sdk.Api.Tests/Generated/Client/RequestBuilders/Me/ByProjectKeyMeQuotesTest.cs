@@ -105,6 +105,27 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Build(),
                    "Get",
                    "/test_projectKey/me/quotes",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .Quotes()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/quotes?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .Quotes()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/quotes",
                }
        };
         }

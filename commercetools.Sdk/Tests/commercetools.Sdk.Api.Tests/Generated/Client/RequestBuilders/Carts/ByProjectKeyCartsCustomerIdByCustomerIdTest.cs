@@ -39,6 +39,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Carts
                    .Build(),
                    "Get",
                    "/test_projectKey/carts/customer-id=test_customerId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Carts()
+                   .WithCustomerId("test_customerId")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/carts/customer-id=test_customerId",
                }
        };
         }

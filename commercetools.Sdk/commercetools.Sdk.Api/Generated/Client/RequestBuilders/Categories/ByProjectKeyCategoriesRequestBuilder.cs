@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
             return new ByProjectKeyCategoriesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyCategoriesHead Head()
+        {
+            return new ByProjectKeyCategoriesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyCategoriesPost Post(commercetools.Sdk.Api.Models.Categories.ICategoryDraft categoryDraft)
         {
             return new ByProjectKeyCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, categoryDraft);

@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeBusinessUnitsGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyMeBusinessUnitsHead Head()
+        {
+            return new ByProjectKeyMeBusinessUnitsHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyMeBusinessUnitsPost Post(commercetools.Sdk.Api.Models.Me.IMyBusinessUnitDraft myBusinessUnitDraft)
         {
             return new ByProjectKeyMeBusinessUnitsPost(ApiHttpClient, SerializerService, ProjectKey, myBusinessUnitDraft);

@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             return new ByProjectKeyStagedQuotesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
+        public ByProjectKeyStagedQuotesKeyByKeyHead Head()
+        {
+            return new ByProjectKeyStagedQuotesKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
+        }
+
         public ByProjectKeyStagedQuotesKeyByKeyPost Post(commercetools.Sdk.Api.Models.StagedQuotes.IStagedQuoteUpdate stagedQuoteUpdate)
         {
             return new ByProjectKeyStagedQuotesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, stagedQuoteUpdate);

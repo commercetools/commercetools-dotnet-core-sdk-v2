@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             return new ByProjectKeyAssociateRolesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyAssociateRolesHead Head()
+        {
+            return new ByProjectKeyAssociateRolesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyAssociateRolesPost Post(commercetools.Sdk.Api.Models.AssociateRoles.IAssociateRoleDraft associateRoleDraft)
         {
             return new ByProjectKeyAssociateRolesPost(ApiHttpClient, SerializerService, ProjectKey, associateRoleDraft);

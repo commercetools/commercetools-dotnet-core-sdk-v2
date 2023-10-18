@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
             return new ByProjectKeyAttributeGroupsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyAttributeGroupsByIDHead Head()
+        {
+            return new ByProjectKeyAttributeGroupsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyAttributeGroupsByIDPost Post(commercetools.Sdk.Api.Models.AttributeGroups.IAttributeGroupUpdate attributeGroupUpdate)
         {
             return new ByProjectKeyAttributeGroupsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, attributeGroupUpdate);

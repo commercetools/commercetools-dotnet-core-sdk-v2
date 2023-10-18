@@ -92,6 +92,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/subscriptions?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Subscriptions()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/subscriptions",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Subscriptions()
                    .Post(null)
                    .Build(),
                    "Post",

@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             return new ByProjectKeyBusinessUnitsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyBusinessUnitsByIDHead Head()
+        {
+            return new ByProjectKeyBusinessUnitsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyBusinessUnitsByIDPost Post(commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitUpdate businessUnitUpdate)
         {
             return new ByProjectKeyBusinessUnitsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, businessUnitUpdate);

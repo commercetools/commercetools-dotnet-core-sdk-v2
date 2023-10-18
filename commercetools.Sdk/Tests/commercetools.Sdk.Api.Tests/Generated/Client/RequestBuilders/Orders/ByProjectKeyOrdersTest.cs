@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Orders
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Orders()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/orders?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Orders()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/orders",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Orders()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

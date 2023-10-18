@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShoppingLists
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shopping-lists?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShoppingLists()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shopping-lists",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShoppingLists()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
