@@ -10,6 +10,12 @@ namespace commercetools.Sdk.Api.Models.Common
 {
     public enum ReferenceTypeId
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
+        [Description("approval-rule")]
+        ApprovalRule,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -145,6 +151,12 @@ namespace commercetools.Sdk.Api.Models.Common
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IReferenceTypeId ApprovalFlow = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalFlow, JsonName = "approval-flow" };
+
+        public static IReferenceTypeId ApprovalRule = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalRule, JsonName = "approval-rule" };
+
         public static IReferenceTypeId AssociateRole = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.AssociateRole, JsonName = "associate-role" };
 
@@ -262,6 +274,8 @@ namespace commercetools.Sdk.Api.Models.Common
         {
             return new[]
             {
+                 ApprovalFlow ,
+                 ApprovalRule ,
                  AssociateRole ,
                  AttributeGroup ,
                  BusinessUnit ,

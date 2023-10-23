@@ -10,6 +10,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum MessageSubscriptionResourceTypeId
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
+        [Description("approval-rule")]
+        ApprovalRule,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -88,6 +94,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IMessageSubscriptionResourceTypeId), "FindEnum")]
     public interface IMessageSubscriptionResourceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IMessageSubscriptionResourceTypeId ApprovalFlow = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ApprovalFlow, JsonName = "approval-flow" };
+
+        public static IMessageSubscriptionResourceTypeId ApprovalRule = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ApprovalRule, JsonName = "approval-rule" };
+
         public static IMessageSubscriptionResourceTypeId AssociateRole = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.AssociateRole, JsonName = "associate-role" };
 
@@ -148,6 +160,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 ApprovalFlow ,
+                 ApprovalRule ,
                  AssociateRole ,
                  BusinessUnit ,
                  Category ,
