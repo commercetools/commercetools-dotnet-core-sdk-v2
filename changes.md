@@ -18,6 +18,14 @@
 
 
 <details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerEmailTokenReference`
+- added type `CustomerPasswordTokenReference`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().head()`
@@ -184,14 +192,6 @@
 - added method `apiRoot.withProjectKey().standalonePrices().withId().head()`
 - added method `apiRoot.withProjectKey().attributeGroups().withKey().head()`
 - added method `apiRoot.withProjectKey().attributeGroups().withId().head()`
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `CustomerEmailTokenReference`
-- added type `CustomerPasswordTokenReference`
 </details>
 
 **History changes**
