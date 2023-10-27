@@ -13,6 +13,12 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("category")]
         Category,
 
+        [Description("customer")]
+        Customer,
+
+        [Description("inventory")]
+        Inventory,
+
         [Description("order")]
         Order,
 
@@ -36,12 +42,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
 
         [Description("product-variant-patch")]
         ProductVariantPatch,
-
-        [Description("customer")]
-        Customer,
-
-        [Description("inventory")]
-        Inventory,
 
         [Description("standalone-price")]
         StandalonePrice,
@@ -76,6 +76,12 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Category = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Category, JsonName = "category" };
 
+        public static IImportResourceType Customer = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.Customer, JsonName = "customer" };
+
+        public static IImportResourceType Inventory = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.Inventory, JsonName = "inventory" };
+
         public static IImportResourceType Order = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Order, JsonName = "order" };
 
@@ -100,12 +106,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType ProductVariantPatch = new ImportResourceTypeWrapper
         { Value = ImportResourceType.ProductVariantPatch, JsonName = "product-variant-patch" };
 
-        public static IImportResourceType Customer = new ImportResourceTypeWrapper
-        { Value = ImportResourceType.Customer, JsonName = "customer" };
-
-        public static IImportResourceType Inventory = new ImportResourceTypeWrapper
-        { Value = ImportResourceType.Inventory, JsonName = "inventory" };
-
         public static IImportResourceType StandalonePrice = new ImportResourceTypeWrapper
         { Value = ImportResourceType.StandalonePrice, JsonName = "standalone-price" };
 
@@ -119,6 +119,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
             return new[]
             {
                  Category ,
+                 Customer ,
+                 Inventory ,
                  Order ,
                  OrderPatch ,
                  Price ,
@@ -127,8 +129,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductType ,
                  ProductVariant ,
                  ProductVariantPatch ,
-                 Customer ,
-                 Inventory ,
                  StandalonePrice ,
                  Type
              };

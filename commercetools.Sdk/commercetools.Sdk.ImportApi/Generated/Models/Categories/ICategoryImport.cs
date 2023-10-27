@@ -10,6 +10,8 @@ namespace commercetools.Sdk.ImportApi.Models.Categories
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Categories.CategoryImport))]
     public partial interface ICategoryImport : IImportResource
     {
+        new string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ILocalizedString Slug { get; set; }

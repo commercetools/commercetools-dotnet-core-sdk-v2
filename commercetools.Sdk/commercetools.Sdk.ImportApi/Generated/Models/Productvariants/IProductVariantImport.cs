@@ -9,6 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.ProductVariantImport))]
     public partial interface IProductVariantImport : IImportResource
     {
+        new string Key { get; set; }
+
         string Sku { get; set; }
 
         bool IsMasterVariant { get; set; }
