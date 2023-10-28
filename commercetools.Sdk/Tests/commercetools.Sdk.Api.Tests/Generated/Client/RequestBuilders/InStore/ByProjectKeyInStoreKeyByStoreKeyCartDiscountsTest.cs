@@ -25,6 +25,83 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .CartDiscounts()
                    .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithSort("sort")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?sort=sort",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithLimit(7)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?limit=7",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithOffset(3)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?offset=3",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithWithTotal(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithWhere("where")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
+                   .WithPredicateVar("varName", "var.varName")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?var.varName=var.varName",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/cart-discounts",
@@ -49,6 +126,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .Build(),
                    "Head",
                    "/test_projectKey/in-store/key=test_storeKey/cart-discounts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .CartDiscounts()
+                   .Post(null)
+                   .WithExpand("expand")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/in-store/key=test_storeKey/cart-discounts?expand=expand",
                },
                new Object[] {
                    ApiRoot

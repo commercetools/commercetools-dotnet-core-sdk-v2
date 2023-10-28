@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead, string>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead, string>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead>
     {
 
 

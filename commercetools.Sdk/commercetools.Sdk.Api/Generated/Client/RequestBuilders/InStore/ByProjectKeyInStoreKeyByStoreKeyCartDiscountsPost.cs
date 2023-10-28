@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost>
     {
 
 
@@ -36,7 +37,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/cart-discounts";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
 
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
 
 
         public async Task<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount> ExecuteAsync(CancellationToken cancellationToken = default)
