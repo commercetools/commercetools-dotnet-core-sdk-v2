@@ -73,6 +73,11 @@ namespace commercetools.Sdk.Api.Client
             return With().Post(projectUpdate);
         }
 
+        public ByProjectKeyHead Head()
+        {
+            return With().Head();
+        }
+
         public ByProjectKeyCategoriesRequestBuilder Categories()
         {
             return With().Categories();
