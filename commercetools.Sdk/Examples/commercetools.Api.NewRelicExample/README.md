@@ -36,4 +36,16 @@ This example application demonstrates how the ME endpoints can be used with the 
 
 ## NewRelic
 
+For testing the NewRelic monitoring install the agent according to the [NewRelic docs](https://docs.newrelic.com/install/dotnet/) and
+run the example application.
 
+We also provide a [DockerFile](../../../Dockerfile) which installs the agent, compiles the application and runs it.
+Execute it by using the following command
+
+```shell
+docker run --rm --port 8080:80 --env NEW_RELIC_LICENSE_KEY=<your-license-key>
+```
+
+Now locate to http://localhost:8080. You should now be able to see the requests in your NewRelic account
+
+![NewRelic Trace](./newrelic-trace.png)
