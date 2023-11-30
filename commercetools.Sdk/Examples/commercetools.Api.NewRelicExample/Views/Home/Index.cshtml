@@ -1,0 +1,35 @@
+﻿@using commercetools.Api.NewRelicExample.Extensions
+@model commercetools.Api.NewRelicExample.Models.HomeViewModel
+@{
+    ViewData["Title"] = $"Checkout App";
+    Layout = "_Layout";
+}
+<div class="text-center">
+    <h5>
+        Select products you want and add to the cart
+    </h5>
+    @* Listing Products *@
+    <div id="div-Products">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td> @product.GetDisplayName()</td>
+                    <td>
+                        <a id="btn_add" href="@Url.Action("AddToCart", "Home", product)" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
