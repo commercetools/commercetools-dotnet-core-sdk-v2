@@ -199,6 +199,9 @@
 - added enum `approval-rule` to type `ReferenceTypeId`
 - added enum `customer-email-token` to type `ReferenceTypeId`
 - added enum `customer-password-token` to type `ReferenceTypeId`
+- added enum `associate-role` to type `AttributeReferenceTypeId`
+- added enum `business-unit` to type `AttributeReferenceTypeId`
+- added enum `cart-discount` to type `AttributeReferenceTypeId`
 - added enum `approval-flow` to type `ChangeSubscriptionResourceTypeId`
 - added enum `approval-rule` to type `ChangeSubscriptionResourceTypeId`
 - added enum `approval-flow` to type `MessageSubscriptionResourceTypeId`
