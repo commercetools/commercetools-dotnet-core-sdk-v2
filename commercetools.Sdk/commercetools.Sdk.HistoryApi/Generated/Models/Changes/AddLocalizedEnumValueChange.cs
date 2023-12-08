@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -10,7 +10,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ILocalizedEnumValue NextValue { get; set; }
+        public IAttributeLocalizedEnumValue NextValue { get; set; }
 
         public string FieldName { get; set; }
 
