@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             return new ByProjectKeyInventoryByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyInventoryByIDHead Head()
+        {
+            return new ByProjectKeyInventoryByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyInventoryByIDPost Post(commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
         {
             return new ByProjectKeyInventoryByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, inventoryEntryUpdate);

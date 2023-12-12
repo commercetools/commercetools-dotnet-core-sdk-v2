@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Quotes
             return new ByProjectKeyQuotesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
+        public ByProjectKeyQuotesKeyByKeyHead Head()
+        {
+            return new ByProjectKeyQuotesKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
+        }
+
         public ByProjectKeyQuotesKeyByKeyPost Post(commercetools.Sdk.Api.Models.Quotes.IQuoteUpdate quoteUpdate)
         {
             return new ByProjectKeyQuotesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, quoteUpdate);

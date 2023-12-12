@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.States
             return new ByProjectKeyStatesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyStatesHead Head()
+        {
+            return new ByProjectKeyStatesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyStatesPost Post(commercetools.Sdk.Api.Models.States.IStateDraft stateDraft)
         {
             return new ByProjectKeyStatesPost(ApiHttpClient, SerializerService, ProjectKey, stateDraft);

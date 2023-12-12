@@ -32,6 +32,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(ApiHttpClient, ProjectKey, StoreKey, OrderNumber);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead(ApiHttpClient, ProjectKey, StoreKey, OrderNumber);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost Post(commercetools.Sdk.Api.Models.Orders.IOrderUpdate orderUpdate)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, OrderNumber, orderUpdate);

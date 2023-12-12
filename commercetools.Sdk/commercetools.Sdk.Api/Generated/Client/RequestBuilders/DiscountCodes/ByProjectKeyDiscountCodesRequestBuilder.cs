@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             return new ByProjectKeyDiscountCodesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyDiscountCodesHead Head()
+        {
+            return new ByProjectKeyDiscountCodesHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyDiscountCodesPost Post(commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodeDraft discountCodeDraft)
         {
             return new ByProjectKeyDiscountCodesPost(ApiHttpClient, SerializerService, ProjectKey, discountCodeDraft);

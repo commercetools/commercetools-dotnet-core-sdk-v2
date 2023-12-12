@@ -14,7 +14,9 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.Api.Models.Categories.CategoryReference))]
     [SubTypeDiscriminator("channel", typeof(commercetools.Sdk.Api.Models.Channels.ChannelReference))]
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.Api.Models.Customers.CustomerReference))]
+    [SubTypeDiscriminator("customer-email-token", typeof(commercetools.Sdk.Api.Models.Customers.CustomerEmailTokenReference))]
     [SubTypeDiscriminator("customer-group", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference))]
+    [SubTypeDiscriminator("customer-password-token", typeof(commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference))]
     [SubTypeDiscriminator("direct-discount", typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountReference))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference))]
     [SubTypeDiscriminator("inventory-entry", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference))]
@@ -92,9 +94,21 @@ namespace commercetools.Sdk.Api.Models.Common
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Customers.CustomerEmailTokenReference CustomerEmailToken(Action<commercetools.Sdk.Api.Models.Customers.CustomerEmailTokenReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Customers.CustomerEmailTokenReference();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference CustomerGroup(Action<commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference CustomerPasswordToken(Action<commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference();
             init?.Invoke(t);
             return t;
         }

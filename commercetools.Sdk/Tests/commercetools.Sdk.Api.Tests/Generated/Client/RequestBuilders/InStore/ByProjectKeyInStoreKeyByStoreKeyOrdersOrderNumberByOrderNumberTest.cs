@@ -48,6 +48,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .Orders()
                    .WithOrderNumber("test_orderNumber")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Orders()
+                   .WithOrderNumber("test_orderNumber")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

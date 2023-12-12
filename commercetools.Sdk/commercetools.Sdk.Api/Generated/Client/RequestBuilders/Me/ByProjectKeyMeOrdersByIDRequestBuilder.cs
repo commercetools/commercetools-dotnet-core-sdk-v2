@@ -29,5 +29,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeOrdersByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyMeOrdersByIDHead Head()
+        {
+            return new ByProjectKeyMeOrdersByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
     }
 }

@@ -83,6 +83,49 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Build(),
                    "Get",
                    "/test_projectKey/shipping-methods/matching-location",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithCountry("country")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?country=country",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithState("state")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?state=state",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithCurrency("currency")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?currency=currency",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location",
                }
        };
         }

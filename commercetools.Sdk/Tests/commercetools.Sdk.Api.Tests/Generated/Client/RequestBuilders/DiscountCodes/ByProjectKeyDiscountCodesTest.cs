@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.DiscountCodes
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .DiscountCodes()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/discount-codes?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .DiscountCodes()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/discount-codes",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .DiscountCodes()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

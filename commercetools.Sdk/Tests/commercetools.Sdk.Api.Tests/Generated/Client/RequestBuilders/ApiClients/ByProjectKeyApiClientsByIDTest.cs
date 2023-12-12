@@ -34,6 +34,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ApiClients
                    .WithProjectKey("test_projectKey")
                    .ApiClients()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/api-clients/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ApiClients()
+                   .WithId("test_ID")
                    .Delete()
                    .Build(),
                    "Delete",

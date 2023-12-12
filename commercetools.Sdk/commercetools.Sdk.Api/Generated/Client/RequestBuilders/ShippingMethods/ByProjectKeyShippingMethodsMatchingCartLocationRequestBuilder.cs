@@ -26,5 +26,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsMatchingCartLocationGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyShippingMethodsMatchingCartLocationHead Head()
+        {
+            return new ByProjectKeyShippingMethodsMatchingCartLocationHead(ApiHttpClient, ProjectKey);
+        }
+
     }
 }

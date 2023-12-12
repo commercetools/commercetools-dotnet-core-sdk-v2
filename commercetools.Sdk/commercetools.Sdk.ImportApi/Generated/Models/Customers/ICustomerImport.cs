@@ -11,6 +11,8 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customers.CustomerImport))]
     public partial interface ICustomerImport : IImportResource
     {
+        new string Key { get; set; }
+
         string CustomerNumber { get; set; }
 
         string Email { get; set; }

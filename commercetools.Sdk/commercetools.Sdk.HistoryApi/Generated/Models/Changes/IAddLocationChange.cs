@@ -11,8 +11,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ILocation PreviousValue { get; set; }
-
         ILocation NextValue { get; set; }
 
     }

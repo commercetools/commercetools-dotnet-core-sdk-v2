@@ -9,6 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Inventories
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Inventories.InventoryImport))]
     public partial interface IInventoryImport : IImportResource
     {
+        new string Key { get; set; }
+
         string Sku { get; set; }
 
         long QuantityOnStock { get; set; }

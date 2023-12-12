@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             return new ByProjectKeyOrdersByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyOrdersByIDHead Head()
+        {
+            return new ByProjectKeyOrdersByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyOrdersByIDPost Post(commercetools.Sdk.Api.Models.Orders.IOrderUpdate orderUpdate)
         {
             return new ByProjectKeyOrdersByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, orderUpdate);

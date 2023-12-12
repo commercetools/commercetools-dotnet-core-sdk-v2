@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.QuoteRequests
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .QuoteRequests()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/quote-requests?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .QuoteRequests()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/quote-requests",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .QuoteRequests()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

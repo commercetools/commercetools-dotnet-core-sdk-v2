@@ -1,7 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using System.Net;
 using commercetools.Api.NewRelicExample.Extensions;
 using commercetools.Api.NewRelicExample.Services;
 using commercetools.Base.Client;

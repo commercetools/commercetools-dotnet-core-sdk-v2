@@ -10,6 +10,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productdrafts.ProductDraftImport))]
     public partial interface IProductDraftImport : IImportResource
     {
+        new string Key { get; set; }
+
         IProductTypeKeyReference ProductType { get; set; }
 
         ILocalizedString Name { get; set; }

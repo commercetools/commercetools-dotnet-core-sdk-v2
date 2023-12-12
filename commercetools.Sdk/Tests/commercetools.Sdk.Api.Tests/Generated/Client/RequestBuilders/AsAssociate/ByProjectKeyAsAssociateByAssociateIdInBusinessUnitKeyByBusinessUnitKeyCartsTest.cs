@@ -129,6 +129,31 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AsAssociate
                    .WithAssociateIdValue("test_associateId")
                    .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                    .Carts()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/carts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .Carts()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/carts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .Carts()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.States
             return new ByProjectKeyStatesByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyStatesByIDHead Head()
+        {
+            return new ByProjectKeyStatesByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyStatesByIDPost Post(commercetools.Sdk.Api.Models.States.IStateUpdate stateUpdate)
         {
             return new ByProjectKeyStatesByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, stateUpdate);

@@ -53,6 +53,29 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .Build(),
                    "Get",
                    "/test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .WithCartId("cartId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart?cartId=cartId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart",
                }
        };
         }

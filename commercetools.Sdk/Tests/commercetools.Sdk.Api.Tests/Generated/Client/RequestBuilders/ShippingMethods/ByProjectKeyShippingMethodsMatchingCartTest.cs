@@ -50,6 +50,27 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Build(),
                    "Get",
                    "/test_projectKey/shipping-methods/matching-cart",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .WithCartId("cartId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart?cartId=cartId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart",
                }
        };
         }

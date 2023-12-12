@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.TaxCategories
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .TaxCategories()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/tax-categories?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .TaxCategories()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/tax-categories",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .TaxCategories()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

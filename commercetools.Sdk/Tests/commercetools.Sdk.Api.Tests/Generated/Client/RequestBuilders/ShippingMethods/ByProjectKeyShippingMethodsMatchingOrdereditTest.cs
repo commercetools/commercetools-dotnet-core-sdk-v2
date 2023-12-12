@@ -61,6 +61,49 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Build(),
                    "Get",
                    "/test_projectKey/shipping-methods/matching-orderedit",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithOrderEditId("orderEditId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithCountry("country")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?country=country",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithState("state")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?state=state",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit",
                }
        };
         }

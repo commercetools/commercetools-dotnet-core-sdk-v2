@@ -10,6 +10,12 @@ namespace commercetools.Sdk.Api.Models.Common
 {
     public enum ReferenceTypeId
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
+        [Description("approval-rule")]
+        ApprovalRule,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -34,8 +40,14 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("customer")]
         Customer,
 
+        [Description("customer-email-token")]
+        CustomerEmailToken,
+
         [Description("customer-group")]
         CustomerGroup,
+
+        [Description("customer-password-token")]
+        CustomerPasswordToken,
 
         [Description("direct-discount")]
         DirectDiscount,
@@ -139,6 +151,12 @@ namespace commercetools.Sdk.Api.Models.Common
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
     public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IReferenceTypeId ApprovalFlow = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalFlow, JsonName = "approval-flow" };
+
+        public static IReferenceTypeId ApprovalRule = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalRule, JsonName = "approval-rule" };
+
         public static IReferenceTypeId AssociateRole = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.AssociateRole, JsonName = "associate-role" };
 
@@ -163,8 +181,14 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId Customer = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Customer, JsonName = "customer" };
 
+        public static IReferenceTypeId CustomerEmailToken = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.CustomerEmailToken, JsonName = "customer-email-token" };
+
         public static IReferenceTypeId CustomerGroup = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.CustomerGroup, JsonName = "customer-group" };
+
+        public static IReferenceTypeId CustomerPasswordToken = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.CustomerPasswordToken, JsonName = "customer-password-token" };
 
         public static IReferenceTypeId DirectDiscount = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.DirectDiscount, JsonName = "direct-discount" };
@@ -250,6 +274,8 @@ namespace commercetools.Sdk.Api.Models.Common
         {
             return new[]
             {
+                 ApprovalFlow ,
+                 ApprovalRule ,
                  AssociateRole ,
                  AttributeGroup ,
                  BusinessUnit ,
@@ -258,7 +284,9 @@ namespace commercetools.Sdk.Api.Models.Common
                  Category ,
                  Channel ,
                  Customer ,
+                 CustomerEmailToken ,
                  CustomerGroup ,
+                 CustomerPasswordToken ,
                  DirectDiscount ,
                  DiscountCode ,
                  Extension ,

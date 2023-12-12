@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Reviews
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Reviews()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/reviews?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Reviews()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/reviews",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Reviews()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

@@ -39,6 +39,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Messages
                    .Build(),
                    "Get",
                    "/test_projectKey/messages/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Messages()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/messages/test_ID",
                }
        };
         }

@@ -26,5 +26,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeActiveCartGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyMeActiveCartHead Head()
+        {
+            return new ByProjectKeyMeActiveCartHead(ApiHttpClient, ProjectKey);
+        }
+
     }
 }

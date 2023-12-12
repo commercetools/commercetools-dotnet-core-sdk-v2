@@ -10,6 +10,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum MessageSubscriptionResourceTypeId
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
+        [Description("approval-rule")]
+        ApprovalRule,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -21,6 +27,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         [Description("customer")]
         Customer,
+
+        [Description("customer-email-token")]
+        CustomerEmailToken,
+
+        [Description("customer-group")]
+        CustomerGroup,
+
+        [Description("customer-password-token")]
+        CustomerPasswordToken,
 
         [Description("inventory-entry")]
         InventoryEntry,
@@ -79,6 +94,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IMessageSubscriptionResourceTypeId), "FindEnum")]
     public interface IMessageSubscriptionResourceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IMessageSubscriptionResourceTypeId ApprovalFlow = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ApprovalFlow, JsonName = "approval-flow" };
+
+        public static IMessageSubscriptionResourceTypeId ApprovalRule = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ApprovalRule, JsonName = "approval-rule" };
+
         public static IMessageSubscriptionResourceTypeId AssociateRole = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.AssociateRole, JsonName = "associate-role" };
 
@@ -90,6 +111,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         public static IMessageSubscriptionResourceTypeId Customer = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.Customer, JsonName = "customer" };
+
+        public static IMessageSubscriptionResourceTypeId CustomerEmailToken = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerEmailToken, JsonName = "customer-email-token" };
+
+        public static IMessageSubscriptionResourceTypeId CustomerGroup = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerGroup, JsonName = "customer-group" };
+
+        public static IMessageSubscriptionResourceTypeId CustomerPasswordToken = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.CustomerPasswordToken, JsonName = "customer-password-token" };
 
         public static IMessageSubscriptionResourceTypeId InventoryEntry = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.InventoryEntry, JsonName = "inventory-entry" };
@@ -130,10 +160,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 ApprovalFlow ,
+                 ApprovalRule ,
                  AssociateRole ,
                  BusinessUnit ,
                  Category ,
                  Customer ,
+                 CustomerEmailToken ,
+                 CustomerGroup ,
+                 CustomerPasswordToken ,
                  InventoryEntry ,
                  Order ,
                  Payment ,

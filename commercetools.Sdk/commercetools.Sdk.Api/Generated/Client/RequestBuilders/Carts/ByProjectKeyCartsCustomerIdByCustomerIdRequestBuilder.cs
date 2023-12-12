@@ -29,5 +29,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             return new ByProjectKeyCartsCustomerIdByCustomerIdGet(ApiHttpClient, ProjectKey, CustomerId);
         }
 
+        public ByProjectKeyCartsCustomerIdByCustomerIdHead Head()
+        {
+            return new ByProjectKeyCartsCustomerIdByCustomerIdHead(ApiHttpClient, ProjectKey, CustomerId);
+        }
+
     }
 }

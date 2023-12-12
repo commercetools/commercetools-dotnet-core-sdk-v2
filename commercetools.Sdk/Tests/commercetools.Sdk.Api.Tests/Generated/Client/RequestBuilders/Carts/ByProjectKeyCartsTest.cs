@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Carts
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Carts()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/carts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Carts()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/carts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Carts()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

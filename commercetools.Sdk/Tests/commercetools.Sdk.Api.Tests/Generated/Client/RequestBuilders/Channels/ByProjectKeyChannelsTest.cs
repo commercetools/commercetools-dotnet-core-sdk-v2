@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Channels
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Channels()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/channels?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Channels()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/channels",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Channels()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

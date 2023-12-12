@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             return new ByProjectKeyChannelsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyChannelsByIDHead Head()
+        {
+            return new ByProjectKeyChannelsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyChannelsByIDPost Post(commercetools.Sdk.Api.Models.Channels.IChannelUpdate channelUpdate)
         {
             return new ByProjectKeyChannelsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, channelUpdate);

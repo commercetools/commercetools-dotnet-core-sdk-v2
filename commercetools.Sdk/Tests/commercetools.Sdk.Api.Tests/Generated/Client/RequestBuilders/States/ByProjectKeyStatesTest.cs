@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.States
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .States()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/states?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .States()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/states",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .States()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

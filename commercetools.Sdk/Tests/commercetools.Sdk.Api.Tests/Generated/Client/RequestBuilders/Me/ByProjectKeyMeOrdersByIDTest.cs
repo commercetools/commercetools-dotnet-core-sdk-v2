@@ -41,6 +41,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Build(),
                    "Get",
                    "/test_projectKey/me/orders/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .Orders()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/orders/test_ID",
                }
        };
         }

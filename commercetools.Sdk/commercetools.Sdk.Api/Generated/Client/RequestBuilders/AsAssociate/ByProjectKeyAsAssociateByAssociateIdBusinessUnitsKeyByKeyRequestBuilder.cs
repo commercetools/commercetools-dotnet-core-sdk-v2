@@ -32,6 +32,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyGet(ApiHttpClient, ProjectKey, AssociateId, Key);
         }
 
+        public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyHead Head()
+        {
+            return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyHead(ApiHttpClient, ProjectKey, AssociateId, Key);
+        }
+
         public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyPost Post(commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnitUpdate businessUnitUpdate)
         {
             return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, AssociateId, Key, businessUnitUpdate);

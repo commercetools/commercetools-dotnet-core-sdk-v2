@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.StandalonePrices
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .StandalonePrices()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/standalone-prices?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .StandalonePrices()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/standalone-prices",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .StandalonePrices()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

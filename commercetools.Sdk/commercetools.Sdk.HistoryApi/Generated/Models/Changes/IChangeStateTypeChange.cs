@@ -11,9 +11,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IStateType PreviousValue { get; set; }
+        IStateTypeEnum PreviousValue { get; set; }
 
-        IStateType NextValue { get; set; }
+        IStateTypeEnum NextValue { get; set; }
 
     }
 }

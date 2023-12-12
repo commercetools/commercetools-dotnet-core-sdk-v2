@@ -21,21 +21,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime> CreatedAt()
-        {
-            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("createdAt")),
-            p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime> LastModifiedAt()
-        {
-            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lastModifiedAt")),
-            p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string> CustomerId()
         {
             return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerId")),
+            p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string> Value()
+        {
+            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
             p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
@@ -45,9 +39,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string> Value()
+        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime> CreatedAt()
         {
-            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
+            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("createdAt")),
+            p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime> LastModifiedAt()
+        {
+            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lastModifiedAt")),
             p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

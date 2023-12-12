@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
             return new ByProjectKeyTypesKeyByKeyGet(ApiHttpClient, ProjectKey, Key);
         }
 
+        public ByProjectKeyTypesKeyByKeyHead Head()
+        {
+            return new ByProjectKeyTypesKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
+        }
+
         public ByProjectKeyTypesKeyByKeyPost Post(commercetools.Sdk.Api.Models.Types.ITypeUpdate typeUpdate)
         {
             return new ByProjectKeyTypesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, typeUpdate);

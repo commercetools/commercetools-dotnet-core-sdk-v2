@@ -13,12 +13,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IList<IStateRole> PreviousValue { get; set; }
-        IEnumerable<IStateRole> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+        IList<IStateRoleEnum> PreviousValue { get; set; }
+        IEnumerable<IStateRoleEnum> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
 
-        IList<IStateRole> NextValue { get; set; }
-        IEnumerable<IStateRole> NextValueEnumerable { set => NextValue = value.ToList(); }
+        IList<IStateRoleEnum> NextValue { get; set; }
+        IEnumerable<IStateRoleEnum> NextValueEnumerable { set => NextValue = value.ToList(); }
 
 
     }

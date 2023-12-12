@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Zones
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Zones()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/zones?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Zones()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/zones",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Zones()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

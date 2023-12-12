@@ -72,6 +72,49 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Build(),
                    "Get",
                    "/test_projectKey/shipping-methods/matching-cart-location",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCartLocation()
+                   .Head()
+                   .WithCountry("country")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart-location?country=country",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCartLocation()
+                   .Head()
+                   .WithState("state")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart-location?state=state",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCartLocation()
+                   .Head()
+                   .WithCartId("cartId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart-location?cartId=cartId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCartLocation()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart-location",
                }
        };
         }

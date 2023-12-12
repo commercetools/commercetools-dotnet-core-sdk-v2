@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Stores
             return new ByProjectKeyStoresGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyStoresHead Head()
+        {
+            return new ByProjectKeyStoresHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyStoresPost Post(commercetools.Sdk.Api.Models.Stores.IStoreDraft storeDraft)
         {
             return new ByProjectKeyStoresPost(ApiHttpClient, SerializerService, ProjectKey, storeDraft);

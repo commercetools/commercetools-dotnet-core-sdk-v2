@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomObjects
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .CustomObjects()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/custom-objects?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/custom-objects",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),

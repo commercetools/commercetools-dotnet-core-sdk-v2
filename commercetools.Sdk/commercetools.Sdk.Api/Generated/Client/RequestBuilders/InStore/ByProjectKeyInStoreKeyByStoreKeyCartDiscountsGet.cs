@@ -1,3 +1,5 @@
+using System.Globalization;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -8,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet, commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet>
     {
 
 
@@ -29,14 +31,76 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/cart-discounts";
         }
 
+        public List<string> GetExpand()
+        {
+            return this.GetQueryParam("expand");
+        }
 
+        public List<string> GetSort()
+        {
+            return this.GetQueryParam("sort");
+        }
 
+        public List<string> GetLimit()
+        {
+            return this.GetQueryParam("limit");
+        }
 
-        public async Task<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount> ExecuteAsync(CancellationToken cancellationToken = default)
+        public List<string> GetOffset()
+        {
+            return this.GetQueryParam("offset");
+        }
+
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithExpand(string expand)
+        {
+            return this.AddQueryParam("expand", expand);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithSort(string sort)
+        {
+            return this.AddQueryParam("sort", sort);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithLimit(int limit)
+        {
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithOffset(int offset)
+        {
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithWhere(string where)
+        {
+            return this.AddQueryParam("where", where);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet WithPredicateVar(string varName, string predicateVar)
+        {
+            return this.AddQueryParam($"var.{varName}", predicateVar);
+        }
+
+        public async Task<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>(requestMessage, cancellationToken);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>(requestMessage, cancellationToken);
 
         }
 
@@ -46,11 +110,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
         }
 
-        public async Task<IApiResponse<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>> SendAsync(CancellationToken cancellationToken = default)
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscount>(requestMessage, cancellationToken);
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.CartDiscounts.ICartDiscountPagedQueryResponse>(requestMessage, cancellationToken);
 
         }
 

@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ApiClients
             return new ByProjectKeyApiClientsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyApiClientsByIDHead Head()
+        {
+            return new ByProjectKeyApiClientsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyApiClientsByIDDelete Delete()
         {
             return new ByProjectKeyApiClientsByIDDelete(ApiHttpClient, ProjectKey, ID);

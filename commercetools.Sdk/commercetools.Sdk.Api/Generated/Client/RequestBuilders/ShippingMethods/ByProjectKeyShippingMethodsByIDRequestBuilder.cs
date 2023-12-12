@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyShippingMethodsByIDHead Head()
+        {
+            return new ByProjectKeyShippingMethodsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyShippingMethodsByIDPost Post(commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodUpdate shippingMethodUpdate)
         {
             return new ByProjectKeyShippingMethodsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, shippingMethodUpdate);

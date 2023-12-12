@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMePaymentsByIDGet(ApiHttpClient, ProjectKey, ID);
         }
 
+        public ByProjectKeyMePaymentsByIDHead Head()
+        {
+            return new ByProjectKeyMePaymentsByIDHead(ApiHttpClient, ProjectKey, ID);
+        }
+
         public ByProjectKeyMePaymentsByIDPost Post(commercetools.Sdk.Api.Models.Me.IMyPaymentUpdate myPaymentUpdate)
         {
             return new ByProjectKeyMePaymentsByIDPost(ApiHttpClient, SerializerService, ProjectKey, ID, myPaymentUpdate);

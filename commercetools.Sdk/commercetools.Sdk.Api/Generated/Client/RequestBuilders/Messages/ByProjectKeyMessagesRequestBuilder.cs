@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
             return new ByProjectKeyMessagesGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyMessagesHead Head()
+        {
+            return new ByProjectKeyMessagesHead(ApiHttpClient, ProjectKey);
+        }
+
 
         public ByProjectKeyMessagesByIDRequestBuilder WithId(string ID)
         {

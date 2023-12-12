@@ -29,6 +29,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet(ApiHttpClient, ProjectKey, StoreKey);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead(ApiHttpClient, ProjectKey, StoreKey);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost Post(commercetools.Sdk.Api.Models.ShoppingLists.IShoppingListDraft shoppingListDraft)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, shoppingListDraft);

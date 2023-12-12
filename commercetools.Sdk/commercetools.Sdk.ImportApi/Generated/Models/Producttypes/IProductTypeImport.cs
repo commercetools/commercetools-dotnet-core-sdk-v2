@@ -9,6 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Producttypes.ProductTypeImport))]
     public partial interface IProductTypeImport : IImportResource
     {
+        new string Key { get; set; }
+
         string Name { get; set; }
 
         string Description { get; set; }

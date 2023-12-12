@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             return new ByProjectKeyExtensionsGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyExtensionsHead Head()
+        {
+            return new ByProjectKeyExtensionsHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyExtensionsPost Post(commercetools.Sdk.Api.Models.Extensions.IExtensionDraft extensionDraft)
         {
             return new ByProjectKeyExtensionsPost(ApiHttpClient, SerializerService, ProjectKey, extensionDraft);

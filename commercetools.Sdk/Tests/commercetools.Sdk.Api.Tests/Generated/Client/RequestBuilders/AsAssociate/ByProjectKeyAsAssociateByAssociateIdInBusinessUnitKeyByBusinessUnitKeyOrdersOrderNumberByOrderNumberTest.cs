@@ -54,6 +54,19 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.AsAssociate
                    .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                    .Orders()
                    .WithOrderNumber("test_orderNumber")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/orders/order-number=test_orderNumber",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .AsAssociate()
+                   .WithAssociateIdValue("test_associateId")
+                   .InBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                   .Orders()
+                   .WithOrderNumber("test_orderNumber")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
