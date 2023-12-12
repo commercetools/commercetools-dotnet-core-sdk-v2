@@ -39,7 +39,7 @@ This example application demonstrates how the ME endpoints can be used with the 
 For testing the NewRelic monitoring install the agent according to the [NewRelic docs](https://docs.newrelic.com/install/dotnet/) and
 run the example application.
 
-We also provide a [DockerFile](../../../Dockerfile) which installs the agent, compiles the application and runs it.
+We also provide a [DockerFile](../../Dockerfile) which installs the agent, compiles the application and runs it.
 Execute it by using the following command
 
 ```shell
