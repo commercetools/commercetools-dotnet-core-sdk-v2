@@ -57,7 +57,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMoneyOverflowError))]
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError))]
-    [SubTypeDiscriminator("NotEnabled", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLNotEnabledError))]
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError))]
@@ -389,12 +388,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError NoMatchingProductDiscountFound(Action<commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.GraphQLNotEnabledError NotEnabled(Action<commercetools.Sdk.Api.Models.Errors.GraphQLNotEnabledError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLNotEnabledError();
             init?.Invoke(t);
             return t;
         }

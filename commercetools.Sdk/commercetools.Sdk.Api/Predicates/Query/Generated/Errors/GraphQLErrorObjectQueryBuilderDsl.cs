@@ -328,12 +328,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsNotEnabled(
-            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLNotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLNotEnabledErrorQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLNotEnabledErrorQueryBuilderDsl.Of()),
-                GraphQLErrorObjectQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsObjectNotFound(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLObjectNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLObjectNotFoundErrorQueryBuilderDsl>> fn)
         {

@@ -23,6 +23,14 @@
 
 
 <details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `NotEnabledError`
+- :warning: removed type `GraphQLNotEnabledError`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().head()`

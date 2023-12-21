@@ -57,7 +57,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError))]
-    [SubTypeDiscriminator("NotEnabled", typeof(commercetools.Sdk.Api.Models.Errors.NotEnabledError))]
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.OutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.OverCapacityError))]
@@ -391,12 +390,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError NoMatchingProductDiscountFound(Action<commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.NotEnabledError NotEnabled(Action<commercetools.Sdk.Api.Models.Errors.NotEnabledError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.NotEnabledError();
             init?.Invoke(t);
             return t;
         }
