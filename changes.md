@@ -17,6 +17,8 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `ApprovalFlowSetCustomFieldAction`
+- added type `ApprovalFlowSetCustomTypeAction`
 - added type `CustomerEmailTokenReference`
 - added type `CustomerPasswordTokenReference`
 </details>
@@ -201,6 +203,13 @@
 
 
 <details>
+<summary>Added Property(s)</summary>
+
+- added property `custom` to type `ApprovalFlow`
+</details>
+
+
+<details>
 <summary>Added Enum(s)</summary>
 
 - added enum `approval-flow` to type `ReferenceTypeId`
@@ -217,6 +226,8 @@
 - added enum `customer-email-token` to type `MessageSubscriptionResourceTypeId`
 - added enum `customer-group` to type `MessageSubscriptionResourceTypeId`
 - added enum `customer-password-token` to type `MessageSubscriptionResourceTypeId`
+- added enum `approval-flow` to type `CustomFieldReferenceValue`
+- added enum `approval-flow` to type `ResourceTypeId`
 </details>
 
 
