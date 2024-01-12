@@ -334,12 +334,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.NoMatchingProductDiscountFoundErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsNotEnabled(
-            Func<commercetools.Sdk.Api.Predicates.Query.Errors.NotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.NotEnabledErrorQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.NotEnabledErrorQueryBuilderDsl.Of()),
-                ErrorObjectQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsObjectNotFound(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ObjectNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ObjectNotFoundErrorQueryBuilderDsl>> fn)
         {
