@@ -96,6 +96,7 @@ namespace commercetools.Base.Client
         {
             options ??= new ClientOptions();
             services.AddSingleton<IUserAgentProvider, UserAgentProvider>();
+            services.AddSingleton<ILoggerHandlerFactory, LoggerHandlerFactory>();
             var httpClientBuilder = services.AddHttpClient(clientName)
                 .ConfigureHttpClient((provider, client) =>
                 {
@@ -118,7 +119,7 @@ namespace commercetools.Base.Client
                     };
                 })
                 .AddHttpMessageHandler(c => new ErrorHandler(message => serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())))
-                .AddHttpMessageHandler(c => new LoggerHandler(c.GetService<ILoggerFactory>()));
+                .AddHttpMessageHandler(c => c.GetService<ILoggerHandlerFactory>().Create());
 
             return httpClientBuilder;
         }
