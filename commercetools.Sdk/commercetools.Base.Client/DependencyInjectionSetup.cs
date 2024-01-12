@@ -10,7 +10,6 @@ using commercetools.Base.Client.Tokens;
 using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {

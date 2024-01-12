@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {
-    public class LoggerHandlerFactory: ILoggerHandlerFactory
+    public class LoggerHandlerFactory : ILoggerHandlerFactory
     {
         private readonly ILoggerFactory loggerFactory;
 
