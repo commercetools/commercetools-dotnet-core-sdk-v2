@@ -19,7 +19,7 @@ namespace commercetools.Api.IntegrationTests
 
         public ILogger CreateLogger(string categoryName)
         {
-            return _loggers.GetOrAdd(categoryName, new InMemoryLogger());
+            return _loggers.GetOrAdd(categoryName, new InMemoryLogger(categoryName));
         }
 
         public InMemoryLogger GetLogger()
