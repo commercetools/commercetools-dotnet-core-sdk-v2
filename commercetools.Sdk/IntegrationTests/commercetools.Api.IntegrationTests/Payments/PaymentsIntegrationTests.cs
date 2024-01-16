@@ -31,7 +31,8 @@ namespace commercetools.Api.IntegrationTests.Payments
                 Type = ITransactionType.Charge
             };
             await WithPayment(
-                _client, paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
+                _client,
+                paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
                 payment =>
                 {
                     Assert.Single(payment.Transactions);

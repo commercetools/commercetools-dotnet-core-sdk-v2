@@ -15,5 +15,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         {
             this.TypeId = IReferenceTypeId.FindEnum("cart");
         }
+
+        public CartResourceIdentifier(string id) : this()
+        {
+            Id = id;
+        }
     }
 }

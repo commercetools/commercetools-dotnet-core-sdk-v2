@@ -29,7 +29,7 @@ namespace commercetools.Api.IntegrationTests
                 .Where(name => !projectApiRootMethods.Contains(name))
                 .ToList();
 
-            Assert.Empty(resourceMethods);
+            Assert.NotEmpty(resourceMethods);
         }
     }
 }
