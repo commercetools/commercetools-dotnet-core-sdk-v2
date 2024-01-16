@@ -53,7 +53,7 @@ public class LoggingTest
         await apiRoot.Get().ExecuteAsync();
             
         var messages = logger.GetLogMessages();
-        Assert.Equal("GET https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1", messages.TrimEnd());
+        Assert.Equal("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
     }
     
     public class CustomLoggerHandler : DelegatingHandler
