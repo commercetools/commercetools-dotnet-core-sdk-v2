@@ -10,17 +10,8 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
 {
     public enum AttributeReferenceTypeId
     {
-        [Description("associate-role")]
-        AssociateRole,
-
-        [Description("business-unit")]
-        BusinessUnit,
-
         [Description("cart")]
         Cart,
-
-        [Description("cart-discount")]
-        CartDiscount,
 
         [Description("category")]
         Category,
@@ -79,17 +70,8 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [EnumInterfaceCreator(typeof(IAttributeReferenceTypeId), "FindEnum")]
     public interface IAttributeReferenceTypeId : IJsonName, IEnumerable<char>
     {
-        public static IAttributeReferenceTypeId AssociateRole = new AttributeReferenceTypeIdWrapper
-        { Value = AttributeReferenceTypeId.AssociateRole, JsonName = "associate-role" };
-
-        public static IAttributeReferenceTypeId BusinessUnit = new AttributeReferenceTypeIdWrapper
-        { Value = AttributeReferenceTypeId.BusinessUnit, JsonName = "business-unit" };
-
         public static IAttributeReferenceTypeId Cart = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.Cart, JsonName = "cart" };
-
-        public static IAttributeReferenceTypeId CartDiscount = new AttributeReferenceTypeIdWrapper
-        { Value = AttributeReferenceTypeId.CartDiscount, JsonName = "cart-discount" };
 
         public static IAttributeReferenceTypeId Category = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.Category, JsonName = "category" };
@@ -130,10 +112,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         {
             return new[]
             {
-                 AssociateRole ,
-                 BusinessUnit ,
                  Cart ,
-                 CartDiscount ,
                  Category ,
                  Channel ,
                  Customer ,

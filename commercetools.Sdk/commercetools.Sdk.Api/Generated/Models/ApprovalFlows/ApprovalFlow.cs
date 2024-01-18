@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.ApprovalRules;
 using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
-using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +51,5 @@ namespace commercetools.Sdk.Api.Models.ApprovalFlows
         public IList<IRuleApprover> CurrentTierPendingApprovers { get; set; }
         public IEnumerable<IRuleApprover> CurrentTierPendingApproversEnumerable { set => CurrentTierPendingApprovers = value.ToList(); }
 
-
-        public ICustomFields Custom { get; set; }
     }
 }

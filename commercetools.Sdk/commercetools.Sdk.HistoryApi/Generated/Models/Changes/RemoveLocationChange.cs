@@ -11,6 +11,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string Change { get; set; }
 
         public ILocation PreviousValue { get; set; }
+
+        public ILocation NextValue { get; set; }
         public RemoveLocationChange()
         {
             this.Type = "RemoveLocationChange";

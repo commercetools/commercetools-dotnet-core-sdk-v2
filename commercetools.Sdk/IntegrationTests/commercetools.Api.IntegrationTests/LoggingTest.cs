@@ -49,13 +49,13 @@ public class LoggingTest
         var p = s.BuildServiceProvider();
 
         var apiRoot = p.GetService<ProjectApiRoot>();
-        
+
         await apiRoot.Get().ExecuteAsync();
-            
+
         var messages = logger.GetLogMessages();
         Assert.Equal("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
     }
-    
+
     public class CustomLoggerHandler : DelegatingHandler
     {
         private readonly ILogger logger;
@@ -68,7 +68,7 @@ public class LoggingTest
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             // Send the request without logging the request details
-            logger.Log(LogLevel.Information,   "{method} {uri}", request.Method.Method, request.RequestUri?.AbsoluteUri);
+            logger.Log(LogLevel.Information, "{method} {uri}", request.Method.Method, request.RequestUri?.AbsoluteUri);
             var response = await base.SendAsync(request, cancellationToken);
 
             return response;
@@ -142,8 +142,8 @@ public class LoggingTest
             return stringBuilder.ToString();
         }
     }
-    
-    class CustomLoggerHandlerFactory: ILoggerHandlerFactory
+
+    class CustomLoggerHandlerFactory : ILoggerHandlerFactory
     {
         private readonly ILoggerFactory loggerFactory;
 

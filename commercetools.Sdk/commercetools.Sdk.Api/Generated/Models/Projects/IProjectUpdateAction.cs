@@ -16,6 +16,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeNameAction))]
     [SubTypeDiscriminator("changeOrderSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeOrderSearchStatusAction))]
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]
+    [SubTypeDiscriminator("changeProductSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchStatusAction))]
     [SubTypeDiscriminator("changeShoppingListsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
@@ -81,6 +82,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction ChangeProductSearchIndexingEnabled(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchStatusAction ChangeProductSearchStatus(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchStatusAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchStatusAction();
             init?.Invoke(t);
             return t;
         }

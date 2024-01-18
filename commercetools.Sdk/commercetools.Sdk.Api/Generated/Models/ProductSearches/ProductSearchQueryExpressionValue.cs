@@ -1,0 +1,12 @@
+namespace commercetools.Sdk.Api.Models.ProductSearches
+{
+
+    public partial class ProductSearchQueryExpressionValue : IProductSearchQueryExpressionValue
+    {
+        public string Field { get; set; }
+
+        public decimal? Boost { get; set; }
+
+        public IProductSearchAttributeType AttributeType { get; set; }
+    }
+}

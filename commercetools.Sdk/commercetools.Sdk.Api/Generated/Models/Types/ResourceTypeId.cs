@@ -16,9 +16,6 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("asset")]
         Asset,
 
-        [Description("approval-flow")]
-        ApprovalFlow,
-
         [Description("associate-role")]
         AssociateRole,
 
@@ -136,9 +133,6 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Asset = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Asset, JsonName = "asset" };
 
-        public static IResourceTypeId ApprovalFlow = new ResourceTypeIdWrapper
-        { Value = ResourceTypeId.ApprovalFlow, JsonName = "approval-flow" };
-
         public static IResourceTypeId AssociateRole = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.AssociateRole, JsonName = "associate-role" };
 
@@ -234,7 +228,6 @@ namespace commercetools.Sdk.Api.Models.Types
             {
                  Address ,
                  Asset ,
-                 ApprovalFlow ,
                  AssociateRole ,
                  BusinessUnit ,
                  CartDiscount ,

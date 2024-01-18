@@ -82,6 +82,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeProductSearchStatus(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchStatusActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchStatusActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeShoppingListsConfiguration(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl>> fn)
         {
