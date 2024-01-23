@@ -29,10 +29,10 @@ namespace commercetools.Api.IntegrationTests.Cart
 
         public static CartDraft DefaultCartDraftWithKey(CartDraft draft, string key)
         {
-            var categoryDraft = DefaultCartDraft(draft);
-            categoryDraft.Key = key;
+            var cartDraft = DefaultCartDraft(draft);
+            cartDraft.Key = key;
 
-            return categoryDraft;
+            return cartDraft;
         }
 
         #endregion
@@ -66,7 +66,7 @@ namespace commercetools.Api.IntegrationTests.Cart
             }
         }
 
-        #region WithCategory
+        #region WithCart
 
         public static async Task WithCart(IClient client, Func<CartDraft, CartDraft> draftAction, Action<ICart> func)
         {
@@ -88,7 +88,7 @@ namespace commercetools.Api.IntegrationTests.Cart
         {
             await WithUpdateableAsync(client, new CartDraft(), DefaultCartDraft, func, CreateCart, DeleteCart);
         }
-        
+
         #endregion
     }
 }

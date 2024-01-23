@@ -1,15 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Sdk.Api.Models.Common;
-using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Models.Carts;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Cart.CartFixture;
-using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Cart
 {
@@ -163,37 +161,46 @@ namespace commercetools.Api.IntegrationTests.Cart
                 }
             );
         }
-        
-        // [Fact]
-        // public async Task UpdateCartByKeyChangeCountry()
-        // {
-        //     await WithUpdateableCart(_client, async cart =>
-        //     {
-        //         Assert.NotNull(cart);
-        //
-        //         const string name = "EN";
-        //         var action = new CartSetCountryAction()
-        //         {
-        //             Country = name
-        //         };
-        //         var update = new CartUpdate()
-        //         {
-        //             Version = cart.Version,
-        //             Actions = new List<ICartUpdateAction>() { action }
-        //         };
-        //
-        //         var updatedCart = await _client
-        //             .WithApi()
-        //             .WithProjectKey(_projectKey)
-        //             .Carts()
-        //             .WithId(cart.Id)
-        //             .Post(update)
-        //             .ExecuteAsync();
-        //
-        //
-        //         Assert.Equal(name, updatedCart.Country);
-        //         return updatedCart;
-        //     });
-        // }
+
+        [Fact]
+        public async Task UpdateCartByIdChangeCountry()
+        {
+            await WithUpdateableCart(_client, async cart =>
+            {
+                Assert.NotNull(cart);
+
+                const string name = "US";
+                var action = new CartSetCountryAction()
+                {
+                    Action = "setCountry",
+                    Country = name
+                };
+
+                var update = new CartUpdate()
+                {
+                    Version = cart.Version,
+                    Actions = new List<ICartUpdateAction>() { action }
+                };
+
+                try
+                {
+                    var updatedCart = await _client
+                        .WithApi()
+                        .WithProjectKey(_projectKey)
+                        .Carts()
+                        .WithId(cart.Id)
+                        .Post(update)
+                        .ExecuteAsync();
+
+                    Assert.Equal(name, updatedCart.Country);
+                    return updatedCart;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+            });
+        }
     }
 }

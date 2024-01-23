@@ -26,7 +26,6 @@
 
     <ItemGroup>
       <Folder Include="Categories\" />
-      <Folder Include="Customers\" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
