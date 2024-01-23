@@ -60,6 +60,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitStoreModeChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessage))]
     [SubTypeDiscriminator("BusinessUnitStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessage))]
     [SubTypeDiscriminator("BusinessUnitStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage))]
+    [SubTypeDiscriminator("CartDiscountCreated", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessage))]
+    [SubTypeDiscriminator("CartDiscountDeleted", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessage))]
+    [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage))]
+    [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage))]
+    [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage))]
@@ -559,6 +564,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage BusinessUnitStoresSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessage CartDiscountCreated(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessage CartDiscountDeleted(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage CartDiscountStoreAdded(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage CartDiscountStoreRemoved(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage CartDiscountStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage();
             init?.Invoke(t);
             return t;
         }

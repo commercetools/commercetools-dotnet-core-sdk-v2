@@ -8,7 +8,7 @@ using commercetools.Base.Models;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    public enum StateRole
+    public enum StateRoleEnum
     {
         [Description("ReviewIncludedInStatistics")]
         ReviewIncludedInStatistics,
@@ -17,10 +17,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         Return
     }
 
-    public class StateRoleWrapper : IStateRole
+    public class StateRoleEnumWrapper : IStateRoleEnum
     {
         public string JsonName { get; internal set; }
-        public StateRole? Value { get; internal set; }
+        public StateRoleEnum? Value { get; internal set; }
         public override string ToString()
         {
             return JsonName;
@@ -37,18 +37,18 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         }
     }
 
-    [EnumInterfaceCreator(typeof(IStateRole), "FindEnum")]
-    public interface IStateRole : IJsonName, IEnumerable<char>
+    [EnumInterfaceCreator(typeof(IStateRoleEnum), "FindEnum")]
+    public interface IStateRoleEnum : IJsonName, IEnumerable<char>
     {
-        public static IStateRole ReviewIncludedInStatistics = new StateRoleWrapper
-        { Value = StateRole.ReviewIncludedInStatistics, JsonName = "ReviewIncludedInStatistics" };
+        public static IStateRoleEnum ReviewIncludedInStatistics = new StateRoleEnumWrapper
+        { Value = StateRoleEnum.ReviewIncludedInStatistics, JsonName = "ReviewIncludedInStatistics" };
 
-        public static IStateRole Return = new StateRoleWrapper
-        { Value = StateRole.Return, JsonName = "Return" };
+        public static IStateRoleEnum Return = new StateRoleEnumWrapper
+        { Value = StateRoleEnum.Return, JsonName = "Return" };
 
-        StateRole? Value { get; }
+        StateRoleEnum? Value { get; }
 
-        static IStateRole[] Values()
+        static IStateRoleEnum[] Values()
         {
             return new[]
             {
@@ -56,9 +56,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
                  Return
              };
         }
-        static IStateRole FindEnum(string value)
+        static IStateRoleEnum FindEnum(string value)
         {
-            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateRoleWrapper() { JsonName = value };
+            return Values().FirstOrDefault(origin => origin.JsonName == value) ?? new StateRoleEnumWrapper() { JsonName = value };
         }
     }
 }

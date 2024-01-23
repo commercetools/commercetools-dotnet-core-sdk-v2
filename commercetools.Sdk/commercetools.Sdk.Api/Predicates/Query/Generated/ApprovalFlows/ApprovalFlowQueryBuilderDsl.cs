@@ -155,6 +155,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.ApprovalFlows
             return new CollectionPredicateBuilder<ApprovalFlowQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("currentTierPendingApprovers")),
                     p => new CombinationQueryPredicate<ApprovalFlowQueryBuilderDsl>(p, ApprovalFlowQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<ApprovalFlowQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ApprovalFlowQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl.Of())),
+                ApprovalFlowQueryBuilderDsl.Of);
+        }
+
 
     }
 }

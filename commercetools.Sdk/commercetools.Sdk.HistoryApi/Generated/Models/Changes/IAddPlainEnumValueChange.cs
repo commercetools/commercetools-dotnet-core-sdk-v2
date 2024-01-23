@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -11,7 +11,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IEnumValue NextValue { get; set; }
+        IAttributePlainEnumValue NextValue { get; set; }
 
         string AttributeName { get; set; }
 

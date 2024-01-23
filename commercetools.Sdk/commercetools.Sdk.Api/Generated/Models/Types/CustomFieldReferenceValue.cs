@@ -10,6 +10,9 @@ namespace commercetools.Sdk.Api.Models.Types
 {
     public enum CustomFieldReferenceValue
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -76,6 +79,9 @@ namespace commercetools.Sdk.Api.Models.Types
     [EnumInterfaceCreator(typeof(ICustomFieldReferenceValue), "FindEnum")]
     public interface ICustomFieldReferenceValue : IJsonName, IEnumerable<char>
     {
+        public static ICustomFieldReferenceValue ApprovalFlow = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.ApprovalFlow, JsonName = "approval-flow" };
+
         public static ICustomFieldReferenceValue AssociateRole = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.AssociateRole, JsonName = "associate-role" };
 
@@ -124,6 +130,7 @@ namespace commercetools.Sdk.Api.Models.Types
         {
             return new[]
             {
+                 ApprovalFlow ,
                  AssociateRole ,
                  BusinessUnit ,
                  Cart ,
