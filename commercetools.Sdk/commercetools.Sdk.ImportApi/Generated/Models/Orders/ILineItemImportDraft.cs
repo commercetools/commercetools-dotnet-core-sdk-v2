@@ -19,7 +19,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
 
         ILineItemPrice Price { get; set; }
 
-        decimal Quantity { get; set; }
+        long Quantity { get; set; }
 
         IList<IItemState> State { get; set; }
         IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
