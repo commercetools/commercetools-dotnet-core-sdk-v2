@@ -14,7 +14,5 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         public IProductSearchAttributeType AttributeType { get; set; }
 
         public IProductSearchQueryExpression Filter { get; set; }
-
-        public bool? Internal { get; set; }
     }
 }

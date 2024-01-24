@@ -7,7 +7,9 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
     public partial class ProductSearchProjectionParams : IProductSearchProjectionParams
     {
-        public string Expand { get; set; }
+        public IList<string> Expand { get; set; }
+        public IEnumerable<string> ExpandEnumerable { set => Expand = value.ToList(); }
+
 
         public bool? Staged { get; set; }
 

@@ -54,12 +54,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
                 ProductSearchSortingQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<ProductSearchSortingQueryBuilderDsl, bool> Internal()
-        {
-            return new ComparisonPredicateBuilder<ProductSearchSortingQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("internal")),
-            p => new CombinationQueryPredicate<ProductSearchSortingQueryBuilderDsl>(p, ProductSearchSortingQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
 
     }
 }

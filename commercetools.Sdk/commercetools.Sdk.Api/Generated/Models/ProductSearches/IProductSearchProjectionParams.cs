@@ -8,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductSearches.ProductSearchProjectionParams))]
     public partial interface IProductSearchProjectionParams
     {
-        string Expand { get; set; }
+        IList<string> Expand { get; set; }
+        IEnumerable<string> ExpandEnumerable { set => Expand = value.ToList(); }
+
 
         bool? Staged { get; set; }
 

@@ -13,9 +13,9 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
             return new ProductSearchProjectionParamsQueryBuilderDsl();
         }
 
-        public IComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string> Expand()
+        public IComparableCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string> Expand()
         {
-            return new ComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("expand")),
+            return new ComparableCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("expand")),
             p => new CombinationQueryPredicate<ProductSearchProjectionParamsQueryBuilderDsl>(p, ProductSearchProjectionParamsQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

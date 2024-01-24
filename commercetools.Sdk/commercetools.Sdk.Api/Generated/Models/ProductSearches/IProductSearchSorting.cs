@@ -18,7 +18,5 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
         IProductSearchQueryExpression Filter { get; set; }
 
-        bool? Internal { get; set; }
-
     }
 }
