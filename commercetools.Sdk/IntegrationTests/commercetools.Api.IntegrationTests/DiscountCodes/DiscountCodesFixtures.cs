@@ -5,6 +5,7 @@
 // using commercetools.Sdk.Api.Models.DiscountCodes;
 // using commercetools.Base.Client;
 // using commercetools.Sdk.Api.Extensions;
+// using commercetools.Sdk.Api.Models.CartDiscounts;
 // using static commercetools.Api.IntegrationTests.GenericFixture;
 //
 // namespace commercetools.Api.IntegrationTests.DiscountCodes
@@ -12,37 +13,42 @@
 //     public class DiscountCodesFixtures
 //     {
 //         #region DraftBuilds
-//         public static DiscountCodeDraft DefaultDiscountCodesDraft()
+//
+//         public static DiscountCodeDraft DefaultDiscountCodesDraft(DiscountCodeDraft discountCodeDraft)
 //         {
-//             var random = TestingUtility.RandomInt();
-//             var discountCodesDraft = new DiscountCodeDraft
-//             {
-//                 Name = new LocalizedString {{"en", "Name"}},
-//                 Code = random.ToString(),
-//                 CartPredicate = "country=DE",
-//                 IsActive = false
-//             };
-//             
-//             return discountCodesDraft;
+//             var randomInt = TestingUtility.RandomInt();
+//             discountCodeDraft.Name = new LocalizedString { { "en", "Name" } };
+//             discountCodeDraft.Code = randomInt.ToString();
+//             discountCodeDraft.CartDiscounts = new List<ICartDiscountResourceIdentifier>()
+//             discountCodeDraft.CartPredicate = "country=DE";
+//             discountCodeDraft.IsActive = false;
+//
+//             return discountCodeDraft;
 //         }
+//
 //         #endregion
 //
 //         #region CreateAndDelete
-//         
+//
 //         public static async Task<IDiscountCode> CreateDiscountCodes(IClient client, DiscountCodeDraft discountCodeDraft)
 //         {
-//             var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
+//             var resource = await client
+//                 .WithApi()
+//                 .WithProjectKey(DefaultProjectKey)
 //                 .DiscountCodes()
 //                 .Post(discountCodeDraft)
 //                 .ExecuteAsync();
+//
 //             return resource;
 //         }
-//         
-//         public static async Task DeleteDiscountCode(IClient client, IDiscountCode discountCode)
+//
+//         public static async Task DeleteDiscountCodes(IClient client, IDiscountCode discountCode)
 //         {
 //             try
 //             {
-//                 await client.WithApi().WithProjectKey(DefaultProjectKey)
+//                 await client
+//                     .WithApi()
+//                     .WithProjectKey(DefaultProjectKey)
 //                     .DiscountCodes()
 //                     .WithId(discountCode.Id)
 //                     .Delete()
@@ -56,13 +62,37 @@
 //         }
 //
 //         #endregion
-//         
+//
 //         #region WithDiscountCodes
-//         
-//         public static async Task WithDiscountCode(IClient client, Func<DiscountCodeDraft, DiscountCodeDraft> draftAction, Action<IDiscountCode> func)
+//
+//         public static async Task WithDiscountCodes(IClient client,
+//             Func<DiscountCodeDraft, DiscountCodeDraft> draftAction, Action<IDiscountCode> func)
 //         {
-//             await With(client, new DiscountCodeDraft(), draftAction, func, CreateDiscountCodes, DeleteDiscountCode);
+//             await With(client, new DiscountCodeDraft(), draftAction, func, CreateDiscountCodes, DeleteDiscountCodes);
 //         }
+//
+//         public static async Task WithDiscountCodes(IClient client,
+//             Func<DiscountCodeDraft, DiscountCodeDraft> draftAction,
+//             Func<IDiscountCode, Task> func)
+//         {
+//             await WithAsync(client, new DiscountCodeDraft(), draftAction, func, CreateDiscountCodes,
+//                 DeleteDiscountCodes);
+//         }
+//
+//         public static async Task WithDiscountCodes(IClient client, Func<IDiscountCode, Task> func)
+//         {
+//             await WithAsync(client, new DiscountCodeDraft(), DefaultDiscountCodesDraft, func, CreateDiscountCodes,
+//                 DeleteDiscountCodes);
+//         }
+//
+//         public static async Task WithUpdateableDiscountCodes(IClient client,
+//             Func<IDiscountCode, Task<IDiscountCode>> func)
+//         {
+//             await WithUpdateableAsync(client, new DiscountCodeDraft(), DefaultDiscountCodesDraft, func,
+//                 CreateDiscountCodes,
+//                 DeleteDiscountCodes);
+//         }
+//
 //         #endregion
 //     }
 // }
