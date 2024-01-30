@@ -33,8 +33,6 @@ jobs:
         with:
           token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
-
       - uses: jenschude/auto-create-pr-action@a5369414c74963e6ec065dab49066d3711b8c1db
         with:
           request_title: "Update generated SDKs"
