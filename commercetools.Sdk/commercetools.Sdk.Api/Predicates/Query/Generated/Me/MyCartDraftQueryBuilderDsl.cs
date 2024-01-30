@@ -110,6 +110,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             return new CollectionPredicateBuilder<MyCartDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("itemShippingAddresses")),
                     p => new CombinationQueryPredicate<MyCartDraftQueryBuilderDsl>(p, MyCartDraftQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<MyCartDraftQueryBuilderDsl, string> ShippingMode()
+        {
+            return new ComparisonPredicateBuilder<MyCartDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("shippingMode")),
+            p => new CombinationQueryPredicate<MyCartDraftQueryBuilderDsl>(p, MyCartDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparableCollectionPredicateBuilder<MyCartDraftQueryBuilderDsl, string> DiscountCodes()
         {
             return new ComparableCollectionPredicateBuilder<MyCartDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("discountCodes")),

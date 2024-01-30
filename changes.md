@@ -1,6 +1,13 @@
 **Api changes**
 
 <details>
+<summary>Added Property(s)</summary>
+
+- added property `shippingMode` to type `MyCartDraft`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `CartDiscountCreatedMessage`
