@@ -39,6 +39,8 @@ namespace commercetools.Sdk.Api.Models.Me
         public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
 
+        public IShippingMode ShippingMode { get; set; }
+
         public IList<string> DiscountCodes { get; set; }
         public IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 

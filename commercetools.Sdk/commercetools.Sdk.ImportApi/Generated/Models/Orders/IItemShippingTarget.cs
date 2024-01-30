@@ -8,7 +8,7 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
     {
         string AddressKey { get; set; }
 
-        decimal Quantity { get; set; }
+        long Quantity { get; set; }
 
     }
 }

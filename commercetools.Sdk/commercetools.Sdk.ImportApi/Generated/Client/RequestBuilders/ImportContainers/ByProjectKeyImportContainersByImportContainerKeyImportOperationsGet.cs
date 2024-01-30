@@ -61,12 +61,12 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             return this.GetQueryParam("debug");
         }
 
-        public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet WithLimit(decimal limit)
+        public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet WithOffset(decimal offset)
+        public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
