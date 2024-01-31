@@ -2,6 +2,8 @@ using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -31,6 +33,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        IList<IMethodExternalTaxRateDraft> PerMethodExternalTaxRate { get; set; }
+        IEnumerable<IMethodExternalTaxRateDraft> PerMethodExternalTaxRateEnumerable { set => PerMethodExternalTaxRate = value.ToList(); }
+
 
         IInventoryMode InventoryMode { get; set; }
 
