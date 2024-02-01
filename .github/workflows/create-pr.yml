@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'gen-sdk-updates'
+      - 'after-release'
 
 name: Create Changes PR
 
@@ -34,6 +35,7 @@ jobs:
           token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: jenschude/auto-create-pr-action@a5369414c74963e6ec065dab49066d3711b8c1db
+        if: github.ref_name == 'gen-sdk-updates'
         with:
           request_title: "Update generated SDKs"
           github_token: ${{ steps.generate_github_token.outputs.token }}
@@ -47,3 +49,11 @@ jobs:
             
             ### Breaking changes
 
+      - uses: jenschude/auto-create-pr-action@a5369414c74963e6ec065dab49066d3711b8c1db
+        if: github.ref_name == 'after-release'
+        with:
+          request_title: "Update changelog"
+          github_token: ${{ steps.generate_github_token.outputs.token }}
+          label: automerge
+          request_body: |
+            Changelog updates
