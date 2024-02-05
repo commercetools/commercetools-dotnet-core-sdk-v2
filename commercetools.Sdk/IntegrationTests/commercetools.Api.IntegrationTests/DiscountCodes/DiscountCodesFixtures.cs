@@ -20,6 +20,9 @@
 //             discountCodeDraft.Name = new LocalizedString { { "en", "Name" } };
 //             discountCodeDraft.Code = randomInt.ToString();
 //             discountCodeDraft.CartDiscounts = new List<ICartDiscountResourceIdentifier>()
+//             {
+//                 
+//             };
 //             discountCodeDraft.CartPredicate = "country=DE";
 //             discountCodeDraft.IsActive = false;
 //

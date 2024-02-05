@@ -1,19 +1,13 @@
 // using System.Collections.Generic;
-// using System.IO;
-// using System.Linq;
-// using System.Net;
 // using System.Threading.Tasks;
 // using commercetools.Base.Client;
-// using commercetools.Base.Client.Error;
-// using commercetools.Sdk.Api;
 // using commercetools.Sdk.Api.Client;
 // using commercetools.Sdk.Api.Extensions;
+// using commercetools.Sdk.Api.Models.CartDiscounts;
 // using commercetools.Sdk.Api.Models.Common;
 // using commercetools.Sdk.Api.Models.DiscountCodes;
-// using commercetools.Sdk.Api.Serialization;
-// using Microsoft.Extensions.Configuration;
-// using Microsoft.Extensions.DependencyInjection;
 // using static commercetools.Api.IntegrationTests.GenericFixture;
+// using static commercetools.Api.IntegrationTests.CartDiscount.CartDiscountFixtures;
 // using Xunit;
 //
 // namespace commercetools.Api.IntegrationTests.DiscountCodes
@@ -36,12 +30,24 @@
 //         public async Task createDiscountCodes()
 //         {
 //             var random = TestingUtility.RandomInt();
-//             var discountCodesDraft = new DiscountCodeDraft
+//             var key = $"CreateCartDiscount-{TestingUtility.RandomString()}";
+//
+//             var cartDiscountDraft = new CartDiscountDraft() { Key = key };
+//             var cartDiscount = CreateCartDiscount(_client, DefaultCartDiscountDraft(cartDiscountDraft));
+//             var discountCodesDraft = new DiscountCodeDraft()
 //             {
 //                 Name = new LocalizedString { { "en", "Discount-Code" } },
 //                 Code = random.ToString(),
 //                 CartPredicate = "country=DE",
-//                 IsActive = false
+//                 IsActive = false,
+//                 CartDiscounts = new List<ICartDiscountResourceIdentifier>()
+//                 {
+//                     new CartDiscountResourceIdentifier()
+//                     {
+//                         TypeId = IReferenceTypeId.CartDiscount,
+//                         Id = cartDiscount.Id.ToString(),
+//                     }
+//                 }
 //             };
 //
 //             var resource = await _client.WithApi()
@@ -49,10 +55,11 @@
 //                 .DiscountCodes()
 //                 .Post(discountCodesDraft)
 //                 .ExecuteAsync();
-//             
+//
 //             Assert.Single(resource.Id);
 //             Assert.Single(resource.Code);
 //             Assert.NotEmpty(resource.Name);
 //         }
 //     }
 // }
+//
