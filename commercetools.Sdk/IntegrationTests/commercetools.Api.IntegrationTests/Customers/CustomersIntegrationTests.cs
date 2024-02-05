@@ -9,7 +9,7 @@ using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Customers;
 using Xunit;
-using static commercetools.Api.IntegrationTests.Customers.CustomerFixtures;
+using static commercetools.Api.IntegrationTests.Customers.CustomersFixtures;
 
 namespace commercetools.Api.IntegrationTests.Customers
 {

@@ -9,7 +9,7 @@ using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Api.IntegrationTests.Customers
 {
-    public class CustomerFixtures
+    public class CustomersFixtures
     {
         #region DraftBuilds
 
