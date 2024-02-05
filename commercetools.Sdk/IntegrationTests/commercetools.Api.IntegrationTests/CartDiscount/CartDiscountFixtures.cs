@@ -16,12 +16,11 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
         {
             var randomString = TestingUtility.RandomString();
 
-            // cartDiscountDraft.Key = $"CartDiscount-{randomString}";
             cartDiscountDraft.Name = new LocalizedString { { "en", $"$Name-{randomString}" } };
             cartDiscountDraft.CartPredicate = $"country=\"DE\"";
             cartDiscountDraft.Value = new CartDiscountValueRelativeDraft() { Type = "relative", Permyriad = 10 };
             cartDiscountDraft.Target = new CartDiscountShippingCostTarget() { Type = "shipping" };
-            cartDiscountDraft.SortOrder = "0.212";
+            cartDiscountDraft.SortOrder = "0.213";
             cartDiscountDraft.IsActive = false;
 
             return cartDiscountDraft;
@@ -29,10 +28,10 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
 
         public static CartDiscountDraft DefaultCartDiscountDraftWithKey(CartDiscountDraft draft, string key)
         {
-            var customerDraft = DefaultCartDiscountDraft(draft);
-            customerDraft.Key = key;
+            var cartDiscountDraft = DefaultCartDiscountDraft(draft);
+            cartDiscountDraft.Key = key;
 
-            return customerDraft;
+            return cartDiscountDraft;
         }
 
         #endregion
