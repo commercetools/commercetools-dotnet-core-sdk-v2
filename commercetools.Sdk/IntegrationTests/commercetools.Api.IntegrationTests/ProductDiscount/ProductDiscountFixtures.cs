@@ -42,8 +42,7 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
 
             return productDiscountDraft;
         }
-
-        // public static async Task<IProductDiscountSigninResult>
+        
         public static async Task<IProductDiscount> CreateProductDiscount(IClient client,
             ProductDiscountDraft productDiscountDraft)
         {

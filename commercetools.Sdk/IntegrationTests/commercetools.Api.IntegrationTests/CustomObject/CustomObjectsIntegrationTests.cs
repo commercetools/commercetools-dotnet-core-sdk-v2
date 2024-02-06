@@ -81,7 +81,7 @@ namespace commercetools.Api.IntegrationTests.CustomObject
         }
 
         [Fact]
-        public async Task UpdateCustomObjectByIdChangeFirstName()
+        public async Task UpdateCustomObjectById()
         {
             await WithUpdateableCustomObject(
                 _client,

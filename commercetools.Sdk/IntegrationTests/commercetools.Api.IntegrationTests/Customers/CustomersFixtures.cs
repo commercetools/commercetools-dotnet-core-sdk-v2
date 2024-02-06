@@ -39,8 +39,7 @@ namespace commercetools.Api.IntegrationTests.Customers
 
             return customerDraft;
         }
-
-        // public static async Task<ICustomerSigninResult>
+        
         public static async Task<ICustomer> CreateCustomer(IClient client, CustomerDraft customerDraft)
         {
             try

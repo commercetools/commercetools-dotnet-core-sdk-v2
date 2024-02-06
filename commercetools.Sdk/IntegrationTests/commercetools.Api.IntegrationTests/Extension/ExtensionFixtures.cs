@@ -48,8 +48,7 @@ namespace commercetools.Api.IntegrationTests.Extension
 
             return extensionDraft;
         }
-
-        // public static async Task<IExtensionSigninResult>
+        
         public static async Task<IExtension> CreateExtension(IClient client, ExtensionDraft extensionDraft)
         {
             try

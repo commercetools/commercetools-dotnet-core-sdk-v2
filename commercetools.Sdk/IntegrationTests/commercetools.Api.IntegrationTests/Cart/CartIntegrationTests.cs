@@ -122,7 +122,7 @@ namespace commercetools.Api.IntegrationTests.Cart
                         () => _client
                             .WithApi()
                             .WithProjectKey(_projectKey)
-                            .Categories().WithId(cart.Id)
+                            .Carts().WithId(cart.Id)
                             .Get()
                             .ExecuteAsync()
                     );

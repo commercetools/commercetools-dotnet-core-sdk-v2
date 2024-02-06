@@ -59,9 +59,9 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
         }
 
         [Fact]
-        public async Task QueryCustomers()
+        public async Task QueryCartDiscounts()
         {
-            var key = $"QueryCustomers-{TestingUtility.RandomString()}";
+            var key = $"QueryCartDiscounts-{TestingUtility.RandomString()}";
             await WithCartDiscount(
                 _client,
                 cartDiscountDraft => DefaultCartDiscountDraftWithKey(cartDiscountDraft, key),
@@ -82,7 +82,7 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
         }
 
         [Fact]
-        public async Task UpdateCustomerByIdChangeFirstName()
+        public async Task UpdateCartDiscountByIdSetKey()
         {
             await WithUpdateableCartDiscount(
                 _client,

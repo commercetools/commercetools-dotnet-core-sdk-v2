@@ -33,7 +33,6 @@ namespace commercetools.Api.IntegrationTests.CustomObject
             return customObjectDraft;
         }
 
-        // public static async Task<ICustomObjectSigninResult>
         public static async Task<ICustomObject> CreateCustomObject(IClient client, CustomObjectDraft customObjectDraft)
         {
             try
