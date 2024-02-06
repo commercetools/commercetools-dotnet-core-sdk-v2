@@ -33,9 +33,6 @@
       <None Update="appsettings.test.Development.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="appsettings.test.Development.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
     </ItemGroup>
 
 </Project>
