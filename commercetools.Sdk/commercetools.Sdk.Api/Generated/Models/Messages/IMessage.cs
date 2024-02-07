@@ -103,6 +103,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("DeliveryAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage))]
     [SubTypeDiscriminator("DeliveryItemsUpdated", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessage))]
     [SubTypeDiscriminator("DeliveryRemoved", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage))]
+    [SubTypeDiscriminator("DiscountCodeCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage))]
+    [SubTypeDiscriminator("DiscountCodeDeleted", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessage))]
+    [SubTypeDiscriminator("DiscountCodeKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessage))]
     [SubTypeDiscriminator("InventoryEntryCreated", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage))]
     [SubTypeDiscriminator("InventoryEntryDeleted", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessage))]
     [SubTypeDiscriminator("InventoryEntryQuantitySet", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessage))]
@@ -822,6 +825,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage DeliveryRemoved(Action<commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage DiscountCodeCreated(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessage DiscountCodeDeleted(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessage DiscountCodeKeySet(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessage();
             init?.Invoke(t);
             return t;
         }

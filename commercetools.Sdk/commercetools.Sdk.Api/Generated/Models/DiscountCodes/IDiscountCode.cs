@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     {
         new string Id { get; set; }
 
+        string Key { get; set; }
+
         new long Version { get; set; }
 
         new DateTime CreatedAt { get; set; }
