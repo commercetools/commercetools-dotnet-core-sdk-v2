@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetCustomTypeAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetKeyAction))]
     [SubTypeDiscriminator("setMaxApplications", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsAction))]
     [SubTypeDiscriminator("setMaxApplicationsPerCustomer", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetMaxApplicationsPerCustomerAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetNameAction))]
@@ -62,6 +63,12 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
         static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeSetKeyAction();
             init?.Invoke(t);
             return t;
         }

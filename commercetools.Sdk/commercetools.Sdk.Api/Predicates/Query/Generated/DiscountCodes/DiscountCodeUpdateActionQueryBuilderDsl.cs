@@ -64,6 +64,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountCodes
             return new CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetDescriptionActionQueryBuilderDsl.Of()),
                 DiscountCodeUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl> AsSetKey(
+            Func<commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetKeyActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetKeyActionQueryBuilderDsl.Of()),
+                DiscountCodeUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl> AsSetMaxApplications(
             Func<commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetMaxApplicationsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeSetMaxApplicationsActionQueryBuilderDsl>> fn)
         {

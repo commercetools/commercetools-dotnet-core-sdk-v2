@@ -15,6 +15,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountCodes
             return new DiscountCodeDraftQueryBuilderDsl();
         }
 
+        public IComparisonPredicateBuilder<DiscountCodeDraftQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<DiscountCodeDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<DiscountCodeDraftQueryBuilderDsl>(p, DiscountCodeDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<DiscountCodeDraftQueryBuilderDsl> Name(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LocalizedStringQueryBuilderDsl>> fn)
         {

@@ -39,6 +39,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountCodes
             p => new CombinationQueryPredicate<DiscountCodeQueryBuilderDsl>(p, DiscountCodeQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl, string> Key()
+        {
+            return new ComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),
+            p => new CombinationQueryPredicate<DiscountCodeQueryBuilderDsl>(p, DiscountCodeQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<DiscountCodeQueryBuilderDsl> LastModifiedBy(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl>> fn)
         {
