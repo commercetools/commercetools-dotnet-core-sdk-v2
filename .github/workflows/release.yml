@@ -125,6 +125,7 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         with:
+          branch: after-release
           commit_message: "TASK: Updating version in README"
           commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
           commit_user_name: ct-sdks[bot]
