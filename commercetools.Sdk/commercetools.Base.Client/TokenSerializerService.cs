@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Text.Json;
 
 namespace commercetools.Base.Client
@@ -18,6 +19,11 @@ namespace commercetools.Base.Client
         public T Deserialize<T>(string input)
         {
             return JsonSerializer.Deserialize<T>(input, jsonSerializerOptions);
+        }
+
+        public T Deserialize<T>(Stream inputStream)
+        {
+            return JsonSerializer.Deserialize<T>(inputStream, jsonSerializerOptions);
         }
 
         public object Deserialize(Type returnType, string input)

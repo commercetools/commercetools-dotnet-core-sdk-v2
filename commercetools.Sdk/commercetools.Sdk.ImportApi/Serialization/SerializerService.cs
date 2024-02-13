@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.IO;
+using System.Text.Json;
 using commercetools.Base.Serialization.JsonConverters;
 using Type = System.Type;
 
@@ -27,6 +28,11 @@ namespace commercetools.Sdk.ImportApi.Serialization
         public T Deserialize<T>(string input)
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
+        }
+
+        public T Deserialize<T>(Stream inputStream)
+        {
+            return JsonSerializer.Deserialize<T>(inputStream, _serializerOptions);
         }
 
         public object Deserialize(Type returnType, string input)

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Types;
@@ -28,7 +30,7 @@ namespace commercetools.Sdk.Api.Serialization
 
             public override string ConvertName(string name)
             {
-                return _fieldMapping.ContainsKey(name) ? _fieldMapping[name] : _policy.ConvertName(name);
+                return _fieldMapping.TryGetValue(name, out string mappedName) ? mappedName : _policy.ConvertName(name);
             }
         }
 
@@ -60,6 +62,11 @@ namespace commercetools.Sdk.Api.Serialization
         public T Deserialize<T>(string input)
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
+        }
+
+        public T Deserialize<T>(Stream inputStream)
+        {
+            return JsonSerializer.Deserialize<T>(inputStream, _serializerOptions);
         }
 
         public object Deserialize(Type returnType, string input)
