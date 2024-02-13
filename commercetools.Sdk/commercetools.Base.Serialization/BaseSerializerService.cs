@@ -1,12 +1,13 @@
 ﻿using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using Type = System.Type;
 
 namespace commercetools.Base.Serialization
 {
-    public class BaseSerializerService : ISerializerService
+    public class BaseSerializerService : IStreamSerializerService
     {
         protected readonly JsonSerializerOptions _serializerOptions;
 

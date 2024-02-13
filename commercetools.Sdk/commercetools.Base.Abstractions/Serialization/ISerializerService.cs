@@ -8,8 +8,6 @@ namespace commercetools.Base.Serialization
         string Serialize<T>(T input);
 
         T Deserialize<T>(string input);
-        T Deserialize<T>(Stream inputStream);
-
         object Deserialize(Type returnType, string input);
     }
 }
