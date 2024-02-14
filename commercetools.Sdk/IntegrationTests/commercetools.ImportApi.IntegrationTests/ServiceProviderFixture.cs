@@ -1,4 +1,5 @@
-﻿using commercetools.Base.Client;
+﻿using System;
+using commercetools.Base.Client;
 using commercetools.Sdk.ImportApi;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +22,8 @@ namespace commercetools.ImportApi.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsImportApi(configuration, "ImportClient");
+            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
+            services.UseCommercetoolsImportApi(configuration, "ImportClient", options: new ClientOptions { ReadResponseAsStream = useStreamClient});
             this.serviceProvider = services.BuildServiceProvider();
 
             //set default ProjectKey

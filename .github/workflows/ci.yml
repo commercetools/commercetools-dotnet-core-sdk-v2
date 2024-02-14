@@ -93,6 +93,7 @@ jobs:
       matrix:
         ClientType:
           - Stream
+          - String
     env:
       CTP_ClientType: ${{ matrix.ClientType }}
       CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID }}
