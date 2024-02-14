@@ -67,7 +67,7 @@ namespace commercetools.Api.IntegrationTests
                     builder.PrimaryHandler = new HttpClientHandler
                     {
                         AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip,
-                        Proxy = new WebProxy("http://localhost:8080")
+                        Proxy = new WebProxy("http://localhost:18080")
                     };
                 });
 

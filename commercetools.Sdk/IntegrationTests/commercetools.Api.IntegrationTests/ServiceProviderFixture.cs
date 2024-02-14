@@ -1,4 +1,5 @@
-﻿using commercetools.Sdk.Api.Models.Errors;
+﻿using System;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
@@ -25,7 +26,8 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client");
+            var useStreamClient = bool.Parse(configuration.GetValue("UseStreamClient", "false"));
+            services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
             services.SetupClient(
                 "MeClient",
