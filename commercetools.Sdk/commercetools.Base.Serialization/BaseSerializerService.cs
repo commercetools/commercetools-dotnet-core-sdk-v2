@@ -16,8 +16,8 @@ namespace commercetools.Base.Serialization
         {
             _serializerOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new CustomDateConverter());

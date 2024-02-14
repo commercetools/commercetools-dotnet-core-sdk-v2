@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Registration;
@@ -41,8 +42,8 @@ namespace commercetools.Sdk.Api.Serialization
         {
             _serializerOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
-                PropertyNamingPolicy = MappedCamelCase
+                PropertyNamingPolicy = MappedCamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
             _serializerOptions.Converters.Add(new MessageDeliveryConverter(this));

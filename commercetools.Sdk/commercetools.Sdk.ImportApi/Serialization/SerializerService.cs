@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using commercetools.Base.Serialization.JsonConverters;
 using Type = System.Type;
 
@@ -13,8 +14,9 @@ namespace commercetools.Sdk.ImportApi.Serialization
         {
             _serializerOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
