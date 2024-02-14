@@ -6,29 +6,30 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Base.Client
 {
-    public class CtpClient : IClient
+    public class StreamCtpClient : IClient
     {
-        public CtpClient(
+        public StreamCtpClient(
             Middleware middlewareStack,
-            ISerializerService serializerService) : this(middlewareStack, serializerService, DefaultClientNames.Api)
+            IStreamSerializerService serializerService) : this(middlewareStack, serializerService, DefaultClientNames.Api)
         {
             this.MiddlewareStack = middlewareStack;
-            this.SerializerService = serializerService;
+            this._serializerService = serializerService;
         }
 
-        public CtpClient(
+        public StreamCtpClient(
             Middleware middlewareStack,
-            ISerializerService serializerService,
+            IStreamSerializerService serializerService,
             string name)
         {
             this.MiddlewareStack = middlewareStack;
-            this.SerializerService = serializerService;
+            this._serializerService = serializerService;
             this.Name = name;
         }
 
+        private readonly IStreamSerializerService _serializerService;
 
         public string Name { get; set; }
-        public ISerializerService SerializerService { get; }
+        public ISerializerService SerializerService => _serializerService;
         private Middleware MiddlewareStack { get; }
 
         public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
@@ -45,9 +46,10 @@ namespace commercetools.Base.Client
 
         public async Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var result = await SendAsJsonAsync(requestMessage, cancellationToken);
-            var body = this.SerializerService.Deserialize<T>(result.Body);
-            return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.HttpHeaders, body);
+            using var result = await SendAsAsync(requestMessage, cancellationToken).ConfigureAwait(false);
+            await using var contentStream = await result.Content.ReadAsStreamAsync().ConfigureAwait(false);
+            var content = _serializerService.Deserialize<T>(contentStream);
+            return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.Headers, content);
         }
 
         public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)

@@ -91,10 +91,11 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        container:
-          - BuiltIn
+        ClientType:
+          - Stream
+          - String
     env:
-      CTP_Container: ${{ matrix.container }}
+      CTP_ClientType: ${{ matrix.ClientType }}
       CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID }}
       CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET }}
       CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}
