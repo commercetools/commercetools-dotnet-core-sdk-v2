@@ -91,10 +91,10 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        UseStreamClient:
-          - true
+        ClientType:
+          - Stream
     env:
-      CTP_UseStreamClient: ${{ matrix.UseStreamClient }}
+      CTP_ClientType: ${{ matrix.ClientType }}
       CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID }}
       CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET }}
       CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}
