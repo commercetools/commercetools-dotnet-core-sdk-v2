@@ -41,5 +41,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
         {
             return new ByProjectKeyDiscountCodesByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyDiscountCodesKeyByKeyRequestBuilder WithKey(string key)
+        {
+            return new ByProjectKeyDiscountCodesKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
+        }
     }
 }

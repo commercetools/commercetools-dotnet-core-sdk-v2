@@ -34,6 +34,7 @@ jobs:
       - run: ./license-check.sh
 
       - uses: stefanzweifel/git-auto-commit-action@v4
+        if: github.event_name == 'push' && github.ref != 'refs/heads/master'
         with:
           file_pattern: 'licenses/index.json'
           commit_message: "TASK: Updating license information"
@@ -90,10 +91,11 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        container:
-          - BuiltIn
+        ClientType:
+          - Stream
+          - String
     env:
-      CTP_Container: ${{ matrix.container }}
+      CTP_ClientType: ${{ matrix.ClientType }}
       CTP_Client__ClientId: ${{ secrets.CTP_CLIENT_ID }}
       CTP_Client__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET }}
       CTP_Client__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}

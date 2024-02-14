@@ -33,20 +33,20 @@ namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContain
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
                    .Get()
-                   .WithLimit(0.26748633m)
+                   .WithLimit(7)
                    .Build(),
                    "Get",
-                   "/test_projectKey/import-containers?limit=0.26748633",
+                   "/test_projectKey/import-containers?limit=7",
                },
                new Object[] {
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .ImportContainers()
                    .Get()
-                   .WithOffset(0.7475848m)
+                   .WithOffset(3)
                    .Build(),
                    "Get",
-                   "/test_projectKey/import-containers?offset=0.7475848",
+                   "/test_projectKey/import-containers?offset=3",
                },
                new Object[] {
                    ApiRoot

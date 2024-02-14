@@ -412,6 +412,36 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.BusinessUnitStoresSetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCartDiscountCreated(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountCreatedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountCreatedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCartDiscountDeleted(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountDeletedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountDeletedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountDeletedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCartDiscountStoreAdded(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreAddedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreAddedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreAddedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCartDiscountStoreRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreRemovedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoreRemovedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCartDiscountStoresSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoresSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoresSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CartDiscountStoresSetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCategoryCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.CategoryCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CategoryCreatedMessageQueryBuilderDsl>> fn)
         {
@@ -608,6 +638,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerTitleSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerTitleSetMessageQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerTitleSetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsDiscountCodeCreated(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeCreatedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeCreatedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsDiscountCodeDeleted(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeDeletedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeDeletedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeDeletedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsDiscountCodeKeySet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeKeySetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DiscountCodeKeySetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntryCreated(

@@ -974,7 +974,7 @@ enum AssociateInheritanceMode {
   Enabled
 }
 
-type AssociateRole implements Versioned {
+type AssociateRole implements Versioned & ReferenceExpandable {
   key: String!
   buyerAssignable: Boolean!
   name: String
@@ -1289,7 +1289,7 @@ type BooleanType implements FieldType {
   name: String!
 }
 
-type BusinessUnit implements Versioned {
+type BusinessUnit implements Versioned & ReferenceExpandable {
   key: String!
   name: String!
   contactEmail: String
@@ -1723,6 +1723,15 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
+type CartDiscountCreated implements MessagePayload {
+  cartDiscount: CartDiscount!
+  type: String!
+}
+
+type CartDiscountDeleted implements MessagePayload {
+  type: String!
+}
+
 input CartDiscountDraft {
   value: CartDiscountValueInput!
   cartPredicate: String!
@@ -1766,6 +1775,24 @@ type CartDiscountQueryResult {
   total: Long!
   exists: Boolean!
   results: [CartDiscount!]!
+}
+
+type CartDiscountStoreAdded implements MessagePayload {
+  store: Store!
+  storeRef: KeyReference!
+  type: String!
+}
+
+type CartDiscountStoreRemoved implements MessagePayload {
+  store: Store!
+  storeRef: KeyReference!
+  type: String!
+}
+
+type CartDiscountStoresSet implements MessagePayload {
+  storesRef: [KeyReference!]!
+  stores: [Store!]!
+  type: String!
 }
 
 interface CartDiscountTarget {
@@ -3853,6 +3880,7 @@ type DirectDiscountDraftOutput {
 "With discount codes it is possible to give specific cart discounts to an eligible amount of users. They are defined by a string value which can be added to a cart so that specific cart discounts can be applied to the cart."
 type DiscountCode implements Versioned & ReferenceExpandable {
   code: String!
+  key: String
   isActive: Boolean!
   maxApplications: Long
   maxApplicationsPerCustomer: Long
@@ -3890,9 +3918,19 @@ type DiscountCode implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
+type DiscountCodeCreated implements MessagePayload {
+  discountCode: DiscountCode!
+  type: String!
+}
+
+type DiscountCodeDeleted implements MessagePayload {
+  type: String!
+}
+
 input DiscountCodeDraft {
   code: String!
   name: [LocalizedStringItemInputType!]
+  key: String
   description: [LocalizedStringItemInputType!]
   cartDiscounts: [ReferenceInput!]!
   isActive: Boolean = true
@@ -3909,6 +3947,12 @@ type DiscountCodeInfo {
   discountCodeRef: Reference!
   state: DiscountCodeState
   discountCode: DiscountCode
+}
+
+type DiscountCodeKeySet implements MessagePayload {
+  key: String
+  oldKey: String
+  type: String!
 }
 
 type DiscountCodeQueryResult {
@@ -3947,6 +3991,7 @@ input DiscountCodeUpdateAction {
   setCustomField: SetDiscountCodeCustomField
   setCustomType: SetDiscountCodeCustomType
   setDescription: SetDiscountCodeDescription
+  setKey: SetDiscountCodeKey
   setMaxApplications: SetDiscountCodeMaxApplications
   setMaxApplicationsPerCustomer: SetDiscountCodeMaxApplicationsPerCustomer
   setName: SetDiscountCodeName
@@ -5398,8 +5443,20 @@ type Mutation {
     "Queries with specified key"
     key: String): TaxCategory
   createDiscountCode(draft: DiscountCodeDraft!): DiscountCode
-  updateDiscountCode(id: String!, version: Long!, actions: [DiscountCodeUpdateAction!]!): DiscountCode
-  deleteDiscountCode(id: String!, version: Long!): DiscountCode
+  updateDiscountCode(version: Long!, actions: [DiscountCodeUpdateAction!]!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
+  deleteDiscountCode(version: Long!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
   createCartDiscount(draft: CartDiscountDraft!,
 
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
@@ -8444,7 +8501,12 @@ type Query {
     "Queries with specified key"
     key: String): CartDiscount
   cartDiscounts(where: String, sort: [String!], limit: Int, offset: Int): CartDiscountQueryResult!
-  discountCode(id: String!): DiscountCode
+ discountCode(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
   discountCodes(where: String, sort: [String!], limit: Int, offset: Int): DiscountCodeQueryResult!
   productDiscount(
     "Queries with specified ID"
@@ -10422,6 +10484,10 @@ input SetDiscountCodeCustomType {
 
 input SetDiscountCodeDescription {
   description: [LocalizedStringItemInputType!]
+}
+
+input SetDiscountCodeKey {
+  key: String
 }
 
 input SetDiscountCodeMaxApplications {

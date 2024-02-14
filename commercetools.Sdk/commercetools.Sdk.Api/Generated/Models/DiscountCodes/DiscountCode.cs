@@ -19,6 +19,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
 
         public DateTime LastModifiedAt { get; set; }
 
+        public string Key { get; set; }
+
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }

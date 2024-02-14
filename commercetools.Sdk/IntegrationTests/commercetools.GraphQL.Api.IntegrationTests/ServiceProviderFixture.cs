@@ -24,8 +24,9 @@ namespace commercetools.GraphQL.Api.IntegrationTests
                 AddUserSecrets<ServiceProviderFixture>().
                 AddEnvironmentVariables("CTP_").
                 Build();
+            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
 
-            services.UseCommercetoolsApi(configuration, "Client");
+            services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions { ReadResponseAsStream = useStreamClient});
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
             services.SetupClient(
                 "MeClient",

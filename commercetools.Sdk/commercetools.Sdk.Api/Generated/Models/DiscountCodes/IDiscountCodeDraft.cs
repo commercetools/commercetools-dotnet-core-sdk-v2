@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeDraft))]
     public partial interface IDiscountCodeDraft
     {
+        string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }

@@ -59,6 +59,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitStoreModeChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessagePayload))]
     [SubTypeDiscriminator("BusinessUnitStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessagePayload))]
+    [SubTypeDiscriminator("CartDiscountCreated", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessagePayload))]
+    [SubTypeDiscriminator("CartDiscountDeleted", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessagePayload))]
+    [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessagePayload))]
+    [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessagePayload))]
+    [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessagePayload))]
@@ -97,6 +102,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("DeliveryAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessagePayload))]
     [SubTypeDiscriminator("DeliveryItemsUpdated", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessagePayload))]
     [SubTypeDiscriminator("DeliveryRemoved", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessagePayload))]
+    [SubTypeDiscriminator("DiscountCodeCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessagePayload))]
+    [SubTypeDiscriminator("DiscountCodeDeleted", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessagePayload))]
+    [SubTypeDiscriminator("DiscountCodeKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryCreated", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryDeleted", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryQuantitySet", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload))]
@@ -542,6 +550,36 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessagePayload CartDiscountCreated(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessagePayload CartDiscountDeleted(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessagePayload CartDiscountStoreAdded(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessagePayload CartDiscountStoreRemoved(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload CartDiscountStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload CategoryCreated(Action<commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload();
@@ -767,6 +805,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessagePayload DeliveryRemoved(Action<commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessagePayload DiscountCodeCreated(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessagePayload DiscountCodeDeleted(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessagePayload DiscountCodeKeySet(Action<commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessagePayload();
             init?.Invoke(t);
             return t;
         }

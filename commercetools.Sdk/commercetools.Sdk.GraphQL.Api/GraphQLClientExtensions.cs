@@ -24,7 +24,7 @@ public static class GraphQlClientExtensions
     }
 }
 
-internal class ClientHandler : IHttpHandler
+internal sealed class ClientHandler : IHttpHandler
 {
     private readonly IClient _client;
     private readonly Uri _graphQlUri;

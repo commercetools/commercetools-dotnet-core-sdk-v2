@@ -10,7 +10,6 @@ using commercetools.Base.Client.Tokens;
 using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {
@@ -28,6 +27,7 @@ namespace commercetools.Base.Client
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
             ClientOptions options = null)
         {
+            options ??= new ClientOptions();
             if (clients.Count() == 1)
             {
                 return services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);
@@ -41,7 +41,7 @@ namespace commercetools.Base.Client
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
-            ClientOptions options = null)
+            ClientOptions options)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
 
@@ -57,7 +57,8 @@ namespace commercetools.Base.Client
                     var client = ClientFactory.Create(clientName, clientConfiguration,
                         serviceProvider.GetService<IHttpClientFactory>(),
                         serializerFactory(serviceProvider),
-                        tokenProviderSupplier(clientName, configuration, serviceProvider));
+                        tokenProviderSupplier(clientName, configuration, serviceProvider),
+                        options.ReadResponseAsStream);
                     client.Name = clientName;
                     return client;
                 });
@@ -71,7 +72,7 @@ namespace commercetools.Base.Client
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
-            ClientOptions options = null)
+            ClientOptions options)
         {
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
@@ -81,7 +82,8 @@ namespace commercetools.Base.Client
                 var client = ClientFactory.Create(clientName, clientConfiguration,
                     serviceProvider.GetService<IHttpClientFactory>(),
                     serializerFactory(serviceProvider),
-                    tokenProviderSupplier(clientName, configuration, serviceProvider));
+                    tokenProviderSupplier(clientName, configuration, serviceProvider),
+                    options.ReadResponseAsStream);
                 client.Name = clientName;
                 return client;
             });

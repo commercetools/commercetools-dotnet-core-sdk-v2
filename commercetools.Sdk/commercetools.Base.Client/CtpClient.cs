@@ -52,7 +52,7 @@ namespace commercetools.Base.Client
 
         public async Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
-            var result = await SendAsAsync(requestMessage, cancellationToken);
+            using var result = await SendAsAsync(requestMessage, cancellationToken).ConfigureAwait(false);
             var content = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
             return new ApiResponse<string>(result.StatusCode, result.ReasonPhrase, result.Headers, content);
         }

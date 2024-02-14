@@ -15,9 +15,18 @@ namespace commercetools.Base.Client
             IClientConfiguration configuration,
             IHttpClientFactory factory,
             ISerializerService serializerService,
-            ITokenProvider tokenProvider)
+            ITokenProvider tokenProvider,
+            bool readResponseAsStream = false)
         {
             Validator.ValidateObject(configuration, new ValidationContext(configuration), true);
+            if (readResponseAsStream && serializerService is IStreamSerializerService streamSerializer)
+            {
+                return new StreamCtpClient(
+                    CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, true),
+                    streamSerializer,
+                    clientName
+                );
+            }
             return new CtpClient(
                 CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
                 serializerService,
@@ -26,7 +35,7 @@ namespace commercetools.Base.Client
         }
 
         public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration,
-            IHttpClientFactory factory, ITokenProvider tokenProvider)
+            IHttpClientFactory factory, ITokenProvider tokenProvider, bool readResponseAsStream = false)
         {
             var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
@@ -39,7 +48,8 @@ namespace commercetools.Base.Client
                 )
             };
 
-            DelegatingMiddleware httpMiddleware = new HttpMiddleware(httpClient);
+            var httpMiddleware =
+                readResponseAsStream ? (DelegatingMiddleware)new StreamHttpMiddleware(httpClient) : new HttpMiddleware(httpClient);
             foreach (var handler in handlers)
             {
                 handler.InnerMiddleware = httpMiddleware;
