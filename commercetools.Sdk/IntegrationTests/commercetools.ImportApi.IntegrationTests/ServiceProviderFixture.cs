@@ -23,7 +23,7 @@ namespace commercetools.ImportApi.IntegrationTests
                 Build();
 
             var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
-            services.UseCommercetoolsImportApi(configuration, "ImportClient", options: new ClientOptions { ReadResponseAsStream = useStreamClient});
+            services.UseCommercetoolsImportApi(configuration, "ImportClient", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             this.serviceProvider = services.BuildServiceProvider();
 
             //set default ProjectKey
