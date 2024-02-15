@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using Xunit;
@@ -13,13 +12,13 @@ namespace commercetools.Api.IntegrationTests.Channel
     [Collection("Integration Tests")]
     public class ChannelIntegrationTests
     {
-        private readonly IClient _client;
+        private readonly ProjectApiRoot _client;
         private readonly string _projectKey;
 
         public ChannelIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
             var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
             this._projectKey = clientConfiguration.ProjectKey;
         }
 
@@ -45,8 +44,6 @@ namespace commercetools.Api.IntegrationTests.Channel
                 {
                     Assert.NotNull(channel);
                     var retrievedChannel = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Channels()
                         .WithId(channel.Id)
                         .Get()
@@ -69,8 +66,6 @@ namespace commercetools.Api.IntegrationTests.Channel
                 {
                     Assert.NotNull(channel);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Channels()
                         .Get()
                         .WithQuery(q => q.Key().Is(channel.Key))
@@ -108,8 +103,6 @@ namespace commercetools.Api.IntegrationTests.Channel
                     };
 
                     var updatedChannel = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Channels()
                         .WithId(channel.Id)
                         .Post(update)

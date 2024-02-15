@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.CartDiscounts;
 using static commercetools.Api.IntegrationTests.GenericFixture;
@@ -38,13 +39,11 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
 
         #region CreateAndDelete
 
-        public static async Task<ICartDiscount> CreateCartDiscount(IClient client, CartDiscountDraft cartDiscountDraft)
+        public static async Task<ICartDiscount> CreateCartDiscount(ProjectApiRoot client, CartDiscountDraft cartDiscountDraft)
         {
             try
             {
                 var resource = await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .CartDiscounts()
                     .Post(cartDiscountDraft)
                     .ExecuteAsync();
@@ -58,13 +57,11 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
             }
         }
 
-        public static async Task DeleteCartDiscount(IClient client, ICartDiscount cartDiscount)
+        public static async Task DeleteCartDiscount(ProjectApiRoot client, ICartDiscount cartDiscount)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .CartDiscounts()
                     .WithId(cartDiscount.Id)
                     .Delete()
@@ -81,13 +78,13 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
 
         #region WithDiscountCodes
 
-        public static async Task WithCartDiscount(IClient client,
+        public static async Task WithCartDiscount(ProjectApiRoot client,
             Func<CartDiscountDraft, CartDiscountDraft> draftAction, Action<ICartDiscount> func)
         {
             await With(client, new CartDiscountDraft(), draftAction, func, CreateCartDiscount, DeleteCartDiscount);
         }
 
-        public static async Task WithCartDiscount(IClient client,
+        public static async Task WithCartDiscount(ProjectApiRoot client,
             Func<CartDiscountDraft, CartDiscountDraft> draftAction,
             Func<ICartDiscount, Task> func)
         {
@@ -95,13 +92,13 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
                 DeleteCartDiscount);
         }
 
-        public static async Task WithCartDiscount(IClient client, Func<ICartDiscount, Task> func)
+        public static async Task WithCartDiscount(ProjectApiRoot client, Func<ICartDiscount, Task> func)
         {
             await WithAsync(client, new CartDiscountDraft(), DefaultCartDiscountDraft, func, CreateCartDiscount,
                 DeleteCartDiscount);
         }
 
-        public static async Task WithUpdateableCartDiscount(IClient client,
+        public static async Task WithUpdateableCartDiscount(ProjectApiRoot client,
             Func<ICartDiscount, Task<ICartDiscount>> func)
         {
             await WithUpdateableAsync(client, new CartDiscountDraft(), DefaultCartDiscountDraft, func,

@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.CartDiscounts;
-using commercetools.Sdk.Api.Models.Customers;
 using Xunit;
 using static commercetools.Api.IntegrationTests.CartDiscount.CartDiscountFixtures;
 
@@ -13,14 +10,11 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
     [Collection("Integration Tests")]
     public class CartDiscountIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public CartDiscountIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -45,8 +39,6 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
                 {
                     Assert.NotNull(cartDiscount);
                     var retrievedCartDiscount = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CartDiscounts()
                         .WithId(cartDiscount.Id)
                         .Get()
@@ -69,8 +61,6 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
                 {
                     Assert.NotNull(cartDiscount);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CartDiscounts()
                         .Get()
                         .WithQuery(q => q.Key().Is(cartDiscount.Key))
@@ -103,8 +93,6 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
                     };
 
                     var updatedCartDiscount = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CartDiscounts()
                         .WithId(cartDiscount.Id)
                         .Post(update)

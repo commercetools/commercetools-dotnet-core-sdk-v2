@@ -16,14 +16,11 @@ namespace commercetools.Api.IntegrationTests.Categories
     [Collection("Integration Tests")]
     public class CategoriesIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public CategoriesIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -47,7 +44,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await _client.WithApi().WithProjectKey(_projectKey)
+                    var retrievedCategory = await _client
                         .Categories()
                         .WithId(category.Id)
                         .Get()
@@ -67,7 +64,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await _client.WithApi(_projectKey)
+                    var retrievedCategory = await _client
                         .Categories()
                         .WithKey(category.Key)
                         .Get()
@@ -87,7 +84,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
+                    var returnedSet = await _client
                         .Categories()
                         .Get()
                         .WithQuery(q => q.Key().Is(category.Key))
@@ -108,7 +105,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     {
                         Assert.NotNull(category);
 
-                        var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
+                        var returnedSet = await _client
                             .Categories()
                             .Get()
                             .WithQuery(q => q.Key().Is(category.Key))
@@ -141,7 +138,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         var orderedCategoriesNames =
                             categoriesList.OrderBy(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
 
-                        var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
+                        var returnedSet = await _client
                             .Categories()
                             .Get()
                             .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
@@ -173,7 +170,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         var orderedCategoriesNames =
                             categoriesList.OrderByDescending(c => c.Name["en"]).Select(c => c.Name["en"]).ToList();
 
-                        var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
+                        var returnedSet = await _client
                             .Categories()
                             .Get()
                             .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
@@ -206,7 +203,7 @@ namespace commercetools.Api.IntegrationTests.Categories
 
                         await AssertEventuallyAsync(async () =>
                         {
-                            var returnedSet = await _client.WithApi().WithProjectKey(_projectKey)
+                            var returnedSet = await _client
                                 .Categories()
                                 .Get()
                                 .WithQuery(q => q.Parent(p => p.Id().Is(parentCategory.Id)))
@@ -237,7 +234,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 {
                     Assert.NotNull(category);
 
-                    await _client.WithApi().WithProjectKey(_projectKey)
+                    await _client
                         .Categories()
                         .WithId(category.Id)
                         .Delete()
@@ -245,7 +242,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .ExecuteAsync();
 
                     await Assert.ThrowsAsync<NotFoundException>(
-                        () => _client.WithApi().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
+                        () => _client.Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
 
@@ -259,7 +256,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 {
                     Assert.NotNull(category);
 
-                    await _client.WithApi().WithProjectKey(_projectKey)
+                    await _client
                         .Categories()
                         .WithKey(category.Key)
                         .Delete()
@@ -267,7 +264,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                         .ExecuteAsync();
 
                     await Assert.ThrowsAsync<NotFoundException>(
-                        () => _client.WithApi().WithProjectKey(_projectKey).Categories().WithId(category.Id).Get().ExecuteAsync());
+                        () => _client.Categories().WithId(category.Id).Get().ExecuteAsync());
                 });
         }
 
@@ -280,7 +277,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                 async category =>
                 {
                     Assert.NotNull(category);
-                    var retrievedCategory = await _client.WithApi().WithProjectKey(_projectKey)
+                    var retrievedCategory = await _client
                         .Categories()
                         .WithId(category.Id)
                         .Get()
@@ -313,7 +310,7 @@ namespace commercetools.Api.IntegrationTests.Categories
                     Actions = new List<ICategoryUpdateAction> { action }
                 };
 
-                var updatedCategory = await _client.WithApi().WithProjectKey(_projectKey)
+                var updatedCategory = await _client
                     .Categories()
                     .WithKey(category.Key)
                     .Post(update)

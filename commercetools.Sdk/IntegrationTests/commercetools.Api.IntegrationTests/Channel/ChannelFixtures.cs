@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Channels;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Api.IntegrationTests.Channel
@@ -44,13 +43,11 @@ namespace commercetools.Api.IntegrationTests.Channel
         }
 
         // public static async Task<IChannelSigninResult>
-        public static async Task<IChannel> CreateChannel(IClient client, ChannelDraft channelDraft)
+        public static async Task<IChannel> CreateChannel(ProjectApiRoot client, ChannelDraft channelDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Channels()
                     .Post(channelDraft)
                     .ExecuteAsync();
@@ -62,13 +59,11 @@ namespace commercetools.Api.IntegrationTests.Channel
             }
         }
 
-        public static async Task DeleteChannel(IClient client, IChannel channel)
+        public static async Task DeleteChannel(ProjectApiRoot client, IChannel channel)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Channels()
                     .WithId(channel.Id)
                     .Delete()
@@ -83,19 +78,19 @@ namespace commercetools.Api.IntegrationTests.Channel
 
         #region
 
-        public static async Task WithChannel(IClient client, Func<ChannelDraft, ChannelDraft> draftAction,
+        public static async Task WithChannel(ProjectApiRoot client, Func<ChannelDraft, ChannelDraft> draftAction,
             Action<IChannel> func)
         {
             await With(client, new ChannelDraft(), draftAction, func, CreateChannel, DeleteChannel);
         }
 
-        public static async Task WithChannel(IClient client, Func<ChannelDraft, ChannelDraft> draftAction,
+        public static async Task WithChannel(ProjectApiRoot client, Func<ChannelDraft, ChannelDraft> draftAction,
             Func<IChannel, Task> func)
         {
             await WithAsync(client, new ChannelDraft(), draftAction, func, CreateChannel, DeleteChannel);
         }
 
-        public static async Task WithUpdateableChannel(IClient client, Func<IChannel, Task<IChannel>> func)
+        public static async Task WithUpdateableChannel(ProjectApiRoot client, Func<IChannel, Task<IChannel>> func)
         {
             await WithUpdateableAsync(client, new ChannelDraft(), DefaultChannelDraft, func, CreateChannel,
                 DeleteChannel);

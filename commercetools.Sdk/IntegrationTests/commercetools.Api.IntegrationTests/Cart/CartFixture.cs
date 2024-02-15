@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
@@ -37,23 +38,19 @@ namespace commercetools.Api.IntegrationTests.Cart
 
         #endregion
 
-        public static async Task<ICart> CreateCart(IClient client, CartDraft cartDraft)
+        public static async Task<ICart> CreateCart(ProjectApiRoot client, CartDraft cartDraft)
         {
             return await client
-                .WithApi()
-                .WithProjectKey(DefaultProjectKey)
                 .Carts()
                 .Post(cartDraft)
                 .ExecuteAsync();
         }
 
-        public static async Task DeleteCart(IClient client, ICart cart)
+        public static async Task DeleteCart(ProjectApiRoot client, ICart cart)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Carts()
                     .WithKey(cart.Key)
                     .Delete()
@@ -68,23 +65,23 @@ namespace commercetools.Api.IntegrationTests.Cart
 
         #region WithCart
 
-        public static async Task WithCart(IClient client, Func<CartDraft, CartDraft> draftAction, Action<ICart> func)
+        public static async Task WithCart(ProjectApiRoot client, Func<CartDraft, CartDraft> draftAction, Action<ICart> func)
         {
             await With(client, new CartDraft(), draftAction, func, CreateCart, DeleteCart);
         }
 
-        public static async Task WithCart(IClient client, Func<CartDraft, CartDraft> draftAction,
+        public static async Task WithCart(ProjectApiRoot client, Func<CartDraft, CartDraft> draftAction,
             Func<ICart, Task> func)
         {
             await WithAsync(client, new CartDraft(), draftAction, func, CreateCart, DeleteCart);
         }
 
-        public static async Task WithCart(IClient client, Func<ICart, Task> func)
+        public static async Task WithCart(ProjectApiRoot client, Func<ICart, Task> func)
         {
             await WithAsync(client, new CartDraft(), DefaultCartDraft, func, CreateCart, DeleteCart);
         }
 
-        public static async Task WithUpdateableCart(IClient client, Func<ICart, Task<ICart>> func)
+        public static async Task WithUpdateableCart(ProjectApiRoot client, Func<ICart, Task<ICart>> func)
         {
             await WithUpdateableAsync(client, new CartDraft(), DefaultCartDraft, func, CreateCart, DeleteCart);
         }
