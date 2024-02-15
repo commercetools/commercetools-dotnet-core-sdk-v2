@@ -14,6 +14,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 
 namespace commercetools.Sdk.ImportApi.Client
 {
@@ -107,5 +108,9 @@ namespace commercetools.Sdk.ImportApi.Client
             return With().Inventories();
         }
 
+        public ByProjectKeyTypesRequestBuilder Types()
+        {
+            return With().Types();
+        }
     }
 }
