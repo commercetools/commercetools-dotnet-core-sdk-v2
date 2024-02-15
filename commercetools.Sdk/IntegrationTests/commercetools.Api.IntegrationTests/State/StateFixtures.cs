@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.States;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -38,14 +39,12 @@ namespace commercetools.Api.IntegrationTests.State
             return stateDraft;
         }
 
-        public static async Task<IState> CreateState(IClient client,
+        public static async Task<IState> CreateState(ProjectApiRoot client,
             StateDraft stateDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .States()
                     .Post(stateDraft)
                     .ExecuteAsync();
@@ -57,13 +56,11 @@ namespace commercetools.Api.IntegrationTests.State
             }
         }
 
-        public static async Task DeleteState(IClient client, IState state)
+        public static async Task DeleteState(ProjectApiRoot client, IState state)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .States()
                     .WithId(state.Id)
                     .Delete()
@@ -78,7 +75,7 @@ namespace commercetools.Api.IntegrationTests.State
 
         #region
 
-        public static async Task WithState(IClient client,
+        public static async Task WithState(ProjectApiRoot client,
             Func<StateDraft, StateDraft> draftAction,
             Action<IState> func)
         {
@@ -86,7 +83,7 @@ namespace commercetools.Api.IntegrationTests.State
                 DeleteState);
         }
 
-        public static async Task WithState(IClient client,
+        public static async Task WithState(ProjectApiRoot client,
             Func<StateDraft, StateDraft> draftAction,
             Func<IState, Task> func)
         {
@@ -94,7 +91,7 @@ namespace commercetools.Api.IntegrationTests.State
                 DeleteState);
         }
 
-        public static async Task WithUpdateableState(IClient client,
+        public static async Task WithUpdateableState(ProjectApiRoot client,
             Func<IState, Task<IState>> func)
         {
             await WithUpdateableAsync(client, new StateDraft(), DefaultStateDraft, func,

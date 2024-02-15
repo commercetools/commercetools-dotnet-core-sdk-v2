@@ -12,14 +12,11 @@ namespace commercetools.Api.IntegrationTests.CustomerGroup
     [Collection("Integration Tests")]
     public class CustomerIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public CustomerIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -44,8 +41,6 @@ namespace commercetools.Api.IntegrationTests.CustomerGroup
                 {
                     Assert.NotNull(customerGroup);
                     var retrievedCustomer = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CustomerGroups()
                         .WithId(customerGroup.Id)
                         .Get()
@@ -68,8 +63,6 @@ namespace commercetools.Api.IntegrationTests.CustomerGroup
                 {
                     Assert.NotNull(customerGroup);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CustomerGroups()
                         .Get()
                         .WithQuery(q => q.Key().Is(customerGroup.Key))
@@ -102,8 +95,6 @@ namespace commercetools.Api.IntegrationTests.CustomerGroup
                     };
 
                     var updatedCustomerGroup = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CustomerGroups()
                         .WithId(customerGroup.Id)
                         .Post(update)

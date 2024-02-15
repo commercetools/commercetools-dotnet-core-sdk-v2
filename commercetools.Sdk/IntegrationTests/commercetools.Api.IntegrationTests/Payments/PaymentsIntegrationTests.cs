@@ -12,13 +12,11 @@ namespace commercetools.Api.IntegrationTests.Payments
     [Collection("Integration Tests")]
     public class PaymentsIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly ProjectApiRoot _apiRoot;
+        private readonly ProjectApiRoot _client;
 
         public PaymentsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._apiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -53,7 +51,7 @@ namespace commercetools.Api.IntegrationTests.Payments
             await WithPayment(
                 _client, draft => DefaultPaymentDraft(draft), async payment =>
                 {
-                    var queryPayment = await _apiRoot.Payments().Get().WithQuery(d => d.Id().Is(payment.Id))
+                    var queryPayment = await _client.Payments().Get().WithQuery(d => d.Id().Is(payment.Id))
                         .ExecuteAsync();
                     Assert.Equal(payment.Id, queryPayment.Results.FirstOrDefault().Id);
                 }

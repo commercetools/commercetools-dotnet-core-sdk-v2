@@ -16,14 +16,11 @@ namespace commercetools.Api.IntegrationTests.Extension
     [Collection("Integration Tests")]
     public class ExtensionIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public ExtensionIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -48,8 +45,6 @@ namespace commercetools.Api.IntegrationTests.Extension
                 {
                     Assert.NotNull(extension);
                     var retrievedExtension = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Extensions()
                         .WithId(extension.Id)
                         .Get()

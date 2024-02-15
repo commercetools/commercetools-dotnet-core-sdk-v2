@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Customers;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -40,13 +41,11 @@ namespace commercetools.Api.IntegrationTests.Customers
             return customerDraft;
         }
         
-        public static async Task<ICustomer> CreateCustomer(IClient client, CustomerDraft customerDraft)
+        public static async Task<ICustomer> CreateCustomer(ProjectApiRoot client, CustomerDraft customerDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Customers()
                     .Post(customerDraft)
                     .ExecuteAsync()
@@ -59,13 +58,11 @@ namespace commercetools.Api.IntegrationTests.Customers
             }
         }
 
-        public static async Task DeleteCustomer(IClient client, ICustomer customer)
+        public static async Task DeleteCustomer(ProjectApiRoot client, ICustomer customer)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Customers()
                     .WithKey(customer.Key)
                     .Delete()
@@ -80,24 +77,24 @@ namespace commercetools.Api.IntegrationTests.Customers
 
         #region
 
-        public static async Task WithCustomer(IClient client, Func<CustomerDraft, CustomerDraft> draftAction,
+        public static async Task WithCustomer(ProjectApiRoot client, Func<CustomerDraft, CustomerDraft> draftAction,
             Action<ICustomer> func)
         {
             await With(client, new CustomerDraft(), draftAction, func, CreateCustomer, DeleteCustomer);
         }
 
-        public static async Task WithCustomer(IClient client, Func<CustomerDraft, CustomerDraft> draftAction,
+        public static async Task WithCustomer(ProjectApiRoot client, Func<CustomerDraft, CustomerDraft> draftAction,
             Func<ICustomer, Task> func)
         {
             await WithAsync(client, new CustomerDraft(), draftAction, func, CreateCustomer, DeleteCustomer);
         }
 
-        public static async Task WithCart(IClient client, Func<ICustomer, Task> func)
+        public static async Task WithCart(ProjectApiRoot client, Func<ICustomer, Task> func)
         {
             await WithAsync(client, new CustomerDraft(), DefaultCustomerDraft, func, CreateCustomer, DeleteCustomer);
         }
 
-        public static async Task WithUpdateableCustomer(IClient client, Func<ICustomer, Task<ICustomer>> func)
+        public static async Task WithUpdateableCustomer(ProjectApiRoot client, Func<ICustomer, Task<ICustomer>> func)
         {
             await WithUpdateableAsync(client, new CustomerDraft(), DefaultCustomerDraft, func, CreateCustomer,
                 DeleteCustomer);

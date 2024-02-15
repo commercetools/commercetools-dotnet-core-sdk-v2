@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Types;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -43,14 +44,12 @@ namespace commercetools.Api.IntegrationTests.Type
             return typeDraft;
         }
 
-        public static async Task<IType> CreateType(IClient client,
+        public static async Task<IType> CreateType(ProjectApiRoot client,
             TypeDraft typeDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Types()
                     .Post(typeDraft)
                     .ExecuteAsync();
@@ -62,13 +61,11 @@ namespace commercetools.Api.IntegrationTests.Type
             }
         }
 
-        public static async Task DeleteType(IClient client, IType type)
+        public static async Task DeleteType(ProjectApiRoot client, IType type)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Types()
                     .WithId(type.Id)
                     .Delete()
@@ -83,7 +80,7 @@ namespace commercetools.Api.IntegrationTests.Type
 
         #region
 
-        public static async Task WithType(IClient client,
+        public static async Task WithType(ProjectApiRoot client,
             Func<TypeDraft, TypeDraft> draftAction,
             Action<IType> func)
         {
@@ -91,7 +88,7 @@ namespace commercetools.Api.IntegrationTests.Type
                 DeleteType);
         }
 
-        public static async Task WithType(IClient client,
+        public static async Task WithType(ProjectApiRoot client,
             Func<TypeDraft, TypeDraft> draftAction,
             Func<IType, Task> func)
         {
@@ -99,7 +96,7 @@ namespace commercetools.Api.IntegrationTests.Type
                 DeleteType);
         }
 
-        public static async Task WithUpdateableType(IClient client,
+        public static async Task WithUpdateableType(ProjectApiRoot client,
             Func<IType, Task<IType>> func)
         {
             await WithUpdateableAsync(client, new TypeDraft(), DefaultTypeDraft, func,

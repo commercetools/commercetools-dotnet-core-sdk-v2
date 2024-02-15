@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.CustomObjects;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -33,13 +34,11 @@ namespace commercetools.Api.IntegrationTests.CustomObject
             return customObjectDraft;
         }
 
-        public static async Task<ICustomObject> CreateCustomObject(IClient client, CustomObjectDraft customObjectDraft)
+        public static async Task<ICustomObject> CreateCustomObject(ProjectApiRoot client, CustomObjectDraft customObjectDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .CustomObjects()
                     .Post(customObjectDraft)
                     .ExecuteAsync();
@@ -51,13 +50,11 @@ namespace commercetools.Api.IntegrationTests.CustomObject
             }
         }
 
-        public static async Task DeleteCustomObject(IClient client, ICustomObject customObject)
+        public static async Task DeleteCustomObject(ProjectApiRoot client, ICustomObject customObject)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .CustomObjects()
                     .WithContainerAndKey(customObject.Container, customObject.Key)
                     .Delete()
@@ -72,7 +69,7 @@ namespace commercetools.Api.IntegrationTests.CustomObject
 
         #region
 
-        public static async Task WithCustomObject(IClient client,
+        public static async Task WithCustomObject(ProjectApiRoot client,
             Func<CustomObjectDraft, CustomObjectDraft> draftAction,
             Action<ICustomObject> func)
         {
@@ -80,7 +77,7 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                 DeleteCustomObject);
         }
 
-        public static async Task WithCustomObject(IClient client,
+        public static async Task WithCustomObject(ProjectApiRoot client,
             Func<CustomObjectDraft, CustomObjectDraft> draftAction,
             Func<ICustomObject, Task> func)
         {
@@ -88,7 +85,7 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                 DeleteCustomObject);
         }
 
-        public static async Task WithUpdateableCustomObject(IClient client,
+        public static async Task WithUpdateableCustomObject(ProjectApiRoot client,
             Func<ICustomObject, Task<ICustomObject>> func)
         {
             await WithUpdateableAsync(client, new CustomObjectDraft(), DefaultCustomObjectDraft, func,

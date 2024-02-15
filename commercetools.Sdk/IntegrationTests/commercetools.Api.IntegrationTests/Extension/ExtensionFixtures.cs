@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Extensions;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -49,13 +50,11 @@ namespace commercetools.Api.IntegrationTests.Extension
             return extensionDraft;
         }
         
-        public static async Task<IExtension> CreateExtension(IClient client, ExtensionDraft extensionDraft)
+        public static async Task<IExtension> CreateExtension(ProjectApiRoot client, ExtensionDraft extensionDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Extensions()
                     .Post(extensionDraft)
                     .ExecuteAsync();
@@ -67,13 +66,11 @@ namespace commercetools.Api.IntegrationTests.Extension
             }
         }
 
-        public static async Task DeleteExtension(IClient client, IExtension extension)
+        public static async Task DeleteExtension(ProjectApiRoot client, IExtension extension)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Extensions()
                     .WithKey(extension.Key)
                     .Delete()
@@ -88,25 +85,25 @@ namespace commercetools.Api.IntegrationTests.Extension
 
         #region
 
-        public static async Task WithExtension(IClient client, Func<ExtensionDraft, ExtensionDraft> draftAction,
+        public static async Task WithExtension(ProjectApiRoot client, Func<ExtensionDraft, ExtensionDraft> draftAction,
             Action<IExtension> func)
         {
             await With(client, new ExtensionDraft(), draftAction, func, CreateExtension, DeleteExtension);
         }
 
-        public static async Task WithExtension(IClient client, Func<ExtensionDraft, ExtensionDraft> draftAction,
+        public static async Task WithExtension(ProjectApiRoot client, Func<ExtensionDraft, ExtensionDraft> draftAction,
             Func<IExtension, Task> func)
         {
             await WithAsync(client, new ExtensionDraft(), draftAction, func, CreateExtension, DeleteExtension);
         }
 
-        public static async Task WithCart(IClient client, Func<IExtension, Task> func)
+        public static async Task WithExtension(ProjectApiRoot client, Func<IExtension, Task> func)
         {
             await WithAsync(client, new ExtensionDraft(), DefaultExtensionDraft, func, CreateExtension,
                 DeleteExtension);
         }
 
-        public static async Task WithUpdateableExtension(IClient client, Func<IExtension, Task<IExtension>> func)
+        public static async Task WithUpdateableExtension(ProjectApiRoot client, Func<IExtension, Task<IExtension>> func)
         {
             await WithUpdateableAsync(client, new ExtensionDraft(), DefaultExtensionDraft, func, CreateExtension,
                 DeleteExtension);

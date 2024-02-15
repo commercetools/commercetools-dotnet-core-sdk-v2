@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -46,14 +47,12 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
             return taxCategoryDraft;
         }
 
-        public static async Task<ITaxCategory> CreateTaxCategories(IClient client,
+        public static async Task<ITaxCategory> CreateTaxCategories(ProjectApiRoot client,
             TaxCategoryDraft taxCategoriesDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .TaxCategories()
                     .Post(taxCategoriesDraft)
                     .ExecuteAsync();
@@ -65,13 +64,11 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
             }
         }
 
-        public static async Task DeleteTaxCategories(IClient client, ITaxCategory taxCategories)
+        public static async Task DeleteTaxCategories(ProjectApiRoot client, ITaxCategory taxCategories)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .TaxCategories()
                     .WithId(taxCategories.Id)
                     .Delete()
@@ -86,7 +83,7 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
 
         #region
 
-        public static async Task WithTaxCategory(IClient client,
+        public static async Task WithTaxCategory(ProjectApiRoot client,
             Func<TaxCategoryDraft, TaxCategoryDraft> draftAction,
             Action<ITaxCategory> func)
         {
@@ -94,7 +91,7 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
                 DeleteTaxCategories);
         }
 
-        public static async Task WithTaxCategory(IClient client,
+        public static async Task WithTaxCategory(ProjectApiRoot client,
             Func<TaxCategoryDraft, TaxCategoryDraft> draftAction,
             Func<ITaxCategory, Task> func)
         {
@@ -102,7 +99,7 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
                 DeleteTaxCategories);
         }
 
-        public static async Task WithUpdateableTaxCategory(IClient client,
+        public static async Task WithUpdateableTaxCategory(ProjectApiRoot client,
             Func<ITaxCategory, Task<ITaxCategory>> func)
         {
             await WithUpdateableAsync(client, new TaxCategoryDraft(), DefaultTaxCategoryDraft, func,

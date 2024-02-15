@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.States;
@@ -12,14 +13,11 @@ namespace commercetools.Api.IntegrationTests.State
     [Collection("Integration Tests")]
     public class StateIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public StateIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -43,8 +41,6 @@ namespace commercetools.Api.IntegrationTests.State
                 {
                     Assert.NotNull(state);
                     var retrievedState = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .States()
                         .WithId(state.Id)
                         .Get()
@@ -67,8 +63,6 @@ namespace commercetools.Api.IntegrationTests.State
                 {
                     Assert.NotNull(state);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .States()
                         .WithKey(key)
                         .Get()
@@ -100,8 +94,6 @@ namespace commercetools.Api.IntegrationTests.State
                     };
 
                     var updatedState = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .States()
                         .WithId(state.Id)
                         .Post(update)

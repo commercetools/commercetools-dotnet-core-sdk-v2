@@ -12,14 +12,11 @@ namespace commercetools.Api.IntegrationTests.CustomObject
     [Collection("Integration Tests")]
     public class CustomObjectIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public CustomObjectIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -44,8 +41,6 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                 {
                     Assert.NotNull(customObject);
                     var retrievedCustomObject = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CustomObjects()
                         .WithContainerAndKey(customObject.Container, customObject.Key)
                         .Get()
@@ -68,8 +63,6 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                 {
                     Assert.NotNull(customer);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .CustomObjects()
                         .Get()
                         .WithQuery(q => q.Key().Is(customer.Key))
@@ -100,8 +93,6 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                         };
         
                         var updatedCustomObject = await _client
-                            .WithApi()
-                            .WithProjectKey(_projectKey)
                             .CustomObjects()
                             .Post(update)
                             .ExecuteAsync();

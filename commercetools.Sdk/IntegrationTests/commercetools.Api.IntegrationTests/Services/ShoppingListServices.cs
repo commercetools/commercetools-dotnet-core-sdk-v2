@@ -16,7 +16,7 @@ namespace commercetools.Api.IntegrationTests.Services
         {
             try
             {
-                var shoppingList = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
+                var shoppingList = await adminClient.WithApi(GenericFixture.DefaultProjectKey)
                     .ShoppingLists()
                     .WithKey(key)
                     .Get()
@@ -33,7 +33,7 @@ namespace commercetools.Api.IntegrationTests.Services
 
         public async Task<IShoppingList> CreateShoppingList(IClient adminClient, IShoppingListDraft shoppingListDraft)
         {
-            var shoppingList = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
+            var shoppingList = await adminClient.WithApi(GenericFixture.DefaultProjectKey)
                 .ShoppingLists()
                 .Post(shoppingListDraft)
                 .ExecuteAsync();

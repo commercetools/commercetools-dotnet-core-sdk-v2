@@ -14,14 +14,11 @@ namespace commercetools.Api.IntegrationTests.Store
     [Collection("Integration Tests")]
     public class StoreIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public StoreIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -45,8 +42,6 @@ namespace commercetools.Api.IntegrationTests.Store
                 {
                     Assert.NotNull(store);
                     var retrievedStore = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Stores()
                         .WithId(store.Id)
                         .Get()
@@ -69,8 +64,6 @@ namespace commercetools.Api.IntegrationTests.Store
                 {
                     Assert.NotNull(store);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Stores()
                         .WithKey(key)
                         .Get()
@@ -102,8 +95,6 @@ namespace commercetools.Api.IntegrationTests.Store
                     };
 
                     var updatedStore = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Stores()
                         .WithId(store.Id)
                         .Post(update)

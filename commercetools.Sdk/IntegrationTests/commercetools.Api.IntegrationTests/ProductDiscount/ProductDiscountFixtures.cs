@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.ProductDiscounts;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -43,14 +44,12 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
             return productDiscountDraft;
         }
         
-        public static async Task<IProductDiscount> CreateProductDiscount(IClient client,
+        public static async Task<IProductDiscount> CreateProductDiscount(ProjectApiRoot client,
             ProductDiscountDraft productDiscountDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .ProductDiscounts()
                     .Post(productDiscountDraft)
                     .ExecuteAsync();
@@ -62,13 +61,11 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
             }
         }
 
-        public static async Task DeleteProductDiscount(IClient client, IProductDiscount productDiscount)
+        public static async Task DeleteProductDiscount(ProjectApiRoot client, IProductDiscount productDiscount)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .ProductDiscounts()
                     .WithId(productDiscount.Id)
                     .Delete()
@@ -83,7 +80,7 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
 
         #region
 
-        public static async Task WithProductDiscount(IClient client,
+        public static async Task WithProductDiscount(ProjectApiRoot client,
             Func<ProductDiscountDraft, ProductDiscountDraft> draftAction,
             Action<IProductDiscount> func)
         {
@@ -91,7 +88,7 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
                 DeleteProductDiscount);
         }
 
-        public static async Task WithProductDiscount(IClient client,
+        public static async Task WithProductDiscount(ProjectApiRoot client,
             Func<ProductDiscountDraft, ProductDiscountDraft> draftAction,
             Func<IProductDiscount, Task> func)
         {
@@ -99,7 +96,7 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
                 DeleteProductDiscount);
         }
 
-        public static async Task WithUpdateableProductDiscount(IClient client,
+        public static async Task WithUpdateableProductDiscount(ProjectApiRoot client,
             Func<IProductDiscount, Task<IProductDiscount>> func)
         {
             await WithUpdateableAsync(client, new ProductDiscountDraft(), DefaultProductDiscountDraft, func,

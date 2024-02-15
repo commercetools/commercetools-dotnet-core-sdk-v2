@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Stores;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -33,14 +34,12 @@ namespace commercetools.Api.IntegrationTests.Store
             return storeDraft;
         }
 
-        public static async Task<IStore> CreateStore(IClient client,
+        public static async Task<IStore> CreateStore(ProjectApiRoot client,
             StoreDraft storeDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Stores()
                     .Post(storeDraft)
                     .ExecuteAsync();
@@ -52,13 +51,11 @@ namespace commercetools.Api.IntegrationTests.Store
             }
         }
 
-        public static async Task DeleteStore(IClient client, IStore store)
+        public static async Task DeleteStore(ProjectApiRoot client, IStore store)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Stores()
                     .WithId(store.Id)
                     .Delete()
@@ -73,7 +70,7 @@ namespace commercetools.Api.IntegrationTests.Store
 
         #region
 
-        public static async Task WithStore(IClient client,
+        public static async Task WithStore(ProjectApiRoot client,
             Func<StoreDraft, StoreDraft> draftAction,
             Action<IStore> func)
         {
@@ -81,7 +78,7 @@ namespace commercetools.Api.IntegrationTests.Store
                 DeleteStore);
         }
 
-        public static async Task WithStore(IClient client,
+        public static async Task WithStore(ProjectApiRoot client,
             Func<StoreDraft, StoreDraft> draftAction,
             Func<IStore, Task> func)
         {
@@ -89,7 +86,7 @@ namespace commercetools.Api.IntegrationTests.Store
                 DeleteStore);
         }
 
-        public static async Task WithUpdateableStore(IClient client,
+        public static async Task WithUpdateableStore(ProjectApiRoot client,
             Func<IStore, Task<IStore>> func)
         {
             await WithUpdateableAsync(client, new StoreDraft(), DefaultStoreDraft, func,

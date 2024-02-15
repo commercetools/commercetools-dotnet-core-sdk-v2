@@ -12,14 +12,11 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
     [Collection("Integration Tests")]
     public class TaxCategoriesIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public TaxCategoriesIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -43,8 +40,6 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
                 {
                     Assert.NotNull(taxCategory);
                     var retrievedTaxCategories = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .TaxCategories()
                         .WithId(taxCategory.Id)
                         .Get()
@@ -67,8 +62,6 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
                 {
                     Assert.NotNull(taxCategory);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .TaxCategories()
                         .Get()
                         .WithQuery(q => q.Key().Is(taxCategory.Key))
@@ -101,8 +94,6 @@ namespace commercetools.Api.IntegrationTests.TaxCategories
                     };
 
                     var updatedTaxCategory = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .TaxCategories()
                         .WithId(taxCategory.Id)
                         .Post(update)

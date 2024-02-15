@@ -12,14 +12,11 @@ namespace commercetools.Api.IntegrationTests.Zone
     [Collection("Integration Tests")]
     public class ZoneIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public ZoneIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -43,8 +40,6 @@ namespace commercetools.Api.IntegrationTests.Zone
                 {
                     Assert.NotNull(zone);
                     var retrievedZone = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Zones()
                         .WithId(zone.Id)
                         .Get()
@@ -67,8 +62,6 @@ namespace commercetools.Api.IntegrationTests.Zone
                 {
                     Assert.NotNull(zone);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Zones()
                         .Get()
                         .WithQuery(q => q.Key().Is(zone.Key))
@@ -101,8 +94,6 @@ namespace commercetools.Api.IntegrationTests.Zone
                     };
 
                     var updatedZone = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Zones()
                         .WithId(zone.Id)
                         .Post(update)

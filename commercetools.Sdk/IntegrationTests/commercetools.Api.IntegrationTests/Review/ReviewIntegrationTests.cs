@@ -12,14 +12,12 @@ namespace commercetools.Api.IntegrationTests.Review
     [Collection("Integration Tests")]
     public class ReviewIntegrationTests
     {
-        private readonly IClient _client;
+        private readonly ProjectApiRoot _client;
         private readonly string _projectKey;
 
         public ReviewIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -43,8 +41,6 @@ namespace commercetools.Api.IntegrationTests.Review
                 {
                     Assert.NotNull(review);
                     var retrievedReview = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Reviews()
                         .WithId(review.Id)
                         .Get()
@@ -67,8 +63,6 @@ namespace commercetools.Api.IntegrationTests.Review
                 {
                     Assert.NotNull(review);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Reviews()
                         .Get()
                         .WithQuery(q => q.Key().Is(review.Key))
@@ -101,8 +95,6 @@ namespace commercetools.Api.IntegrationTests.Review
                     };
 
                     var updatedReview = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Reviews()
                         .WithId(review.Id)
                         .Post(update)

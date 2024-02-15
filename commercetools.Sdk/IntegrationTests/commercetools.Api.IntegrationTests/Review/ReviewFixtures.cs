@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Reviews;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using commercetools.Sdk.Api.Extensions;
@@ -32,14 +33,12 @@ namespace commercetools.Api.IntegrationTests.Review
             return reviewDraft;
         }
 
-        public static async Task<IReview> CreateReview(IClient client,
+        public static async Task<IReview> CreateReview(ProjectApiRoot client,
             ReviewDraft reviewDraft)
         {
             try
             {
                 return await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Reviews()
                     .Post(reviewDraft)
                     .ExecuteAsync();
@@ -51,13 +50,11 @@ namespace commercetools.Api.IntegrationTests.Review
             }
         }
 
-        public static async Task DeleteReview(IClient client, IReview review)
+        public static async Task DeleteReview(ProjectApiRoot client, IReview review)
         {
             try
             {
                 await client
-                    .WithApi()
-                    .WithProjectKey(DefaultProjectKey)
                     .Reviews()
                     .WithId(review.Id)
                     .Delete()
@@ -72,7 +69,7 @@ namespace commercetools.Api.IntegrationTests.Review
 
         #region
 
-        public static async Task WithReview(IClient client,
+        public static async Task WithReview(ProjectApiRoot client,
             Func<ReviewDraft, ReviewDraft> draftAction,
             Action<IReview> func)
         {
@@ -80,7 +77,7 @@ namespace commercetools.Api.IntegrationTests.Review
                 DeleteReview);
         }
 
-        public static async Task WithReview(IClient client,
+        public static async Task WithReview(ProjectApiRoot client,
             Func<ReviewDraft, ReviewDraft> draftAction,
             Func<IReview, Task> func)
         {
@@ -88,7 +85,7 @@ namespace commercetools.Api.IntegrationTests.Review
                 DeleteReview);
         }
 
-        public static async Task WithUpdateableReview(IClient client,
+        public static async Task WithUpdateableReview(ProjectApiRoot client,
             Func<IReview, Task<IReview>> func)
         {
             await WithUpdateableAsync(client, new ReviewDraft(), DefaultReviewDraft, func,

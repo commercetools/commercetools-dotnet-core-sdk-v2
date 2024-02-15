@@ -13,14 +13,11 @@ namespace commercetools.Api.IntegrationTests.Type
     [Collection("Integration Tests")]
     public class TypeIntegrationTests
     {
-        private readonly IClient _client;
-        private readonly string _projectKey;
+        private readonly ProjectApiRoot _client;
 
         public TypeIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -44,8 +41,6 @@ namespace commercetools.Api.IntegrationTests.Type
                 {
                     Assert.NotNull(type);
                     var retrievedType = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Types()
                         .WithId(type.Id)
                         .Get()
@@ -68,8 +63,6 @@ namespace commercetools.Api.IntegrationTests.Type
                 {
                     Assert.NotNull(type);
                     var returnedSet = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Types()
                         .Get()
                         .WithQuery(q => q.Key().Is(type.Key))
@@ -102,8 +95,6 @@ namespace commercetools.Api.IntegrationTests.Type
                     };
 
                     var updatedType = await _client
-                        .WithApi()
-                        .WithProjectKey(_projectKey)
                         .Types()
                         .WithId(type.Id)
                         .Post(update)
