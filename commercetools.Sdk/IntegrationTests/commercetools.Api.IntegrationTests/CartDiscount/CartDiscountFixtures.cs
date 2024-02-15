@@ -1,9 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.CartDiscounts;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
@@ -21,7 +19,8 @@ namespace commercetools.Api.IntegrationTests.CartDiscount
             cartDiscountDraft.CartPredicate = $"country=\"DE\"";
             cartDiscountDraft.Value = new CartDiscountValueRelativeDraft() { Type = "relative", Permyriad = 10 };
             cartDiscountDraft.Target = new CartDiscountShippingCostTarget() { Type = "shipping" };
-            cartDiscountDraft.SortOrder = "0.213";
+            cartDiscountDraft.SortOrder = TestingUtility.RandomSortOrder();
+            cartDiscountDraft.RequiresDiscountCode = true;
             cartDiscountDraft.IsActive = false;
 
             return cartDiscountDraft;
