@@ -12,8 +12,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     {
         IMoney Value { get; set; }
 
-        IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
-        IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+        IList<IDiscountedLineItemPortionDraft> IncludedDiscounts { get; set; }
+        IEnumerable<IDiscountedLineItemPortionDraft> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
 
 
     }
