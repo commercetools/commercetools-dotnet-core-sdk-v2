@@ -87,16 +87,6 @@ namespace commercetools.Api.IntegrationTests.Products
             return resource;
         }
 
-        public static async Task<IProduct> CreateProduct(IClient client, ProductDraft productDraft)
-        {
-            return await CreateProduct(client.WithProject(DefaultProjectKey), productDraft);
-        }
-
-        public static async Task DeleteProduct(IClient client, IProduct product)
-        {
-            await DeleteProduct(client.WithProject(DefaultProjectKey), product);
-        }
-
         public static async Task DeleteProduct(ProjectApiRoot apiRoot, IProduct product)
         {
             try
@@ -130,10 +120,6 @@ namespace commercetools.Api.IntegrationTests.Products
             }
         }
 
-        public static async Task<IProduct> CreateOrRetrieveProduct(IClient client, ProductDraft productDraft)
-        {
-            return await CreateOrRetrieveProduct(client.WithProject(DefaultProjectKey), productDraft);
-        }
         public static async Task<IProduct> CreateOrRetrieveProduct(ProjectApiRoot apiRoot, ProductDraft productDraft)
         {
             IProduct product = null;
@@ -156,20 +142,9 @@ namespace commercetools.Api.IntegrationTests.Products
         }
         #endregion
 
-        public static async Task WithProduct(IClient client, Func<IProduct, Task> func)
-        {
-            await WithProduct(client.WithProject(DefaultProjectKey), func);
-        }
-
         public static async Task WithProduct(ProjectApiRoot apiRoot, Func<IProduct, Task> func)
         {
             await WithProduct(apiRoot, DefaultProductDraft, func);
-        }
-
-        public static async Task WithProduct(IClient client, Func<ProductDraft, ProductDraft> draftAction,
-            Func<IProduct, Task> func)
-        {
-            await WithProduct(client.WithProject(DefaultProjectKey), draftAction, func);
         }
 
         public static async Task WithProduct(ProjectApiRoot apiRoot, Func<ProductDraft, ProductDraft> draftAction, Func<IProduct, Task> func)

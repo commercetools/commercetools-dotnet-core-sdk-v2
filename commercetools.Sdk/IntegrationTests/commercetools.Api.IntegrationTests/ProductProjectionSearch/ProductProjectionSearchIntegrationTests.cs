@@ -21,16 +21,11 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
         public readonly string KeyProductType = $"{KeyPrefix}_ProductType";
         public readonly string KeyLocalizedProduct = $"{KeyPrefix}_localizedProduct";
 
-        private readonly IClient _client;
-        private readonly string _projectKey;
-        private readonly ProjectApiRoot _apiRoot;
+        private readonly ProjectApiRoot _client;
 
         public ProductProjectionSearchIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            var clientConfiguration = serviceProviderFixture.GetClientConfiguration("Client");
-            this._client = serviceProviderFixture.GetService<IClient>();
-            this._apiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
-            this._projectKey = clientConfiguration.ProjectKey;
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -61,8 +56,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
             await AssertEventuallyAsync(async () =>
             {
                 //Act
-                var searchResult = await _client.WithApi()
-                    .WithProjectKey(_projectKey)
+                var searchResult = await _client
                     .ProductProjections()
                     .Search()
                     .Get()
@@ -79,7 +73,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
 
             });
 
-            var r = _apiRoot.StandalonePrices().Get()
+            var r = _client.StandalonePrices().Get()
                 .WithQuery(q => q.Key().IsInVar("keys"), new Dictionary<string, IEnumerable<string>>()
                 {
                     {
@@ -95,7 +89,7 @@ namespace commercetools.Api.IntegrationTests.ProductProjectionSearch
         [Fact]
         public Task SearchPost()
         {
-            var request = _client.WithApi().WithProjectKey(_projectKey).ProductProjections().Search()
+            var request = _client.ProductProjections().Search()
                 .Post()
                 .AddFormParam("filter", "test")
                 .AddFormParam("filter", "test2")
