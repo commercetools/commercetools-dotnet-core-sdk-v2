@@ -3,6 +3,7 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `DiscountedLineItemPortionDraft`
 - added type `DiscountCodeSetKeyAction`
 - added type `CartDiscountCreatedMessage`
 - added type `CartDiscountDeletedMessage`
@@ -24,6 +25,23 @@
 
 
 <details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `includedDiscounts` of type `DiscountedLineItemPriceDraft` from type `DiscountedLineItemPortion[]` to `DiscountedLineItemPortionDraft[]`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `perMethodExternalTaxRate` to type `CartAddLineItemAction`
+- added property `key` to type `DiscountCode`
+- added property `key` to type `DiscountCodeDraft`
+- added property `shippingMode` to type `MyCartDraft`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().discountCodes().withKey().get()`
@@ -37,15 +55,5 @@
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/discount-codes/key={key}`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `perMethodExternalTaxRate` to type `CartAddLineItemAction`
-- added property `key` to type `DiscountCode`
-- added property `key` to type `DiscountCodeDraft`
-- added property `shippingMode` to type `MyCartDraft`
 </details>
 
