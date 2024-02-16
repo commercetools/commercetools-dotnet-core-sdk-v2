@@ -25,11 +25,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
         }
 
         public CombinationQueryPredicate<DiscountedLineItemPriceDraftQueryBuilderDsl> IncludedDiscounts(
-            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<DiscountedLineItemPriceDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("includedDiscounts"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountedLineItemPortionDraftQueryBuilderDsl.Of())),
                 DiscountedLineItemPriceDraftQueryBuilderDsl.Of);
         }
         public ICollectionPredicateBuilder<DiscountedLineItemPriceDraftQueryBuilderDsl> IncludedDiscounts()
