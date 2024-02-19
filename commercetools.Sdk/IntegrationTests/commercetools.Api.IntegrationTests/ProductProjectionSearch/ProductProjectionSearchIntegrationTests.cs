@@ -6,7 +6,6 @@ using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Products.ProductsFixture;
 using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;

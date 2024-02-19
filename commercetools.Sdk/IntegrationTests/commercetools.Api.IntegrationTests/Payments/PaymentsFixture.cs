@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Payments;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Payments

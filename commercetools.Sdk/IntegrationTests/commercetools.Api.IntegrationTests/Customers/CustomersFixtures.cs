@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Customers;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
-using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Api.IntegrationTests.Customers
 {
@@ -22,7 +18,7 @@ namespace commercetools.Api.IntegrationTests.Customers
             customerDraft.FirstName = "test-first-name";
             customerDraft.LastName = "test-last-name";
             customerDraft.Password = $"test-password-{randomStr}";
-            
+
             // customerDraft.Addresses = new List<IBaseAddress>()
             // {
             //   new BaseAddress() { Country = "DE", Key = $"Key{randomInt}" }
@@ -40,7 +36,7 @@ namespace commercetools.Api.IntegrationTests.Customers
 
             return customerDraft;
         }
-        
+
         public static async Task<ICustomer> CreateCustomer(ProjectApiRoot client, CustomerDraft customerDraft)
         {
             try

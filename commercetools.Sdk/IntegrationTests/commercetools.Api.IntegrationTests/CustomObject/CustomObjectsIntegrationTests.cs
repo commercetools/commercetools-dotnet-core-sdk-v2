@@ -1,8 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.CustomObjects;
 using Xunit;
 using static commercetools.Api.IntegrationTests.CustomObject.CustomObjectFixtures;
@@ -84,19 +82,19 @@ namespace commercetools.Api.IntegrationTests.CustomObject
                     {
                         Assert.NotNull(customObject);
                         var name = $"New-Custom-Object-Value-{TestingUtility.RandomString()}";
-        
+
                         var update = new CustomObjectDraft()
                         {
                             Key = customObject.Key,
                             Container = customObject.Container,
                             Value = name
                         };
-        
+
                         var updatedCustomObject = await _client
                             .CustomObjects()
                             .Post(update)
                             .ExecuteAsync();
-        
+
                         Assert.Equal(updatedCustomObject.Key, customObject.Key);
                         return updatedCustomObject;
                     }
