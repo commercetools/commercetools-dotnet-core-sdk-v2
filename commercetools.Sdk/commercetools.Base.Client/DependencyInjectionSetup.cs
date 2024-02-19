@@ -99,6 +99,7 @@ namespace commercetools.Base.Client
             options ??= new ClientOptions();
             services.AddSingleton<IUserAgentProvider, UserAgentProvider>();
             services.AddSingleton<ILoggerHandlerFactory, LoggerHandlerFactory>();
+            services.AddSingleton<IHttpLogger, DefaultHttpLogger>();
             var httpClientBuilder = services.AddHttpClient(clientName)
                 .ConfigureHttpClient((provider, client) =>
                 {
@@ -106,10 +107,12 @@ namespace commercetools.Base.Client
                     {
                         client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
                     }
+
                     if (options.DecompressionMethods.HasFlag(DecompressionMethods.Deflate))
                     {
                         client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
                     }
+
                     var userAgentProvider = provider.GetService<IUserAgentProvider>() ?? new UserAgentProvider();
                     client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);
                 })

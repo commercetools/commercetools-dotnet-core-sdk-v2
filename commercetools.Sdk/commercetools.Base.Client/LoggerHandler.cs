@@ -1,38 +1,54 @@
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using commercetools.Base.Client.Domain;
 using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {
     public class LoggerHandler : DelegatingHandler
     {
-        private readonly ILoggerFactory loggerFactory;
+        private readonly ILoggerFactory _loggerFactory;
 
-        public LoggerHandler(ILoggerFactory loggerFactory)
+        private readonly IHttpLogger _httpLogger;
+
+        public LoggerHandler(ILoggerFactory loggerFactory, IHttpLogger httpLogger = null)
         {
-            this.loggerFactory = loggerFactory;
+            _loggerFactory = loggerFactory;
+            _httpLogger = httpLogger ?? new DefaultHttpLogger();
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
-            var logger = this.loggerFactory.CreateLogger("commercetoolsLoggerHandler");
+            var logger = _loggerFactory.CreateLogger("commercetoolsLoggerHandler");
 
             if (request == null)
             {
                 throw new ArgumentNullException(nameof(request));
             }
 
-            using (Log.BeginRequestPipelineScope(logger, request))
+            _httpLogger.Debug(logger, request);
+            await _httpLogger.Trace(logger, request).ConfigureAwait(false);
+            var watch = Stopwatch.StartNew();
+            try
             {
-                Log.RequestPipelineStart(logger, request);
                 var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
-                Log.RequestPipelineEnd(logger, response);
-
+                watch.Stop();
+                
+                _httpLogger.Log(logger, (int)response.StatusCode < 400 ? LogLevel.Information : LogLevel.Error, request, response, watch.ElapsedMilliseconds);
+                await _httpLogger.Trace(logger, request, response);
+                
                 return response;
+            }
+            catch (ApiHttpException e)
+            {
+                watch.Stop();
+                _httpLogger.Error(logger, request, e, watch.ElapsedMilliseconds);
+                throw;
             }
         }
     }
