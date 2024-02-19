@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Zones;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Zone.ZoneFixtures;

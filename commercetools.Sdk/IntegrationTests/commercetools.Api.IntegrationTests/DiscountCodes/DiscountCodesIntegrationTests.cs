@@ -90,7 +90,7 @@ namespace commercetools.Api.IntegrationTests.DiscountCodes
                         async discountCode =>
                         {
                             Assert.NotNull(discountCode);
-                            var retrievedDiscountCode = await _projectApiRoot 
+                            var retrievedDiscountCode = await _projectApiRoot
                                 .DiscountCodes()
                                 .WithId(discountCode.Id)
                                 .Get()
@@ -136,7 +136,7 @@ namespace commercetools.Api.IntegrationTests.DiscountCodes
                         async discountCode =>
                         {
                             Assert.NotNull(discountCode);
-                            var retrievedDiscountCode = await _projectApiRoot 
+                            var retrievedDiscountCode = await _projectApiRoot
                                 .DiscountCodes()
                                 .Get()
                                 .WithQuery(d => d.Id().Is(discountCode.Id))

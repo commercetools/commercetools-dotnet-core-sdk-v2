@@ -2,10 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.ProductTypes;
-using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 

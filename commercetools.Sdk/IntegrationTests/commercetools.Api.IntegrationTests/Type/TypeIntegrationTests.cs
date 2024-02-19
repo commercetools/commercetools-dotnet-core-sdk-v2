@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using Xunit;
@@ -85,7 +83,7 @@ namespace commercetools.Api.IntegrationTests.Type
                     var action = new TypeSetDescriptionAction()
                     {
                         Action = "setDescription",
-                        Description = new LocalizedString() {{ "en", name }}
+                        Description = new LocalizedString() { { "en", name } }
                     };
 
                     var update = new TypeUpdate()
@@ -100,7 +98,7 @@ namespace commercetools.Api.IntegrationTests.Type
                         .Post(update)
                         .ExecuteAsync();
 
-                    Assert.Equal(updatedType.Description, new LocalizedString() {{ "en", name }});
+                    Assert.Equal(updatedType.Description, new LocalizedString() { { "en", name } });
                     return updatedType;
                 }
             );

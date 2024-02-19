@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Extensions;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
 
 namespace commercetools.Api.IntegrationTests.Extension
 {
@@ -49,7 +47,7 @@ namespace commercetools.Api.IntegrationTests.Extension
 
             return extensionDraft;
         }
-        
+
         public static async Task<IExtension> CreateExtension(ProjectApiRoot client, ExtensionDraft extensionDraft)
         {
             try

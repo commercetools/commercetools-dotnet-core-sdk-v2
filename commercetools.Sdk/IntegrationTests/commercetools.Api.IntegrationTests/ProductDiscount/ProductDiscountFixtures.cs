@@ -1,10 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.ProductDiscounts;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Api.IntegrationTests.ProductDiscount
@@ -43,7 +41,7 @@ namespace commercetools.Api.IntegrationTests.ProductDiscount
 
             return productDiscountDraft;
         }
-        
+
         public static async Task<IProductDiscount> CreateProductDiscount(ProjectApiRoot client,
             ProductDiscountDraft productDiscountDraft)
         {

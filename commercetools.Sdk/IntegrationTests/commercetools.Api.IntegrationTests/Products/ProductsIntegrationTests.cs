@@ -26,7 +26,7 @@ namespace commercetools.Api.IntegrationTests.Products
         {
             this._projectApiRoot = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
-        
+
         [Fact]
         public async Task HeadRequest()
         {
