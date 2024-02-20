@@ -10,22 +10,32 @@ namespace commercetools.Base.Client
 {
     public class DefaultHttpLogger : IHttpLogger
     {
-        public void Debug(ILogger logger, HttpRequestMessage request)
+        public async Task LogRequestBody(ILogger logger, LogLevel logLevel, HttpRequestMessage request)
         {
-            if (logger.IsEnabled(LogLevel.Debug))
-            {
-                logger.LogDebug("{HttpMethod} {Uri} {Headers}", request.Method.Method,
-                    request.RequestUri.AbsoluteUri, Redact(request.Headers));
-            }
-        }
-
-        public async Task Trace(ILogger logger, HttpRequestMessage request)
-        {
-            if (logger.IsEnabled(LogLevel.Trace))
+            if (logger.IsEnabled(logLevel))
             {
                 var body = await (request.Content?.ReadAsStringAsync() ?? Task.FromResult(""));
-                logger.LogTrace("{HttpMethod} {Uri} {Headers} {Body}", request.Method.Method,
-                    request.RequestUri.AbsoluteUri, Redact(request.Headers), SecuredBody(body));
+                logger.Log(logLevel, "{HttpMethod} {Uri} {Headers} {Body}", request.Method.Method,
+                    request.RequestUri.AbsoluteUri, RedactAuthorizationHeader(request.Headers), SecuredBody(body));
+            }
+        }
+        
+        public async Task LogResponseBody(ILogger logger, LogLevel logLevel, HttpRequestMessage request, HttpResponseMessage response, long elapsed)
+        {
+            if (logger.IsEnabled(logLevel))
+            {
+                var body = await (response.Content?.ReadAsStringAsync() ?? Task.FromResult(""));
+                logger.Log(logLevel, "{HttpMethod} {Uri} {StatusCode} {Timing} {Headers} {Body}", request.Method.Method,
+                    request.RequestUri.AbsoluteUri, (int)response.StatusCode, elapsed, RedactAuthorizationHeader(request.Headers), SecuredBody(body));
+            }
+        }
+        
+        public void Log(ILogger logger, LogLevel logLevel, HttpRequestMessage request)
+        {
+            if (logger.IsEnabled(logLevel))
+            {
+                logger.Log(logLevel, "{HttpMethod} {Uri} {Headers}", request.Method.Method,
+                    request.RequestUri.AbsoluteUri, RedactAuthorizationHeader(request.Headers));
             }
         }
         
@@ -38,36 +48,17 @@ namespace commercetools.Base.Client
             }
         }
 
-        public void Info(ILogger logger, HttpRequestMessage request, HttpResponseMessage response, long elapsed)
+        public void Log(ILogger logger, LogLevel logLevel, HttpRequestMessage request, ApiHttpException exception, long elapsed)
         {
-            Log(logger, LogLevel.Information, request, response, elapsed);
-        }
-
-        public void Error(ILogger logger, HttpRequestMessage request, HttpResponseMessage response, long elapsed)
-        {
-            Log(logger, LogLevel.Error, request, response, elapsed);
-        }
-
-        public void Error(ILogger logger, HttpRequestMessage request, ApiHttpException exception, long elapsed)
-        {
-            if (logger.IsEnabled(LogLevel.Error))
+            if (logger.IsEnabled(logLevel))
             {
-                logger.LogError("{HttpMethod} {Uri} {StatusCode} {Timing} {CorrelationId} {ServerTiming}", request.Method.Method,
+                logger.Log(logLevel, "{HttpMethod} {Uri} {StatusCode} {Timing} {CorrelationId} {ServerTiming}", request.Method.Method,
                     request.RequestUri.AbsoluteUri, exception.StatusCode, elapsed, GetCorrelationId(exception.Headers), GetServerTiming(exception.Headers));
             }
         }
 
-        public async Task Trace(ILogger logger, HttpRequestMessage request, HttpResponseMessage response)
-        {
-            if (logger.IsEnabled(LogLevel.Trace))
-            {
-                var body = await (response.Content?.ReadAsStringAsync() ?? Task.FromResult(""));
-                logger.LogTrace("{HttpMethod} {Uri} {StatusCode} {Headers} {Body}", request.Method.Method,
-                    request.RequestUri.AbsoluteUri, (int)response.StatusCode, Redact(request.Headers), SecuredBody(body));
-            }
-        }
         
-        private static string Redact(HttpRequestHeaders headers)
+        private static string RedactAuthorizationHeader(HttpRequestHeaders headers)
         {
             var headString = from header in headers
                 where header.Key.ToLower() != "authorization"
@@ -91,26 +82,24 @@ namespace commercetools.Base.Client
         
         private static string GetCorrelationId(HttpResponseHeaders headers)
         {
-            var correlationId = "-";
+            return GetHeader(headers, "X-Correlation-ID");
+        }
+        
+        private static string GetHeader(HttpResponseHeaders headers, string headerName)
+        {
+            var headerValue = "-";
 
-            if (headers.TryGetValues("X-Correlation-ID", out var values))
+            if (headers.TryGetValues(headerName, out var values))
             {
-                correlationId = values.First();
+                headerValue = values.First();
             }
 
-            return correlationId;
+            return headerValue;
         }
         
         private static string GetServerTiming(HttpResponseHeaders headers)
         {
-            var serverTiming = "-";
-
-            if (headers.TryGetValues("Server-Timing", out var values))
-            {
-                serverTiming = values.First();
-            }
-
-            return serverTiming;
+            return GetHeader(headers, "Server-Timing");
         }
         
         private static string GetServerTiming(ApiHttpHeaders headers)

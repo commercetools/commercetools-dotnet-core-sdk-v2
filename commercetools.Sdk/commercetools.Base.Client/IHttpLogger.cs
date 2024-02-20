@@ -6,16 +6,13 @@ namespace commercetools.Base.Client
 {
     public interface IHttpLogger
     {
-        void Debug(ILogger logger, HttpRequestMessage request);
-        Task Trace(ILogger logger, HttpRequestMessage request);
-        Task Trace(ILogger logger, HttpRequestMessage request, HttpResponseMessage response);
-
+        void Log(ILogger logger, LogLevel level, HttpRequestMessage request);
         void Log(ILogger logger, LogLevel level, HttpRequestMessage request, HttpResponseMessage response, long elapsed);
+        void Log(ILogger logger, LogLevel logLevel, HttpRequestMessage request, ApiHttpException exception, long elapsed);
 
-        void Info(ILogger logger, HttpRequestMessage request, HttpResponseMessage response, long elapsed);
+        Task LogRequestBody(ILogger logger, LogLevel logLevel, HttpRequestMessage request);
 
-        void Error(ILogger logger, HttpRequestMessage request, HttpResponseMessage response, long elapsed);
-
-        void Error(ILogger logger, HttpRequestMessage request, ApiHttpException exception, long elapsed);
+        Task LogResponseBody(ILogger logger, LogLevel logLevel, HttpRequestMessage request,
+            HttpResponseMessage response, long elapsed);
     }
 }

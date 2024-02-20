@@ -9,15 +9,18 @@ namespace commercetools.Base.Client
 
         private readonly IHttpLogger _httpLogger;
 
-        public LoggerHandlerFactory(ILoggerFactory loggerFactory, IHttpLogger httpLogger = null)
+        private readonly ILoggerHandlerOptions _handlerOptions;
+
+        public LoggerHandlerFactory(ILoggerFactory loggerFactory, IHttpLogger httpLogger = null, ILoggerHandlerOptions options = null)
         {
             _loggerFactory = loggerFactory;
             _httpLogger = httpLogger;
+            _handlerOptions = options;
         }
 
         public DelegatingHandler Create()
         {
-            return new LoggerHandler(_loggerFactory, _httpLogger);
+            return new LoggerHandler(_loggerFactory, _httpLogger, _handlerOptions);
         }
     }
 }
