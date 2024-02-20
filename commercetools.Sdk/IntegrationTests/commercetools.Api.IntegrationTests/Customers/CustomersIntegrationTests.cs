@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
+using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Errors;
 using Xunit;
@@ -128,8 +128,9 @@ namespace commercetools.Api.IntegrationTests.Customers
                             })
                             .ExecuteAsync();
                     });
-                    var response = exception.ResponseBody as ErrorResponse;
+                    var response = exception.AsErrorResponse();
                     Assert.NotNull(response);
+                    Assert.True(response.HasErrorCode(IErrorObject.InvalidCredentials().Code));
                     Assert.IsAssignableFrom<IInvalidCredentialsError>(response.Errors.First());
                     Assert.Equal(IErrorObject.InvalidCredentials().Code, response.Errors.First().Code);
                 }
