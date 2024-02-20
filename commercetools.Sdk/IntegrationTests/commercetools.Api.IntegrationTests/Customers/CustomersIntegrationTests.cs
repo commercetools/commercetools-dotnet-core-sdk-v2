@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Errors;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Customers.CustomersFixtures;
 
@@ -111,10 +114,10 @@ namespace commercetools.Api.IntegrationTests.Customers
         {
             await WithCustomer(
                 _client,
-                customerDraft => DefaultCustomerDraft(customerDraft),
+                DefaultCustomerDraft,
                 async customer =>
                 {
-                    await Assert.ThrowsAsync<BadRequestException>(async () =>
+                    var exception = await Assert.ThrowsAsync<BadRequestException>(async () =>
                     {
                         await _client
                             .Login()
@@ -125,6 +128,10 @@ namespace commercetools.Api.IntegrationTests.Customers
                             })
                             .ExecuteAsync();
                     });
+                    var response = exception.ResponseBody as ErrorResponse;
+                    Assert.NotNull(response);
+                    Assert.IsAssignableFrom<IInvalidCredentialsError>(response.Errors.First());
+                    Assert.Equal(IErrorObject.InvalidCredentials().Code, response.Errors.First().Code);
                 }
             );
         }
