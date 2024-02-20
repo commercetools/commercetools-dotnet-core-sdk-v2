@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Customers;
 using Xunit;
@@ -101,6 +102,29 @@ namespace commercetools.Api.IntegrationTests.Customers
 
                     Assert.Equal(updatedCustomer.FirstName, name);
                     return updatedCustomer;
+                }
+            );
+        }
+        
+        [Fact]
+        public async Task LoginFails()
+        {
+            await WithCustomer(
+                _client,
+                customerDraft => DefaultCustomerDraft(customerDraft),
+                async customer =>
+                {
+                    await Assert.ThrowsAsync<BadRequestException>(async () =>
+                    {
+                        await _client
+                            .Login()
+                            .Post(new CustomerSignin()
+                            {
+                                Email = customer.Email,
+                                Password = "abcdef"
+                            })
+                            .ExecuteAsync();
+                    });
                 }
             );
         }
