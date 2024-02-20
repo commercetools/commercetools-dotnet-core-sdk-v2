@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Errors;
-using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Extensions;

@@ -1,10 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Zones;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
 
 namespace commercetools.Api.IntegrationTests.Zone
 {

@@ -2,7 +2,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Payments;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Payments.PaymentsFixture;

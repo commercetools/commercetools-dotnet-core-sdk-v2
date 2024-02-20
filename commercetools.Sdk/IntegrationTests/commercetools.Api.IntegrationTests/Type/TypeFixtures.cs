@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Base.Client;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Types;
 using static commercetools.Api.IntegrationTests.GenericFixture;
-using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Common;
 
 namespace commercetools.Api.IntegrationTests.Type
@@ -20,7 +18,7 @@ namespace commercetools.Api.IntegrationTests.Type
             var randomStr = TestingUtility.RandomString();
 
             typeDraft.Key = $"Test-Key-{randomInt}";
-            typeDraft.Name = new LocalizedString() {{ "de", $"Test-Name-{randomStr}" }};
+            typeDraft.Name = new LocalizedString() { { "de", $"Test-Name-{randomStr}" } };
             typeDraft.ResourceTypeIds = new List<IResourceTypeId>()
             {
                 IResourceTypeId.Asset,
