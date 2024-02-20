@@ -38,7 +38,13 @@ namespace commercetools.Api.IntegrationTests
             services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             services.AddLogging(c => c.AddConfiguration(configuration.GetSection("Logging")));
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
-            services.AddLogging(c => c.AddConsole());
+            services.AddLogging(c => c.AddSimpleConsole(o =>
+            {
+                o.UseUtcTimestamp = true;
+                o.IncludeScopes = true;
+                o.TimestampFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK ";
+                o.SingleLine = true;
+            }));
             services.SetupClient(
                 "MeClient",
                 errorTypeMapper => typeof(ErrorResponse),
