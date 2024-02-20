@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Extensions
     {
         public static IErrorResponse AsErrorResponse(this ApiHttpException exception)
         {
-            return exception.ResponseBody as ErrorResponse;
+            return exception.ResponseBody as IErrorResponse;
         }
         
         public static bool HasErrorCode(this IErrorResponse errorResponse, string errorCode) {
