@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {
-    class LoggerHandlerOptions : ILoggerHandlerOptions
+    public class LoggerHandlerOptions : ILoggerHandlerOptions
     {
         public LogLevel ResponseLogEvent { get; set; } = LogLevel.Information;
         public LogLevel DefaultExceptionLogEvent { get; set; } = LogLevel.Error;

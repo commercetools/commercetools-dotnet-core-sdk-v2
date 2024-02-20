@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Configuration;
 
 namespace commercetools.Api.IntegrationTests
 {
@@ -42,7 +42,7 @@ namespace commercetools.Api.IntegrationTests
             {
                 o.UseUtcTimestamp = true;
                 o.IncludeScopes = true;
-                o.TimestampFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK ";
+                o.TimestampFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFK ";
                 o.SingleLine = true;
             }));
             services.SetupClient(
@@ -50,6 +50,16 @@ namespace commercetools.Api.IntegrationTests
                 errorTypeMapper => typeof(ErrorResponse),
                 s => s.GetService<IApiSerializerService>()
             );
+            services.AddSingleton<ILoggerHandlerOptions>(new LoggerHandlerOptions()
+            {
+                ResponseLogEvent = LogLevel.Information,
+                DefaultExceptionLogEvent = LogLevel.Warning,
+                ExceptionLogEvents = new Dictionary<System.Type, LogLevel>()
+                {
+                    { typeof(NotFoundException), LogLevel.Information },
+                    { typeof(ConcurrentModificationException), LogLevel.Information}
+                }
+            });
             this.serviceProvider = services.BuildServiceProvider();
 
             //set default ProjectKey
