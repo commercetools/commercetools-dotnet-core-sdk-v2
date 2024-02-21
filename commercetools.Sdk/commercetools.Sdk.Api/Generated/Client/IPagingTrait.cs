@@ -14,12 +14,12 @@ namespace commercetools.Sdk.Api.Client
         /**
          * set limit with the specificied value
          */
-        T WithLimit(int limit);
+        T WithLimit(long limit);
 
         /**
          * set offset with the specificied value
          */
-        T WithOffset(int offset);
+        T WithOffset(long offset);
 
         /**
          * set withTotal with the specificied value

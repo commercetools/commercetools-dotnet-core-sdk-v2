@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyDiscountCodesGet WithLimit(int limit)
+        public ByProjectKeyDiscountCodesGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyDiscountCodesGet WithOffset(int offset)
+        public ByProjectKeyDiscountCodesGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

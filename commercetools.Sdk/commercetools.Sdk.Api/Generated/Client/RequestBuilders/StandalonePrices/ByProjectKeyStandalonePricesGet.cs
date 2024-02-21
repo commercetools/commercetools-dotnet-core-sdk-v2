@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyStandalonePricesGet WithLimit(int limit)
+        public ByProjectKeyStandalonePricesGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyStandalonePricesGet WithOffset(int offset)
+        public ByProjectKeyStandalonePricesGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

@@ -73,12 +73,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyCustomerGroupsGet WithLimit(int limit)
+        public ByProjectKeyCustomerGroupsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyCustomerGroupsGet WithOffset(int offset)
+        public ByProjectKeyCustomerGroupsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

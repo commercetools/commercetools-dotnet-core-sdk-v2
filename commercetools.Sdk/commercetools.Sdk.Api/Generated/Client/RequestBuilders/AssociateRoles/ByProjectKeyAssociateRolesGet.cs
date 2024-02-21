@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyAssociateRolesGet WithLimit(int limit)
+        public ByProjectKeyAssociateRolesGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyAssociateRolesGet WithOffset(int offset)
+        public ByProjectKeyAssociateRolesGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

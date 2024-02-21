@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyReviewsGet WithLimit(int limit)
+        public ByProjectKeyReviewsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyReviewsGet WithOffset(int offset)
+        public ByProjectKeyReviewsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
