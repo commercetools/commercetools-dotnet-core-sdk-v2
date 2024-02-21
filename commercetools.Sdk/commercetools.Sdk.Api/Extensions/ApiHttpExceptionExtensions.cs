@@ -10,8 +10,9 @@ namespace commercetools.Sdk.Api.Extensions
         {
             return exception.ResponseBody as IErrorResponse;
         }
-        
-        public static bool HasErrorCode(this IErrorResponse errorResponse, string errorCode) {
+
+        public static bool HasErrorCode(this IErrorResponse errorResponse, string errorCode)
+        {
             return errorResponse.Errors.Any(o => o.Code.Equals(errorCode));
         }
     }
