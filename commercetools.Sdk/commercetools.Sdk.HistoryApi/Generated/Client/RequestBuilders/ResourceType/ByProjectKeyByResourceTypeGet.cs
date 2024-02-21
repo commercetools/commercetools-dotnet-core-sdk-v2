@@ -122,12 +122,12 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("date.to", dateTo.ToString());
         }
 
-        public ByProjectKeyByResourceTypeGet WithLimit(int limit)
+        public ByProjectKeyByResourceTypeGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyByResourceTypeGet WithOffset(int offset)
+        public ByProjectKeyByResourceTypeGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

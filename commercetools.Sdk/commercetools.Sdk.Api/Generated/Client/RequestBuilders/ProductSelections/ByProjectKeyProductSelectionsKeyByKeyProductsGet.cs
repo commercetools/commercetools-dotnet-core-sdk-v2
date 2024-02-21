@@ -61,12 +61,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
             return this.AddQueryParam("expand", expand);
         }
 
-        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithLimit(int limit)
+        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithOffset(int offset)
+        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
