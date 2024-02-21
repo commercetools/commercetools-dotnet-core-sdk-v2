@@ -108,7 +108,7 @@ namespace commercetools.Api.IntegrationTests.Customers
                 }
             );
         }
-        
+
         [Fact]
         public async Task LoginFails()
         {
