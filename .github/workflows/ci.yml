@@ -78,8 +78,6 @@ jobs:
         working-directory: ./commercetools.Sdk
       - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.ImportApi.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk        
-      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.MLApi.Tests --no-build -c Release
-        working-directory: ./commercetools.Sdk
       - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.HistoryApi.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk
         

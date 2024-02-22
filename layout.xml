@@ -7,7 +7,6 @@
     <tab type="namespacelist" visible="yes" title="" intro="All packages"/>
     <tab type="user" visible="yes" title="Api" url="@ref commercetools.Sdk.Api"/>
     <tab type="user" visible="yes" title="ImportApi" url="@ref commercetools.Sdk.ImportApi"/>
-    <tab type="user" visible="yes" title="MLApi" url="@ref commercetools.Sdk.MLApi"/>
     <tab type="user" visible="yes" title="HistoryApi" url="@ref commercetools.Sdk.HistoryApi"/>
     <tab type="pages" visible="yes" title="" intro=""/>
     <tab type="topics" visible="yes" title="" intro=""/>

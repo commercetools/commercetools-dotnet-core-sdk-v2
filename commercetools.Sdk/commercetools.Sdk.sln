@@ -28,8 +28,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.Api", "co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.ImportApi", "commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj", "{063701C0-1057-402D-8129-BC1F9C9F12FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.MLApi", "commercetools.Sdk.MLApi\commercetools.Sdk.MLApi.csproj", "{B4A67036-1B5A-442D-9088-ECF3D5F79129}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.ImportApi.IntegrationTests", "IntegrationTests\commercetools.ImportApi.IntegrationTests\commercetools.ImportApi.IntegrationTests.csproj", "{1CB0F695-158E-472C-A485-AE6BC13BC3C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{344C365C-06DF-4615-82C6-44D07D77D092}"
@@ -37,8 +35,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Api.ConsoleApp", "Examples\commercetools.Api.ConsoleApp\commercetools.Api.ConsoleApp.csproj", "{E943E000-7FE7-4C8E-8F9F-4D6835470F6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.HistoryApi", "commercetools.Sdk.HistoryApi\commercetools.Sdk.HistoryApi.csproj", "{E320B3FD-5A89-470F-B8B8-0C64CD31AACE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.MLApi.Tests", "Tests\commercetools.Sdk.MLApi.Tests\commercetools.Sdk.MLApi.Tests.csproj", "{85589ABD-3D3A-48FA-80AE-FD2FAE01761A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commercetools.Sdk.HistoryApi.Tests", "Tests\commercetools.Sdk.HistoryApi.Tests\commercetools.Sdk.HistoryApi.Tests.csproj", "{B93DE3E7-F3A6-4FAF-8525-1B5BE692EF0B}"
 EndProject
@@ -102,10 +98,6 @@ Global
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{063701C0-1057-402D-8129-BC1F9C9F12FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4A67036-1B5A-442D-9088-ECF3D5F79129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4A67036-1B5A-442D-9088-ECF3D5F79129}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4A67036-1B5A-442D-9088-ECF3D5F79129}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4A67036-1B5A-442D-9088-ECF3D5F79129}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1CB0F695-158E-472C-A485-AE6BC13BC3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CB0F695-158E-472C-A485-AE6BC13BC3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB0F695-158E-472C-A485-AE6BC13BC3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -118,10 +110,6 @@ Global
 		{E320B3FD-5A89-470F-B8B8-0C64CD31AACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E320B3FD-5A89-470F-B8B8-0C64CD31AACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E320B3FD-5A89-470F-B8B8-0C64CD31AACE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85589ABD-3D3A-48FA-80AE-FD2FAE01761A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85589ABD-3D3A-48FA-80AE-FD2FAE01761A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85589ABD-3D3A-48FA-80AE-FD2FAE01761A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85589ABD-3D3A-48FA-80AE-FD2FAE01761A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B93DE3E7-F3A6-4FAF-8525-1B5BE692EF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B93DE3E7-F3A6-4FAF-8525-1B5BE692EF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93DE3E7-F3A6-4FAF-8525-1B5BE692EF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -155,7 +143,6 @@ Global
 		{44CA0C3D-17E0-4135-9E82-109A0BA9C7A8} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{1CB0F695-158E-472C-A485-AE6BC13BC3C6} = {C1623B8A-8B14-4C27-AB57-7A2C76EEACC7}
 		{E943E000-7FE7-4C8E-8F9F-4D6835470F6F} = {344C365C-06DF-4615-82C6-44D07D77D092}
-		{85589ABD-3D3A-48FA-80AE-FD2FAE01761A} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{B93DE3E7-F3A6-4FAF-8525-1B5BE692EF0B} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{6128A16B-FE11-4C09-8B41-3DD311DE979B} = {D4A429AE-8B66-4936-B91F-7226BF78B82A}
 		{6178E865-9D39-45D3-B789-B14CD41218C6} = {344C365C-06DF-4615-82C6-44D07D77D092}
