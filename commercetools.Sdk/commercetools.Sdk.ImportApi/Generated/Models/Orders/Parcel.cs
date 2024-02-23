@@ -1,13 +1,12 @@
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class Parcel : IParcel
     {
         public string Id { get; set; }
@@ -18,6 +17,10 @@ namespace commercetools.ImportApi.Models.Orders
 
         public ITrackingData TrackingData { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
+
+        public ICustom Custom { get; set; }
     }
 }

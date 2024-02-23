@@ -1,21 +1,19 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Orders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderUpdateSyncInfoAction))]
     public partial interface IStagedOrderUpdateSyncInfoAction : IStagedOrderUpdateAction
     {
-        IChannelResourceIdentifier Channel { get; set; }
-
         string ExternalId { get; set; }
 
+        IChannelResourceIdentifier Channel { get; set; }
+
         DateTime? SyncedAt { get; set; }
+
     }
 }

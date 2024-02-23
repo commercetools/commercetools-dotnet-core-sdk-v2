@@ -1,32 +1,35 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.TaxCategories;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddCustomLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderAddCustomLineItemAction))]
     public partial interface IStagedOrderAddCustomLineItemAction : IStagedOrderUpdateAction
     {
         IMoney Money { get; set; }
 
         ILocalizedString Name { get; set; }
 
-        double? Quantity { get; set; }
+        string Key { get; set; }
+
+        long? Quantity { get; set; }
 
         string Slug { get; set; }
 
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustomLineItemPriceMode PriceMode { get; set; }
+
         ICustomFieldsDraft Custom { get; set; }
 
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
     }
 }

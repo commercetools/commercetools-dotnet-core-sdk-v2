@@ -1,23 +1,32 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddDeliveryAction : IStagedOrderAddDeliveryAction
     {
         public string Action { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public string DeliveryKey { get; set; }
+
+        public string ShippingKey { get; set; }
+
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         public IBaseAddress Address { get; set; }
 
-        public List<IParcelDraft> Parcels { get; set; }
+        public IList<IParcelDraft> Parcels { get; set; }
+        public IEnumerable<IParcelDraft> ParcelsEnumerable { set => Parcels = value.ToList(); }
+
+
+        public ICustomFieldsDraft Custom { get; set; }
         public StagedOrderAddDeliveryAction()
         {
             this.Action = "addDelivery";

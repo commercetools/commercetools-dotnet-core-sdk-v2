@@ -1,19 +1,19 @@
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Zones;
-using System;
+using commercetools.Sdk.Api.Models.Zones;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ZoneRateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ZoneRateDraft))]
     public partial interface IZoneRateDraft
     {
         IZoneResourceIdentifier Zone { get; set; }
 
-        List<IShippingRateDraft> ShippingRates { get; set; }
+        IList<IShippingRateDraft> ShippingRates { get; set; }
+        IEnumerable<IShippingRateDraft> ShippingRatesEnumerable { set => ShippingRates = value.ToList(); }
+
+
     }
 }

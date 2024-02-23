@@ -1,19 +1,16 @@
-using commercetools.Api.Models.TaxCategories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.TaxCategories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.TaxCategories.TaxRateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxRateDraft))]
     public partial interface ITaxRateDraft
     {
         string Name { get; set; }
 
-        double? Amount { get; set; }
+        decimal? Amount { get; set; }
 
         bool IncludedInPrice { get; set; }
 
@@ -21,6 +18,11 @@ namespace commercetools.Api.Models.TaxCategories
 
         string State { get; set; }
 
-        List<ISubRate> SubRates { get; set; }
+        IList<ISubRate> SubRates { get; set; }
+        IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
+
+        string Key { get; set; }
+
     }
 }

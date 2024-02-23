@@ -1,16 +1,12 @@
-using commercetools.Api.Models.Carts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.ScoreShippingRateInput))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ScoreShippingRateInput))]
     public partial interface IScoreShippingRateInput : IShippingRateInput
     {
-        double Score { get; set; }
+        long Score { get; set; }
+
     }
 }

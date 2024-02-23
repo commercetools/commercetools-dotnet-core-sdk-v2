@@ -1,16 +1,16 @@
-using commercetools.Api.Models.States;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.States
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.States
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.States.StateSetTransitionsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.States.StateSetTransitionsAction))]
     public partial interface IStateSetTransitionsAction : IStateUpdateAction
     {
-        List<IStateResourceIdentifier> Transitions { get; set; }
+        IList<IStateResourceIdentifier> Transitions { get; set; }
+        IEnumerable<IStateResourceIdentifier> TransitionsEnumerable { set => Transitions = value.ToList(); }
+
+
     }
 }

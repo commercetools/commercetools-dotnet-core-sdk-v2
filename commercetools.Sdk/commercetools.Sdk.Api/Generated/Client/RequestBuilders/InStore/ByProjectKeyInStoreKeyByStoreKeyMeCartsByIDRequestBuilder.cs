@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder
+    public partial class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -35,7 +32,12 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet(ApiHttpClient, ProjectKey, StoreKey, ID);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost Post(commercetools.Api.Models.Me.IMyCartUpdate myCartUpdate)
+        public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDHead Head()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDHead(ApiHttpClient, ProjectKey, StoreKey, ID);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost Post(commercetools.Sdk.Api.Models.Me.IMyCartUpdate myCartUpdate)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ID, myCartUpdate);
         }

@@ -1,0 +1,15 @@
+#%RAML 1.0 Extension
+usage: Adds dotnet SDK extended functionality
+extends: api.raml
+annotationTypes:
+  csharp-implements:
+    type: string
+    allowedTargets: TypeDeclaration
+  csharp-extends:
+    type: string
+    allowedTargets: TypeDeclaration
+types:
+    CartDiscountValueFixedDraft:
+      properties:
+        money:
+          type: Money[]

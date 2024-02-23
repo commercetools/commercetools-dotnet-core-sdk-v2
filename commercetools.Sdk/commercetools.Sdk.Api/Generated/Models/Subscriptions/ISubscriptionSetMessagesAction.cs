@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Subscriptions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
     public partial interface ISubscriptionSetMessagesAction : ISubscriptionUpdateAction
     {
-        List<IMessageSubscription> Messages { get; set; }
+        IList<IMessageSubscription> Messages { get; set; }
+        IEnumerable<IMessageSubscription> MessagesEnumerable { set => Messages = value.ToList(); }
+
+
     }
 }

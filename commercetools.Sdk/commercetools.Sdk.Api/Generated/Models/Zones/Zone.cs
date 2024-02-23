@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Zones;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class Zone : IZone
     {
         public string Id { get; set; }
@@ -29,6 +27,8 @@ namespace commercetools.Api.Models.Zones
 
         public string Description { get; set; }
 
-        public List<ILocation> Locations { get; set; }
+        public IList<ILocation> Locations { get; set; }
+        public IEnumerable<ILocation> LocationsEnumerable { set => Locations = value.ToList(); }
+
     }
 }

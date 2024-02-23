@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.ImportApi.Models;
-using commercetools.ImportApi.Models.Common;
 using Xunit;
 
-namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Tests.Client.RequestBuilders.ImportContainers
 {
     public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTest : RequestBuilderParentTests
     {
@@ -28,10 +26,10 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    .WithImportContainerKeyValue("test_importContainerKey")
                    .ImportOperations()
                    .Get()
-                   .WithLimit(0.26748633)
+                   .WithLimit(7)
                    .Build(),
                    "Get",
-                   "/test_projectKey/import-containers/test_importContainerKey/import-operations?limit=0.26748633",
+                   "/test_projectKey/import-containers/test_importContainerKey/import-operations?limit=7",
                },
                new Object[] {
                    ApiRoot
@@ -40,10 +38,10 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    .WithImportContainerKeyValue("test_importContainerKey")
                    .ImportOperations()
                    .Get()
-                   .WithOffset(0.7475848)
+                   .WithOffset(3)
                    .Build(),
                    "Get",
-                   "/test_projectKey/import-containers/test_importContainerKey/import-operations?offset=0.7475848",
+                   "/test_projectKey/import-containers/test_importContainerKey/import-operations?offset=3",
                },
                new Object[] {
                    ApiRoot
@@ -76,7 +74,7 @@ namespace commercetools.ImportApi.Tests.Client.RequestBuilders.ImportContainers
                    .WithImportContainerKeyValue("test_importContainerKey")
                    .ImportOperations()
                    .Get()
-                   .WithState(IProcessingState.FindEnum("state"))
+                   .WithState(commercetools.Sdk.ImportApi.Models.Common.IProcessingState.FindEnum("state"))
                    .Build(),
                    "Get",
                    "/test_projectKey/import-containers/test_importContainerKey/import-operations?state=state",

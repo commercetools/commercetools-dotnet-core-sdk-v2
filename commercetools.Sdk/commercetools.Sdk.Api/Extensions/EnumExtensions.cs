@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace commercetools.Api.Models
+namespace commercetools.Sdk.Api.Models
 {
     public static class EnumExtensions
     {

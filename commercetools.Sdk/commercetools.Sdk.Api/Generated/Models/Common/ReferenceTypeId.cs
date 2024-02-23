@@ -1,11 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Common
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Common
 {
     public enum ReferenceTypeId
     {
+        [Description("approval-flow")]
+        ApprovalFlow,
+
+        [Description("approval-rule")]
+        ApprovalRule,
+
+        [Description("associate-role")]
+        AssociateRole,
+
+        [Description("attribute-group")]
+        AttributeGroup,
+
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart")]
         Cart,
 
@@ -29,6 +48,9 @@ namespace commercetools.Api.Models.Common
 
         [Description("customer-password-token")]
         CustomerPasswordToken,
+
+        [Description("direct-discount")]
+        DirectDiscount,
 
         [Description("discount-code")]
         DiscountCode,
@@ -57,8 +79,20 @@ namespace commercetools.Api.Models.Common
         [Description("product-discount")]
         ProductDiscount,
 
+        [Description("product-price")]
+        ProductPrice,
+
+        [Description("product-selection")]
+        ProductSelection,
+
         [Description("product-type")]
         ProductType,
+
+        [Description("quote")]
+        Quote,
+
+        [Description("quote-request")]
+        QuoteRequest,
 
         [Description("review")]
         Review,
@@ -68,6 +102,12 @@ namespace commercetools.Api.Models.Common
 
         [Description("shopping-list")]
         ShoppingList,
+
+        [Description("staged-quote")]
+        StagedQuote,
+
+        [Description("standalone-price")]
+        StandalonePrice,
 
         [Description("state")]
         State,
@@ -96,11 +136,36 @@ namespace commercetools.Api.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IReferenceTypeId), "FindEnum")]
-    public interface IReferenceTypeId : IJsonName
+    public interface IReferenceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IReferenceTypeId ApprovalFlow = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalFlow, JsonName = "approval-flow" };
+
+        public static IReferenceTypeId ApprovalRule = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ApprovalRule, JsonName = "approval-rule" };
+
+        public static IReferenceTypeId AssociateRole = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.AssociateRole, JsonName = "associate-role" };
+
+        public static IReferenceTypeId AttributeGroup = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.AttributeGroup, JsonName = "attribute-group" };
+
+        public static IReferenceTypeId BusinessUnit = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.BusinessUnit, JsonName = "business-unit" };
+
         public static IReferenceTypeId Cart = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Cart, JsonName = "cart" };
 
@@ -124,6 +189,9 @@ namespace commercetools.Api.Models.Common
 
         public static IReferenceTypeId CustomerPasswordToken = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.CustomerPasswordToken, JsonName = "customer-password-token" };
+
+        public static IReferenceTypeId DirectDiscount = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.DirectDiscount, JsonName = "direct-discount" };
 
         public static IReferenceTypeId DiscountCode = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.DiscountCode, JsonName = "discount-code" };
@@ -152,8 +220,20 @@ namespace commercetools.Api.Models.Common
         public static IReferenceTypeId ProductDiscount = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductDiscount, JsonName = "product-discount" };
 
+        public static IReferenceTypeId ProductPrice = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ProductPrice, JsonName = "product-price" };
+
+        public static IReferenceTypeId ProductSelection = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ProductSelection, JsonName = "product-selection" };
+
         public static IReferenceTypeId ProductType = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductType, JsonName = "product-type" };
+
+        public static IReferenceTypeId Quote = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.Quote, JsonName = "quote" };
+
+        public static IReferenceTypeId QuoteRequest = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.QuoteRequest, JsonName = "quote-request" };
 
         public static IReferenceTypeId Review = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Review, JsonName = "review" };
@@ -163,6 +243,12 @@ namespace commercetools.Api.Models.Common
 
         public static IReferenceTypeId ShoppingList = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ShoppingList, JsonName = "shopping-list" };
+
+        public static IReferenceTypeId StagedQuote = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.StagedQuote, JsonName = "staged-quote" };
+
+        public static IReferenceTypeId StandalonePrice = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.StandalonePrice, JsonName = "standalone-price" };
 
         public static IReferenceTypeId State = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.State, JsonName = "state" };
@@ -188,6 +274,11 @@ namespace commercetools.Api.Models.Common
         {
             return new[]
             {
+                 ApprovalFlow ,
+                 ApprovalRule ,
+                 AssociateRole ,
+                 AttributeGroup ,
+                 BusinessUnit ,
                  Cart ,
                  CartDiscount ,
                  Category ,
@@ -196,6 +287,7 @@ namespace commercetools.Api.Models.Common
                  CustomerEmailToken ,
                  CustomerGroup ,
                  CustomerPasswordToken ,
+                 DirectDiscount ,
                  DiscountCode ,
                  Extension ,
                  InventoryEntry ,
@@ -205,10 +297,16 @@ namespace commercetools.Api.Models.Common
                  Payment ,
                  Product ,
                  ProductDiscount ,
+                 ProductPrice ,
+                 ProductSelection ,
                  ProductType ,
+                 Quote ,
+                 QuoteRequest ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,
+                 StagedQuote ,
+                 StandalonePrice ,
                  State ,
                  Store ,
                  Subscription ,

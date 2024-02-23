@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Customers
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
     public enum AnonymousCartSignInMode
     {
@@ -21,10 +25,20 @@ namespace commercetools.Api.Models.Customers
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IAnonymousCartSignInMode), "FindEnum")]
-    public interface IAnonymousCartSignInMode : IJsonName
+    public interface IAnonymousCartSignInMode : IJsonName, IEnumerable<char>
     {
         public static IAnonymousCartSignInMode MergeWithExistingCustomerCart = new AnonymousCartSignInModeWrapper
         { Value = AnonymousCartSignInMode.MergeWithExistingCustomerCart, JsonName = "MergeWithExistingCustomerCart" };

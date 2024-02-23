@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.CustomerGroups;
 
-namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
 {
 
-    public class ByProjectKeyCustomerGroupsRequestBuilder
+    public partial class ByProjectKeyCustomerGroupsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.CustomerGroups
             return new ByProjectKeyCustomerGroupsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyCustomerGroupsPost Post(commercetools.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
+        public ByProjectKeyCustomerGroupsHead Head()
+        {
+            return new ByProjectKeyCustomerGroupsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyCustomerGroupsPost Post(commercetools.Sdk.Api.Models.CustomerGroups.ICustomerGroupDraft customerGroupDraft)
         {
             return new ByProjectKeyCustomerGroupsPost(ApiHttpClient, SerializerService, ProjectKey, customerGroupDraft);
         }

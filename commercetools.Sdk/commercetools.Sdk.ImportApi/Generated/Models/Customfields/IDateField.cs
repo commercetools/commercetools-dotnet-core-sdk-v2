@@ -1,16 +1,13 @@
-using commercetools.ImportApi.Models.Customfields;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
-
-namespace commercetools.ImportApi.Models.Customfields
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Customfields.DateField))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.DateField))]
     public partial interface IDateField : ICustomField
     {
-        DateTime Value { get; set; }
+        Date Value { get; set; }
+
     }
 }

@@ -1,25 +1,24 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.GraphQl;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Projects;
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.GraphQl;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Projects;
+using commercetools.Sdk.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization;
 using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
-using JsonException = System.Text.Json.JsonException;
 
 namespace commercetools.Api.Serialization.Tests
 {
@@ -332,6 +331,35 @@ namespace commercetools.Api.Serialization.Tests
             var customersResult = typedResult.Customers;
             Assert.NotNull(customersResult);
             Assert.Equal(customersResult.Count, customersResult.Results.Count);
+        }
+
+        [Fact]
+        public void DeserializeResourceIdentifier()
+        {
+            var serializerService = this.serializationFixture.SerializerService;
+
+            string serialized = @"
+                {
+                    ""typeId"": ""customer-group"",
+                    ""id"": ""ebd18115-6902-4ad7-8779-a08c94132aa2""
+                }
+            ";
+
+            var resourceIdentifier = serializerService.Deserialize<IResourceIdentifier>(serialized);
+            var customerGroupResourceIdentifier = serializerService.Deserialize<ICustomerGroupResourceIdentifier>(serialized);
+            Assert.IsType<CustomerGroupResourceIdentifier>(resourceIdentifier);
+            Assert.IsType<CustomerGroupResourceIdentifier>(customerGroupResourceIdentifier);
+            Assert.Equal(resourceIdentifier.Id, customerGroupResourceIdentifier.Id);
+
+            //downcast
+            IResourceIdentifier rs = serializerService.Deserialize<IResourceIdentifier>(serialized);
+            ICustomerGroupResourceIdentifier crs = (ICustomerGroupResourceIdentifier)rs;
+            CustomerGroupResourceIdentifier cgrs = (CustomerGroupResourceIdentifier)rs;
+
+            Assert.Equal(rs.Id, crs.Id);
+            Assert.Equal(rs.Id, cgrs.Id);
+
+
         }
 
     }

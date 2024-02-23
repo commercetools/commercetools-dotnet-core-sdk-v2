@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
 {
     public class ByProjectKeyShippingMethodsMatchingOrdereditTest : RequestBuilderParentTests
     {
@@ -62,6 +60,49 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/shipping-methods/matching-orderedit",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithOrderEditId("orderEditId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithCountry("country")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?country=country",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .WithState("state")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-orderedit?state=state",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingOrderedit()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/shipping-methods/matching-orderedit",
                }
        };

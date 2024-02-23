@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
 {
     public class ByProjectKeyProductsTest : RequestBuilderParentTests
     {
@@ -21,6 +19,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Get()
+                   .WithWhere("where")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products?where=where",
+               },
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
@@ -70,16 +78,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Get",
                    "/test_projectKey/products?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .Get()
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products?storeProjection=storeProjection",
                },
                new Object[] {
                    ApiRoot
@@ -136,16 +134,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
-                   .WithWhere("where")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products?where=where",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .Get()
                    .WithPredicateVar("varName", "var.varName")
                    .Build(),
                    "Get",
@@ -158,6 +146,25 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/products",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/products?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/products",
                },
                new Object[] {
@@ -209,16 +216,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .Post(null)
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/products?storeProjection=storeProjection",
                },
                new Object[] {
                    ApiRoot

@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public enum ShippingRateTierType
     {
@@ -24,10 +28,20 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IShippingRateTierType), "FindEnum")]
-    public interface IShippingRateTierType : IJsonName
+    public interface IShippingRateTierType : IJsonName, IEnumerable<char>
     {
         public static IShippingRateTierType CartValue = new ShippingRateTierTypeWrapper
         { Value = ShippingRateTierType.CartValue, JsonName = "CartValue" };

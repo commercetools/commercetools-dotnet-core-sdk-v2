@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Inventory;
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
 
-    public class ByProjectKeyInventoryRequestBuilder
+    public partial class ByProjectKeyInventoryRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
             return new ByProjectKeyInventoryGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyInventoryPost Post(commercetools.Api.Models.Inventories.IInventoryEntryDraft inventoryEntryDraft)
+        public ByProjectKeyInventoryHead Head()
+        {
+            return new ByProjectKeyInventoryHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyInventoryPost Post(commercetools.Sdk.Api.Models.Inventories.IInventoryEntryDraft inventoryEntryDraft)
         {
             return new ByProjectKeyInventoryPost(ApiHttpClient, SerializerService, ProjectKey, inventoryEntryDraft);
         }
@@ -39,6 +40,11 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
         public ByProjectKeyInventoryByIDRequestBuilder WithId(string ID)
         {
             return new ByProjectKeyInventoryByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
+
+        public ByProjectKeyInventoryKeyByKeyRequestBuilder WithKey(string key)
+        {
+            return new ByProjectKeyInventoryKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
         }
     }
 }

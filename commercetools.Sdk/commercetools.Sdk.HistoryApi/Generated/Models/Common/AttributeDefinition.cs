@@ -1,16 +1,9 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class AttributeDefinition : IAttributeDefinition
     {
-        public Object Type { get; set; }
+        public IAttributeType Type { get; set; }
 
         public string Name { get; set; }
 

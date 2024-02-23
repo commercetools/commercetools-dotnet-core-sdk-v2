@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.CategorySlugChangedMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
     public partial interface ICategorySlugChangedMessage : IMessage
     {
         ILocalizedString Slug { get; set; }
 
         ILocalizedString OldSlug { get; set; }
+
     }
 }

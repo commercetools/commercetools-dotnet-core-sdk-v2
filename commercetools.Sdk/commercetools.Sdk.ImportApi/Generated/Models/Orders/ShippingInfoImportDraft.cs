@@ -1,15 +1,12 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class ShippingInfoImportDraft : IShippingInfoImportDraft
     {
         public string ShippingMethodName { get; set; }
@@ -24,7 +21,9 @@ namespace commercetools.ImportApi.Models.Orders
 
         public IShippingMethodKeyReference ShippingMethod { get; set; }
 
-        public List<IDelivery> Deliveries { get; set; }
+        public IList<IDelivery> Deliveries { get; set; }
+        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         public IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

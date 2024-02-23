@@ -1,13 +1,6 @@
-using commercetools.Api.Models.Subscriptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.Api.Models.Subscriptions
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
+
     public partial class SqsDestination : ISqsDestination
     {
         public string Type { get; set; }
@@ -19,6 +12,8 @@ namespace commercetools.Api.Models.Subscriptions
         public string QueueUrl { get; set; }
 
         public string Region { get; set; }
+
+        public IAwsAuthenticationMode AuthenticationMode { get; set; }
         public SqsDestination()
         {
             this.Type = "SQS";

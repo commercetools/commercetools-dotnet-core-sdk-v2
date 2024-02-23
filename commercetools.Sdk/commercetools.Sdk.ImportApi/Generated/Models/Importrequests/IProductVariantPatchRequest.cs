@@ -1,18 +1,17 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Importrequests;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Importrequests
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.ProductVariantPatchRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductVariantPatchRequest))]
     public partial interface IProductVariantPatchRequest : IImportRequest
     {
-        List<IProductVariantPatch> Patches { get; set; }
+        IList<IProductVariantPatch> Patches { get; set; }
+        IEnumerable<IProductVariantPatch> PatchesEnumerable { set => Patches = value.ToList(); }
+
+
     }
 }

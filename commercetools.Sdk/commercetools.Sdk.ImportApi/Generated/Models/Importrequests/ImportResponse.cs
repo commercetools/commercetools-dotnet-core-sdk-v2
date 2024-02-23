@@ -1,15 +1,15 @@
-using commercetools.ImportApi.Models.Importoperations;
-using System;
+using commercetools.Sdk.ImportApi.Models.Importoperations;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
+
     public partial class ImportResponse : IImportResponse
     {
-        public List<IImportOperationStatus> OperationStatus { get; set; }
+        public IList<IImportOperationStatus> OperationStatus { get; set; }
+        public IEnumerable<IImportOperationStatus> OperationStatusEnumerable { set => OperationStatus = value.ToList(); }
+
     }
 }

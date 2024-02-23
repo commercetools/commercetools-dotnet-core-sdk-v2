@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductProjectionPagedSearchResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductProjectionPagedSearchResponse))]
     public partial interface IProductProjectionPagedSearchResponse
     {
         long Limit { get; set; }
@@ -19,8 +16,11 @@ namespace commercetools.Api.Models.Products
 
         long Offset { get; set; }
 
-        List<IProductProjection> Results { get; set; }
+        IList<IProductProjection> Results { get; set; }
+        IEnumerable<IProductProjection> ResultsEnumerable { set => Results = value.ToList(); }
+
 
         IFacetResults Facets { get; set; }
+
     }
 }

@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ApiClients
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ApiClients.ApiClientDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClientDraft))]
     public partial interface IApiClientDraft
     {
         string Name { get; set; }
@@ -15,5 +11,10 @@ namespace commercetools.Api.Models.ApiClients
         string Scope { get; set; }
 
         long? DeleteDaysAfterCreation { get; set; }
+
+        int? AccessTokenValiditySeconds { get; set; }
+
+        int? RefreshTokenValiditySeconds { get; set; }
+
     }
 }

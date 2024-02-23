@@ -1,17 +1,18 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.GeoLocation))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.GeoLocation))]
     public partial interface IGeoLocation
     {
         string Type { get; set; }
 
-        List<int> Coordinates { get; set; }
+        IList<int> Coordinates { get; set; }
+        IEnumerable<int> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
+
+
     }
 }

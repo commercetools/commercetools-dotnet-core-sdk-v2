@@ -1,21 +1,21 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.ReferencedResourceNotFoundError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.ReferencedResourceNotFoundError))]
     public partial interface IReferencedResourceNotFoundError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         IReferenceTypeId TypeId { get; set; }
 
         string Id { get; set; }
 
         string Key { get; set; }
+
     }
 }

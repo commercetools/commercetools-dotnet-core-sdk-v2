@@ -1,17 +1,13 @@
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodChangeTaxCategoryAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeTaxCategoryAction))]
     public partial interface IShippingMethodChangeTaxCategoryAction : IShippingMethodUpdateAction
     {
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
+
     }
 }

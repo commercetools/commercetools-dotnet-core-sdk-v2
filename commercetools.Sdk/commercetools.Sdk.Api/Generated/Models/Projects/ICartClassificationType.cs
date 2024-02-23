@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Projects;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.CartClassificationType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.CartClassificationType))]
     public partial interface ICartClassificationType : IShippingRateInputType
     {
-        List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        IList<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        IEnumerable<ICustomFieldLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
+
     }
 }

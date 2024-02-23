@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeGet : ApiMethod<ByProjectKeyMeGet>
+
+    public partial class ByProjectKeyMeGet : ApiMethod<ByProjectKeyMeGet>, IApiMethod<ByProjectKeyMeGet, commercetools.Sdk.Api.Models.Customers.ICustomer>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyMeGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyMeGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyMeGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyMeGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyMeGet>
     {
 
 
@@ -66,14 +63,14 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyMeGet WithLimit(int limit)
+        public ByProjectKeyMeGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyMeGet WithOffset(int offset)
+        public ByProjectKeyMeGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyMeGet WithWithTotal(bool withTotal)
@@ -96,10 +93,32 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Customers.ICustomer> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomer> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomer>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomer>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Customers.ICustomer>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Customers.ICustomer>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

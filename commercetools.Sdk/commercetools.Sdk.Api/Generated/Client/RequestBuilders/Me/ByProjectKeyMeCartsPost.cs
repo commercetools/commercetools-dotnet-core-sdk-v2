@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeCartsPost : ApiMethod<ByProjectKeyMeCartsPost>
+
+    public partial class ByProjectKeyMeCartsPost : ApiMethod<ByProjectKeyMeCartsPost>, IApiMethod<ByProjectKeyMeCartsPost, commercetools.Sdk.Api.Models.Carts.ICart>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyMeCartsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyMeCartsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeCartsPost>
     {
 
 
@@ -25,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Me.IMyCartDraft MyCartDraft;
+        private commercetools.Sdk.Api.Models.Me.IMyCartDraft MyCartDraft;
 
-        public ByProjectKeyMeCartsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Me.IMyCartDraft myCartDraft)
+        public ByProjectKeyMeCartsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Me.IMyCartDraft myCartDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -47,10 +45,32 @@ namespace commercetools.Api.Client.RequestBuilders.Me
         }
 
 
-        public async Task<commercetools.Api.Models.Carts.ICart> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Carts.ICart> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Carts.ICart>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Carts.ICart>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Carts.ICart>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Carts.ICart>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

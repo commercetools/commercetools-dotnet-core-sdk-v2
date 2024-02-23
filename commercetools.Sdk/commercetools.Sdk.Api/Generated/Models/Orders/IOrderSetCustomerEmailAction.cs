@@ -1,16 +1,12 @@
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetCustomerEmailAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSetCustomerEmailAction))]
     public partial interface IOrderSetCustomerEmailAction : IOrderUpdateAction
     {
         string Email { get; set; }
+
     }
 }

@@ -1,16 +1,16 @@
-using commercetools.Api.Models.ProductTypes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ProductTypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.AttributeLocalizedEnumType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.AttributeLocalizedEnumType))]
     public partial interface IAttributeLocalizedEnumType : IAttributeType
     {
-        List<IAttributeLocalizedEnumValue> Values { get; set; }
+        IList<IAttributeLocalizedEnumValue> Values { get; set; }
+        IEnumerable<IAttributeLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
+
     }
 }

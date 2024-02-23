@@ -9,5 +9,11 @@ namespace commercetools.Sdk.HistoryApi.Client
         {
             return new HistoryApiRoot(client);
         }
+
+        public static ProjectApiRoot Create(
+            IClient client, string projectKey)
+        {
+            return new ProjectApiRoot(client, projectKey);
+        }
     }
 }

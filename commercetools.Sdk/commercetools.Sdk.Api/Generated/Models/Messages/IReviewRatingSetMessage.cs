@@ -1,23 +1,19 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ReviewRatingSetMessage))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessage))]
     public partial interface IReviewRatingSetMessage : IMessage
     {
-        double? OldRating { get; set; }
+        decimal? OldRating { get; set; }
 
-        double? NewRating { get; set; }
+        decimal? NewRating { get; set; }
 
         bool IncludedInStatistics { get; set; }
 
         IReference Target { get; set; }
+
     }
 }

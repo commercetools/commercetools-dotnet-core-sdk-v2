@@ -1,20 +1,19 @@
-using commercetools.ImportApi.Models.Categories;
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Importrequests;
-using System;
+using commercetools.Sdk.ImportApi.Models.Categories;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
+
     public partial class CategoryImportRequest : ICategoryImportRequest
     {
         public IImportResourceType Type { get; set; }
 
-        public List<ICategoryImport> Resources { get; set; }
+        public IList<ICategoryImport> Resources { get; set; }
+        public IEnumerable<ICategoryImport> ResourcesEnumerable { set => Resources = value.ToList(); }
+
         public CategoryImportRequest()
         {
             this.Type = IImportResourceType.FindEnum("category");

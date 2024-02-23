@@ -1,14 +1,11 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.Parcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.Parcel))]
     public partial interface IParcel
     {
         string Id { get; set; }
@@ -19,6 +16,9 @@ namespace commercetools.HistoryApi.Models.Common
 
         ITrackingData TrackingData { get; set; }
 
-        List<IDeliveryItem> Items { get; set; }
+        IList<IDeliveryItem> Items { get; set; }
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
+
     }
 }

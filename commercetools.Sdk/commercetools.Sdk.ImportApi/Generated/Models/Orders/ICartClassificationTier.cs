@@ -1,23 +1,23 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.CartClassificationTier))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.CartClassificationTier))]
     public partial interface ICartClassificationTier : IShippingRatePriceTier
     {
         string Value { get; set; }
 
         IMoney Price { get; set; }
 
-        List<IShippingRatePriceTier> Tiers { get; set; }
+        IList<IShippingRatePriceTier> Tiers { get; set; }
+        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         bool? IsMatching { get; set; }
+
     }
 }

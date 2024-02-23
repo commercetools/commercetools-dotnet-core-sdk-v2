@@ -1,14 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productdrafts
+namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
+
     public partial class PriceDraftImport : IPriceDraftImport
     {
         public ITypedMoney Value { get; set; }
@@ -27,7 +26,9 @@ namespace commercetools.ImportApi.Models.Productdrafts
 
         public IDiscountedPrice Discounted { get; set; }
 
-        public List<IPriceTier> Tiers { get; set; }
+        public IList<IPriceTier> Tiers { get; set; }
+        public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         public string Key { get; set; }
     }

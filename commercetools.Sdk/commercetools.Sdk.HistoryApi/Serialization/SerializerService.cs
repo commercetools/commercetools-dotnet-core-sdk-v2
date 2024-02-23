@@ -1,11 +1,12 @@
+using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using commercetools.Base.Serialization.JsonConverters;
-using commercetools.Base.Serialization;
 using Type = System.Type;
 
 namespace commercetools.Sdk.HistoryApi.Serialization
 {
-    public class SerializerService : ISerializerService
+    public class SerializerService : IHistorySerializerService
     {
         private readonly JsonSerializerOptions _serializerOptions;
 
@@ -13,8 +14,8 @@ namespace commercetools.Sdk.HistoryApi.Serialization
         {
             _serializerOptions = new JsonSerializerOptions
             {
-                IgnoreNullValues = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
@@ -28,6 +29,11 @@ namespace commercetools.Sdk.HistoryApi.Serialization
         public T Deserialize<T>(string input)
         {
             return JsonSerializer.Deserialize<T>(input, _serializerOptions);
+        }
+
+        public T Deserialize<T>(Stream inputStream)
+        {
+            return JsonSerializer.Deserialize<T>(inputStream, _serializerOptions);
         }
 
         public object Deserialize(Type returnType, string input)

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
 {
     public class ByProjectKeyExtensionsKeyByKeyTest : RequestBuilderParentTests
     {
@@ -27,17 +25,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
                    .Extensions()
                    .WithKey("test_key")
                    .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/extensions/key=test_key?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .WithKey("test_key")
-                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/extensions/key=test_key",
@@ -47,11 +34,10 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
                    .WithProjectKey("test_projectKey")
                    .Extensions()
                    .WithKey("test_key")
-                   .Post(null)
-                   .WithExpand("expand")
+                   .Head()
                    .Build(),
-                   "Post",
-                   "/test_projectKey/extensions/key=test_key?expand=expand",
+                   "Head",
+                   "/test_projectKey/extensions/key=test_key",
                },
                new Object[] {
                    ApiRoot
@@ -73,17 +59,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
                    .Build(),
                    "Delete",
                    "/test_projectKey/extensions/key=test_key?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .WithKey("test_key")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/extensions/key=test_key?expand=expand",
                },
                new Object[] {
                    ApiRoot

@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerResetPassword))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerResetPassword))]
     public partial interface ICustomerResetPassword
     {
         string TokenValue { get; set; }
@@ -15,5 +11,6 @@ namespace commercetools.Api.Models.Customers
         string NewPassword { get; set; }
 
         long? Version { get; set; }
+
     }
 }

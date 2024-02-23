@@ -1,23 +1,25 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.AddChannelRolesChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.AddChannelRolesChange))]
     public partial interface IAddChannelRolesChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
-        List<IChannelRole> PreviousValue { get; set; }
+        IList<IChannelRoleEnum> PreviousValue { get; set; }
+        IEnumerable<IChannelRoleEnum> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        List<IChannelRole> NextValue { get; set; }
+
+        IList<IChannelRoleEnum> NextValue { get; set; }
+        IEnumerable<IChannelRoleEnum> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+
     }
 }

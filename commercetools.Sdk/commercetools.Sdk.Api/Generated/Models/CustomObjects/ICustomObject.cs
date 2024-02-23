@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CustomObjects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CustomObjects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomObjects.CustomObject))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObject))]
     public partial interface ICustomObject : IBaseResource
     {
         new string Id { get; set; }
@@ -28,5 +25,6 @@ namespace commercetools.Api.Models.CustomObjects
         string Key { get; set; }
 
         Object Value { get; set; }
+
     }
 }

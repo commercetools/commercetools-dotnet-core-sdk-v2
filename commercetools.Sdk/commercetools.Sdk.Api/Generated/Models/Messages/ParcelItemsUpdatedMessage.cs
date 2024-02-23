@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ParcelItemsUpdatedMessage : IParcelItemsUpdatedMessage
     {
         public string Id { get; set; }
@@ -38,9 +36,15 @@ namespace commercetools.Api.Models.Messages
 
         public string DeliveryId { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
-        public List<IDeliveryItem> OldItems { get; set; }
+
+        public IList<IDeliveryItem> OldItems { get; set; }
+        public IEnumerable<IDeliveryItem> OldItemsEnumerable { set => OldItems = value.ToList(); }
+
+
+        public string ShippingKey { get; set; }
         public ParcelItemsUpdatedMessage()
         {
             this.Type = "ParcelItemsUpdated";

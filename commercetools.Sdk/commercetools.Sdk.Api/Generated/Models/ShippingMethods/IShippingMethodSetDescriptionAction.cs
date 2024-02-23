@@ -1,16 +1,12 @@
-using commercetools.Api.Models.ShippingMethods;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethodSetDescriptionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetDescriptionAction))]
     public partial interface IShippingMethodSetDescriptionAction : IShippingMethodUpdateAction
     {
         string Description { get; set; }
+
     }
 }

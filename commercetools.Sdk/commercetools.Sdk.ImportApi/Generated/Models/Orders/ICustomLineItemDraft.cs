@@ -1,16 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.CustomLineItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.CustomLineItemDraft))]
     public partial interface ICustomLineItemDraft
     {
         ILocalizedString Name { get; set; }
@@ -23,9 +20,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         string Slug { get; set; }
 
-        double Quantity { get; set; }
+        long Quantity { get; set; }
 
-        List<IItemState> State { get; set; }
+        IList<IItemState> State { get; set; }
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         ITaxCategoryKeyReference TaxCategory { get; set; }
 
@@ -33,8 +32,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
-        List<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set; }
+        IList<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set; }
+        IEnumerable<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
+
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

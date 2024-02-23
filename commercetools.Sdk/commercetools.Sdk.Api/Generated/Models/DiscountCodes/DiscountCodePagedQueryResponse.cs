@@ -1,23 +1,22 @@
-using commercetools.Api.Models.DiscountCodes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodePagedQueryResponse : IDiscountCodePagedQueryResponse
     {
         public long Limit { get; set; }
+
+        public long Offset { get; set; }
 
         public long Count { get; set; }
 
         public long? Total { get; set; }
 
-        public long Offset { get; set; }
+        public IList<IDiscountCode> Results { get; set; }
+        public IEnumerable<IDiscountCode> ResultsEnumerable { set => Results = value.ToList(); }
 
-        public List<IDiscountCode> Results { get; set; }
     }
 }

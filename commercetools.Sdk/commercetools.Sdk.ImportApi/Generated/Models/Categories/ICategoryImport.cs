@@ -1,17 +1,17 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Categories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Categories.CategoryImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Categories.CategoryImport))]
     public partial interface ICategoryImport : IImportResource
     {
+        new string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ILocalizedString Slug { get; set; }
@@ -30,8 +30,11 @@ namespace commercetools.ImportApi.Models.Categories
 
         ILocalizedString MetaKeywords { get; set; }
 
-        List<IAsset> Assets { get; set; }
+        IList<IAsset> Assets { get; set; }
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         ICustom Custom { get; set; }
+
     }
 }

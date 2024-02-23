@@ -1,23 +1,47 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingList))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingList))]
     public partial interface IShoppingList : IBaseResource
     {
         new string Id { get; set; }
 
         new long Version { get; set; }
+
+        ILocalizedString Name { get; set; }
+
+        string Key { get; set; }
+
+        ICustomerReference Customer { get; set; }
+
+        ILocalizedString Slug { get; set; }
+
+        ILocalizedString Description { get; set; }
+
+        IList<IShoppingListLineItem> LineItems { get; set; }
+        IEnumerable<IShoppingListLineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
+
+
+        IList<ITextLineItem> TextLineItems { get; set; }
+        IEnumerable<ITextLineItem> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
+
+
+        long? DeleteDaysAfterLastModification { get; set; }
+
+        string AnonymousId { get; set; }
+
+        IStoreKeyReference Store { get; set; }
+
+        ICustomFields Custom { get; set; }
 
         new DateTime CreatedAt { get; set; }
 
@@ -27,26 +51,5 @@ namespace commercetools.Api.Models.ShoppingLists
 
         ICreatedBy CreatedBy { get; set; }
 
-        ICustomFields Custom { get; set; }
-
-        ICustomerReference Customer { get; set; }
-
-        long? DeleteDaysAfterLastModification { get; set; }
-
-        ILocalizedString Description { get; set; }
-
-        string Key { get; set; }
-
-        List<IShoppingListLineItem> LineItems { get; set; }
-
-        ILocalizedString Name { get; set; }
-
-        ILocalizedString Slug { get; set; }
-
-        List<ITextLineItem> TextLineItems { get; set; }
-
-        string AnonymousId { get; set; }
-
-        IStoreKeyReference Store { get; set; }
     }
 }

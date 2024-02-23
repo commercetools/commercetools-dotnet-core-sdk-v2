@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductPublishAction : IProductPublishAction
     {
         public string Action { get; set; }

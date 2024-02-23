@@ -1,25 +1,28 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.CartDiscounts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.DiscountCodes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeDraft))]
     public partial interface IDiscountCodeDraft
     {
+        string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }
 
         string Code { get; set; }
 
-        List<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        IList<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        IEnumerable<ICartDiscountResourceIdentifier> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
 
         string CartPredicate { get; set; }
 
@@ -31,10 +34,13 @@ namespace commercetools.Api.Models.DiscountCodes
 
         ICustomFieldsDraft Custom { get; set; }
 
-        List<string> Groups { get; set; }
+        IList<string> Groups { get; set; }
+        IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
+
 
         DateTime? ValidFrom { get; set; }
 
         DateTime? ValidUntil { get; set; }
+
     }
 }

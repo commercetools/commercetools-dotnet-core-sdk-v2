@@ -1,19 +1,19 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class Price : IPrice
     {
         public string Id { get; set; }
+
+        public string Key { get; set; }
 
         public ITypedMoney Value { get; set; }
 
@@ -29,8 +29,10 @@ namespace commercetools.Api.Models.Common
 
         public IDiscountedPrice Discounted { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public IList<IPriceTier> Tiers { get; set; }
+        public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
-        public List<IPriceTier> Tiers { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

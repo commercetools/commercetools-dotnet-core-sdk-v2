@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShoppingLists
 {
     public class ByProjectKeyShoppingListsKeyByKeyTest : RequestBuilderParentTests
     {
@@ -47,6 +45,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    .WithProjectKey("test_projectKey")
                    .ShoppingLists()
                    .WithKey("test_key")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shopping-lists/key=test_key",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShoppingLists()
+                   .WithKey("test_key")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
@@ -69,6 +77,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    .ShoppingLists()
                    .WithKey("test_key")
                    .Delete()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/shopping-lists/key=test_key?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShoppingLists()
+                   .WithKey("test_key")
+                   .Delete()
                    .WithDataErasure(true)
                    .Build(),
                    "Delete",
@@ -84,17 +103,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShoppingLists
                    .Build(),
                    "Delete",
                    "/test_projectKey/shopping-lists/key=test_key?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ShoppingLists()
-                   .WithKey("test_key")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/shopping-lists/key=test_key?expand=expand",
                },
                new Object[] {
                    ApiRoot

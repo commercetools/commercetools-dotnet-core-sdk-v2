@@ -1,19 +1,17 @@
 using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
-using commercetools.HistoryApi.Models;
+using commercetools.Sdk.HistoryApi.Models.ChangeHistories;
 
-namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
 {
-    public partial class ByProjectKeyByResourceTypeByIDGet : ApiMethod<ByProjectKeyByResourceTypeByIDGet>
+
+    public partial class ByProjectKeyByResourceTypeByIDGet : ApiMethod<ByProjectKeyByResourceTypeByIDGet>, IApiMethod<ByProjectKeyByResourceTypeByIDGet, commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>
     {
 
 
@@ -62,14 +60,29 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("userId");
         }
 
-        public List<string> GetType()
-        {
-            return this.GetQueryParam("type");
-        }
-
         public List<string> GetClientId()
         {
             return this.GetQueryParam("clientId");
+        }
+
+        public List<string> GetCustomerId()
+        {
+            return this.GetQueryParam("customerId");
+        }
+
+        public List<string> GetAssociateId()
+        {
+            return this.GetQueryParam("associateId");
+        }
+
+        public List<string> GetBusinessUnit()
+        {
+            return this.GetQueryParam("businessUnit");
+        }
+
+        public List<string> GetType()
+        {
+            return this.GetQueryParam("type");
         }
 
         public List<string> GetSource()
@@ -82,9 +95,9 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("changes");
         }
 
-        public List<string> GetCustomerId()
+        public List<string> GetStores()
         {
-            return this.GetQueryParam("customerId");
+            return this.GetQueryParam("stores");
         }
 
         public List<string> GetExcludePlatformInitiatedChanges()
@@ -107,14 +120,14 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("date.to", dateTo.ToString());
         }
 
-        public ByProjectKeyByResourceTypeByIDGet WithLimit(int limit)
+        public ByProjectKeyByResourceTypeByIDGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyByResourceTypeByIDGet WithOffset(int offset)
+        public ByProjectKeyByResourceTypeByIDGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithUserId(string userId)
@@ -122,14 +135,29 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("userId", userId);
         }
 
-        public ByProjectKeyByResourceTypeByIDGet WithType(string type)
-        {
-            return this.AddQueryParam("type", type);
-        }
-
         public ByProjectKeyByResourceTypeByIDGet WithClientId(string clientId)
         {
             return this.AddQueryParam("clientId", clientId);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithCustomerId(string customerId)
+        {
+            return this.AddQueryParam("customerId", customerId);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithAssociateId(string associateId)
+        {
+            return this.AddQueryParam("associateId", associateId);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithBusinessUnit(string businessUnit)
+        {
+            return this.AddQueryParam("businessUnit", businessUnit);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithType(string type)
+        {
+            return this.AddQueryParam("type", type);
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithSource(string source)
@@ -142,9 +170,9 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("changes", changes);
         }
 
-        public ByProjectKeyByResourceTypeByIDGet WithCustomerId(string customerId)
+        public ByProjectKeyByResourceTypeByIDGet WithStores(string stores)
         {
-            return this.AddQueryParam("customerId", customerId);
+            return this.AddQueryParam("stores", stores);
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange excludePlatformInitiatedChanges)
@@ -158,10 +186,32 @@ namespace commercetools.HistoryApi.Client.RequestBuilders.ResourceType
         }
 
 
-        public async Task<commercetools.HistoryApi.Models.IRecordPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.HistoryApi.Models.IRecordPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.HistoryApi.Models.ChangeHistories.IRecordPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

@@ -1,14 +1,10 @@
-using commercetools.HistoryApi.Models.Changes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.UnknownChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.UnknownChange))]
     public partial interface IUnknownChange : IChange
     {
         new string Type { get; set; }
@@ -18,5 +14,6 @@ namespace commercetools.HistoryApi.Models.Changes
         Object PreviousValue { get; set; }
 
         Object NextValue { get; set; }
+
     }
 }

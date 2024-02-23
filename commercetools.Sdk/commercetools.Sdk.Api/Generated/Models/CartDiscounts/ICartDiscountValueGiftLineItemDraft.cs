@@ -1,16 +1,11 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CartDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueGiftLineItemDraft))]
     public partial interface ICartDiscountValueGiftLineItemDraft : ICartDiscountValueDraft
     {
         IProductResourceIdentifier Product { get; set; }
@@ -20,5 +15,6 @@ namespace commercetools.Api.Models.CartDiscounts
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

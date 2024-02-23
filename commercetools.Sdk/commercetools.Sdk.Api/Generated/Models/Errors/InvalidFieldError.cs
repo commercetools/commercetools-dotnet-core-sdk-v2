@@ -1,13 +1,11 @@
-using commercetools.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class InvalidFieldError : IInvalidFieldError
     {
         public string Code { get; set; }
@@ -18,7 +16,9 @@ namespace commercetools.Api.Models.Errors
 
         public Object InvalidValue { get; set; }
 
-        public List<Object> AllowedValues { get; set; }
+        public IList<Object> AllowedValues { get; set; }
+        public IEnumerable<Object> AllowedValuesEnumerable { set => AllowedValues = value.ToList(); }
+
         public InvalidFieldError()
         {
             this.Code = "InvalidField";

@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Graphql
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
 {
 
-    public class ByProjectKeyGraphqlRequestBuilder
+    public partial class ByProjectKeyGraphqlRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -24,7 +21,7 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
             this.ProjectKey = projectKey;
         }
 
-        public ByProjectKeyGraphqlPost Post(commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
+        public ByProjectKeyGraphqlPost Post(commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
         {
             return new ByProjectKeyGraphqlPost(ApiHttpClient, SerializerService, ProjectKey, graphQLRequest);
         }

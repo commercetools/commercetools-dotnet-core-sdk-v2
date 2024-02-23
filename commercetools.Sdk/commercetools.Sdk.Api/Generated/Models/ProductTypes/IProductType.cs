@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ProductTypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductType))]
     public partial interface IProductType : IBaseResource
     {
         new string Id { get; set; }
@@ -30,6 +28,9 @@ namespace commercetools.Api.Models.ProductTypes
 
         string Description { get; set; }
 
-        List<IAttributeDefinition> Attributes { get; set; }
+        IList<IAttributeDefinition> Attributes { get; set; }
+        IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
+
+
     }
 }

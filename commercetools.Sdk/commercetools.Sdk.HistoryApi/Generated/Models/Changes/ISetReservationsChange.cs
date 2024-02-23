@@ -1,23 +1,25 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetReservationsChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange))]
     public partial interface ISetReservationsChange : IChange
     {
         new string Change { get; set; }
 
         new string Type { get; set; }
 
-        List<IReservation> NextValue { get; set; }
+        IList<IReservation> PreviousValue { get; set; }
+        IEnumerable<IReservation> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        List<IReservation> PreviousValue { get; set; }
+
+        IList<IReservation> NextValue { get; set; }
+        IEnumerable<IReservation> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+
     }
 }

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
 {
     public class ByProjectKeyInStoreKeyByStoreKeyCartsTest : RequestBuilderParentTests
     {
@@ -21,17 +19,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .InStoreKeyWithStoreKeyValue("test_storeKey")
-                   .Carts()
-                   .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/in-store/key=test_storeKey/carts?customerId=customerId",
-               },
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
@@ -117,6 +104,27 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/carts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Carts()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/carts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .Carts()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/in-store/key=test_storeKey/carts",
                },
                new Object[] {

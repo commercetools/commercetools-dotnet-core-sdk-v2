@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Payments
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
 {
-    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>
+
+    public partial class ByProjectKeyPaymentsGet : ApiMethod<ByProjectKeyPaymentsGet>, IApiMethod<ByProjectKeyPaymentsGet, commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyPaymentsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyPaymentsGet>
     {
 
 
@@ -71,14 +68,14 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyPaymentsGet WithLimit(int limit)
+        public ByProjectKeyPaymentsGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyPaymentsGet WithOffset(int offset)
+        public ByProjectKeyPaymentsGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyPaymentsGet WithWithTotal(bool withTotal)
@@ -96,10 +93,32 @@ namespace commercetools.Api.Client.RequestBuilders.Payments
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Payments.IPaymentPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Payments.IPaymentPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Payments.IPaymentPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

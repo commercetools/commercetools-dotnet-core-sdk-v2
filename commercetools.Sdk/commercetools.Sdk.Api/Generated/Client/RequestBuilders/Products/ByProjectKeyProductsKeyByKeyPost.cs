@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
-    public partial class ByProjectKeyProductsKeyByKeyPost : ApiMethod<ByProjectKeyProductsKeyByKeyPost>
+
+    public partial class ByProjectKeyProductsKeyByKeyPost : ApiMethod<ByProjectKeyProductsKeyByKeyPost>, IApiMethod<ByProjectKeyProductsKeyByKeyPost, commercetools.Sdk.Api.Models.Products.IProduct>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductsKeyByKeyPost>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyProductsKeyByKeyPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductsKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductsKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductsKeyByKeyPost>
     {
 
 
@@ -27,9 +25,9 @@ namespace commercetools.Api.Client.RequestBuilders.Products
 
         private string Key { get; }
 
-        private commercetools.Api.Models.Products.IProductUpdate ProductUpdate;
+        private commercetools.Sdk.Api.Models.Products.IProductUpdate ProductUpdate;
 
-        public ByProjectKeyProductsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Products.IProductUpdate productUpdate)
+        public ByProjectKeyProductsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Sdk.Api.Models.Products.IProductUpdate productUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -64,11 +62,6 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("localeProjection");
         }
 
-        public List<string> GetStoreProjection()
-        {
-            return this.GetQueryParam("storeProjection");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -99,21 +92,38 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.AddQueryParam("localeProjection", localeProjection);
         }
 
-        public ByProjectKeyProductsKeyByKeyPost WithStoreProjection(string storeProjection)
-        {
-            return this.AddQueryParam("storeProjection", storeProjection);
-        }
-
         public ByProjectKeyProductsKeyByKeyPost WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
         }
 
 
-        public async Task<commercetools.Api.Models.Products.IProduct> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProduct> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProduct>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProduct>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Products.IProduct>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Products.IProduct>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

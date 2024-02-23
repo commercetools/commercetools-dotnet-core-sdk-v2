@@ -1,17 +1,17 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Stores;
-using System;
+using commercetools.Sdk.Api.Models.Channels;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Stores
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Stores
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Stores.StoreSetDistributionChannelsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Stores.StoreSetDistributionChannelsAction))]
     public partial interface IStoreSetDistributionChannelsAction : IStoreUpdateAction
     {
-        List<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        IList<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        IEnumerable<IChannelResourceIdentifier> DistributionChannelsEnumerable { set => DistributionChannels = value.ToList(); }
+
+
     }
 }

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CustomObjects
 {
     public class ByProjectKeyCustomObjectsByContainerTest : RequestBuilderParentTests
     {
@@ -27,10 +25,32 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    .CustomObjects()
                    .WithContainer("test_container")
                    .Get()
+                   .WithSort("sort")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/custom-objects/test_container?sort=sort",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
+                   .WithContainer("test_container")
+                   .Get()
                    .WithWhere("where")
                    .Build(),
                    "Get",
                    "/test_projectKey/custom-objects/test_container?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
+                   .WithContainer("test_container")
+                   .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/custom-objects/test_container?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -49,10 +69,32 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CustomObjects
                    .CustomObjects()
                    .WithContainer("test_container")
                    .Get()
-                   .WithExpand("expand")
+                   .WithLimit(7)
                    .Build(),
                    "Get",
-                   "/test_projectKey/custom-objects/test_container?expand=expand",
+                   "/test_projectKey/custom-objects/test_container?limit=7",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
+                   .WithContainer("test_container")
+                   .Get()
+                   .WithOffset(3)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/custom-objects/test_container?offset=3",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CustomObjects()
+                   .WithContainer("test_container")
+                   .Get()
+                   .WithWithTotal(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/custom-objects/test_container?withTotal=true",
                },
                new Object[] {
                    ApiRoot

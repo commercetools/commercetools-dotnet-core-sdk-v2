@@ -1,23 +1,24 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyLineItemDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyLineItemDraft))]
     public partial interface IMyLineItemDraft
     {
+        string Key { get; set; }
+
         string ProductId { get; set; }
 
         long? VariantId { get; set; }
 
-        long Quantity { get; set; }
+        string Sku { get; set; }
+
+        long? Quantity { get; set; }
 
         DateTime? AddedAt { get; set; }
 
@@ -25,10 +26,9 @@ namespace commercetools.Api.Models.Me
 
         IChannelResourceIdentifier DistributionChannel { get; set; }
 
-        ICustomFieldsDraft Custom { get; set; }
-
         IItemShippingDetailsDraft ShippingDetails { get; set; }
 
-        string Sku { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

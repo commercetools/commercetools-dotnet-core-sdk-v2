@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductPriceDiscountsSetMessage : IProductPriceDiscountsSetMessage
     {
         public string Id { get; set; }
@@ -33,7 +31,9 @@ namespace commercetools.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+        public IList<IProductPriceDiscountsSetUpdatedPrice> UpdatedPrices { get; set; }
+        public IEnumerable<IProductPriceDiscountsSetUpdatedPrice> UpdatedPricesEnumerable { set => UpdatedPrices = value.ToList(); }
+
         public ProductPriceDiscountsSetMessage()
         {
             this.Type = "ProductPriceDiscountsSet";

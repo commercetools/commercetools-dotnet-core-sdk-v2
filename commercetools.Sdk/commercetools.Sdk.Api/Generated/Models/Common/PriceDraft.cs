@@ -1,18 +1,18 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class PriceDraft : IPriceDraft
     {
+        public string Key { get; set; }
+
         public IMoney Value { get; set; }
 
         public string Country { get; set; }
@@ -25,10 +25,12 @@ namespace commercetools.Api.Models.Common
 
         public DateTime? ValidUntil { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
-        public List<IPriceTierDraft> Tiers { get; set; }
-
         public IDiscountedPriceDraft Discounted { get; set; }
+
+        public IList<IPriceTierDraft> Tiers { get; set; }
+        public IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
+
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

@@ -1,17 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingMethod))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethod))]
     public partial interface IShippingMethod : IBaseResource
     {
         new string Id { get; set; }
@@ -32,18 +30,22 @@ namespace commercetools.Api.Models.ShippingMethods
 
         ILocalizedString LocalizedName { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         string Description { get; set; }
 
         ILocalizedString LocalizedDescription { get; set; }
 
         ITaxCategoryReference TaxCategory { get; set; }
 
-        List<IZoneRate> ZoneRates { get; set; }
+        IList<IZoneRate> ZoneRates { get; set; }
+        IEnumerable<IZoneRate> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
+
 
         bool IsDefault { get; set; }
 
         string Predicate { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

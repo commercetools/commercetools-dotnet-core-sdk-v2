@@ -1,16 +1,17 @@
-using commercetools.ImportApi.Models.Productvariants;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
-
-namespace commercetools.ImportApi.Models.Productvariants
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.DateSetAttribute))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.DateSetAttribute))]
     public partial interface IDateSetAttribute : IAttribute
     {
-        List<DateTime> Value { get; set; }
+        IList<Date> Value { get; set; }
+        IEnumerable<Date> ValueEnumerable { set => Value = value.ToList(); }
+
+
     }
 }

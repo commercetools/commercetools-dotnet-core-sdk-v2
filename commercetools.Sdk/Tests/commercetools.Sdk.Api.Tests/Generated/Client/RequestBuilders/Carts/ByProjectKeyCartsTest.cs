@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Carts
 {
     public class ByProjectKeyCartsTest : RequestBuilderParentTests
     {
@@ -21,16 +19,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Carts
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Carts()
-                   .Get()
-                   .WithCustomerId("customerId")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/carts?customerId=customerId",
-               },
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
@@ -108,6 +96,25 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Carts
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/carts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Carts()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/carts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Carts()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/carts",
                },
                new Object[] {

@@ -1,22 +1,18 @@
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariantAvailability))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductVariantAvailability))]
     public partial interface IProductVariantAvailability
     {
+        IProductVariantChannelAvailabilityMap Channels { get; set; }
+
         bool? IsOnStock { get; set; }
 
         long? RestockableInDays { get; set; }
 
         long? AvailableQuantity { get; set; }
 
-        IProductVariantChannelAvailabilityMap Channels { get; set; }
     }
 }

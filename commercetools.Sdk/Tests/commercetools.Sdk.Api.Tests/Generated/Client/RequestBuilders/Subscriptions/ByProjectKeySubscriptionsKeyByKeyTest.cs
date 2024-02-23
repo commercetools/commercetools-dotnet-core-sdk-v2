@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
 {
     public class ByProjectKeySubscriptionsKeyByKeyTest : RequestBuilderParentTests
     {
@@ -27,17 +25,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    .Subscriptions()
                    .WithKey("test_key")
                    .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/subscriptions/key=test_key?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Subscriptions()
-                   .WithKey("test_key")
-                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/subscriptions/key=test_key",
@@ -47,11 +34,10 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
                    .WithKey("test_key")
-                   .Post(null)
-                   .WithExpand("expand")
+                   .Head()
                    .Build(),
-                   "Post",
-                   "/test_projectKey/subscriptions/key=test_key?expand=expand",
+                   "Head",
+                   "/test_projectKey/subscriptions/key=test_key",
                },
                new Object[] {
                    ApiRoot
@@ -73,17 +59,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    .Build(),
                    "Delete",
                    "/test_projectKey/subscriptions/key=test_key?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Subscriptions()
-                   .WithKey("test_key")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/subscriptions/key=test_key?expand=expand",
                },
                new Object[] {
                    ApiRoot

@@ -1,15 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Reviews;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ReviewCreatedMessage : IReviewCreatedMessage
     {
         public string Id { get; set; }

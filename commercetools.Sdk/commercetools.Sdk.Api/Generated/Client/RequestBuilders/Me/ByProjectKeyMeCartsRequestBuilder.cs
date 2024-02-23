@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Me;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
-    public class ByProjectKeyMeCartsRequestBuilder
+    public partial class ByProjectKeyMeCartsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeCartsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyMeCartsPost Post(commercetools.Api.Models.Me.IMyCartDraft myCartDraft)
+        public ByProjectKeyMeCartsHead Head()
+        {
+            return new ByProjectKeyMeCartsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyMeCartsPost Post(commercetools.Sdk.Api.Models.Me.IMyCartDraft myCartDraft)
         {
             return new ByProjectKeyMeCartsPost(ApiHttpClient, SerializerService, ProjectKey, myCartDraft);
         }
@@ -44,6 +45,11 @@ namespace commercetools.Api.Client.RequestBuilders.Me
         public ByProjectKeyMeCartsByIDRequestBuilder WithId(string ID)
         {
             return new ByProjectKeyMeCartsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
+
+        public ByProjectKeyMeCartsReplicateRequestBuilder Replicate()
+        {
+            return new ByProjectKeyMeCartsReplicateRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

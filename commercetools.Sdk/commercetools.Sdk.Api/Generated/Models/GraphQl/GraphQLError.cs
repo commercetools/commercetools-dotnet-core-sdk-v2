@@ -1,19 +1,24 @@
-using commercetools.Api.Models.GraphQl;
+using commercetools.Sdk.Api.Models.Errors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
+
     public partial class GraphQLError : IGraphQLError
     {
         public string Message { get; set; }
 
-        public List<IGraphQLErrorLocation> Locations { get; set; }
+        public IList<IGraphQLErrorLocation> Locations { get; set; }
+        public IEnumerable<IGraphQLErrorLocation> LocationsEnumerable { set => Locations = value.ToList(); }
 
-        public List<Object> Path { get; set; }
+
+        public IList<Object> Path { get; set; }
+        public IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
+
+
+        public IGraphQLErrorObject Extensions { get; set; }
     }
 }

@@ -1,20 +1,19 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Channels
+namespace commercetools.Sdk.Api.Models.Channels
 {
+
     public partial class ChannelDraft : IChannelDraft
     {
         public string Key { get; set; }
 
-        public List<IChannelRoleEnum> Roles { get; set; }
+        public IList<IChannelRoleEnum> Roles { get; set; }
+        public IEnumerable<IChannelRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
+
 
         public ILocalizedString Name { get; set; }
 

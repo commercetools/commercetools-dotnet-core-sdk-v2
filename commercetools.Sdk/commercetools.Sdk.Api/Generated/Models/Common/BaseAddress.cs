@@ -1,17 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
+
     public partial class BaseAddress : IBaseAddress
     {
         public string Id { get; set; }
 
         public string Key { get; set; }
+
+        public string Country { get; set; }
 
         public string Title { get; set; }
 
@@ -34,8 +30,6 @@ namespace commercetools.Api.Models.Common
         public string Region { get; set; }
 
         public string State { get; set; }
-
-        public string Country { get; set; }
 
         public string Company { get; set; }
 

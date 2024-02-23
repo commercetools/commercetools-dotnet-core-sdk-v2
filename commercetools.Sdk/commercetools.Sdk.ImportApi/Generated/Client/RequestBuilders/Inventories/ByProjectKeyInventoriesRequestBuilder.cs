@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories
 {
 
-    public class ByProjectKeyInventoriesRequestBuilder
+    public partial class ByProjectKeyInventoriesRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,11 +26,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
         public ByProjectKeyInventoriesImportContainersRequestBuilder ImportContainers()
         {
             return new ByProjectKeyInventoriesImportContainersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder ImportSinkKeyWithImportSinkKeyValue(string importSinkKey)
-        {
-            return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, importSinkKey);
         }
     }
 }

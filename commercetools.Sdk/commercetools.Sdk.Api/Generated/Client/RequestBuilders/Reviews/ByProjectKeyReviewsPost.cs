@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Reviews
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
-    public partial class ByProjectKeyReviewsPost : ApiMethod<ByProjectKeyReviewsPost>
+
+    public partial class ByProjectKeyReviewsPost : ApiMethod<ByProjectKeyReviewsPost>, IApiMethod<ByProjectKeyReviewsPost, commercetools.Sdk.Api.Models.Reviews.IReview>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyReviewsPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsPost>
     {
 
 
@@ -25,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Reviews.IReviewDraft ReviewDraft;
+        private commercetools.Sdk.Api.Models.Reviews.IReviewDraft ReviewDraft;
 
-        public ByProjectKeyReviewsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Reviews.IReviewDraft reviewDraft)
+        public ByProjectKeyReviewsPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Reviews.IReviewDraft reviewDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -47,10 +45,32 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
         }
 
 
-        public async Task<commercetools.Api.Models.Reviews.IReview> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Reviews.IReview> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Reviews.IReview>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Reviews.IReview>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Reviews.IReview>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Reviews.IReview>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

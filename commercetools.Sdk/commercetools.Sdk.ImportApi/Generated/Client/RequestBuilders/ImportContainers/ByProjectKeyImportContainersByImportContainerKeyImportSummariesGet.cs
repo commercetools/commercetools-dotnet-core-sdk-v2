@@ -1,19 +1,14 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
-    public partial class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>
+
+    public partial class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet : ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>, IApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet, commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet>
     {
 
 
@@ -37,10 +32,32 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.ImportApi.Models.Importsummaries.IImportSummary>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

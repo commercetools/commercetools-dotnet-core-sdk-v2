@@ -1,16 +1,12 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.ChangeValues
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeValueExternalChangeValue))]
     public partial interface IChangeValueExternalChangeValue : IChangeValueChangeValue
     {
         new string Type { get; set; }
+
     }
 }

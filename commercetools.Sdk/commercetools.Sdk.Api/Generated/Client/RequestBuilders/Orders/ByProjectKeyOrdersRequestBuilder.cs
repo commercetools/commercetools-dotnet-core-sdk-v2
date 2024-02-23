@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Orders;
 
-namespace commercetools.Api.Client.RequestBuilders.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
 {
 
-    public class ByProjectKeyOrdersRequestBuilder
+    public partial class ByProjectKeyOrdersRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
             return new ByProjectKeyOrdersGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyOrdersPost Post(commercetools.Api.Models.Orders.IOrderFromCartDraft orderFromCartDraft)
+        public ByProjectKeyOrdersHead Head()
+        {
+            return new ByProjectKeyOrdersHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyOrdersPost Post(commercetools.Sdk.Api.Models.Orders.IOrderFromCartDraft orderFromCartDraft)
         {
             return new ByProjectKeyOrdersPost(ApiHttpClient, SerializerService, ProjectKey, orderFromCartDraft);
         }
@@ -39,6 +40,11 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
         public ByProjectKeyOrdersImportRequestBuilder ImportOrder()
         {
             return new ByProjectKeyOrdersImportRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyOrdersQuotesRequestBuilder OrderQuote()
+        {
+            return new ByProjectKeyOrdersQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder WithOrderNumber(string orderNumber)
@@ -54,6 +60,11 @@ namespace commercetools.Api.Client.RequestBuilders.Orders
         public ByProjectKeyOrdersByIDRequestBuilder WithId(string ID)
         {
             return new ByProjectKeyOrdersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
+
+        public ByProjectKeyOrdersSearchRequestBuilder Search()
+        {
+            return new ByProjectKeyOrdersSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

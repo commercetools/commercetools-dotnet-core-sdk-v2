@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.Address))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.Address))]
     public partial interface IAddress
     {
         string Id { get; set; }
@@ -59,5 +56,8 @@ namespace commercetools.ImportApi.Models.Common
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
+        ICustom Custom { get; set; }
+
     }
 }

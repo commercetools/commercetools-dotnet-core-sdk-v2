@@ -1,18 +1,16 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.States;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
-    public partial interface ILineItemStateTransitionMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
+    public partial interface ILineItemStateTransitionMessagePayload : IOrderMessagePayload
     {
         string LineItemId { get; set; }
+
+        string LineItemKey { get; set; }
 
         DateTime TransitionDate { get; set; }
 
@@ -21,5 +19,6 @@ namespace commercetools.Api.Models.Messages
         IStateReference FromState { get; set; }
 
         IStateReference ToState { get; set; }
+
     }
 }

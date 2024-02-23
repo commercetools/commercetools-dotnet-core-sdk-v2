@@ -1,15 +1,10 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.States;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ReviewStateTransitionMessagePayload : IReviewStateTransitionMessagePayload
     {
         public string Type { get; set; }

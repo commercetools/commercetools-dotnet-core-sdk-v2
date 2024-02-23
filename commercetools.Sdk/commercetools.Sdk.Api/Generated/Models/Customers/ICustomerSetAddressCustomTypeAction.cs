@@ -1,21 +1,17 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetAddressCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetAddressCustomTypeAction))]
     public partial interface ICustomerSetAddressCustomTypeAction : ICustomerUpdateAction
     {
+        string AddressId { get; set; }
+
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
 
-        string AddressId { get; set; }
     }
 }

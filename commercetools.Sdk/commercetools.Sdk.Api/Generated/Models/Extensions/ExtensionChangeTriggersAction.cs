@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class ExtensionChangeTriggersAction : IExtensionChangeTriggersAction
     {
         public string Action { get; set; }
 
-        public List<IExtensionTrigger> Triggers { get; set; }
+        public IList<IExtensionTrigger> Triggers { get; set; }
+        public IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
         public ExtensionChangeTriggersAction()
         {
             this.Action = "changeTriggers";

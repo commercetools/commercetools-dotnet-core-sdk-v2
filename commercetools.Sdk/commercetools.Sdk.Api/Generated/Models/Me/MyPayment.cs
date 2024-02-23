@@ -1,16 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Payments;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyPayment : IMyPayment
     {
         public string Id { get; set; }
@@ -21,11 +19,13 @@ namespace commercetools.Api.Models.Me
 
         public string AnonymousId { get; set; }
 
-        public ITypedMoney AmountPlanned { get; set; }
+        public ICentPrecisionMoney AmountPlanned { get; set; }
 
         public IPaymentMethodInfo PaymentMethodInfo { get; set; }
 
-        public List<ITransaction> Transactions { get; set; }
+        public IList<ITransaction> Transactions { get; set; }
+        public IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
+
 
         public ICustomFields Custom { get; set; }
     }

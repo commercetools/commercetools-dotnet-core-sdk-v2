@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.CartDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.CartDiscounts
 {
     public class ByProjectKeyCartDiscountsTest : RequestBuilderParentTests
     {
@@ -98,6 +96,25 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.CartDiscounts
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/cart-discounts",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CartDiscounts()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/cart-discounts?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .CartDiscounts()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/cart-discounts",
                },
                new Object[] {

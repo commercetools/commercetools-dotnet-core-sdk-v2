@@ -1,17 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Productvariants
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.MoneyAttribute))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.MoneyAttribute))]
     public partial interface IMoneyAttribute : IAttribute
     {
         ITypedMoney Value { get; set; }
+
     }
 }

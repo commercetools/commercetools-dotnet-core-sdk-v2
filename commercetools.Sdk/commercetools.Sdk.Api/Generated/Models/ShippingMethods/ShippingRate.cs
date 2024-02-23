@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingRate : IShippingRate
     {
         public ITypedMoney Price { get; set; }
@@ -17,6 +14,8 @@ namespace commercetools.Api.Models.ShippingMethods
 
         public bool? IsMatching { get; set; }
 
-        public List<IShippingRatePriceTier> Tiers { get; set; }
+        public IList<IShippingRatePriceTier> Tiers { get; set; }
+        public IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
     }
 }

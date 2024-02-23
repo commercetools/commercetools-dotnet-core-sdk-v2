@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Subscriptions;
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
 
-    public class ByProjectKeySubscriptionsRequestBuilder
+    public partial class ByProjectKeySubscriptionsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
             return new ByProjectKeySubscriptionsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeySubscriptionsPost Post(commercetools.Api.Models.Subscriptions.ISubscriptionDraft subscriptionDraft)
+        public ByProjectKeySubscriptionsHead Head()
+        {
+            return new ByProjectKeySubscriptionsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeySubscriptionsPost Post(commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionDraft subscriptionDraft)
         {
             return new ByProjectKeySubscriptionsPost(ApiHttpClient, SerializerService, ProjectKey, subscriptionDraft);
         }

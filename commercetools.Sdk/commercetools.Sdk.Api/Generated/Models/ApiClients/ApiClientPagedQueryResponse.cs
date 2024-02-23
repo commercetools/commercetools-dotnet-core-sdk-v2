@@ -1,13 +1,10 @@
-using commercetools.Api.Models.ApiClients;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ApiClients
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
+
     public partial class ApiClientPagedQueryResponse : IApiClientPagedQueryResponse
     {
         public long Limit { get; set; }
@@ -18,6 +15,8 @@ namespace commercetools.Api.Models.ApiClients
 
         public long? Total { get; set; }
 
-        public List<IApiClient> Results { get; set; }
+        public IList<IApiClient> Results { get; set; }
+        public IEnumerable<IApiClient> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

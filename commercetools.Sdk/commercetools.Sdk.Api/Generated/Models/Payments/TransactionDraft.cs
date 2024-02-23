@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class TransactionDraft : ITransactionDraft
     {
         public DateTime? Timestamp { get; set; }
@@ -20,5 +17,7 @@ namespace commercetools.Api.Models.Payments
         public string InteractionId { get; set; }
 
         public ITransactionState State { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

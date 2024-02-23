@@ -1,15 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductVariant))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductVariant))]
     public partial interface IProductVariant
     {
         long Id { get; set; }
@@ -18,15 +15,23 @@ namespace commercetools.Api.Models.Products
 
         string Key { get; set; }
 
-        List<IPrice> Prices { get; set; }
+        IList<IPrice> Prices { get; set; }
+        IEnumerable<IPrice> PricesEnumerable { set => Prices = value.ToList(); }
 
-        List<IAttribute> Attributes { get; set; }
+
+        IList<IAttribute> Attributes { get; set; }
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
 
         IPrice Price { get; set; }
 
-        List<IImage> Images { get; set; }
+        IList<IImage> Images { get; set; }
+        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
-        List<IAsset> Assets { get; set; }
+
+        IList<IAsset> Assets { get; set; }
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         IProductVariantAvailability Availability { get; set; }
 
@@ -35,5 +40,6 @@ namespace commercetools.Api.Models.Products
         IScopedPrice ScopedPrice { get; set; }
 
         bool? ScopedPriceDiscounted { get; set; }
+
     }
 }

@@ -1,20 +1,19 @@
-using commercetools.Api.Models.Projects;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Projects
+namespace commercetools.Sdk.Api.Models.Projects
 {
+
     public partial class CartClassificationType : ICartClassificationType
     {
         public IShippingRateTierType Type { get; set; }
 
-        public List<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        public IList<ICustomFieldLocalizedEnumValue> Values { get; set; }
+        public IEnumerable<ICustomFieldLocalizedEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
         public CartClassificationType()
         {
             this.Type = IShippingRateTierType.FindEnum("CartClassification");

@@ -1,19 +1,19 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.PriceDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.PriceDraft))]
     public partial interface IPriceDraft
     {
+        string Key { get; set; }
+
         IMoney Value { get; set; }
 
         string Country { get; set; }
@@ -26,10 +26,13 @@ namespace commercetools.Api.Models.Common
 
         DateTime? ValidUntil { get; set; }
 
+        IDiscountedPriceDraft Discounted { get; set; }
+
+        IList<IPriceTierDraft> Tiers { get; set; }
+        IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
+
+
         ICustomFieldsDraft Custom { get; set; }
 
-        List<IPriceTierDraft> Tiers { get; set; }
-
-        IDiscountedPriceDraft Discounted { get; set; }
     }
 }

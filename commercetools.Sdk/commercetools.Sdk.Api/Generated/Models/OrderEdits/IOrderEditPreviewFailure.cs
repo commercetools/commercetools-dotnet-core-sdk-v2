@@ -1,17 +1,17 @@
-using commercetools.Api.Models.Errors;
-using commercetools.Api.Models.OrderEdits;
-using System;
+using commercetools.Sdk.Api.Models.Errors;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewFailure))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewFailure))]
     public partial interface IOrderEditPreviewFailure : IOrderEditResult
     {
-        List<IErrorObject> Errors { get; set; }
+        IList<IErrorObject> Errors { get; set; }
+        IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
+
+
     }
 }

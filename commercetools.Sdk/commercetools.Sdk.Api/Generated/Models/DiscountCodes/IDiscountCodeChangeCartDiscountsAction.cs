@@ -1,17 +1,17 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.DiscountCodes;
-using System;
+using commercetools.Sdk.Api.Models.CartDiscounts;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.DiscountCodes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeChangeCartDiscountsAction))]
     public partial interface IDiscountCodeChangeCartDiscountsAction : IDiscountCodeUpdateAction
     {
-        List<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        IList<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        IEnumerable<ICartDiscountResourceIdentifier> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
+
     }
 }

@@ -1,13 +1,6 @@
-using commercetools.Api.Models.GraphQl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.Api.Models.GraphQl
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
+
     public partial class GraphQLRequest : IGraphQLRequest
     {
         public string Query { get; set; }

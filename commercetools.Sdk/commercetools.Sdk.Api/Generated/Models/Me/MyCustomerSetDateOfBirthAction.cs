@@ -1,18 +1,14 @@
-using commercetools.Api.Models.Me;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCustomerSetDateOfBirthAction : IMyCustomerSetDateOfBirthAction
     {
         public string Action { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
         public MyCustomerSetDateOfBirthAction()
         {
             this.Action = "setDateOfBirth";

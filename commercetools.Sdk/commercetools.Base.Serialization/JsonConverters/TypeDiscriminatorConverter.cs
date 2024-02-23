@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using commercetools.Base.Registration;
 using commercetools.Base.CustomAttributes;
 
 namespace commercetools.Base.Serialization.JsonConverters
@@ -68,7 +67,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             else
             {
                 var discriminatorValue = discriminatorProperty.GetString();
-                
+
                 if (!this.SubTypes.TryGetValue(discriminatorValue, out Type derivedType))
                 {
                     if (DefaultType == null)
@@ -84,13 +83,13 @@ namespace commercetools.Base.Serialization.JsonConverters
             }
 
             var json = jsonDocument.RootElement.GetRawText();
-            return (T) JsonSerializer.Deserialize(json, typeToDeserialize, JsonSerializerOptions);
+            return (T)JsonSerializer.Deserialize(json, typeToDeserialize, JsonSerializerOptions);
         }
 
         /// <inheritdoc/>
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
-            JsonSerializer.Serialize(writer, (object) value, options);
+            JsonSerializer.Serialize(writer, (object)value, options);
         }
     }
 }

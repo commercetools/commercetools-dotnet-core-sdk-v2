@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
 {
     public class ByProjectKeyMeShoppingListsByIDTest : RequestBuilderParentTests
     {
@@ -50,6 +48,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    .Me()
                    .ShoppingLists()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/me/shopping-lists/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Me()
+                   .ShoppingLists()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
@@ -74,10 +83,10 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    .ShoppingLists()
                    .WithId("test_ID")
                    .Delete()
-                   .WithVersion(2)
+                   .WithExpand("expand")
                    .Build(),
                    "Delete",
-                   "/test_projectKey/me/shopping-lists/test_ID?version=2",
+                   "/test_projectKey/me/shopping-lists/test_ID?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -86,10 +95,10 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    .ShoppingLists()
                    .WithId("test_ID")
                    .Delete()
-                   .WithExpand("expand")
+                   .WithVersion(2)
                    .Build(),
                    "Delete",
-                   "/test_projectKey/me/shopping-lists/test_ID?expand=expand",
+                   "/test_projectKey/me/shopping-lists/test_ID?version=2",
                },
                new Object[] {
                    ApiRoot

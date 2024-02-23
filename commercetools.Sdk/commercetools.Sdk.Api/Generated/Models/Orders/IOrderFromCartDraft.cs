@@ -1,16 +1,13 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderFromCartDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderFromCartDraft))]
     public partial interface IOrderFromCartDraft
     {
         [ObsoleteAttribute("This property is obsolete", false)]
@@ -22,6 +19,8 @@ namespace commercetools.Api.Models.Orders
 
         string OrderNumber { get; set; }
 
+        string PurchaseOrderNumber { get; set; }
+
         IPaymentState PaymentState { get; set; }
 
         IShipmentState ShipmentState { get; set; }
@@ -29,5 +28,8 @@ namespace commercetools.Api.Models.Orders
         IOrderState OrderState { get; set; }
 
         IStateResourceIdentifier State { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

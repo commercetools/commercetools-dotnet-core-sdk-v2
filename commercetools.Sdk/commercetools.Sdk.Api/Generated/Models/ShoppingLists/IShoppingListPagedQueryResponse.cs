@@ -1,14 +1,11 @@
-using commercetools.Api.Models.ShoppingLists;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListPagedQueryResponse))]
     public partial interface IShoppingListPagedQueryResponse
     {
         long Limit { get; set; }
@@ -19,6 +16,9 @@ namespace commercetools.Api.Models.ShoppingLists
 
         long Offset { get; set; }
 
-        List<IShoppingList> Results { get; set; }
+        IList<IShoppingList> Results { get; set; }
+        IEnumerable<IShoppingList> ResultsEnumerable { set => Results = value.ToList(); }
+
+
     }
 }

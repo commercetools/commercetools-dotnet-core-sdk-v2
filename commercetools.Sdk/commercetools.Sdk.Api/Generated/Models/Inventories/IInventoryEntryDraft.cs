@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Inventories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Inventories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryDraft))]
     public partial interface IInventoryEntryDraft
     {
         string Sku { get; set; }
+
+        string Key { get; set; }
 
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
@@ -23,5 +22,6 @@ namespace commercetools.Api.Models.Inventories
         DateTime? ExpectedDelivery { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

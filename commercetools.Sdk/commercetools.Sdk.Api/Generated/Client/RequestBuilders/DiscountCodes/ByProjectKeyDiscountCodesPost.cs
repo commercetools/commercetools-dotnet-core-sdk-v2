@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
-    public partial class ByProjectKeyDiscountCodesPost : ApiMethod<ByProjectKeyDiscountCodesPost>
+
+    public partial class ByProjectKeyDiscountCodesPost : ApiMethod<ByProjectKeyDiscountCodesPost>, IApiMethod<ByProjectKeyDiscountCodesPost, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyDiscountCodesPost>, commercetools.Sdk.Api.Client.IDeprecatable201Trait<ByProjectKeyDiscountCodesPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyDiscountCodesPost>
     {
 
 
@@ -25,9 +23,9 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.DiscountCodes.IDiscountCodeDraft DiscountCodeDraft;
+        private commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodeDraft DiscountCodeDraft;
 
-        public ByProjectKeyDiscountCodesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.DiscountCodes.IDiscountCodeDraft discountCodeDraft)
+        public ByProjectKeyDiscountCodesPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodeDraft discountCodeDraft)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -47,10 +45,32 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
         }
 
 
-        public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCode>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCode>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

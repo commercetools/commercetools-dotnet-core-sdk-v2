@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Zones
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Zones
 {
     public class ByProjectKeyZonesTest : RequestBuilderParentTests
     {
@@ -98,6 +96,25 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Zones
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/zones",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Zones()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/zones?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Zones()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/zones",
                },
                new Object[] {

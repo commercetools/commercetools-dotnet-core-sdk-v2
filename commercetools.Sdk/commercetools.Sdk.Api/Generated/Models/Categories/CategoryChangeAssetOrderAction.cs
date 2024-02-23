@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Categories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategoryChangeAssetOrderAction : ICategoryChangeAssetOrderAction
     {
         public string Action { get; set; }
 
-        public List<string> AssetOrder { get; set; }
+        public IList<string> AssetOrder { get; set; }
+        public IEnumerable<string> AssetOrderEnumerable { set => AssetOrder = value.ToList(); }
+
         public CategoryChangeAssetOrderAction()
         {
             this.Action = "changeAssetOrder";

@@ -1,19 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum InventoryMode
     {
+        [Description("None")]
+        None,
+
         [Description("TrackOnly")]
         TrackOnly,
 
         [Description("ReserveOnOrder")]
-        ReserveOnOrder,
-
-        [Description("None")]
-        None
+        ReserveOnOrder
     }
 
     public class InventoryModeWrapper : IInventoryMode
@@ -24,19 +28,29 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
-    public interface IInventoryMode : IJsonName
+    public interface IInventoryMode : IJsonName, IEnumerable<char>
     {
+        public static IInventoryMode None = new InventoryModeWrapper
+        { Value = InventoryMode.None, JsonName = "None" };
+
         public static IInventoryMode TrackOnly = new InventoryModeWrapper
         { Value = InventoryMode.TrackOnly, JsonName = "TrackOnly" };
 
         public static IInventoryMode ReserveOnOrder = new InventoryModeWrapper
         { Value = InventoryMode.ReserveOnOrder, JsonName = "ReserveOnOrder" };
-
-        public static IInventoryMode None = new InventoryModeWrapper
-        { Value = InventoryMode.None, JsonName = "None" };
 
         InventoryMode? Value { get; }
 
@@ -44,9 +58,9 @@ namespace commercetools.Api.Models.Carts
         {
             return new[]
             {
+                 None ,
                  TrackOnly ,
-                 ReserveOnOrder ,
-                 None
+                 ReserveOnOrder
              };
         }
         static IInventoryMode FindEnum(string value)

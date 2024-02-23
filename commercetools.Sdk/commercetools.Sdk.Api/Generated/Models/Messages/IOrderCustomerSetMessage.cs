@@ -1,18 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderCustomerSetMessage))]
-    public partial interface IOrderCustomerSetMessage : IMessage
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage))]
+    public partial interface IOrderCustomerSetMessage : IOrderMessage
     {
         ICustomerReference Customer { get; set; }
 
@@ -21,5 +15,6 @@ namespace commercetools.Api.Models.Messages
         ICustomerReference OldCustomer { get; set; }
 
         ICustomerGroupReference OldCustomerGroup { get; set; }
+
     }
 }

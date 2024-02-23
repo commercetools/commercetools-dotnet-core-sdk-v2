@@ -2,8 +2,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using commercetools.Api.IntegrationTests.Services;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Tokens;
 using commercetools.Sdk.Api.Extensions;
@@ -102,7 +102,7 @@ namespace commercetools.Api.IntegrationTests.Me
         {
             var meClientConfig = _serviceProviderFixture.GetClientConfiguration("MeClient");
             var httpClientFactory = _serviceProviderFixture.GetService<IHttpClientFactory>();
-            var serializerService = _serviceProviderFixture.GetService<SerializerService>();
+            var serializerService = _serviceProviderFixture.GetService<IApiSerializerService>();
 
             //Create passwordFlow TokenProvider
             var passwordTokenProvider = TokenProviderFactory

@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Reviews
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
-    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>
+
+    public partial class ByProjectKeyReviewsGet : ApiMethod<ByProjectKeyReviewsGet>, IApiMethod<ByProjectKeyReviewsGet, commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyReviewsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyReviewsGet>
     {
 
 
@@ -71,14 +68,14 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyReviewsGet WithLimit(int limit)
+        public ByProjectKeyReviewsGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyReviewsGet WithOffset(int offset)
+        public ByProjectKeyReviewsGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyReviewsGet WithWithTotal(bool withTotal)
@@ -96,10 +93,32 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Reviews.IReviewPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Reviews.IReviewPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Reviews.IReviewPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

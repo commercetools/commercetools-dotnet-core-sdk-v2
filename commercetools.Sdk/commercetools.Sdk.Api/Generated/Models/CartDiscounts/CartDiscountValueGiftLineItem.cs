@@ -1,15 +1,10 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Products;
 
 
-namespace commercetools.Api.Models.CartDiscounts
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountValueGiftLineItem : ICartDiscountValueGiftLineItem
     {
         public string Type { get; set; }

@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.TaxCategories;
 
-namespace commercetools.Api.Client.RequestBuilders.TaxCategories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
 {
 
-    public class ByProjectKeyTaxCategoriesRequestBuilder
+    public partial class ByProjectKeyTaxCategoriesRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.TaxCategories
             return new ByProjectKeyTaxCategoriesGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyTaxCategoriesPost Post(commercetools.Api.Models.TaxCategories.ITaxCategoryDraft taxCategoryDraft)
+        public ByProjectKeyTaxCategoriesHead Head()
+        {
+            return new ByProjectKeyTaxCategoriesHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyTaxCategoriesPost Post(commercetools.Sdk.Api.Models.TaxCategories.ITaxCategoryDraft taxCategoryDraft)
         {
             return new ByProjectKeyTaxCategoriesPost(ApiHttpClient, SerializerService, ProjectKey, taxCategoryDraft);
         }

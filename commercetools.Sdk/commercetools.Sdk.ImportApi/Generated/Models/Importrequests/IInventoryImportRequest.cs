@@ -1,18 +1,17 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Importrequests;
-using commercetools.ImportApi.Models.Inventories;
-using System;
+using commercetools.Sdk.ImportApi.Models.Inventories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Importrequests
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.InventoryImportRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.InventoryImportRequest))]
     public partial interface IInventoryImportRequest : IImportRequest
     {
-        List<IInventoryImport> Resources { get; set; }
+        IList<IInventoryImport> Resources { get; set; }
+        IEnumerable<IInventoryImport> ResourcesEnumerable { set => Resources = value.ToList(); }
+
+
     }
 }

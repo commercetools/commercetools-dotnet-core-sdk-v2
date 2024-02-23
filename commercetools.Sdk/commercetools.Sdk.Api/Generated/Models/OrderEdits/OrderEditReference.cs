@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.OrderEdits;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditReference : IOrderEditReference
     {
         public IReferenceTypeId TypeId { get; set; }

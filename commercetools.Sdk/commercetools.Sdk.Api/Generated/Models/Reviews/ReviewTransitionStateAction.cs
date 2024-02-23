@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.States;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.States;
 
 
-namespace commercetools.Api.Models.Reviews
+namespace commercetools.Sdk.Api.Models.Reviews
 {
+
     public partial class ReviewTransitionStateAction : IReviewTransitionStateAction
     {
         public string Action { get; set; }

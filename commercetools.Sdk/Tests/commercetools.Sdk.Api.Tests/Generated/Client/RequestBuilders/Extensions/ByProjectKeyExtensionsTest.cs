@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Extensions
 {
     public class ByProjectKeyExtensionsTest : RequestBuilderParentTests
     {
@@ -21,16 +19,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Extensions()
-                   .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/extensions?expand=expand",
-               },
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
@@ -104,11 +92,20 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Extensions
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Extensions()
-                   .Post(null)
-                   .WithExpand("expand")
+                   .Head()
+                   .WithWhere("where")
                    .Build(),
-                   "Post",
-                   "/test_projectKey/extensions?expand=expand",
+                   "Head",
+                   "/test_projectKey/extensions?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Extensions()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/extensions",
                },
                new Object[] {
                    ApiRoot

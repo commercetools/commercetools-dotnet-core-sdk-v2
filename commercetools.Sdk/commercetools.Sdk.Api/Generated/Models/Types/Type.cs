@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Types
+namespace commercetools.Sdk.Api.Models.Types
 {
+
     public partial class Type : IType
     {
         public string Id { get; set; }
@@ -29,8 +27,12 @@ namespace commercetools.Api.Models.Types
 
         public ILocalizedString Description { get; set; }
 
-        public List<IResourceTypeId> ResourceTypeIds { get; set; }
+        public IList<IResourceTypeId> ResourceTypeIds { get; set; }
+        public IEnumerable<IResourceTypeId> ResourceTypeIdsEnumerable { set => ResourceTypeIds = value.ToList(); }
 
-        public List<IFieldDefinition> FieldDefinitions { get; set; }
+
+        public IList<IFieldDefinition> FieldDefinitions { get; set; }
+        public IEnumerable<IFieldDefinition> FieldDefinitionsEnumerable { set => FieldDefinitions = value.ToList(); }
+
     }
 }

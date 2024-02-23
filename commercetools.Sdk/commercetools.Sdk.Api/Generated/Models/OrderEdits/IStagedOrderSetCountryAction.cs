@@ -1,16 +1,13 @@
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetCountryAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetCountryAction))]
     public partial interface IStagedOrderSetCountryAction : IStagedOrderUpdateAction
     {
         string Country { get; set; }
+
     }
 }

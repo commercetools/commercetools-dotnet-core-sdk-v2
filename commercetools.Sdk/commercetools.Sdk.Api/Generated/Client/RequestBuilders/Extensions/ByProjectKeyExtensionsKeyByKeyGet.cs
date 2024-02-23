@@ -1,19 +1,14 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
-    public partial class ByProjectKeyExtensionsKeyByKeyGet : ApiMethod<ByProjectKeyExtensionsKeyByKeyGet>
+
+    public partial class ByProjectKeyExtensionsKeyByKeyGet : ApiMethod<ByProjectKeyExtensionsKeyByKeyGet>, IApiMethod<ByProjectKeyExtensionsKeyByKeyGet, commercetools.Sdk.Api.Models.Extensions.IExtension>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsKeyByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsKeyByKeyGet>
     {
 
 
@@ -34,21 +29,35 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
             this.RequestUrl = $"/{ProjectKey}/extensions/key={Key}";
         }
 
-        public List<string> GetExpand()
+
+
+
+        public async Task<commercetools.Sdk.Api.Models.Extensions.IExtension> ExecuteAsync(CancellationToken cancellationToken = default)
         {
-            return this.GetQueryParam("expand");
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Extensions.IExtension>(requestMessage, cancellationToken);
+
         }
 
-        public ByProjectKeyExtensionsKeyByKeyGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.Extensions.IExtension> ExecuteAsync()
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Extensions.IExtension>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Extensions.IExtension>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Extensions.IExtension>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

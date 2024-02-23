@@ -30,6 +30,7 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+.vscode/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -280,3 +281,7 @@ __pycache__/
 # End of https://www.gitignore.io/api/aspnetcore
 appsettings.test.Development.json
 appsettings.Development.json
+
+
+build_docs/
+**/Generated/GraphQLClient.g.cs

@@ -1,15 +1,10 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeLocalizedNameChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLocalizedNameChange))]
     public partial interface IChangeLocalizedNameChange : IChange
     {
         new string Type { get; set; }
@@ -19,5 +14,6 @@ namespace commercetools.HistoryApi.Models.Changes
         ILocalizedString PreviousValue { get; set; }
 
         ILocalizedString NextValue { get; set; }
+
     }
 }

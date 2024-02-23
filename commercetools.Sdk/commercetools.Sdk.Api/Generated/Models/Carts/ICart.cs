@@ -1,27 +1,112 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.BusinessUnits;
+using commercetools.Sdk.Api.Models.CartDiscounts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.Cart))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.Cart))]
     public partial interface ICart : IBaseResource
     {
         new string Id { get; set; }
 
+        new long Version { get; set; }
+
         string Key { get; set; }
 
-        new long Version { get; set; }
+        string CustomerId { get; set; }
+
+        string CustomerEmail { get; set; }
+
+        ICustomerGroupReference CustomerGroup { get; set; }
+
+        string AnonymousId { get; set; }
+
+        IBusinessUnitKeyReference BusinessUnit { get; set; }
+
+        IStoreKeyReference Store { get; set; }
+
+        IList<ILineItem> LineItems { get; set; }
+        IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
+
+
+        IList<ICustomLineItem> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
+
+        long? TotalLineItemQuantity { get; set; }
+
+        ICentPrecisionMoney TotalPrice { get; set; }
+
+        ITaxedPrice TaxedPrice { get; set; }
+
+        ITaxedPrice TaxedShippingPrice { get; set; }
+
+        IDiscountOnTotalPrice DiscountOnTotalPrice { get; set; }
+
+        ITaxMode TaxMode { get; set; }
+
+        IRoundingMode TaxRoundingMode { get; set; }
+
+        ITaxCalculationMode TaxCalculationMode { get; set; }
+
+        IInventoryMode InventoryMode { get; set; }
+
+        ICartState CartState { get; set; }
+
+        IAddress BillingAddress { get; set; }
+
+        IAddress ShippingAddress { get; set; }
+
+        IShippingMode ShippingMode { get; set; }
+
+        string ShippingKey { get; set; }
+
+        IShippingInfo ShippingInfo { get; set; }
+
+        IShippingRateInput ShippingRateInput { get; set; }
+
+        ICustomFields ShippingCustomFields { get; set; }
+
+        IList<IShipping> Shipping { get; set; }
+        IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
+
+
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
+
+        IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+        IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
+
+        IList<IDirectDiscount> DirectDiscounts { get; set; }
+        IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
+
+
+        IList<ICartDiscountReference> RefusedGifts { get; set; }
+        IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
+
+
+        IPaymentInfo PaymentInfo { get; set; }
+
+        string Country { get; set; }
+
+        string Locale { get; set; }
+
+        ICartOrigin Origin { get; set; }
+
+        ICustomFields Custom { get; set; }
+
+        int? DeleteDaysAfterLastModification { get; set; }
 
         new DateTime CreatedAt { get; set; }
 
@@ -31,58 +116,5 @@ namespace commercetools.Api.Models.Carts
 
         ICreatedBy CreatedBy { get; set; }
 
-        string CustomerId { get; set; }
-
-        string CustomerEmail { get; set; }
-
-        string AnonymousId { get; set; }
-
-        IStoreKeyReference Store { get; set; }
-
-        List<ILineItem> LineItems { get; set; }
-
-        List<ICustomLineItem> CustomLineItems { get; set; }
-
-        ITypedMoney TotalPrice { get; set; }
-
-        ITaxedPrice TaxedPrice { get; set; }
-
-        ICartState CartState { get; set; }
-
-        IAddress ShippingAddress { get; set; }
-
-        IAddress BillingAddress { get; set; }
-
-        IInventoryMode InventoryMode { get; set; }
-
-        ITaxMode TaxMode { get; set; }
-
-        IRoundingMode TaxRoundingMode { get; set; }
-
-        ITaxCalculationMode TaxCalculationMode { get; set; }
-
-        ICustomerGroupReference CustomerGroup { get; set; }
-
-        string Country { get; set; }
-
-        IShippingInfo ShippingInfo { get; set; }
-
-        List<IDiscountCodeInfo> DiscountCodes { get; set; }
-
-        ICustomFields Custom { get; set; }
-
-        IPaymentInfo PaymentInfo { get; set; }
-
-        string Locale { get; set; }
-
-        int? DeleteDaysAfterLastModification { get; set; }
-
-        List<ICartDiscountReference> RefusedGifts { get; set; }
-
-        ICartOrigin Origin { get; set; }
-
-        IShippingRateInput ShippingRateInput { get; set; }
-
-        List<IAddress> ItemShippingAddresses { get; set; }
     }
 }

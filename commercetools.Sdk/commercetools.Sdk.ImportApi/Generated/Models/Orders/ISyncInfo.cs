@@ -1,14 +1,11 @@
-using commercetools.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.SyncInfo))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.SyncInfo))]
     public partial interface ISyncInfo
     {
         IChannelKeyReference Channel { get; set; }
@@ -16,5 +13,6 @@ namespace commercetools.ImportApi.Models.Orders
         string ExternalId { get; set; }
 
         DateTime SyncedAt { get; set; }
+
     }
 }

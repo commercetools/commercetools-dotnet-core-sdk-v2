@@ -1,14 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.ChangeValues
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.ShoppingListLineItemValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ShoppingListLineItemValue))]
     public partial interface IShoppingListLineItemValue
     {
         string Id { get; set; }
@@ -16,5 +12,6 @@ namespace commercetools.HistoryApi.Models.ChangeValues
         ILocalizedString Name { get; set; }
 
         int VariantId { get; set; }
+
     }
 }

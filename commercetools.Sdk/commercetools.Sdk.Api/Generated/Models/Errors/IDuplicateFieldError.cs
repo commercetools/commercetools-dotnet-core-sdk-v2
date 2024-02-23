@@ -1,21 +1,19 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateFieldError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DuplicateFieldError))]
     public partial interface IDuplicateFieldError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         string Field { get; set; }
 
         Object DuplicateValue { get; set; }
 
-        IReference ConflictingResource { get; set; }
     }
 }

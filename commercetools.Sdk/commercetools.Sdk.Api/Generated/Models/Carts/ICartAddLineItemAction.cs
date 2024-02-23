@@ -1,24 +1,18 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartAddLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartAddLineItemAction))]
     public partial interface ICartAddLineItemAction : ICartUpdateAction
     {
-        ICustomFieldsDraft Custom { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        string Key { get; set; }
 
         string ProductId { get; set; }
 
@@ -28,12 +22,27 @@ namespace commercetools.Api.Models.Carts
 
         long? Quantity { get; set; }
 
+        DateTime? AddedAt { get; set; }
+
+        IChannelResourceIdentifier DistributionChannel { get; set; }
+
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        IList<IMethodExternalTaxRateDraft> PerMethodExternalTaxRate { get; set; }
+        IEnumerable<IMethodExternalTaxRateDraft> PerMethodExternalTaxRateEnumerable { set => PerMethodExternalTaxRate = value.ToList(); }
+
+
+        IInventoryMode InventoryMode { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

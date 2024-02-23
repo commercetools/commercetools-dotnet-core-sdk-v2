@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductChangeAssetOrderAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductChangeAssetOrderAction))]
     public partial interface IProductChangeAssetOrderAction : IProductUpdateAction
     {
         long? VariantId { get; set; }
@@ -17,6 +14,9 @@ namespace commercetools.Api.Models.Products
 
         bool? Staged { get; set; }
 
-        List<string> AssetOrder { get; set; }
+        IList<string> AssetOrder { get; set; }
+        IEnumerable<string> AssetOrderEnumerable { set => AssetOrder = value.ToList(); }
+
+
     }
 }

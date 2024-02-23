@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Stores;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Channels;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
+
     public partial class StoreRemoveSupplyChannelAction : IStoreRemoveSupplyChannelAction
     {
         public string Action { get; set; }

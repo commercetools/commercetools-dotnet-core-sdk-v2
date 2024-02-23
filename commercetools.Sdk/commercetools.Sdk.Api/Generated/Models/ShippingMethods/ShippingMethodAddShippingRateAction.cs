@@ -1,14 +1,9 @@
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Zones;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Zones;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodAddShippingRateAction : IShippingMethodAddShippingRateAction
     {
         public string Action { get; set; }

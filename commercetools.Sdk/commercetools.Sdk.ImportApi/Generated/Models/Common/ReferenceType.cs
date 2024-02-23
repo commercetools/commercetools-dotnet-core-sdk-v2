@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Common
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public enum ReferenceType
     {
@@ -75,10 +79,20 @@ namespace commercetools.ImportApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IReferenceType), "FindEnum")]
-    public interface IReferenceType : IJsonName
+    public interface IReferenceType : IJsonName, IEnumerable<char>
     {
         public static IReferenceType Cart = new ReferenceTypeWrapper
         { Value = ReferenceType.Cart, JsonName = "cart" };

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
 {
     public class ByProjectKeyShippingMethodsMatchingLocationTest : RequestBuilderParentTests
     {
@@ -71,8 +69,62 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .ShippingMethods()
                    .MatchingLocation()
                    .Get()
+                   .WithSort("sort")
                    .Build(),
                    "Get",
+                   "/test_projectKey/shipping-methods/matching-location?sort=sort",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Get()
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/shipping-methods/matching-location",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithCountry("country")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?country=country",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithState("state")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?state=state",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .WithCurrency("currency")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-location?currency=currency",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingLocation()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/shipping-methods/matching-location",
                }
        };

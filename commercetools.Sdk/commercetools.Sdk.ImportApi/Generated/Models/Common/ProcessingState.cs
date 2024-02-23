@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Common
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public enum ProcessingState
     {
@@ -22,7 +26,10 @@ namespace commercetools.ImportApi.Models.Common
         Imported,
 
         [Description("rejected")]
-        Rejected
+        Rejected,
+
+        [Description("canceled")]
+        Canceled
     }
 
     public class ProcessingStateWrapper : IProcessingState
@@ -33,10 +40,20 @@ namespace commercetools.ImportApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IProcessingState), "FindEnum")]
-    public interface IProcessingState : IJsonName
+    public interface IProcessingState : IJsonName, IEnumerable<char>
     {
         public static IProcessingState Processing = new ProcessingStateWrapper
         { Value = ProcessingState.Processing, JsonName = "processing" };
@@ -56,6 +73,9 @@ namespace commercetools.ImportApi.Models.Common
         public static IProcessingState Rejected = new ProcessingStateWrapper
         { Value = ProcessingState.Rejected, JsonName = "rejected" };
 
+        public static IProcessingState Canceled = new ProcessingStateWrapper
+        { Value = ProcessingState.Canceled, JsonName = "canceled" };
+
         ProcessingState? Value { get; }
 
         static IProcessingState[] Values()
@@ -67,7 +87,8 @@ namespace commercetools.ImportApi.Models.Common
                  Unresolved ,
                  WaitForMasterVariant ,
                  Imported ,
-                 Rejected
+                 Rejected ,
+                 Canceled
              };
         }
         static IProcessingState FindEnum(string value)

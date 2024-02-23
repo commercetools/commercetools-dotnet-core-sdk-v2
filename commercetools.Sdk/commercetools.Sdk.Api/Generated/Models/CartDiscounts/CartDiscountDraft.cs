@@ -1,15 +1,14 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.CartDiscounts
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
+
     public partial class CartDiscountDraft : ICartDiscountDraft
     {
         public ILocalizedString Name { get; set; }
@@ -26,6 +25,10 @@ namespace commercetools.Api.Models.CartDiscounts
 
         public string SortOrder { get; set; }
 
+        public IList<IStoreResourceIdentifier> Stores { get; set; }
+        public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
+
         public bool? IsActive { get; set; }
 
         public DateTime? ValidFrom { get; set; }
@@ -36,6 +39,6 @@ namespace commercetools.Api.Models.CartDiscounts
 
         public IStackingMode StackingMode { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

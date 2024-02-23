@@ -1,13 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.LocalizedString))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.LocalizedString))]
     public interface ILocalizedString : IDictionary<string, string>
     {
     }

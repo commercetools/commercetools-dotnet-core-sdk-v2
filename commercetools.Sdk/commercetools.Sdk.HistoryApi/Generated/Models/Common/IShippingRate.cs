@@ -1,14 +1,11 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.ShippingRate))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.ShippingRate))]
     public partial interface IShippingRate
     {
         IMoney Price { get; set; }
@@ -17,6 +14,9 @@ namespace commercetools.HistoryApi.Models.Common
 
         bool IsMatching { get; set; }
 
-        List<IShippingRatePriceTier> Tiers { get; set; }
+        IList<IShippingRatePriceTier> Tiers { get; set; }
+        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
+
     }
 }

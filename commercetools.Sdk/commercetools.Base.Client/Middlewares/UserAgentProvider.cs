@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 namespace commercetools.Base.Client.Middlewares
@@ -9,7 +8,7 @@ namespace commercetools.Base.Client.Middlewares
         public UserAgentProvider()
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
-            var assemblyVersion = FileVersionInfo.GetVersionInfo(executingAssembly.Location).ProductVersion;
+            var assemblyVersion = executingAssembly.GetCustomAttribute<AssemblyFileVersionAttribute>().Version;
 
             var attr = (AssemblyFileVersionAttribute)typeof(object).GetTypeInfo().Assembly.GetCustomAttribute(typeof(AssemblyFileVersionAttribute));
             var frameworkName = "dotnet";

@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Projects;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.ProjectChangeLanguagesAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeLanguagesAction))]
     public partial interface IProjectChangeLanguagesAction : IProjectUpdateAction
     {
-        List<string> Languages { get; set; }
+        IList<string> Languages { get; set; }
+        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
+
+
     }
 }

@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes
 {
 
-    public class ByProjectKeyProductTypesImportContainersByImportContainerKeyRequestBuilder
+    public partial class ByProjectKeyProductTypesImportContainersByImportContainerKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -27,7 +24,7 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
             this.ImportContainerKey = importContainerKey;
         }
 
-        public ByProjectKeyProductTypesImportContainersByImportContainerKeyPost Post(commercetools.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
+        public ByProjectKeyProductTypesImportContainersByImportContainerKeyPost Post(commercetools.Sdk.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
         {
             return new ByProjectKeyProductTypesImportContainersByImportContainerKeyPost(ApiHttpClient, SerializerService, ProjectKey, ImportContainerKey, productTypeImportRequest);
         }

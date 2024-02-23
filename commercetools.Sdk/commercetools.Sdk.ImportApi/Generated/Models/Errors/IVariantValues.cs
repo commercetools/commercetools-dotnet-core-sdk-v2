@@ -1,21 +1,24 @@
-using commercetools.ImportApi.Models.Prices;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Prices;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.VariantValues))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.VariantValues))]
     public partial interface IVariantValues
     {
         string Sku { get; set; }
 
-        List<IPriceImport> Prices { get; set; }
+        IList<IPriceImport> Prices { get; set; }
+        IEnumerable<IPriceImport> PricesEnumerable { set => Prices = value.ToList(); }
 
-        List<IAttribute> Attributes { get; set; }
+
+        IList<IAttribute> Attributes { get; set; }
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
+
     }
 }

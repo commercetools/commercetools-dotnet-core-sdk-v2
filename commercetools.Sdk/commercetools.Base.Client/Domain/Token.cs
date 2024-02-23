@@ -8,7 +8,6 @@ namespace commercetools.Base.Client.Domain
             this.CreationDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
         }
-
         public string AccessToken { get; set; }
 
         public string TokenType { get; set; }
@@ -20,8 +19,8 @@ namespace commercetools.Base.Client.Domain
             get => expiresIn;
             set
             {
-                ExpirationDate = CreationDate.AddSeconds(value - 300);
                 expiresIn = value;
+                RefreshExpirationDate();
             }
         }
 
@@ -29,9 +28,14 @@ namespace commercetools.Base.Client.Domain
 
         public string RefreshToken { get; set; }
 
-        public DateTime CreationDate { get; }
+        public DateTime CreationDate { get; set; }
         public DateTime ExpirationDate { get; private set; }
 
         public bool Expired => ExpirationDate < DateTime.Now;
+
+        public void RefreshExpirationDate()
+        {
+            ExpirationDate = CreationDate.AddSeconds(ExpiresIn - 300);
+        }
     }
 }

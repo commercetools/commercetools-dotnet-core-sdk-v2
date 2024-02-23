@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client;
 
 namespace commercetools.Api.IntegrationTests
 {
@@ -93,6 +94,106 @@ namespace commercetools.Api.IntegrationTests
             Func<T, Task<T>> func,
             Func<IClient, TDraft, Task<T>> createFunc,
             Func<IClient, T, Task> deleteFunc) where T : IBaseResource
+        {
+
+            var buildDraft = draftAction.Invoke(draft);
+
+            var resource = await createFunc(client, buildDraft);
+
+            var updatedResource = default(T);
+
+            try
+            {
+                updatedResource = await func(resource);
+            }
+            finally
+            {
+                await deleteFunc(client, updatedResource != null ? updatedResource : resource);
+            }
+        }
+
+        public static async Task WithAsync<T, TDraft>(
+            ProjectApiRoot apiRoot,
+            TDraft draft,
+            Func<TDraft, TDraft> draftAction,
+            Func<T, Task> func,
+            Func<ProjectApiRoot, TDraft, Task<T>> createFunc,
+            Func<ProjectApiRoot, T, Task> deleteFunc
+        )
+        {
+            var buildDraft = draftAction.Invoke(draft);
+            var resource = await createFunc(apiRoot, buildDraft);
+            try
+            {
+                await func(resource);
+            }
+            finally
+            {
+                await deleteFunc(apiRoot, resource);
+            }
+        }
+
+        public static async Task With<T, TDraft>(
+            ProjectApiRoot apiRoot,
+            TDraft draft,
+            Func<TDraft, TDraft> draftAction,
+            Action<T> func,
+            Func<ProjectApiRoot, TDraft, Task<T>> createFunc,
+            Func<ProjectApiRoot, T, Task> deleteFunc)
+        {
+
+            var buildDraft = draftAction.Invoke(draft);
+
+            var resource = await createFunc(apiRoot, buildDraft);
+
+            try
+            {
+                func(resource);
+            }
+            finally
+            {
+                await deleteFunc(apiRoot, resource);
+            }
+        }
+
+        public static async Task WithListAsync<T, TDraft>(
+            ProjectApiRoot apiRoot,
+            TDraft draft,
+            Func<TDraft, TDraft> draftAction,
+            Func<List<T>, Task> func,
+            int count,
+            Func<ProjectApiRoot, TDraft, Task<T>> createFunc,
+            Func<ProjectApiRoot, T, Task> deleteFunc
+        )
+        {
+            var resourcesList = new List<T>();
+            for (int i = 1; i <= count; i++)
+            {
+                var buildDraft = draftAction.Invoke(draft);
+                var resource = await createFunc(apiRoot, buildDraft);
+                resourcesList.Add(resource);
+            }
+
+            try
+            {
+                await func(resourcesList);
+            }
+            finally
+            {
+                foreach (var resource in resourcesList)
+                {
+                    await deleteFunc(apiRoot, resource);
+                }
+            }
+        }
+
+        public static async Task WithUpdateableAsync<T, TDraft>(
+            ProjectApiRoot client,
+            TDraft draft,
+            Func<TDraft, TDraft> draftAction,
+            Func<T, Task<T>> func,
+            Func<ProjectApiRoot, TDraft, Task<T>> createFunc,
+            Func<ProjectApiRoot, T, Task> deleteFunc) where T : IBaseResource
         {
 
             var buildDraft = draftAction.Invoke(draft);

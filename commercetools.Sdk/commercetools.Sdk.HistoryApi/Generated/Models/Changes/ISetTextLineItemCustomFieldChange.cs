@@ -1,20 +1,20 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using commercetools.HistoryApi.Models.Changes;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetTextLineItemCustomFieldChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTextLineItemCustomFieldChange))]
     public partial interface ISetTextLineItemCustomFieldChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
+
+        Object PreviousValue { get; set; }
+
+        Object NextValue { get; set; }
 
         string Name { get; set; }
 
@@ -22,8 +22,5 @@ namespace commercetools.HistoryApi.Models.Changes
 
         ITextLineItemValue TextLineItem { get; set; }
 
-        Object NextValue { get; set; }
-
-        Object PreviousValue { get; set; }
     }
 }

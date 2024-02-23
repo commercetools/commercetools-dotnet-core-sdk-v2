@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductTypes
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
+
     public partial class ProductType : IProductType
     {
         public string Id { get; set; }
@@ -29,6 +27,8 @@ namespace commercetools.Api.Models.ProductTypes
 
         public string Description { get; set; }
 
-        public List<IAttributeDefinition> Attributes { get; set; }
+        public IList<IAttributeDefinition> Attributes { get; set; }
+        public IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
+
     }
 }

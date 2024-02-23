@@ -1,15 +1,10 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class MatchingPriceNotFoundError : IMatchingPriceNotFoundError
     {
         public string Code { get; set; }

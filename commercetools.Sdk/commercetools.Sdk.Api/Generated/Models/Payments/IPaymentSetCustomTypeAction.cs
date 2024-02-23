@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Payments;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Payments
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentSetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetCustomTypeAction))]
     public partial interface IPaymentSetCustomTypeAction : IPaymentUpdateAction
     {
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

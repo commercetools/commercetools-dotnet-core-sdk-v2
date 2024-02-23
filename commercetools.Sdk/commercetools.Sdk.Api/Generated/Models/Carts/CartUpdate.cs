@@ -1,17 +1,16 @@
-using commercetools.Api.Models.Carts;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class CartUpdate : ICartUpdate
     {
         public long Version { get; set; }
 
-        public List<ICartUpdateAction> Actions { get; set; }
+        public IList<ICartUpdateAction> Actions { get; set; }
+        public IEnumerable<ICartUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
     }
 }

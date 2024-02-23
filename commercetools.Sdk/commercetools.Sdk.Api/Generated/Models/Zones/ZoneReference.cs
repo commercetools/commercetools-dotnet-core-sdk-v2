@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Zones;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Zones
+namespace commercetools.Sdk.Api.Models.Zones
 {
+
     public partial class ZoneReference : IZoneReference
     {
         public IReferenceTypeId TypeId { get; set; }

@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class Customer : ICustomer
     {
         public string Id { get; set; }
@@ -21,11 +21,15 @@ namespace commercetools.Api.Models.Customers
 
         public DateTime LastModifiedAt { get; set; }
 
+        public string Key { get; set; }
+
+        public string CustomerNumber { get; set; }
+
+        public string ExternalId { get; set; }
+
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }
-
-        public string CustomerNumber { get; set; }
 
         public string Email { get; set; }
 
@@ -39,25 +43,29 @@ namespace commercetools.Api.Models.Customers
 
         public string Title { get; set; }
 
-        public DateTime? DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
 
         public string CompanyName { get; set; }
 
         public string VatId { get; set; }
 
-        public List<IAddress> Addresses { get; set; }
+        public IList<IAddress> Addresses { get; set; }
+        public IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
+
 
         public string DefaultShippingAddressId { get; set; }
 
-        public List<string> ShippingAddressIds { get; set; }
+        public IList<string> ShippingAddressIds { get; set; }
+        public IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
+
 
         public string DefaultBillingAddressId { get; set; }
 
-        public List<string> BillingAddressIds { get; set; }
+        public IList<string> BillingAddressIds { get; set; }
+        public IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
+
 
         public bool IsEmailVerified { get; set; }
-
-        public string ExternalId { get; set; }
 
         public ICustomerGroupReference CustomerGroup { get; set; }
 
@@ -67,8 +75,10 @@ namespace commercetools.Api.Models.Customers
 
         public string Salutation { get; set; }
 
-        public string Key { get; set; }
+        public IList<IStoreKeyReference> Stores { get; set; }
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
-        public List<IStoreKeyReference> Stores { get; set; }
+
+        public IAuthenticationMode AuthenticationMode { get; set; }
     }
 }

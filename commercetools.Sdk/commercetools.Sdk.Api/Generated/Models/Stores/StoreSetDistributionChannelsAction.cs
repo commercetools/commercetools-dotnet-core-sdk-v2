@@ -1,19 +1,18 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Stores;
-using System;
+using commercetools.Sdk.Api.Models.Channels;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Stores
+namespace commercetools.Sdk.Api.Models.Stores
 {
+
     public partial class StoreSetDistributionChannelsAction : IStoreSetDistributionChannelsAction
     {
         public string Action { get; set; }
 
-        public List<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        public IList<IChannelResourceIdentifier> DistributionChannels { get; set; }
+        public IEnumerable<IChannelResourceIdentifier> DistributionChannelsEnumerable { set => DistributionChannels = value.ToList(); }
+
         public StoreSetDistributionChannelsAction()
         {
             this.Action = "setDistributionChannels";

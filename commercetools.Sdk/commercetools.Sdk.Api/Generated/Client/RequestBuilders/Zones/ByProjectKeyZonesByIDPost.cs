@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Zones
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
 {
-    public partial class ByProjectKeyZonesByIDPost : ApiMethod<ByProjectKeyZonesByIDPost>
+
+    public partial class ByProjectKeyZonesByIDPost : ApiMethod<ByProjectKeyZonesByIDPost>, IApiMethod<ByProjectKeyZonesByIDPost, commercetools.Sdk.Api.Models.Zones.IZone>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyZonesByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyZonesByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyZonesByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyZonesByIDPost>
     {
 
 
@@ -27,9 +25,9 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Zones.IZoneUpdate ZoneUpdate;
+        private commercetools.Sdk.Api.Models.Zones.IZoneUpdate ZoneUpdate;
 
-        public ByProjectKeyZonesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Zones.IZoneUpdate zoneUpdate)
+        public ByProjectKeyZonesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Zones.IZoneUpdate zoneUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -50,10 +48,32 @@ namespace commercetools.Api.Client.RequestBuilders.Zones
         }
 
 
-        public async Task<commercetools.Api.Models.Zones.IZone> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Zones.IZone> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Zones.IZone>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Zones.IZone>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Zones.IZone>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Zones.IZone>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

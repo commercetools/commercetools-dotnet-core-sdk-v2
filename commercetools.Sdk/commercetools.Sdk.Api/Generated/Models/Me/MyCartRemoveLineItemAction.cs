@@ -1,20 +1,17 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Me;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCartRemoveLineItemAction : IMyCartRemoveLineItemAction
     {
         public string Action { get; set; }
 
         public string LineItemId { get; set; }
+
+        public string LineItemKey { get; set; }
 
         public long? Quantity { get; set; }
 

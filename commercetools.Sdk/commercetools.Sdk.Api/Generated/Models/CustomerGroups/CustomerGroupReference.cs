@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.CustomerGroups;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.CustomerGroups
+namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
+
     public partial class CustomerGroupReference : ICustomerGroupReference
     {
         public IReferenceTypeId TypeId { get; set; }

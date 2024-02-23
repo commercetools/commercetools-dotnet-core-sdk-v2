@@ -1,13 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
-
-namespace commercetools.Api.Models.ApiClients
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ApiClients.ApiClient))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ApiClients.ApiClient))]
     public partial interface IApiClient
     {
         string Id { get; set; }
@@ -18,10 +16,15 @@ namespace commercetools.Api.Models.ApiClients
 
         string Secret { get; set; }
 
-        DateTime? LastUsedAt { get; set; }
+        Date? LastUsedAt { get; set; }
 
         DateTime? DeleteAt { get; set; }
 
         DateTime? CreatedAt { get; set; }
+
+        int? AccessTokenValiditySeconds { get; set; }
+
+        int? RefreshTokenValiditySeconds { get; set; }
+
     }
 }

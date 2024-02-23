@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductVariant : IProductVariant
     {
         public long Id { get; set; }
@@ -17,15 +14,23 @@ namespace commercetools.Api.Models.Products
 
         public string Key { get; set; }
 
-        public List<IPrice> Prices { get; set; }
+        public IList<IPrice> Prices { get; set; }
+        public IEnumerable<IPrice> PricesEnumerable { set => Prices = value.ToList(); }
 
-        public List<IAttribute> Attributes { get; set; }
+
+        public IList<IAttribute> Attributes { get; set; }
+        public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
 
         public IPrice Price { get; set; }
 
-        public List<IImage> Images { get; set; }
+        public IList<IImage> Images { get; set; }
+        public IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
-        public List<IAsset> Assets { get; set; }
+
+        public IList<IAsset> Assets { get; set; }
+        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         public IProductVariantAvailability Availability { get; set; }
 

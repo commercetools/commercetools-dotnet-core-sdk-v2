@@ -1,20 +1,21 @@
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Orders;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.OrderPatches
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.DeliveryParcelDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.DeliveryParcelDraft))]
     public partial interface IDeliveryParcelDraft
     {
         IParcelMeasurements Measurements { get; set; }
 
         ITrackingData TrackingData { get; set; }
 
-        List<IDeliveryItem> Items { get; set; }
+        IList<IDeliveryItem> Items { get; set; }
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
+
     }
 }

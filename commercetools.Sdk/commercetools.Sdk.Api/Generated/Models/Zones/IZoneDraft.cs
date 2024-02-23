@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Zones;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Zones
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Zones
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Zones.ZoneDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.ZoneDraft))]
     public partial interface IZoneDraft
     {
         string Key { get; set; }
@@ -17,6 +14,9 @@ namespace commercetools.Api.Models.Zones
 
         string Description { get; set; }
 
-        List<ILocation> Locations { get; set; }
+        IList<ILocation> Locations { get; set; }
+        IEnumerable<ILocation> LocationsEnumerable { set => Locations = value.ToList(); }
+
+
     }
 }

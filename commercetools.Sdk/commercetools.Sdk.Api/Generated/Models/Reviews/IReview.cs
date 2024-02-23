@@ -1,17 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Reviews
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Reviews
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Reviews.Review))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.Review))]
     public partial interface IReview : IBaseResource
     {
         new string Id { get; set; }
@@ -49,5 +46,6 @@ namespace commercetools.Api.Models.Reviews
         ICustomerReference Customer { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

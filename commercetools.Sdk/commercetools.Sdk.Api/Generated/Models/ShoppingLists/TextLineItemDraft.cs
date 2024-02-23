@@ -1,16 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShoppingLists
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
+
     public partial class TextLineItemDraft : ITextLineItemDraft
     {
+        public string Key { get; set; }
+
         public DateTime? AddedAt { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
@@ -19,6 +18,6 @@ namespace commercetools.Api.Models.ShoppingLists
 
         public ILocalizedString Name { get; set; }
 
-        public int? Quantity { get; set; }
+        public long? Quantity { get; set; }
     }
 }

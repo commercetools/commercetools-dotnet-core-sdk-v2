@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum CartState
     {
@@ -13,7 +17,10 @@ namespace commercetools.Api.Models.Carts
         Merged,
 
         [Description("Ordered")]
-        Ordered
+        Ordered,
+
+        [Description("Frozen")]
+        Frozen
     }
 
     public class CartStateWrapper : ICartState
@@ -24,10 +31,20 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ICartState), "FindEnum")]
-    public interface ICartState : IJsonName
+    public interface ICartState : IJsonName, IEnumerable<char>
     {
         public static ICartState Active = new CartStateWrapper
         { Value = CartState.Active, JsonName = "Active" };
@@ -38,6 +55,9 @@ namespace commercetools.Api.Models.Carts
         public static ICartState Ordered = new CartStateWrapper
         { Value = CartState.Ordered, JsonName = "Ordered" };
 
+        public static ICartState Frozen = new CartStateWrapper
+        { Value = CartState.Frozen, JsonName = "Frozen" };
+
         CartState? Value { get; }
 
         static ICartState[] Values()
@@ -46,7 +66,8 @@ namespace commercetools.Api.Models.Carts
             {
                  Active ,
                  Merged ,
-                 Ordered
+                 Ordered ,
+                 Frozen
              };
         }
         static ICartState FindEnum(string value)

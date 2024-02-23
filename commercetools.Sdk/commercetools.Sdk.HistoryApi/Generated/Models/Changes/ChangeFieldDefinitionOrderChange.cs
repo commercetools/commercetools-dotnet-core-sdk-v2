@@ -1,23 +1,24 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using commercetools.HistoryApi.Models.Changes;
-using System;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class ChangeFieldDefinitionOrderChange : IChangeFieldDefinitionOrderChange
     {
         public string Type { get; set; }
 
         public string Change { get; set; }
 
-        public List<IFieldDefinitionOrderValue> PreviousValue { get; set; }
+        public IList<IFieldDefinitionOrderValue> PreviousValue { get; set; }
+        public IEnumerable<IFieldDefinitionOrderValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        public List<IFieldDefinitionOrderValue> NextValue { get; set; }
+
+        public IList<IFieldDefinitionOrderValue> NextValue { get; set; }
+        public IEnumerable<IFieldDefinitionOrderValue> NextValueEnumerable { set => NextValue = value.ToList(); }
+
         public ChangeFieldDefinitionOrderChange()
         {
             this.Type = "ChangeFieldDefinitionOrderChange";

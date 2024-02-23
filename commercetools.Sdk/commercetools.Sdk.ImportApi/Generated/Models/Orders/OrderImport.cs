@@ -1,15 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class OrderImport : IOrderImport
     {
         public string OrderNumber { get; set; }
@@ -18,9 +16,13 @@ namespace commercetools.ImportApi.Models.Orders
 
         public string CustomerEmail { get; set; }
 
-        public List<ILineItemImportDraft> LineItems { get; set; }
+        public IList<ILineItemImportDraft> LineItems { get; set; }
+        public IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        public List<ICustomLineItemDraft> CustomLineItems { get; set; }
+
+        public IList<ICustomLineItemDraft> CustomLineItems { get; set; }
+        public IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         public ITypedMoney TotalPrice { get; set; }
 
@@ -54,6 +56,12 @@ namespace commercetools.ImportApi.Models.Orders
 
         public ICartOrigin Origin { get; set; }
 
-        public List<IAddress> ItemShippingAddresses { get; set; }
+        public IList<IAddress> ItemShippingAddresses { get; set; }
+        public IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
+
+        public IStoreKeyReference Store { get; set; }
+
+        public IStateKeyReference State { get; set; }
     }
 }

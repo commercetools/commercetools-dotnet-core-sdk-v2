@@ -1,23 +1,20 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.ShippingInfo))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.ShippingInfo))]
     public partial interface IShippingInfo
     {
         string ShippingMethodName { get; set; }
 
-        ITypedMoney Price { get; set; }
+        ICentPrecisionMoney Price { get; set; }
 
         IShippingRate ShippingRate { get; set; }
 
@@ -29,10 +26,13 @@ namespace commercetools.Api.Models.Carts
 
         IShippingMethodReference ShippingMethod { get; set; }
 
-        List<IDelivery> Deliveries { get; set; }
+        IList<IDelivery> Deliveries { get; set; }
+        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         IDiscountedLineItemPrice DiscountedPrice { get; set; }
 
         IShippingMethodState ShippingMethodState { get; set; }
+
     }
 }

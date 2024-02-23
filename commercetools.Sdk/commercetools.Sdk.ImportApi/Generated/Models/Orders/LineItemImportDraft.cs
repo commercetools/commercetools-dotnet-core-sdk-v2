@@ -1,15 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class LineItemImportDraft : ILineItemImportDraft
     {
         public IProductKeyReference Product { get; set; }
@@ -20,9 +18,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         public ILineItemPrice Price { get; set; }
 
-        public double Quantity { get; set; }
+        public long Quantity { get; set; }
 
-        public List<IItemState> State { get; set; }
+        public IList<IItemState> State { get; set; }
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         public IChannelKeyReference SupplyChannel { get; set; }
 
@@ -31,5 +31,7 @@ namespace commercetools.ImportApi.Models.Orders
         public ITaxRate TaxRate { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        public ICustom Custom { get; set; }
     }
 }

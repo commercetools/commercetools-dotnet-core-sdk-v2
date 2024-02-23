@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Common
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Common
 {
     public enum MoneyType
     {
@@ -21,10 +25,20 @@ namespace commercetools.Api.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IMoneyType), "FindEnum")]
-    public interface IMoneyType : IJsonName
+    public interface IMoneyType : IJsonName, IEnumerable<char>
     {
         public static IMoneyType CentPrecision = new MoneyTypeWrapper
         { Value = MoneyType.CentPrecision, JsonName = "centPrecision" };

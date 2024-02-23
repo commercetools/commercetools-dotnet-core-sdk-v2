@@ -1,21 +1,23 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Producttypes;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Producttypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Producttypes.ProductTypeImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Producttypes.ProductTypeImport))]
     public partial interface IProductTypeImport : IImportResource
     {
+        new string Key { get; set; }
+
         string Name { get; set; }
 
         string Description { get; set; }
 
-        List<IAttributeDefinition> Attributes { get; set; }
+        IList<IAttributeDefinition> Attributes { get; set; }
+        IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
+
+
     }
 }

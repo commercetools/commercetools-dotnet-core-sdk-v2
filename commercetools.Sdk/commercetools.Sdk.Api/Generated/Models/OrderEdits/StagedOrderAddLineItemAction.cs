@@ -1,26 +1,18 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderAddLineItemAction : IStagedOrderAddLineItemAction
     {
         public string Action { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
-        public IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        public string Key { get; set; }
 
         public string ProductId { get; set; }
 
@@ -28,9 +20,11 @@ namespace commercetools.Api.Models.OrderEdits
 
         public string Sku { get; set; }
 
-        public double? Quantity { get; set; }
+        public long? Quantity { get; set; }
 
         public DateTime? AddedAt { get; set; }
+
+        public IChannelResourceIdentifier DistributionChannel { get; set; }
 
         public IChannelResourceIdentifier SupplyChannel { get; set; }
 
@@ -38,7 +32,13 @@ namespace commercetools.Api.Models.OrderEdits
 
         public IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public IInventoryMode InventoryMode { get; set; }
+
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        public ICustomFieldsDraft Custom { get; set; }
         public StagedOrderAddLineItemAction()
         {
             this.Action = "addLineItem";

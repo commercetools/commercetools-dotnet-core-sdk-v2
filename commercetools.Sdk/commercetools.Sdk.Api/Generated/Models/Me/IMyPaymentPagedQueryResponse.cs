@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Me;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPaymentPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyPaymentPagedQueryResponse))]
     public partial interface IMyPaymentPagedQueryResponse
     {
         long Limit { get; set; }
@@ -19,6 +16,9 @@ namespace commercetools.Api.Models.Me
 
         long Offset { get; set; }
 
-        List<IMyPayment> Results { get; set; }
+        IList<IMyPayment> Results { get; set; }
+        IEnumerable<IMyPayment> ResultsEnumerable { set => Results = value.ToList(); }
+
+
     }
 }

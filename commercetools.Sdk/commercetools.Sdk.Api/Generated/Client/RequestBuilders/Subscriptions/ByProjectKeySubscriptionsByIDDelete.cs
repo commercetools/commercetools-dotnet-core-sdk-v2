@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsByIDDelete : ApiMethod<ByProjectKeySubscriptionsByIDDelete>
+
+    public partial class ByProjectKeySubscriptionsByIDDelete : ApiMethod<ByProjectKeySubscriptionsByIDDelete>, IApiMethod<ByProjectKeySubscriptionsByIDDelete, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsByIDDelete>
     {
 
 
@@ -39,26 +36,38 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
             return this.GetQueryParam("version");
         }
 
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
-        }
-
         public ByProjectKeySubscriptionsByIDDelete WithVersion(long version)
         {
-            return this.AddQueryParam("version", version.ToString());
+            return this.AddQueryParam("version", version.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeySubscriptionsByIDDelete WithExpand(string expand)
+
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync(CancellationToken cancellationToken = default)
         {
-            return this.AddQueryParam("expand", expand);
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage, cancellationToken);
+
         }
 
-
-        public async Task<commercetools.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.ISubscription>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

@@ -1,21 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.ParcelMeasurements))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.ParcelMeasurements))]
     public partial interface IParcelMeasurements
     {
-        double? HeightInMillimeter { get; set; }
+        int? HeightInMillimeter { get; set; }
 
-        double? LengthInMillimeter { get; set; }
+        int? LengthInMillimeter { get; set; }
 
-        double? WidthInMillimeter { get; set; }
+        int? WidthInMillimeter { get; set; }
 
-        double? WeightInGram { get; set; }
+        int? WeightInGram { get; set; }
+
     }
 }

@@ -1,18 +1,15 @@
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
-using System;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductDraft : IProductDraft
     {
         public IProductTypeResourceIdentifier ProductType { get; set; }
@@ -25,7 +22,9 @@ namespace commercetools.Api.Models.Products
 
         public ILocalizedString Description { get; set; }
 
-        public List<ICategoryResourceIdentifier> Categories { get; set; }
+        public IList<ICategoryResourceIdentifier> Categories { get; set; }
+        public IEnumerable<ICategoryResourceIdentifier> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         public ICategoryOrderHints CategoryOrderHints { get; set; }
 
@@ -37,7 +36,9 @@ namespace commercetools.Api.Models.Products
 
         public IProductVariantDraft MasterVariant { get; set; }
 
-        public List<IProductVariantDraft> Variants { get; set; }
+        public IList<IProductVariantDraft> Variants { get; set; }
+        public IEnumerable<IProductVariantDraft> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
         public ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
@@ -46,5 +47,7 @@ namespace commercetools.Api.Models.Products
         public IStateResourceIdentifier State { get; set; }
 
         public bool? Publish { get; set; }
+
+        public IProductPriceModeEnum PriceMode { get; set; }
     }
 }

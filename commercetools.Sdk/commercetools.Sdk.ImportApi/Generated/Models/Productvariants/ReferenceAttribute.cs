@@ -1,14 +1,9 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class ReferenceAttribute : IReferenceAttribute
     {
         public string Name { get; set; }

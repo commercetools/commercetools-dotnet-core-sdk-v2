@@ -1,13 +1,10 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Common
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
+
     public partial class TaxRate : ITaxRate
     {
         public string Id { get; set; }
@@ -22,6 +19,8 @@ namespace commercetools.HistoryApi.Models.Common
 
         public string State { get; set; }
 
-        public List<ISubRate> SubRates { get; set; }
+        public IList<ISubRate> SubRates { get; set; }
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
     }
 }

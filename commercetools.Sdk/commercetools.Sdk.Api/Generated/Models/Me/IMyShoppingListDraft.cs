@@ -1,31 +1,34 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyShoppingListDraft))]
     public partial interface IMyShoppingListDraft
     {
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }
 
-        List<IShoppingListLineItemDraft> LineItems { get; set; }
+        IList<IShoppingListLineItemDraft> LineItems { get; set; }
+        IEnumerable<IShoppingListLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ITextLineItemDraft> TextLineItems { get; set; }
+
+        IList<ITextLineItemDraft> TextLineItems { get; set; }
+        IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
+
 
         ICustomFieldsDraft Custom { get; set; }
 
         long? DeleteDaysAfterLastModification { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

@@ -1,16 +1,17 @@
-using commercetools.ImportApi.Models.Importoperations;
-using System;
+using commercetools.Sdk.ImportApi.Models.Importoperations;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Importrequests
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importrequests.ImportResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ImportResponse))]
     public partial interface IImportResponse
     {
-        List<IImportOperationStatus> OperationStatus { get; set; }
+        IList<IImportOperationStatus> OperationStatus { get; set; }
+        IEnumerable<IImportOperationStatus> OperationStatusEnumerable { set => OperationStatus = value.ToList(); }
+
+
     }
 }

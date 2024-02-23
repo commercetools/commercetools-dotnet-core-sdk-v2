@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CustomerAddressAddedMessage : ICustomerAddressAddedMessage
     {
         public string Id { get; set; }

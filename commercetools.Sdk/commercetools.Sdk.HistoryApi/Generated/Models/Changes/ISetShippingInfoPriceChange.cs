@@ -1,23 +1,19 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetShippingInfoPriceChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange))]
     public partial interface ISetShippingInfoPriceChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
+        IMoney PreviousValue { get; set; }
+
         IMoney NextValue { get; set; }
 
-        IMoney PreviousValue { get; set; }
     }
 }

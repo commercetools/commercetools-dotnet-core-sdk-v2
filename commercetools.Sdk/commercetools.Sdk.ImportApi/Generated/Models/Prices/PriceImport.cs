@@ -1,14 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Prices
+namespace commercetools.Sdk.ImportApi.Models.Prices
 {
+
     public partial class PriceImport : IPriceImport
     {
         public string Key { get; set; }
@@ -29,7 +28,9 @@ namespace commercetools.ImportApi.Models.Prices
 
         public bool? Publish { get; set; }
 
-        public List<IPriceTier> Tiers { get; set; }
+        public IList<IPriceTier> Tiers { get; set; }
+        public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         public ICustom Custom { get; set; }
 

@@ -1,19 +1,18 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.DiscountCodes;
-using System;
+using commercetools.Sdk.Api.Models.CartDiscounts;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.DiscountCodes
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
+
     public partial class DiscountCodeChangeCartDiscountsAction : IDiscountCodeChangeCartDiscountsAction
     {
         public string Action { get; set; }
 
-        public List<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        public IList<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
+        public IEnumerable<ICartDiscountResourceIdentifier> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
         public DiscountCodeChangeCartDiscountsAction()
         {
             this.Action = "changeCartDiscounts";

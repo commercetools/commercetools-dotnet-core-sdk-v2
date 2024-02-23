@@ -1,14 +1,11 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Productvariants
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
+
     public partial class ProductVariantImport : IProductVariantImport
     {
         public string Key { get; set; }
@@ -17,11 +14,17 @@ namespace commercetools.ImportApi.Models.Productvariants
 
         public bool IsMasterVariant { get; set; }
 
-        public List<IAttribute> Attributes { get; set; }
+        public IList<IAttribute> Attributes { get; set; }
+        public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
-        public List<IImage> Images { get; set; }
 
-        public List<IAsset> Assets { get; set; }
+        public IList<IImage> Images { get; set; }
+        public IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
+
+
+        public IList<IAsset> Assets { get; set; }
+        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         public bool? Publish { get; set; }
 

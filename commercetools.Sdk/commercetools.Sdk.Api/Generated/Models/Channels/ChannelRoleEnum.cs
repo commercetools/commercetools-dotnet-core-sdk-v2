@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Channels
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Channels
 {
     public enum ChannelRoleEnum
     {
@@ -30,10 +34,20 @@ namespace commercetools.Api.Models.Channels
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IChannelRoleEnum), "FindEnum")]
-    public interface IChannelRoleEnum : IJsonName
+    public interface IChannelRoleEnum : IJsonName, IEnumerable<char>
     {
         public static IChannelRoleEnum InventorySupply = new ChannelRoleEnumWrapper
         { Value = ChannelRoleEnum.InventorySupply, JsonName = "InventorySupply" };

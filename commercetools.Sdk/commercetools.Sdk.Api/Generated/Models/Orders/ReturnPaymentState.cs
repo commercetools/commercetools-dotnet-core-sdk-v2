@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public enum ReturnPaymentState
     {
@@ -27,10 +31,20 @@ namespace commercetools.Api.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IReturnPaymentState), "FindEnum")]
-    public interface IReturnPaymentState : IJsonName
+    public interface IReturnPaymentState : IJsonName, IEnumerable<char>
     {
         public static IReturnPaymentState NonRefundable = new ReturnPaymentStateWrapper
         { Value = ReturnPaymentState.NonRefundable, JsonName = "NonRefundable" };

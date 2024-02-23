@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Types
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
 {
-    public partial class ByProjectKeyTypesByIDPost : ApiMethod<ByProjectKeyTypesByIDPost>
+
+    public partial class ByProjectKeyTypesByIDPost : ApiMethod<ByProjectKeyTypesByIDPost>, IApiMethod<ByProjectKeyTypesByIDPost, commercetools.Sdk.Api.Models.Types.IType>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyTypesByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyTypesByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyTypesByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyTypesByIDPost>
     {
 
 
@@ -27,9 +25,9 @@ namespace commercetools.Api.Client.RequestBuilders.Types
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Types.ITypeUpdate TypeUpdate;
+        private commercetools.Sdk.Api.Models.Types.ITypeUpdate TypeUpdate;
 
-        public ByProjectKeyTypesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Types.ITypeUpdate typeUpdate)
+        public ByProjectKeyTypesByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Types.ITypeUpdate typeUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -50,10 +48,32 @@ namespace commercetools.Api.Client.RequestBuilders.Types
         }
 
 
-        public async Task<commercetools.Api.Models.Types.IType> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Types.IType> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Types.IType>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Types.IType>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Types.IType>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Types.IType>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

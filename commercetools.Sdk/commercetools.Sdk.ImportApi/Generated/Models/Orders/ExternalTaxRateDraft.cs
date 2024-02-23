@@ -1,24 +1,24 @@
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class ExternalTaxRateDraft : IExternalTaxRateDraft
     {
         public string Name { get; set; }
 
-        public double? Amount { get; set; }
+        public decimal? Amount { get; set; }
 
         public string Country { get; set; }
 
         public string State { get; set; }
 
-        public List<ISubRate> SubRates { get; set; }
+        public IList<ISubRate> SubRates { get; set; }
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
 
         public bool? IncludedInPrice { get; set; }
     }

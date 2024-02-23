@@ -1,14 +1,11 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class CartClassificationTier : ICartClassificationTier
     {
         public IShippingRateTierType Type { get; set; }
@@ -17,7 +14,9 @@ namespace commercetools.ImportApi.Models.Orders
 
         public IMoney Price { get; set; }
 
-        public List<IShippingRatePriceTier> Tiers { get; set; }
+        public IList<IShippingRatePriceTier> Tiers { get; set; }
+        public IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         public bool? IsMatching { get; set; }
         public CartClassificationTier()

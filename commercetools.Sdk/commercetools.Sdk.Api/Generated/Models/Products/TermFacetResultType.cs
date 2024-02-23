@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Products
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
     public enum TermFacetResultType
     {
@@ -33,10 +37,20 @@ namespace commercetools.Api.Models.Products
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ITermFacetResultType), "FindEnum")]
-    public interface ITermFacetResultType : IJsonName
+    public interface ITermFacetResultType : IJsonName, IEnumerable<char>
     {
         public static ITermFacetResultType Text = new TermFacetResultTypeWrapper
         { Value = TermFacetResultType.Text, JsonName = "text" };

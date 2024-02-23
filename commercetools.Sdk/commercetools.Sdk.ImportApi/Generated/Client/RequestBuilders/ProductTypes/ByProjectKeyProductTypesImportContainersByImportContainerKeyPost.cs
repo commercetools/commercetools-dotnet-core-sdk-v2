@@ -1,19 +1,16 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes
 {
-    public partial class ByProjectKeyProductTypesImportContainersByImportContainerKeyPost : ApiMethod<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost>
+
+    public partial class ByProjectKeyProductTypesImportContainersByImportContainerKeyPost : ApiMethod<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost>, IApiMethod<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost, commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_manage_productsTrait<ByProjectKeyProductTypesImportContainersByImportContainerKeyPost>
     {
 
 
@@ -27,9 +24,9 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
 
         private string ImportContainerKey { get; }
 
-        private commercetools.ImportApi.Models.Importrequests.IProductTypeImportRequest ProductTypeImportRequest;
+        private commercetools.Sdk.ImportApi.Models.Importrequests.IProductTypeImportRequest ProductTypeImportRequest;
 
-        public ByProjectKeyProductTypesImportContainersByImportContainerKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importContainerKey, commercetools.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
+        public ByProjectKeyProductTypesImportContainersByImportContainerKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string importContainerKey, commercetools.Sdk.ImportApi.Models.Importrequests.IProductTypeImportRequest productTypeImportRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -42,10 +39,32 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ProductTypes
 
 
 
-        public async Task<commercetools.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importrequests.IImportResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.ImportApi.Models.Importrequests.IImportResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

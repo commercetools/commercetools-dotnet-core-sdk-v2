@@ -1,24 +1,24 @@
-using commercetools.Api.Models.Orders;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderPagedQueryResponse))]
     public partial interface IOrderPagedQueryResponse
     {
         long Limit { get; set; }
+
+        long Offset { get; set; }
 
         long Count { get; set; }
 
         long? Total { get; set; }
 
-        long Offset { get; set; }
+        IList<IOrder> Results { get; set; }
+        IEnumerable<IOrder> ResultsEnumerable { set => Results = value.ToList(); }
 
-        List<IOrder> Results { get; set; }
+
     }
 }

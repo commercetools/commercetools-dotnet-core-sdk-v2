@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetProductVariantKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductVariantKeyAction))]
     public partial interface IProductSetProductVariantKeyAction : IProductUpdateAction
     {
         long? VariantId { get; set; }
@@ -18,5 +13,6 @@ namespace commercetools.Api.Models.Products
         string Key { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

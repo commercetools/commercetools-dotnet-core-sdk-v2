@@ -1,20 +1,19 @@
-using commercetools.ImportApi.Models.Errors;
-using commercetools.ImportApi.Models.Importoperations;
-using System;
+using commercetools.Sdk.ImportApi.Models.Errors;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importoperations
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
+
     public partial class ImportOperationStatus : IImportOperationStatus
     {
         public string OperationId { get; set; }
 
         public IImportOperationState State { get; set; }
 
-        public List<IErrorObject> Errors { get; set; }
+        public IList<IErrorObject> Errors { get; set; }
+        public IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
+
     }
 }

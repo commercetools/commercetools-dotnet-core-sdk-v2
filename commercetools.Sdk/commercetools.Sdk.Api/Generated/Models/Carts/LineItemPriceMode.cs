@@ -1,19 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum LineItemPriceMode
     {
         [Description("Platform")]
         Platform,
 
-        [Description("ExternalTotal")]
-        ExternalTotal,
-
         [Description("ExternalPrice")]
-        ExternalPrice
+        ExternalPrice,
+
+        [Description("ExternalTotal")]
+        ExternalTotal
     }
 
     public class LineItemPriceModeWrapper : ILineItemPriceMode
@@ -24,19 +28,29 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ILineItemPriceMode), "FindEnum")]
-    public interface ILineItemPriceMode : IJsonName
+    public interface ILineItemPriceMode : IJsonName, IEnumerable<char>
     {
         public static ILineItemPriceMode Platform = new LineItemPriceModeWrapper
         { Value = LineItemPriceMode.Platform, JsonName = "Platform" };
 
-        public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
-        { Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal" };
-
         public static ILineItemPriceMode ExternalPrice = new LineItemPriceModeWrapper
         { Value = LineItemPriceMode.ExternalPrice, JsonName = "ExternalPrice" };
+
+        public static ILineItemPriceMode ExternalTotal = new LineItemPriceModeWrapper
+        { Value = LineItemPriceMode.ExternalTotal, JsonName = "ExternalTotal" };
 
         LineItemPriceMode? Value { get; }
 
@@ -45,8 +59,8 @@ namespace commercetools.Api.Models.Carts
             return new[]
             {
                  Platform ,
-                 ExternalTotal ,
-                 ExternalPrice
+                 ExternalPrice ,
+                 ExternalTotal
              };
         }
         static ILineItemPriceMode FindEnum(string value)

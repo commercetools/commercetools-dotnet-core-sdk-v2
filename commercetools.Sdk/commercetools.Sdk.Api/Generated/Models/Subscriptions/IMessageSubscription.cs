@@ -1,17 +1,18 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.MessageSubscription))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.MessageSubscription))]
     public partial interface IMessageSubscription
     {
-        string ResourceTypeId { get; set; }
+        IMessageSubscriptionResourceTypeId ResourceTypeId { get; set; }
 
-        List<string> Types { get; set; }
+        IList<string> Types { get; set; }
+        IEnumerable<string> TypesEnumerable { set => Types = value.ToList(); }
+
+
     }
 }

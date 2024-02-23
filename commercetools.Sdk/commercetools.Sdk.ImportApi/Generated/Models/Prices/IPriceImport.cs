@@ -1,17 +1,18 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Prices
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Prices
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Prices.PriceImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Prices.PriceImport))]
     public partial interface IPriceImport : IImportResource
     {
+        new string Key { get; set; }
+
         ITypedMoney Value { get; set; }
 
         string Country { get; set; }
@@ -28,12 +29,15 @@ namespace commercetools.ImportApi.Models.Prices
 
         bool? Publish { get; set; }
 
-        List<IPriceTier> Tiers { get; set; }
+        IList<IPriceTier> Tiers { get; set; }
+        IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         ICustom Custom { get; set; }
 
         IProductVariantKeyReference ProductVariant { get; set; }
 
         IProductKeyReference Product { get; set; }
+
     }
 }

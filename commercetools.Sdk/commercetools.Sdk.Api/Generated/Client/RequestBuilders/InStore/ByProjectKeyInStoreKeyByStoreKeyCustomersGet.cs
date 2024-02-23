@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.InStore
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
-    public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>
+
+    public partial class ByProjectKeyInStoreKeyByStoreKeyCustomersGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersGet, commercetools.Sdk.Api.Models.Customers.ICustomerPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCustomersGet>
     {
 
 
@@ -74,14 +71,14 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersGet WithLimit(int limit)
+        public ByProjectKeyInStoreKeyByStoreKeyCustomersGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyCustomersGet WithOffset(int offset)
+        public ByProjectKeyInStoreKeyByStoreKeyCustomersGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyCustomersGet WithWithTotal(bool withTotal)
@@ -99,10 +96,32 @@ namespace commercetools.Api.Client.RequestBuilders.InStore
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Customers.ICustomerPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Customers.ICustomerPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

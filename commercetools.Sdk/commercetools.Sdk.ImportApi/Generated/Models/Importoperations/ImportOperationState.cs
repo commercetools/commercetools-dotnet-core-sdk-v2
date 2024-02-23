@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Importoperations
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Importoperations
 {
     public enum ImportOperationState
     {
@@ -21,10 +25,20 @@ namespace commercetools.ImportApi.Models.Importoperations
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IImportOperationState), "FindEnum")]
-    public interface IImportOperationState : IJsonName
+    public interface IImportOperationState : IJsonName, IEnumerable<char>
     {
         public static IImportOperationState Processing = new ImportOperationStateWrapper
         { Value = ImportOperationState.Processing, JsonName = "processing" };

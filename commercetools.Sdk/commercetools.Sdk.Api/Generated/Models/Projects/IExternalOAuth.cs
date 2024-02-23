@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.ExternalOAuth))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.ExternalOAuth))]
     public partial interface IExternalOAuth
     {
         string Url { get; set; }
 
         string AuthorizationHeader { get; set; }
+
     }
 }

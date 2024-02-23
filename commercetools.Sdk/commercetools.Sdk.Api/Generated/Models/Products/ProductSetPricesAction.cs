@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class ProductSetPricesAction : IProductSetPricesAction
     {
         public string Action { get; set; }
@@ -17,7 +14,9 @@ namespace commercetools.Api.Models.Products
 
         public string Sku { get; set; }
 
-        public List<IPriceDraft> Prices { get; set; }
+        public IList<IPriceDraft> Prices { get; set; }
+        public IEnumerable<IPriceDraft> PricesEnumerable { set => Prices = value.ToList(); }
+
 
         public bool? Staged { get; set; }
         public ProductSetPricesAction()

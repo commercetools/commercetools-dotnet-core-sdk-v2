@@ -1,20 +1,19 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Importrequests;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Importrequests
+namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
+
     public partial class PriceImportRequest : IPriceImportRequest
     {
         public IImportResourceType Type { get; set; }
 
-        public List<IPriceImport> Resources { get; set; }
+        public IList<IPriceImport> Resources { get; set; }
+        public IEnumerable<IPriceImport> ResourcesEnumerable { set => Resources = value.ToList(); }
+
         public PriceImportRequest()
         {
             this.Type = IImportResourceType.FindEnum("price");

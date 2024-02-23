@@ -1,19 +1,15 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.CustomObjects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
 {
-    public partial class ByProjectKeyCustomObjectsByContainerByKeyGet : ApiMethod<ByProjectKeyCustomObjectsByContainerByKeyGet>
+
+    public partial class ByProjectKeyCustomObjectsByContainerByKeyGet : ApiMethod<ByProjectKeyCustomObjectsByContainerByKeyGet>, IApiMethod<ByProjectKeyCustomObjectsByContainerByKeyGet, commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyCustomObjectsByContainerByKeyGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyCustomObjectsByContainerByKeyGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyCustomObjectsByContainerByKeyGet>
     {
 
 
@@ -48,10 +44,32 @@ namespace commercetools.Api.Client.RequestBuilders.CustomObjects
         }
 
 
-        public async Task<commercetools.Api.Models.CustomObjects.ICustomObject> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.CustomObjects.ICustomObject>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.CustomObjects.ICustomObject>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

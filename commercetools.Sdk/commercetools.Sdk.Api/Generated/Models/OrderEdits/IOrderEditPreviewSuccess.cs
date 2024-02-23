@@ -1,19 +1,19 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.OrderEdits;
-using System;
+using commercetools.Sdk.Api.Models.Messages;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditPreviewSuccess))]
     public partial interface IOrderEditPreviewSuccess : IOrderEditResult
     {
         IStagedOrder Preview { get; set; }
 
-        List<IMessagePayload> MessagePayloads { get; set; }
+        IList<IMessagePayload> MessagePayloads { get; set; }
+        IEnumerable<IMessagePayload> MessagePayloadsEnumerable { set => MessagePayloads = value.ToList(); }
+
+
     }
 }

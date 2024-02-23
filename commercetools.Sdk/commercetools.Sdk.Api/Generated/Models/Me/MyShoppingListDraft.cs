@@ -1,25 +1,27 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ShoppingLists;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyShoppingListDraft : IMyShoppingListDraft
     {
         public ILocalizedString Name { get; set; }
 
         public ILocalizedString Description { get; set; }
 
-        public List<IShoppingListLineItemDraft> LineItems { get; set; }
+        public IList<IShoppingListLineItemDraft> LineItems { get; set; }
+        public IEnumerable<IShoppingListLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        public List<ITextLineItemDraft> TextLineItems { get; set; }
+
+        public IList<ITextLineItemDraft> TextLineItems { get; set; }
+        public IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
+
 
         public ICustomFieldsDraft Custom { get; set; }
 

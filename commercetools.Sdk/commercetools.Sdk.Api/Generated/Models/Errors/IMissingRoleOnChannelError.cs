@@ -1,19 +1,19 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.MissingRoleOnChannelError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     public partial interface IMissingRoleOnChannelError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         IChannelResourceIdentifier Channel { get; set; }
 
         IChannelRoleEnum MissingRole { get; set; }
+
     }
 }

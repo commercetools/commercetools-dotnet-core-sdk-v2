@@ -1,15 +1,11 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Carts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSignin))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerSignin))]
     public partial interface ICustomerSignin
     {
         string Email { get; set; }
@@ -26,5 +22,6 @@ namespace commercetools.Api.Models.Customers
         string AnonymousId { get; set; }
 
         bool? UpdateProductData { get; set; }
+
     }
 }

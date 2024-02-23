@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Producttypes
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
     public enum TextInputHint
     {
@@ -21,10 +25,20 @@ namespace commercetools.ImportApi.Models.Producttypes
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ITextInputHint), "FindEnum")]
-    public interface ITextInputHint : IJsonName
+    public interface ITextInputHint : IJsonName, IEnumerable<char>
     {
         public static ITextInputHint SingleLine = new TextInputHintWrapper
         { Value = TextInputHint.SingleLine, JsonName = "SingleLine" };

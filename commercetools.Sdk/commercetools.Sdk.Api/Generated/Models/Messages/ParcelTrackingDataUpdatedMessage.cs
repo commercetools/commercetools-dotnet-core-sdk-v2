@@ -1,15 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ParcelTrackingDataUpdatedMessage : IParcelTrackingDataUpdatedMessage
     {
         public string Id { get; set; }
@@ -39,6 +35,8 @@ namespace commercetools.Api.Models.Messages
         public string ParcelId { get; set; }
 
         public ITrackingData TrackingData { get; set; }
+
+        public string ShippingKey { get; set; }
         public ParcelTrackingDataUpdatedMessage()
         {
             this.Type = "ParcelTrackingDataUpdated";

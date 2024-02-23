@@ -1,20 +1,35 @@
-using commercetools.Api.Models.Products;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
     [TypeDiscriminator(nameof(Type))]
-    [DefaultTypeDiscriminator(typeof(commercetools.Api.Models.Products.FacetResult))]
-    [SubTypeDiscriminator("filter", typeof(commercetools.Api.Models.Products.FilteredFacetResult))]
-    [SubTypeDiscriminator("range", typeof(commercetools.Api.Models.Products.RangeFacetResult))]
-    [SubTypeDiscriminator("terms", typeof(commercetools.Api.Models.Products.TermFacetResult))]
+    [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Products.FacetResult))]
+    [SubTypeDiscriminator("filter", typeof(commercetools.Sdk.Api.Models.Products.FilteredFacetResult))]
+    [SubTypeDiscriminator("range", typeof(commercetools.Sdk.Api.Models.Products.RangeFacetResult))]
+    [SubTypeDiscriminator("terms", typeof(commercetools.Sdk.Api.Models.Products.TermFacetResult))]
     public partial interface IFacetResult
     {
         IFacetTypes Type { get; set; }
+
+        static commercetools.Sdk.Api.Models.Products.FilteredFacetResult Filter(Action<commercetools.Sdk.Api.Models.Products.FilteredFacetResult> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.FilteredFacetResult();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Products.RangeFacetResult Range(Action<commercetools.Sdk.Api.Models.Products.RangeFacetResult> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.RangeFacetResult();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Products.TermFacetResult Terms(Action<commercetools.Sdk.Api.Models.Products.TermFacetResult> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.TermFacetResult();
+            init?.Invoke(t);
+            return t;
+        }
     }
 }

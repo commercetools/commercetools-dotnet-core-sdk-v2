@@ -1,8 +1,9 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
-using Microsoft.AspNetCore.WebUtilities;
 
 namespace commercetools.Base.Client
 {
@@ -14,10 +15,11 @@ namespace commercetools.Base.Client
 
         private List<KeyValuePair<string, string>> QueryParams { get; set; }
 
-        private ApiHttpHeaders Headers { get; set; }
+        protected ApiHttpHeaders Headers { get; set; }
 
         public ApiMethod()
         {
+            this.RequestUrl = "";
             this.QueryParams = new List<KeyValuePair<string, string>>();
             this.Headers = new ApiHttpHeaders();
         }
@@ -37,11 +39,23 @@ namespace commercetools.Base.Client
             return (T)this;
         }
 
+        public ICollection<KeyValuePair<string, string>> GetQueryParams()
+        {
+            return this.QueryParams;
+        }
+
         public List<string> GetQueryParam(string key)
         {
             return this.QueryParams.Where(
                     p => p.Key.Equals(key))
                 .Select(p => p.Value).ToList();
+        }
+
+        public string? GetFirstQueryParam(string key)
+        {
+            return this.QueryParams.Where(
+                    p => p.Key.Equals(key))
+                .Select(p => p.Value).FirstOrDefault();
         }
 
         public T AddHeader(string key, string value)
@@ -58,14 +72,23 @@ namespace commercetools.Base.Client
 
         public virtual HttpRequestMessage Build()
         {
-            var requestPath = RequestUrl;
-            QueryParams.ForEach(x => { requestPath = QueryHelpers.AddQueryString(requestPath, x.Key, x.Value); });
-
+            var requestPath = new Uri(RequestUrl + ToQueryString(QueryParams), UriKind.Relative);
             var request = new HttpRequestMessage();
+            request.Version = HttpVersion.Version20;
             request.Method = this.Method;
-            request.RequestUri = new Uri(requestPath, UriKind.Relative);
+            request.RequestUri = requestPath;
             request.AddHeaders(Headers);
             return request;
+        }
+
+        private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
+        {
+            var keyValuePairs = queryParams.ToList();
+            if (keyValuePairs.Any())
+                return "?" + string.Join("&",
+                    keyValuePairs.Select(pair =>
+                        $"{Uri.EscapeDataString(pair.Key)}={Uri.EscapeDataString(pair.Value)}"));
+            return "";
         }
     }
 }

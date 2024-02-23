@@ -1,18 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.Reviews;
-using commercetools.Api.Models.States;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Reviews;
+using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class Product : IProduct
     {
         public string Id { get; set; }
@@ -38,5 +34,7 @@ namespace commercetools.Api.Models.Products
         public IStateReference State { get; set; }
 
         public IReviewRatingStatistics ReviewRatingStatistics { get; set; }
+
+        public IProductPriceModeEnum PriceMode { get; set; }
     }
 }

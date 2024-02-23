@@ -1,29 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.ImportApi.Client.RequestBuilders.ImportSinks;
-using commercetools.ImportApi.Client.RequestBuilders.ImportSummaries;
-using commercetools.ImportApi.Client.RequestBuilders.ImportContainers;
-using commercetools.ImportApi.Client.RequestBuilders.ImportOperations;
-using commercetools.ImportApi.Client.RequestBuilders.Categories;
-using commercetools.ImportApi.Client.RequestBuilders.Prices;
-using commercetools.ImportApi.Client.RequestBuilders.Products;
-using commercetools.ImportApi.Client.RequestBuilders.ProductDrafts;
-using commercetools.ImportApi.Client.RequestBuilders.ProductTypes;
-using commercetools.ImportApi.Client.RequestBuilders.ProductVariants;
-using commercetools.ImportApi.Client.RequestBuilders.ProductVariant;
-using commercetools.ImportApi.Client.RequestBuilders.Orders;
-using commercetools.ImportApi.Client.RequestBuilders.OrderPatches;
-using commercetools.ImportApi.Client.RequestBuilders.Customers;
-using commercetools.ImportApi.Client.RequestBuilders.Inventories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Products;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
 {
 
-    public class ByProjectKeyRequestBuilder
+    public partial class ByProjectKeyRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -40,16 +37,6 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Projects
         }
 
 
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyImportSinksRequestBuilder ImportSinks()
-        {
-            return new ByProjectKeyImportSinksRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-        [Obsolete("usage of this endpoint has been deprecated.", false)]
-        public ByProjectKeyImportSummariesRequestBuilder ImportSummaries()
-        {
-            return new ByProjectKeyImportSummariesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
 
         public ByProjectKeyImportContainersRequestBuilder ImportContainers()
         {
@@ -69,6 +56,11 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyPricesRequestBuilder Prices()
         {
             return new ByProjectKeyPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
+        {
+            return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyProductsRequestBuilder Products()
@@ -114,6 +106,11 @@ namespace commercetools.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyInventoriesRequestBuilder Inventories()
         {
             return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyTypesRequestBuilder Types()
+        {
+            return new ByProjectKeyTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

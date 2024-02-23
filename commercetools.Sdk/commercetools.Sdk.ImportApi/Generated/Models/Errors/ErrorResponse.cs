@@ -1,13 +1,10 @@
-using commercetools.ImportApi.Models.Errors;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class ErrorResponse : IErrorResponse
     {
         public int StatusCode { get; set; }
@@ -18,6 +15,8 @@ namespace commercetools.ImportApi.Models.Errors
 
         public string Error_description { get; set; }
 
-        public List<IErrorObject> Errors { get; set; }
+        public IList<IErrorObject> Errors { get; set; }
+        public IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
+
     }
 }

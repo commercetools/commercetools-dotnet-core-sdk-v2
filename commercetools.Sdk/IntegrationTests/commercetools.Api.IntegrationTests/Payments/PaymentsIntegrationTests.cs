@@ -1,8 +1,8 @@
 using System.Linq;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
-using commercetools.Base.Client;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Payments;
+using commercetools.Sdk.Api.Client;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Payments.PaymentsFixture;
 
@@ -11,11 +11,11 @@ namespace commercetools.Api.IntegrationTests.Payments
     [Collection("Integration Tests")]
     public class PaymentsIntegrationTests
     {
-        private readonly IClient _client;
+        private readonly ProjectApiRoot _client;
 
         public PaymentsIntegrationTests(ServiceProviderFixture serviceProviderFixture)
         {
-            this._client = serviceProviderFixture.GetService<IClient>();
+            this._client = serviceProviderFixture.GetService<ProjectApiRoot>();
         }
 
         [Fact]
@@ -28,7 +28,8 @@ namespace commercetools.Api.IntegrationTests.Payments
                 Type = ITransactionType.Charge
             };
             await WithPayment(
-                _client, paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
+                _client,
+                paymentDraft => DefaultPaymentDraftWithTransaction(paymentDraft, transactionDraft),
                 payment =>
                 {
                     Assert.Single(payment.Transactions);
@@ -41,6 +42,19 @@ namespace commercetools.Api.IntegrationTests.Payments
                     Assert.Equal(amount.CurrencyCode, retrievedAmount.CurrencyCode);
                     Assert.IsType<CentPrecisionMoney>(retrievedAmount);
                 });
+        }
+
+        [Fact]
+        public async Task QueryPayment()
+        {
+            await WithPayment(
+                _client, draft => DefaultPaymentDraft(draft), async payment =>
+                {
+                    var queryPayment = await _client.Payments().Get().WithQuery(d => d.Id().Is(payment.Id))
+                        .ExecuteAsync();
+                    Assert.Equal(payment.Id, queryPayment.Results.FirstOrDefault().Id);
+                }
+            );
         }
     }
 }

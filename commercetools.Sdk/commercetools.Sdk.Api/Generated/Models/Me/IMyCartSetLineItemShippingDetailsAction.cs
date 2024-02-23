@@ -1,19 +1,17 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Me;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartSetLineItemShippingDetailsAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemShippingDetailsAction))]
     public partial interface IMyCartSetLineItemShippingDetailsAction : IMyCartUpdateAction
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
     }
 }

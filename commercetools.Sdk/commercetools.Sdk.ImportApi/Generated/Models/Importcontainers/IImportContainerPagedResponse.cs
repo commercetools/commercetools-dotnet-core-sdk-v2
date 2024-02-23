@@ -1,14 +1,11 @@
-using commercetools.ImportApi.Models.Importcontainers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Importcontainers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Importcontainers.ImportContainerPagedResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Importcontainers.ImportContainerPagedResponse))]
     public partial interface IImportContainerPagedResponse
     {
         int Limit { get; set; }
@@ -19,6 +16,9 @@ namespace commercetools.ImportApi.Models.Importcontainers
 
         long Total { get; set; }
 
-        List<IImportContainer> Results { get; set; }
+        IList<IImportContainer> Results { get; set; }
+        IEnumerable<IImportContainer> ResultsEnumerable { set => Results = value.ToList(); }
+
+
     }
 }

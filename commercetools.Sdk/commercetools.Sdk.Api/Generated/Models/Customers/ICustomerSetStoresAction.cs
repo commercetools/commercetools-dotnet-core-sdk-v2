@@ -1,17 +1,17 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Stores;
-using System;
+using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetStoresAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetStoresAction))]
     public partial interface ICustomerSetStoresAction : ICustomerUpdateAction
     {
-        List<IStoreResourceIdentifier> Stores { get; set; }
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
+
     }
 }

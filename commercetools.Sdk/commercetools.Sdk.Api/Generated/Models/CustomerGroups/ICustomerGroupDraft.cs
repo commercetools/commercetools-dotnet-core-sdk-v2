@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CustomerGroups
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomerGroups.CustomerGroupDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupDraft))]
     public partial interface ICustomerGroupDraft
     {
         string Key { get; set; }
@@ -16,5 +12,6 @@ namespace commercetools.Api.Models.CustomerGroups
         string GroupName { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

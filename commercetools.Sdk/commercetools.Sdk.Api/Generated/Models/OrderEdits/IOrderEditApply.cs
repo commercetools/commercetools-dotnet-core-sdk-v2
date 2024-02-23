@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.OrderEditApply))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditApply))]
     public partial interface IOrderEditApply
     {
-        int EditVersion { get; set; }
+        long EditVersion { get; set; }
 
-        int ResourceVersion { get; set; }
+        long ResourceVersion { get; set; }
+
     }
 }

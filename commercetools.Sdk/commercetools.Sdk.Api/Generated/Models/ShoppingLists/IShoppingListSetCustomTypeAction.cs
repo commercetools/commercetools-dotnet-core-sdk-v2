@@ -1,19 +1,15 @@
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction))]
     public partial interface IShoppingListSetCustomTypeAction : IShoppingListUpdateAction
     {
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Customers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.ClientLogging))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.ClientLogging))]
     public partial interface IClientLogging
     {
         string ClientId { get; set; }
@@ -18,5 +14,8 @@ namespace commercetools.Api.Models.Common
         ICustomerReference Customer { get; set; }
 
         string AnonymousId { get; set; }
+
+        ICustomerReference Associate { get; set; }
+
     }
 }

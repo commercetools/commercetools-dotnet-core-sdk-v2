@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Me;
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
 
-    public class ByProjectKeyMeRequestBuilder
+    public partial class ByProjectKeyMeRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,7 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyMePost Post(commercetools.Api.Models.Me.IMyCustomerUpdate myCustomerUpdate)
+        public ByProjectKeyMePost Post(commercetools.Sdk.Api.Models.Me.IMyCustomerUpdate myCustomerUpdate)
         {
             return new ByProjectKeyMePost(ApiHttpClient, SerializerService, ProjectKey, myCustomerUpdate);
         }
@@ -66,6 +62,11 @@ namespace commercetools.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeActiveCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyMeBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyMeBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyMeCartsRequestBuilder Carts()
         {
             return new ByProjectKeyMeCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
@@ -79,6 +80,16 @@ namespace commercetools.Api.Client.RequestBuilders.Me
         public ByProjectKeyMePaymentsRequestBuilder Payments()
         {
             return new ByProjectKeyMePaymentsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMeQuoteRequestsRequestBuilder QuoteRequests()
+        {
+            return new ByProjectKeyMeQuoteRequestsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMeQuotesRequestBuilder Quotes()
+        {
+            return new ByProjectKeyMeQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyMeShoppingListsRequestBuilder ShoppingLists()

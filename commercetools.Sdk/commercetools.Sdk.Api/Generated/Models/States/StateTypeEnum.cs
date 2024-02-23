@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.States
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.States
 {
     public enum StateTypeEnum
     {
@@ -19,7 +23,16 @@ namespace commercetools.Api.Models.States
         ReviewState,
 
         [Description("PaymentState")]
-        PaymentState
+        PaymentState,
+
+        [Description("QuoteRequestState")]
+        QuoteRequestState,
+
+        [Description("StagedQuoteState")]
+        StagedQuoteState,
+
+        [Description("QuoteState")]
+        QuoteState
     }
 
     public class StateTypeEnumWrapper : IStateTypeEnum
@@ -30,10 +43,20 @@ namespace commercetools.Api.Models.States
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IStateTypeEnum), "FindEnum")]
-    public interface IStateTypeEnum : IJsonName
+    public interface IStateTypeEnum : IJsonName, IEnumerable<char>
     {
         public static IStateTypeEnum OrderState = new StateTypeEnumWrapper
         { Value = StateTypeEnum.OrderState, JsonName = "OrderState" };
@@ -50,6 +73,15 @@ namespace commercetools.Api.Models.States
         public static IStateTypeEnum PaymentState = new StateTypeEnumWrapper
         { Value = StateTypeEnum.PaymentState, JsonName = "PaymentState" };
 
+        public static IStateTypeEnum QuoteRequestState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.QuoteRequestState, JsonName = "QuoteRequestState" };
+
+        public static IStateTypeEnum StagedQuoteState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.StagedQuoteState, JsonName = "StagedQuoteState" };
+
+        public static IStateTypeEnum QuoteState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.QuoteState, JsonName = "QuoteState" };
+
         StateTypeEnum? Value { get; }
 
         static IStateTypeEnum[] Values()
@@ -60,7 +92,10 @@ namespace commercetools.Api.Models.States
                  LineItemState ,
                  ProductState ,
                  ReviewState ,
-                 PaymentState
+                 PaymentState ,
+                 QuoteRequestState ,
+                 StagedQuoteState ,
+                 QuoteState
              };
         }
         static IStateTypeEnum FindEnum(string value)

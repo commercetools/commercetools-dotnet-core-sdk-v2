@@ -1,19 +1,19 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
-    public partial class ByProjectKeyProductProjectionsSearchPost : ApiMethod<ByProjectKeyProductProjectionsSearchPost>
+
+    public partial class ByProjectKeyProductProjectionsSearchPost : ApiMethod<ByProjectKeyProductProjectionsSearchPost>, IApiMethod<ByProjectKeyProductProjectionsSearchPost, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchPost>
     {
 
 
@@ -39,10 +39,32 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
 
 
 
-        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

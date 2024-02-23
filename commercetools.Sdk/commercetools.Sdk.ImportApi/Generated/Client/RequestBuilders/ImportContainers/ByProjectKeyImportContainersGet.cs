@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
 {
-    public partial class ByProjectKeyImportContainersGet : ApiMethod<ByProjectKeyImportContainersGet>
+
+    public partial class ByProjectKeyImportContainersGet : ApiMethod<ByProjectKeyImportContainersGet>, IApiMethod<ByProjectKeyImportContainersGet, commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>, commercetools.Sdk.ImportApi.Client.ISecured_by_view_import_containersTrait<ByProjectKeyImportContainersGet>
     {
 
 
@@ -46,14 +43,14 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
             return this.GetQueryParam("sort");
         }
 
-        public ByProjectKeyImportContainersGet WithLimit(double limit)
+        public ByProjectKeyImportContainersGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyImportContainersGet WithOffset(double offset)
+        public ByProjectKeyImportContainersGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyImportContainersGet WithSort(string sort)
@@ -62,10 +59,32 @@ namespace commercetools.ImportApi.Client.RequestBuilders.ImportContainers
         }
 
 
-        public async Task<commercetools.ImportApi.Models.Importcontainers.IImportContainerPagedResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.ImportApi.Models.Importcontainers.IImportContainerPagedResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

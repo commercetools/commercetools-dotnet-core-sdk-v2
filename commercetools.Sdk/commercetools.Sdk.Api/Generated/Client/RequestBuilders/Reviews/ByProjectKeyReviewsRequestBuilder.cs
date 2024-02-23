@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.Reviews;
 
-namespace commercetools.Api.Client.RequestBuilders.Reviews
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
 {
 
-    public class ByProjectKeyReviewsRequestBuilder
+    public partial class ByProjectKeyReviewsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.Reviews
             return new ByProjectKeyReviewsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyReviewsPost Post(commercetools.Api.Models.Reviews.IReviewDraft reviewDraft)
+        public ByProjectKeyReviewsHead Head()
+        {
+            return new ByProjectKeyReviewsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyReviewsPost Post(commercetools.Sdk.Api.Models.Reviews.IReviewDraft reviewDraft)
         {
             return new ByProjectKeyReviewsPost(ApiHttpClient, SerializerService, ProjectKey, reviewDraft);
         }

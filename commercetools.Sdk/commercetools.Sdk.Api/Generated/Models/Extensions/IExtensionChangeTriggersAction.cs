@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.ExtensionChangeTriggersAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction))]
     public partial interface IExtensionChangeTriggersAction : IExtensionUpdateAction
     {
-        List<IExtensionTrigger> Triggers { get; set; }
+        IList<IExtensionTrigger> Triggers { get; set; }
+        IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
+
     }
 }

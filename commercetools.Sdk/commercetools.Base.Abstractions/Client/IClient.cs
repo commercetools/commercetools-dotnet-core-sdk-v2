@@ -1,11 +1,12 @@
 ﻿using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Base.Serialization;
 
 namespace commercetools.Base.Client
 {
     /// <summary>
-    /// This interface defines the way to communicate with commercetools API.
+    /// This interface defines the way to communicate with the Composable Commerce HTTP API.
     /// </summary>
     public interface IClient
     {
@@ -19,8 +20,15 @@ namespace commercetools.Base.Client
         string Name { get; set; }
 
 
-        Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage);
+        Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
 
-        Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage);
+        Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
+        Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
+        Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
+        Task<HttpResponseMessage> SendAsAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default);
+
     }
 }

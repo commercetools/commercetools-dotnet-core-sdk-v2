@@ -1,19 +1,16 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
 {
-    public partial class ByProjectKeySubscriptionsKeyByKeyPost : ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost>
+
+    public partial class ByProjectKeySubscriptionsKeyByKeyPost : ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost>, IApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, commercetools.Sdk.Api.Models.Subscriptions.ISubscription>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeySubscriptionsKeyByKeyPost>
     {
 
 
@@ -27,9 +24,9 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
 
         private string Key { get; }
 
-        private commercetools.Api.Models.Subscriptions.ISubscriptionUpdate SubscriptionUpdate;
+        private commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionUpdate SubscriptionUpdate;
 
-        public ByProjectKeySubscriptionsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
+        public ByProjectKeySubscriptionsKeyByKeyPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string key, commercetools.Sdk.Api.Models.Subscriptions.ISubscriptionUpdate subscriptionUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -39,21 +36,35 @@ namespace commercetools.Api.Client.RequestBuilders.Subscriptions
             this.RequestUrl = $"/{ProjectKey}/subscriptions/key={Key}";
         }
 
-        public List<string> GetExpand()
+
+
+
+        public async Task<commercetools.Sdk.Api.Models.Subscriptions.ISubscription> ExecuteAsync(CancellationToken cancellationToken = default)
         {
-            return this.GetQueryParam("expand");
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage, cancellationToken);
+
         }
 
-        public ByProjectKeySubscriptionsKeyByKeyPost WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
-
-        public async Task<commercetools.Api.Models.Subscriptions.ISubscription> ExecuteAsync()
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Subscriptions.ISubscription>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Subscriptions.ISubscription>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

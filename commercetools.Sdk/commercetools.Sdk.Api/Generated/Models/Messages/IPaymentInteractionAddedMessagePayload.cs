@@ -1,17 +1,13 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.PaymentInteractionAddedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessagePayload))]
     public partial interface IPaymentInteractionAddedMessagePayload : IMessagePayload
     {
         ICustomFields Interaction { get; set; }
+
     }
 }

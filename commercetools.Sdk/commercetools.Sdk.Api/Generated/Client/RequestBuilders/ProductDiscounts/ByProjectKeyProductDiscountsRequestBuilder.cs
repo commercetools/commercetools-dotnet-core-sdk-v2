@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.ProductDiscounts;
 
-namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
 {
 
-    public class ByProjectKeyProductDiscountsRequestBuilder
+    public partial class ByProjectKeyProductDiscountsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.ProductDiscounts
             return new ByProjectKeyProductDiscountsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyProductDiscountsPost Post(commercetools.Api.Models.ProductDiscounts.IProductDiscountDraft productDiscountDraft)
+        public ByProjectKeyProductDiscountsHead Head()
+        {
+            return new ByProjectKeyProductDiscountsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyProductDiscountsPost Post(commercetools.Sdk.Api.Models.ProductDiscounts.IProductDiscountDraft productDiscountDraft)
         {
             return new ByProjectKeyProductDiscountsPost(ApiHttpClient, SerializerService, ProjectKey, productDiscountDraft);
         }

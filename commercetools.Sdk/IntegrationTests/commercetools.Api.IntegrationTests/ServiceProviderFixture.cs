@@ -1,5 +1,8 @@
-﻿using commercetools.Base.Client;
+﻿using System;
+using commercetools.Sdk.Api.Models.Errors;
+using commercetools.Base.Client;
 using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -23,8 +26,14 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            services.UseCommercetoolsApi(configuration, "Client");
+            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
+            services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
+            services.SetupClient(
+                "MeClient",
+                errorTypeMapper => typeof(ErrorResponse),
+                s => s.GetService<IApiSerializerService>()
+            );
             this.serviceProvider = services.BuildServiceProvider();
 
             //set default ProjectKey

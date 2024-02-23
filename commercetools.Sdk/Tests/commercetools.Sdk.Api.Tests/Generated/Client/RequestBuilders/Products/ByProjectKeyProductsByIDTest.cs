@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
 {
     public class ByProjectKeyProductsByIDTest : RequestBuilderParentTests
     {
@@ -82,17 +80,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithId("test_ID")
                    .Get()
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -106,6 +93,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/products/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/products/test_ID",
                },
                new Object[] {
@@ -162,17 +159,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products/test_ID?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Post(null)
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Post",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
                },
                new Object[] {
                    ApiRoot
@@ -249,17 +235,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Delete",
                    "/test_projectKey/products/test_ID?localeProjection=localeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithStoreProjection("storeProjection")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/products/test_ID?storeProjection=storeProjection",
                },
                new Object[] {
                    ApiRoot

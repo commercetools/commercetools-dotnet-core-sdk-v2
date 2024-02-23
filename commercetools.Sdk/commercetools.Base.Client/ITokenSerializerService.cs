@@ -2,7 +2,7 @@
 
 namespace commercetools.Base.Client
 {
-    public interface ITokenSerializerService : ISerializerService
+    public interface ITokenSerializerService : IStreamSerializerService
     {
     }
 }

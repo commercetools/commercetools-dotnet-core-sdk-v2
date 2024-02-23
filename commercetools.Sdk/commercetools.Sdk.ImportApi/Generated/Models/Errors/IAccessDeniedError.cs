@@ -1,15 +1,11 @@
-using commercetools.ImportApi.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.AccessDeniedError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.AccessDeniedError))]
     public partial interface IAccessDeniedError : IErrorObject
     {
+
     }
 }

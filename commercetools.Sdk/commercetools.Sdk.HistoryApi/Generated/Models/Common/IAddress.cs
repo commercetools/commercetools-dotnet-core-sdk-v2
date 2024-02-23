@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.Address))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.Address))]
     public partial interface IAddress
     {
         string Id { get; set; }
@@ -59,5 +55,6 @@ namespace commercetools.HistoryApi.Models.Common
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
     }
 }

@@ -1,25 +1,18 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderAddLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderAddLineItemAction))]
     public partial interface IStagedOrderAddLineItemAction : IStagedOrderUpdateAction
     {
-        ICustomFieldsDraft Custom { get; set; }
-
-        IChannelResourceIdentifier DistributionChannel { get; set; }
-
-        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+        string Key { get; set; }
 
         string ProductId { get; set; }
 
@@ -27,9 +20,11 @@ namespace commercetools.Api.Models.OrderEdits
 
         string Sku { get; set; }
 
-        double? Quantity { get; set; }
+        long? Quantity { get; set; }
 
         DateTime? AddedAt { get; set; }
+
+        IChannelResourceIdentifier DistributionChannel { get; set; }
 
         IChannelResourceIdentifier SupplyChannel { get; set; }
 
@@ -37,6 +32,13 @@ namespace commercetools.Api.Models.OrderEdits
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
+        IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        IInventoryMode InventoryMode { get; set; }
+
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

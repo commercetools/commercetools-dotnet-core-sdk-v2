@@ -1,18 +1,15 @@
-using commercetools.ImportApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.OrderPatches
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.DeliveryAddressDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.DeliveryAddressDraft))]
     public partial interface IDeliveryAddressDraft
     {
         string DeliveryId { get; set; }
 
         IAddress Address { get; set; }
+
     }
 }

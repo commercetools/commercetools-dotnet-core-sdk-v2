@@ -1,23 +1,25 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeAssetOrderChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeAssetOrderChange))]
     public partial interface IChangeAssetOrderChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
-        List<ILocalizedString> PreviousValue { get; set; }
+        IList<ILocalizedString> PreviousValue { get; set; }
+        IEnumerable<ILocalizedString> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        List<ILocalizedString> NextValue { get; set; }
+
+        IList<ILocalizedString> NextValue { get; set; }
+        IEnumerable<ILocalizedString> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+
     }
 }

@@ -1,19 +1,19 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.DiscountedLineItemPriceDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.DiscountedLineItemPriceDraft))]
     public partial interface IDiscountedLineItemPriceDraft
     {
         IMoney Value { get; set; }
 
-        List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+
+
     }
 }

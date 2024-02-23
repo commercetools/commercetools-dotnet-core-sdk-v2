@@ -1,18 +1,18 @@
-using commercetools.Api.Models.Carts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetLineItemTaxRateAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTaxRateAction))]
     public partial interface ICartSetLineItemTaxRateAction : ICartUpdateAction
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        string ShippingKey { get; set; }
+
     }
 }

@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Messages;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductRevertedStagedChangesMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductRevertedStagedChangesMessagePayload))]
     public partial interface IProductRevertedStagedChangesMessagePayload : IMessagePayload
     {
-        List<string> RemovedImageUrls { get; set; }
+        IList<string> RemovedImageUrls { get; set; }
+        IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
+
+
     }
 }

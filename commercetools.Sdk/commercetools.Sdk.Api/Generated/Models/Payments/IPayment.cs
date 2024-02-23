@@ -1,17 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Payments;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Payments
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.Payment))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.Payment))]
     public partial interface IPayment : IBaseResource
     {
         new string Id { get; set; }
@@ -30,30 +28,25 @@ namespace commercetools.Api.Models.Payments
 
         string AnonymousId { get; set; }
 
-        string ExternalId { get; set; }
-
         string InterfaceId { get; set; }
 
-        ITypedMoney AmountPlanned { get; set; }
-
-        ITypedMoney AmountAuthorized { get; set; }
-
-        string AuthorizedUntil { get; set; }
-
-        ITypedMoney AmountPaid { get; set; }
-
-        ITypedMoney AmountRefunded { get; set; }
+        ICentPrecisionMoney AmountPlanned { get; set; }
 
         IPaymentMethodInfo PaymentMethodInfo { get; set; }
 
         IPaymentStatus PaymentStatus { get; set; }
 
-        List<ITransaction> Transactions { get; set; }
+        IList<ITransaction> Transactions { get; set; }
+        IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
-        List<ICustomFields> InterfaceInteractions { get; set; }
+
+        IList<ICustomFields> InterfaceInteractions { get; set; }
+        IEnumerable<ICustomFields> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
+
 
         ICustomFields Custom { get; set; }
 
         string Key { get; set; }
+
     }
 }

@@ -1,14 +1,9 @@
-using commercetools.Api.Models.ProductTypes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ProductTypes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductTypes.ProductTypeChangeEnumKeyAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeEnumKeyAction))]
     public partial interface IProductTypeChangeEnumKeyAction : IProductTypeUpdateAction
     {
         string AttributeName { get; set; }
@@ -16,5 +11,6 @@ namespace commercetools.Api.Models.ProductTypes
         string Key { get; set; }
 
         string NewKey { get; set; }
+
     }
 }

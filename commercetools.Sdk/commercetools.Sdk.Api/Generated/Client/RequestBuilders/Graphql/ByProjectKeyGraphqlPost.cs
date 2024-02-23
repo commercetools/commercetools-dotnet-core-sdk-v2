@@ -1,19 +1,16 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Graphql
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
 {
-    public partial class ByProjectKeyGraphqlPost : ApiMethod<ByProjectKeyGraphqlPost>
+
+    public partial class ByProjectKeyGraphqlPost : ApiMethod<ByProjectKeyGraphqlPost>, IApiMethod<ByProjectKeyGraphqlPost, commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyGraphqlPost>
     {
 
 
@@ -25,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.GraphQl.IGraphQLRequest GraphQLRequest;
+        private commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest GraphQLRequest;
 
-        public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
+        public ByProjectKeyGraphqlPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.GraphQl.IGraphQLRequest graphQLRequest)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -39,10 +36,32 @@ namespace commercetools.Api.Client.RequestBuilders.Graphql
 
 
 
-        public async Task<commercetools.Api.Models.GraphQl.IGraphQLResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.GraphQl.IGraphQLResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.GraphQl.IGraphQLResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

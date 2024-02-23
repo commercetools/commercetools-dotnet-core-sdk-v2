@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.HistoryApi.Models.Common
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
     public enum TransactionState
     {
@@ -27,10 +31,20 @@ namespace commercetools.HistoryApi.Models.Common
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ITransactionState), "FindEnum")]
-    public interface ITransactionState : IJsonName
+    public interface ITransactionState : IJsonName, IEnumerable<char>
     {
         public static ITransactionState Initial = new TransactionStateWrapper
         { Value = TransactionState.Initial, JsonName = "Initial" };

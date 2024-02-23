@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Me;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Carts;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyCartChangeTaxModeAction : IMyCartChangeTaxModeAction
     {
         public string Action { get; set; }

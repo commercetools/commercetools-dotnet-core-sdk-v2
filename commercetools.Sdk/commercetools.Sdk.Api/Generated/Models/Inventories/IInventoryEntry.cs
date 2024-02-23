@@ -1,16 +1,13 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Inventories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Inventories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntry))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntry))]
     public partial interface IInventoryEntry : IBaseResource
     {
         new string Id { get; set; }
@@ -25,6 +22,8 @@ namespace commercetools.Api.Models.Inventories
 
         ICreatedBy CreatedBy { get; set; }
 
+        string Key { get; set; }
+
         string Sku { get; set; }
 
         IChannelReference SupplyChannel { get; set; }
@@ -38,5 +37,6 @@ namespace commercetools.Api.Models.Inventories
         DateTime? ExpectedDelivery { get; set; }
 
         ICustomFields Custom { get; set; }
+
     }
 }

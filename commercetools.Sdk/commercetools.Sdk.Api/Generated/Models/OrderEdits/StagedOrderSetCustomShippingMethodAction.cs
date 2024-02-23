@@ -1,16 +1,11 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.TaxCategories;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderSetCustomShippingMethodAction : IStagedOrderSetCustomShippingMethodAction
     {
         public string Action { get; set; }

@@ -1,13 +1,10 @@
-using commercetools.Api.Models.Me;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyPaymentPagedQueryResponse : IMyPaymentPagedQueryResponse
     {
         public long Limit { get; set; }
@@ -18,6 +15,8 @@ namespace commercetools.Api.Models.Me
 
         public long Offset { get; set; }
 
-        public List<IMyPayment> Results { get; set; }
+        public IList<IMyPayment> Results { get; set; }
+        public IEnumerable<IMyPayment> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

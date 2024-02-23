@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ShippingMethods
 {
     public class ByProjectKeyShippingMethodsMatchingCartTest : RequestBuilderParentTests
     {
@@ -51,6 +49,27 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ShippingMethods
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/shipping-methods/matching-cart",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .WithCartId("cartId")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/shipping-methods/matching-cart?cartId=cartId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ShippingMethods()
+                   .MatchingCart()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/shipping-methods/matching-cart",
                }
        };

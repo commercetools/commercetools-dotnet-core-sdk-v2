@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
 {
     public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest : RequestBuilderParentTests
     {
@@ -50,6 +48,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .InStoreKeyWithStoreKeyValue("test_storeKey")
                    .ShoppingLists()
                    .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ShoppingLists()
+                   .WithId("test_ID")
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
@@ -74,6 +83,18 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .ShoppingLists()
                    .WithId("test_ID")
                    .Delete()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ShoppingLists()
+                   .WithId("test_ID")
+                   .Delete()
                    .WithDataErasure(true)
                    .Build(),
                    "Delete",
@@ -90,18 +111,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.InStore
                    .Build(),
                    "Delete",
                    "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .InStoreKeyWithStoreKeyValue("test_storeKey")
-                   .ShoppingLists()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?expand=expand",
                },
                new Object[] {
                    ApiRoot

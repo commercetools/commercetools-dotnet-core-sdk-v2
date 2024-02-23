@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Types
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.Type))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.Type))]
     public partial interface IType : IBaseResource
     {
         new string Id { get; set; }
@@ -30,8 +28,13 @@ namespace commercetools.Api.Models.Types
 
         ILocalizedString Description { get; set; }
 
-        List<IResourceTypeId> ResourceTypeIds { get; set; }
+        IList<IResourceTypeId> ResourceTypeIds { get; set; }
+        IEnumerable<IResourceTypeId> ResourceTypeIdsEnumerable { set => ResourceTypeIds = value.ToList(); }
 
-        List<IFieldDefinition> FieldDefinitions { get; set; }
+
+        IList<IFieldDefinition> FieldDefinitions { get; set; }
+        IEnumerable<IFieldDefinition> FieldDefinitionsEnumerable { set => FieldDefinitions = value.ToList(); }
+
+
     }
 }

@@ -1,13 +1,10 @@
-using commercetools.Api.Models.ShippingMethods;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethodPagedQueryResponse : IShippingMethodPagedQueryResponse
     {
         public long? Limit { get; set; }
@@ -18,6 +15,8 @@ namespace commercetools.Api.Models.ShippingMethods
 
         public long? Offset { get; set; }
 
-        public List<IShippingMethod> Results { get; set; }
+        public IList<IShippingMethod> Results { get; set; }
+        public IEnumerable<IShippingMethod> ResultsEnumerable { set => Results = value.ToList(); }
+
     }
 }

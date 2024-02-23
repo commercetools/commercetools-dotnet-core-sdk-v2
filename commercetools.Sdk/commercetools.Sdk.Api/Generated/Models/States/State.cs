@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.States;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.States
+namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class State : IState
     {
         public string Id { get; set; }
@@ -35,8 +33,12 @@ namespace commercetools.Api.Models.States
 
         public bool BuiltIn { get; set; }
 
-        public List<IStateRoleEnum> Roles { get; set; }
+        public IList<IStateRoleEnum> Roles { get; set; }
+        public IEnumerable<IStateRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
-        public List<IStateReference> Transitions { get; set; }
+
+        public IList<IStateReference> Transitions { get; set; }
+        public IEnumerable<IStateReference> TransitionsEnumerable { set => Transitions = value.ToList(); }
+
     }
 }

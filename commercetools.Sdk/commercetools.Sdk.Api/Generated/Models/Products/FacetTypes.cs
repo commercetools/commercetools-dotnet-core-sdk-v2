@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Products
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
     public enum FacetTypes
     {
@@ -24,10 +28,20 @@ namespace commercetools.Api.Models.Products
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IFacetTypes), "FindEnum")]
-    public interface IFacetTypes : IJsonName
+    public interface IFacetTypes : IJsonName, IEnumerable<char>
     {
         public static IFacetTypes Terms = new FacetTypesWrapper
         { Value = FacetTypes.Terms, JsonName = "terms" };

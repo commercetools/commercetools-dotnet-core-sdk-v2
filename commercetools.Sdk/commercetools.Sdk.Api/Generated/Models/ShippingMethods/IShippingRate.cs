@@ -1,15 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.ShippingRate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingRate))]
     public partial interface IShippingRate
     {
         ITypedMoney Price { get; set; }
@@ -18,6 +15,9 @@ namespace commercetools.Api.Models.ShippingMethods
 
         bool? IsMatching { get; set; }
 
-        List<IShippingRatePriceTier> Tiers { get; set; }
+        IList<IShippingRatePriceTier> Tiers { get; set; }
+        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
+
     }
 }

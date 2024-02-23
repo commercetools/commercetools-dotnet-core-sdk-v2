@@ -1,16 +1,15 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CartDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountDraft))]
     public partial interface ICartDiscountDraft
     {
         ILocalizedString Name { get; set; }
@@ -27,6 +26,10 @@ namespace commercetools.Api.Models.CartDiscounts
 
         string SortOrder { get; set; }
 
+        IList<IStoreResourceIdentifier> Stores { get; set; }
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
+
+
         bool? IsActive { get; set; }
 
         DateTime? ValidFrom { get; set; }
@@ -37,6 +40,7 @@ namespace commercetools.Api.Models.CartDiscounts
 
         IStackingMode StackingMode { get; set; }
 
-        ICustomFields Custom { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

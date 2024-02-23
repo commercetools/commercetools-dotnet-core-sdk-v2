@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Projects;
+using commercetools.Sdk.Api.Models.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.Project))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.Project))]
     public partial interface IProject
     {
         long Version { get; set; }
@@ -18,26 +16,35 @@ namespace commercetools.Api.Models.Projects
 
         string Name { get; set; }
 
-        List<string> Countries { get; set; }
+        IList<string> Countries { get; set; }
+        IEnumerable<string> CountriesEnumerable { set => Countries = value.ToList(); }
 
-        List<string> Currencies { get; set; }
 
-        List<string> Languages { get; set; }
+        IList<string> Currencies { get; set; }
+        IEnumerable<string> CurrenciesEnumerable { set => Currencies = value.ToList(); }
+
+
+        IList<string> Languages { get; set; }
+        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
+
 
         DateTime CreatedAt { get; set; }
 
         string TrialUntil { get; set; }
 
-        IMessageConfiguration Messages { get; set; }
+        IMessagesConfiguration Messages { get; set; }
+
+        ICartsConfiguration Carts { get; set; }
+
+        IShoppingListsConfiguration ShoppingLists { get; set; }
 
         IShippingRateInputType ShippingRateInputType { get; set; }
 
         IExternalOAuth ExternalOAuth { get; set; }
 
-        ICartsConfiguration Carts { get; set; }
-
         ISearchIndexingConfiguration SearchIndexing { get; set; }
 
-        IShoppingListsConfiguration ShoppingLists { get; set; }
+        IBusinessUnitConfiguration BusinessUnits { get; set; }
+
     }
 }

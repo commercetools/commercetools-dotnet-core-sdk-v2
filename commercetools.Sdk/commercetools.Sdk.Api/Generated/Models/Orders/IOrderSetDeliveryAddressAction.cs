@@ -1,19 +1,17 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.OrderSetDeliveryAddressAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryAddressAction))]
     public partial interface IOrderSetDeliveryAddressAction : IOrderUpdateAction
     {
         string DeliveryId { get; set; }
 
+        string DeliveryKey { get; set; }
+
         IBaseAddress Address { get; set; }
+
     }
 }

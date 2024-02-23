@@ -1,19 +1,16 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Login
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Login
 {
-    public partial class ByProjectKeyLoginPost : ApiMethod<ByProjectKeyLoginPost>
+
+    public partial class ByProjectKeyLoginPost : ApiMethod<ByProjectKeyLoginPost>, IApiMethod<ByProjectKeyLoginPost, commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyLoginPost>
     {
 
 
@@ -25,9 +22,9 @@ namespace commercetools.Api.Client.RequestBuilders.Login
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Customers.ICustomerSignin CustomerSignin;
+        private commercetools.Sdk.Api.Models.Customers.ICustomerSignin CustomerSignin;
 
-        public ByProjectKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.ICustomerSignin customerSignin)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -39,10 +36,32 @@ namespace commercetools.Api.Client.RequestBuilders.Login
 
 
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

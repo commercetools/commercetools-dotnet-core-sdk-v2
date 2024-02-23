@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
-    public partial class ByProjectKeyShippingMethodsGet : ApiMethod<ByProjectKeyShippingMethodsGet>
+
+    public partial class ByProjectKeyShippingMethodsGet : ApiMethod<ByProjectKeyShippingMethodsGet>, IApiMethod<ByProjectKeyShippingMethodsGet, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShippingMethodsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyShippingMethodsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyShippingMethodsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyShippingMethodsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShippingMethodsGet>
     {
 
 
@@ -71,14 +68,14 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyShippingMethodsGet WithLimit(int limit)
+        public ByProjectKeyShippingMethodsGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyShippingMethodsGet WithOffset(int offset)
+        public ByProjectKeyShippingMethodsGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyShippingMethodsGet WithWithTotal(bool withTotal)
@@ -96,10 +93,32 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

@@ -1,20 +1,16 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderExcerpt : IOrderExcerpt
     {
         public ITypedMoney TotalPrice { get; set; }
 
         public ITaxedPrice TaxedPrice { get; set; }
 
-        public int Version { get; set; }
+        public long Version { get; set; }
     }
 }

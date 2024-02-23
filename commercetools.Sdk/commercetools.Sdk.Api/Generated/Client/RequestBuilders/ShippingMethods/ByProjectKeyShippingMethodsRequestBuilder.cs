@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.Api.Client.RequestBuilders.ShippingMethods;
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
 
-    public class ByProjectKeyShippingMethodsRequestBuilder
+    public partial class ByProjectKeyShippingMethodsRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,7 +26,12 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return new ByProjectKeyShippingMethodsGet(ApiHttpClient, ProjectKey);
         }
 
-        public ByProjectKeyShippingMethodsPost Post(commercetools.Api.Models.ShippingMethods.IShippingMethodDraft shippingMethodDraft)
+        public ByProjectKeyShippingMethodsHead Head()
+        {
+            return new ByProjectKeyShippingMethodsHead(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyShippingMethodsPost Post(commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodDraft shippingMethodDraft)
         {
             return new ByProjectKeyShippingMethodsPost(ApiHttpClient, SerializerService, ProjectKey, shippingMethodDraft);
         }
@@ -44,6 +45,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
         public ByProjectKeyShippingMethodsMatchingCartRequestBuilder MatchingCart()
         {
             return new ByProjectKeyShippingMethodsMatchingCartRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder MatchingCartLocation()
+        {
+            return new ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder MatchingOrderedit()

@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetParcelTrackingDataAction))]
     public partial interface IStagedOrderSetParcelTrackingDataAction : IStagedOrderUpdateAction
     {
         string ParcelId { get; set; }
 
+        string ParcelKey { get; set; }
+
         ITrackingData TrackingData { get; set; }
+
     }
 }

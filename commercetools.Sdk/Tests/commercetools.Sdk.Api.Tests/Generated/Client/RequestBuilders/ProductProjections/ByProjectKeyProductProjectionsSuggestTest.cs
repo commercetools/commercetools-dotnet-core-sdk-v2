@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
 {
     public class ByProjectKeyProductProjectionsSuggestTest : RequestBuilderParentTests
     {
@@ -31,17 +29,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/suggest?fuzzy=true",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Suggest()
-                   .Get()
-                   .WithStaged(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/suggest?staged=true",
                },
                new Object[] {
                    ApiRoot
@@ -97,6 +84,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/suggest?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Suggest()
+                   .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/suggest?staged=true",
                },
                new Object[] {
                    ApiRoot

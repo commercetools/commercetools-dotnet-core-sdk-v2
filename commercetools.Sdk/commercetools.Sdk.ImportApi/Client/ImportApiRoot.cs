@@ -1,5 +1,5 @@
 using commercetools.Base.Client;
-using commercetools.ImportApi.Client.RequestBuilders.Projects;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects;
 
 namespace commercetools.Sdk.ImportApi.Client
 {

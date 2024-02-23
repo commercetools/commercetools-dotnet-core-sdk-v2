@@ -1,15 +1,10 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.ChangeValues
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
     public partial interface IChangeTargetMultiBuyCustomLineItemsChangeValue : IChangeTargetChangeValue
     {
         new string Type { get; set; }
@@ -23,5 +18,6 @@ namespace commercetools.HistoryApi.Models.ChangeValues
         int MaxOccurrence { get; set; }
 
         ISelectionMode SelectionMode { get; set; }
+
     }
 }

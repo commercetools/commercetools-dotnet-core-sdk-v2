@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Subscriptions;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Messages;
+using commercetools.Sdk.Api.Models.Subscriptions;
 using commercetools.Base.Serialization;
 using Xunit;
 
@@ -83,12 +83,12 @@ namespace commercetools.Api.Serialization.Tests
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/Messages/ResourceCreatedPayload.json");
-            var payload = serializerService.Deserialize<ISubscriptionDelivery>(serialized);
+            var payload = serializerService.Deserialize<IDeliveryPayload>(serialized);
             Assert.NotNull(payload);
             Assert.NotNull(payload.ResourceUserProvidedIdentifiers);
             Assert.Equal("test-ca15403ea56ec0e51137ff40a6f4607e", payload.ResourceUserProvidedIdentifiers.Key);
-            Assert.IsType<ResourceCreatedDelivery>(payload);
-            var customerCreatedPayload = payload as ResourceCreatedDelivery;
+            Assert.IsType<ResourceCreatedDeliveryPayload>(payload);
+            var customerCreatedPayload = payload as ResourceCreatedDeliveryPayload;
             Assert.NotNull(customerCreatedPayload);
             Assert.NotNull(customerCreatedPayload.Resource);
             Assert.IsType<CustomerReference>(customerCreatedPayload.Resource);
@@ -100,13 +100,13 @@ namespace commercetools.Api.Serialization.Tests
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             string serialized = File.ReadAllText("Resources/Messages/Payloads.json");
-            var payloads = serializerService.Deserialize<List<ISubscriptionDelivery>>(serialized);
+            var payloads = serializerService.Deserialize<List<IDeliveryPayload>>(serialized);
             Assert.NotNull(payloads);
             Assert.Equal(4, payloads.Count);
-            var resourceCreatedPayload = payloads[0] as ResourceCreatedDelivery;
-            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDelivery;
-            var resourceDeletedPayload = payloads[2] as ResourceDeletedDelivery;
-            var customerCreatedPayload = payloads[3] as MessageDelivery;
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDeliveryPayload;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDeliveryPayload;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDeliveryPayload;
+            var customerCreatedPayload = payloads[3] as MessageDeliveryPayload;
 
             Assert.NotNull(resourceCreatedPayload);
             Assert.NotNull(resourceUpdatedPayload);
@@ -121,9 +121,9 @@ namespace commercetools.Api.Serialization.Tests
             ISerializerService serializerService = this.serializationFixture.SerializerService;
             var expectedCategoryId = "3df866bd-7e5f-47d1-bbe2-ca1d1f39a260";
             string serialized = File.ReadAllText("Resources/Messages/MessageSubscriptionPayload.json");
-            var payload = serializerService.Deserialize<ISubscriptionDelivery>(serialized);
+            var payload = serializerService.Deserialize<IDeliveryPayload>(serialized);
             Assert.NotNull(payload);
-            var categoryCreatedPayload = payload as MessageDelivery;
+            var categoryCreatedPayload = payload as MessageDeliveryPayload;
             Assert.NotNull(categoryCreatedPayload);
             Assert.Equal(expectedCategoryId, categoryCreatedPayload.Resource.Id);
             var categoryCreatedMessage = serializerService.Deserialize<CategoryCreatedMessage>(serialized);
@@ -140,6 +140,41 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(payloads);
             Assert.IsType<CategoryCreatedMessage>(payloads[0]);
             Assert.IsType<CustomerCreatedMessage>(payloads[1]);
+        }
+
+        [Fact]
+        public void DeserializationOfListOfSubscriptionDeliveryUnwrapped()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Messages/Payloads.json");
+            var payloads = serializerService.Deserialize<List<IDeliveryPayload>>(serialized);
+            Assert.NotNull(payloads);
+            Assert.Equal(4, payloads.Count);
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDeliveryPayload;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDeliveryPayload;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDeliveryPayload;
+            var customerCreatedPayload = payloads[3] as MessageDeliveryPayload;
+
+            Assert.NotNull(resourceCreatedPayload);
+            Assert.NotNull(resourceUpdatedPayload);
+            Assert.NotNull(resourceDeletedPayload);
+            Assert.NotNull(customerCreatedPayload);
+            Assert.Equal(2, resourceUpdatedPayload.OldVersion);
+            Assert.IsType<CustomerCreatedMessage>(customerCreatedPayload.Message);
+        }
+
+        [Fact]
+        public void DeserializationOfListOfMessageSubscriptionPayloadsUnwrapped()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Messages/MessageSubscriptionPayloads.json");
+            var payloads = serializerService.Deserialize<List<IDeliveryPayload>>(serialized);
+            Assert.NotNull(payloads);
+            Assert.IsType<MessageDeliveryPayload>(payloads[0]);
+            Assert.IsType<MessageDeliveryPayload>(payloads[1]);
+            Assert.IsType<CategoryCreatedMessage>((payloads[0] as IMessageDelivery).Message);
+            Assert.IsType<CustomerCreatedMessage>((payloads[1] as IMessageDelivery).Message);
+
         }
 
         [Fact]
@@ -160,10 +195,9 @@ namespace commercetools.Api.Serialization.Tests
 
             var changeSubscription1 = serializerService.Deserialize<ChangeSubscription>(serialized1);
             var changeSubscription2 = serializerService.Deserialize<ChangeSubscription>(serialized2);
-            Assert.Equal("cart-discount", changeSubscription1.ResourceTypeId);
-            Assert.Equal("new-type", changeSubscription2.ResourceTypeId);
+            Assert.Equal("cart-discount", changeSubscription1.ResourceTypeId.ToString());
+            Assert.Equal("new-type", changeSubscription2.ResourceTypeId.ToString());
         }
-
 
         [Fact]
         public void DeserializeOfSubscriptions()
@@ -176,8 +210,8 @@ namespace commercetools.Api.Serialization.Tests
             Assert.IsType<SnsDestination>(subscriptions[1].Destination);
             var subscription1 = subscriptions[0];
             var subscription2 = subscriptions[1];
-            Assert.IsType<DeliveryPlatformFormat>(subscription1.Format);
-            var subscription2Format = subscription2.Format as DeliveryCloudEventsFormat;
+            Assert.IsType<PlatformFormat>(subscription1.Format);
+            var subscription2Format = subscription2.Format as CloudEventsFormat;
             Assert.NotNull(subscription2Format);
             Assert.Equal("0.1", subscription2Format.CloudEventsVersion);
             Assert.NotNull(subscription1.Status.Value);

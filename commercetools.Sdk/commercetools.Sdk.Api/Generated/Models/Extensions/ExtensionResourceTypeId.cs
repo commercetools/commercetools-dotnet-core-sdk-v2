@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Extensions
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Extensions
 {
     public enum ExtensionResourceTypeId
     {
@@ -16,7 +20,19 @@ namespace commercetools.Api.Models.Extensions
         Payment,
 
         [Description("customer")]
-        Customer
+        Customer,
+
+        [Description("quote-request")]
+        QuoteRequest,
+
+        [Description("staged-quote")]
+        StagedQuote,
+
+        [Description("quote")]
+        Quote,
+
+        [Description("business-unit")]
+        BusinessUnit
     }
 
     public class ExtensionResourceTypeIdWrapper : IExtensionResourceTypeId
@@ -27,10 +43,20 @@ namespace commercetools.Api.Models.Extensions
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IExtensionResourceTypeId), "FindEnum")]
-    public interface IExtensionResourceTypeId : IJsonName
+    public interface IExtensionResourceTypeId : IJsonName, IEnumerable<char>
     {
         public static IExtensionResourceTypeId Cart = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Cart, JsonName = "cart" };
@@ -44,6 +70,18 @@ namespace commercetools.Api.Models.Extensions
         public static IExtensionResourceTypeId Customer = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Customer, JsonName = "customer" };
 
+        public static IExtensionResourceTypeId QuoteRequest = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.QuoteRequest, JsonName = "quote-request" };
+
+        public static IExtensionResourceTypeId StagedQuote = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.StagedQuote, JsonName = "staged-quote" };
+
+        public static IExtensionResourceTypeId Quote = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.Quote, JsonName = "quote" };
+
+        public static IExtensionResourceTypeId BusinessUnit = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.BusinessUnit, JsonName = "business-unit" };
+
         ExtensionResourceTypeId? Value { get; }
 
         static IExtensionResourceTypeId[] Values()
@@ -53,7 +91,11 @@ namespace commercetools.Api.Models.Extensions
                  Cart ,
                  Order ,
                  Payment ,
-                 Customer
+                 Customer ,
+                 QuoteRequest ,
+                 StagedQuote ,
+                 Quote ,
+                 BusinessUnit
              };
         }
         static IExtensionResourceTypeId FindEnum(string value)

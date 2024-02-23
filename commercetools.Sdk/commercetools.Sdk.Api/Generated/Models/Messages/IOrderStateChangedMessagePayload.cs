@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderStateChangedMessagePayload))]
-    public partial interface IOrderStateChangedMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderStateChangedMessagePayload))]
+    public partial interface IOrderStateChangedMessagePayload : IOrderMessagePayload
     {
         IOrderState OrderState { get; set; }
 
         IOrderState OldOrderState { get; set; }
+
     }
 }

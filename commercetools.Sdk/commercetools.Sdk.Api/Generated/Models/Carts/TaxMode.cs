@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum TaxMode
     {
@@ -27,10 +31,20 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ITaxMode), "FindEnum")]
-    public interface ITaxMode : IJsonName
+    public interface ITaxMode : IJsonName, IEnumerable<char>
     {
         public static ITaxMode Platform = new TaxModeWrapper
         { Value = TaxMode.Platform, JsonName = "Platform" };

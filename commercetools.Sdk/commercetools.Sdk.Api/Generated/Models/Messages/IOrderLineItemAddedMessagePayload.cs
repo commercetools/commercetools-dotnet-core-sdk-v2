@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderLineItemAddedMessagePayload))]
-    public partial interface IOrderLineItemAddedMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemAddedMessagePayload))]
+    public partial interface IOrderLineItemAddedMessagePayload : IOrderMessagePayload
     {
         ILineItem LineItem { get; set; }
 
         long AddedQuantity { get; set; }
+
     }
 }

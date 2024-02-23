@@ -1,24 +1,24 @@
-using commercetools.Api.Models.Carts;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartPagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartPagedQueryResponse))]
     public partial interface ICartPagedQueryResponse
     {
         long Limit { get; set; }
+
+        long Offset { get; set; }
 
         long Count { get; set; }
 
         long? Total { get; set; }
 
-        long Offset { get; set; }
+        IList<ICart> Results { get; set; }
+        IEnumerable<ICart> ResultsEnumerable { set => Results = value.ToList(); }
 
-        List<ICart> Results { get; set; }
+
     }
 }

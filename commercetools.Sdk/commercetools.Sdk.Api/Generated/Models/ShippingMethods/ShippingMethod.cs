@@ -1,16 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ShippingMethods
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
+
     public partial class ShippingMethod : IShippingMethod
     {
         public string Id { get; set; }
@@ -31,13 +29,16 @@ namespace commercetools.Api.Models.ShippingMethods
 
         public ILocalizedString LocalizedName { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public string Description { get; set; }
 
         public ILocalizedString LocalizedDescription { get; set; }
 
         public ITaxCategoryReference TaxCategory { get; set; }
 
-        public List<IZoneRate> ZoneRates { get; set; }
+        public IList<IZoneRate> ZoneRates { get; set; }
+        public IEnumerable<IZoneRate> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
+
 
         public bool IsDefault { get; set; }
 

@@ -1,17 +1,18 @@
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.Parcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.Parcel))]
     public partial interface IParcel
     {
         string Id { get; set; }
+
+        string Key { get; set; }
 
         DateTime CreatedAt { get; set; }
 
@@ -19,6 +20,11 @@ namespace commercetools.Api.Models.Orders
 
         ITrackingData TrackingData { get; set; }
 
-        List<IDeliveryItem> Items { get; set; }
+        IList<IDeliveryItem> Items { get; set; }
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
+
+        ICustomFields Custom { get; set; }
+
     }
 }

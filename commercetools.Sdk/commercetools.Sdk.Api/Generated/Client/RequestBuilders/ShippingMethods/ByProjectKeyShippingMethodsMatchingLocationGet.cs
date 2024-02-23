@@ -1,19 +1,15 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
-    public partial class ByProjectKeyShippingMethodsMatchingLocationGet : ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet>
+
+    public partial class ByProjectKeyShippingMethodsMatchingLocationGet : ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet>, IApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyShippingMethodsMatchingLocationGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyShippingMethodsMatchingLocationGet>
     {
 
 
@@ -51,6 +47,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return this.GetQueryParam("expand");
         }
 
+        public List<string> GetSort()
+        {
+            return this.GetQueryParam("sort");
+        }
+
         public ByProjectKeyShippingMethodsMatchingLocationGet WithCountry(string country)
         {
             return this.AddQueryParam("country", country);
@@ -71,11 +72,38 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
             return this.AddQueryParam("expand", expand);
         }
 
+        public ByProjectKeyShippingMethodsMatchingLocationGet WithSort(string sort)
+        {
+            return this.AddQueryParam("sort", sort);
+        }
 
-        public async Task<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync()
+
+        public async Task<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.ShippingMethods.IShippingMethodPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

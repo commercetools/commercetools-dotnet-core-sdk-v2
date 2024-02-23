@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductDiscounts;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
+
     public partial class ProductDiscount : IProductDiscount
     {
         public string Id { get; set; }
@@ -37,7 +35,9 @@ namespace commercetools.Api.Models.ProductDiscounts
 
         public bool IsActive { get; set; }
 
-        public List<IReference> References { get; set; }
+        public IList<IReference> References { get; set; }
+        public IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
+
 
         public DateTime? ValidFrom { get; set; }
 

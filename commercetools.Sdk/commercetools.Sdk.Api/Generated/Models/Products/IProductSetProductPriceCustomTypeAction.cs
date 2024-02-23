@@ -1,15 +1,10 @@
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductSetProductPriceCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductSetProductPriceCustomTypeAction))]
     public partial interface IProductSetProductPriceCustomTypeAction : IProductUpdateAction
     {
         string PriceId { get; set; }
@@ -19,5 +14,6 @@ namespace commercetools.Api.Models.Products
         ITypeResourceIdentifier Type { get; set; }
 
         IFieldContainer Fields { get; set; }
+
     }
 }

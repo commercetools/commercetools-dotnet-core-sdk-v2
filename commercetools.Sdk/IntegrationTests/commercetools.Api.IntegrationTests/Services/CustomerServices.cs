@@ -1,6 +1,5 @@
-using System;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Extensions;
@@ -16,7 +15,7 @@ namespace commercetools.Api.IntegrationTests.Services
         {
             try
             {
-                var customer = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
+                var customer = await adminClient.WithApi(GenericFixture.DefaultProjectKey)
                     .Customers()
                     .WithKey(key)
                     .Get()
@@ -32,7 +31,7 @@ namespace commercetools.Api.IntegrationTests.Services
         }
         public async Task<ICustomer> CreateCustomer(IClient adminClient, ICustomerDraft customerDraft)
         {
-            var customerSignInResult = await adminClient.WithApi().WithProjectKey(GenericFixture.DefaultProjectKey)
+            var customerSignInResult = await adminClient.WithApi(GenericFixture.DefaultProjectKey)
                 .Customers()
                 .Post(customerDraft)
                 .ExecuteAsync();

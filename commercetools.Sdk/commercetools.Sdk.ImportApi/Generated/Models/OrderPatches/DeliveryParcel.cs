@@ -1,13 +1,11 @@
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Orders;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class DeliveryParcel : IDeliveryParcel
     {
         public string DeliveryId { get; set; }
@@ -16,6 +14,8 @@ namespace commercetools.ImportApi.Models.OrderPatches
 
         public ITrackingData TrackingData { get; set; }
 
-        public List<IDeliveryItem> Items { get; set; }
+        public IList<IDeliveryItem> Items { get; set; }
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
     }
 }

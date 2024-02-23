@@ -1,19 +1,15 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CartDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountSetCustomTypeAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomTypeAction))]
     public partial interface ICartDiscountSetCustomTypeAction : ICartDiscountUpdateAction
     {
         ITypeResourceIdentifier Type { get; set; }
 
-        Object Fields { get; set; }
+        IFieldContainer Fields { get; set; }
+
     }
 }

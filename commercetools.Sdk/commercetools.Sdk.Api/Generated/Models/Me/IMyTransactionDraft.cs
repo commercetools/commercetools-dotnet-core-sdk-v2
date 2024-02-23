@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyTransactionDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyTransactionDraft))]
     public partial interface IMyTransactionDraft
     {
         DateTime? Timestamp { get; set; }
@@ -19,5 +17,8 @@ namespace commercetools.Api.Models.Me
         IMoney Amount { get; set; }
 
         string InteractionId { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
+
     }
 }

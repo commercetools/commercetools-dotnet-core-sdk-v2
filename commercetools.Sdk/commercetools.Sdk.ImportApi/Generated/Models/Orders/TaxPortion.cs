@@ -1,18 +1,14 @@
-using commercetools.ImportApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class TaxPortion : ITaxPortion
     {
         public string Name { get; set; }
 
-        public double Rate { get; set; }
+        public decimal Rate { get; set; }
 
         public ITypedMoney Amount { get; set; }
     }

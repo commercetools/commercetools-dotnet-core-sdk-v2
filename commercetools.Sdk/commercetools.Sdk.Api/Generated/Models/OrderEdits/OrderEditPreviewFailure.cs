@@ -1,19 +1,18 @@
-using commercetools.Api.Models.Errors;
-using commercetools.Api.Models.OrderEdits;
-using System;
+using commercetools.Sdk.Api.Models.Errors;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class OrderEditPreviewFailure : IOrderEditPreviewFailure
     {
         public string Type { get; set; }
 
-        public List<IErrorObject> Errors { get; set; }
+        public IList<IErrorObject> Errors { get; set; }
+        public IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
+
         public OrderEditPreviewFailure()
         {
             this.Type = "PreviewFailure";

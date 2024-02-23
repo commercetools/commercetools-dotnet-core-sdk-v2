@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.ProductProjections
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
-    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>
+
+    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IStoreprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
     {
 
 
@@ -44,11 +41,6 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
         public List<string> GetMarkMatchingVariants()
         {
             return this.GetQueryParam("markMatchingVariants");
-        }
-
-        public List<string> GetStaged()
-        {
-            return this.GetQueryParam("staged");
         }
 
         public List<string> GetFilter()
@@ -91,6 +83,11 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("withTotal");
         }
 
+        public List<string> GetStaged()
+        {
+            return this.GetQueryParam("staged");
+        }
+
         public List<string> GetPriceCurrency()
         {
             return this.GetQueryParam("priceCurrency");
@@ -131,19 +128,14 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("fuzzy", fuzzy.ToString());
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(double fuzzyLevel)
+        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(long fuzzyLevel)
         {
-            return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString());
+            return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithMarkMatchingVariants(bool markMatchingVariants)
         {
             return this.AddQueryParam("markMatchingVariants", markMatchingVariants.ToString());
-        }
-
-        public ByProjectKeyProductProjectionsSearchGet WithStaged(bool staged)
-        {
-            return this.AddQueryParam("staged", staged.ToString());
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithFilter(string filter)
@@ -171,19 +163,24 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithLimit(int limit)
+        public ByProjectKeyProductProjectionsSearchGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithOffset(int offset)
+        public ByProjectKeyProductProjectionsSearchGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithWithTotal(bool withTotal)
         {
             return this.AddQueryParam("withTotal", withTotal.ToString());
+        }
+
+        public ByProjectKeyProductProjectionsSearchGet WithStaged(bool staged)
+        {
+            return this.AddQueryParam("staged", staged.ToString());
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithPriceCurrency(string priceCurrency)
@@ -226,10 +223,32 @@ namespace commercetools.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam($"text.{locale}", text);
         }
 
-        public async Task<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

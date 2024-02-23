@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ProductDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountMatchQuery))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountMatchQuery))]
     public partial interface IProductDiscountMatchQuery
     {
         string ProductId { get; set; }
@@ -18,5 +14,6 @@ namespace commercetools.Api.Models.ProductDiscounts
         bool Staged { get; set; }
 
         IQueryPrice Price { get; set; }
+
     }
 }

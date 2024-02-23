@@ -1,19 +1,17 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShoppingLists;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListAddTextLineItemAction))]
     public partial interface IShoppingListAddTextLineItemAction : IShoppingListUpdateAction
     {
         ILocalizedString Name { get; set; }
+
+        string Key { get; set; }
 
         ILocalizedString Description { get; set; }
 
@@ -22,5 +20,6 @@ namespace commercetools.Api.Models.ShoppingLists
         DateTime? AddedAt { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
     }
 }

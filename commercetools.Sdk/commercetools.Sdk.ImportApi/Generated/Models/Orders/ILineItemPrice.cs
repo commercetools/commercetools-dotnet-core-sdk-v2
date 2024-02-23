@@ -1,15 +1,14 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.LineItemPrice))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.LineItemPrice))]
     public partial interface ILineItemPrice
     {
         ITypedMoney Value { get; set; }
@@ -26,8 +25,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         IDiscountedPrice Discounted { get; set; }
 
-        List<IPriceTier> Tiers { get; set; }
+        IList<IPriceTier> Tiers { get; set; }
+        IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
+
 
         ICustom Custom { get; set; }
+
     }
 }

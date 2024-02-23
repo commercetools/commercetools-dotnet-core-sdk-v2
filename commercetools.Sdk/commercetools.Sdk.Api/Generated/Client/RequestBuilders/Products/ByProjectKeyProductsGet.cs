@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
 {
-    public partial class ByProjectKeyProductsGet : ApiMethod<ByProjectKeyProductsGet>
+
+    public partial class ByProjectKeyProductsGet : ApiMethod<ByProjectKeyProductsGet>, IApiMethod<ByProjectKeyProductsGet, commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductsGet>
     {
 
 
@@ -29,6 +26,11 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.RequestUrl = $"/{ProjectKey}/products";
+        }
+
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
         }
 
         public List<string> GetPriceCurrency()
@@ -56,11 +58,6 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("localeProjection");
         }
 
-        public List<string> GetStoreProjection()
-        {
-            return this.GetQueryParam("storeProjection");
-        }
-
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -86,9 +83,9 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("withTotal");
         }
 
-        public List<string> GetWhere()
+        public ByProjectKeyProductsGet WithWhere(string where)
         {
-            return this.GetQueryParam("where");
+            return this.AddQueryParam("where", where);
         }
 
         public ByProjectKeyProductsGet WithPriceCurrency(string priceCurrency)
@@ -116,11 +113,6 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.AddQueryParam("localeProjection", localeProjection);
         }
 
-        public ByProjectKeyProductsGet WithStoreProjection(string storeProjection)
-        {
-            return this.AddQueryParam("storeProjection", storeProjection);
-        }
-
         public ByProjectKeyProductsGet WithExpand(string expand)
         {
             return this.AddQueryParam("expand", expand);
@@ -131,14 +123,14 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyProductsGet WithLimit(int limit)
+        public ByProjectKeyProductsGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductsGet WithOffset(int offset)
+        public ByProjectKeyProductsGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyProductsGet WithWithTotal(bool withTotal)
@@ -146,20 +138,37 @@ namespace commercetools.Api.Client.RequestBuilders.Products
             return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
-        public ByProjectKeyProductsGet WithWhere(string where)
-        {
-            return this.AddQueryParam("where", where);
-        }
-
         public ByProjectKeyProductsGet WithPredicateVar(string varName, string predicateVar)
         {
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Products.IProductPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Products.IProductPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

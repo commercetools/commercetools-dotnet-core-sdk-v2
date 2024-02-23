@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.CustomLineItemReturnItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.CustomLineItemReturnItem))]
     public partial interface ICustomLineItemReturnItem : IReturnItem
     {
+        new string Key { get; set; }
+
         string CustomLineItemId { get; set; }
+
+        new long Quantity { get; set; }
+
     }
 }

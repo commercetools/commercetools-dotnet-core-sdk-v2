@@ -1,13 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
     public enum ShipmentState
     {
         [Description("Shipped")]
         Shipped,
+
+        [Description("Delivered")]
+        Delivered,
 
         [Description("Ready")]
         Ready,
@@ -33,13 +40,26 @@ namespace commercetools.Api.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IShipmentState), "FindEnum")]
-    public interface IShipmentState : IJsonName
+    public interface IShipmentState : IJsonName, IEnumerable<char>
     {
         public static IShipmentState Shipped = new ShipmentStateWrapper
         { Value = ShipmentState.Shipped, JsonName = "Shipped" };
+
+        public static IShipmentState Delivered = new ShipmentStateWrapper
+        { Value = ShipmentState.Delivered, JsonName = "Delivered" };
 
         public static IShipmentState Ready = new ShipmentStateWrapper
         { Value = ShipmentState.Ready, JsonName = "Ready" };
@@ -63,6 +83,7 @@ namespace commercetools.Api.Models.Orders
             return new[]
             {
                  Shipped ,
+                 Delivered ,
                  Ready ,
                  Pending ,
                  Delayed ,

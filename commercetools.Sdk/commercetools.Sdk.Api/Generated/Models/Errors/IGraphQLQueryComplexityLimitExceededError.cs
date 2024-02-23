@@ -1,0 +1,12 @@
+using commercetools.Base.CustomAttributes;
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
+{
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.GraphQLQueryComplexityLimitExceededError))]
+    public partial interface IGraphQLQueryComplexityLimitExceededError : IGraphQLErrorObject
+    {
+        new string Code { get; set; }
+
+    }
+}

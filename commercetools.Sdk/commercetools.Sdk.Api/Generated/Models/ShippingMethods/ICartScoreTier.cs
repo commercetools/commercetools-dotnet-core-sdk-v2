@@ -1,23 +1,19 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ShippingMethods;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.CartScoreTier))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.CartScoreTier))]
     public partial interface ICartScoreTier : IShippingRatePriceTier
     {
-        double Score { get; set; }
+        int Score { get; set; }
 
         IMoney Price { get; set; }
 
         IPriceFunction PriceFunction { get; set; }
 
         bool? IsMatching { get; set; }
+
     }
 }

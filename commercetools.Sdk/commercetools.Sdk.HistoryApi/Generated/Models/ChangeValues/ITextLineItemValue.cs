@@ -1,18 +1,15 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.ChangeValues
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.ChangeValues.TextLineItemValue))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.TextLineItemValue))]
     public partial interface ITextLineItemValue
     {
         string Id { get; set; }
 
         ILocalizedString Name { get; set; }
+
     }
 }

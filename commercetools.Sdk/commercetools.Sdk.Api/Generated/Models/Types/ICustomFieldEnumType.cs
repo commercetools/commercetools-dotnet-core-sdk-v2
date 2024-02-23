@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Types;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Types
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.CustomFieldEnumType))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.CustomFieldEnumType))]
     public partial interface ICustomFieldEnumType : IFieldType
     {
-        List<ICustomFieldEnumValue> Values { get; set; }
+        IList<ICustomFieldEnumValue> Values { get; set; }
+        IEnumerable<ICustomFieldEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
+
+
     }
 }

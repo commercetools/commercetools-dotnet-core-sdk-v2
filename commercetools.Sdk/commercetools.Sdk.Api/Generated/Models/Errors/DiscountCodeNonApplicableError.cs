@@ -1,13 +1,9 @@
-using commercetools.Api.Models.Errors;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class DiscountCodeNonApplicableError : IDiscountCodeNonApplicableError
     {
         public string Code { get; set; }
@@ -18,7 +14,7 @@ namespace commercetools.Api.Models.Errors
 
         public string Reason { get; set; }
 
-        public string DicountCodeId { get; set; }
+        public string DiscountCodeId { get; set; }
 
         public DateTime? ValidFrom { get; set; }
 

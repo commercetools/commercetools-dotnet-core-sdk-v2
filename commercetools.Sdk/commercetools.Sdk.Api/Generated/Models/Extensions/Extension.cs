@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Extensions;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Extensions
+namespace commercetools.Sdk.Api.Models.Extensions
 {
+
     public partial class Extension : IExtension
     {
         public string Id { get; set; }
@@ -27,7 +25,9 @@ namespace commercetools.Api.Models.Extensions
 
         public IExtensionDestination Destination { get; set; }
 
-        public List<IExtensionTrigger> Triggers { get; set; }
+        public IList<IExtensionTrigger> Triggers { get; set; }
+        public IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
 
         public int? TimeoutInMs { get; set; }
     }

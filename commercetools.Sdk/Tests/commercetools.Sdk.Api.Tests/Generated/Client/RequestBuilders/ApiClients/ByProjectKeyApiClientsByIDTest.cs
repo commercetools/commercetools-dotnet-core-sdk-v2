@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ApiClients
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ApiClients
 {
     public class ByProjectKeyApiClientsByIDTest : RequestBuilderParentTests
     {
@@ -29,6 +27,16 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ApiClients
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/api-clients/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ApiClients()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/api-clients/test_ID",
                },
                new Object[] {

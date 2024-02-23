@@ -1,16 +1,13 @@
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Categories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategoryDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategoryDraft))]
     public partial interface ICategoryDraft
     {
         ILocalizedString Name { get; set; }
@@ -33,8 +30,11 @@ namespace commercetools.Api.Models.Categories
 
         ICustomFieldsDraft Custom { get; set; }
 
-        List<IAssetDraft> Assets { get; set; }
+        IList<IAssetDraft> Assets { get; set; }
+        IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         string Key { get; set; }
+
     }
 }

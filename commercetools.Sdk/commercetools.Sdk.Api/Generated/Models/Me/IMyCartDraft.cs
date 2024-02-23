@@ -1,49 +1,58 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Me;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.Stores;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.BusinessUnits;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.Stores;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyCartDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyCartDraft))]
     public partial interface IMyCartDraft
     {
         string Currency { get; set; }
 
         string CustomerEmail { get; set; }
 
-        string Country { get; set; }
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
-        IInventoryMode InventoryMode { get; set; }
+        IStoreResourceIdentifier Store { get; set; }
 
-        List<IMyLineItemDraft> LineItems { get; set; }
+        IList<IMyLineItemDraft> LineItems { get; set; }
+        IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        IBaseAddress ShippingAddress { get; set; }
-
-        IBaseAddress BillingAddress { get; set; }
-
-        IShippingMethodResourceIdentifier ShippingMethod { get; set; }
-
-        ICustomFieldsDraft Custom { get; set; }
-
-        string Locale { get; set; }
 
         ITaxMode TaxMode { get; set; }
 
+        IInventoryMode InventoryMode { get; set; }
+
+        IBaseAddress BillingAddress { get; set; }
+
+        IBaseAddress ShippingAddress { get; set; }
+
+        IShippingMethodResourceIdentifier ShippingMethod { get; set; }
+
+        IList<IBaseAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
+
+        IShippingMode ShippingMode { get; set; }
+
+        IList<string> DiscountCodes { get; set; }
+        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
+
+
+        string Country { get; set; }
+
+        string Locale { get; set; }
+
         long? DeleteDaysAfterLastModification { get; set; }
 
-        List<IBaseAddress> ItemShippingAddresses { get; set; }
+        ICustomFieldsDraft Custom { get; set; }
 
-        IStoreKeyReference Store { get; set; }
-
-        List<IDiscountCodeInfo> DiscountCodes { get; set; }
     }
 }

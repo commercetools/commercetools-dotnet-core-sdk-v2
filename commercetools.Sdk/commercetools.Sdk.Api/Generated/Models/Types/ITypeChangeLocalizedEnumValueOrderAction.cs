@@ -1,18 +1,18 @@
-using commercetools.Api.Models.Types;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Types
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Types
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction))]
     public partial interface ITypeChangeLocalizedEnumValueOrderAction : ITypeUpdateAction
     {
         string FieldName { get; set; }
 
-        List<string> Keys { get; set; }
+        IList<string> Keys { get; set; }
+        IEnumerable<string> KeysEnumerable { set => Keys = value.ToList(); }
+
+
     }
 }

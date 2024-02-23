@@ -1,21 +1,20 @@
-using commercetools.ImportApi.Models.Errors;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class DuplicateAttributeValuesError : IDuplicateAttributeValuesError
     {
         public string Code { get; set; }
 
         public string Message { get; set; }
 
-        public List<IAttribute> Attributes { get; set; }
+        public IList<IAttribute> Attributes { get; set; }
+        public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
         public DuplicateAttributeValuesError()
         {
             this.Code = "DuplicateAttributeValues";

@@ -1,6 +1,6 @@
 using System;
 
-namespace commercetools.Api.Models.Common
+namespace commercetools.Sdk.Api.Models.Common
 {
     public partial class CentPrecisionMoneyDraft : ICentPrecisionMoneyDraft
     {
@@ -11,6 +11,17 @@ namespace commercetools.Api.Models.Common
             {
                 CurrencyCode = currencyCode,
                 CentAmount = (long)amount
+            };
+        }
+
+        public static ICentPrecisionMoneyDraft FromDecimal(string currencyCode, decimal value, int fractionDigits, MidpointRounding midpointRounding = MidpointRounding.ToEven)
+        {
+            var amount = Math.Round(value * (decimal)Math.Pow(10, fractionDigits), 0, midpointRounding);
+            return new CentPrecisionMoneyDraft
+            {
+                CurrencyCode = currencyCode,
+                CentAmount = (long)amount,
+                FractionDigits = fractionDigits
             };
         }
     }

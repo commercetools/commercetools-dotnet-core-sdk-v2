@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.Api.Models.ApiClients
+namespace commercetools.Sdk.Api.Models.ApiClients
 {
+
     public partial class ApiClientDraft : IApiClientDraft
     {
         public string Name { get; set; }
@@ -14,5 +8,9 @@ namespace commercetools.Api.Models.ApiClients
         public string Scope { get; set; }
 
         public long? DeleteDaysAfterCreation { get; set; }
+
+        public int? AccessTokenValiditySeconds { get; set; }
+
+        public int? RefreshTokenValiditySeconds { get; set; }
     }
 }

@@ -1,13 +1,10 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
+
     public partial class TermFacetResult : ITermFacetResult
     {
         public IFacetTypes Type { get; set; }
@@ -20,7 +17,9 @@ namespace commercetools.Api.Models.Products
 
         public long Other { get; set; }
 
-        public List<IFacetResultTerm> Terms { get; set; }
+        public IList<IFacetTerm> Terms { get; set; }
+        public IEnumerable<IFacetTerm> TermsEnumerable { set => Terms = value.ToList(); }
+
         public TermFacetResult()
         {
             this.Type = IFacetTypes.FindEnum("terms");

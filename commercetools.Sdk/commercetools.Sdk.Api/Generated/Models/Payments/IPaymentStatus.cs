@@ -1,14 +1,10 @@
-using commercetools.Api.Models.States;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.States;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Payments
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Payments
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Payments.PaymentStatus))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Payments.PaymentStatus))]
     public partial interface IPaymentStatus
     {
         string InterfaceCode { get; set; }
@@ -16,5 +12,6 @@ namespace commercetools.Api.Models.Payments
         string InterfaceText { get; set; }
 
         IStateReference State { get; set; }
+
     }
 }

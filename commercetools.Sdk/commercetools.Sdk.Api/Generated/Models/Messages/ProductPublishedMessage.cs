@@ -1,16 +1,14 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ProductPublishedMessage : IProductPublishedMessage
     {
         public string Id { get; set; }
@@ -35,7 +33,9 @@ namespace commercetools.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public List<string> RemovedImageUrls { get; set; }
+        public IList<string> RemovedImageUrls { get; set; }
+        public IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
+
 
         public IProductProjection ProductProjection { get; set; }
 

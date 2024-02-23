@@ -1,8 +1,8 @@
 using Xunit;
 using System.Net.Http;
 using System.Collections.Generic;
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Categories;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Serialization;
@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Tests
             s.UseCommercetoolsApiSerialization();
             var p = s.BuildServiceProvider();
 
-            return new CtpClient(null, p.GetService<SerializerService>());
+            return new CtpClient(null, p.GetService<IApiSerializerService>());
         }
 
         [Fact]
@@ -51,6 +51,45 @@ namespace commercetools.Sdk.Api.Tests
             Assert.Equal(expectedRequestUrl, request.RequestUri.ToString());
         }
 
+        [Fact]
+        public void HeaderCaseInsensitive()
+        {
+            var headers = new ApiHttpHeaders();
+
+            headers.AddHeader("content-type", "text/plain");
+            Assert.True(headers.HasHeader("Content-Type"));
+            Assert.True(headers.HasHeader("content-type"));
+            Assert.True(headers.HasHeader("content-Type"));
+            Assert.Equal("text/plain", headers.GetFirst("conTent-type"));
+            headers.AddHeader("Content-Type", "image/png");
+            Assert.Equal(2, headers.GetHeaderValue("Content-type").Count);
+            Assert.Equal(2, headers.GetHeaders("Content-type").Count);
+        }
+
+        [Fact]
+        public void TestWhereRequest()
+        {
+            //arrange
+            var projectKey = "test-proj";
+            var where = $"key in (\"abc-def-ghi\",\"abc-def-ghi-2\")";
+
+            //act
+            var request = GetClient().WithProject(projectKey)
+                .StandalonePrices()
+                .Get()
+                .WithWhere(where)
+                .Build();
+
+            var expectedRequestUrl = $"/{projectKey}/standalone-prices?" +
+                                     $"where=key%20in%20%28%22abc-def-ghi%22%2C%22abc-def-ghi-2%22%29";
+
+            //assert
+            Assert.NotNull(request);
+            Assert.Equal(HttpMethod.Get, request.Method);
+            Assert.Equal(expectedRequestUrl, request.RequestUri.ToString());
+        }
+
+        // 
         [Fact]
         public void TestQueryRequest()
         {

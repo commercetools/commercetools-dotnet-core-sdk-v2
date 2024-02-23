@@ -1,6 +1,6 @@
-﻿using commercetools.Api.Client.RequestBuilders.InStore;
+﻿using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Base.Client;
-using commercetools.Api.Client.RequestBuilders.Projects;
+using commercetools.Sdk.Api.Client.RequestBuilders.Projects;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -12,6 +12,12 @@ namespace commercetools.Sdk.Api.Client
             return new ApiRoot(client);
         }
 
+        public static ProjectApiRoot Create(
+            IClient client, string projectKey)
+        {
+            return new ProjectApiRoot(client, projectKey);
+        }
+
         public static ByProjectKeyRequestBuilder CreateForProject(
             IClient client, string projectKey)
         {
@@ -21,7 +27,7 @@ namespace commercetools.Sdk.Api.Client
         public static ByProjectKeyInStoreKeyByStoreKeyRequestBuilder CreateForStore(
             IClient client, string projectKey, string storeKey)
         {
-            return new ApiRoot(client).WithProjectKey(projectKey).InStoreKeyWithStoreKeyValue(storeKey);
+            return Create(client, projectKey).InStore(storeKey);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Version>0.1.0</Version>
     <RepositoryUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</RepositoryUrl>
-    <Description>The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.</Description>
+    <Description>The Composable Commerce SDK allows developers to work effectively by providing typesafe access to commercetools Composable Commerce in their .NET applications.</Description>
     <Copyright>Copyright commercetools 2021</Copyright>
     <PackageProjectUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/commercetools/commercetools-dotnet-core-sdk-v2/master/ct-logo.png</PackageIconUrl>
@@ -12,8 +12,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="4.7.2" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.14" />
+    <PackageReference Include="System.Text.Json" Version="6.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>

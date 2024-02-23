@@ -7,6 +7,13 @@ namespace commercetools.Api.IntegrationTests
 {
     public class InMemoryLogger : ILogger
     {
+        private string _categoryName;
+
+        public InMemoryLogger(string categoryName)
+        {
+            this._categoryName = categoryName;
+        }
+
         private static ConcurrentQueue<string> LogMessages { get; set; }
 
         public void Log<TState>(
@@ -32,6 +39,11 @@ namespace commercetools.Api.IntegrationTests
         public IDisposable BeginScope<TState>(TState state)
         {
             return null;
+        }
+
+        public static void Clear()
+        {
+            LogMessages?.Clear();
         }
 
         public static string GetLogMessages()

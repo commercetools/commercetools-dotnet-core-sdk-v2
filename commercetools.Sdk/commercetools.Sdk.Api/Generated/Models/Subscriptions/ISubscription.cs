@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Subscriptions;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Subscriptions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Subscriptions.Subscription))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.Subscription))]
     public partial interface ISubscription : IBaseResource
     {
         new string Id { get; set; }
@@ -24,16 +22,21 @@ namespace commercetools.Api.Models.Subscriptions
 
         ICreatedBy CreatedBy { get; set; }
 
-        List<IChangeSubscription> Changes { get; set; }
+        IList<IChangeSubscription> Changes { get; set; }
+        IEnumerable<IChangeSubscription> ChangesEnumerable { set => Changes = value.ToList(); }
+
 
         IDestination Destination { get; set; }
 
         string Key { get; set; }
 
-        List<IMessageSubscription> Messages { get; set; }
+        IList<IMessageSubscription> Messages { get; set; }
+        IEnumerable<IMessageSubscription> MessagesEnumerable { set => Messages = value.ToList(); }
+
 
         IDeliveryFormat Format { get; set; }
 
         ISubscriptionHealthStatus Status { get; set; }
+
     }
 }

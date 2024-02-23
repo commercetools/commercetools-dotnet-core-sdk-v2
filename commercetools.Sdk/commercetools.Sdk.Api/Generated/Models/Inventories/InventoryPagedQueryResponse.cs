@@ -1,23 +1,22 @@
-using commercetools.Api.Models.Inventories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryPagedQueryResponse : IInventoryPagedQueryResponse
     {
         public long Limit { get; set; }
+
+        public long Offset { get; set; }
 
         public long Count { get; set; }
 
         public long? Total { get; set; }
 
-        public long Offset { get; set; }
+        public IList<IInventoryEntry> Results { get; set; }
+        public IEnumerable<IInventoryEntry> ResultsEnumerable { set => Results = value.ToList(); }
 
-        public List<IInventoryEntry> Results { get; set; }
     }
 }

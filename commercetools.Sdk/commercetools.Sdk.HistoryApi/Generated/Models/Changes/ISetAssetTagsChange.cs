@@ -1,25 +1,27 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using commercetools.HistoryApi.Models.Changes;
-using System;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetAssetTagsChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetAssetTagsChange))]
     public partial interface ISetAssetTagsChange : IChange
     {
         new string Change { get; set; }
 
         new string Type { get; set; }
 
+        IList<string> PreviousValue { get; set; }
+        IEnumerable<string> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
+
+        IList<string> NextValue { get; set; }
+        IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+
         IAssetChangeValue Asset { get; set; }
 
-        List<string> NextValue { get; set; }
-
-        List<string> PreviousValue { get; set; }
     }
 }

@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Messages;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.MessagePagedQueryResponse))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.MessagePagedQueryResponse))]
     public partial interface IMessagePagedQueryResponse
     {
         long Limit { get; set; }
@@ -19,6 +16,9 @@ namespace commercetools.Api.Models.Messages
 
         long Offset { get; set; }
 
-        List<IMessage> Results { get; set; }
+        IList<IMessage> Results { get; set; }
+        IEnumerable<IMessage> ResultsEnumerable { set => Results = value.ToList(); }
+
+
     }
 }

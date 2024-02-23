@@ -1,18 +1,17 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.MatchingPriceNotFoundError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     public partial interface IMatchingPriceNotFoundError : IErrorObject
     {
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
         string ProductId { get; set; }
 
         int VariantId { get; set; }
@@ -24,5 +23,6 @@ namespace commercetools.Api.Models.Errors
         ICustomerGroupReference CustomerGroup { get; set; }
 
         IChannelReference Channel { get; set; }
+
     }
 }

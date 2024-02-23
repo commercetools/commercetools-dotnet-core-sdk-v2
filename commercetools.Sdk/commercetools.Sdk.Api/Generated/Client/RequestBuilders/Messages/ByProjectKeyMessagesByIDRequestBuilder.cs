@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
 {
 
-    public class ByProjectKeyMessagesByIDRequestBuilder
+    public partial class ByProjectKeyMessagesByIDRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -30,6 +27,11 @@ namespace commercetools.Api.Client.RequestBuilders.Messages
         public ByProjectKeyMessagesByIDGet Get()
         {
             return new ByProjectKeyMessagesByIDGet(ApiHttpClient, ProjectKey, ID);
+        }
+
+        public ByProjectKeyMessagesByIDHead Head()
+        {
+            return new ByProjectKeyMessagesByIDHead(ApiHttpClient, ProjectKey, ID);
         }
 
     }

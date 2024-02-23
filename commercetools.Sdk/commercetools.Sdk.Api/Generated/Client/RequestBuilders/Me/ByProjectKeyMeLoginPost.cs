@@ -1,19 +1,16 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
 {
-    public partial class ByProjectKeyMeLoginPost : ApiMethod<ByProjectKeyMeLoginPost>
+
+    public partial class ByProjectKeyMeLoginPost : ApiMethod<ByProjectKeyMeLoginPost>, IApiMethod<ByProjectKeyMeLoginPost, commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyMeLoginPost>
     {
 
 
@@ -25,31 +22,53 @@ namespace commercetools.Api.Client.RequestBuilders.Me
 
         private string ProjectKey { get; }
 
-        private commercetools.Api.Models.Customers.ICustomerSignin CustomerSignin;
+        private commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin MyCustomerSignin;
 
-        public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Api.Models.Customers.ICustomerSignin customerSignin)
+        public ByProjectKeyMeLoginPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, commercetools.Sdk.Api.Models.Customers.IMyCustomerSignin myCustomerSignin)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
-            this.CustomerSignin = customerSignin;
+            this.MyCustomerSignin = myCustomerSignin;
             this.RequestUrl = $"/{ProjectKey}/me/login";
         }
 
 
 
 
-        public async Task<commercetools.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Customers.ICustomerSignInResult>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Customers.ICustomerSignInResult>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {
             var request = base.Build();
             if (SerializerService != null)
             {
-                var body = this.SerializerService.Serialize(CustomerSignin);
+                var body = this.SerializerService.Serialize(MyCustomerSignin);
                 if (!string.IsNullOrEmpty(body))
                 {
                     request.Content = new StringContent(body, Encoding.UTF8, "application/json");

@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
 {
 
-    public class ByProjectKeyCustomersEmailTokenByEmailTokenRequestBuilder
+    public partial class ByProjectKeyCustomersEmailTokenByEmailTokenRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

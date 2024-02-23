@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Common.BaseAddress))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.BaseAddress))]
     public partial interface IBaseAddress
     {
         string Id { get; set; }
 
         string Key { get; set; }
+
+        string Country { get; set; }
 
         string Title { get; set; }
 
@@ -36,8 +34,6 @@ namespace commercetools.Api.Models.Common
 
         string State { get; set; }
 
-        string Country { get; set; }
-
         string Company { get; set; }
 
         string Department { get; set; }
@@ -59,5 +55,6 @@ namespace commercetools.Api.Models.Common
         string AdditionalAddressInfo { get; set; }
 
         string ExternalId { get; set; }
+
     }
 }

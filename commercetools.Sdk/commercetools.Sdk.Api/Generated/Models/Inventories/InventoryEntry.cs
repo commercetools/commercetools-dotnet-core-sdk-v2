@@ -1,15 +1,12 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Inventories
+namespace commercetools.Sdk.Api.Models.Inventories
 {
+
     public partial class InventoryEntry : IInventoryEntry
     {
         public string Id { get; set; }
@@ -23,6 +20,8 @@ namespace commercetools.Api.Models.Inventories
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }
+
+        public string Key { get; set; }
 
         public string Sku { get; set; }
 

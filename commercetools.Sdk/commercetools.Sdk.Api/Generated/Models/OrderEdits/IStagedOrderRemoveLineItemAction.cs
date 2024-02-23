@@ -1,26 +1,25 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.OrderEdits
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.OrderEdits.StagedOrderRemoveLineItemAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderRemoveLineItemAction))]
     public partial interface IStagedOrderRemoveLineItemAction : IStagedOrderUpdateAction
     {
         string LineItemId { get; set; }
 
-        double? Quantity { get; set; }
+        string LineItemKey { get; set; }
+
+        long? Quantity { get; set; }
 
         IMoney ExternalPrice { get; set; }
 
         IExternalLineItemTotalPrice ExternalTotalPrice { get; set; }
 
         IItemShippingDetailsDraft ShippingDetailsToRemove { get; set; }
+
     }
 }

@@ -1,18 +1,17 @@
-using commercetools.Api.Models.States;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.States
+namespace commercetools.Sdk.Api.Models.States
 {
+
     public partial class StateAddRolesAction : IStateAddRolesAction
     {
         public string Action { get; set; }
 
-        public List<IStateRoleEnum> Roles { get; set; }
+        public IList<IStateRoleEnum> Roles { get; set; }
+        public IEnumerable<IStateRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
+
         public StateAddRolesAction()
         {
             this.Action = "addRoles";

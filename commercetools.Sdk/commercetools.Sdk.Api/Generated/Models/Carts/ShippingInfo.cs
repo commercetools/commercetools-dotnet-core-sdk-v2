@@ -1,22 +1,19 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.ShippingMethods;
-using commercetools.Api.Models.TaxCategories;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.ShippingMethods;
+using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class ShippingInfo : IShippingInfo
     {
         public string ShippingMethodName { get; set; }
 
-        public ITypedMoney Price { get; set; }
+        public ICentPrecisionMoney Price { get; set; }
 
         public IShippingRate ShippingRate { get; set; }
 
@@ -28,7 +25,9 @@ namespace commercetools.Api.Models.Carts
 
         public IShippingMethodReference ShippingMethod { get; set; }
 
-        public List<IDelivery> Deliveries { get; set; }
+        public IList<IDelivery> Deliveries { get; set; }
+        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         public IDiscountedLineItemPrice DiscountedPrice { get; set; }
 

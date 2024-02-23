@@ -1,20 +1,21 @@
-using commercetools.Api.Models.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Orders.ReturnInfo))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Orders.ReturnInfo))]
     public partial interface IReturnInfo
     {
-        List<IReturnItem> Items { get; set; }
+        IList<IReturnItem> Items { get; set; }
+        IEnumerable<IReturnItem> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         string ReturnTrackingId { get; set; }
 
         DateTime? ReturnDate { get; set; }
+
     }
 }

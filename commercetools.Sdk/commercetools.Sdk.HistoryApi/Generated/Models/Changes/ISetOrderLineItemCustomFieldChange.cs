@@ -1,31 +1,28 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetOrderLineItemCustomFieldChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetOrderLineItemCustomFieldChange))]
     public partial interface ISetOrderLineItemCustomFieldChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
+        Object PreviousValue { get; set; }
+
+        Object NextValue { get; set; }
+
         string CustomTypeId { get; set; }
 
         string Name { get; set; }
 
-        string Variant { get; set; }
-
         ILocalizedString LineItem { get; set; }
 
-        Object NextValue { get; set; }
+        string Variant { get; set; }
 
-        Object PreviousValue { get; set; }
     }
 }

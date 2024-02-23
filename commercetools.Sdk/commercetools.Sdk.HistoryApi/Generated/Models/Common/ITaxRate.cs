@@ -1,14 +1,11 @@
-using commercetools.HistoryApi.Models.Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Common.TaxRate))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.TaxRate))]
     public partial interface ITaxRate
     {
         string Id { get; set; }
@@ -23,6 +20,9 @@ namespace commercetools.HistoryApi.Models.Common
 
         string State { get; set; }
 
-        List<ISubRate> SubRates { get; set; }
+        IList<ISubRate> SubRates { get; set; }
+        IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
+
     }
 }

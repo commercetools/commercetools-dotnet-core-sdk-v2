@@ -1,18 +1,18 @@
-using commercetools.Api.Models.Channels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Channels
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Channels
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Channels.ChannelUpdate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Channels.ChannelUpdate))]
     public partial interface IChannelUpdate
     {
         long Version { get; set; }
 
-        List<IChannelUpdateAction> Actions { get; set; }
+        IList<IChannelUpdateAction> Actions { get; set; }
+        IEnumerable<IChannelUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
+
     }
 }

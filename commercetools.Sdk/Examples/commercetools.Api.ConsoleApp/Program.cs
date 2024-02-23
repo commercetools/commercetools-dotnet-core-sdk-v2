@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;
@@ -21,7 +21,7 @@ namespace commercetools.Api.ConsoleApp
             collection.SetupClient(
                 clientName,
                 errorTypeMapper => typeof(ErrorResponse),
-                s => s.GetService<SerializerService>()
+                s => s.GetService<IApiSerializerService>()
             );
 
             var serviceProvider = collection.BuildServiceProvider();
@@ -36,7 +36,7 @@ namespace commercetools.Api.ConsoleApp
                 clientName,
                 config,
                 clientFactory,
-                serviceProvider.GetService<SerializerService>(),
+                serviceProvider.GetService<IApiSerializerService>(),
                 TokenProviderFactory.CreateClientCredentialsTokenProvider(config, clientFactory)
             );
             var project = await new ApiRoot(client)

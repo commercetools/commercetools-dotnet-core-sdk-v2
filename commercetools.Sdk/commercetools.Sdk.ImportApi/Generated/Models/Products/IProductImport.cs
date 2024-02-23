@@ -1,17 +1,16 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Products;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Products.ProductImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Products.ProductImport))]
     public partial interface IProductImport : IImportResource
     {
+        new string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         IProductTypeKeyReference ProductType { get; set; }
@@ -20,7 +19,9 @@ namespace commercetools.ImportApi.Models.Products
 
         ILocalizedString Description { get; set; }
 
-        List<ICategoryKeyReference> Categories { get; set; }
+        IList<ICategoryKeyReference> Categories { get; set; }
+        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         ILocalizedString MetaTitle { get; set; }
 
@@ -35,5 +36,8 @@ namespace commercetools.ImportApi.Models.Products
         IStateKeyReference State { get; set; }
 
         bool? Publish { get; set; }
+
+        IProductPriceModeEnum PriceMode { get; set; }
+
     }
 }

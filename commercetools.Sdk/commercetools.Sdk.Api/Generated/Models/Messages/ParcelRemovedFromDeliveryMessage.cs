@@ -1,15 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Orders;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Orders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class ParcelRemovedFromDeliveryMessage : IParcelRemovedFromDeliveryMessage
     {
         public string Id { get; set; }
@@ -37,6 +33,8 @@ namespace commercetools.Api.Models.Messages
         public string DeliveryId { get; set; }
 
         public IParcel Parcel { get; set; }
+
+        public string ShippingKey { get; set; }
         public ParcelRemovedFromDeliveryMessage()
         {
             this.Type = "ParcelRemovedFromDelivery";

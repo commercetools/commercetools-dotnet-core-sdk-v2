@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.ShippingMethods;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetShippingMethodAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodAction))]
     public partial interface ICartSetShippingMethodAction : ICartUpdateAction
     {
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
     }
 }

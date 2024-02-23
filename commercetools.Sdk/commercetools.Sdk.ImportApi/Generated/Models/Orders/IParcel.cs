@@ -1,14 +1,13 @@
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.Parcel))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.Parcel))]
     public partial interface IParcel
     {
         string Id { get; set; }
@@ -19,6 +18,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         ITrackingData TrackingData { get; set; }
 
-        List<IDeliveryItem> Items { get; set; }
+        IList<IDeliveryItem> Items { get; set; }
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
+
+
+        ICustom Custom { get; set; }
+
     }
 }

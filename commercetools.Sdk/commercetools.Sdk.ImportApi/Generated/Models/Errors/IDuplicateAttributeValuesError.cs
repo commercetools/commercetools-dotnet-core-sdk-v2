@@ -1,17 +1,17 @@
-using commercetools.ImportApi.Models.Errors;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Errors.DuplicateAttributeValuesError))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Errors.DuplicateAttributeValuesError))]
     public partial interface IDuplicateAttributeValuesError : IErrorObject
     {
-        List<IAttribute> Attributes { get; set; }
+        IList<IAttribute> Attributes { get; set; }
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
+
     }
 }

@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
 {
-    public partial class ByProjectKeyExtensionsGet : ApiMethod<ByProjectKeyExtensionsGet>
+
+    public partial class ByProjectKeyExtensionsGet : ApiMethod<ByProjectKeyExtensionsGet>, IApiMethod<ByProjectKeyExtensionsGet, commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyExtensionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyExtensionsGet>
     {
 
 
@@ -29,11 +26,6 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.RequestUrl = $"/{ProjectKey}/extensions";
-        }
-
-        public List<string> GetExpand()
-        {
-            return this.GetQueryParam("expand");
         }
 
         public List<string> GetSort()
@@ -61,24 +53,19 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
             return this.GetQueryParam("where");
         }
 
-        public ByProjectKeyExtensionsGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
-        }
-
         public ByProjectKeyExtensionsGet WithSort(string sort)
         {
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyExtensionsGet WithLimit(int limit)
+        public ByProjectKeyExtensionsGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyExtensionsGet WithOffset(int offset)
+        public ByProjectKeyExtensionsGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyExtensionsGet WithWithTotal(bool withTotal)
@@ -96,10 +83,32 @@ namespace commercetools.Api.Client.RequestBuilders.Extensions
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.Extensions.IExtensionPagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Extensions.IExtensionPagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Extensions.IExtensionPagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

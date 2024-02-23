@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public enum InventoryMode
     {
@@ -21,10 +25,20 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IInventoryMode), "FindEnum")]
-    public interface IInventoryMode : IJsonName
+    public interface IInventoryMode : IJsonName, IEnumerable<char>
     {
         public static IInventoryMode TrackOnly = new InventoryModeWrapper
         { Value = InventoryMode.TrackOnly, JsonName = "TrackOnly" };

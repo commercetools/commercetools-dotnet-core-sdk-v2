@@ -1,16 +1,12 @@
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductRevertStagedVariantChangesAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductRevertStagedVariantChangesAction))]
     public partial interface IProductRevertStagedVariantChangesAction : IProductUpdateAction
     {
         long VariantId { get; set; }
+
     }
 }

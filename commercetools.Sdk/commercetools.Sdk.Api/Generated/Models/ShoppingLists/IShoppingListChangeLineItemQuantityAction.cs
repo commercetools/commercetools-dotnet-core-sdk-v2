@@ -1,18 +1,16 @@
-using commercetools.Api.Models.ShoppingLists;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListChangeLineItemQuantityAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListChangeLineItemQuantityAction))]
     public partial interface IShoppingListChangeLineItemQuantityAction : IShoppingListUpdateAction
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         long Quantity { get; set; }
+
     }
 }

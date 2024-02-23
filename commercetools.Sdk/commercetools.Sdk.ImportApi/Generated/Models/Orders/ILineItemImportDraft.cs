@@ -1,16 +1,14 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.LineItemImportDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.LineItemImportDraft))]
     public partial interface ILineItemImportDraft
     {
         IProductKeyReference Product { get; set; }
@@ -21,9 +19,11 @@ namespace commercetools.ImportApi.Models.Orders
 
         ILineItemPrice Price { get; set; }
 
-        double Quantity { get; set; }
+        long Quantity { get; set; }
 
-        List<IItemState> State { get; set; }
+        IList<IItemState> State { get; set; }
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
 
         IChannelKeyReference SupplyChannel { get; set; }
 
@@ -32,5 +32,8 @@ namespace commercetools.ImportApi.Models.Orders
         ITaxRate TaxRate { get; set; }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        ICustom Custom { get; set; }
+
     }
 }

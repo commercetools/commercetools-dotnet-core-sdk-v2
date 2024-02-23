@@ -1,20 +1,17 @@
-using commercetools.Api.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.TaxPortion))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.TaxPortion))]
     public partial interface ITaxPortion
     {
         string Name { get; set; }
 
-        double Rate { get; set; }
+        decimal Rate { get; set; }
 
-        ITypedMoney Amount { get; set; }
+        ICentPrecisionMoney Amount { get; set; }
+
     }
 }

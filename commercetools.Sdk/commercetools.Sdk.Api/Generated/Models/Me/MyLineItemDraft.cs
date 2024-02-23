@@ -1,22 +1,23 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.Api.Models.Channels;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Me
+namespace commercetools.Sdk.Api.Models.Me
 {
+
     public partial class MyLineItemDraft : IMyLineItemDraft
     {
+        public string Key { get; set; }
+
         public string ProductId { get; set; }
 
         public long? VariantId { get; set; }
 
-        public long Quantity { get; set; }
+        public string Sku { get; set; }
+
+        public long? Quantity { get; set; }
 
         public DateTime? AddedAt { get; set; }
 
@@ -24,10 +25,8 @@ namespace commercetools.Api.Models.Me
 
         public IChannelResourceIdentifier DistributionChannel { get; set; }
 
-        public ICustomFieldsDraft Custom { get; set; }
-
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 
-        public string Sku { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
     }
 }

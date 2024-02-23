@@ -1,15 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
-using commercetools.ImportApi.Client.RequestBuilders.Inventories;
 
-namespace commercetools.ImportApi.Client.RequestBuilders.Inventories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories
 {
 
-    public class ByProjectKeyInventoriesImportContainersRequestBuilder
+    public partial class ByProjectKeyInventoriesImportContainersRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }

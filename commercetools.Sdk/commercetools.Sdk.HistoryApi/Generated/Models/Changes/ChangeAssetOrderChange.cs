@@ -1,23 +1,24 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.HistoryApi.Models.Changes
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
+
     public partial class ChangeAssetOrderChange : IChangeAssetOrderChange
     {
         public string Type { get; set; }
 
         public string Change { get; set; }
 
-        public List<ILocalizedString> PreviousValue { get; set; }
+        public IList<ILocalizedString> PreviousValue { get; set; }
+        public IEnumerable<ILocalizedString> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        public List<ILocalizedString> NextValue { get; set; }
+
+        public IList<ILocalizedString> NextValue { get; set; }
+        public IEnumerable<ILocalizedString> NextValueEnumerable { set => NextValue = value.ToList(); }
+
         public ChangeAssetOrderChange()
         {
             this.Type = "ChangeAssetOrderChange";

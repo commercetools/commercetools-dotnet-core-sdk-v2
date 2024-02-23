@@ -1,14 +1,9 @@
-using commercetools.Api.Models.GraphQl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.GraphQl
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.GraphQl
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.GraphQl.GraphQLRequest))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.GraphQl.GraphQLRequest))]
     public partial interface IGraphQLRequest
     {
         string Query { get; set; }
@@ -16,5 +11,6 @@ namespace commercetools.Api.Models.GraphQl
         string OperationName { get; set; }
 
         IGraphQLVariablesMap Variables { get; set; }
+
     }
 }

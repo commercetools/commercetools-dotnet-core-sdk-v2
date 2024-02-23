@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum ProductPublishScope
     {
@@ -21,10 +25,20 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IProductPublishScope), "FindEnum")]
-    public interface IProductPublishScope : IJsonName
+    public interface IProductPublishScope : IJsonName, IEnumerable<char>
     {
         public static IProductPublishScope All = new ProductPublishScopeWrapper
         { Value = ProductPublishScope.All, JsonName = "All" };

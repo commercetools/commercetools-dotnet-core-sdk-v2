@@ -1,17 +1,13 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.Stores;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderStoreSetMessagePayload))]
-    public partial interface IOrderStoreSetMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderStoreSetMessagePayload))]
+    public partial interface IOrderStoreSetMessagePayload : IOrderMessagePayload
     {
         IStoreKeyReference Store { get; set; }
+
     }
 }

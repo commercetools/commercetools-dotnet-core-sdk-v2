@@ -1,19 +1,17 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Me;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyShoppingListSetTextLineItemDescriptionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyShoppingListSetTextLineItemDescriptionAction))]
     public partial interface IMyShoppingListSetTextLineItemDescriptionAction : IMyShoppingListUpdateAction
     {
         string TextLineItemId { get; set; }
 
+        string TextLineItemKey { get; set; }
+
         ILocalizedString Description { get; set; }
+
     }
 }

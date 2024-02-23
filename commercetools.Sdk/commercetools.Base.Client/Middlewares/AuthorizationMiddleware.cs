@@ -17,7 +17,7 @@ namespace commercetools.Base.Client.Middlewares
 
         protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            Token token = this._tokenProvider.Token;
+            Token token = await this._tokenProvider.GetToken().ConfigureAwait(false);
             request.Headers.Add("Authorization", $"Bearer {token.AccessToken}");
             return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }

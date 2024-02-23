@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Payments;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class PaymentSetCustomerAction : IPaymentSetCustomerAction
     {
         public string Action { get; set; }

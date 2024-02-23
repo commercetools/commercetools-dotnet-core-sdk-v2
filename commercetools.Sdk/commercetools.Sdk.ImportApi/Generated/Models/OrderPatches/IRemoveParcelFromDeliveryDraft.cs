@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.OrderPatches
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.OrderPatches.RemoveParcelFromDeliveryDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.OrderPatches.RemoveParcelFromDeliveryDraft))]
     public partial interface IRemoveParcelFromDeliveryDraft
     {
         string ParcelId { get; set; }
+
     }
 }

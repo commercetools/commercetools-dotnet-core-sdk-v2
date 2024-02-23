@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Stores;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Stores;
 
 
-namespace commercetools.Api.Models.Customers
+namespace commercetools.Sdk.Api.Models.Customers
 {
+
     public partial class CustomerAddStoreAction : ICustomerAddStoreAction
     {
         public string Action { get; set; }

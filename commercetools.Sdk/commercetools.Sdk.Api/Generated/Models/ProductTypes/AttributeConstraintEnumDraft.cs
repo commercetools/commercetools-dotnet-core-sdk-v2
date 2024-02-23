@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.ProductTypes
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductTypes
 {
     public enum AttributeConstraintEnumDraft
     {
@@ -18,10 +22,20 @@ namespace commercetools.Api.Models.ProductTypes
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IAttributeConstraintEnumDraft), "FindEnum")]
-    public interface IAttributeConstraintEnumDraft : IJsonName
+    public interface IAttributeConstraintEnumDraft : IJsonName, IEnumerable<char>
     {
         public static IAttributeConstraintEnumDraft None = new AttributeConstraintEnumDraftWrapper
         { Value = AttributeConstraintEnumDraft.None, JsonName = "None" };

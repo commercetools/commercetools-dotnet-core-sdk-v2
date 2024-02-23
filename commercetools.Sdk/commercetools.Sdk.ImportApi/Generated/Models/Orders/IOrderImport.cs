@@ -1,16 +1,14 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
-using commercetools.ImportApi.Models.Orders;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.OrderImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.OrderImport))]
     public partial interface IOrderImport
     {
         string OrderNumber { get; set; }
@@ -19,9 +17,13 @@ namespace commercetools.ImportApi.Models.Orders
 
         string CustomerEmail { get; set; }
 
-        List<ILineItemImportDraft> LineItems { get; set; }
+        IList<ILineItemImportDraft> LineItems { get; set; }
+        IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-        List<ICustomLineItemDraft> CustomLineItems { get; set; }
+
+        IList<ICustomLineItemDraft> CustomLineItems { get; set; }
+        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
+
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -55,6 +57,13 @@ namespace commercetools.ImportApi.Models.Orders
 
         ICartOrigin Origin { get; set; }
 
-        List<IAddress> ItemShippingAddresses { get; set; }
+        IList<IAddress> ItemShippingAddresses { get; set; }
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
+
+
+        IStoreKeyReference Store { get; set; }
+
+        IStateKeyReference State { get; set; }
+
     }
 }

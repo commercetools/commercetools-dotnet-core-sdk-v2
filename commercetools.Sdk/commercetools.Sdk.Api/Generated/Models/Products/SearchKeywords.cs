@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    public partial class SearchKeywords : Dictionary<string, List<ISearchKeyword>>, ISearchKeywords
+
+    public partial class SearchKeywords : Dictionary<string, IList<ISearchKeyword>>, ISearchKeywords
     {
     }
 }

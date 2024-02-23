@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
 {
     public class ByProjectKeyMeEmailConfirmTest : RequestBuilderParentTests
     {
@@ -26,7 +24,7 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Me
                    .WithProjectKey("test_projectKey")
                    .Me()
                    .EmailConfirm()
-                   .Post()
+                   .Post(null)
                    .Build(),
                    "Post",
                    "/test_projectKey/me/email/confirm",

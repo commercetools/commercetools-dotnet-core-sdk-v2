@@ -1,17 +1,13 @@
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Stores;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerAddStoreAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerAddStoreAction))]
     public partial interface ICustomerAddStoreAction : ICustomerUpdateAction
     {
         IStoreResourceIdentifier Store { get; set; }
+
     }
 }

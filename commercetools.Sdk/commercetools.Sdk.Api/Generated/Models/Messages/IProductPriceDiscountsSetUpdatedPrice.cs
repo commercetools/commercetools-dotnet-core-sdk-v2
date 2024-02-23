@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.ProductPriceDiscountsSetUpdatedPrice))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetUpdatedPrice))]
     public partial interface IProductPriceDiscountsSetUpdatedPrice
     {
         int VariantId { get; set; }
@@ -22,5 +18,6 @@ namespace commercetools.Api.Models.Messages
         IDiscountedPrice Discounted { get; set; }
 
         bool Staged { get; set; }
+
     }
 }

@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <RepositoryUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</RepositoryUrl>
-        <Description>The commercetools SDK allows developers to work effectively with the commercetools platform in their .NET applications by providing typesafe access to the commercetools HTTP API.</Description>
+        <Description>The Composable Commerce SDK allows developers to work effectively by providing typesafe access to commercetools Composable Commerce in their .NET applications.</Description>
         <Copyright>Copyright commercetools 2021</Copyright>
         <PackageProjectUrl>https://github.com/commercetools/commercetools-dotnet-core-sdk-v2</PackageProjectUrl>
         <PackageIconUrl>https://raw.githubusercontent.com/commercetools/commercetools-dotnet-core-sdk-v2/master/ct-logo.png</PackageIconUrl>
@@ -16,14 +16,6 @@
       <ProjectReference Include="..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
       <ProjectReference Include="..\commercetools.Base.Registration\commercetools.Base.Registration.csproj" />
       <ProjectReference Include="..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Generated\Client" />
-      <Folder Include="Generated\Models" />
-      <Folder Include="Serialization\JsonConverters" />
-      <Folder Include="Serialization\Mappers\CustomFieldMappers" />
-      <Folder Include="Serialization\MapperTypeRetrievers" />
     </ItemGroup>
 
 </Project>

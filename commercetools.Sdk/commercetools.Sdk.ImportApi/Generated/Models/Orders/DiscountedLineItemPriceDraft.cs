@@ -1,18 +1,17 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Orders
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
+
     public partial class DiscountedLineItemPriceDraft : IDiscountedLineItemPriceDraft
     {
         public IMoney Value { get; set; }
 
-        public List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        public IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        public IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+
     }
 }

@@ -1,17 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShippingMethods.PriceFunction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.PriceFunction))]
     public partial interface IPriceFunction
     {
         string CurrencyCode { get; set; }
 
         string Function { get; set; }
+
     }
 }

@@ -1,19 +1,16 @@
-using System;
-using System.IO;
+using System.Globalization;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
-using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
 {
-    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>
+
+    public partial class ByProjectKeyDiscountCodesGet : ApiMethod<ByProjectKeyDiscountCodesGet>, IApiMethod<ByProjectKeyDiscountCodesGet, commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyDiscountCodesGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyDiscountCodesGet>
     {
 
 
@@ -71,14 +68,14 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyDiscountCodesGet WithLimit(int limit)
+        public ByProjectKeyDiscountCodesGet WithLimit(long limit)
         {
-            return this.AddQueryParam("limit", limit.ToString());
+            return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyDiscountCodesGet WithOffset(int offset)
+        public ByProjectKeyDiscountCodesGet WithOffset(long offset)
         {
-            return this.AddQueryParam("offset", offset.ToString());
+            return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }
 
         public ByProjectKeyDiscountCodesGet WithWithTotal(bool withTotal)
@@ -96,10 +93,32 @@ namespace commercetools.Api.Client.RequestBuilders.DiscountCodes
             return this.AddQueryParam($"var.{varName}", predicateVar);
         }
 
-        public async Task<commercetools.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.DiscountCodes.IDiscountCodePagedQueryResponse>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
     }

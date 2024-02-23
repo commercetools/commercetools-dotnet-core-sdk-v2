@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
-using commercetools.Base.Client;
-using commercetools.Sdk.Api.Extensions;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Payments;
+using commercetools.Sdk.Api.Client;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 
 namespace commercetools.Api.IntegrationTests.Payments
@@ -30,20 +29,20 @@ namespace commercetools.Api.IntegrationTests.Payments
 
         #region CreateAndDelete
 
-        public static async Task<IPayment> CreatePayment(IClient client, PaymentDraft paymentDraft)
+        public static async Task<IPayment> CreatePayment(ProjectApiRoot client, PaymentDraft paymentDraft)
         {
-            var resource = await client.WithApi().WithProjectKey(DefaultProjectKey)
+            var resource = await client
                 .Payments()
                 .Post(paymentDraft)
                 .ExecuteAsync();
             return resource;
         }
 
-        public static async Task DeletePayment(IClient client, IPayment payment)
+        public static async Task DeletePayment(ProjectApiRoot client, IPayment payment)
         {
             try
             {
-                await client.WithApi().WithProjectKey(DefaultProjectKey)
+                await client
                     .Payments()
                     .WithId(payment.Id)
                     .Delete()
@@ -60,7 +59,7 @@ namespace commercetools.Api.IntegrationTests.Payments
 
         #region WithPayment
 
-        public static async Task WithPayment(IClient client, Func<PaymentDraft, PaymentDraft> draftAction, Action<IPayment> func)
+        public static async Task WithPayment(ProjectApiRoot client, Func<PaymentDraft, PaymentDraft> draftAction, Action<IPayment> func)
         {
             await With(client, new PaymentDraft(), draftAction, func, CreatePayment, DeletePayment);
         }

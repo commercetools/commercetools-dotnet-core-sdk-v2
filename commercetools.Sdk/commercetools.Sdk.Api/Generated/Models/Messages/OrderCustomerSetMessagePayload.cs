@@ -1,15 +1,10 @@
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.Customers;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class OrderCustomerSetMessagePayload : IOrderCustomerSetMessagePayload
     {
         public string Type { get; set; }

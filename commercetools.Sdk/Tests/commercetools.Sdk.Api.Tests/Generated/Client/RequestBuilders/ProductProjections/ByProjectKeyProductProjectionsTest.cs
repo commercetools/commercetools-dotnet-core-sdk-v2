@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
 {
     public class ByProjectKeyProductProjectionsTest : RequestBuilderParentTests
     {
@@ -168,6 +166,25 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Get()
                    .Build(),
                    "Get",
+                   "/test_projectKey/product-projections",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/product-projections?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Head()
+                   .Build(),
+                   "Head",
                    "/test_projectKey/product-projections",
                }
        };

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Subscriptions
 {
     public class ByProjectKeySubscriptionsTest : RequestBuilderParentTests
     {
@@ -21,16 +19,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
         public static IEnumerable<object[]> GetData()
         {
             return new List<object[]> {
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Subscriptions()
-                   .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/subscriptions?expand=expand",
-               },
                new Object[] {
                    ApiRoot
                    .WithProjectKey("test_projectKey")
@@ -104,11 +92,20 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.Subscriptions
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .Subscriptions()
-                   .Post(null)
-                   .WithExpand("expand")
+                   .Head()
+                   .WithWhere("where")
                    .Build(),
-                   "Post",
-                   "/test_projectKey/subscriptions?expand=expand",
+                   "Head",
+                   "/test_projectKey/subscriptions?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Subscriptions()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/subscriptions",
                },
                new Object[] {
                    ApiRoot

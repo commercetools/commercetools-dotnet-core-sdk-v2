@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.Api.Models;
-using commercetools.Api.Models.Common;
 using Xunit;
 
-namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
 {
     public class ByProjectKeyProductProjectionsSearchTest : RequestBuilderParentTests
     {
@@ -48,10 +46,10 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithFuzzyLevel(0.110830665)
+                   .WithFuzzyLevel(9)
                    .Build(),
                    "Get",
-                   "/test_projectKey/product-projections/search?fuzzyLevel=0.110830665",
+                   "/test_projectKey/product-projections/search?fuzzyLevel=9",
                },
                new Object[] {
                    ApiRoot
@@ -63,17 +61,6 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?markMatchingVariants=true",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
-                   .WithStaged(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?staged=true",
                },
                new Object[] {
                    ApiRoot
@@ -173,6 +160,17 @@ namespace commercetools.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Search()
+                   .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/search?staged=true",
                },
                new Object[] {
                    ApiRoot

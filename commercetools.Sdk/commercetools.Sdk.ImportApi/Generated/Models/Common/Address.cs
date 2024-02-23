@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 
 
-namespace commercetools.ImportApi.Models.Common
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
+
     public partial class Address : IAddress
     {
         public string Id { get; set; }
@@ -58,5 +55,7 @@ namespace commercetools.ImportApi.Models.Common
         public string AdditionalAddressInfo { get; set; }
 
         public string ExternalId { get; set; }
+
+        public ICustom Custom { get; set; }
     }
 }

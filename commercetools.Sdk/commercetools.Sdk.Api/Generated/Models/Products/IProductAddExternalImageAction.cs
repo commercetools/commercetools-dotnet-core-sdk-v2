@@ -1,15 +1,10 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.ProductAddExternalImageAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.ProductAddExternalImageAction))]
     public partial interface IProductAddExternalImageAction : IProductUpdateAction
     {
         long? VariantId { get; set; }
@@ -19,5 +14,6 @@ namespace commercetools.Api.Models.Products
         IImage Image { get; set; }
 
         bool? Staged { get; set; }
+
     }
 }

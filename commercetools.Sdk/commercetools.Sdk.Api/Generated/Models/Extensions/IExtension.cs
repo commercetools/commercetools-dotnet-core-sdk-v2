@@ -1,15 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Extensions;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Extensions
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Extensions
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Extensions.Extension))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Extensions.Extension))]
     public partial interface IExtension : IBaseResource
     {
         new string Id { get; set; }
@@ -28,8 +26,11 @@ namespace commercetools.Api.Models.Extensions
 
         IExtensionDestination Destination { get; set; }
 
-        List<IExtensionTrigger> Triggers { get; set; }
+        IList<IExtensionTrigger> Triggers { get; set; }
+        IEnumerable<IExtensionTrigger> TriggersEnumerable { set => Triggers = value.ToList(); }
+
 
         int? TimeoutInMs { get; set; }
+
     }
 }

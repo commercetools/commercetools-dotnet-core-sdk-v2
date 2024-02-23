@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
-namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
 {
 
-    public class ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder
+    public partial class ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder
     {
 
         private IClient ApiHttpClient { get; }
@@ -27,6 +24,11 @@ namespace commercetools.Api.Client.RequestBuilders.ShippingMethods
         public ByProjectKeyShippingMethodsMatchingOrdereditGet Get()
         {
             return new ByProjectKeyShippingMethodsMatchingOrdereditGet(ApiHttpClient, ProjectKey);
+        }
+
+        public ByProjectKeyShippingMethodsMatchingOrdereditHead Head()
+        {
+            return new ByProjectKeyShippingMethodsMatchingOrdereditHead(ApiHttpClient, ProjectKey);
         }
 
     }

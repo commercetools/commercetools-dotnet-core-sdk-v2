@@ -1,18 +1,14 @@
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Base.Models;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class CustomerDateOfBirthSetMessagePayload : ICustomerDateOfBirthSetMessagePayload
     {
         public string Type { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public Date? DateOfBirth { get; set; }
         public CustomerDateOfBirthSetMessagePayload()
         {
             this.Type = "CustomerDateOfBirthSet";

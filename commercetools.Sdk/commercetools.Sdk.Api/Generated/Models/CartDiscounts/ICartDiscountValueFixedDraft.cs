@@ -1,17 +1,17 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CartDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CartDiscounts.CartDiscountValueFixedDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountValueFixedDraft))]
     public partial interface ICartDiscountValueFixedDraft : ICartDiscountValueDraft
     {
-        List<IMoney> Money { get; set; }
+        IList<IMoney> Money { get; set; }
+        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
+
+
     }
 }

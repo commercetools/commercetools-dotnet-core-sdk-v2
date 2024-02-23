@@ -1,18 +1,18 @@
-using commercetools.Api.Models.Inventories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Inventories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Inventories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Inventories.InventoryEntryUpdate))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryUpdate))]
     public partial interface IInventoryEntryUpdate
     {
         long Version { get; set; }
 
-        List<IInventoryEntryUpdateAction> Actions { get; set; }
+        IList<IInventoryEntryUpdateAction> Actions { get; set; }
+        IEnumerable<IInventoryEntryUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+
+
     }
 }

@@ -1,16 +1,14 @@
-using commercetools.Api.Models.Projects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Projects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Projects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Projects.SearchIndexingConfiguration))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Projects.SearchIndexingConfiguration))]
     public partial interface ISearchIndexingConfiguration
     {
         ISearchIndexingConfigurationValues Products { get; set; }
+
+        ISearchIndexingConfigurationValues Orders { get; set; }
+
     }
 }

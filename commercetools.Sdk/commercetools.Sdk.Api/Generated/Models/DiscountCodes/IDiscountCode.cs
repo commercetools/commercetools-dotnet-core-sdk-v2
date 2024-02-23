@@ -1,19 +1,20 @@
-using commercetools.Api.Models.CartDiscounts;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.CartDiscounts;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.DiscountCodes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.DiscountCodes.DiscountCode))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCode))]
     public partial interface IDiscountCode : IBaseResource
     {
         new string Id { get; set; }
+
+        string Key { get; set; }
 
         new long Version { get; set; }
 
@@ -31,13 +32,17 @@ namespace commercetools.Api.Models.DiscountCodes
 
         string Code { get; set; }
 
-        List<ICartDiscountReference> CartDiscounts { get; set; }
+        IList<ICartDiscountReference> CartDiscounts { get; set; }
+        IEnumerable<ICartDiscountReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
 
         string CartPredicate { get; set; }
 
         bool IsActive { get; set; }
 
-        List<IReference> References { get; set; }
+        IList<IReference> References { get; set; }
+        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
+
 
         long? MaxApplications { get; set; }
 
@@ -45,12 +50,15 @@ namespace commercetools.Api.Models.DiscountCodes
 
         ICustomFields Custom { get; set; }
 
-        List<string> Groups { get; set; }
+        IList<string> Groups { get; set; }
+        IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
+
 
         DateTime? ValidFrom { get; set; }
 
         DateTime? ValidUntil { get; set; }
 
-        long ApplicationVersion { get; set; }
+        long? ApplicationVersion { get; set; }
+
     }
 }

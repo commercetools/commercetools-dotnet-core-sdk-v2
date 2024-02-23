@@ -1,20 +1,21 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Carts
+namespace commercetools.Sdk.Api.Models.Carts
 {
+
     public partial class TaxedPriceDraft : ITaxedPriceDraft
     {
         public IMoney TotalNet { get; set; }
 
         public IMoney TotalGross { get; set; }
 
-        public List<ITaxPortionDraft> TaxPortions { get; set; }
+        public IList<ITaxPortionDraft> TaxPortions { get; set; }
+        public IEnumerable<ITaxPortionDraft> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
+
+
+        public ITypedMoneyDraft TotalTax { get; set; }
     }
 }

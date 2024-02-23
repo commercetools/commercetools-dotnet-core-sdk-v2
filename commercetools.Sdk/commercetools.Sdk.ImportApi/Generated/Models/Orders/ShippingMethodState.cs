@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public enum ShippingMethodState
     {
@@ -21,10 +25,20 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IShippingMethodState), "FindEnum")]
-    public interface IShippingMethodState : IJsonName
+    public interface IShippingMethodState : IJsonName, IEnumerable<char>
     {
         public static IShippingMethodState DoesNotMatchCart = new ShippingMethodStateWrapper
         { Value = ShippingMethodState.DoesNotMatchCart, JsonName = "DoesNotMatchCart" };

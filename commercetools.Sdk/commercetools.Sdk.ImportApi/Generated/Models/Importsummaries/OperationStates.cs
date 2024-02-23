@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
-
-
-namespace commercetools.ImportApi.Models.Importsummaries
+namespace commercetools.Sdk.ImportApi.Models.Importsummaries
 {
+
     public partial class OperationStates : IOperationStates
     {
         public long Processing { get; set; }
@@ -20,5 +14,7 @@ namespace commercetools.ImportApi.Models.Importsummaries
         public long Imported { get; set; }
 
         public long Rejected { get; set; }
+
+        public long Canceled { get; set; }
     }
 }

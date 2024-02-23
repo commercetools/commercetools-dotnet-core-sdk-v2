@@ -1,17 +1,13 @@
-using commercetools.Api.Models.CustomerGroups;
-using commercetools.Api.Models.Customers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Customers
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Customers
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Customers.CustomerSetCustomerGroupAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerSetCustomerGroupAction))]
     public partial interface ICustomerSetCustomerGroupAction : ICustomerUpdateAction
     {
         ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
+
     }
 }

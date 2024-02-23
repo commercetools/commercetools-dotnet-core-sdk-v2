@@ -1,14 +1,9 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Errors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.ImportApi.Models.Common;
 
 
-namespace commercetools.ImportApi.Models.Errors
+namespace commercetools.Sdk.ImportApi.Models.Errors
 {
+
     public partial class InvalidStateTransitionError : IInvalidStateTransitionError
     {
         public string Code { get; set; }

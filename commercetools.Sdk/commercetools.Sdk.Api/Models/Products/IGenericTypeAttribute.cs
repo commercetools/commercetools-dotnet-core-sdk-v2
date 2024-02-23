@@ -1,6 +1,6 @@
 using System;
 
-namespace commercetools.Api.Models.Products
+namespace commercetools.Sdk.Api.Models.Products
 {
     public interface IGenericTypeAttribute
     {

@@ -1,14 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.TaxCategories
+namespace commercetools.Sdk.Api.Models.TaxCategories
 {
+
     public partial class TaxCategory : ITaxCategory
     {
         public string Id { get; set; }
@@ -27,7 +25,9 @@ namespace commercetools.Api.Models.TaxCategories
 
         public string Description { get; set; }
 
-        public List<ITaxRate> Rates { get; set; }
+        public IList<ITaxRate> Rates { get; set; }
+        public IEnumerable<ITaxRate> RatesEnumerable { set => Rates = value.ToList(); }
+
 
         public string Key { get; set; }
     }

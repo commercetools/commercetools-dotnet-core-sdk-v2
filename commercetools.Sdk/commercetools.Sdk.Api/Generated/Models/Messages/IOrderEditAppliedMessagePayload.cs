@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Messages;
-using commercetools.Api.Models.OrderEdits;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.OrderEdits;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.OrderEditAppliedMessagePayload))]
-    public partial interface IOrderEditAppliedMessagePayload : IMessagePayload
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessagePayload))]
+    public partial interface IOrderEditAppliedMessagePayload : IOrderMessagePayload
     {
-        IOrderEditReference Edit { get; set; }
+        IOrderEdit Edit { get; set; }
 
         IOrderEditApplied Result { get; set; }
+
     }
 }

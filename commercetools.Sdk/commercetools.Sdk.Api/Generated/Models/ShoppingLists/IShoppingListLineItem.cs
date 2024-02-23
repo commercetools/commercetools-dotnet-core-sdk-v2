@@ -1,17 +1,14 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ShoppingLists
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ShoppingLists.ShoppingListLineItem))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListLineItem))]
     public partial interface IShoppingListLineItem
     {
         DateTime AddedAt { get; set; }
@@ -22,18 +19,21 @@ namespace commercetools.Api.Models.ShoppingLists
 
         string Id { get; set; }
 
+        string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
         string ProductId { get; set; }
 
-        ILocalizedString ProductSlug { get; set; }
-
         IProductTypeReference ProductType { get; set; }
 
-        int Quantity { get; set; }
+        long Quantity { get; set; }
+
+        long? VariantId { get; set; }
 
         IProductVariant Variant { get; set; }
 
-        long? VariantId { get; set; }
+        ILocalizedString ProductSlug { get; set; }
+
     }
 }

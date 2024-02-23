@@ -1,27 +1,29 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Customfields;
-using System;
+using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Common
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Common
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Common.Asset))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.Asset))]
     public partial interface IAsset
     {
         string Key { get; set; }
 
-        List<IAssetSource> Sources { get; set; }
+        IList<IAssetSource> Sources { get; set; }
+        IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
+
 
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }
 
-        List<string> Tags { get; set; }
+        IList<string> Tags { get; set; }
+        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
+
 
         ICustom Custom { get; set; }
+
     }
 }

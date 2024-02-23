@@ -1,13 +1,9 @@
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Channels;
 
 
-namespace commercetools.Api.Models.Messages
+namespace commercetools.Sdk.Api.Models.Messages
 {
+
     public partial class InventoryEntryQuantitySetMessagePayload : IInventoryEntryQuantitySetMessagePayload
     {
         public string Type { get; set; }
@@ -19,6 +15,8 @@ namespace commercetools.Api.Models.Messages
         public long OldAvailableQuantity { get; set; }
 
         public long NewAvailableQuantity { get; set; }
+
+        public IChannelReference SupplyChannel { get; set; }
         public InventoryEntryQuantitySetMessagePayload()
         {
             this.Type = "InventoryEntryQuantitySet";

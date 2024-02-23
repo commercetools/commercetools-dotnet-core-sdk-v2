@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductDiscounts;
+using commercetools.Sdk.Api.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.ProductDiscounts
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
+
     public partial class ProductDiscountDraft : IProductDiscountDraft
     {
         public ILocalizedString Name { get; set; }

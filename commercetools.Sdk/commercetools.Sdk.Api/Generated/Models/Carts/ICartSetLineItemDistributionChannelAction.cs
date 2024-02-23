@@ -1,19 +1,17 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Channels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
     public partial interface ICartSetLineItemDistributionChannelAction : ICartUpdateAction
     {
         string LineItemId { get; set; }
 
+        string LineItemKey { get; set; }
+
         IChannelResourceIdentifier DistributionChannel { get; set; }
+
     }
 }

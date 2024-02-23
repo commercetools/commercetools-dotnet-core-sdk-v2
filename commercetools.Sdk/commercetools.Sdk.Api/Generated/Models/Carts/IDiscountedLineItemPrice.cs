@@ -1,19 +1,19 @@
-using commercetools.Api.Models.Carts;
-using commercetools.Api.Models.Common;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Carts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Carts.DiscountedLineItemPrice))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.DiscountedLineItemPrice))]
     public partial interface IDiscountedLineItemPrice
     {
         ITypedMoney Value { get; set; }
 
-        List<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
+        IEnumerable<IDiscountedLineItemPortion> IncludedDiscountsEnumerable { set => IncludedDiscounts = value.ToList(); }
+
+
     }
 }

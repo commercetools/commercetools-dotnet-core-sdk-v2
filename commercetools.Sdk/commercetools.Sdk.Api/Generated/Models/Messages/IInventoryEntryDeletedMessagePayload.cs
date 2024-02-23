@@ -1,19 +1,15 @@
-using commercetools.Api.Models.Channels;
-using commercetools.Api.Models.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Messages
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Messages
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
     public partial interface IInventoryEntryDeletedMessagePayload : IMessagePayload
     {
         string Sku { get; set; }
 
         IChannelReference SupplyChannel { get; set; }
+
     }
 }

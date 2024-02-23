@@ -1,21 +1,32 @@
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
 
 namespace commercetools.Sdk.Api.Extensions
 {
     public static class AttributeExtensions
     {
-        public static IAttribute Get(this List<IAttribute> attributes, string name)
+        public static IAttribute Get(this IList<IAttribute> attributes, string name)
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
 
-        public static T Get<T>(this List<IAttribute> attributes, string name) where T : IAttribute
+        public static T Get<T>(this IList<IAttribute> attributes, string name) where T : IAttribute
         {
-            return (T)attributes.FirstOrDefault(a => a.Name.Equals(name));
+            var t = attributes.FirstOrDefault(a => a.Name.Equals(name));
+            if (t is LongAttribute l && typeof(T).IsAssignableFrom(typeof(DecimalAttribute)))
+            {
+                var toD = (DecimalAttribute)l;
+                return (T)(IAttribute)toD;
+            }
+            if (t is DecimalAttribute d && typeof(T).IsAssignableFrom(typeof(LongAttribute)))
+            {
+                var toL = (LongAttribute)d;
+                return (T)(IAttribute)toL;
+            }
+            return (T)t;
         }
 
         public static bool IsTextAttribute(this IAttribute attribute)
@@ -142,7 +153,7 @@ namespace commercetools.Sdk.Api.Extensions
         public static bool IsSetAttribute<T>(this IAttribute attribute)
         {
             return
-                attribute is IGenericAttribute<List<T>>;
+                attribute is IGenericAttribute<IList<T>>;
         }
     }
 }

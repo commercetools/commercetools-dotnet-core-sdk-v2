@@ -1,16 +1,13 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Orders;
-using commercetools.ImportApi.Models.Prices;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Orders
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Orders.ShippingInfoImportDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Orders.ShippingInfoImportDraft))]
     public partial interface IShippingInfoImportDraft
     {
         string ShippingMethodName { get; set; }
@@ -25,10 +22,13 @@ namespace commercetools.ImportApi.Models.Orders
 
         IShippingMethodKeyReference ShippingMethod { get; set; }
 
-        List<IDelivery> Deliveries { get; set; }
+        IList<IDelivery> Deliveries { get; set; }
+        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
+
 
         IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 
         IShippingMethodState ShippingMethodState { get; set; }
+
     }
 }

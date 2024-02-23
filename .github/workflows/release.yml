@@ -17,11 +17,15 @@ jobs:
       - name: Support longpaths
         run: git config --global core.longpaths true
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup dotnet 3.1
-        uses: actions/setup-dotnet@v1
+        uses: actions/checkout@v3
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '3.1' # SDK Version to use.
+          dotnet-version: |
+            6.0.x
+            7.0.x
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
         working-directory: ./commercetools.Sdk
       - run: dotnet build --no-restore --source ../packages -c Release
@@ -32,8 +36,6 @@ jobs:
         working-directory: ./commercetools.Sdk
       - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.ImportApi.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk
-      - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.MLApi.Tests --no-build -c Release
-        working-directory: ./commercetools.Sdk
       - run: dotnet test --verbosity=normal Tests/commercetools.Sdk.HistoryApi.Tests --no-build -c Release
         working-directory: ./commercetools.Sdk
   artifacts:
@@ -41,17 +43,22 @@ jobs:
     runs-on: ubuntu-latest
     needs: [unittests]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # Authenticates packages to push to GPR
-      - uses: actions/setup-dotnet@v1
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '3.1'
+          dotnet-version: |
+            6.0.x
+            7.0.x
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Retrieve branch name
         id: branch_name
         run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+      - run: dotnet tool restore
+        working-directory: ./commercetools.Sdk
       - run: ./patch_csproj.rb --version $SOURCE_TAG --patch **/*.csproj
         env:
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}   
@@ -65,7 +72,7 @@ jobs:
       - name: List packages
         run: ls -la pack
       - name: Publish Nuget to GitHub registry
-        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "pack/*.nupkg" -k ${GITHUB_TOKEN} -s https://nuget.pkg.github.com/commercetools/index.json --skip-duplicate --no-symbols
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-artifact@v2
@@ -73,4 +80,51 @@ jobs:
           name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
       - name: Push generated package to NuGet
-        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
+  update_ref:
+    runs-on: ubuntu-latest
+
+    needs: [artifacts]
+    if: startsWith( github.ref, 'refs/tags/')
+
+    steps:
+      # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.CT_SDKS_APP_ID }}
+          private-key: ${{ secrets.CT_SDKS_APP_PEM }}
+
+      - name: Get App user
+        id: get_app_user
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: |
+          export GH_APP_USER=`gh api /users/ct-sdks%5Bbot%5D | jq .id`
+          echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          token: ${{ steps.generate_github_token.outputs.token }}
+
+      - name: "Switch SDK to after release branch"
+        run: |
+          git fetch --depth=1 origin after-release || true
+          git checkout -B after-release origin/after-release || true
+          git checkout -B after-release
+          git log -1
+
+      - name: "remove API reference commit SHA"
+        run: rm -rf reference.txt
+        continue-on-error: true
+
+      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        with:
+          branch: after-release
+          commit_message: "TASK: Updating version in README"
+          commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+          commit_user_name: ct-sdks[bot]
+          commit_user_email: ${{ steps.get_app_user.outputs.email }}

@@ -1,14 +1,10 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Errors;
+using commercetools.Sdk.Api.Models.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Errors
+namespace commercetools.Sdk.Api.Models.Errors
 {
+
     public partial class DuplicateFieldWithConflictingResourceError : IDuplicateFieldWithConflictingResourceError
     {
         public string Code { get; set; }

@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.ImportApi.Models.Orders
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Orders
 {
     public enum RoundingMode
     {
@@ -24,10 +28,20 @@ namespace commercetools.ImportApi.Models.Orders
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(IRoundingMode), "FindEnum")]
-    public interface IRoundingMode : IJsonName
+    public interface IRoundingMode : IJsonName, IEnumerable<char>
     {
         public static IRoundingMode HalfEven = new RoundingModeWrapper
         { Value = RoundingMode.HalfEven, JsonName = "HalfEven" };

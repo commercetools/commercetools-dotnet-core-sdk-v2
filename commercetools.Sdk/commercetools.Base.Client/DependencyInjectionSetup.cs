@@ -10,7 +10,6 @@ using commercetools.Base.Client.Tokens;
 using commercetools.Base.Serialization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace commercetools.Base.Client
 {
@@ -25,40 +24,45 @@ namespace commercetools.Base.Client
             IConfiguration configuration, IList<string> clients,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
+            ClientOptions options = null)
         {
+            options ??= new ClientOptions();
             if (clients.Count() == 1)
             {
-                return services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier);
+                return services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);
             }
 
-            return services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier);
+            return services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);
         }
 
         private static IDictionary<string, IHttpClientBuilder> UseMultipleClients(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
+            ClientOptions options)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
-            foreach (string clientName in clients)
+
+            clients.ToList().ForEach(clientName =>
             {
                 IClientConfiguration clientConfiguration =
                     configuration.GetSection(clientName).Get<ClientConfiguration>();
                 Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
 
-                builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory));
+                builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));
                 services.AddSingleton(serviceProvider =>
                 {
                     var client = ClientFactory.Create(clientName, clientConfiguration,
                         serviceProvider.GetService<IHttpClientFactory>(),
                         serializerFactory(serviceProvider),
-                        tokenProviderSupplier(clientName, configuration, serviceProvider));
+                        tokenProviderSupplier(clientName, configuration, serviceProvider),
+                        options.ReadResponseAsStream);
                     client.Name = clientName;
                     return client;
                 });
-            }
+            });
 
             return builders;
         }
@@ -67,7 +71,8 @@ namespace commercetools.Base.Client
             IConfiguration configuration, string clientName,
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
-            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier)
+            Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
+            ClientOptions options)
         {
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
@@ -77,35 +82,46 @@ namespace commercetools.Base.Client
                 var client = ClientFactory.Create(clientName, clientConfiguration,
                     serviceProvider.GetService<IHttpClientFactory>(),
                     serializerFactory(serviceProvider),
-                    tokenProviderSupplier(clientName, configuration, serviceProvider));
+                    tokenProviderSupplier(clientName, configuration, serviceProvider),
+                    options.ReadResponseAsStream);
                 client.Name = clientName;
                 return client;
             });
 
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
-            builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory));
+            builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));
 
             return builders;
         }
 
-        public static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName, Func<HttpResponseMessage, Type> errorResponseTypeMapper, Func<IServiceProvider, ISerializerService> serializerFactory)
+        public static IHttpClientBuilder SetupClient(this IServiceCollection services, string clientName, Func<HttpResponseMessage, Type> errorResponseTypeMapper, Func<IServiceProvider, ISerializerService> serializerFactory, ClientOptions options = null)
         {
+            options ??= new ClientOptions();
+            services.AddSingleton<IUserAgentProvider, UserAgentProvider>();
+            services.AddSingleton<ILoggerHandlerFactory, LoggerHandlerFactory>();
             var httpClientBuilder = services.AddHttpClient(clientName)
-                .ConfigureHttpClient(client =>
+                .ConfigureHttpClient((provider, client) =>
                 {
-                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
-                    client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
-                    client.DefaultRequestHeaders.UserAgent.ParseAdd(new UserAgentProvider().UserAgent);
+                    if (options.DecompressionMethods.HasFlag(DecompressionMethods.GZip))
+                    {
+                        client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
+                    }
+                    if (options.DecompressionMethods.HasFlag(DecompressionMethods.Deflate))
+                    {
+                        client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
+                    }
+                    var userAgentProvider = provider.GetService<IUserAgentProvider>() ?? new UserAgentProvider();
+                    client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);
                 })
                 .ConfigureHttpMessageHandlerBuilder(builder =>
                 {
                     builder.PrimaryHandler = new HttpClientHandler
                     {
-                        AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip
+                        AutomaticDecompression = options.DecompressionMethods
                     };
                 })
                 .AddHttpMessageHandler(c => new ErrorHandler(message => serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())))
-                .AddHttpMessageHandler(c => new LoggerHandler(c.GetService<ILoggerFactory>()));
+                .AddHttpMessageHandler(c => c.GetService<ILoggerHandlerFactory>().Create());
 
             return httpClientBuilder;
         }

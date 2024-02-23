@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.CartDiscounts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
     public enum SelectionMode
     {
@@ -21,10 +25,20 @@ namespace commercetools.Api.Models.CartDiscounts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ISelectionMode), "FindEnum")]
-    public interface ISelectionMode : IJsonName
+    public interface ISelectionMode : IJsonName, IEnumerable<char>
     {
         public static ISelectionMode Cheapest = new SelectionModeWrapper
         { Value = SelectionMode.Cheapest, JsonName = "Cheapest" };

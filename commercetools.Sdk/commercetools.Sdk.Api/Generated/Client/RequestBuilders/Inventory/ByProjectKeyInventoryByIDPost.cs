@@ -1,19 +1,17 @@
-using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 
 
-namespace commercetools.Api.Client.RequestBuilders.Inventory
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
 {
-    public partial class ByProjectKeyInventoryByIDPost : ApiMethod<ByProjectKeyInventoryByIDPost>
+
+    public partial class ByProjectKeyInventoryByIDPost : ApiMethod<ByProjectKeyInventoryByIDPost>, IApiMethod<ByProjectKeyInventoryByIDPost, commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInventoryByIDPost>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInventoryByIDPost>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInventoryByIDPost>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInventoryByIDPost>
     {
 
 
@@ -27,9 +25,9 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
 
         private string ID { get; }
 
-        private commercetools.Api.Models.Inventories.IInventoryEntryUpdate InventoryEntryUpdate;
+        private commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate InventoryEntryUpdate;
 
-        public ByProjectKeyInventoryByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
+        public ByProjectKeyInventoryByIDPost(IClient apiHttpClient, ISerializerService serializerService, string projectKey, string id, commercetools.Sdk.Api.Models.Inventories.IInventoryEntryUpdate inventoryEntryUpdate)
         {
             this.ApiHttpClient = apiHttpClient;
             this.SerializerService = serializerService;
@@ -50,10 +48,32 @@ namespace commercetools.Api.Client.RequestBuilders.Inventory
         }
 
 
-        public async Task<commercetools.Api.Models.Inventories.IInventoryEntry> ExecuteAsync()
+        public async Task<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry> ExecuteAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<string> ExecuteAsJsonAsync(CancellationToken cancellationToken = default)
         {
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<commercetools.Api.Models.Inventories.IInventoryEntry>(requestMessage);
+            return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
+        }
+
+        public async Task<IApiResponse<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>> SendAsync(CancellationToken cancellationToken = default)
+        {
+
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.Api.Models.Inventories.IInventoryEntry>(requestMessage, cancellationToken);
+
+        }
+
+        public async Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default)
+        {
+            var requestMessage = Build();
+            return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
         public override HttpRequestMessage Build()
         {

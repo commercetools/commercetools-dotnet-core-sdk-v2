@@ -1,15 +1,10 @@
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Categories
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Categories
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Categories.CategorySetAssetDescriptionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetDescriptionAction))]
     public partial interface ICategorySetAssetDescriptionAction : ICategoryUpdateAction
     {
         string AssetId { get; set; }
@@ -17,5 +12,6 @@ namespace commercetools.Api.Models.Categories
         string AssetKey { get; set; }
 
         ILocalizedString Description { get; set; }
+
     }
 }

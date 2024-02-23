@@ -1,14 +1,9 @@
-using commercetools.Api.Models.Orders;
-using commercetools.Api.Models.Payments;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
+using commercetools.Sdk.Api.Models.Payments;
 
 
-namespace commercetools.Api.Models.OrderEdits
+namespace commercetools.Sdk.Api.Models.OrderEdits
 {
+
     public partial class StagedOrderRemovePaymentAction : IStagedOrderRemovePaymentAction
     {
         public string Action { get; set; }

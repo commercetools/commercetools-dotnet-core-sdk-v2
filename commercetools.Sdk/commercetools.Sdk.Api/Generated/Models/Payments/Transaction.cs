@@ -1,14 +1,11 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Payments
+namespace commercetools.Sdk.Api.Models.Payments
 {
+
     public partial class Transaction : ITransaction
     {
         public string Id { get; set; }
@@ -17,10 +14,12 @@ namespace commercetools.Api.Models.Payments
 
         public ITransactionType Type { get; set; }
 
-        public ITypedMoney Amount { get; set; }
+        public ICentPrecisionMoney Amount { get; set; }
 
         public string InteractionId { get; set; }
 
         public ITransactionState State { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

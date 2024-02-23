@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Base.Validation;
 using Type = System.Type;
@@ -10,12 +11,15 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {
     public class FieldMapperTypeRetriever : MapperTypeRetriever<IFieldContainer>
     {
-        private readonly ICultureValidator _cultureValidator;
-
-        public FieldMapperTypeRetriever(ICultureValidator cultureValidator)
+        public FieldMapperTypeRetriever()
         {
-            this._cultureValidator = cultureValidator;
         }
+
+        [Obsolete("use constructor without cultureValidator")]
+        public FieldMapperTypeRetriever(ICultureValidator cultureValidator) : this()
+        {
+        }
+
         public override Type GetTypeForToken(JsonElement element)
         {
             Type tokenType;
@@ -41,10 +45,8 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(ITypedMoney);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(IReference);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedString);
                     else
-                        tokenType = typeof(object);
+                        tokenType = typeof(LocalizedString);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();

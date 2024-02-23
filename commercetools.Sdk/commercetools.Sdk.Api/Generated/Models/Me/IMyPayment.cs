@@ -1,17 +1,15 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Customers;
-using commercetools.Api.Models.Payments;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Payments;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Me
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Me
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Me.MyPayment))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Me.MyPayment))]
     public partial interface IMyPayment
     {
         string Id { get; set; }
@@ -22,12 +20,15 @@ namespace commercetools.Api.Models.Me
 
         string AnonymousId { get; set; }
 
-        ITypedMoney AmountPlanned { get; set; }
+        ICentPrecisionMoney AmountPlanned { get; set; }
 
         IPaymentMethodInfo PaymentMethodInfo { get; set; }
 
-        List<ITransaction> Transactions { get; set; }
+        IList<ITransaction> Transactions { get; set; }
+        IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
+
 
         ICustomFields Custom { get; set; }
+
     }
 }

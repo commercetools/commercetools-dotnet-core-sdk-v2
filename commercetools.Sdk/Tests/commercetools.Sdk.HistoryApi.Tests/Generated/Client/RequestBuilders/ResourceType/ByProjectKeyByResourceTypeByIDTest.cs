@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Text.Json;
-using commercetools.HistoryApi.Models;
-using commercetools.HistoryApi.Models.Common;
 using Xunit;
 
-namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
 {
     public class ByProjectKeyByResourceTypeByIDTest : RequestBuilderParentTests
     {
@@ -82,10 +80,10 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithType("type")
+                   .WithClientId("clientId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType/test_ID?type=type",
+                   "/test_projectKey/test_resourceType/test_ID?clientId=clientId",
                },
                new Object[] {
                    ApiRoot
@@ -93,10 +91,43 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithClientId("clientId")
+                   .WithCustomerId("customerId")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType/test_ID?clientId=clientId",
+                   "/test_projectKey/test_resourceType/test_ID?customerId=customerId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
+                   .WithAssociateId("associateId")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?associateId=associateId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
+                   .WithBusinessUnit("businessUnit")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?businessUnit=businessUnit",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
+                   .WithType("type")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?type=type",
                },
                new Object[] {
                    ApiRoot
@@ -126,10 +157,10 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithCustomerId("customerId")
+                   .WithStores("stores")
                    .Build(),
                    "Get",
-                   "/test_projectKey/test_resourceType/test_ID?customerId=customerId",
+                   "/test_projectKey/test_resourceType/test_ID?stores=stores",
                },
                new Object[] {
                    ApiRoot
@@ -137,7 +168,7 @@ namespace commercetools.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
-                   .WithExcludePlatformInitiatedChanges(IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
+                   .WithExcludePlatformInitiatedChanges(commercetools.Sdk.HistoryApi.Models.ChangeHistories.IPlatformInitiatedChange.FindEnum("excludePlatformInitiatedChanges"))
                    .Build(),
                    "Get",
                    "/test_projectKey/test_resourceType/test_ID?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges",

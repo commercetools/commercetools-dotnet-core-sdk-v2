@@ -1,5 +1,7 @@
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
+using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Client;
 using IClient = commercetools.Sdk.Client.IClient;
@@ -19,12 +21,27 @@ namespace commercetools.Sdk.V2Compat
         public ISerializerService SerializerService { get; }
 
         public string Name { get; set; }
-        public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage)
+        public async Task<T> ExecuteAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             return await client.ExecuteAsync(new HttpRequestCommand<T>(requestMessage));
         }
 
-        public Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage)
+        public Task<string> ExecuteAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IApiResponse<string>> SendAsJsonAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public async Task<HttpResponseMessage> SendAsAsync(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             throw new System.NotImplementedException();
         }

@@ -1,22 +1,27 @@
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Products;
-using commercetools.Api.Models.ProductTypes;
-using commercetools.Base.Serialization.MapperTypeRetrievers;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Validation;
-using Attribute = commercetools.Api.Models.Products.Attribute;
+using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 
 namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {
     public class AttributeTypeRetriever
     {
-        private readonly ICultureValidator _cultureValidator;
+        private readonly ISerializationConfiguration _serializationConfiguration;
 
-        public AttributeTypeRetriever(ICultureValidator cultureValidator)
+        public AttributeTypeRetriever(ISerializationConfiguration serializationConfiguration = null)
         {
-            this._cultureValidator = cultureValidator;
+            this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
+        }
+
+        [Obsolete("use constructor without cultureValidator")]
+        public AttributeTypeRetriever(ICultureValidator cultureValidator,
+            ISerializationConfiguration serializationConfiguration = null) : this(serializationConfiguration)
+        {
         }
 
         private Type GetTypeForToken(JsonElement element)
@@ -30,7 +35,14 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(BooleanAttribute);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(LongAttribute) : typeof(DecimalAttribute);
+                    if (_serializationConfiguration.DeserializeNumberAttributeAsDecimalOnly)
+                    {
+                        tokenType = typeof(DecimalAttribute);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(LongAttribute) : typeof(DecimalAttribute);
+                    }
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(StringAttribute);
@@ -48,10 +60,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(MoneyAttribute);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(ReferenceAttribute);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedStringAttribute);
-                    else
+                    else if (element.IsNestedElement())
                         tokenType = typeof(Attribute);
+                    else
+                        tokenType = typeof(LocalizedStringAttribute);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();
@@ -81,7 +93,14 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(bool);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    if (_serializationConfiguration.DeserializeNumberAttributeAsDecimalOnly)
+                    {
+                        tokenType = typeof(decimal);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    }
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(string);
@@ -99,12 +118,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                         tokenType = typeof(ITypedMoney);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(IReference);
-                    else if (element.IsLocalizedStringElement(_cultureValidator))
-                        tokenType = typeof(LocalizedString);
                     else if (element.IsNestedElement())
                         tokenType = typeof(IAttribute);
                     else
-                        tokenType = typeof(object);
+                        tokenType = typeof(LocalizedString);
                     break;
                 case JsonValueKind.Array:
                     var valueKind = element.GetFirstArrayElementValueKind();

@@ -1,23 +1,19 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetGeoLocationChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetGeoLocationChange))]
     public partial interface ISetGeoLocationChange : IChange
     {
         new string Change { get; set; }
 
         new string Type { get; set; }
 
+        IGeoLocation PreviousValue { get; set; }
+
         IGeoLocation NextValue { get; set; }
 
-        IGeoLocation PreviousValue { get; set; }
     }
 }

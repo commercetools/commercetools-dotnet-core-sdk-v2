@@ -1,29 +1,35 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productvariants;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Productvariants
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productvariants.ProductVariantImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.ProductVariantImport))]
     public partial interface IProductVariantImport : IImportResource
     {
+        new string Key { get; set; }
+
         string Sku { get; set; }
 
         bool IsMasterVariant { get; set; }
 
-        List<IAttribute> Attributes { get; set; }
+        IList<IAttribute> Attributes { get; set; }
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
-        List<IImage> Images { get; set; }
 
-        List<IAsset> Assets { get; set; }
+        IList<IImage> Images { get; set; }
+        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
+
+
+        IList<IAsset> Assets { get; set; }
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         bool? Publish { get; set; }
 
         IProductKeyReference Product { get; set; }
+
     }
 }

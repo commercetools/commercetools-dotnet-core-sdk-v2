@@ -1,17 +1,13 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.ProductDiscounts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.Api.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.ProductDiscounts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.ProductDiscounts.ProductDiscountSetDescriptionAction))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountSetDescriptionAction))]
     public partial interface IProductDiscountSetDescriptionAction : IProductDiscountUpdateAction
     {
         ILocalizedString Description { get; set; }
+
     }
 }

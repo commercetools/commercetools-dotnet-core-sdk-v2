@@ -1,27 +1,23 @@
-using commercetools.HistoryApi.Models.Changes;
-using commercetools.HistoryApi.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.SetCustomLineItemTaxCategoryChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetCustomLineItemTaxCategoryChange))]
     public partial interface ISetCustomLineItemTaxCategoryChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
+        IReference PreviousValue { get; set; }
+
+        IReference NextValue { get; set; }
+
         ILocalizedString CustomLineItem { get; set; }
 
         string CustomLineItemId { get; set; }
 
-        IReference NextValue { get; set; }
-
-        IReference PreviousValue { get; set; }
     }
 }

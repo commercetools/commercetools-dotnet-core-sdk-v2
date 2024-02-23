@@ -1,16 +1,16 @@
-using commercetools.ImportApi.Models.OrderPatches;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.OrderPatches
+namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
+
     public partial class ReturnInfo : IReturnInfo
     {
-        public List<IReturnItemDraft> Items { get; set; }
+        public IList<IReturnItemDraft> Items { get; set; }
+        public IEnumerable<IReturnItemDraft> ItemsEnumerable { set => Items = value.ToList(); }
+
 
         public string ReturnTrackingId { get; set; }
 

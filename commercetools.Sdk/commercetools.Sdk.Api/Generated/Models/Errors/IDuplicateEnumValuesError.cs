@@ -1,16 +1,20 @@
-using commercetools.Api.Models.Errors;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Errors
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Errors.DuplicateEnumValuesError))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.DuplicateEnumValuesError))]
     public partial interface IDuplicateEnumValuesError : IErrorObject
     {
-        List<string> Duplicates { get; set; }
+        new string Code { get; set; }
+
+        new string Message { get; set; }
+
+        IList<string> Duplicates { get; set; }
+        IEnumerable<string> DuplicatesEnumerable { set => Duplicates = value.ToList(); }
+
+
     }
 }

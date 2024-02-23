@@ -1,13 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.CustomObjects
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.CustomObjects
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.CustomObjects.CustomObjectDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectDraft))]
     public partial interface ICustomObjectDraft
     {
         string Container { get; set; }
@@ -17,5 +14,6 @@ namespace commercetools.Api.Models.CustomObjects
         Object Value { get; set; }
 
         long? Version { get; set; }
+
     }
 }

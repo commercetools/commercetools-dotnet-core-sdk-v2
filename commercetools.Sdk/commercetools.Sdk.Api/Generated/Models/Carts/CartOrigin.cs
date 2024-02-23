@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-namespace commercetools.Api.Models.Carts
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Carts
 {
     public enum CartOrigin
     {
@@ -10,7 +14,10 @@ namespace commercetools.Api.Models.Carts
         Customer,
 
         [Description("Merchant")]
-        Merchant
+        Merchant,
+
+        [Description("Quote")]
+        Quote
     }
 
     public class CartOriginWrapper : ICartOrigin
@@ -21,16 +28,29 @@ namespace commercetools.Api.Models.Carts
         {
             return JsonName;
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public new IEnumerator<char> GetEnumerator()
+        {
+            return JsonName.GetEnumerator();
+        }
     }
 
     [EnumInterfaceCreator(typeof(ICartOrigin), "FindEnum")]
-    public interface ICartOrigin : IJsonName
+    public interface ICartOrigin : IJsonName, IEnumerable<char>
     {
         public static ICartOrigin Customer = new CartOriginWrapper
         { Value = CartOrigin.Customer, JsonName = "Customer" };
 
         public static ICartOrigin Merchant = new CartOriginWrapper
         { Value = CartOrigin.Merchant, JsonName = "Merchant" };
+
+        public static ICartOrigin Quote = new CartOriginWrapper
+        { Value = CartOrigin.Quote, JsonName = "Quote" };
 
         CartOrigin? Value { get; }
 
@@ -39,7 +59,8 @@ namespace commercetools.Api.Models.Carts
             return new[]
             {
                  Customer ,
-                 Merchant
+                 Merchant ,
+                 Quote
              };
         }
         static ICartOrigin FindEnum(string value)

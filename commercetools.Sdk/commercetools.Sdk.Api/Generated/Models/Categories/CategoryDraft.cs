@@ -1,15 +1,12 @@
-using commercetools.Api.Models.Categories;
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.Types;
-using System;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.Api.Models.Categories
+namespace commercetools.Sdk.Api.Models.Categories
 {
+
     public partial class CategoryDraft : ICategoryDraft
     {
         public ILocalizedString Name { get; set; }
@@ -32,7 +29,9 @@ namespace commercetools.Api.Models.Categories
 
         public ICustomFieldsDraft Custom { get; set; }
 
-        public List<IAssetDraft> Assets { get; set; }
+        public IList<IAssetDraft> Assets { get; set; }
+        public IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
+
 
         public string Key { get; set; }
     }

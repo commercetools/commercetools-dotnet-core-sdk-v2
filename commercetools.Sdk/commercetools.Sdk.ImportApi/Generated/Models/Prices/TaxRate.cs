@@ -1,20 +1,17 @@
-using commercetools.ImportApi.Models.Prices;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
-using commercetools.Base.CustomAttributes;
 
 
-namespace commercetools.ImportApi.Models.Prices
+namespace commercetools.Sdk.ImportApi.Models.Prices
 {
+
     public partial class TaxRate : ITaxRate
     {
         public string Id { get; set; }
 
         public string Name { get; set; }
 
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
 
         public bool IncludedInPrice { get; set; }
 
@@ -22,6 +19,8 @@ namespace commercetools.ImportApi.Models.Prices
 
         public string State { get; set; }
 
-        public List<ISubRate> SubRates { get; set; }
+        public IList<ISubRate> SubRates { get; set; }
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
+
     }
 }

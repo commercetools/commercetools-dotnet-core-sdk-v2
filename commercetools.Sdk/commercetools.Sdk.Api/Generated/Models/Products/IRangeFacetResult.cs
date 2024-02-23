@@ -1,16 +1,16 @@
-using commercetools.Api.Models.Products;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.Products
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.Products
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.Products.RangeFacetResult))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Products.RangeFacetResult))]
     public partial interface IRangeFacetResult : IFacetResult
     {
-        List<IFacetResultRange> Ranges { get; set; }
+        IList<IFacetRange> Ranges { get; set; }
+        IEnumerable<IFacetRange> RangesEnumerable { set => Ranges = value.ToList(); }
+
+
     }
 }

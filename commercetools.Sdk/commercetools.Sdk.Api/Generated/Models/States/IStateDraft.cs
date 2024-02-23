@@ -1,15 +1,12 @@
-using commercetools.Api.Models.Common;
-using commercetools.Api.Models.States;
-using System;
+using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.Api.Models.States
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Models.States
 {
-    [DeserializeAs(typeof(commercetools.Api.Models.States.StateDraft))]
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.States.StateDraft))]
     public partial interface IStateDraft
     {
         string Key { get; set; }
@@ -22,8 +19,13 @@ namespace commercetools.Api.Models.States
 
         bool? Initial { get; set; }
 
-        List<IStateRoleEnum> Roles { get; set; }
+        IList<IStateRoleEnum> Roles { get; set; }
+        IEnumerable<IStateRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
-        List<IStateResourceIdentifier> Transitions { get; set; }
+
+        IList<IStateResourceIdentifier> Transitions { get; set; }
+        IEnumerable<IStateResourceIdentifier> TransitionsEnumerable { set => Transitions = value.ToList(); }
+
+
     }
 }

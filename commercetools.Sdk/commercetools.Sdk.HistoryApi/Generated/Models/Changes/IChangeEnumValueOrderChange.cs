@@ -1,25 +1,27 @@
-using commercetools.HistoryApi.Models.ChangeValues;
-using commercetools.HistoryApi.Models.Changes;
-using System;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.HistoryApi.Models.Changes
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
-    [DeserializeAs(typeof(commercetools.HistoryApi.Models.Changes.ChangeEnumValueOrderChange))]
+    [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeEnumValueOrderChange))]
     public partial interface IChangeEnumValueOrderChange : IChange
     {
         new string Type { get; set; }
 
         new string Change { get; set; }
 
+        IList<IEnumValue> PreviousValue { get; set; }
+        IEnumerable<IEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+
+
+        IList<IEnumValue> NextValue { get; set; }
+        IEnumerable<IEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+
         string FieldName { get; set; }
 
-        List<IEnumValue> NextValue { get; set; }
-
-        List<IEnumValue> PreviousValue { get; set; }
     }
 }

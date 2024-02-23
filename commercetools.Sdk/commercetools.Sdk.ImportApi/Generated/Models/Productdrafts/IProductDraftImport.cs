@@ -1,18 +1,17 @@
-using commercetools.ImportApi.Models.Common;
-using commercetools.ImportApi.Models.Productdrafts;
-using commercetools.ImportApi.Models.Products;
-using System;
+using commercetools.Sdk.ImportApi.Models.Common;
+using commercetools.Sdk.ImportApi.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
 
-
-namespace commercetools.ImportApi.Models.Productdrafts
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
-    [DeserializeAs(typeof(commercetools.ImportApi.Models.Productdrafts.ProductDraftImport))]
+    [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productdrafts.ProductDraftImport))]
     public partial interface IProductDraftImport : IImportResource
     {
+        new string Key { get; set; }
+
         IProductTypeKeyReference ProductType { get; set; }
 
         ILocalizedString Name { get; set; }
@@ -21,7 +20,9 @@ namespace commercetools.ImportApi.Models.Productdrafts
 
         ILocalizedString Description { get; set; }
 
-        List<ICategoryKeyReference> Categories { get; set; }
+        IList<ICategoryKeyReference> Categories { get; set; }
+        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
 
         ILocalizedString MetaTitle { get; set; }
 
@@ -31,7 +32,9 @@ namespace commercetools.ImportApi.Models.Productdrafts
 
         IProductVariantDraftImport MasterVariant { get; set; }
 
-        List<IProductVariantDraftImport> Variants { get; set; }
+        IList<IProductVariantDraftImport> Variants { get; set; }
+        IEnumerable<IProductVariantDraftImport> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
         ITaxCategoryKeyReference TaxCategory { get; set; }
 
@@ -40,5 +43,8 @@ namespace commercetools.ImportApi.Models.Productdrafts
         IStateKeyReference State { get; set; }
 
         bool? Publish { get; set; }
+
+        IProductPriceModeEnum PriceMode { get; set; }
+
     }
 }
