@@ -42,6 +42,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             p => new CombinationQueryPredicate<ProductVariantAvailabilityQueryBuilderDsl>(p, ProductVariantAvailabilityQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl, string> Id()
+        {
+            return new ComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("id")),
+            p => new CombinationQueryPredicate<ProductVariantAvailabilityQueryBuilderDsl>(p, ProductVariantAvailabilityQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl, long> Version()
+        {
+            return new ComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("version")),
+            p => new CombinationQueryPredicate<ProductVariantAvailabilityQueryBuilderDsl>(p, ProductVariantAvailabilityQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
