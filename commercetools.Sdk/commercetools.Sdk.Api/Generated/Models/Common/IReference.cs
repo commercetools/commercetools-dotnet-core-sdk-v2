@@ -27,6 +27,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("product", typeof(commercetools.Sdk.Api.Models.Products.ProductReference))]
     [SubTypeDiscriminator("product-discount", typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountReference))]
     [SubTypeDiscriminator("product-selection", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference))]
+    [SubTypeDiscriminator("product-tailoring", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringReference))]
     [SubTypeDiscriminator("product-type", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference))]
     [SubTypeDiscriminator("quote", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteReference))]
     [SubTypeDiscriminator("quote-request", typeof(commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference))]
@@ -169,6 +170,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference ProductSelection(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringReference ProductTailoring(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringReference();
             init?.Invoke(t);
             return t;
         }

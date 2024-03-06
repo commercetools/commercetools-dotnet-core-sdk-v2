@@ -130,6 +130,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSelections.ProductSelectionResourceIdentifierQueryBuilderDsl.Of()),
                 ResourceIdentifierQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsProductTailoring(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringResourceIdentifierQueryBuilderDsl.Of()),
+                ResourceIdentifierQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsProductType(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeResourceIdentifierQueryBuilderDsl>> fn)
         {
