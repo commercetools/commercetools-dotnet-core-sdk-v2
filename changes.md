@@ -48,6 +48,7 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `taxPortions` to type `TaxedItemPrice`
 - added property `totalTax` to type `TaxedPriceDraft`
 - added property `id` to type `ProductVariantAvailability`
 - added property `version` to type `ProductVariantAvailability`
