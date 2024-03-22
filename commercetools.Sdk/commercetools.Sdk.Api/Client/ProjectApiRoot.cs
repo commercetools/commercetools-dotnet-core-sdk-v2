@@ -42,6 +42,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate;
 using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -287,6 +288,11 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyAssociateRolesRequestBuilder AssociateRoles()
         {
             return With().AssociateRoles();
+        }
+
+        public ByProjectKeyProductTailoringRequestBuilder ProductTailoring()
+        {
+            return With().ProductTailoring();
         }
     }
 }
