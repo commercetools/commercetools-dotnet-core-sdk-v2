@@ -85,6 +85,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("product-selection")]
         ProductSelection,
 
+        [Description("product-tailoring")]
+        ProductTailoring,
+
         [Description("product-type")]
         ProductType,
 
@@ -226,6 +229,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId ProductSelection = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductSelection, JsonName = "product-selection" };
 
+        public static IReferenceTypeId ProductTailoring = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.ProductTailoring, JsonName = "product-tailoring" };
+
         public static IReferenceTypeId ProductType = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.ProductType, JsonName = "product-type" };
 
@@ -299,6 +305,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  ProductDiscount ,
                  ProductPrice ,
                  ProductSelection ,
+                 ProductTailoring ,
                  ProductType ,
                  Quote ,
                  QuoteRequest ,

@@ -22,6 +22,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("product", typeof(commercetools.Sdk.Api.Models.Products.ProductResourceIdentifier))]
     [SubTypeDiscriminator("product-discount", typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountResourceIdentifier))]
     [SubTypeDiscriminator("product-selection", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionResourceIdentifier))]
+    [SubTypeDiscriminator("product-tailoring", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringResourceIdentifier))]
     [SubTypeDiscriminator("product-type", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeResourceIdentifier))]
     [SubTypeDiscriminator("quote", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteResourceIdentifier))]
     [SubTypeDiscriminator("quote-request", typeof(commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier))]
@@ -136,6 +137,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionResourceIdentifier ProductSelection(Action<commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionResourceIdentifier> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringResourceIdentifier ProductTailoring(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringResourceIdentifier();
             init?.Invoke(t);
             return t;
         }

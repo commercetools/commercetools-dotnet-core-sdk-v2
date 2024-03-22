@@ -21,6 +21,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Products;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
@@ -181,6 +182,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
         {
             return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyProductTailoringRequestBuilder ProductTailoring()
+        {
+            return new ByProjectKeyProductTailoringRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyProductTypesRequestBuilder ProductTypes()
