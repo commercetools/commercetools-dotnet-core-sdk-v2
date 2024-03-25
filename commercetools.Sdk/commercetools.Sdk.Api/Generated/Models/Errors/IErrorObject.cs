@@ -49,6 +49,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.Api.Models.Errors.InvalidOperationError))]
     [SubTypeDiscriminator("InvalidSubject", typeof(commercetools.Sdk.Api.Models.Errors.InvalidSubjectError))]
     [SubTypeDiscriminator("LanguageUsedInStores", typeof(commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError))]
+    [SubTypeDiscriminator("LockedField", typeof(commercetools.Sdk.Api.Models.Errors.LockedFieldError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
@@ -342,6 +343,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError LanguageUsedInStores(Action<commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.LockedFieldError LockedField(Action<commercetools.Sdk.Api.Models.Errors.LockedFieldError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.LockedFieldError();
             init?.Invoke(t);
             return t;
         }
