@@ -1,40 +1,9 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added type `ProductTailoringCreatedMessage`
-- added type `ProductTailoringDeletedMessage`
-- added type `ProductTailoringDescriptionSetMessage`
-- added type `ProductTailoringNameSetMessage`
-- added type `ProductTailoringPublishedMessage`
-- added type `ProductTailoringSlugSetMessage`
-- added type `ProductTailoringUnpublishedMessage`
-- added type `ProductTailoringCreatedMessagePayload`
-- added type `ProductTailoringDeletedMessagePayload`
-- added type `ProductTailoringDescriptionSetMessagePayload`
-- added type `ProductTailoringNameSetMessagePayload`
-- added type `ProductTailoringPublishedMessagePayload`
-- added type `ProductTailoringSlugSetMessagePayload`
-- added type `ProductTailoringUnpublishedMessagePayload`
-- added type `ProductTailoring`
-- added type `ProductTailoringData`
-- added type `ProductTailoringDraft`
-- added type `ProductTailoringInStoreDraft`
-- added type `ProductTailoringPagedQueryResponse`
-- added type `ProductTailoringReference`
-- added type `ProductTailoringResourceIdentifier`
-- added type `ProductTailoringUpdate`
-- added type `ProductTailoringUpdateAction`
-- added type `ProductTailoringPublishAction`
-- added type `ProductTailoringSetDescriptionAction`
-- added type `ProductTailoringSetMetaAttributesAction`
-- added type `ProductTailoringSetMetaDescriptionAction`
-- added type `ProductTailoringSetMetaKeywordsAction`
-- added type `ProductTailoringSetMetaTitleAction`
-- added type `ProductTailoringSetNameAction`
-- added type `ProductTailoringSetSlugAction`
-- added type `ProductTailoringUnpublishAction`
+- added enum `product-tailoring` to type `ReferenceTypeId`
 </details>
 
 
@@ -78,13 +47,6 @@
 
 
 <details>
-<summary>Added Enum(s)</summary>
-
-- added enum `product-tailoring` to type `ReferenceTypeId`
-</details>
-
-
-<details>
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/product-tailoring`
@@ -96,5 +58,45 @@
 - added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}`
 - added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring`
 - added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `LockedFieldError`
+- added type `GraphQLLockedFieldError`
+- added type `ProductTailoringCreatedMessage`
+- added type `ProductTailoringDeletedMessage`
+- added type `ProductTailoringDescriptionSetMessage`
+- added type `ProductTailoringNameSetMessage`
+- added type `ProductTailoringPublishedMessage`
+- added type `ProductTailoringSlugSetMessage`
+- added type `ProductTailoringUnpublishedMessage`
+- added type `ProductTailoringCreatedMessagePayload`
+- added type `ProductTailoringDeletedMessagePayload`
+- added type `ProductTailoringDescriptionSetMessagePayload`
+- added type `ProductTailoringNameSetMessagePayload`
+- added type `ProductTailoringPublishedMessagePayload`
+- added type `ProductTailoringSlugSetMessagePayload`
+- added type `ProductTailoringUnpublishedMessagePayload`
+- added type `ProductTailoring`
+- added type `ProductTailoringData`
+- added type `ProductTailoringDraft`
+- added type `ProductTailoringInStoreDraft`
+- added type `ProductTailoringPagedQueryResponse`
+- added type `ProductTailoringReference`
+- added type `ProductTailoringResourceIdentifier`
+- added type `ProductTailoringUpdate`
+- added type `ProductTailoringUpdateAction`
+- added type `ProductTailoringPublishAction`
+- added type `ProductTailoringSetDescriptionAction`
+- added type `ProductTailoringSetMetaAttributesAction`
+- added type `ProductTailoringSetMetaDescriptionAction`
+- added type `ProductTailoringSetMetaKeywordsAction`
+- added type `ProductTailoringSetMetaTitleAction`
+- added type `ProductTailoringSetNameAction`
+- added type `ProductTailoringSetSlugAction`
+- added type `ProductTailoringUnpublishAction`
 </details>
 

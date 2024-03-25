@@ -49,6 +49,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLInvalidOperationError))]
     [SubTypeDiscriminator("InvalidSubject", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLInvalidSubjectError))]
     [SubTypeDiscriminator("LanguageUsedInStores", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLLanguageUsedInStoresError))]
+    [SubTypeDiscriminator("LockedField", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLLockedFieldError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMatchingPriceNotFoundError))]
     [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
@@ -340,6 +341,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLLanguageUsedInStoresError LanguageUsedInStores(Action<commercetools.Sdk.Api.Models.Errors.GraphQLLanguageUsedInStoresError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLLanguageUsedInStoresError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLLockedFieldError LockedField(Action<commercetools.Sdk.Api.Models.Errors.GraphQLLockedFieldError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLLockedFieldError();
             init?.Invoke(t);
             return t;
         }
