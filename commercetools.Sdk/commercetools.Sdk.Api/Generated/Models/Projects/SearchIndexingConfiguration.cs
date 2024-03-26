@@ -5,6 +5,8 @@ namespace commercetools.Sdk.Api.Models.Projects
     {
         public ISearchIndexingConfigurationValues Products { get; set; }
 
+        public ISearchIndexingConfigurationValues ProductsSearch { get; set; }
+
         public ISearchIndexingConfigurationValues Orders { get; set; }
     }
 }

@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     {
         bool Enabled { get; set; }
 
+        IProductSearchIndexingMode Mode { get; set; }
+
     }
 }
