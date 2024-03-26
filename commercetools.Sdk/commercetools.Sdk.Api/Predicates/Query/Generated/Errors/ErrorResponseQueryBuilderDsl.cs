@@ -47,5 +47,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorResponseQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.AuthErrorResponseQueryBuilderDsl.Of()),
                 ErrorResponseQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> AsProductSearchErrorResponse(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchErrorResponseQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchErrorResponseQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorResponseQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchErrorResponseQueryBuilderDsl.Of()),
+                ErrorResponseQueryBuilderDsl.Of);
+        }
     }
 }

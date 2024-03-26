@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Projects
         public string Action { get; set; }
 
         public bool Enabled { get; set; }
+
+        public IProductSearchIndexingMode Mode { get; set; }
         public ProjectChangeProductSearchIndexingEnabledAction()
         {
             this.Action = "changeProductSearchIndexingEnabled";
