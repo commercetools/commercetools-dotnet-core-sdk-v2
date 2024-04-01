@@ -1,4 +1,20 @@
 
+# 11.5.0 (2024-04-01)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/278
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/279
+* Create changelog.js by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/281
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/282
+* Remove ML from readme by @industrian in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/284
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/283
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/285
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/286
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/287
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.4.0...11.5.0
+
 # 11.4.0 (2024-02-21)
 
 ## What's Changed
