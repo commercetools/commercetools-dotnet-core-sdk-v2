@@ -24,7 +24,7 @@
   <td id="projectalign">
    <div id="projectname">commercetools.Sdk
    </div>
-   <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
+   <div id="projectbrief">The commercetools platform, import-api and C# sdks generated from our api reference.</div>
   </td>
  </tr>
  </tbody>
@@ -88,8 +88,6 @@ Packages</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Import API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.ImportApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Machine Learning API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.MLApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Change History API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md12"></a>
@@ -107,8 +105,6 @@ Download from &lt;a href="https://www.nuget.org/profiles/commercetools" &gt;Nuge
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.ImportApi">Import API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.MLApi">Machine Learning API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d1/d31/namespacecommercetools_1_1_sdk_1_1_m_l_api.html">commercetools.Sdk.MLApi</a></code>    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi">Change History API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md15"></a>
@@ -120,7 +116,6 @@ Technical Overview</h1>
 <li><code><a class="el" href="d8/d12/namespacecommercetools_1_1_base_1_1_serialization.html">commercetools.Base.Serialization</a></code>: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.</li>
 <li><code><a class="el" href="d0/d46/namespacecommercetools_1_1_sdk_1_1_api.html">commercetools.Sdk.Api</a></code>: Contains all generated models and request builders to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
 <li><code><a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/import-api/">Import API</a>.</li>
-<li><code><a class="el" href="d1/d31/namespacecommercetools_1_1_sdk_1_1_m_l_api.html">commercetools.Sdk.MLApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/ml">Machine Learning API</a>.</li>
 <li><code><a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/history/change-history">Change History API</a>.</li>
 <li><code>commercetools.Sdk.GraphQL.Api</code>: Contains a type safe GraphQL client to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
 </ul>
@@ -155,8 +150,6 @@ Dependency Injection Setup</h3>
 </div><!-- fragment --></li>
 <li><code>Import API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsImportApi(this.configuration, <span class="stringliteral">&quot;ImportClient&quot;</span>);</div>
 </div><!-- fragment --></li>
-<li><code>Machine Learning API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsMLApi(this.configuration, <span class="stringliteral">&quot;MLClient&quot;</span>);</div>
-</div><!-- fragment --></li>
 <li><code>Change History API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsHistoryApi(this.configuration, <span class="stringliteral">&quot;HistoryClient&quot;</span>);</div>
 </div><!-- fragment --></li>
 </ul>
@@ -182,9 +175,6 @@ Getting instance of ApiRoot</h4>
 <li><code>Import API</code>: <div class="fragment"><div class="line">var root1 = client.WithImportApi();</div>
 <div class="line">var root2 = ImportApiFactory.Create(client);</div>
 </div><!-- fragment --></li>
-<li><code>Machine Learning API</code>: <div class="fragment"><div class="line">var root1 = client.WithMLApi();</div>
-<div class="line">var root2 = MLApiFactory.Create(client);</div>
-</div><!-- fragment --></li>
 <li><code>Change History API</code>: <div class="fragment"><div class="line">var root1 = client.WithHistoryApi();</div>
 <div class="line">var root2 = HistoryApiFactory.Create(client);</div>
 </div><!-- fragment --></li>
@@ -198,9 +188,6 @@ Getting instance of ProjectApiRoot</h4>
 </div><!-- fragment --></li>
 <li><code>Import API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithImportApi(projectKey);</div>
 <div class="line">ProjectApiRoot root2 = ImportApiFactory.Create(client, projectKey);</div>
-</div><!-- fragment --></li>
-<li><code>Machine Learning API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithMLApi(projectKey);</div>
-<div class="line">ProjectApiRoot root2 = MLApiFactory.Create(client, projectKey);</div>
 </div><!-- fragment --></li>
 <li><code>Change History API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithHistoryApi(projectKey);</div>
 <div class="line">ProjectApiRoot root2 = HistoryApiFactory.Create(client, projectKey);</div>
@@ -239,7 +226,7 @@ Using SDK</h2>
 <div class="line">                {</div>
 <div class="line">                    Name = <span class="keyword">new</span> LocalizedString {{<span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>}},</div>
 <div class="line">                    Slug = <span class="keyword">new</span> LocalizedString {{<span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;Slug&quot;</span>}},</div>
-<div class="line">                    Key = <span class="stringliteral">&quot;Key&quot;</span></div>
+<div class="line">                    <a class="code hl_enumvalue" href="d2/d35/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches.html#a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba">Key</a> = <span class="stringliteral">&quot;Key&quot;</span></div>
 <div class="line">                };</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Use in the previous step configured client instance to send and receive a newly created Category</span></div>
@@ -303,6 +290,7 @@ Using SDK</h2>
 <div class="line">            .WithVersion(category.Version)</div>
 <div class="line">            .ExecuteAsync();</div>
 <div class="line">    }</div>
+<div class="ttc" id="anamespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches_html_a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba"><div class="ttname"><a href="d2/d35/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches.html#a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba">commercetools.Sdk.Api.Models.ProductSearches.ProductSearchFacetDistinctBucketSortBy.Key</a></div><div class="ttdeci">@ Key</div></div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md24"></a>
 Creating a client using ClientFactory</h2>
 <p>You can get a client from injected services or you can create client on the fly using ClientFactory, the example below illustrate how to create a client with password TokenFlow to get customer's orders:</p>

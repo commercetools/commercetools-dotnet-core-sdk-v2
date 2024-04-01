@@ -24,7 +24,7 @@
   <td id="projectalign">
    <div id="projectname">commercetools.Sdk
    </div>
-   <div id="projectbrief">The commercetools platform, import-api and ml-api C# sdks generated from our api reference.</div>
+   <div id="projectbrief">The commercetools platform, import-api and C# sdks generated from our api reference.</div>
   </td>
  </tr>
  </tbody>
@@ -94,7 +94,7 @@ Comparison of SDK Installation</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Import API   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="../../d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>   </td><td class="markdownTableBodyNone"></td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Machine Learning API   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="../../d1/d31/namespacecommercetools_1_1_sdk_1_1_m_l_api.html">commercetools.Sdk.MLApi</a></code>   </td><td class="markdownTableBodyNone"></td></tr>
+<td class="markdownTableBodyNone">Machine Learning API   </td><td class="markdownTableBodyNone"><code>dotnet add package commercetools.Sdk.MLApi</code>   </td><td class="markdownTableBodyNone"></td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Change History API   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="../../d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>   </td><td class="markdownTableBodyNone"></td></tr>
 </table>
@@ -122,7 +122,7 @@ Comparison of how to make requests to the Composable Commerce HTTP API</h1>
 <div class="line">            {</div>
 <div class="line">                Name = <span class="keyword">new</span> LocalizedString {{<span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>}},</div>
 <div class="line">                Slug = <span class="keyword">new</span> LocalizedString {{<span class="stringliteral">&quot;en&quot;</span>, <span class="stringliteral">&quot;Slug&quot;</span>}},</div>
-<div class="line">                Key = <span class="stringliteral">&quot;Key&quot;</span></div>
+<div class="line">                <a class="code hl_enumvalue" href="../../d2/d35/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches.html#a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba">Key</a> = <span class="stringliteral">&quot;Key&quot;</span></div>
 <div class="line">            };</div>
 <div class="line"><span class="comment">// Create CategoryUpdate</span></div>
 <div class="line">var action = <span class="keyword">new</span> CategoryChangeNameAction</div>
@@ -134,6 +134,7 @@ Comparison of how to make requests to the Composable Commerce HTTP API</h1>
 <div class="line">                    Version = category.Version,</div>
 <div class="line">                    Actions = <span class="keyword">new</span> List&lt;ICategoryUpdateAction&gt; { action }</div>
 <div class="line">                };</div>
+<div class="ttc" id="anamespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches_html_a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba"><div class="ttname"><a href="../../d2/d35/namespacecommercetools_1_1_sdk_1_1_api_1_1_models_1_1_product_searches.html#a43663a41df0fdc8d245cbb667a5afd66a897356954c2cd3d41b221e3f24f99bba">commercetools.Sdk.Api.Models.ProductSearches.ProductSearchFacetDistinctBucketSortBy.Key</a></div><div class="ttdeci">@ Key</div></div>
 </div><!-- fragment --> <table class="doxtable">
 <tr>
 <th>Request  </th><th>V2  </th><th>V1   </th></tr>

@@ -27,7 +27,6 @@ var menudata={children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Api",url:"d0/d46/namespacecommercetools_1_1_sdk_1_1_api.html"},
 {text:"ImportApi",url:"d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html"},
-{text:"MLApi",url:"d1/d31/namespacecommercetools_1_1_sdk_1_1_m_l_api.html"},
 {text:"HistoryApi",url:"d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html"},
 {text:"Related Pages",url:"pages.html"},
 {text:"Classes",url:"annotated.html",children:[
