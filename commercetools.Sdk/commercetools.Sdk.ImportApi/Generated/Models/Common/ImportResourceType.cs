@@ -47,7 +47,10 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         StandalonePrice,
 
         [Description("type")]
-        Type
+        Type,
+
+        [Description("discount-code")]
+        DiscountCode
     }
 
     public class ImportResourceTypeWrapper : IImportResourceType
@@ -112,6 +115,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Type = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Type, JsonName = "type" };
 
+        public static IImportResourceType DiscountCode = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.DiscountCode, JsonName = "discount-code" };
+
         ImportResourceType? Value { get; }
 
         static IImportResourceType[] Values()
@@ -130,7 +136,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductVariant ,
                  ProductVariantPatch ,
                  StandalonePrice ,
-                 Type
+                 Type ,
+                 DiscountCode
              };
         }
         static IImportResourceType FindEnum(string value)

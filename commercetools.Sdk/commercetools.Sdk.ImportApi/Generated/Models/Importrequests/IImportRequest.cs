@@ -9,6 +9,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ImportRequest))]
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest))]
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest))]
+    [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.DiscountCodeImportRequest))]
     [SubTypeDiscriminator("inventory", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.InventoryImportRequest))]
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.OrderImportRequest))]
     [SubTypeDiscriminator("order-patch", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.OrderPatchImportRequest))]
@@ -33,6 +34,12 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
         static commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest Customer(Action<commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Importrequests.DiscountCodeImportRequest DiscountCode(Action<commercetools.Sdk.ImportApi.Models.Importrequests.DiscountCodeImportRequest> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Importrequests.DiscountCodeImportRequest();
             init?.Invoke(t);
             return t;
         }
