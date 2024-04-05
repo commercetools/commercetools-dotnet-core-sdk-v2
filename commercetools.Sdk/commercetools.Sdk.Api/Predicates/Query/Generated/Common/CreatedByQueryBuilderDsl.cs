@@ -51,6 +51,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
                 CreatedByQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CreatedByQueryBuilderDsl> AttributedTo(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.AttributionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AttributionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CreatedByQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("attributedTo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.AttributionQueryBuilderDsl.Of())),
+                CreatedByQueryBuilderDsl.Of);
+        }
+
 
     }
 }

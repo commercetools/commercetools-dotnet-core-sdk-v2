@@ -15,6 +15,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
         new string AnonymousId { get; set; }
 
+        IAttribution AttributedTo { get; set; }
+
         new ICustomerReference Associate { get; set; }
 
     }
