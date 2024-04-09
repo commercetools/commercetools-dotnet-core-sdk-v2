@@ -26,10 +26,5 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return new ByProjectKeyProductsSearchPost(ApiHttpClient, SerializerService, ProjectKey, productSearchRequest);
         }
 
-        public ByProjectKeyProductsSearchHead Head()
-        {
-            return new ByProjectKeyProductsSearchHead(ApiHttpClient, ProjectKey);
-        }
-
     }
 }

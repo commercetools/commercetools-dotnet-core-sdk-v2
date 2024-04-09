@@ -28,16 +28,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products/search",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .Search()
-                   .Head()
-                   .Build(),
-                   "Head",
-                   "/test_projectKey/products/search",
                }
        };
         }
