@@ -27,5 +27,7 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         IEnumerable<IProductSearchFacetExpression> FacetsEnumerable { set => Facets = value.ToList(); }
 
 
+        ISearchQuery PostFilter { get; set; }
+
     }
 }
