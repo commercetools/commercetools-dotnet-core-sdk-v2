@@ -56,6 +56,22 @@
 
 
 <details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `PriceImport::publish` as deprecated
+- marked property `ProductVariantImport::publish` as deprecated
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `staged` to type `PriceImport`
+- added property `staged` to type `ProductVariantImport`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKeyValue().discountCodes().importContainers().withImportContainerKeyValue().post()`
