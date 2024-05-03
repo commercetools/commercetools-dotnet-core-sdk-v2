@@ -96,7 +96,7 @@ namespace commercetools.Api.CheckoutApp
                             });
 
                         // Use IConfiguration binding for AspNetCore instrumentation options.
-                        services.Configure<AspNetCoreInstrumentationOptions>(
+                        services.Configure<AspNetCoreTraceInstrumentationOptions>(
                             configuration.GetSection("AspNetCoreInstrumentation"));
 
                         switch (tracingExporter)
