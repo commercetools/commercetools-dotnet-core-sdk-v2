@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public string ContactEmail { get; set; }
 
-        public ICustomFields Custom { get; set; }
+        public ICustomFieldsDraft Custom { get; set; }
 
         public IList<IBaseAddress> Addresses { get; set; }
         public IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }

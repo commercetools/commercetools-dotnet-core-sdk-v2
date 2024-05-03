@@ -77,6 +77,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
             return new CollectionPredicateBuilder<ProductSearchRequestQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("facets")),
                     p => new CombinationQueryPredicate<ProductSearchRequestQueryBuilderDsl>(p, ProductSearchRequestQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<ProductSearchRequestQueryBuilderDsl> PostFilter(
+            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductSearchRequestQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("postFilter"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl.Of())),
+                ProductSearchRequestQueryBuilderDsl.Of);
+        }
+
 
     }
 }

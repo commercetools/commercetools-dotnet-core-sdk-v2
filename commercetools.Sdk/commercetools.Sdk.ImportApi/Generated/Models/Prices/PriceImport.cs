@@ -26,7 +26,10 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
 
         public IDiscountedPrice Discounted { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public bool? Publish { get; set; }
+
+        public bool? Staged { get; set; }
 
         public IList<IPriceTier> Tiers { get; set; }
         public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
