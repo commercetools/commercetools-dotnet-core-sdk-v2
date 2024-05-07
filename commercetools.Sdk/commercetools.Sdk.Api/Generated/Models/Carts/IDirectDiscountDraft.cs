@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountDraft))]
     public partial interface IDirectDiscountDraft
     {
-        ICartDiscountValue Value { get; set; }
+        ICartDiscountValueDraft Value { get; set; }
 
         ICartDiscountTarget Target { get; set; }
 
