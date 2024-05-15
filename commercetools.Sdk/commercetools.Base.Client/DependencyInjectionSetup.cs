@@ -45,13 +45,13 @@ namespace commercetools.Base.Client
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
 
-            
+
             clients.ToList().ForEach(clientName =>
             {
                 IClientConfiguration clientConfiguration =
                     configuration.GetSection(clientName).Get<ClientConfiguration>();
                 Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
-                
+
                 builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));
                 services.AddSingleton(serviceProvider =>
                 {
