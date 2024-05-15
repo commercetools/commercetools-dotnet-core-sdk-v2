@@ -4,7 +4,6 @@ using commercetools.Base.Client;
 using commercetools.Base.Client.Middlewares;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.ImportApi;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -27,14 +26,14 @@ public class CorrelationIdProviderTest
         s.UseCommercetoolsApi(configuration, "Client");
         s.AddSingleton<ICorrelationIdProvider>(new TestCorrelationIdProvider());
         var p = s.BuildServiceProvider();
-            
+
         var apiRoot = p.GetService<ProjectApiRoot>();
 
         var result = await apiRoot.Get().SendAsync();
-        
+
         Assert.StartsWith("TestProvider/", result.HttpHeaders.GetValues(ApiHttpHeaders.X_CORRELATION_ID).First());
     }
-    
+
     [Fact]
     public async void TestCorrelationId()
     {
@@ -52,10 +51,10 @@ public class CorrelationIdProviderTest
         var apiRoot = p.GetService<ProjectApiRoot>();
 
         var result = await apiRoot.Get().SendAsync();
-        
+
         Assert.StartsWith(clientConfiguration.ProjectKey, result.HttpHeaders.GetValues(ApiHttpHeaders.X_CORRELATION_ID).First());
     }
-    
+
     [Fact]
     public async void TestCorrelationIdPerRequest()
     {
@@ -69,16 +68,16 @@ public class CorrelationIdProviderTest
         var s = new ServiceCollection();
         s.UseCommercetoolsApi(configuration, "Client");
         var p = s.BuildServiceProvider();
-            
+
         var apiRoot = p.GetService<ProjectApiRoot>();
 
         ApiHttpHeaders headers = new ApiHttpHeaders();
         headers.AddHeader(ApiHttpHeaders.X_CORRELATION_ID, $"TestRequest/{Guid.NewGuid()}");
         var result = await apiRoot.Get().WithHeaders(headers).SendAsync();
-        
+
         Assert.StartsWith("TestRequest/", result.HttpHeaders.GetValues(ApiHttpHeaders.X_CORRELATION_ID).First());
     }
-    
+
     private class TestCorrelationIdProvider : ICorrelationIdProvider
     {
         public string CorrelationId => $"TestProvider/{Guid.NewGuid()}";
