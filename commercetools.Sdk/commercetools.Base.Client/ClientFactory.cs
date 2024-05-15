@@ -16,26 +16,27 @@ namespace commercetools.Base.Client
             IHttpClientFactory factory,
             ISerializerService serializerService,
             ITokenProvider tokenProvider,
-            bool readResponseAsStream = false)
+            bool readResponseAsStream = false,
+            ICorrelationIdProvider correlationIdProvider = null)
         {
             Validator.ValidateObject(configuration, new ValidationContext(configuration), true);
             if (readResponseAsStream && serializerService is IStreamSerializerService streamSerializer)
             {
                 return new StreamCtpClient(
-                    CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, true),
+                    CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, true, correlationIdProvider),
                     streamSerializer,
                     clientName
                 );
             }
             return new CtpClient(
-                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider),
+                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, false, correlationIdProvider),
                 serializerService,
                 clientName
             );
         }
 
         public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration,
-            IHttpClientFactory factory, ITokenProvider tokenProvider, bool readResponseAsStream = false)
+            IHttpClientFactory factory, ITokenProvider tokenProvider, bool readResponseAsStream = false, ICorrelationIdProvider correlationIdProvider = null)
         {
             var httpClient = factory.CreateClient(clientName);
             httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
@@ -44,7 +45,7 @@ namespace commercetools.Base.Client
             {
                 CreateAuthMiddleware(tokenProvider),
                 CreateCorrelationIdMiddleware(
-                    new DefaultCorrelationIdProvider(configuration)
+                    correlationIdProvider ?? new DefaultCorrelationIdProvider(configuration)
                 )
             };
 
