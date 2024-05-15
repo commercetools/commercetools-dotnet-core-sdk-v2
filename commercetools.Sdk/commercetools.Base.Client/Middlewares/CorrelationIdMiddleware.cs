@@ -15,8 +15,10 @@ namespace commercetools.Base.Client.Middlewares
 
         protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            var correlationId = this.correlationIdProvider.CorrelationId;
-            request.Headers.Add("X-Correlation-ID", correlationId);
+            if (!request.Headers.Contains(ApiHttpHeaders.X_CORRELATION_ID))
+            {
+                request.Headers.Add(ApiHttpHeaders.X_CORRELATION_ID, this.correlationIdProvider.CorrelationId);
+            }
             return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }
     }
