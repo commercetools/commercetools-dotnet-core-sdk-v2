@@ -53,7 +53,7 @@ PROJECT_NUMBER         = ""
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "The commercetools platform, import-api and ml-api C# sdks generated from our api reference."
+PROJECT_BRIEF          = "The commercetools platform, import-api and C# sdks generated from our api reference."
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -909,7 +909,6 @@ WARN_LOGFILE           =
 INPUT                  = commercetools.Sdk/commercetools.Sdk.Api \
                          commercetools.Sdk/commercetools.Sdk.ImportApi \
                          commercetools.Sdk/commercetools.Sdk.HistoryApi \
-                         commercetools.Sdk/commercetools.Sdk.MLApi \
                          commercetools.Sdk/commercetools.Base.Abstractions \
                          commercetools.Sdk/commercetools.Base.Client \
                          commercetools.Sdk/commercetools.Base.Registration \
@@ -1253,7 +1252,7 @@ HTML_STYLESHEET        =
 # list). For an example see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET  =
+HTML_EXTRA_STYLESHEET  = doxygen_extra.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note

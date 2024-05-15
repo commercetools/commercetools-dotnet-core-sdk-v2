@@ -5,9 +5,9 @@ namespace commercetools.Sdk.Api.Models
     public interface IPagedQueryResourceRequest<out T, TResult> : IRequestCommand<TResult>
         where T : IPagedQueryResourceRequest<T, TResult>
     {
-        T WithLimit(int limit);
+        T WithLimit(long limit);
 
-        T WithOffset(int offset);
+        T WithOffset(long offset);
 
         T WithSort(string sort);
 

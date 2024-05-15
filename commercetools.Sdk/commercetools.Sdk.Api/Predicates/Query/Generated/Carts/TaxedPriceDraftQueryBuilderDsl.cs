@@ -46,6 +46,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CollectionPredicateBuilder<TaxedPriceDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxPortions")),
                     p => new CombinationQueryPredicate<TaxedPriceDraftQueryBuilderDsl>(p, TaxedPriceDraftQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<TaxedPriceDraftQueryBuilderDsl> TotalTax(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<TaxedPriceDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("totalTax"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyDraftQueryBuilderDsl.Of())),
+                TaxedPriceDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }

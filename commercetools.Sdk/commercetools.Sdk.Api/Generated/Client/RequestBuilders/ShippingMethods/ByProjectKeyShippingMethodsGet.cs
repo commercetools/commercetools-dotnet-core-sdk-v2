@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyShippingMethodsGet WithLimit(int limit)
+        public ByProjectKeyShippingMethodsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyShippingMethodsGet WithOffset(int offset)
+        public ByProjectKeyShippingMethodsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

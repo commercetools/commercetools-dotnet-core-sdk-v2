@@ -1,7 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
+using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.Customers;
+using commercetools.Sdk.Api.Models.Errors;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Customers.CustomersFixtures;
 
@@ -101,6 +105,34 @@ namespace commercetools.Api.IntegrationTests.Customers
 
                     Assert.Equal(updatedCustomer.FirstName, name);
                     return updatedCustomer;
+                }
+            );
+        }
+
+        [Fact]
+        public async Task LoginFails()
+        {
+            await WithCustomer(
+                _client,
+                DefaultCustomerDraft,
+                async customer =>
+                {
+                    var exception = await Assert.ThrowsAsync<BadRequestException>(async () =>
+                    {
+                        await _client
+                            .Login()
+                            .Post(new CustomerSignin()
+                            {
+                                Email = customer.Email,
+                                Password = "abcdef"
+                            })
+                            .ExecuteAsync();
+                    });
+                    var response = exception.AsErrorResponse();
+                    Assert.NotNull(response);
+                    Assert.True(response.HasErrorCode(IErrorObject.InvalidCredentials().Code));
+                    Assert.IsAssignableFrom<IInvalidCredentialsError>(response.Errors.First());
+                    Assert.Equal(IErrorObject.InvalidCredentials().Code, response.Errors.First().Code);
                 }
             );
         }

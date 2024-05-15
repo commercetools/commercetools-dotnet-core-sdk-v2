@@ -10,7 +10,6 @@ This repository contains the .NET SDKs generated from the Composable Commerce AP
 | --------| --------------------------------------------------------------------------------------------------------- |
 | HTTP API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
 | Import API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
-| Machine Learning API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.MLApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.MLApi)|
 | Change History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
 
 ## Example and Training material
@@ -23,7 +22,6 @@ Feel free to explore these examples using this SDK for calling the Composable Co
 | ------------------------------------------------------------------------------- | ----------------------------------------------------------|
 | [HTTP API](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```            |
 | [Import API](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)        | ```dotnet add package commercetools.Sdk.ImportApi```      |
-| [Machine Learning API](https://www.nuget.org/packages/commercetools.Sdk.MLApi)                | ```dotnet add package commercetools.Sdk.MLApi```          |
 | [Change History API](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)      | ```dotnet add package commercetools.Sdk.HistoryApi```     |
 
 ## Technical Overview
@@ -35,7 +33,6 @@ The SDK consists of the following projects:
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
 * `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
 * `commercetools.Sdk.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
-* `commercetools.Sdk.MLApi`: Contains all generated models and request builders to communicate with the [Machine Learning API](https://docs.commercetools.com/api/ml).
 * `commercetools.Sdk.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
 * `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
 
@@ -78,10 +75,6 @@ services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your
 ```csharp
 services.UseCommercetoolsImportApi(this.configuration, "ImportClient");
 ```
-* `Machine Learning API`:
-```csharp
-services.UseCommercetoolsMLApi(this.configuration, "MLClient");
-```
 * `Change History API`:
 ```csharp
 services.UseCommercetoolsHistoryApi(this.configuration, "HistoryClient");
@@ -115,11 +108,6 @@ var root2 = ApiFactory.Create(client);
 var root1 = client.WithImportApi();
 var root2 = ImportApiFactory.Create(client);
 ```
-* `Machine Learning API`:
-```csharp
-var root1 = client.WithMLApi();
-var root2 = MLApiFactory.Create(client);
-```
 * `Change History API`:
 ```csharp
 var root1 = client.WithHistoryApi();
@@ -141,11 +129,6 @@ ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);
 ```csharp
 ProjectApiRoot root1 = client.WithImportApi(projectKey);
 ProjectApiRoot root2 = ImportApiFactory.Create(client, projectKey);
-```
-* `Machine Learning API`:
-```csharp
-ProjectApiRoot root1 = client.WithMLApi(projectKey);
-ProjectApiRoot root2 = MLApiFactory.Create(client, projectKey);
 ```
 * `Change History API`:
 ```csharp

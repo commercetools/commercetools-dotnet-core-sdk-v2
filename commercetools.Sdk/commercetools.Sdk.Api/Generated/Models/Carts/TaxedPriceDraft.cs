@@ -15,5 +15,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IList<ITaxPortionDraft> TaxPortions { get; set; }
         public IEnumerable<ITaxPortionDraft> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
 
+
+        public ITypedMoneyDraft TotalTax { get; set; }
     }
 }

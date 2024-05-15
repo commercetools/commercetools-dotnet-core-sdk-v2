@@ -7,9 +7,9 @@ namespace commercetools.Sdk.Api.Client
         where T : ISimplePagedQueryResourceRequest<T, TResult, TQuery>
         where TQuery : new()
     {
-        T WithLimit(int limit);
+        T WithLimit(long limit);
 
-        T WithOffset(int offset);
+        T WithOffset(long offset);
 
         T WithSort(string sort);
 

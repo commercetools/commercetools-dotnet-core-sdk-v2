@@ -16,11 +16,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
         }
 
         public CombinationQueryPredicate<DirectDiscountDraftQueryBuilderDsl> Value(
-            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<DirectDiscountDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("value"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountValueDraftQueryBuilderDsl.Of())),
                 DirectDiscountDraftQueryBuilderDsl.Of);
         }
 

@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyZonesGet WithLimit(int limit)
+        public ByProjectKeyZonesGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyZonesGet WithOffset(int offset)
+        public ByProjectKeyZonesGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

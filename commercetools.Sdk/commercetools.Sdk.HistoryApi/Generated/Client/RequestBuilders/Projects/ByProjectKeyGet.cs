@@ -134,12 +134,12 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return this.AddQueryParam("date.to", dateTo.ToString());
         }
 
-        public ByProjectKeyGet WithLimit(int limit)
+        public ByProjectKeyGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyGet WithOffset(int offset)
+        public ByProjectKeyGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

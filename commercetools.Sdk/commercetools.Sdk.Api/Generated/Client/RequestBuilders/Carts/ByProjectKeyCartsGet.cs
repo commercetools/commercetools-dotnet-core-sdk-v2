@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyCartsGet WithLimit(int limit)
+        public ByProjectKeyCartsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyCartsGet WithOffset(int offset)
+        public ByProjectKeyCartsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

@@ -128,7 +128,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("fuzzy", fuzzy.ToString());
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(int fuzzyLevel)
+        public ByProjectKeyProductProjectionsSearchGet WithFuzzyLevel(long fuzzyLevel)
         {
             return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString(CultureInfo.InvariantCulture));
         }
@@ -163,12 +163,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithLimit(int limit)
+        public ByProjectKeyProductProjectionsSearchGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithOffset(int offset)
+        public ByProjectKeyProductProjectionsSearchGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

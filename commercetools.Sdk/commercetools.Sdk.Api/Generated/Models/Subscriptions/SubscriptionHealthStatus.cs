@@ -20,7 +20,10 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         ConfigurationErrorDeliveryStopped,
 
         [Description("TemporaryError")]
-        TemporaryError
+        TemporaryError,
+
+        [Description("ManuallySuspended")]
+        ManuallySuspended
     }
 
     public class SubscriptionHealthStatusWrapper : ISubscriptionHealthStatus
@@ -58,6 +61,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static ISubscriptionHealthStatus TemporaryError = new SubscriptionHealthStatusWrapper
         { Value = SubscriptionHealthStatus.TemporaryError, JsonName = "TemporaryError" };
 
+        public static ISubscriptionHealthStatus ManuallySuspended = new SubscriptionHealthStatusWrapper
+        { Value = SubscriptionHealthStatus.ManuallySuspended, JsonName = "ManuallySuspended" };
+
         SubscriptionHealthStatus? Value { get; }
 
         static ISubscriptionHealthStatus[] Values()
@@ -67,7 +73,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  Healthy ,
                  ConfigurationError ,
                  ConfigurationErrorDeliveryStopped ,
-                 TemporaryError
+                 TemporaryError ,
+                 ManuallySuspended
              };
         }
         static ISubscriptionHealthStatus FindEnum(string value)

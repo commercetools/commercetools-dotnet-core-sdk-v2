@@ -56,12 +56,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("where");
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithLimit(int limit)
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithOffset(int offset)
+        public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

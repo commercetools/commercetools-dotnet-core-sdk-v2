@@ -154,6 +154,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSelections.ProductSelectionReferenceQueryBuilderDsl.Of()),
                 ReferenceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsProductTailoring(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringReferenceQueryBuilderDsl.Of()),
+                ReferenceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsProductType(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeReferenceQueryBuilderDsl>> fn)
         {

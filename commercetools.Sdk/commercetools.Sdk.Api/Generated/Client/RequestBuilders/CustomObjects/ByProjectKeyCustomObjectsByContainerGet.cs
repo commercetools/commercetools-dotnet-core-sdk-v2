@@ -76,12 +76,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             return this.AddQueryParam("expand", expand);
         }
 
-        public ByProjectKeyCustomObjectsByContainerGet WithLimit(int limit)
+        public ByProjectKeyCustomObjectsByContainerGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyCustomObjectsByContainerGet WithOffset(int offset)
+        public ByProjectKeyCustomObjectsByContainerGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

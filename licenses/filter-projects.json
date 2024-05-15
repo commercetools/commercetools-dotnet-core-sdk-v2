@@ -7,7 +7,6 @@
   "commercetools.ImportApi.IntegrationTests",
   "commercetools.Sdk.HistoryApi.Tests",
   "commercetools.Sdk.ImportApi.Tests",
-  "commercetools.Sdk.MLApi.Tests",
   "commercetools.Api.CheckoutApp",
   "commercetools.Api.ConsoleApp",
   "commercetools.Sdk.BCTest",

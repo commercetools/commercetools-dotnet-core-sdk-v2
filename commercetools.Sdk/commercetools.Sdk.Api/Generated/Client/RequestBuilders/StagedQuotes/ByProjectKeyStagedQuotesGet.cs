@@ -68,12 +68,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyStagedQuotesGet WithLimit(int limit)
+        public ByProjectKeyStagedQuotesGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyStagedQuotesGet WithOffset(int offset)
+        public ByProjectKeyStagedQuotesGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

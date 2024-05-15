@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             p => new CombinationQueryPredicate<ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl>(p, ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl, string> Mode()
+        {
+            return new ComparisonPredicateBuilder<ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("mode")),
+            p => new CombinationQueryPredicate<ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl>(p, ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

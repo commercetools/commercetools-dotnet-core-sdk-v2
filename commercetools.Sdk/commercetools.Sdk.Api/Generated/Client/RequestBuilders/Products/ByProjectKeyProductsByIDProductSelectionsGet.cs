@@ -71,12 +71,12 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.AddQueryParam("sort", sort);
         }
 
-        public ByProjectKeyProductsByIDProductSelectionsGet WithLimit(int limit)
+        public ByProjectKeyProductsByIDProductSelectionsGet WithLimit(long limit)
         {
             return this.AddQueryParam("limit", limit.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductsByIDProductSelectionsGet WithOffset(int offset)
+        public ByProjectKeyProductsByIDProductSelectionsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
         }

@@ -24,6 +24,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
                 SearchIndexingConfigurationQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> ProductsSearch(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("productsSearch"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl.Of())),
+                SearchIndexingConfigurationQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> Orders(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn)
         {
