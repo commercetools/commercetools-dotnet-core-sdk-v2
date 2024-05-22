@@ -490,6 +490,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingAddressCustomTypeActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetShippingCustomField(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetShippingCustomType(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetShippingMethod(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingMethodActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetShippingMethodActionQueryBuilderDsl>> fn)
         {

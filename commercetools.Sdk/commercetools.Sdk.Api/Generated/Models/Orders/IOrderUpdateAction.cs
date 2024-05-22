@@ -57,6 +57,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setShippingCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomFieldAction))]
+    [SubTypeDiscriminator("setShippingCustomType", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomTypeAction))]
     [SubTypeDiscriminator("setStore", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetStoreAction))]
     [SubTypeDiscriminator("transitionCustomLineItemState", typeof(commercetools.Sdk.Api.Models.Orders.OrderTransitionCustomLineItemStateAction))]
     [SubTypeDiscriminator("transitionLineItemState", typeof(commercetools.Sdk.Api.Models.Orders.OrderTransitionLineItemStateAction))]
@@ -370,6 +372,18 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressCustomTypeAction SetShippingAddressCustomType(Action<commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Orders.OrderSetShippingAddressCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomFieldAction SetShippingCustomField(Action<commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomTypeAction SetShippingCustomType(Action<commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.OrderSetShippingCustomTypeAction();
             init?.Invoke(t);
             return t;
         }

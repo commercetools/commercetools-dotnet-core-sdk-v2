@@ -328,6 +328,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingAddressCustomTypeActionQueryBuilderDsl.Of()),
                 OrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetShippingCustomField(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomFieldActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomFieldActionQueryBuilderDsl.Of()),
+                OrderUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetShippingCustomType(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomTypeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetShippingCustomTypeActionQueryBuilderDsl.Of()),
+                OrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetStore(
             Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetStoreActionQueryBuilderDsl>> fn)
         {
