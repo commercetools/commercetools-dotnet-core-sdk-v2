@@ -84,6 +84,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setShippingAddressAndShippingMethod", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressAndShippingMethodAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setShippingCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomFieldAction))]
+    [SubTypeDiscriminator("setShippingCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomTypeAction))]
     [SubTypeDiscriminator("setShippingMethod", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodAction))]
     [SubTypeDiscriminator("setShippingMethodTaxAmount", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodTaxAmountAction))]
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingMethodTaxRateAction))]
@@ -563,6 +565,18 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomTypeAction SetShippingAddressCustomType(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingAddressCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomFieldAction SetShippingCustomField(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomTypeAction SetShippingCustomType(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetShippingCustomTypeAction();
             init?.Invoke(t);
             return t;
         }
