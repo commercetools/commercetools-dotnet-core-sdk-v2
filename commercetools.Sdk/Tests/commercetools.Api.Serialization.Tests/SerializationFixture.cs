@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,7 +13,10 @@ namespace commercetools.Api.Serialization.Tests
         public SerializationFixture()
         {
             var services = new ServiceCollection();
-            services.UseCommercetoolsApiSerialization();
+            services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { AttributeTypeMap = new Dictionary<string, Type>()
+            {
+                { "grapes-pct", typeof(SetAttribute<decimal>) }
+            }});
             var serviceProvider = services.BuildServiceProvider();
             this.SerializerService = serviceProvider.GetService<IApiSerializerService>();
         }
