@@ -1,4 +1,18 @@
 
+# 11.7.0 (2024-05-30)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/306
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/307
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/308
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/309
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/310
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/311
+* add option to specify attribute type mapping explicit by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/312
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.6.0...11.7.0
+
 # 11.6.0 (2024-05-15)
 
 ## What's Changed
