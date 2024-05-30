@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     public partial interface ICompanyDraft : IBusinessUnitDraft
     {
 
+
     }
 }

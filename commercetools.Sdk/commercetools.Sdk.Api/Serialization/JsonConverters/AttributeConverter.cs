@@ -36,7 +36,7 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             {
                 var nameProp = rootElement.GetProperty("name");
                 var valueProp = rootElement.GetProperty("value");
-                var attributeName = nameProp.GetString(); 
+                var attributeName = nameProp.GetString();
                 attribute = _attributeTypeRetriever.GetAttribute(attributeName, valueProp);
                 attribute.Name = attributeName;
                 var returnType = attribute is IGenericTypeAttribute attributeValueType ?

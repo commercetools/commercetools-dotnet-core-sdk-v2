@@ -144,7 +144,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
             var type = GetTypeForToken(element);
             return (IAttribute)Activator.CreateInstance(type);
         }
-        
+
         public IAttribute GetAttribute(String attributeName, JsonElement element)
         {
             if (_serializationConfiguration.AttributeTypeMap.TryGetValue(attributeName, out var mappedType))

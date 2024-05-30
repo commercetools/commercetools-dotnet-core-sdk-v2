@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Types
     public partial interface ICustomFieldBooleanType : IFieldType
     {
 
+
     }
 }

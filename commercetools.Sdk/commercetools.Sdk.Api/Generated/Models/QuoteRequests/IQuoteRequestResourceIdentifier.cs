@@ -8,5 +8,6 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
     public partial interface IQuoteRequestResourceIdentifier : IResourceIdentifier
     {
 
+
     }
 }

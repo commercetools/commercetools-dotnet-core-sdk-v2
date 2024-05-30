@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Searches
     public partial interface ISearchQuery
     {
 
+
     }
 }

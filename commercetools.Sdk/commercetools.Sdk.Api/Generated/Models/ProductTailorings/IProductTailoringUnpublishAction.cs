@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     public partial interface IProductTailoringUnpublishAction : IProductTailoringUpdateAction
     {
 
+
     }
 }

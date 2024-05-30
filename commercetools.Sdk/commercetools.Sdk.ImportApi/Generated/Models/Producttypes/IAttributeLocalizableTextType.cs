@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
     public partial interface IAttributeLocalizableTextType : IAttributeType
     {
 
+
     }
 }
