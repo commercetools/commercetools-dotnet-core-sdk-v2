@@ -13,10 +13,7 @@ namespace commercetools.Api.Serialization.Tests
         public SerializationFixture()
         {
             var services = new ServiceCollection();
-            services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { AttributeTypeMap = new Dictionary<string, Type>()
-            {
-                { "grapes-pct", typeof(SetAttribute<decimal>) }
-            }});
+            services.UseCommercetoolsApiSerialization();
             var serviceProvider = services.BuildServiceProvider();
             this.SerializerService = serviceProvider.GetService<IApiSerializerService>();
         }
