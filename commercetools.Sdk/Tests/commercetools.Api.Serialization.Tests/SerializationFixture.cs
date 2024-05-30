@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api;
+using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 

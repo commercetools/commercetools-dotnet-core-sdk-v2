@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using commercetools.Sdk.Api;
@@ -19,6 +20,26 @@ namespace commercetools.Api.Serialization.Tests
         public AttributesTests(SerializationFixture serializationFixture)
         {
             this._serializationFixture = serializationFixture;
+        }
+
+        [Fact]
+        public void MixedSetDeserialization()
+        {
+            var services = new ServiceCollection();
+            services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { AttributeTypeMap = new Dictionary<string, Type>()
+            {
+                { "set-mixed", typeof(SetAttribute<decimal>) },
+                { "decimal", typeof(DecimalAttribute) },
+            }});
+            var serviceProvider = services.BuildServiceProvider();
+            var serializerService = serviceProvider.GetService<IApiSerializerService>();
+            var serialized = File.ReadAllText("Resources/Attributes/MixedSetAttribute.json");
+            var deserialized = serializerService.Deserialize<ProductVariant>(serialized);
+            Assert.NotNull(deserialized);
+            var attributes = deserialized.Attributes;
+            Assert.IsType<List<decimal>>(attributes.Get("set-mixed").Value);
+            Assert.IsType<decimal>(attributes.Get("decimal").Value);
+
         }
 
         [Fact]
