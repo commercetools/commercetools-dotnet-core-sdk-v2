@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Products
     {
         IProductVariantChannelAvailabilityMap Channels { get; set; }
 
-        bool IsOnStock { get; set; }
+        bool? IsOnStock { get; set; }
 
         long? RestockableInDays { get; set; }
 

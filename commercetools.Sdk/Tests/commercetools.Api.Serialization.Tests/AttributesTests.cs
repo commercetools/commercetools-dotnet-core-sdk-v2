@@ -26,11 +26,14 @@ namespace commercetools.Api.Serialization.Tests
         public void MixedSetDeserialization()
         {
             var services = new ServiceCollection();
-            services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { AttributeTypeMap = new Dictionary<string, Type>()
+            services.UseCommercetoolsApiSerialization(new SerializationConfiguration()
+            {
+                AttributeTypeMap = new Dictionary<string, Type>()
             {
                 { "set-mixed", typeof(SetAttribute<decimal>) },
                 { "decimal", typeof(DecimalAttribute) },
-            }});
+            }
+            });
             var serviceProvider = services.BuildServiceProvider();
             var serializerService = serviceProvider.GetService<IApiSerializerService>();
             var serialized = File.ReadAllText("Resources/Attributes/MixedSetAttribute.json");

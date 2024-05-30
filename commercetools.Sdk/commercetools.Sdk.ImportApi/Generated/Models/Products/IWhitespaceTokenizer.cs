@@ -7,5 +7,6 @@ namespace commercetools.Sdk.ImportApi.Models.Products
     public partial interface IWhitespaceTokenizer : ISuggestTokenizer
     {
 
+
     }
 }

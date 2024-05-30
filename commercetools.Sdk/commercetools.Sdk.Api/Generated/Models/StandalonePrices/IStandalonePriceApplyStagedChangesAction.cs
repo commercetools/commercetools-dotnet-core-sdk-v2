@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     public partial interface IStandalonePriceApplyStagedChangesAction : IStandalonePriceUpdateAction
     {
 
+
     }
 }

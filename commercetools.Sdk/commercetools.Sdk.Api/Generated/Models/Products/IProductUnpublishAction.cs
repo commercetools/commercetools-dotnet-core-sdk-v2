@@ -7,5 +7,6 @@ namespace commercetools.Sdk.Api.Models.Products
     public partial interface IProductUnpublishAction : IProductUpdateAction
     {
 
+
     }
 }
