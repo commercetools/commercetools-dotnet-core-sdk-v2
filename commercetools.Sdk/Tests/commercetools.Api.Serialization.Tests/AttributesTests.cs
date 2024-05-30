@@ -28,7 +28,8 @@ namespace commercetools.Api.Serialization.Tests
             var services = new ServiceCollection();
             services.UseCommercetoolsApiSerialization(new SerializationConfiguration() { AttributeTypeMap = new Dictionary<string, Type>()
             {
-                { "set-mixed", typeof(SetAttribute<decimal>) }
+                { "set-mixed", typeof(SetAttribute<decimal>) },
+                { "decimal", typeof(DecimalAttribute) },
             }});
             var serviceProvider = services.BuildServiceProvider();
             var serializerService = serviceProvider.GetService<IApiSerializerService>();
@@ -37,6 +38,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(deserialized);
             var attributes = deserialized.Attributes;
             Assert.IsType<List<decimal>>(attributes.Get("set-mixed").Value);
+            Assert.IsType<decimal>(attributes.Get("decimal").Value);
 
         }
 

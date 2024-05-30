@@ -138,6 +138,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
             return tokenType;
         }
 
+        [Obsolete("use GetAttribute(attributeName, element) instead")]
         public IAttribute GetAttribute(JsonElement element)
         {
             var type = GetTypeForToken(element);

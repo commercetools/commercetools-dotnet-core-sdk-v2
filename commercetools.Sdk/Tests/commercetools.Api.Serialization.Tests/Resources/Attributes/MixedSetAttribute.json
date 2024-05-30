@@ -5,6 +5,10 @@
     {
       "name": "set-mixed",
       "value": [10, 10.3]
+    },
+    {
+      "name": "decimal",
+      "value": 10.3
     }
   ]
 }
