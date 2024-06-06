@@ -9,9 +9,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingRate))]
     public partial interface IShippingRate
     {
-        ITypedMoney Price { get; set; }
+        ICentPrecisionMoney Price { get; set; }
 
-        ITypedMoney FreeAbove { get; set; }
+        ICentPrecisionMoney FreeAbove { get; set; }
 
         bool? IsMatching { get; set; }
 

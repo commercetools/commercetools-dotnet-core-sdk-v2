@@ -119,11 +119,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                     p => new CombinationQueryPredicate<OrderLineItemDiscountSetMessageQueryBuilderDsl>(p, OrderLineItemDiscountSetMessageQueryBuilderDsl.Of));
         }
         public CombinationQueryPredicate<OrderLineItemDiscountSetMessageQueryBuilderDsl> TotalPrice(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderLineItemDiscountSetMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("totalPrice"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl.Of())),
                 OrderLineItemDiscountSetMessageQueryBuilderDsl.Of);
         }
 
