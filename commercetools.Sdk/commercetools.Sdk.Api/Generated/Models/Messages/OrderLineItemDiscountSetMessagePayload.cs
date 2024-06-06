@@ -19,7 +19,7 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 
 
-        public IMoney TotalPrice { get; set; }
+        public ICentPrecisionMoney TotalPrice { get; set; }
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 

@@ -7,11 +7,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessage))]
     public partial interface IStandalonePriceValueChangedMessage : IMessage
     {
-        IMoney Value { get; set; }
+        ITypedMoney Value { get; set; }
 
         bool Staged { get; set; }
 
-        IMoney OldValue { get; set; }
+        ITypedMoney OldValue { get; set; }
 
     }
 }

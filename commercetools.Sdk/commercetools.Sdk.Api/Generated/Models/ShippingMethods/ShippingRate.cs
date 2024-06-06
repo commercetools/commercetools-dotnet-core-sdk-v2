@@ -8,9 +8,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
 
     public partial class ShippingRate : IShippingRate
     {
-        public ITypedMoney Price { get; set; }
+        public ICentPrecisionMoney Price { get; set; }
 
-        public ITypedMoney FreeAbove { get; set; }
+        public ICentPrecisionMoney FreeAbove { get; set; }
 
         public bool? IsMatching { get; set; }
 

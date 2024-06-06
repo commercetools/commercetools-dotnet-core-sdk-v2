@@ -22,11 +22,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl> Value(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("value"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl.Of())),
                 StandalonePriceValueChangedMessagePayloadQueryBuilderDsl.Of);
         }
 
@@ -37,11 +37,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl> OldValue(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("oldValue"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.MoneyQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl.Of())),
                 StandalonePriceValueChangedMessagePayloadQueryBuilderDsl.Of);
         }
 
