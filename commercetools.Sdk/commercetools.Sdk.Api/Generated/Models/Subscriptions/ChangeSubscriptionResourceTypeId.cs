@@ -19,6 +19,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("associate-role")]
         AssociateRole,
 
+        [Description("attribute-group")]
+        AttributeGroup,
+
         [Description("business-unit")]
         BusinessUnit,
 
@@ -73,11 +76,11 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("product-discount")]
         ProductDiscount,
 
-        [Description("product-price")]
-        ProductPrice,
-
         [Description("product-selection")]
         ProductSelection,
+
+        [Description("product-tailoring")]
+        ProductTailoring,
 
         [Description("product-type")]
         ProductType,
@@ -154,6 +157,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IChangeSubscriptionResourceTypeId AssociateRole = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.AssociateRole, JsonName = "associate-role" };
 
+        public static IChangeSubscriptionResourceTypeId AttributeGroup = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.AttributeGroup, JsonName = "attribute-group" };
+
         public static IChangeSubscriptionResourceTypeId BusinessUnit = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.BusinessUnit, JsonName = "business-unit" };
 
@@ -208,11 +214,11 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IChangeSubscriptionResourceTypeId ProductDiscount = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.ProductDiscount, JsonName = "product-discount" };
 
-        public static IChangeSubscriptionResourceTypeId ProductPrice = new ChangeSubscriptionResourceTypeIdWrapper
-        { Value = ChangeSubscriptionResourceTypeId.ProductPrice, JsonName = "product-price" };
-
         public static IChangeSubscriptionResourceTypeId ProductSelection = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.ProductSelection, JsonName = "product-selection" };
+
+        public static IChangeSubscriptionResourceTypeId ProductTailoring = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.ProductTailoring, JsonName = "product-tailoring" };
 
         public static IChangeSubscriptionResourceTypeId ProductType = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.ProductType, JsonName = "product-type" };
@@ -265,6 +271,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  ApprovalFlow ,
                  ApprovalRule ,
                  AssociateRole ,
+                 AttributeGroup ,
                  BusinessUnit ,
                  Cart ,
                  CartDiscount ,
@@ -283,8 +290,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  Payment ,
                  Product ,
                  ProductDiscount ,
-                 ProductPrice ,
                  ProductSelection ,
+                 ProductTailoring ,
                  ProductType ,
                  Quote ,
                  QuoteRequest ,
