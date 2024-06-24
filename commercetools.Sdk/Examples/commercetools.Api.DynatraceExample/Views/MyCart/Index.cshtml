@@ -1,0 +1,46 @@
+﻿@model commercetools.Api.DynatraceExample.Models.CustomerProfileViewModel
+@{
+    ViewData["Title"] = $"My Cart";
+    Layout = "_Layout";
+}
+<div class="text-center">
+    <h5>
+        My Cart
+    </h5>
+    @* Listing LineItems *@
+    <div id="div-LineItems">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var lineItem in Model.ActiveCart.LineItems)
+            {
+                <tr>
+                    <td> @lineItem.ProductName</td>
+                    <td> @lineItem.Quantity</td>
+                    <td>
+                        @Html.ActionLink(
+                            "Delete",
+                            "Delete",
+                            "MyCart",
+                            new
+                            {
+                                lineItemId = lineItem.LineItemId
+                            },
+                            new
+                            {
+                                onclick = "return confirm('Are you sure?');",
+                                @class = "btn btn-primary"
+                            }
+                            )
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

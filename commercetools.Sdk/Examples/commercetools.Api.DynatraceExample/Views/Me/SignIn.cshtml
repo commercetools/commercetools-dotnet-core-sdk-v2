@@ -1,0 +1,44 @@
+﻿@model commercetools.Api.DynatraceExample.Models.SignInCustomerViewModel
+@{
+    ViewData["Title"] = $"Sign In";
+    Layout = "_Layout";
+}
+<div class="text-center">
+    @using (Html.BeginForm("SignIn", "Me", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container register">
+            <div class="row">
+                <h3>Login as a Customer</h3>
+            </div>
+            <div class="login-form">
+                <div class="row form-group">
+                    @Html.TextBoxFor(e => e.Email, new {@class = "form-control", placeholder = "Your Email *", required = true})
+                    @Html.ValidationMessageFor(e => e.Email)
+                </div>
+                <div class="row form-group">
+                    @Html.PasswordFor(e => e.Password, new {id = "password", @class = "form-control", placeholder = "Password *", required = true})
+                    <span id="result"></span>
+                    @Html.ValidationMessageFor(e => e.Password)
+                </div>
+                <div class="row">
+                    <input type="submit" class="btnLogin" value="Login"/>
+                </div>
+                @if (Model.FailedLogin)
+                {
+                    <br>
+                    <div class="row alert-danger">
+                        Email or Password is Incorrect
+                    </div>
+                }
+                @if (Model.EmailNotVerified)
+                {
+                    <br>
+                    <div class="row alert-danger">
+                        Please verify your email first
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
