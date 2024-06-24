@@ -1,4 +1,4 @@
-# ME Endpoint Checkout App
+# Dynatrace Example App
 
 This example application demonstrates how the ME endpoints can be used with the DotNET v2 SDK.
 
@@ -12,16 +12,16 @@ This example application demonstrates how the ME endpoints can be used with the 
 ## Installation
 
 1. Clone/Download the Examples folder.
-2. Open **\Examples\commercetools.Api.NewRelicExample\appsettings.json** and replace the placeholder values with your API Client credentials.
+2. Open **\Examples\commercetools.Api.DynatraceExample\appsettings.json** and replace the placeholder values with your API Client credentials.
 
 ![image](https://user-images.githubusercontent.com/77231096/180888862-2e911f43-db94-4ae1-b2bc-479ae7e549e2.png)
 
-## Using the ME Endpoint Checkout App
+## Using the app
 
 ### In Visual Studio
 
-1. Open **\Examples\commercetools.Api.NewRelicExample\commercetools.Api.NewRelicExample.csproj**
-2. Select **commercetools.Api.NewRelicExample**
+1. Open **\Examples\commercetools.Api.DynatraceExample\commercetools.Api.DynatraceExample.csproj**
+2. Select **commercetools.Api.DynatraceExample**
 
 ![checkoutapp](https://user-images.githubusercontent.com/77231096/180888672-8045a167-6fc4-4fdb-8b11-2ea1bac10319.png)
 
@@ -30,22 +30,26 @@ This example application demonstrates how the ME endpoints can be used with the 
 
 ### In Visual Studio Code
 
-1. Open the folder **\Examples\commercetools.Api.NewRelicExample**
+1. Open the folder **\Examples\commercetools.Api.DynatraceExample**
 2. Start the app using **Run** > **Start Debugging** or by pressing **F5**.
 3. A new web browser window opens and displays the Checkout app. A list of Products should appear.
 
-## NewRelic
+## Dynatrace
 
-For testing the NewRelic monitoring install the agent according to the [NewRelic docs](https://docs.newrelic.com/install/dotnet/) and
-run the example application.
+### Install Dynatrace OneAgent
+Follow the instructions on the [Dynatrace OneAgent page](
+https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent#tabgroup--technology-support--operating-systems) to install the OneAgent on your system.
 
-We also provide a [DockerFile](../../NewRelic.Dockerfile) which installs the agent, compiles the application and runs it.
-Execute it by using the following command
+#### Install Dynatrace OneAgent on Mac
+Currently, it is NOT possible to install Dynatrace OneAgent on macOS. For this case a [Dockerfile](./Dockerfile) is provided.
+Use this file to build the application with the OneAgent included on Docker.
+2. Update ENV variables in the [Dockerfile](../../Dynatrace.Dockerfile) with your Dynatrace and CTP credentials.
+3. Run `docker build -t dotnet-dynatrace-oneagent .` to build the Docker image.
+4. Run `docker run -p 8080:80 dotnet-dynatrace-oneagent` to start the Docker container.
+
 
 ```shell
-docker run --rm --port 8080:80 --env NEW_RELIC_LICENSE_KEY=<your-license-key>
+docker run --rm --port 8080:80
 ```
 
-Now locate to http://localhost:8080. You should now be able to see the requests in your NewRelic account
-
-![NewRelic Trace](./newrelic-trace.png)
+Now locate to http://localhost:8080. You should now be able to see the requests in your Dynatrace account
