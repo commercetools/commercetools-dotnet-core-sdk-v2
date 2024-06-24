@@ -37,8 +37,7 @@ This example application demonstrates how the ME endpoints can be used with the 
 ## Dynatrace
 
 ### Install Dynatrace OneAgent
-Follow the instructions on the [Dynatrace OneAgent page](
-https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent#tabgroup--technology-support--operating-systems) to install the OneAgent on your system.
+Follow the instructions on the [Dynatrace OneAgent page](https://docs.dynatrace.com/docs/setup-and-configuration/dynatrace-oneagent#tabgroup--technology-support--operating-systems) to install the OneAgent on your system.
 
 #### Install Dynatrace OneAgent on Mac
 Currently, it is NOT possible to install Dynatrace OneAgent on macOS. For this case a [Dockerfile](./Dockerfile) is provided.
