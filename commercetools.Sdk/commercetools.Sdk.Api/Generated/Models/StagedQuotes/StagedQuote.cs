@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.QuoteRequests;
 using commercetools.Sdk.Api.Models.States;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 
@@ -46,5 +47,7 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
         public string PurchaseOrderNumber { get; set; }
 
         public IBusinessUnitKeyReference BusinessUnit { get; set; }
+
+        public IStoreKeyReference Store { get; set; }
     }
 }

@@ -141,6 +141,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.StagedQuotes
                 StagedQuoteQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StagedQuoteQueryBuilderDsl> Store(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedQuoteQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("store"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl.Of())),
+                StagedQuoteQueryBuilderDsl.Of);
+        }
+
 
     }
 }
