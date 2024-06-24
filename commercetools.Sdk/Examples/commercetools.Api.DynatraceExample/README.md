@@ -42,7 +42,7 @@ Follow the instructions on the [Dynatrace OneAgent page](https://docs.dynatrace.
 #### Install Dynatrace OneAgent on Mac
 Currently, it is NOT possible to install Dynatrace OneAgent on macOS. For this case a [Dockerfile](./Dockerfile) is provided.
 Use this file to build the application with the OneAgent included on Docker.
-2. Update ENV variables in the [Dockerfile](../../Dynatrace.Dockerfile) with your Dynatrace and CTP credentials.
+2. Update ENV variables in the [Dockerfile](../../Dynatrace.Dockerfile) with your Dynatrace credentials.
 3. Run `docker build -t dotnet-dynatrace-oneagent .` to build the Docker image.
 4. Run `docker run -p 8080:80 dotnet-dynatrace-oneagent` to start the Docker container.
 
