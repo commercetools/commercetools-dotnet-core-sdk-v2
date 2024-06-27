@@ -8,7 +8,7 @@ WORKDIR /DockerSource/src
 
 RUN dotnet restore
 
-RUN dotnet publish -c release -o /DockerOutput/app --no-restore Examples/commercetools.Api.DynatraceExample
+RUN dotnet publish -c release -o /DockerOutput/app --no-restore Examples/commercetools.Api.ApmExample
 
 # Final stage
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
@@ -34,4 +34,4 @@ RUN mkdir -p /opt/dynatrace/oneagent && ARCHIVE=$(mktemp) && wget -O $ARCHIVE "h
 ENV LD_PRELOAD /opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so
 
 # Set the entry point to start Dynatrace OneAgent
-ENTRYPOINT ["dotnet", "commercetools.Api.DynatraceExample.dll"]
+ENTRYPOINT ["dotnet", "commercetools.Api.ApmExample.dll"]

@@ -1,0 +1,48 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      dockerfile: ./Datadog.Dockerfile
+    environment:
+      - DD_ENV
+      - DD_TRACE_DEBUG
+      - DD_TRACE_ENABLED
+      - DD_LOGS_INJECTION=true
+      - DD_AGENT_HOST=agent
+    labels:
+      com.datadoghq.ad.logs: '[{"source": "dotnet", "service": "app"}]'
+    ports:
+      - 8080:80
+      - 127.0.0.1:8126:8126/tcp
+    networks:
+      - profiler
+  agent:
+    privileged: true
+    image: gcr.io/datadoghq/agent:7
+    environment:
+      - DD_ENV
+      - DD_TAGS="env:${DD_ENV}"
+      - DD_PROCESS_AGENT_ENABLED=true
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+      - DD_PROCESS_CONFIG_PROCESS_COLLECTION_ENABLED=true
+      - DD_CONTAINER_EXCLUDE_LOGS=name:agent
+      - DD_LOGS_CONFIG_DOCKER_CONTAINER_USE_FILE=true
+      - DD_APM_ENABLED=true
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_APM_NON_LOCAL_TRAFFIC=true
+      - DD_LOGS_ENABLED=true
+      - DD_API_KEY
+      - DD_SITE
+      - DD_HOSTNAME_TRUST_UTS_NAMESPACE=true
+      - DD_REMOTE_CONFIGURATION_ENABLED=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /opt/datadog-agent/run:/opt/datadog-agent/run:rw
+    networks:
+      - profiler
+networks:
+  profiler:
