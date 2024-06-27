@@ -10,6 +10,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeCountries", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCountriesAction))]
     [SubTypeDiscriminator("changeCountryTaxRateFallbackEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCountryTaxRateFallbackEnabledAction))]
     [SubTypeDiscriminator("changeCurrencies", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction))]
+    [SubTypeDiscriminator("changeCustomerSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCustomerSearchStatusAction))]
     [SubTypeDiscriminator("changeLanguages", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeLanguagesAction))]
     [SubTypeDiscriminator("changeMessagesConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeMessagesConfigurationAction))]
     [SubTypeDiscriminator("changeMyBusinessUnitStatusOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction))]
@@ -45,6 +46,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction ChangeCurrencies(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeCurrenciesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangeCustomerSearchStatusAction ChangeCustomerSearchStatus(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeCustomerSearchStatusAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeCustomerSearchStatusAction();
             init?.Invoke(t);
             return t;
         }
