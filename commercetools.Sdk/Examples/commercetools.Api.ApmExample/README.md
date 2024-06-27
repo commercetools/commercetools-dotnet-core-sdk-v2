@@ -1,4 +1,4 @@
-# Dynatrace Example App
+# APM Example App
 
 This example application demonstrates how the ME endpoints can be used with the DotNET v2 SDK.
 
