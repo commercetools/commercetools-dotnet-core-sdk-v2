@@ -69,6 +69,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTailorings
                 ProductTailoringDataQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ProductTailoringDataQueryBuilderDsl> Variants(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductVariantTailoringQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductVariantTailoringQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTailoringDataQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("variants"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductVariantTailoringQueryBuilderDsl.Of())),
+                ProductTailoringDataQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ProductTailoringDataQueryBuilderDsl> Variants()
+        {
+            return new CollectionPredicateBuilder<ProductTailoringDataQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("variants")),
+                    p => new CombinationQueryPredicate<ProductTailoringDataQueryBuilderDsl>(p, ProductTailoringDataQueryBuilderDsl.Of));
+        }
 
     }
 }

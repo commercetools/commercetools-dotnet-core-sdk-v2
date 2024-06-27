@@ -182,6 +182,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductTailoringCreated", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringCreatedMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringDeleted", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringDeletedMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringDescriptionSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringDescriptionSetMessagePayload))]
+    [SubTypeDiscriminator("ProductTailoringImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringImageAddedMessagePayload))]
+    [SubTypeDiscriminator("ProductTailoringImagesSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringNameSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringNameSetMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringPublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringPublishedMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringSlugSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringSlugSetMessagePayload))]
@@ -189,6 +191,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductUnpublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductUnpublishedMessagePayload))]
     [SubTypeDiscriminator("ProductVariantAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantAddedMessagePayload))]
     [SubTypeDiscriminator("ProductVariantDeleted", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessagePayload))]
+    [SubTypeDiscriminator("ProductVariantTailoringAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringAddedMessagePayload))]
+    [SubTypeDiscriminator("ProductVariantTailoringRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringRemovedMessagePayload))]
     [SubTypeDiscriminator("QuoteCreated", typeof(commercetools.Sdk.Api.Models.Messages.QuoteCreatedMessagePayload))]
     [SubTypeDiscriminator("QuoteCustomerChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteCustomerChangedMessagePayload))]
     [SubTypeDiscriminator("QuoteDeleted", typeof(commercetools.Sdk.Api.Models.Messages.QuoteDeletedMessagePayload))]
@@ -1295,6 +1299,18 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.ProductTailoringImageAddedMessagePayload ProductTailoringImageAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductTailoringImageAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductTailoringImageAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload ProductTailoringImagesSet(Action<commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.ProductTailoringNameSetMessagePayload ProductTailoringNameSet(Action<commercetools.Sdk.Api.Models.Messages.ProductTailoringNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductTailoringNameSetMessagePayload();
@@ -1334,6 +1350,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessagePayload ProductVariantDeleted(Action<commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductVariantDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringAddedMessagePayload ProductVariantTailoringAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringRemovedMessagePayload ProductVariantTailoringRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductVariantTailoringRemovedMessagePayload();
             init?.Invoke(t);
             return t;
         }

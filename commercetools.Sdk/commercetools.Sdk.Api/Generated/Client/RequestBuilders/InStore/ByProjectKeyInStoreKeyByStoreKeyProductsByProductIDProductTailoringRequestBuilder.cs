@@ -42,5 +42,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringDelete(ApiHttpClient, ProjectKey, StoreKey, ProductID);
         }
 
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesRequestBuilder Images()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, ProductID);
+        }
     }
 }

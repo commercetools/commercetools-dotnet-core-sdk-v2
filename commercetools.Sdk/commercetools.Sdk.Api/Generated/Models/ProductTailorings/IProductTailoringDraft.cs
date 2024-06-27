@@ -1,6 +1,8 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Stores;
+using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 
 // ReSharper disable CheckNamespace
@@ -28,6 +30,10 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         ILocalizedString Slug { get; set; }
 
         bool? Publish { get; set; }
+
+        IList<IProductVariantTailoringDraft> Variants { get; set; }
+        IEnumerable<IProductVariantTailoringDraft> VariantsEnumerable { set => Variants = value.ToList(); }
+
 
     }
 }
