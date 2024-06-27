@@ -82,6 +82,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.CountryNotConfiguredInStoreErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsCustomerSearchProjectNotIndexedError(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsDiscountCodeNonApplicable(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.DiscountCodeNonApplicableErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.DiscountCodeNonApplicableErrorQueryBuilderDsl>> fn)
         {
