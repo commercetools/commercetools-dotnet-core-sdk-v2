@@ -37,6 +37,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
 
+        IBusinessUnitApprovalRuleMode ApprovalRuleMode { get; set; }
+
         IList<IBaseAddress> Addresses { get; set; }
         IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
