@@ -12,5 +12,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         new IBusinessUnitAssociateMode AssociateMode { get; set; }
 
+        new IBusinessUnitApprovalRuleMode ApprovalRuleMode { get; set; }
+
     }
 }

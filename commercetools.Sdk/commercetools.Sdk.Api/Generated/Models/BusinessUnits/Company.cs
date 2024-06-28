@@ -70,6 +70,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public IBusinessUnitKeyReference ParentUnit { get; set; }
 
         public IBusinessUnitKeyReference TopLevelUnit { get; set; }
+
+        public IBusinessUnitApprovalRuleMode ApprovalRuleMode { get; set; }
         public Company()
         {
             this.UnitType = IBusinessUnitType.FindEnum("Company");

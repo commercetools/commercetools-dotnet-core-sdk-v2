@@ -75,6 +75,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         IBusinessUnitKeyReference TopLevelUnit { get; set; }
 
+        IBusinessUnitApprovalRuleMode ApprovalRuleMode { get; set; }
+
         static commercetools.Sdk.Api.Models.BusinessUnits.Company Company(Action<commercetools.Sdk.Api.Models.BusinessUnits.Company> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.Company();

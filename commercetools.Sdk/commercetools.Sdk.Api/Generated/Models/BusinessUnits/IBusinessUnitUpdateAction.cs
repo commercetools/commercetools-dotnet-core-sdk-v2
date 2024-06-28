@@ -12,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [SubTypeDiscriminator("addShippingAddressId", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddShippingAddressIdAction))]
     [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddStoreAction))]
     [SubTypeDiscriminator("changeAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction))]
+    [SubTypeDiscriminator("changeApprovalRuleMode", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeApprovalRuleModeAction))]
     [SubTypeDiscriminator("changeAssociate", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateAction))]
     [SubTypeDiscriminator("changeAssociateMode", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAssociateModeAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeNameAction))]
@@ -69,6 +70,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction ChangeAddress(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeApprovalRuleModeAction ChangeApprovalRuleMode(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeApprovalRuleModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeApprovalRuleModeAction();
             init?.Invoke(t);
             return t;
         }

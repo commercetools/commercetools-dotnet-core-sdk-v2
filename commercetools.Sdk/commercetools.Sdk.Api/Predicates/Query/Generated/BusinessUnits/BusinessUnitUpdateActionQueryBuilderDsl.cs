@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeAddressActionQueryBuilderDsl.Of()),
                 BusinessUnitUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsChangeApprovalRuleMode(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl.Of()),
+                BusinessUnitUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsChangeAssociate(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeAssociateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitChangeAssociateActionQueryBuilderDsl>> fn)
         {
