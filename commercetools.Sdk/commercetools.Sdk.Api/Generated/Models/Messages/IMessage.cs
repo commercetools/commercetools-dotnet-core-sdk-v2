@@ -163,6 +163,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessage))]
     [SubTypeDiscriminator("ProductPriceAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessage))]
     [SubTypeDiscriminator("ProductPriceChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldsRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessage))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessage))]
     [SubTypeDiscriminator("ProductPriceDiscountsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessage))]
     [SubTypeDiscriminator("ProductPriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessage))]
     [SubTypeDiscriminator("ProductPriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessage))]
@@ -1197,6 +1202,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage ProductPriceChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessage ProductPriceCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessage ProductPriceCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessage ProductPriceCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessage ProductPriceCustomFieldsRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessage ProductPriceCustomFieldsSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessage();
             init?.Invoke(t);
             return t;
         }
