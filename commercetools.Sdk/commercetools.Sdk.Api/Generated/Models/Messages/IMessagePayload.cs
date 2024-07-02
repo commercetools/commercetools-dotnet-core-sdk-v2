@@ -162,6 +162,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductImageAddedMessagePayload))]
     [SubTypeDiscriminator("ProductPriceAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceAddedMessagePayload))]
     [SubTypeDiscriminator("ProductPriceChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldsRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessagePayload))]
+    [SubTypeDiscriminator("ProductPriceCustomFieldsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceDiscountsSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceDiscountsSetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceExternalDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceExternalDiscountSetMessagePayload))]
     [SubTypeDiscriminator("ProductPriceKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ProductPriceKeySetMessagePayload))]
@@ -1177,6 +1182,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessagePayload ProductPriceChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessagePayload ProductPriceCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessagePayload ProductPriceCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessagePayload ProductPriceCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessagePayload ProductPriceCustomFieldsRemoved(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessagePayload ProductPriceCustomFieldsSet(Action<commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductPriceCustomFieldsSetMessagePayload();
             init?.Invoke(t);
             return t;
         }
