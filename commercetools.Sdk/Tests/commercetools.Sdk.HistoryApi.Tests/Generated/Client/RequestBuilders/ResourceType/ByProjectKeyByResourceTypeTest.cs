@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Text.Json;
+using commercetools.Sdk.HistoryApi.Tests;
+using commercetools.Sdk.HistoryApi.Models;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using Xunit;
 
 // ReSharper disable CheckNamespace
