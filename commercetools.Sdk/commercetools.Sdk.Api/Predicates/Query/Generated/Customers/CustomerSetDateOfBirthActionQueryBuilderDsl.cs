@@ -1,5 +1,3 @@
-using System;
-using commercetools.Sdk.Api.Predicates.Query;
 using commercetools.Base.Models;
 
 // ReSharper disable CheckNamespace
