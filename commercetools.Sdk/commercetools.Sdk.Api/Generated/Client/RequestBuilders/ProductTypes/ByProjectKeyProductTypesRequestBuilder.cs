@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
+using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes

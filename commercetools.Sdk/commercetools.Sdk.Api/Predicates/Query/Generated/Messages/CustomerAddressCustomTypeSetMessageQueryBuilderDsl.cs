@@ -1,4 +1,6 @@
 using System;
+using commercetools.Sdk.Api.Predicates.Query;
+using commercetools.Base.Models;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Predicates.Query.Messages
@@ -105,6 +107,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
         public IComparisonPredicateBuilder<CustomerAddressCustomTypeSetMessageQueryBuilderDsl, string> PreviousTypeId()
         {
             return new ComparisonPredicateBuilder<CustomerAddressCustomTypeSetMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("previousTypeId")),
+            p => new CombinationQueryPredicate<CustomerAddressCustomTypeSetMessageQueryBuilderDsl>(p, CustomerAddressCustomTypeSetMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<CustomerAddressCustomTypeSetMessageQueryBuilderDsl, string> AddressId()
+        {
+            return new ComparisonPredicateBuilder<CustomerAddressCustomTypeSetMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("addressId")),
             p => new CombinationQueryPredicate<CustomerAddressCustomTypeSetMessageQueryBuilderDsl>(p, CustomerAddressCustomTypeSetMessageQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
