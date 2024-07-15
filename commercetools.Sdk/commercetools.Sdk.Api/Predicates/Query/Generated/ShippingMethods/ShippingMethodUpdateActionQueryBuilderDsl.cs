@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddZoneActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsChangeActive(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodChangeActiveActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodChangeActiveActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodChangeActiveActionQueryBuilderDsl.Of()),
+                ShippingMethodUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsChangeIsDefault(
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodChangeIsDefaultActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodChangeIsDefaultActionQueryBuilderDsl>> fn)
         {

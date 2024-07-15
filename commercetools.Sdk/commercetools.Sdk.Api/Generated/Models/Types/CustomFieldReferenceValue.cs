@@ -22,6 +22,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("cart")]
         Cart,
 
+        [Description("cart-discount")]
+        CartDiscount,
+
         [Description("category")]
         Category,
 
@@ -91,6 +94,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static ICustomFieldReferenceValue Cart = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Cart, JsonName = "cart" };
 
+        public static ICustomFieldReferenceValue CartDiscount = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.CartDiscount, JsonName = "cart-discount" };
+
         public static ICustomFieldReferenceValue Category = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Category, JsonName = "category" };
 
@@ -134,6 +140,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  AssociateRole ,
                  BusinessUnit ,
                  Cart ,
+                 CartDiscount ,
                  Category ,
                  Channel ,
                  Customer ,

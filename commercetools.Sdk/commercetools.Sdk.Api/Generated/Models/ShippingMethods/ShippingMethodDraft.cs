@@ -28,6 +28,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         public IEnumerable<IZoneRateDraft> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
 
 
+        public bool? Active { get; set; }
+
         public bool IsDefault { get; set; }
 
         public string Predicate { get; set; }
