@@ -25,32 +25,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Suggest()
                    .Get()
-                   .WithFuzzy(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/suggest?fuzzy=true",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Suggest()
-                   .Get()
                    .WithSearchKeywords("locale", "searchKeywords.locale")
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/suggest?searchKeywords.locale=searchKeywords.locale",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Suggest()
-                   .Get()
-                   .WithSort("sort")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/suggest?sort=sort",
                },
                new Object[] {
                    ApiRoot
@@ -69,21 +47,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Suggest()
                    .Get()
-                   .WithOffset(3)
+                   .WithFuzzy(true)
                    .Build(),
                    "Get",
-                   "/test_projectKey/product-projections/suggest?offset=3",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Suggest()
-                   .Get()
-                   .WithWithTotal(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/suggest?withTotal=true",
+                   "/test_projectKey/product-projections/suggest?fuzzy=true",
                },
                new Object[] {
                    ApiRoot
