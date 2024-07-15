@@ -8,6 +8,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodUpdateAction))]
     [SubTypeDiscriminator("addShippingRate", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction))]
     [SubTypeDiscriminator("addZone", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddZoneAction))]
+    [SubTypeDiscriminator("changeActive", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeActiveAction))]
     [SubTypeDiscriminator("changeIsDefault", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeIsDefaultAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeNameAction))]
     [SubTypeDiscriminator("changeTaxCategory", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeTaxCategoryAction))]
@@ -33,6 +34,12 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddZoneAction AddZone(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddZoneAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddZoneAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeActiveAction ChangeActive(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeActiveAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeActiveAction();
             init?.Invoke(t);
             return t;
         }

@@ -115,6 +115,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CollectionPredicateBuilder<ShippingMethodQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("zoneRates")),
                     p => new CombinationQueryPredicate<ShippingMethodQueryBuilderDsl>(p, ShippingMethodQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl, bool> Active()
+        {
+            return new ComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("active")),
+            p => new CombinationQueryPredicate<ShippingMethodQueryBuilderDsl>(p, ShippingMethodQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl, bool> IsDefault()
         {
             return new ComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("isDefault")),

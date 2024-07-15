@@ -1,6 +1,13 @@
 **Api changes**
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `cart-discount` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
@@ -23,5 +30,14 @@
 - added property `addressId` to type `CustomerAddressCustomFieldRemovedMessagePayload`
 - added property `addressId` to type `CustomerAddressCustomTypeRemovedMessagePayload`
 - added property `addressId` to type `CustomerAddressCustomTypeSetMessagePayload`
+- added property `active` to type `ShippingMethod`
+- added property `active` to type `ShippingMethodDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ShippingMethodChangeActiveAction`
 </details>
 
