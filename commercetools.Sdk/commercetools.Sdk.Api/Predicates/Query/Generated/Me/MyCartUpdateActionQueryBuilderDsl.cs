@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeLineItemQuantityActionQueryBuilderDsl.Of()),
                 MyCartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsChangeLineItemsOrder(
+            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeLineItemsOrderActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeLineItemsOrderActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeLineItemsOrderActionQueryBuilderDsl.Of()),
+                MyCartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsChangeTaxMode(
             Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeTaxModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartChangeTaxModeActionQueryBuilderDsl>> fn)
         {

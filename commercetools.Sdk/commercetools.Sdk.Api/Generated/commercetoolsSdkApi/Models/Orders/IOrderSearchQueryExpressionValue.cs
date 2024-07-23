@@ -10,7 +10,7 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         int? Boost { get; set; }
 
-        string CustomType { get; set; }
+        IOrderSearchCustomType CustomType { get; set; }
 
     }
 }
