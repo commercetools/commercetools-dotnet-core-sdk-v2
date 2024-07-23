@@ -12,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.Me
     [SubTypeDiscriminator("addPayment", typeof(commercetools.Sdk.Api.Models.Me.MyCartAddPaymentAction))]
     [SubTypeDiscriminator("applyDeltaToLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Me.MyCartApplyDeltaToLineItemShippingDetailsTargetsAction))]
     [SubTypeDiscriminator("changeLineItemQuantity", typeof(commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemQuantityAction))]
+    [SubTypeDiscriminator("changeLineItemsOrder", typeof(commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemsOrderAction))]
     [SubTypeDiscriminator("changeTaxMode", typeof(commercetools.Sdk.Api.Models.Me.MyCartChangeTaxModeAction))]
     [SubTypeDiscriminator("recalculate", typeof(commercetools.Sdk.Api.Models.Me.MyCartRecalculateAction))]
     [SubTypeDiscriminator("removeDiscountCode", typeof(commercetools.Sdk.Api.Models.Me.MyCartRemoveDiscountCodeAction))]
@@ -71,6 +72,12 @@ namespace commercetools.Sdk.Api.Models.Me
         static commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemQuantityAction ChangeLineItemQuantity(Action<commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemQuantityAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemQuantityAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemsOrderAction ChangeLineItemsOrder(Action<commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemsOrderAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Me.MyCartChangeLineItemsOrderAction();
             init?.Invoke(t);
             return t;
         }

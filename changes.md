@@ -8,6 +8,28 @@
 
 
 <details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `customType` of type `OrderSearchAnyValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchDateRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchFullTextValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchLongRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchNumberRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchQueryExpressionValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchStringValue` from type `string` to `OrderSearchCustomType`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
@@ -38,15 +60,9 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `CartChangeLineItemsOrderAction`
+- added type `MyCartChangeLineItemsOrderAction`
+- added type `OrderSearchCustomType`
 - added type `ShippingMethodChangeActiveAction`
-</details>
-
-
-<details>
-<summary>Removed QueryParameter(s)</summary>
-
-- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
-- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
-- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
 </details>
 
