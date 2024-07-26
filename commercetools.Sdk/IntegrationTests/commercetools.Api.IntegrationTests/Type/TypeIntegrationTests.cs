@@ -1,10 +1,18 @@
 using System.Collections.Generic;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
+using commercetools.Sdk.GraphQL.Api;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Type.TypeFixtures;
+using static commercetools.Api.IntegrationTests.Cart.CartFixture;
+using CustomFieldsDraft = commercetools.Sdk.Api.Models.Types.CustomFieldsDraft;
+using FieldDefinition = commercetools.Sdk.Api.Models.Types.FieldDefinition;
+using FieldType = commercetools.Sdk.Api.Models.Types.FieldType;
+using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
 
 namespace commercetools.Api.IntegrationTests.Type
 {
@@ -68,6 +76,80 @@ namespace commercetools.Api.IntegrationTests.Type
 
                     Assert.Single(returnedSet.Results);
                     Assert.Equal(key, returnedSet.Results[0].Key);
+                });
+        }
+
+        [Fact]
+        public async Task CartWithCustomType()
+        {
+            var gqlClient = _client.GraphQLClient();
+
+            var key = $"QueryType-{TestingUtility.RandomString()}";
+            
+            await WithType(
+                _client,
+                typeDraft =>
+                {
+                    var draft = DefaultTypeDraftWithKey(typeDraft, key);
+                    draft.FieldDefinitions = new List<IFieldDefinition>()
+                    {
+                        new FieldDefinition()
+                        {
+                            Type = new CustomFieldStringType()
+                            {
+                            },
+                            Label = new LocalizedString()
+                            {
+                                {"en", "test-string"}
+                            },
+                            Required = false,
+                            Name = "test-string"
+                        },
+                        new FieldDefinition()
+                        {
+                            Type = new CustomFieldSetType()
+                            {
+                                ElementType = new CustomFieldStringType()
+                            },
+                            Label = new LocalizedString()
+                            {
+                                {"en", "test-set"}
+                            },
+                            Required = false,
+                            Name = "test-set"
+                        }
+                    };
+                    return draft;
+                },
+                async type =>
+                {
+                    await WithCart(_client, cartDraft =>
+                    {
+                        var draft = DefaultCartDraft(cartDraft);
+                        draft.Custom = new CustomFieldsDraft()
+                        {
+                            Type = new TypeResourceIdentifier() { Key = type.Key },
+                            Fields = new FieldContainer()
+                            {
+                                { "test-set", new List<string>()
+                                    {
+                                    "abc",
+                                    "def"
+                                    }
+                                },
+                                { "test-string", "foo"
+                            }
+                            }
+                        };
+                        return draft;
+                    }, async cart =>
+                    {
+                        var cartId = cart.Id;
+                        var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Field = custom.CustomFieldsRaw(selector: field => field.Value) })}));
+                        Assert.Equal("abc", t.Data.Custom.Field[0].Deserialize<List<string>>()[0]);
+                        Assert.Equal("def", t.Data.Custom.Field[0].Deserialize<List<string>>()[1]);
+                        Assert.Equal("foo", t.Data.Custom.Field[1].ToString());
+                    });
                 });
         }
 
