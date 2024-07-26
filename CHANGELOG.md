@@ -1,4 +1,97 @@
 
+# 11.9.0 (2024-07-26)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/328
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/329
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/332
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/333
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/334
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/335
+* fix resolving of custom fields in GraphQL module by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/336
+
+**Api changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `cart-discount` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `customType` of type `OrderSearchAnyValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchDateRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchFullTextValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchLongRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchNumberRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchQueryExpressionValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchStringValue` from type `string` to `OrderSearchCustomType`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessagePayload`
+- added property `active` to type `ShippingMethod`
+- added property `active` to type `ShippingMethodDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartChangeLineItemsOrderAction`
+- added type `MyCartChangeLineItemsOrderAction`
+- added type `OrderSearchCustomType`
+- added type `ShippingMethodChangeActiveAction`
+</details>
+
+### Breaking changes
+
+#### Order Search
+
+The `customtype` parameter in an OrderSearch request has been changed from a String to an Enum.
+
+#### GraphQL module
+
+We released a fix for the GraphQL module. Previously Json-Values in GraphQL were tried to be deserialized to a String. This caused Runtime exceptions for example when trying to deserialize CustomFields which where not Strings. The GraphQL module now deserializes Json into a `System.Text.Json.Nodes.JsonValue`. So they have to be deserialized to a specific type when trying to access it. An example can be found here:
+
+https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/0f164fc8bdf173b7203ff2c3d1afb2913c9b95ac/commercetools.Sdk/IntegrationTests/commercetools.Api.IntegrationTests/Type/TypeIntegrationTests.cs#L148-L151
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.8.0...11.9.0
+
 # 11.8.0 (2024-07-03)
 
 ## What's Changed
