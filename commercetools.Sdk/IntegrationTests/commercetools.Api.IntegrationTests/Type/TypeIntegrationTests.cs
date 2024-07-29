@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Sdk.GraphQL.Api;
 using Xunit;
@@ -11,7 +9,6 @@ using static commercetools.Api.IntegrationTests.Type.TypeFixtures;
 using static commercetools.Api.IntegrationTests.Cart.CartFixture;
 using CustomFieldsDraft = commercetools.Sdk.Api.Models.Types.CustomFieldsDraft;
 using FieldDefinition = commercetools.Sdk.Api.Models.Types.FieldDefinition;
-using FieldType = commercetools.Sdk.Api.Models.Types.FieldType;
 using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
 
 namespace commercetools.Api.IntegrationTests.Type
@@ -85,7 +82,7 @@ namespace commercetools.Api.IntegrationTests.Type
             var gqlClient = _client.GraphQLClient();
 
             var key = $"QueryType-{TestingUtility.RandomString()}";
-            
+
             await WithType(
                 _client,
                 typeDraft =>
@@ -145,7 +142,7 @@ namespace commercetools.Api.IntegrationTests.Type
                     }, async cart =>
                     {
                         var cartId = cart.Id;
-                        var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Field = custom.CustomFieldsRaw(selector: field => field.Value) })}));
+                        var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Field = custom.CustomFieldsRaw(selector: field => field.Value) }) }));
                         Assert.Equal("abc", t.Data.Custom.Field[0].Deserialize<List<string>>()[0]);
                         Assert.Equal("def", t.Data.Custom.Field[0].Deserialize<List<string>>()[1]);
                         Assert.Equal("foo", t.Data.Custom.Field[1].ToString());
