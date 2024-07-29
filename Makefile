@@ -39,7 +39,9 @@ prettify:
 	dotnet format commercetools.Sdk/commercetools.Base.Client/commercetools.Base.Client.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Base.Registration/commercetools.Base.Registration.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Base.Serialization/commercetools.Base.Serialization.csproj --severity warn
-	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj whitespace
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj style --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj analyzers --severity warn
 	dotnet format commercetools.Sdk/commercetools.Sdk.GraphQL.Api/commercetools.Sdk.GraphQL.Api.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Sdk.HistoryApi/commercetools.Sdk.HistoryApi.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Sdk.ImportApi/commercetools.Sdk.ImportApi.csproj --severity warn
