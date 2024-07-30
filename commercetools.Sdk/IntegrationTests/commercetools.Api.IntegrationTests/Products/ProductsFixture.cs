@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
+using commercetools.Sdk.GraphQL.Api;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
+using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
+using ProductDraft = commercetools.Sdk.Api.Models.Products.ProductDraft;
+using StringAttribute = commercetools.Sdk.Api.Models.Products.StringAttribute;
 
 namespace commercetools.Api.IntegrationTests.Products
 {
@@ -61,6 +64,7 @@ namespace commercetools.Api.IntegrationTests.Products
                             new DecimalAttribute() { Name = "number", Value = TestingUtility.RandomDecimal() },
                             new LongAttribute() { Name = "integer", Value = TestingUtility.RandomInt() },
                             new StringAttribute() { Name = "text", Value = $"Attribute_{randomInt}" },
+                            new PlainEnumAttribute() { Name = "enum", Value = "foo" }
                         }
                     };
                     variants.Add(productVariant);

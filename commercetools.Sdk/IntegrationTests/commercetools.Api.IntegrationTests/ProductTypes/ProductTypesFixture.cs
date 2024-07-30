@@ -41,7 +41,23 @@ namespace commercetools.Api.IntegrationTests.ProductTypes
                     IsRequired = false,
                     IsSearchable = true,
                     Label = new LocalizedString() { { "en", "text" } }
+                },
+                new AttributeDefinitionDraft()
+                {
+                    Name = "enum",
+                    Type = new AttributeEnumType()
+                    {
+                        Values = new List<IAttributePlainEnumValue>()
+                        {
+                            new AttributePlainEnumValue() { Key = "foo", Label = "foo"},
+                            new AttributePlainEnumValue() { Key = "bar", Label = "bar"},
+                        }
+                    },
+                    IsRequired = false,
+                    IsSearchable = true,
+                    Label = new LocalizedString() { { "en", "enum" } }
                 }
+
 
             };
             return productTypeDraft;
