@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
-using commercetools.Sdk.GraphQL.Api;
 using static commercetools.Api.IntegrationTests.GenericFixture;
 using static commercetools.Api.IntegrationTests.ProductTypes.ProductTypesFixture;
 using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
