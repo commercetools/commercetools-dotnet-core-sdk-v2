@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text.Json;
-using System.Threading;
 using System.Threading.Tasks;
 using commercetools.Base.Client;
 using commercetools.Base.Client.Error;
@@ -184,15 +183,16 @@ namespace commercetools.Api.IntegrationTests.Products
                 async product =>
                 {
                     var key = product.Key;
-                    var response = await _projectApiRoot.GraphQLClient().Query(o => 
+                    var response = await _projectApiRoot.GraphQLClient().Query(o =>
                     o.Product(
                         key: key,
                         // queryFilters: t,
                         selector: product => new
                         {
-                            MasterData = product.MasterData(data => new 
+                            MasterData = product.MasterData(data => new
                             {
-                                Staged = data.Staged(staged => new {
+                                Staged = data.Staged(staged => new
+                                {
                                     Variants = staged.Variants(selector: variant => new
                                     {
                                         Attributes = variant.AttributesRaw(selector: attribute => new
@@ -206,18 +206,18 @@ namespace commercetools.Api.IntegrationTests.Products
                         }
                     )
                 );
-                Assert.NotNull(response);
-                
-                Assert.Equal("number", response.Data.MasterData.Staged.Variants[0].Attributes[0].Name);
-                Assert.IsType<decimal>(response.Data.MasterData.Staged.Variants[0].Attributes[0].Value.GetValue<decimal>());
-                Assert.Equal("integer", response.Data.MasterData.Staged.Variants[0].Attributes[1].Name);
-                Assert.IsType<int>(response.Data.MasterData.Staged.Variants[0].Attributes[1].Value.GetValue<int>());
-                Assert.Equal("text", response.Data.MasterData.Staged.Variants[0].Attributes[2].Name);
-                Assert.IsType<string>(response.Data.MasterData.Staged.Variants[0].Attributes[2].Value.GetValue<string>());
-                Assert.Equal("enum", response.Data.MasterData.Staged.Variants[0].Attributes[3].Name);
-                Assert.IsType<PlainEnumValue>(response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>());
-                Assert.Equal("foo", response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>().Key);
-                Assert.Equal("foo", response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>().Label);
+                    Assert.NotNull(response);
+
+                    Assert.Equal("number", response.Data.MasterData.Staged.Variants[0].Attributes[0].Name);
+                    Assert.IsType<decimal>(response.Data.MasterData.Staged.Variants[0].Attributes[0].Value.GetValue<decimal>());
+                    Assert.Equal("integer", response.Data.MasterData.Staged.Variants[0].Attributes[1].Name);
+                    Assert.IsType<int>(response.Data.MasterData.Staged.Variants[0].Attributes[1].Value.GetValue<int>());
+                    Assert.Equal("text", response.Data.MasterData.Staged.Variants[0].Attributes[2].Name);
+                    Assert.IsType<string>(response.Data.MasterData.Staged.Variants[0].Attributes[2].Value.GetValue<string>());
+                    Assert.Equal("enum", response.Data.MasterData.Staged.Variants[0].Attributes[3].Name);
+                    Assert.IsType<PlainEnumValue>(response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>());
+                    Assert.Equal("foo", response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>().Key);
+                    Assert.Equal("foo", response.Data.MasterData.Staged.Variants[0].Attributes[3].Value.Deserialize<PlainEnumValue>().Label);
                 });
         }
     }
