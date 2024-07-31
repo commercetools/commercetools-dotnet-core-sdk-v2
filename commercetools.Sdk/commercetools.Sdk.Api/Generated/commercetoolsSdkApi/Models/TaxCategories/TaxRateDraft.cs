@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
 
@@ -18,8 +17,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         public string State { get; set; }
 
         public IList<ISubRate> SubRates { get; set; }
-        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
         public string Key { get; set; }
     }

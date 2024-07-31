@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         IMessageSubscriptionResourceTypeId ResourceTypeId { get; set; }
 
         IList<string> Types { get; set; }
-        IEnumerable<string> TypesEnumerable { set => Types = value.ToList(); }
 
+        IEnumerable<string> TypesEnumerable { set => Types = value.ToList(); }
 
     }
 }

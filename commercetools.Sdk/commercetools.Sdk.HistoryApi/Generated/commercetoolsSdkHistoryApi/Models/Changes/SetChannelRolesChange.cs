@@ -2,7 +2,6 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
 
@@ -13,12 +12,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string Change { get; set; }
 
         public IList<IChannelRoleEnum> PreviousValue { get; set; }
+
         public IEnumerable<IChannelRoleEnum> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-
         public IList<IChannelRoleEnum> NextValue { get; set; }
-        public IEnumerable<IChannelRoleEnum> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+        public IEnumerable<IChannelRoleEnum> NextValueEnumerable { set => NextValue = value.ToList(); }
         public SetChannelRolesChange()
         {
             this.Type = "SetChannelRolesChange";

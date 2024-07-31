@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.CustomerSearches
 {
 
@@ -14,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.CustomerSearches
         public int Offset { get; set; }
 
         public IList<ICustomerSearchResult> Results { get; set; }
-        public IEnumerable<ICustomerSearchResult> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<ICustomerSearchResult> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

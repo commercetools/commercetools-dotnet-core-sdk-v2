@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public long Version { get; set; }
 
         public IList<ISubscriptionUpdateAction> Actions { get; set; }
-        public IEnumerable<ISubscriptionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        public IEnumerable<ISubscriptionUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
     }
 }

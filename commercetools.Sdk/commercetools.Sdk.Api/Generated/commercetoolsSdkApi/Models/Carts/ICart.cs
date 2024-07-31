@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Carts
 {
@@ -35,12 +34,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         IStoreKeyReference Store { get; set; }
 
         IList<ILineItem> LineItems { get; set; }
+
         IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ICustomLineItem> CustomLineItems { get; set; }
-        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         long? TotalLineItemQuantity { get; set; }
 
@@ -77,24 +76,24 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICustomFields ShippingCustomFields { get; set; }
 
         IList<IShipping> Shipping { get; set; }
+
         IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
 
-
         IList<IAddress> ItemShippingAddresses { get; set; }
+
         IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-
         IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+
         IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
-
         IList<IDirectDiscount> DirectDiscounts { get; set; }
+
         IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
-
         IList<ICartDiscountReference> RefusedGifts { get; set; }
-        IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
 
+        IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
 
         IPaymentInfo PaymentInfo { get; set; }
 

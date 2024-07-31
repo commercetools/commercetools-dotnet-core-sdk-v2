@@ -4,7 +4,6 @@ using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
@@ -22,8 +21,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         long Quantity { get; set; }
 
         IList<IItemState> State { get; set; }
-        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
         IChannelKeyReference SupplyChannel { get; set; }
 

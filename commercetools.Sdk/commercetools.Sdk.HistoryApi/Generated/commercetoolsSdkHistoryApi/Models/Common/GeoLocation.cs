@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public string Type { get; set; }
 
         public IList<int> Coordinates { get; set; }
-        public IEnumerable<int> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
 
+        public IEnumerable<int> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
     }
 }

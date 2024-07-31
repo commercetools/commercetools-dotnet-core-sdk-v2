@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Products
 {
 
@@ -18,8 +17,8 @@ namespace commercetools.Sdk.Api.Models.Products
         public long Other { get; set; }
 
         public IList<IFacetTerm> Terms { get; set; }
-        public IEnumerable<IFacetTerm> TermsEnumerable { set => Terms = value.ToList(); }
 
+        public IEnumerable<IFacetTerm> TermsEnumerable { set => Terms = value.ToList(); }
         public TermFacetResult()
         {
             this.Type = IFacetTypes.FindEnum("terms");

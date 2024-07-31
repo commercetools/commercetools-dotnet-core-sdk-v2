@@ -1,6 +1,5 @@
 using commercetools.Sdk.Api.Models.Products;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 

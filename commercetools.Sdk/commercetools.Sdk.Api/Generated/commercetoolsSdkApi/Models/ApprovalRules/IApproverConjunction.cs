@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ApprovalRules
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
     public partial interface IApproverConjunction
     {
         IList<IApproverDisjunction> And { get; set; }
-        IEnumerable<IApproverDisjunction> AndEnumerable { set => And = value.ToList(); }
 
+        IEnumerable<IApproverDisjunction> AndEnumerable { set => And = value.ToList(); }
 
     }
 }

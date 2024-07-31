@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public long Version { get; set; }
 
         public IList<IAssociateRoleUpdateAction> Actions { get; set; }
-        public IEnumerable<IAssociateRoleUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        public IEnumerable<IAssociateRoleUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
     }
 }

@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
@@ -18,12 +17,12 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         string CustomerEmail { get; set; }
 
         IList<ILineItemImportDraft> LineItems { get; set; }
+
         IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ICustomLineItemDraft> CustomLineItems { get; set; }
-        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -58,8 +57,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         ICartOrigin Origin { get; set; }
 
         IList<IAddress> ItemShippingAddresses { get; set; }
-        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
+        IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
         IStoreKeyReference Store { get; set; }
 

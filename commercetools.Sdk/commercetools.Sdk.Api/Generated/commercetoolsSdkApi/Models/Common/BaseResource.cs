@@ -1,6 +1,5 @@
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Common
 {
 

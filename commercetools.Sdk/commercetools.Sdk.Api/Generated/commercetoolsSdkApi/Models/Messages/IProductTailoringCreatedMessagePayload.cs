@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -33,8 +32,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         ILocalizedString MetaKeywords { get; set; }
 
         IList<IProductVariantTailoring> Variants { get; set; }
-        IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
         bool Published { get; set; }
 

@@ -1,8 +1,7 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Messages;
-using System;
 using commercetools.Base.CustomAttributes;
-
+using System;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Subscriptions
 {

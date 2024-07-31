@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Categories
 {
@@ -31,8 +30,8 @@ namespace commercetools.Sdk.ImportApi.Models.Categories
         ILocalizedString MetaKeywords { get; set; }
 
         IList<IAsset> Assets { get; set; }
-        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
         ICustom Custom { get; set; }
 

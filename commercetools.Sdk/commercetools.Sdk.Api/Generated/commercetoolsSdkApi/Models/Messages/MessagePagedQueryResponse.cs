@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.Messages
         public long Offset { get; set; }
 
         public IList<IMessage> Results { get; set; }
-        public IEnumerable<IMessage> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IMessage> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

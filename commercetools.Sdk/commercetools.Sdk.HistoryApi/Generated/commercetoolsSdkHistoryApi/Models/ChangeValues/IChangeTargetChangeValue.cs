@@ -1,6 +1,5 @@
-using System;
 using commercetools.Base.CustomAttributes;
-
+using System;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {

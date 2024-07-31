@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Inventories
 {

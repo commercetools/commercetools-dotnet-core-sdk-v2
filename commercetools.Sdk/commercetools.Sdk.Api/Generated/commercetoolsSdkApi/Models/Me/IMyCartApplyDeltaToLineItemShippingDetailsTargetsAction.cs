@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Carts;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Me
 {
@@ -14,8 +13,8 @@ namespace commercetools.Sdk.Api.Models.Me
         string LineItemKey { get; set; }
 
         IList<IItemShippingTarget> TargetsDelta { get; set; }
-        IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
 
+        IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
 
     }
 }

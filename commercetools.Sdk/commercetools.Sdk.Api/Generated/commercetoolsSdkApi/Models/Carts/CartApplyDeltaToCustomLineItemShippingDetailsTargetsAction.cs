@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Carts
 {
 
@@ -14,8 +13,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public string CustomLineItemKey { get; set; }
 
         public IList<IItemShippingTarget> TargetsDelta { get; set; }
-        public IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
 
+        public IEnumerable<IItemShippingTarget> TargetsDeltaEnumerable { set => TargetsDelta = value.ToList(); }
         public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction()
         {
             this.Action = "applyDeltaToCustomLineItemShippingDetailsTargets";

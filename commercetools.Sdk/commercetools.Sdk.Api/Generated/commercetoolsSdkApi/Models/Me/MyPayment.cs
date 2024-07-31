@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Me
 {
 
@@ -24,8 +23,8 @@ namespace commercetools.Sdk.Api.Models.Me
         public IPaymentMethodInfo PaymentMethodInfo { get; set; }
 
         public IList<ITransaction> Transactions { get; set; }
-        public IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
+        public IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
         public ICustomFields Custom { get; set; }
     }

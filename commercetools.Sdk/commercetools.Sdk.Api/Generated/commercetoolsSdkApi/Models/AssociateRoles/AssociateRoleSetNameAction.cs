@@ -1,3 +1,5 @@
+
+
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
 

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         long? Total { get; set; }
 
         IList<ICustomerGroup> Results { get; set; }
-        IEnumerable<ICustomerGroup> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<ICustomerGroup> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

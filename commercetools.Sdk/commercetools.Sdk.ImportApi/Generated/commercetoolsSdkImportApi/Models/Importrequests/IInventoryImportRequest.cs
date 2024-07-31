@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Inventories;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IInventoryImportRequest : IImportRequest
     {
         IList<IInventoryImport> Resources { get; set; }
-        IEnumerable<IInventoryImport> ResourcesEnumerable { set => Resources = value.ToList(); }
 
+        IEnumerable<IInventoryImport> ResourcesEnumerable { set => Resources = value.ToList(); }
 
     }
 }

@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Zones;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         IZoneReference Zone { get; set; }
 
         IList<IShippingRate> ShippingRates { get; set; }
-        IEnumerable<IShippingRate> ShippingRatesEnumerable { set => ShippingRates = value.ToList(); }
 
+        IEnumerable<IShippingRate> ShippingRatesEnumerable { set => ShippingRates = value.ToList(); }
 
     }
 }

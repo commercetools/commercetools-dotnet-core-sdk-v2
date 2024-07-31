@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
@@ -28,12 +27,12 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         ILocalizedString Description { get; set; }
 
         IList<IShoppingListLineItem> LineItems { get; set; }
+
         IEnumerable<IShoppingListLineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ITextLineItem> TextLineItems { get; set; }
-        IEnumerable<ITextLineItem> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
+        IEnumerable<ITextLineItem> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
         long? DeleteDaysAfterLastModification { get; set; }
 

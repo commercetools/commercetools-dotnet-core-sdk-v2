@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Me
 {
@@ -17,12 +16,12 @@ namespace commercetools.Sdk.Api.Models.Me
         ILocalizedString Description { get; set; }
 
         IList<IShoppingListLineItemDraft> LineItems { get; set; }
+
         IEnumerable<IShoppingListLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ITextLineItemDraft> TextLineItems { get; set; }
-        IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
+        IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
         ICustomFieldsDraft Custom { get; set; }
 

@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Producttypes
 {
@@ -16,8 +15,8 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
         string Description { get; set; }
 
         IList<IAttributeDefinition> Attributes { get; set; }
-        IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        IEnumerable<IAttributeDefinition> AttributesEnumerable { set => Attributes = value.ToList(); }
 
     }
 }

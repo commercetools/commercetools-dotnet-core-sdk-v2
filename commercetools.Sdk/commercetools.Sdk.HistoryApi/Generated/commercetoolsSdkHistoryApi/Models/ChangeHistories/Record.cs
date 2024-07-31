@@ -4,7 +4,6 @@ using commercetools.Sdk.HistoryApi.Models.Labels;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
 
@@ -25,14 +24,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public ILabel PreviousLabel { get; set; }
 
         public IList<IChange> Changes { get; set; }
-        public IEnumerable<IChange> ChangesEnumerable { set => Changes = value.ToList(); }
 
+        public IEnumerable<IChange> ChangesEnumerable { set => Changes = value.ToList(); }
 
         public IResourceIdentifier Resource { get; set; }
 
         public IList<IKeyReference> Stores { get; set; }
-        public IEnumerable<IKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        public IEnumerable<IKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         public IKeyReference BusinessUnit { get; set; }
 

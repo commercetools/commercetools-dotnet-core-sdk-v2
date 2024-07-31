@@ -3,7 +3,6 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
 {
@@ -15,12 +14,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         new string Change { get; set; }
 
         IList<IDeliveryItem> PreviousValue { get; set; }
+
         IEnumerable<IDeliveryItem> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-
         IList<IDeliveryItem> NextValue { get; set; }
-        IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+        IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         IParcelChangeValue Parcel { get; set; }
 

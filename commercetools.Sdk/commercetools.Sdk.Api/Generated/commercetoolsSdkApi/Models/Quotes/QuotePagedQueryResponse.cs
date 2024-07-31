@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Quotes
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.Quotes
         public long? Total { get; set; }
 
         public IList<IQuote> Results { get; set; }
-        public IEnumerable<IQuote> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IQuote> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

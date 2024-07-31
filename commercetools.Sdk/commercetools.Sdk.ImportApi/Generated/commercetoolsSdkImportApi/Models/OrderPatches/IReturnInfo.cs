@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
     public partial interface IReturnInfo
     {
         IList<IReturnItemDraft> Items { get; set; }
-        IEnumerable<IReturnItemDraft> ItemsEnumerable { set => Items = value.ToList(); }
 
+        IEnumerable<IReturnItemDraft> ItemsEnumerable { set => Items = value.ToList(); }
 
         string ReturnTrackingId { get; set; }
 

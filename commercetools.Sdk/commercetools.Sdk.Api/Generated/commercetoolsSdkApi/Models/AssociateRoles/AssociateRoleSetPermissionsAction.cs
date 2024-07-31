@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
 
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public string Action { get; set; }
 
         public IList<IPermission> Permissions { get; set; }
-        public IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
+        public IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
         public AssociateRoleSetPermissionsAction()
         {
             this.Action = "setPermissions";

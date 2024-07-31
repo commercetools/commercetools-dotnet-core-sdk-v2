@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Quotes
 {
@@ -51,12 +50,12 @@ namespace commercetools.Sdk.Api.Models.Quotes
         IStoreKeyReference Store { get; set; }
 
         IList<ILineItem> LineItems { get; set; }
+
         IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ICustomLineItem> CustomLineItems { get; set; }
-        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         ITypedMoney TotalPrice { get; set; }
 
@@ -83,12 +82,12 @@ namespace commercetools.Sdk.Api.Models.Quotes
         IShippingRateInput ShippingRateInput { get; set; }
 
         IList<IAddress> ItemShippingAddresses { get; set; }
+
         IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-
         IList<IDirectDiscount> DirectDiscounts { get; set; }
-        IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
+        IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
         ICustomFields Custom { get; set; }
 

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IOrderSearchQuery Query { get; set; }
 
         public IList<IOrderSearchSorting> Sort { get; set; }
-        public IEnumerable<IOrderSearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
+        public IEnumerable<IOrderSearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
         public int? Limit { get; set; }
 

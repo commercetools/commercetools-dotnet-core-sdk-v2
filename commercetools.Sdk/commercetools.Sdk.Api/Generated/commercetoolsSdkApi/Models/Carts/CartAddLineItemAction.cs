@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Carts
 {
 
@@ -36,8 +35,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
         public IList<IMethodExternalTaxRateDraft> PerMethodExternalTaxRate { get; set; }
-        public IEnumerable<IMethodExternalTaxRateDraft> PerMethodExternalTaxRateEnumerable { set => PerMethodExternalTaxRate = value.ToList(); }
 
+        public IEnumerable<IMethodExternalTaxRateDraft> PerMethodExternalTaxRateEnumerable { set => PerMethodExternalTaxRate = value.ToList(); }
 
         public IInventoryMode InventoryMode { get; set; }
 

@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Orders;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.OrderPatches
 {
@@ -16,8 +15,8 @@ namespace commercetools.Sdk.ImportApi.Models.OrderPatches
         ITrackingData TrackingData { get; set; }
 
         IList<IDeliveryItem> Items { get; set; }
-        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
     }
 }

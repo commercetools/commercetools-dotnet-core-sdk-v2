@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Quotes
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
         long Version { get; set; }
 
         IList<IQuoteUpdateAction> Actions { get; set; }
-        IEnumerable<IQuoteUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        IEnumerable<IQuoteUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
     }
 }

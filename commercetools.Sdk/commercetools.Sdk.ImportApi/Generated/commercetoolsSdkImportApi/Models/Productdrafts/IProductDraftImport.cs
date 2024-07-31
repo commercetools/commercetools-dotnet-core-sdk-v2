@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Productdrafts
 {
@@ -21,8 +20,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         ILocalizedString Description { get; set; }
 
         IList<ICategoryKeyReference> Categories { get; set; }
-        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
+        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
         ILocalizedString MetaTitle { get; set; }
 
@@ -33,8 +32,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productdrafts
         IProductVariantDraftImport MasterVariant { get; set; }
 
         IList<IProductVariantDraftImport> Variants { get; set; }
-        IEnumerable<IProductVariantDraftImport> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IEnumerable<IProductVariantDraftImport> VariantsEnumerable { set => Variants = value.ToList(); }
 
         ITaxCategoryKeyReference TaxCategory { get; set; }
 

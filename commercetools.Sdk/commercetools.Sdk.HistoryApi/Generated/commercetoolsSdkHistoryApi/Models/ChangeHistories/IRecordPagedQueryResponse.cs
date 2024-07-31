@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         int Offset { get; set; }
 
         IList<IRecord> Results { get; set; }
-        IEnumerable<IRecord> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IRecord> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

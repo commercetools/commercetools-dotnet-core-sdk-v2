@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.AttributeGroups
 {
@@ -14,8 +13,8 @@ namespace commercetools.Sdk.Api.Models.AttributeGroups
         ILocalizedString Description { get; set; }
 
         IList<IAttributeReference> Attributes { get; set; }
-        IEnumerable<IAttributeReference> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        IEnumerable<IAttributeReference> AttributesEnumerable { set => Attributes = value.ToList(); }
 
         string Key { get; set; }
 

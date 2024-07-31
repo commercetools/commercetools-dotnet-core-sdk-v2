@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     public partial interface IDateTimeSetAttribute : IAttribute
     {
         IList<DateTime> Value { get; set; }
-        IEnumerable<DateTime> ValueEnumerable { set => Value = value.ToList(); }
 
+        IEnumerable<DateTime> ValueEnumerable { set => Value = value.ToList(); }
 
     }
 }

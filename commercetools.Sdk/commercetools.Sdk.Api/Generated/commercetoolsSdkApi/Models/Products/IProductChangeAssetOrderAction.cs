@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.Products
         bool? Staged { get; set; }
 
         IList<string> AssetOrder { get; set; }
-        IEnumerable<string> AssetOrderEnumerable { set => AssetOrder = value.ToList(); }
 
+        IEnumerable<string> AssetOrderEnumerable { set => AssetOrder = value.ToList(); }
 
     }
 }

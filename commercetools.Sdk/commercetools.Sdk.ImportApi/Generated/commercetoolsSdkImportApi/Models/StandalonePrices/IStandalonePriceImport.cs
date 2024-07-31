@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.StandalonePrices
 {
@@ -28,8 +27,8 @@ namespace commercetools.Sdk.ImportApi.Models.StandalonePrices
         DateTime? ValidUntil { get; set; }
 
         IList<IPriceTier> Tiers { get; set; }
-        IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
         IDiscountedPrice Discounted { get; set; }
 

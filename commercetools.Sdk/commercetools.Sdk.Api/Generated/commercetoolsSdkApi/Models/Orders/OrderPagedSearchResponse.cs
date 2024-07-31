@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -14,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.Orders
         public long? Limit { get; set; }
 
         public IList<IHit> Hits { get; set; }
-        public IEnumerable<IHit> HitsEnumerable { set => Hits = value.ToList(); }
 
+        public IEnumerable<IHit> HitsEnumerable { set => Hits = value.ToList(); }
     }
 }

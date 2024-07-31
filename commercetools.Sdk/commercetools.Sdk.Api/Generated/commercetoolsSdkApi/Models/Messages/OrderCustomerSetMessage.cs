@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Customers;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 

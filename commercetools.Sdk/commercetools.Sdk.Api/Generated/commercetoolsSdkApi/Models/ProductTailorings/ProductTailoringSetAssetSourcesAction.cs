@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductTailorings
 {
 
@@ -21,8 +20,8 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         public string AssetKey { get; set; }
 
         public IList<IAssetSource> Sources { get; set; }
-        public IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
 
+        public IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
         public ProductTailoringSetAssetSourcesAction()
         {
             this.Action = "setAssetSources";

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.Products
         long Offset { get; set; }
 
         IList<IProductProjection> Results { get; set; }
-        IEnumerable<IProductProjection> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IProductProjection> ResultsEnumerable { set => Results = value.ToList(); }
 
         IFacetResults Facets { get; set; }
 

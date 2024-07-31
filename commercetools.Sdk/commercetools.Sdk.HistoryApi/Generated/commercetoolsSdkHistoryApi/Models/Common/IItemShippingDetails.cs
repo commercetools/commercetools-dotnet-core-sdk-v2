@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     public partial interface IItemShippingDetails
     {
         IList<IItemShippingTarget> Targets { get; set; }
-        IEnumerable<IItemShippingTarget> TargetsEnumerable { set => Targets = value.ToList(); }
 
+        IEnumerable<IItemShippingTarget> TargetsEnumerable { set => Targets = value.ToList(); }
 
         bool Valid { get; set; }
 

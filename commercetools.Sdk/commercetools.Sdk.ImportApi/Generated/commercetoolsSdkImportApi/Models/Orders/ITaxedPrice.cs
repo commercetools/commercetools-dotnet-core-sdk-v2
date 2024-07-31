@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
@@ -14,8 +13,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IMoney TotalGross { get; set; }
 
         IList<ITaxPortion> TaxPortions { get; set; }
-        IEnumerable<ITaxPortion> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
 
+        IEnumerable<ITaxPortion> TaxPortionsEnumerable { set => TaxPortions = value.ToList(); }
 
     }
 }

@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -42,12 +41,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         public long VariantId { get; set; }
 
         public IList<IImage> OldImages { get; set; }
+
         public IEnumerable<IImage> OldImagesEnumerable { set => OldImages = value.ToList(); }
 
-
         public IList<IImage> Images { get; set; }
-        public IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
+        public IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
         public ProductTailoringImagesSetMessage()
         {
             this.Type = "ProductTailoringImagesSet";

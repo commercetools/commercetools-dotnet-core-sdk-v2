@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Categories
 {
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.Api.Models.Categories
         string AssetKey { get; set; }
 
         IList<string> Tags { get; set; }
-        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
 
+        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
 
     }
 }

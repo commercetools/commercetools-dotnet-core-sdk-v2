@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Zones
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Zones
         long Version { get; set; }
 
         IList<IZoneUpdateAction> Actions { get; set; }
-        IEnumerable<IZoneUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        IEnumerable<IZoneUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
     }
 }

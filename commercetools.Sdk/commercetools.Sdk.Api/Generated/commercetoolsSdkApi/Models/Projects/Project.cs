@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Projects
 {
 
@@ -16,16 +15,16 @@ namespace commercetools.Sdk.Api.Models.Projects
         public string Name { get; set; }
 
         public IList<string> Countries { get; set; }
+
         public IEnumerable<string> CountriesEnumerable { set => Countries = value.ToList(); }
 
-
         public IList<string> Currencies { get; set; }
+
         public IEnumerable<string> CurrenciesEnumerable { set => Currencies = value.ToList(); }
 
-
         public IList<string> Languages { get; set; }
-        public IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
 
+        public IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
 
         public DateTime CreatedAt { get; set; }
 

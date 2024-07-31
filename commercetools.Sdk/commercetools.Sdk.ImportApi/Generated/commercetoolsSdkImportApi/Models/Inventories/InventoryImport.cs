@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using commercetools.Sdk.ImportApi.Models.Customfields;
 using System;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Inventories
 {
 

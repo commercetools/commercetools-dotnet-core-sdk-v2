@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System;
 
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         public string Type { get; set; }
 
         public IList<DateTime> Value { get; set; }
-        public IEnumerable<DateTime> ValueEnumerable { set => Value = value.ToList(); }
 
+        public IEnumerable<DateTime> ValueEnumerable { set => Value = value.ToList(); }
         public DateTimeSetAttribute()
         {
             this.Type = "datetime-set";

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
         public long? Total { get; set; }
 
         public IList<IProductDiscount> Results { get; set; }
-        public IEnumerable<IProductDiscount> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IProductDiscount> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

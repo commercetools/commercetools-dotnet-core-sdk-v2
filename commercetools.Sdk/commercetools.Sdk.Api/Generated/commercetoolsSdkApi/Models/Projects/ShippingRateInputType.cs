@@ -1,6 +1,5 @@
 using commercetools.Sdk.Api.Models.ShippingMethods;
 
-
 namespace commercetools.Sdk.Api.Models.Projects
 {
 

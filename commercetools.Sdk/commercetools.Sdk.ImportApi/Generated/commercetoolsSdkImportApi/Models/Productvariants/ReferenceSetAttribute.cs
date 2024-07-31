@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
 
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         public string Type { get; set; }
 
         public IList<IKeyReference> Value { get; set; }
-        public IEnumerable<IKeyReference> ValueEnumerable { set => Value = value.ToList(); }
 
+        public IEnumerable<IKeyReference> ValueEnumerable { set => Value = value.ToList(); }
         public ReferenceSetAttribute()
         {
             this.Type = "reference-set";

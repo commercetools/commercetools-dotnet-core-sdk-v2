@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Prices
 {
 
@@ -20,7 +19,7 @@ namespace commercetools.Sdk.ImportApi.Models.Prices
         public string State { get; set; }
 
         public IList<ISubRate> SubRates { get; set; }
-        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
+        public IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
     }
 }

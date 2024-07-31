@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ApprovalRules
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         public long? Total { get; set; }
 
         public IList<IApprovalRule> Results { get; set; }
-        public IEnumerable<IApprovalRule> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IApprovalRule> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

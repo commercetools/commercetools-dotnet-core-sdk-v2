@@ -6,7 +6,6 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -24,8 +23,8 @@ namespace commercetools.Sdk.Api.Models.Products
         ILocalizedString Description { get; set; }
 
         IList<ICategoryResourceIdentifier> Categories { get; set; }
-        IEnumerable<ICategoryResourceIdentifier> CategoriesEnumerable { set => Categories = value.ToList(); }
 
+        IEnumerable<ICategoryResourceIdentifier> CategoriesEnumerable { set => Categories = value.ToList(); }
 
         ICategoryOrderHints CategoryOrderHints { get; set; }
 
@@ -38,8 +37,8 @@ namespace commercetools.Sdk.Api.Models.Products
         IProductVariantDraft MasterVariant { get; set; }
 
         IList<IProductVariantDraft> Variants { get; set; }
-        IEnumerable<IProductVariantDraft> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IEnumerable<IProductVariantDraft> VariantsEnumerable { set => Variants = value.ToList(); }
 
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     public partial interface IInheritedAssociate
     {
         IList<IInheritedAssociateRoleAssignment> AssociateRoleAssignments { get; set; }
-        IEnumerable<IInheritedAssociateRoleAssignment> AssociateRoleAssignmentsEnumerable { set => AssociateRoleAssignments = value.ToList(); }
 
+        IEnumerable<IInheritedAssociateRoleAssignment> AssociateRoleAssignmentsEnumerable { set => AssociateRoleAssignments = value.ToList(); }
 
         IReference Customer { get; set; }
 

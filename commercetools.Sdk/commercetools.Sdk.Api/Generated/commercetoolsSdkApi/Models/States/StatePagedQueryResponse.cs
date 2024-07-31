@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.States
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.States
         public long? Total { get; set; }
 
         public IList<IState> Results { get; set; }
-        public IEnumerable<IState> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IState> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

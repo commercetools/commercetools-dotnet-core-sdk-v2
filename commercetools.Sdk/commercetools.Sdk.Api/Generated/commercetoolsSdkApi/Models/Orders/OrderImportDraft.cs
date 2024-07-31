@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -30,12 +29,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IStoreResourceIdentifier Store { get; set; }
 
         public IList<ILineItemImportDraft> LineItems { get; set; }
+
         public IEnumerable<ILineItemImportDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         public IList<ICustomLineItemImportDraft> CustomLineItems { get; set; }
-        public IEnumerable<ICustomLineItemImportDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        public IEnumerable<ICustomLineItemImportDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         public IMoney TotalPrice { get; set; }
 
@@ -52,8 +51,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IBaseAddress ShippingAddress { get; set; }
 
         public IList<IBaseAddress> ItemShippingAddresses { get; set; }
-        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
+        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
         public IShippingInfoImportDraft ShippingInfo { get; set; }
 

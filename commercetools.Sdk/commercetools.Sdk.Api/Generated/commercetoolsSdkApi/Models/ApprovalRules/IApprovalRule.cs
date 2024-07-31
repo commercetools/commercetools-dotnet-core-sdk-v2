@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ApprovalRules
 {
@@ -36,8 +35,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         IApproverHierarchy Approvers { get; set; }
 
         IList<IRuleRequester> Requesters { get; set; }
-        IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
+        IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
         IBusinessUnitKeyReference BusinessUnit { get; set; }
 

@@ -1,6 +1,5 @@
 using commercetools.Sdk.Api.Models.Reviews;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {

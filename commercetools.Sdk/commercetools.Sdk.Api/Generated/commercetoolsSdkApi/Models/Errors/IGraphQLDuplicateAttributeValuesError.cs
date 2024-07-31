@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         new string Code { get; set; }
 
         IList<IAttribute> Attributes { get; set; }
-        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
     }
 }

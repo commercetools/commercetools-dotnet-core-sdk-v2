@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         public bool AllMatched { get; set; }
 
         public IList<IProductSearchMatchingVariantEntry> MatchedVariants { get; set; }
-        public IEnumerable<IProductSearchMatchingVariantEntry> MatchedVariantsEnumerable { set => MatchedVariants = value.ToList(); }
 
+        public IEnumerable<IProductSearchMatchingVariantEntry> MatchedVariantsEnumerable { set => MatchedVariants = value.ToList(); }
     }
 }

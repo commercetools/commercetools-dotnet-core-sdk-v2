@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
 

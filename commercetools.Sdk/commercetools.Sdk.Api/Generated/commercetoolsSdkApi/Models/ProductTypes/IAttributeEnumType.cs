@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     public partial interface IAttributeEnumType : IAttributeType
     {
         IList<IAttributePlainEnumValue> Values { get; set; }
-        IEnumerable<IAttributePlainEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
 
+        IEnumerable<IAttributePlainEnumValue> ValuesEnumerable { set => Values = value.ToList(); }
 
     }
 }

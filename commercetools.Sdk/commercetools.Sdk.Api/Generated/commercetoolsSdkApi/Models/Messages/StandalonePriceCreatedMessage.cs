@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.StandalonePrices;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 

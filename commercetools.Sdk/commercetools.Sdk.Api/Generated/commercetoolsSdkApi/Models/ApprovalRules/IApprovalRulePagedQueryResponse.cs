@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ApprovalRules
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         long? Total { get; set; }
 
         IList<IApprovalRule> Results { get; set; }
-        IEnumerable<IApprovalRule> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IApprovalRule> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Projects
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Projects
     public partial interface IProjectChangeLanguagesAction : IProjectUpdateAction
     {
         IList<string> Languages { get; set; }
-        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
 
+        IEnumerable<string> LanguagesEnumerable { set => Languages = value.ToList(); }
 
     }
 }

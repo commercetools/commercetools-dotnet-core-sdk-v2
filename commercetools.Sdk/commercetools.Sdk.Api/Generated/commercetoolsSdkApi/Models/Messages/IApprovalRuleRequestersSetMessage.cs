@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.ApprovalRules;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -10,12 +9,12 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IApprovalRuleRequestersSetMessage : IMessage
     {
         IList<IRuleRequester> Requesters { get; set; }
+
         IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
-
         IList<IRuleRequester> OldRequesters { get; set; }
-        IEnumerable<IRuleRequester> OldRequestersEnumerable { set => OldRequesters = value.ToList(); }
 
+        IEnumerable<IRuleRequester> OldRequestersEnumerable { set => OldRequesters = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Zones
 {
 
@@ -14,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.Zones
         public string Description { get; set; }
 
         public IList<ILocation> Locations { get; set; }
-        public IEnumerable<ILocation> LocationsEnumerable { set => Locations = value.ToList(); }
 
+        public IEnumerable<ILocation> LocationsEnumerable { set => Locations = value.ToList(); }
     }
 }

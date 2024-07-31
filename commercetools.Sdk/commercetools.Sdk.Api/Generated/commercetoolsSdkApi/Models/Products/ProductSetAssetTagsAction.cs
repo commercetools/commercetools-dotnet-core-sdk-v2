@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Products
 {
 
@@ -20,8 +19,8 @@ namespace commercetools.Sdk.Api.Models.Products
         public string AssetKey { get; set; }
 
         public IList<string> Tags { get; set; }
-        public IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
 
+        public IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
         public ProductSetAssetTagsAction()
         {
             this.Action = "setAssetTags";

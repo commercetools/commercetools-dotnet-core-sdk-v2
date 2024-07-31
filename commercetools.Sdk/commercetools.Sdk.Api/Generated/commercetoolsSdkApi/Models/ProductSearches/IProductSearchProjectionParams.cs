@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
     public partial interface IProductSearchProjectionParams
     {
         IList<string> Expand { get; set; }
-        IEnumerable<string> ExpandEnumerable { set => Expand = value.ToList(); }
 
+        IEnumerable<string> ExpandEnumerable { set => Expand = value.ToList(); }
 
         bool? Staged { get; set; }
 
@@ -23,8 +22,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         string PriceChannel { get; set; }
 
         IList<string> LocaleProjection { get; set; }
-        IEnumerable<string> LocaleProjectionEnumerable { set => LocaleProjection = value.ToList(); }
 
+        IEnumerable<string> LocaleProjectionEnumerable { set => LocaleProjection = value.ToList(); }
 
         string StoreProjection { get; set; }
 

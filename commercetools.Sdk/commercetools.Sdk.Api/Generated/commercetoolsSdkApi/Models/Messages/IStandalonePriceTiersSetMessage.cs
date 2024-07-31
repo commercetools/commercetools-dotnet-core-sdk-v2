@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -10,12 +9,12 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IStandalonePriceTiersSetMessage : IMessage
     {
         IList<IPriceTier> Tiers { get; set; }
+
         IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
-
         IList<IPriceTier> PreviousTiers { get; set; }
-        IEnumerable<IPriceTier> PreviousTiersEnumerable { set => PreviousTiers = value.ToList(); }
 
+        IEnumerable<IPriceTier> PreviousTiersEnumerable { set => PreviousTiers = value.ToList(); }
 
     }
 }

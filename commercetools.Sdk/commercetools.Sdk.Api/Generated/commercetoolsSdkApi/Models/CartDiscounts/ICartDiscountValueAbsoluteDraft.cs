@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     public partial interface ICartDiscountValueAbsoluteDraft : ICartDiscountValueDraft
     {
         IList<IMoney> Money { get; set; }
-        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
+        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
     }
 }

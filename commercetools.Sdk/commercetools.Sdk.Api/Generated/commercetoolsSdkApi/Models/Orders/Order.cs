@@ -11,7 +11,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -42,12 +41,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IStoreKeyReference Store { get; set; }
 
         public IList<ILineItem> LineItems { get; set; }
+
         public IEnumerable<ILineItem> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         public IList<ICustomLineItem> CustomLineItems { get; set; }
-        public IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        public IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         public ITypedMoney TotalPrice { get; set; }
 
@@ -80,24 +79,24 @@ namespace commercetools.Sdk.Api.Models.Orders
         public ICustomFields ShippingCustomFields { get; set; }
 
         public IList<IShipping> Shipping { get; set; }
+
         public IEnumerable<IShipping> ShippingEnumerable { set => Shipping = value.ToList(); }
 
-
         public IList<IAddress> ItemShippingAddresses { get; set; }
+
         public IEnumerable<IAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-
         public IList<IDiscountCodeInfo> DiscountCodes { get; set; }
+
         public IEnumerable<IDiscountCodeInfo> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
-
         public IList<IDirectDiscount> DirectDiscounts { get; set; }
+
         public IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
-
         public IList<ICartDiscountReference> RefusedGifts { get; set; }
-        public IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
 
+        public IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }
 
         public IPaymentInfo PaymentInfo { get; set; }
 
@@ -120,12 +119,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IStateReference State { get; set; }
 
         public IList<ISyncInfo> SyncInfo { get; set; }
+
         public IEnumerable<ISyncInfo> SyncInfoEnumerable { set => SyncInfo = value.ToList(); }
 
-
         public IList<IReturnInfo> ReturnInfo { get; set; }
-        public IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
 
+        public IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
 
         [ObsoleteAttribute("This property is obsolete", false)]
         public long? LastMessageSequenceNumber { get; set; }

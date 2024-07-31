@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Customfields;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Categories
 {
 
@@ -30,8 +29,8 @@ namespace commercetools.Sdk.ImportApi.Models.Categories
         public ILocalizedString MetaKeywords { get; set; }
 
         public IList<IAsset> Assets { get; set; }
-        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
         public ICustom Custom { get; set; }
     }

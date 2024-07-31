@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.BusinessUnits;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.ApprovalFlows
 {
 

@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ApprovalFlows
 {
@@ -31,28 +30,28 @@ namespace commercetools.Sdk.Api.Models.ApprovalFlows
         IBusinessUnitKeyReference BusinessUnit { get; set; }
 
         IList<IApprovalRule> Rules { get; set; }
-        IEnumerable<IApprovalRule> RulesEnumerable { set => Rules = value.ToList(); }
 
+        IEnumerable<IApprovalRule> RulesEnumerable { set => Rules = value.ToList(); }
 
         IApprovalFlowStatus Status { get; set; }
 
         IApprovalFlowRejection Rejection { get; set; }
 
         IList<IApprovalFlowApproval> Approvals { get; set; }
+
         IEnumerable<IApprovalFlowApproval> ApprovalsEnumerable { set => Approvals = value.ToList(); }
 
-
         IList<IRuleApprover> EligibleApprovers { get; set; }
+
         IEnumerable<IRuleApprover> EligibleApproversEnumerable { set => EligibleApprovers = value.ToList(); }
 
-
         IList<IRuleApprover> PendingApprovers { get; set; }
+
         IEnumerable<IRuleApprover> PendingApproversEnumerable { set => PendingApprovers = value.ToList(); }
 
-
         IList<IRuleApprover> CurrentTierPendingApprovers { get; set; }
-        IEnumerable<IRuleApprover> CurrentTierPendingApproversEnumerable { set => CurrentTierPendingApprovers = value.ToList(); }
 
+        IEnumerable<IRuleApprover> CurrentTierPendingApproversEnumerable { set => CurrentTierPendingApprovers = value.ToList(); }
 
         ICustomFields Custom { get; set; }
 

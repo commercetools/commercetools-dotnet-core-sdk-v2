@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Searches
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Searches
     public partial interface ISearchNotExpression : ISearchCompoundExpression
     {
         IList<ISearchQuery> Not { get; set; }
-        IEnumerable<ISearchQuery> NotEnumerable { set => Not = value.ToList(); }
 
+        IEnumerable<ISearchQuery> NotEnumerable { set => Not = value.ToList(); }
 
     }
 }

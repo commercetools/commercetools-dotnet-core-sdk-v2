@@ -1,6 +1,5 @@
 using System;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
 

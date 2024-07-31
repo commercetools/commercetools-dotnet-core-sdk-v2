@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ApprovalRules
 {
 
@@ -35,8 +34,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         public IApproverHierarchy Approvers { get; set; }
 
         public IList<IRuleRequester> Requesters { get; set; }
-        public IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
+        public IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
         public IBusinessUnitKeyReference BusinessUnit { get; set; }
     }

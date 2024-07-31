@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Carts
 {
@@ -27,8 +26,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         IShippingMethodReference ShippingMethod { get; set; }
 
         IList<IDelivery> Deliveries { get; set; }
-        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
+        IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
         IDiscountedLineItemPrice DiscountedPrice { get; set; }
 

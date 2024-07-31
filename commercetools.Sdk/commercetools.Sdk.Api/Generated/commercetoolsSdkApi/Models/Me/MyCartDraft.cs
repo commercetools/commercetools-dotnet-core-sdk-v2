@@ -7,7 +7,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Me
 {
 
@@ -22,8 +21,8 @@ namespace commercetools.Sdk.Api.Models.Me
         public IStoreResourceIdentifier Store { get; set; }
 
         public IList<IMyLineItemDraft> LineItems { get; set; }
-        public IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
+        public IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
         public ITaxMode TaxMode { get; set; }
 
@@ -36,14 +35,14 @@ namespace commercetools.Sdk.Api.Models.Me
         public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         public IList<IBaseAddress> ItemShippingAddresses { get; set; }
-        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
+        public IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
         public IShippingMode ShippingMode { get; set; }
 
         public IList<string> DiscountCodes { get; set; }
-        public IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+        public IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
         public string Country { get; set; }
 

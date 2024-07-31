@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.DiscountCodes
 {
 
@@ -20,8 +19,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
         public string Code { get; set; }
 
         public IList<ICartDiscountResourceIdentifier> CartDiscounts { get; set; }
-        public IEnumerable<ICartDiscountResourceIdentifier> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
+        public IEnumerable<ICartDiscountResourceIdentifier> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
         public string CartPredicate { get; set; }
 
@@ -34,8 +33,8 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
         public ICustomFieldsDraft Custom { get; set; }
 
         public IList<string> Groups { get; set; }
-        public IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
+        public IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
         public DateTime? ValidFrom { get; set; }
 

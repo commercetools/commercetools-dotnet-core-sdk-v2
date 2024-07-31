@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Searches;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         ISearchQuery Query { get; set; }
 
         IList<ISearchSorting> Sort { get; set; }
-        IEnumerable<ISearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
+        IEnumerable<ISearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
         int? Limit { get; set; }
 
@@ -24,8 +23,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         IProductSearchProjectionParams ProductProjectionParameters { get; set; }
 
         IList<IProductSearchFacetExpression> Facets { get; set; }
-        IEnumerable<IProductSearchFacetExpression> FacetsEnumerable { set => Facets = value.ToList(); }
 
+        IEnumerable<IProductSearchFacetExpression> FacetsEnumerable { set => Facets = value.ToList(); }
 
         ISearchQuery PostFilter { get; set; }
 

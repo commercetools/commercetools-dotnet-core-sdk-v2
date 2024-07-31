@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -20,12 +19,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         long VariantId { get; set; }
 
         IList<IImage> OldImages { get; set; }
+
         IEnumerable<IImage> OldImagesEnumerable { set => OldImages = value.ToList(); }
 
-
         IList<IImage> Images { get; set; }
-        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
+        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Payments
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.Payments
         long Offset { get; set; }
 
         IList<IPayment> Results { get; set; }
-        IEnumerable<IPayment> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IPayment> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

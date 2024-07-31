@@ -1,11 +1,10 @@
 using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Types;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
+using System;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Me
 {
@@ -26,18 +25,18 @@ namespace commercetools.Sdk.Api.Models.Me
         ICustomFieldsDraft Custom { get; set; }
 
         IList<IBaseAddress> Addresses { get; set; }
+
         IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-
         IList<int> ShippingAddresses { get; set; }
-        IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
 
+        IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
 
         int? DefaultShippingAddress { get; set; }
 
         IList<int> BillingAddresses { get; set; }
-        IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
 
+        IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
 
         int? DefaultBillingAddress { get; set; }
 

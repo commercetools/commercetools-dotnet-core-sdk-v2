@@ -6,7 +6,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 
@@ -35,8 +34,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         public IList<IItemState> State { get; set; }
-        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
     }

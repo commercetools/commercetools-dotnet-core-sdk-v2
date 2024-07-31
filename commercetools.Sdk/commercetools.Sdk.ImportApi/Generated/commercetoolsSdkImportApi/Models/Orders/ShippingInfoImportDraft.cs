@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
 
@@ -22,8 +21,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         public IShippingMethodKeyReference ShippingMethod { get; set; }
 
         public IList<IDelivery> Deliveries { get; set; }
-        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
+        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
         public IDiscountedLineItemPriceDraft DiscountedPrice { get; set; }
 

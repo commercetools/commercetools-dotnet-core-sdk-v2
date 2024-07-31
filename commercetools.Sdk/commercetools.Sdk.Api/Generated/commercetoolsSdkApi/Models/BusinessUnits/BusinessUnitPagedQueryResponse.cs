@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public long? Total { get; set; }
 
         public IList<IBusinessUnit> Results { get; set; }
-        public IEnumerable<IBusinessUnit> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IBusinessUnit> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }
