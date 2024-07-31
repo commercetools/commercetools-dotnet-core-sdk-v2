@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
@@ -37,8 +36,8 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
         bool IsActive { get; set; }
 
         IList<IReference> References { get; set; }
-        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
+        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
         DateTime? ValidFrom { get; set; }
 

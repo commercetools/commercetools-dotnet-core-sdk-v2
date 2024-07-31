@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
 
@@ -25,8 +24,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         public IDiscountedPrice Discounted { get; set; }
 
         public IList<IPriceTier> Tiers { get; set; }
-        public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        public IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
         public ICustom Custom { get; set; }
     }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductDiscounts
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.ProductDiscounts
         public long Version { get; set; }
 
         public IList<IProductDiscountUpdateAction> Actions { get; set; }
-        public IEnumerable<IProductDiscountUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        public IEnumerable<IProductDiscountUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
     }
 }

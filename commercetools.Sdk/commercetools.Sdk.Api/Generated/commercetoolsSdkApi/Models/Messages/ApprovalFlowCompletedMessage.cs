@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 

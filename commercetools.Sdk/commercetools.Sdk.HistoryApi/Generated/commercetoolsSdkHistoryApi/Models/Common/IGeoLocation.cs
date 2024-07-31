@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         string Type { get; set; }
 
         IList<int> Coordinates { get; set; }
-        IEnumerable<int> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
 
+        IEnumerable<int> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
 
     }
 }

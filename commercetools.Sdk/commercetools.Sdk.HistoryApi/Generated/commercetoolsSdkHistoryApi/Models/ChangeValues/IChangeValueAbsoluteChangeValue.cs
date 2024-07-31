@@ -2,7 +2,6 @@ using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         new string Type { get; set; }
 
         IList<IMoney> Money { get; set; }
-        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
+        IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
     }
 }

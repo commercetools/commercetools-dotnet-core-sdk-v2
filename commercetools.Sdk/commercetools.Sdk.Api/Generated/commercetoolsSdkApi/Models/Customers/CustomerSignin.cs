@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Carts;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Customers
 {
 

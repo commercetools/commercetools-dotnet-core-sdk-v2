@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
 
@@ -14,7 +13,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         public string Description { get; set; }
 
         public IList<IAttributeDefinitionDraft> Attributes { get; set; }
-        public IEnumerable<IAttributeDefinitionDraft> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        public IEnumerable<IAttributeDefinitionDraft> AttributesEnumerable { set => Attributes = value.ToList(); }
     }
 }

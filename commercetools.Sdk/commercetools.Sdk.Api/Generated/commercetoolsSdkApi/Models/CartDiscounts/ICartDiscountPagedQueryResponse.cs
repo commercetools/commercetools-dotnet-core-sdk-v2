@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         long? Total { get; set; }
 
         IList<ICartDiscount> Results { get; set; }
-        IEnumerable<ICartDiscount> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<ICartDiscount> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

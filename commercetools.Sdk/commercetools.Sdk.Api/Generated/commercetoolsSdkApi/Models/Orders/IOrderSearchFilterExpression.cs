@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Orders
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Orders
     public partial interface IOrderSearchFilterExpression : IOrderSearchCompoundExpression
     {
         IList<IOrderSearchQueryExpression> Filter { get; set; }
-        IEnumerable<IOrderSearchQueryExpression> FilterEnumerable { set => Filter = value.ToList(); }
 
+        IEnumerable<IOrderSearchQueryExpression> FilterEnumerable { set => Filter = value.ToList(); }
 
     }
 }

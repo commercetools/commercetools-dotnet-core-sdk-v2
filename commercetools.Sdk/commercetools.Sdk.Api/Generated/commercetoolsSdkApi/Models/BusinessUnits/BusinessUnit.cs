@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
 
@@ -28,8 +27,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public IBusinessUnitStatus Status { get; set; }
 
         public IList<IStoreKeyReference> Stores { get; set; }
-        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         public IBusinessUnitStoreMode StoreMode { get; set; }
 
@@ -42,30 +41,30 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public ICustomFields Custom { get; set; }
 
         public IList<IAddress> Addresses { get; set; }
+
         public IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-
         public IList<string> ShippingAddressIds { get; set; }
-        public IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
+        public IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
         public string DefaultShippingAddressId { get; set; }
 
         public IList<string> BillingAddressIds { get; set; }
-        public IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
+        public IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
         public string DefaultBillingAddressId { get; set; }
 
         public IBusinessUnitAssociateMode AssociateMode { get; set; }
 
         public IList<IAssociate> Associates { get; set; }
+
         public IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
 
-
         public IList<IInheritedAssociate> InheritedAssociates { get; set; }
-        public IEnumerable<IInheritedAssociate> InheritedAssociatesEnumerable { set => InheritedAssociates = value.ToList(); }
 
+        public IEnumerable<IInheritedAssociate> InheritedAssociatesEnumerable { set => InheritedAssociates = value.ToList(); }
 
         public IBusinessUnitKeyReference ParentUnit { get; set; }
 

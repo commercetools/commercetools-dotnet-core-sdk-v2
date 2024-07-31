@@ -1,7 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Common;
 using System;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
 

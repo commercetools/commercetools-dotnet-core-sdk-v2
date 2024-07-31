@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Orders
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         IOrderSearchQuery Query { get; set; }
 
         IList<IOrderSearchSorting> Sort { get; set; }
-        IEnumerable<IOrderSearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
+        IEnumerable<IOrderSearchSorting> SortEnumerable { set => Sort = value.ToList(); }
 
         int? Limit { get; set; }
 

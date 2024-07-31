@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Searches;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
 
@@ -19,8 +18,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         public string Field { get; set; }
 
         public IList<IProductSearchFacetRangesFacetRange> Ranges { get; set; }
-        public IEnumerable<IProductSearchFacetRangesFacetRange> RangesEnumerable { set => Ranges = value.ToList(); }
 
+        public IEnumerable<IProductSearchFacetRangesFacetRange> RangesEnumerable { set => Ranges = value.ToList(); }
 
         public string Language { get; set; }
 

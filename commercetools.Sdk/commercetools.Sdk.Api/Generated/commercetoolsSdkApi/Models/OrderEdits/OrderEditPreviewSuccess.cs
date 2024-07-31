@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Messages;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
 
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public IStagedOrder Preview { get; set; }
 
         public IList<IMessagePayload> MessagePayloads { get; set; }
-        public IEnumerable<IMessagePayload> MessagePayloadsEnumerable { set => MessagePayloads = value.ToList(); }
 
+        public IEnumerable<IMessagePayload> MessagePayloadsEnumerable { set => MessagePayloads = value.ToList(); }
         public OrderEditPreviewSuccess()
         {
             this.Type = "PreviewSuccess";

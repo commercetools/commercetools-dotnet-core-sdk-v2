@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.States
 {
@@ -35,12 +34,12 @@ namespace commercetools.Sdk.Api.Models.States
         bool BuiltIn { get; set; }
 
         IList<IStateRoleEnum> Roles { get; set; }
+
         IEnumerable<IStateRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
-
         IList<IStateReference> Transitions { get; set; }
-        IEnumerable<IStateReference> TransitionsEnumerable { set => Transitions = value.ToList(); }
 
+        IEnumerable<IStateReference> TransitionsEnumerable { set => Transitions = value.ToList(); }
 
     }
 }

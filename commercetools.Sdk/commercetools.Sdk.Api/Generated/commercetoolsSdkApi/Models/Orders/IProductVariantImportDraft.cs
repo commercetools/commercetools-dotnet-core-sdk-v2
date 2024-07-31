@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Orders
 {
@@ -15,16 +14,16 @@ namespace commercetools.Sdk.Api.Models.Orders
         string Sku { get; set; }
 
         IList<IPriceDraft> Prices { get; set; }
+
         IEnumerable<IPriceDraft> PricesEnumerable { set => Prices = value.ToList(); }
 
-
         IList<IAttribute> Attributes { get; set; }
+
         IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
-
         IList<IImage> Images { get; set; }
-        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
+        IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
     }
 }

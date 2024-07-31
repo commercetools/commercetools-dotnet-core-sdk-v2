@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     public partial interface IBusinessUnitSetAssociatesAction : IBusinessUnitUpdateAction
     {
         IList<IAssociateDraft> Associates { get; set; }
-        IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
+        IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public long? Total { get; set; }
 
         public IList<IAssociateRole> Results { get; set; }
-        public IEnumerable<IAssociateRole> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IAssociateRole> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

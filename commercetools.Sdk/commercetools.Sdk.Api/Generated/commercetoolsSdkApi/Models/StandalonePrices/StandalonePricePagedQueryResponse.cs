@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         public long? Total { get; set; }
 
         public IList<IStandalonePrice> Results { get; set; }
-        public IEnumerable<IStandalonePrice> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IStandalonePrice> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

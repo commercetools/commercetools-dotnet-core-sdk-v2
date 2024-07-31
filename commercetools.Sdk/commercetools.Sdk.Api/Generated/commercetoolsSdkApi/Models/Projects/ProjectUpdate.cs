@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Projects
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.Projects
         public long Version { get; set; }
 
         public IList<IProjectUpdateAction> Actions { get; set; }
-        public IEnumerable<IProjectUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        public IEnumerable<IProjectUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
     }
 }

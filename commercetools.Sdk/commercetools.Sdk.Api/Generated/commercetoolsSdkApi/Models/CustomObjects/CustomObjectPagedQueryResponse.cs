@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.CustomObjects
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
         public long? Total { get; set; }
 
         public IList<ICustomObject> Results { get; set; }
-        public IEnumerable<ICustomObject> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<ICustomObject> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

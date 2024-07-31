@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         long? Offset { get; set; }
 
         IList<IShippingMethod> Results { get; set; }
-        IEnumerable<IShippingMethod> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IShippingMethod> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

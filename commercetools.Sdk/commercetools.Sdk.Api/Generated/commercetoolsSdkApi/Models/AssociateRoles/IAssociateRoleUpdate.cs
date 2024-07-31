@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         long Version { get; set; }
 
         IList<IAssociateRoleUpdateAction> Actions { get; set; }
-        IEnumerable<IAssociateRoleUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        IEnumerable<IAssociateRoleUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
     }
 }

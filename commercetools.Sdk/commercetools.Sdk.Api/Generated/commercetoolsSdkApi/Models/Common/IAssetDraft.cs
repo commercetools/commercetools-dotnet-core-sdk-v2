@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Common
 {
@@ -10,16 +9,16 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IAssetDraft
     {
         IList<IAssetSource> Sources { get; set; }
-        IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
 
+        IEnumerable<IAssetSource> SourcesEnumerable { set => Sources = value.ToList(); }
 
         ILocalizedString Name { get; set; }
 
         ILocalizedString Description { get; set; }
 
         IList<string> Tags { get; set; }
-        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
 
+        IEnumerable<string> TagsEnumerable { set => Tags = value.ToList(); }
 
         ICustomFieldsDraft Custom { get; set; }
 

@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
 {
 
@@ -19,8 +18,8 @@ namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
         public string Code { get; set; }
 
         public IList<ICartDiscountKeyReference> CartDiscounts { get; set; }
-        public IEnumerable<ICartDiscountKeyReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
+        public IEnumerable<ICartDiscountKeyReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
         public string CartPredicate { get; set; }
 
@@ -31,8 +30,8 @@ namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
         public long? MaxApplicationsPerCustomer { get; set; }
 
         public IList<string> Groups { get; set; }
-        public IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
+        public IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
         public DateTime? ValidFrom { get; set; }
 

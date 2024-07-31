@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Payments
 {
 
@@ -23,12 +22,12 @@ namespace commercetools.Sdk.Api.Models.Payments
         public IPaymentStatusDraft PaymentStatus { get; set; }
 
         public IList<ITransactionDraft> Transactions { get; set; }
+
         public IEnumerable<ITransactionDraft> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
-
         public IList<ICustomFieldsDraft> InterfaceInteractions { get; set; }
-        public IEnumerable<ICustomFieldsDraft> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
+        public IEnumerable<ICustomFieldsDraft> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
 

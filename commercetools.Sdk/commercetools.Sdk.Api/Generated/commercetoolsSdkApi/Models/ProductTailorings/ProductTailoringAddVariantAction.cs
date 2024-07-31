@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductTailorings
 {
 
@@ -15,12 +14,12 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         public string Sku { get; set; }
 
         public IList<IImage> Images { get; set; }
+
         public IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
-
         public IList<IAssetDraft> Assets { get; set; }
-        public IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        public IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
         public bool? Staged { get; set; }
         public ProductTailoringAddVariantAction()

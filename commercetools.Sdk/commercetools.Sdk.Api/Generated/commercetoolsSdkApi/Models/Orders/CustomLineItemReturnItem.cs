@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Types;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 

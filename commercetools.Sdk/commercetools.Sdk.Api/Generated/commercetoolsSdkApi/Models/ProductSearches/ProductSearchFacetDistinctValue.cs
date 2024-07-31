@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Searches;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
 
@@ -19,8 +18,8 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
         public string Field { get; set; }
 
         public IList<string> Includes { get; set; }
-        public IEnumerable<string> IncludesEnumerable { set => Includes = value.ToList(); }
 
+        public IEnumerable<string> IncludesEnumerable { set => Includes = value.ToList(); }
 
         public IProductSearchFacetDistinctBucketSortExpression Sort { get; set; }
 

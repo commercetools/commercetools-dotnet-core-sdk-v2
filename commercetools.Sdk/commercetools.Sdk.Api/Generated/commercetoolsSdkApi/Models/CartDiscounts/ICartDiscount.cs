@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
@@ -39,8 +38,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         string SortOrder { get; set; }
 
         IList<IStoreKeyReference> Stores { get; set; }
-        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         bool IsActive { get; set; }
 
@@ -51,8 +50,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         bool RequiresDiscountCode { get; set; }
 
         IList<IReference> References { get; set; }
-        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
+        IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
         IStackingMode StackingMode { get; set; }
 

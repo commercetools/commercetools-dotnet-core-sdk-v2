@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 
@@ -16,8 +15,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         public Object ExtensionExtraInfo { get; set; }
 
         public IList<IExtensionError> ExtensionErrors { get; set; }
-        public IEnumerable<IExtensionError> ExtensionErrorsEnumerable { set => ExtensionErrors = value.ToList(); }
 
+        public IEnumerable<IExtensionError> ExtensionErrorsEnumerable { set => ExtensionErrors = value.ToList(); }
         public GraphQLExtensionUpdateActionsFailedError()
         {
             this.Code = "ExtensionUpdateActionsFailed";

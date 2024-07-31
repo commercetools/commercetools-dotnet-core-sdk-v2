@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ProductTailorings
 {
 
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         public bool? Publish { get; set; }
 
         public IList<IProductVariantTailoringDraft> Variants { get; set; }
-        public IEnumerable<IProductVariantTailoringDraft> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        public IEnumerable<IProductVariantTailoringDraft> VariantsEnumerable { set => Variants = value.ToList(); }
     }
 }

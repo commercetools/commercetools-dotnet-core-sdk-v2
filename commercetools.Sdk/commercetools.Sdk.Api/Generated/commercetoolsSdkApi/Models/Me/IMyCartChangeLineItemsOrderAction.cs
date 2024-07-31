@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Me
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Me
     public partial interface IMyCartChangeLineItemsOrderAction : IMyCartUpdateAction
     {
         IList<string> LineItemOrder { get; set; }
-        IEnumerable<string> LineItemOrderEnumerable { set => LineItemOrder = value.ToList(); }
 
+        IEnumerable<string> LineItemOrderEnumerable { set => LineItemOrder = value.ToList(); }
 
     }
 }

@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
@@ -21,8 +20,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITrackingData TrackingData { get; set; }
 
         IList<IDeliveryItem> Items { get; set; }
-        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
+        IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
         ICustomFieldsDraft Custom { get; set; }
 

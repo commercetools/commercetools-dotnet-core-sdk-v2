@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         bool IsMatching { get; set; }
 
         IList<IShippingRatePriceTier> Tiers { get; set; }
-        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
     }
 }

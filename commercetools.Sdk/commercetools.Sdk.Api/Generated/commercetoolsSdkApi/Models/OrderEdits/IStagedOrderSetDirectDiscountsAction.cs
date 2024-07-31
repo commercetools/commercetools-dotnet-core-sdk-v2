@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     public partial interface IStagedOrderSetDirectDiscountsAction : IStagedOrderUpdateAction
     {
         IList<IDirectDiscountDraft> Discounts { get; set; }
-        IEnumerable<IDirectDiscountDraft> DiscountsEnumerable { set => Discounts = value.ToList(); }
 
+        IEnumerable<IDirectDiscountDraft> DiscountsEnumerable { set => Discounts = value.ToList(); }
 
     }
 }

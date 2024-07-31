@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Importoperations;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     public partial interface IImportResponse
     {
         IList<IImportOperationStatus> OperationStatus { get; set; }
-        IEnumerable<IImportOperationStatus> OperationStatusEnumerable { set => OperationStatus = value.ToList(); }
 
+        IEnumerable<IImportOperationStatus> OperationStatusEnumerable { set => OperationStatus = value.ToList(); }
 
     }
 }

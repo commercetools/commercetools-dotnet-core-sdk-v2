@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Customers;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
@@ -22,8 +21,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         ICustomerResourceIdentifier AssociateOnBehalf { get; set; }
 
         IList<IPermission> Permissions { get; set; }
-        IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
+        IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
     }
 }

@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -55,8 +54,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public ILocalizedString MetaKeywords { get; set; }
 
         public IList<IProductVariantTailoring> Variants { get; set; }
-        public IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        public IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
         public bool Published { get; set; }
         public ProductTailoringCreatedMessage()

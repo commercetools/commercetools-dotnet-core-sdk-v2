@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Customers
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.Customers
     public partial interface ICustomerSetStoresAction : ICustomerUpdateAction
     {
         IList<IStoreResourceIdentifier> Stores { get; set; }
-        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
+        IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
     }
 }

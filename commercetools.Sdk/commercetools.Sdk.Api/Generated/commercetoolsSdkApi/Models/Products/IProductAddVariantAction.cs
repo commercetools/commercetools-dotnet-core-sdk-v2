@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -14,22 +13,22 @@ namespace commercetools.Sdk.Api.Models.Products
         string Key { get; set; }
 
         IList<IPriceDraft> Prices { get; set; }
+
         IEnumerable<IPriceDraft> PricesEnumerable { set => Prices = value.ToList(); }
 
-
         IList<IImage> Images { get; set; }
+
         IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
-
         IList<IAttribute> Attributes { get; set; }
-        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
         bool? Staged { get; set; }
 
         IList<IAssetDraft> Assets { get; set; }
-        IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        IEnumerable<IAssetDraft> AssetsEnumerable { set => Assets = value.ToList(); }
 
     }
 }

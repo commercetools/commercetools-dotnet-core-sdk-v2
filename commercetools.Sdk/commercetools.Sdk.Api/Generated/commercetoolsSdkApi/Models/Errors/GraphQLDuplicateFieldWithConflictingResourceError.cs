@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 

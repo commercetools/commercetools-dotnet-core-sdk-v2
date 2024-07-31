@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductTailorings
 {
@@ -29,8 +28,8 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         bool? Publish { get; set; }
 
         IList<IProductVariantTailoringDraft> Variants { get; set; }
-        IEnumerable<IProductVariantTailoringDraft> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IEnumerable<IProductVariantTailoringDraft> VariantsEnumerable { set => Variants = value.ToList(); }
 
     }
 }

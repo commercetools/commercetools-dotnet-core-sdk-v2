@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
 
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public string Action { get; set; }
 
         public IList<IAssociateDraft> Associates { get; set; }
-        public IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
+        public IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
         public BusinessUnitSetAssociatesAction()
         {
             this.Action = "setAssociates";

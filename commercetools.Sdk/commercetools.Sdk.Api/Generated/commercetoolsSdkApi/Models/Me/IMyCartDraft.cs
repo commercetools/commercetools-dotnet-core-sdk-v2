@@ -7,7 +7,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Me
 {
@@ -23,8 +22,8 @@ namespace commercetools.Sdk.Api.Models.Me
         IStoreResourceIdentifier Store { get; set; }
 
         IList<IMyLineItemDraft> LineItems { get; set; }
-        IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
+        IEnumerable<IMyLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
         ITaxMode TaxMode { get; set; }
 
@@ -37,14 +36,14 @@ namespace commercetools.Sdk.Api.Models.Me
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         IList<IBaseAddress> ItemShippingAddresses { get; set; }
-        IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
+        IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
         IShippingMode ShippingMode { get; set; }
 
         IList<string> DiscountCodes { get; set; }
-        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
         string Country { get; set; }
 

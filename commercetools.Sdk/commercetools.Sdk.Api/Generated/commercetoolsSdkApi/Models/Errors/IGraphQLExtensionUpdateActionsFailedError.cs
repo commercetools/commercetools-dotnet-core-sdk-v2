@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         Object ExtensionExtraInfo { get; set; }
 
         IList<IExtensionError> ExtensionErrors { get; set; }
-        IEnumerable<IExtensionError> ExtensionErrorsEnumerable { set => ExtensionErrors = value.ToList(); }
 
+        IEnumerable<IExtensionError> ExtensionErrorsEnumerable { set => ExtensionErrors = value.ToList(); }
 
     }
 }

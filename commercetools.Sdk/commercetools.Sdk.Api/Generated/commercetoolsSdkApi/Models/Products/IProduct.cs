@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using System;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {

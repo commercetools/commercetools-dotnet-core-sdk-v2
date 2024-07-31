@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Productvariants
 {
@@ -17,16 +16,16 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         bool IsMasterVariant { get; set; }
 
         IList<IAttribute> Attributes { get; set; }
+
         IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
-
         IList<IImage> Images { get; set; }
+
         IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }
 
-
         IList<IAsset> Assets { get; set; }
-        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
         [ObsoleteAttribute("This property is obsolete", false)]
         bool? Publish { get; set; }

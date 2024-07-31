@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.AttributeGroups
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.AttributeGroups
         public long? Total { get; set; }
 
         public IList<IAttributeGroup> Results { get; set; }
-        public IEnumerable<IAttributeGroup> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IAttributeGroup> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

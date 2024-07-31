@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         public string Message { get; set; }
 
         public IList<IErrorObject> Errors { get; set; }
-        public IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
 
+        public IEnumerable<IErrorObject> ErrorsEnumerable { set => Errors = value.ToList(); }
 
         public string Error { get; set; }
 

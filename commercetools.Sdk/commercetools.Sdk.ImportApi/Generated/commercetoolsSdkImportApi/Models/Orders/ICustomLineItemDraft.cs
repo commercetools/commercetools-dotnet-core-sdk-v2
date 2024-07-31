@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Prices;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
@@ -23,8 +22,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         long Quantity { get; set; }
 
         IList<IItemState> State { get; set; }
-        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
+        IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
         ITaxCategoryKeyReference TaxCategory { get; set; }
 
@@ -33,8 +32,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
         IList<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantity { get; set; }
-        IEnumerable<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 
+        IEnumerable<IDiscountedLineItemPriceDraft> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
 
         IItemShippingDetailsDraft ShippingDetails { get; set; }
 

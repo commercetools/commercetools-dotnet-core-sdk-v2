@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Common
 {
 
@@ -28,8 +27,8 @@ namespace commercetools.Sdk.Api.Models.Common
         public IDiscountedPriceDraft Discounted { get; set; }
 
         public IList<IPriceTierDraft> Tiers { get; set; }
-        public IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        public IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
     }

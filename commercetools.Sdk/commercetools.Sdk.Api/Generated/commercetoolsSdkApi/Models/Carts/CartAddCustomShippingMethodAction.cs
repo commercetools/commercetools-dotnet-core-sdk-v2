@@ -6,7 +6,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Carts
 {
 
@@ -29,8 +28,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
         public IList<IDeliveryDraft> Deliveries { get; set; }
-        public IEnumerable<IDeliveryDraft> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
+        public IEnumerable<IDeliveryDraft> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
         public CartAddCustomShippingMethodAction()

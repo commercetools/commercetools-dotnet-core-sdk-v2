@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.ShippingMethods;
-using System;
 using commercetools.Base.CustomAttributes;
-
+using System;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Projects
 {

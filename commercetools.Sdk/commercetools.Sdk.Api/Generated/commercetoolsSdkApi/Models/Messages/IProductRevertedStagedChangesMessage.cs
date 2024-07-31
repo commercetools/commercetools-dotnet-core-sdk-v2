@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IProductRevertedStagedChangesMessage : IMessage
     {
         IList<string> RemovedImageUrls { get; set; }
-        IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
 
+        IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
 
     }
 }

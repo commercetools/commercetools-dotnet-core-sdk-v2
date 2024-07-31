@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Productvariants;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Errors
 {
@@ -13,12 +12,12 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         string Sku { get; set; }
 
         IList<IPriceImport> Prices { get; set; }
+
         IEnumerable<IPriceImport> PricesEnumerable { set => Prices = value.ToList(); }
 
-
         IList<IAttribute> Attributes { get; set; }
-        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
 
     }
 }

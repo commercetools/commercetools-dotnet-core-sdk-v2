@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ShoppingLists
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         public long Offset { get; set; }
 
         public IList<IShoppingList> Results { get; set; }
-        public IEnumerable<IShoppingList> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IShoppingList> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

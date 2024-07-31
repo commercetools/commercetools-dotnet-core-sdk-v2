@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Channels;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.Orders
 {
 

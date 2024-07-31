@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.TaxCategories;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Carts
 {
 
@@ -26,8 +25,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IShippingMethodReference ShippingMethod { get; set; }
 
         public IList<IDelivery> Deliveries { get; set; }
-        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
+        public IEnumerable<IDelivery> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
         public IDiscountedLineItemPrice DiscountedPrice { get; set; }
 

@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Messages;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         IStagedOrder Preview { get; set; }
 
         IList<IMessagePayload> MessagePayloads { get; set; }
-        IEnumerable<IMessagePayload> MessagePayloadsEnumerable { set => MessagePayloads = value.ToList(); }
 
+        IEnumerable<IMessagePayload> MessagePayloadsEnumerable { set => MessagePayloads = value.ToList(); }
 
     }
 }

@@ -7,7 +7,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Carts
 {
@@ -31,12 +30,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         IStoreResourceIdentifier Store { get; set; }
 
         IList<ILineItemDraft> LineItems { get; set; }
+
         IEnumerable<ILineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         IList<ICustomLineItemDraft> CustomLineItems { get; set; }
-        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
+        IEnumerable<ICustomLineItemDraft> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
         ITaxMode TaxMode { get; set; }
 
@@ -59,20 +58,20 @@ namespace commercetools.Sdk.Api.Models.Carts
         IShippingMode ShippingMode { get; set; }
 
         IList<ICustomShippingDraft> CustomShipping { get; set; }
+
         IEnumerable<ICustomShippingDraft> CustomShippingEnumerable { set => CustomShipping = value.ToList(); }
 
-
         IList<IShippingDraft> Shipping { get; set; }
+
         IEnumerable<IShippingDraft> ShippingEnumerable { set => Shipping = value.ToList(); }
 
-
         IList<IBaseAddress> ItemShippingAddresses { get; set; }
+
         IEnumerable<IBaseAddress> ItemShippingAddressesEnumerable { set => ItemShippingAddresses = value.ToList(); }
 
-
         IList<string> DiscountCodes { get; set; }
-        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+        IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
         string Country { get; set; }
 

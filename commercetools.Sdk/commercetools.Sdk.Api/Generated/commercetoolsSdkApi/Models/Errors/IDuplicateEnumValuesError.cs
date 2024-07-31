@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         new string Message { get; set; }
 
         IList<string> Duplicates { get; set; }
-        IEnumerable<string> DuplicatesEnumerable { set => Duplicates = value.ToList(); }
 
+        IEnumerable<string> DuplicatesEnumerable { set => Duplicates = value.ToList(); }
 
     }
 }

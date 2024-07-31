@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.CustomerGroups
 {
 
@@ -10,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
         public long Version { get; set; }
 
         public IList<ICustomerGroupUpdateAction> Actions { get; set; }
-        public IEnumerable<ICustomerGroupUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
+        public IEnumerable<ICustomerGroupUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
     }
 }

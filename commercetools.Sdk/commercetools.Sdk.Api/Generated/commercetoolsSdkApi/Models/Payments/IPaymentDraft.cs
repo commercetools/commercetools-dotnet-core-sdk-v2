@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Payments
 {
@@ -24,12 +23,12 @@ namespace commercetools.Sdk.Api.Models.Payments
         IPaymentStatusDraft PaymentStatus { get; set; }
 
         IList<ITransactionDraft> Transactions { get; set; }
+
         IEnumerable<ITransactionDraft> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
-
         IList<ICustomFieldsDraft> InterfaceInteractions { get; set; }
-        IEnumerable<ICustomFieldsDraft> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
+        IEnumerable<ICustomFieldsDraft> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
         ICustomFieldsDraft Custom { get; set; }
 

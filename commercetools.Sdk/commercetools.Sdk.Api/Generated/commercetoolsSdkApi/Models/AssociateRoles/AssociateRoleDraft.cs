@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
 
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public bool? BuyerAssignable { get; set; }
 
         public IList<IPermission> Permissions { get; set; }
-        public IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
+        public IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
     }

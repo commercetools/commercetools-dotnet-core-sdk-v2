@@ -3,7 +3,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -13,8 +12,8 @@ namespace commercetools.Sdk.Api.Models.Products
         ILocalizedString Name { get; set; }
 
         IList<ICategoryReference> Categories { get; set; }
-        IEnumerable<ICategoryReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
+        IEnumerable<ICategoryReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
         ICategoryOrderHints CategoryOrderHints { get; set; }
 
@@ -31,8 +30,8 @@ namespace commercetools.Sdk.Api.Models.Products
         IProductVariant MasterVariant { get; set; }
 
         IList<IProductVariant> Variants { get; set; }
-        IEnumerable<IProductVariant> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IEnumerable<IProductVariant> VariantsEnumerable { set => Variants = value.ToList(); }
 
         ISearchKeywords SearchKeywords { get; set; }
 

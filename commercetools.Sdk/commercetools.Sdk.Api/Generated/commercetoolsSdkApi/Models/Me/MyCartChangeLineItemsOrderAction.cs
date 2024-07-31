@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Me
 {
 
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.Me
         public string Action { get; set; }
 
         public IList<string> LineItemOrder { get; set; }
-        public IEnumerable<string> LineItemOrderEnumerable { set => LineItemOrder = value.ToList(); }
 
+        public IEnumerable<string> LineItemOrderEnumerable { set => LineItemOrder = value.ToList(); }
         public MyCartChangeLineItemsOrderAction()
         {
             this.Action = "changeLineItemsOrder";

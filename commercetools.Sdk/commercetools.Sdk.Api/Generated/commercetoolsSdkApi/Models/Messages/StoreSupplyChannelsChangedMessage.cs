@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -33,12 +32,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IList<IChannelReference> AddedSupplyChannels { get; set; }
+
         public IEnumerable<IChannelReference> AddedSupplyChannelsEnumerable { set => AddedSupplyChannels = value.ToList(); }
 
-
         public IList<IChannelReference> RemovedSupplyChannels { get; set; }
-        public IEnumerable<IChannelReference> RemovedSupplyChannelsEnumerable { set => RemovedSupplyChannels = value.ToList(); }
 
+        public IEnumerable<IChannelReference> RemovedSupplyChannelsEnumerable { set => RemovedSupplyChannels = value.ToList(); }
         public StoreSupplyChannelsChangedMessage()
         {
             this.Type = "StoreSupplyChannelsChanged";

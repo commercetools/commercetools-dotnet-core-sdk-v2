@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Products
 {
 
@@ -19,8 +18,8 @@ namespace commercetools.Sdk.ImportApi.Models.Products
         public ILocalizedString Description { get; set; }
 
         public IList<ICategoryKeyReference> Categories { get; set; }
-        public IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
+        public IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
         public ILocalizedString MetaTitle { get; set; }
 

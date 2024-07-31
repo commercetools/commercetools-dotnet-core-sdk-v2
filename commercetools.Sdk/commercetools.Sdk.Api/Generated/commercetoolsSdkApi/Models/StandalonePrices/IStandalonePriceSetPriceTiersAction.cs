@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.StandalonePrices
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     public partial interface IStandalonePriceSetPriceTiersAction : IStandalonePriceUpdateAction
     {
         IList<IPriceTierDraft> Tiers { get; set; }
-        IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        IEnumerable<IPriceTierDraft> TiersEnumerable { set => Tiers = value.ToList(); }
 
     }
 }

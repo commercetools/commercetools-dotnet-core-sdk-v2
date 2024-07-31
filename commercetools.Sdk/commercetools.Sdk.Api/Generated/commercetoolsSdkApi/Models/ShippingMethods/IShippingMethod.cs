@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
@@ -38,8 +37,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         ITaxCategoryReference TaxCategory { get; set; }
 
         IList<IZoneRate> ZoneRates { get; set; }
-        IEnumerable<IZoneRate> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
 
+        IEnumerable<IZoneRate> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
 
         bool Active { get; set; }
 

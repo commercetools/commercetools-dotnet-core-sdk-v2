@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
 
@@ -18,8 +17,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         public ITrackingData TrackingData { get; set; }
 
         public IList<IDeliveryItem> Items { get; set; }
-        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
+        public IEnumerable<IDeliveryItem> ItemsEnumerable { set => Items = value.ToList(); }
 
         public ICustom Custom { get; set; }
     }

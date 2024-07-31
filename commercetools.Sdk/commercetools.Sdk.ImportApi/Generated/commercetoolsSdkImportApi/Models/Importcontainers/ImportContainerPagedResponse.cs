@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 {
 
@@ -16,7 +15,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
         public long Total { get; set; }
 
         public IList<IImportContainer> Results { get; set; }
-        public IEnumerable<IImportContainer> ResultsEnumerable { set => Results = value.ToList(); }
 
+        public IEnumerable<IImportContainer> ResultsEnumerable { set => Results = value.ToList(); }
     }
 }

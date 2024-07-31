@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Products
 {
@@ -20,8 +19,8 @@ namespace commercetools.Sdk.ImportApi.Models.Products
         ILocalizedString Description { get; set; }
 
         IList<ICategoryKeyReference> Categories { get; set; }
-        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
+        IEnumerable<ICategoryKeyReference> CategoriesEnumerable { set => Categories = value.ToList(); }
 
         ILocalizedString MetaTitle { get; set; }
 

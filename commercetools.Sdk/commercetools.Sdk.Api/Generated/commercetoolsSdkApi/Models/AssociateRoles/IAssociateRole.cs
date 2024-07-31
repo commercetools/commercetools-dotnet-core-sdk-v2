@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
@@ -30,8 +29,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         string Name { get; set; }
 
         IList<IPermission> Permissions { get; set; }
-        IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
+        IEnumerable<IPermission> PermissionsEnumerable { set => Permissions = value.ToList(); }
 
         ICustomFields Custom { get; set; }
 

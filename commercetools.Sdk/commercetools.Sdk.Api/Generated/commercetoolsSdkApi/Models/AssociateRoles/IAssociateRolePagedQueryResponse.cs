@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.AssociateRoles
 {
@@ -17,8 +16,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         long? Total { get; set; }
 
         IList<IAssociateRole> Results { get; set; }
-        IEnumerable<IAssociateRole> ResultsEnumerable { set => Results = value.ToList(); }
 
+        IEnumerable<IAssociateRole> ResultsEnumerable { set => Results = value.ToList(); }
 
     }
 }

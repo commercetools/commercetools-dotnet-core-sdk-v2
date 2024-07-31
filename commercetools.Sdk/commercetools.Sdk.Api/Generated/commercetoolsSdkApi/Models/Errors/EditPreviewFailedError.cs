@@ -1,6 +1,5 @@
 using commercetools.Sdk.Api.Models.OrderEdits;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 

@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Channels;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -10,12 +9,12 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IStoreSupplyChannelsChangedMessagePayload : IMessagePayload
     {
         IList<IChannelReference> AddedSupplyChannels { get; set; }
+
         IEnumerable<IChannelReference> AddedSupplyChannelsEnumerable { set => AddedSupplyChannels = value.ToList(); }
 
-
         IList<IChannelReference> RemovedSupplyChannels { get; set; }
-        IEnumerable<IChannelReference> RemovedSupplyChannelsEnumerable { set => RemovedSupplyChannels = value.ToList(); }
 
+        IEnumerable<IChannelReference> RemovedSupplyChannelsEnumerable { set => RemovedSupplyChannels = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Types
 {
 
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.Api.Models.Types
         public string FieldName { get; set; }
 
         public IList<string> Keys { get; set; }
-        public IEnumerable<string> KeysEnumerable { set => Keys = value.ToList(); }
 
+        public IEnumerable<string> KeysEnumerable { set => Keys = value.ToList(); }
         public TypeChangeLocalizedEnumValueOrderAction()
         {
             this.Action = "changeLocalizedEnumValueOrder";

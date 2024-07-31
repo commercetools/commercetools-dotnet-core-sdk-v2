@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
 {
@@ -20,8 +19,8 @@ namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
         string Code { get; set; }
 
         IList<ICartDiscountKeyReference> CartDiscounts { get; set; }
-        IEnumerable<ICartDiscountKeyReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
+        IEnumerable<ICartDiscountKeyReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
 
         string CartPredicate { get; set; }
 
@@ -32,8 +31,8 @@ namespace commercetools.Sdk.ImportApi.Models.DiscountCodes
         long? MaxApplicationsPerCustomer { get; set; }
 
         IList<string> Groups { get; set; }
-        IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
+        IEnumerable<string> GroupsEnumerable { set => Groups = value.ToList(); }
 
         DateTime? ValidFrom { get; set; }
 

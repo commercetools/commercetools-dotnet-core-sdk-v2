@@ -1,7 +1,6 @@
 using commercetools.Sdk.ImportApi.Models.Common;
-using System;
 using commercetools.Base.CustomAttributes;
-
+using System;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {

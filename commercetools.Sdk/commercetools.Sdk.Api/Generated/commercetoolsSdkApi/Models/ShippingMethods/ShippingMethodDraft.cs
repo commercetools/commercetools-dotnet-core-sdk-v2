@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.ShippingMethods
 {
 
@@ -25,8 +24,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         public ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         public IList<IZoneRateDraft> ZoneRates { get; set; }
-        public IEnumerable<IZoneRateDraft> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
 
+        public IEnumerable<IZoneRateDraft> ZoneRatesEnumerable { set => ZoneRates = value.ToList(); }
 
         public bool? Active { get; set; }
 

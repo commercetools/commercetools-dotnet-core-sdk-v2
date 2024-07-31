@@ -2,7 +2,6 @@ using commercetools.Sdk.ImportApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Models.Orders
 {
@@ -14,8 +13,8 @@ namespace commercetools.Sdk.ImportApi.Models.Orders
         IMoney Price { get; set; }
 
         IList<IShippingRatePriceTier> Tiers { get; set; }
-        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
+        IEnumerable<IShippingRatePriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
         bool? IsMatching { get; set; }
 

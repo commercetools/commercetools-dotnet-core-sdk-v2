@@ -5,9 +5,8 @@ using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using commercetools.Base.CustomAttributes;
 using commercetools.Base.Models;
-
+using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Customers
 {
@@ -51,20 +50,20 @@ namespace commercetools.Sdk.Api.Models.Customers
         string VatId { get; set; }
 
         IList<IAddress> Addresses { get; set; }
-        IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
+        IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
         string DefaultShippingAddressId { get; set; }
 
         IList<string> ShippingAddressIds { get; set; }
-        IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
+        IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
         string DefaultBillingAddressId { get; set; }
 
         IList<string> BillingAddressIds { get; set; }
-        IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
+        IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
         bool IsEmailVerified { get; set; }
 
@@ -77,8 +76,8 @@ namespace commercetools.Sdk.Api.Models.Customers
         string Salutation { get; set; }
 
         IList<IStoreKeyReference> Stores { get; set; }
-        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         IAuthenticationMode AuthenticationMode { get; set; }
 

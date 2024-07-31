@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
@@ -32,8 +31,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         IBusinessUnitStatus Status { get; set; }
 
         IList<IStoreKeyReference> Stores { get; set; }
-        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         IBusinessUnitStoreMode StoreMode { get; set; }
 
@@ -46,30 +45,30 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         ICustomFields Custom { get; set; }
 
         IList<IAddress> Addresses { get; set; }
+
         IEnumerable<IAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-
         IList<string> ShippingAddressIds { get; set; }
-        IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
+        IEnumerable<string> ShippingAddressIdsEnumerable { set => ShippingAddressIds = value.ToList(); }
 
         string DefaultShippingAddressId { get; set; }
 
         IList<string> BillingAddressIds { get; set; }
-        IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
+        IEnumerable<string> BillingAddressIdsEnumerable { set => BillingAddressIds = value.ToList(); }
 
         string DefaultBillingAddressId { get; set; }
 
         IBusinessUnitAssociateMode AssociateMode { get; set; }
 
         IList<IAssociate> Associates { get; set; }
+
         IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
 
-
         IList<IInheritedAssociate> InheritedAssociates { get; set; }
-        IEnumerable<IInheritedAssociate> InheritedAssociatesEnumerable { set => InheritedAssociates = value.ToList(); }
 
+        IEnumerable<IInheritedAssociate> InheritedAssociatesEnumerable { set => InheritedAssociates = value.ToList(); }
 
         IBusinessUnitKeyReference ParentUnit { get; set; }
 

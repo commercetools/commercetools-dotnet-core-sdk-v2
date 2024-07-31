@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.CustomerGroups;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 

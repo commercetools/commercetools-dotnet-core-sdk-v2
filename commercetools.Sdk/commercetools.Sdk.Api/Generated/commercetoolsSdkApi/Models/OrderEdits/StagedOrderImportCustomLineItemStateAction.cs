@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Orders;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.OrderEdits
 {
 
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public string CustomLineItemKey { get; set; }
 
         public IList<IItemState> State { get; set; }
-        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
 
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
         public StagedOrderImportCustomLineItemStateAction()
         {
             this.Action = "importCustomLineItemState";

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Common
 {
@@ -9,8 +8,8 @@ namespace commercetools.Sdk.Api.Models.Common
     public partial interface IGeoJsonPoint : IGeoJson
     {
         IList<decimal> Coordinates { get; set; }
-        IEnumerable<decimal> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
 
+        IEnumerable<decimal> CoordinatesEnumerable { set => Coordinates = value.ToList(); }
 
     }
 }

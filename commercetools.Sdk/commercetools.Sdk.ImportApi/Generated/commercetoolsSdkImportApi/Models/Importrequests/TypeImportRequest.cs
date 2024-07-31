@@ -3,7 +3,6 @@ using commercetools.Sdk.ImportApi.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
 
@@ -12,8 +11,8 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
         public IImportResourceType Type { get; set; }
 
         public IList<ITypeImport> Resources { get; set; }
-        public IEnumerable<ITypeImport> ResourcesEnumerable { set => Resources = value.ToList(); }
 
+        public IEnumerable<ITypeImport> ResourcesEnumerable { set => Resources = value.ToList(); }
         public TypeImportRequest()
         {
             this.Type = IImportResourceType.FindEnum("type");

@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.BusinessUnits;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Messages
 {
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial interface IBusinessUnitAssociatesSetMessagePayload : IMessagePayload
     {
         IList<IAssociate> Associates { get; set; }
-        IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
 
+        IEnumerable<IAssociate> AssociatesEnumerable { set => Associates = value.ToList(); }
 
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.ImportApi.Models.Customfields
 {
 
@@ -10,8 +9,8 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
         public string Type { get; set; }
 
         public IList<string> Value { get; set; }
-        public IEnumerable<string> ValueEnumerable { set => Value = value.ToList(); }
 
+        public IEnumerable<string> ValueEnumerable { set => Value = value.ToList(); }
         public EnumSetField()
         {
             this.Type = "EnumSet";

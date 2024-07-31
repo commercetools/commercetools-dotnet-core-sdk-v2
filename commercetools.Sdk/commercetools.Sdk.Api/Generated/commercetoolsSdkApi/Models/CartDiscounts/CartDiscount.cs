@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
 
@@ -38,8 +37,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public string SortOrder { get; set; }
 
         public IList<IStoreKeyReference> Stores { get; set; }
-        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         public bool IsActive { get; set; }
 
@@ -50,8 +49,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public bool RequiresDiscountCode { get; set; }
 
         public IList<IReference> References { get; set; }
-        public IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
+        public IEnumerable<IReference> ReferencesEnumerable { set => References = value.ToList(); }
 
         public IStackingMode StackingMode { get; set; }
 

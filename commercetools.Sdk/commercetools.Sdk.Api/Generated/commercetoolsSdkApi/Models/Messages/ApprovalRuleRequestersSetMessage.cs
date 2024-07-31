@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
@@ -33,12 +32,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IList<IRuleRequester> Requesters { get; set; }
+
         public IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
-
         public IList<IRuleRequester> OldRequesters { get; set; }
-        public IEnumerable<IRuleRequester> OldRequestersEnumerable { set => OldRequesters = value.ToList(); }
 
+        public IEnumerable<IRuleRequester> OldRequestersEnumerable { set => OldRequesters = value.ToList(); }
         public ApprovalRuleRequestersSetMessage()
         {
             this.Type = "ApprovalRuleRequestersSet";

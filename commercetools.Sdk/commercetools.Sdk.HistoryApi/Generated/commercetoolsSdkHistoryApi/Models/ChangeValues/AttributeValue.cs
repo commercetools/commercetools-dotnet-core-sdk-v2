@@ -1,6 +1,5 @@
 using System;
 
-
 namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
 {
 

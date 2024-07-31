@@ -1,6 +1,5 @@
 using commercetools.Base.Models;
 
-
 namespace commercetools.Sdk.Api.Models.Customers
 {
 

@@ -5,7 +5,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Me
 {
 
@@ -16,12 +15,12 @@ namespace commercetools.Sdk.Api.Models.Me
         public ILocalizedString Description { get; set; }
 
         public IList<IShoppingListLineItemDraft> LineItems { get; set; }
+
         public IEnumerable<IShoppingListLineItemDraft> LineItemsEnumerable { set => LineItems = value.ToList(); }
 
-
         public IList<ITextLineItemDraft> TextLineItems { get; set; }
-        public IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
+        public IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
 

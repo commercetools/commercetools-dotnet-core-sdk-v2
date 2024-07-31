@@ -4,7 +4,6 @@ using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.BusinessUnits
 {
 
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public IBusinessUnitStatus Status { get; set; }
 
         public IList<IStoreResourceIdentifier> Stores { get; set; }
-        public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
+        public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
         public IBusinessUnitStoreMode StoreMode { get; set; }
 
@@ -29,24 +28,24 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public IBusinessUnitAssociateMode AssociateMode { get; set; }
 
         public IList<IAssociateDraft> Associates { get; set; }
-        public IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
+        public IEnumerable<IAssociateDraft> AssociatesEnumerable { set => Associates = value.ToList(); }
 
         public IBusinessUnitApprovalRuleMode ApprovalRuleMode { get; set; }
 
         public IList<IBaseAddress> Addresses { get; set; }
+
         public IEnumerable<IBaseAddress> AddressesEnumerable { set => Addresses = value.ToList(); }
 
-
         public IList<int> ShippingAddresses { get; set; }
-        public IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
 
+        public IEnumerable<int> ShippingAddressesEnumerable { set => ShippingAddresses = value.ToList(); }
 
         public int? DefaultShippingAddress { get; set; }
 
         public IList<int> BillingAddresses { get; set; }
-        public IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
 
+        public IEnumerable<int> BillingAddressesEnumerable { set => BillingAddresses = value.ToList(); }
 
         public int? DefaultBillingAddress { get; set; }
 

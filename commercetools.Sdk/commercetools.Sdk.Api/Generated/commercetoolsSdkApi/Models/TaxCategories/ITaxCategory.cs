@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.TaxCategories
 {
@@ -27,8 +26,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
         string Description { get; set; }
 
         IList<ITaxRate> Rates { get; set; }
-        IEnumerable<ITaxRate> RatesEnumerable { set => Rates = value.ToList(); }
 
+        IEnumerable<ITaxRate> RatesEnumerable { set => Rates = value.ToList(); }
 
         string Key { get; set; }
 

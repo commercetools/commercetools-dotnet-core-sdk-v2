@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 
@@ -15,8 +14,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         public Object InvalidValue { get; set; }
 
         public IList<Object> AllowedValues { get; set; }
-        public IEnumerable<Object> AllowedValuesEnumerable { set => AllowedValues = value.ToList(); }
 
+        public IEnumerable<Object> AllowedValuesEnumerable { set => AllowedValues = value.ToList(); }
         public GraphQLInvalidFieldError()
         {
             this.Code = "InvalidField";

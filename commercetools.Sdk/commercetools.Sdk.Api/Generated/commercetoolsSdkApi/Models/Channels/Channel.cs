@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Channels
 {
 
@@ -26,8 +25,8 @@ namespace commercetools.Sdk.Api.Models.Channels
         public string Key { get; set; }
 
         public IList<IChannelRoleEnum> Roles { get; set; }
-        public IEnumerable<IChannelRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
+        public IEnumerable<IChannelRoleEnum> RolesEnumerable { set => Roles = value.ToList(); }
 
         public ILocalizedString Name { get; set; }
 

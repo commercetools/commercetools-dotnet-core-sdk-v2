@@ -1,7 +1,6 @@
 using commercetools.Sdk.Api.Models.Projects;
 using System;
 
-
 namespace commercetools.Sdk.Api.Models.CustomerSearches
 {
 

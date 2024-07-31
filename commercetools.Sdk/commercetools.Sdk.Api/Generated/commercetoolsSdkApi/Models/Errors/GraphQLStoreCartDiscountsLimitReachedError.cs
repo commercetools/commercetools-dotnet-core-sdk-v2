@@ -2,7 +2,6 @@ using commercetools.Sdk.Api.Models.Stores;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace commercetools.Sdk.Api.Models.Errors
 {
 
@@ -11,8 +10,8 @@ namespace commercetools.Sdk.Api.Models.Errors
         public string Code { get; set; }
 
         public IList<IStoreKeyReference> Stores { get; set; }
-        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
         public GraphQLStoreCartDiscountsLimitReachedError()
         {
             this.Code = "StoreCartDiscountsLimitReached";

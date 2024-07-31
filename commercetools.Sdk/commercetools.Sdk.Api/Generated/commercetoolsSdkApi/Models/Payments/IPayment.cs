@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
-
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Payments
 {
@@ -37,12 +36,12 @@ namespace commercetools.Sdk.Api.Models.Payments
         IPaymentStatus PaymentStatus { get; set; }
 
         IList<ITransaction> Transactions { get; set; }
+
         IEnumerable<ITransaction> TransactionsEnumerable { set => Transactions = value.ToList(); }
 
-
         IList<ICustomFields> InterfaceInteractions { get; set; }
-        IEnumerable<ICustomFields> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
+        IEnumerable<ICustomFields> InterfaceInteractionsEnumerable { set => InterfaceInteractions = value.ToList(); }
 
         ICustomFields Custom { get; set; }
 
