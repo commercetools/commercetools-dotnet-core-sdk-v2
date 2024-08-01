@@ -31,6 +31,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         [Description("customer")]
         Customer,
 
+        [Description("customer-group")]
+        CustomerGroup,
+
         [Description("key-value-document")]
         KeyValueDocument,
 
@@ -100,6 +103,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         public static IAttributeReferenceTypeId Customer = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.Customer, JsonName = "customer" };
 
+        public static IAttributeReferenceTypeId CustomerGroup = new AttributeReferenceTypeIdWrapper
+        { Value = AttributeReferenceTypeId.CustomerGroup, JsonName = "customer-group" };
+
         public static IAttributeReferenceTypeId KeyValueDocument = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.KeyValueDocument, JsonName = "key-value-document" };
 
@@ -137,6 +143,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
                  Category ,
                  Channel ,
                  Customer ,
+                 CustomerGroup ,
                  KeyValueDocument ,
                  Order ,
                  Product ,
