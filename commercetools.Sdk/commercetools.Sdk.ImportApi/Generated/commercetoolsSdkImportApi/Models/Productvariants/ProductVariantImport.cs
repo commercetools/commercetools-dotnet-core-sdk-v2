@@ -1,5 +1,4 @@
 using commercetools.Sdk.ImportApi.Models.Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,9 +24,6 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
         public IList<IAsset> Assets { get; set; }
 
         public IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
-
-        [ObsoleteAttribute("This property is obsolete", false)]
-        public bool? Publish { get; set; }
 
         public bool? Staged { get; set; }
 
