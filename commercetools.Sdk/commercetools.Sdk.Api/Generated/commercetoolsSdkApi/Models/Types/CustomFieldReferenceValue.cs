@@ -34,6 +34,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("customer")]
         Customer,
 
+        [Description("customer-group")]
+        CustomerGroup,
+
         [Description("key-value-document")]
         KeyValueDocument,
 
@@ -106,6 +109,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static ICustomFieldReferenceValue Customer = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Customer, JsonName = "customer" };
 
+        public static ICustomFieldReferenceValue CustomerGroup = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.CustomerGroup, JsonName = "customer-group" };
+
         public static ICustomFieldReferenceValue KeyValueDocument = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.KeyValueDocument, JsonName = "key-value-document" };
 
@@ -144,6 +150,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  Category ,
                  Channel ,
                  Customer ,
+                 CustomerGroup ,
                  KeyValueDocument ,
                  Order ,
                  Product ,
