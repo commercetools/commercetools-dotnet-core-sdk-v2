@@ -1,4 +1,64 @@
 
+# 11.10.0 (2024-08-05)
+
+**Api changes**
+
+<details>
+<summary>Removed Resource(s)</summary>
+
+- :warning: removed resource `/{projectKey}/me/carts/key={key}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `shopping-list` to type `ExtensionResourceTypeId`
+- added enum `customer-group` to type `AttributeReferenceTypeId`
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().head()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withKey().delete()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Deprecated Property(s)</summary>
+
+- property `PriceImport::publish` is removed
+- property `ProductVariantImport::publish` is removed
+</details>
+
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/337
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/338
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/339
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/340
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/341
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/342
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/343
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.9.0...11.10.0
+
 # 11.9.0 (2024-07-26)
 
 ## What's Changed
