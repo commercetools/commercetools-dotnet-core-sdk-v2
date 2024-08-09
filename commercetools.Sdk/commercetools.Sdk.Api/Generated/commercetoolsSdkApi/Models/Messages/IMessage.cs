@@ -101,6 +101,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomLineItemStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessage))]
     [SubTypeDiscriminator("DeliveryAdded", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryAddedMessage))]
     [SubTypeDiscriminator("DeliveryAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage))]
+    [SubTypeDiscriminator("DeliveryCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("DeliveryCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("DeliveryCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("DeliveryCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("DeliveryCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeSetMessage))]
     [SubTypeDiscriminator("DeliveryItemsUpdated", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryItemsUpdatedMessage))]
     [SubTypeDiscriminator("DeliveryRemoved", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryRemovedMessage))]
     [SubTypeDiscriminator("DiscountCodeCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage))]
@@ -835,6 +840,36 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage DeliveryAddressSet(Action<commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.DeliveryAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldAddedMessage DeliveryCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldChangedMessage DeliveryCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldRemovedMessage DeliveryCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeRemovedMessage DeliveryCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeSetMessage DeliveryCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DeliveryCustomTypeSetMessage();
             init?.Invoke(t);
             return t;
         }
