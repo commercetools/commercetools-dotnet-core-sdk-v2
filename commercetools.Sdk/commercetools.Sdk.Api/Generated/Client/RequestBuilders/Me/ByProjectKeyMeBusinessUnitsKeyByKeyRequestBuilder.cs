@@ -39,10 +39,5 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             return new ByProjectKeyMeBusinessUnitsKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, myBusinessUnitUpdate);
         }
 
-        public ByProjectKeyMeBusinessUnitsKeyByKeyDelete Delete()
-        {
-            return new ByProjectKeyMeBusinessUnitsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
-        }
-
     }
 }

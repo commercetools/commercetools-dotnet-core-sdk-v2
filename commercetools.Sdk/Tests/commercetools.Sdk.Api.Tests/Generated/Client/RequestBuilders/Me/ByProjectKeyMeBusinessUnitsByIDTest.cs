@@ -75,41 +75,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Build(),
                    "Post",
                    "/test_projectKey/me/business-units/test_ID",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .BusinessUnits()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithVersion(2)
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/business-units/test_ID?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .BusinessUnits()
-                   .WithId("test_ID")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/business-units/test_ID?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .BusinessUnits()
-                   .WithId("test_ID")
-                   .Delete()
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/business-units/test_ID",
                }
        };
         }
