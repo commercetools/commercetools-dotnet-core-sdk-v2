@@ -5,16 +5,22 @@ namespace commercetools.Base.Client
 {
     public class LoggerHandlerFactory : ILoggerHandlerFactory
     {
-        private readonly ILoggerFactory loggerFactory;
+        private readonly ILoggerFactory _loggerFactory;
 
-        public LoggerHandlerFactory(ILoggerFactory loggerFactory)
+        private readonly IHttpLogger _httpLogger;
+
+        private readonly ILoggerHandlerOptions _handlerOptions;
+
+        public LoggerHandlerFactory(ILoggerFactory loggerFactory, IHttpLogger httpLogger = null, ILoggerHandlerOptions options = null)
         {
-            this.loggerFactory = loggerFactory;
+            _loggerFactory = loggerFactory;
+            _httpLogger = httpLogger;
+            _handlerOptions = options;
         }
 
         public DelegatingHandler Create()
         {
-            return new LoggerHandler(loggerFactory);
+            return new LoggerHandler(_loggerFactory, _httpLogger, _handlerOptions);
         }
     }
 }
