@@ -40,6 +40,36 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryAddressSetMessagePayloadQueryBuilderDsl.Of()),
                 OrderMessagePayloadQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryCustomFieldAdded(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldAddedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldAddedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldAddedMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryCustomFieldChanged(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldChangedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldChangedMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryCustomFieldRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldRemovedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomFieldRemovedMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryCustomTypeRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeRemovedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeRemovedMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryCustomTypeSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeSetMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryCustomTypeSetMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsDeliveryItemsUpdated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryItemsUpdatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.DeliveryItemsUpdatedMessagePayloadQueryBuilderDsl>> fn)
         {
