@@ -12,5 +12,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         IEnumerable<IMoney> MoneyEnumerable { set => Money = value.ToList(); }
 
+        IDiscountApplicationMode ApplicationMode { get; set; }
+
     }
 }
