@@ -22,6 +22,7 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
     [SubTypeDiscriminator("InvalidJsonInput", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidJsonInput))]
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation))]
     [SubTypeDiscriminator("InvalidTransition", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError))]
+    [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound))]
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Sdk.ImportApi.Models.Errors.RequiredFieldError))]
     [SubTypeDiscriminator("ResourceCreation", typeof(commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError))]
     [SubTypeDiscriminator("ResourceDeletion", typeof(commercetools.Sdk.ImportApi.Models.Errors.ResourceDeletionError))]
@@ -132,6 +133,12 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         static commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError InvalidTransition(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound ReferencedResourceNotFound(Action<commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound();
             init?.Invoke(t);
             return t;
         }
