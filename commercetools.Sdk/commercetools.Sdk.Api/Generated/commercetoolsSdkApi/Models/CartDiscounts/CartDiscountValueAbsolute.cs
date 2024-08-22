@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public IList<ICentPrecisionMoney> Money { get; set; }
 
         public IEnumerable<ICentPrecisionMoney> MoneyEnumerable { set => Money = value.ToList(); }
+
+        public IDiscountApplicationMode ApplicationMode { get; set; }
         public CartDiscountValueAbsolute()
         {
             this.Type = "absolute";
