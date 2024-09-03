@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 
 namespace commercetools.Base.Client
@@ -8,5 +9,7 @@ namespace commercetools.Base.Client
             DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
         public bool ReadResponseAsStream { get; set; } = false;
+
+        public Version UseHttpVersion { get; set; } = null;
     }
 }
