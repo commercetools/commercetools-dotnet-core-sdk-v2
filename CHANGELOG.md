@@ -1,4 +1,65 @@
 
+# 11.11.0 (2024-09-04)
+
+## Important Information
+
+This major release branch will be the last compatible with .NET Standard 2.1. The major release will have .NET 6 as minimum requirement. The next major release will include a refactored logger handler. Some defaults in the client configuration may be changed.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/344
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/345
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/346
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/347
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/348
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/349
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/350
+* add http version middleware by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/351
+
+**Api changes**
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueAbsolute`
+- added property `applicationMode` to type `CartDiscountValueAbsoluteDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountApplicationMode`
+- added type `DeliveryCustomFieldAddedMessage`
+- added type `DeliveryCustomFieldChangedMessage`
+- added type `DeliveryCustomFieldRemovedMessage`
+- added type `DeliveryCustomTypeRemovedMessage`
+- added type `DeliveryCustomTypeSetMessage`
+- added type `DeliveryCustomFieldAddedMessagePayload`
+- added type `DeliveryCustomFieldChangedMessagePayload`
+- added type `DeliveryCustomFieldRemovedMessagePayload`
+- added type `DeliveryCustomTypeRemovedMessagePayload`
+- added type `DeliveryCustomTypeSetMessagePayload`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ReferencedResourceNotFound`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.10.0...11.11.0
+
 # 11.10.0 (2024-08-05)
 
 **Api changes**
