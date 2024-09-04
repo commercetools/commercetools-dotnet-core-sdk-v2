@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace commercetools.Base.Client.Middlewares
 {
-    public class VersionMiddleware: DelegatingMiddleware
+    public class VersionMiddleware : DelegatingMiddleware
     {
         private readonly Version _httpVersion;
 
@@ -13,7 +13,7 @@ namespace commercetools.Base.Client.Middlewares
         {
             this._httpVersion = httpVersion;
         }
-        
+
         protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             request.Version = _httpVersion;
