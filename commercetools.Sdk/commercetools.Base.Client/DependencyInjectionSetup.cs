@@ -60,7 +60,8 @@ namespace commercetools.Base.Client
                         serializerFactory(serviceProvider),
                         tokenProviderSupplier(clientName, configuration, serviceProvider),
                         options.ReadResponseAsStream,
-                        serviceProvider.GetService<ICorrelationIdProvider>());
+                        serviceProvider.GetService<ICorrelationIdProvider>(),
+                        options.UseHttpVersion);
                     client.Name = clientName;
                     return client;
                 });
@@ -86,7 +87,8 @@ namespace commercetools.Base.Client
                     serializerFactory(serviceProvider),
                     tokenProviderSupplier(clientName, configuration, serviceProvider),
                     options.ReadResponseAsStream,
-                    serviceProvider.GetService<ICorrelationIdProvider>());
+                    serviceProvider.GetService<ICorrelationIdProvider>(),
+                    options.UseHttpVersion);
 
                 client.Name = clientName;
                 return client;
