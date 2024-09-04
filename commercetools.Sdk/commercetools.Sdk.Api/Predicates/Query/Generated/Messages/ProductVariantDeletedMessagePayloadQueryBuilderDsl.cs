@@ -36,6 +36,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<ProductVariantDeletedMessagePayloadQueryBuilderDsl>(p, ProductVariantDeletedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<ProductVariantDeletedMessagePayloadQueryBuilderDsl, bool> Staged()
+        {
+            return new ComparisonPredicateBuilder<ProductVariantDeletedMessagePayloadQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("staged")),
+            p => new CombinationQueryPredicate<ProductVariantDeletedMessagePayloadQueryBuilderDsl>(p, ProductVariantDeletedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

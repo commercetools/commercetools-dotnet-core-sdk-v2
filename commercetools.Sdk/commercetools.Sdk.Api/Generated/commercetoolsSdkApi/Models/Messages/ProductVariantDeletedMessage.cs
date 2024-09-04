@@ -36,6 +36,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IList<string> RemovedImageUrls { get; set; }
 
         public IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
+
+        public bool Staged { get; set; }
         public ProductVariantDeletedMessage()
         {
             this.Type = "ProductVariantDeleted";

@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IEnumerable<string> RemovedImageUrlsEnumerable { set => RemovedImageUrls = value.ToList(); }
 
+        bool Staged { get; set; }
+
     }
 }
