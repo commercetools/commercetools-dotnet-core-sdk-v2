@@ -3,7 +3,10 @@ using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Models.Reviews;
 using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Warnings;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
@@ -36,6 +39,10 @@ namespace commercetools.Sdk.Api.Models.Products
         IReviewRatingStatistics ReviewRatingStatistics { get; set; }
 
         IProductPriceModeEnum PriceMode { get; set; }
+
+        IList<IWarningObject> Warnings { get; set; }
+
+        IEnumerable<IWarningObject> WarningsEnumerable { set => Warnings = value.ToList(); }
 
     }
 }
