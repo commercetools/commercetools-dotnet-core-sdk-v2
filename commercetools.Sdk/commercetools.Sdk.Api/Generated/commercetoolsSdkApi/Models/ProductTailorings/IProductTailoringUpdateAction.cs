@@ -21,6 +21,8 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     [SubTypeDiscriminator("setAssetKey", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetKeyAction))]
     [SubTypeDiscriminator("setAssetSources", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetSourcesAction))]
     [SubTypeDiscriminator("setAssetTags", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetTagsAction))]
+    [SubTypeDiscriminator("setAttribute", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeAction))]
+    [SubTypeDiscriminator("setAttributeInAllVariants", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeInAllVariantsAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetDescriptionAction))]
     [SubTypeDiscriminator("setImageLabel", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetImageLabelAction))]
     [SubTypeDiscriminator("setImages", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetExternalImagesAction))]
@@ -128,6 +130,18 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetTagsAction SetAssetTags(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetTagsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAssetTagsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeAction SetAttribute(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeInAllVariantsAction SetAttributeInAllVariants(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeInAllVariantsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetAttributeInAllVariantsAction();
             init?.Invoke(t);
             return t;
         }

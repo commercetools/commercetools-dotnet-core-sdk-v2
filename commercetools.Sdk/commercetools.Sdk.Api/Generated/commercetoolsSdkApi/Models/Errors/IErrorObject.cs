@@ -77,6 +77,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchExecutionFailure", typeof(commercetools.Sdk.Api.Models.Errors.SearchExecutionFailureError))]
     [SubTypeDiscriminator("SearchFacetPathNotFound", typeof(commercetools.Sdk.Api.Models.Errors.SearchFacetPathNotFoundError))]
     [SubTypeDiscriminator("SearchIndexingInProgress", typeof(commercetools.Sdk.Api.Models.Errors.SearchIndexingInProgressError))]
+    [SubTypeDiscriminator("SearchNotReady", typeof(commercetools.Sdk.Api.Models.Errors.SearchNotReadyError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.SemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
@@ -516,6 +517,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SearchIndexingInProgressError SearchIndexingInProgress(Action<commercetools.Sdk.Api.Models.Errors.SearchIndexingInProgressError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SearchIndexingInProgressError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.SearchNotReadyError SearchNotReady(Action<commercetools.Sdk.Api.Models.Errors.SearchNotReadyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.SearchNotReadyError();
             init?.Invoke(t);
             return t;
         }

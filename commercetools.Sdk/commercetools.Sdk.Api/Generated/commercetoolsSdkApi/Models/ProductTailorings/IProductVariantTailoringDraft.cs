@@ -20,5 +20,9 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
 
         IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
+        IList<IProductTailoringAttribute> Attributes { get; set; }
+
+        IEnumerable<IProductTailoringAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
     }
 }

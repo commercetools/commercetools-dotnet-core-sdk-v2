@@ -118,6 +118,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTailorings
             return new CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAssetTagsActionQueryBuilderDsl.Of()),
                 ProductTailoringUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> AsSetAttribute(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeActionQueryBuilderDsl.Of()),
+                ProductTailoringUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> AsSetAttributeInAllVariants(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl.Of()),
+                ProductTailoringUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> AsSetDescription(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetDescriptionActionQueryBuilderDsl>> fn)
         {

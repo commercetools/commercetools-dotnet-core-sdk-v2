@@ -77,6 +77,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchExecutionFailure", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchExecutionFailureError))]
     [SubTypeDiscriminator("SearchFacetPathNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchFacetPathNotFoundError))]
     [SubTypeDiscriminator("SearchIndexingInProgress", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchIndexingInProgressError))]
+    [SubTypeDiscriminator("SearchNotReady", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchNotReadyError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
@@ -514,6 +515,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLSearchIndexingInProgressError SearchIndexingInProgress(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSearchIndexingInProgressError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSearchIndexingInProgressError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLSearchNotReadyError SearchNotReady(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSearchNotReadyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSearchNotReadyError();
             init?.Invoke(t);
             return t;
         }
