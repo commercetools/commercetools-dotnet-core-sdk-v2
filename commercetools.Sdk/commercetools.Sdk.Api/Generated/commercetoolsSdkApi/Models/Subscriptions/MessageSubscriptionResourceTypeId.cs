@@ -52,6 +52,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("product-selection")]
         ProductSelection,
 
+        [Description("product-tailoring")]
+        ProductTailoring,
+
         [Description("quote")]
         Quote,
 
@@ -136,6 +139,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IMessageSubscriptionResourceTypeId ProductSelection = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.ProductSelection, JsonName = "product-selection" };
 
+        public static IMessageSubscriptionResourceTypeId ProductTailoring = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ProductTailoring, JsonName = "product-tailoring" };
+
         public static IMessageSubscriptionResourceTypeId Quote = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.Quote, JsonName = "quote" };
 
@@ -174,6 +180,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  Payment ,
                  Product ,
                  ProductSelection ,
+                 ProductTailoring ,
                  Quote ,
                  QuoteRequest ,
                  Review ,

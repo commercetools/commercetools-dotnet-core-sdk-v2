@@ -53,6 +53,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTailorings
             return new CollectionPredicateBuilder<ProductVariantTailoringDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("assets")),
                     p => new CombinationQueryPredicate<ProductVariantTailoringDraftQueryBuilderDsl>(p, ProductVariantTailoringDraftQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<ProductVariantTailoringDraftQueryBuilderDsl> Attributes(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductVariantTailoringDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("attributes"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl.Of())),
+                ProductVariantTailoringDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ProductVariantTailoringDraftQueryBuilderDsl> Attributes()
+        {
+            return new CollectionPredicateBuilder<ProductVariantTailoringDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("attributes")),
+                    p => new CombinationQueryPredicate<ProductVariantTailoringDraftQueryBuilderDsl>(p, ProductVariantTailoringDraftQueryBuilderDsl.Of));
+        }
 
     }
 }

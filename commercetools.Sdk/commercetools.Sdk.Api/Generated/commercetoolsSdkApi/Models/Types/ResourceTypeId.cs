@@ -79,6 +79,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("product-selection")]
         ProductSelection,
 
+        [Description("product-tailoring")]
+        ProductTailoring,
+
         [Description("quote")]
         Quote,
 
@@ -199,6 +202,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId ProductSelection = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ProductSelection, JsonName = "product-selection" };
 
+        public static IResourceTypeId ProductTailoring = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.ProductTailoring, JsonName = "product-tailoring" };
+
         public static IResourceTypeId Quote = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Quote, JsonName = "quote" };
 
@@ -255,6 +261,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  PaymentInterfaceInteraction ,
                  ProductPrice ,
                  ProductSelection ,
+                 ProductTailoring ,
                  Quote ,
                  Review ,
                  Shipping ,
