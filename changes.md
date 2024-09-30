@@ -27,6 +27,13 @@
 
 
 <details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ProductSearchStatus`
+</details>
+
+
+<details>
 <summary>Added Enum(s)</summary>
 
 - added enum `product-tailoring` to type `MessageSubscriptionResourceTypeId`
