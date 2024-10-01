@@ -22,6 +22,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
         [Description("customer")]
         Customer,
 
+        [Description("customer-group")]
+        CustomerGroup,
+
         [Description("quote-request")]
         QuoteRequest,
 
@@ -73,6 +76,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
         public static IExtensionResourceTypeId Customer = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Customer, JsonName = "customer" };
 
+        public static IExtensionResourceTypeId CustomerGroup = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.CustomerGroup, JsonName = "customer-group" };
+
         public static IExtensionResourceTypeId QuoteRequest = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.QuoteRequest, JsonName = "quote-request" };
 
@@ -98,6 +104,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
                  Order ,
                  Payment ,
                  Customer ,
+                 CustomerGroup ,
                  QuoteRequest ,
                  StagedQuote ,
                  Quote ,
