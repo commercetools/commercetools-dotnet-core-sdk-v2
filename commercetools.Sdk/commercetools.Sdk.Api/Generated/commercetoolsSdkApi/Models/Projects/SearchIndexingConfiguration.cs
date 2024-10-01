@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Projects
         public ISearchIndexingConfigurationValues ProductsSearch { get; set; }
 
         public ISearchIndexingConfigurationValues Orders { get; set; }
+
+        public ISearchIndexingConfigurationValues Customers { get; set; }
     }
 }
