@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace commercetools.Api.IntegrationTests
 {
-    public class ServiceProviderFixture
+    public sealed class ServiceProviderFixture
     {
         private readonly ServiceProvider serviceProvider;
         private readonly IConfiguration configuration;
@@ -26,7 +26,7 @@ namespace commercetools.Api.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
+            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) != ClientType.String;
             services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             services.AddLogging(c => c.AddProvider(new InMemoryLoggerProvider()));
             services.SetupClient(
