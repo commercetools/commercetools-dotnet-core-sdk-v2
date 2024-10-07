@@ -120,6 +120,8 @@ namespace commercetools.Base.Client
                         client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
                     }
 
+                    client.DefaultRequestVersion = options.UseHttpVersion;
+
                     var userAgentProvider = provider.GetService<IUserAgentProvider>() ?? new UserAgentProvider();
                     client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);
                 })

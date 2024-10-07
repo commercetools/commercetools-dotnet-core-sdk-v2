@@ -10,6 +10,6 @@ namespace commercetools.Base.Client
 
         public bool ReadResponseAsStream { get; set; } = true;
 
-        public Version UseHttpVersion { get; set; } = null;
+        public Version UseHttpVersion { get; set; } = HttpVersion.Version20;
     }
 }
