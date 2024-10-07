@@ -18,6 +18,45 @@ namespace commercetools.Api.IntegrationTests;
 public class LoggingTest
 {
     [Fact]
+    public async void DefaultLogger()
+    {
+        var configuration = new ConfigurationBuilder().
+            AddJsonFile("appsettings.test.Development.json", true).
+            AddEnvironmentVariables().
+            AddUserSecrets<ServiceProviderFixture>().
+            AddEnvironmentVariables("CTP_").
+            Build();
+        var clientConfiguration = configuration.GetSection("Client").Get<ClientConfiguration>();
+        var loggerClientConf = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string>()
+            {
+                { "LoggerClient:ClientId", clientConfiguration.ClientId},
+                { "LoggerClient:ClientSecret", clientConfiguration.ClientSecret},
+                { "LoggerClient:ProjectKey", clientConfiguration.ProjectKey},
+            })
+            .Build();
+        var logger = new TestLogger();
+        var loggerFactory = LoggerFactory.Create(builder =>
+        {
+            builder
+                .AddFilter("System.Net.Http.HttpClient", LogLevel.None) // disable HTTP client default logging
+                .AddProvider(new TestLoggerProvider(logger));
+        });
+        var s = new ServiceCollection();
+        s.AddSingleton(loggerFactory);
+        s.UseCommercetoolsApi(loggerClientConf, "LoggerClient");
+        var p = s.BuildServiceProvider();
+
+        var apiRoot = p.GetService<ProjectApiRoot>();
+
+        await apiRoot.Get().ExecuteAsync();
+
+        var messages = logger.GetLogMessages();
+        Assert.StartsWith("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
+    }
+
+    
+    [Fact]
     public async void CustomLogger()
     {
         var configuration = new ConfigurationBuilder().
@@ -55,7 +94,7 @@ public class LoggingTest
         var messages = logger.GetLogMessages();
         Assert.Equal("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
     }
-
+    
     public class CustomLoggerHandler : DelegatingHandler
     {
         private readonly ILogger logger;
