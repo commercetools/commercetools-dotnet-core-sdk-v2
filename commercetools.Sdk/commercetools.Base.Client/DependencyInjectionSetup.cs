@@ -105,6 +105,8 @@ namespace commercetools.Base.Client
             options ??= new ClientOptions();
             services.AddSingleton<IUserAgentProvider, UserAgentProvider>();
             services.AddSingleton<ILoggerHandlerFactory, LoggerHandlerFactory>();
+            services.AddSingleton<IHttpLogger, DefaultHttpLogger>();
+            services.AddSingleton<ILoggerHandlerOptions, LoggerHandlerOptions>();
             var httpClientBuilder = services.AddHttpClient(clientName)
                 .ConfigureHttpClient((provider, client) =>
                 {
@@ -112,10 +114,12 @@ namespace commercetools.Base.Client
                     {
                         client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("gzip");
                     }
+
                     if (options.DecompressionMethods.HasFlag(DecompressionMethods.Deflate))
                     {
                         client.DefaultRequestHeaders.AcceptEncoding.ParseAdd("deflate");
                     }
+
                     var userAgentProvider = provider.GetService<IUserAgentProvider>() ?? new UserAgentProvider();
                     client.DefaultRequestHeaders.UserAgent.ParseAdd(userAgentProvider.UserAgent);
                 })
@@ -126,8 +130,9 @@ namespace commercetools.Base.Client
                         AutomaticDecompression = options.DecompressionMethods
                     };
                 })
-                .AddHttpMessageHandler(c => new ErrorHandler(message => serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())))
-                .AddHttpMessageHandler(c => c.GetService<ILoggerHandlerFactory>().Create());
+                .AddHttpMessageHandler(c => c.GetService<ILoggerHandlerFactory>().Create())
+                .AddHttpMessageHandler(c => new ErrorHandler(message =>
+                    serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())));
 
             return httpClientBuilder;
         }
