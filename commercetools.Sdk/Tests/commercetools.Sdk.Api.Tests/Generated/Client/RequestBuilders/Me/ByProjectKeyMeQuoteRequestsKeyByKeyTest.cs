@@ -75,41 +75,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Me
                    .Build(),
                    "Post",
                    "/test_projectKey/me/quote-requests/key=test_key",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .QuoteRequests()
-                   .WithKey("test_key")
-                   .Delete()
-                   .WithVersion(2)
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/quote-requests/key=test_key?version=2",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .QuoteRequests()
-                   .WithKey("test_key")
-                   .Delete()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/quote-requests/key=test_key?expand=expand",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Me()
-                   .QuoteRequests()
-                   .WithKey("test_key")
-                   .Delete()
-                   .Build(),
-                   "Delete",
-                   "/test_projectKey/me/quote-requests/key=test_key",
                }
        };
         }

@@ -45,6 +45,7 @@ namespace commercetools.Base.Client
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
 
+
             clients.ToList().ForEach(clientName =>
             {
                 IClientConfiguration clientConfiguration =
@@ -58,7 +59,9 @@ namespace commercetools.Base.Client
                         serviceProvider.GetService<IHttpClientFactory>(),
                         serializerFactory(serviceProvider),
                         tokenProviderSupplier(clientName, configuration, serviceProvider),
-                        options.ReadResponseAsStream);
+                        options.ReadResponseAsStream,
+                        serviceProvider.GetService<ICorrelationIdProvider>(),
+                        options.UseHttpVersion);
                     client.Name = clientName;
                     return client;
                 });
@@ -83,7 +86,10 @@ namespace commercetools.Base.Client
                     serviceProvider.GetService<IHttpClientFactory>(),
                     serializerFactory(serviceProvider),
                     tokenProviderSupplier(clientName, configuration, serviceProvider),
-                    options.ReadResponseAsStream);
+                    options.ReadResponseAsStream,
+                    serviceProvider.GetService<ICorrelationIdProvider>(),
+                    options.UseHttpVersion);
+
                 client.Name = clientName;
                 return client;
             });

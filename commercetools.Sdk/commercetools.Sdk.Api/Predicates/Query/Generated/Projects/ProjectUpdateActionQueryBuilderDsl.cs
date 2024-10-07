@@ -52,6 +52,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeCurrenciesActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeCustomerSearchStatus(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeLanguages(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeLanguagesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeLanguagesActionQueryBuilderDsl>> fn)
         {

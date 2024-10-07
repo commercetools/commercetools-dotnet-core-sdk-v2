@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl>(p, BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl, string> AddressId()
+        {
+            return new ComparisonPredicateBuilder<BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("addressId")),
+            p => new CombinationQueryPredicate<BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl>(p, BusinessUnitAddressCustomFieldRemovedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

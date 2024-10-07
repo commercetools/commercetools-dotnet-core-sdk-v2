@@ -81,5 +81,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
         {
             return new ByProjectKeyCustomersByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyCustomersSearchRequestBuilder Search()
+        {
+            return new ByProjectKeyCustomersSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyCustomersSearchIndexingStatusRequestBuilder SearchIndexingStatus()
+        {
+            return new ByProjectKeyCustomersSearchIndexingStatusRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
     }
 }

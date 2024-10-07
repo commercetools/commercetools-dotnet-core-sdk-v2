@@ -114,6 +114,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             p => new CombinationQueryPredicate<ProductQueryBuilderDsl>(p, ProductQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ProductQueryBuilderDsl> Warnings(
+            Func<commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("warnings"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl.Of())),
+                ProductQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ProductQueryBuilderDsl> Warnings()
+        {
+            return new CollectionPredicateBuilder<ProductQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("warnings")),
+                    p => new CombinationQueryPredicate<ProductQueryBuilderDsl>(p, ProductQueryBuilderDsl.Of));
+        }
 
     }
 }

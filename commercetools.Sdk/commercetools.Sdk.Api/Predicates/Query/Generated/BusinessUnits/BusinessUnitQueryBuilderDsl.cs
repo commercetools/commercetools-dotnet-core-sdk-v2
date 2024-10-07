@@ -202,6 +202,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
                 BusinessUnitQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<BusinessUnitQueryBuilderDsl, string> ApprovalRuleMode()
+        {
+            return new ComparisonPredicateBuilder<BusinessUnitQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("approvalRuleMode")),
+            p => new CombinationQueryPredicate<BusinessUnitQueryBuilderDsl>(p, BusinessUnitQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
         public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> AsCompany(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.CompanyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.CompanyQueryBuilderDsl>> fn)

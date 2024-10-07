@@ -35,4 +35,24 @@ generate_history:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="HistoryApi" GEN_RAML_FILE=../$(HISTORY_RAML) generate_sdk
 
 prettify:
-	dotnet format commercetools.Sdk --severity warn
+	dotnet format commercetools.Sdk/commercetools.Base.Abstractions/commercetools.Base.Abstractions.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Base.Client/commercetools.Base.Client.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Base.Registration/commercetools.Base.Registration.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Base.Serialization/commercetools.Base.Serialization.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj whitespace
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj style --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.Api/commercetools.Sdk.Api.csproj analyzers --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.GraphQL.Api/commercetools.Sdk.GraphQL.Api.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.HistoryApi/commercetools.Sdk.HistoryApi.csproj --severity warn
+	dotnet format commercetools.Sdk/commercetools.Sdk.ImportApi/commercetools.Sdk.ImportApi.csproj --severity warn
+	dotnet format commercetools.Sdk/Examples/commercetools.Api.ApmExample/commercetools.Api.ApmExample.csproj --severity warn
+	dotnet format commercetools.Sdk/Examples/commercetools.Api.CheckoutApp/commercetools.Api.CheckoutApp.csproj --severity warn
+	dotnet format commercetools.Sdk/Examples/commercetools.Api.ConsoleApp/commercetools.Api.ConsoleApp.csproj --severity warn
+	dotnet format commercetools.Sdk/Examples/commercetools.Api.NewRelicExample/commercetools.Api.NewRelicExample.csproj --severity warn
+	dotnet format commercetools.Sdk/IntegrationTests/commercetools.Api.IntegrationTests/commercetools.Api.IntegrationTests.csproj --severity warn
+	dotnet format commercetools.Sdk/IntegrationTests/commercetools.GraphQL.Api.IntegrationTests/commercetools.GraphQL.Api.IntegrationTests.csproj --severity warn
+	dotnet format commercetools.Sdk/IntegrationTests/commercetools.ImportApi.IntegrationTests/commercetools.ImportApi.IntegrationTests.csproj --severity warn
+	dotnet format commercetools.Sdk/Tests/commercetools.Api.Serialization.Tests/commercetools.Api.Serialization.Tests.csproj --severity warn
+	dotnet format commercetools.Sdk/Tests/commercetools.Sdk.Api.Tests/commercetools.Sdk.Api.Tests.csproj --severity warn
+	dotnet format commercetools.Sdk/Tests/commercetools.Sdk.HistoryApi.Tests/commercetools.Sdk.HistoryApi.Tests.csproj --severity warn
+	dotnet format commercetools.Sdk/Tests/commercetools.Sdk.ImportApi.Tests/commercetools.Sdk.ImportApi.Tests.csproj --severity warn

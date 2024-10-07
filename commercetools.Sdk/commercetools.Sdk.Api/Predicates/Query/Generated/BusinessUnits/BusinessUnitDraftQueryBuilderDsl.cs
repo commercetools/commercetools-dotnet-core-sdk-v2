@@ -83,6 +83,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CollectionPredicateBuilder<BusinessUnitDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("associates")),
                     p => new CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl>(p, BusinessUnitDraftQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<BusinessUnitDraftQueryBuilderDsl, string> ApprovalRuleMode()
+        {
+            return new ComparisonPredicateBuilder<BusinessUnitDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("approvalRuleMode")),
+            p => new CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl>(p, BusinessUnitDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl> Addresses(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.BaseAddressQueryBuilderDsl>> fn)
         {

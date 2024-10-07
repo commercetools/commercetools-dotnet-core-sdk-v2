@@ -44,6 +44,17 @@ input AWSLambdaDestinationInput {
   accessSecret: String!
 }
 
+type AbsoluteCartDiscountValue implements CartDiscountValue {
+  money: [Money!]!
+  applicationMode: DiscountApplicationMode!
+  type: String!
+}
+
+input AbsoluteCartDiscountValueInput {
+  money: [MoneyInput!]!
+  applicationMode: DiscountApplicationMode!
+}
+
 type AbsoluteDiscountValue implements CartDiscountValue & ProductDiscountValue {
   money: [Money!]!
   type: String!
@@ -306,6 +317,21 @@ input AddProductSelectionProduct {
   variantSelection: ProductVariantSelectionDraft
 }
 
+input AddProductTailoringAsset {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  position: Int
+  asset: AssetDraftInput!
+}
+
+input AddProductTailoringExternalImage {
+  variantId: Int
+  sku: String
+  image: ImageInput!
+  staged: Boolean = true
+}
+
 input AddProductToCategory {
   category: ResourceIdentifierInput!
   orderHint: String
@@ -319,6 +345,16 @@ input AddProductVariant {
   prices: [ProductPriceDataInput!] = []
   key: String
   sku: String
+  staged: Boolean = true
+}
+
+input AddProductVariantTailoring {
+  id: Int
+  sku: String
+  images: [ImageInput!] = []
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributes: [ProductAttributeInput!] = []
+  assets: [AssetDraftInput!] = []
   staged: Boolean = true
 }
 
@@ -1332,6 +1368,7 @@ type BusinessUnit implements Versioned & ReferenceExpandable {
   inheritedStores: [InheritedStore!]
   topLevelUnitRef: KeyReference
   topLevelUnit: BusinessUnit!
+  approvalRuleMode: BusinessUnitApprovalRuleMode!
   id: String!
   version: Long!
   createdAt: DateTime!
@@ -1353,6 +1390,7 @@ type BusinessUnitAddressChanged implements MessagePayload {
 type BusinessUnitAddressCustomFieldAdded implements MessagePayload {
   name: String!
   value: Json!
+  addressId: String
   type: String!
 }
 
@@ -1360,27 +1398,42 @@ type BusinessUnitAddressCustomFieldChanged implements MessagePayload {
   name: String!
   value: Json!
   oldValue: Json
+  addressId: String
   type: String!
 }
 
 type BusinessUnitAddressCustomFieldRemoved implements MessagePayload {
   name: String!
+  addressId: String
   type: String!
 }
 
 type BusinessUnitAddressCustomTypeRemoved implements MessagePayload {
   oldTypeId: String
+  addressId: String
   type: String!
 }
 
 type BusinessUnitAddressCustomTypeSet implements MessagePayload {
   customFields: CustomFieldsType!
   oldTypeId: String
+  addressId: String
   type: String!
 }
 
 type BusinessUnitAddressRemoved implements MessagePayload {
   address: Address!
+  type: String!
+}
+
+enum BusinessUnitApprovalRuleMode {
+  Explicit
+  ExplicitAndFromParent
+}
+
+type BusinessUnitApprovalRuleModeChanged implements MessagePayload {
+  approvalRuleMode: BusinessUnitApprovalRuleMode!
+  oldApprovalRuleMode: BusinessUnitApprovalRuleMode
   type: String!
 }
 
@@ -1517,6 +1570,7 @@ input BusinessUnitDraft {
   stores: [ResourceIdentifierInput!]
   associates: [AssociateDraft!]
   associateMode: BusinessUnitAssociateMode
+  approvalRuleMode: BusinessUnitApprovalRuleMode
 }
 
 type BusinessUnitNameChanged implements MessagePayload {
@@ -1620,6 +1674,7 @@ input BusinessUnitUpdateAction {
   setStores: SetBusinessUnitStores
   setStoreMode: SetBusinessUnitStoreMode
   changeAssociateMode: ChangeBusinessUnitAssociateMode
+  changeApprovalRuleMode: ChangeBusinessUnitApprovalRuleMode
 }
 
 input CancelQuoteRequest {
@@ -1866,6 +1921,7 @@ input CartDiscountValueBaseMoneyInput {
 input CartDiscountValueInput {
   relative: RelativeDiscountValueInput
   absolute: AbsoluteDiscountValueInput
+  absoluteCart: AbsoluteCartDiscountValueInput
   fixed: FixedPriceDiscountValueInput
   giftLineItem: GiftLineItemValueInput
 }
@@ -1972,6 +2028,7 @@ input CartUpdateAction {
   changeCustomLineItemMoney: ChangeCartCustomLineItemMoney
   changeCustomLineItemPriceMode: ChangeCartCustomLineItemPriceMode
   changeCustomLineItemQuantity: ChangeCartCustomLineItemQuantity
+  changeLineItemsOrder: ChangeCartLineItemsOrder
   changeTaxCalculationMode: ChangeCartTaxCalculationMode
   changeTaxMode: ChangeCartTaxMode
   changeTaxRoundingMode: ChangeCartTaxRoundingMode
@@ -2222,6 +2279,10 @@ input ChangeBusinessUnitAddress {
   address: AddressInput!
 }
 
+input ChangeBusinessUnitApprovalRuleMode {
+  approvalRuleMode: BusinessUnitApprovalRuleMode!
+}
+
 input ChangeBusinessUnitAssociate {
   associate: AssociateDraft!
 }
@@ -2302,6 +2363,10 @@ input ChangeCartLineItemQuantity {
 
   "Only valid for the general Carts API. Ignored for the My Carts API."
   externalTotalPrice: ExternalLineItemTotalPriceDraft
+}
+
+input ChangeCartLineItemsOrder {
+  lineItemOrder: [String!]!
 }
 
 input ChangeCartTaxCalculationMode {
@@ -2521,6 +2586,22 @@ input ChangeProductSlug {
   staged: Boolean = true
 }
 
+input ChangeProductTailoringAssetName {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  name: [LocalizedStringItemInputType!]!
+  assetKey: String
+  assetId: String
+}
+
+input ChangeProductTailoringAssetOrder {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  assetOrder: [String!]!
+}
+
 input ChangeProjectSettingsCartsConfiguration {
   cartsConfiguration: CartsConfigurationInput!
 }
@@ -2535,6 +2616,10 @@ input ChangeProjectSettingsCountryTaxRateFallbackEnabled {
 
 input ChangeProjectSettingsCurrencies {
   currencies: [Currency!]!
+}
+
+input ChangeProjectSettingsCustomerSearchStatus {
+  status: CustomerSearchStatus!
 }
 
 input ChangeProjectSettingsLanguages {
@@ -2583,6 +2668,10 @@ input ChangeQuoteRequestState {
 
 input ChangeQuoteState {
   quoteState: QuoteState!
+}
+
+input ChangeShippingMethodActive {
+  active: Boolean!
 }
 
 input ChangeShippingMethodIsDefault {
@@ -3355,6 +3444,7 @@ type CustomerAddressChanged implements MessagePayload {
 type CustomerAddressCustomFieldAdded implements MessagePayload {
   name: String!
   value: Json!
+  addressId: String
   type: String!
 }
 
@@ -3362,22 +3452,26 @@ type CustomerAddressCustomFieldChanged implements MessagePayload {
   name: String!
   value: Json!
   previousValue: Json
+  addressId: String
   type: String!
 }
 
 type CustomerAddressCustomFieldRemoved implements MessagePayload {
   name: String!
+  addressId: String
   type: String!
 }
 
 type CustomerAddressCustomTypeRemoved implements MessagePayload {
   previousTypeId: String
+  addressId: String
   type: String!
 }
 
 type CustomerAddressCustomTypeSet implements MessagePayload {
   customFields: CustomFieldsType!
   previousTypeId: String
+  addressId: String
   type: String!
 }
 
@@ -3610,6 +3704,17 @@ type CustomerQueryResult {
   total: Long!
   exists: Boolean!
   results: [Customer!]!
+}
+
+type CustomerSearchConfiguration {
+  status: CustomerSearchStatus!
+  lastModifiedAt: DateTime!
+  lastModifiedBy: Initiator
+}
+
+enum CustomerSearchStatus {
+  Activated
+  Deactivated
 }
 
 input CustomerSignInDraft {
@@ -3888,6 +3993,12 @@ type DirectDiscountDraftOutput {
   target: CartDiscountTarget
 }
 
+enum DiscountApplicationMode {
+  ProportionateDistribution
+  EvenDistribution
+  IndividualApplication
+}
+
 "With discount codes it is possible to give specific cart discounts to an eligible amount of users. They are defined by a string value which can be added to a cart so that specific cart discounts can be applied to the cart."
 type DiscountCode implements Versioned & ReferenceExpandable {
   code: String!
@@ -3943,7 +4054,7 @@ input DiscountCodeDraft {
   name: [LocalizedStringItemInputType!]
   key: String
   description: [LocalizedStringItemInputType!]
-  cartDiscounts: [ReferenceInput!]!
+  cartDiscounts: [ResourceIdentifierInput!]!
   isActive: Boolean = true
   maxApplications: Long
   maxApplicationsPerCustomer: Long
@@ -4433,6 +4544,7 @@ interface HasProductTailoringData {
     "List of languages the client is able to understand, and which locale variant is preferred."
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
+  variants: [ProductVariantTailoring!]!
 }
 
 type HighPrecisionMoney implements BaseMoney {
@@ -4611,8 +4723,6 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
     key: String): ShoppingList
   shoppingLists(where: String, sort: [String!], limit: Int, offset: Int): ShoppingListQueryResult!
   productSelectionAssignments(where: String, sort: [String!], limit: Int, offset: Int): ProductAssignmentQueryResult!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   productTailoring(
     "Queries with specified ID"
     id: String,
@@ -4625,9 +4735,28 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
 
     "Queries with specified Product key"
     productKey: String): ProductTailoring
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   productTailoringList(where: String, sort: [String!], limit: Int, offset: Int): ProductTailoringQueryResult!
+  quoteRequest(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): QuoteRequest
+  quoteRequests(where: String, sort: [String!], limit: Int, offset: Int): QuoteRequestQueryResult!
+  stagedQuote(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): StagedQuote
+  stagedQuotes(where: String, sort: [String!], limit: Int, offset: Int): StagedQuoteQueryResult!
+  quote(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): Quote
+  quotes(where: String, sort: [String!], limit: Int, offset: Int): QuoteQueryResult!
 }
 
 type InStoreMe implements MeQueryInterface & CartQueryInterface & ActiveCartInterface & OrderQueryInterface & ShoppingListQueryInterface {
@@ -5365,6 +5494,14 @@ input MoveProductImageToPosition {
   staged: Boolean
 }
 
+input MoveProductTailoringImageToPosition {
+  variantId: Int
+  sku: String
+  imageUrl: String!
+  position: Int!
+  staged: Boolean = true
+}
+
 type MultiBuyCustomLineItemsTarget implements CartDiscountTarget {
   predicate: String!
   triggerQuantity: Long!
@@ -5871,6 +6008,9 @@ type Mutation {
     storeKey: KeyReferenceInput): Order
   createOrderFromQuote(draft: OrderQuoteCommand!,
 
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
+
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument): Order
 
@@ -5981,13 +6121,9 @@ type Mutation {
 
     "Queries with specified key"
     key: String): ProductSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   createProductTailoring(
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
     storeKey: KeyReferenceInput, draft: ProductTailoringDraft!): ProductTailoring
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   updateProductTailoring(
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
     storeKey: KeyReferenceInput,
@@ -6003,8 +6139,6 @@ type Mutation {
 
     "Queries with specified key"
     key: String, actions: [ProductTailoringUpdateAction!]!, version: Long!): ProductTailoring
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   deleteProductTailoring(
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
     storeKey: KeyReferenceInput,
@@ -6101,11 +6235,17 @@ type Mutation {
   createQuoteRequest(draft: QuoteRequestDraft!,
 
     "Create/modify entity as an associate in business-unit."
-    asAssociate: AsAssociateArgument): QuoteRequest
+    asAssociate: AsAssociateArgument,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): QuoteRequest
   updateQuoteRequest(version: Long!,
 
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument, actions: [QuoteRequestUpdateAction!]!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6113,6 +6253,9 @@ type Mutation {
     "Queries with specified key"
     key: String): QuoteRequest
   deleteQuoteRequest(version: Long!, personalDataErasure: Boolean = false,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6127,8 +6270,14 @@ type Mutation {
 
     "Queries with specified key"
     key: String): QuoteRequest
-  createStagedQuote(draft: StagedQuoteDraft!): StagedQuote
+  createStagedQuote(draft: StagedQuoteDraft!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): StagedQuote
   updateStagedQuote(version: Long!, actions: [StagedQuoteUpdateAction!]!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6137,16 +6286,25 @@ type Mutation {
     key: String): StagedQuote
   deleteStagedQuote(version: Long!, personalDataErasure: Boolean = false,
 
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
+
     "Queries with specified ID"
     id: String,
 
     "Queries with specified key"
     key: String): StagedQuote
-  createQuote(draft: QuoteDraft!): Quote
+  createQuote(draft: QuoteDraft!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): Quote
   updateQuote(version: Long!, actions: [QuoteUpdateAction!]!,
 
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6154,6 +6312,9 @@ type Mutation {
     "Queries with specified key"
     key: String): Quote
   deleteQuote(version: Long!, personalDataErasure: Boolean = false,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6306,6 +6467,7 @@ input MyCartUpdateAction {
   addPayment: AddCartPayment
   addShoppingList: AddCartShoppingList
   applyDeltaToLineItemShippingDetailsTargets: ApplyCartDeltaToLineItemShippingDetailsTargets
+  changeLineItemsOrder: ChangeCartLineItemsOrder
   changeTaxMode: ChangeMyCartTaxMode
   recalculate: RecalculateCart
   removeDiscountCode: RemoveCartDiscountCode
@@ -7713,6 +7875,48 @@ type ProductPriceChanged implements MessagePayload {
   type: String!
 }
 
+type ProductPriceCustomFieldAdded implements MessagePayload {
+  priceId: String!
+  variantId: Int!
+  staged: Boolean!
+  name: String!
+  value: Json!
+  type: String!
+}
+
+type ProductPriceCustomFieldChanged implements MessagePayload {
+  priceId: String!
+  variantId: Int!
+  staged: Boolean!
+  name: String!
+  value: Json!
+  type: String!
+}
+
+type ProductPriceCustomFieldRemoved implements MessagePayload {
+  priceId: String!
+  variantId: Int!
+  staged: Boolean!
+  name: String!
+  type: String!
+}
+
+type ProductPriceCustomFieldsRemoved implements MessagePayload {
+  priceId: String!
+  variantId: Int!
+  staged: Boolean!
+  type: String!
+}
+
+type ProductPriceCustomFieldsSet implements MessagePayload {
+  priceId: String!
+  variantId: Int!
+  staged: Boolean!
+  customField: CustomFieldsType!
+  oldTypeId: String
+  type: String!
+}
+
 input ProductPriceDataInput {
   value: BaseMoneyInput!
   key: String
@@ -8191,7 +8395,6 @@ type ProductStateTransition implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ProductTailoring implements Versioned {
   key: String
   productRef: Reference!
@@ -8259,9 +8462,9 @@ type ProductTailoringCreated implements MessagePayload & HasProductTailoringData
     "List of languages the client is able to understand, and which locale variant is preferred."
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
+  variants: [ProductVariantTailoring!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ProductTailoringData implements HasProductTailoringData {
   name(
     "String is defined for different locales. This argument specifies the desired locale."
@@ -8305,6 +8508,7 @@ type ProductTailoringData implements HasProductTailoringData {
     "List of languages the client is able to understand, and which locale variant is preferred."
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
+  variants: [ProductVariantTailoring!]!
 }
 
 type ProductTailoringDeleted implements MessagePayload {
@@ -8335,7 +8539,6 @@ type ProductTailoringDescriptionSet implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ProductTailoringDraft {
   product: ResourceIdentifierInput!
   name: [LocalizedStringItemInputType!]
@@ -8346,6 +8549,26 @@ input ProductTailoringDraft {
   metaDescription: [LocalizedStringItemInputType!]
   metaKeywords: [LocalizedStringItemInputType!]
   publish: Boolean
+  variants: [ProductVariantTailoringInput!] = []
+}
+
+type ProductTailoringImageAdded implements MessagePayload {
+  variantId: Int!
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  image: Image!
+  type: String!
+}
+
+type ProductTailoringImagesSet implements MessagePayload {
+  variantId: Int!
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  oldImages: [Image!]!
+  images: [Image!]!
+  type: String!
 }
 
 type ProductTailoringNameSet implements MessagePayload {
@@ -8412,11 +8635,32 @@ type ProductTailoringUnpublished implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ProductTailoringUpdateAction {
+  moveImageToPosition: MoveProductTailoringImageToPosition
+  addVariant: AddProductVariantTailoring
+  removeVariant: RemoveProductVariantTailoring
   publish: PublishTailoring
   unpublish: UnpublishTailoring
+  addAsset: AddProductTailoringAsset
+  addExternalImage: AddProductTailoringExternalImage
+  changeAssetName: ChangeProductTailoringAssetName
+  changeAssetOrder: ChangeProductTailoringAssetOrder
+  removeAsset: RemoveProductTailoringAsset
+  removeImage: RemoveProductTailoringImage
+  setAssetCustomField: SetProductTailoringAssetCustomField
+  setAssetCustomType: SetProductTailoringAssetCustomType
+  setAssetDescription: SetProductTailoringAssetDescription
+  setAssetKey: SetProductTailoringAssetKey
+  setAssetSources: SetProductTailoringAssetSources
+  setAssetTags: SetProductTailoringAssetTags
+  setImages: SetProductTailoringImages
   setDescription: SetProductTailoringDescription
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setAttribute: SetProductTailoringAttribute
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setAttributeInAllVariants: SetProductTailoringAttributeInAllVariants
+  setImageLabel: SetProductTailoringImageLabel
   setMetaAttributes: SetProductTailoringMetaAttributes
   setMetaDescription: SetProductTailoringMetaDescription
   setMetaKeywords: SetProductTailoringMetaKeywords
@@ -8633,6 +8877,7 @@ type ProductVariantAvailabilityWithChannels {
 type ProductVariantDeleted implements MessagePayload {
   removedImageUrls: Set!
   variant: ProductVariant
+  staged: Boolean
   type: String!
 }
 
@@ -8679,6 +8924,41 @@ type ProductVariantSelectionIncludeAllExcept implements ProductVariantSelection 
 type ProductVariantSelectionIncludeOnly implements ProductVariantSelection {
   type: String!
   skus: [String!]!
+}
+
+type ProductVariantTailoring {
+  id: Int!
+  images: [Image!]!
+  assets: [Asset!]!
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributesRaw: [RawProductAttribute!]!
+}
+
+type ProductVariantTailoringAdded implements MessagePayload {
+  variantId: Int!
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  variant: VariantTailoring!
+  type: String!
+}
+
+input ProductVariantTailoringInput {
+  id: Int
+  sku: String
+  images: [ImageInput!] = []
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributes: [ProductAttributeInput!] = []
+  assets: [AssetDraftInput!] = []
+}
+
+type ProductVariantTailoringRemoved implements MessagePayload {
+  variantId: Int!
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  variant: VariantTailoring!
+  type: String!
 }
 
 "Contains information about the limits of your project."
@@ -8728,6 +9008,7 @@ input ProjectSettingsUpdateAction {
   changeCountries: ChangeProjectSettingsCountries
   changeCountryTaxRateFallbackEnabled: ChangeProjectSettingsCountryTaxRateFallbackEnabled
   changeCurrencies: ChangeProjectSettingsCurrencies
+  changeCustomerSearchStatus: ChangeProjectSettingsCustomerSearchStatus
   changeLanguages: ChangeProjectSettingsLanguages
   changeMessagesConfiguration: ChangeProjectSettingsMessagesConfiguration
   changeMessagesEnabled: ChangeProjectSettingsMessagesEnabled
@@ -8960,8 +9241,6 @@ type Query {
     "Queries with specified key"
     key: String): ProductSelection
   productSelections(where: String, sort: [String!], limit: Int, offset: Int): ProductSelectionQueryResult!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   productTailoring(
     "Queries with specified ID"
     id: String,
@@ -8977,8 +9256,6 @@ type Query {
 
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
     storeKey: KeyReferenceInput): ProductTailoring
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   productTailoringList(where: String, sort: [String!], limit: Int, offset: Int): ProductTailoringQueryResult!
   productProjectionsSuggest(searchKeywords: [SearchKeywordArgument!]!, fuzzy: Boolean, limit: Int = 10, staged: Boolean = false): SuggestResult!
   project: ProjectProjection!
@@ -9427,15 +9704,6 @@ input RecalculateCart {
   updateProductData: Boolean = false
 }
 
-input RecalculateStagedOrder {
-  updateProductData: Boolean = false
-}
-
-type RecalculateStagedOrderOutput implements StagedOrderUpdateActionOutput {
-  type: String!
-  updateProductData: Boolean!
-}
-
 type Reference {
   typeId: String!
   id: String!
@@ -9666,7 +9934,28 @@ input RemoveProductSelectionProduct {
   product: ResourceIdentifierInput!
 }
 
+input RemoveProductTailoringAsset {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  assetKey: String
+  assetId: String
+}
+
+input RemoveProductTailoringImage {
+  variantId: Int
+  sku: String
+  imageUrl: String!
+  staged: Boolean = true
+}
+
 input RemoveProductVariant {
+  id: Int
+  sku: String
+  staged: Boolean = true
+}
+
+input RemoveProductVariantTailoring {
   id: Int
   sku: String
   staged: Boolean = true
@@ -10124,6 +10413,7 @@ input SearchFilterModelInput {
 type SearchIndexingConfiguration {
   products: SearchIndexingConfigurationValues
   orders: OrderSearchConfiguration
+  customers: CustomerSearchConfiguration
 }
 
 type SearchIndexingConfigurationValues {
@@ -10393,12 +10683,14 @@ input SetCartCustomLineItemTaxAmount {
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraft
+  shippingKey: String
 }
 
 input SetCartCustomLineItemTaxRate {
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraft
+  shippingKey: String
 }
 
 input SetCartCustomShippingMethod {
@@ -11538,8 +11830,96 @@ input SetProductSku {
   staged: Boolean = true
 }
 
+input SetProductTailoringAssetCustomField {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  value: String
+  name: String!
+  assetKey: String
+  assetId: String
+}
+
+input SetProductTailoringAssetCustomType {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  typeId: String
+  typeKey: String
+  type: ResourceIdentifierInput
+  fields: [CustomFieldInput!]
+  assetKey: String
+  assetId: String
+}
+
+input SetProductTailoringAssetDescription {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  description: [LocalizedStringItemInputType!]
+  assetKey: String
+  assetId: String
+}
+
+input SetProductTailoringAssetKey {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  assetKey: String
+  assetId: String!
+}
+
+input SetProductTailoringAssetSources {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  sources: [AssetSourceInput!] = []
+  assetKey: String
+  assetId: String
+}
+
+input SetProductTailoringAssetTags {
+  variantId: Int
+  sku: String
+  staged: Boolean = true
+  tags: [String!] = []
+  assetKey: String
+  assetId: String
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetProductTailoringAttribute {
+  variantId: Int
+  sku: String
+  name: String!
+  value: String
+  staged: Boolean = true
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetProductTailoringAttributeInAllVariants {
+  name: String!
+  value: String
+  staged: Boolean = true
+}
+
 input SetProductTailoringDescription {
   description: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringImageLabel {
+  variantId: Int
+  sku: String
+  imageUrl: String!
+  label: String
+  staged: Boolean = true
+}
+
+input SetProductTailoringImages {
+  variantId: Int
+  sku: String
+  images: [ImageInput!]!
   staged: Boolean = true
 }
 
@@ -11882,6 +12262,7 @@ input SetStagedOrderCustomLineItemTaxAmount {
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraft
+  shippingKey: String
 }
 
 type SetStagedOrderCustomLineItemTaxAmountOutput implements StagedOrderUpdateActionOutput {
@@ -11889,12 +12270,14 @@ type SetStagedOrderCustomLineItemTaxAmountOutput implements StagedOrderUpdateAct
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraftOutput
+  shippingKey: String
 }
 
 input SetStagedOrderCustomLineItemTaxRate {
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraft
+  shippingKey: String
 }
 
 type SetStagedOrderCustomLineItemTaxRateOutput implements StagedOrderUpdateActionOutput {
@@ -11902,6 +12285,7 @@ type SetStagedOrderCustomLineItemTaxRateOutput implements StagedOrderUpdateActio
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraftOutput
+  shippingKey: String
 }
 
 input SetStagedOrderCustomShippingMethod {
@@ -12702,6 +13086,7 @@ input ShippingInfoImportDraft {
 type ShippingMethod implements Versioned & ReferenceExpandable {
   name: String!
   zoneRates: [ZoneRate!]!
+  active: Boolean!
   isDefault: Boolean!
   predicate: String
   key: String
@@ -12739,6 +13124,7 @@ input ShippingMethodDraft {
   localizedDescription: [LocalizedStringItemInputType!]
   taxCategory: ResourceIdentifierInput!
   zoneRates: [ZoneRateDraft!] = []
+  active: Boolean
   isDefault: Boolean!
   predicate: String
   key: String
@@ -12773,6 +13159,7 @@ enum ShippingMethodState {
 input ShippingMethodUpdateAction {
   addShippingRate: AddShippingMethodShippingRate
   addZone: AddShippingMethodZone
+  changeActive: ChangeShippingMethodActive
   changeIsDefault: ChangeShippingMethodIsDefault
   changeName: ChangeShippingMethodName
   changeTaxCategory: ChangeShippingMethodTaxCategory
@@ -13119,7 +13506,6 @@ input StagedOrderUpdateAction {
   changeTaxRoundingMode: ChangeStagedOrderTaxRoundingMode
   importCustomLineItemState: ImportStagedOrderCustomLineItemState
   importLineItemState: ImportStagedOrderLineItemState
-  recalculate: RecalculateStagedOrder
   removeCustomLineItem: RemoveStagedOrderCustomLineItem
   removeDelivery: RemoveStagedOrderDelivery
   removeDiscountCode: RemoveStagedOrderDiscountCode
@@ -13217,6 +13603,8 @@ type StagedQuote implements Versioned {
   businessUnit: BusinessUnit
   businessUnitRef: KeyReference
   purchaseOrderNumber: String
+  storeRef: KeyReference
+  store: Store
   id: String!
   version: Long!
   createdAt: DateTime!
@@ -14324,6 +14712,11 @@ type ValueFacetResult implements FacetResult {
 input ValueFilterInput {
   path: String!
   values: [String!]!
+}
+
+type VariantTailoring {
+  images: [Image!]!
+  assets: [Asset!]!
 }
 
 "Versioned object have an ID and version and modification. Every update of this object changes it's version."

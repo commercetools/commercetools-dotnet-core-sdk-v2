@@ -1,4 +1,564 @@
 
+# 11.11.0 (2024-09-04)
+
+## Important Information
+
+This major release branch will be the last compatible with .NET Standard 2.1. The major release will have .NET 6 as minimum requirement. The next major release will include a refactored logger handler. Some defaults in the client configuration may be changed.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/344
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/345
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/346
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/347
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/348
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/349
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/350
+* add http version middleware by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/351
+
+**Api changes**
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueAbsolute`
+- added property `applicationMode` to type `CartDiscountValueAbsoluteDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountApplicationMode`
+- added type `DeliveryCustomFieldAddedMessage`
+- added type `DeliveryCustomFieldChangedMessage`
+- added type `DeliveryCustomFieldRemovedMessage`
+- added type `DeliveryCustomTypeRemovedMessage`
+- added type `DeliveryCustomTypeSetMessage`
+- added type `DeliveryCustomFieldAddedMessagePayload`
+- added type `DeliveryCustomFieldChangedMessagePayload`
+- added type `DeliveryCustomFieldRemovedMessagePayload`
+- added type `DeliveryCustomTypeRemovedMessagePayload`
+- added type `DeliveryCustomTypeSetMessagePayload`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ReferencedResourceNotFound`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.10.0...11.11.0
+
+# 11.10.0 (2024-08-05)
+
+**Api changes**
+
+<details>
+<summary>Removed Resource(s)</summary>
+
+- :warning: removed resource `/{projectKey}/me/carts/key={key}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `shopping-list` to type `ExtensionResourceTypeId`
+- added enum `customer-group` to type `AttributeReferenceTypeId`
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().head()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withKey().delete()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Deprecated Property(s)</summary>
+
+- property `PriceImport::publish` is removed
+- property `ProductVariantImport::publish` is removed
+</details>
+
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/337
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/338
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/339
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/340
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/341
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/342
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/343
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.9.0...11.10.0
+
+# 11.9.0 (2024-07-26)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/328
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/329
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/332
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/333
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/334
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/335
+* fix resolving of custom fields in GraphQL module by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/336
+
+**Api changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `cart-discount` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `customType` of type `OrderSearchAnyValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchDateRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchFullTextValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchLongRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchNumberRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchQueryExpressionValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchStringValue` from type `string` to `OrderSearchCustomType`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessagePayload`
+- added property `active` to type `ShippingMethod`
+- added property `active` to type `ShippingMethodDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartChangeLineItemsOrderAction`
+- added type `MyCartChangeLineItemsOrderAction`
+- added type `OrderSearchCustomType`
+- added type `ShippingMethodChangeActiveAction`
+</details>
+
+### Breaking changes
+
+#### Order Search
+
+The `customtype` parameter in an OrderSearch request has been changed from a String to an Enum.
+
+#### GraphQL module
+
+We released a fix for the GraphQL module. Previously Json-Values in GraphQL were tried to be deserialized to a String. This caused Runtime exceptions for example when trying to deserialize CustomFields which where not Strings. The GraphQL module now deserializes Json into a `System.Text.Json.Nodes.JsonValue`. So they have to be deserialized to a specific type when trying to access it. An example can be found here:
+
+https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/0f164fc8bdf173b7203ff2c3d1afb2913c9b95ac/commercetools.Sdk/IntegrationTests/commercetools.Api.IntegrationTests/Type/TypeIntegrationTests.cs#L148-L151
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.8.0...11.9.0
+
+# 11.8.0 (2024-07-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/313
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/314
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/315
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/316
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/317
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/318
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/319
+* DEVX-330 add dynatrace example app by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/320
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/321
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/322
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/323
+* add datadog example app by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/324
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/325
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/326
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/327
+
+**Api changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `isOnStock` of type `ProductVariantAvailability` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `approvalRuleMode` to type `BusinessUnit`
+- added property `approvalRuleMode` to type `BusinessUnitDraft`
+- added property `approvalRuleMode` to type `Company`
+- added property `approvalRuleMode` to type `CompanyDraft`
+- added property `approvalRuleMode` to type `Division`
+- added property `approvalRuleMode` to type `DivisionDraft`
+- added property `metaTitle` to type `ProductTailoringCreatedMessage`
+- added property `metaDescription` to type `ProductTailoringCreatedMessage`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
+- added property `variants` to type `ProductTailoringCreatedMessage`
+- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringData`
+- added property `variants` to type `ProductTailoringDraft`
+- added property `variants` to type `ProductTailoringInStoreDraft`
+- added property `store` to type `StagedQuote`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `totalPrice` of type `OrderLineItemDiscountSetMessage` from type `Money` to `CentPrecisionMoney`
+- :warning: changed property `value` of type `StandalonePriceValueChangedMessage` from type `Money` to `TypedMoney`
+- :warning: changed property `oldValue` of type `StandalonePriceValueChangedMessage` from type `Money` to `TypedMoney`
+- :warning: changed property `totalPrice` of type `OrderLineItemDiscountSetMessagePayload` from type `Money` to `CentPrecisionMoney`
+- :warning: changed property `value` of type `StandalonePriceValueChangedMessagePayload` from type `Money` to `TypedMoney`
+- :warning: changed property `oldValue` of type `StandalonePriceValueChangedMessagePayload` from type `Money` to `TypedMoney`
+- :warning: changed property `price` of type `ShippingRate` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `freeAbove` of type `ShippingRate` from type `TypedMoney` to `CentPrecisionMoney`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
+- added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Removed Enum(s)</summary>
+
+- :warning: removed enum `product-price` from type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().customers().search().post()`
+- added method `apiRoot.withProjectKey().customers().search().head()`
+- added method `apiRoot.withProjectKey().customers().searchIndexingStatus().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().orderQuote().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductId().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductKey().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().delete()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitChangeApprovalRuleModeAction`
+- added type `CustomerIndexingProgress`
+- added type `CustomerIndexingStatus`
+- added type `CustomerPagedSearchResponse`
+- added type `CustomerSearchIndexingStatusResponse`
+- added type `CustomerSearchRequest`
+- added type `CustomerSearchResult`
+- added type `BusinessUnitApprovalRuleModeChangedMessage`
+- added type `ProductPriceCustomFieldAddedMessage`
+- added type `ProductPriceCustomFieldChangedMessage`
+- added type `ProductPriceCustomFieldRemovedMessage`
+- added type `ProductPriceCustomFieldsRemovedMessage`
+- added type `ProductPriceCustomFieldsSetMessage`
+- added type `ProductTailoringImageAddedMessage`
+- added type `ProductTailoringImagesSetMessage`
+- added type `ProductVariantTailoringAddedMessage`
+- added type `ProductVariantTailoringRemovedMessage`
+- added type `BusinessUnitApprovalRuleModeChangedMessagePayload`
+- added type `ProductPriceCustomFieldAddedMessagePayload`
+- added type `ProductPriceCustomFieldChangedMessagePayload`
+- added type `ProductPriceCustomFieldRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsSetMessagePayload`
+- added type `ProductTailoringImageAddedMessagePayload`
+- added type `ProductTailoringImagesSetMessagePayload`
+- added type `ProductVariantTailoringAddedMessagePayload`
+- added type `ProductVariantTailoringRemovedMessagePayload`
+- added type `ProductVariantTailoring`
+- added type `ProductVariantTailoringDraft`
+- added type `ProductTailoringAddAssetAction`
+- added type `ProductTailoringAddExternalImageAction`
+- added type `ProductTailoringAddVariantAction`
+- added type `ProductTailoringChangeAssetNameAction`
+- added type `ProductTailoringChangeAssetOrderAction`
+- added type `ProductTailoringMoveImageToPositionAction`
+- added type `ProductTailoringRemoveAssetAction`
+- added type `ProductTailoringRemoveImageAction`
+- added type `ProductTailoringRemoveVariantAction`
+- added type `ProductTailoringSetAssetCustomFieldAction`
+- added type `ProductTailoringSetAssetCustomTypeAction`
+- added type `ProductTailoringSetAssetDescriptionAction`
+- added type `ProductTailoringSetAssetKeyAction`
+- added type `ProductTailoringSetAssetSourcesAction`
+- added type `ProductTailoringSetAssetTagsAction`
+- added type `ProductTailoringSetExternalImagesAction`
+- added type `ProductTailoringSetImageLabelAction`
+- added type `CustomerSearchStatus`
+- added type `ProjectChangeCustomerSearchStatusAction`
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/{ID}`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/customers/search`
+- added resource `/{projectKey}/customers/search/indexing-status`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.7.0...11.8.0
+
+# 11.7.0 (2024-05-30)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/306
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/307
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/308
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/309
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/310
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/311
+* add option to specify attribute type mapping explicit by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/312
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.6.0...11.7.0
+
+# 11.6.0 (2024-05-15)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/288
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/289
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/290
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/291
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/292
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/295
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/296
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/297
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/298
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/301
+* update bootstrap, jquery, jquery-validation by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/302
+* update dependencies by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/303
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/304
+* support custom correlation id provider by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/305
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `Attribution`
+- added type `AttributionSource`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `value` of type `DirectDiscountDraft` from type `CartDiscountValue` to `CartDiscountValueDraft`
+- :warning: changed property `custom` of type `MyBusinessUnitDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyCompanyDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyDivisionDraft` from type `CustomFields` to `CustomFieldsDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `stores` of type `BusinessUnit` to be required
+- :warning: changed property `stores` of type `Company` to be required
+- :warning: changed property `stores` of type `Division` to be required
+- :warning: changed property `stores` of type `BusinessUnitSetStoresAction` to be required
+- :warning: changed property `stores` of type `CartDiscountSetStoresAction` to be required
+- :warning: changed property `stores` of type `Customer` to be required
+- :warning: changed property `stores` of type `CustomerSetStoresAction` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `attributedTo` to type `CreatedBy`
+- added property `attributedTo` to type `LastModifiedBy`
+- added property `postFilter` to type `ProductSearchRequest`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().products().search().head()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCodeImportRequest`
+- added type `DiscountCodeImport`
+</details>
+
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `PriceImport::publish` as deprecated
+- marked property `ProductVariantImport::publish` as deprecated
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `staged` to type `PriceImport`
+- added property `staged` to type `ProductVariantImport`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().discountCodes().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/discount-codes`
+- added resource `/{projectKey}/discount-codes/import-containers`
+- added resource `/{projectKey}/discount-codes/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-code` to type `ImportResourceType`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.5.0...11.6.0
+
 # 11.5.0 (2024-04-01)
 
 ## What's Changed
