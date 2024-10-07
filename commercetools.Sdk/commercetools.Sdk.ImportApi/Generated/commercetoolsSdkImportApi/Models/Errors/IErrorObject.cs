@@ -18,6 +18,7 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
     [SubTypeDiscriminator("invalid_token", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidTokenError))]
     [SubTypeDiscriminator("InvalidCredentials", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidCredentialsError))]
     [SubTypeDiscriminator("InvalidField", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError))]
+    [SubTypeDiscriminator("InvalidFieldUpdate", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldsUpdateError))]
     [SubTypeDiscriminator("InvalidInput", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidInput))]
     [SubTypeDiscriminator("InvalidJsonInput", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidJsonInput))]
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation))]
@@ -109,6 +110,12 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         static commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError InvalidField(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldsUpdateError InvalidFieldUpdate(Action<commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldsUpdateError> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Errors.InvalidFieldsUpdateError();
             init?.Invoke(t);
             return t;
         }

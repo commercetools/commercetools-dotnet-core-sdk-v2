@@ -42,3 +42,11 @@
 - added enum `product-tailoring` to type `ResourceTypeId`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `InvalidFieldsUpdateError`
+</details>
+
