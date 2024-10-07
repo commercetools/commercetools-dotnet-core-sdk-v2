@@ -127,7 +127,7 @@ namespace commercetools.Base.Client
                 })
                 .ConfigureHttpMessageHandlerBuilder(builder =>
                 {
-                    builder.PrimaryHandler = new HttpClientHandler
+                    builder.PrimaryHandler = new SocketsHttpHandler()
                     {
                         AutomaticDecompression = options.DecompressionMethods
                     };
