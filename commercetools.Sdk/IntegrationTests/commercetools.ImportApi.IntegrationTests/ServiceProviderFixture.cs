@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace commercetools.ImportApi.IntegrationTests
 {
-    public class ServiceProviderFixture
+    public sealed class ServiceProviderFixture
     {
         private readonly ServiceProvider serviceProvider;
         private readonly IConfiguration configuration;
@@ -22,7 +22,7 @@ namespace commercetools.ImportApi.IntegrationTests
                 AddEnvironmentVariables("CTP_").
                 Build();
 
-            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) == ClientType.Stream;
+            var useStreamClient = Enum.Parse<ClientType>(configuration.GetValue("ClientType", "String")) != ClientType.String;
             services.UseCommercetoolsImportApi(configuration, "ImportClient", options: new ClientOptions { ReadResponseAsStream = useStreamClient });
             this.serviceProvider = services.BuildServiceProvider();
 
