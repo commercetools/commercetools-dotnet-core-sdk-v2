@@ -74,7 +74,6 @@ namespace commercetools.Base.Client
         {
             var requestPath = new Uri(RequestUrl + ToQueryString(QueryParams), UriKind.Relative);
             var request = new HttpRequestMessage();
-            request.Version = HttpVersion.Version20;
             request.Method = this.Method;
             request.RequestUri = requestPath;
             request.AddHeaders(Headers);
