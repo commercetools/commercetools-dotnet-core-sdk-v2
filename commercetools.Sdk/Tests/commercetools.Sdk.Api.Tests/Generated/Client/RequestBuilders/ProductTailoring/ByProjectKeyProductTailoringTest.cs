@@ -102,6 +102,25 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductTailoring
                    ApiRoot
                    .WithProjectKey("test_projectKey")
                    .ProductTailoring()
+                   .Head()
+                   .WithWhere("where")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/product-tailoring?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductTailoring()
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/product-tailoring",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductTailoring()
                    .Post(null)
                    .WithExpand("expand")
                    .Build(),
