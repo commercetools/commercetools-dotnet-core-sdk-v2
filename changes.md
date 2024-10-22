@@ -6,3 +6,11 @@
 - added method `apiRoot.withProjectKey().productTailoring().head()`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `NewMasterVariantAdditionNotAllowedError`
+</details>
+
