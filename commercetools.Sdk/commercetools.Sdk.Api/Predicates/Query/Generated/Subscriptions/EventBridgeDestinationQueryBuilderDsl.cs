@@ -31,6 +31,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
             p => new CombinationQueryPredicate<EventBridgeDestinationQueryBuilderDsl>(p, EventBridgeDestinationQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<EventBridgeDestinationQueryBuilderDsl, string> Source()
+        {
+            return new ComparisonPredicateBuilder<EventBridgeDestinationQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("source")),
+            p => new CombinationQueryPredicate<EventBridgeDestinationQueryBuilderDsl>(p, EventBridgeDestinationQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

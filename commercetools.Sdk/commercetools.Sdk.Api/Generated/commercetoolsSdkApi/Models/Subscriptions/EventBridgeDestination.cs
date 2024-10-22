@@ -10,6 +10,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public string Region { get; set; }
 
         public string AccountId { get; set; }
+
+        public string Source { get; set; }
         public EventBridgeDestination()
         {
             this.Type = "EventBridge";
