@@ -118,6 +118,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.ApprovalRules
                 ApprovalRuleQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ApprovalRuleQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ApprovalRuleQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl.Of())),
+                ApprovalRuleQueryBuilderDsl.Of);
+        }
+
 
     }
 }

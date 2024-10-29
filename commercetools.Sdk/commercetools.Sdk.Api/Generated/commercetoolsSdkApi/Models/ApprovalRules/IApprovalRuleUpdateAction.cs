@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleUpdateAction))]
     [SubTypeDiscriminator("setApprovers", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetApproversAction))]
+    [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomFieldAction))]
+    [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomTypeAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetKeyAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetNameAction))]
@@ -19,6 +21,18 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         static commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetApproversAction SetApprovers(Action<commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetApproversAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetApproversAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ApprovalRules.ApprovalRuleSetCustomTypeAction();
             init?.Invoke(t);
             return t;
         }
