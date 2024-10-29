@@ -13,6 +13,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("approval-flow")]
         ApprovalFlow,
 
+        [Description("approval-rule")]
+        ApprovalRule,
+
         [Description("associate-role")]
         AssociateRole,
 
@@ -88,6 +91,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static ICustomFieldReferenceValue ApprovalFlow = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.ApprovalFlow, JsonName = "approval-flow" };
 
+        public static ICustomFieldReferenceValue ApprovalRule = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.ApprovalRule, JsonName = "approval-rule" };
+
         public static ICustomFieldReferenceValue AssociateRole = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.AssociateRole, JsonName = "associate-role" };
 
@@ -143,6 +149,7 @@ namespace commercetools.Sdk.Api.Models.Types
             return new[]
             {
                  ApprovalFlow ,
+                 ApprovalRule ,
                  AssociateRole ,
                  BusinessUnit ,
                  Cart ,
