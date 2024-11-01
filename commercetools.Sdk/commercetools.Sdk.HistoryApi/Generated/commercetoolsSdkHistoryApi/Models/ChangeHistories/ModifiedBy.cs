@@ -6,6 +6,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
     public partial class ModifiedBy : IModifiedBy
     {
+        public bool IsPlatformClient { get; set; }
+
         public string Id { get; set; }
 
         public string Type { get; set; }
@@ -17,7 +19,5 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public IReference Customer { get; set; }
 
         public IReference Associate { get; set; }
-
-        public bool IsPlatformClient { get; set; }
     }
 }

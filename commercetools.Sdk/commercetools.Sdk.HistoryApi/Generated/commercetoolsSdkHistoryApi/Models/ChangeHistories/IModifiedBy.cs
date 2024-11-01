@@ -6,6 +6,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.ChangeHistories.ModifiedBy))]
     public partial interface IModifiedBy
     {
+        bool IsPlatformClient { get; set; }
+
         string Id { get; set; }
 
         string Type { get; set; }
@@ -17,8 +19,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         IReference Customer { get; set; }
 
         IReference Associate { get; set; }
-
-        bool IsPlatformClient { get; set; }
 
     }
 }
