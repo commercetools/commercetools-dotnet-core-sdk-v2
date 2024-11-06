@@ -1,4 +1,19 @@
 
+# 11.13.0 (2024-11-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/364
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/365
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/366
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/367
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/368
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/369
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/370
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/371
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.12.0...11.13.0
+
 # 11.12.0 (2024-10-08)
 
 ## What's Changed
