@@ -1,0 +1,20 @@
+{
+  "total":0,
+  "offset": 0,
+  "limit": 0,
+  "facets": [
+    {
+      "name": "supplierName",
+      "buckets": [
+        {
+          "key": "Example Inc.",
+          "count": 77
+        }
+      ]
+    },
+    {
+      "name": "supplierCounts",
+      "value": 10
+    }
+  ]
+}
