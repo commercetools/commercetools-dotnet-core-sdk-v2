@@ -1,4 +1,12 @@
 
+# 11.14.0 (2024-11-11)
+
+## What's Changed
+* add converter for product search facets by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/375
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.13.0...11.14.0
+
 # 11.13.0 (2024-11-06)
 
 ## What's Changed
