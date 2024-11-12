@@ -1,6 +1,5 @@
 using System.IO;
 using commercetools.Sdk.Api.Models.ProductSearches;
-using FluentAssertions;
 using Xunit;
 
 namespace commercetools.Api.Serialization.Tests
@@ -29,9 +28,9 @@ namespace commercetools.Api.Serialization.Tests
             var count = Assert.IsAssignableFrom<IProductSearchFacetResultCount>(facets[1]);
             Assert.Equal("supplierCounts", count.Name);
             Assert.Equal(10, count.Value);
-            
+
             var serialize = serializerService.Serialize(deserialized);
-            
+
             Assert.Equal("{\"total\":0,\"offset\":0,\"limit\":0,\"facets\":[{\"name\":\"supplierName\",\"buckets\":[{\"key\":\"Example Inc.\",\"count\":77}]},{\"name\":\"supplierCounts\",\"value\":10}]}", serialize);
         }
     }

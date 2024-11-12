@@ -3,10 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Serialization;
-using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Sdk.Api.Models.ProductSearches;
-using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
-using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
@@ -69,7 +66,8 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                 writer.WritePropertyName("buckets");
                 JsonSerializer.Serialize(writer, bucket.Buckets, options);
             }
-            else if (value is ProductSearchFacetResultCount count) {
+            else if (value is ProductSearchFacetResultCount count)
+            {
                 writer.WritePropertyName("value");
                 JsonSerializer.Serialize(writer, count.Value, options);
             }
