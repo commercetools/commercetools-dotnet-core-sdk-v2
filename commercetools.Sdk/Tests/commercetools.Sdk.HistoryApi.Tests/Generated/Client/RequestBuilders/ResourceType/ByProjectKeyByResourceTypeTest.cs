@@ -134,7 +134,7 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithProjectKeyValue("test_projectKey")
                    .WithResourceTypeValue("test_resourceType")
                    .Get()
-                   .WithSource("source")
+                   .WithSource(commercetools.Sdk.HistoryApi.Models.ChangeHistories.ISource.FindEnum("source"))
                    .Build(),
                    "Get",
                    "/test_projectKey/test_resourceType?source=source",
