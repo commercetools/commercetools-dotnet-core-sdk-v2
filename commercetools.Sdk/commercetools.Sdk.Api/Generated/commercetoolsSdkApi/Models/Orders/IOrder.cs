@@ -45,7 +45,7 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IEnumerable<ICustomLineItem> CustomLineItemsEnumerable { set => CustomLineItems = value.ToList(); }
 
-        ITypedMoney TotalPrice { get; set; }
+        ICentPrecisionMoney TotalPrice { get; set; }
 
         ITaxedPrice TaxedPrice { get; set; }
 
