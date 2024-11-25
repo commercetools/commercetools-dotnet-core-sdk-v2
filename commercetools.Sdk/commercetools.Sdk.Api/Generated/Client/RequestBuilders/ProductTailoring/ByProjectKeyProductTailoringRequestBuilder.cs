@@ -26,6 +26,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             return new ByProjectKeyProductTailoringGet(ApiHttpClient, ProjectKey);
         }
 
+        public ByProjectKeyProductTailoringHead Head()
+        {
+            return new ByProjectKeyProductTailoringHead(ApiHttpClient, ProjectKey);
+        }
+
         public ByProjectKeyProductTailoringPost Post(commercetools.Sdk.Api.Models.ProductTailorings.IProductTailoringDraft productTailoringDraft)
         {
             return new ByProjectKeyProductTailoringPost(ApiHttpClient, SerializerService, ProjectKey, productTailoringDraft);

@@ -123,11 +123,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                     p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of));
         }
         public CombinationQueryPredicate<OrderQueryBuilderDsl> TotalPrice(
-            Func<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("totalPrice"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.TypedMoneyQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.CentPrecisionMoneyQueryBuilderDsl.Of())),
                 OrderQueryBuilderDsl.Of);
         }
 

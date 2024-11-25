@@ -160,9 +160,9 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.AddQueryParam("type", type);
         }
 
-        public ByProjectKeyByResourceTypeByIDGet WithSource(string source)
+        public ByProjectKeyByResourceTypeByIDGet WithSource(ISource source)
         {
-            return this.AddQueryParam("source", source);
+            return this.AddQueryParam("source", source.JsonName);
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithChanges(string changes)

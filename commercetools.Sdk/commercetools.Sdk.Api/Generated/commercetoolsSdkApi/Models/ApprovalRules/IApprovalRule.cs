@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,8 @@ namespace commercetools.Sdk.Api.Models.ApprovalRules
         IEnumerable<IRuleRequester> RequestersEnumerable { set => Requesters = value.ToList(); }
 
         IBusinessUnitKeyReference BusinessUnit { get; set; }
+
+        ICustomFields Custom { get; set; }
 
     }
 }

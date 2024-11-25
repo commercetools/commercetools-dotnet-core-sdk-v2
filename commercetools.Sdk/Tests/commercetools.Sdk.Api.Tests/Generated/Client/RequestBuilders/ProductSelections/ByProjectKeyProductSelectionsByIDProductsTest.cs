@@ -26,6 +26,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductSelections
                    .WithId("test_ID")
                    .Products()
                    .Get()
+                   .WithWhere("where")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-selections/test_ID/products?where=where",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductSelections()
+                   .WithId("test_ID")
+                   .Products()
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         string AccountId { get; set; }
 
+        string Source { get; set; }
+
     }
 }

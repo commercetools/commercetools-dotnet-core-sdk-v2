@@ -28,6 +28,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.ApprovalRules
             return new CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetApproversActionQueryBuilderDsl.Of()),
                 ApprovalRuleUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> AsSetCustomField(
+            Func<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomFieldActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomFieldActionQueryBuilderDsl.Of()),
+                ApprovalRuleUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> AsSetCustomType(
+            Func<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomTypeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetCustomTypeActionQueryBuilderDsl.Of()),
+                ApprovalRuleUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> AsSetDescription(
             Func<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ApprovalRules.ApprovalRuleSetDescriptionActionQueryBuilderDsl>> fn)
         {

@@ -140,7 +140,7 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
-                   .WithSource("source")
+                   .WithSource(commercetools.Sdk.HistoryApi.Models.ChangeHistories.ISource.FindEnum("source"))
                    .Build(),
                    "Get",
                    "/test_projectKey?source=source",

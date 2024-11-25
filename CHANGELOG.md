@@ -1,4 +1,95 @@
 
+# 11.14.0 (2024-11-11)
+
+## What's Changed
+* add converter for product search facets by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/375
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.13.0...11.14.0
+
+# 11.13.0 (2024-11-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/364
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/365
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/366
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/367
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/368
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/369
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/370
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/371
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.12.0...11.13.0
+
+# 11.12.0 (2024-10-08)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/352
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/353
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/354
+* Create config.yml by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/355
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/356
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/357
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/358
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/362
+* Update ci.yml by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/363
+
+**Api changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `staged` to type `ProductVariantDeletedMessage`
+- added property `staged` to type `ProductVariantDeletedMessagePayload`
+- added property `warnings` to type `ProductTailoring`
+- added property `attributes` to type `ProductVariantTailoring`
+- added property `attributes` to type `ProductVariantTailoringDraft`
+- added property `attributes` to type `ProductTailoringAddVariantAction`
+- added property `warnings` to type `Product`
+- added property `customers` to type `SearchIndexingConfiguration`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `SearchNotReadyError`
+- added type `GraphQLSearchNotReadyError`
+- added type `ProductTailoringAttribute`
+- added type `ProductTailoringSetAttributeAction`
+- added type `ProductTailoringSetAttributeInAllVariantsAction`
+- added type `ImageProcessingOngoingWarning`
+- added type `WarningObject`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ProductSearchStatus`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-group` to type `ExtensionResourceTypeId`
+- added enum `product-tailoring` to type `MessageSubscriptionResourceTypeId`
+- added enum `product-tailoring` to type `ResourceTypeId`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `InvalidFieldsUpdateError`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.11.0...11.12.0
+
 # 11.11.0 (2024-09-04)
 
 ## Important Information

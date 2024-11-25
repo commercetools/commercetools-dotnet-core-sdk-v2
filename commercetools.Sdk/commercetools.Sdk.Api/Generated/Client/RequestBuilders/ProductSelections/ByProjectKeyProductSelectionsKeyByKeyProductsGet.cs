@@ -31,6 +31,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
             this.RequestUrl = $"/{ProjectKey}/product-selections/key={Key}/products";
         }
 
+        public List<string> GetWhere()
+        {
+            return this.GetQueryParam("where");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -54,6 +59,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
         public List<string> GetSort()
         {
             return this.GetQueryParam("sort");
+        }
+
+        public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithWhere(string where)
+        {
+            return this.AddQueryParam("where", where);
         }
 
         public ByProjectKeyProductSelectionsKeyByKeyProductsGet WithExpand(string expand)
