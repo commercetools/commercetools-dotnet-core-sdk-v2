@@ -1,4 +1,93 @@
 
+# 12.0.0 (2024-11-26)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/376
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/377
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/378
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/379
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/380
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/381
+* Version 12.0.0 preparation by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/360
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `line` of type `GraphQLErrorLocation` from type `integer` to `number`
+- :warning: changed property `column` of type `GraphQLErrorLocation` from type `integer` to `number`
+- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `where` to method `get /{projectKey}/product-selections/key={key}/products`
+- added query parameter `where` to method `get /{projectKey}/product-selections/{ID}/products`
+</details>
+
+### New Features
+
+- Improved internal logger
+	- the SDKs internal HttpLogger now offers more configuration options like debug/trace logs and different LogLevels
+		for specific exception types.
+		
+		```csharp
+	 	services.AddSingleton<ILoggerHandlerOptions>(new LoggerHandlerOptions()
+        {
+            ResponseLogEvent = LogLevel.Information,
+            DefaultExceptionLogEvent = LogLevel.Warning,
+            ExceptionLogEvents = new Dictionary<System.Type, LogLevel>()
+            {
+                { typeof(NotFoundException), LogLevel.Information },
+                { typeof(ConcurrentModificationException), LogLevel.Information}
+            }
+        });
+		```
+		
+- ClientBuilder class
+	- the ClientBuilder replaces the ClientFactory. ClientFactory calls internally invoke ClientBuilder methods
+		```csharp
+		var client = new ClientBuilder {
+                        ClientName = clientName,
+                        ClientConfiguration = clientConfiguration,
+                        HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName),
+                        SerializerService = serializerFactory(serviceProvider),
+                        TokenProvider = tokenProviderSupplier(clientName, configuration, serviceProvider),
+                        ReadResponseAsStream = options.ReadResponseAsStream,
+                        CorrelationIdProvider = serviceProvider.GetService<ICorrelationIdProvider>(),
+                        Middlewares = middlewares
+                    }.Build();
+		```
+- [NotFoundMiddleware](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/blob/8f2f9b0fa9ccbbd5b1ed1aefdac764c536c2ba6f/commercetools.Sdk/IntegrationTests/commercetools.Api.IntegrationTests/MiddlewareTest.cs#L25-L28)
+	- This middleware allows to return null in case a resource returns a 404 error instead of throwing an exception
+
+		```csharp
+		services.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { ReadResponseAsStream = true},middlewares: new List<DelegatingMiddleware>()
+        {
+            new NotFoundMiddleware()
+        });
+		```
+
+- allow adding custom middlewares to the dependency injection setup
+
+## BREAKING CHANGES
+
+- Updated the target framework to .NET 6.0 [PR #361](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/361)
+- HttpVersion is set to 2.0 in the HttpClient instead of the ApiMethod
+- Use Streams for response bodies by default [PR #359](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/359) - thanks to @Henr1k80
+	- The StreamCtpClient is now used by default which reduces the overall CPU & memory footprint significantly
+- Log Format has been changed [PR #273](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/273)
+	- The log format has been changed to `{HttpMethod} {Uri} {StatusCode} {Timing} {CorrelationId} {ServerTiming}`. We are not using log scopes anymore
+	- by default only on response information is being logged
+	- raising the loglevel to debug logs request information
+	- raising to loglevel trace logs request and response bodies
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.14.0...12.0.0
+
 # 11.14.0 (2024-11-11)
 
 ## What's Changed
