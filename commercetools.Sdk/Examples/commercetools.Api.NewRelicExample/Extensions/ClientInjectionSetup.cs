@@ -31,10 +31,14 @@ namespace commercetools.Api.NewRelicExample.Extensions
             {
                 var clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
                 var tokenProvider = serviceProvider.GetService<ITokenProvider>();
-                var client = ClientFactory.Create(clientName, clientConfiguration,
-                    serviceProvider.GetService<IHttpClientFactory>(),
-                    serviceProvider.GetService<IApiSerializerService>(),
-                    tokenProvider);
+                var client = new ClientBuilder()
+                {
+                    ClientConfiguration = clientConfiguration,
+                    ClientName = clientName,
+                    TokenProvider = tokenProvider,
+                    SerializerService = serviceProvider.GetService<IApiSerializerService>(),
+                    HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName)
+                }.Build();
                 client.Name = clientName;
                 return client;
             });

@@ -8,6 +8,7 @@ using commercetools.Base.Serialization;
 
 namespace commercetools.Base.Client
 {
+    [Obsolete("Use ClientBuilder instead")]
     public class ClientFactory
     {
         [Obsolete("Use ClientBuilder instead")]

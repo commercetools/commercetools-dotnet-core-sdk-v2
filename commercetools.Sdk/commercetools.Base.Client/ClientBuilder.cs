@@ -16,6 +16,8 @@ public class ClientBuilder
     public ITokenProvider TokenProvider { get; set; }
     public bool ReadResponseAsStream { get; set; } = true;
     public ICorrelationIdProvider CorrelationIdProvider { get; set; }
+    
+    [Obsolete("Set default HttpVersion in HttpClient instead")]
     public Version HttpVersion { get; set; }
     public IEnumerable<DelegatingMiddleware> Middlewares { get; set; } = new List<DelegatingMiddleware>();
     public HttpClient HttpClient { get; set; }
