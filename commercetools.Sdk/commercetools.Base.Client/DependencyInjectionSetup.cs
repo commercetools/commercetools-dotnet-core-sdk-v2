@@ -66,7 +66,6 @@ namespace commercetools.Base.Client
                         TokenProvider = tokenProviderSupplier(clientName, configuration, serviceProvider),
                         ReadResponseAsStream = options.ReadResponseAsStream,
                         CorrelationIdProvider = serviceProvider.GetService<ICorrelationIdProvider>(),
-                        HttpVersion = options.UseHttpVersion,
                         Middlewares = middlewares
                     }.Build();
                     return client;
@@ -97,7 +96,6 @@ namespace commercetools.Base.Client
                     TokenProvider = tokenProviderSupplier(clientName, configuration, serviceProvider),
                     ReadResponseAsStream = options.ReadResponseAsStream,
                     CorrelationIdProvider = serviceProvider.GetService<ICorrelationIdProvider>(),
-                    HttpVersion = options.UseHttpVersion,
                     Middlewares = middlewares
                 }.Build();
 
