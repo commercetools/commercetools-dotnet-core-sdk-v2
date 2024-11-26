@@ -32,13 +32,15 @@ namespace commercetools.Api.ConsoleApp
                 ProjectKey = ""
             };
             var clientFactory = serviceProvider.GetService<IHttpClientFactory>();
-            var client = ClientFactory.Create(
-                clientName,
-                config,
-                clientFactory,
-                serviceProvider.GetService<IApiSerializerService>(),
-                TokenProviderFactory.CreateClientCredentialsTokenProvider(config, clientFactory)
-            );
+            var client = new ClientBuilder()
+            {
+                ClientConfiguration = config,
+                ClientName = clientName,
+                TokenProvider = TokenProviderFactory.CreateClientCredentialsTokenProvider(config, clientFactory),
+                SerializerService = serviceProvider.GetService<IApiSerializerService>(),
+                HttpClient = clientFactory.CreateClient(clientName)
+            }.Build();
+
             var project = await new ApiRoot(client)
                 .WithProjectKey(config.ProjectKey)
                 .Get()

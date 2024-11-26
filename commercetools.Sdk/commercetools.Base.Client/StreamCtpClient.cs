@@ -47,6 +47,11 @@ namespace commercetools.Base.Client
         public async Task<IApiResponse<T>> SendAsync<T>(HttpRequestMessage requestMessage, CancellationToken cancellationToken = default)
         {
             using var result = await SendAsAsync(requestMessage, cancellationToken).ConfigureAwait(false);
+            if (result.Content is EmptyContent)
+            {
+                return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.Headers, default);
+            }
+
             await using var contentStream = await result.Content.ReadAsStreamAsync().ConfigureAwait(false);
             var content = _serializerService.Deserialize<T>(contentStream);
             return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.Headers, content);

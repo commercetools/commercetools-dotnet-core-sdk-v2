@@ -31,11 +31,14 @@ namespace commercetools.Api.CheckoutApp.Extensions
             {
                 var clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
                 var tokenProvider = serviceProvider.GetService<ITokenProvider>();
-                var client = ClientFactory.Create(clientName, clientConfiguration,
-                    serviceProvider.GetService<IHttpClientFactory>(),
-                    serviceProvider.GetService<IApiSerializerService>(),
-                    tokenProvider);
-                client.Name = clientName;
+                var client = new ClientBuilder()
+                {
+                    ClientName = clientName,
+                    ClientConfiguration = clientConfiguration,
+                    TokenProvider = tokenProvider,
+                    SerializerService =serviceProvider.GetService<IApiSerializerService>(),
+                    HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName) 
+                }.Build();
                 return client;
             });
 
