@@ -113,12 +113,13 @@ namespace commercetools.Api.IntegrationTests.Me
                         CustomerServices.CustomerPassword));
 
             //Create MeClient
-            _meClient = ClientFactory.Create(
-                "MeClient",
-                meClientConfig,
-                httpClientFactory,
-                serializerService,
-                passwordTokenProvider);
+            _meClient = new ClientBuilder {
+                ClientName = "MeClient",
+                ClientConfiguration = meClientConfig,
+                TokenProvider = passwordTokenProvider,
+                HttpClient = httpClientFactory.CreateClient("MeClient"),
+                SerializerService = serializerService,
+            }.Build();
         }
     }
 }

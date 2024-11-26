@@ -8,6 +8,8 @@ namespace commercetools.Base.Client
     public class ErrorHandler : DelegatingHandler
     {
         private Func<HttpResponseMessage, Object> errorResponseBodyMapper;
+        
+        private readonly ExceptionFactory exceptionFactory;
 
         public ErrorHandler(Func<HttpResponseMessage, Object> errorResponseBodyMapper)
         {

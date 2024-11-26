@@ -10,6 +10,7 @@ namespace commercetools.Base.Client
 {
     public class ClientFactory
     {
+        [Obsolete("Use ClientBuilder instead")]
         public static IClient Create(
             string clientName,
             IClientConfiguration configuration,
@@ -20,65 +21,44 @@ namespace commercetools.Base.Client
             ICorrelationIdProvider correlationIdProvider = null,
             Version httpVersion = null)
         {
-            Validator.ValidateObject(configuration, new ValidationContext(configuration), true);
-            if (readResponseAsStream && serializerService is IStreamSerializerService streamSerializer)
-            {
-                return new StreamCtpClient(
-                    CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, true, correlationIdProvider, httpVersion),
-                    streamSerializer,
-                    clientName
-                );
-            }
-            return new CtpClient(
-                CreateMiddlewareStack(clientName, configuration, factory, tokenProvider, false, correlationIdProvider, httpVersion),
-                serializerService,
-                clientName
-            );
+            return new ClientBuilder()
+                {
+                    ClientName = clientName,
+                    ClientConfiguration = configuration,
+                    HttpClient = factory.CreateClient(clientName),
+                    SerializerService = serializerService,
+                    TokenProvider = tokenProvider,
+                    ReadResponseAsStream = readResponseAsStream,
+                    CorrelationIdProvider = correlationIdProvider,
+                    HttpVersion = httpVersion
+                }.Build();
         }
 
+        [Obsolete("Use ClientBuilder.CreateMiddlewareStack instead")]
         public static Middleware CreateMiddlewareStack(string clientName, IClientConfiguration configuration,
             IHttpClientFactory factory, ITokenProvider tokenProvider, bool readResponseAsStream = false, ICorrelationIdProvider correlationIdProvider = null, Version httpVersion = null)
         {
-            var httpClient = factory.CreateClient(clientName);
-            httpClient.BaseAddress = new Uri(configuration.ApiBaseAddress);
-
-            List<DelegatingMiddleware> handlers = new List<DelegatingMiddleware>()
-            {
-                CreateAuthMiddleware(tokenProvider),
-                CreateCorrelationIdMiddleware(
-                    correlationIdProvider ?? new DefaultCorrelationIdProvider(configuration)
-                )
-            };
-            if (httpVersion != null)
-            {
-                handlers.Add(CreateVersionMiddleware(httpVersion));
-            }
-
-            var httpMiddleware =
-                readResponseAsStream ? (DelegatingMiddleware)new StreamHttpMiddleware(httpClient) : new HttpMiddleware(httpClient);
-            foreach (var handler in handlers)
-            {
-                handler.InnerMiddleware = httpMiddleware;
-                httpMiddleware = handler;
-            }
-
-            return httpMiddleware;
+            return ClientBuilder.CreateMiddlewareStack(configuration, factory.CreateClient(clientName), tokenProvider, new List<DelegatingMiddleware>(),
+                readResponseAsStream, correlationIdProvider, httpVersion);
         }
 
+        [Obsolete("Use ClientBuilder.CreateAuthMiddleware instead")]
         public static AuthorizationMiddleware CreateAuthMiddleware(ITokenProvider tokenProvider)
         {
-            return new AuthorizationMiddleware(tokenProvider);
+            return ClientBuilder.CreateAuthMiddleware(tokenProvider);
         }
 
+        [Obsolete("Use ClientBuilder.CreateCorrelationIdMiddleware instead")]
         public static CorrelationIdMiddleware CreateCorrelationIdMiddleware(
             ICorrelationIdProvider correlationIdProvider)
         {
-            return new CorrelationIdMiddleware(correlationIdProvider);
+            return ClientBuilder.CreateCorrelationIdMiddleware(correlationIdProvider);
         }
 
+        [Obsolete("Use ClientBuilder.CreateVersionMiddleware instead")]
         public static VersionMiddleware CreateVersionMiddleware(Version httpVersion)
         {
-            return new VersionMiddleware(httpVersion);
+            return ClientBuilder.CreateVersionMiddleware(httpVersion);
         }
     }
 }

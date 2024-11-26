@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using commercetools.Api.IntegrationTests;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Middlewares;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.ImportApi.Extensions;
@@ -82,6 +84,5 @@ namespace commercetools.Sdk.ImportApi.Tests
 
 
         }
-
     }
 }

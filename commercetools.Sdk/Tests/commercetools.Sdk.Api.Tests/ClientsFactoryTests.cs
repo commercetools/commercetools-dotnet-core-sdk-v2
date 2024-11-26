@@ -63,6 +63,47 @@ namespace commercetools.Sdk.Api.Tests
         }
 
         [Fact]
+        public void TestClientConfigValidationBuilder()
+        {
+            //arrange
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApiSerialization();
+            var p = s.BuildServiceProvider();
+            var serializerService = p.GetService<IApiSerializerService>();
+            var clientConfig = new ClientConfiguration
+            {
+                ClientId = "ClientId",
+                ClientSecret = "ClientSecret",
+                ProjectKey = "test",
+                ApiBaseAddress = "https://api.europe-west1.gcp.commercetools.com",
+                AuthorizationBaseAddress = "https://auth.europe-west1.gcp.commercetools.com/"
+            };
+
+            //act
+            Exception validationEx = null;
+            try
+            {
+                var tokenProvider = TokenProviderFactory
+                    .CreateClientCredentialsTokenProvider(clientConfig, null);
+
+                new ClientBuilder {
+                    ClientName = "test",
+                    ClientConfiguration = clientConfig,
+                    HttpClient = null,
+                    SerializerService = serializerService,
+                    TokenProvider = tokenProvider}.Build();
+            }
+            catch (Exception e)
+            {
+                validationEx = e;
+            }
+
+            //assert
+            Assert.NotNull(validationEx);
+            Assert.IsType<ValidationException>(validationEx);
+        }
+        
+        [Fact]
         public void TestClientConfigValidation()
         {
             //arrange

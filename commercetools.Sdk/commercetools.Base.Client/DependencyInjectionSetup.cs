@@ -25,15 +25,16 @@ namespace commercetools.Base.Client
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
-            ClientOptions options = null)
+            ClientOptions options = null,
+            IEnumerable<DelegatingMiddleware> middlewares = null)
         {
             options ??= new ClientOptions();
             if (clients.Count() == 1)
             {
-                return services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);
+                return services.UseSingleClient(configuration, clients.First(), serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options, middlewares);
             }
 
-            return services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options);
+            return services.UseMultipleClients(configuration, clients, serializerFactory, errorResponseTypeMapper, tokenProviderSupplier, options, middlewares);
         }
 
         private static IDictionary<string, IHttpClientBuilder> UseMultipleClients(this IServiceCollection services,
@@ -41,7 +42,8 @@ namespace commercetools.Base.Client
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
-            ClientOptions options)
+            ClientOptions options,
+            IEnumerable<DelegatingMiddleware> middlewares = null)
         {
             var builders = new ConcurrentDictionary<string, IHttpClientBuilder>();
 
@@ -55,14 +57,18 @@ namespace commercetools.Base.Client
                 builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));
                 services.AddSingleton(serviceProvider =>
                 {
-                    var client = ClientFactory.Create(clientName, clientConfiguration,
-                        serviceProvider.GetService<IHttpClientFactory>(),
-                        serializerFactory(serviceProvider),
-                        tokenProviderSupplier(clientName, configuration, serviceProvider),
-                        options.ReadResponseAsStream,
-                        serviceProvider.GetService<ICorrelationIdProvider>(),
-                        options.UseHttpVersion);
-                    client.Name = clientName;
+                    
+                    var client = new ClientBuilder {
+                        ClientName = clientName,
+                        ClientConfiguration = clientConfiguration,
+                        HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName),
+                        SerializerService = serializerFactory(serviceProvider),
+                        TokenProvider = tokenProviderSupplier(clientName, configuration, serviceProvider),
+                        ReadResponseAsStream = options.ReadResponseAsStream,
+                        CorrelationIdProvider = serviceProvider.GetService<ICorrelationIdProvider>(),
+                        HttpVersion = options.UseHttpVersion,
+                        Middlewares = middlewares
+                    }.Build();
                     return client;
                 });
             });
@@ -75,20 +81,25 @@ namespace commercetools.Base.Client
             Func<IServiceProvider, ISerializerService> serializerFactory,
             Func<HttpResponseMessage, Type> errorResponseTypeMapper,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier,
-            ClientOptions options)
+            ClientOptions options,
+            IEnumerable<DelegatingMiddleware> middlewares = null)
         {
             IClientConfiguration clientConfiguration = configuration.GetSection(clientName).Get<ClientConfiguration>();
             Validator.ValidateObject(clientConfiguration, new ValidationContext(clientConfiguration), true);
 
             services.AddSingleton(serviceProvider =>
             {
-                var client = ClientFactory.Create(clientName, clientConfiguration,
-                    serviceProvider.GetService<IHttpClientFactory>(),
-                    serializerFactory(serviceProvider),
-                    tokenProviderSupplier(clientName, configuration, serviceProvider),
-                    options.ReadResponseAsStream,
-                    serviceProvider.GetService<ICorrelationIdProvider>(),
-                    options.UseHttpVersion);
+                var client = new ClientBuilder {
+                    ClientName = clientName,
+                    ClientConfiguration = clientConfiguration,
+                    HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName),
+                    SerializerService = serializerFactory(serviceProvider),
+                    TokenProvider = tokenProviderSupplier(clientName, configuration, serviceProvider),
+                    ReadResponseAsStream = options.ReadResponseAsStream,
+                    CorrelationIdProvider = serviceProvider.GetService<ICorrelationIdProvider>(),
+                    HttpVersion = options.UseHttpVersion,
+                    Middlewares = middlewares
+                }.Build();
 
                 client.Name = clientName;
                 return client;

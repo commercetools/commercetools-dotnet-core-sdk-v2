@@ -8,6 +8,7 @@ using System.Net.Http;
 using commercetools.Sdk.Api.Models.Errors;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Client;
+using commercetools.Base.Client.Middlewares;
 using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
@@ -25,7 +26,8 @@ namespace commercetools.Sdk.Api
             string clientName = DefaultClientNames.Api,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
             ISerializationConfiguration serializationConfiguration = null,
-            ClientOptions options = null)
+            ClientOptions options = null,
+            IEnumerable<DelegatingMiddleware> middlewares = null)
         {
             var clients = new List<string>()
             {
@@ -38,14 +40,14 @@ namespace commercetools.Sdk.Api
                 services.AddSingleton(c => ApiFactory.Create(c.GetServices<IClient>().Single(client => client.Name == clientName), clientConfiguration.ProjectKey));
             }
             return services.UseCommercetoolsApi(configuration, clients,
-                tokenProviderSupplier ?? CreateDefaultTokenProvider, serializationConfiguration, options).Single().Value;
+                tokenProviderSupplier ?? CreateDefaultTokenProvider, serializationConfiguration, options, middlewares).Single().Value;
         }
 
         public static IDictionary<string, IHttpClientBuilder> UseCommercetoolsApi(this IServiceCollection services,
             IConfiguration configuration, IList<string> clients,
             Func<string, IConfiguration, IServiceProvider, ITokenProvider> tokenProviderSupplier = null,
             ISerializationConfiguration serializationConfiguration = null,
-            ClientOptions options = null)
+            ClientOptions options = null, IEnumerable<DelegatingMiddleware> middlewares = null)
         {
             services.UseCommercetoolsApiSerialization(serializationConfiguration);
 
@@ -60,7 +62,8 @@ namespace commercetools.Sdk.Api
                 serviceProvider => serviceProvider.GetService<IApiSerializerService>(),
                 message => typeof(ErrorResponse),
                 tokenProviderSupplier ?? CreateDefaultTokenProvider,
-                options);
+                options,
+                middlewares);
         }
 
         public static void UseCommercetoolsApiSerialization(this IServiceCollection services,
