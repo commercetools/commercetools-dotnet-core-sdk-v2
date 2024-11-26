@@ -7,22 +7,20 @@ namespace commercetools.Base.Client
 {
     public class ErrorHandler : DelegatingHandler
     {
-        private Func<HttpResponseMessage, Object> errorResponseBodyMapper;
+        private readonly Func<HttpResponseMessage, object> _errorResponseBodyMapper;
         
-        private readonly ExceptionFactory exceptionFactory;
-
-        public ErrorHandler(Func<HttpResponseMessage, Object> errorResponseBodyMapper)
+        public ErrorHandler(Func<HttpResponseMessage, object> errorResponseBodyMapper)
         {
-            this.errorResponseBodyMapper = errorResponseBodyMapper;
+            this._errorResponseBodyMapper = errorResponseBodyMapper;
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
 
-            if (response != null && !response.IsSuccessStatusCode)
+            if (response is { IsSuccessStatusCode: false })
             {
-                var exception = ExceptionFactory.Create(request, response, errorResponseBodyMapper);
+                var exception = ExceptionFactory.Create(request, response, _errorResponseBodyMapper);
                 throw exception;
             }
 
