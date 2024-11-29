@@ -8,7 +8,7 @@ namespace commercetools.Base.Client
     public class ErrorHandler : DelegatingHandler
     {
         private readonly Func<HttpResponseMessage, object> _errorResponseBodyMapper;
-        
+
         public ErrorHandler(Func<HttpResponseMessage, object> errorResponseBodyMapper)
         {
             this._errorResponseBodyMapper = errorResponseBodyMapper;

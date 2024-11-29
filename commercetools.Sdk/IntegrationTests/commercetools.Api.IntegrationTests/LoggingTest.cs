@@ -55,7 +55,7 @@ public class LoggingTest
         Assert.StartsWith("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
     }
 
-    
+
     [Fact]
     public async void CustomLogger()
     {
@@ -94,7 +94,7 @@ public class LoggingTest
         var messages = logger.GetLogMessages();
         Assert.Equal("GET https://api.europe-west1.gcp.commercetools.com/" + clientConfiguration.ProjectKey, messages.TrimEnd());
     }
-    
+
     public class CustomLoggerHandler : DelegatingHandler
     {
         private readonly ILogger logger;

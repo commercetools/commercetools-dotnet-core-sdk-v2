@@ -48,7 +48,7 @@ namespace commercetools.Base.Client
             var result = await SendAsJsonAsync(requestMessage, cancellationToken);
             if (string.IsNullOrEmpty(result.Body))
             {
-                return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.HttpHeaders, default);    
+                return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.HttpHeaders, default);
             }
             var body = this.SerializerService.Deserialize<T>(result.Body);
             return new ApiResponse<T>(result.StatusCode, result.ReasonPhrase, result.HttpHeaders, body);

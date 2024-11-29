@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -19,7 +18,7 @@ namespace commercetools.Base.Client
                     request.RequestUri.AbsoluteUri, RedactAuthorizationHeader(request.Headers), SecuredBody(body));
             }
         }
-        
+
         public async Task LogResponseBody(ILogger logger, LogLevel logLevel, HttpRequestMessage request, HttpResponseMessage response, long elapsed)
         {
             if (logger.IsEnabled(logLevel))
@@ -29,7 +28,7 @@ namespace commercetools.Base.Client
                     request.RequestUri.AbsoluteUri, (int)response.StatusCode, elapsed, RedactAuthorizationHeader(request.Headers), SecuredBody(body));
             }
         }
-        
+
         public void Log(ILogger logger, LogLevel logLevel, HttpRequestMessage request)
         {
             if (logger.IsEnabled(logLevel))
@@ -38,7 +37,7 @@ namespace commercetools.Base.Client
                     request.RequestUri.AbsoluteUri, RedactAuthorizationHeader(request.Headers));
             }
         }
-        
+
         public void Log(ILogger logger, LogLevel level, HttpRequestMessage request, HttpResponseMessage response, long elapsed)
         {
             if (logger.IsEnabled(level))
@@ -57,12 +56,12 @@ namespace commercetools.Base.Client
             }
         }
 
-        
+
         private static string RedactAuthorizationHeader(HttpRequestHeaders headers)
         {
             var headString = from header in headers
-                where header.Key.ToLower() != "authorization"
-                select header.Key + ": " + string.Join(", ", header.Value);
+                             where header.Key.ToLower() != "authorization"
+                             select header.Key + ": " + string.Join(", ", header.Value);
 
             return "[" + string.Join(", ", headString) + "]";
         }
@@ -79,12 +78,12 @@ namespace commercetools.Base.Client
         {
             return headers.GetFirst("X-Correlation-Id") ?? "-";
         }
-        
+
         private static string GetCorrelationId(HttpResponseHeaders headers)
         {
             return GetHeader(headers, "X-Correlation-ID");
         }
-        
+
         private static string GetHeader(HttpResponseHeaders headers, string headerName)
         {
             var headerValue = "-";
@@ -96,12 +95,12 @@ namespace commercetools.Base.Client
 
             return headerValue;
         }
-        
+
         private static string GetServerTiming(HttpResponseHeaders headers)
         {
             return GetHeader(headers, "Server-Timing");
         }
-        
+
         private static string GetServerTiming(ApiHttpHeaders headers)
         {
             return headers.GetFirst("Server-Timing") ?? "-";

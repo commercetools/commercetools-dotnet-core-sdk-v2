@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using commercetools.Base.Client.Middlewares;
 using commercetools.Base.Client.Tokens;
@@ -23,16 +22,16 @@ namespace commercetools.Base.Client
             Version httpVersion = null)
         {
             return new ClientBuilder()
-                {
-                    ClientName = clientName,
-                    ClientConfiguration = configuration,
-                    HttpClient = factory.CreateClient(clientName),
-                    SerializerService = serializerService,
-                    TokenProvider = tokenProvider,
-                    ReadResponseAsStream = readResponseAsStream,
-                    CorrelationIdProvider = correlationIdProvider,
-                    HttpVersion = httpVersion
-                }.Build();
+            {
+                ClientName = clientName,
+                ClientConfiguration = configuration,
+                HttpClient = factory.CreateClient(clientName),
+                SerializerService = serializerService,
+                TokenProvider = tokenProvider,
+                ReadResponseAsStream = readResponseAsStream,
+                CorrelationIdProvider = correlationIdProvider,
+                HttpVersion = httpVersion
+            }.Build();
         }
 
         [Obsolete("Use ClientBuilder.CreateMiddlewareStack instead")]

@@ -57,8 +57,9 @@ namespace commercetools.Base.Client
                 builders.TryAdd(clientName, services.SetupClient(clientName, errorResponseTypeMapper, serializerFactory, options));
                 services.AddSingleton(serviceProvider =>
                 {
-                    
-                    var client = new ClientBuilder {
+
+                    var client = new ClientBuilder
+                    {
                         ClientName = clientName,
                         ClientConfiguration = clientConfiguration,
                         HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName),
@@ -88,7 +89,8 @@ namespace commercetools.Base.Client
 
             services.AddSingleton(serviceProvider =>
             {
-                var client = new ClientBuilder {
+                var client = new ClientBuilder
+                {
                     ClientName = clientName,
                     ClientConfiguration = clientConfiguration,
                     HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName),
