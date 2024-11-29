@@ -36,8 +36,8 @@ namespace commercetools.Api.CheckoutApp.Extensions
                     ClientName = clientName,
                     ClientConfiguration = clientConfiguration,
                     TokenProvider = tokenProvider,
-                    SerializerService =serviceProvider.GetService<IApiSerializerService>(),
-                    HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName) 
+                    SerializerService = serviceProvider.GetService<IApiSerializerService>(),
+                    HttpClient = serviceProvider.GetService<IHttpClientFactory>().CreateClient(clientName)
                 }.Build();
                 return client;
             });

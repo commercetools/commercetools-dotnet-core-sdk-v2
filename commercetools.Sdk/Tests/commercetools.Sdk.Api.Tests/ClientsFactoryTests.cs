@@ -86,12 +86,14 @@ namespace commercetools.Sdk.Api.Tests
                 var tokenProvider = TokenProviderFactory
                     .CreateClientCredentialsTokenProvider(clientConfig, null);
 
-                new ClientBuilder {
+                new ClientBuilder
+                {
                     ClientName = "test",
                     ClientConfiguration = clientConfig,
                     HttpClient = null,
                     SerializerService = serializerService,
-                    TokenProvider = tokenProvider}.Build();
+                    TokenProvider = tokenProvider
+                }.Build();
             }
             catch (Exception e)
             {
@@ -102,7 +104,7 @@ namespace commercetools.Sdk.Api.Tests
             Assert.NotNull(validationEx);
             Assert.IsType<ValidationException>(validationEx);
         }
-        
+
         [Fact]
         public void TestClientConfigValidation()
         {

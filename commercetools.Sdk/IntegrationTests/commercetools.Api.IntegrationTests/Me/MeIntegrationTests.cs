@@ -113,7 +113,8 @@ namespace commercetools.Api.IntegrationTests.Me
                         CustomerServices.CustomerPassword));
 
             //Create MeClient
-            _meClient = new ClientBuilder {
+            _meClient = new ClientBuilder
+            {
                 ClientName = "MeClient",
                 ClientConfiguration = meClientConfig,
                 TokenProvider = passwordTokenProvider,

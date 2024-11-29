@@ -22,7 +22,7 @@ public class MiddlewareTest
             Build();
 
         var s = new ServiceCollection();
-        s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { ReadResponseAsStream = true},middlewares: new List<DelegatingMiddleware>()
+        s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { ReadResponseAsStream = true }, middlewares: new List<DelegatingMiddleware>()
         {
             new NotFoundMiddleware()
         });
@@ -36,7 +36,7 @@ public class MiddlewareTest
 
         Assert.Null(category);
     }
-    
+
     [Fact]
     public async void not_found_middleware_string_client()
     {
@@ -48,7 +48,7 @@ public class MiddlewareTest
             Build();
 
         var s = new ServiceCollection();
-        s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { ReadResponseAsStream = false},middlewares: new List<DelegatingMiddleware>()
+        s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { ReadResponseAsStream = false }, middlewares: new List<DelegatingMiddleware>()
         {
             new NotFoundMiddleware()
         });

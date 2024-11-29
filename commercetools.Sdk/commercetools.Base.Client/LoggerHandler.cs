@@ -41,10 +41,10 @@ namespace commercetools.Base.Client
             {
                 var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
                 watch.Stop();
-                
+
                 _httpLogger.Log(logger, (int)response.StatusCode < 400 ? _loggerHandlerOptions.ResponseLogEvent : _loggerHandlerOptions.DefaultExceptionLogEvent, request, response, watch.ElapsedMilliseconds);
                 await _httpLogger.LogResponseBody(logger, LogLevel.Trace, request, response, watch.ElapsedMilliseconds);
-                
+
                 return response;
             }
             catch (ApiHttpException e)

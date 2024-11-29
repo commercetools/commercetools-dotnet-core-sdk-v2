@@ -6,7 +6,7 @@ using commercetools.Base.Client.Error;
 
 namespace commercetools.Base.Client.Middlewares;
 
-public class NotFoundMiddleware: DelegatingMiddleware
+public class NotFoundMiddleware : DelegatingMiddleware
 {
     protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
     {
