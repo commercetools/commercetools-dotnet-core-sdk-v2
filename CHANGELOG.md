@@ -1,4 +1,13 @@
 
+# 12.1.0 (2024-12-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/382
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/383
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.0.0...12.1.0
+
 # 12.0.0 (2024-11-26)
 
 ## What's Changed
@@ -81,8 +90,8 @@
 - Use Streams for response bodies by default [PR #359](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/359) - thanks to @Henr1k80
 	- The StreamCtpClient is now used by default which reduces the overall CPU & memory footprint significantly
 - Log Format has been changed [PR #273](https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/273)
-	- The log format has been changed to `{HttpMethod} {Uri} {StatusCode} {Timing} {CorrelationId} {ServerTiming}`. We are not using log scopes anymore
-	- by default only on response information is being logged
+	- The log format has been changed to `{HttpMethod} {Uri} {StatusCode} {Timing} {CorrelationId} {ServerTiming}`. Log scopes aren't used anymore
+	- by default only response information is being logged
 	- raising the loglevel to debug logs request information
 	- raising to loglevel trace logs request and response bodies
 
