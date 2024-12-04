@@ -8,6 +8,8 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
     {
         public string Key { get; set; }
 
+        public string Country { get; set; }
+
         public string Title { get; set; }
 
         public string Salutation { get; set; }
@@ -29,8 +31,6 @@ namespace commercetools.Sdk.ImportApi.Models.Customers
         public string Region { get; set; }
 
         public string State { get; set; }
-
-        public string Country { get; set; }
 
         public string Company { get; set; }
 
