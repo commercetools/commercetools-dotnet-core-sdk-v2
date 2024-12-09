@@ -24,7 +24,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidOperation))]
     [SubTypeDiscriminator("InvalidTransition", typeof(commercetools.Sdk.ImportApi.Models.Errors.InvalidStateTransitionError))]
     [SubTypeDiscriminator("NewMasterVariantAdditionNotAllowed", typeof(commercetools.Sdk.ImportApi.Models.Errors.NewMasterVariantAdditionNotAllowedError))]
-    [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound))]
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Sdk.ImportApi.Models.Errors.RequiredFieldError))]
     [SubTypeDiscriminator("ResourceCreation", typeof(commercetools.Sdk.ImportApi.Models.Errors.ResourceCreationError))]
     [SubTypeDiscriminator("ResourceDeletion", typeof(commercetools.Sdk.ImportApi.Models.Errors.ResourceDeletionError))]
@@ -147,12 +146,6 @@ namespace commercetools.Sdk.ImportApi.Models.Errors
         static commercetools.Sdk.ImportApi.Models.Errors.NewMasterVariantAdditionNotAllowedError NewMasterVariantAdditionNotAllowed(Action<commercetools.Sdk.ImportApi.Models.Errors.NewMasterVariantAdditionNotAllowedError> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Errors.NewMasterVariantAdditionNotAllowedError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound ReferencedResourceNotFound(Action<commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound> init = null)
-        {
-            var t = new commercetools.Sdk.ImportApi.Models.Errors.ReferencedResourceNotFound();
             init?.Invoke(t);
             return t;
         }
