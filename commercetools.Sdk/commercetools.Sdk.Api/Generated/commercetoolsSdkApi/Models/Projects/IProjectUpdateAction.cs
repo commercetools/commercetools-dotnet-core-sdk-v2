@@ -5,6 +5,7 @@ namespace commercetools.Sdk.Api.Models.Projects
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Projects.ProjectUpdateAction))]
+    [SubTypeDiscriminator("changeBusinessUnitSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitSearchStatusAction))]
     [SubTypeDiscriminator("changeCartsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction))]
     [SubTypeDiscriminator("changeCountries", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCountriesAction))]
     [SubTypeDiscriminator("changeCountryTaxRateFallbackEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeCountryTaxRateFallbackEnabledAction))]
@@ -24,6 +25,12 @@ namespace commercetools.Sdk.Api.Models.Projects
     {
         string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitSearchStatusAction ChangeBusinessUnitSearchStatus(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitSearchStatusAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitSearchStatusAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction ChangeCartsConfiguration(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeCartsConfigurationAction();

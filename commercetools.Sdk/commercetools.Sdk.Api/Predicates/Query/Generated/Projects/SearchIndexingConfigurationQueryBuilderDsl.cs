@@ -51,6 +51,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
                 SearchIndexingConfigurationQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> BusinessUnits(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("businessUnits"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.SearchIndexingConfigurationValuesQueryBuilderDsl.Of())),
+                SearchIndexingConfigurationQueryBuilderDsl.Of);
+        }
+
 
     }
 }

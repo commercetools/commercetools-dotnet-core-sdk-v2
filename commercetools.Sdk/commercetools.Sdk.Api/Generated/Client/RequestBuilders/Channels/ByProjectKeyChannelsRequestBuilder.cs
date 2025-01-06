@@ -41,5 +41,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
         {
             return new ByProjectKeyChannelsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyChannelsKeyByKeyRequestBuilder WithKey(string key)
+        {
+            return new ByProjectKeyChannelsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key);
+        }
     }
 }

@@ -16,11 +16,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Searches
         }
 
         public CombinationQueryPredicate<SearchExactExpressionQueryBuilderDsl> Exact(
-            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchAnyValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchAnyValueQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<SearchExactExpressionQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("exact"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchAnyValueQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl.Of())),
                 SearchExactExpressionQueryBuilderDsl.Of);
         }
 

@@ -46,5 +46,15 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
         {
             return new ByProjectKeyBusinessUnitsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
+
+        public ByProjectKeyBusinessUnitsSearchRequestBuilder Search()
+        {
+            return new ByProjectKeyBusinessUnitsSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder SearchIndexingStatus()
+        {
+            return new ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
     }
 }

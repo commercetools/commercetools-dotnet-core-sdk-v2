@@ -3,6 +3,7 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.ShippingMethods;
 using commercetools.Sdk.Api.Models.TaxCategories;
+using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.OrderEdits
@@ -19,6 +20,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        ICustomFieldsDraft Custom { get; set; }
 
     }
 }

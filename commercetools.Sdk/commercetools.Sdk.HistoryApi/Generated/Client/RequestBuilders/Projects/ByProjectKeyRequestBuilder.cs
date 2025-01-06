@@ -1,5 +1,6 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
+using commercetools.Sdk.HistoryApi.Client.RequestBuilders.Graphql;
 using commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType;
 
 // ReSharper disable CheckNamespace
@@ -27,6 +28,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return new ByProjectKeyGet(ApiHttpClient, ProjectKey);
         }
 
+
+        public ByProjectKeyGraphqlRequestBuilder Graphql()
+        {
+            return new ByProjectKeyGraphqlRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
 
         public ByProjectKeyByResourceTypeRequestBuilder WithResourceTypeValue(string resourceType)
         {
