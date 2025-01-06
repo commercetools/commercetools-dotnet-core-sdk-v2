@@ -22,6 +22,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeBusinessUnitSearchStatus(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeMyBusinessUnitStatusOnCreation(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl>> fn)
         {

@@ -219,6 +219,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessagePayload))]
     [SubTypeDiscriminator("ReviewRatingSet", typeof(commercetools.Sdk.Api.Models.Messages.ReviewRatingSetMessagePayload))]
     [SubTypeDiscriminator("ReviewStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload))]
+    [SubTypeDiscriminator("ShoppingListLineItemAdded", typeof(commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemAddedMessagePayload))]
+    [SubTypeDiscriminator("ShoppingListLineItemRemoved", typeof(commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemRemovedMessagePayload))]
     [SubTypeDiscriminator("ShoppingListStoreSet", typeof(commercetools.Sdk.Api.Models.Messages.ShoppingListStoreSetMessagePayload))]
     [SubTypeDiscriminator("StagedQuoteCreated", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteCreatedMessagePayload))]
     [SubTypeDiscriminator("StagedQuoteDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StagedQuoteDeletedMessagePayload))]
@@ -1534,6 +1536,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload ReviewStateTransition(Action<commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ReviewStateTransitionMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemAddedMessagePayload ShoppingListLineItemAdded(Action<commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemRemovedMessagePayload ShoppingListLineItemRemoved(Action<commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ShoppingListLineItemRemovedMessagePayload();
             init?.Invoke(t);
             return t;
         }

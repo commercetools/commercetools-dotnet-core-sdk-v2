@@ -64,6 +64,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("review")]
         Review,
 
+        [Description("shopping-list")]
+        ShoppingList,
+
         [Description("staged-quote")]
         StagedQuote,
 
@@ -151,6 +154,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IMessageSubscriptionResourceTypeId Review = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.Review, JsonName = "review" };
 
+        public static IMessageSubscriptionResourceTypeId ShoppingList = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.ShoppingList, JsonName = "shopping-list" };
+
         public static IMessageSubscriptionResourceTypeId StagedQuote = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.StagedQuote, JsonName = "staged-quote" };
 
@@ -184,6 +190,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  Quote ,
                  QuoteRequest ,
                  Review ,
+                 ShoppingList ,
                  StagedQuote ,
                  StandalonePrice ,
                  Store

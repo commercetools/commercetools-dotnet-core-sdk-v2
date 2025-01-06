@@ -29,7 +29,10 @@ namespace commercetools.Sdk.Api.Models.Orders
         Partial,
 
         [Description("Backorder")]
-        Backorder
+        Backorder,
+
+        [Description("Canceled")]
+        Canceled
     }
 
     public class ShipmentStateWrapper : IShipmentState
@@ -76,6 +79,9 @@ namespace commercetools.Sdk.Api.Models.Orders
         public static IShipmentState Backorder = new ShipmentStateWrapper
         { Value = ShipmentState.Backorder, JsonName = "Backorder" };
 
+        public static IShipmentState Canceled = new ShipmentStateWrapper
+        { Value = ShipmentState.Canceled, JsonName = "Canceled" };
+
         ShipmentState? Value { get; }
 
         static IShipmentState[] Values()
@@ -88,7 +94,8 @@ namespace commercetools.Sdk.Api.Models.Orders
                  Pending ,
                  Delayed ,
                  Partial ,
-                 Backorder
+                 Backorder ,
+                 Canceled
              };
         }
         static IShipmentState FindEnum(string value)

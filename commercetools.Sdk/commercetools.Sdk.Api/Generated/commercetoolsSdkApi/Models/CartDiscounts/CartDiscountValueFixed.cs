@@ -12,6 +12,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public IList<ITypedMoney> Money { get; set; }
 
         public IEnumerable<ITypedMoney> MoneyEnumerable { set => Money = value.ToList(); }
+
+        public IDiscountApplicationMode ApplicationMode { get; set; }
         public CartDiscountValueFixed()
         {
             this.Type = "fixed";

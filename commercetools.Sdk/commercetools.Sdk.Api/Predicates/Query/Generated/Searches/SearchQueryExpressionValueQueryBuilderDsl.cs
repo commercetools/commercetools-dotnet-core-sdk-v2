@@ -52,6 +52,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Searches
             return new CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchDateTimeRangeValueQueryBuilderDsl.Of()),
                 SearchQueryExpressionValueQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> AsSearchExactValue(
+            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchExactValueQueryBuilderDsl.Of()),
+                SearchQueryExpressionValueQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> AsSearchExistsValue(
             Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExistsValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchExistsValueQueryBuilderDsl>> fn)
         {

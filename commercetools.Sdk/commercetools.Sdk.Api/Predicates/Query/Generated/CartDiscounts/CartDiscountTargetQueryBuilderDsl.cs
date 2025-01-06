@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             return new CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountLineItemsTargetQueryBuilderDsl.Of()),
                 CartDiscountTargetQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> AsPattern(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountPatternTargetQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountPatternTargetQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountPatternTargetQueryBuilderDsl.Of()),
+                CartDiscountTargetQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountTargetQueryBuilderDsl> AsShipping(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountShippingCostTargetQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountShippingCostTargetQueryBuilderDsl>> fn)
         {

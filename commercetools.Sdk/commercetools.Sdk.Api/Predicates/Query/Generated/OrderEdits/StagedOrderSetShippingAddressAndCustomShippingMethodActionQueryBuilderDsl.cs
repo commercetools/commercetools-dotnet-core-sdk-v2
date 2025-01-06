@@ -63,6 +63,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
                 StagedOrderSetShippingAddressAndCustomShippingMethodActionQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StagedOrderSetShippingAddressAndCustomShippingMethodActionQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderSetShippingAddressAndCustomShippingMethodActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl.Of())),
+                StagedOrderSetShippingAddressAndCustomShippingMethodActionQueryBuilderDsl.Of);
+        }
+
 
     }
 }

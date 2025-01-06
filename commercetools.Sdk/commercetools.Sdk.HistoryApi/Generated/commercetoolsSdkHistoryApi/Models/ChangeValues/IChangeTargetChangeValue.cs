@@ -9,6 +9,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
     [SubTypeDiscriminator("lineItems", typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetLineItemsChangeValue))]
     [SubTypeDiscriminator("multiBuyCustomLineItems", typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyCustomLineItemsChangeValue))]
     [SubTypeDiscriminator("multiBuyLineItems", typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyLineItemsChangeValue))]
+    [SubTypeDiscriminator("pattern", typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetPatternChangeValue))]
     [SubTypeDiscriminator("shipping", typeof(commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetShippingChangeValue))]
     public partial interface IChangeTargetChangeValue
     {
@@ -35,6 +36,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeValues
         static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyLineItemsChangeValue MultiBuyLineItems(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyLineItemsChangeValue> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetMultiBuyLineItemsChangeValue();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetPatternChangeValue Pattern(Action<commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetPatternChangeValue> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.ChangeValues.ChangeTargetPatternChangeValue();
             init?.Invoke(t);
             return t;
         }
