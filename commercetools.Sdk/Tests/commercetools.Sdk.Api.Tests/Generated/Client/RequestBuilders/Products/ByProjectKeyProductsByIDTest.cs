@@ -58,6 +58,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithId("test_ID")
                    .Get()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
+                   .Get()
                    .WithPriceChannel("priceChannel")
                    .Build(),
                    "Get",
@@ -133,6 +144,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithId("test_ID")
                    .Post(null)
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/products/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
+                   .Post(null)
                    .WithPriceChannel("priceChannel")
                    .Build(),
                    "Post",
@@ -191,6 +213,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Delete",
                    "/test_projectKey/products/test_ID?priceCustomerGroup=priceCustomerGroup",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithId("test_ID")
+                   .Delete()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/products/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
                },
                new Object[] {
                    ApiRoot

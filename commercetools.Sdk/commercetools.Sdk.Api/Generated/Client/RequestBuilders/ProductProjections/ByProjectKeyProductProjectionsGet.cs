@@ -48,6 +48,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("priceCustomerGroup");
         }
 
+        public List<string> GetPriceCustomerGroupAssignments()
+        {
+            return this.GetQueryParam("priceCustomerGroupAssignments");
+        }
+
         public List<string> GetPriceChannel()
         {
             return this.GetQueryParam("priceChannel");
@@ -111,6 +116,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsGet WithPriceCustomerGroup(string priceCustomerGroup)
         {
             return this.AddQueryParam("priceCustomerGroup", priceCustomerGroup);
+        }
+
+        public ByProjectKeyProductProjectionsGet WithPriceCustomerGroupAssignments(string priceCustomerGroupAssignments)
+        {
+            return this.AddQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
         }
 
         public ByProjectKeyProductProjectionsGet WithPriceChannel(string priceChannel)

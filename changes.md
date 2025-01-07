@@ -13,8 +13,11 @@
 - added property `applicationMode` to type `CartDiscountValueFixed`
 - added property `applicationMode` to type `CartDiscountValueFixedDraft`
 - added property `custom` to type `CartSetCustomShippingMethodAction`
+- added property `customerGroupAssignments` to type `Customer`
+- added property `customerGroupAssignments` to type `CustomerDraft`
 - added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
 - added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
+- added property `priceCustomerGroupAssignments` to type `ProductSearchProjectionParams`
 - added property `businessUnits` to type `SearchIndexingConfiguration`
 </details>
 
@@ -54,9 +57,20 @@
 - added type `CountOnCustomLineItemUnits`
 - added type `CountOnLineItemUnits`
 - added type `PatternComponent`
+- added type `CustomerGroupAssignment`
+- added type `CustomerGroupAssignmentDraft`
+- added type `CustomerAddCustomerGroupAssignmentAction`
+- added type `CustomerRemoveCustomerGroupAssignmentAction`
+- added type `CustomerSetCustomerGroupAssignmentsAction`
+- added type `CustomerGroupAssignmentAddedMessage`
+- added type `CustomerGroupAssignmentRemovedMessage`
+- added type `CustomerGroupAssignmentsSetMessage`
 - added type `ShoppingListLineItemAddedMessage`
 - added type `ShoppingListLineItemRemovedMessage`
 - added type `ShoppingListMessage`
+- added type `CustomerGroupAssignmentAddedMessagePayload`
+- added type `CustomerGroupAssignmentRemovedMessagePayload`
+- added type `CustomerGroupAssignmentsSetMessagePayload`
 - added type `ShoppingListLineItemAddedMessagePayload`
 - added type `ShoppingListLineItemRemovedMessagePayload`
 - added type `ShoppingListMessagePayload`
@@ -71,6 +85,26 @@
 
 - added enum `Canceled` to type `ShipmentState`
 - added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
 </details>
 
 **Import changes**

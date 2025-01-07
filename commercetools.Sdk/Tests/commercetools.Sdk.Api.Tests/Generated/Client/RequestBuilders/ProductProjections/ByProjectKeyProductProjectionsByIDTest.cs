@@ -69,6 +69,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .WithId("test_ID")
                    .Get()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .WithId("test_ID")
+                   .Get()
                    .WithPriceChannel("priceChannel")
                    .Build(),
                    "Get",

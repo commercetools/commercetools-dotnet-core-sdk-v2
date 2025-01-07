@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Client
 
         List<string> GetPriceCustomerGroup();
 
+        List<string> GetPriceCustomerGroupAssignments();
+
         List<string> GetPriceChannel();
 
         /**
@@ -27,6 +29,11 @@ namespace commercetools.Sdk.Api.Client
          * set priceCustomerGroup with the specificied value
          */
         T WithPriceCustomerGroup(string priceCustomerGroup);
+
+        /**
+         * set priceCustomerGroupAssignments with the specificied value
+         */
+        T WithPriceCustomerGroupAssignments(string priceCustomerGroupAssignments);
 
         /**
          * set priceChannel with the specificied value
