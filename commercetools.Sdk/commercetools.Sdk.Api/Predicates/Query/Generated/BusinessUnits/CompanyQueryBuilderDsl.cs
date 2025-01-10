@@ -82,6 +82,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CollectionPredicateBuilder<CompanyQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
                     p => new CombinationQueryPredicate<CompanyQueryBuilderDsl>(p, CompanyQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<CompanyQueryBuilderDsl> InheritedStores(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CompanyQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("inheritedStores"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl.Of())),
+                CompanyQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CompanyQueryBuilderDsl> InheritedStores()
+        {
+            return new CollectionPredicateBuilder<CompanyQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("inheritedStores")),
+                    p => new CombinationQueryPredicate<CompanyQueryBuilderDsl>(p, CompanyQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<CompanyQueryBuilderDsl, string> StoreMode()
         {
             return new ComparisonPredicateBuilder<CompanyQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("storeMode")),
