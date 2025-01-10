@@ -10,6 +10,9 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `inheritedStores` to type `BusinessUnit`
+- added property `inheritedStores` to type `Company`
+- added property `inheritedStores` to type `Division`
 - added property `applicationMode` to type `CartDiscountValueFixed`
 - added property `applicationMode` to type `CartDiscountValueFixedDraft`
 - added property `custom` to type `CartSetCustomShippingMethodAction`
@@ -25,6 +28,9 @@
 - added resource `/{projectKey}/business-units/search`
 - added resource `/{projectKey}/business-units/search/indexing-status`
 - added resource `/{projectKey}/channels/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/{ID}`
 </details>
 
 
@@ -38,6 +44,17 @@
 - added method `apiRoot.withProjectKey().channels().withKey().head()`
 - added method `apiRoot.withProjectKey().channels().withKey().post()`
 - added method `apiRoot.withProjectKey().channels().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().delete()`
 </details>
 
 

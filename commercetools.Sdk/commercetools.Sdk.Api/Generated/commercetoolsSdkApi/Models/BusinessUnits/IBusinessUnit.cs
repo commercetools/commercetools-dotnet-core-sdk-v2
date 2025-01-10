@@ -34,6 +34,10 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
 
         IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
+        IList<IStoreKeyReference> InheritedStores { get; set; }
+
+        IEnumerable<IStoreKeyReference> InheritedStoresEnumerable { set => InheritedStores = value.ToList(); }
+
         IBusinessUnitStoreMode StoreMode { get; set; }
 
         IBusinessUnitType UnitType { get; set; }
