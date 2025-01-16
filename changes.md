@@ -8,6 +8,13 @@
 
 
 <details>
+<summary>Required Property(s)</summary>
+
+- changed property `images` of type `ProductTailoringSetExternalImagesAction` to be optional
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `inheritedStores` to type `BusinessUnit`
