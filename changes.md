@@ -3,6 +3,7 @@
 <details>
 <summary>Changed Property(s)</summary>
 
+- :warning: changed property `discount` of type `DiscountedTotalPricePortion` from type `CartDiscountReference` to `Reference`
 - :warning: changed property `exact` of type `SearchExactExpression` from type `SearchAnyValue` to `SearchExactValue`
 </details>
 
