@@ -8,9 +8,9 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
     {
         string Id { get; set; }
 
-        IProductProjection ProductProjection { get; set; }
-
         IProductSearchMatchingVariants MatchingVariants { get; set; }
+
+        IProductProjection ProductProjection { get; set; }
 
     }
 }
