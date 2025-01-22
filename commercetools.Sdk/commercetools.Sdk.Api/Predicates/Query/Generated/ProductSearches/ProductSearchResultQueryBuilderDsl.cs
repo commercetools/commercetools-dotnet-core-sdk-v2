@@ -21,21 +21,21 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
             p => new CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl>(p, ProductSearchResultQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> ProductProjection(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("productProjection"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl.Of())),
-                ProductSearchResultQueryBuilderDsl.Of);
-        }
-
         public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> MatchingVariants(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchMatchingVariantsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchMatchingVariantsQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("matchingVariants"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchMatchingVariantsQueryBuilderDsl.Of())),
+                ProductSearchResultQueryBuilderDsl.Of);
+        }
+
+        public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> ProductProjection(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("productProjection"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductProjectionQueryBuilderDsl.Of())),
                 ProductSearchResultQueryBuilderDsl.Of);
         }
 
