@@ -40,15 +40,11 @@ namespace commercetools.Api.IntegrationTests.Products
                 var send = await _projectApiRoot.Products().WithKey(product.Key).Head().SendAsync();
                 Assert.Equal(HttpStatusCode.OK, send.StatusCode);
 
-                await Assert.ThrowsAsync<NotFoundException>(async () =>
-                {
-                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head()
-                        .ExecuteAsync();
-                });
-                await Assert.ThrowsAsync<NotFoundException>(async () =>
-                {
-                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
-                });
+                Assert.Equal(true, await _projectApiRoot.Products().WithKey(product.Key).Head().ExecuteSuccess());
+                Assert.Equal(false, await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteSuccess());
+
+                Assert.Equal("", await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteAsync());
+                Assert.Equal("", (await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync()).Body);
             });
         }
 

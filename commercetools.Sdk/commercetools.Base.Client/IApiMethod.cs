@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,5 +24,9 @@ namespace commercetools.Base.Client
 
         public Task<IApiResponse<string>> SendAsJsonAsync(CancellationToken cancellationToken = default);
 
+        public async Task<bool> ExecuteSuccess(CancellationToken cancellationToken = default)
+        {
+            return (await SendAsJsonAsync(cancellationToken)).StatusCode == HttpStatusCode.OK;
+        }
     }
 }

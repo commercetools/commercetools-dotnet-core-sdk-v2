@@ -2,6 +2,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
 using commercetools.Base.Client;
+using System.Net;
 
 
 // ReSharper disable CheckNamespace
@@ -58,5 +59,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
+        public async Task<bool> ExecuteSuccess(CancellationToken cancellationToken = default)
+        {
+            return (await SendAsJsonAsync(cancellationToken)).StatusCode == HttpStatusCode.OK;
+        }
     }
 }

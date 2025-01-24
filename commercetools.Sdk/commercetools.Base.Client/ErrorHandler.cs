@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,13 +19,12 @@ namespace commercetools.Base.Client
         {
             var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
 
-            if (response is { IsSuccessStatusCode: false })
-            {
-                var exception = ExceptionFactory.Create(request, response, _errorResponseBodyMapper);
-                throw exception;
-            }
+            if (response.IsSuccessStatusCode
+                || (response.RequestMessage!.Method == HttpMethod.Head &&
+                    response.StatusCode == HttpStatusCode.NotFound))
+                return response;
 
-            return response;
+            throw ExceptionFactory.Create(request, response, _errorResponseBodyMapper);
         }
     }
 }
