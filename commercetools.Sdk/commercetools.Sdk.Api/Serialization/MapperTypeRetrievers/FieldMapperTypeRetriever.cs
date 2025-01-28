@@ -11,8 +11,10 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 {
     public class FieldMapperTypeRetriever : MapperTypeRetriever<IFieldContainer>
     {
-        public FieldMapperTypeRetriever()
+        private readonly ISerializationConfiguration _serializationConfiguration;
+        public FieldMapperTypeRetriever(ISerializationConfiguration serializationConfiguration = null)
         {
+            this._serializationConfiguration = serializationConfiguration ?? SerializationConfiguration.DefaultConfig;
         }
 
         [Obsolete("use constructor without cultureValidator")]
@@ -31,7 +33,15 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(bool);
                     break;
                 case JsonValueKind.Number:
-                    tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    if (_serializationConfiguration.DeserializeNumberCustomFieldAsDecimalOnly)
+                    {
+                        tokenType = typeof(decimal);
+                    }
+                    else
+                    {
+                        tokenType = element.IsLongOrInt() ? typeof(long) : typeof(decimal);
+                    }
+
                     break;
                 case JsonValueKind.String:
                     tokenType = typeof(string);
@@ -41,7 +51,11 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
                     tokenType = typeof(object);
                     break;
                 case JsonValueKind.Object:
-                    if (element.IsMoneyElement())
+                    if (element.IsEnumElement())
+                        tokenType = typeof(ICustomFieldEnumValue);
+                    else if (element.IsLocalizedEnumElement())
+                        tokenType = typeof(ICustomFieldLocalizedEnumValue);
+                    else if (element.IsMoneyElement())
                         tokenType = typeof(ITypedMoney);
                     else if (element.IsReferenceElement())
                         tokenType = typeof(IReference);
