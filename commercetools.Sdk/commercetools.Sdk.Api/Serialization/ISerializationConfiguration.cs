@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Serialization
     {
         bool DeserializeNumberAttributeAsDecimalOnly { get; set; }
 
+        bool DeserializeNumberCustomFieldAsDecimalOnly { get; set; }
+
         Dictionary<string, Type> AttributeTypeMap { get; set; }
     }
 }
