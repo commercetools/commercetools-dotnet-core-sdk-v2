@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
-using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,7 +36,7 @@ public class CustomFieldsTest
         Assert.Equal("foo", fields.AsPlainEnum("enum").Label);
         Assert.IsType<CustomFieldLocalizedEnumValue>(fields.AsLocalizedEnum("lenum"));
         Assert.Equal("foo", fields.AsLocalizedEnum("lenum").Label["en"]);
-        
+
         Assert.IsType<string>(fields.AsString("date"));
         Assert.Equal("2020-01-01", fields.AsString("date"));
         Assert.IsType<string>(fields.AsString("date-text"));
@@ -67,15 +66,15 @@ public class CustomFieldsTest
         Assert.Equal(11L, fields.AsLong("double"));
 
         Assert.IsType<ProductReference>(fields.AsReference("reference"));
-        Assert.Equal("12345",fields.AsReference("reference").Id);
+        Assert.Equal("12345", fields.AsReference("reference").Id);
         Assert.IsType<TypedMoney>(fields.AsMoney("money"));
         Assert.Equal("EUR", fields.AsMoney("money").CurrencyCode);
-        
+
         Assert.Null(fields.AsLong("null"));
         Assert.Null(fields.AsDecimal("null"));
     }
-    
-        [Fact]
+
+    [Fact]
     public void attributeSets()
     {
         var s = new ServiceCollection();

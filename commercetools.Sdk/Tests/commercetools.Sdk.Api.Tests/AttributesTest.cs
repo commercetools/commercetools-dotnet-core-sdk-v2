@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using commercetools.Sdk.Api.Extensions;
@@ -72,7 +70,7 @@ public class AttributesTest
         Assert.IsType<MoneyAttribute>(attributes.Get("money"));
         Assert.Equal("EUR", attributes.Get("money").ToMoneyAttribute().GetValue().CurrencyCode);
     }
-    
+
     [Fact]
     public void attributeSets()
     {
@@ -182,7 +180,7 @@ public class AttributesTest
         Assert.Equal("EUR", attributes.Get("money").ToMoneyAttribute().GetValue().CurrencyCode);
     }
 
-        [Fact]
+    [Fact]
     public void attributeSetsAsDecimal()
     {
         var s = new ServiceCollection();
