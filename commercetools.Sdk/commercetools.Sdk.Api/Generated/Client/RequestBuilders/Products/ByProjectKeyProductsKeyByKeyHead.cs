@@ -2,7 +2,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
 using commercetools.Base.Client;
-using System.Net;
 
 
 // ReSharper disable CheckNamespace
