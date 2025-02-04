@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Net;
 using System.Net.Http;
 
 namespace commercetools.Base.Client
@@ -29,6 +30,11 @@ namespace commercetools.Base.Client
         public static string ToSnakeCase(this string str)
         {
             return string.Concat(str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString())).ToLower();
+        }
+
+        public static bool IsSuccess<T>(this IApiResponse<T> apiResponse)
+        {
+            return apiResponse.StatusCode is HttpStatusCode.OK or HttpStatusCode.Created;
         }
     }
 }

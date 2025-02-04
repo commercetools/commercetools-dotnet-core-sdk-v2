@@ -145,7 +145,7 @@ namespace commercetools.Base.Client
                 })
                 .AddHttpMessageHandler(c => c.GetService<ILoggerHandlerFactory>().Create())
                 .AddHttpMessageHandler(c => new ErrorHandler(message =>
-                    serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody())));
+                    serializerFactory(c).Deserialize(errorResponseTypeMapper(message), message.ExtractResponseBody()), options.NotFoundReturnsDefault, options.HeadNotFoundReturnsDefault));
 
             return httpClientBuilder;
         }

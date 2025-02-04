@@ -40,11 +40,118 @@ namespace commercetools.Api.IntegrationTests.Products
                 var send = await _projectApiRoot.Products().WithKey(product.Key).Head().SendAsync();
                 Assert.Equal(HttpStatusCode.OK, send.StatusCode);
 
-                Assert.Equal(true, await _projectApiRoot.Products().WithKey(product.Key).Head().ExecuteSuccess());
-                Assert.Equal(false, await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteSuccess());
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head()
+                        .ExecuteAsync();
+                });
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
+                });
+            });
+        }
+        
+        [Fact]
+        public async Task HeadNotFoundReturnsDefault()
+        {
+            var configuration = new ConfigurationBuilder().
+                AddJsonFile("appsettings.test.Development.json", true).
+                AddEnvironmentVariables().
+                AddUserSecrets<ServiceProviderFixture>().
+                AddEnvironmentVariables("CTP_").
+                Build();
 
-                Assert.Equal("", await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteAsync());
-                Assert.Equal("", (await _projectApiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync()).Body);
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { HeadNotFoundReturnsDefault = true });
+            var p = s.BuildServiceProvider();
+
+            var apiRoot = p.GetService<ProjectApiRoot>();
+            await WithProduct(apiRoot, async product =>
+            {
+                var execProduct = await apiRoot.Products().WithKey(product.Key).Get().ExecuteAsync();
+                Assert.NotNull(execProduct);
+                Assert.Equal(product.Key, execProduct.Key);
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await apiRoot.Products().WithKey(product.Key + "-unknown").Get().ExecuteAsync();
+                });
+                
+                var sendProduct = await apiRoot.Products().WithKey(product.Key).Get().SendAsync();
+                Assert.True(sendProduct.IsSuccess());
+                Assert.Equal(HttpStatusCode.OK, sendProduct.StatusCode);
+                Assert.Equal(product.Key, sendProduct.Body.Key);
+
+                await Assert.ThrowsAsync<NotFoundException>(async () =>
+                {
+                    await apiRoot.Products().WithKey(product.Key + "-unknown").Get().SendAsync();
+                });
+
+                var execHead = await apiRoot.Products().WithKey(product.Key).Head().ExecuteAsync();
+                Assert.Equal("", execHead);
+                var execUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteAsync();
+                Assert.Equal("", execUnknownHead);
+
+                var sendHead = await apiRoot.Products().WithKey(product.Key).Head().SendAsync();
+                Assert.True(sendHead.IsSuccess());
+                Assert.Equal(HttpStatusCode.OK, sendHead.StatusCode);
+                Assert.Equal("", sendHead.Body);
+                
+                var sendUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
+                Assert.False(sendUnknownHead.IsSuccess());
+                Assert.Equal(HttpStatusCode.NotFound, sendUnknownHead.StatusCode);
+                Assert.Equal("", sendUnknownHead.Body);
+            });
+        }
+        
+        [Fact]
+        public async Task NotFoundReturnsDefault()
+        {
+            var configuration = new ConfigurationBuilder().
+                AddJsonFile("appsettings.test.Development.json", true).
+                AddEnvironmentVariables().
+                AddUserSecrets<ServiceProviderFixture>().
+                AddEnvironmentVariables("CTP_").
+                Build();
+
+            var s = new ServiceCollection();
+            s.UseCommercetoolsApi(configuration, "Client", options: new ClientOptions() { NotFoundReturnsDefault = true });
+            var p = s.BuildServiceProvider();
+
+            var apiRoot = p.GetService<ProjectApiRoot>();
+            await WithProduct(apiRoot, async product =>
+            {
+                var execProduct = await apiRoot.Products().WithKey(product.Key).Get().ExecuteAsync();
+                Assert.NotNull(execProduct);
+                Assert.Equal(product.Key, execProduct.Key);
+
+                var execUnknownProduct = await apiRoot.Products().WithKey(product.Key + "-unknown").Get().ExecuteAsync();
+                Assert.Null(execUnknownProduct);
+
+                var sendProduct = await apiRoot.Products().WithKey(product.Key).Get().SendAsync();
+                Assert.True(sendProduct.IsSuccess());
+                Assert.Equal(HttpStatusCode.OK, sendProduct.StatusCode);
+                Assert.Equal(product.Key, sendProduct.Body.Key);
+
+                var sendUnknownProduct = await apiRoot.Products().WithKey(product.Key + "-unknown").Get().SendAsync();
+                Assert.False(sendUnknownProduct.IsSuccess());
+                Assert.Equal(HttpStatusCode.NotFound, sendUnknownProduct.StatusCode);
+                Assert.Null(sendUnknownProduct.Body);
+
+                var execHead = await apiRoot.Products().WithKey(product.Key).Head().ExecuteAsync();
+                Assert.Equal("", execHead);
+                var execUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().ExecuteAsync();
+                Assert.Equal("", execUnknownHead);
+
+                var sendHead = await apiRoot.Products().WithKey(product.Key).Head().SendAsync();
+                Assert.True(sendHead.IsSuccess());
+                Assert.Equal(HttpStatusCode.OK, sendHead.StatusCode);
+                Assert.Equal("", sendHead.Body);
+                
+                var sendUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
+                Assert.False(sendUnknownHead.IsSuccess());
+                Assert.Equal(HttpStatusCode.NotFound, sendUnknownHead.StatusCode);
+                Assert.Equal("", sendUnknownHead.Body);
             });
         }
 

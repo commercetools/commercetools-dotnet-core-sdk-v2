@@ -9,6 +9,9 @@ namespace commercetools.Base.Client
             DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
         public bool ReadResponseAsStream { get; set; } = true;
+        
+        public bool NotFoundReturnsDefault { get; set; } = false;
+        public bool HeadNotFoundReturnsDefault { get; set; } = false;
 
         public Version UseHttpVersion { get; set; } = HttpVersion.Version20;
     }

@@ -59,9 +59,5 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return await ApiHttpClient.SendAsJsonAsync(requestMessage, cancellationToken);
         }
 
-        public async Task<bool> ExecuteSuccess(CancellationToken cancellationToken = default)
-        {
-            return (await SendAsJsonAsync(cancellationToken)).StatusCode == HttpStatusCode.OK;
-        }
     }
 }
