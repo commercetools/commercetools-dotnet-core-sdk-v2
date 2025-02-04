@@ -51,7 +51,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 });
             });
         }
-        
+
         [Fact]
         public async Task HeadNotFoundReturnsDefault()
         {
@@ -76,7 +76,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 {
                     await apiRoot.Products().WithKey(product.Key + "-unknown").Get().ExecuteAsync();
                 });
-                
+
                 var sendProduct = await apiRoot.Products().WithKey(product.Key).Get().SendAsync();
                 Assert.True(sendProduct.IsSuccess());
                 Assert.Equal(HttpStatusCode.OK, sendProduct.StatusCode);
@@ -96,14 +96,14 @@ namespace commercetools.Api.IntegrationTests.Products
                 Assert.True(sendHead.IsSuccess());
                 Assert.Equal(HttpStatusCode.OK, sendHead.StatusCode);
                 Assert.Equal("", sendHead.Body);
-                
+
                 var sendUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
                 Assert.False(sendUnknownHead.IsSuccess());
                 Assert.Equal(HttpStatusCode.NotFound, sendUnknownHead.StatusCode);
                 Assert.Equal("", sendUnknownHead.Body);
             });
         }
-        
+
         [Fact]
         public async Task NotFoundReturnsDefault()
         {
@@ -147,7 +147,7 @@ namespace commercetools.Api.IntegrationTests.Products
                 Assert.True(sendHead.IsSuccess());
                 Assert.Equal(HttpStatusCode.OK, sendHead.StatusCode);
                 Assert.Equal("", sendHead.Body);
-                
+
                 var sendUnknownHead = await apiRoot.Products().WithKey(product.Key + "-unknown").Head().SendAsync();
                 Assert.False(sendUnknownHead.IsSuccess());
                 Assert.Equal(HttpStatusCode.NotFound, sendUnknownHead.StatusCode);

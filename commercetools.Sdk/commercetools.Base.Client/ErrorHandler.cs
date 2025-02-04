@@ -27,7 +27,7 @@ namespace commercetools.Base.Client
             if (response is { IsSuccessStatusCode: true })
                 return response;
 
-            if (response.StatusCode == HttpStatusCode.NotFound && (_notFoundReturnsEmpty || (_headNotFoundReturnsEmpty && request.Method == HttpMethod.Head) ))
+            if (response.StatusCode == HttpStatusCode.NotFound && (_notFoundReturnsEmpty || (_headNotFoundReturnsEmpty && request.Method == HttpMethod.Head)))
             {
                 response.Content = new EmptyContent();
                 return response;
