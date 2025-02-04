@@ -1,4 +1,23 @@
 
+# 12.4.0 (2025-02-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/398
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/399
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.3.0...12.4.0
+
+# 12.3.0 (2025-01-28)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/394
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/395
+* add custom field helper methods by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/397
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.2.0...12.3.0
+
 # 12.2.0 (2025-01-22)
 
 ## What's Changed
