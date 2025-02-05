@@ -88,6 +88,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
             return new CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetAnonymousIdActionQueryBuilderDsl.Of()),
                 ShoppingListUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl> AsSetBusinessUnit(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetBusinessUnitActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetBusinessUnitActionQueryBuilderDsl.Of()),
+                ShoppingListUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListSetCustomFieldActionQueryBuilderDsl>> fn)
         {

@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Stores;
@@ -42,6 +43,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         public string AnonymousId { get; set; }
 
         public IStoreKeyReference Store { get; set; }
+
+        public IBusinessUnitKeyReference BusinessUnit { get; set; }
 
         public ICustomFields Custom { get; set; }
 

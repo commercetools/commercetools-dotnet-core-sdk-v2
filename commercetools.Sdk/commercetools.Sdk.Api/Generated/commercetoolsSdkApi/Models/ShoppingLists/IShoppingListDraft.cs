@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.BusinessUnits;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Stores;
@@ -34,6 +35,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         IEnumerable<ITextLineItemDraft> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
         IStoreResourceIdentifier Store { get; set; }
+
+        IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
 

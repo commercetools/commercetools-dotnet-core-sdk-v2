@@ -16,6 +16,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
     [SubTypeDiscriminator("removeLineItem", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveLineItemAction))]
     [SubTypeDiscriminator("removeTextLineItem", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListRemoveTextLineItemAction))]
     [SubTypeDiscriminator("setAnonymousId", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction))]
+    [SubTypeDiscriminator("setBusinessUnit", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetBusinessUnitAction))]
     [SubTypeDiscriminator("setCustomer", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomerAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetCustomTypeAction))]
@@ -96,6 +97,12 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
         static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction SetAnonymousId(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetAnonymousIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetBusinessUnitAction SetBusinessUnit(Action<commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetBusinessUnitAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListSetBusinessUnitAction();
             init?.Invoke(t);
             return t;
         }
