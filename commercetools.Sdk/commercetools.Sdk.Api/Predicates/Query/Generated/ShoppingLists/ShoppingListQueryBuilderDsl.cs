@@ -128,6 +128,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
                 ShoppingListQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ShoppingListQueryBuilderDsl> BusinessUnit(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShoppingListQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("businessUnit"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl.Of())),
+                ShoppingListQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<ShoppingListQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {
