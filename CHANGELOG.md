@@ -1,4 +1,41 @@
 
+# 12.5.0 (2025-02-10)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/400
+* feat(api): Option to not fail on head calls by @sommmen in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/396
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/401
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/402
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/403
+
+**Api changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ProductSearchFacetScope`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ShoppingListSetBusinessUnitAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `businessUnit` to type `ShoppingList`
+- added property `businessUnit` to type `ShoppingListDraft`
+</details>
+
+## New Contributors
+* @sommmen made their first contribution in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/396
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.4.0...12.5.0
+
 # 12.4.0 (2025-02-03)
 
 ## What's Changed
