@@ -20,7 +20,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("AssociateRoleBuyerAssignableChanged", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleBuyerAssignableChangedMessagePayload))]
     [SubTypeDiscriminator("AssociateRoleCreated", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleCreatedMessagePayload))]
     [SubTypeDiscriminator("AssociateRoleDeleted", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleDeletedMessagePayload))]
-    [SubTypeDiscriminator("AssociateRoleNameSet", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload))]
+    [SubTypeDiscriminator("AssociateRoleNameSet", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRoleNameSetMessagePayload))]
     [SubTypeDiscriminator("AssociateRolePermissionAdded", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionAddedMessagePayload))]
     [SubTypeDiscriminator("AssociateRolePermissionRemoved", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionRemovedMessagePayload))]
     [SubTypeDiscriminator("AssociateRolePermissionsSet", typeof(commercetools.Sdk.Api.Models.Messages.AssociateRolePermissionsSetMessagePayload))]
@@ -345,9 +345,9 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload AssociateRoleNameSet(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload> init = null)
+        static commercetools.Sdk.Api.Models.Messages.AssociateRoleNameSetMessagePayload AssociateRoleNameSet(Action<commercetools.Sdk.Api.Models.Messages.AssociateRoleNameSetMessagePayload> init = null)
         {
-            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleNameChangedMessagePayload();
+            var t = new commercetools.Sdk.Api.Models.Messages.AssociateRoleNameSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

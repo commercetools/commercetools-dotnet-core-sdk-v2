@@ -185,9 +185,9 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsAssociateRoleNameSet(
-            Func<commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameChangedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameChangedMessageQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameSetMessageQueryBuilderDsl>> fn)
         {
-            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameChangedMessageQueryBuilderDsl.Of()),
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.AssociateRoleNameSetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsAssociateRolePermissionAdded(
