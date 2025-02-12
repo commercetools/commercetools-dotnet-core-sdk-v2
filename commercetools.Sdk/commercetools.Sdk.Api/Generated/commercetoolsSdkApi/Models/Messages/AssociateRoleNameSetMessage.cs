@@ -4,7 +4,7 @@ using System;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class AssociateRoleNameChangedMessage : IAssociateRoleNameChangedMessage
+    public partial class AssociateRoleNameSetMessage : IAssociateRoleNameSetMessage
     {
         public string Id { get; set; }
 
@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public string Name { get; set; }
-        public AssociateRoleNameChangedMessage()
+        public AssociateRoleNameSetMessage()
         {
             this.Type = "AssociateRoleNameSet";
         }
