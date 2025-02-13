@@ -1,5 +1,6 @@
 
 using System;
+using commercetools.Base.Models;
 using commercetools.Sdk.Api.Predicates.Query.Common;
 using commercetools.Sdk.Api.Predicates.Query.ProductTypes;
 
@@ -64,6 +65,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
                 p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of),
                 PredicateFormatter.Format);
+        }
+        
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, Date> Date() {
+            return new DateComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
+                BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
+                p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
+        }
+
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, DateTime> DateTime() {
+            return new DateTimeComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
+                BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
+                p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
+        }
+
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, TimeSpan> Time() {
+            return new TimeComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
+                BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
+                p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
         }
     }
 }
