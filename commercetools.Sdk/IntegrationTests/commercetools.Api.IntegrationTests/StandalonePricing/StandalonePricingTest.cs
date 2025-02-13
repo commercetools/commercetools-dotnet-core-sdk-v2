@@ -60,17 +60,17 @@ namespace commercetools.Api.IntegrationTests.StandalonePricing
                             fields.Field("productId").String().Is("abcdef")
                             .And(fields.Field("channelKey").String().Is("my-channel"))
                             .And(
-                                fields.Field("validFrom").DateTime().IsLessThanOrEqual(Date.Parse("2025-02-11T00:00:00.000Z"))
+                                fields.Field("validFrom").DateTime().IsLessThanOrEqual(DateTime.Parse("2025-02-11T00:00:00.000Z"))
                                 .Or(fields.Field("validFrom").DateTime().IsNotDefined())
                                 .Group()
                             ).And(
-                                fields.Field("validUntil").DateTime().IsGreaterThanOrEqual(Date.Parse("2025-02-11T12:00:00.000Z"))
+                                fields.Field("validUntil").DateTime().IsGreaterThanOrEqual(DateTime.Parse("2025-02-11T12:00:00.000Z"))
                                 .Or(fields.Field("validUntil").DateTime().IsNotDefined())
                                 .Group()
                             )
                         )
                     ));
-                Assert.Equal("custom(fields(productId = \"abcdef\" and channelKey = \"my-channel\" and (validFrom <= \"2025-02-10T23:00:00Z\" or validFrom is not defined) and (validUntil >= \"2025-02-10T23:00:00Z\" or validUntil is not defined)))", result.GetQueryParams().First(pair => pair.Key == "where").Value);
+                Assert.Equal("custom(fields(productId = \"abcdef\" and channelKey = \"my-channel\" and (validFrom <= \"2025-02-11T00:00:00Z\" or validFrom is not defined) and (validUntil >= \"2025-02-11T12:00:00Z\" or validUntil is not defined)))", result.GetQueryParams().First(pair => pair.Key == "where").Value);
         }
     }
 }
