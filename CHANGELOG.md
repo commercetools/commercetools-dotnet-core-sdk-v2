@@ -1,4 +1,35 @@
 
+# 12.6.0 (2025-02-13)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/404
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/405
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/406
+* Make custom fields queryable through DSL by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/407
+
+**Api changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `AssociateRoleNameChangedMessage`
+- :warning: removed type `AssociateRoleNameChangedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AssociateRoleNameSetMessage`
+- added type `AssociateRoleNameSetMessagePayload`
+</details>
+
+### Fixes
+
+The `AssociateRoleNameChangedMessage` has been renamed to `AssociateRoleNameSetMessage` to be consistent with the message `type` value.
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.5.0...12.6.0
+
 # 12.5.0 (2025-02-10)
 
 ## What's Changed
