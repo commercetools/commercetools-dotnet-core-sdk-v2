@@ -1,20 +1,22 @@
 using System;
 using commercetools.Base.Models;
 using commercetools.Sdk.Api.Predicates.Query.Common;
-using FieldContainerQueryBuilderDsl = commercetools.Sdk.Api.Predicates.Query.Types.FieldContainerQueryBuilderDsl;
 
 namespace commercetools.Sdk.Api.Predicates.Query.Types
 {
-    public class FieldContainerValueQueryBuilderDsl {
+    public class FieldContainerValueQueryBuilderDsl
+    {
 
         private readonly string _fieldName;
 
-        public FieldContainerValueQueryBuilderDsl(string fieldName) {
+        public FieldContainerValueQueryBuilderDsl(string fieldName)
+        {
             this._fieldName = fieldName;
         }
 
         public CombinationQueryPredicate<FieldContainerQueryBuilderDsl> PlainEnum(
-                Func<CustomFieldEnumValueQueryBuilderDsl, CombinationQueryPredicate<CustomFieldEnumValueQueryBuilderDsl>> fn) {
+                Func<CustomFieldEnumValueQueryBuilderDsl, CombinationQueryPredicate<CustomFieldEnumValueQueryBuilderDsl>> fn)
+        {
             return new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(ContainerQueryPredicate.Of()
                     .Parent(new ConstantQueryPredicate(_fieldName))
                     .Inner(fn.Invoke(CustomFieldEnumValueQueryBuilderDsl.Of())),
@@ -22,7 +24,8 @@ namespace commercetools.Sdk.Api.Predicates.Query.Types
         }
 
         public CombinationQueryPredicate<FieldContainerQueryBuilderDsl> LocalizedEnum(
-                Func<CustomFieldLocalizedEnumValueQueryBuilderDsl, CombinationQueryPredicate<CustomFieldLocalizedEnumValueQueryBuilderDsl>> fn) {
+                Func<CustomFieldLocalizedEnumValueQueryBuilderDsl, CombinationQueryPredicate<CustomFieldLocalizedEnumValueQueryBuilderDsl>> fn)
+        {
             return new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(
                 ContainerQueryPredicate.Of()
                     .Parent(new ConstantQueryPredicate(_fieldName))
@@ -31,7 +34,8 @@ namespace commercetools.Sdk.Api.Predicates.Query.Types
         }
 
         public CombinationQueryPredicate<FieldContainerQueryBuilderDsl> Money(
-                Func<MoneyQueryBuilderDsl, CombinationQueryPredicate<MoneyQueryBuilderDsl>> fn) {
+                Func<MoneyQueryBuilderDsl, CombinationQueryPredicate<MoneyQueryBuilderDsl>> fn)
+        {
             return new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(ContainerQueryPredicate.Of()
                     .Parent(new ConstantQueryPredicate(_fieldName))
                     .Inner(fn.Invoke(MoneyQueryBuilderDsl.Of())),
@@ -39,45 +43,52 @@ namespace commercetools.Sdk.Api.Predicates.Query.Types
         }
 
         public CombinationQueryPredicate<FieldContainerQueryBuilderDsl> Reference(
-                Func<ReferenceQueryBuilderDsl, CombinationQueryPredicate<ReferenceQueryBuilderDsl>> fn) {
+                Func<ReferenceQueryBuilderDsl, CombinationQueryPredicate<ReferenceQueryBuilderDsl>> fn)
+        {
             return new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(ContainerQueryPredicate.Of()
                     .Parent(new ConstantQueryPredicate(_fieldName))
                     .Inner(fn.Invoke(ReferenceQueryBuilderDsl.Of())),
                 FieldContainerQueryBuilderDsl.Of);
         }
 
-        public ComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, long> LongNumber() {
+        public ComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, long> LongNumber()
+        {
             return new ComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, long>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of),
                 PredicateFormatter.Format);
         }
 
-        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, decimal> DoubleNumber() {
+        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, decimal> DoubleNumber()
+        {
             return new ComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, decimal>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of), PredicateFormatter.Format);
         }
 
-        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, string> String() {
+        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, string> String()
+        {
             return new ComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, string>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of), PredicateFormatter.Format);
         }
-        
-        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, Date> Date() {
+
+        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, Date> Date()
+        {
             return new DateComparisonPredicateBuilder<FieldContainerQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of));
         }
 
-        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, DateTime> DateTime() {
+        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, DateTime> DateTime()
+        {
             return new DateTimeComparisonPredicateBuilder<FieldContainerQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of));
         }
 
-        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, TimeSpan> Time() {
+        public IComparisonPredicateBuilder<FieldContainerQueryBuilderDsl, TimeSpan> Time()
+        {
             return new TimeComparisonPredicateBuilder<FieldContainerQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate(_fieldName)),
                 p => new CombinationQueryPredicate<FieldContainerQueryBuilderDsl>(p, FieldContainerQueryBuilderDsl.Of));

@@ -66,20 +66,23 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
                 p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of),
                 PredicateFormatter.Format);
         }
-        
-        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, Date> Date() {
+
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, Date> Date()
+        {
             return new DateComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
                 p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
         }
 
-        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, DateTime> DateTime() {
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, DateTime> DateTime()
+        {
             return new DateTimeComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
                 p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
         }
 
-        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, TimeSpan> Time() {
+        public IComparisonPredicateBuilder<AttributeQueryBuilderDsl, TimeSpan> Time()
+        {
             return new TimeComparisonPredicateBuilder<AttributeQueryBuilderDsl>(
                 BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
                 p => new CombinationQueryPredicate<AttributeQueryBuilderDsl>(p, AttributeQueryBuilderDsl.Of));
