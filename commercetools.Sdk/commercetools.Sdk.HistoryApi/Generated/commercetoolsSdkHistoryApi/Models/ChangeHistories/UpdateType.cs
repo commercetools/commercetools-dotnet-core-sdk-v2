@@ -415,8 +415,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setAssetTags")]
         SetAssetTags,
 
-        [Description("setAsssetKey")]
-        SetAsssetKey,
+        [Description("setAssetKey")]
+        SetAssetKey,
 
         [Description("setAttribute")]
         SetAttribute,
@@ -1258,8 +1258,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetAssetTags = new UpdateTypeWrapper
         { Value = UpdateType.SetAssetTags, JsonName = "setAssetTags" };
 
-        public static IUpdateType SetAsssetKey = new UpdateTypeWrapper
-        { Value = UpdateType.SetAsssetKey, JsonName = "setAsssetKey" };
+        public static IUpdateType SetAssetKey = new UpdateTypeWrapper
+        { Value = UpdateType.SetAssetKey, JsonName = "setAssetKey" };
 
         public static IUpdateType SetAttribute = new UpdateTypeWrapper
         { Value = UpdateType.SetAttribute, JsonName = "setAttribute" };
@@ -1813,7 +1813,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetAssetDescription ,
                  SetAssetSources ,
                  SetAssetTags ,
-                 SetAsssetKey ,
+                 SetAssetKey ,
                  SetAttribute ,
                  SetAuthenticationMode ,
                  SetAuthorName ,
