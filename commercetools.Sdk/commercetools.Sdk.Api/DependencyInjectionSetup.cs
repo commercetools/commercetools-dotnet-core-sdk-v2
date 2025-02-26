@@ -13,6 +13,7 @@ using commercetools.Base.Client.Tokens;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.Api.Client;
+using commercetools.Sdk.Api.Models.ProductTailorings;
 using commercetools.Sdk.Api.Serialization;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
 using Microsoft.Extensions.Configuration;
@@ -74,8 +75,10 @@ namespace commercetools.Sdk.Api
             services.AddSingleton(serializationConfiguration ?? SerializationConfiguration.DefaultConfig);
             services.AddSingleton<IMapperTypeRetriever<IFieldContainer>>(provider => new FieldMapperTypeRetriever(provider.GetService<ISerializationConfiguration>()));
             services.AddSingleton<IMapperTypeRetriever<IAttribute>>(provider => new AttributeMapperTypeRetriever(provider.GetService<ISerializationConfiguration>()));
+            services.AddSingleton<IMapperTypeRetriever<IProductTailoringAttribute>>(provider => new ProductTailoringAttributeMapperTypeRetriever(provider.GetService<ISerializationConfiguration>()));
             services.AddSingleton<AttributeTypeRetriever>(provider => new AttributeTypeRetriever(provider.GetService<ISerializationConfiguration>()));
             services.AddSingleton<FieldMapperTypeRetriever>(provider => new FieldMapperTypeRetriever(provider.GetService<ISerializationConfiguration>()));
+            services.AddSingleton<ProductTailoringAttributeTypeRetriever>(provider => new ProductTailoringAttributeTypeRetriever(provider.GetService<ISerializationConfiguration>()));
             services.AddSingleton<SerializerService>();
             services.AddSingleton<IApiSerializerService, SerializerService>();
         }

@@ -7,6 +7,7 @@ using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
+using commercetools.Sdk.Api.Models.ProductTailorings;
 using commercetools.Sdk.Api.Serialization.JsonConverters;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
 using Type = System.Type;
@@ -38,7 +39,9 @@ namespace commercetools.Sdk.Api.Serialization
             ITypeRetriever typeRetriever,
             IMapperTypeRetriever<IFieldContainer> customFieldsMapperTypeRetriever,
             IMapperTypeRetriever<IAttribute> attributesMapperTypeRetriever,
-            AttributeTypeRetriever attributeTypeRetriever)
+            IMapperTypeRetriever<IProductTailoringAttribute> productTailoringAttributesMapperTypeRetriever,
+            AttributeTypeRetriever attributeTypeRetriever,
+            ProductTailoringAttributeTypeRetriever productTailoringAttributeTypeRetriever)
         {
             _serializerOptions = new JsonSerializerOptions
             {
@@ -52,6 +55,7 @@ namespace commercetools.Sdk.Api.Serialization
             _serializerOptions.Converters.Add(new ProductSearchFacetConverter(this));
             _serializerOptions.Converters.Add(new FieldContainerConverter(customFieldsMapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new AttributeConverter(attributesMapperTypeRetriever, attributeTypeRetriever, this));
+            _serializerOptions.Converters.Add(new ProductTailoringAttributeConverter(productTailoringAttributesMapperTypeRetriever, productTailoringAttributeTypeRetriever, this));
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new EnumAsInterfaceConverterFactory(
