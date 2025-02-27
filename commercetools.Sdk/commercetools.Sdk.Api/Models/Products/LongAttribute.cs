@@ -1,8 +1,9 @@
 using System;
+using commercetools.Sdk.Api.Models.ProductTailorings;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
-    public class LongAttribute : Attribute, IGenericAttribute<long>
+    public class LongAttribute : Attribute, IGenericAttribute<long>, IProductTailoringAttribute
     {
         public Type GetValueType() => typeof(long);
 

@@ -1,8 +1,9 @@
 using System;
+using commercetools.Sdk.Api.Models.ProductTailorings;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
-    public class DecimalAttribute : Attribute, IGenericAttribute<decimal>
+    public class DecimalAttribute : Attribute, IGenericAttribute<decimal>, IProductTailoringAttribute
     {
         public Type GetValueType() => typeof(decimal);
 

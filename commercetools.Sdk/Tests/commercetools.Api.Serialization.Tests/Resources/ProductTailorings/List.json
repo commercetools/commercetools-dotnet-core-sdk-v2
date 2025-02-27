@@ -1,0 +1,149 @@
+{
+  "id": 1,
+  "key": "newKey",
+  "attributes": [
+    {
+      "name": "text",
+      "value": "txt"
+    },
+    {
+      "name": "ltext",
+      "value": {
+        "de": "de-txt",
+        "en": "en-txt"
+      }
+    },
+    {
+      "name": "enum",
+      "value": {
+        "key": "enum-key2",
+        "label": "enum-label2"
+      }
+    },
+    {
+      "name": "lenum",
+      "value": {
+        "key": "lenum-key2",
+        "label": {
+          "de": "enum-label2-de",
+          "en": "enum-label2-en"
+        }
+      }
+    },
+    {
+      "name": "date",
+      "value": "2021-03-24"
+    },
+    {
+      "name": "time",
+      "value": "13:23:00.000"
+    },
+    {
+      "name": "datetime",
+      "value": "2021-03-24T00:45:00.000Z"
+    },
+    {
+      "name": "boolean",
+      "value": true
+    },
+    {
+      "name": "integer",
+      "value": 12233344
+    },
+    {
+      "name": "double",
+      "value": 10.2
+    },
+    {
+      "name": "double-zero",
+      "value": 13.0
+    },
+    {
+      "name": "reference",
+      "value": {
+        "typeId": "product",
+        "id": "b7334b20-c570-4e1d-a71a-35efd1c1c895"
+      }
+    },
+    {
+      "name": "money",
+      "value": {
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 234500,
+        "fractionDigits": 2
+      }
+    },
+    {
+      "name": "set-text",
+      "value": ["foo"]
+    },
+    {
+      "name": "set-ltext",
+      "value": [{ "en": "foo" }]
+    },
+    {
+      "name": "set-integer",
+      "value": [10]
+    },
+    {
+      "name": "set-double",
+      "value": [11.2]
+    },
+    {
+      "name": "set-double-zero",
+      "value": [13.0]
+    },
+    {
+      "name": "set-enum",
+      "value": [{
+        "key": "foo",
+        "label": "foo"
+      }]
+    },
+    {
+      "name": "set-lenum",
+      "value": [{
+        "key": "foo",
+        "label": {
+          "en": "foo"
+        }
+      }]
+    },
+    {
+      "name": "set-money",
+      "value": [{
+        "type": "centPrecision",
+        "currencyCode": "EUR",
+        "centAmount": 100
+      }]
+    },
+    {
+      "name": "set-reference",
+      "value": [{
+        "typeId": "product",
+        "id": "12345"
+      }]
+    },
+    {
+      "name": "set-date",
+      "value": ["2020-01-01"]
+    },
+    {
+      "name": "set-datetime",
+      "value": ["2020-01-01T13:15:00.123Z"]
+    },
+    {
+      "name": "set-time",
+      "value": ["13:15:00.123"]
+    },
+    {
+      "name": "set-boolean",
+      "value": [true]
+    },
+    {
+      "name": "set-empty",
+      "value": []
+    }
+  ]
+}

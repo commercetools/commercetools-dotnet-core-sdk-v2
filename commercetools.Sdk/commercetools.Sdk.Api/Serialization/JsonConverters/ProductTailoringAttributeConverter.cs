@@ -10,13 +10,13 @@ using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
 {
-    public class AttributeConverter : JsonConverter<IAttribute>
+    public class ProductTailoringAttributeConverter : JsonConverter<IProductTailoringAttribute>
     {
-        private readonly IMapperTypeRetriever<IAttribute> _mapperTypeRetriever;
-        private readonly AttributeTypeRetriever _attributeTypeRetriever;
+        private readonly IMapperTypeRetriever<IProductTailoringAttribute> _mapperTypeRetriever;
+        private readonly ProductTailoringAttributeTypeRetriever _attributeTypeRetriever;
         private ISerializerService serializerService;
 
-        public AttributeConverter(IMapperTypeRetriever<IAttribute> mapperTypeRetriever, AttributeTypeRetriever attributeTypeRetriever, ISerializerService serializerService)
+        public ProductTailoringAttributeConverter(IMapperTypeRetriever<IProductTailoringAttribute> mapperTypeRetriever, ProductTailoringAttributeTypeRetriever attributeTypeRetriever, ISerializerService serializerService)
         {
             this._mapperTypeRetriever = mapperTypeRetriever;
             this._attributeTypeRetriever = attributeTypeRetriever;
@@ -25,13 +25,13 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
 
         public override bool CanConvert(Type typeToConvert)
         {
-            return typeof(IAttribute).IsAssignableFrom(typeToConvert) && !typeof(IProductTailoringAttribute).IsAssignableFrom(typeToConvert);
+            return typeof(IProductTailoringAttribute).IsAssignableFrom(typeToConvert);
         }
 
-        public override IAttribute Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override IProductTailoringAttribute Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var jsonDocument = JsonDocument.ParseValue(ref reader);
-            IAttribute attribute;
+            IProductTailoringAttribute attribute;
             var rootElement = jsonDocument.RootElement;
             if (rootElement.ValueKind == JsonValueKind.Object)
             {
@@ -47,13 +47,13 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             }
             else
             {
-                attribute = new Attribute();
+                attribute = new ProductTailoringAttribute();
             }
 
             return attribute;
         }
 
-        public override void Write(Utf8JsonWriter writer, IAttribute value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, IProductTailoringAttribute value, JsonSerializerOptions options)
         {
             writer.WriteStartObject();
             writer.WriteString("name", value.Name);
