@@ -1,4 +1,31 @@
 
+# 12.7.0 (2025-02-27)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/408
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/409
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/410
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/411
+* [DEVX-551] add json converter for ProductTailoringAttributes by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/413
+
+**History changes**
+
+<details>
+<summary>Removed Enum(s)</summary>
+
+- :warning: removed enum `setAsssetKey` from type `UpdateType`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `setAssetKey` to type `UpdateType`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.6.0...12.7.0
+
 # 12.6.0 (2025-02-13)
 
 ## What's Changed
