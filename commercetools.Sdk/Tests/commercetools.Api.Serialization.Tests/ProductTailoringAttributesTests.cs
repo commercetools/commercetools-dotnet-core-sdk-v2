@@ -6,7 +6,6 @@ using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Extensions;
-using commercetools.Sdk.Api.Models.Messages;
 using commercetools.Sdk.Api.Models.ProductTailorings;
 using commercetools.Sdk.Api.Serialization;
 using Microsoft.Extensions.DependencyInjection;

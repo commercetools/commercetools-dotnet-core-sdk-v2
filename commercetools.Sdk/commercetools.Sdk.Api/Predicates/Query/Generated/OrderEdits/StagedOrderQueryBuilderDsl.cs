@@ -402,6 +402,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
             return new CollectionPredicateBuilder<StagedOrderQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("returnInfo")),
                     p => new CombinationQueryPredicate<StagedOrderQueryBuilderDsl>(p, StagedOrderQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> DiscountTypeCombination(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountTypeCombinationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountTypeCombinationQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("discountTypeCombination"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.DiscountTypeCombinationQueryBuilderDsl.Of())),
+                StagedOrderQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<StagedOrderQueryBuilderDsl, long> LastMessageSequenceNumber()
         {
             return new ComparisonPredicateBuilder<StagedOrderQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lastMessageSequenceNumber")),

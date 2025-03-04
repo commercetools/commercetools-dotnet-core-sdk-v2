@@ -1,5 +1,3 @@
-using System;
-using commercetools.Base.CustomAttributes;
 using commercetools.Sdk.Api.Models.Products;
 
 // ReSharper disable CheckNamespace

@@ -13,7 +13,7 @@ namespace commercetools.Sdk.Api.Extensions
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
         }
-        
+
         public static IProductTailoringAttribute Get(this IList<IProductTailoringAttribute> attributes, string name)
         {
             return attributes.FirstOrDefault(a => a.Name.Equals(name));
@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Extensions
             }
             return (T)t;
         }
-        
+
         public static T Get<T>(this IList<IProductTailoringAttribute> attributes, string name) where T : IProductTailoringAttribute
         {
             var t = attributes.FirstOrDefault(a => a.Name.Equals(name));

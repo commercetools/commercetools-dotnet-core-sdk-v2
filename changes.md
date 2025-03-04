@@ -1,15 +1,19 @@
-**History changes**
+**Api changes**
 
 <details>
-<summary>Removed Enum(s)</summary>
+<summary>Added Type(s)</summary>
 
-- :warning: removed enum `setAsssetKey` from type `UpdateType`
+- added type `BestDeal`
+- added type `DiscountTypeCombination`
+- added type `Stacking`
 </details>
 
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Added Property(s)</summary>
 
-- added enum `setAssetKey` to type `UpdateType`
+- added property `discountTypeCombination` to type `Cart`
+- added property `discountTypeCombination` to type `StagedOrder`
+- added property `discountTypeCombination` to type `Order`
 </details>
 
