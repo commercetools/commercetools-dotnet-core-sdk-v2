@@ -1,11 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using commercetools.Sdk.Api.Models.Common;
-using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
-using commercetools.Base.Validation;
 using commercetools.Sdk.Api.Models.ProductTailorings;
 using Type = System.Type;
 

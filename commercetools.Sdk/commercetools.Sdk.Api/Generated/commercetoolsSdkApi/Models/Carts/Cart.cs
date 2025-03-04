@@ -108,6 +108,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ICustomFields Custom { get; set; }
 
+        public IDiscountTypeCombination DiscountTypeCombination { get; set; }
+
         public int? DeleteDaysAfterLastModification { get; set; }
 
         public ILastModifiedBy LastModifiedBy { get; set; }

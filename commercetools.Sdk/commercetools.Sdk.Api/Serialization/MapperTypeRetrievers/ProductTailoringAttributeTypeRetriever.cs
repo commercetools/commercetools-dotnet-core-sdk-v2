@@ -4,7 +4,6 @@ using System.Text.Json;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.ProductTypes;
-using commercetools.Base.Validation;
 using commercetools.Sdk.Api.Models.ProductTailorings;
 using Attribute = commercetools.Sdk.Api.Models.Products.Attribute;
 
@@ -126,7 +125,7 @@ namespace commercetools.Sdk.Api.Serialization.MapperTypeRetrievers
 
             return tokenType;
         }
-        
+
         public IProductTailoringAttribute GetAttribute(String attributeName, JsonElement element)
         {
             if (_serializationConfiguration.AttributeTypeMap.TryGetValue(attributeName, out var mappedType))

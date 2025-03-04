@@ -127,6 +127,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
 
         public IEnumerable<IReturnInfo> ReturnInfoEnumerable { set => ReturnInfo = value.ToList(); }
 
+        public IDiscountTypeCombination DiscountTypeCombination { get; set; }
+
         [ObsoleteAttribute("This property is obsolete", false)]
         public long? LastMessageSequenceNumber { get; set; }
 
