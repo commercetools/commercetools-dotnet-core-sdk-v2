@@ -1,4 +1,4 @@
-
+using System;
 
 namespace commercetools.Sdk.Api.Models.CartDiscounts
 {
@@ -13,6 +13,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         public int? MaxCount { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public int? ExcludeCount { get; set; }
         public CountOnCustomLineItemUnits()
         {

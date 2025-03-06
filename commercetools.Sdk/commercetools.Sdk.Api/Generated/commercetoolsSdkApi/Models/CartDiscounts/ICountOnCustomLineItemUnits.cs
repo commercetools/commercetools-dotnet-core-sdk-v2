@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.CartDiscounts
@@ -11,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
 
         int? MaxCount { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         int? ExcludeCount { get; set; }
 
     }
