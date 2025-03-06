@@ -47,6 +47,16 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             return new ByProjectKeyBusinessUnitsByIDRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
         }
 
+        public ByProjectKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder KeyWithKeyValueAssociatesWithAssociateIdValue(string key, string associateId)
+        {
+            return new ByProjectKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, key, associateId);
+        }
+
+        public ByProjectKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder WithBusinessUnitIdValueAssociatesWithAssociateIdValue(string businessUnitId, string associateId)
+        {
+            return new ByProjectKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, businessUnitId, associateId);
+        }
+
         public ByProjectKeyBusinessUnitsSearchRequestBuilder Search()
         {
             return new ByProjectKeyBusinessUnitsSearchRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
