@@ -166,6 +166,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderBillingAddressSetMessageQueryBuilderDsl.Of()),
                 OrderMessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderBusinessUnitSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderBusinessUnitSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderBusinessUnitSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderBusinessUnitSetMessageQueryBuilderDsl.Of()),
+                OrderMessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> AsOrderCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedMessageQueryBuilderDsl>> fn)
         {

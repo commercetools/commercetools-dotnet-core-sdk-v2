@@ -124,6 +124,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetBillingAddressCustomTypeActionQueryBuilderDsl.Of()),
                 OrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetBusinessUnit(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetBusinessUnitActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetBusinessUnitActionQueryBuilderDsl.Of()),
+                OrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetCustomFieldActionQueryBuilderDsl>> fn)
         {
