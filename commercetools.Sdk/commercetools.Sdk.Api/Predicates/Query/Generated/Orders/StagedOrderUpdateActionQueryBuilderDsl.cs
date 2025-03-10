@@ -202,6 +202,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetBillingAddressCustomTypeActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetBusinessUnit(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetBusinessUnitActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetBusinessUnitActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetCountry(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetCountryActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetCountryActionQueryBuilderDsl>> fn)
         {

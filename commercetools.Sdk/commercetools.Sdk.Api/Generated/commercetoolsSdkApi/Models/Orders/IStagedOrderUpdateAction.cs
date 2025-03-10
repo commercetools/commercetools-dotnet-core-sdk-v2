@@ -35,6 +35,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressAction))]
     [SubTypeDiscriminator("setBillingAddressCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setBillingAddressCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressCustomTypeAction))]
+    [SubTypeDiscriminator("setBusinessUnit", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBusinessUnitAction))]
     [SubTypeDiscriminator("setCountry", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetCountryAction))]
     [SubTypeDiscriminator("setCustomerEmail", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetCustomerEmailAction))]
     [SubTypeDiscriminator("setCustomerGroup", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetCustomerGroupAction))]
@@ -276,6 +277,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressCustomTypeAction SetBillingAddressCustomType(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBillingAddressCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBusinessUnitAction SetBusinessUnit(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBusinessUnitAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetBusinessUnitAction();
             init?.Invoke(t);
             return t;
         }
