@@ -1,6 +1,5 @@
 #nullable enable
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
 
@@ -8,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.Common;
 
 public partial class LocalizedString
 {
-    public LocalizedString(): base()
+    public LocalizedString() : base()
     {
     }
 
@@ -43,7 +42,7 @@ public partial class LocalizedString
     protected LocalizedString(SerializationInfo info, StreamingContext context) : base(info, context)
     {
     }
-    
+
     /**
      * Creates an instance with one locale translation pair.
     */
@@ -51,7 +50,7 @@ public partial class LocalizedString
     {
         this.Add(locale, value);
     }
-    
+
     /**
      * Creates an instance for two different locales.
      */
@@ -60,7 +59,7 @@ public partial class LocalizedString
         this.Add(locale1, value1);
         this.Add(locale2, value2);
     }
-    
+
     public LocalizedString Plus(string locale, string value)
     {
         return new LocalizedString(this.Append(new KeyValuePair<string, string>(locale, value)));
@@ -77,11 +76,12 @@ public partial class LocalizedString
     public string? Find(IEnumerable<string> locales)
     {
         var firstOrDefault = locales.FirstOrDefault(this.ContainsKey);
-        
+
         return this.GetValueOrDefault(firstOrDefault);
     }
-    
-    public static LocalizedString OfEnglish(string translationForEnglish) {
-         return new LocalizedString("en", translationForEnglish);
-     }
+
+    public static LocalizedString OfEnglish(string translationForEnglish)
+    {
+        return new LocalizedString("en", translationForEnglish);
+    }
 }

@@ -125,7 +125,31 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         UpdateApprovalRules,
 
         [Description("UpdateApprovalFlows")]
-        UpdateApprovalFlows
+        UpdateApprovalFlows,
+
+        [Description("ViewMyShoppingLists")]
+        ViewMyShoppingLists,
+
+        [Description("ViewOthersShoppingLists")]
+        ViewOthersShoppingLists,
+
+        [Description("UpdateMyShoppingLists")]
+        UpdateMyShoppingLists,
+
+        [Description("UpdateOthersShoppingLists")]
+        UpdateOthersShoppingLists,
+
+        [Description("CreateMyShoppingLists")]
+        CreateMyShoppingLists,
+
+        [Description("CreateOthersShoppingLists")]
+        CreateOthersShoppingLists,
+
+        [Description("DeleteMyShoppingLists")]
+        DeleteMyShoppingLists,
+
+        [Description("DeleteOthersShoppingLists")]
+        DeleteOthersShoppingLists
     }
 
     public class PermissionWrapper : IPermission
@@ -268,6 +292,30 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
         public static IPermission UpdateApprovalFlows = new PermissionWrapper
         { Value = Permission.UpdateApprovalFlows, JsonName = "UpdateApprovalFlows" };
 
+        public static IPermission ViewMyShoppingLists = new PermissionWrapper
+        { Value = Permission.ViewMyShoppingLists, JsonName = "ViewMyShoppingLists" };
+
+        public static IPermission ViewOthersShoppingLists = new PermissionWrapper
+        { Value = Permission.ViewOthersShoppingLists, JsonName = "ViewOthersShoppingLists" };
+
+        public static IPermission UpdateMyShoppingLists = new PermissionWrapper
+        { Value = Permission.UpdateMyShoppingLists, JsonName = "UpdateMyShoppingLists" };
+
+        public static IPermission UpdateOthersShoppingLists = new PermissionWrapper
+        { Value = Permission.UpdateOthersShoppingLists, JsonName = "UpdateOthersShoppingLists" };
+
+        public static IPermission CreateMyShoppingLists = new PermissionWrapper
+        { Value = Permission.CreateMyShoppingLists, JsonName = "CreateMyShoppingLists" };
+
+        public static IPermission CreateOthersShoppingLists = new PermissionWrapper
+        { Value = Permission.CreateOthersShoppingLists, JsonName = "CreateOthersShoppingLists" };
+
+        public static IPermission DeleteMyShoppingLists = new PermissionWrapper
+        { Value = Permission.DeleteMyShoppingLists, JsonName = "DeleteMyShoppingLists" };
+
+        public static IPermission DeleteOthersShoppingLists = new PermissionWrapper
+        { Value = Permission.DeleteOthersShoppingLists, JsonName = "DeleteOthersShoppingLists" };
+
         Permission? Value { get; }
 
         static IPermission[] Values()
@@ -312,7 +360,15 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
                  CreateQuoteRequestsFromOthersCarts ,
                  CreateApprovalRules ,
                  UpdateApprovalRules ,
-                 UpdateApprovalFlows
+                 UpdateApprovalFlows ,
+                 ViewMyShoppingLists ,
+                 ViewOthersShoppingLists ,
+                 UpdateMyShoppingLists ,
+                 UpdateOthersShoppingLists ,
+                 CreateMyShoppingLists ,
+                 CreateOthersShoppingLists ,
+                 DeleteMyShoppingLists ,
+                 DeleteOthersShoppingLists
              };
         }
         static IPermission FindEnum(string value)
