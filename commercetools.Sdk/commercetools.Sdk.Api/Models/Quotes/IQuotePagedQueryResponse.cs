@@ -1,6 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Quotes;
 
-public partial interface IQuotePagedQueryResponse: IResourcePagedQueryResponse<IQuote>
+public partial interface IQuotePagedQueryResponse : IResourcePagedQueryResponse<IQuote>
 {
-    
+
 }

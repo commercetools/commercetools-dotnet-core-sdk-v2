@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace commercetools.Sdk.Api.Models;
 
-public interface IResourcePagedQueryResponse<T>: IResourceQueryResponse<T>
+public interface IResourcePagedQueryResponse<T> : IResourceQueryResponse<T>
 {
     public long Limit { get; set; }
 

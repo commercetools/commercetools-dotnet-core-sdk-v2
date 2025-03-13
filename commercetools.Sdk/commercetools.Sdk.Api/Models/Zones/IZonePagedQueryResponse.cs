@@ -1,6 +1,6 @@
 namespace commercetools.Sdk.Api.Models.Zones;
 
-public partial interface IZonePagedQueryResponse: IResourcePagedQueryResponse<IZone>
+public partial interface IZonePagedQueryResponse : IResourcePagedQueryResponse<IZone>
 {
-    
+
 }

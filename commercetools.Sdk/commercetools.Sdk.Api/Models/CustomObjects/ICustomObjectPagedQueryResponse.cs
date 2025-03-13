@@ -1,6 +1,6 @@
 namespace commercetools.Sdk.Api.Models.CustomObjects;
 
-public partial interface ICustomObjectPagedQueryResponse: IResourcePagedQueryResponse<ICustomObject>
+public partial interface ICustomObjectPagedQueryResponse : IResourcePagedQueryResponse<ICustomObject>
 {
-    
+
 }
