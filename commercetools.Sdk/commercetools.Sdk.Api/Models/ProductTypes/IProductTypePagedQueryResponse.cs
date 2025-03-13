@@ -1,6 +1,6 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes;
 
-public partial interface IProductTypePagedQueryResponse: IResourcePagedQueryResponse<IProductType>
+public partial interface IProductTypePagedQueryResponse : IResourcePagedQueryResponse<IProductType>
 {
-    
+
 }
