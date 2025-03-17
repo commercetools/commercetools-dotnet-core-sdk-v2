@@ -1,4 +1,14 @@
 
+# 12.9.0 (2025-03-17)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/425
+* add interface for paged response types by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/427
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/428
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.8.0...12.9.0
+
 # 12.8.0 (2025-03-12)
 
 ## What's Changed
