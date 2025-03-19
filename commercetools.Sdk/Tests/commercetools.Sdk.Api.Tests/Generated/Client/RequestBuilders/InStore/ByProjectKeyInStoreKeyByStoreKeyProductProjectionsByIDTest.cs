@@ -74,6 +74,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ProductProjections()
                    .WithId("test_ID")
                    .Get()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithId("test_ID")
+                   .Get()
                    .WithPriceChannel("priceChannel")
                    .Build(),
                    "Get",

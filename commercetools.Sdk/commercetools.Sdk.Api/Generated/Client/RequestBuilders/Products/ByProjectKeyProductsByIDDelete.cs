@@ -46,6 +46,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("priceCustomerGroup");
         }
 
+        public List<string> GetPriceCustomerGroupAssignments()
+        {
+            return this.GetQueryParam("priceCustomerGroupAssignments");
+        }
+
         public List<string> GetPriceChannel()
         {
             return this.GetQueryParam("priceChannel");
@@ -74,6 +79,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsByIDDelete WithPriceCustomerGroup(string priceCustomerGroup)
         {
             return this.AddQueryParam("priceCustomerGroup", priceCustomerGroup);
+        }
+
+        public ByProjectKeyProductsByIDDelete WithPriceCustomerGroupAssignments(string priceCustomerGroupAssignments)
+        {
+            return this.AddQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
         }
 
         public ByProjectKeyProductsByIDDelete WithPriceChannel(string priceChannel)

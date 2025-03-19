@@ -87,6 +87,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerEmailTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailTokenCreatedMessagePayload))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessagePayload))]
     [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentsSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessagePayload))]
@@ -745,6 +748,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessagePayload CustomerGroupAssignmentAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessagePayload CustomerGroupAssignmentRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessagePayload CustomerGroupAssignmentsSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

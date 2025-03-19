@@ -81,5 +81,9 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         IAuthenticationMode AuthenticationMode { get; set; }
 
+        IList<ICustomerGroupAssignment> CustomerGroupAssignments { get; set; }
+
+        IEnumerable<ICustomerGroupAssignment> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
+
     }
 }

@@ -53,6 +53,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("priceCustomerGroup");
         }
 
+        public List<string> GetPriceCustomerGroupAssignments()
+        {
+            return this.GetQueryParam("priceCustomerGroupAssignments");
+        }
+
         public List<string> GetPriceChannel()
         {
             return this.GetQueryParam("priceChannel");
@@ -86,6 +91,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithPriceCustomerGroup(string priceCustomerGroup)
         {
             return this.AddQueryParam("priceCustomerGroup", priceCustomerGroup);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithPriceCustomerGroupAssignments(string priceCustomerGroupAssignments)
+        {
+            return this.AddQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithPriceChannel(string priceChannel)

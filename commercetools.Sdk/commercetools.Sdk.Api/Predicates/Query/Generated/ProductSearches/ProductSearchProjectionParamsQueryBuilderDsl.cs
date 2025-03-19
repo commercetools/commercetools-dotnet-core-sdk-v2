@@ -43,6 +43,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
             p => new CombinationQueryPredicate<ProductSearchProjectionParamsQueryBuilderDsl>(p, ProductSearchProjectionParamsQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparableCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string> PriceCustomerGroupAssignments()
+        {
+            return new ComparableCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceCustomerGroupAssignments")),
+            p => new CombinationQueryPredicate<ProductSearchProjectionParamsQueryBuilderDsl>(p, ProductSearchProjectionParamsQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string> PriceChannel()
         {
             return new ComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceChannel")),

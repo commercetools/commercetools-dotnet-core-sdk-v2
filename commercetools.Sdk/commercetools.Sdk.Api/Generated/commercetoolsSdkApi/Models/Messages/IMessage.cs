@@ -88,6 +88,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerEmailTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailTokenCreatedMessage))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessage))]
     [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessage))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessage))]
+    [SubTypeDiscriminator("CustomerGroupAssignmentsSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessage))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldAddedMessage))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldChangedMessage))]
     [SubTypeDiscriminator("CustomerGroupCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupCustomFieldRemovedMessage))]
@@ -765,6 +768,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessage CustomerGroupAssignmentAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessage CustomerGroupAssignmentRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessage CustomerGroupAssignmentsSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentsSetMessage();
             init?.Invoke(t);
             return t;
         }

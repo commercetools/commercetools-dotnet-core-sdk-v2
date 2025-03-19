@@ -75,5 +75,9 @@ namespace commercetools.Sdk.Api.Models.Customers
         public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
         public IAuthenticationMode AuthenticationMode { get; set; }
+
+        public IList<ICustomerGroupAssignmentDraft> CustomerGroupAssignments { get; set; }
+
+        public IEnumerable<ICustomerGroupAssignmentDraft> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
     }
 }
