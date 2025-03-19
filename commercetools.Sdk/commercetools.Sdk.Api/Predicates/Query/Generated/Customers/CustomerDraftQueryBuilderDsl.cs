@@ -201,6 +201,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             p => new CombinationQueryPredicate<CustomerDraftQueryBuilderDsl>(p, CustomerDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<CustomerDraftQueryBuilderDsl> CustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomerDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl.Of())),
+                CustomerDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CustomerDraftQueryBuilderDsl> CustomerGroupAssignments()
+        {
+            return new CollectionPredicateBuilder<CustomerDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
+                    p => new CombinationQueryPredicate<CustomerDraftQueryBuilderDsl>(p, CustomerDraftQueryBuilderDsl.Of));
+        }
 
     }
 }

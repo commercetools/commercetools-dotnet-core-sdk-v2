@@ -19,6 +19,10 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
         string PriceCustomerGroup { get; set; }
 
+        IList<string> PriceCustomerGroupAssignments { get; set; }
+
+        IEnumerable<string> PriceCustomerGroupAssignmentsEnumerable { set => PriceCustomerGroupAssignments = value.ToList(); }
+
         string PriceChannel { get; set; }
 
         IList<string> LocaleProjection { get; set; }

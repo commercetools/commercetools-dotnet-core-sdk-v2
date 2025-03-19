@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddBillingAddressIdActionQueryBuilderDsl.Of()),
                 CustomerUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsAddCustomerGroupAssignment(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl.Of()),
+                CustomerUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsAddShippingAddressId(
             Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddShippingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerAddShippingAddressIdActionQueryBuilderDsl>> fn)
         {
@@ -68,6 +74,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveBillingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveBillingAddressIdActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveBillingAddressIdActionQueryBuilderDsl.Of()),
+                CustomerUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsRemoveCustomerGroupAssignment(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl.Of()),
                 CustomerUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsRemoveShippingAddressId(
@@ -122,6 +134,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupActionQueryBuilderDsl.Of()),
+                CustomerUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsSetCustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl.Of()),
                 CustomerUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> AsSetCustomerNumber(

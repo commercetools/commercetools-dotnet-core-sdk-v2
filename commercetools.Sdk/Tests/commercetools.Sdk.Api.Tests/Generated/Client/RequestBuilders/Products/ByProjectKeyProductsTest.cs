@@ -64,6 +64,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Get()
                    .WithPriceChannel("priceChannel")
                    .Build(),
                    "Get",
@@ -186,6 +196,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products?priceCustomerGroup=priceCustomerGroup",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Post(null)
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/products?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
                },
                new Object[] {
                    ApiRoot
