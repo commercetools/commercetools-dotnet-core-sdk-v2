@@ -28,6 +28,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             this.RequestUrl = $"/{ProjectKey}/product-tailoring";
         }
 
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -48,14 +53,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             return this.GetQueryParam("offset");
         }
 
-        public List<string> GetWithTotal()
-        {
-            return this.GetQueryParam("withTotal");
-        }
-
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
+        }
+
+        public ByProjectKeyProductTailoringGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyProductTailoringGet WithExpand(string expand)
@@ -76,11 +81,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
         public ByProjectKeyProductTailoringGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
-        }
-
-        public ByProjectKeyProductTailoringGet WithWithTotal(bool withTotal)
-        {
-            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyProductTailoringGet WithWhere(string where)

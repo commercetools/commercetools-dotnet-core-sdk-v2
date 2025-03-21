@@ -26,6 +26,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithKey("test_key")
                    .ProductSelections()
                    .Get()
+                   .WithWithTotal(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products/key=test_key/product-selections?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithKey("test_key")
+                   .ProductSelections()
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -66,18 +78,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Get",
                    "/test_projectKey/products/key=test_key/product-selections?offset=3",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .Products()
-                   .WithKey("test_key")
-                   .ProductSelections()
-                   .Get()
-                   .WithWithTotal(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/products/key=test_key/product-selections?withTotal=true",
                },
                new Object[] {
                    ApiRoot
