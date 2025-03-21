@@ -31,6 +31,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.RequestUrl = $"/{ProjectKey}/products/key={Key}/product-selections";
         }
 
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -51,14 +56,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("offset");
         }
 
-        public List<string> GetWithTotal()
-        {
-            return this.GetQueryParam("withTotal");
-        }
-
         public List<string> GetWhere()
         {
             return this.GetQueryParam("where");
+        }
+
+        public ByProjectKeyProductsKeyByKeyProductSelectionsGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyProductsKeyByKeyProductSelectionsGet WithExpand(string expand)
@@ -79,11 +84,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsKeyByKeyProductSelectionsGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
-        }
-
-        public ByProjectKeyProductsKeyByKeyProductSelectionsGet WithWithTotal(bool withTotal)
-        {
-            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyProductsKeyByKeyProductSelectionsGet WithWhere(string where)

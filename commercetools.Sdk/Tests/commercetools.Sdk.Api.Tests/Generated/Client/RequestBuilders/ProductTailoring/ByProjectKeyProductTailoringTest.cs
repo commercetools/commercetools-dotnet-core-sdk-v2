@@ -24,6 +24,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductTailoring
                    .WithProjectKey("test_projectKey")
                    .ProductTailoring()
                    .Get()
+                   .WithWithTotal(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-tailoring?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductTailoring()
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -58,16 +68,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductTailoring
                    .Build(),
                    "Get",
                    "/test_projectKey/product-tailoring?offset=3",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductTailoring()
-                   .Get()
-                   .WithWithTotal(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-tailoring?withTotal=true",
                },
                new Object[] {
                    ApiRoot
