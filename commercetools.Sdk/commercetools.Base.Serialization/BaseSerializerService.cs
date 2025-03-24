@@ -27,7 +27,6 @@ namespace commercetools.Base.Serialization
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new TypeDiscriminatorConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
-            _serializerOptions.Converters.Add(new CustomObjectConverter<Money>());
         }
 
         public T Deserialize<T>(string input)
