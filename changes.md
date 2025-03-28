@@ -21,6 +21,13 @@
 
 
 <details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/search`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `CustomerGroupAssignment`
@@ -34,6 +41,13 @@
 - added type `CustomerGroupAssignmentAddedMessagePayload`
 - added type `CustomerGroupAssignmentRemovedMessagePayload`
 - added type `CustomerGroupAssignmentsSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `facets` of type `ProductProjectionPagedSearchResponse` to be optional
 </details>
 
 

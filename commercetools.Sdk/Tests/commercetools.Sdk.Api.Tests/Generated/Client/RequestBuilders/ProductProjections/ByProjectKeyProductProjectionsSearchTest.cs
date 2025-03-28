@@ -35,6 +35,28 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
+                   .WithMarkMatchingVariants(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/search?markMatchingVariants=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Search()
+                   .Get()
+                   .WithText("locale", "text.locale")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/search?text.locale=text.locale",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Search()
+                   .Get()
                    .WithFuzzy(true)
                    .Build(),
                    "Get",
@@ -57,10 +79,10 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithMarkMatchingVariants(true)
+                   .WithFilterQuery("filter.query")
                    .Build(),
                    "Get",
-                   "/test_projectKey/product-projections/search?markMatchingVariants=true",
+                   "/test_projectKey/product-projections/search?filter.query=filter.query",
                },
                new Object[] {
                    ApiRoot
@@ -79,28 +101,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithFilterFacets("filter.facets")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?filter.facets=filter.facets",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
-                   .WithFilterQuery("filter.query")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?filter.query=filter.query",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
                    .WithFacet("facet")
                    .Build(),
                    "Get",
@@ -112,10 +112,21 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .Search()
                    .Get()
-                   .WithText("locale", "text.locale")
+                   .WithFilterFacets("filter.facets")
                    .Build(),
                    "Get",
-                   "/test_projectKey/product-projections/search?text.locale=text.locale",
+                   "/test_projectKey/product-projections/search?filter.facets=filter.facets",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Search()
+                   .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/search?expand=expand",
                },
                new Object[] {
                    ApiRoot
@@ -149,17 +160,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?offset=3",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
-                   .WithWithTotal(true)
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?withTotal=true",
                },
                new Object[] {
                    ApiRoot
@@ -248,17 +248,6 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .Build(),
                    "Get",
                    "/test_projectKey/product-projections/search?storeProjection=storeProjection",
-               },
-               new Object[] {
-                   ApiRoot
-                   .WithProjectKey("test_projectKey")
-                   .ProductProjections()
-                   .Search()
-                   .Get()
-                   .WithExpand("expand")
-                   .Build(),
-                   "Get",
-                   "/test_projectKey/product-projections/search?expand=expand",
                },
                new Object[] {
                    ApiRoot

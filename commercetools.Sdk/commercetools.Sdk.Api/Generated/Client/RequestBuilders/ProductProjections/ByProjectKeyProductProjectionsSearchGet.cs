@@ -10,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 
-    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IStoreprojectingtailoringTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
+    public partial class ByProjectKeyProductProjectionsSearchGet : ApiMethod<ByProjectKeyProductProjectionsSearchGet>, IApiMethod<ByProjectKeyProductProjectionsSearchGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IStoreprojectingtailoringTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsSearchGet>
     {
 
 
@@ -28,6 +28,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             this.RequestUrl = $"/{ProjectKey}/product-projections/search";
         }
 
+        public List<string> GetMarkMatchingVariants()
+        {
+            return this.GetQueryParam("markMatchingVariants");
+        }
+
         public List<string> GetFuzzy()
         {
             return this.GetQueryParam("fuzzy");
@@ -38,9 +43,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("fuzzyLevel");
         }
 
-        public List<string> GetMarkMatchingVariants()
+        public List<string> GetFilterQuery()
         {
-            return this.GetQueryParam("markMatchingVariants");
+            return this.GetQueryParam("filter.query");
         }
 
         public List<string> GetFilter()
@@ -48,19 +53,19 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("filter");
         }
 
+        public List<string> GetFacet()
+        {
+            return this.GetQueryParam("facet");
+        }
+
         public List<string> GetFilterFacets()
         {
             return this.GetQueryParam("filter.facets");
         }
 
-        public List<string> GetFilterQuery()
+        public List<string> GetExpand()
         {
-            return this.GetQueryParam("filter.query");
-        }
-
-        public List<string> GetFacet()
-        {
-            return this.GetQueryParam("facet");
+            return this.GetQueryParam("expand");
         }
 
         public List<string> GetSort()
@@ -76,11 +81,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public List<string> GetOffset()
         {
             return this.GetQueryParam("offset");
-        }
-
-        public List<string> GetWithTotal()
-        {
-            return this.GetQueryParam("withTotal");
         }
 
         public List<string> GetStaged()
@@ -123,9 +123,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.GetQueryParam("storeProjection");
         }
 
-        public List<string> GetExpand()
+        public ByProjectKeyProductProjectionsSearchGet WithMarkMatchingVariants(bool markMatchingVariants)
         {
-            return this.GetQueryParam("expand");
+            return this.AddQueryParam("markMatchingVariants", markMatchingVariants.ToString());
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithFuzzy(bool fuzzy)
@@ -138,9 +138,9 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("fuzzyLevel", fuzzyLevel.ToString(CultureInfo.InvariantCulture));
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithMarkMatchingVariants(bool markMatchingVariants)
+        public ByProjectKeyProductProjectionsSearchGet WithFilterQuery(string filterQuery)
         {
-            return this.AddQueryParam("markMatchingVariants", markMatchingVariants.ToString());
+            return this.AddQueryParam("filter.query", filterQuery);
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithFilter(string filter)
@@ -148,19 +148,19 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return this.AddQueryParam("filter", filter);
         }
 
+        public ByProjectKeyProductProjectionsSearchGet WithFacet(string facet)
+        {
+            return this.AddQueryParam("facet", facet);
+        }
+
         public ByProjectKeyProductProjectionsSearchGet WithFilterFacets(string filterFacets)
         {
             return this.AddQueryParam("filter.facets", filterFacets);
         }
 
-        public ByProjectKeyProductProjectionsSearchGet WithFilterQuery(string filterQuery)
+        public ByProjectKeyProductProjectionsSearchGet WithExpand(string expand)
         {
-            return this.AddQueryParam("filter.query", filterQuery);
-        }
-
-        public ByProjectKeyProductProjectionsSearchGet WithFacet(string facet)
-        {
-            return this.AddQueryParam("facet", facet);
+            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithSort(string sort)
@@ -176,11 +176,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsSearchGet WithOffset(long offset)
         {
             return this.AddQueryParam("offset", offset.ToString(CultureInfo.InvariantCulture));
-        }
-
-        public ByProjectKeyProductProjectionsSearchGet WithWithTotal(bool withTotal)
-        {
-            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithStaged(bool staged)
@@ -221,11 +216,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsSearchGet WithStoreProjection(string storeProjection)
         {
             return this.AddQueryParam("storeProjection", storeProjection);
-        }
-
-        public ByProjectKeyProductProjectionsSearchGet WithExpand(string expand)
-        {
-            return this.AddQueryParam("expand", expand);
         }
 
         public ByProjectKeyProductProjectionsSearchGet WithText(string locale, string text)
