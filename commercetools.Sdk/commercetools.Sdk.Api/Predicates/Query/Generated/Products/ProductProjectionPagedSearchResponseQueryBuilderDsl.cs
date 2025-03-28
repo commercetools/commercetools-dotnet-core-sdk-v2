@@ -21,6 +21,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             p => new CombinationQueryPredicate<ProductProjectionPagedSearchResponseQueryBuilderDsl>(p, ProductProjectionPagedSearchResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long> Offset()
+        {
+            return new ComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
+            p => new CombinationQueryPredicate<ProductProjectionPagedSearchResponseQueryBuilderDsl>(p, ProductProjectionPagedSearchResponseQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long> Count()
         {
             return new ComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("count")),
@@ -30,12 +36,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
         public IComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long> Total()
         {
             return new ComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("total")),
-            p => new CombinationQueryPredicate<ProductProjectionPagedSearchResponseQueryBuilderDsl>(p, ProductProjectionPagedSearchResponseQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
-        public IComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long> Offset()
-        {
-            return new ComparisonPredicateBuilder<ProductProjectionPagedSearchResponseQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("offset")),
             p => new CombinationQueryPredicate<ProductProjectionPagedSearchResponseQueryBuilderDsl>(p, ProductProjectionPagedSearchResponseQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
