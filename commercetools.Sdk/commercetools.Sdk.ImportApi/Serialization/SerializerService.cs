@@ -19,6 +19,7 @@ namespace commercetools.Sdk.ImportApi.Serialization
 
             };
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
+            _serializerOptions.Converters.Add(new CustomDateConverter());
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
             _serializerOptions.Converters.Add(new EnumAsInterfaceConverterFactory(
