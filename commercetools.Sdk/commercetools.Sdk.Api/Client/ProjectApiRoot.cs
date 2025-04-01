@@ -46,7 +46,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring;
 
 namespace commercetools.Sdk.Api.Client
 {
-    public class ProjectApiRoot
+    public class ProjectApiRoot : IProjectApiRoot
     {
         public string ClientName { get; }
         public string ProjectKey { get; }
