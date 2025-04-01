@@ -18,13 +18,13 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 
 namespace commercetools.Sdk.ImportApi.Client
 {
-    public class ProjectApiRoot
+    public class ProjectApiRoot : IProjectApiRoot
     {
         public string ClientName { get; }
 
-        private string ProjectKey { get; }
+        public string ProjectKey { get; }
 
-        private IClient ApiHttpClient { get; }
+        public IClient ApiHttpClient { get; }
 
         public ProjectApiRoot(IClient apiHttpClient, string projectKey)
         {
@@ -33,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Client
             this.ClientName = apiHttpClient.Name;
         }
 
-        private ByProjectKeyRequestBuilder With()
+        public ByProjectKeyRequestBuilder With()
         {
             return new ImportApiRoot(ApiHttpClient).WithProjectKeyValue(ProjectKey);
         }
