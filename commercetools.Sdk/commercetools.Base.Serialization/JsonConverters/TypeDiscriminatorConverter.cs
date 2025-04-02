@@ -19,7 +19,7 @@ namespace commercetools.Base.Serialization.JsonConverters
             if (DiscriminatorAttribute == null)
                 throw new NullReferenceException($"Failed to find the required '{nameof(TypeDiscriminatorAttribute)}'");
             this.DiscriminatorProperty = typeof(T).GetProperty(DiscriminatorAttribute.Property,
-                BindingFlags.Default | BindingFlags.Public | BindingFlags.Instance);
+                BindingFlags.Default | BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy);
             if (this.DiscriminatorProperty == null)
                 throw new NullReferenceException(
                     $"Failed to find the specified discriminator property '{DiscriminatorAttribute.Property}' in type '{typeof(T).Name}'");

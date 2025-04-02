@@ -27,7 +27,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         public override bool CanConvert(Type typeToConvert)
         {
             return (typeToConvert.IsAbstractClass() || typeToConvert.IsInterface)
-                   && typeToConvert.IsDefined(typeof(DeserializeAsAttribute));
+                   && typeToConvert.IsDefined(typeof(DeserializeAsAttribute)) && !typeToConvert.IsDefined(typeof(TypeDiscriminatorAttribute));
         }
 
         /// <inheritdoc/>
