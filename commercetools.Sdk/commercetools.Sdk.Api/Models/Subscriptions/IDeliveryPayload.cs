@@ -9,7 +9,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions;
 [SubTypeDiscriminator("ResourceDeleted", typeof(commercetools.Sdk.Api.Models.Subscriptions.ResourceDeletedDeliveryPayload))]
 [SubTypeDiscriminator("ResourceUpdated", typeof(commercetools.Sdk.Api.Models.Subscriptions.ResourceUpdatedDeliveryPayload))]
 public partial interface IDeliveryPayload
-{ 
+{
     new string NotificationType { get; set; }
 
 }

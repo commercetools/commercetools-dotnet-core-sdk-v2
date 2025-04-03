@@ -15,15 +15,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
             return new ResourceCreatedDeliveryPayloadQueryBuilderDsl();
         }
 
-        public IComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string> ProjectKey()
-        {
-            return new ComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("projectKey")),
-            p => new CombinationQueryPredicate<ResourceCreatedDeliveryPayloadQueryBuilderDsl>(p, ResourceCreatedDeliveryPayloadQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
-        }
         public IComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string> NotificationType()
         {
             return new ComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("notificationType")),
+            p => new CombinationQueryPredicate<ResourceCreatedDeliveryPayloadQueryBuilderDsl>(p, ResourceCreatedDeliveryPayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string> ProjectKey()
+        {
+            return new ComparisonPredicateBuilder<ResourceCreatedDeliveryPayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("projectKey")),
             p => new CombinationQueryPredicate<ResourceCreatedDeliveryPayloadQueryBuilderDsl>(p, ResourceCreatedDeliveryPayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

@@ -7,9 +7,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
     public partial class ResourceDeletedDeliveryPayload : IResourceDeletedDeliveryPayload
     {
-        public string ProjectKey { get; set; }
-
         public string NotificationType { get; set; }
+
+        public string ProjectKey { get; set; }
 
         public IReference Resource { get; set; }
 

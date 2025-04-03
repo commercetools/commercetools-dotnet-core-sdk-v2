@@ -56,6 +56,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
             return new CollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("messages")),
                     p => new CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl>(p, SubscriptionDraftQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl> Events(
+            Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.EventSubscriptionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.EventSubscriptionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("events"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Subscriptions.EventSubscriptionQueryBuilderDsl.Of())),
+                SubscriptionDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl> Events()
+        {
+            return new CollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("events")),
+                    p => new CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl>(p, SubscriptionDraftQueryBuilderDsl.Of));
+        }
         public CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl> Format(
             Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.DeliveryFormatQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.DeliveryFormatQueryBuilderDsl>> fn)
         {
