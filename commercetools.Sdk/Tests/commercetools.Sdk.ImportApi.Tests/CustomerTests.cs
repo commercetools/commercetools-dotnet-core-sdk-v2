@@ -13,7 +13,7 @@ public class CustomerTests
     {
         var s = new ServiceCollection();
         s.UseCommercetoolsImportApiSerialization();
-        
+
         var p = s.BuildServiceProvider();
         var serializerService = p.GetService<IImportSerializerService>();
 
@@ -21,7 +21,7 @@ public class CustomerTests
         {
             DateOfBirth = new Date(1980, 01, 01),
         };
-        
+
         var t = serializerService.Serialize(customerImport);
 
         Assert.Equal("{\"dateOfBirth\":\"1980-01-01\"}", t);

@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
             return new CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetChangesActionQueryBuilderDsl.Of()),
                 SubscriptionUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl> AsSetEvents(
+            Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetEventsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetEventsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetEventsActionQueryBuilderDsl.Of()),
+                SubscriptionUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<SubscriptionUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.SubscriptionSetKeyActionQueryBuilderDsl>> fn)
         {

@@ -60,6 +60,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitStoreModeChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreModeChangedMessage))]
     [SubTypeDiscriminator("BusinessUnitStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoreRemovedMessage))]
     [SubTypeDiscriminator("BusinessUnitStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage))]
+    [SubTypeDiscriminator("BusinessUnitTopLevelUnitSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitTopLevelUnitSetMessage))]
+    [SubTypeDiscriminator("BusinessUnitTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitTypeSetMessage))]
     [SubTypeDiscriminator("CartDiscountCreated", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountCreatedMessage))]
     [SubTypeDiscriminator("CartDiscountDeleted", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountDeletedMessage))]
     [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage))]
@@ -600,6 +602,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage BusinessUnitStoresSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitStoresSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitTopLevelUnitSetMessage BusinessUnitTopLevelUnitSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitTopLevelUnitSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitTopLevelUnitSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitTypeSetMessage BusinessUnitTypeSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitTypeSetMessage();
             init?.Invoke(t);
             return t;
         }

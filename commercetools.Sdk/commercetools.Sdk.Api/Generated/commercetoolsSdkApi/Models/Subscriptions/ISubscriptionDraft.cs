@@ -19,6 +19,10 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 
         IEnumerable<IMessageSubscription> MessagesEnumerable { set => Messages = value.ToList(); }
 
+        IList<IEventSubscription> Events { get; set; }
+
+        IEnumerable<IEventSubscription> EventsEnumerable { set => Events = value.ToList(); }
+
         IDeliveryFormat Format { get; set; }
 
     }

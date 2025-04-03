@@ -184,5 +184,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetStoresActionQueryBuilderDsl.Of()),
                 BusinessUnitUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsSetUnitType(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetUnitTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetUnitTypeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetUnitTypeActionQueryBuilderDsl.Of()),
+                BusinessUnitUpdateActionQueryBuilderDsl.Of);
+        }
     }
 }

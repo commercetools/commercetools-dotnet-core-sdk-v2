@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionUpdateAction))]
     [SubTypeDiscriminator("changeDestination", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionChangeDestinationAction))]
     [SubTypeDiscriminator("setChanges", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction))]
+    [SubTypeDiscriminator("setEvents", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetEventsAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetKeyAction))]
     [SubTypeDiscriminator("setMessages", typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetMessagesAction))]
     public partial interface ISubscriptionUpdateAction
@@ -22,6 +23,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction SetChanges(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetChangesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetEventsAction SetEvents(Action<commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetEventsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetEventsAction();
             init?.Invoke(t);
             return t;
         }

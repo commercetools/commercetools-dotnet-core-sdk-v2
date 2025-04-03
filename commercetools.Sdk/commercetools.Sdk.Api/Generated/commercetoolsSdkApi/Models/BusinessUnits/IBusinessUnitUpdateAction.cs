@@ -32,6 +32,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [SubTypeDiscriminator("setDefaultShippingAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetDefaultShippingAddressAction))]
     [SubTypeDiscriminator("setStoreMode", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoreModeAction))]
     [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction))]
+    [SubTypeDiscriminator("setUnitType", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetUnitTypeAction))]
     public partial interface IBusinessUnitUpdateAction
     {
         string Action { get; set; }
@@ -195,6 +196,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction SetStores(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetStoresAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetUnitTypeAction SetUnitType(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetUnitTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetUnitTypeAction();
             init?.Invoke(t);
             return t;
         }
