@@ -164,6 +164,28 @@ namespace commercetools.Api.Serialization.Tests
         }
 
         [Fact]
+        public void DeserializationOfListOfEventDeliveryUnwrapped()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            string serialized = File.ReadAllText("Resources/Messages/NotificationPayloads.json");
+            var payloads = serializerService.Deserialize<List<ISubscriptionNotification>>(serialized);
+            Assert.NotNull(payloads);
+            Assert.Equal(5, payloads.Count);
+            var resourceCreatedPayload = payloads[0] as ResourceCreatedDeliveryPayload;
+            var resourceUpdatedPayload = payloads[1] as ResourceUpdatedDeliveryPayload;
+            var resourceDeletedPayload = payloads[2] as ResourceDeletedDeliveryPayload;
+            var customerCreatedPayload = payloads[3] as MessageDeliveryPayload;
+            var importEventPayload = payloads[4] as EventDeliveryPayload;
+
+            Assert.NotNull(resourceCreatedPayload);
+            Assert.NotNull(resourceUpdatedPayload);
+            Assert.NotNull(resourceDeletedPayload);
+            Assert.NotNull(customerCreatedPayload);
+            Assert.NotNull(importEventPayload);
+            Assert.Equal(2, resourceUpdatedPayload.OldVersion);
+            Assert.IsType<CustomerCreatedMessage>(customerCreatedPayload.Message);
+        }
+        [Fact]
         public void DeserializationOfListOfMessageSubscriptionPayloadsUnwrapped()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
