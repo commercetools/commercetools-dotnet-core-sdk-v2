@@ -1,0 +1,85 @@
+[
+  {
+    "notificationType": "ResourceCreated",
+    "projectKey": "test-php-sdk-129839581278250",
+    "resource": {
+      "typeId": "customer",
+      "id": "e63d76ff-e203-42ba-af17-375040b8ecb6"
+    },
+    "resourceUserProvidedIdentifiers": {
+      "key": "test-ca15403ea56ec0e51137ff40a6f4607e"
+    },
+    "version": 1,
+    "modifiedAt": "2019-09-12T09:39:21.338Z"
+  },
+  {
+    "notificationType": "ResourceUpdated",
+    "projectKey": "test-php-sdk-129839581278250",
+    "resource": {
+      "typeId": "category",
+      "id": "e63d76ff-e203-42ba-af17-375040b8ecb6"
+    },
+    "resourceUserProvidedIdentifiers": {
+      "key": "test-ca15403ea56ec0e51137ff40a6f4607e"
+    },
+    "version": 3,
+    "oldVersion": 2,
+    "modifiedAt": "2019-09-12T09:39:21.338Z"
+  },
+  {
+    "notificationType": "ResourceDeleted",
+    "projectKey": "test-php-sdk-129839581278250",
+    "resource": {
+      "typeId": "product",
+      "id": "e63d76ff-e203-42ba-af17-375040b8ecb6"
+    },
+    "resourceUserProvidedIdentifiers": {
+      "key": "test-ca15403ea56ec0e51137ff40a6f4607e"
+    },
+    "version": 2,
+    "modifiedAt": "2019-09-12T09:39:21.338Z"
+  },
+  {
+    "notificationType": "Message",
+    "projectKey": "test-php-sdk-129839581278250",
+    "payloadNotIncluded": {
+      "reason": "does not fit into the size limit of your message queue",
+      "payloadType": "CustomerCreated"
+    },
+    "resource": {
+      "typeId": "customer",
+      "id": "14dc1379-1edc-464f-9f7f-569274820aea"
+    },
+    "resourceUserProvidedIdentifiers": {
+      "key": "test-ca15403ea56ec0e51137ff40a6f4607e"
+    },
+    "id": "f88a8c79-eb0a-4e74-843b-0c96c6e462bc",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resourceVersion": 1,
+    "type": "CustomerCreated",
+    "createdAt": "2019-08-14T08:24:39.347Z",
+    "lastModifiedAt": "2019-08-14T08:24:39.347Z",
+    "lastModifiedBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    },
+    "createdBy": {
+      "clientId": "kdlz-oxUfPV3tV1W9Y1-czoE",
+      "isPlatformClient": false
+    }
+  },
+  {
+    "id": "3b364ca2-cbe5-42b4-a85a-37d4e57d659e",
+    "notificationType": "Event",
+    "type": "ImportContainerCreated",
+    "resourceType": "import-api",
+    "data": {
+      "version": 1,
+      "key": "my-import-container",
+      "createdAt": "2025-03-26T17:28:20.376Z",
+      "lastModifiedAt": "2025-03-26T17:28:20.376Z"
+    },
+    "createdAt": "2025-03-26T17:28:20.397Z"
+  }
+]
