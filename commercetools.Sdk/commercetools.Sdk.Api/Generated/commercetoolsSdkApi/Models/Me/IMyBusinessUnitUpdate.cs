@@ -1,4 +1,3 @@
-using commercetools.Sdk.Api.Models.BusinessUnits;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -10,9 +9,9 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         long Version { get; set; }
 
-        IList<IBusinessUnitUpdateAction> Actions { get; set; }
+        IList<IMyBusinessUnitUpdateAction> Actions { get; set; }
 
-        IEnumerable<IBusinessUnitUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
+        IEnumerable<IMyBusinessUnitUpdateAction> ActionsEnumerable { set => Actions = value.ToList(); }
 
     }
 }
