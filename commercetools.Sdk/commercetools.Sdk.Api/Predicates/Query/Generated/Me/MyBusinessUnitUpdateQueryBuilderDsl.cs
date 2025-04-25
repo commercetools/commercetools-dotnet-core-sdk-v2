@@ -22,11 +22,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<MyBusinessUnitUpdateQueryBuilderDsl> Actions(
-            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitUpdateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitUpdateActionQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyBusinessUnitUpdateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyBusinessUnitUpdateActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MyBusinessUnitUpdateQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("actions"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitUpdateActionQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyBusinessUnitUpdateActionQueryBuilderDsl.Of())),
                 MyBusinessUnitUpdateQueryBuilderDsl.Of);
         }
         public ICollectionPredicateBuilder<MyBusinessUnitUpdateQueryBuilderDsl> Actions()

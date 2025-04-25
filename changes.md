@@ -24,6 +24,13 @@
 
 
 <details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `actions` of type `MyBusinessUnitUpdate` from type `BusinessUnitUpdateAction[]` to `MyBusinessUnitUpdateAction[]`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `projectKey` to type `DeliveryPayload`
