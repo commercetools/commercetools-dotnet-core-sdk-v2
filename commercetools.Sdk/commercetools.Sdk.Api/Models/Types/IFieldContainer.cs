@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Serialization;
 
 namespace commercetools.Sdk.Api.Models.Types;
 
@@ -59,9 +61,13 @@ public partial interface IFieldContainer
     public decimal? AsDecimal(string fieldName)
     {
         var value = GetValue(fieldName);
-        if (GetValue(fieldName) is decimal decimalValue) { return decimalValue; }
-        if (GetValue(fieldName) is long longValue) { return Convert.ToDecimal(longValue); }
-
+        if (value is decimal decimalValue) { return decimalValue; }
+        if (value is long longValue) { return Convert.ToDecimal(longValue); }
+        if (value is JsonElement { ValueKind: JsonValueKind.Number } element)
+        {
+            return element.GetDecimal();
+        }
+            
         return null;
     }
 
@@ -70,6 +76,10 @@ public partial interface IFieldContainer
         var value = GetValue(fieldName);
         if (value is decimal decimalValue) { return Convert.ToInt64(decimalValue); }
         if (value is long longValue) { return longValue; }
+        if (value is JsonElement { ValueKind: JsonValueKind.Number } element)
+        {
+            return Convert.ToInt64(element.GetDecimal());
+        }
 
         return null;
     }
@@ -132,6 +142,10 @@ public partial interface IFieldContainer
         {
             return longs.Select(Convert.ToDecimal).ToList();
         }
+        if (value is JsonElement { ValueKind: JsonValueKind.Array } elements && elements.GetFirstArrayElementValueKind() == JsonValueKind.Number)
+        {
+            return elements.EnumerateArray().Select(element => element.GetDecimal()).ToList();
+        }
 
         return null;
     }
@@ -143,6 +157,10 @@ public partial interface IFieldContainer
         if (value is IList<decimal> decimals)
         {
             return decimals.Select(Convert.ToInt64).ToList();
+        }
+        if (value is JsonElement { ValueKind: JsonValueKind.Array } elements && elements.GetFirstArrayElementValueKind() == JsonValueKind.Number)
+        {
+            return elements.EnumerateArray().Select(element => Convert.ToInt64(element.GetDecimal())).ToList();
         }
 
         return null;
