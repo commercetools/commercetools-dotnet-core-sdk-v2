@@ -67,7 +67,7 @@ public partial interface IFieldContainer
         {
             return element.GetDecimal();
         }
-            
+
         return null;
     }
 

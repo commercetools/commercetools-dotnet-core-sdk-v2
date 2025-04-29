@@ -25,6 +25,8 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         public IProductTypeReference ProductType { get; set; }
 
+        public bool Published { get; set; }
+
         public long Quantity { get; set; }
 
         public long? VariantId { get; set; }
