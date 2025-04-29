@@ -72,6 +72,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShoppingLists
                 ShoppingListLineItemQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl, bool> Published()
+        {
+            return new ComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("published")),
+            p => new CombinationQueryPredicate<ShoppingListLineItemQueryBuilderDsl>(p, ShoppingListLineItemQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl, long> Quantity()
         {
             return new ComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("quantity")),

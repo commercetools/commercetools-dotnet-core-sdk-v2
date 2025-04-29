@@ -13,13 +13,13 @@ namespace commercetools.Sdk.Api.Tests;
 
 public class CustomFieldsTest
 {
-    
+
     [Fact]
     public void AsDecimalOrLong()
     {
         var fieldsStr = "{ \"number\": 91.62, \"numbers\": [91.62, 91.26, 91] }";
         IFieldContainer fields = JsonSerializer.Deserialize<FieldContainer>(fieldsStr);
-        
+
         Assert.Equal(91.62m, fields.AsDecimal("number").Value);
         Assert.Equal(92, fields.AsLong("number").Value);
         Assert.Equal(91.62m, fields.AsSetDecimal("numbers")[0]);
@@ -30,7 +30,7 @@ public class CustomFieldsTest
         Assert.Equal(91, fields.AsSetLong("numbers")[2]);
 
     }
-    
+
     [Fact]
     public void fields()
     {
