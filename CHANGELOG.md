@@ -1,4 +1,17 @@
 
+# 12.11.0 (2025-04-29)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/442
+* Events sdk fixes by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/443
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/444
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/448
+* add instore query methods by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/446
+* Fix NPE for AsDecimal extension methods by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/450
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.10.0...12.11.0
+
 # 12.10.0 (2025-04-01)
 
 ## What's Changed
