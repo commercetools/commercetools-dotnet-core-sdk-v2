@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.Types;
@@ -12,6 +13,24 @@ namespace commercetools.Sdk.Api.Tests;
 
 public class CustomFieldsTest
 {
+    
+    [Fact]
+    public void AsDecimalOrLong()
+    {
+        var fieldsStr = "{ \"number\": 91.62, \"numbers\": [91.62, 91.26, 91] }";
+        IFieldContainer fields = JsonSerializer.Deserialize<FieldContainer>(fieldsStr);
+        
+        Assert.Equal(91.62m, fields.AsDecimal("number").Value);
+        Assert.Equal(92, fields.AsLong("number").Value);
+        Assert.Equal(91.62m, fields.AsSetDecimal("numbers")[0]);
+        Assert.Equal(92, fields.AsSetLong("numbers")[0]);
+        Assert.Equal(91.26m, fields.AsSetDecimal("numbers")[1]);
+        Assert.Equal(91, fields.AsSetLong("numbers")[1]);
+        Assert.Equal(91.0m, fields.AsSetDecimal("numbers")[2]);
+        Assert.Equal(91, fields.AsSetLong("numbers")[2]);
+
+    }
+    
     [Fact]
     public void fields()
     {
