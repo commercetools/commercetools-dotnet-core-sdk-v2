@@ -1,4 +1,21 @@
 
+# 12.12.0 (2025-05-05)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/451
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/452
+
+**Api changes**
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `published` to type `ShoppingListLineItem`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.11.0...12.12.0
+
 # 12.11.0 (2025-04-29)
 
 ## What's Changed
