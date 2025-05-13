@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Tests
             JToken resultFormatted = JValue.Parse(json);
             var serialized =
                 "{\"changes\":[{\"resourceTypeId\":\"product\"}],\"destination\":{\"type\":\"AzureServiceBus\",\"connectionString\":\"\"},\"key\":\"azure-product-subscription\"}";
-            
+
             JToken serializedFormatted = JValue.Parse(serialized);
             serializedFormatted.Should().BeEquivalentTo(resultFormatted);
 
