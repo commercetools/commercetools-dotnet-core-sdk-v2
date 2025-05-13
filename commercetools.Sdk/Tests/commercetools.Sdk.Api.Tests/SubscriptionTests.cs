@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using commercetools.Sdk.Api.Models.Subscriptions;
 using commercetools.Sdk.Api.Serialization;
+using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace commercetools.Sdk.Api.Tests
@@ -29,8 +31,13 @@ namespace commercetools.Sdk.Api.Tests
             };
 
             var json = serializerService.Serialize(subscriptionDraft);
+            JToken resultFormatted = JValue.Parse(json);
+            var serialized =
+                "{\"changes\":[{\"resourceTypeId\":\"product\"}],\"destination\":{\"type\":\"AzureServiceBus\",\"connectionString\":\"\"},\"key\":\"azure-product-subscription\"}";
+            
+            JToken serializedFormatted = JValue.Parse(serialized);
+            serializedFormatted.Should().BeEquivalentTo(resultFormatted);
 
-            Assert.Equal("{\"changes\":[{\"resourceTypeId\":\"product\"}],\"destination\":{\"type\":\"AzureServiceBus\",\"connectionString\":\"\"},\"key\":\"azure-product-subscription\"}", json);
         }
     }
 }
