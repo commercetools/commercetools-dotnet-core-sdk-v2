@@ -57,19 +57,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
                 SubscriptionQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> Changes(
-            Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<SubscriptionQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("changes"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl.Of())),
-                SubscriptionQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<SubscriptionQueryBuilderDsl> Changes()
-        {
-            return new CollectionPredicateBuilder<SubscriptionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("changes")),
-                    p => new CombinationQueryPredicate<SubscriptionQueryBuilderDsl>(p, SubscriptionQueryBuilderDsl.Of));
-        }
         public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> Destination(
             Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.DestinationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.DestinationQueryBuilderDsl>> fn)
         {
@@ -96,6 +83,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Subscriptions
         public ICollectionPredicateBuilder<SubscriptionQueryBuilderDsl> Messages()
         {
             return new CollectionPredicateBuilder<SubscriptionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("messages")),
+                    p => new CombinationQueryPredicate<SubscriptionQueryBuilderDsl>(p, SubscriptionQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> Changes(
+            Func<commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SubscriptionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("changes"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Subscriptions.ChangeSubscriptionQueryBuilderDsl.Of())),
+                SubscriptionQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<SubscriptionQueryBuilderDsl> Changes()
+        {
+            return new CollectionPredicateBuilder<SubscriptionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("changes")),
                     p => new CombinationQueryPredicate<SubscriptionQueryBuilderDsl>(p, SubscriptionQueryBuilderDsl.Of));
         }
         public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> Events(
