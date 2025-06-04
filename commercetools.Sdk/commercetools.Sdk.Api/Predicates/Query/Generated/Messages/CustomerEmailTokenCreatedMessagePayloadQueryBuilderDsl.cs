@@ -33,6 +33,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl>(p, CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl, string> Value()
+        {
+            return new ComparisonPredicateBuilder<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("value")),
+            p => new CombinationQueryPredicate<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl>(p, CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl, bool> InvalidateOlderTokens()
+        {
+            return new ComparisonPredicateBuilder<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p => new CombinationQueryPredicate<CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl>(p, CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

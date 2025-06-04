@@ -39,6 +39,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, bool> InvalidateOlderTokens()
+        {
+            return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p => new CombinationQueryPredicate<CustomerTokenQueryBuilderDsl>(p, CustomerTokenQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime> CreatedAt()
         {
             return new ComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("createdAt")),

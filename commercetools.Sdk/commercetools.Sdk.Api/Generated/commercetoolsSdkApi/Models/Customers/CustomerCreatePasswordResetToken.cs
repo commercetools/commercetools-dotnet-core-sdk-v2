@@ -8,5 +8,7 @@ namespace commercetools.Sdk.Api.Models.Customers
         public string Email { get; set; }
 
         public long? TtlMinutes { get; set; }
+
+        public bool? InvalidateOlderTokens { get; set; }
     }
 }

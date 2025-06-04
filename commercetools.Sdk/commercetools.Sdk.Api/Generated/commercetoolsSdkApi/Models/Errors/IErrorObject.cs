@@ -29,6 +29,8 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("EnumKeyDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.EnumKeyDoesNotExistError))]
     [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Sdk.Api.Models.Errors.EnumValueIsUsedError))]
     [SubTypeDiscriminator("EnumValuesMustMatch", typeof(commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError))]
+    [SubTypeDiscriminator("ExpiredCustomerEmailToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError))]
+    [SubTypeDiscriminator("ExpiredCustomerPasswordToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError))]
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError))]
@@ -229,6 +231,18 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError EnumValuesMustMatch(Action<commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError ExpiredCustomerEmailToken(Action<commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError ExpiredCustomerPasswordToken(Action<commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError();
             init?.Invoke(t);
             return t;
         }

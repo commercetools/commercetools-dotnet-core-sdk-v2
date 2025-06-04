@@ -31,6 +31,10 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string CustomerId { get; set; }
 
         public DateTime ExpiresAt { get; set; }
+
+        public string Value { get; set; }
+
+        public bool InvalidateOlderTokens { get; set; }
         public CustomerEmailTokenCreatedMessage()
         {
             this.Type = "CustomerEmailTokenCreated";

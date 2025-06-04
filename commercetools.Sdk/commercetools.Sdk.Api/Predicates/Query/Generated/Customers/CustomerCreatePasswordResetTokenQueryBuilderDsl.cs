@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             p => new CombinationQueryPredicate<CustomerCreatePasswordResetTokenQueryBuilderDsl>(p, CustomerCreatePasswordResetTokenQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CustomerCreatePasswordResetTokenQueryBuilderDsl, bool> InvalidateOlderTokens()
+        {
+            return new ComparisonPredicateBuilder<CustomerCreatePasswordResetTokenQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p => new CombinationQueryPredicate<CustomerCreatePasswordResetTokenQueryBuilderDsl>(p, CustomerCreatePasswordResetTokenQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

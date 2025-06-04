@@ -11,5 +11,7 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         long TtlMinutes { get; set; }
 
+        bool? InvalidateOlderTokens { get; set; }
+
     }
 }

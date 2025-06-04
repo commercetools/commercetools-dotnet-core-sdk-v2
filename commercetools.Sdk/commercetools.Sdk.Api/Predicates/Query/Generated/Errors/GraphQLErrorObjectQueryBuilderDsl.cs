@@ -166,6 +166,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLEnumValuesMustMatchErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExpiredCustomerEmailToken(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerEmailTokenErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerEmailTokenErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerEmailTokenErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExpiredCustomerPasswordToken(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerPasswordTokenErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerPasswordTokenErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExpiredCustomerPasswordTokenErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtensionBadResponse(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionBadResponseErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionBadResponseErrorQueryBuilderDsl>> fn)
         {

@@ -172,6 +172,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.EnumValuesMustMatchErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExpiredCustomerEmailToken(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerEmailTokenErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerEmailTokenErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerEmailTokenErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExpiredCustomerPasswordToken(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerPasswordTokenErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerPasswordTokenErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerPasswordTokenErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExtensionBadResponse(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionBadResponseErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionBadResponseErrorQueryBuilderDsl>> fn)
         {
