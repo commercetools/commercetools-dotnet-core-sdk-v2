@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         DateTime ExpiresAt { get; set; }
 
+        bool InvalidateOlderTokens { get; set; }
+
         DateTime CreatedAt { get; set; }
 
         DateTime? LastModifiedAt { get; set; }

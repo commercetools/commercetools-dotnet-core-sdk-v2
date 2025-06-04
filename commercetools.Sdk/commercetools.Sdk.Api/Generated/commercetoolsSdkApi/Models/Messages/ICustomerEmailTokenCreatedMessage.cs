@@ -10,5 +10,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         DateTime ExpiresAt { get; set; }
 
+        string Value { get; set; }
+
+        bool InvalidateOlderTokens { get; set; }
+
     }
 }

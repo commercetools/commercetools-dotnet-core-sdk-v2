@@ -29,6 +29,8 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("EnumKeyDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumKeyDoesNotExistError))]
     [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumValueIsUsedError))]
     [SubTypeDiscriminator("EnumValuesMustMatch", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError))]
+    [SubTypeDiscriminator("ExpiredCustomerEmailToken", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerEmailTokenError))]
+    [SubTypeDiscriminator("ExpiredCustomerPasswordToken", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerPasswordTokenError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionBadResponseError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionNoResponseError))]
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionPredicateEvaluationFailedError))]
@@ -227,6 +229,18 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError EnumValuesMustMatch(Action<commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerEmailTokenError ExpiredCustomerEmailToken(Action<commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerEmailTokenError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerEmailTokenError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerPasswordTokenError ExpiredCustomerPasswordToken(Action<commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerPasswordTokenError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerPasswordTokenError();
             init?.Invoke(t);
             return t;
         }
