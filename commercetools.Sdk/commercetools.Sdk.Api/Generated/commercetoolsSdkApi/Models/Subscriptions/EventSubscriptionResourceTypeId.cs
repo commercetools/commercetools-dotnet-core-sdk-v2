@@ -10,6 +10,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum EventSubscriptionResourceTypeId
     {
+        [Description("checkout")]
+        Checkout,
+
         [Description("import-api")]
         ImportApi
     }
@@ -37,6 +40,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IEventSubscriptionResourceTypeId), "FindEnum")]
     public interface IEventSubscriptionResourceTypeId : IJsonName, IEnumerable<char>
     {
+        public static IEventSubscriptionResourceTypeId Checkout = new EventSubscriptionResourceTypeIdWrapper
+        { Value = EventSubscriptionResourceTypeId.Checkout, JsonName = "checkout" };
+
         public static IEventSubscriptionResourceTypeId ImportApi = new EventSubscriptionResourceTypeIdWrapper
         { Value = EventSubscriptionResourceTypeId.ImportApi, JsonName = "import-api" };
 
@@ -46,6 +52,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 Checkout ,
                  ImportApi
              };
         }
