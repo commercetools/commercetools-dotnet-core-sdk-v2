@@ -46,6 +46,60 @@ namespace commercetools.Sdk.Api.Predicates.Query.Events
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutOrderCreationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutOrderCreationFailedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutOrderCreationFailedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutOrderCreationFailedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentAuthorizationCancelled(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentAuthorizationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentAuthorized(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentAuthorizedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentCancelAuthorizationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentChargeFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargeFailedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargeFailedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargeFailedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentCharged(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentChargedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentRefundFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundFailedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundFailedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundFailedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<EventQueryBuilderDsl> AsCheckoutPaymentRefunded(
+            Func<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundedEventQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<EventQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Events.CheckoutPaymentRefundedEventQueryBuilderDsl.Of()),
+                EventQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<EventQueryBuilderDsl> AsImportContainerCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Events.ImportContainerCreatedEventQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Events.ImportContainerCreatedEventQueryBuilderDsl>> fn)
         {

@@ -10,6 +10,33 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
 {
     public enum EventType
     {
+        [Description("CheckoutOrderCreationFailed")]
+        CheckoutOrderCreationFailed,
+
+        [Description("CheckoutPaymentAuthorizationCancelled")]
+        CheckoutPaymentAuthorizationCancelled,
+
+        [Description("CheckoutPaymentAuthorizationFailed")]
+        CheckoutPaymentAuthorizationFailed,
+
+        [Description("CheckoutPaymentAuthorized")]
+        CheckoutPaymentAuthorized,
+
+        [Description("CheckoutPaymentCancelAuthorizationFailed")]
+        CheckoutPaymentCancelAuthorizationFailed,
+
+        [Description("CheckoutPaymentCharged")]
+        CheckoutPaymentCharged,
+
+        [Description("CheckoutPaymentChargeFailed")]
+        CheckoutPaymentChargeFailed,
+
+        [Description("CheckoutPaymentRefunded")]
+        CheckoutPaymentRefunded,
+
+        [Description("CheckoutPaymentRefundFailed")]
+        CheckoutPaymentRefundFailed,
+
         [Description("ImportContainerCreated")]
         ImportContainerCreated,
 
@@ -52,6 +79,33 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [EnumInterfaceCreator(typeof(IEventType), "FindEnum")]
     public interface IEventType : IJsonName, IEnumerable<char>
     {
+        public static IEventType CheckoutOrderCreationFailed = new EventTypeWrapper
+        { Value = EventType.CheckoutOrderCreationFailed, JsonName = "CheckoutOrderCreationFailed" };
+
+        public static IEventType CheckoutPaymentAuthorizationCancelled = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentAuthorizationCancelled, JsonName = "CheckoutPaymentAuthorizationCancelled" };
+
+        public static IEventType CheckoutPaymentAuthorizationFailed = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentAuthorizationFailed, JsonName = "CheckoutPaymentAuthorizationFailed" };
+
+        public static IEventType CheckoutPaymentAuthorized = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentAuthorized, JsonName = "CheckoutPaymentAuthorized" };
+
+        public static IEventType CheckoutPaymentCancelAuthorizationFailed = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentCancelAuthorizationFailed, JsonName = "CheckoutPaymentCancelAuthorizationFailed" };
+
+        public static IEventType CheckoutPaymentCharged = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentCharged, JsonName = "CheckoutPaymentCharged" };
+
+        public static IEventType CheckoutPaymentChargeFailed = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentChargeFailed, JsonName = "CheckoutPaymentChargeFailed" };
+
+        public static IEventType CheckoutPaymentRefunded = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentRefunded, JsonName = "CheckoutPaymentRefunded" };
+
+        public static IEventType CheckoutPaymentRefundFailed = new EventTypeWrapper
+        { Value = EventType.CheckoutPaymentRefundFailed, JsonName = "CheckoutPaymentRefundFailed" };
+
         public static IEventType ImportContainerCreated = new EventTypeWrapper
         { Value = EventType.ImportContainerCreated, JsonName = "ImportContainerCreated" };
 
@@ -76,6 +130,15 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         {
             return new[]
             {
+                 CheckoutOrderCreationFailed ,
+                 CheckoutPaymentAuthorizationCancelled ,
+                 CheckoutPaymentAuthorizationFailed ,
+                 CheckoutPaymentAuthorized ,
+                 CheckoutPaymentCancelAuthorizationFailed ,
+                 CheckoutPaymentCharged ,
+                 CheckoutPaymentChargeFailed ,
+                 CheckoutPaymentRefunded ,
+                 CheckoutPaymentRefundFailed ,
                  ImportContainerCreated ,
                  ImportContainerDeleted ,
                  ImportOperationRejected ,
