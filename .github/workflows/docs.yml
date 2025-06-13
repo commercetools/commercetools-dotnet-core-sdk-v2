@@ -6,6 +6,9 @@ on:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+*'
 
+# Declare default permissions as read only.
+permissions: read-all
+
 jobs:
   unittests:
     name: Build Docs
@@ -13,19 +16,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # v2
+        with:
+          app-id: ${{ secrets.CT_SDKS_APP_ID }}
+          private-key: ${{ secrets.CT_SDKS_APP_PEM }}
+
+      - name: Get App user
+        id: get_app_user
+        env:
+          GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: |
+          export GH_APP_USER=`gh api /users/ct-sdks%5Bbot%5D | jq .id`
+          echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
       - name: Support longpaths
         run: git config --global core.longpaths true
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
           path: sdk
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           path: doc
           ref: gh-pages
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: ssciwr/doxygen-install@022351b889a5d2639382a0d55a1834a413ec6a23
         with:
@@ -48,6 +72,6 @@ jobs:
         with:
           repository: doc
           commit_message: "Update docs"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+          commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+          commit_user_name: ct-sdks[bot]
+          commit_user_email: ${{ steps.get_app_user.outputs.email }}
