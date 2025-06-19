@@ -46,11 +46,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Searches
             PredicateFormatter.Format);
         }
         public CombinationQueryPredicate<SearchSortingQueryBuilderDsl> Filter(
-            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryExpressionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryExpressionQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<SearchSortingQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("filter"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryExpressionQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchQueryQueryBuilderDsl.Of())),
                 SearchSortingQueryBuilderDsl.Of);
         }
 

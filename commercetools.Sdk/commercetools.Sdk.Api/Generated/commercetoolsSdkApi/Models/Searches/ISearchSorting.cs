@@ -15,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.Searches
 
         ISearchFieldType FieldType { get; set; }
 
-        ISearchQueryExpression Filter { get; set; }
+        ISearchQuery Filter { get; set; }
 
     }
 }
