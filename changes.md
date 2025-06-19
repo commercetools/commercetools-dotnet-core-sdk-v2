@@ -30,6 +30,13 @@
 
 
 <details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `invalidateOlderTokens` to type `CustomerCreateEmailToken`
