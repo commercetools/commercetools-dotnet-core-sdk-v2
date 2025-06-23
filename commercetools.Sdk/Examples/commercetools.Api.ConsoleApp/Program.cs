@@ -29,7 +29,9 @@ namespace commercetools.Api.ConsoleApp
             {
                 ClientId = "",
                 ClientSecret = "",
-                ProjectKey = ""
+                ProjectKey = "",
+                ApiBaseAddress = "https://api.europe-west1.gcp.commercetools.com/",
+                AuthorizationBaseAddress = "https://auth.europe-west1.gcp.commercetools.com/",
             };
             var clientFactory = serviceProvider.GetService<IHttpClientFactory>();
             var client = new ClientBuilder()
