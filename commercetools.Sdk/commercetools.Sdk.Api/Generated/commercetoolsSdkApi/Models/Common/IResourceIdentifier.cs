@@ -15,6 +15,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.Api.Models.Customers.CustomerResourceIdentifier))]
     [SubTypeDiscriminator("customer-group", typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupResourceIdentifier))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeResourceIdentifier))]
+    [SubTypeDiscriminator("discount-group", typeof(commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupResourceIdentifier))]
     [SubTypeDiscriminator("inventory-entry", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryResourceIdentifier))]
     [SubTypeDiscriminator("order-edit", typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditResourceIdentifier))]
     [SubTypeDiscriminator("payment", typeof(commercetools.Sdk.Api.Models.Payments.PaymentResourceIdentifier))]
@@ -100,6 +101,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeResourceIdentifier DiscountCode(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeResourceIdentifier> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupResourceIdentifier DiscountGroup(Action<commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupResourceIdentifier();
             init?.Invoke(t);
             return t;
         }

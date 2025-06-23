@@ -11,6 +11,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Customers;
 using commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects;
 using commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes;
+using commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.Graphql;
 using commercetools.Sdk.Api.Client.RequestBuilders.Inventory;
 using commercetools.Sdk.Api.Client.RequestBuilders.Login;
@@ -132,6 +133,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyDiscountCodesRequestBuilder DiscountCodes()
         {
             return new ByProjectKeyDiscountCodesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups()
+        {
+            return new ByProjectKeyDiscountGroupsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyGraphqlRequestBuilder Graphql()

@@ -18,6 +18,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetCustomTypeAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction))]
+    [SubTypeDiscriminator("setDiscountGroup", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDiscountGroupAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction))]
     [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction))]
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAction))]
@@ -102,6 +103,12 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction SetDescription(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDiscountGroupAction SetDiscountGroup(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDiscountGroupAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDiscountGroupAction();
             init?.Invoke(t);
             return t;
         }

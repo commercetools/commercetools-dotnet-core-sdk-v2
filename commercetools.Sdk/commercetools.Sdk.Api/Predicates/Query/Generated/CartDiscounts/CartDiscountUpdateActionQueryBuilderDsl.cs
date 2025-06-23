@@ -100,6 +100,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetDescriptionActionQueryBuilderDsl.Of()),
                 CartDiscountUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetDiscountGroup(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetDiscountGroupActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetDiscountGroupActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetDiscountGroupActionQueryBuilderDsl.Of()),
+                CartDiscountUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl>> fn)
         {

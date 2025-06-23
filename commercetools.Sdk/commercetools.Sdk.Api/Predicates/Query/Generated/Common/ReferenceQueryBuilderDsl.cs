@@ -112,6 +112,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountCodes.DiscountCodeReferenceQueryBuilderDsl.Of()),
                 ReferenceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsDiscountGroup(
+            Func<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupReferenceQueryBuilderDsl.Of()),
+                ReferenceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsInventoryEntry(
             Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryReferenceQueryBuilderDsl>> fn)
         {
