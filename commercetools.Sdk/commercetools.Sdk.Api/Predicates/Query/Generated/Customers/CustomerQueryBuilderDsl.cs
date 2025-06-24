@@ -182,6 +182,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
                 CustomerQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CustomerQueryBuilderDsl> CustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomerQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl.Of())),
+                CustomerQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CustomerQueryBuilderDsl> CustomerGroupAssignments()
+        {
+            return new CollectionPredicateBuilder<CustomerQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
+                    p => new CombinationQueryPredicate<CustomerQueryBuilderDsl>(p, CustomerQueryBuilderDsl.Of));
+        }
         public CombinationQueryPredicate<CustomerQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {
@@ -221,19 +234,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Customers
             return new ComparisonPredicateBuilder<CustomerQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("authenticationMode")),
             p => new CombinationQueryPredicate<CustomerQueryBuilderDsl>(p, CustomerQueryBuilderDsl.Of),
             PredicateFormatter.Format);
-        }
-        public CombinationQueryPredicate<CustomerQueryBuilderDsl> CustomerGroupAssignments(
-            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<CustomerQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl.Of())),
-                CustomerQueryBuilderDsl.Of);
-        }
-        public ICollectionPredicateBuilder<CustomerQueryBuilderDsl> CustomerGroupAssignments()
-        {
-            return new CollectionPredicateBuilder<CustomerQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
-                    p => new CombinationQueryPredicate<CustomerQueryBuilderDsl>(p, CustomerQueryBuilderDsl.Of));
         }
 
     }
