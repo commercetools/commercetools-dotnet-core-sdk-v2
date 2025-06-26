@@ -38,6 +38,9 @@
 - added type `DiscountGroupDeletedMessagePayload`
 - added type `DiscountGroupKeySetMessagePayload`
 - added type `DiscountGroupSortOrderSetMessagePayload`
+- added type `ProductTailoringSetProductAttributeAction`
+- added type `AttributeLevelEnum`
+- added type `ProductSetProductAttributeAction`
 </details>
 
 
@@ -84,11 +87,21 @@
 - added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessage`
 - added property `value` to type `CustomerPasswordTokenCreatedMessage`
 - added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessage`
+- added property `attributes` to type `ProductTailoringCreatedMessage`
 - added property `value` to type `CustomerEmailTokenCreatedMessagePayload`
 - added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessagePayload`
 - added property `value` to type `CustomerPasswordTokenCreatedMessagePayload`
 - added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessagePayload`
+- added property `attributes` to type `ProductTailoringCreatedMessagePayload`
+- added property `attributes` to type `ProductTailoringData`
+- added property `attributes` to type `ProductTailoringDraft`
+- added property `attributes` to type `ProductTailoringInStoreDraft`
+- added property `level` to type `AttributeDefinition`
+- added property `level` to type `AttributeDefinitionDraft`
 - added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `CategoryOrderHints`
+- added property `attributes` to type `ProductData`
+- added property `attributes` to type `ProductDraft`
+- added property `attributes` to type `ProductProjection`
 - added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `ProductVariantChannelAvailabilityMap`
 </details>
 
@@ -125,6 +138,23 @@
 - added enum `CheckoutPaymentChargeFailed` to type `EventType`
 - added enum `CheckoutPaymentRefunded` to type `EventType`
 - added enum `CheckoutPaymentRefundFailed` to type `EventType`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AttributeLevel`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `attributes` to type `ProductImport`
+- added property `attributes` to type `ProductDraftImport`
+- added property `level` to type `AttributeDefinition`
 </details>
 
 **History changes**
