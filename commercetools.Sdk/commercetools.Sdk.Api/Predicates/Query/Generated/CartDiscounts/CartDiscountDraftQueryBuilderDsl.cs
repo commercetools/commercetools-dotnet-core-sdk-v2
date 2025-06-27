@@ -121,6 +121,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
                 CartDiscountDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> DiscountGroup(
+            Func<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("discountGroup"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupResourceIdentifierQueryBuilderDsl.Of())),
+                CartDiscountDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }

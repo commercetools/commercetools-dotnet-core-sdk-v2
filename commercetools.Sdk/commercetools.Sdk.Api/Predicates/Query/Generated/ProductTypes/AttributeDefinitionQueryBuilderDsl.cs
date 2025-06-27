@@ -45,6 +45,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTypes
             p => new CombinationQueryPredicate<AttributeDefinitionQueryBuilderDsl>(p, AttributeDefinitionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, string> Level()
+        {
+            return new ComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("level")),
+            p => new CombinationQueryPredicate<AttributeDefinitionQueryBuilderDsl>(p, AttributeDefinitionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, string> AttributeConstraint()
         {
             return new ComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("attributeConstraint")),

@@ -18,6 +18,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("customer-password-token", typeof(commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference))]
     [SubTypeDiscriminator("direct-discount", typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountReference))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference))]
+    [SubTypeDiscriminator("discount-group", typeof(commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference))]
     [SubTypeDiscriminator("inventory-entry", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference))]
     [SubTypeDiscriminator("key-value-document", typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference))]
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.Api.Models.Orders.OrderReference))]
@@ -121,6 +122,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference DiscountCode(Action<commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference DiscountGroup(Action<commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference();
             init?.Invoke(t);
             return t;
         }

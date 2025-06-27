@@ -68,6 +68,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
 
         public ITaxMode TaxMode { get; set; }
 
+        public IRoundingMode PriceRoundingMode { get; set; }
+
         public IRoundingMode TaxRoundingMode { get; set; }
 
         public ITaxCalculationMode TaxCalculationMode { get; set; }

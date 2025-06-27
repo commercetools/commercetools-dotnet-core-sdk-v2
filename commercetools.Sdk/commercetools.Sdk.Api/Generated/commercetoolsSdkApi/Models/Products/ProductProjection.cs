@@ -62,5 +62,9 @@ namespace commercetools.Sdk.Api.Models.Products
         public IReviewRatingStatistics ReviewRatingStatistics { get; set; }
 
         public IProductPriceModeEnum PriceMode { get; set; }
+
+        public IList<IAttribute> Attributes { get; set; }
+
+        public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
     }
 }

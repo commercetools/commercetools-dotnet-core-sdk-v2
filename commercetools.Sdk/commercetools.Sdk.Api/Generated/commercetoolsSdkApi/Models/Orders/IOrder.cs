@@ -53,6 +53,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         IDiscountOnTotalPrice DiscountOnTotalPrice { get; set; }
 
+        IRoundingMode PriceRoundingMode { get; set; }
+
         ITaxMode TaxMode { get; set; }
 
         IRoundingMode TaxRoundingMode { get; set; }

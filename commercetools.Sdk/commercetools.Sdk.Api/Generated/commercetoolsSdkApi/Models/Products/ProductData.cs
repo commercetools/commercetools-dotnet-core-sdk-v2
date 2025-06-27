@@ -33,5 +33,9 @@ namespace commercetools.Sdk.Api.Models.Products
         public IEnumerable<IProductVariant> VariantsEnumerable { set => Variants = value.ToList(); }
 
         public ISearchKeywords SearchKeywords { get; set; }
+
+        public IList<IAttribute> Attributes { get; set; }
+
+        public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
     }
 }

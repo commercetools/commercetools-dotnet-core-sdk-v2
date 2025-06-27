@@ -26,7 +26,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         MaxApplicationReached,
 
         [Description("ApplicationStoppedByPreviousDiscount")]
-        ApplicationStoppedByPreviousDiscount
+        ApplicationStoppedByPreviousDiscount,
+
+        [Description("ApplicationStoppedByGroupBestDeal")]
+        ApplicationStoppedByGroupBestDeal
     }
 
     public class DiscountCodeStateWrapper : IDiscountCodeState
@@ -70,6 +73,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static IDiscountCodeState ApplicationStoppedByPreviousDiscount = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.ApplicationStoppedByPreviousDiscount, JsonName = "ApplicationStoppedByPreviousDiscount" };
 
+        public static IDiscountCodeState ApplicationStoppedByGroupBestDeal = new DiscountCodeStateWrapper
+        { Value = DiscountCodeState.ApplicationStoppedByGroupBestDeal, JsonName = "ApplicationStoppedByGroupBestDeal" };
+
         DiscountCodeState? Value { get; }
 
         static IDiscountCodeState[] Values()
@@ -81,7 +87,8 @@ namespace commercetools.Sdk.Api.Models.Carts
                  DoesNotMatchCart ,
                  MatchesCart ,
                  MaxApplicationReached ,
-                 ApplicationStoppedByPreviousDiscount
+                 ApplicationStoppedByPreviousDiscount ,
+                 ApplicationStoppedByGroupBestDeal
              };
         }
         static IDiscountCodeState FindEnum(string value)

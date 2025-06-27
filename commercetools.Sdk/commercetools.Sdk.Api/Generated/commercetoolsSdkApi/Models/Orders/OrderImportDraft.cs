@@ -40,6 +40,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public ITaxedPriceDraft TaxedPrice { get; set; }
 
+        public IRoundingMode PriceRoundingMode { get; set; }
+
         public IRoundingMode TaxRoundingMode { get; set; }
 
         public ITaxCalculationMode TaxCalculationMode { get; set; }

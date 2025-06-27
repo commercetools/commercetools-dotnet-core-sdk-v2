@@ -14,6 +14,8 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
 
         bool IsRequired { get; set; }
 
+        IAttributeLevelEnum Level { get; set; }
+
         IAttributeConstraintEnum AttributeConstraint { get; set; }
 
         ILocalizedString InputTip { get; set; }

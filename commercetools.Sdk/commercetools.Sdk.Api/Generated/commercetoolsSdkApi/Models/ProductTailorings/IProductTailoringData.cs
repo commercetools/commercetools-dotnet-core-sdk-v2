@@ -24,5 +24,9 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
 
         IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        IList<IProductTailoringAttribute> Attributes { get; set; }
+
+        IEnumerable<IProductTailoringAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
     }
 }

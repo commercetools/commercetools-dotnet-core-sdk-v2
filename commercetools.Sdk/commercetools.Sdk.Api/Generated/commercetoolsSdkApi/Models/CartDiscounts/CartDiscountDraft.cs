@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.DiscountGroups;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -39,5 +40,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         public IStackingMode StackingMode { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IDiscountGroupResourceIdentifier DiscountGroup { get; set; }
     }
 }

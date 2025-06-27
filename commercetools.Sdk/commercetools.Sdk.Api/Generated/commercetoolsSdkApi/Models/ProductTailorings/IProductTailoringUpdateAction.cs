@@ -31,6 +31,7 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetMetaKeywordsAction))]
     [SubTypeDiscriminator("setMetaTitle", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetMetaTitleAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetNameAction))]
+    [SubTypeDiscriminator("setProductAttribute", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetProductAttributeAction))]
     [SubTypeDiscriminator("setSlug", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetSlugAction))]
     [SubTypeDiscriminator("unpublish", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringUnpublishAction))]
     public partial interface IProductTailoringUpdateAction
@@ -190,6 +191,12 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetNameAction SetName(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetNameAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetProductAttributeAction SetProductAttribute(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetProductAttributeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetProductAttributeAction();
             init?.Invoke(t);
             return t;
         }

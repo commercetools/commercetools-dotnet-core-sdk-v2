@@ -25,6 +25,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             p => new CombinationQueryPredicate<CartsConfigurationQueryBuilderDsl>(p, CartsConfigurationQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl, string> PriceRoundingMode()
+        {
+            return new ComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceRoundingMode")),
+            p => new CombinationQueryPredicate<CartsConfigurationQueryBuilderDsl>(p, CartsConfigurationQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl, string> TaxRoundingMode()
+        {
+            return new ComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingMode")),
+            p => new CombinationQueryPredicate<CartsConfigurationQueryBuilderDsl>(p, CartsConfigurationQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

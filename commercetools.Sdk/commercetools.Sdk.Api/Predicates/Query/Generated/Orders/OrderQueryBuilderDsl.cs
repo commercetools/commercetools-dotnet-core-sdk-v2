@@ -158,6 +158,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 OrderQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> PriceRoundingMode()
+        {
+            return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceRoundingMode")),
+            p => new CombinationQueryPredicate<OrderQueryBuilderDsl>(p, OrderQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<OrderQueryBuilderDsl, string> TaxMode()
         {
             return new ComparisonPredicateBuilder<OrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxMode")),

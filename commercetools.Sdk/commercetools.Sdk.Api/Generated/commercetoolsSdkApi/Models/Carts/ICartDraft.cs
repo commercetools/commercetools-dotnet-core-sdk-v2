@@ -41,6 +41,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IExternalTaxRateDraft ExternalTaxRateForShippingMethod { get; set; }
 
+        IRoundingMode PriceRoundingMode { get; set; }
+
         IRoundingMode TaxRoundingMode { get; set; }
 
         ITaxCalculationMode TaxCalculationMode { get; set; }

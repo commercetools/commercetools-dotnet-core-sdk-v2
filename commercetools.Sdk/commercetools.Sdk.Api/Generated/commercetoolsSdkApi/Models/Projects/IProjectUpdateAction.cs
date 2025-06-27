@@ -16,8 +16,10 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("changeMyBusinessUnitStatusOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeBusinessUnitStatusOnCreationAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeNameAction))]
     [SubTypeDiscriminator("changeOrderSearchStatus", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeOrderSearchStatusAction))]
+    [SubTypeDiscriminator("changePriceRoundingMode", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangePriceRoundingModeAction))]
     [SubTypeDiscriminator("changeProductSearchIndexingEnabled", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction))]
     [SubTypeDiscriminator("changeShoppingListsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction))]
+    [SubTypeDiscriminator("changeTaxRoundingMode", typeof(commercetools.Sdk.Api.Models.Projects.ProjectChangeTaxRoundingModeAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
@@ -91,6 +93,12 @@ namespace commercetools.Sdk.Api.Models.Projects
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangePriceRoundingModeAction ChangePriceRoundingMode(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangePriceRoundingModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangePriceRoundingModeAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction ChangeProductSearchIndexingEnabled(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeProductSearchIndexingEnabledAction();
@@ -100,6 +108,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction ChangeShoppingListsConfiguration(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeShoppingListsConfigurationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectChangeTaxRoundingModeAction ChangeTaxRoundingMode(Action<commercetools.Sdk.Api.Models.Projects.ProjectChangeTaxRoundingModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectChangeTaxRoundingModeAction();
             init?.Invoke(t);
             return t;
         }

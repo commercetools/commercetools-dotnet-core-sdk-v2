@@ -88,6 +88,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeOrderSearchStatusActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangePriceRoundingMode(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangePriceRoundingModeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangePriceRoundingModeActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeProductSearchIndexingEnabled(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl>> fn)
         {
@@ -98,6 +104,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsChangeTaxRoundingMode(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeTaxRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeTaxRoundingModeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectChangeTaxRoundingModeActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetMyBusinessUnitAssociateRoleOnCreation(

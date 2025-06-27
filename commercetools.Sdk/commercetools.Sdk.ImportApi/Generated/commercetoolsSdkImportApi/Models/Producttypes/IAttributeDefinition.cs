@@ -22,5 +22,7 @@ namespace commercetools.Sdk.ImportApi.Models.Producttypes
 
         bool? IsSearchable { get; set; }
 
+        IAttributeLevel Level { get; set; }
+
     }
 }

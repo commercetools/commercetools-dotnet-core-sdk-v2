@@ -36,6 +36,10 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IEnumerable<IProductVariantTailoring> VariantsEnumerable { set => Variants = value.ToList(); }
 
+        public IList<IProductTailoringAttribute> Attributes { get; set; }
+
+        public IEnumerable<IProductTailoringAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
         public bool Published { get; set; }
         public ProductTailoringCreatedMessagePayload()
         {
