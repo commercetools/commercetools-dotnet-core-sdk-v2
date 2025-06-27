@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Projects
@@ -8,6 +9,10 @@ namespace commercetools.Sdk.Api.Models.Projects
         long? DeleteDaysAfterLastModification { get; set; }
 
         bool? CountryTaxRateFallbackEnabled { get; set; }
+
+        IRoundingMode PriceRoundingMode { get; set; }
+
+        IRoundingMode TaxRoundingMode { get; set; }
 
     }
 }

@@ -20,6 +20,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("changeCustomLineItemQuantity", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeCustomLineItemQuantityAction))]
     [SubTypeDiscriminator("changeLineItemQuantity", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeLineItemQuantityAction))]
     [SubTypeDiscriminator("changeLineItemsOrder", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeLineItemsOrderAction))]
+    [SubTypeDiscriminator("changePriceRoundingMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangePriceRoundingModeAction))]
     [SubTypeDiscriminator("changeTaxCalculationMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxCalculationModeAction))]
     [SubTypeDiscriminator("changeTaxMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxModeAction))]
     [SubTypeDiscriminator("changeTaxRoundingMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction))]
@@ -167,6 +168,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartChangeLineItemsOrderAction ChangeLineItemsOrder(Action<commercetools.Sdk.Api.Models.Carts.CartChangeLineItemsOrderAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartChangeLineItemsOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartChangePriceRoundingModeAction ChangePriceRoundingMode(Action<commercetools.Sdk.Api.Models.Carts.CartChangePriceRoundingModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartChangePriceRoundingModeAction();
             init?.Invoke(t);
             return t;
         }

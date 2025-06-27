@@ -200,6 +200,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Quotes
             p => new CombinationQueryPredicate<QuoteQueryBuilderDsl>(p, QuoteQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<QuoteQueryBuilderDsl, string> PriceRoundingMode()
+        {
+            return new ComparisonPredicateBuilder<QuoteQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("priceRoundingMode")),
+            p => new CombinationQueryPredicate<QuoteQueryBuilderDsl>(p, QuoteQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<QuoteQueryBuilderDsl, string> TaxRoundingMode()
         {
             return new ComparisonPredicateBuilder<QuoteQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingMode")),

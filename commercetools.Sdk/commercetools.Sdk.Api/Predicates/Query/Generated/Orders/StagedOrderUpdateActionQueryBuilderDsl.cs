@@ -106,6 +106,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangePaymentStateActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsChangePriceRoundingMode(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsChangeShipmentState(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangeShipmentStateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderChangeShipmentStateActionQueryBuilderDsl>> fn)
         {
