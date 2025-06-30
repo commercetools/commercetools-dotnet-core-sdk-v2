@@ -7,9 +7,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Subscriptions.SubscriptionSetEventsAction))]
     public partial interface ISubscriptionSetEventsAction : ISubscriptionUpdateAction
     {
-        IList<IEventSubscription> Messages { get; set; }
+        IList<IEventSubscription> Events { get; set; }
 
-        IEnumerable<IEventSubscription> MessagesEnumerable { set => Messages = value.ToList(); }
+        IEnumerable<IEventSubscription> EventsEnumerable { set => Events = value.ToList(); }
 
     }
 }
