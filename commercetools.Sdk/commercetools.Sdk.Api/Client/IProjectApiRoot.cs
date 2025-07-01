@@ -22,6 +22,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Login;
 using commercetools.Sdk.Api.Client.RequestBuilders.Me;
 using commercetools.Sdk.Api.Client.RequestBuilders.Messages;
 using commercetools.Sdk.Api.Client.RequestBuilders.Orders;
+using commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.Payments;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections;
@@ -101,4 +102,5 @@ public interface IProjectApiRoot
     ByProjectKeyAssociateRolesRequestBuilder AssociateRoles();
     ByProjectKeyProductTailoringRequestBuilder ProductTailoring();
     ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups();
+    ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods();
 }
