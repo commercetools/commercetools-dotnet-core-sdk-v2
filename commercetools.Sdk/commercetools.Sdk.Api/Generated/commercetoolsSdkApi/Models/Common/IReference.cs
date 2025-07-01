@@ -24,6 +24,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.Api.Models.Orders.OrderReference))]
     [SubTypeDiscriminator("order-edit", typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditReference))]
     [SubTypeDiscriminator("payment", typeof(commercetools.Sdk.Api.Models.Payments.PaymentReference))]
+    [SubTypeDiscriminator("payment-method", typeof(commercetools.Sdk.Api.Models.PaymentMethods.PaymentMethodReference))]
     [SubTypeDiscriminator("product", typeof(commercetools.Sdk.Api.Models.Products.ProductReference))]
     [SubTypeDiscriminator("product-discount", typeof(commercetools.Sdk.Api.Models.ProductDiscounts.ProductDiscountReference))]
     [SubTypeDiscriminator("product-selection", typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionReference))]
@@ -158,6 +159,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.Payments.PaymentReference Payment(Action<commercetools.Sdk.Api.Models.Payments.PaymentReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Payments.PaymentReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.PaymentMethods.PaymentMethodReference PaymentMethod(Action<commercetools.Sdk.Api.Models.PaymentMethods.PaymentMethodReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.PaymentMethods.PaymentMethodReference();
             init?.Invoke(t);
             return t;
         }

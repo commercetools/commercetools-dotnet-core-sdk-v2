@@ -25,11 +25,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
         }
 
         public CombinationQueryPredicate<MyPaymentDraftQueryBuilderDsl> PaymentMethodInfo(
-            Func<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoQueryBuilderDsl>> fn)
+            Func<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MyPaymentDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
                 .Parent(ConstantQueryPredicate.Of().Constant("paymentMethodInfo"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoQueryBuilderDsl.Of())),
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentMethodInfoDraftQueryBuilderDsl.Of())),
                 MyPaymentDraftQueryBuilderDsl.Of);
         }
 

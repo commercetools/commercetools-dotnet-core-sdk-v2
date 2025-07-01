@@ -17,9 +17,14 @@ namespace commercetools.Sdk.Api.Models.Payments
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetCustomTypeAction))]
     [SubTypeDiscriminator("setInterfaceId", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetInterfaceIdAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetKeyAction))]
+    [SubTypeDiscriminator("setMethodInfo", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoAction))]
+    [SubTypeDiscriminator("setMethodInfoCustomField", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomFieldAction))]
+    [SubTypeDiscriminator("setMethodInfoCustomType", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomTypeAction))]
     [SubTypeDiscriminator("setMethodInfoInterface", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAction))]
+    [SubTypeDiscriminator("setMethodInfoInterfaceAccount", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAccountAction))]
     [SubTypeDiscriminator("setMethodInfoMethod", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoMethodAction))]
     [SubTypeDiscriminator("setMethodInfoName", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoNameAction))]
+    [SubTypeDiscriminator("setMethodInfoToken", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoTokenAction))]
     [SubTypeDiscriminator("setStatusInterfaceCode", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetStatusInterfaceCodeAction))]
     [SubTypeDiscriminator("setStatusInterfaceText", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetStatusInterfaceTextAction))]
     [SubTypeDiscriminator("setTransactionCustomField", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomFieldAction))]
@@ -101,9 +106,33 @@ namespace commercetools.Sdk.Api.Models.Payments
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoAction SetMethodInfo(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomFieldAction SetMethodInfoCustomField(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomFieldAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomFieldAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomTypeAction SetMethodInfoCustomType(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomTypeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAction SetMethodInfoInterface(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAccountAction SetMethodInfoInterfaceAccount(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAccountAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoInterfaceAccountAction();
             init?.Invoke(t);
             return t;
         }
@@ -116,6 +145,12 @@ namespace commercetools.Sdk.Api.Models.Payments
         static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoNameAction SetMethodInfoName(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoNameAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoNameAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoTokenAction SetMethodInfoToken(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoTokenAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetMethodInfoTokenAction();
             init?.Invoke(t);
             return t;
         }

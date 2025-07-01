@@ -73,6 +73,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("order-edit")]
         OrderEdit,
 
+        [Description("payment-method")]
+        PaymentMethod,
+
         [Description("payment")]
         Payment,
 
@@ -220,6 +223,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId OrderEdit = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.OrderEdit, JsonName = "order-edit" };
 
+        public static IReferenceTypeId PaymentMethod = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.PaymentMethod, JsonName = "payment-method" };
+
         public static IReferenceTypeId Payment = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Payment, JsonName = "payment" };
 
@@ -307,6 +313,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  KeyValueDocument ,
                  Order ,
                  OrderEdit ,
+                 PaymentMethod ,
                  Payment ,
                  Product ,
                  ProductDiscount ,

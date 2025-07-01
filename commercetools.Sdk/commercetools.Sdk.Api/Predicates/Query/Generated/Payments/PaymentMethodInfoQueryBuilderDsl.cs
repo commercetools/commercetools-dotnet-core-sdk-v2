@@ -36,6 +36,30 @@ namespace commercetools.Sdk.Api.Predicates.Query.Payments
                 PaymentMethodInfoQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<PaymentMethodInfoQueryBuilderDsl> Token(
+            Func<commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodTokenQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodTokenQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<PaymentMethodInfoQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("token"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodTokenQueryBuilderDsl.Of())),
+                PaymentMethodInfoQueryBuilderDsl.Of);
+        }
+
+        public IComparisonPredicateBuilder<PaymentMethodInfoQueryBuilderDsl, string> InterfaceAccount()
+        {
+            return new ComparisonPredicateBuilder<PaymentMethodInfoQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("interfaceAccount")),
+            p => new CombinationQueryPredicate<PaymentMethodInfoQueryBuilderDsl>(p, PaymentMethodInfoQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<PaymentMethodInfoQueryBuilderDsl> Custom(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<PaymentMethodInfoQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("custom"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl.Of())),
+                PaymentMethodInfoQueryBuilderDsl.Of);
+        }
+
 
     }
 }

@@ -18,7 +18,7 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         IMoney AmountPlanned { get; set; }
 
-        IPaymentMethodInfo PaymentMethodInfo { get; set; }
+        IPaymentMethodInfoDraft PaymentMethodInfo { get; set; }
 
         IPaymentStatusDraft PaymentStatus { get; set; }
 

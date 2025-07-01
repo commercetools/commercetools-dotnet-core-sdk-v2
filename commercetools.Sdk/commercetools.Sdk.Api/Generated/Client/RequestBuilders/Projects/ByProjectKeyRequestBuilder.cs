@@ -17,6 +17,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Inventory;
 using commercetools.Sdk.Api.Client.RequestBuilders.Login;
 using commercetools.Sdk.Api.Client.RequestBuilders.Messages;
 using commercetools.Sdk.Api.Client.RequestBuilders.Orders;
+using commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.Payments;
 using commercetools.Sdk.Api.Client.RequestBuilders.Products;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
@@ -163,6 +164,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyOrdersRequestBuilder Orders()
         {
             return new ByProjectKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods()
+        {
+            return new ByProjectKeyPaymentMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyPaymentsRequestBuilder Payments()

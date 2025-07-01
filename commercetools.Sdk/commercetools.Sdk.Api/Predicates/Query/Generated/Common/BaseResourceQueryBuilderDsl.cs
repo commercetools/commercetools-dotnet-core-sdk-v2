@@ -160,6 +160,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsPaymentMethod(
+            Func<commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.PaymentMethods.PaymentMethodQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsProduct(
             Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductQueryBuilderDsl>> fn)
         {

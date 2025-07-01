@@ -19,6 +19,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
         [Description("payment")]
         Payment,
 
+        [Description("payment-method")]
+        PaymentMethod,
+
         [Description("customer")]
         Customer,
 
@@ -73,6 +76,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
         public static IExtensionResourceTypeId Payment = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Payment, JsonName = "payment" };
 
+        public static IExtensionResourceTypeId PaymentMethod = new ExtensionResourceTypeIdWrapper
+        { Value = ExtensionResourceTypeId.PaymentMethod, JsonName = "payment-method" };
+
         public static IExtensionResourceTypeId Customer = new ExtensionResourceTypeIdWrapper
         { Value = ExtensionResourceTypeId.Customer, JsonName = "customer" };
 
@@ -103,6 +109,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
                  Cart ,
                  Order ,
                  Payment ,
+                 PaymentMethod ,
                  Customer ,
                  CustomerGroup ,
                  QuoteRequest ,
