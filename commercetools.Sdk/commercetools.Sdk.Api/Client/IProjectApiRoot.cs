@@ -12,6 +12,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.Customers;
 using commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects;
 using commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes;
+using commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.Extensions;
 using commercetools.Sdk.Api.Client.RequestBuilders.Graphql;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
@@ -42,6 +43,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
 using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Types;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
+using commercetools.Sdk.Api.Models.DiscountGroups;
 using commercetools.Sdk.Api.Models.Projects;
 
 namespace commercetools.Sdk.Api.Client;
@@ -98,4 +100,5 @@ public interface IProjectApiRoot
     ByProjectKeyAsAssociateRequestBuilder AsAssociate();
     ByProjectKeyAssociateRolesRequestBuilder AssociateRoles();
     ByProjectKeyProductTailoringRequestBuilder ProductTailoring();
+    ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups();
 }
