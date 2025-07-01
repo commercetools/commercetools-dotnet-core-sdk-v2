@@ -42,6 +42,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate;
 using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
+using commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups;
+using commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring;
 
 namespace commercetools.Sdk.Api.Client
@@ -293,6 +295,16 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyProductTailoringRequestBuilder ProductTailoring()
         {
             return With().ProductTailoring();
+        }
+
+        public ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups()
+        {
+            return With().DiscountGroups();
+        }
+
+        public ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods()
+        {
+            return With().PaymentMethods();
         }
     }
 }

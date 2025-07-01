@@ -40,6 +40,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             return new CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetCustomFieldActionQueryBuilderDsl.Of()),
                 MyPaymentUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> AsSetMethodInfoCustomField(
+            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomFieldActionQueryBuilderDsl.Of()),
+                MyPaymentUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> AsSetMethodInfoCustomType(
+            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoCustomTypeActionQueryBuilderDsl.Of()),
+                MyPaymentUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> AsSetMethodInfoInterfaceAccount(
+            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl.Of()),
+                MyPaymentUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MyPaymentUpdateActionQueryBuilderDsl> AsSetMethodInfoInterface(
             Func<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoInterfaceActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyPaymentSetMethodInfoInterfaceActionQueryBuilderDsl>> fn)
         {

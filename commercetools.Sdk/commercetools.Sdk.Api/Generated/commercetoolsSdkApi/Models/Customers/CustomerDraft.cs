@@ -64,6 +64,10 @@ namespace commercetools.Sdk.Api.Models.Customers
 
         public ICustomerGroupResourceIdentifier CustomerGroup { get; set; }
 
+        public IList<ICustomerGroupAssignmentDraft> CustomerGroupAssignments { get; set; }
+
+        public IEnumerable<ICustomerGroupAssignmentDraft> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
+
         public ICustomFieldsDraft Custom { get; set; }
 
         public string Locale { get; set; }
@@ -75,9 +79,5 @@ namespace commercetools.Sdk.Api.Models.Customers
         public IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
         public IAuthenticationMode AuthenticationMode { get; set; }
-
-        public IList<ICustomerGroupAssignmentDraft> CustomerGroupAssignments { get; set; }
-
-        public IEnumerable<ICustomerGroupAssignmentDraft> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
     }
 }

@@ -55,6 +55,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("discount-code")]
         DiscountCode,
 
+        [Description("discount-group")]
+        DiscountGroup,
+
         [Description("extension")]
         Extension,
 
@@ -69,6 +72,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         [Description("order-edit")]
         OrderEdit,
+
+        [Description("payment-method")]
+        PaymentMethod,
 
         [Description("payment")]
         Payment,
@@ -199,6 +205,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId DiscountCode = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.DiscountCode, JsonName = "discount-code" };
 
+        public static IReferenceTypeId DiscountGroup = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.DiscountGroup, JsonName = "discount-group" };
+
         public static IReferenceTypeId Extension = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Extension, JsonName = "extension" };
 
@@ -213,6 +222,9 @@ namespace commercetools.Sdk.Api.Models.Common
 
         public static IReferenceTypeId OrderEdit = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.OrderEdit, JsonName = "order-edit" };
+
+        public static IReferenceTypeId PaymentMethod = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.PaymentMethod, JsonName = "payment-method" };
 
         public static IReferenceTypeId Payment = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Payment, JsonName = "payment" };
@@ -295,11 +307,13 @@ namespace commercetools.Sdk.Api.Models.Common
                  CustomerPasswordToken ,
                  DirectDiscount ,
                  DiscountCode ,
+                 DiscountGroup ,
                  Extension ,
                  InventoryEntry ,
                  KeyValueDocument ,
                  Order ,
                  OrderEdit ,
+                 PaymentMethod ,
                  Payment ,
                  Product ,
                  ProductDiscount ,

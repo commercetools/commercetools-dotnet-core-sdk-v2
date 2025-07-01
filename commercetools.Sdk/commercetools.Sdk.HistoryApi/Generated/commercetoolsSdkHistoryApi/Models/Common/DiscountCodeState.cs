@@ -25,6 +25,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         [Description("ApplicationStoppedByPreviousDiscount")]
         ApplicationStoppedByPreviousDiscount,
 
+        [Description("ApplicationStoppedByGroupBestDeal")]
+        ApplicationStoppedByGroupBestDeal,
+
         [Description("NotValid")]
         NotValid
     }
@@ -67,6 +70,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IDiscountCodeState ApplicationStoppedByPreviousDiscount = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.ApplicationStoppedByPreviousDiscount, JsonName = "ApplicationStoppedByPreviousDiscount" };
 
+        public static IDiscountCodeState ApplicationStoppedByGroupBestDeal = new DiscountCodeStateWrapper
+        { Value = DiscountCodeState.ApplicationStoppedByGroupBestDeal, JsonName = "ApplicationStoppedByGroupBestDeal" };
+
         public static IDiscountCodeState NotValid = new DiscountCodeStateWrapper
         { Value = DiscountCodeState.NotValid, JsonName = "NotValid" };
 
@@ -81,6 +87,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
                  MatchesCart ,
                  MaxApplicationReached ,
                  ApplicationStoppedByPreviousDiscount ,
+                 ApplicationStoppedByGroupBestDeal ,
                  NotValid
              };
         }

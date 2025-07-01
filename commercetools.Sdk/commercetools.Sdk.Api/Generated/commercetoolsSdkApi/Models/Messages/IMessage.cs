@@ -116,6 +116,10 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("DiscountCodeCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeCreatedMessage))]
     [SubTypeDiscriminator("DiscountCodeDeleted", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeDeletedMessage))]
     [SubTypeDiscriminator("DiscountCodeKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessage))]
+    [SubTypeDiscriminator("DiscountGroupCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupCreatedMessage))]
+    [SubTypeDiscriminator("DiscountGroupDeleted", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessage))]
+    [SubTypeDiscriminator("DiscountGroupKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupKeySetMessage))]
+    [SubTypeDiscriminator("DiscountGroupSortOrderSet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessage))]
     [SubTypeDiscriminator("InventoryEntryCreated", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage))]
     [SubTypeDiscriminator("InventoryEntryDeleted", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessage))]
     [SubTypeDiscriminator("InventoryEntryQuantitySet", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessage))]
@@ -163,6 +167,31 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ParcelTrackingDataUpdated", typeof(commercetools.Sdk.Api.Models.Messages.ParcelTrackingDataUpdatedMessage))]
     [SubTypeDiscriminator("PaymentCreated", typeof(commercetools.Sdk.Api.Models.Messages.PaymentCreatedMessage))]
     [SubTypeDiscriminator("PaymentInteractionAdded", typeof(commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage))]
+    [SubTypeDiscriminator("PaymentInterfaceIdSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentInterfaceIdSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodCreated", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCreatedMessage))]
+    [SubTypeDiscriminator("PaymentMethodCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("PaymentMethodCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("PaymentMethodCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("PaymentMethodCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("PaymentMethodCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodDefaultSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodDefaultSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodDeleted", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodDeletedMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoInterfaceAccountSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceAccountSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoInterfaceSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoMethodSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoMethodSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoNameSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoNameSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInfoTokenSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoTokenSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodInterfaceAccountSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodInterfaceAccountSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodKeySet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodKeySetMessage))]
+    [SubTypeDiscriminator("PaymentMethodMethodSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodMethodSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodNameSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodNameSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodPaymentInterfaceSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentInterfaceSetMessage))]
+    [SubTypeDiscriminator("PaymentMethodPaymentMethodStatusSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentMethodStatusSetMessage))]
     [SubTypeDiscriminator("PaymentStatusInterfaceCodeSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentStatusInterfaceCodeSetMessage))]
     [SubTypeDiscriminator("PaymentStatusStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.PaymentStatusStateTransitionMessage))]
     [SubTypeDiscriminator("PaymentTransactionAdded", typeof(commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage))]
@@ -941,6 +970,30 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.DiscountGroupCreatedMessage DiscountGroupCreated(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessage DiscountGroupDeleted(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountGroupKeySetMessage DiscountGroupKeySet(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupKeySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupKeySetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessage DiscountGroupSortOrderSet(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage InventoryEntryCreated(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessage();
@@ -1220,6 +1273,156 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage PaymentInteractionAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.PaymentInteractionAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentInterfaceIdSetMessage PaymentInterfaceIdSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentInterfaceIdSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentInterfaceIdSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCreatedMessage PaymentMethodCreated(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldAddedMessage PaymentMethodCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldChangedMessage PaymentMethodCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldRemovedMessage PaymentMethodCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeRemovedMessage PaymentMethodCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeSetMessage PaymentMethodCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodCustomTypeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodDefaultSetMessage PaymentMethodDefaultSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodDefaultSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodDefaultSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodDeletedMessage PaymentMethodDeleted(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldAddedMessage PaymentMethodInfoCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldChangedMessage PaymentMethodInfoCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldRemovedMessage PaymentMethodInfoCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeRemovedMessage PaymentMethodInfoCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeSetMessage PaymentMethodInfoCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoCustomTypeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceAccountSetMessage PaymentMethodInfoInterfaceAccountSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceAccountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceAccountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceSetMessage PaymentMethodInfoInterfaceSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoInterfaceSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoMethodSetMessage PaymentMethodInfoMethodSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoMethodSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoMethodSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoNameSetMessage PaymentMethodInfoNameSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoTokenSetMessage PaymentMethodInfoTokenSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoTokenSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInfoTokenSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodInterfaceAccountSetMessage PaymentMethodInterfaceAccountSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodInterfaceAccountSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodInterfaceAccountSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodKeySetMessage PaymentMethodKeySet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodKeySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodKeySetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodMethodSetMessage PaymentMethodMethodSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodMethodSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodMethodSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodNameSetMessage PaymentMethodNameSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodNameSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodNameSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentInterfaceSetMessage PaymentMethodPaymentInterfaceSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentInterfaceSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentInterfaceSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentMethodStatusSetMessage PaymentMethodPaymentMethodStatusSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentMethodStatusSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentMethodPaymentMethodStatusSetMessage();
             init?.Invoke(t);
             return t;
         }

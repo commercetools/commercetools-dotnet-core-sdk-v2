@@ -10,7 +10,7 @@ namespace commercetools.Sdk.Api.Models.Me
     {
         IMoney AmountPlanned { get; set; }
 
-        IPaymentMethodInfo PaymentMethodInfo { get; set; }
+        IPaymentMethodInfoDraft PaymentMethodInfo { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
 

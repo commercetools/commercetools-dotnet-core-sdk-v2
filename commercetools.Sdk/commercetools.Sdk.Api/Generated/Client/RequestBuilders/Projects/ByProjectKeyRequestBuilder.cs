@@ -11,11 +11,13 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Customers;
 using commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects;
 using commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes;
+using commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.Graphql;
 using commercetools.Sdk.Api.Client.RequestBuilders.Inventory;
 using commercetools.Sdk.Api.Client.RequestBuilders.Login;
 using commercetools.Sdk.Api.Client.RequestBuilders.Messages;
 using commercetools.Sdk.Api.Client.RequestBuilders.Orders;
+using commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.Payments;
 using commercetools.Sdk.Api.Client.RequestBuilders.Products;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts;
@@ -134,6 +136,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
             return new ByProjectKeyDiscountCodesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups()
+        {
+            return new ByProjectKeyDiscountGroupsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyGraphqlRequestBuilder Graphql()
         {
             return new ByProjectKeyGraphqlRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
@@ -157,6 +164,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyOrdersRequestBuilder Orders()
         {
             return new ByProjectKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods()
+        {
+            return new ByProjectKeyPaymentMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyPaymentsRequestBuilder Payments()

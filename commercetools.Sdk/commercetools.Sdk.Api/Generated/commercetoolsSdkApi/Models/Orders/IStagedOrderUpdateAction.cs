@@ -19,6 +19,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("changeLineItemQuantity", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangeLineItemQuantityAction))]
     [SubTypeDiscriminator("changeOrderState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangeOrderStateAction))]
     [SubTypeDiscriminator("changePaymentState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePaymentStateAction))]
+    [SubTypeDiscriminator("changePriceRoundingMode", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePriceRoundingModeAction))]
     [SubTypeDiscriminator("changeShipmentState", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangeShipmentStateAction))]
     [SubTypeDiscriminator("changeTaxCalculationMode", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangeTaxCalculationModeAction))]
     [SubTypeDiscriminator("changeTaxMode", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangeTaxModeAction))]
@@ -181,6 +182,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePaymentStateAction ChangePaymentState(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePaymentStateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePaymentStateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePriceRoundingModeAction ChangePriceRoundingMode(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePriceRoundingModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderChangePriceRoundingModeAction();
             init?.Invoke(t);
             return t;
         }

@@ -190,6 +190,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CollectionPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("variants")),
                     p => new CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl>(p, ProductTailoringCreatedMessageQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl> Attributes(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("attributes"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringAttributeQueryBuilderDsl.Of())),
+                ProductTailoringCreatedMessageQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl> Attributes()
+        {
+            return new CollectionPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("attributes")),
+                    p => new CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl>(p, ProductTailoringCreatedMessageQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl, bool> Published()
         {
             return new ComparisonPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("published")),

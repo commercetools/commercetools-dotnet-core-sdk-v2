@@ -8,9 +8,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
     {
         public string Action { get; set; }
 
-        public IList<IEventSubscription> Messages { get; set; }
+        public IList<IEventSubscription> Events { get; set; }
 
-        public IEnumerable<IEventSubscription> MessagesEnumerable { set => Messages = value.ToList(); }
+        public IEnumerable<IEventSubscription> EventsEnumerable { set => Events = value.ToList(); }
         public SubscriptionSetEventsAction()
         {
             this.Action = "setEvents";

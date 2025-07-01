@@ -35,5 +35,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         ISearchKeywords SearchKeywords { get; set; }
 
+        IList<IAttribute> Attributes { get; set; }
+
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
     }
 }

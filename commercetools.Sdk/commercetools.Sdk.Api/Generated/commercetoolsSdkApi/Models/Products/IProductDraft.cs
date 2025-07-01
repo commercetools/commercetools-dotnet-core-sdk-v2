@@ -50,5 +50,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         IProductPriceModeEnum PriceMode { get; set; }
 
+        IList<IAttribute> Attributes { get; set; }
+
+        IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
     }
 }
