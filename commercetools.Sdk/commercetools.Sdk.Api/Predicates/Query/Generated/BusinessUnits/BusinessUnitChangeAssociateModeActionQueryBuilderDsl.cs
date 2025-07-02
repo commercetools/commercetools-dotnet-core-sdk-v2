@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             p => new CombinationQueryPredicate<BusinessUnitChangeAssociateModeActionQueryBuilderDsl>(p, BusinessUnitChangeAssociateModeActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<BusinessUnitChangeAssociateModeActionQueryBuilderDsl, bool> MakeInheritedAssociatesExplicit()
+        {
+            return new ComparisonPredicateBuilder<BusinessUnitChangeAssociateModeActionQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("makeInheritedAssociatesExplicit")),
+            p => new CombinationQueryPredicate<BusinessUnitChangeAssociateModeActionQueryBuilderDsl>(p, BusinessUnitChangeAssociateModeActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

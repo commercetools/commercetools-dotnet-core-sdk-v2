@@ -8,6 +8,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public string Action { get; set; }
 
         public IBusinessUnitAssociateMode AssociateMode { get; set; }
+
+        public bool MakeInheritedAssociatesExplicit { get; set; }
         public BusinessUnitChangeAssociateModeAction()
         {
             this.Action = "changeAssociateMode";

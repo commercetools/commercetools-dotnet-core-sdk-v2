@@ -44,7 +44,6 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
 using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Types;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
-using commercetools.Sdk.Api.Models.DiscountGroups;
 using commercetools.Sdk.Api.Models.Projects;
 
 namespace commercetools.Sdk.Api.Client;
