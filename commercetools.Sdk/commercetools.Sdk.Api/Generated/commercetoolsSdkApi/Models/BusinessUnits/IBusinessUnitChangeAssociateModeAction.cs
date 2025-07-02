@@ -7,5 +7,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     {
         IBusinessUnitAssociateMode AssociateMode { get; set; }
 
+        bool MakeInheritedAssociatesExplicit { get; set; }
+
     }
 }
