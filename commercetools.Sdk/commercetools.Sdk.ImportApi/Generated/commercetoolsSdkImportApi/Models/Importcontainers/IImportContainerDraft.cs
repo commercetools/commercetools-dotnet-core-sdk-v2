@@ -10,5 +10,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 
         IImportResourceType ResourceType { get; set; }
 
+        IRetentionPolicy RetentionPolicy { get; set; }
+
     }
 }

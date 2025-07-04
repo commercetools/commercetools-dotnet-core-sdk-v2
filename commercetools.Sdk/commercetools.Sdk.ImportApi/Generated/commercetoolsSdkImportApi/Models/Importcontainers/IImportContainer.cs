@@ -13,9 +13,13 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
 
         long Version { get; set; }
 
+        IRetentionPolicy RetentionPolicy { get; set; }
+
         DateTime CreatedAt { get; set; }
 
         DateTime LastModifiedAt { get; set; }
+
+        DateTime? ExpiresAt { get; set; }
 
     }
 }
