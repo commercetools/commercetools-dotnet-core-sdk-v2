@@ -9,5 +9,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importcontainers
         public string Key { get; set; }
 
         public IImportResourceType ResourceType { get; set; }
+
+        public IRetentionPolicy RetentionPolicy { get; set; }
     }
 }
