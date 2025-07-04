@@ -8,9 +8,9 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.MoneySetAttribute))]
     public partial interface IMoneySetAttribute : IAttribute
     {
-        IList<ITypedMoney> Value { get; set; }
+        IList<IMoney> Value { get; set; }
 
-        IEnumerable<ITypedMoney> ValueEnumerable { set => Value = value.ToList(); }
+        IEnumerable<IMoney> ValueEnumerable { set => Value = value.ToList(); }
 
     }
 }

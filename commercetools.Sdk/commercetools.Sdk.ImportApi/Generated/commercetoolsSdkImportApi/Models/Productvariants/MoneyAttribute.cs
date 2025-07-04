@@ -10,7 +10,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
 
         public string Type { get; set; }
 
-        public ITypedMoney Value { get; set; }
+        public IMoney Value { get; set; }
         public MoneyAttribute()
         {
             this.Type = "money";

@@ -6,7 +6,7 @@ namespace commercetools.Sdk.ImportApi.Models.Productvariants
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Productvariants.MoneyAttribute))]
     public partial interface IMoneyAttribute : IAttribute
     {
-        ITypedMoney Value { get; set; }
+        IMoney Value { get; set; }
 
     }
 }

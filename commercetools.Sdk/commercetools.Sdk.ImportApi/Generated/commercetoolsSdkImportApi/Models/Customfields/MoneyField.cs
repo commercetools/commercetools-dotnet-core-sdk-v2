@@ -8,7 +8,7 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     {
         public string Type { get; set; }
 
-        public ITypedMoney Value { get; set; }
+        public IMoney Value { get; set; }
         public MoneyField()
         {
             this.Type = "Money";
