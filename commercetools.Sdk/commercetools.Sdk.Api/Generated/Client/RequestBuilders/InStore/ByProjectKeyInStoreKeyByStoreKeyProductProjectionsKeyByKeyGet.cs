@@ -63,6 +63,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("priceChannel");
         }
 
+        public List<string> GetPriceRecurrencePolicy()
+        {
+            return this.GetQueryParam("priceRecurrencePolicy");
+        }
+
         public List<string> GetLocaleProjection()
         {
             return this.GetQueryParam("localeProjection");
@@ -101,6 +106,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithPriceChannel(string priceChannel)
         {
             return this.AddQueryParam("priceChannel", priceChannel);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithPriceRecurrencePolicy(string priceRecurrencePolicy)
+        {
+            return this.AddQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet WithLocaleProjection(string localeProjection)

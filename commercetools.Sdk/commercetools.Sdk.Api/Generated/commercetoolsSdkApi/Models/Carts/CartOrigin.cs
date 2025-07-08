@@ -17,7 +17,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         Merchant,
 
         [Description("Quote")]
-        Quote
+        Quote,
+
+        [Description("RecurringOrder")]
+        RecurringOrder
     }
 
     public class CartOriginWrapper : ICartOrigin
@@ -52,6 +55,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static ICartOrigin Quote = new CartOriginWrapper
         { Value = CartOrigin.Quote, JsonName = "Quote" };
 
+        public static ICartOrigin RecurringOrder = new CartOriginWrapper
+        { Value = CartOrigin.RecurringOrder, JsonName = "RecurringOrder" };
+
         CartOrigin? Value { get; }
 
         static ICartOrigin[] Values()
@@ -60,7 +66,8 @@ namespace commercetools.Sdk.Api.Models.Carts
             {
                  Customer ,
                  Merchant ,
-                 Quote
+                 Quote ,
+                 RecurringOrder
              };
         }
         static ICartOrigin FindEnum(string value)

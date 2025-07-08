@@ -97,6 +97,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
                 PriceDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<PriceDraftQueryBuilderDsl> RecurrencePolicy(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<PriceDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrencePolicy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl.Of())),
+                PriceDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }
