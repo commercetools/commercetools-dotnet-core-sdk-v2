@@ -99,6 +99,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartAddCustomLineItemActionQueryBuilderDsl>(p, CartAddCustomLineItemActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<CartAddCustomLineItemActionQueryBuilderDsl> RecurrenceInfo(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartAddCustomLineItemActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrenceInfo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.CustomLineItemRecurrenceInfoDraftQueryBuilderDsl.Of())),
+                CartAddCustomLineItemActionQueryBuilderDsl.Of);
+        }
+
 
     }
 }

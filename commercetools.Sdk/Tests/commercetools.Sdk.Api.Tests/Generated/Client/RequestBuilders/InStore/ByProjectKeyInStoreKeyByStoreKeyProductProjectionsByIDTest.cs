@@ -98,6 +98,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ProductProjections()
                    .WithId("test_ID")
                    .Get()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/test_ID?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithId("test_ID")
+                   .Get()
                    .WithLocaleProjection("localeProjection")
                    .Build(),
                    "Get",

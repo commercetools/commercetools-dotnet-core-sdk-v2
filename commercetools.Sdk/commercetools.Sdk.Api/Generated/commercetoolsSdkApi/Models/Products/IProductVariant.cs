@@ -40,5 +40,9 @@ namespace commercetools.Sdk.Api.Models.Products
 
         bool? ScopedPriceDiscounted { get; set; }
 
+        IList<IPrice> RecurrencePrices { get; set; }
+
+        IEnumerable<IPrice> RecurrencePricesEnumerable { set => RecurrencePrices = value.ToList(); }
+
     }
 }

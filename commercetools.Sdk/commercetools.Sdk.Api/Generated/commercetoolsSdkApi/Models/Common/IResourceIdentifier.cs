@@ -26,6 +26,8 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("product-type", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeResourceIdentifier))]
     [SubTypeDiscriminator("quote", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteResourceIdentifier))]
     [SubTypeDiscriminator("quote-request", typeof(commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier))]
+    [SubTypeDiscriminator("recurrence-policy", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyResourceIdentifier))]
+    [SubTypeDiscriminator("recurring-order", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderResourceIdentifier))]
     [SubTypeDiscriminator("review", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewResourceIdentifier))]
     [SubTypeDiscriminator("shipping-method", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodResourceIdentifier))]
     [SubTypeDiscriminator("shopping-list", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListResourceIdentifier))]
@@ -167,6 +169,18 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier QuoteRequest(Action<commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyResourceIdentifier RecurrencePolicy(Action<commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderResourceIdentifier RecurringOrder(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderResourceIdentifier();
             init?.Invoke(t);
             return t;
         }

@@ -80,6 +80,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithKey("test_key")
                    .Get()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products/key=test_key?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithKey("test_key")
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -166,6 +177,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Products()
                    .WithKey("test_key")
                    .Post(null)
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/products/key=test_key?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithKey("test_key")
+                   .Post(null)
                    .WithExpand("expand")
                    .Build(),
                    "Post",
@@ -235,6 +257,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Delete",
                    "/test_projectKey/products/key=test_key?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/products/key=test_key?priceRecurrencePolicy=priceRecurrencePolicy",
                },
                new Object[] {
                    ApiRoot

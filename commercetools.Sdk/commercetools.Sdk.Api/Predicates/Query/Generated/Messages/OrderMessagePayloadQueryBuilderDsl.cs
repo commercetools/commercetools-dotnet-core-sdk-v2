@@ -100,6 +100,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderBusinessUnitSetMessagePayloadQueryBuilderDsl.Of()),
                 OrderMessagePayloadQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsOrderCreatedFromRecurringOrder(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsOrderCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderCreatedMessagePayloadQueryBuilderDsl>> fn)
         {
