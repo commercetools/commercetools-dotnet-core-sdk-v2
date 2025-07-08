@@ -15,6 +15,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     [SubTypeDiscriminator("price", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.PriceImportRequest))]
     [SubTypeDiscriminator("product", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductImportRequest))]
     [SubTypeDiscriminator("product-draft", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductDraftImportRequest))]
+    [SubTypeDiscriminator("product-selection", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductSelectionImportRequest))]
     [SubTypeDiscriminator("product-type", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductTypeImportRequest))]
     [SubTypeDiscriminator("product-variant", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductVariantImportRequest))]
     [SubTypeDiscriminator("product-variant-patch", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ProductVariantPatchRequest))]
@@ -75,6 +76,12 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
         static commercetools.Sdk.ImportApi.Models.Importrequests.ProductDraftImportRequest ProductDraft(Action<commercetools.Sdk.ImportApi.Models.Importrequests.ProductDraftImportRequest> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Importrequests.ProductDraftImportRequest();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Importrequests.ProductSelectionImportRequest ProductSelection(Action<commercetools.Sdk.ImportApi.Models.Importrequests.ProductSelectionImportRequest> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Importrequests.ProductSelectionImportRequest();
             init?.Invoke(t);
             return t;
         }

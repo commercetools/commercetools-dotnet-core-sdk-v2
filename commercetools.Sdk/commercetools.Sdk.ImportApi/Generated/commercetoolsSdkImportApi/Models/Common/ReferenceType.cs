@@ -31,6 +31,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("discount-code")]
         DiscountCode,
 
+        [Description("key-value-document")]
+        KeyValueDocument,
+
         [Description("order")]
         Order,
 
@@ -65,10 +68,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         TaxCategory,
 
         [Description("type")]
-        Type,
-
-        [Description("key-value-document")]
-        KeyValueDocument
+        Type
     }
 
     public class ReferenceTypeWrapper : IReferenceType
@@ -115,6 +115,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IReferenceType DiscountCode = new ReferenceTypeWrapper
         { Value = ReferenceType.DiscountCode, JsonName = "discount-code" };
 
+        public static IReferenceType KeyValueDocument = new ReferenceTypeWrapper
+        { Value = ReferenceType.KeyValueDocument, JsonName = "key-value-document" };
+
         public static IReferenceType Order = new ReferenceTypeWrapper
         { Value = ReferenceType.Order, JsonName = "order" };
 
@@ -151,9 +154,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IReferenceType Type = new ReferenceTypeWrapper
         { Value = ReferenceType.Type, JsonName = "type" };
 
-        public static IReferenceType KeyValueDocument = new ReferenceTypeWrapper
-        { Value = ReferenceType.KeyValueDocument, JsonName = "key-value-document" };
-
         ReferenceType? Value { get; }
 
         static IReferenceType[] Values()
@@ -167,6 +167,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  Customer ,
                  CustomerGroup ,
                  DiscountCode ,
+                 KeyValueDocument ,
                  Order ,
                  Payment ,
                  Price ,
@@ -178,8 +179,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  State ,
                  Store ,
                  TaxCategory ,
-                 Type ,
-                 KeyValueDocument
+                 Type
              };
         }
         static IReferenceType FindEnum(string value)

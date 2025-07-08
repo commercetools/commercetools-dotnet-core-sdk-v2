@@ -5,6 +5,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.PaymentKeyReference))]
     public partial interface IPaymentKeyReference : IKeyReference
     {
+        new string Key { get; set; }
 
     }
 }

@@ -5,6 +5,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.ShippingMethodKeyReference))]
     public partial interface IShippingMethodKeyReference : IKeyReference
     {
+        new string Key { get; set; }
 
     }
 }
