@@ -16,6 +16,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("customer")]
         Customer,
 
+        [Description("discount-code")]
+        DiscountCode,
+
         [Description("inventory")]
         Inventory,
 
@@ -34,6 +37,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("product-draft")]
         ProductDraft,
 
+        [Description("product-selection")]
+        ProductSelection,
+
         [Description("product-type")]
         ProductType,
 
@@ -47,10 +53,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         StandalonePrice,
 
         [Description("type")]
-        Type,
-
-        [Description("discount-code")]
-        DiscountCode
+        Type
     }
 
     public class ImportResourceTypeWrapper : IImportResourceType
@@ -82,6 +85,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Customer = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Customer, JsonName = "customer" };
 
+        public static IImportResourceType DiscountCode = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.DiscountCode, JsonName = "discount-code" };
+
         public static IImportResourceType Inventory = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Inventory, JsonName = "inventory" };
 
@@ -100,6 +106,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType ProductDraft = new ImportResourceTypeWrapper
         { Value = ImportResourceType.ProductDraft, JsonName = "product-draft" };
 
+        public static IImportResourceType ProductSelection = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.ProductSelection, JsonName = "product-selection" };
+
         public static IImportResourceType ProductType = new ImportResourceTypeWrapper
         { Value = ImportResourceType.ProductType, JsonName = "product-type" };
 
@@ -115,9 +124,6 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType Type = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Type, JsonName = "type" };
 
-        public static IImportResourceType DiscountCode = new ImportResourceTypeWrapper
-        { Value = ImportResourceType.DiscountCode, JsonName = "discount-code" };
-
         ImportResourceType? Value { get; }
 
         static IImportResourceType[] Values()
@@ -126,18 +132,19 @@ namespace commercetools.Sdk.ImportApi.Models.Common
             {
                  Category ,
                  Customer ,
+                 DiscountCode ,
                  Inventory ,
                  Order ,
                  OrderPatch ,
                  Price ,
                  Product ,
                  ProductDraft ,
+                 ProductSelection ,
                  ProductType ,
                  ProductVariant ,
                  ProductVariantPatch ,
                  StandalonePrice ,
-                 Type ,
-                 DiscountCode
+                 Type
              };
         }
         static IImportResourceType FindEnum(string value)

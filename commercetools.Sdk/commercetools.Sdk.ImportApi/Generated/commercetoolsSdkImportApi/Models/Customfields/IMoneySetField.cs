@@ -8,9 +8,9 @@ namespace commercetools.Sdk.ImportApi.Models.Customfields
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Customfields.MoneySetField))]
     public partial interface IMoneySetField : ICustomField
     {
-        IList<IMoney> Value { get; set; }
+        IList<ITypedMoney> Value { get; set; }
 
-        IEnumerable<IMoney> ValueEnumerable { set => Value = value.ToList(); }
+        IEnumerable<ITypedMoney> ValueEnumerable { set => Value = value.ToList(); }
 
     }
 }
