@@ -1,29 +1,18 @@
 **Api changes**
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added enum `RecurringOrder` to type `CartOrigin`
-- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
-- added enum `discount-group` to type `ReferenceTypeId`
-- added enum `payment-method` to type `ReferenceTypeId`
-- added enum `recurrence-policy` to type `ReferenceTypeId`
-- added enum `recurring-order` to type `ReferenceTypeId`
-- added enum `payment-method` to type `ExtensionResourceTypeId`
-- added enum `RecurringOrderState` to type `StateTypeEnum`
-- added enum `recurrence-policy` to type `ChangeSubscriptionResourceTypeId`
-- added enum `recurring-order` to type `ChangeSubscriptionResourceTypeId`
-- added enum `checkout` to type `EventSubscriptionResourceTypeId`
-- added enum `CheckoutOrderCreationFailed` to type `EventType`
-- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
-- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
-- added enum `CheckoutPaymentAuthorized` to type `EventType`
-- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
-- added enum `CheckoutPaymentCharged` to type `EventType`
-- added enum `CheckoutPaymentChargeFailed` to type `EventType`
-- added enum `CheckoutPaymentRefunded` to type `EventType`
-- added enum `CheckoutPaymentRefundFailed` to type `EventType`
-- added enum `recurring-order` to type `ResourceTypeId`
+- changed property `sortOrder` of type `CartDiscountDraft` to be optional
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `paymentMethodInfo` of type `MyPaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+- :warning: changed property `paymentMethodInfo` of type `PaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
 </details>
 
 
@@ -90,73 +79,11 @@
 
 
 <details>
-<summary>Changed Property(s)</summary>
-
-- :warning: changed property `paymentMethodInfo` of type `MyPaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
-- :warning: changed property `paymentMethodInfo` of type `PaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
-- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
-</details>
-
-
-<details>
-<summary>Required Property(s)</summary>
-
-- changed property `sortOrder` of type `CartDiscountDraft` to be optional
-</details>
-
-
-<details>
 <summary>Removed Property(s)</summary>
 
 - :warning: removed property `/[0-9].[0-9]*[1-9]/` from type `CategoryOrderHints`
 - :warning: removed property `//` from type `ProductVariantChannelAvailabilityMap`
 - :warning: removed property `messages` from type `SubscriptionSetEventsAction`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().discountGroups().get()`
-- added method `apiRoot.withProjectKey().discountGroups().head()`
-- added method `apiRoot.withProjectKey().discountGroups().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().post()`
-- added method `apiRoot.withProjectKey().recurringOrders().get()`
-- added method `apiRoot.withProjectKey().recurringOrders().head()`
-- added method `apiRoot.withProjectKey().recurringOrders().post()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().get()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().head()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().get()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().head()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().delete()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().get()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().head()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().delete()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().delete()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().delete()`
-- added method `apiRoot.withProjectKey().recurringOrders().withId().get()`
-- added method `apiRoot.withProjectKey().recurringOrders().withId().head()`
-- added method `apiRoot.withProjectKey().recurringOrders().withId().post()`
-- added method `apiRoot.withProjectKey().recurringOrders().withKey().get()`
-- added method `apiRoot.withProjectKey().recurringOrders().withKey().head()`
-- added method `apiRoot.withProjectKey().recurringOrders().withKey().post()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().get()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().head()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().post()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withId().get()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withId().head()`
-- added method `apiRoot.withProjectKey().recurrencePolicies().withId().post()`
 </details>
 
 
@@ -362,22 +289,48 @@
 
 
 <details>
-<summary>Added QueryParameter(s)</summary>
+<summary>Added Method(s)</summary>
 
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products`
-- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/key={key}`
-- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/key={key}`
-- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/key={key}`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/{ID}`
-- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/{ID}`
-- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/{ID}`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/search`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/key={key}`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/{ID}`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
-- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+- added method `apiRoot.withProjectKey().discountGroups().get()`
+- added method `apiRoot.withProjectKey().discountGroups().head()`
+- added method `apiRoot.withProjectKey().discountGroups().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().delete()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().post()`
 </details>
 
 
@@ -398,41 +351,54 @@
 - added resource `/{projectKey}/recurrence-policies/{ID}`
 </details>
 
-**Import changes**
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `product-selection` to type `ImportResourceType`
+- added enum `RecurringOrder` to type `CartOrigin`
+- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
+- added enum `discount-group` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `recurrence-policy` to type `ReferenceTypeId`
+- added enum `recurring-order` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ExtensionResourceTypeId`
+- added enum `RecurringOrderState` to type `StateTypeEnum`
+- added enum `recurrence-policy` to type `ChangeSubscriptionResourceTypeId`
+- added enum `recurring-order` to type `ChangeSubscriptionResourceTypeId`
+- added enum `checkout` to type `EventSubscriptionResourceTypeId`
+- added enum `CheckoutOrderCreationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorized` to type `EventType`
+- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentCharged` to type `EventType`
+- added enum `CheckoutPaymentChargeFailed` to type `EventType`
+- added enum `CheckoutPaymentRefunded` to type `EventType`
+- added enum `CheckoutPaymentRefundFailed` to type `EventType`
+- added enum `recurring-order` to type `ResourceTypeId`
 </details>
 
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `retentionPolicy` to type `ImportContainer`
-- added property `expiresAt` to type `ImportContainer`
-- added property `retentionPolicy` to type `ImportContainerDraft`
-- added property `attributes` to type `ProductImport`
-- added property `attributes` to type `ProductDraftImport`
-- added property `level` to type `AttributeDefinition`
-</details>
-
-
-<details>
-<summary>Changed Property(s)</summary>
-
-- :warning: changed property `country` of type `ExternalTaxRateDraft` from type `string` to `CountryCode`
-- :warning: changed property `value` of type `MoneySetField` from type `Money[]` to `TypedMoney[]`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKeyValue().productSelections().importContainers().withImportContainerKeyValue().post()`
-</details>
-
+**Import changes**
 
 <details>
 <summary>Added Type(s)</summary>
@@ -453,11 +419,45 @@
 
 
 <details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().productSelections().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/product-selections`
 - added resource `/{projectKey}/product-selections/import-containers`
 - added resource `/{projectKey}/product-selections/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `country` of type `ExternalTaxRateDraft` from type `string` to `CountryCode`
+- :warning: changed property `value` of type `MoneySetField` from type `Money[]` to `TypedMoney[]`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `retentionPolicy` to type `ImportContainer`
+- added property `expiresAt` to type `ImportContainer`
+- added property `retentionPolicy` to type `ImportContainerDraft`
+- added property `attributes` to type `ProductImport`
+- added property `attributes` to type `ProductDraftImport`
+- added property `level` to type `AttributeDefinition`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `product-selection` to type `ImportResourceType`
 </details>
 
 **History changes**
