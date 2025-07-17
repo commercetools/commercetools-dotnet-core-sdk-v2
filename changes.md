@@ -203,7 +203,6 @@
 - added type `RecurringOrderCustomTypeRemovedMessagePayload`
 - added type `RecurringOrderCustomTypeSetMessagePayload`
 - added type `RecurringOrderKeySetMessagePayload`
-- added type `RecurringOrderMessagePayload`
 - added type `RecurringOrderScheduleSetMessagePayload`
 - added type `RecurringOrderStartsAtSetMessagePayload`
 - added type `RecurringOrderStateChangedMessagePayload`

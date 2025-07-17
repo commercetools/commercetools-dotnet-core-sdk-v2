@@ -1228,12 +1228,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderKeySetMessagePayloadQueryBuilderDsl.Of()),
                 MessagePayloadQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsRecurringOrderMessagePayload(
-            Func<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderMessagePayloadQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderMessagePayloadQueryBuilderDsl.Of()),
-                MessagePayloadQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsRecurringOrderScheduleSet(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderScheduleSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderScheduleSetMessagePayloadQueryBuilderDsl>> fn)
         {
