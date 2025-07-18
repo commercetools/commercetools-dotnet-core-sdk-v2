@@ -103,6 +103,12 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("quote-request")]
         QuoteRequest,
 
+        [Description("recurrence-policy")]
+        RecurrencePolicy,
+
+        [Description("recurring-order")]
+        RecurringOrder,
+
         [Description("review")]
         Review,
 
@@ -253,6 +259,12 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId QuoteRequest = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.QuoteRequest, JsonName = "quote-request" };
 
+        public static IReferenceTypeId RecurrencePolicy = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.RecurrencePolicy, JsonName = "recurrence-policy" };
+
+        public static IReferenceTypeId RecurringOrder = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.RecurringOrder, JsonName = "recurring-order" };
+
         public static IReferenceTypeId Review = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Review, JsonName = "review" };
 
@@ -323,6 +335,8 @@ namespace commercetools.Sdk.Api.Models.Common
                  ProductType ,
                  Quote ,
                  QuoteRequest ,
+                 RecurrencePolicy ,
+                 RecurringOrder ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,

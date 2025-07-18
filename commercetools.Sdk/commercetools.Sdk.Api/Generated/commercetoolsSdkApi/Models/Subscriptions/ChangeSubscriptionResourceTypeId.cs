@@ -91,6 +91,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("quote-request")]
         QuoteRequest,
 
+        [Description("recurrence-policy")]
+        RecurrencePolicy,
+
+        [Description("recurring-order")]
+        RecurringOrder,
+
         [Description("review")]
         Review,
 
@@ -229,6 +235,12 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IChangeSubscriptionResourceTypeId QuoteRequest = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.QuoteRequest, JsonName = "quote-request" };
 
+        public static IChangeSubscriptionResourceTypeId RecurrencePolicy = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.RecurrencePolicy, JsonName = "recurrence-policy" };
+
+        public static IChangeSubscriptionResourceTypeId RecurringOrder = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.RecurringOrder, JsonName = "recurring-order" };
+
         public static IChangeSubscriptionResourceTypeId Review = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.Review, JsonName = "review" };
 
@@ -295,6 +307,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  ProductType ,
                  Quote ,
                  QuoteRequest ,
+                 RecurrencePolicy ,
+                 RecurringOrder ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,

@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.RecurrencePolicies;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
         IDiscountedPriceDraft Discounted { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
+
+        IRecurrencePolicyResourceIdentifier RecurrencePolicy { get; set; }
 
         IStagedPriceDraft Staged { get; set; }
 

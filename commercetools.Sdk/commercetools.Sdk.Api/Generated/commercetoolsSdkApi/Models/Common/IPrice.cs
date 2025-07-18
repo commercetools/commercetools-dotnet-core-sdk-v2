@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.CustomerGroups;
+using commercetools.Sdk.Api.Models.RecurrencePolicies;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ namespace commercetools.Sdk.Api.Models.Common
         IEnumerable<IPriceTier> TiersEnumerable { set => Tiers = value.ToList(); }
 
         ICustomFields Custom { get; set; }
+
+        IRecurrencePolicyReference RecurrencePolicy { get; set; }
 
     }
 }

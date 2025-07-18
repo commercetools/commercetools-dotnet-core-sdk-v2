@@ -56,6 +56,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("priceChannel");
         }
 
+        public List<string> GetPriceRecurrencePolicy()
+        {
+            return this.GetQueryParam("priceRecurrencePolicy");
+        }
+
         public List<string> GetVersion()
         {
             return this.GetQueryParam("version");
@@ -89,6 +94,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsKeyByKeyDelete WithPriceChannel(string priceChannel)
         {
             return this.AddQueryParam("priceChannel", priceChannel);
+        }
+
+        public ByProjectKeyProductsKeyByKeyDelete WithPriceRecurrencePolicy(string priceRecurrencePolicy)
+        {
+            return this.AddQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
         }
 
         public ByProjectKeyProductsKeyByKeyDelete WithVersion(long version)

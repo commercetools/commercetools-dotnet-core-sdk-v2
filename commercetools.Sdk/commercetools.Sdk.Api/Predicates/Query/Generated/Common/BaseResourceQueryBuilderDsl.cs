@@ -214,6 +214,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.QuoteRequests.QuoteRequestQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsRecurrencePolicy(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsRecurringOrder(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsReview(
             Func<commercetools.Sdk.Api.Predicates.Query.Reviews.ReviewQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Reviews.ReviewQueryBuilderDsl>> fn)
         {

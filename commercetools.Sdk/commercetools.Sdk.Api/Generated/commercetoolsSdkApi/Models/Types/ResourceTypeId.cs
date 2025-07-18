@@ -91,6 +91,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("review")]
         Review,
 
+        [Description("recurring-order")]
+        RecurringOrder,
+
         [Description("shipping")]
         Shipping,
 
@@ -217,6 +220,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Review, JsonName = "review" };
 
+        public static IResourceTypeId RecurringOrder = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.RecurringOrder, JsonName = "recurring-order" };
+
         public static IResourceTypeId Shipping = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Shipping, JsonName = "shipping" };
 
@@ -271,6 +277,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  ProductTailoring ,
                  Quote ,
                  Review ,
+                 RecurringOrder ,
                  Shipping ,
                  ShippingMethod ,
                  ShoppingList ,

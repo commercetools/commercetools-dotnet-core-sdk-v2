@@ -124,6 +124,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             p => new CombinationQueryPredicate<ProductVariantQueryBuilderDsl>(p, ProductVariantQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ProductVariantQueryBuilderDsl> RecurrencePrices(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.PriceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.PriceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductVariantQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrencePrices"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.PriceQueryBuilderDsl.Of())),
+                ProductVariantQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ProductVariantQueryBuilderDsl> RecurrencePrices()
+        {
+            return new CollectionPredicateBuilder<ProductVariantQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("recurrencePrices")),
+                    p => new CombinationQueryPredicate<ProductVariantQueryBuilderDsl>(p, ProductVariantQueryBuilderDsl.Of));
+        }
 
     }
 }

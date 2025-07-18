@@ -13,6 +13,9 @@ namespace commercetools.Sdk.Api.Models.States
         [Description("OrderState")]
         OrderState,
 
+        [Description("RecurringOrderState")]
+        RecurringOrderState,
+
         [Description("LineItemState")]
         LineItemState,
 
@@ -61,6 +64,9 @@ namespace commercetools.Sdk.Api.Models.States
         public static IStateTypeEnum OrderState = new StateTypeEnumWrapper
         { Value = StateTypeEnum.OrderState, JsonName = "OrderState" };
 
+        public static IStateTypeEnum RecurringOrderState = new StateTypeEnumWrapper
+        { Value = StateTypeEnum.RecurringOrderState, JsonName = "RecurringOrderState" };
+
         public static IStateTypeEnum LineItemState = new StateTypeEnumWrapper
         { Value = StateTypeEnum.LineItemState, JsonName = "LineItemState" };
 
@@ -89,6 +95,7 @@ namespace commercetools.Sdk.Api.Models.States
             return new[]
             {
                  OrderState ,
+                 RecurringOrderState ,
                  LineItemState ,
                  ProductState ,
                  ReviewState ,

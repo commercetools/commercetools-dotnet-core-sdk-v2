@@ -28,6 +28,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
 using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
 using commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies;
 using commercetools.Sdk.Api.Client.RequestBuilders.Reviews;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists;
@@ -219,6 +221,16 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyStagedQuotesRequestBuilder StagedQuotes()
         {
             return new ByProjectKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyRecurringOrdersRequestBuilder RecurringOrders()
+        {
+            return new ByProjectKeyRecurringOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyRecurrencePoliciesRequestBuilder RecurrencePolicies()
+        {
+            return new ByProjectKeyRecurrencePoliciesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyReviewsRequestBuilder Reviews()

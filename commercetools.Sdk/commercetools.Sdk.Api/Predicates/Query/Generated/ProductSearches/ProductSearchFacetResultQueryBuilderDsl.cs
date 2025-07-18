@@ -34,5 +34,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
             return new CombinationQueryPredicate<ProductSearchFacetResultQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchFacetResultCountQueryBuilderDsl.Of()),
                 ProductSearchFacetResultQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProductSearchFacetResultQueryBuilderDsl> AsProductSearchFacetResultStats(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchFacetResultStatsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchFacetResultStatsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductSearchFacetResultQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductSearches.ProductSearchFacetResultStatsQueryBuilderDsl.Of()),
+                ProductSearchFacetResultQueryBuilderDsl.Of);
+        }
     }
 }

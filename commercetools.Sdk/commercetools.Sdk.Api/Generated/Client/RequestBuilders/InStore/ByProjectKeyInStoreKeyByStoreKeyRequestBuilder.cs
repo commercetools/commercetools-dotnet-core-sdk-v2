@@ -26,19 +26,19 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 
 
 
+        public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder CartDiscounts()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder Carts()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder Orders()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder Me()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder Customers()
@@ -46,19 +46,14 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder Login()
+        public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder Me()
         {
-            return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+            return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder ShippingMethods()
+        public ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder Orders()
         {
-            return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder ShoppingLists()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+            return new ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder ProductProjections()
@@ -69,11 +64,6 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder ProductSelectionAssignments()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
-        }
-
-        public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder CartDiscounts()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder ProductTailoring()
@@ -91,19 +81,29 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder StagedQuotes()
-        {
-            return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
-        }
-
         public ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder Quotes()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
-        public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder BusinessUnits()
+        public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder ShippingMethods()
         {
-            return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+            return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder ShoppingLists()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder StagedQuotes()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder Login()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
     }
 }

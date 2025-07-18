@@ -126,6 +126,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
                 StagedOrderAddLineItemActionQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StagedOrderAddLineItemActionQueryBuilderDsl> RecurrenceInfo(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderAddLineItemActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrenceInfo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl.Of())),
+                StagedOrderAddLineItemActionQueryBuilderDsl.Of);
+        }
+
 
     }
 }

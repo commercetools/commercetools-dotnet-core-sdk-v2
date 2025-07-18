@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.CustomAttributes;
@@ -27,6 +28,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         ICustomFieldsDraft Custom { get; set; }
 
         ICustomLineItemPriceMode PriceMode { get; set; }
+
+        ICustomLineItemRecurrenceInfoDraft RecurrenceInfo { get; set; }
 
     }
 }
