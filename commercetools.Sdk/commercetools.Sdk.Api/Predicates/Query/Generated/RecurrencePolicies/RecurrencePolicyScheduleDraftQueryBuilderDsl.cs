@@ -22,7 +22,7 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies
             PredicateFormatter.Format);
         }
 
-        public CombinationQueryPredicate<RecurrencePolicyScheduleDraftQueryBuilderDsl> AsDayOfMonthScheduleDraft(
+        public CombinationQueryPredicate<RecurrencePolicyScheduleDraftQueryBuilderDsl> AsDayOfMonth(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.DayOfMonthScheduleDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.DayOfMonthScheduleDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<RecurrencePolicyScheduleDraftQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.DayOfMonthScheduleDraftQueryBuilderDsl.Of()),
