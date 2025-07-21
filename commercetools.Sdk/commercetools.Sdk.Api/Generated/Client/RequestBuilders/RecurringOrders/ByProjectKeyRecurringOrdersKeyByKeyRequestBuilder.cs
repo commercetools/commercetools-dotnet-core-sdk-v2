@@ -39,5 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders
             return new ByProjectKeyRecurringOrdersKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, recurringOrderUpdate);
         }
 
+        public ByProjectKeyRecurringOrdersKeyByKeyDelete Delete()
+        {
+            return new ByProjectKeyRecurringOrdersKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
+        }
+
     }
 }

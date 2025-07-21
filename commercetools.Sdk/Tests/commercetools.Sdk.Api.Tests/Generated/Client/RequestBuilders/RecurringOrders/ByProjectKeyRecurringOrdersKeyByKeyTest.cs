@@ -70,6 +70,49 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.RecurringOrders
                    .Build(),
                    "Post",
                    "/test_projectKey/recurring-orders/key=test_key",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurringOrders()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithDataErasure(true)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurring-orders/key=test_key?dataErasure=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurringOrders()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithVersion(2)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurring-orders/key=test_key?version=2",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurringOrders()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurring-orders/key=test_key?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurringOrders()
+                   .WithKey("test_key")
+                   .Delete()
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurring-orders/key=test_key",
                }
        };
         }

@@ -257,6 +257,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("RecurringOrderCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldRemovedMessage))]
     [SubTypeDiscriminator("RecurringOrderCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeRemovedMessage))]
     [SubTypeDiscriminator("RecurringOrderCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage))]
+    [SubTypeDiscriminator("RecurringOrderDeleted", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage))]
     [SubTypeDiscriminator("RecurringOrderKeySet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessage))]
     [SubTypeDiscriminator("RecurringOrderScheduleSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessage))]
     [SubTypeDiscriminator("RecurringOrderStartsAtSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessage))]
@@ -1825,6 +1826,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage RecurringOrderCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage RecurringOrderDeleted(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage();
             init?.Invoke(t);
             return t;
         }
