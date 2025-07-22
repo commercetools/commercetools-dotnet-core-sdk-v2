@@ -1,6 +1,7 @@
-using System;
+using commercetools.Sdk.HistoryApi.Models.Errors;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.GraphQl
 {
@@ -17,6 +18,6 @@ namespace commercetools.Sdk.HistoryApi.Models.GraphQl
 
         public IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
 
-        public Object Extensions { get; set; }
+        public IGraphQLErrorObject Extensions { get; set; }
     }
 }

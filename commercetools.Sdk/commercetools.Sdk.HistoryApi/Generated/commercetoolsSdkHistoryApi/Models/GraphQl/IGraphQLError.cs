@@ -1,6 +1,7 @@
-using System;
+using commercetools.Sdk.HistoryApi.Models.Errors;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.GraphQl
@@ -18,7 +19,7 @@ namespace commercetools.Sdk.HistoryApi.Models.GraphQl
 
         IEnumerable<Object> PathEnumerable { set => Path = value.ToList(); }
 
-        Object Extensions { get; set; }
+        IGraphQLErrorObject Extensions { get; set; }
 
     }
 }
