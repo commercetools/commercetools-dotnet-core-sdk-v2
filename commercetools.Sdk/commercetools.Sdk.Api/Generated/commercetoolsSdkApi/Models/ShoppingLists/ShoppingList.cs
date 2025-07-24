@@ -38,7 +38,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         public IEnumerable<ITextLineItem> TextLineItemsEnumerable { set => TextLineItems = value.ToList(); }
 
-        public long? DeleteDaysAfterLastModification { get; set; }
+        public int? DeleteDaysAfterLastModification { get; set; }
 
         public string AnonymousId { get; set; }
 

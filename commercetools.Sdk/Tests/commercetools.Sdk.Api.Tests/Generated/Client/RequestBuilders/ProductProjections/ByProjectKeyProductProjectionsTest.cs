@@ -84,6 +84,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .WithProjectKey("test_projectKey")
                    .ProductProjections()
                    .Get()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .Get()
                    .WithLocaleProjection("localeProjection")
                    .Build(),
                    "Get",

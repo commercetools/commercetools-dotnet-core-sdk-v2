@@ -1,6 +1,7 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 
@@ -38,6 +39,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public ILineItemRecurrenceInfoDraft RecurrenceInfo { get; set; }
         public StagedOrderAddLineItemAction()
         {
             this.Action = "addLineItem";

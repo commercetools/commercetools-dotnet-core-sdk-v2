@@ -49,7 +49,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         string Locale { get; set; }
 
-        long? DeleteDaysAfterLastModification { get; set; }
+        int? DeleteDaysAfterLastModification { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }
 

@@ -59,6 +59,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             return this.GetQueryParam("priceChannel");
         }
 
+        public List<string> GetPriceRecurrencePolicy()
+        {
+            return this.GetQueryParam("priceRecurrencePolicy");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -87,6 +92,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
         public ByProjectKeyProductsPost WithPriceChannel(string priceChannel)
         {
             return this.AddQueryParam("priceChannel", priceChannel);
+        }
+
+        public ByProjectKeyProductsPost WithPriceRecurrencePolicy(string priceRecurrencePolicy)
+        {
+            return this.AddQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
         }
 
         public ByProjectKeyProductsPost WithExpand(string expand)

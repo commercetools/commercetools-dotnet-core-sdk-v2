@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Models.ShoppingLists
 
         public string AnonymousId { get; set; }
 
-        public long? DeleteDaysAfterLastModification { get; set; }
+        public int? DeleteDaysAfterLastModification { get; set; }
 
         public IList<IShoppingListLineItemDraft> LineItems { get; set; }
 

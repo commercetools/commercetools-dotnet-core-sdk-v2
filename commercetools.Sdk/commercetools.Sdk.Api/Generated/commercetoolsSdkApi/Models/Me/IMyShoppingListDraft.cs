@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         ICustomFieldsDraft Custom { get; set; }
 
-        long? DeleteDaysAfterLastModification { get; set; }
+        int? DeleteDaysAfterLastModification { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
 

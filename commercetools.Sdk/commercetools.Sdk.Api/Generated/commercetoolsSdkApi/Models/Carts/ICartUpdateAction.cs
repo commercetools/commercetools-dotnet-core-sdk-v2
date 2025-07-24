@@ -45,6 +45,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomLineItemCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setCustomLineItemCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemCustomTypeAction))]
+    [SubTypeDiscriminator("setCustomLineItemRecurrenceInfo", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemRecurrenceInfoAction))]
     [SubTypeDiscriminator("setCustomLineItemShippingDetails", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemShippingDetailsAction))]
     [SubTypeDiscriminator("setCustomLineItemTaxAmount", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemTaxAmountAction))]
     [SubTypeDiscriminator("setCustomLineItemTaxRate", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemTaxRateAction))]
@@ -60,6 +61,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemDistributionChannelAction))]
     [SubTypeDiscriminator("setLineItemInventoryMode", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemInventoryModeAction))]
     [SubTypeDiscriminator("setLineItemPrice", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemPriceAction))]
+    [SubTypeDiscriminator("setLineItemRecurrenceInfo", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemRecurrenceInfoAction))]
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemShippingDetailsAction))]
     [SubTypeDiscriminator("setLineItemSupplyChannel", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemSupplyChannelAction))]
     [SubTypeDiscriminator("setLineItemTaxAmount", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTaxAmountAction))]
@@ -321,6 +323,12 @@ namespace commercetools.Sdk.Api.Models.Carts
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemRecurrenceInfoAction SetCustomLineItemRecurrenceInfo(Action<commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemRecurrenceInfoAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemRecurrenceInfoAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemShippingDetailsAction SetCustomLineItemShippingDetails(Action<commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemShippingDetailsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetCustomLineItemShippingDetailsAction();
@@ -408,6 +416,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetLineItemPriceAction SetLineItemPrice(Action<commercetools.Sdk.Api.Models.Carts.CartSetLineItemPriceAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetLineItemPriceAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetLineItemRecurrenceInfoAction SetLineItemRecurrenceInfo(Action<commercetools.Sdk.Api.Models.Carts.CartSetLineItemRecurrenceInfoAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetLineItemRecurrenceInfoAction();
             init?.Invoke(t);
             return t;
         }

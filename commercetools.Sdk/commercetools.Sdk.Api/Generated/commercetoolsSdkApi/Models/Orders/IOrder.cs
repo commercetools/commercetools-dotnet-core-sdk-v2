@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Quotes;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.States;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
@@ -108,6 +109,8 @@ namespace commercetools.Sdk.Api.Models.Orders
         ICartReference Cart { get; set; }
 
         IQuoteReference Quote { get; set; }
+
+        IRecurringOrderReference RecurringOrder { get; set; }
 
         IOrderState OrderState { get; set; }
 

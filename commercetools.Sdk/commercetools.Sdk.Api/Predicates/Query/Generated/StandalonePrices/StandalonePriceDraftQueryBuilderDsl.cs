@@ -103,6 +103,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
                 StandalonePriceDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> RecurrencePolicy(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrencePolicy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyResourceIdentifierQueryBuilderDsl.Of())),
+                StandalonePriceDraftQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> Staged(
             Func<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StagedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.StandalonePrices.StagedPriceDraftQueryBuilderDsl>> fn)
         {

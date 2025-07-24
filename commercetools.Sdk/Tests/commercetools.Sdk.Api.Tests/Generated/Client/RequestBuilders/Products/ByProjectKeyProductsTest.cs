@@ -84,6 +84,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .WithProjectKey("test_projectKey")
                    .Products()
                    .Get()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/products?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",
@@ -216,6 +226,16 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.Products
                    .Build(),
                    "Post",
                    "/test_projectKey/products?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Products()
+                   .Post(null)
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Post",
+                   "/test_projectKey/products?priceRecurrencePolicy=priceRecurrencePolicy",
                },
                new Object[] {
                    ApiRoot

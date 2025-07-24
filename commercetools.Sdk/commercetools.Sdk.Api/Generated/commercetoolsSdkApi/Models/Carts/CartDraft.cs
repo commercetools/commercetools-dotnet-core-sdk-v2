@@ -80,7 +80,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public ICartOrigin Origin { get; set; }
 
-        public long? DeleteDaysAfterLastModification { get; set; }
+        public int? DeleteDaysAfterLastModification { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
     }

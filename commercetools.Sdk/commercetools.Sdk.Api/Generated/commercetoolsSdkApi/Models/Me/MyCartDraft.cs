@@ -48,7 +48,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         public string Locale { get; set; }
 
-        public long? DeleteDaysAfterLastModification { get; set; }
+        public int? DeleteDaysAfterLastModification { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
     }

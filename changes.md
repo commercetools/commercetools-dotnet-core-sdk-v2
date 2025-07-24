@@ -1,22 +1,27 @@
 **Api changes**
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
-- added enum `discount-group` to type `ReferenceTypeId`
-- added enum `payment-method` to type `ReferenceTypeId`
-- added enum `payment-method` to type `ExtensionResourceTypeId`
-- added enum `checkout` to type `EventSubscriptionResourceTypeId`
-- added enum `CheckoutOrderCreationFailed` to type `EventType`
-- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
-- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
-- added enum `CheckoutPaymentAuthorized` to type `EventType`
-- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
-- added enum `CheckoutPaymentCharged` to type `EventType`
-- added enum `CheckoutPaymentChargeFailed` to type `EventType`
-- added enum `CheckoutPaymentRefunded` to type `EventType`
-- added enum `CheckoutPaymentRefundFailed` to type `EventType`
+- changed property `sortOrder` of type `CartDiscountDraft` to be optional
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartDraft` from type `number` to `integer`
+- :warning: changed property `deleteDaysAfterLastModification` of type `MyCartDraft` from type `number` to `integer`
+- :warning: changed property `paymentMethodInfo` of type `MyPaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+- :warning: changed property `deleteDaysAfterLastModification` of type `MyShoppingListDraft` from type `number` to `integer`
+- :warning: changed property `deleteDaysAfterLastModification` of type `MyShoppingListSetDeleteDaysAfterLastModificationAction` from type `number` to `integer`
+- :warning: changed property `paymentMethodInfo` of type `PaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` from type `number` to `integer`
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` from type `number` to `integer`
+- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingList` from type `number` to `integer`
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListDraft` from type `number` to `integer`
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListSetDeleteDaysAfterLastModificationAction` from type `number` to `integer`
 </details>
 
 
@@ -28,9 +33,19 @@
 - added property `discountGroup` to type `CartDiscountDraft`
 - added property `priceRoundingMode` to type `Cart`
 - added property `priceRoundingMode` to type `CartDraft`
+- added property `recurrenceInfo` to type `CustomLineItem`
+- added property `recurrenceInfo` to type `CustomLineItemDraft`
+- added property `recurrenceInfo` to type `LineItem`
+- added property `recurrenceInfo` to type `LineItemDraft`
+- added property `recurrenceInfo` to type `CartAddCustomLineItemAction`
+- added property `recurrenceInfo` to type `CartAddLineItemAction`
+- added property `recurrencePolicy` to type `Price`
+- added property `recurrencePolicy` to type `PriceDraft`
 - added property `invalidateOlderTokens` to type `CustomerCreateEmailToken`
 - added property `invalidateOlderTokens` to type `CustomerCreatePasswordResetToken`
 - added property `invalidateOlderTokens` to type `CustomerToken`
+- added property `recurrenceInfo` to type `MyLineItemDraft`
+- added property `recurrenceInfo` to type `MyCartAddLineItemAction`
 - added property `value` to type `CustomerEmailTokenCreatedMessage`
 - added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessage`
 - added property `value` to type `CustomerPasswordTokenCreatedMessage`
@@ -42,7 +57,11 @@
 - added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessagePayload`
 - added property `attributes` to type `ProductTailoringCreatedMessagePayload`
 - added property `priceRoundingMode` to type `StagedOrder`
+- added property `recurringOrder` to type `StagedOrder`
+- added property `recurrenceInfo` to type `StagedOrderAddCustomLineItemAction`
+- added property `recurrenceInfo` to type `StagedOrderAddLineItemAction`
 - added property `priceRoundingMode` to type `Order`
+- added property `recurringOrder` to type `Order`
 - added property `priceRoundingMode` to type `OrderImportDraft`
 - added property `token` to type `PaymentMethodInfo`
 - added property `interfaceAccount` to type `PaymentMethodInfo`
@@ -56,28 +75,15 @@
 - added property `attributes` to type `ProductData`
 - added property `attributes` to type `ProductDraft`
 - added property `attributes` to type `ProductProjection`
+- added property `recurrencePrices` to type `ProductVariant`
 - added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `ProductVariantChannelAvailabilityMap`
 - added property `priceRoundingMode` to type `CartsConfiguration`
 - added property `taxRoundingMode` to type `CartsConfiguration`
 - added property `priceRoundingMode` to type `QuoteRequest`
 - added property `priceRoundingMode` to type `Quote`
+- added property `recurrencePolicy` to type `StandalonePrice`
+- added property `recurrencePolicy` to type `StandalonePriceDraft`
 - added property `events` to type `SubscriptionSetEventsAction`
-</details>
-
-
-<details>
-<summary>Changed Property(s)</summary>
-
-- :warning: changed property `paymentMethodInfo` of type `MyPaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
-- :warning: changed property `paymentMethodInfo` of type `PaymentDraft` from type `PaymentMethodInfo` to `PaymentMethodInfoDraft`
-- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
-</details>
-
-
-<details>
-<summary>Required Property(s)</summary>
-
-- changed property `sortOrder` of type `CartDiscountDraft` to be optional
 </details>
 
 
@@ -91,38 +97,12 @@
 
 
 <details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().discountGroups().get()`
-- added method `apiRoot.withProjectKey().discountGroups().head()`
-- added method `apiRoot.withProjectKey().discountGroups().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().get()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().head()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withKey().delete()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().get()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().head()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().post()`
-- added method `apiRoot.withProjectKey().discountGroups().withId().delete()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().withKey().delete()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().get()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().head()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().post()`
-- added method `apiRoot.withProjectKey().paymentMethods().withId().delete()`
-</details>
-
-
-<details>
 <summary>Added Type(s)</summary>
 
 - added type `CartDiscountSetDiscountGroupAction`
 - added type `CartChangePriceRoundingModeAction`
+- added type `CartSetCustomLineItemRecurrenceInfoAction`
+- added type `CartSetLineItemRecurrenceInfoAction`
 - added type `DiscountGroup`
 - added type `DiscountGroupDraft`
 - added type `DiscountGroupPagedQueryResponse`
@@ -149,6 +129,8 @@
 - added type `CheckoutPaymentRefundedEvent`
 - added type `CheckoutMessageOrderPayloadBaseData`
 - added type `CheckoutMessagePaymentsPayloadBaseData`
+- added type `MyCartSetCustomLineItemRecurrenceInfoAction`
+- added type `MyCartSetLineItemRecurrenceInfoAction`
 - added type `MyPaymentSetMethodInfoCustomFieldAction`
 - added type `MyPaymentSetMethodInfoCustomTypeAction`
 - added type `MyPaymentSetMethodInfoInterfaceAccountAction`
@@ -156,6 +138,7 @@
 - added type `DiscountGroupDeletedMessage`
 - added type `DiscountGroupKeySetMessage`
 - added type `DiscountGroupSortOrderSetMessage`
+- added type `OrderCreatedFromRecurringOrderMessage`
 - added type `PaymentInterfaceIdSetMessage`
 - added type `PaymentMethodCreatedMessage`
 - added type `PaymentMethodCustomFieldAddedMessage`
@@ -181,10 +164,23 @@
 - added type `PaymentMethodNameSetMessage`
 - added type `PaymentMethodPaymentInterfaceSetMessage`
 - added type `PaymentMethodPaymentMethodStatusSetMessage`
+- added type `RecurringOrderCreatedMessage`
+- added type `RecurringOrderCustomFieldAddedMessage`
+- added type `RecurringOrderCustomFieldChangedMessage`
+- added type `RecurringOrderCustomFieldRemovedMessage`
+- added type `RecurringOrderCustomTypeRemovedMessage`
+- added type `RecurringOrderCustomTypeSetMessage`
+- added type `RecurringOrderDeletedMessage`
+- added type `RecurringOrderKeySetMessage`
+- added type `RecurringOrderScheduleSetMessage`
+- added type `RecurringOrderStartsAtSetMessage`
+- added type `RecurringOrderStateChangedMessage`
+- added type `RecurringOrderStateTransitionMessage`
 - added type `DiscountGroupCreatedMessagePayload`
 - added type `DiscountGroupDeletedMessagePayload`
 - added type `DiscountGroupKeySetMessagePayload`
 - added type `DiscountGroupSortOrderSetMessagePayload`
+- added type `OrderCreatedFromRecurringOrderMessagePayload`
 - added type `PaymentInterfaceIdSetMessagePayload`
 - added type `PaymentMethodCreatedMessagePayload`
 - added type `PaymentMethodCustomFieldAddedMessagePayload`
@@ -210,6 +206,18 @@
 - added type `PaymentMethodNameSetMessagePayload`
 - added type `PaymentMethodPaymentInterfaceSetMessagePayload`
 - added type `PaymentMethodPaymentMethodStatusSetMessagePayload`
+- added type `RecurringOrderCreatedMessagePayload`
+- added type `RecurringOrderCustomFieldAddedMessagePayload`
+- added type `RecurringOrderCustomFieldChangedMessagePayload`
+- added type `RecurringOrderCustomFieldRemovedMessagePayload`
+- added type `RecurringOrderCustomTypeRemovedMessagePayload`
+- added type `RecurringOrderCustomTypeSetMessagePayload`
+- added type `RecurringOrderDeletedMessagePayload`
+- added type `RecurringOrderKeySetMessagePayload`
+- added type `RecurringOrderScheduleSetMessagePayload`
+- added type `RecurringOrderStartsAtSetMessagePayload`
+- added type `RecurringOrderStateChangedMessagePayload`
+- added type `RecurringOrderStateTransitionMessagePayload`
 - added type `StagedOrderChangePriceRoundingModeAction`
 - added type `PaymentMethod`
 - added type `PaymentMethodDraft`
@@ -234,11 +242,110 @@
 - added type `PaymentSetMethodInfoCustomTypeAction`
 - added type `PaymentSetMethodInfoInterfaceAccountAction`
 - added type `PaymentSetMethodInfoTokenAction`
+- added type `ProductSearchFacetResultStats`
+- added type `ProductSearchFacetStatsExpression`
+- added type `ProductSearchFacetStatsValue`
 - added type `ProductTailoringSetProductAttributeAction`
 - added type `AttributeLevelEnum`
 - added type `ProductSetProductAttributeAction`
 - added type `ProjectChangePriceRoundingModeAction`
 - added type `ProjectChangeTaxRoundingModeAction`
+- added type `DayOfMonthSchedule`
+- added type `DayOfMonthScheduleDraft`
+- added type `IntervalUnit`
+- added type `RecurrencePolicy`
+- added type `RecurrencePolicyDraft`
+- added type `RecurrencePolicyPagedQueryResponse`
+- added type `RecurrencePolicyReference`
+- added type `RecurrencePolicyResourceIdentifier`
+- added type `RecurrencePolicySchedule`
+- added type `RecurrencePolicyScheduleDraft`
+- added type `RecurrencePolicyUpdate`
+- added type `RecurrencePolicyUpdateAction`
+- added type `StandardSchedule`
+- added type `StandardScheduleDraft`
+- added type `RecurrencePolicySetDescriptionAction`
+- added type `RecurrencePolicySetKeyAction`
+- added type `RecurrencePolicySetNameAction`
+- added type `RecurrencePolicySetScheduleAction`
+- added type `Counter`
+- added type `CounterDraft`
+- added type `CustomLineItemRecurrenceInfo`
+- added type `CustomLineItemRecurrenceInfoDraft`
+- added type `LineItemRecurrenceInfo`
+- added type `LineItemRecurrenceInfoDraft`
+- added type `PriceSelectionMode`
+- added type `RecurringOrder`
+- added type `RecurringOrderActive`
+- added type `RecurringOrderCanceled`
+- added type `RecurringOrderDraft`
+- added type `RecurringOrderExpired`
+- added type `RecurringOrderPagedQueryResponse`
+- added type `RecurringOrderPaused`
+- added type `RecurringOrderReference`
+- added type `RecurringOrderResourceIdentifier`
+- added type `RecurringOrderState`
+- added type `RecurringOrderStateDraft`
+- added type `RecurringOrderUpdate`
+- added type `RecurringOrderUpdateAction`
+- added type `SkipConfiguration`
+- added type `SkipConfigurationDraft`
+- added type `RecurringOrderSetCustomFieldAction`
+- added type `RecurringOrderSetCustomTypeAction`
+- added type `RecurringOrderSetKeyAction`
+- added type `RecurringOrderSetOrderSkipConfigurationAction`
+- added type `RecurringOrderSetScheduleAction`
+- added type `RecurringOrderSetStartsAtAction`
+- added type `RecurringOrderSetStateAction`
+- added type `RecurringOrderTransitionStateAction`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().discountGroups().get()`
+- added method `apiRoot.withProjectKey().discountGroups().head()`
+- added method `apiRoot.withProjectKey().discountGroups().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withKey().delete()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().get()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().head()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().post()`
+- added method `apiRoot.withProjectKey().discountGroups().withId().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withKey().delete()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().get()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().head()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().post()`
+- added method `apiRoot.withProjectKey().paymentMethods().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().head()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().post()`
+- added method `apiRoot.withProjectKey().recurringOrders().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().post()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().get()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().head()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().post()`
 </details>
 
 
@@ -247,47 +354,66 @@
 
 - added resource `/{projectKey}/discount-groups`
 - added resource `/{projectKey}/payment-methods`
+- added resource `/{projectKey}/recurring-orders`
+- added resource `/{projectKey}/recurrence-policies`
 - added resource `/{projectKey}/discount-groups/key={key}`
 - added resource `/{projectKey}/discount-groups/{ID}`
 - added resource `/{projectKey}/payment-methods/key={key}`
 - added resource `/{projectKey}/payment-methods/{ID}`
+- added resource `/{projectKey}/recurring-orders/{ID}`
+- added resource `/{projectKey}/recurring-orders/key={key}`
+- added resource `/{projectKey}/recurrence-policies/key={key}`
+- added resource `/{projectKey}/recurrence-policies/{ID}`
 </details>
 
-**Import changes**
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceRecurrencePolicy` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `product-selection` to type `ImportResourceType`
+- added enum `RecurringOrder` to type `CartOrigin`
+- added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
+- added enum `discount-group` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `recurrence-policy` to type `ReferenceTypeId`
+- added enum `recurring-order` to type `ReferenceTypeId`
+- added enum `payment-method` to type `ExtensionResourceTypeId`
+- added enum `RecurringOrderState` to type `StateTypeEnum`
+- added enum `recurrence-policy` to type `ChangeSubscriptionResourceTypeId`
+- added enum `recurring-order` to type `ChangeSubscriptionResourceTypeId`
+- added enum `checkout` to type `EventSubscriptionResourceTypeId`
+- added enum `CheckoutOrderCreationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorized` to type `EventType`
+- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentCharged` to type `EventType`
+- added enum `CheckoutPaymentChargeFailed` to type `EventType`
+- added enum `CheckoutPaymentRefunded` to type `EventType`
+- added enum `CheckoutPaymentRefundFailed` to type `EventType`
+- added enum `recurring-order` to type `ResourceTypeId`
 </details>
 
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `retentionPolicy` to type `ImportContainer`
-- added property `expiresAt` to type `ImportContainer`
-- added property `retentionPolicy` to type `ImportContainerDraft`
-- added property `attributes` to type `ProductImport`
-- added property `attributes` to type `ProductDraftImport`
-- added property `level` to type `AttributeDefinition`
-</details>
-
-
-<details>
-<summary>Changed Property(s)</summary>
-
-- :warning: changed property `country` of type `ExternalTaxRateDraft` from type `string` to `CountryCode`
-- :warning: changed property `value` of type `MoneySetField` from type `Money[]` to `TypedMoney[]`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKeyValue().productSelections().importContainers().withImportContainerKeyValue().post()`
-</details>
-
+**Import changes**
 
 <details>
 <summary>Added Type(s)</summary>
@@ -308,6 +434,13 @@
 
 
 <details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().productSelections().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/product-selections`
@@ -315,12 +448,56 @@
 - added resource `/{projectKey}/product-selections/import-containers/{importContainerKey}`
 </details>
 
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `country` of type `ExternalTaxRateDraft` from type `string` to `CountryCode`
+- :warning: changed property `value` of type `MoneySetField` from type `Money[]` to `TypedMoney[]`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `retentionPolicy` to type `ImportContainer`
+- added property `expiresAt` to type `ImportContainer`
+- added property `retentionPolicy` to type `ImportContainerDraft`
+- added property `attributes` to type `ProductImport`
+- added property `attributes` to type `ProductDraftImport`
+- added property `level` to type `AttributeDefinition`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `product-selection` to type `ImportResourceType`
+</details>
+
 **History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `TooManyRequestsError`
+- added type `GraphQLTooManyRequestsError`
+- added type `GraphQLErrorObject`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `extensions` of type `GraphQLError` from type `object` to `GraphQLErrorObject`
+</details>
+
 
 <details>
 <summary>Added Enum(s)</summary>
 
 - added enum `ApplicationStoppedByGroupBestDeal` to type `DiscountCodeState`
 - added enum `payment-method` to type `ReferenceTypeId`
+- added enum `RecurringOrderState` to type `StateTypeEnum`
 </details>
 

@@ -84,6 +84,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
                 MyCartAddLineItemActionQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<MyCartAddLineItemActionQueryBuilderDsl> RecurrenceInfo(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MyCartAddLineItemActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrenceInfo"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.LineItemRecurrenceInfoDraftQueryBuilderDsl.Of())),
+                MyCartAddLineItemActionQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<MyCartAddLineItemActionQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsDraftQueryBuilderDsl>> fn)
         {
