@@ -1,4 +1,34 @@
 
+# 13.0.0 (2025-07-25)
+
+## Breaking Changes
+
+The field `paymentMethodInfo` in type `PaymentDraft` and `MyPaymentDraft` has been changed from `PaymentMethodInfo` to `PaymentMethodInfoDraft`. For `IPaymentMethodInfo` and `ICustomFields` a helper method `ToDraft` has been added.
+
+## New Features
+
+Adds support for [Discount Groups](https://docs.commercetools.com/api/projects/discount-groups) and [Recurring Orders](https://docs.commercetools.com/api/recurring-orders-overview)
+
+Adds support for [product level attributes](https://docs.commercetools.com/api/releases/2025-06-26-added-support-for-attributes-at-the-product-level)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/458
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/459
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/460
+* add permissions to GH workflows by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/461
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/462
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/463
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/464
+* Add region addresses to Example by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/465
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/466
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/467
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/468
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/469
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/470
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.13.0...13.0.0
+
 # 12.13.0 (2025-06-03)
 
 ## What's Changed
