@@ -127,6 +127,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("OrderBillingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderBillingAddressSetMessage))]
     [SubTypeDiscriminator("OrderBusinessUnitSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderBusinessUnitSetMessage))]
     [SubTypeDiscriminator("OrderCreated", typeof(commercetools.Sdk.Api.Models.Messages.OrderCreatedMessage))]
+    [SubTypeDiscriminator("OrderCreatedFromRecurringOrder", typeof(commercetools.Sdk.Api.Models.Messages.OrderCreatedFromRecurringOrderMessage))]
     [SubTypeDiscriminator("OrderCustomerEmailSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage))]
     [SubTypeDiscriminator("OrderCustomerGroupSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerGroupSetMessage))]
     [SubTypeDiscriminator("OrderCustomerSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderCustomerSetMessage))]
@@ -250,6 +251,18 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("QuoteRequestStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteRequestStateTransitionMessage))]
     [SubTypeDiscriminator("QuoteStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateChangedMessage))]
     [SubTypeDiscriminator("QuoteStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessage))]
+    [SubTypeDiscriminator("RecurringOrderCreated", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCreatedMessage))]
+    [SubTypeDiscriminator("RecurringOrderCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldAddedMessage))]
+    [SubTypeDiscriminator("RecurringOrderCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldChangedMessage))]
+    [SubTypeDiscriminator("RecurringOrderCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldRemovedMessage))]
+    [SubTypeDiscriminator("RecurringOrderCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeRemovedMessage))]
+    [SubTypeDiscriminator("RecurringOrderCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage))]
+    [SubTypeDiscriminator("RecurringOrderDeleted", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage))]
+    [SubTypeDiscriminator("RecurringOrderKeySet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessage))]
+    [SubTypeDiscriminator("RecurringOrderScheduleSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessage))]
+    [SubTypeDiscriminator("RecurringOrderStartsAtSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessage))]
+    [SubTypeDiscriminator("RecurringOrderStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStateChangedMessage))]
+    [SubTypeDiscriminator("RecurringOrderStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStateTransitionMessage))]
     [SubTypeDiscriminator("ReturnInfoAdded", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoAddedMessage))]
     [SubTypeDiscriminator("ReturnInfoSet", typeof(commercetools.Sdk.Api.Models.Messages.ReturnInfoSetMessage))]
     [SubTypeDiscriminator("ReviewCreated", typeof(commercetools.Sdk.Api.Models.Messages.ReviewCreatedMessage))]
@@ -1036,6 +1049,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.OrderCreatedFromRecurringOrderMessage OrderCreatedFromRecurringOrder(Action<commercetools.Sdk.Api.Models.Messages.OrderCreatedFromRecurringOrderMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderCreatedFromRecurringOrderMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage OrderCustomerEmailSet(Action<commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.OrderCustomerEmailSetMessage();
@@ -1771,6 +1790,78 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessage QuoteStateTransition(Action<commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.QuoteStateTransitionMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCreatedMessage RecurringOrderCreated(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCreatedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldAddedMessage RecurringOrderCustomFieldAdded(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldChangedMessage RecurringOrderCustomFieldChanged(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldRemovedMessage RecurringOrderCustomFieldRemoved(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomFieldRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeRemovedMessage RecurringOrderCustomTypeRemoved(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage RecurringOrderCustomTypeSet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderCustomTypeSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage RecurringOrderDeleted(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderDeletedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessage RecurringOrderKeySet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessage RecurringOrderScheduleSet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessage RecurringOrderStartsAtSet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderStateChangedMessage RecurringOrderStateChanged(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderStateChangedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderStateChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderStateTransitionMessage RecurringOrderStateTransition(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderStateTransitionMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderStateTransitionMessage();
             init?.Invoke(t);
             return t;
         }

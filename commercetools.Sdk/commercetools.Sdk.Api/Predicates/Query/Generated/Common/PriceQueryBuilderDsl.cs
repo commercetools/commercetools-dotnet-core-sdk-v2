@@ -103,6 +103,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
                 PriceQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<PriceQueryBuilderDsl> RecurrencePolicy(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<PriceQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrencePolicy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl.Of())),
+                PriceQueryBuilderDsl.Of);
+        }
+
 
     }
 }

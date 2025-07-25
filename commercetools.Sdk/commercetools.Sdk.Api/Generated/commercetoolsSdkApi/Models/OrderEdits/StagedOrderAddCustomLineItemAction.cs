@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Carts;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 
@@ -30,6 +31,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
         public ICustomLineItemPriceMode PriceMode { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public ICustomLineItemRecurrenceInfoDraft RecurrenceInfo { get; set; }
         public StagedOrderAddCustomLineItemAction()
         {
             this.Action = "addCustomLineItem";

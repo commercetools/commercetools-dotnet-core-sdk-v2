@@ -160,6 +160,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             p => new CombinationQueryPredicate<StandalonePriceQueryBuilderDsl>(p, StandalonePriceQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<StandalonePriceQueryBuilderDsl> RecurrencePolicy(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StandalonePriceQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurrencePolicy"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicyReferenceQueryBuilderDsl.Of())),
+                StandalonePriceQueryBuilderDsl.Of);
+        }
+
 
     }
 }

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Channels;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IInventoryMode InventoryMode { get; set; }
 
         public IItemShippingDetailsDraft ShippingDetails { get; set; }
+
+        public ILineItemRecurrenceInfoDraft RecurrenceInfo { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
         public CartAddLineItemAction()

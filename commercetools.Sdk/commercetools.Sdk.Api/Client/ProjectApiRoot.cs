@@ -45,6 +45,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
 using commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders;
 
 namespace commercetools.Sdk.Api.Client
 {
@@ -305,6 +307,16 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods()
         {
             return With().PaymentMethods();
+        }
+
+        public ByProjectKeyRecurringOrdersRequestBuilder RecurringOrders()
+        {
+            return With().RecurringOrders();
+        }
+
+        public ByProjectKeyRecurrencePoliciesRequestBuilder RecurrencePolicies()
+        {
+            return With().RecurrencePolicies();
         }
     }
 }

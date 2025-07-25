@@ -32,6 +32,8 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("product-type", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference))]
     [SubTypeDiscriminator("quote", typeof(commercetools.Sdk.Api.Models.Quotes.QuoteReference))]
     [SubTypeDiscriminator("quote-request", typeof(commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference))]
+    [SubTypeDiscriminator("recurrence-policy", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference))]
+    [SubTypeDiscriminator("recurring-order", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference))]
     [SubTypeDiscriminator("review", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewReference))]
     [SubTypeDiscriminator("shipping-method", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference))]
     [SubTypeDiscriminator("shopping-list", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference))]
@@ -207,6 +209,18 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference QuoteRequest(Action<commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference RecurrencePolicy(Action<commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference RecurringOrder(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference();
             init?.Invoke(t);
             return t;
         }

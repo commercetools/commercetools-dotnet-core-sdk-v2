@@ -355,6 +355,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.OrderEdits
                 StagedOrderQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> RecurringOrder(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurringOrder"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl.Of())),
+                StagedOrderQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<StagedOrderQueryBuilderDsl, string> OrderState()
         {
             return new ComparisonPredicateBuilder<StagedOrderQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("orderState")),
