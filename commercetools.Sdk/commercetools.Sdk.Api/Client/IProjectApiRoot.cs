@@ -33,6 +33,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.Api.Client.RequestBuilders.Projects;
 using commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests;
 using commercetools.Sdk.Api.Client.RequestBuilders.Quotes;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies;
+using commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders;
 using commercetools.Sdk.Api.Client.RequestBuilders.Reviews;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods;
 using commercetools.Sdk.Api.Client.RequestBuilders.ShoppingLists;
@@ -102,4 +104,6 @@ public interface IProjectApiRoot
     ByProjectKeyProductTailoringRequestBuilder ProductTailoring();
     ByProjectKeyDiscountGroupsRequestBuilder DiscountGroups();
     ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods();
+    ByProjectKeyRecurringOrdersRequestBuilder RecurringOrders();
+    ByProjectKeyRecurrencePoliciesRequestBuilder RecurrencePolicies();
 }
