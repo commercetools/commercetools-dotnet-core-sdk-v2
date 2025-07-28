@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurringOrders
             return new CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetCustomTypeActionQueryBuilderDsl.Of()),
                 RecurringOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> AsSetExpiresAt(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetExpiresAtActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetExpiresAtActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetExpiresAtActionQueryBuilderDsl.Of()),
+                RecurringOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetKeyActionQueryBuilderDsl>> fn)
         {

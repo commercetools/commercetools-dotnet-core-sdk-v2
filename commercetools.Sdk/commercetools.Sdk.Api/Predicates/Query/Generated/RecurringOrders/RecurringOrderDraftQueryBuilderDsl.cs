@@ -42,6 +42,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurringOrders
             p => new CombinationQueryPredicate<RecurringOrderDraftQueryBuilderDsl>(p, RecurringOrderDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<RecurringOrderDraftQueryBuilderDsl, DateTime> ExpiresAt()
+        {
+            return new ComparisonPredicateBuilder<RecurringOrderDraftQueryBuilderDsl, DateTime>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("expiresAt")),
+            p => new CombinationQueryPredicate<RecurringOrderDraftQueryBuilderDsl>(p, RecurringOrderDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<RecurringOrderDraftQueryBuilderDsl> State(
             Func<commercetools.Sdk.Api.Predicates.Query.States.StateResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.States.StateResourceIdentifierQueryBuilderDsl>> fn)
         {
