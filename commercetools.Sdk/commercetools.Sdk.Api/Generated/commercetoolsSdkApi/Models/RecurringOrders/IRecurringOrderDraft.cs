@@ -17,6 +17,8 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
 
         DateTime StartsAt { get; set; }
 
+        DateTime? ExpiresAt { get; set; }
+
         IStateResourceIdentifier State { get; set; }
 
         ICustomFieldsDraft Custom { get; set; }

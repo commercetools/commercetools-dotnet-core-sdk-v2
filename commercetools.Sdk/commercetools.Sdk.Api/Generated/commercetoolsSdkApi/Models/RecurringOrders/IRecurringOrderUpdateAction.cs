@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderUpdateAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomTypeAction))]
+    [SubTypeDiscriminator("setExpiresAt", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetExpiresAtAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetKeyAction))]
     [SubTypeDiscriminator("setOrderSkipConfiguration", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetOrderSkipConfigurationAction))]
     [SubTypeDiscriminator("setRecurringOrderState", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetStateAction))]
@@ -26,6 +27,12 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
         static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetExpiresAtAction SetExpiresAt(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetExpiresAtAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetExpiresAtAction();
             init?.Invoke(t);
             return t;
         }
