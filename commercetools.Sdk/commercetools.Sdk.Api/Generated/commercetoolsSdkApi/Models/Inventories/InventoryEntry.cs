@@ -30,6 +30,10 @@ namespace commercetools.Sdk.Api.Models.Inventories
 
         public long AvailableQuantity { get; set; }
 
+        public int? MinCartQuantity { get; set; }
+
+        public int? MaxCartQuantity { get; set; }
+
         public long? RestockableInDays { get; set; }
 
         public DateTime? ExpectedDelivery { get; set; }

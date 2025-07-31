@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Inventories
             return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetExpectedDeliveryActionQueryBuilderDsl.Of()),
                 InventoryEntryUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetInventoryLimits(
+            Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl.Of()),
+                InventoryEntryUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetKeyActionQueryBuilderDsl>> fn)
         {
