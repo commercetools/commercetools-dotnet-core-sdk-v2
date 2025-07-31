@@ -90,6 +90,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Inventories
             p => new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(p, InventoryEntryQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long> MinCartQuantity()
+        {
+            return new ComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("minCartQuantity")),
+            p => new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(p, InventoryEntryQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long> MaxCartQuantity()
+        {
+            return new ComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("maxCartQuantity")),
+            p => new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(p, InventoryEntryQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long> RestockableInDays()
         {
             return new ComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("restockableInDays")),

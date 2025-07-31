@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Inventories
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetCustomTypeAction))]
     [SubTypeDiscriminator("setExpectedDelivery", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction))]
+    [SubTypeDiscriminator("setInventoryLimits", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetInventoryLimitsAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction))]
     [SubTypeDiscriminator("setRestockableInDays", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction))]
     [SubTypeDiscriminator("setSupplyChannel", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
@@ -51,6 +52,12 @@ namespace commercetools.Sdk.Api.Models.Inventories
         static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction SetExpectedDelivery(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetInventoryLimitsAction SetInventoryLimits(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetInventoryLimitsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetInventoryLimitsAction();
             init?.Invoke(t);
             return t;
         }
