@@ -52,6 +52,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("discount-code")]
         DiscountCode,
 
+        [Description("discount-group")]
+        DiscountGroup,
+
         [Description("extension")]
         Extension,
 
@@ -196,6 +199,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IChangeSubscriptionResourceTypeId DiscountCode = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.DiscountCode, JsonName = "discount-code" };
 
+        public static IChangeSubscriptionResourceTypeId DiscountGroup = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.DiscountGroup, JsonName = "discount-group" };
+
         public static IChangeSubscriptionResourceTypeId Extension = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.Extension, JsonName = "extension" };
 
@@ -294,6 +300,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  CustomerGroup ,
                  CustomerPasswordToken ,
                  DiscountCode ,
+                 DiscountGroup ,
                  Extension ,
                  InventoryEntry ,
                  KeyValueDocument ,
