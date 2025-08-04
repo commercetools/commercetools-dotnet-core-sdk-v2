@@ -20,3 +20,10 @@
 - added property `expiresAt` to type `RecurringOrderDraft`
 </details>
 
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-group` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
