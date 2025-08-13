@@ -568,6 +568,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDateOfBirthSetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCustomerDefaultBillingAddressSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultBillingAddressSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultBillingAddressSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultBillingAddressSetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCustomerDefaultShippingAddressSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultShippingAddressSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultShippingAddressSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDefaultShippingAddressSetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCustomerDeleted(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDeletedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerDeletedMessageQueryBuilderDsl>> fn)
         {
@@ -668,6 +680,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerPasswordUpdatedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerPasswordUpdatedMessageQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerPasswordUpdatedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCustomerStoresSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerStoresSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.CustomerStoresSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.CustomerStoresSetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsCustomerTitleSet(

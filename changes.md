@@ -4,7 +4,13 @@
 <summary>Added Type(s)</summary>
 
 - added type `InventoryEntrySetInventoryLimitsAction`
+- added type `CustomerDefaultBillingAddressSetMessage`
+- added type `CustomerDefaultShippingAddressSetMessage`
+- added type `CustomerStoresSetMessage`
 - added type `RecurringOrderExpiresAtSetMessage`
+- added type `CustomerDefaultBillingAddressSetMessagePayload`
+- added type `CustomerDefaultShippingAddressSetMessagePayload`
+- added type `CustomerStoresSetMessagePayload`
 - added type `RecurringOrderExpiresAtSetMessagePayload`
 - added type `RecurringOrderSetExpiresAtAction`
 </details>
