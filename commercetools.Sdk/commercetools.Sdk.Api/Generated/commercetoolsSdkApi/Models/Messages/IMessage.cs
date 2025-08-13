@@ -85,6 +85,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeRemovedMessage))]
     [SubTypeDiscriminator("CustomerCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomTypeSetMessage))]
     [SubTypeDiscriminator("CustomerDateOfBirthSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDateOfBirthSetMessage))]
+    [SubTypeDiscriminator("CustomerDefaultBillingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDefaultBillingAddressSetMessage))]
+    [SubTypeDiscriminator("CustomerDefaultShippingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDefaultShippingAddressSetMessage))]
     [SubTypeDiscriminator("CustomerDeleted", typeof(commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage))]
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessage))]
     [SubTypeDiscriminator("CustomerEmailTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailTokenCreatedMessage))]
@@ -102,6 +104,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerLastNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessage))]
     [SubTypeDiscriminator("CustomerPasswordTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordTokenCreatedMessage))]
     [SubTypeDiscriminator("CustomerPasswordUpdated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage))]
+    [SubTypeDiscriminator("CustomerStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerStoresSetMessage))]
     [SubTypeDiscriminator("CustomerTitleSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerTitleSetMessage))]
     [SubTypeDiscriminator("CustomLineItemStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessage))]
     [SubTypeDiscriminator("DeliveryAdded", typeof(commercetools.Sdk.Api.Models.Messages.DeliveryAddedMessage))]
@@ -798,6 +801,18 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CustomerDefaultBillingAddressSetMessage CustomerDefaultBillingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerDefaultBillingAddressSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerDefaultBillingAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerDefaultShippingAddressSetMessage CustomerDefaultShippingAddressSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerDefaultShippingAddressSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerDefaultShippingAddressSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage CustomerDeleted(Action<commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerDeletedMessage();
@@ -897,6 +912,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage CustomerPasswordUpdated(Action<commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerStoresSetMessage CustomerStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerStoresSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerStoresSetMessage();
             init?.Invoke(t);
             return t;
         }
