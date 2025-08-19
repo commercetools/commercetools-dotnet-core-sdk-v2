@@ -10,6 +10,12 @@ namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public enum ReferenceType
     {
+        [Description("associate-role")]
+        AssociateRole,
+
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("cart")]
         Cart,
 
@@ -94,6 +100,12 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [EnumInterfaceCreator(typeof(IReferenceType), "FindEnum")]
     public interface IReferenceType : IJsonName, IEnumerable<char>
     {
+        public static IReferenceType AssociateRole = new ReferenceTypeWrapper
+        { Value = ReferenceType.AssociateRole, JsonName = "associate-role" };
+
+        public static IReferenceType BusinessUnit = new ReferenceTypeWrapper
+        { Value = ReferenceType.BusinessUnit, JsonName = "business-unit" };
+
         public static IReferenceType Cart = new ReferenceTypeWrapper
         { Value = ReferenceType.Cart, JsonName = "cart" };
 
@@ -160,6 +172,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         {
             return new[]
             {
+                 AssociateRole ,
+                 BusinessUnit ,
                  Cart ,
                  CartDiscount ,
                  Category ,

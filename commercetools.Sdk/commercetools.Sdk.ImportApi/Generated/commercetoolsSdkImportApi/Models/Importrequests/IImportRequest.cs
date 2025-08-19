@@ -6,6 +6,7 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.ImportApi.Models.Importrequests.ImportRequest))]
+    [SubTypeDiscriminator("business-unit", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.BusinessUnitImportRequest))]
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest))]
     [SubTypeDiscriminator("customer", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.CustomerImportRequest))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.ImportApi.Models.Importrequests.DiscountCodeImportRequest))]
@@ -25,6 +26,12 @@ namespace commercetools.Sdk.ImportApi.Models.Importrequests
     {
         IImportResourceType Type { get; set; }
 
+        static commercetools.Sdk.ImportApi.Models.Importrequests.BusinessUnitImportRequest BusinessUnit(Action<commercetools.Sdk.ImportApi.Models.Importrequests.BusinessUnitImportRequest> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Importrequests.BusinessUnitImportRequest();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest Category(Action<commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Importrequests.CategoryImportRequest();
