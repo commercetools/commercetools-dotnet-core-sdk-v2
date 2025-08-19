@@ -5,6 +5,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
 {
     [TypeDiscriminator(nameof(TypeId))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.ImportApi.Models.Common.KeyReference))]
+    [SubTypeDiscriminator("associate-role", typeof(commercetools.Sdk.ImportApi.Models.Common.AssociateRoleKeyReference))]
+    [SubTypeDiscriminator("business-unit", typeof(commercetools.Sdk.ImportApi.Models.Common.BusinessUnitKeyReference))]
     [SubTypeDiscriminator("cart", typeof(commercetools.Sdk.ImportApi.Models.Common.CartKeyReference))]
     [SubTypeDiscriminator("cart-discount", typeof(commercetools.Sdk.ImportApi.Models.Common.CartDiscountKeyReference))]
     [SubTypeDiscriminator("category", typeof(commercetools.Sdk.ImportApi.Models.Common.CategoryKeyReference))]
@@ -31,6 +33,18 @@ namespace commercetools.Sdk.ImportApi.Models.Common
 
         IReferenceType TypeId { get; set; }
 
+        static commercetools.Sdk.ImportApi.Models.Common.AssociateRoleKeyReference AssociateRole(Action<commercetools.Sdk.ImportApi.Models.Common.AssociateRoleKeyReference> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Common.AssociateRoleKeyReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.ImportApi.Models.Common.BusinessUnitKeyReference BusinessUnit(Action<commercetools.Sdk.ImportApi.Models.Common.BusinessUnitKeyReference> init = null)
+        {
+            var t = new commercetools.Sdk.ImportApi.Models.Common.BusinessUnitKeyReference();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.ImportApi.Models.Common.CartKeyReference Cart(Action<commercetools.Sdk.ImportApi.Models.Common.CartKeyReference> init = null)
         {
             var t = new commercetools.Sdk.ImportApi.Models.Common.CartKeyReference();

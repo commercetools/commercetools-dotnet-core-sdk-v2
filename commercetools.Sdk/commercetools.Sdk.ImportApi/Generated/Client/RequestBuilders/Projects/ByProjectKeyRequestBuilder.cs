@@ -17,6 +17,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.DiscountCodes;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductSelections;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.BusinessUnits;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
@@ -123,6 +124,11 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
         {
             return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

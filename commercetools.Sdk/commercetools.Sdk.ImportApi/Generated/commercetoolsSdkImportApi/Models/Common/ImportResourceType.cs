@@ -10,6 +10,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
 {
     public enum ImportResourceType
     {
+        [Description("business-unit")]
+        BusinessUnit,
+
         [Description("category")]
         Category,
 
@@ -79,6 +82,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [EnumInterfaceCreator(typeof(IImportResourceType), "FindEnum")]
     public interface IImportResourceType : IJsonName, IEnumerable<char>
     {
+        public static IImportResourceType BusinessUnit = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.BusinessUnit, JsonName = "business-unit" };
+
         public static IImportResourceType Category = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Category, JsonName = "category" };
 
@@ -130,6 +136,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         {
             return new[]
             {
+                 BusinessUnit ,
                  Category ,
                  Customer ,
                  DiscountCode ,
