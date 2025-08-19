@@ -70,6 +70,38 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.RecurrencePolicies
                    .Build(),
                    "Post",
                    "/test_projectKey/recurrence-policies/key=test_key",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurrencePolicies()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithVersion(2)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurrence-policies/key=test_key?version=2",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurrencePolicies()
+                   .WithKey("test_key")
+                   .Delete()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurrence-policies/key=test_key?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .RecurrencePolicies()
+                   .WithKey("test_key")
+                   .Delete()
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/recurrence-policies/key=test_key",
                }
        };
         }

@@ -39,5 +39,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
             return new ByProjectKeyRecurrencePoliciesKeyByKeyPost(ApiHttpClient, SerializerService, ProjectKey, Key, recurrencePolicyUpdate);
         }
 
+        public ByProjectKeyRecurrencePoliciesKeyByKeyDelete Delete()
+        {
+            return new ByProjectKeyRecurrencePoliciesKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
+        }
+
     }
 }
