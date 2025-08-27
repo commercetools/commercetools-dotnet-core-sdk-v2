@@ -53,6 +53,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("LockedField", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLLockedFieldError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMatchingPriceNotFoundError))]
     [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError))]
+    [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError))]
@@ -373,6 +374,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError MaxCartDiscountsReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxCartDiscountsReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError MaxDiscountGroupsReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError();
             init?.Invoke(t);
             return t;
         }

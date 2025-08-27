@@ -22,6 +22,8 @@ namespace commercetools.Sdk.Api.Models.DiscountGroups
 
         public string SortOrder { get; set; }
 
+        public bool IsActive { get; set; }
+
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }

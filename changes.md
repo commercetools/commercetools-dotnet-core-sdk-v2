@@ -3,6 +3,8 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `isActive` to type `DiscountGroup`
+- added property `isActive` to type `DiscountGroupDraft`
 - added property `minCartQuantity` to type `InventoryEntry`
 - added property `maxCartQuantity` to type `InventoryEntry`
 - added property `minCartQuantity` to type `InventoryEntryDraft`
@@ -14,14 +16,19 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `DiscountGroupSetIsActiveAction`
+- added type `MaxDiscountGroupsReachedError`
+- added type `GraphQLMaxDiscountGroupsReachedError`
 - added type `InventoryEntrySetInventoryLimitsAction`
 - added type `CustomerDefaultBillingAddressSetMessage`
 - added type `CustomerDefaultShippingAddressSetMessage`
 - added type `CustomerStoresSetMessage`
+- added type `DiscountGroupIsActiveSetMessage`
 - added type `RecurringOrderExpiresAtSetMessage`
 - added type `CustomerDefaultBillingAddressSetMessagePayload`
 - added type `CustomerDefaultShippingAddressSetMessagePayload`
 - added type `CustomerStoresSetMessagePayload`
+- added type `DiscountGroupIsActiveSetMessagePayload`
 - added type `RecurringOrderExpiresAtSetMessagePayload`
 - added type `RecurringOrderSetExpiresAtAction`
 </details>
