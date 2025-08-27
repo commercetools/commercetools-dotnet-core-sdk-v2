@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.DiscountGroups
 
         string SortOrder { get; set; }
 
+        bool? IsActive { get; set; }
+
     }
 }

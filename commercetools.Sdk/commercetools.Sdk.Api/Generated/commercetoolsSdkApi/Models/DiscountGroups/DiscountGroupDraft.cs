@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.DiscountGroups
         public ILocalizedString Description { get; set; }
 
         public string SortOrder { get; set; }
+
+        public bool? IsActive { get; set; }
     }
 }
