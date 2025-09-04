@@ -4,8 +4,18 @@ using System.Threading.Tasks;
 using commercetools.Base.Client.Error;
 using commercetools.Sdk.Api.Client;
 using commercetools.Sdk.Api.Models.Carts;
+using commercetools.Sdk.GraphQL.Api;
+using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Types;
+
 using Xunit;
 using static commercetools.Api.IntegrationTests.Cart.CartFixture;
+using static commercetools.Api.IntegrationTests.Type.TypeFixtures;
+using CartDraft = commercetools.Sdk.Api.Models.Carts.CartDraft;
+using CustomFieldsDraft = commercetools.Sdk.Api.Models.Types.CustomFieldsDraft;
+using FieldDefinition = commercetools.Sdk.Api.Models.Types.FieldDefinition;
+using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
+using Money = commercetools.Sdk.Api.Models.Common.Money;
 
 namespace commercetools.Api.IntegrationTests.Cart
 {
@@ -184,5 +194,58 @@ namespace commercetools.Api.IntegrationTests.Cart
                 }
             });
         }
+        
+        [Fact]
+        public async Task TestMoney()
+        {
+            var gqlClient = _client.GraphQLClient();
+            var key = $"GetTypeById-{TestingUtility.RandomString()}";
+            await WithType(_client, typeDraft =>
+            {
+                var draft = DefaultTypeDraftWithKey(typeDraft, key);
+                draft.FieldDefinitions = new List<IFieldDefinition>()
+                {
+                    new FieldDefinition()
+                    {
+                        Type = new CustomFieldMoneyType()
+                        {
+                        },
+                        Label = new LocalizedString()
+                        {
+                            { "en", "money" }
+                        },
+                        Required = false,
+                        Name = "money"
+                    }
+                };
+                return draft;
+            }, async type =>
+            {
+                await WithCart(_client, draft =>
+                {
+                    draft.Currency = "EUR";
+                    draft.Custom = new CustomFieldsDraft()
+                    {
+                        Type = new TypeResourceIdentifier() { Key = type.Key },
+                        Fields = new FieldContainer()
+                        {
+                            { "money", new MoneyDraft() { CurrencyCode = "EUR", CentAmount = 100 } }
+                        }
+                    };
+                    return draft;
+                }, async cart =>
+                {
+                    var retrieveCart = await _client.Carts().WithId(cart.Id).Get().ExecuteAsync();
+                    Assert.IsAssignableFrom<IMoney>(retrieveCart.Custom.Fields["money"]);
+                    var cartId = cart.Id;
+                    var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Fields = custom.CustomFieldsRaw(selector: field => new {Name = field.Name, Value = field.Value}) }) }));
+                    Assert.NotNull(t);
+                    Assert.Equal("money", t.Data.Custom.Fields[0].Name);
+                    Assert.Equal("EUR", t.Data.Custom.Fields[0].Value.AsObject()["currencyCode"].GetValue<string>());
+                    Assert.Equal(100m, t.Data.Custom.Fields[0].Value.AsObject()["centAmount"].GetValue<decimal>());
+                });
+            });
+        }
+
     }
 }
