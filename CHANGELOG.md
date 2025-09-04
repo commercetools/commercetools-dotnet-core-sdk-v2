@@ -1,4 +1,18 @@
 
+# 14.0.0 (2025-09-04)
+
+## Breaking Changes
+
+We changed in the GraphQL package the mapping of `Json` type fields from `System.Text.Json.Nodes.JsonValue` to `System.Text.Json.Nodes.JsonNode` to support array and object values.
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/483
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/484
+* map Json type fields to JsonNode to support arrays & objects by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/485
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/13.1.0...14.0.0
+
 # 13.1.0 (2025-09-01)
 
 **Api changes**
