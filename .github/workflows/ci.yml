@@ -50,6 +50,7 @@ jobs:
           dotnet-version: |
             6.0.x
             7.0.x
+            9.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
@@ -101,6 +102,7 @@ jobs:
           dotnet-version: |
             6.0.x
             7.0.x
+            9.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
@@ -176,6 +178,7 @@ jobs:
           dotnet-version: |
             6.0.x
             7.0.x
+            9.0.x
       - run: dotnet tool restore
         working-directory: ./commercetools.Sdk
       - run: dotnet restore --configfile Nuget.config --packages ../packages
@@ -276,6 +279,7 @@ jobs:
           dotnet-version: |
             6.0.x
             7.0.x
+            9.0.x
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

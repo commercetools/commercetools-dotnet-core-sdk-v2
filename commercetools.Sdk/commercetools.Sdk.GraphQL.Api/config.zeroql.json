@@ -8,7 +8,7 @@
     "BigDecimal": "System.Decimal",
     "Country": "System.String",
     "Locale": "System.String",
-    "Json": "System.Text.Json.Nodes.JsonValue",
+    "Json": "System.Text.Json.Nodes.JsonNode",
     "KeyReferenceInput": "System.String",
     "Set": "System.String",
     "Time": "System.String",

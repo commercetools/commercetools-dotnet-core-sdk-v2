@@ -28,6 +28,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountGroups
             return new CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetDescriptionActionQueryBuilderDsl.Of()),
                 DiscountGroupUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl> AsSetIsActive(
+            Func<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetIsActiveActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetIsActiveActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetIsActiveActionQueryBuilderDsl.Of()),
+                DiscountGroupUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupSetKeyActionQueryBuilderDsl>> fn)
         {

@@ -69,6 +69,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountGroups
             p => new CombinationQueryPredicate<DiscountGroupQueryBuilderDsl>(p, DiscountGroupQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<DiscountGroupQueryBuilderDsl, bool> IsActive()
+        {
+            return new ComparisonPredicateBuilder<DiscountGroupQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("isActive")),
+            p => new CombinationQueryPredicate<DiscountGroupQueryBuilderDsl>(p, DiscountGroupQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<DiscountGroupQueryBuilderDsl> LastModifiedBy(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl>> fn)
         {

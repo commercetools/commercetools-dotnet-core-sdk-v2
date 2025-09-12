@@ -120,6 +120,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("DiscountCodeKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountCodeKeySetMessagePayload))]
     [SubTypeDiscriminator("DiscountGroupCreated", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupCreatedMessagePayload))]
     [SubTypeDiscriminator("DiscountGroupDeleted", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessagePayload))]
+    [SubTypeDiscriminator("DiscountGroupIsActiveSet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupIsActiveSetMessagePayload))]
     [SubTypeDiscriminator("DiscountGroupKeySet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupKeySetMessagePayload))]
     [SubTypeDiscriminator("DiscountGroupSortOrderSet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryCreated", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessagePayload))]
@@ -994,6 +995,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessagePayload DiscountGroupDeleted(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.DiscountGroupIsActiveSetMessagePayload DiscountGroupIsActiveSet(Action<commercetools.Sdk.Api.Models.Messages.DiscountGroupIsActiveSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.DiscountGroupIsActiveSetMessagePayload();
             init?.Invoke(t);
             return t;
         }

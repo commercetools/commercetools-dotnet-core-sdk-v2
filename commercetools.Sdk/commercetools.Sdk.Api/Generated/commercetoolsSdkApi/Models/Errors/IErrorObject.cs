@@ -53,6 +53,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("LockedField", typeof(commercetools.Sdk.Api.Models.Errors.LockedFieldError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError))]
+    [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
@@ -375,6 +376,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError MaxCartDiscountsReached(Action<commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError MaxDiscountGroupsReached(Action<commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError();
             init?.Invoke(t);
             return t;
         }
