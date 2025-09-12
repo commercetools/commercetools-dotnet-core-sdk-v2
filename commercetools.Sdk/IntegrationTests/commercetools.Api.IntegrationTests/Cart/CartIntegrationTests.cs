@@ -11,11 +11,9 @@ using commercetools.Sdk.Api.Models.Types;
 using Xunit;
 using static commercetools.Api.IntegrationTests.Cart.CartFixture;
 using static commercetools.Api.IntegrationTests.Type.TypeFixtures;
-using CartDraft = commercetools.Sdk.Api.Models.Carts.CartDraft;
 using CustomFieldsDraft = commercetools.Sdk.Api.Models.Types.CustomFieldsDraft;
 using FieldDefinition = commercetools.Sdk.Api.Models.Types.FieldDefinition;
 using LocalizedString = commercetools.Sdk.Api.Models.Common.LocalizedString;
-using Money = commercetools.Sdk.Api.Models.Common.Money;
 
 namespace commercetools.Api.IntegrationTests.Cart
 {
@@ -194,7 +192,7 @@ namespace commercetools.Api.IntegrationTests.Cart
                 }
             });
         }
-        
+
         [Fact]
         public async Task TestMoney()
         {
@@ -238,7 +236,7 @@ namespace commercetools.Api.IntegrationTests.Cart
                     var retrieveCart = await _client.Carts().WithId(cart.Id).Get().ExecuteAsync();
                     Assert.IsAssignableFrom<IMoney>(retrieveCart.Custom.Fields["money"]);
                     var cartId = cart.Id;
-                    var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Fields = custom.CustomFieldsRaw(selector: field => new {Name = field.Name, Value = field.Value}) }) }));
+                    var t = await gqlClient.Query(o => o.Cart(id: cartId, selector: cart => new { Custom = cart.Custom(custom => new { Fields = custom.CustomFieldsRaw(selector: field => new { Name = field.Name, Value = field.Value }) }) }));
                     Assert.NotNull(t);
                     Assert.Equal("money", t.Data.Custom.Fields[0].Name);
                     Assert.Equal("EUR", t.Data.Custom.Fields[0].Value.AsObject()["currencyCode"].GetValue<string>());
