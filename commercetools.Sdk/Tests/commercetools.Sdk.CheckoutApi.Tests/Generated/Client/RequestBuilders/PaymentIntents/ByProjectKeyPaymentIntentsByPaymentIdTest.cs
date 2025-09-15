@@ -23,7 +23,7 @@ namespace commercetools.Sdk.CheckoutApi.Tests.Client.RequestBuilders.PaymentInte
        return new List<object[]> {
                new Object[] {           
                    ApiRoot
-                   .WithProjectKey("test_projectKey")
+                   .WithProject("test_projectKey")
                    .PaymentIntents()
                    .WithPaymentId("test_paymentId")
                    .Post(null)

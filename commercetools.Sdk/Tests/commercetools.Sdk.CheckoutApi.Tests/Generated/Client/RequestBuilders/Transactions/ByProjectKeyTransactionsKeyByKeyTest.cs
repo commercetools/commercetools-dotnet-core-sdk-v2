@@ -23,7 +23,7 @@ namespace commercetools.Sdk.CheckoutApi.Tests.Client.RequestBuilders.Transaction
        return new List<object[]> {
                new Object[] {           
                    ApiRoot
-                   .WithProjectKey("test_projectKey")
+                   .WithProject("test_projectKey")
                    .Transactions()
                    .WithKey("test_key")
                    .Get()

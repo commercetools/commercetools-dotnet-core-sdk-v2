@@ -23,10 +23,10 @@ verify:
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.Api.Tests -c Release
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.HistoryApi.Tests -c Release
 	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.ImportApi.Tests -c Release
-	#dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.CheckoutApi.Tests -c Release
+	dotnet test --verbosity=normal commercetools.Sdk/Tests/commercetools.Sdk.CheckoutApi.Tests -c Release
 
 codegen_install:
-	#curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
+	curl -o- -s https://raw.githubusercontent.com/vrapio/rmf-codegen/master/scripts/install.sh | bash
 
 generate_api:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="Api" GEN_RAML_FILE=../$(API_RAML) generate_sdk_with_predicates
