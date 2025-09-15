@@ -140,6 +140,11 @@ jobs:
       CTP_Import__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}
       CTP_Import__Scope: ${{ secrets.CTP_SCOPE }}
       CTP_Import__ApiBaseAddress: "https://import.europe-west1.gcp.commercetools.com/"
+      CTP_Checkout__ClientId: ${{ secrets.CTP_CLIENT_ID }}
+      CTP_Checkout__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET }}
+      CTP_Checkout__ProjectKey: ${{ secrets.CTP_PROJECT_KEY }}
+      CTP_Checkout__Scope: ${{ secrets.CTP_SCOPE }}
+      CTP_Checkout__ApiBaseAddress: "https://checkout.europe-west1.gcp.commercetools.com/"
       CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID }}
       CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET }}
       CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY }}
@@ -201,6 +206,11 @@ jobs:
           CTP_Import__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
           CTP_Import__Scope: ${{ secrets.CTP_SCOPE_PR }}
           CTP_Import__ApiBaseAddress: "https://import.europe-west1.gcp.commercetools.com/"
+          CTP_Checkout__ClientId: ${{ secrets.CTP_CLIENT_ID_PR }}
+          CTP_Checkout__ClientSecret: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+          CTP_Checkout__ProjectKey: ${{ secrets.CTP_PROJECT_KEY_PR }}
+          CTP_Checkout__Scope: ${{ secrets.CTP_SCOPE_PR }}
+          CTP_Checkout__ApiBaseAddress: "https://checkout.europe-west1.gcp.commercetools.com/"
           CTP_MeClient__ClientId: ${{ secrets.CTP_MECLIENT_ID_PR }}
           CTP_MeClient__ClientSecret: ${{ secrets.CTP_MECLIENT_SECRET_PR }}
           CTP_MeClient__ProjectKey: ${{ secrets.CTP_MEPROJECT_KEY_PR }}
