@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using commercetools.Base.Client;
 using commercetools.Sdk.Api;
 using commercetools.Sdk.Api.Models.Carts;
@@ -51,6 +52,7 @@ public class CheckoutIntegrationTests
         var cart = await apiRoot.Carts().Post(newCart).ExecuteAsync().ConfigureAwait(false);
         Assert.NotNull(cart);
         
+        Thread.Sleep(500);
         var transactionKey = "transaction-" + TestingUtility.RandomString();
         var transaction = await checkoutApiRoot.Transactions()
 
