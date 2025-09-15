@@ -26,13 +26,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Categories\" />
-    </ItemGroup>
-    <ItemGroup>
       <ProjectReference Include="..\..\commercetools.Base.Client\commercetools.Base.Client.csproj" />
       <ProjectReference Include="..\..\commercetools.Base.Serialization\commercetools.Base.Serialization.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.Api\commercetools.Sdk.Api.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.ImportApi\commercetools.Sdk.ImportApi.csproj" />
+      <ProjectReference Include="..\..\commercetools.Sdk.CheckoutApi\commercetools.Sdk.CheckoutApi.csproj" />
       <ProjectReference Include="..\..\commercetools.Sdk.GraphQL.Api\commercetools.Sdk.GraphQL.Api.csproj" />
     </ItemGroup>
     <ItemGroup>
