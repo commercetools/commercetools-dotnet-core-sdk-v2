@@ -15,8 +15,8 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             var requestMessage = Build();
             return await ApiHttpClient.ExecuteAsync<ResourcePagedQueryResponse<GenericCustomObject<T>>>(requestMessage, cancellationToken);
         }
-    
-    
+
+
         public async Task<IApiResponse<IResourcePagedQueryResponse<GenericCustomObject<T>>>> SendAsync<T>(CancellationToken cancellationToken = default)
         {
 

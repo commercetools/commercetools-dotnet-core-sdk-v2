@@ -22,7 +22,7 @@ namespace commercetools.Sdk.CheckoutApi.Client
 
         private ByProjectKeyRequestBuilder With()
         {
-            return new CheckoutApiRoot(ApiHttpClient).WithProject(ProjectKey);
+            return new CheckoutApiRoot(ApiHttpClient).WithProjectKey(ProjectKey);
         }
 
         public ByProjectKeyPaymentIntentsRequestBuilder PaymentIntents()
