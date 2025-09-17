@@ -11,7 +11,7 @@ namespace commercetools.Sdk.CheckoutApi.Client
         {
             this.ApiHttpClient = apiHttpClient;
         }
-        public ByProjectKeyRequestBuilder WithProject(string projectKey)
+        public ByProjectKeyRequestBuilder WithProjectKey(string projectKey)
         {
             return new ByProjectKeyRequestBuilder(ApiHttpClient, ApiHttpClient?.SerializerService, projectKey);
         }

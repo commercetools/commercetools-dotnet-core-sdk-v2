@@ -51,7 +51,7 @@ public class CheckoutIntegrationTests
 
         var cart = await apiRoot.Carts().Post(newCart).ExecuteAsync().ConfigureAwait(false);
         Assert.NotNull(cart);
-        
+
         Thread.Sleep(500);
         var transactionKey = "transaction-" + TestingUtility.RandomString();
         var transaction = await checkoutApiRoot.Transactions()
