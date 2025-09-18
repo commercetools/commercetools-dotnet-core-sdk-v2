@@ -51,6 +51,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
                 MyTransactionDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<MyTransactionDraftQueryBuilderDsl, string> InterfaceId()
+        {
+            return new ComparisonPredicateBuilder<MyTransactionDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("interfaceId")),
+            p => new CombinationQueryPredicate<MyTransactionDraftQueryBuilderDsl>(p, MyTransactionDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

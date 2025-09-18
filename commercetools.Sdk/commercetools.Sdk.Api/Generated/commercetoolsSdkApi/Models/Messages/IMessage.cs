@@ -200,6 +200,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("PaymentStatusInterfaceCodeSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentStatusInterfaceCodeSetMessage))]
     [SubTypeDiscriminator("PaymentStatusStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.PaymentStatusStateTransitionMessage))]
     [SubTypeDiscriminator("PaymentTransactionAdded", typeof(commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage))]
+    [SubTypeDiscriminator("PaymentTransactionInterfaceIdSet", typeof(commercetools.Sdk.Api.Models.Messages.PaymentTransactionInterfaceIdSetMessage))]
     [SubTypeDiscriminator("PaymentTransactionStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.PaymentTransactionStateChangedMessage))]
     [SubTypeDiscriminator("ProductAddedToCategory", typeof(commercetools.Sdk.Api.Models.Messages.ProductAddedToCategoryMessage))]
     [SubTypeDiscriminator("ProductCreated", typeof(commercetools.Sdk.Api.Models.Messages.ProductCreatedMessage))]
@@ -1489,6 +1490,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage PaymentTransactionAdded(Action<commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.PaymentTransactionAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.PaymentTransactionInterfaceIdSetMessage PaymentTransactionInterfaceIdSet(Action<commercetools.Sdk.Api.Models.Messages.PaymentTransactionInterfaceIdSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.PaymentTransactionInterfaceIdSetMessage();
             init?.Invoke(t);
             return t;
         }

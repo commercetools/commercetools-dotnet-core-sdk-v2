@@ -19,5 +19,7 @@ namespace commercetools.Sdk.Api.Models.Me
 
         ICustomFieldsDraft Custom { get; set; }
 
+        string InterfaceId { get; set; }
+
     }
 }
