@@ -10,7 +10,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
         public int TotalToSkip { get; set; }
         public CounterDraft()
         {
-            this.Type = "counter";
+            this.Type = "Counter";
         }
     }
 }

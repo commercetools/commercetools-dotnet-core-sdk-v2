@@ -14,7 +14,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
         public DateTime? LastSkippedAt { get; set; }
         public Counter()
         {
-            this.Type = "counter";
+            this.Type = "Counter";
         }
     }
 }

@@ -5,7 +5,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
 {
     [TypeDiscriminator(nameof(Type))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.RecurringOrders.SkipConfigurationDraft))]
-    [SubTypeDiscriminator("counter", typeof(commercetools.Sdk.Api.Models.RecurringOrders.CounterDraft))]
+    [SubTypeDiscriminator("Counter", typeof(commercetools.Sdk.Api.Models.RecurringOrders.CounterDraft))]
     public partial interface ISkipConfigurationDraft
     {
         string Type { get; set; }
