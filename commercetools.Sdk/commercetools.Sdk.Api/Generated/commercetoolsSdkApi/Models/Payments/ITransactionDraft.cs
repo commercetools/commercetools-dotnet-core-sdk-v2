@@ -20,5 +20,7 @@ namespace commercetools.Sdk.Api.Models.Payments
 
         ICustomFieldsDraft Custom { get; set; }
 
+        string InterfaceId { get; set; }
+
     }
 }

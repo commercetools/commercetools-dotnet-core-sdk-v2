@@ -166,6 +166,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Payments
             return new CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentSetTransactionCustomTypeActionQueryBuilderDsl.Of()),
                 PaymentUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> AsSetTransactionInterfaceId(
+            Func<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentSetTransactionInterfaceIdActionQueryBuilderDsl.Of()),
+                PaymentUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> AsTransitionState(
             Func<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentTransitionStateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentTransitionStateActionQueryBuilderDsl>> fn)
         {

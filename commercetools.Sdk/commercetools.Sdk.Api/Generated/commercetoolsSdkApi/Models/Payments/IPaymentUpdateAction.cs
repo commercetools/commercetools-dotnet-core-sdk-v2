@@ -29,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Payments
     [SubTypeDiscriminator("setStatusInterfaceText", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetStatusInterfaceTextAction))]
     [SubTypeDiscriminator("setTransactionCustomField", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomFieldAction))]
     [SubTypeDiscriminator("setTransactionCustomType", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction))]
+    [SubTypeDiscriminator("setTransactionInterfaceId", typeof(commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionInterfaceIdAction))]
     [SubTypeDiscriminator("transitionState", typeof(commercetools.Sdk.Api.Models.Payments.PaymentTransitionStateAction))]
     public partial interface IPaymentUpdateAction
     {
@@ -175,6 +176,12 @@ namespace commercetools.Sdk.Api.Models.Payments
         static commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction SetTransactionCustomType(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionCustomTypeAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionInterfaceIdAction SetTransactionInterfaceId(Action<commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionInterfaceIdAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Payments.PaymentSetTransactionInterfaceIdAction();
             init?.Invoke(t);
             return t;
         }
