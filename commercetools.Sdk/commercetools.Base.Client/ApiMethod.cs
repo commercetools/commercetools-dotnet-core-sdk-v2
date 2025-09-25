@@ -85,7 +85,7 @@ namespace commercetools.Base.Client
             if (keyValuePairs.Any())
                 return "?" + string.Join("&",
                     keyValuePairs.Select(pair =>
-                        $"{Uri.EscapeDataString(pair.Key)}={Uri.EscapeDataString(pair.Value)}"));
+                        $"{pair.Key}={Uri.EscapeDataString(pair.Value)}"));
             return "";
         }
     }
