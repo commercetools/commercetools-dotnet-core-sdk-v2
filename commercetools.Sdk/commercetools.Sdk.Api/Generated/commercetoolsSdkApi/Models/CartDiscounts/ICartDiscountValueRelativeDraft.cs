@@ -7,5 +7,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     {
         long Permyriad { get; set; }
 
+        IDiscountApplicationMode ApplicationMode { get; set; }
+
     }
 }

@@ -10,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
 
-    public partial class ByProjectKeyProductProjectionsGet : ApiMethod<ByProjectKeyProductProjectionsGet>, IApiMethod<ByProjectKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IStoreprojectingtailoringTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsGet>
+    public partial class ByProjectKeyProductProjectionsGet : ApiMethod<ByProjectKeyProductProjectionsGet>, IApiMethod<ByProjectKeyProductProjectionsGet, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedQueryResponse>, commercetools.Sdk.Api.Client.IProjectionselectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IStoreprojectingtailoringTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IAttributefilteringTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.ISortableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IPagingTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IQueryTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyProductProjectionsGet>
     {
 
 
@@ -71,6 +71,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public List<string> GetStoreProjection()
         {
             return this.GetQueryParam("storeProjection");
+        }
+
+        public List<string> GetFilterAttributes()
+        {
+            return this.GetQueryParam("filter[attributes]");
         }
 
         public List<string> GetExpand()
@@ -146,6 +151,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         public ByProjectKeyProductProjectionsGet WithStoreProjection(string storeProjection)
         {
             return this.AddQueryParam("storeProjection", storeProjection);
+        }
+
+        public ByProjectKeyProductProjectionsGet WithFilterAttributes(string filterAttributes)
+        {
+            return this.AddQueryParam("filter[attributes]", filterAttributes);
         }
 
         public ByProjectKeyProductProjectionsGet WithExpand(string expand)

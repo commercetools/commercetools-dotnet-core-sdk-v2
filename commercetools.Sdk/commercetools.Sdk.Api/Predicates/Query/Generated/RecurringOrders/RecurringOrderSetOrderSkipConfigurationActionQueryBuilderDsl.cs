@@ -21,11 +21,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurringOrders
             p => new CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl>(p, RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl> SkipConfiguration(
+        public CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl> SkipConfigurationInputDraft(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.SkipConfigurationDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.SkipConfigurationDraftQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("skipConfiguration"))
+                .Parent(ConstantQueryPredicate.Of().Constant("skipConfigurationInputDraft"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.SkipConfigurationDraftQueryBuilderDsl.Of())),
                 RecurringOrderSetOrderSkipConfigurationActionQueryBuilderDsl.Of);
         }

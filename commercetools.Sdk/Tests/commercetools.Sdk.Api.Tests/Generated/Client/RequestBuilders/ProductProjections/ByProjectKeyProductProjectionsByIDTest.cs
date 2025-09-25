@@ -124,6 +124,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.ProductProjections
                    .ProductProjections()
                    .WithId("test_ID")
                    .Get()
+                   .WithFilterAttributes("filter[attributes]")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/product-projections/test_ID?filter[attributes]=filter%5Battributes%5D",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .ProductProjections()
+                   .WithId("test_ID")
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

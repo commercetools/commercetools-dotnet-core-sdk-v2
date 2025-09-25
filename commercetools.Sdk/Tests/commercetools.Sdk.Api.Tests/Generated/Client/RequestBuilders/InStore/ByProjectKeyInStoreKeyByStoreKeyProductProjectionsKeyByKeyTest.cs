@@ -122,6 +122,18 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
                    .ProductProjections()
                    .WithKey("test_key")
                    .Get()
+                   .WithFilterAttributes("filter[attributes]")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?filter[attributes]=filter%5Battributes%5D",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .ProductProjections()
+                   .WithKey("test_key")
+                   .Get()
                    .WithExpand("expand")
                    .Build(),
                    "Get",

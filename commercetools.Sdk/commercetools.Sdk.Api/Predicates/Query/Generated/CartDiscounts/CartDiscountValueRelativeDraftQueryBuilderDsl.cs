@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             p => new CombinationQueryPredicate<CartDiscountValueRelativeDraftQueryBuilderDsl>(p, CartDiscountValueRelativeDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartDiscountValueRelativeDraftQueryBuilderDsl, string> ApplicationMode()
+        {
+            return new ComparisonPredicateBuilder<CartDiscountValueRelativeDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("applicationMode")),
+            p => new CombinationQueryPredicate<CartDiscountValueRelativeDraftQueryBuilderDsl>(p, CartDiscountValueRelativeDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
