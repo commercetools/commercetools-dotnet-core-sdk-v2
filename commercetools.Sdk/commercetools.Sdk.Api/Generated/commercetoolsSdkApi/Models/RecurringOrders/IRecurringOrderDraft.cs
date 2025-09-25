@@ -15,7 +15,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
 
         long CartVersion { get; set; }
 
-        DateTime StartsAt { get; set; }
+        DateTime? StartsAt { get; set; }
 
         DateTime? ExpiresAt { get; set; }
 

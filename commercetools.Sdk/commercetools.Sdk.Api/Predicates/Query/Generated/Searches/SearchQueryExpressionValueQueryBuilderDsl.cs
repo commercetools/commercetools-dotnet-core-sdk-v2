@@ -76,6 +76,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Searches
             return new CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchFullTextValueQueryBuilderDsl.Of()),
                 SearchQueryExpressionValueQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> AsSearchFuzzyValue(
+            Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchFuzzyValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchFuzzyValueQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Searches.SearchFuzzyValueQueryBuilderDsl.Of()),
+                SearchQueryExpressionValueQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> AsSearchLongRangeValue(
             Func<commercetools.Sdk.Api.Predicates.Query.Searches.SearchLongRangeValueQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Searches.SearchLongRangeValueQueryBuilderDsl>> fn)
         {

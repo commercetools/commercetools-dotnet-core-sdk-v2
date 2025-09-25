@@ -9,7 +9,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet, commercetools.Sdk.Api.Models.Products.IProductProjection>, commercetools.Sdk.Api.Client.IProjectionselectingtailoringTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet, commercetools.Sdk.Api.Models.Products.IProductProjection>, commercetools.Sdk.Api.Client.IProjectionselectingtailoringTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IPriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.ILocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IAttributefilteringTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet>
     {
 
 
@@ -73,6 +73,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return this.GetQueryParam("localeProjection");
         }
 
+        public List<string> GetFilterAttributes()
+        {
+            return this.GetQueryParam("filter[attributes]");
+        }
+
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
@@ -116,6 +121,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithLocaleProjection(string localeProjection)
         {
             return this.AddQueryParam("localeProjection", localeProjection);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithFilterAttributes(string filterAttributes)
+        {
+            return this.AddQueryParam("filter[attributes]", filterAttributes);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet WithExpand(string expand)
