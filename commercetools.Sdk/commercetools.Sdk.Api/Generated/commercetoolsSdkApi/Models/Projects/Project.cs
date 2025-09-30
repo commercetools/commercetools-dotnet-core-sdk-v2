@@ -43,5 +43,7 @@ namespace commercetools.Sdk.Api.Models.Projects
         public ISearchIndexingConfiguration SearchIndexing { get; set; }
 
         public IBusinessUnitConfiguration BusinessUnits { get; set; }
+
+        public IDiscountsConfiguration Discounts { get; set; }
     }
 }
