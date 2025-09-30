@@ -118,6 +118,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetDiscountsConfiguration(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetDiscountsConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetDiscountsConfigurationActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetDiscountsConfigurationActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetExternalOAuth(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetExternalOAuthActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetExternalOAuthActionQueryBuilderDsl>> fn)
         {
