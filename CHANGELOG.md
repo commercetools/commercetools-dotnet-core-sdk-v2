@@ -1,5 +1,83 @@
 
-# 14.0.0 (2025-09-04)
+# 14.1.0 (2025-10-06)
+
+## New features
+
+- adds support for the checkout APIs
+- adds a new generic custom object
+- support the new parameters to filter attributes
+
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/486
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/487
+* Checkout sdk by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/488
+* add generic custom object by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/489
+* fix checkout SDK by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/490
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/491
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/492
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/493
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/494
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/495
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/496
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `PaymentTransactionInterfaceIdSetMessage`
+- added type `PaymentTransactionInterfaceIdSetMessagePayload`
+- added type `PaymentSetTransactionInterfaceIdAction`
+- added type `DiscountCombinationMode`
+- added type `DiscountsConfiguration`
+- added type `ProjectSetDiscountsConfigurationAction`
+- added type `SearchFuzzyExpression`
+- added type `SearchFuzzyValue`
+</details>
+
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `filter[attributes]` to method `get /{projectKey}/product-projections`
+- added query parameter `filter[attributes]` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `filter[attributes]` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `filter[attributes]` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `filter[attributes]` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `startsAt` of type `RecurringOrderDraft` to be optional
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `skipConfiguration` from type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueRelative`
+- added property `applicationMode` to type `CartDiscountValueRelativeDraft`
+- added property `interfaceId` to type `MyTransactionDraft`
+- added property `interfaceId` to type `Transaction`
+- added property `interfaceId` to type `TransactionDraft`
+- added property `discounts` to type `Project`
+- added property `skipConfigurationInputDraft` to type `RecurringOrderSetOrderSkipConfigurationAction`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.0.0...14.1.0
+
+# 14.0.0 (2025-09-12)
 
 ## Breaking Changes
 
