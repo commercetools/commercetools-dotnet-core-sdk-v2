@@ -45,6 +45,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerId);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdMergeRequestBuilder CustomerIdWithCustomerIdValueMerge(string customerId)
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdMergeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, customerId);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder WithKey(string key)
         {
             return new ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey, key);
