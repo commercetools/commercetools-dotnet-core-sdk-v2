@@ -2,22 +2,22 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.BusinessUnits;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Categories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.DiscountCodes;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Prices;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Products;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductDrafts;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductSelections;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.Customers;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.Inventories;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.DiscountCodes;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductSelections;
-using commercetools.Sdk.ImportApi.Client.RequestBuilders.BusinessUnits;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
@@ -51,9 +51,24 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
             return new ByProjectKeyImportOperationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyBusinessUnitsRequestBuilder BusinessUnits()
+        {
+            return new ByProjectKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyCategoriesRequestBuilder Categories()
         {
             return new ByProjectKeyCategoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyCustomersRequestBuilder Customers()
+        {
+            return new ByProjectKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyDiscountCodesRequestBuilder DiscountCodes()
+        {
+            return new ByProjectKeyDiscountCodesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyPricesRequestBuilder Prices()
@@ -61,9 +76,9 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
             return new ByProjectKeyPricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
-        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
+        public ByProjectKeyInventoriesRequestBuilder Inventories()
         {
-            return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+            return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyProductsRequestBuilder Products()
@@ -91,6 +106,11 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
             return new ByProjectKeyProductVariantPatchesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
+        {
+            return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyOrdersRequestBuilder Orders()
         {
             return new ByProjectKeyOrdersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
@@ -101,34 +121,14 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
             return new ByProjectKeyOrderPatchesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
-        public ByProjectKeyCustomersRequestBuilder Customers()
+        public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
         {
-            return new ByProjectKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-
-        public ByProjectKeyInventoriesRequestBuilder Inventories()
-        {
-            return new ByProjectKeyInventoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+            return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyTypesRequestBuilder Types()
         {
             return new ByProjectKeyTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-
-        public ByProjectKeyDiscountCodesRequestBuilder DiscountCodes()
-        {
-            return new ByProjectKeyDiscountCodesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-
-        public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
-        {
-            return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
-        }
-
-        public ByProjectKeyBusinessUnitsRequestBuilder BusinessUnits()
-        {
-            return new ByProjectKeyBusinessUnitsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }
