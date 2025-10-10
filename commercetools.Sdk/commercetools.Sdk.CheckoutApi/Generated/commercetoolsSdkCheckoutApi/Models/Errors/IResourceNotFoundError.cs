@@ -9,5 +9,9 @@ namespace commercetools.Sdk.CheckoutApi.Models.Errors
 
         new string Message { get; set; }
 
+        string ResourceIdentifier { get; set; }
+
+        string ResourceId { get; set; }
+
     }
 }

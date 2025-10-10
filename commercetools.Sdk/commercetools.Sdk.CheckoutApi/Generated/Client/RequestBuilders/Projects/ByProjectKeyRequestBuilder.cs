@@ -2,6 +2,8 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Transactions;
+using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegrations;
+using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Projects
@@ -33,6 +35,16 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Projects
         public ByProjectKeyTransactionsRequestBuilder Transactions()
         {
             return new ByProjectKeyTransactionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyPaymentIntegrationsRequestBuilder PaymentIntegrations()
+        {
+            return new ByProjectKeyPaymentIntegrationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyApplicationsRequestBuilder Applications()
+        {
+            return new ByProjectKeyApplicationsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

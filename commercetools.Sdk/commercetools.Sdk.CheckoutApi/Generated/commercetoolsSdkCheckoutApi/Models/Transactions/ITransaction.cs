@@ -16,7 +16,7 @@ namespace commercetools.Sdk.CheckoutApi.Models.Transactions
 
         int Version { get; set; }
 
-        IApplicationResourceIdentifier Application { get; set; }
+        IApplicationReference Application { get; set; }
 
         IList<ITransactionItem> TransactionItems { get; set; }
 

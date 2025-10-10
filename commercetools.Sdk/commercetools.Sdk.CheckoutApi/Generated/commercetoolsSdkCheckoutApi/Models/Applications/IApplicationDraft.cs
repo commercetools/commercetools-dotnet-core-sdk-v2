@@ -1,0 +1,37 @@
+using System.Collections.Generic;
+using System.Linq;
+using commercetools.Base.CustomAttributes;
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.CheckoutApi.Models.Applications
+{
+    [DeserializeAs(typeof(commercetools.Sdk.CheckoutApi.Models.Applications.ApplicationDraft))]
+    public partial interface IApplicationDraft
+    {
+        string Key { get; set; }
+
+        IApplicationStatus Status { get; set; }
+
+        string Name { get; set; }
+
+        string Description { get; set; }
+
+        IApplicationLogo Logo { get; set; }
+
+        IList<string> Countries { get; set; }
+
+        IEnumerable<string> CountriesEnumerable { set => Countries = value.ToList(); }
+
+        IAllowedOrigins AllowedOrigins { get; set; }
+
+        IApplicationMode Mode { get; set; }
+
+        IPaymentsConfiguration PaymentsConfiguration { get; set; }
+
+        IList<IApplicationAgreement> Agreements { get; set; }
+
+        IEnumerable<IApplicationAgreement> AgreementsEnumerable { set => Agreements = value.ToList(); }
+
+        IDiscountsConfiguration DiscountsConfiguration { get; set; }
+
+    }
+}
