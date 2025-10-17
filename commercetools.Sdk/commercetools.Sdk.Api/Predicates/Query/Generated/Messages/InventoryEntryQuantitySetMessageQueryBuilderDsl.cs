@@ -117,6 +117,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<InventoryEntryQuantitySetMessageQueryBuilderDsl>(p, InventoryEntryQuantitySetMessageQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<InventoryEntryQuantitySetMessageQueryBuilderDsl, string> Sku()
+        {
+            return new ComparisonPredicateBuilder<InventoryEntryQuantitySetMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("sku")),
+            p => new CombinationQueryPredicate<InventoryEntryQuantitySetMessageQueryBuilderDsl>(p, InventoryEntryQuantitySetMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<InventoryEntryQuantitySetMessageQueryBuilderDsl> SupplyChannel(
             Func<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Channels.ChannelReferenceQueryBuilderDsl>> fn)
         {

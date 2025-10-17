@@ -37,6 +37,8 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public long NewAvailableQuantity { get; set; }
 
+        public string Sku { get; set; }
+
         public IChannelReference SupplyChannel { get; set; }
         public InventoryEntryQuantitySetMessage()
         {
