@@ -39,9 +39,9 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             return new ByProjectKeyPaymentIntegrationsKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
         }
 
-        public ByProjectKeyPaymentIntegrationsKeyByKeyDelete Delete(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.IPaymentIntegration paymentIntegration)
+        public ByProjectKeyPaymentIntegrationsKeyByKeyDelete Delete()
         {
-            return new ByProjectKeyPaymentIntegrationsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key, paymentIntegration);
+            return new ByProjectKeyPaymentIntegrationsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
         }
 
     }

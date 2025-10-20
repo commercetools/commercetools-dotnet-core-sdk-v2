@@ -56,7 +56,18 @@ namespace commercetools.Sdk.CheckoutApi.Tests.Client.RequestBuilders.PaymentInte
                    .WithProjectKey("test_projectKey")
                    .PaymentIntegrations()
                    .WithId("test_id")
-                   .Delete(null)
+                   .Delete()
+                   .WithVersion(2)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/payment-integrations/test_id?version=2",
+               },
+               new Object[] {           
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .PaymentIntegrations()
+                   .WithId("test_id")
+                   .Delete()
                    .Build(),
                    "Delete",
                    "/test_projectKey/payment-integrations/test_id",
