@@ -56,7 +56,18 @@ namespace commercetools.Sdk.CheckoutApi.Tests.Client.RequestBuilders.Application
                    .WithProjectKey("test_projectKey")
                    .Applications()
                    .WithKey("test_key")
-                   .Delete(null)
+                   .Delete()
+                   .WithVersion(2)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/applications/key=test_key?version=2",
+               },
+               new Object[] {           
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .Applications()
+                   .WithKey("test_key")
+                   .Delete()
                    .Build(),
                    "Delete",
                    "/test_projectKey/applications/key=test_key",

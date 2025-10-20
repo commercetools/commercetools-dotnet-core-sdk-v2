@@ -39,9 +39,9 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             return new ByProjectKeyApplicationsKeyByKeyHead(ApiHttpClient, ProjectKey, Key);
         }
 
-        public ByProjectKeyApplicationsKeyByKeyDelete Delete(commercetools.Sdk.CheckoutApi.Models.Applications.IApplication application)
+        public ByProjectKeyApplicationsKeyByKeyDelete Delete()
         {
-            return new ByProjectKeyApplicationsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key, application);
+            return new ByProjectKeyApplicationsKeyByKeyDelete(ApiHttpClient, ProjectKey, Key);
         }
 
     }

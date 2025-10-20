@@ -1,3 +1,5 @@
+using System.Globalization;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -20,18 +22,24 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
 
         private string Key { get; }
 
-        private commercetools.Sdk.CheckoutApi.Models.Applications.IApplication Application;
 
-        public ByProjectKeyApplicationsKeyByKeyDelete(IClient apiHttpClient, string projectKey, string key, commercetools.Sdk.CheckoutApi.Models.Applications.IApplication application)
+        public ByProjectKeyApplicationsKeyByKeyDelete(IClient apiHttpClient, string projectKey, string key)
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.Application = application;
             this.RequestUrl = $"/{ProjectKey}/applications/key={Key}";
         }
 
+        public List<string> GetVersion()
+        {
+            return this.GetQueryParam("version");
+        }
 
+        public ByProjectKeyApplicationsKeyByKeyDelete WithVersion(long version)
+        {
+            return this.AddQueryParam("version", version.ToString(CultureInfo.InvariantCulture));
+        }
 
 
         public async Task<commercetools.Sdk.CheckoutApi.Models.Applications.IApplication> ExecuteAsync(CancellationToken cancellationToken = default)
