@@ -71,6 +71,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ProjectNotConfiguredForLanguages", typeof(commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError))]
     [SubTypeDiscriminator("QueryComplexityLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.QueryComplexityLimitExceededError))]
     [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Sdk.Api.Models.Errors.QueryTimedOutError))]
+    [SubTypeDiscriminator("RecurringOrderFailure", typeof(commercetools.Sdk.Api.Models.Errors.RecurringOrderFailureError))]
     [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ReferencedResourceNotFoundError))]
     [SubTypeDiscriminator("ReferenceExists", typeof(commercetools.Sdk.Api.Models.Errors.ReferenceExistsError))]
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Sdk.Api.Models.Errors.RequiredFieldError))]
@@ -484,6 +485,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.QueryTimedOutError QueryTimedOut(Action<commercetools.Sdk.Api.Models.Errors.QueryTimedOutError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.QueryTimedOutError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.RecurringOrderFailureError RecurringOrderFailure(Action<commercetools.Sdk.Api.Models.Errors.RecurringOrderFailureError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.RecurringOrderFailureError();
             init?.Invoke(t);
             return t;
         }

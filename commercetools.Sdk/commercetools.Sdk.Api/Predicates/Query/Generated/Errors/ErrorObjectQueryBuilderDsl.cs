@@ -424,6 +424,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.QueryTimedOutErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsRecurringOrderFailure(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.RecurringOrderFailureErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.RecurringOrderFailureErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.RecurringOrderFailureErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsReferenceExists(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ReferenceExistsErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ReferenceExistsErrorQueryBuilderDsl>> fn)
         {

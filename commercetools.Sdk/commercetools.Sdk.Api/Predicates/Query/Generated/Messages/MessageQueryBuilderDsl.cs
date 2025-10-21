@@ -1336,6 +1336,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderExpiresAtSetMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsRecurringOrderFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderFailedMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderFailedMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderFailedMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsRecurringOrderKeySet(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.RecurringOrderKeySetMessageQueryBuilderDsl>> fn)
         {
