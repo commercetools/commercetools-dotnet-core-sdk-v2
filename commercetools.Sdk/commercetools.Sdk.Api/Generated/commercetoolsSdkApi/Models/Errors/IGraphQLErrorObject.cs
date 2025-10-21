@@ -71,6 +71,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ProjectNotConfiguredForLanguages", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLProjectNotConfiguredForLanguagesError))]
     [SubTypeDiscriminator("QueryComplexityLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLQueryComplexityLimitExceededError))]
     [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError))]
+    [SubTypeDiscriminator("RecurringOrderFailure", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLRecurringOrderFailureError))]
     [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLReferencedResourceNotFoundError))]
     [SubTypeDiscriminator("ReferenceExists", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLReferenceExistsError))]
     [SubTypeDiscriminator("RequiredField", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLRequiredFieldError))]
@@ -482,6 +483,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError QueryTimedOut(Action<commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLRecurringOrderFailureError RecurringOrderFailure(Action<commercetools.Sdk.Api.Models.Errors.GraphQLRecurringOrderFailureError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLRecurringOrderFailureError();
             init?.Invoke(t);
             return t;
         }
