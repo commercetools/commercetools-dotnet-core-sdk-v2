@@ -16,5 +16,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         ILocalizedString LineItem { get; set; }
 
+        string LineItemId { get; set; }
+
     }
 }

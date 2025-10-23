@@ -24,5 +24,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string Variant { get; set; }
 
+        IList<IPrice> AddedItems { get; set; }
+
+        IEnumerable<IPrice> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        IList<IPrice> RemovedItems { get; set; }
+
+        IEnumerable<IPrice> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
+
     }
 }

@@ -20,5 +20,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         ITaxMode TaxMode { get; set; }
 
+        string LineItemId { get; set; }
+
     }
 }

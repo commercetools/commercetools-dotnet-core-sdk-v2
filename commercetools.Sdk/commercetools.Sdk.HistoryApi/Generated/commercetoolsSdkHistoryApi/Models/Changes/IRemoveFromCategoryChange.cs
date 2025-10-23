@@ -22,5 +22,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IReference Category { get; set; }
 
+        string CatalogData { get; set; }
+
     }
 }

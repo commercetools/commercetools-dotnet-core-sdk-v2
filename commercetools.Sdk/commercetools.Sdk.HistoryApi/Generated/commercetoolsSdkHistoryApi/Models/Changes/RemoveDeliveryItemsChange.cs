@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.Common;
+using commercetools.Sdk.HistoryApi.Models.ChangeValues;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -10,7 +10,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IDelivery PreviousValue { get; set; }
+        public IDeliveryChangeValue PreviousValue { get; set; }
         public RemoveDeliveryItemsChange()
         {
             this.Type = "RemoveDeliveryItemsChange";

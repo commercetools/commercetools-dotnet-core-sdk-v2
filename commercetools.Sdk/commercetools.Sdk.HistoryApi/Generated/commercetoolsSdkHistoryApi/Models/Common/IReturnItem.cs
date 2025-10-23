@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
@@ -7,7 +8,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         string Id { get; set; }
 
-        int Quantity { get; set; }
+        string Key { get; set; }
+
+        long Quantity { get; set; }
 
         string Type { get; set; }
 
@@ -17,9 +20,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         IReturnPaymentState PaymentState { get; set; }
 
-        string LastModifiedAt { get; set; }
+        ICustomFields Custom { get; set; }
 
-        string CreatedAt { get; set; }
+        DateTime LastModifiedAt { get; set; }
+
+        DateTime CreatedAt { get; set; }
 
     }
 }

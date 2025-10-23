@@ -16,5 +16,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string CatalogData { get; set; }
 
+        string Variant { get; set; }
+
+        string PriceId { get; set; }
+
+        string CustomTypeId { get; set; }
+
+        string Name { get; set; }
+
     }
 }

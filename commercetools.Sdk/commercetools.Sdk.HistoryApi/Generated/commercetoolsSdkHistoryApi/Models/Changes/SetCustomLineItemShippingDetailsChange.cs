@@ -15,6 +15,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IItemShippingDetails NextValue { get; set; }
 
         public string CustomLineItemId { get; set; }
+
+        public ILocalizedString CustomLineItem { get; set; }
         public SetCustomLineItemShippingDetailsChange()
         {
             this.Type = "SetCustomLineItemShippingDetailsChange";

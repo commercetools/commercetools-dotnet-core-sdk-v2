@@ -21,5 +21,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string CustomLineItemId { get; set; }
 
+        string CustomTypeId { get; set; }
+
     }
 }

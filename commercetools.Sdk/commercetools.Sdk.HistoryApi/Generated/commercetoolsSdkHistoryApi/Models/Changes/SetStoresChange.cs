@@ -18,6 +18,14 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IList<IReference> NextValue { get; set; }
 
         public IEnumerable<IReference> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+        public IList<IKeyReference> AddedItems { get; set; }
+
+        public IEnumerable<IKeyReference> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        public IList<IKeyReference> RemovedItems { get; set; }
+
+        public IEnumerable<IKeyReference> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
         public SetStoresChange()
         {
             this.Type = "SetStoresChange";

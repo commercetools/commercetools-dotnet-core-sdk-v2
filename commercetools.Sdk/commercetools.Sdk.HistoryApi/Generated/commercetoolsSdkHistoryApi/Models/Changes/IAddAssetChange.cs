@@ -14,5 +14,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IAsset NextValue { get; set; }
 
+        string CatalogData { get; set; }
+
+        string Variant { get; set; }
+
     }
 }

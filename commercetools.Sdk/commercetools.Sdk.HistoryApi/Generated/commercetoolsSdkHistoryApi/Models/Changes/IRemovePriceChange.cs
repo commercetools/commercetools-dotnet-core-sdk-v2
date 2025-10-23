@@ -18,5 +18,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string PriceId { get; set; }
 
+        string Variant { get; set; }
+
     }
 }

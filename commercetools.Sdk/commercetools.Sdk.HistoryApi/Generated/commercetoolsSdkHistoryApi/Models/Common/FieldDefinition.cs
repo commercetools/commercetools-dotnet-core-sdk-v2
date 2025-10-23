@@ -11,6 +11,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public ILocalizedString Label { get; set; }
 
-        public ITextInputHint InputHint { get; set; }
+        public bool Required { get; set; }
+
+        public ITypeTextInputHint InputHint { get; set; }
     }
 }

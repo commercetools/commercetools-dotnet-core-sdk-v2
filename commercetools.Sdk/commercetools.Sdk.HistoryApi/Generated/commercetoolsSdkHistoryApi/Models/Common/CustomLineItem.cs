@@ -1,4 +1,5 @@
-
+using System.Collections.Generic;
+using System.Linq;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -7,16 +8,46 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         public string Id { get; set; }
 
+        public string Key { get; set; }
+
         public ILocalizedString Name { get; set; }
 
-        public IMoney Money { get; set; }
+        public ITypedMoney Money { get; set; }
 
         public ITaxedItemPrice TaxedPrice { get; set; }
 
-        public IMoney TotalPrice { get; set; }
+        public IList<IMethodTaxedPrice> TaxedPricePortions { get; set; }
+
+        public IEnumerable<IMethodTaxedPrice> TaxedPricePortionsEnumerable { set => TaxedPricePortions = value.ToList(); }
+
+        public ICentPrecisionMoney TotalPrice { get; set; }
 
         public string Slug { get; set; }
 
-        public int Quantity { get; set; }
+        public long Quantity { get; set; }
+
+        public IList<IItemState> State { get; set; }
+
+        public IEnumerable<IItemState> StateEnumerable { set => State = value.ToList(); }
+
+        public ITaxCategoryReference TaxCategory { get; set; }
+
+        public ITaxRate TaxRate { get; set; }
+
+        public IList<IMethodTaxRate> PerMethodTaxRate { get; set; }
+
+        public IEnumerable<IMethodTaxRate> PerMethodTaxRateEnumerable { set => PerMethodTaxRate = value.ToList(); }
+
+        public IList<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantity { get; set; }
+
+        public IEnumerable<IDiscountedLineItemPriceForQuantity> DiscountedPricePerQuantityEnumerable { set => DiscountedPricePerQuantity = value.ToList(); }
+
+        public ICustomFields Custom { get; set; }
+
+        public IItemShippingDetails ShippingDetails { get; set; }
+
+        public ICustomLineItemPriceMode PriceMode { get; set; }
+
+        public ICustomLineItemRecurrenceInfo RecurrenceInfo { get; set; }
     }
 }

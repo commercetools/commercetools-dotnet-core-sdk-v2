@@ -15,6 +15,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string NextValue { get; set; }
 
         public IAssetChangeValue Asset { get; set; }
+
+        public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public SetAssetKeyChange()
         {
             this.Type = "SetAssetKeyChange";

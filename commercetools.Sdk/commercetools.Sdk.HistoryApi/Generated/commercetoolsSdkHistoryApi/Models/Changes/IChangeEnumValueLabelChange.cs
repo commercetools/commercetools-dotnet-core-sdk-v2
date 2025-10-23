@@ -17,5 +17,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string ValueKey { get; set; }
 
+        string AttributeName { get; set; }
+
     }
 }

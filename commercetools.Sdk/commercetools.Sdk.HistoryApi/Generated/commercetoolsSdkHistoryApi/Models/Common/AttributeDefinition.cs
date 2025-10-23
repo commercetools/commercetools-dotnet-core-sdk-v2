@@ -13,6 +13,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public bool IsRequired { get; set; }
 
+        public IAttributeLevelEnum Level { get; set; }
+
         public IAttributeConstraintEnum AttributeConstraint { get; set; }
 
         public ILocalizedString InputTip { get; set; }

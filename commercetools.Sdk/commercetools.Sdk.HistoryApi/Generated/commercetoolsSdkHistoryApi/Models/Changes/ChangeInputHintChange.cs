@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public ITextInputHint PreviousValue { get; set; }
+        public ITypeTextInputHint PreviousValue { get; set; }
 
-        public ITextInputHint NextValue { get; set; }
+        public ITypeTextInputHint NextValue { get; set; }
 
         public string FieldName { get; set; }
 

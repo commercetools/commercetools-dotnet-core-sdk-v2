@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -10,11 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IAttributeValue PreviousValue { get; set; }
+        public IAttribute PreviousValue { get; set; }
 
-        public IAttributeValue NextValue { get; set; }
+        public IAttribute NextValue { get; set; }
 
         public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public SetAttributeChange()
         {
             this.Type = "SetAttributeChange";

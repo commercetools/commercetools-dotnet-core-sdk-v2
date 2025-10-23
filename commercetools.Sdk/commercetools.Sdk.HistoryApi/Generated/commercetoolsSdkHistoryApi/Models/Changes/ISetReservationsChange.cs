@@ -20,5 +20,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IEnumerable<IReservation> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+        IList<IReservation> AddedItems { get; set; }
+
+        IEnumerable<IReservation> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        IList<IReservation> RemovedItems { get; set; }
+
+        IEnumerable<IReservation> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
+
     }
 }

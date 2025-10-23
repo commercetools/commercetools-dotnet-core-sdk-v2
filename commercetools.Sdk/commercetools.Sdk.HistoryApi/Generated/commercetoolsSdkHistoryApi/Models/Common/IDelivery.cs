@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -9,7 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         string Id { get; set; }
 
-        string CreatedAt { get; set; }
+        string Key { get; set; }
+
+        DateTime CreatedAt { get; set; }
 
         IList<IDeliveryItem> Items { get; set; }
 

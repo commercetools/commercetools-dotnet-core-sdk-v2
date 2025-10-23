@@ -19,6 +19,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string Variant { get; set; }
 
         public ITaxMode TaxMode { get; set; }
+
+        public string LineItemId { get; set; }
         public SetLineItemTaxRateChange()
         {
             this.Type = "SetLineItemTaxRateChange";

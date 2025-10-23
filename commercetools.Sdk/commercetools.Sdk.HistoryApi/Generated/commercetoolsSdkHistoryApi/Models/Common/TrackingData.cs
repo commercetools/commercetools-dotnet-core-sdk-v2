@@ -13,6 +13,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public string ProviderTransaction { get; set; }
 
-        public bool IsReturn { get; set; }
+        public bool? IsReturn { get; set; }
     }
 }

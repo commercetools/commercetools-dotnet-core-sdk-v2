@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -13,7 +14,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         string ReturnTrackingId { get; set; }
 
-        string ReturnDate { get; set; }
+        DateTime? ReturnDate { get; set; }
 
     }
 }

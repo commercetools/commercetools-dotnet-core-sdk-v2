@@ -1,11 +1,11 @@
-
+using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
 
     public partial class TextLineItem : ITextLineItem
     {
-        public string AddedAt { get; set; }
+        public DateTime AddedAt { get; set; }
 
         public ICustomFields Custom { get; set; }
 
@@ -13,8 +13,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public string Id { get; set; }
 
+        public string Key { get; set; }
+
         public ILocalizedString Name { get; set; }
 
-        public int Quantity { get; set; }
+        public long Quantity { get; set; }
     }
 }

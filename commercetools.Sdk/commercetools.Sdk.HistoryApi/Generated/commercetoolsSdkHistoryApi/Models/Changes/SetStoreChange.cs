@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IReference PreviousValue { get; set; }
+        public IKeyReference PreviousValue { get; set; }
 
-        public IReference NextValue { get; set; }
+        public IKeyReference NextValue { get; set; }
         public SetStoreChange()
         {
             this.Type = "SetStoreChange";

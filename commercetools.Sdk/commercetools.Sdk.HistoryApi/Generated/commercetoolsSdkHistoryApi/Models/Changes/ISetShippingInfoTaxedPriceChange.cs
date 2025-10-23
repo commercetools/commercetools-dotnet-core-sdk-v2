@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        ITaxedPrice PreviousValue { get; set; }
+        ITaxedItemPrice PreviousValue { get; set; }
 
-        ITaxedPrice NextValue { get; set; }
+        ITaxedItemPrice NextValue { get; set; }
 
     }
 }

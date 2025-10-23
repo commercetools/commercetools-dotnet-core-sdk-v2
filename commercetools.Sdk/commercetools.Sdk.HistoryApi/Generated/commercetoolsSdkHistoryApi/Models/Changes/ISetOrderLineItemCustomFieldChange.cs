@@ -23,5 +23,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         string Variant { get; set; }
 
+        string LineItemId { get; set; }
+
     }
 }

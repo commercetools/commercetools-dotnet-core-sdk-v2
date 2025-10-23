@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -12,13 +12,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IList<ILocalizedEnumValue> PreviousValue { get; set; }
+        IList<IAttributeLocalizedEnumValue> PreviousValue { get; set; }
 
-        IEnumerable<ILocalizedEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
+        IEnumerable<IAttributeLocalizedEnumValue> PreviousValueEnumerable { set => PreviousValue = value.ToList(); }
 
-        IList<ILocalizedEnumValue> NextValue { get; set; }
+        IList<IAttributeLocalizedEnumValue> NextValue { get; set; }
 
-        IEnumerable<ILocalizedEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
+        IEnumerable<IAttributeLocalizedEnumValue> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         string FieldName { get; set; }
 

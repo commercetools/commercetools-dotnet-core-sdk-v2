@@ -106,9 +106,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeAddress")]
         ChangeAddress,
 
-        [Description("changeAmountAuthorized")]
-        ChangeAmountAuthorized,
-
         [Description("changeAmountPlanned")]
         ChangeAmountPlanned,
 
@@ -949,9 +946,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeAddress = new UpdateTypeWrapper
         { Value = UpdateType.ChangeAddress, JsonName = "changeAddress" };
 
-        public static IUpdateType ChangeAmountAuthorized = new UpdateTypeWrapper
-        { Value = UpdateType.ChangeAmountAuthorized, JsonName = "changeAmountAuthorized" };
-
         public static IUpdateType ChangeAmountPlanned = new UpdateTypeWrapper
         { Value = UpdateType.ChangeAmountPlanned, JsonName = "changeAmountPlanned" };
 
@@ -1710,7 +1704,6 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  AddTransaction ,
                  AddVariant ,
                  ChangeAddress ,
-                 ChangeAmountAuthorized ,
                  ChangeAmountPlanned ,
                  ChangeAssetName ,
                  ChangeAssetOrder ,

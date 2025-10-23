@@ -16,6 +16,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string FieldName { get; set; }
 
         public string ValueKey { get; set; }
+
+        public string AttributeName { get; set; }
         public ChangeEnumValueLabelChange()
         {
             this.Type = "ChangeEnumValueLabelChange";

@@ -14,6 +14,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string NextValue { get; set; }
 
         public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public SetProductVariantKeyChange()
         {
             this.Type = "SetProductVariantKeyChange";

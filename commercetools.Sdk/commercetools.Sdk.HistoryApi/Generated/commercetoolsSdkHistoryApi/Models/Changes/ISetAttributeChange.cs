@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -10,11 +10,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IAttributeValue PreviousValue { get; set; }
+        IAttribute PreviousValue { get; set; }
 
-        IAttributeValue NextValue { get; set; }
+        IAttribute NextValue { get; set; }
 
         string CatalogData { get; set; }
+
+        string Variant { get; set; }
 
     }
 }

@@ -20,5 +20,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IEnumerable<IStateRoleEnum> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+        IList<IStateRoleEnum> AddedItems { get; set; }
+
+        IEnumerable<IStateRoleEnum> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        IList<IStateRoleEnum> RemovedItems { get; set; }
+
+        IEnumerable<IStateRoleEnum> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
+
     }
 }

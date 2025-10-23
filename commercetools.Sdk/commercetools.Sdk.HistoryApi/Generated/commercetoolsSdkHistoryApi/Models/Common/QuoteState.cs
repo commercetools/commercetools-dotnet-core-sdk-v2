@@ -19,11 +19,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         [Description("DeclinedForRenegotiation")]
         DeclinedForRenegotiation,
 
+        [Description("RenegotiationAddressed")]
+        RenegotiationAddressed,
+
         [Description("Accepted")]
         Accepted,
-
-        [Description("Failed")]
-        Failed,
 
         [Description("Withdrawn")]
         Withdrawn
@@ -61,11 +61,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IQuoteState DeclinedForRenegotiation = new QuoteStateWrapper
         { Value = QuoteState.DeclinedForRenegotiation, JsonName = "DeclinedForRenegotiation" };
 
+        public static IQuoteState RenegotiationAddressed = new QuoteStateWrapper
+        { Value = QuoteState.RenegotiationAddressed, JsonName = "RenegotiationAddressed" };
+
         public static IQuoteState Accepted = new QuoteStateWrapper
         { Value = QuoteState.Accepted, JsonName = "Accepted" };
-
-        public static IQuoteState Failed = new QuoteStateWrapper
-        { Value = QuoteState.Failed, JsonName = "Failed" };
 
         public static IQuoteState Withdrawn = new QuoteStateWrapper
         { Value = QuoteState.Withdrawn, JsonName = "Withdrawn" };
@@ -79,8 +79,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
                  Pending ,
                  Declined ,
                  DeclinedForRenegotiation ,
+                 RenegotiationAddressed ,
                  Accepted ,
-                 Failed ,
                  Withdrawn
              };
         }

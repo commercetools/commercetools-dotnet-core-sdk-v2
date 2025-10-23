@@ -20,6 +20,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IEnumerable<string> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         public IAssetChangeValue Asset { get; set; }
+
+        public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public SetAssetTagsChange()
         {
             this.Type = "SetAssetTagsChange";

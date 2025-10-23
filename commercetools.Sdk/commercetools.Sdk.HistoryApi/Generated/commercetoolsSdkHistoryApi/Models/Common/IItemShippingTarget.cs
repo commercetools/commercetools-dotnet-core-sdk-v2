@@ -7,7 +7,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         string AddressKey { get; set; }
 
-        int Quantity { get; set; }
+        long Quantity { get; set; }
+
+        string ShippingMethodKey { get; set; }
 
     }
 }

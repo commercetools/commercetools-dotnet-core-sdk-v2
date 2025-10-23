@@ -1,4 +1,4 @@
-using commercetools.Sdk.HistoryApi.Models.ChangeValues;
+using commercetools.Sdk.HistoryApi.Models.Common;
 
 
 namespace commercetools.Sdk.HistoryApi.Models.Changes
@@ -10,9 +10,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IEnumValue NextValue { get; set; }
+        public ICustomFieldEnumValue NextValue { get; set; }
 
         public string FieldName { get; set; }
+
+        public string AttributeName { get; set; }
         public AddEnumValueChange()
         {
             this.Type = "AddEnumValueChange";

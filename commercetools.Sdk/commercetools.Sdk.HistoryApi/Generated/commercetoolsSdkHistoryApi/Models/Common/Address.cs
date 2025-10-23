@@ -9,6 +9,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public string Key { get; set; }
 
+        public string Country { get; set; }
+
         public string Title { get; set; }
 
         public string Salutation { get; set; }
@@ -31,8 +33,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public string State { get; set; }
 
-        public string Country { get; set; }
-
         public string Company { get; set; }
 
         public string Department { get; set; }
@@ -54,5 +54,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public string AdditionalAddressInfo { get; set; }
 
         public string ExternalId { get; set; }
+
+        public ICustomFields Custom { get; set; }
     }
 }

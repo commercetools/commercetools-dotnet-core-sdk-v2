@@ -19,6 +19,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public ILocalizedString CustomLineItem { get; set; }
 
         public string CustomLineItemId { get; set; }
+
+        public string CustomTypeId { get; set; }
         public SetCustomLineItemCustomFieldChange()
         {
             this.Type = "SetCustomLineItemCustomFieldChange";

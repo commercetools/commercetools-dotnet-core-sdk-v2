@@ -18,6 +18,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IList<ILocalizedString> NextValue { get; set; }
 
         public IEnumerable<ILocalizedString> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+        public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public ChangeAssetOrderChange()
         {
             this.Type = "ChangeAssetOrderChange";
