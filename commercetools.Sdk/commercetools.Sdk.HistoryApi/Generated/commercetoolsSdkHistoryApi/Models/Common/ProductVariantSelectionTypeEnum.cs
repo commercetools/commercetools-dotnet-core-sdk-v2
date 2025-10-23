@@ -14,7 +14,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         Inclusion,
 
         [Description("exclusion")]
-        Exclusion
+        Exclusion,
+
+        [Description("includeOnly")]
+        IncludeOnly,
+
+        [Description("includeAllExcept")]
+        IncludeAllExcept
     }
 
     public class ProductVariantSelectionTypeEnumWrapper : IProductVariantSelectionTypeEnum
@@ -46,6 +52,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IProductVariantSelectionTypeEnum Exclusion = new ProductVariantSelectionTypeEnumWrapper
         { Value = ProductVariantSelectionTypeEnum.Exclusion, JsonName = "exclusion" };
 
+        public static IProductVariantSelectionTypeEnum IncludeOnly = new ProductVariantSelectionTypeEnumWrapper
+        { Value = ProductVariantSelectionTypeEnum.IncludeOnly, JsonName = "includeOnly" };
+
+        public static IProductVariantSelectionTypeEnum IncludeAllExcept = new ProductVariantSelectionTypeEnumWrapper
+        { Value = ProductVariantSelectionTypeEnum.IncludeAllExcept, JsonName = "includeAllExcept" };
+
         ProductVariantSelectionTypeEnum? Value { get; }
 
         static IProductVariantSelectionTypeEnum[] Values()
@@ -53,7 +65,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
             return new[]
             {
                  Inclusion ,
-                 Exclusion
+                 Exclusion ,
+                 IncludeOnly ,
+                 IncludeAllExcept
              };
         }
         static IProductVariantSelectionTypeEnum FindEnum(string value)

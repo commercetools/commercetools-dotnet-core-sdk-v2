@@ -13,6 +13,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public ILocalizedString PreviousValue { get; set; }
 
         public ILocalizedString NextValue { get; set; }
+
+        public string CatalogData { get; set; }
         public SetMetaTitleChange()
         {
             this.Type = "SetMetaTitleChange";

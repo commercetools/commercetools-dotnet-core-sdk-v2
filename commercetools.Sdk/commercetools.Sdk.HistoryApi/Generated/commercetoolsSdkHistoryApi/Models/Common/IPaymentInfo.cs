@@ -7,9 +7,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.PaymentInfo))]
     public partial interface IPaymentInfo
     {
-        IList<IReference> Payments { get; set; }
+        IList<IPaymentReference> Payments { get; set; }
 
-        IEnumerable<IReference> PaymentsEnumerable { set => Payments = value.ToList(); }
+        IEnumerable<IPaymentReference> PaymentsEnumerable { set => Payments = value.ToList(); }
 
     }
 }

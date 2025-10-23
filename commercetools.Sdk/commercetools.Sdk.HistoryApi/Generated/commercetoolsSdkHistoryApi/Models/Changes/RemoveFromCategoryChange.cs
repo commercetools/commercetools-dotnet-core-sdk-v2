@@ -20,6 +20,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IEnumerable<IReference> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         public IReference Category { get; set; }
+
+        public string CatalogData { get; set; }
         public RemoveFromCategoryChange()
         {
             this.Type = "RemoveFromCategoryChange";

@@ -10,9 +10,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IMoney PreviousValue { get; set; }
+        IShippingRate PreviousValue { get; set; }
 
-        IMoney NextValue { get; set; }
+        IShippingRate NextValue { get; set; }
 
     }
 }

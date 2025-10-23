@@ -5,9 +5,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.InheritedAssociateRoleAssignment))]
     public partial interface IInheritedAssociateRoleAssignment
     {
-        IKeyReference AssociateRole { get; set; }
+        IAssociateRoleKeyReference AssociateRole { get; set; }
 
-        IKeyReference Source { get; set; }
+        IBusinessUnitKeyReference Source { get; set; }
 
     }
 }

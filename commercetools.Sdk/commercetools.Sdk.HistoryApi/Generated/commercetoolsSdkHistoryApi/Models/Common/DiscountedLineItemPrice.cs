@@ -6,7 +6,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
     public partial class DiscountedLineItemPrice : IDiscountedLineItemPrice
     {
-        public IMoney Value { get; set; }
+        public ITypedMoney Value { get; set; }
 
         public IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
 

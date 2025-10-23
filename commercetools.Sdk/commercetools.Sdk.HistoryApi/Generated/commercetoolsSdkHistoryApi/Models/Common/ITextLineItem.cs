@@ -1,3 +1,4 @@
+using System;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.HistoryApi.Models.Common
@@ -5,7 +6,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.TextLineItem))]
     public partial interface ITextLineItem
     {
-        string AddedAt { get; set; }
+        DateTime AddedAt { get; set; }
 
         ICustomFields Custom { get; set; }
 
@@ -13,9 +14,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         string Id { get; set; }
 
+        string Key { get; set; }
+
         ILocalizedString Name { get; set; }
 
-        int Quantity { get; set; }
+        long Quantity { get; set; }
 
     }
 }

@@ -20,5 +20,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IEnumerable<ILocalizedString> NextValueEnumerable { set => NextValue = value.ToList(); }
 
+        string CatalogData { get; set; }
+
+        string Variant { get; set; }
+
     }
 }

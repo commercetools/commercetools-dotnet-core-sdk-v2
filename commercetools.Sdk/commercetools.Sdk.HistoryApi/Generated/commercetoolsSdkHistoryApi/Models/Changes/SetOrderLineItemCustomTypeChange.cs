@@ -17,6 +17,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public ILocalizedString LineItem { get; set; }
 
         public string Variant { get; set; }
+
+        public string LineItemId { get; set; }
         public SetOrderLineItemCustomTypeChange()
         {
             this.Type = "SetOrderLineItemCustomTypeChange";

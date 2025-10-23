@@ -1,5 +1,3 @@
-
-
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
 

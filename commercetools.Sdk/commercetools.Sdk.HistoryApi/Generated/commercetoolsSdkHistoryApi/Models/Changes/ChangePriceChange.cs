@@ -17,6 +17,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string CatalogData { get; set; }
 
         public string PriceId { get; set; }
+
+        public string Variant { get; set; }
         public ChangePriceChange()
         {
             this.Type = "ChangePriceChange";

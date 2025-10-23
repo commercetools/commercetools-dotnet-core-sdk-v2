@@ -10,6 +10,6 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public IEnumerable<IInheritedAssociateRoleAssignment> AssociateRoleAssignmentsEnumerable { set => AssociateRoleAssignments = value.ToList(); }
 
-        public IReference Customer { get; set; }
+        public ICustomerReference Customer { get; set; }
     }
 }

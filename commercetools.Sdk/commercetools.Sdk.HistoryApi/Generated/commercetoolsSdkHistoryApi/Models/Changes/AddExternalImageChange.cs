@@ -20,6 +20,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IEnumerable<IImage> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
         public AddExternalImageChange()
         {
             this.Type = "AddExternalImageChange";

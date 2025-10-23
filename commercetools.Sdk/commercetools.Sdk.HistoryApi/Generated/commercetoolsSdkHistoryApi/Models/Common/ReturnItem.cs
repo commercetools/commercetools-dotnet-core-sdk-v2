@@ -1,4 +1,4 @@
-
+using System;
 
 namespace commercetools.Sdk.HistoryApi.Models.Common
 {
@@ -7,7 +7,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         public string Id { get; set; }
 
-        public int Quantity { get; set; }
+        public string Key { get; set; }
+
+        public long Quantity { get; set; }
 
         public string Type { get; set; }
 
@@ -17,8 +19,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
 
         public IReturnPaymentState PaymentState { get; set; }
 
-        public string LastModifiedAt { get; set; }
+        public ICustomFields Custom { get; set; }
 
-        public string CreatedAt { get; set; }
+        public DateTime LastModifiedAt { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

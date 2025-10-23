@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +9,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         public string Id { get; set; }
 
-        public string CreatedAt { get; set; }
+        public string Key { get; set; }
+
+        public DateTime CreatedAt { get; set; }
 
         public IList<IDeliveryItem> Items { get; set; }
 

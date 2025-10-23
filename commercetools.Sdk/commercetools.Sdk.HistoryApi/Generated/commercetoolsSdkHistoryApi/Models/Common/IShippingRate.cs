@@ -7,11 +7,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.ShippingRate))]
     public partial interface IShippingRate
     {
-        IMoney Price { get; set; }
+        ICentPrecisionMoney Price { get; set; }
 
-        IMoney FreeAbove { get; set; }
+        ICentPrecisionMoney FreeAbove { get; set; }
 
-        bool IsMatching { get; set; }
+        bool? IsMatching { get; set; }
 
         IList<IShippingRatePriceTier> Tiers { get; set; }
 

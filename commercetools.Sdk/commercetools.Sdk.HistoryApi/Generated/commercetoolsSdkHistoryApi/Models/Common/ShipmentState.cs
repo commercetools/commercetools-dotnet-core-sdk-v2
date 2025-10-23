@@ -13,6 +13,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         [Description("Shipped")]
         Shipped,
 
+        [Description("Delivered")]
+        Delivered,
+
         [Description("Ready")]
         Ready,
 
@@ -26,7 +29,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         Partial,
 
         [Description("Backorder")]
-        Backorder
+        Backorder,
+
+        [Description("Canceled")]
+        Canceled
     }
 
     public class ShipmentStateWrapper : IShipmentState
@@ -55,6 +61,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IShipmentState Shipped = new ShipmentStateWrapper
         { Value = ShipmentState.Shipped, JsonName = "Shipped" };
 
+        public static IShipmentState Delivered = new ShipmentStateWrapper
+        { Value = ShipmentState.Delivered, JsonName = "Delivered" };
+
         public static IShipmentState Ready = new ShipmentStateWrapper
         { Value = ShipmentState.Ready, JsonName = "Ready" };
 
@@ -70,6 +79,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
         public static IShipmentState Backorder = new ShipmentStateWrapper
         { Value = ShipmentState.Backorder, JsonName = "Backorder" };
 
+        public static IShipmentState Canceled = new ShipmentStateWrapper
+        { Value = ShipmentState.Canceled, JsonName = "Canceled" };
+
         ShipmentState? Value { get; }
 
         static IShipmentState[] Values()
@@ -77,11 +89,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
             return new[]
             {
                  Shipped ,
+                 Delivered ,
                  Ready ,
                  Pending ,
                  Delayed ,
                  Partial ,
-                 Backorder
+                 Backorder ,
+                 Canceled
              };
         }
         static IShipmentState FindEnum(string value)

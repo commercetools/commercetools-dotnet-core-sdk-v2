@@ -9,9 +9,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     {
         string Id { get; set; }
 
+        string Key { get; set; }
+
         string Name { get; set; }
 
-        int Amount { get; set; }
+        decimal Amount { get; set; }
 
         bool IncludedInPrice { get; set; }
 

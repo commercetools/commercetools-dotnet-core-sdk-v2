@@ -6,11 +6,11 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.ReviewRatingStatistics))]
     public partial interface IReviewRatingStatistics
     {
-        int AverageRating { get; set; }
+        decimal AverageRating { get; set; }
 
-        int HighestRating { get; set; }
+        decimal HighestRating { get; set; }
 
-        int LowestRating { get; set; }
+        decimal LowestRating { get; set; }
 
         int Count { get; set; }
 

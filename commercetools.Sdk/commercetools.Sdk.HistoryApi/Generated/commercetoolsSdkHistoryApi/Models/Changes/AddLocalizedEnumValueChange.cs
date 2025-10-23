@@ -10,7 +10,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         public string Change { get; set; }
 
-        public IAttributeLocalizedEnumValue NextValue { get; set; }
+        public ICustomFieldLocalizedEnumValue NextValue { get; set; }
 
         public string FieldName { get; set; }
 

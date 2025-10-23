@@ -15,6 +15,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IMoney NextValue { get; set; }
 
         public ILocalizedString LineItem { get; set; }
+
+        public string LineItemId { get; set; }
+
+        public string Variant { get; set; }
         public SetLineItemTotalPriceChange()
         {
             this.Type = "SetLineItemTotalPriceChange";

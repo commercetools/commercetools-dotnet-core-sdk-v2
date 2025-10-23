@@ -18,6 +18,14 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IList<IPermission> NextValue { get; set; }
 
         public IEnumerable<IPermission> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+        public IList<IPermission> AddedItems { get; set; }
+
+        public IEnumerable<IPermission> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        public IList<IPermission> RemovedItems { get; set; }
+
+        public IEnumerable<IPermission> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
         public SetPermissionsChange()
         {
             this.Type = "SetPermissionsChange";

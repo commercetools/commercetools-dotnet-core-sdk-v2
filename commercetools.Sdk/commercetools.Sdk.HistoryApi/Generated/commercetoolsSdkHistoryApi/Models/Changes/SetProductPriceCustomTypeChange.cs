@@ -15,6 +15,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public ICustomFields NextValue { get; set; }
 
         public string CatalogData { get; set; }
+
+        public string Variant { get; set; }
+
+        public string PriceId { get; set; }
         public SetProductPriceCustomTypeChange()
         {
             this.Type = "SetProductPriceCustomTypeChange";

@@ -15,6 +15,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IPrice NextValue { get; set; }
 
         public ILocalizedString LineItem { get; set; }
+
+        public string LineItemId { get; set; }
         public SetLineItemPriceChange()
         {
             this.Type = "SetLineItemPriceChange";

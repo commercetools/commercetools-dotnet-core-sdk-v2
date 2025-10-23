@@ -22,5 +22,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IAssetChangeValue Asset { get; set; }
 
+        string CatalogData { get; set; }
+
+        string Variant { get; set; }
+
     }
 }

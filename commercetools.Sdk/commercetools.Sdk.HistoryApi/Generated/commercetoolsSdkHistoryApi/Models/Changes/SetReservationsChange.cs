@@ -18,6 +18,14 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IList<IReservation> NextValue { get; set; }
 
         public IEnumerable<IReservation> NextValueEnumerable { set => NextValue = value.ToList(); }
+
+        public IList<IReservation> AddedItems { get; set; }
+
+        public IEnumerable<IReservation> AddedItemsEnumerable { set => AddedItems = value.ToList(); }
+
+        public IList<IReservation> RemovedItems { get; set; }
+
+        public IEnumerable<IReservation> RemovedItemsEnumerable { set => RemovedItems = value.ToList(); }
         public SetReservationsChange()
         {
             this.Type = "SetReservationsChange";

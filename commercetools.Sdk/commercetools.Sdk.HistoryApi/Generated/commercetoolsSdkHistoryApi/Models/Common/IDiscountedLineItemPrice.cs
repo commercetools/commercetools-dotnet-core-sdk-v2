@@ -7,7 +7,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.HistoryApi.Models.Common.DiscountedLineItemPrice))]
     public partial interface IDiscountedLineItemPrice
     {
-        IMoney Value { get; set; }
+        ITypedMoney Value { get; set; }
 
         IList<IDiscountedLineItemPortion> IncludedDiscounts { get; set; }
 

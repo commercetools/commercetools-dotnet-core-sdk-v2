@@ -10,15 +10,17 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         new string Change { get; set; }
 
-        IPrice PreviousValue { get; set; }
+        IDiscountedPrice PreviousValue { get; set; }
 
-        IPrice NextValue { get; set; }
+        IDiscountedPrice NextValue { get; set; }
 
         string CatalogData { get; set; }
 
         string Variant { get; set; }
 
         string PriceId { get; set; }
+
+        IPrice Price { get; set; }
 
     }
 }
