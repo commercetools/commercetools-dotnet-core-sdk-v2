@@ -66,6 +66,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessagePayload))]
     [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessagePayload))]
     [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload))]
+    [SubTypeDiscriminator("CartFrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartFrozenMessagePayload))]
+    [SubTypeDiscriminator("CartUnfrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessagePayload))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessagePayload))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessagePayload))]
@@ -673,6 +675,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload CartDiscountStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartFrozenMessagePayload CartFrozen(Action<commercetools.Sdk.Api.Models.Messages.CartFrozenMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartFrozenMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessagePayload CartUnfrozen(Action<commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessagePayload();
             init?.Invoke(t);
             return t;
         }
