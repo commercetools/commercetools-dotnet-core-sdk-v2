@@ -67,6 +67,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage))]
     [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage))]
     [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage))]
+    [SubTypeDiscriminator("CartFrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartFrozenMessage))]
+    [SubTypeDiscriminator("CartUnfrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage))]
@@ -693,6 +695,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage CartDiscountStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartFrozenMessage CartFrozen(Action<commercetools.Sdk.Api.Models.Messages.CartFrozenMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartFrozenMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage CartUnfrozen(Action<commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage();
             init?.Invoke(t);
             return t;
         }
