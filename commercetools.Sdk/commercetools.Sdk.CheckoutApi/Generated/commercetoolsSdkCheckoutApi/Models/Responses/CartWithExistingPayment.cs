@@ -16,7 +16,7 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
         public Object Payload { get; set; }
         public CartWithExistingPayment()
         {
-            this.Code = "cart_with_exisiting_payment";
+            this.Code = "cart_with_existing_payment";
         }
     }
 }

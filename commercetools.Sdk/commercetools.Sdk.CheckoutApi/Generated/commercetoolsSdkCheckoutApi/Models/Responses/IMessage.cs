@@ -10,7 +10,7 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
     [SubTypeDiscriminator("cart_emptied_during_checkout", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CartEmptiedDuringCheckout))]
     [SubTypeDiscriminator("cart_empty", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CartEmpty))]
     [SubTypeDiscriminator("cart_not_found", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CartNotFound))]
-    [SubTypeDiscriminator("cart_with_exisiting_payment", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment))]
+    [SubTypeDiscriminator("cart_with_existing_payment", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment))]
     [SubTypeDiscriminator("checkout_cancelled", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CheckoutCancelled))]
     [SubTypeDiscriminator("checkout_completed", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CheckoutCompleted))]
     [SubTypeDiscriminator("checkout_loaded", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.CheckoutLoaded))]
@@ -108,7 +108,7 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment CartWithExisitingPayment(Action<commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment> init = null)
+        static commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment CartWithExistingPayment(Action<commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.Responses.CartWithExistingPayment();
             init?.Invoke(t);
