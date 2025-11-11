@@ -156,6 +156,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("OrderLineItemDistributionChannelSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemDistributionChannelSetMessagePayload))]
     [SubTypeDiscriminator("OrderLineItemRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemRemovedMessagePayload))]
     [SubTypeDiscriminator("OrderPaymentAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessagePayload))]
+    [SubTypeDiscriminator("OrderPaymentRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderPaymentRemovedMessagePayload))]
     [SubTypeDiscriminator("OrderPaymentStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.OrderPaymentStateChangedMessagePayload))]
     [SubTypeDiscriminator("OrderPurchaseOrderNumberSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderPurchaseOrderNumberSetMessagePayload))]
     [SubTypeDiscriminator("OrderReturnShipmentStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.OrderReturnShipmentStateChangedMessagePayload))]
@@ -1215,6 +1216,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessagePayload OrderPaymentAdded(Action<commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.OrderPaymentAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderPaymentRemovedMessagePayload OrderPaymentRemoved(Action<commercetools.Sdk.Api.Models.Messages.OrderPaymentRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderPaymentRemovedMessagePayload();
             init?.Invoke(t);
             return t;
         }

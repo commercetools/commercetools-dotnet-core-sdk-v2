@@ -21,11 +21,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl>(p, OrderPaymentAddedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl> Payment(
+        public CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl> PaymentRef(
             Func<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Payments.PaymentReferenceQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderPaymentAddedMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("payment"))
+                .Parent(ConstantQueryPredicate.Of().Constant("paymentRef"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Payments.PaymentReferenceQueryBuilderDsl.Of())),
                 OrderPaymentAddedMessagePayloadQueryBuilderDsl.Of);
         }

@@ -5,7 +5,7 @@ using System;
 namespace commercetools.Sdk.Api.Models.Messages
 {
 
-    public partial class OrderPaymentAddedMessage : IOrderPaymentAddedMessage
+    public partial class OrderPaymentRemovedMessage : IOrderPaymentRemovedMessage
     {
         public string Id { get; set; }
 
@@ -30,9 +30,11 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public IPaymentReference PaymentRef { get; set; }
-        public OrderPaymentAddedMessage()
+
+        public bool RemovedPaymentInfo { get; set; }
+        public OrderPaymentRemovedMessage()
         {
-            this.Type = "OrderPaymentAdded";
+            this.Type = "OrderPaymentRemoved";
         }
     }
 }
