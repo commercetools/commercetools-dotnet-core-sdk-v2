@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public IPaymentReference Payment { get; set; }
+        public IPaymentReference PaymentRef { get; set; }
         public OrderPaymentAddedMessagePayload()
         {
             this.Type = "OrderPaymentAdded";

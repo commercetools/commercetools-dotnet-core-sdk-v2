@@ -712,6 +712,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderPaymentAddedMessagePayloadQueryBuilderDsl.Of()),
                 MessagePayloadQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsOrderPaymentRemoved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderPaymentRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderPaymentRemovedMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderPaymentRemovedMessagePayloadQueryBuilderDsl.Of()),
+                MessagePayloadQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> AsPaymentCreated(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.PaymentCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.PaymentCreatedMessagePayloadQueryBuilderDsl>> fn)
         {
