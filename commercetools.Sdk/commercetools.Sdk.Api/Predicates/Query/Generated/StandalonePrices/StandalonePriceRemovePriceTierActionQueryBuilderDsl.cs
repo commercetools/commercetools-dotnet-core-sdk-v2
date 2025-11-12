@@ -19,9 +19,9 @@ namespace commercetools.Sdk.Api.Predicates.Query.StandalonePrices
             p => new CombinationQueryPredicate<StandalonePriceRemovePriceTierActionQueryBuilderDsl>(p, StandalonePriceRemovePriceTierActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl, long> TierMinimumQuantity()
+        public IComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl, long> MinimumQuantity()
         {
-            return new ComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("tierMinimumQuantity")),
+            return new ComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("minimumQuantity")),
             p => new CombinationQueryPredicate<StandalonePriceRemovePriceTierActionQueryBuilderDsl>(p, StandalonePriceRemovePriceTierActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
