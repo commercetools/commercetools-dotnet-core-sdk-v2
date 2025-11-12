@@ -7,7 +7,7 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     {
         public string Action { get; set; }
 
-        public long TierMinimumQuantity { get; set; }
+        public long MinimumQuantity { get; set; }
         public StandalonePriceRemovePriceTierAction()
         {
             this.Action = "removePriceTier";
