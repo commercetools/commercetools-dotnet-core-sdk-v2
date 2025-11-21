@@ -16,7 +16,6 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Products.ProductChangeNameAction))]
     [SubTypeDiscriminator("changePrice", typeof(commercetools.Sdk.Api.Models.Products.ProductChangePriceAction))]
     [SubTypeDiscriminator("changeSlug", typeof(commercetools.Sdk.Api.Models.Products.ProductChangeSlugAction))]
-    [SubTypeDiscriminator("legacySetSku", typeof(commercetools.Sdk.Api.Models.Products.ProductLegacySetSkuAction))]
     [SubTypeDiscriminator("moveImageToPosition", typeof(commercetools.Sdk.Api.Models.Products.ProductMoveImageToPositionAction))]
     [SubTypeDiscriminator("publish", typeof(commercetools.Sdk.Api.Models.Products.ProductPublishAction))]
     [SubTypeDiscriminator("removeAsset", typeof(commercetools.Sdk.Api.Models.Products.ProductRemoveAssetAction))]
@@ -121,12 +120,6 @@ namespace commercetools.Sdk.Api.Models.Products
         static commercetools.Sdk.Api.Models.Products.ProductChangeSlugAction ChangeSlug(Action<commercetools.Sdk.Api.Models.Products.ProductChangeSlugAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Products.ProductChangeSlugAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Products.ProductLegacySetSkuAction LegacySetSku(Action<commercetools.Sdk.Api.Models.Products.ProductLegacySetSkuAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Products.ProductLegacySetSkuAction();
             init?.Invoke(t);
             return t;
         }

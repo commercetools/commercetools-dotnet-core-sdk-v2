@@ -88,12 +88,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             return new CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductChangeSlugActionQueryBuilderDsl.Of()),
                 ProductUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> AsLegacySetSku(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductLegacySetSkuActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductLegacySetSkuActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductLegacySetSkuActionQueryBuilderDsl.Of()),
-                ProductUpdateActionQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> AsMoveImageToPosition(
             Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductMoveImageToPositionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductMoveImageToPositionActionQueryBuilderDsl>> fn)
         {
