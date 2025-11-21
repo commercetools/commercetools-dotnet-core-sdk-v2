@@ -13,3 +13,10 @@
 - added property `minimumQuantity` to type `StandalonePriceRemovePriceTierAction`
 </details>
 
+
+<details>
+<summary>Deprecated Type(s)</summary>
+
+- type `ProductLegacySetSkuAction` is removed
+</details>
+
