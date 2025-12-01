@@ -17,6 +17,7 @@ Feel free to explore these examples using this SDK for calling the Composable Co
 [.NET Core SDK Training for V2 SDK](https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2)
 
 ## Installation
+
 #### Download from [Nuget](https://www.nuget.org/profiles/commercetools)
 | Package                                                                         | Installation                                                                                                                                  |
 | ------------------------------------------------------------------------------- | ----------------------------------------------------------|
@@ -46,6 +47,10 @@ In addition, the SDK has the following directories:
      to cart as anonymous user, user can login and switch to password token flow,
      it's storing the token in the cookie right now, cookies only used
      as POC, it maybe not the best option for production purposes.
+
+## Support
+
+Please see our [support policy](SUPPORT.md)
 
 ## Getting Started with the .NET SDK
 
