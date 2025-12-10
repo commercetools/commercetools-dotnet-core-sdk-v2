@@ -27,6 +27,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
+
+        public string Email { get; set; }
         public CustomerDeletedMessage()
         {
             this.Type = "CustomerDeleted";

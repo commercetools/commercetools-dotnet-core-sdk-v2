@@ -29,6 +29,8 @@ namespace commercetools.Sdk.Api.Models.Messages
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
         public string Email { get; set; }
+
+        public string OldEmail { get; set; }
         public CustomerEmailChangedMessage()
         {
             this.Type = "CustomerEmailChanged";

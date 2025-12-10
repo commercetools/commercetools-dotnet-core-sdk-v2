@@ -7,5 +7,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         string Email { get; set; }
 
+        string OldEmail { get; set; }
+
     }
 }

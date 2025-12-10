@@ -12,5 +12,9 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         IEnumerable<ICustomerGroupAssignment> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
 
+        IList<ICustomerGroupAssignment> OldCustomerGroupAssignments { get; set; }
+
+        IEnumerable<ICustomerGroupAssignment> OldCustomerGroupAssignmentsEnumerable { set => OldCustomerGroupAssignments = value.ToList(); }
+
     }
 }
