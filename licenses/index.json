@@ -25,15 +25,15 @@
   },
   {
     "PackageName": "Microsoft.CSharp",
-    "PackageVersion": "4.5.0",
+    "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation.  All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides support for compilation and code generation, including dynamic, using the C# language.\r\n\r\nCommonly Used Types:\r\nMicrosoft.CSharp.RuntimeBinder.Binder\r\nMicrosoft.CSharp.RuntimeBinder.RuntimeBinderException\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfo\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags\r\nMicrosoft.CSharp.RuntimeBinder.CSharpBinderFlags\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
+    "Description": "Provides support for compilation and code generation, including dynamic, using the C# language.\r\n\r\nCommonly Used Types:\r\nMicrosoft.CSharp.RuntimeBinder.Binder\r\nMicrosoft.CSharp.RuntimeBinder.RuntimeBinderException\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfo\r\nMicrosoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags\r\nMicrosoft.CSharp.RuntimeBinder.CSharpBinderFlags\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
   },
   {
     "PackageName": "Microsoft.Extensions.Configuration",
@@ -591,14 +591,14 @@
   },
   {
     "PackageName": "System.Collections.Immutable",
-    "PackageVersion": "7.0.0",
+    "PackageVersion": "1.5.0",
     "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "This package provides collections that are thread safe and guaranteed to never change their contents, also known as immutable collections. Like strings, any methods that perform modifications will not change the existing instance but instead return a new instance. For efficiency reasons, the implementation uses a sharing mechanism to ensure that newly created instances share as much data as possible with the previous instance while ensuring that operations have a predictable time complexity.\r\n\r\nThe System.Collections.Immutable library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "Description": "This package provides collections that are thread safe and guaranteed to never change their contents, also known as immutable collections. Like strings, any methods that perform modifications will not change the existing instance but instead return a new instance. For efficiency reasons, the implementation uses a sharing mechanism to ensure that newly created instances share as much data as possible with the previous instance while ensuring that operations have a predictable time complexity.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.Immutable.ImmutableArray\r\nSystem.Collections.Immutable.ImmutableArray<T>\r\nSystem.Collections.Immutable.ImmutableDictionary\r\nSystem.Collections.Immutable.ImmutableDictionary<TKey,TValue>\r\nSystem.Collections.Immutable.ImmutableHashSet\r\nSystem.Collections.Immutable.ImmutableHashSet<T>\r\nSystem.Collections.Immutable.ImmutableList\r\nSystem.Collections.Immutable.ImmutableList<T>\r\nSystem.Collections.Immutable.ImmutableQueue\r\nSystem.Collections.Immutable.ImmutableQueue<T>\r\nSystem.Collections.Immutable.ImmutableSortedDictionary\r\nSystem.Collections.Immutable.ImmutableSortedDictionary<TKey,TValue>\r\nSystem.Collections.Immutable.ImmutableSortedSet\r\nSystem.Collections.Immutable.ImmutableSortedSet<T>\r\nSystem.Collections.Immutable.ImmutableStack\r\nSystem.Collections.Immutable.ImmutableStack<T>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
     "LicenseType": "MIT"
   },
   {
@@ -891,18 +891,6 @@
   },
   {
     "PackageName": "System.Memory",
-    "PackageVersion": "4.5.5",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n32b491939fbd125f304031c35038b1e14b4e3958 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Memory",
     "PackageVersion": "4.5.4",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -1080,18 +1068,6 @@
     "Description": "Provides extensions methods for System.Type that are designed to be source-compatible with older framework reflection-based APIs.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.TypeExtensions\r\nSystem.Reflection.BindingFlags\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
     "LicenseType": "MS-EULA"
-  },
-  {
-    "PackageName": "System.Reflection.TypeExtensions",
-    "PackageVersion": "4.4.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides extensions methods for System.Type that are designed to be source-compatible with older framework reflection-based APIs.\r\n\r\nCommonly Used Types:\r\nSystem.Reflection.TypeExtensions\r\nSystem.Reflection.BindingFlags\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
-    "LicenseType": "MIT"
   },
   {
     "PackageName": "System.Resources.ResourceManager",
@@ -1359,7 +1335,7 @@
   },
   {
     "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "7.0.0",
+    "PackageVersion": "6.0.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
