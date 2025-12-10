@@ -93,6 +93,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 CustomerDeletedMessageQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CustomerDeletedMessageQueryBuilderDsl, string> Email()
+        {
+            return new ComparisonPredicateBuilder<CustomerDeletedMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("email")),
+            p => new CombinationQueryPredicate<CustomerDeletedMessageQueryBuilderDsl>(p, CustomerDeletedMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

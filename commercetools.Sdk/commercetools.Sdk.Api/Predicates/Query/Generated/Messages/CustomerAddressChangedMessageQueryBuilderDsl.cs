@@ -102,6 +102,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 CustomerAddressChangedMessageQueryBuilderDsl.Of);
         }
 
+        public IComparableCollectionPredicateBuilder<CustomerAddressChangedMessageQueryBuilderDsl, string> AddressRoles()
+        {
+            return new ComparableCollectionPredicateBuilder<CustomerAddressChangedMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("addressRoles")),
+            p => new CombinationQueryPredicate<CustomerAddressChangedMessageQueryBuilderDsl>(p, CustomerAddressChangedMessageQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

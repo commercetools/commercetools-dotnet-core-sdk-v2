@@ -78,6 +78,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerAddressCustomTypeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeRemovedMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressCustomTypeSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressCustomTypeSetMessagePayload))]
     [SubTypeDiscriminator("CustomerAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressRemovedMessagePayload))]
+    [SubTypeDiscriminator("CustomerBillingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressAddedMessagePayload))]
+    [SubTypeDiscriminator("CustomerBillingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressRemovedMessagePayload))]
     [SubTypeDiscriminator("CustomerCompanyNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessagePayload))]
     [SubTypeDiscriminator("CustomerCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCreatedMessagePayload))]
     [SubTypeDiscriminator("CustomerCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerCustomFieldAddedMessagePayload))]
@@ -92,6 +94,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerEmailChanged", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailChangedMessagePayload))]
     [SubTypeDiscriminator("CustomerEmailTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailTokenCreatedMessagePayload))]
     [SubTypeDiscriminator("CustomerEmailVerified", typeof(commercetools.Sdk.Api.Models.Messages.CustomerEmailVerifiedMessagePayload))]
+    [SubTypeDiscriminator("CustomerExternalIdSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerExternalIdSetMessagePayload))]
     [SubTypeDiscriminator("CustomerFirstNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupAssignmentAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentAddedMessagePayload))]
     [SubTypeDiscriminator("CustomerGroupAssignmentRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerGroupAssignmentRemovedMessagePayload))]
@@ -105,6 +108,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CustomerLastNameSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerLastNameSetMessagePayload))]
     [SubTypeDiscriminator("CustomerPasswordTokenCreated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordTokenCreatedMessagePayload))]
     [SubTypeDiscriminator("CustomerPasswordUpdated", typeof(commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload))]
+    [SubTypeDiscriminator("CustomerShippingAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressAddedMessagePayload))]
+    [SubTypeDiscriminator("CustomerShippingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressRemovedMessagePayload))]
     [SubTypeDiscriminator("CustomerStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerStoresSetMessagePayload))]
     [SubTypeDiscriminator("CustomerTitleSet", typeof(commercetools.Sdk.Api.Models.Messages.CustomerTitleSetMessagePayload))]
     [SubTypeDiscriminator("CustomLineItemStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.CustomLineItemStateTransitionMessagePayload))]
@@ -751,6 +756,18 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressAddedMessagePayload CustomerBillingAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressRemovedMessagePayload CustomerBillingAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerBillingAddressRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessagePayload CustomerCompanyNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerCompanyNameSetMessagePayload();
@@ -835,6 +852,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CustomerExternalIdSetMessagePayload CustomerExternalIdSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerExternalIdSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerExternalIdSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload CustomerFirstNameSet(Action<commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerFirstNameSetMessagePayload();
@@ -910,6 +933,18 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload CustomerPasswordUpdated(Action<commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CustomerPasswordUpdatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressAddedMessagePayload CustomerShippingAddressAdded(Action<commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressRemovedMessagePayload CustomerShippingAddressRemoved(Action<commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CustomerShippingAddressRemovedMessagePayload();
             init?.Invoke(t);
             return t;
         }

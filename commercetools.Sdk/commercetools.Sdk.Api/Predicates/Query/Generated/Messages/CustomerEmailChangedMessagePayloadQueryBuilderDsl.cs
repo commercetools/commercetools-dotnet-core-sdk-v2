@@ -25,6 +25,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<CustomerEmailChangedMessagePayloadQueryBuilderDsl>(p, CustomerEmailChangedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CustomerEmailChangedMessagePayloadQueryBuilderDsl, string> OldEmail()
+        {
+            return new ComparisonPredicateBuilder<CustomerEmailChangedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("oldEmail")),
+            p => new CombinationQueryPredicate<CustomerEmailChangedMessagePayloadQueryBuilderDsl>(p, CustomerEmailChangedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
