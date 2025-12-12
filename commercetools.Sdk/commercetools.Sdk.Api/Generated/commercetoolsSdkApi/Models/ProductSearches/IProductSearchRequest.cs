@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Searches;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -20,6 +21,7 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
         bool? MarkMatchingVariants { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         IProductSearchProjectionParams ProductProjectionParameters { get; set; }
 
         IList<IProductSearchFacetExpression> Facets { get; set; }

@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Products;
+using System;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.ProductSearches
@@ -10,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
         IProductSearchMatchingVariants MatchingVariants { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         IProductProjection ProductProjection { get; set; }
 
     }

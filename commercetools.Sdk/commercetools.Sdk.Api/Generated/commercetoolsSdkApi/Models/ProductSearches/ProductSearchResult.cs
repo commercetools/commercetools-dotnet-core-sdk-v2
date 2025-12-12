@@ -1,5 +1,5 @@
 using commercetools.Sdk.Api.Models.Products;
-
+using System;
 
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
@@ -10,6 +10,7 @@ namespace commercetools.Sdk.Api.Models.ProductSearches
 
         public IProductSearchMatchingVariants MatchingVariants { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public IProductProjection ProductProjection { get; set; }
     }
 }
