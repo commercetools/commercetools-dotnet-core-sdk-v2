@@ -1,7 +1,10 @@
+using System;
+
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Predicates.Query.ProductSearches
 {
 
+    [Obsolete]
     public partial class ProductSearchProjectionParamsQueryBuilderDsl
     {
         public ProductSearchProjectionParamsQueryBuilderDsl()

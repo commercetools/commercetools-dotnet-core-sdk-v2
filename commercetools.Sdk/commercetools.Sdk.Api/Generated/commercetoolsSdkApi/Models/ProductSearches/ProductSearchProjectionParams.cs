@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace commercetools.Sdk.Api.Models.ProductSearches
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class ProductSearchProjectionParams : IProductSearchProjectionParams
     {
         public IList<string> Expand { get; set; }
