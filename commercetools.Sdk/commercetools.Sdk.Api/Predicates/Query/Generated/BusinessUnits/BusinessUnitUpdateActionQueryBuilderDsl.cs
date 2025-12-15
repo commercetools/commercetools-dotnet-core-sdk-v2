@@ -40,6 +40,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddBillingAddressIdActionQueryBuilderDsl.Of()),
                 BusinessUnitUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsAddCustomerGroupAssignment(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentActionQueryBuilderDsl.Of()),
+                BusinessUnitUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsAddShippingAddressId(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddShippingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitAddShippingAddressIdActionQueryBuilderDsl>> fn)
         {
@@ -112,6 +118,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveBillingAddressIdActionQueryBuilderDsl.Of()),
                 BusinessUnitUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsRemoveCustomerGroupAssignment(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentActionQueryBuilderDsl.Of()),
+                BusinessUnitUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsRemoveShippingAddressId(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveShippingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitRemoveShippingAddressIdActionQueryBuilderDsl>> fn)
         {
@@ -158,6 +170,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomTypeActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomTypeActionQueryBuilderDsl.Of()),
+                BusinessUnitUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsSetCustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsActionQueryBuilderDsl.Of()),
                 BusinessUnitUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> AsSetDefaultBillingAddress(

@@ -135,6 +135,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
                 BusinessUnitDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl> CustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl.Of())),
+                BusinessUnitDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<BusinessUnitDraftQueryBuilderDsl> CustomerGroupAssignments()
+        {
+            return new CollectionPredicateBuilder<BusinessUnitDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
+                    p => new CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl>(p, BusinessUnitDraftQueryBuilderDsl.Of));
+        }
 
         public CombinationQueryPredicate<BusinessUnitDraftQueryBuilderDsl> AsCompany(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.CompanyDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.CompanyDraftQueryBuilderDsl>> fn)

@@ -8,6 +8,7 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [SubTypeDiscriminator("addAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddAddressAction))]
     [SubTypeDiscriminator("addAssociate", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddAssociateAction))]
     [SubTypeDiscriminator("addBillingAddressId", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddBillingAddressIdAction))]
+    [SubTypeDiscriminator("addCustomerGroupAssignment", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentAction))]
     [SubTypeDiscriminator("addShippingAddressId", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddShippingAddressIdAction))]
     [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddStoreAction))]
     [SubTypeDiscriminator("changeAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitChangeAddressAction))]
@@ -20,12 +21,14 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [SubTypeDiscriminator("removeAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveAddressAction))]
     [SubTypeDiscriminator("removeAssociate", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveAssociateAction))]
     [SubTypeDiscriminator("removeBillingAddressId", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveBillingAddressIdAction))]
+    [SubTypeDiscriminator("removeCustomerGroupAssignment", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentAction))]
     [SubTypeDiscriminator("removeShippingAddressId", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveShippingAddressIdAction))]
     [SubTypeDiscriminator("removeStore", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveStoreAction))]
     [SubTypeDiscriminator("setAddressCustomField", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetAddressCustomFieldAction))]
     [SubTypeDiscriminator("setAddressCustomType", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetAddressCustomTypeAction))]
     [SubTypeDiscriminator("setAssociates", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetAssociatesAction))]
     [SubTypeDiscriminator("setContactEmail", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetContactEmailAction))]
+    [SubTypeDiscriminator("setCustomerGroupAssignments", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomTypeAction))]
     [SubTypeDiscriminator("setDefaultBillingAddress", typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetDefaultBillingAddressAction))]
@@ -52,6 +55,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddBillingAddressIdAction AddBillingAddressId(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddBillingAddressIdAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddBillingAddressIdAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentAction AddCustomerGroupAssignment(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitAddCustomerGroupAssignmentAction();
             init?.Invoke(t);
             return t;
         }
@@ -127,6 +136,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentAction RemoveCustomerGroupAssignment(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveCustomerGroupAssignmentAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveShippingAddressIdAction RemoveShippingAddressId(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveShippingAddressIdAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitRemoveShippingAddressIdAction();
@@ -160,6 +175,12 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetContactEmailAction SetContactEmail(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetContactEmailAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetContactEmailAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsAction SetCustomerGroupAssignments(Action<commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitSetCustomerGroupAssignmentsAction();
             init?.Invoke(t);
             return t;
         }
