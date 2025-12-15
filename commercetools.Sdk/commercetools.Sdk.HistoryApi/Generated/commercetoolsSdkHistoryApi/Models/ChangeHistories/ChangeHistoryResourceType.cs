@@ -67,11 +67,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("review")]
         Review,
 
+        [Description("shipping-method")]
+        ShippingMethod,
+
         [Description("shopping-list")]
         ShoppingList,
 
         [Description("staged-quote")]
         StagedQuote,
+
+        [Description("standalone-price")]
+        StandalonePrice,
 
         [Description("state")]
         State,
@@ -169,11 +175,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IChangeHistoryResourceType Review = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.Review, JsonName = "review" };
 
+        public static IChangeHistoryResourceType ShippingMethod = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.ShippingMethod, JsonName = "shipping-method" };
+
         public static IChangeHistoryResourceType ShoppingList = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.ShoppingList, JsonName = "shopping-list" };
 
         public static IChangeHistoryResourceType StagedQuote = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.StagedQuote, JsonName = "staged-quote" };
+
+        public static IChangeHistoryResourceType StandalonePrice = new ChangeHistoryResourceTypeWrapper
+        { Value = ChangeHistoryResourceType.StandalonePrice, JsonName = "standalone-price" };
 
         public static IChangeHistoryResourceType State = new ChangeHistoryResourceTypeWrapper
         { Value = ChangeHistoryResourceType.State, JsonName = "state" };
@@ -215,8 +227,10 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  QuoteRequest ,
                  Quote ,
                  Review ,
+                 ShippingMethod ,
                  ShoppingList ,
                  StagedQuote ,
+                 StandalonePrice ,
                  State ,
                  Store ,
                  TaxCategory ,

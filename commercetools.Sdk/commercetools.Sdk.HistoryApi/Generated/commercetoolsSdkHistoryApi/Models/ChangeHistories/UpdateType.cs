@@ -85,8 +85,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("addRoles")]
         AddRoles,
 
+        [Description("addShipping")]
+        AddShipping,
+
         [Description("addShippingAddressId")]
         AddShippingAddressId,
+
+        [Description("addShippingRate")]
+        AddShippingRate,
 
         [Description("addTaxRate")]
         AddTaxRate,
@@ -103,11 +109,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("addVariant")]
         AddVariant,
 
+        [Description("addZone")]
+        AddZone,
+
+        [Description("changeActive")]
+        ChangeActive,
+
         [Description("changeAddress")]
         ChangeAddress,
 
         [Description("changeAmountPlanned")]
         ChangeAmountPlanned,
+
+        [Description("changeApprovalRuleMode")]
+        ChangeApprovalRuleMode,
 
         [Description("changeAssetName")]
         ChangeAssetName,
@@ -136,11 +151,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeCartPredicate")]
         ChangeCartPredicate,
 
+        [Description("changeCustomLineItemPriceRoundingMode")]
+        ChangeCustomLineItemPriceRoundingMode,
+
         [Description("changeCustomLineItemQuantity")]
         ChangeCustomLineItemQuantity,
 
+        [Description("changeCustomer")]
+        ChangeCustomer,
+
         [Description("changeDescription")]
         ChangeDescription,
+
+        [Description("changeDiscountTypeCombination")]
+        ChangeDiscountTypeCombination,
 
         [Description("changeEmail")]
         ChangeEmail,
@@ -160,6 +184,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeGroups")]
         ChangeGroups,
 
+        [Description("changeIncludedInStatistics")]
+        ChangeIncludedInStatistics,
+
         [Description("changeInitial")]
         ChangeInitial,
 
@@ -168,6 +195,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("changeIsActive")]
         ChangeIsActive,
+
+        [Description("changeIsDefault")]
+        ChangeIsDefault,
 
         [Description("changeIsSearchable")]
         ChangeIsSearchable,
@@ -178,8 +208,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeLabel")]
         ChangeLabel,
 
+        [Description("changeLastVariantId")]
+        ChangeLastVariantId,
+
         [Description("changeLineItemName")]
         ChangeLineItemName,
+
+        [Description("changeLineItemPriceRoundingMode")]
+        ChangeLineItemPriceRoundingMode,
+
+        [Description("changeLineItemPublished")]
+        ChangeLineItemPublished,
 
         [Description("changeLineItemQuantity")]
         ChangeLineItemQuantity,
@@ -223,6 +262,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changePrice")]
         ChangePrice,
 
+        [Description("changePriceRoundingMode")]
+        ChangePriceRoundingMode,
+
         [Description("changeProductSelectionActive")]
         ChangeProductSelectionActive,
 
@@ -265,6 +307,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeTaxCalculationMode")]
         ChangeTaxCalculationMode,
 
+        [Description("changeTaxCategory")]
+        ChangeTaxCategory,
+
         [Description("changeTaxMode")]
         ChangeTaxMode,
 
@@ -280,6 +325,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("changeTextLineItemsOrder")]
         ChangeTextLineItemsOrder,
 
+        [Description("changeTopLevelUnit")]
+        ChangeTopLevelUnit,
+
         [Description("changeTransactionInteractionId")]
         ChangeTransactionInteractionId,
 
@@ -294,6 +342,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("changeValue")]
         ChangeValue,
+
+        [Description("excludeProduct")]
+        ExcludeProduct,
 
         [Description("moveImageToPosition")]
         MoveImageToPosition,
@@ -367,8 +418,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("removeRoles")]
         RemoveRoles,
 
+        [Description("removeShipping")]
+        RemoveShipping,
+
         [Description("removeShippingAddressId")]
         RemoveShippingAddressId,
+
+        [Description("removeShippingRate")]
+        RemoveShippingRate,
 
         [Description("removeTaxRate")]
         RemoveTaxRate,
@@ -379,8 +436,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("removeVariant")]
         RemoveVariant,
 
+        [Description("removeZone")]
+        RemoveZone,
+
+        [Description("replaceTaxRate")]
+        ReplaceTaxRate,
+
         [Description("requestQuoteRenegotiation")]
         RequestQuoteRenegotiation,
+
+        [Description("revertStagedChanges")]
+        RevertStagedChanges,
+
+        [Description("revertStagedVariantChanges")]
+        RevertStagedVariantChanges,
 
         [Description("setAddress")]
         SetAddress,
@@ -390,6 +459,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setAddressCustomType")]
         SetAddressCustomType,
+
+        [Description("setAncestors")]
+        SetAncestors,
 
         [Description("setAnonymousId")]
         SetAnonymousId,
@@ -406,14 +478,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setAssetDescription")]
         SetAssetDescription,
 
+        [Description("setAssetKey")]
+        SetAssetKey,
+
         [Description("setAssetSources")]
         SetAssetSources,
 
         [Description("setAssetTags")]
         SetAssetTags,
 
-        [Description("setAssetKey")]
-        SetAssetKey,
+        [Description("setAssociates")]
+        SetAssociates,
 
         [Description("setAttribute")]
         SetAttribute,
@@ -426,6 +501,15 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setBillingAddress")]
         SetBillingAddress,
+
+        [Description("setBillingAddressCustomField")]
+        SetBillingAddressCustomField,
+
+        [Description("setBillingAddressCustomType")]
+        SetBillingAddressCustomType,
+
+        [Description("setBusinessUnit")]
+        SetBusinessUnit,
 
         [Description("setCartPredicate")]
         SetCartPredicate,
@@ -453,6 +537,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setCustomLineItemCustomType")]
         SetCustomLineItemCustomType,
+
+        [Description("setCustomLineItemDiscountedPrice")]
+        SetCustomLineItemDiscountedPrice,
+
+        [Description("setCustomLineItemDiscountedPricePerQuantity")]
+        SetCustomLineItemDiscountedPricePerQuantity,
 
         [Description("setCustomLineItemMoney")]
         SetCustomLineItemMoney,
@@ -490,6 +580,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setCustomerGroup")]
         SetCustomerGroup,
 
+        [Description("setCustomerGroupAssignments")]
+        SetCustomerGroupAssignments,
+
         [Description("setCustomerId")]
         SetCustomerId,
 
@@ -511,11 +604,29 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setDeliveryAddress")]
         SetDeliveryAddress,
 
+        [Description("setDeliveryAddressCustomField")]
+        SetDeliveryAddressCustomField,
+
+        [Description("setDeliveryAddressCustomType")]
+        SetDeliveryAddressCustomType,
+
+        [Description("setDeliveryCustomField")]
+        SetDeliveryCustomField,
+
+        [Description("setDeliveryCustomType")]
+        SetDeliveryCustomType,
+
         [Description("setDeliveryItems")]
         SetDeliveryItems,
 
         [Description("setDescription")]
         SetDescription,
+
+        [Description("setDirectDiscounts")]
+        SetDirectDiscounts,
+
+        [Description("setDiscountOnTotalPrice")]
+        SetDiscountOnTotalPrice,
 
         [Description("setDiscountedPrice")]
         SetDiscountedPrice,
@@ -538,6 +649,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setImageLabel")]
         SetImageLabel,
 
+        [Description("setInheritedAssociates")]
+        SetInheritedAssociates,
+
+        [Description("setInheritedStores")]
+        SetInheritedStores,
+
         [Description("setInputTip")]
         SetInputTip,
 
@@ -546,6 +663,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setIsValid")]
         SetIsValid,
+
+        [Description("setItemShippingAddressCustomField")]
+        SetItemShippingAddressCustomField,
+
+        [Description("setItemShippingAddressCustomType")]
+        SetItemShippingAddressCustomType,
 
         [Description("setKey")]
         SetKey,
@@ -601,11 +724,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setLocale")]
         SetLocale,
 
+        [Description("setLocalizedDescription")]
+        SetLocalizedDescription,
+
+        [Description("setLocalizedName")]
+        SetLocalizedName,
+
         [Description("setMaxApplications")]
         SetMaxApplications,
 
         [Description("setMaxApplicationsPerCustomer")]
         SetMaxApplicationsPerCustomer,
+
+        [Description("setMaxCartQuantity")]
+        SetMaxCartQuantity,
 
         [Description("setMetaDescription")]
         SetMetaDescription,
@@ -628,6 +760,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setMiddleName")]
         SetMiddleName,
 
+        [Description("setMinCartQuantity")]
+        SetMinCartQuantity,
+
         [Description("setName")]
         SetName,
 
@@ -643,6 +778,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setOrderTotalTax")]
         SetOrderTotalTax,
 
+        [Description("setParcelCustomField")]
+        SetParcelCustomField,
+
+        [Description("setParcelCustomType")]
+        SetParcelCustomType,
+
         [Description("setParcelItems")]
         SetParcelItems,
 
@@ -655,8 +796,23 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setPassword")]
         SetPassword,
 
+        [Description("setPredicate")]
+        SetPredicate,
+
+        [Description("setPriceKey")]
+        SetPriceKey,
+
+        [Description("setPriceMode")]
+        SetPriceMode,
+
+        [Description("setPriceTiers")]
+        SetPriceTiers,
+
         [Description("setPrices")]
         SetPrices,
+
+        [Description("setProductAttribute")]
+        SetProductAttribute,
 
         [Description("setProductCount")]
         SetProductCount,
@@ -682,11 +838,23 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setRating")]
         SetRating,
 
+        [Description("setReferences")]
+        SetReferences,
+
         [Description("setReservations")]
         SetReservations,
 
         [Description("setRestockableInDays")]
         SetRestockableInDays,
+
+        [Description("setReturnInfo")]
+        SetReturnInfo,
+
+        [Description("setReturnItemCustomField")]
+        SetReturnItemCustomField,
+
+        [Description("setReturnItemCustomType")]
+        SetReturnItemCustomType,
 
         [Description("setReturnPaymentState")]
         SetReturnPaymentState,
@@ -709,6 +877,21 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setShippingAddress")]
         SetShippingAddress,
 
+        [Description("setShippingAddressCustomField")]
+        SetShippingAddressCustomField,
+
+        [Description("setShippingAddressCustomType")]
+        SetShippingAddressCustomType,
+
+        [Description("setShippingCustomField")]
+        SetShippingCustomField,
+
+        [Description("setShippingCustomType")]
+        SetShippingCustomType,
+
+        [Description("setShippingInfoDiscountedPrice")]
+        SetShippingInfoDiscountedPrice,
+
         [Description("setShippingInfoPrice")]
         SetShippingInfoPrice,
 
@@ -720,6 +903,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setShippingMethodTaxAmount")]
         SetShippingMethodTaxAmount,
+
+        [Description("setShippingMethodTaxCategory")]
+        SetShippingMethodTaxCategory,
 
         [Description("setShippingMethodTaxRate")]
         SetShippingMethodTaxRate,
@@ -763,6 +949,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setTaxCategory")]
         SetTaxCategory,
 
+        [Description("setTaxedShippingPrice")]
+        SetTaxedShippingPrice,
+
         [Description("setText")]
         SetText,
 
@@ -778,8 +967,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setTitle")]
         SetTitle,
 
+        [Description("setTransactionCustomField")]
+        SetTransactionCustomField,
+
+        [Description("setTransactionCustomType")]
+        SetTransactionCustomType,
+
         [Description("setTransitions")]
         SetTransitions,
+
+        [Description("setUnitType")]
+        SetUnitType,
 
         [Description("setValidFrom")]
         SetValidFrom,
@@ -798,6 +996,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         [Description("setVariantAvailability")]
         SetVariantAvailability,
+
+        [Description("setVariantExclusion")]
+        SetVariantExclusion,
 
         [Description("setVariantSelection")]
         SetVariantSelection,
@@ -925,8 +1126,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType AddRoles = new UpdateTypeWrapper
         { Value = UpdateType.AddRoles, JsonName = "addRoles" };
 
+        public static IUpdateType AddShipping = new UpdateTypeWrapper
+        { Value = UpdateType.AddShipping, JsonName = "addShipping" };
+
         public static IUpdateType AddShippingAddressId = new UpdateTypeWrapper
         { Value = UpdateType.AddShippingAddressId, JsonName = "addShippingAddressId" };
+
+        public static IUpdateType AddShippingRate = new UpdateTypeWrapper
+        { Value = UpdateType.AddShippingRate, JsonName = "addShippingRate" };
 
         public static IUpdateType AddTaxRate = new UpdateTypeWrapper
         { Value = UpdateType.AddTaxRate, JsonName = "addTaxRate" };
@@ -943,11 +1150,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType AddVariant = new UpdateTypeWrapper
         { Value = UpdateType.AddVariant, JsonName = "addVariant" };
 
+        public static IUpdateType AddZone = new UpdateTypeWrapper
+        { Value = UpdateType.AddZone, JsonName = "addZone" };
+
+        public static IUpdateType ChangeActive = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeActive, JsonName = "changeActive" };
+
         public static IUpdateType ChangeAddress = new UpdateTypeWrapper
         { Value = UpdateType.ChangeAddress, JsonName = "changeAddress" };
 
         public static IUpdateType ChangeAmountPlanned = new UpdateTypeWrapper
         { Value = UpdateType.ChangeAmountPlanned, JsonName = "changeAmountPlanned" };
+
+        public static IUpdateType ChangeApprovalRuleMode = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeApprovalRuleMode, JsonName = "changeApprovalRuleMode" };
 
         public static IUpdateType ChangeAssetName = new UpdateTypeWrapper
         { Value = UpdateType.ChangeAssetName, JsonName = "changeAssetName" };
@@ -976,11 +1192,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeCartPredicate = new UpdateTypeWrapper
         { Value = UpdateType.ChangeCartPredicate, JsonName = "changeCartPredicate" };
 
+        public static IUpdateType ChangeCustomLineItemPriceRoundingMode = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeCustomLineItemPriceRoundingMode, JsonName = "changeCustomLineItemPriceRoundingMode" };
+
         public static IUpdateType ChangeCustomLineItemQuantity = new UpdateTypeWrapper
         { Value = UpdateType.ChangeCustomLineItemQuantity, JsonName = "changeCustomLineItemQuantity" };
 
+        public static IUpdateType ChangeCustomer = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeCustomer, JsonName = "changeCustomer" };
+
         public static IUpdateType ChangeDescription = new UpdateTypeWrapper
         { Value = UpdateType.ChangeDescription, JsonName = "changeDescription" };
+
+        public static IUpdateType ChangeDiscountTypeCombination = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeDiscountTypeCombination, JsonName = "changeDiscountTypeCombination" };
 
         public static IUpdateType ChangeEmail = new UpdateTypeWrapper
         { Value = UpdateType.ChangeEmail, JsonName = "changeEmail" };
@@ -1000,6 +1225,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeGroups = new UpdateTypeWrapper
         { Value = UpdateType.ChangeGroups, JsonName = "changeGroups" };
 
+        public static IUpdateType ChangeIncludedInStatistics = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeIncludedInStatistics, JsonName = "changeIncludedInStatistics" };
+
         public static IUpdateType ChangeInitial = new UpdateTypeWrapper
         { Value = UpdateType.ChangeInitial, JsonName = "changeInitial" };
 
@@ -1008,6 +1236,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType ChangeIsActive = new UpdateTypeWrapper
         { Value = UpdateType.ChangeIsActive, JsonName = "changeIsActive" };
+
+        public static IUpdateType ChangeIsDefault = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeIsDefault, JsonName = "changeIsDefault" };
 
         public static IUpdateType ChangeIsSearchable = new UpdateTypeWrapper
         { Value = UpdateType.ChangeIsSearchable, JsonName = "changeIsSearchable" };
@@ -1018,8 +1249,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeLabel = new UpdateTypeWrapper
         { Value = UpdateType.ChangeLabel, JsonName = "changeLabel" };
 
+        public static IUpdateType ChangeLastVariantId = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeLastVariantId, JsonName = "changeLastVariantId" };
+
         public static IUpdateType ChangeLineItemName = new UpdateTypeWrapper
         { Value = UpdateType.ChangeLineItemName, JsonName = "changeLineItemName" };
+
+        public static IUpdateType ChangeLineItemPriceRoundingMode = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeLineItemPriceRoundingMode, JsonName = "changeLineItemPriceRoundingMode" };
+
+        public static IUpdateType ChangeLineItemPublished = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeLineItemPublished, JsonName = "changeLineItemPublished" };
 
         public static IUpdateType ChangeLineItemQuantity = new UpdateTypeWrapper
         { Value = UpdateType.ChangeLineItemQuantity, JsonName = "changeLineItemQuantity" };
@@ -1063,6 +1303,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangePrice = new UpdateTypeWrapper
         { Value = UpdateType.ChangePrice, JsonName = "changePrice" };
 
+        public static IUpdateType ChangePriceRoundingMode = new UpdateTypeWrapper
+        { Value = UpdateType.ChangePriceRoundingMode, JsonName = "changePriceRoundingMode" };
+
         public static IUpdateType ChangeProductSelectionActive = new UpdateTypeWrapper
         { Value = UpdateType.ChangeProductSelectionActive, JsonName = "changeProductSelectionActive" };
 
@@ -1105,6 +1348,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeTaxCalculationMode = new UpdateTypeWrapper
         { Value = UpdateType.ChangeTaxCalculationMode, JsonName = "changeTaxCalculationMode" };
 
+        public static IUpdateType ChangeTaxCategory = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeTaxCategory, JsonName = "changeTaxCategory" };
+
         public static IUpdateType ChangeTaxMode = new UpdateTypeWrapper
         { Value = UpdateType.ChangeTaxMode, JsonName = "changeTaxMode" };
 
@@ -1120,6 +1366,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType ChangeTextLineItemsOrder = new UpdateTypeWrapper
         { Value = UpdateType.ChangeTextLineItemsOrder, JsonName = "changeTextLineItemsOrder" };
 
+        public static IUpdateType ChangeTopLevelUnit = new UpdateTypeWrapper
+        { Value = UpdateType.ChangeTopLevelUnit, JsonName = "changeTopLevelUnit" };
+
         public static IUpdateType ChangeTransactionInteractionId = new UpdateTypeWrapper
         { Value = UpdateType.ChangeTransactionInteractionId, JsonName = "changeTransactionInteractionId" };
 
@@ -1134,6 +1383,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType ChangeValue = new UpdateTypeWrapper
         { Value = UpdateType.ChangeValue, JsonName = "changeValue" };
+
+        public static IUpdateType ExcludeProduct = new UpdateTypeWrapper
+        { Value = UpdateType.ExcludeProduct, JsonName = "excludeProduct" };
 
         public static IUpdateType MoveImageToPosition = new UpdateTypeWrapper
         { Value = UpdateType.MoveImageToPosition, JsonName = "moveImageToPosition" };
@@ -1207,8 +1459,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType RemoveRoles = new UpdateTypeWrapper
         { Value = UpdateType.RemoveRoles, JsonName = "removeRoles" };
 
+        public static IUpdateType RemoveShipping = new UpdateTypeWrapper
+        { Value = UpdateType.RemoveShipping, JsonName = "removeShipping" };
+
         public static IUpdateType RemoveShippingAddressId = new UpdateTypeWrapper
         { Value = UpdateType.RemoveShippingAddressId, JsonName = "removeShippingAddressId" };
+
+        public static IUpdateType RemoveShippingRate = new UpdateTypeWrapper
+        { Value = UpdateType.RemoveShippingRate, JsonName = "removeShippingRate" };
 
         public static IUpdateType RemoveTaxRate = new UpdateTypeWrapper
         { Value = UpdateType.RemoveTaxRate, JsonName = "removeTaxRate" };
@@ -1219,8 +1477,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType RemoveVariant = new UpdateTypeWrapper
         { Value = UpdateType.RemoveVariant, JsonName = "removeVariant" };
 
+        public static IUpdateType RemoveZone = new UpdateTypeWrapper
+        { Value = UpdateType.RemoveZone, JsonName = "removeZone" };
+
+        public static IUpdateType ReplaceTaxRate = new UpdateTypeWrapper
+        { Value = UpdateType.ReplaceTaxRate, JsonName = "replaceTaxRate" };
+
         public static IUpdateType RequestQuoteRenegotiation = new UpdateTypeWrapper
         { Value = UpdateType.RequestQuoteRenegotiation, JsonName = "requestQuoteRenegotiation" };
+
+        public static IUpdateType RevertStagedChanges = new UpdateTypeWrapper
+        { Value = UpdateType.RevertStagedChanges, JsonName = "revertStagedChanges" };
+
+        public static IUpdateType RevertStagedVariantChanges = new UpdateTypeWrapper
+        { Value = UpdateType.RevertStagedVariantChanges, JsonName = "revertStagedVariantChanges" };
 
         public static IUpdateType SetAddress = new UpdateTypeWrapper
         { Value = UpdateType.SetAddress, JsonName = "setAddress" };
@@ -1230,6 +1500,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetAddressCustomType = new UpdateTypeWrapper
         { Value = UpdateType.SetAddressCustomType, JsonName = "setAddressCustomType" };
+
+        public static IUpdateType SetAncestors = new UpdateTypeWrapper
+        { Value = UpdateType.SetAncestors, JsonName = "setAncestors" };
 
         public static IUpdateType SetAnonymousId = new UpdateTypeWrapper
         { Value = UpdateType.SetAnonymousId, JsonName = "setAnonymousId" };
@@ -1246,14 +1519,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetAssetDescription = new UpdateTypeWrapper
         { Value = UpdateType.SetAssetDescription, JsonName = "setAssetDescription" };
 
+        public static IUpdateType SetAssetKey = new UpdateTypeWrapper
+        { Value = UpdateType.SetAssetKey, JsonName = "setAssetKey" };
+
         public static IUpdateType SetAssetSources = new UpdateTypeWrapper
         { Value = UpdateType.SetAssetSources, JsonName = "setAssetSources" };
 
         public static IUpdateType SetAssetTags = new UpdateTypeWrapper
         { Value = UpdateType.SetAssetTags, JsonName = "setAssetTags" };
 
-        public static IUpdateType SetAssetKey = new UpdateTypeWrapper
-        { Value = UpdateType.SetAssetKey, JsonName = "setAssetKey" };
+        public static IUpdateType SetAssociates = new UpdateTypeWrapper
+        { Value = UpdateType.SetAssociates, JsonName = "setAssociates" };
 
         public static IUpdateType SetAttribute = new UpdateTypeWrapper
         { Value = UpdateType.SetAttribute, JsonName = "setAttribute" };
@@ -1266,6 +1542,15 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetBillingAddress = new UpdateTypeWrapper
         { Value = UpdateType.SetBillingAddress, JsonName = "setBillingAddress" };
+
+        public static IUpdateType SetBillingAddressCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetBillingAddressCustomField, JsonName = "setBillingAddressCustomField" };
+
+        public static IUpdateType SetBillingAddressCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetBillingAddressCustomType, JsonName = "setBillingAddressCustomType" };
+
+        public static IUpdateType SetBusinessUnit = new UpdateTypeWrapper
+        { Value = UpdateType.SetBusinessUnit, JsonName = "setBusinessUnit" };
 
         public static IUpdateType SetCartPredicate = new UpdateTypeWrapper
         { Value = UpdateType.SetCartPredicate, JsonName = "setCartPredicate" };
@@ -1293,6 +1578,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetCustomLineItemCustomType = new UpdateTypeWrapper
         { Value = UpdateType.SetCustomLineItemCustomType, JsonName = "setCustomLineItemCustomType" };
+
+        public static IUpdateType SetCustomLineItemDiscountedPrice = new UpdateTypeWrapper
+        { Value = UpdateType.SetCustomLineItemDiscountedPrice, JsonName = "setCustomLineItemDiscountedPrice" };
+
+        public static IUpdateType SetCustomLineItemDiscountedPricePerQuantity = new UpdateTypeWrapper
+        { Value = UpdateType.SetCustomLineItemDiscountedPricePerQuantity, JsonName = "setCustomLineItemDiscountedPricePerQuantity" };
 
         public static IUpdateType SetCustomLineItemMoney = new UpdateTypeWrapper
         { Value = UpdateType.SetCustomLineItemMoney, JsonName = "setCustomLineItemMoney" };
@@ -1330,6 +1621,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetCustomerGroup = new UpdateTypeWrapper
         { Value = UpdateType.SetCustomerGroup, JsonName = "setCustomerGroup" };
 
+        public static IUpdateType SetCustomerGroupAssignments = new UpdateTypeWrapper
+        { Value = UpdateType.SetCustomerGroupAssignments, JsonName = "setCustomerGroupAssignments" };
+
         public static IUpdateType SetCustomerId = new UpdateTypeWrapper
         { Value = UpdateType.SetCustomerId, JsonName = "setCustomerId" };
 
@@ -1351,11 +1645,29 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetDeliveryAddress = new UpdateTypeWrapper
         { Value = UpdateType.SetDeliveryAddress, JsonName = "setDeliveryAddress" };
 
+        public static IUpdateType SetDeliveryAddressCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetDeliveryAddressCustomField, JsonName = "setDeliveryAddressCustomField" };
+
+        public static IUpdateType SetDeliveryAddressCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetDeliveryAddressCustomType, JsonName = "setDeliveryAddressCustomType" };
+
+        public static IUpdateType SetDeliveryCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetDeliveryCustomField, JsonName = "setDeliveryCustomField" };
+
+        public static IUpdateType SetDeliveryCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetDeliveryCustomType, JsonName = "setDeliveryCustomType" };
+
         public static IUpdateType SetDeliveryItems = new UpdateTypeWrapper
         { Value = UpdateType.SetDeliveryItems, JsonName = "setDeliveryItems" };
 
         public static IUpdateType SetDescription = new UpdateTypeWrapper
         { Value = UpdateType.SetDescription, JsonName = "setDescription" };
+
+        public static IUpdateType SetDirectDiscounts = new UpdateTypeWrapper
+        { Value = UpdateType.SetDirectDiscounts, JsonName = "setDirectDiscounts" };
+
+        public static IUpdateType SetDiscountOnTotalPrice = new UpdateTypeWrapper
+        { Value = UpdateType.SetDiscountOnTotalPrice, JsonName = "setDiscountOnTotalPrice" };
 
         public static IUpdateType SetDiscountedPrice = new UpdateTypeWrapper
         { Value = UpdateType.SetDiscountedPrice, JsonName = "setDiscountedPrice" };
@@ -1378,6 +1690,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetImageLabel = new UpdateTypeWrapper
         { Value = UpdateType.SetImageLabel, JsonName = "setImageLabel" };
 
+        public static IUpdateType SetInheritedAssociates = new UpdateTypeWrapper
+        { Value = UpdateType.SetInheritedAssociates, JsonName = "setInheritedAssociates" };
+
+        public static IUpdateType SetInheritedStores = new UpdateTypeWrapper
+        { Value = UpdateType.SetInheritedStores, JsonName = "setInheritedStores" };
+
         public static IUpdateType SetInputTip = new UpdateTypeWrapper
         { Value = UpdateType.SetInputTip, JsonName = "setInputTip" };
 
@@ -1386,6 +1704,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetIsValid = new UpdateTypeWrapper
         { Value = UpdateType.SetIsValid, JsonName = "setIsValid" };
+
+        public static IUpdateType SetItemShippingAddressCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetItemShippingAddressCustomField, JsonName = "setItemShippingAddressCustomField" };
+
+        public static IUpdateType SetItemShippingAddressCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetItemShippingAddressCustomType, JsonName = "setItemShippingAddressCustomType" };
 
         public static IUpdateType SetKey = new UpdateTypeWrapper
         { Value = UpdateType.SetKey, JsonName = "setKey" };
@@ -1441,11 +1765,20 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetLocale = new UpdateTypeWrapper
         { Value = UpdateType.SetLocale, JsonName = "setLocale" };
 
+        public static IUpdateType SetLocalizedDescription = new UpdateTypeWrapper
+        { Value = UpdateType.SetLocalizedDescription, JsonName = "setLocalizedDescription" };
+
+        public static IUpdateType SetLocalizedName = new UpdateTypeWrapper
+        { Value = UpdateType.SetLocalizedName, JsonName = "setLocalizedName" };
+
         public static IUpdateType SetMaxApplications = new UpdateTypeWrapper
         { Value = UpdateType.SetMaxApplications, JsonName = "setMaxApplications" };
 
         public static IUpdateType SetMaxApplicationsPerCustomer = new UpdateTypeWrapper
         { Value = UpdateType.SetMaxApplicationsPerCustomer, JsonName = "setMaxApplicationsPerCustomer" };
+
+        public static IUpdateType SetMaxCartQuantity = new UpdateTypeWrapper
+        { Value = UpdateType.SetMaxCartQuantity, JsonName = "setMaxCartQuantity" };
 
         public static IUpdateType SetMetaDescription = new UpdateTypeWrapper
         { Value = UpdateType.SetMetaDescription, JsonName = "setMetaDescription" };
@@ -1468,6 +1801,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetMiddleName = new UpdateTypeWrapper
         { Value = UpdateType.SetMiddleName, JsonName = "setMiddleName" };
 
+        public static IUpdateType SetMinCartQuantity = new UpdateTypeWrapper
+        { Value = UpdateType.SetMinCartQuantity, JsonName = "setMinCartQuantity" };
+
         public static IUpdateType SetName = new UpdateTypeWrapper
         { Value = UpdateType.SetName, JsonName = "setName" };
 
@@ -1483,6 +1819,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetOrderTotalTax = new UpdateTypeWrapper
         { Value = UpdateType.SetOrderTotalTax, JsonName = "setOrderTotalTax" };
 
+        public static IUpdateType SetParcelCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetParcelCustomField, JsonName = "setParcelCustomField" };
+
+        public static IUpdateType SetParcelCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetParcelCustomType, JsonName = "setParcelCustomType" };
+
         public static IUpdateType SetParcelItems = new UpdateTypeWrapper
         { Value = UpdateType.SetParcelItems, JsonName = "setParcelItems" };
 
@@ -1495,8 +1837,23 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetPassword = new UpdateTypeWrapper
         { Value = UpdateType.SetPassword, JsonName = "setPassword" };
 
+        public static IUpdateType SetPredicate = new UpdateTypeWrapper
+        { Value = UpdateType.SetPredicate, JsonName = "setPredicate" };
+
+        public static IUpdateType SetPriceKey = new UpdateTypeWrapper
+        { Value = UpdateType.SetPriceKey, JsonName = "setPriceKey" };
+
+        public static IUpdateType SetPriceMode = new UpdateTypeWrapper
+        { Value = UpdateType.SetPriceMode, JsonName = "setPriceMode" };
+
+        public static IUpdateType SetPriceTiers = new UpdateTypeWrapper
+        { Value = UpdateType.SetPriceTiers, JsonName = "setPriceTiers" };
+
         public static IUpdateType SetPrices = new UpdateTypeWrapper
         { Value = UpdateType.SetPrices, JsonName = "setPrices" };
+
+        public static IUpdateType SetProductAttribute = new UpdateTypeWrapper
+        { Value = UpdateType.SetProductAttribute, JsonName = "setProductAttribute" };
 
         public static IUpdateType SetProductCount = new UpdateTypeWrapper
         { Value = UpdateType.SetProductCount, JsonName = "setProductCount" };
@@ -1522,11 +1879,23 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetRating = new UpdateTypeWrapper
         { Value = UpdateType.SetRating, JsonName = "setRating" };
 
+        public static IUpdateType SetReferences = new UpdateTypeWrapper
+        { Value = UpdateType.SetReferences, JsonName = "setReferences" };
+
         public static IUpdateType SetReservations = new UpdateTypeWrapper
         { Value = UpdateType.SetReservations, JsonName = "setReservations" };
 
         public static IUpdateType SetRestockableInDays = new UpdateTypeWrapper
         { Value = UpdateType.SetRestockableInDays, JsonName = "setRestockableInDays" };
+
+        public static IUpdateType SetReturnInfo = new UpdateTypeWrapper
+        { Value = UpdateType.SetReturnInfo, JsonName = "setReturnInfo" };
+
+        public static IUpdateType SetReturnItemCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetReturnItemCustomField, JsonName = "setReturnItemCustomField" };
+
+        public static IUpdateType SetReturnItemCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetReturnItemCustomType, JsonName = "setReturnItemCustomType" };
 
         public static IUpdateType SetReturnPaymentState = new UpdateTypeWrapper
         { Value = UpdateType.SetReturnPaymentState, JsonName = "setReturnPaymentState" };
@@ -1549,6 +1918,21 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetShippingAddress = new UpdateTypeWrapper
         { Value = UpdateType.SetShippingAddress, JsonName = "setShippingAddress" };
 
+        public static IUpdateType SetShippingAddressCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingAddressCustomField, JsonName = "setShippingAddressCustomField" };
+
+        public static IUpdateType SetShippingAddressCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingAddressCustomType, JsonName = "setShippingAddressCustomType" };
+
+        public static IUpdateType SetShippingCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingCustomField, JsonName = "setShippingCustomField" };
+
+        public static IUpdateType SetShippingCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingCustomType, JsonName = "setShippingCustomType" };
+
+        public static IUpdateType SetShippingInfoDiscountedPrice = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingInfoDiscountedPrice, JsonName = "setShippingInfoDiscountedPrice" };
+
         public static IUpdateType SetShippingInfoPrice = new UpdateTypeWrapper
         { Value = UpdateType.SetShippingInfoPrice, JsonName = "setShippingInfoPrice" };
 
@@ -1560,6 +1944,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetShippingMethodTaxAmount = new UpdateTypeWrapper
         { Value = UpdateType.SetShippingMethodTaxAmount, JsonName = "setShippingMethodTaxAmount" };
+
+        public static IUpdateType SetShippingMethodTaxCategory = new UpdateTypeWrapper
+        { Value = UpdateType.SetShippingMethodTaxCategory, JsonName = "setShippingMethodTaxCategory" };
 
         public static IUpdateType SetShippingMethodTaxRate = new UpdateTypeWrapper
         { Value = UpdateType.SetShippingMethodTaxRate, JsonName = "setShippingMethodTaxRate" };
@@ -1603,6 +1990,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetTaxCategory = new UpdateTypeWrapper
         { Value = UpdateType.SetTaxCategory, JsonName = "setTaxCategory" };
 
+        public static IUpdateType SetTaxedShippingPrice = new UpdateTypeWrapper
+        { Value = UpdateType.SetTaxedShippingPrice, JsonName = "setTaxedShippingPrice" };
+
         public static IUpdateType SetText = new UpdateTypeWrapper
         { Value = UpdateType.SetText, JsonName = "setText" };
 
@@ -1618,8 +2008,17 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetTitle = new UpdateTypeWrapper
         { Value = UpdateType.SetTitle, JsonName = "setTitle" };
 
+        public static IUpdateType SetTransactionCustomField = new UpdateTypeWrapper
+        { Value = UpdateType.SetTransactionCustomField, JsonName = "setTransactionCustomField" };
+
+        public static IUpdateType SetTransactionCustomType = new UpdateTypeWrapper
+        { Value = UpdateType.SetTransactionCustomType, JsonName = "setTransactionCustomType" };
+
         public static IUpdateType SetTransitions = new UpdateTypeWrapper
         { Value = UpdateType.SetTransitions, JsonName = "setTransitions" };
+
+        public static IUpdateType SetUnitType = new UpdateTypeWrapper
+        { Value = UpdateType.SetUnitType, JsonName = "setUnitType" };
 
         public static IUpdateType SetValidFrom = new UpdateTypeWrapper
         { Value = UpdateType.SetValidFrom, JsonName = "setValidFrom" };
@@ -1638,6 +2037,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public static IUpdateType SetVariantAvailability = new UpdateTypeWrapper
         { Value = UpdateType.SetVariantAvailability, JsonName = "setVariantAvailability" };
+
+        public static IUpdateType SetVariantExclusion = new UpdateTypeWrapper
+        { Value = UpdateType.SetVariantExclusion, JsonName = "setVariantExclusion" };
 
         public static IUpdateType SetVariantSelection = new UpdateTypeWrapper
         { Value = UpdateType.SetVariantSelection, JsonName = "setVariantSelection" };
@@ -1697,14 +2099,19 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  AddProperty ,
                  AddReturnInfo ,
                  AddRoles ,
+                 AddShipping ,
                  AddShippingAddressId ,
+                 AddShippingRate ,
                  AddTaxRate ,
                  AddTextLineItem ,
                  AddToCategory ,
                  AddTransaction ,
                  AddVariant ,
+                 AddZone ,
+                 ChangeActive ,
                  ChangeAddress ,
                  ChangeAmountPlanned ,
+                 ChangeApprovalRuleMode ,
                  ChangeAssetName ,
                  ChangeAssetOrder ,
                  ChangeAssociate ,
@@ -1714,21 +2121,29 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  ChangeAttributeOrderByName ,
                  ChangeCartDiscounts ,
                  ChangeCartPredicate ,
+                 ChangeCustomLineItemPriceRoundingMode ,
                  ChangeCustomLineItemQuantity ,
+                 ChangeCustomer ,
                  ChangeDescription ,
+                 ChangeDiscountTypeCombination ,
                  ChangeEmail ,
                  ChangeEnumKey ,
                  ChangeEnumValueLabel ,
                  ChangeEnumValueOrder ,
                  ChangeFieldDefinitionOrder ,
                  ChangeGroups ,
+                 ChangeIncludedInStatistics ,
                  ChangeInitial ,
                  ChangeInputHint ,
                  ChangeIsActive ,
+                 ChangeIsDefault ,
                  ChangeIsSearchable ,
                  ChangeKey ,
                  ChangeLabel ,
+                 ChangeLastVariantId ,
                  ChangeLineItemName ,
+                 ChangeLineItemPriceRoundingMode ,
+                 ChangeLineItemPublished ,
                  ChangeLineItemQuantity ,
                  ChangeLineItemsOrder ,
                  ChangeLocalizedEnumValueLabel ,
@@ -1743,6 +2158,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  ChangePlainEnumValueLabel ,
                  ChangePredicate ,
                  ChangePrice ,
+                 ChangePriceRoundingMode ,
                  ChangeProductSelectionActive ,
                  ChangeQuantity ,
                  ChangeQuoteRequestState ,
@@ -1757,16 +2173,19 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  ChangeStatus ,
                  ChangeTarget ,
                  ChangeTaxCalculationMode ,
+                 ChangeTaxCategory ,
                  ChangeTaxMode ,
                  ChangeTaxRoundingMode ,
                  ChangeTextLineItemName ,
                  ChangeTextLineItemQuantity ,
                  ChangeTextLineItemsOrder ,
+                 ChangeTopLevelUnit ,
                  ChangeTransactionInteractionId ,
                  ChangeTransactionState ,
                  ChangeTransactionTimestamp ,
                  ChangeType ,
                  ChangeValue ,
+                 ExcludeProduct ,
                  MoveImageToPosition ,
                  Publish ,
                  RemoveAddress ,
@@ -1791,26 +2210,37 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  RemoveProductSelection ,
                  RemoveProperty ,
                  RemoveRoles ,
+                 RemoveShipping ,
                  RemoveShippingAddressId ,
+                 RemoveShippingRate ,
                  RemoveTaxRate ,
                  RemoveTextLineItem ,
                  RemoveVariant ,
+                 RemoveZone ,
+                 ReplaceTaxRate ,
                  RequestQuoteRenegotiation ,
+                 RevertStagedChanges ,
+                 RevertStagedVariantChanges ,
                  SetAddress ,
                  SetAddressCustomField ,
                  SetAddressCustomType ,
+                 SetAncestors ,
                  SetAnonymousId ,
                  SetApplicationVersion ,
                  SetAssetCustomField ,
                  SetAssetCustomType ,
                  SetAssetDescription ,
+                 SetAssetKey ,
                  SetAssetSources ,
                  SetAssetTags ,
-                 SetAssetKey ,
+                 SetAssociates ,
                  SetAttribute ,
                  SetAuthenticationMode ,
                  SetAuthorName ,
                  SetBillingAddress ,
+                 SetBillingAddressCustomField ,
+                 SetBillingAddressCustomType ,
+                 SetBusinessUnit ,
                  SetCartPredicate ,
                  SetCategoryOrderHint ,
                  SetCompanyName ,
@@ -1820,6 +2250,8 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetCustomField ,
                  SetCustomLineItemCustomField ,
                  SetCustomLineItemCustomType ,
+                 SetCustomLineItemDiscountedPrice ,
+                 SetCustomLineItemDiscountedPricePerQuantity ,
                  SetCustomLineItemMoney ,
                  SetCustomLineItemShippingDetails ,
                  SetCustomLineItemTaxAmount ,
@@ -1832,6 +2264,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetCustomer ,
                  SetCustomerEmail ,
                  SetCustomerGroup ,
+                 SetCustomerGroupAssignments ,
                  SetCustomerId ,
                  SetCustomerNumber ,
                  SetDateOfBirth ,
@@ -1839,8 +2272,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetDefaultShippingAddress ,
                  SetDeleteDaysAfterLastModification ,
                  SetDeliveryAddress ,
+                 SetDeliveryAddressCustomField ,
+                 SetDeliveryAddressCustomType ,
+                 SetDeliveryCustomField ,
+                 SetDeliveryCustomType ,
                  SetDeliveryItems ,
                  SetDescription ,
+                 SetDirectDiscounts ,
+                 SetDiscountOnTotalPrice ,
                  SetDiscountedPrice ,
                  SetDistributionChannels ,
                  SetExpectedDelivery ,
@@ -1848,9 +2287,13 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetFirstName ,
                  SetGeoLocation ,
                  SetImageLabel ,
+                 SetInheritedAssociates ,
+                 SetInheritedStores ,
                  SetInputTip ,
                  SetInterfaceId ,
                  SetIsValid ,
+                 SetItemShippingAddressCustomField ,
+                 SetItemShippingAddressCustomType ,
                  SetKey ,
                  SetLanguages ,
                  SetLastName ,
@@ -1869,8 +2312,11 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetLineItemTaxedPrice ,
                  SetLineItemTotalPrice ,
                  SetLocale ,
+                 SetLocalizedDescription ,
+                 SetLocalizedName ,
                  SetMaxApplications ,
                  SetMaxApplicationsPerCustomer ,
+                 SetMaxCartQuantity ,
                  SetMetaDescription ,
                  SetMetaKeywords ,
                  SetMetaTitle ,
@@ -1878,16 +2324,24 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetMethodInfoMethod ,
                  SetMethodInfoName ,
                  SetMiddleName ,
+                 SetMinCartQuantity ,
                  SetName ,
                  SetOrderNumber ,
                  SetOrderTaxedPrice ,
                  SetOrderTotalPrice ,
                  SetOrderTotalTax ,
+                 SetParcelCustomField ,
+                 SetParcelCustomType ,
                  SetParcelItems ,
                  SetParcelMeasurements ,
                  SetParcelTrackingData ,
                  SetPassword ,
+                 SetPredicate ,
+                 SetPriceKey ,
+                 SetPriceMode ,
+                 SetPriceTiers ,
                  SetPrices ,
+                 SetProductAttribute ,
                  SetProductCount ,
                  SetProductPriceCustomField ,
                  SetProductPriceCustomType ,
@@ -1896,8 +2350,12 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetProperty ,
                  SetPurchaseOrderNumber ,
                  SetRating ,
+                 SetReferences ,
                  SetReservations ,
                  SetRestockableInDays ,
+                 SetReturnInfo ,
+                 SetReturnItemCustomField ,
+                 SetReturnItemCustomType ,
                  SetReturnPaymentState ,
                  SetReturnShipmentState ,
                  SetRoles ,
@@ -1905,10 +2363,16 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetSearchKeywords ,
                  SetSellerComment ,
                  SetShippingAddress ,
+                 SetShippingAddressCustomField ,
+                 SetShippingAddressCustomType ,
+                 SetShippingCustomField ,
+                 SetShippingCustomType ,
+                 SetShippingInfoDiscountedPrice ,
                  SetShippingInfoPrice ,
                  SetShippingInfoTaxedPrice ,
                  SetShippingMethod ,
                  SetShippingMethodTaxAmount ,
+                 SetShippingMethodTaxCategory ,
                  SetShippingMethodTaxRate ,
                  SetShippingRate ,
                  SetShippingRateInput ,
@@ -1923,18 +2387,23 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetSupplyChannels ,
                  SetTarget ,
                  SetTaxCategory ,
+                 SetTaxedShippingPrice ,
                  SetText ,
                  SetTextLineItemCustomField ,
                  SetTextLineItemCustomType ,
                  SetTextLineItemDescription ,
                  SetTitle ,
+                 SetTransactionCustomField ,
+                 SetTransactionCustomType ,
                  SetTransitions ,
+                 SetUnitType ,
                  SetValidFrom ,
                  SetValidFromAndUntil ,
                  SetValidTo ,
                  SetValidUntil ,
                  SetValue ,
                  SetVariantAvailability ,
+                 SetVariantExclusion ,
                  SetVariantSelection ,
                  SetVatId ,
                  TransitionCustomLineItemState ,
