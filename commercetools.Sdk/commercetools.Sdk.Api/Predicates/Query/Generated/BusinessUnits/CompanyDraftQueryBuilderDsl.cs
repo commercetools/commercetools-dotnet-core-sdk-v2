@@ -135,6 +135,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
                 CompanyDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CompanyDraftQueryBuilderDsl> CustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CompanyDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentDraftQueryBuilderDsl.Of())),
+                CompanyDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CompanyDraftQueryBuilderDsl> CustomerGroupAssignments()
+        {
+            return new CollectionPredicateBuilder<CompanyDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
+                    p => new CombinationQueryPredicate<CompanyDraftQueryBuilderDsl>(p, CompanyDraftQueryBuilderDsl.Of));
+        }
 
     }
 }

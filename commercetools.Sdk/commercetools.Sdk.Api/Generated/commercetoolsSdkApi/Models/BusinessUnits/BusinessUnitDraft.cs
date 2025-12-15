@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System.Collections.Generic;
@@ -50,5 +51,9 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         public int? DefaultBillingAddress { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IList<ICustomerGroupAssignmentDraft> CustomerGroupAssignments { get; set; }
+
+        public IEnumerable<ICustomerGroupAssignmentDraft> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
     }
 }

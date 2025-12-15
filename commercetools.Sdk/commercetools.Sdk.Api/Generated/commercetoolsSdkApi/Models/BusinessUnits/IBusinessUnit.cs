@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Customers;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -47,6 +48,10 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
         string ContactEmail { get; set; }
 
         ICustomFields Custom { get; set; }
+
+        IList<ICustomerGroupAssignment> CustomerGroupAssignments { get; set; }
+
+        IEnumerable<ICustomerGroupAssignment> CustomerGroupAssignmentsEnumerable { set => CustomerGroupAssignments = value.ToList(); }
 
         IList<IAddress> Addresses { get; set; }
 

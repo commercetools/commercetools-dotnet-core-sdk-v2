@@ -128,6 +128,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.BusinessUnits
                 BusinessUnitQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> CustomerGroupAssignments(
+            Func<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BusinessUnitQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("customerGroupAssignments"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Customers.CustomerGroupAssignmentQueryBuilderDsl.Of())),
+                BusinessUnitQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<BusinessUnitQueryBuilderDsl> CustomerGroupAssignments()
+        {
+            return new CollectionPredicateBuilder<BusinessUnitQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("customerGroupAssignments")),
+                    p => new CombinationQueryPredicate<BusinessUnitQueryBuilderDsl>(p, BusinessUnitQueryBuilderDsl.Of));
+        }
         public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> Addresses(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.AddressQueryBuilderDsl>> fn)
         {

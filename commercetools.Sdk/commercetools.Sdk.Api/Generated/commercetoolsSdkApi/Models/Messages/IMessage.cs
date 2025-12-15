@@ -43,6 +43,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("BusinessUnitBillingAddressRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitBillingAddressRemovedMessage))]
     [SubTypeDiscriminator("BusinessUnitContactEmailSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitContactEmailSetMessage))]
     [SubTypeDiscriminator("BusinessUnitCreated", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessage))]
+    [SubTypeDiscriminator("BusinessUnitCustomerGroupAssignmentAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentAddedMessage))]
+    [SubTypeDiscriminator("BusinessUnitCustomerGroupAssignmentRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentRemovedMessage))]
+    [SubTypeDiscriminator("BusinessUnitCustomerGroupAssignmentsSet", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentsSetMessage))]
     [SubTypeDiscriminator("BusinessUnitCustomFieldAdded", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldAddedMessage))]
     [SubTypeDiscriminator("BusinessUnitCustomFieldChanged", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldChangedMessage))]
     [SubTypeDiscriminator("BusinessUnitCustomFieldRemoved", typeof(commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomFieldRemovedMessage))]
@@ -557,6 +560,24 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessage BusinessUnitCreated(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCreatedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentAddedMessage BusinessUnitCustomerGroupAssignmentAdded(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentAddedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentAddedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentRemovedMessage BusinessUnitCustomerGroupAssignmentRemoved(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentRemovedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentRemovedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentsSetMessage BusinessUnitCustomerGroupAssignmentsSet(Action<commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentsSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.BusinessUnitCustomerGroupAssignmentsSetMessage();
             init?.Invoke(t);
             return t;
         }
