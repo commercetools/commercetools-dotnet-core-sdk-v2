@@ -54,8 +54,10 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeCartDiscountsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCartDiscountsChange))]
     [SubTypeDiscriminator("ChangeCartPredicateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCartPredicateChange))]
     [SubTypeDiscriminator("ChangeCustomerChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomerChange))]
+    [SubTypeDiscriminator("ChangeCustomLineItemPriceRoundingModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemPriceRoundingModeChange))]
     [SubTypeDiscriminator("ChangeCustomLineItemQuantityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemQuantityChange))]
     [SubTypeDiscriminator("ChangeDescriptionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeDescriptionChange))]
+    [SubTypeDiscriminator("ChangeDiscountTypeCombinationChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeDiscountTypeCombinationChange))]
     [SubTypeDiscriminator("ChangeEmailChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeEmailChange))]
     [SubTypeDiscriminator("ChangeEnumValueLabelChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeEnumValueLabelChange))]
     [SubTypeDiscriminator("ChangeEnumValueOrderChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeEnumValueOrderChange))]
@@ -71,6 +73,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeLabelChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLabelChange))]
     [SubTypeDiscriminator("ChangeLastVariantIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLastVariantIdChange))]
     [SubTypeDiscriminator("ChangeLineItemNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemNameChange))]
+    [SubTypeDiscriminator("ChangeLineItemPriceRoundingModeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemPriceRoundingModeChange))]
     [SubTypeDiscriminator("ChangeLineItemPublishedChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemPublishedChange))]
     [SubTypeDiscriminator("ChangeLineItemQuantityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemQuantityChange))]
     [SubTypeDiscriminator("ChangeLocalizedDescriptionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeLocalizedDescriptionChange))]
@@ -212,6 +215,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetDeliveryCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDeliveryCustomTypeChange))]
     [SubTypeDiscriminator("SetDeliveryItemsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDeliveryItemsChange))]
     [SubTypeDiscriminator("SetDescriptionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDescriptionChange))]
+    [SubTypeDiscriminator("SetDirectDiscountsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDirectDiscountsChange))]
     [SubTypeDiscriminator("SetDiscountedPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDiscountedPriceChange))]
     [SubTypeDiscriminator("SetDiscountOnTotalPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDiscountOnTotalPriceChange))]
     [SubTypeDiscriminator("SetDistributionChannelsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetDistributionChannelsChange))]
@@ -282,6 +286,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetPropertyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetPropertyChange))]
     [SubTypeDiscriminator("SetPurchaseOrderNumberChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetPurchaseOrderNumberChange))]
     [SubTypeDiscriminator("SetRatingChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetRatingChange))]
+    [SubTypeDiscriminator("SetReferencesChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetReferencesChange))]
     [SubTypeDiscriminator("SetReservationsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange))]
     [SubTypeDiscriminator("SetRestockableInDaysChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetRestockableInDaysChange))]
     [SubTypeDiscriminator("SetReturnInfoChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetReturnInfoChange))]
@@ -299,10 +304,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetShippingAddressCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingAddressCustomTypeChange))]
     [SubTypeDiscriminator("SetShippingCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingCustomFieldChange))]
     [SubTypeDiscriminator("SetShippingCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingCustomTypeChange))]
+    [SubTypeDiscriminator("SetShippingInfoDiscountedPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoDiscountedPriceChange))]
     [SubTypeDiscriminator("SetShippingInfoPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange))]
     [SubTypeDiscriminator("SetShippingInfoTaxedPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoTaxedPriceChange))]
     [SubTypeDiscriminator("SetShippingMethodChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodChange))]
     [SubTypeDiscriminator("SetShippingMethodTaxAmountChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxAmountChange))]
+    [SubTypeDiscriminator("SetShippingMethodTaxCategoryChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxCategoryChange))]
     [SubTypeDiscriminator("SetShippingMethodTaxRateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxRateChange))]
     [SubTypeDiscriminator("SetShippingRateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingRateChange))]
     [SubTypeDiscriminator("SetShippingRateInputChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetShippingRateInputChange))]
@@ -320,6 +327,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetSupplyChannelsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetSupplyChannelsChange))]
     [SubTypeDiscriminator("SetTargetChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTargetChange))]
     [SubTypeDiscriminator("SetTaxCategoryChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTaxCategoryChange))]
+    [SubTypeDiscriminator("SetTaxedShippingPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTaxedShippingPriceChange))]
     [SubTypeDiscriminator("SetTextChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTextChange))]
     [SubTypeDiscriminator("SetTextLineItemCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTextLineItemCustomFieldChange))]
     [SubTypeDiscriminator("SetTextLineItemCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTextLineItemCustomTypeChange))]
@@ -338,6 +346,30 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetVariantExclusionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVariantExclusionChange))]
     [SubTypeDiscriminator("SetVariantSelectionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVariantSelectionChange))]
     [SubTypeDiscriminator("SetVatIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetVatIdChange))]
+    [SubTypeDiscriminator("ShippingMethodAddShippingRateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddShippingRateChange))]
+    [SubTypeDiscriminator("ShippingMethodAddZoneChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddZoneChange))]
+    [SubTypeDiscriminator("ShippingMethodChangeActiveChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeActiveChange))]
+    [SubTypeDiscriminator("ShippingMethodChangeIsDefaultChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeIsDefaultChange))]
+    [SubTypeDiscriminator("ShippingMethodChangeNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeNameChange))]
+    [SubTypeDiscriminator("ShippingMethodChangeTaxCategoryChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeTaxCategoryChange))]
+    [SubTypeDiscriminator("ShippingMethodRemoveShippingRateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveShippingRateChange))]
+    [SubTypeDiscriminator("ShippingMethodRemoveZoneChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveZoneChange))]
+    [SubTypeDiscriminator("ShippingMethodSetCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomFieldChange))]
+    [SubTypeDiscriminator("ShippingMethodSetCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomTypeChange))]
+    [SubTypeDiscriminator("ShippingMethodSetKeyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetKeyChange))]
+    [SubTypeDiscriminator("ShippingMethodSetLocalizedDescriptionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedDescriptionChange))]
+    [SubTypeDiscriminator("ShippingMethodSetLocalizedNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedNameChange))]
+    [SubTypeDiscriminator("ShippingMethodSetPredicateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetPredicateChange))]
+    [SubTypeDiscriminator("StandalonePriceChangeActiveChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeActiveChange))]
+    [SubTypeDiscriminator("StandalonePriceChangeValueChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeValueChange))]
+    [SubTypeDiscriminator("StandalonePriceSetCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomFieldChange))]
+    [SubTypeDiscriminator("StandalonePriceSetCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomTypeChange))]
+    [SubTypeDiscriminator("StandalonePriceSetDiscountedPriceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetDiscountedPriceChange))]
+    [SubTypeDiscriminator("StandalonePriceSetKeyChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetKeyChange))]
+    [SubTypeDiscriminator("StandalonePriceSetPriceTiersChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetPriceTiersChange))]
+    [SubTypeDiscriminator("StandalonePriceSetValidFromAndUntilChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromAndUntilChange))]
+    [SubTypeDiscriminator("StandalonePriceSetValidFromChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromChange))]
+    [SubTypeDiscriminator("StandalonePriceSetValidUntilChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidUntilChange))]
     [SubTypeDiscriminator("TransitionCustomLineItemStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionCustomLineItemStateChange))]
     [SubTypeDiscriminator("TransitionLineItemStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionLineItemStateChange))]
     [SubTypeDiscriminator("TransitionStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.TransitionStateChange))]
@@ -646,6 +678,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemPriceRoundingModeChange ChangeCustomLineItemPriceRoundingModeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemPriceRoundingModeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemPriceRoundingModeChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemQuantityChange ChangeCustomLineItemQuantityChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemQuantityChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeCustomLineItemQuantityChange();
@@ -655,6 +693,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeDescriptionChange ChangeDescriptionChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeDescriptionChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeDescriptionChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeDiscountTypeCombinationChange ChangeDiscountTypeCombinationChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeDiscountTypeCombinationChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeDiscountTypeCombinationChange();
             init?.Invoke(t);
             return t;
         }
@@ -745,6 +789,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemNameChange ChangeLineItemNameChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemNameChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemNameChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemPriceRoundingModeChange ChangeLineItemPriceRoundingModeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemPriceRoundingModeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeLineItemPriceRoundingModeChange();
             init?.Invoke(t);
             return t;
         }
@@ -1594,6 +1644,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetDirectDiscountsChange SetDirectDiscountsChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetDirectDiscountsChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetDirectDiscountsChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetDiscountedPriceChange SetDiscountedPriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetDiscountedPriceChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetDiscountedPriceChange();
@@ -2014,6 +2070,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetReferencesChange SetReferencesChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetReferencesChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetReferencesChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange SetReservationsChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetReservationsChange();
@@ -2116,6 +2178,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoDiscountedPriceChange SetShippingInfoDiscountedPriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoDiscountedPriceChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoDiscountedPriceChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange SetShippingInfoPriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetShippingInfoPriceChange();
@@ -2137,6 +2205,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxAmountChange SetShippingMethodTaxAmountChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxAmountChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxAmountChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxCategoryChange SetShippingMethodTaxCategoryChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxCategoryChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetShippingMethodTaxCategoryChange();
             init?.Invoke(t);
             return t;
         }
@@ -2239,6 +2313,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetTaxCategoryChange SetTaxCategoryChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetTaxCategoryChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetTaxCategoryChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetTaxedShippingPriceChange SetTaxedShippingPriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetTaxedShippingPriceChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetTaxedShippingPriceChange();
             init?.Invoke(t);
             return t;
         }
@@ -2347,6 +2427,150 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetVatIdChange SetVatIdChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetVatIdChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetVatIdChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddShippingRateChange ShippingMethodAddShippingRateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddShippingRateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddShippingRateChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddZoneChange ShippingMethodAddZoneChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddZoneChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodAddZoneChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeActiveChange ShippingMethodChangeActiveChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeActiveChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeActiveChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeIsDefaultChange ShippingMethodChangeIsDefaultChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeIsDefaultChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeIsDefaultChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeNameChange ShippingMethodChangeNameChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeNameChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeNameChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeTaxCategoryChange ShippingMethodChangeTaxCategoryChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeTaxCategoryChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodChangeTaxCategoryChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveShippingRateChange ShippingMethodRemoveShippingRateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveShippingRateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveShippingRateChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveZoneChange ShippingMethodRemoveZoneChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveZoneChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodRemoveZoneChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomFieldChange ShippingMethodSetCustomFieldChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomFieldChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomFieldChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomTypeChange ShippingMethodSetCustomTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomTypeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetCustomTypeChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetKeyChange ShippingMethodSetKeyChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetKeyChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetKeyChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedDescriptionChange ShippingMethodSetLocalizedDescriptionChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedDescriptionChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedDescriptionChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedNameChange ShippingMethodSetLocalizedNameChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedNameChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetLocalizedNameChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetPredicateChange ShippingMethodSetPredicateChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetPredicateChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ShippingMethodSetPredicateChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeActiveChange StandalonePriceChangeActiveChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeActiveChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeActiveChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeValueChange StandalonePriceChangeValueChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeValueChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceChangeValueChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomFieldChange StandalonePriceSetCustomFieldChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomFieldChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomFieldChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomTypeChange StandalonePriceSetCustomTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomTypeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetCustomTypeChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetDiscountedPriceChange StandalonePriceSetDiscountedPriceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetDiscountedPriceChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetDiscountedPriceChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetKeyChange StandalonePriceSetKeyChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetKeyChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetKeyChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetPriceTiersChange StandalonePriceSetPriceTiersChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetPriceTiersChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetPriceTiersChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromAndUntilChange StandalonePriceSetValidFromAndUntilChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromAndUntilChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromAndUntilChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromChange StandalonePriceSetValidFromChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidFromChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidUntilChange StandalonePriceSetValidUntilChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidUntilChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.StandalonePriceSetValidUntilChange();
             init?.Invoke(t);
             return t;
         }

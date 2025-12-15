@@ -16,7 +16,9 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
     [SubTypeDiscriminator("QuoteLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.QuoteLabel))]
     [SubTypeDiscriminator("QuoteRequestLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.QuoteRequestLabel))]
     [SubTypeDiscriminator("ReviewLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.ReviewLabel))]
+    [SubTypeDiscriminator("ShippingMethodLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.ShippingMethodLabel))]
     [SubTypeDiscriminator("StagedQuoteLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.StagedQuoteLabel))]
+    [SubTypeDiscriminator("StandalonePriceLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.StandalonePriceLabel))]
     [SubTypeDiscriminator("StringLabel", typeof(commercetools.Sdk.HistoryApi.Models.Labels.StringLabel))]
     public partial interface ILabel
     {
@@ -88,9 +90,21 @@ namespace commercetools.Sdk.HistoryApi.Models.Labels
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Labels.ShippingMethodLabel ShippingMethodLabel(Action<commercetools.Sdk.HistoryApi.Models.Labels.ShippingMethodLabel> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Labels.ShippingMethodLabel();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Labels.StagedQuoteLabel StagedQuoteLabel(Action<commercetools.Sdk.HistoryApi.Models.Labels.StagedQuoteLabel> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Labels.StagedQuoteLabel();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Labels.StandalonePriceLabel StandalonePriceLabel(Action<commercetools.Sdk.HistoryApi.Models.Labels.StandalonePriceLabel> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Labels.StandalonePriceLabel();
             init?.Invoke(t);
             return t;
         }
