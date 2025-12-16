@@ -76,6 +76,12 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("payment-interface-interaction")]
         PaymentInterfaceInteraction,
 
+        [Description("payment-method")]
+        PaymentMethod,
+
+        [Description("payment-method-info")]
+        PaymentMethodInfo,
+
         [Description("product-price")]
         ProductPrice,
 
@@ -205,6 +211,12 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId PaymentInterfaceInteraction = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.PaymentInterfaceInteraction, JsonName = "payment-interface-interaction" };
 
+        public static IResourceTypeId PaymentMethod = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.PaymentMethod, JsonName = "payment-method" };
+
+        public static IResourceTypeId PaymentMethodInfo = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.PaymentMethodInfo, JsonName = "payment-method-info" };
+
         public static IResourceTypeId ProductPrice = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.ProductPrice, JsonName = "product-price" };
 
@@ -272,6 +284,8 @@ namespace commercetools.Sdk.Api.Models.Types
                  OrderReturnItem ,
                  Payment ,
                  PaymentInterfaceInteraction ,
+                 PaymentMethod ,
+                 PaymentMethodInfo ,
                  ProductPrice ,
                  ProductSelection ,
                  ProductTailoring ,
