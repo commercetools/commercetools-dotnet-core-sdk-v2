@@ -124,12 +124,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomFieldActionQueryBuilderDsl.Of()),
                 MyCartUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetCustomLineItemRecurrenceInfo(
-            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl.Of()),
-                MyCartUpdateActionQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetCustomType(
             Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetCustomTypeActionQueryBuilderDsl>> fn)
         {
@@ -164,12 +158,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Me
             Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.Of()),
-                MyCartUpdateActionQueryBuilderDsl.Of);
-        }
-        public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetLineItemRecurrenceInfo(
-            Func<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl.Of()),
                 MyCartUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> AsSetLineItemShippingDetails(
