@@ -23,13 +23,11 @@ namespace commercetools.Sdk.Api.Models.Me
     [SubTypeDiscriminator("setCountry", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCountryAction))]
     [SubTypeDiscriminator("setCustomerEmail", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomerEmailAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomFieldAction))]
-    [SubTypeDiscriminator("setCustomLineItemRecurrenceInfo", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomLineItemRecurrenceInfoAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetDeleteDaysAfterLastModificationAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemCustomFieldAction))]
     [SubTypeDiscriminator("setLineItemCustomType", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemDistributionChannel", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemDistributionChannelAction))]
-    [SubTypeDiscriminator("setLineItemRecurrenceInfo", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemRecurrenceInfoAction))]
     [SubTypeDiscriminator("setLineItemShippingDetails", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemShippingDetailsAction))]
     [SubTypeDiscriminator("setLineItemSupplyChannel", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLineItemSupplyChannelAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Sdk.Api.Models.Me.MyCartSetLocaleAction))]
@@ -148,12 +146,6 @@ namespace commercetools.Sdk.Api.Models.Me
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Me.MyCartSetCustomLineItemRecurrenceInfoAction SetCustomLineItemRecurrenceInfo(Action<commercetools.Sdk.Api.Models.Me.MyCartSetCustomLineItemRecurrenceInfoAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Me.MyCartSetCustomLineItemRecurrenceInfoAction();
-            init?.Invoke(t);
-            return t;
-        }
         static commercetools.Sdk.Api.Models.Me.MyCartSetCustomTypeAction SetCustomType(Action<commercetools.Sdk.Api.Models.Me.MyCartSetCustomTypeAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Me.MyCartSetCustomTypeAction();
@@ -181,12 +173,6 @@ namespace commercetools.Sdk.Api.Models.Me
         static commercetools.Sdk.Api.Models.Me.MyCartSetLineItemDistributionChannelAction SetLineItemDistributionChannel(Action<commercetools.Sdk.Api.Models.Me.MyCartSetLineItemDistributionChannelAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Me.MyCartSetLineItemDistributionChannelAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Me.MyCartSetLineItemRecurrenceInfoAction SetLineItemRecurrenceInfo(Action<commercetools.Sdk.Api.Models.Me.MyCartSetLineItemRecurrenceInfoAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Me.MyCartSetLineItemRecurrenceInfoAction();
             init?.Invoke(t);
             return t;
         }
