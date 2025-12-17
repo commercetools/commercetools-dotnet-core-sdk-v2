@@ -93,11 +93,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 RecurringOrderCreatedMessageQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<RecurringOrderCreatedMessageQueryBuilderDsl> Order(
+        public CombinationQueryPredicate<RecurringOrderCreatedMessageQueryBuilderDsl> RecurringOrder(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<RecurringOrderCreatedMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("order"))
+                .Parent(ConstantQueryPredicate.Of().Constant("recurringOrder"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl.Of())),
                 RecurringOrderCreatedMessageQueryBuilderDsl.Of);
         }

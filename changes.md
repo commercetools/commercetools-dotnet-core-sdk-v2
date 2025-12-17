@@ -84,6 +84,8 @@
 <details>
 <summary>Removed Property(s)</summary>
 
+- :warning: removed property `order` from type `RecurringOrderCreatedMessage`
+- :warning: removed property `order` from type `RecurringOrderCreatedMessagePayload`
 - :warning: removed property `tierMinimumQuantity` from type `StandalonePriceRemovePriceTierAction`
 </details>
 
@@ -104,6 +106,7 @@
 - added property `email` to type `CustomerDeletedMessage`
 - added property `oldEmail` to type `CustomerEmailChangedMessage`
 - added property `oldCustomerGroupAssignments` to type `CustomerGroupAssignmentsSetMessage`
+- added property `recurringOrder` to type `RecurringOrderCreatedMessage`
 - added property `addressRoles` to type `BusinessUnitAddressChangedMessagePayload`
 - added property `addressRoles` to type `BusinessUnitAddressRemovedMessagePayload`
 - added property `addressRoles` to type `CustomerAddressChangedMessagePayload`
@@ -111,6 +114,7 @@
 - added property `email` to type `CustomerDeletedMessagePayload`
 - added property `oldEmail` to type `CustomerEmailChangedMessagePayload`
 - added property `oldCustomerGroupAssignments` to type `CustomerGroupAssignmentsSetMessagePayload`
+- added property `recurringOrder` to type `RecurringOrderCreatedMessagePayload`
 - added property `minimumQuantity` to type `StandalonePriceRemovePriceTierAction`
 </details>
 
