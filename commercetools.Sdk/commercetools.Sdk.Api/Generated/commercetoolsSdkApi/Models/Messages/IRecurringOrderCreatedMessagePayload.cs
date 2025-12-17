@@ -6,7 +6,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderCreatedMessagePayload))]
     public partial interface IRecurringOrderCreatedMessagePayload : IMessagePayload
     {
-        IRecurringOrder Order { get; set; }
+        IRecurringOrder RecurringOrder { get; set; }
 
     }
 }

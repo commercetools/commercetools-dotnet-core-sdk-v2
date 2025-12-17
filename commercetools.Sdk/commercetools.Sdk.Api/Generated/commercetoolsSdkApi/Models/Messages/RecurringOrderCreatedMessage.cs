@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public IRecurringOrder Order { get; set; }
+        public IRecurringOrder RecurringOrder { get; set; }
         public RecurringOrderCreatedMessage()
         {
             this.Type = "RecurringOrderCreated";

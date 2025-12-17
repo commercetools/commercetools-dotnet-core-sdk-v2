@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public IRecurringOrder Order { get; set; }
+        public IRecurringOrder RecurringOrder { get; set; }
         public RecurringOrderCreatedMessagePayload()
         {
             this.Type = "RecurringOrderCreated";
