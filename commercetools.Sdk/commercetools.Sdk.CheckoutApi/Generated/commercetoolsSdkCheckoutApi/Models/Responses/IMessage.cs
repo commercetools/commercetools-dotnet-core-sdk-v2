@@ -20,6 +20,14 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
     [SubTypeDiscriminator("discount_code_not_applicable", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.DiscountCodeNotApplicable))]
     [SubTypeDiscriminator("error_loading_all_payment_integrations", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ErrorLoadingAllPaymentIntegrations))]
     [SubTypeDiscriminator("expired_session", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpiredSession))]
+    [SubTypeDiscriminator("express_container_not_found", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressContainerNotFound))]
+    [SubTypeDiscriminator("express_multiple_containers_found", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressMultipleContainersFound))]
+    [SubTypeDiscriminator("express_payment_cancelled", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCancelled))]
+    [SubTypeDiscriminator("express_payment_completed", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCompleted))]
+    [SubTypeDiscriminator("express_payment_failed", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentFailed))]
+    [SubTypeDiscriminator("express_payment_integration_not_available", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentIntegrationNotAvailable))]
+    [SubTypeDiscriminator("express_payment_interrupted", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentInterrupted))]
+    [SubTypeDiscriminator("express_payment_started", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentStarted))]
     [SubTypeDiscriminator("external_terms_and_conditions_pending", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.ExternalTermsAndConditionsPending))]
     [SubTypeDiscriminator("failed_to_refresh_session", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.FailedToRefreshSession))]
     [SubTypeDiscriminator("gift_card_balance_error", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.GiftCardBalanceError))]
@@ -35,6 +43,7 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
     [SubTypeDiscriminator("invalid_locale", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.InvalidLocale))]
     [SubTypeDiscriminator("invalid_mode", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.InvalidMode))]
     [SubTypeDiscriminator("multiple_vendor_button_containers", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.MultipleVendorButtonContainers))]
+    [SubTypeDiscriminator("no_express_payment_integrations", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.NoExpressPaymentIntegrations))]
     [SubTypeDiscriminator("no_payment_integrations", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.NoPaymentIntegrations))]
     [SubTypeDiscriminator("no_shipping_methods", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.NoShippingMethods))]
     [SubTypeDiscriminator("non_orderable_cart_error", typeof(commercetools.Sdk.CheckoutApi.Models.Responses.NonOrderableCartError))]
@@ -168,6 +177,54 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressContainerNotFound ExpressContainerNotFound(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressContainerNotFound> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressContainerNotFound();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressMultipleContainersFound ExpressMultipleContainersFound(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressMultipleContainersFound> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressMultipleContainersFound();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCancelled ExpressPaymentCancelled(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCancelled> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCancelled();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCompleted ExpressPaymentCompleted(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCompleted> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentCompleted();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentFailed ExpressPaymentFailed(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentFailed> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentFailed();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentIntegrationNotAvailable ExpressPaymentIntegrationNotAvailable(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentIntegrationNotAvailable> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentIntegrationNotAvailable();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentInterrupted ExpressPaymentInterrupted(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentInterrupted> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentInterrupted();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentStarted ExpressPaymentStarted(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentStarted> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExpressPaymentStarted();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.CheckoutApi.Models.Responses.ExternalTermsAndConditionsPending ExternalTermsAndConditionsPending(Action<commercetools.Sdk.CheckoutApi.Models.Responses.ExternalTermsAndConditionsPending> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.Responses.ExternalTermsAndConditionsPending();
@@ -255,6 +312,12 @@ namespace commercetools.Sdk.CheckoutApi.Models.Responses
         static commercetools.Sdk.CheckoutApi.Models.Responses.MultipleVendorButtonContainers MultipleVendorButtonContainers(Action<commercetools.Sdk.CheckoutApi.Models.Responses.MultipleVendorButtonContainers> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.Responses.MultipleVendorButtonContainers();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Responses.NoExpressPaymentIntegrations NoExpressPaymentIntegrations(Action<commercetools.Sdk.CheckoutApi.Models.Responses.NoExpressPaymentIntegrations> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Responses.NoExpressPaymentIntegrations();
             init?.Invoke(t);
             return t;
         }
