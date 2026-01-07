@@ -14,7 +14,10 @@ namespace commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations
         Component,
 
         [Description("DropIn")]
-        DropIn
+        DropIn,
+
+        [Description("Express")]
+        Express
     }
 
     public class PaymentComponentTypeWrapper : IPaymentComponentType
@@ -46,6 +49,9 @@ namespace commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations
         public static IPaymentComponentType DropIn = new PaymentComponentTypeWrapper
         { Value = PaymentComponentType.DropIn, JsonName = "DropIn" };
 
+        public static IPaymentComponentType Express = new PaymentComponentTypeWrapper
+        { Value = PaymentComponentType.Express, JsonName = "Express" };
+
         PaymentComponentType? Value { get; }
 
         static IPaymentComponentType[] Values()
@@ -53,7 +59,8 @@ namespace commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations
             return new[]
             {
                  Component ,
-                 DropIn
+                 DropIn ,
+                 Express
              };
         }
         static IPaymentComponentType FindEnum(string value)
