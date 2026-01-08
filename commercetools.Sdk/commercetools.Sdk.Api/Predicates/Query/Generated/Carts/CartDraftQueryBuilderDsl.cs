@@ -257,6 +257,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<CartDraftQueryBuilderDsl, string> PurchaseOrderNumber()
+        {
+            return new ComparisonPredicateBuilder<CartDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p => new CombinationQueryPredicate<CartDraftQueryBuilderDsl>(p, CartDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

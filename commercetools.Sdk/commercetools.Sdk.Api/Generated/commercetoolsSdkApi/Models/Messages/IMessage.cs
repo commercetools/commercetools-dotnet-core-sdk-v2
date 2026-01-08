@@ -71,6 +71,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage))]
     [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage))]
     [SubTypeDiscriminator("CartFrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartFrozenMessage))]
+    [SubTypeDiscriminator("CartPurchaseOrderNumberSet", typeof(commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage))]
     [SubTypeDiscriminator("CartUnfrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
@@ -728,6 +729,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CartFrozenMessage CartFrozen(Action<commercetools.Sdk.Api.Models.Messages.CartFrozenMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartFrozenMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage CartPurchaseOrderNumberSet(Action<commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage();
             init?.Invoke(t);
             return t;
         }

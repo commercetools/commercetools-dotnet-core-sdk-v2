@@ -68,6 +68,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemTaxRate", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTaxRateAction))]
     [SubTypeDiscriminator("setLineItemTotalPrice", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTotalPriceAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction))]
+    [SubTypeDiscriminator("setPurchaseOrderNumber", typeof(commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction))]
@@ -458,6 +459,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction SetLocale(Action<commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction SetPurchaseOrderNumber(Action<commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction();
             init?.Invoke(t);
             return t;
         }

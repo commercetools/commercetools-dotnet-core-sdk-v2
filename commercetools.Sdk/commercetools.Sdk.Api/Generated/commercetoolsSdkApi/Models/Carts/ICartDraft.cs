@@ -85,5 +85,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICustomFieldsDraft Custom { get; set; }
 
+        string PurchaseOrderNumber { get; set; }
+
     }
 }

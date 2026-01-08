@@ -367,6 +367,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartQueryBuilderDsl>(p, CartQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartQueryBuilderDsl, string> PurchaseOrderNumber()
+        {
+            return new ComparisonPredicateBuilder<CartQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p => new CombinationQueryPredicate<CartQueryBuilderDsl>(p, CartQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<CartQueryBuilderDsl> LastModifiedBy(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.LastModifiedByQueryBuilderDsl>> fn)
         {
