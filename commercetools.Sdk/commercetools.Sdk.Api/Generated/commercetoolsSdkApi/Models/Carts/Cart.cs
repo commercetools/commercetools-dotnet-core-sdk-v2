@@ -114,6 +114,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public int? DeleteDaysAfterLastModification { get; set; }
 
+        public string PurchaseOrderNumber { get; set; }
+
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }

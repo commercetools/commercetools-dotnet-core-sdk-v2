@@ -83,5 +83,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public long? DeleteDaysAfterLastModification { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public string PurchaseOrderNumber { get; set; }
     }
 }

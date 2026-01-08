@@ -6,10 +6,12 @@
 - added type `BusinessUnitAddCustomerGroupAssignmentAction`
 - added type `BusinessUnitRemoveCustomerGroupAssignmentAction`
 - added type `BusinessUnitSetCustomerGroupAssignmentsAction`
+- added type `CartSetPurchaseOrderNumberAction`
 - added type `AddressRole`
 - added type `BusinessUnitCustomerGroupAssignmentAddedMessage`
 - added type `BusinessUnitCustomerGroupAssignmentRemovedMessage`
 - added type `BusinessUnitCustomerGroupAssignmentsSetMessage`
+- added type `CartPurchaseOrderNumberSetMessage`
 - added type `CustomerBillingAddressAddedMessage`
 - added type `CustomerBillingAddressRemovedMessage`
 - added type `CustomerExternalIdSetMessage`
@@ -18,6 +20,7 @@
 - added type `BusinessUnitCustomerGroupAssignmentAddedMessagePayload`
 - added type `BusinessUnitCustomerGroupAssignmentRemovedMessagePayload`
 - added type `BusinessUnitCustomerGroupAssignmentsSetMessagePayload`
+- added type `CartPurchaseOrderNumberSetMessagePayload`
 - added type `CustomerBillingAddressAddedMessagePayload`
 - added type `CustomerBillingAddressRemovedMessagePayload`
 - added type `CustomerExternalIdSetMessagePayload`
@@ -99,6 +102,8 @@
 - added property `customerGroupAssignments` to type `CompanyDraft`
 - added property `customerGroupAssignments` to type `Division`
 - added property `customerGroupAssignments` to type `DivisionDraft`
+- added property `purchaseOrderNumber` to type `Cart`
+- added property `purchaseOrderNumber` to type `CartDraft`
 - added property `addressRoles` to type `BusinessUnitAddressChangedMessage`
 - added property `addressRoles` to type `BusinessUnitAddressRemovedMessage`
 - added property `addressRoles` to type `CustomerAddressChangedMessage`
