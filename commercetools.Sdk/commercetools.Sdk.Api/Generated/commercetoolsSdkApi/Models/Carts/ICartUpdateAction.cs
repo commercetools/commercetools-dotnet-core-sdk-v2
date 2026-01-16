@@ -25,6 +25,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("changeTaxMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxModeAction))]
     [SubTypeDiscriminator("changeTaxRoundingMode", typeof(commercetools.Sdk.Api.Models.Carts.CartChangeTaxRoundingModeAction))]
     [SubTypeDiscriminator("freezeCart", typeof(commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction))]
+    [SubTypeDiscriminator("lockCart", typeof(commercetools.Sdk.Api.Models.Carts.CartLockCartAction))]
     [SubTypeDiscriminator("recalculate", typeof(commercetools.Sdk.Api.Models.Carts.CartRecalculateAction))]
     [SubTypeDiscriminator("removeCustomLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveCustomLineItemAction))]
     [SubTypeDiscriminator("removeDiscountCode", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveDiscountCodeAction))]
@@ -79,6 +80,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setShippingMethodTaxRate", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingMethodTaxRateAction))]
     [SubTypeDiscriminator("setShippingRateInput", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingRateInputAction))]
     [SubTypeDiscriminator("unfreezeCart", typeof(commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction))]
+    [SubTypeDiscriminator("unlockCart", typeof(commercetools.Sdk.Api.Models.Carts.CartUnlockCartAction))]
     [SubTypeDiscriminator("updateItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartUpdateItemShippingAddressAction))]
     public partial interface ICartUpdateAction
     {
@@ -201,6 +203,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction FreezeCart(Action<commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartFreezeCartAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartLockCartAction LockCart(Action<commercetools.Sdk.Api.Models.Carts.CartLockCartAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartLockCartAction();
             init?.Invoke(t);
             return t;
         }
@@ -525,6 +533,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction UnfreezeCart(Action<commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartUnfreezeCartAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartUnlockCartAction UnlockCart(Action<commercetools.Sdk.Api.Models.Carts.CartUnlockCartAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartUnlockCartAction();
             init?.Invoke(t);
             return t;
         }

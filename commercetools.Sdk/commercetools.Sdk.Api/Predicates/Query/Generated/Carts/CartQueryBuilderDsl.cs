@@ -361,6 +361,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartQueryBuilderDsl> Lock(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartLockQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartLockQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("lock"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartLockQueryBuilderDsl.Of())),
+                CartQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<CartQueryBuilderDsl, long> DeleteDaysAfterLastModification()
         {
             return new ComparisonPredicateBuilder<CartQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("deleteDaysAfterLastModification")),

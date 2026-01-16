@@ -112,6 +112,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         public IDiscountTypeCombination DiscountTypeCombination { get; set; }
 
+        public ICartLock Lock { get; set; }
+
         public int? DeleteDaysAfterLastModification { get; set; }
 
         public string PurchaseOrderNumber { get; set; }

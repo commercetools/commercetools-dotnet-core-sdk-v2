@@ -142,6 +142,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartFreezeCartActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsLockCart(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartLockCartActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartLockCartActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartLockCartActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsRecalculate(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartRecalculateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartRecalculateActionQueryBuilderDsl>> fn)
         {
@@ -464,6 +470,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartUnfreezeCartActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartUnfreezeCartActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartUnfreezeCartActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsUnlockCart(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartUnlockCartActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartUnlockCartActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartUnlockCartActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsUpdateItemShippingAddress(
