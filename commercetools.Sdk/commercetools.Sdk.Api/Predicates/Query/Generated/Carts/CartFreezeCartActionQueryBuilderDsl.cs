@@ -19,6 +19,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartFreezeCartActionQueryBuilderDsl>(p, CartFreezeCartActionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartFreezeCartActionQueryBuilderDsl, string> Strategy()
+        {
+            return new ComparisonPredicateBuilder<CartFreezeCartActionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("strategy")),
+            p => new CombinationQueryPredicate<CartFreezeCartActionQueryBuilderDsl>(p, CartFreezeCartActionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

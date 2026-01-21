@@ -7,6 +7,7 @@
 - added type `BusinessUnitRemoveCustomerGroupAssignmentAction`
 - added type `BusinessUnitSetCustomerGroupAssignmentsAction`
 - added type `CartLock`
+- added type `FreezeStrategy`
 - added type `CartLockCartAction`
 - added type `CartSetPurchaseOrderNumberAction`
 - added type `CartUnlockCartAction`
@@ -105,9 +106,11 @@
 - added property `customerGroupAssignments` to type `CompanyDraft`
 - added property `customerGroupAssignments` to type `Division`
 - added property `customerGroupAssignments` to type `DivisionDraft`
+- added property `freezeStrategy` to type `Cart`
 - added property `lock` to type `Cart`
 - added property `purchaseOrderNumber` to type `Cart`
 - added property `purchaseOrderNumber` to type `CartDraft`
+- added property `strategy` to type `CartFreezeCartAction`
 - added property `addressRoles` to type `BusinessUnitAddressChangedMessage`
 - added property `addressRoles` to type `BusinessUnitAddressRemovedMessage`
 - added property `addressRoles` to type `CustomerAddressChangedMessage`
