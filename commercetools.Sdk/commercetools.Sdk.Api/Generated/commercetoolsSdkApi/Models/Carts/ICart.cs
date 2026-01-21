@@ -63,6 +63,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICartState CartState { get; set; }
 
+        IFreezeStrategy FreezeStrategy { get; set; }
+
         IAddress BillingAddress { get; set; }
 
         IAddress ShippingAddress { get; set; }
