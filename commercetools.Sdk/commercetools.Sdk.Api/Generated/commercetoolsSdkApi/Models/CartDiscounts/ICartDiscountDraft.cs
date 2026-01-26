@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.DiscountGroups;
+using commercetools.Sdk.Api.Models.RecurringOrders;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -43,6 +44,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         ICustomFieldsDraft Custom { get; set; }
 
         IDiscountGroupResourceIdentifier DiscountGroup { get; set; }
+
+        IRecurringOrderScopeDraft RecurringOrderScope { get; set; }
 
     }
 }
