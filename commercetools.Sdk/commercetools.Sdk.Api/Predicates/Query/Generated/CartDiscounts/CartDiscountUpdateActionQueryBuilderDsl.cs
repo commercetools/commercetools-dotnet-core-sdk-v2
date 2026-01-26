@@ -112,6 +112,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
             return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetKeyActionQueryBuilderDsl.Of()),
                 CartDiscountUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetRecurringOrderScope(
+            Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetRecurringOrderScopeActionQueryBuilderDsl.Of()),
+                CartDiscountUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> AsSetStores(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountSetStoresActionQueryBuilderDsl>> fn)
         {

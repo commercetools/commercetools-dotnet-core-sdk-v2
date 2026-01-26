@@ -20,6 +20,7 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDescriptionAction))]
     [SubTypeDiscriminator("setDiscountGroup", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetDiscountGroupAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction))]
+    [SubTypeDiscriminator("setRecurringOrderScope", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetRecurringOrderScopeAction))]
     [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetStoresAction))]
     [SubTypeDiscriminator("setValidFrom", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAction))]
     [SubTypeDiscriminator("setValidFromAndUntil", typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetValidFromAndUntilAction))]
@@ -115,6 +116,12 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
         static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetRecurringOrderScopeAction SetRecurringOrderScope(Action<commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetRecurringOrderScopeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountSetRecurringOrderScopeAction();
             init?.Invoke(t);
             return t;
         }

@@ -130,6 +130,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.CartDiscounts
                 CartDiscountDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> RecurringOrderScope(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderScopeDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderScopeDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurringOrderScope"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderScopeDraftQueryBuilderDsl.Of())),
+                CartDiscountDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }

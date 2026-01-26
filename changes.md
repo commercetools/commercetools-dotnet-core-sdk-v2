@@ -6,6 +6,7 @@
 - added type `BusinessUnitAddCustomerGroupAssignmentAction`
 - added type `BusinessUnitRemoveCustomerGroupAssignmentAction`
 - added type `BusinessUnitSetCustomerGroupAssignmentsAction`
+- added type `CartDiscountSetRecurringOrderScopeAction`
 - added type `CartLock`
 - added type `FreezeStrategy`
 - added type `CartLockCartAction`
@@ -30,6 +31,16 @@
 - added type `CustomerExternalIdSetMessagePayload`
 - added type `CustomerShippingAddressAddedMessagePayload`
 - added type `CustomerShippingAddressRemovedMessagePayload`
+- added type `AnyOrder`
+- added type `AnyOrderDraft`
+- added type `ApplicableRecurrencePolicies`
+- added type `ApplicableRecurrencePoliciesDraft`
+- added type `NonRecurringOrdersOnly`
+- added type `NonRecurringOrdersOnlyDraft`
+- added type `RecurringOrderScope`
+- added type `RecurringOrderScopeDraft`
+- added type `RecurringOrdersOnly`
+- added type `RecurringOrdersOnlyDraft`
 </details>
 
 
@@ -106,6 +117,8 @@
 - added property `customerGroupAssignments` to type `CompanyDraft`
 - added property `customerGroupAssignments` to type `Division`
 - added property `customerGroupAssignments` to type `DivisionDraft`
+- added property `recurringOrderScope` to type `CartDiscount`
+- added property `recurringOrderScope` to type `CartDiscountDraft`
 - added property `freezeStrategy` to type `Cart`
 - added property `lock` to type `Cart`
 - added property `purchaseOrderNumber` to type `Cart`
