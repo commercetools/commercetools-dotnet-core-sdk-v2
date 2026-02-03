@@ -15,5 +15,6 @@ var searchData=
   ['fieldmappertyperetriever_12',['FieldMapperTypeRetriever',['../d5/d18/classcommercetools_1_1_sdk_1_1_api_1_1_serialization_1_1_mapper_type_retrievers_1_1_field_mapper_type_retriever.html',1,'commercetools::Sdk::Api::Serialization::MapperTypeRetrievers']]],
   ['fieldtype_13',['fieldtype',['../dd/dbc/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_types_1_1_field_type.html',1,'commercetools.Sdk.Api.Models.Types.FieldType'],['../de/d8d/classcommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_common_1_1_field_type.html',1,'commercetools.Sdk.HistoryApi.Models.Common.FieldType'],['../da/d47/classcommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_types_1_1_field_type.html',1,'commercetools.Sdk.ImportApi.Models.Types.FieldType']]],
   ['filteredfacetresult_14',['FilteredFacetResult',['../da/d5c/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_filtered_facet_result.html',1,'commercetools::Sdk::Api::Models::Products']]],
-  ['forbiddenexception_15',['ForbiddenException',['../dc/d50/classcommercetools_1_1_base_1_1_client_1_1_error_1_1_forbidden_exception.html',1,'commercetools::Base::Client::Error']]]
+  ['forbiddenexception_15',['ForbiddenException',['../dc/d50/classcommercetools_1_1_base_1_1_client_1_1_error_1_1_forbidden_exception.html',1,'commercetools::Base::Client::Error']]],
+  ['freezestrategywrapper_16',['FreezeStrategyWrapper',['../d9/df2/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_carts_1_1_freeze_strategy_wrapper.html',1,'commercetools::Sdk::Api::Models::Carts']]]
 ];
