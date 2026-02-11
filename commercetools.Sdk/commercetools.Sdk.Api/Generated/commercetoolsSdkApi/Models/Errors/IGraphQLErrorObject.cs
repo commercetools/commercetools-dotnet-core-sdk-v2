@@ -29,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("EnumKeyDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumKeyDoesNotExistError))]
     [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumValueIsUsedError))]
     [SubTypeDiscriminator("EnumValuesMustMatch", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError))]
+    [SubTypeDiscriminator("ExactLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExactLockConflictError))]
     [SubTypeDiscriminator("ExpiredCustomerEmailToken", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerEmailTokenError))]
     [SubTypeDiscriminator("ExpiredCustomerPasswordToken", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExpiredCustomerPasswordTokenError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionBadResponseError))]
@@ -86,6 +87,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
+    [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError))]
     public partial interface IGraphQLErrorObject
     {
         string Code { get; set; }
@@ -231,6 +233,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError EnumValuesMustMatch(Action<commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLEnumValuesMustMatchError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLExactLockConflictError ExactLockConflict(Action<commercetools.Sdk.Api.Models.Errors.GraphQLExactLockConflictError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLExactLockConflictError();
             init?.Invoke(t);
             return t;
         }
@@ -573,6 +581,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError ValidityLockConflict(Action<commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError();
             init?.Invoke(t);
             return t;
         }
