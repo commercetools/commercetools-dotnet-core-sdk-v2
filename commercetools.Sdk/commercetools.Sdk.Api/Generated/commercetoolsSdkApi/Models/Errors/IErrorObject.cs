@@ -29,6 +29,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("EnumKeyDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.EnumKeyDoesNotExistError))]
     [SubTypeDiscriminator("EnumValueIsUsed", typeof(commercetools.Sdk.Api.Models.Errors.EnumValueIsUsedError))]
     [SubTypeDiscriminator("EnumValuesMustMatch", typeof(commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError))]
+    [SubTypeDiscriminator("ExactLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ExactLockConflictError))]
     [SubTypeDiscriminator("ExpiredCustomerEmailToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError))]
     [SubTypeDiscriminator("ExpiredCustomerPasswordToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
@@ -86,6 +87,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
+    [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError))]
     public partial interface IErrorObject
     {
         string Code { get; set; }
@@ -233,6 +235,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError EnumValuesMustMatch(Action<commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.EnumValuesMustMatchError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExactLockConflictError ExactLockConflict(Action<commercetools.Sdk.Api.Models.Errors.ExactLockConflictError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExactLockConflictError();
             init?.Invoke(t);
             return t;
         }
@@ -575,6 +583,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.SyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError ValidityLockConflict(Action<commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError();
             init?.Invoke(t);
             return t;
         }

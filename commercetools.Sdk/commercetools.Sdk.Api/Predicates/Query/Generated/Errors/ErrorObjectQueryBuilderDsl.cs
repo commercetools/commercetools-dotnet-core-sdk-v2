@@ -172,6 +172,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.EnumValuesMustMatchErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExactLockConflict(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExactLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExactLockConflictErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ExactLockConflictErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExpiredCustomerEmailToken(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerEmailTokenErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExpiredCustomerEmailTokenErrorQueryBuilderDsl>> fn)
         {
@@ -512,6 +518,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.SyntaxErrorErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.SyntaxErrorErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.SyntaxErrorErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsValidityLockConflict(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ValidityLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ValidityLockConflictErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ValidityLockConflictErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
     }
