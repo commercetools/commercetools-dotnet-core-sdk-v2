@@ -1,4 +1,34 @@
 
+# 14.3.0 (2026-02-19)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/534
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/535
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/536
+* deserialize product search facets by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/537
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.2.2...14.3.0
+
 # 14.2.2 (2026-02-03)
 
 ## What's Changed
