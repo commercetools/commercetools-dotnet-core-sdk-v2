@@ -1,7 +1,9 @@
+using System;
 using System.IO;
 using commercetools.Sdk.Api.Extensions;
 using commercetools.Sdk.Api.Models.ProductSearches;
 using Xunit;
+using commercetools.Base;
 
 namespace commercetools.Api.Serialization.Tests
 {
@@ -48,16 +50,30 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal(600, (long)stats.Sum);
             Assert.Equal(3, stats.Count);
 
-            var statsByName = Assert.IsAssignableFrom<IProductSearchFacetResultStats>(facets.Get("supplierCounts"));
+            var statsByName = Assert.IsAssignableFrom<IProductSearchFacetResultStats>(facets.Get("pricesStatsVariants"));
             var longStats = statsByName.Get<long>();
             Assert.Equal(100, longStats.Min);
             Assert.Equal(300, longStats.Max);
             Assert.Equal(200, longStats.Mean);
             Assert.Equal(600, longStats.Sum);
             Assert.Equal(3, longStats.Count);
-            var serialize = serializerService.Serialize(deserialized);
 
-            Assert.Equal("{\"total\":0,\"offset\":0,\"limit\":0,\"facets\":[{\"name\":\"supplierName\",\"buckets\":[{\"key\":\"Example Inc.\",\"count\":77}]},{\"name\":\"supplierCounts\",\"value\":10}]}", serialize);
+            var doubleStatsByName = Assert.IsAssignableFrom<IProductSearchFacetResultStats>(facets.Get("doubleStatsVariants"));
+            var decimalStats = doubleStatsByName.Get<decimal>();
+            Assert.Equal(100.3m, decimalStats.Min);
+            Assert.Equal(300.6m, decimalStats.Max);
+            Assert.Equal(200.4m, decimalStats.Mean);
+            Assert.Equal(600.6m, decimalStats.Sum);
+            Assert.Equal(3, decimalStats.Count);
+            var serialize = serializerService.Serialize(deserialized);
+            
+            var dateStatsByName = Assert.IsAssignableFrom<IProductSearchFacetResultStats>(facets.Get("dateStatsVariants"));
+            var dateStats = dateStatsByName.Get<string>();
+            Assert.Equal(DateTime.Parse("2026-01-01"), dateStats.Min.AsDate());
+            Assert.Equal(DateTime.Parse("2026-01-31"), dateStats.Max.AsDate());
+            Assert.Equal(3, dateStats.Count);
+            
+            Assert.Equal("{\"total\":0,\"offset\":0,\"limit\":0,\"facets\":[{\"name\":\"supplierName\",\"buckets\":[{\"key\":\"Example Inc.\",\"count\":77}]},{\"name\":\"supplierCounts\",\"value\":10},{\"name\":\"pricesStatsVariants\",\"min\":100,\"max\":300,\"mean\":200,\"sum\":600,\"count\":3},{\"name\":\"dateStatsVariants\",\"min\":\"2026-01-01\",\"max\":\"2026-01-31\",\"count\":3},{\"name\":\"doubleStatsVariants\",\"min\":100.3,\"max\":300.6,\"mean\":200.4,\"sum\":600.6,\"count\":3}]}", serialize);
         }
     }
 }

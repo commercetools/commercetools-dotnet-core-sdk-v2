@@ -58,7 +58,7 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                         Value = valueElement.GetInt64()
                     };
                 }
-                if (rootElement.TryGetProperty("sum", out var statsElement))
+                if (rootElement.TryGetProperty("count", out var statsElement))
                 {
                     var stats = new ProductSearchFacetResultStats()
                     {
@@ -66,19 +66,39 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                     };
                     if (rootElement.TryGetProperty("min", out var min))
                     {
-                        stats.Min = min.GetInt64();
+                        if (min.ValueKind == JsonValueKind.String)
+                            stats.Min = min.GetString();
+                        else if (min.IsLongOrInt())
+                            stats.Min = min.GetInt64();
+                        else
+                            stats.Min = min.GetDecimal();
                     }
                     if (rootElement.TryGetProperty("max", out var max))
                     {
-                        stats.Max = max.GetInt64();
+                        if (max.ValueKind == JsonValueKind.String)
+                            stats.Max = max.GetString();
+                        else if (max.IsLongOrInt())
+                            stats.Max = max.GetInt64();
+                        else
+                            stats.Max = max.GetDecimal();
                     }
                     if (rootElement.TryGetProperty("mean", out var mean))
                     {
-                        stats.Mean = mean.GetInt64();
+                        if (mean.ValueKind == JsonValueKind.String)
+                            stats.Mean = mean.GetString();
+                        else if (mean.IsLongOrInt())
+                            stats.Mean = mean.GetInt64();
+                        else
+                            stats.Mean = mean.GetDecimal();
                     }
                     if (rootElement.TryGetProperty("sum", out var sum))
                     {
-                        stats.Sum = sum.GetInt64();
+                        if (sum.ValueKind == JsonValueKind.String)
+                            stats.Sum = sum.GetString();
+                        else if (sum.IsLongOrInt())
+                            stats.Sum = sum.GetInt64();
+                        else
+                            stats.Sum = sum.GetDecimal();
                     }
                     if (rootElement.TryGetProperty("count", out var count))
                     {
@@ -110,6 +130,37 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             {
                 writer.WritePropertyName("value");
                 JsonSerializer.Serialize(writer, count.Value, options);
+            } else if (value is ProductSearchFacetResultStats stats)
+            {
+                if (stats.Min != null)
+                {
+                    writer.WritePropertyName("min");
+                    JsonSerializer.Serialize(writer, stats.Min, options);
+                }
+
+                if (stats.Max != null)
+                {
+                    writer.WritePropertyName("max");
+                    JsonSerializer.Serialize(writer, stats.Max, options);
+                }
+
+                if (stats.Mean != null)
+                {
+                    writer.WritePropertyName("mean");
+                    JsonSerializer.Serialize(writer, stats.Mean, options);
+                }
+
+                if (stats.Sum != null)
+                {
+                    writer.WritePropertyName("sum");
+                    JsonSerializer.Serialize(writer, stats.Sum, options);
+                }
+
+                if (stats.Count != null)
+                {
+                    writer.WritePropertyName("count");
+                    JsonSerializer.Serialize(writer, stats.Count, options);
+                }
             }
 
             writer.WriteEndObject();
