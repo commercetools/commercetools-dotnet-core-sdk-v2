@@ -7,6 +7,7 @@ using commercetools.Sdk.Api.Models.Types;
 using commercetools.Base.Registration;
 using commercetools.Base.Serialization.JsonConverters;
 using commercetools.Base.Serialization.MapperTypeRetrievers;
+using commercetools.Sdk.Api.Models.ProductSearches;
 using commercetools.Sdk.Api.Models.ProductTailorings;
 using commercetools.Sdk.Api.Serialization.JsonConverters;
 using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
@@ -41,7 +42,8 @@ namespace commercetools.Sdk.Api.Serialization
             IMapperTypeRetriever<IAttribute> attributesMapperTypeRetriever,
             IMapperTypeRetriever<IProductTailoringAttribute> productTailoringAttributesMapperTypeRetriever,
             AttributeTypeRetriever attributeTypeRetriever,
-            ProductTailoringAttributeTypeRetriever productTailoringAttributeTypeRetriever)
+            ProductTailoringAttributeTypeRetriever productTailoringAttributeTypeRetriever,
+            IMapperTypeRetriever<IProductSearchFacetResult> productSearchFacetResultMapperTypeRetriever)
         {
             _serializerOptions = new JsonSerializerOptions
             {
@@ -52,7 +54,7 @@ namespace commercetools.Sdk.Api.Serialization
             _serializerOptions.Converters.Add(new MessageDeliveryConverter(this));
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new CustomDateConverter());
-            _serializerOptions.Converters.Add(new ProductSearchFacetConverter(this));
+            _serializerOptions.Converters.Add(new ProductSearchFacetConverter(productSearchFacetResultMapperTypeRetriever,this));
             _serializerOptions.Converters.Add(new FieldContainerConverter(customFieldsMapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new AttributeConverter(attributesMapperTypeRetriever, attributeTypeRetriever, this));
             _serializerOptions.Converters.Add(new ProductTailoringAttributeConverter(productTailoringAttributesMapperTypeRetriever, productTailoringAttributeTypeRetriever, this));

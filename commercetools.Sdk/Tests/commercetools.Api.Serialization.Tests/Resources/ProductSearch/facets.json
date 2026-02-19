@@ -15,6 +15,28 @@
     {
       "name": "supplierCounts",
       "value": 10
+    },
+    {
+      "name": "pricesStatsVariants",
+      "min": 100,
+      "max": 300,
+      "mean": 200,
+      "sum": 600,
+      "count": 3
+    },
+    {
+      "name": "dateStatsVariants",
+      "min": "2026-01-01",
+      "max": "2026-01-31",
+      "count": 3
+    },
+    {
+      "name": "doubleStatsVariants",
+      "min": 100.3,
+      "max": 300.6,
+      "mean": 200.4,
+      "sum": 600.6,
+      "count": 3
     }
   ]
 }

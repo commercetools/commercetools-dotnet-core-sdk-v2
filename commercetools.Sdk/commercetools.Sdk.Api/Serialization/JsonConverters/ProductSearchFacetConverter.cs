@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Base.Serialization;
+using commercetools.Base.Serialization.MapperTypeRetrievers;
 using commercetools.Sdk.Api.Models.ProductSearches;
+using commercetools.Sdk.Api.Serialization.MapperTypeRetrievers;
 using Type = System.Type;
 
 namespace commercetools.Sdk.Api.Serialization.JsonConverters
@@ -11,10 +14,19 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
     public class ProductSearchFacetConverter : JsonConverter<IProductSearchFacetResult>
     {
         private readonly ISerializerService _serializerService;
-
+        private readonly IMapperTypeRetriever<IProductSearchFacetResult> mapperTypeRetriever;
+        
+        public ProductSearchFacetConverter(IMapperTypeRetriever<IProductSearchFacetResult> mapperTypeRetriever, ISerializerService serializerService)
+        {
+            this._serializerService = serializerService;
+            this.mapperTypeRetriever = mapperTypeRetriever;
+        }
+        
+        [Obsolete("use constructor with mapperTypeRetriever instead")]
         public ProductSearchFacetConverter(ISerializerService serializerService)
         {
             this._serializerService = serializerService;
+            this.mapperTypeRetriever = new ProductSearchFacetResultTypeRetriever(SerializationConfiguration.DefaultConfig);
         }
 
         public override bool CanConvert(Type typeToConvert)
@@ -45,6 +57,34 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
                         Name = nameProp.GetString(),
                         Value = valueElement.GetInt64()
                     };
+                }
+                if (rootElement.TryGetProperty("sum", out var statsElement))
+                {
+                    var stats = new ProductSearchFacetResultStats()
+                    {
+                        Name = nameProp.GetString()
+                    };
+                    if (rootElement.TryGetProperty("min", out var min))
+                    {
+                        stats.Min = min.GetInt64();
+                    }
+                    if (rootElement.TryGetProperty("max", out var max))
+                    {
+                        stats.Max = max.GetInt64();
+                    }
+                    if (rootElement.TryGetProperty("mean", out var mean))
+                    {
+                        stats.Mean = mean.GetInt64();
+                    }
+                    if (rootElement.TryGetProperty("sum", out var sum))
+                    {
+                        stats.Sum = sum.GetInt64();
+                    }
+                    if (rootElement.TryGetProperty("count", out var count))
+                    {
+                        stats.Count = count.GetInt64();
+                    }
+                    return stats;
                 }
 
                 return new ProductSearchFacetResult
