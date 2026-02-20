@@ -54,7 +54,7 @@ namespace commercetools.Sdk.Api.Serialization
             _serializerOptions.Converters.Add(new MessageDeliveryConverter(this));
             _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new CustomDateConverter());
-            _serializerOptions.Converters.Add(new ProductSearchFacetConverter(productSearchFacetResultMapperTypeRetriever,this));
+            _serializerOptions.Converters.Add(new ProductSearchFacetConverter(productSearchFacetResultMapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new FieldContainerConverter(customFieldsMapperTypeRetriever, this));
             _serializerOptions.Converters.Add(new AttributeConverter(attributesMapperTypeRetriever, attributeTypeRetriever, this));
             _serializerOptions.Converters.Add(new ProductTailoringAttributeConverter(productTailoringAttributesMapperTypeRetriever, productTailoringAttributeTypeRetriever, this));
