@@ -12,7 +12,7 @@ public static class FacetExtensions
 
         return facetResult;
     }
-    
+
     public static bool TryGet(this IList<IProductSearchFacetResult> facets, string name, out IProductSearchFacetResult facetResult)
     {
         facetResult = facets.FirstOrDefault(result => result.Name.Equals(name));

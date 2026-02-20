@@ -15,13 +15,13 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
     {
         private readonly ISerializerService _serializerService;
         private readonly IMapperTypeRetriever<IProductSearchFacetResult> mapperTypeRetriever;
-        
+
         public ProductSearchFacetConverter(IMapperTypeRetriever<IProductSearchFacetResult> mapperTypeRetriever, ISerializerService serializerService)
         {
             this._serializerService = serializerService;
             this.mapperTypeRetriever = mapperTypeRetriever;
         }
-        
+
         [Obsolete("use constructor with mapperTypeRetriever instead")]
         public ProductSearchFacetConverter(ISerializerService serializerService)
         {
@@ -130,7 +130,8 @@ namespace commercetools.Sdk.Api.Serialization.JsonConverters
             {
                 writer.WritePropertyName("value");
                 JsonSerializer.Serialize(writer, count.Value, options);
-            } else if (value is ProductSearchFacetResultStats stats)
+            }
+            else if (value is ProductSearchFacetResultStats stats)
             {
                 if (stats.Min != null)
                 {
