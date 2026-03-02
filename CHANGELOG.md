@@ -1,4 +1,33 @@
 
+# 14.3.1 (2026-03-02)
+
+## What's Changed
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExactLockConflictError`
+- added type `ValidityLockConflictError`
+- added type `GraphQLExactLockConflictError`
+- added type `GraphQLValidityLockConflictError`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `deleteDaysAfterLastModification` of type `CartsConfiguration` to be required
+- :warning: changed property `deleteDaysAfterLastModification` of type `ShoppingListsConfiguration` to be required
+</details>
+
+
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/538
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/539
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.3.0...14.3.1
+
 # 14.3.0 (2026-02-19)
 
 ## What's Changed
