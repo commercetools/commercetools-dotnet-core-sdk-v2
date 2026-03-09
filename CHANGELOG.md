@@ -1,4 +1,25 @@
 
+# 15.0.0 (2026-03-09)
+
+# New TargetFramework builds
+
+The SDK packages are now built with multiple target frameworks. This especially allows to declare updated dependencies per Framework version.
+
+## Breaking Changes
+
+The ZeroQL dependency in the GrapqlQL package has been updated to version 8 raising the .NET dependency to minimum verison 8.
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/540
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/541
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/542
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/543
+* Zeroql8 by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/544
+* declare min version for dependencies by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/545
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.3.1...15.0.0
+
 # 14.3.1 (2026-03-02)
 
 ## What's Changed
