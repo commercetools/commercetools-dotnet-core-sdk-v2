@@ -12,6 +12,54 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.\r\n\r\nCommonly Used Types:\r\nSystem.IAsyncDisposable\r\nSystem.Collections.Generic.IAsyncEnumerable\r\nSystem.Collections.Generic.IAsyncEnumerator",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.\r\n\r\nCommonly Used Types:\r\nSystem.IAsyncDisposable\r\nSystem.Collections.Generic.IAsyncEnumerable\r\nSystem.Collections.Generic.IAsyncEnumerator",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Bcl.AsyncInterfaces",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the IAsyncEnumerable<T> and IAsyncDisposable interfaces and helper types for .NET Standard 2.0. This package is not required starting with .NET Standard 2.1 and .NET Core 3.0.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.CodeCoverage",
     "PackageVersion": "17.7.2",
     "PackageUrl": "https://github.com/microsoft/vstest",
@@ -49,7 +97,43 @@
   },
   {
     "PackageName": "Microsoft.Extensions.Configuration",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Includes the memory configuration provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration",
+    "PackageVersion": "10.0.3",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -72,6 +156,54 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Extensions.Configuration.Abstractions",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions of key-value pair based configuration.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Configuration.IConfiguration\r\nMicrosoft.Extensions.Configuration.IConfigurationBuilder\r\nMicrosoft.Extensions.Configuration.IConfigurationProvider\r\nMicrosoft.Extensions.Configuration.IConfigurationRoot\r\nMicrosoft.Extensions.Configuration.IConfigurationSection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Abstractions",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides abstractions of key-value pair based configuration. Interfaces defined in this package are implemented by classes in Microsoft.Extensions.Configuration and other configuration packages.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Abstractions",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides abstractions of key-value pair based configuration. Interfaces defined in this package are implemented by classes in Microsoft.Extensions.Configuration and other configuration packages.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Abstractions",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides abstractions of key-value pair based configuration. Interfaces defined in this package are implemented by classes in Microsoft.Extensions.Configuration and other configuration packages.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.Extensions.Configuration.Binder",
     "PackageVersion": "6.0.0",
     "PackageUrl": "https://dot.net/",
@@ -84,50 +216,110 @@
     "LicenseType": "MIT"
   },
   {
-    "PackageName": "Microsoft.Extensions.Configuration.EnvironmentVariables",
-    "PackageVersion": "6.0.1",
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "7.0.4",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Environment variables configuration provider implementation for Microsoft.Extensions.Configuration.",
+    "Description": "Functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration. This package enables you to represent the configuration data as strongly-typed classes defined in the application code. To bind a configuration, use the Microsoft.Extensions.Configuration.ConfigurationBinder.Get extension method on the IConfiguration object. To use this package, you also need to install a package for the configuration provider, for example, Microsoft.Extensions.Configuration.Json for the JSON provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "8.0.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration. This package enables you to represent the configuration data as strongly-typed classes defined in the application code. To bind a configuration, use the Microsoft.Extensions.Configuration.ConfigurationBinder.Get extension method on the IConfiguration object. To use this package, you also need to install a package for the configuration provider, for example, Microsoft.Extensions.Configuration.Json for the JSON provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration. This package enables you to represent the configuration data as strongly-typed classes defined in the application code. To bind a configuration, use the Microsoft.Extensions.Configuration.ConfigurationBinder.Get extension method on the IConfiguration object. To use this package, you also need to install a package for the configuration provider, for example, Microsoft.Extensions.Configuration.Json for the JSON provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.Binder",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the functionality to bind an object to data in configuration providers for Microsoft.Extensions.Configuration. This package enables you to represent the configuration data as strongly-typed classes defined in the application code. To bind a configuration, use the Microsoft.Extensions.Configuration.ConfigurationBinder.Get extension method on the IConfiguration object. To use this package, you also need to install a package for the configuration provider, for example, Microsoft.Extensions.Configuration.Json for the JSON provider.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Environment variables configuration provider implementation for Microsoft.Extensions.Configuration. This package enables you to read configuration parameters from environment variables. You can use EnvironmentVariablesExtensions.AddEnvironmentVariables extension method on IConfigurationBuilder to add the environment variables configuration provider to the configuration builder.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
     "PackageName": "Microsoft.Extensions.Configuration.FileExtensions",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Extension methods for configuring file-based configuration providers for Microsoft.Extensions.Configuration.",
+    "Description": "Provides a base class for file-based configuration providers used with Microsoft.Extensions.Configuration and extension methods for configuring them.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
     "PackageName": "Microsoft.Extensions.Configuration.Json",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "JSON configuration provider implementation for Microsoft.Extensions.Configuration.",
+    "Description": "JSON configuration provider implementation for Microsoft.Extensions.Configuration. This package enables you to read your application's settings from a JSON file. You can use JsonConfigurationExtensions.AddJsonFile extension method on IConfigurationBuilder to add the JSON configuration provider to the configuration builder.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
     "PackageName": "Microsoft.Extensions.Configuration.UserSecrets",
-    "PackageVersion": "6.0.1",
+    "PackageVersion": "8.0.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "User secrets configuration provider implementation for Microsoft.Extensions.Configuration.",
+    "Description": "User secrets configuration provider implementation for Microsoft.Extensions.Configuration. User secrets mechanism enables you to override application configuration settings with values stored in the local secrets file. You can use UserSecretsConfigurationExtensions.AddUserSecrets extension method on IConfigurationBuilder to add user secrets provider to the configuration builder.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
@@ -145,7 +337,55 @@
   },
   {
     "PackageName": "Microsoft.Extensions.DependencyInjection",
-    "PackageVersion": "6.0.1",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection",
+    "PackageVersion": "6.0.2",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -168,8 +408,140 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "8.0.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Abstractions for dependency injection.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.DependencyInjection.IServiceCollection",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "This package includes the default implementation of IMeterFactory and additional extension methods to easily register it with the Dependency Injection framework.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "This package includes the default implementation of IMeterFactory and additional extension methods to easily register it with the Dependency Injection framework.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "This package includes the default implementation of IMeterFactory and additional extension methods to easily register it with the Dependency Injection framework.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics.Abstractions",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Diagnostic abstractions for Microsoft.Extensions.Diagnostics.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsBuilder\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsListener\r\nMicrosoft.Extensions.Diagnostics.Metrics.InstrumentRule\r\nMicrosoft.Extensions.Diagnostics.Metrics.MeterScope\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsOptions",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics.Abstractions",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Diagnostic abstractions for Microsoft.Extensions.Diagnostics.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsBuilder\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsListener\r\nMicrosoft.Extensions.Diagnostics.Metrics.InstrumentRule\r\nMicrosoft.Extensions.Diagnostics.Metrics.MeterScope\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsOptions",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Diagnostics.Abstractions",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Diagnostic abstractions for Microsoft.Extensions.Diagnostics.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsBuilder\r\nMicrosoft.Extensions.Diagnostics.Metrics.IMetricsListener\r\nMicrosoft.Extensions.Diagnostics.Metrics.InstrumentRule\r\nMicrosoft.Extensions.Diagnostics.Metrics.MeterScope\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions\r\nMicrosoft.Extensions.Diagnostics.Metrics.MetricsOptions",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.Extensions.FileProviders.Abstractions",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -181,7 +553,7 @@
   },
   {
     "PackageName": "Microsoft.Extensions.FileProviders.Physical",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -193,7 +565,7 @@
   },
   {
     "PackageName": "Microsoft.Extensions.FileSystemGlobbing",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -216,20 +588,116 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Extensions.Http",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Http.IHttpClientFactory",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Http",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Http.IHttpClientFactory",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Http",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Http.IHttpClientFactory",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Http",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. The HttpClient factory provides extensibility to plug in DelegatingHandlers that address cross-cutting concerns such as service location, load balancing, and reliability. The default HttpClient factory provides built-in diagnostics and logging and manages the lifetimes of connections in a performant way.\r\n\r\nCommonly Used Types:\r\nSystem.Net.Http.IHttpClientFactory",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.Extensions.Http.Polly",
-    "PackageVersion": "6.0.21",
+    "PackageVersion": "8.0.24",
     "PackageUrl": "https://asp.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. This package integrates IHttpClientFactory with the Polly library, to add transient-fault-handling and resiliency through fluent policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback.\r\n    \r\n\r\nThis package was built from the source code at https://github.com/dotnet/aspnetcore/tree/cec88a329584349fda070f4c7346b10538210ace",
+    "Description": "The HttpClient factory is a pattern for configuring and retrieving named HttpClients in a composable way. This package integrates IHttpClientFactory with the Polly library, to add transient-fault-handling and resiliency through fluent policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback.\r\n    \r\n\r\nThis package was built from the source code at https://github.com/dotnet/aspnetcore/tree/159901324421e89ca7612465fc8c138609837f3d",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
     "PackageName": "Microsoft.Extensions.Logging",
     "PackageVersion": "6.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging infrastructure default implementation for Microsoft.Extensions.Logging.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging",
+    "PackageVersion": "10.0.3",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -252,6 +720,54 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Extensions.Logging.Abstractions",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging abstractions for Microsoft.Extensions.Logging.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Logging.ILogger\r\nMicrosoft.Extensions.Logging.ILoggerFactory\r\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\r\nMicrosoft.Extensions.Logging.LogLevel\r\nMicrosoft.Extensions.Logging.Logger<T>\r\nMicrosoft.Extensions.Logging.LoggerMessage\r\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging.Abstractions",
+    "PackageVersion": "8.0.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging abstractions for Microsoft.Extensions.Logging.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Logging.ILogger\r\nMicrosoft.Extensions.Logging.ILoggerFactory\r\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\r\nMicrosoft.Extensions.Logging.LogLevel\r\nMicrosoft.Extensions.Logging.Logger<T>\r\nMicrosoft.Extensions.Logging.LoggerMessage\r\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging.Abstractions",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging abstractions for Microsoft.Extensions.Logging.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Logging.ILogger\r\nMicrosoft.Extensions.Logging.ILoggerFactory\r\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\r\nMicrosoft.Extensions.Logging.LogLevel\r\nMicrosoft.Extensions.Logging.Logger<T>\r\nMicrosoft.Extensions.Logging.LoggerMessage\r\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Logging.Abstractions",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Logging abstractions for Microsoft.Extensions.Logging.\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Logging.ILogger\r\nMicrosoft.Extensions.Logging.ILoggerFactory\r\nMicrosoft.Extensions.Logging.ILogger<TCategoryName>\r\nMicrosoft.Extensions.Logging.LogLevel\r\nMicrosoft.Extensions.Logging.Logger<T>\r\nMicrosoft.Extensions.Logging.LoggerMessage\r\nMicrosoft.Extensions.Logging.Abstractions.NullLogger",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.Extensions.Options",
     "PackageVersion": "6.0.0",
     "PackageUrl": "https://dot.net/",
@@ -264,8 +780,152 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "8.0.2",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides a strongly typed way of specifying and accessing settings using dependency injection.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options.ConfigurationExtensions",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional configuration specific functionality related to Options.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options.ConfigurationExtensions",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional configuration specific functionality related to Options.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Options.ConfigurationExtensions",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional configuration specific functionality related to Options.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "Microsoft.Extensions.Primitives",
     "PackageVersion": "6.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Primitives shared by framework extensions. Commonly used types include:\r\n\r\nCommonly Used Types:\r\nMicrosoft.Extensions.Primitives.IChangeToken\r\nMicrosoft.Extensions.Primitives.StringValues\r\nMicrosoft.Extensions.Primitives.StringSegment",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "Microsoft.Extensions.Primitives",
+    "PackageVersion": "10.0.3",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -409,9 +1069,9 @@
   },
   {
     "PackageName": "Polly",
-    "PackageVersion": "7.2.2",
+    "PackageVersion": "7.2.4",
     "PackageUrl": "https://github.com/App-vNext/Polly",
-    "Copyright": "Copyright (c) 2021, App vNext",
+    "Copyright": "Copyright (c) 2023, App vNext",
     "Authors": [
       "Michael Wolfenden",
       " App vNext"
@@ -494,32 +1154,8 @@
     "LicenseType": "MS-EULA"
   },
   {
-    "PackageName": "runtime.native.System.Security.Cryptography.Apple",
-    "PackageVersion": "4.3.1",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
-  },
-  {
     "PackageName": "runtime.native.System.Security.Cryptography.OpenSsl",
     "PackageVersion": "4.3.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Internal implementation package not meant for direct consumption.  Please do not reference directly. \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
-  },
-  {
-    "PackageName": "runtime.native.System.Security.Cryptography.OpenSsl",
-    "PackageVersion": "4.3.2",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation.  All rights reserved.",
     "Authors": [
@@ -543,6 +1179,18 @@
   },
   {
     "PackageName": "System.Buffers",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Buffers",
     "PackageVersion": "4.5.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -555,15 +1203,15 @@
   },
   {
     "PackageName": "System.Buffers",
-    "PackageVersion": "4.3.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "PackageVersion": "4.6.1",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides resource pooling of any type for performance-critical applications that allocate and deallocate objects frequently.\r\n\r\nCommonly Used Types:\r\nSystem.Buffers.ArrayPool<T>\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
+    "Description": "System.Buffers",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
   },
   {
     "PackageName": "System.Collections",
@@ -734,6 +1382,54 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "System.Diagnostics.DiagnosticSource",
+    "PackageVersion": "7.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.DiagnosticListener\r\nSystem.Diagnostics.DiagnosticSource",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Diagnostics.DiagnosticSource",
+    "PackageVersion": "8.0.1",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.DiagnosticListener\r\nSystem.Diagnostics.DiagnosticSource",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Diagnostics.DiagnosticSource",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.DiagnosticListener\r\nSystem.Diagnostics.DiagnosticSource",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Diagnostics.DiagnosticSource",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/telemetry (e.g. framework) from code that consumes it (e.g. tools)\r\n\r\nCommonly Used Types:\r\nSystem.Diagnostics.DiagnosticListener\r\nSystem.Diagnostics.DiagnosticSource",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "System.Diagnostics.Tools",
     "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
@@ -866,6 +1562,30 @@
     "LicenseType": "MS-EULA"
   },
   {
+    "PackageName": "System.IO.Pipelines",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.IO.Pipelines",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "System.Linq",
     "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
@@ -899,6 +1619,30 @@
     ],
     "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n7601f4f6225089ffb291dc7d58293c7bbf5c5d4f \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Memory",
+    "PackageVersion": "4.5.5",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for efficient representation and pooling of managed, stack, and native memory segments and sequences of such segments, along with primitives to parse and format UTF-8 encoded text stored in those memory segments.\r\n\r\nCommonly Used Types:\r\nSystem.Span\r\nSystem.ReadOnlySpan\r\nSystem.Memory\r\nSystem.ReadOnlyMemory\r\nSystem.Buffers.MemoryPool\r\nSystem.Buffers.ReadOnlySequence\r\nSystem.Buffers.Text.Utf8Parser\r\nSystem.Buffers.Text.Utf8Formatter\r\n \r\n32b491939fbd125f304031c35038b1e14b4e3958 \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Memory",
+    "PackageVersion": "4.6.3",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "System.Memory",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
@@ -959,6 +1703,18 @@
     ],
     "Description": "Provides hardware-accelerated numeric types, suitable for high-performance processing and graphics applications.\r\n\r\nCommonly Used Types:\r\nSystem.Numerics.Matrix3x2\r\nSystem.Numerics.Matrix4x4\r\nSystem.Numerics.Plane\r\nSystem.Numerics.Quaternion\r\nSystem.Numerics.Vector2\r\nSystem.Numerics.Vector3\r\nSystem.Numerics.Vector4\r\nSystem.Numerics.Vector\r\nSystem.Numerics.Vector<T>\r\n \r\n8321c729934c0f8be754953439b88e6e1c120c24",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Numerics.Vectors",
+    "PackageVersion": "4.6.1",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "System.Numerics.Vectors",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
@@ -1118,6 +1874,18 @@
     "LicenseType": "MIT"
   },
   {
+    "PackageName": "System.Runtime.CompilerServices.Unsafe",
+    "PackageVersion": "6.1.2",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level functionality for manipulating pointers.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
     "PackageName": "System.Runtime.Extensions",
     "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
@@ -1216,18 +1984,6 @@
   {
     "PackageName": "System.Security.Cryptography.Algorithms",
     "PackageVersion": "4.3.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides base types for cryptographic algorithms, including hashing, encryption, and signing operations.\r\n\r\nCommonly Used Types:\r\nSystem.Security.Cryptography.Aes\r\nSystem.Security.Cryptography.RSA\r\nSystem.Security.Cryptography.RSAParameters\r\nSystem.Security.Cryptography.HMACSHA1\r\nSystem.Security.Cryptography.SHA256\r\nSystem.Security.Cryptography.SHA1\r\nSystem.Security.Cryptography.SHA512\r\nSystem.Security.Cryptography.SHA384\r\nSystem.Security.Cryptography.HMACSHA256\r\nSystem.Security.Cryptography.MD5\r\nSystem.Security.Cryptography.HMACSHA384\r\nSystem.Security.Cryptography.HMACSHA512\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
-  },
-  {
-    "PackageName": "System.Security.Cryptography.Algorithms",
-    "PackageVersion": "4.3.1",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation.  All rights reserved.",
     "Authors": [
@@ -1347,7 +2103,31 @@
   },
   {
     "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Encodings.Web",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Encodings.Web",
+    "PackageVersion": "10.0.3",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
@@ -1371,13 +2151,49 @@
   },
   {
     "PackageName": "System.Text.Json",
-    "PackageVersion": "6.0.0",
+    "PackageVersion": "8.0.6",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nCommonly Used Types:\r\nSystem.Text.Json.JsonSerializer\r\nSystem.Text.Json.JsonDocument\r\nSystem.Text.Json.JsonElement\r\nSystem.Text.Json.Utf8JsonWriter\r\nSystem.Text.Json.Utf8JsonReader",
+    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Json",
+    "PackageVersion": "9.0.13",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Json",
+    "PackageVersion": "10.0.3",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.Text.Json",
+    "PackageVersion": "8.0.5",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
@@ -1419,6 +2235,18 @@
   },
   {
     "PackageName": "System.Threading.Tasks.Extensions",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Threading.Tasks.Extensions",
     "PackageVersion": "4.5.4",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -1431,15 +2259,15 @@
   },
   {
     "PackageName": "System.Threading.Tasks.Extensions",
-    "PackageVersion": "4.3.0",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "PackageVersion": "4.6.3",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
     "Authors": [
       "Microsoft"
     ],
-    "Description": "Provides additional types that simplify the work of writing concurrent and asynchronous code.\r\n\r\nCommonly Used Types:\r\nSystem.Threading.Tasks.ValueTask<TResult>",
-    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
-    "LicenseType": "MS-EULA"
+    "Description": "System.Threading.Tasks.Extensions",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
+    "LicenseType": "MIT"
   },
   {
     "PackageName": "System.Threading.Timer",
@@ -1463,6 +2291,18 @@
     ],
     "Description": "Provides the System.ValueTuple structs, which implement the underlying types for tuples in C# and Visual Basic.\r\n\r\nCommonly Used Types:\r\nSystem.ValueTuple\r\nSystem.ValueTuple<T1>\r\nSystem.ValueTuple<T1, T2>\r\nSystem.ValueTuple<T1, T2, T3>\r\nSystem.ValueTuple<T1, T2, T3, T4>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7>\r\nSystem.ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>\r\n \r\n30ab651fcb4354552bd4891619a0bdd81e0ebdbf \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "https://github.com/dotnet/corefx/blob/master/LICENSE.TXT",
+    "LicenseType": "MIT"
+  },
+  {
+    "PackageName": "System.ValueTuple",
+    "PackageVersion": "4.6.1",
+    "PackageUrl": "https://github.com/dotnet/maintenance-packages",
+    "Copyright": "© Microsoft Corporation. All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "System.ValueTuple",
+    "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
   {
