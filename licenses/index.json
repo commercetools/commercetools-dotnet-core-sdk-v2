@@ -1562,30 +1562,6 @@
     "LicenseType": "MS-EULA"
   },
   {
-    "PackageName": "System.IO.Pipelines",
-    "PackageVersion": "9.0.13",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.IO.Pipelines",
-    "PackageVersion": "10.0.3",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Single producer single consumer byte buffer management.\r\n\r\nCommonly Used Types:\r\nSystem.IO.Pipelines.Pipe\r\nSystem.IO.Pipelines.PipeWriter\r\nSystem.IO.Pipelines.PipeReader",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
     "PackageName": "System.Linq",
     "PackageVersion": "4.3.0",
     "PackageUrl": "https://dot.net/",
@@ -2091,18 +2067,6 @@
   },
   {
     "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "6.0.1",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Encodings.Web",
     "PackageVersion": "8.0.0",
     "PackageUrl": "https://dot.net/",
     "Copyright": "© Microsoft Corporation. All rights reserved.",
@@ -2110,78 +2074,6 @@
       "Microsoft"
     ],
     "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "9.0.13",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Encodings.Web",
-    "PackageVersion": "10.0.3",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language (HTML), and uniform resource locators (URL).\r\n\r\nCommonly Used Types:\r\nSystem.Text.Encodings.Web.HtmlEncoder\r\nSystem.Text.Encodings.Web.UrlEncoder\r\nSystem.Text.Encodings.Web.JavaScriptEncoder",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Json",
-    "PackageVersion": "6.0.11",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nCommonly Used Types:\r\nSystem.Text.Json.JsonSerializer\r\nSystem.Text.Json.JsonDocument\r\nSystem.Text.Json.JsonElement\r\nSystem.Text.Json.Utf8JsonWriter\r\nSystem.Text.Json.Utf8JsonReader",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Json",
-    "PackageVersion": "8.0.6",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Json",
-    "PackageVersion": "9.0.13",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
-    "LicenseUrl": "https://licenses.nuget.org/MIT",
-    "LicenseType": "MIT"
-  },
-  {
-    "PackageName": "System.Text.Json",
-    "PackageVersion": "10.0.3",
-    "PackageUrl": "https://dot.net/",
-    "Copyright": "© Microsoft Corporation. All rights reserved.",
-    "Authors": [
-      "Microsoft"
-    ],
-    "Description": "Provides high-performance and low-allocating types that serialize objects to JavaScript Object Notation (JSON) text and deserialize JSON text to objects, with UTF-8 support built-in. Also provides types to read and write JSON text encoded as UTF-8, and to create an in-memory document object model (DOM), that is read-only, for random access of the JSON elements within a structured view of the data.\r\n\r\nThe System.Text.Json library is built-in as part of the shared framework in .NET Runtime. The package can be installed when you need to use it in other target frameworks.",
     "LicenseUrl": "https://licenses.nuget.org/MIT",
     "LicenseType": "MIT"
   },
