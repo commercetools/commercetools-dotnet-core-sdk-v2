@@ -1528,7 +1528,7 @@
   },
   {
     "PackageName": "ZeroQL",
-    "PackageVersion": "7.0.2",
+    "PackageVersion": "8.0.0",
     "PackageUrl": "https://github.com/byme8/ZeroQL",
     "Copyright": "",
     "Authors": [
