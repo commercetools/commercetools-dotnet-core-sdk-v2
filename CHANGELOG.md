@@ -1,4 +1,21 @@
 
+# 15.1.0 (2026-04-08)
+
+## What's Changed
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CountryCode`
+- added type `CurrencyCode`
+- added type `Locale`
+</details>
+
+Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/546
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.0.0...15.1.0
+
 # 15.0.0 (2026-03-09)
 
 # New TargetFramework builds
