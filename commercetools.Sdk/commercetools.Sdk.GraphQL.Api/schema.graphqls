@@ -1830,7 +1830,9 @@ type Category implements Versioned & ReferenceExpandable {
   stagedProductCount: Int!
     """Number of direct child categories."""
   childCount: Int!
-    """Direct child categories."""
+    """
+  Direct child categories. The maximum number of child categories that can be fetched is **150**. If the actual number of child categories exceeds this limit, the query will fail.
+  """
   children: [Category!]
     createdAt: DateTime!
     lastModifiedAt: DateTime!
@@ -2070,7 +2072,7 @@ type CountOnCustomLineItemUnits implements PatternComponent {
     predicate: String!
     minCount: Int
     maxCount: Int
-    excludeCount: Int
+    excludeCount: Int @deprecated(reason: "Please use 'triggerPattern' to exclude.")
     type: String!
 }
 
@@ -3015,6 +3017,10 @@ type Extension implements Versioned & ReferenceExpandable {
     destination: ExtensionDestination!
     triggers: [Trigger!]!
     timeoutInMs: Int
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
+  expansionPaths: [String!]!
     id: String!
     version: Long!
     createdAt: DateTime!
@@ -4698,25 +4704,10 @@ type Mutation {
   createMyPayment(draft: MyPaymentDraft!): MyPayment
     updateMyPayment(id: String!, version: Long!, actions: [MyPaymentUpdateAction!]!): MyPayment
     deleteMyPayment(id: String!, version: Long!): MyPayment
-    createProductSelection(
-    draft: CreateProductSelectionDraft!
-    """
-    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
-    """
-    storeKey: KeyReferenceInput @filterFromPublicDoc
-  ): ProductSelection
-    updateProductSelection(
-    version: Long!
-    actions: [ProductSelectionUpdateAction!]!
-    """
-    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
-    """
-    storeKey: KeyReferenceInput @filterFromPublicDoc
-    """Queries with specified ID"""
-    id: String
-    """Queries with specified key"""
-    key: String
-  ): ProductSelection
+    createProductSelection(draft: CreateProductSelectionDraft!): ProductSelection
+    updateProductSelection(version: Long!, actions: [ProductSelectionUpdateAction!]!, """Queries with specified ID"""
+    id: String, """Queries with specified key"""
+    key: String): ProductSelection
     deleteProductSelection(
     version: Long!
     """Queries with specified ID"""
@@ -9615,6 +9606,12 @@ type VariantDeleted implements MessagePayload {
     type: String!
 }
 
+type VariantImageAdded implements MessagePayload {
+    image: Image!
+    staged: Boolean!
+    type: String!
+}
+
 type VariantImagesSet implements MessagePayload {
     staged: Boolean!
     images: [Image!]!
@@ -12732,7 +12729,7 @@ input CountOnCustomLineItemUnitsInput {
     predicate: String!
     minCount: Int = 1
     maxCount: Int
-    excludeCount: Int
+    excludeCount: Int @deprecated(reason: "Please use 'triggerPattern' to exclude.")
 }
 
 input CountOnLineItemUnitsInput {
@@ -13239,11 +13236,19 @@ input ExtensionDraft {
     destination: ExtensionDestinationInput!
     triggers: [TriggerInput!]!
     timeoutInMs: Int
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
+  expansionPaths: [String!]
 }
 
 input ExtensionUpdateAction {
     changeDestination: ChangeExtensionDestination
     changeTriggers: ChangeExtensionTriggers
+    """
+  BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+  """
+  setExpansionPaths: SetExtensionExpansionPaths
     setKey: SetExtensionKey
     setTimeoutInMs: SetExtensionTimeoutInMs
 }
@@ -15919,6 +15924,13 @@ input SetDiscountGroupSortOrder {
     sortOrder: String!
 }
 
+"""
+BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+"""
+input SetExtensionExpansionPaths {
+    expansionPaths: [String!]!
+}
+
 input SetExtensionKey {
     key: String
 }
@@ -17983,8 +17995,8 @@ input StateUpdateAction {
 BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
 """
 input StockLevelsDraft {
-    safetyStock: Long
-    reorderPoint: Long
+    safetyStock: Int
+    reorderPoint: Int
 }
 
 input StoreCountryInput {
