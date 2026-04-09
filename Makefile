@@ -41,7 +41,7 @@ generate_checkout:
 	$(MAKE) -C commercetools.Sdk LIB_NAME="CheckoutApi" GEN_RAML_FILE=../$(CHECKOUT_RAML) generate_sdk
 
 prettify:
-	find . -name "*.csproj" -exec sed -i '' 's/<TargetFrameworks>net6.0;net7.0;net8.0;net9.0;net10.0/<TargetFrameworks>net6.0/g' {} +
+	find . -name "*.csproj" -exec sed -i 's/<TargetFrameworks>net6.0;net7.0;net8.0;net9.0;net10.0/<TargetFrameworks>net6.0/g' {} +
 	dotnet format commercetools.Sdk/commercetools.Base.Abstractions/commercetools.Base.Abstractions.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Base.Client/commercetools.Base.Client.csproj --severity warn
 	dotnet format commercetools.Sdk/commercetools.Base.Registration/commercetools.Base.Registration.csproj --severity warn
