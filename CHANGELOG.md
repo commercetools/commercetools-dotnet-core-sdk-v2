@@ -1,4 +1,13 @@
 
+# 15.2.0 (2026-04-13)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/547
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/548
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.1.0...15.2.0
+
 # 15.1.0 (2026-04-08)
 
 ## What's Changed
