@@ -18,7 +18,9 @@ namespace commercetools.Sdk.ImportApi.Serialization
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
 
             };
+            // Keep ImportDateTimeConverter first so DateTime writes stay canonical for Import payloads.
             _serializerOptions.Converters.Add(new ImportDateTimeConverter());
+            _serializerOptions.Converters.Add(new CustomDateTimeConverter());
             _serializerOptions.Converters.Add(new CustomDateConverter());
             _serializerOptions.Converters.Add(new DeserializeAsConverterFactory(
                 _serializerOptions.PropertyNamingPolicy, _serializerOptions));
