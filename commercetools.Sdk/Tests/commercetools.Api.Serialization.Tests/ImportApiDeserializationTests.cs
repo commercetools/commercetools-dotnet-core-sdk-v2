@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System;
 using commercetools.Sdk.ImportApi.Models.Importoperations;
 using commercetools.Sdk.ImportApi.Models.Importsummaries;
 using Xunit;
@@ -54,6 +55,17 @@ namespace commercetools.Api.Serialization.Tests
             Assert.NotNull(error);
             Assert.NotNull(error.Attribute);
             Assert.IsType<Attribute>(error.Attribute);//default attribute
+        }
+
+        [Fact]
+        public void SerializeDateTime_UsesCanonicalUtcOffset()
+        {
+            var serializerService = this.serializationFixture.SerializerService;
+            var dateTime = DateTime.Parse("2026-03-31T22:12:45.345Z");
+
+            var serialized = serializerService.Serialize(dateTime);
+
+            Assert.Equal("\"2026-03-31T22:12:45.345+00:00\"", serialized);
         }
 
 
