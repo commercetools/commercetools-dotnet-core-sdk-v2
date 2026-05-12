@@ -29,6 +29,15 @@ namespace commercetools.Api.Serialization.Tests
         }
 
         [Fact]
+        public void SerializeLocalDateTime()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+            var dateTime = DateTime.Parse("2020-06-04T12:27:55.344+01:00", CultureInfo.GetCultureInfo("de-DE"));
+            var dateTimeSerialized = serializerService.Serialize(dateTime);
+            Assert.Equal("\"2020-06-04T11:27:55.344Z\"", dateTimeSerialized);
+        }
+        
+        [Fact]
         public void SerializeDate()
         {
             ISerializerService serializerService = this.serializationFixture.SerializerService;
