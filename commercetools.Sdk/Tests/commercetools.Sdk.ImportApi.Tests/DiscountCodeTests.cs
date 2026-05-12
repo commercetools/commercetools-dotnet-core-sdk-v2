@@ -22,11 +22,11 @@ public class DiscountCodeTests
         
         var discountCodeImport = new DiscountCodeImport
         {
-            ValidFrom = DateTime.Parse("2026-01-01T12:00:00+01:00"),
+            ValidFrom = DateTime.Parse("2026-01-01T12:00:00.230+01:00"),
             ValidUntil = DateTime.Parse("2026-01-31T12:00:00+00:00"),
         };
         var t = serializerService.Serialize(discountCodeImport);
 
-        Assert.Equal("{\"isActive\":false,\"validFrom\":\"2026-01-01T11:00:00Z\",\"validUntil\":\"2026-01-31T12:00:00Z\"}", t);
+        Assert.Equal("{\"isActive\":false,\"validFrom\":\"2026-01-01T11:00:00.23Z\",\"validUntil\":\"2026-01-31T12:00:00Z\"}", t);
     }
 }
