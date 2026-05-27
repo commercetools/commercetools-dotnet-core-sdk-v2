@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Channels
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Channels.ChannelResourceIdentifier))]
     public partial interface IChannelResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

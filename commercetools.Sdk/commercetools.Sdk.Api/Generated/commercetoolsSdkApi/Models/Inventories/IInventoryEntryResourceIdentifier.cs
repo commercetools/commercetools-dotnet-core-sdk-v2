@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Inventories
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryResourceIdentifier))]
     public partial interface IInventoryEntryResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

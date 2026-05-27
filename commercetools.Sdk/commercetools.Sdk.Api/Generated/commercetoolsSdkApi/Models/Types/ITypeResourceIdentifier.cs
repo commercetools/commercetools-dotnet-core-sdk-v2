@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Types
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Types.TypeResourceIdentifier))]
     public partial interface ITypeResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

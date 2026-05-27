@@ -70,10 +70,28 @@ namespace commercetools.Sdk.Api.Predicates.Query.Inventories
             return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetKeyActionQueryBuilderDsl.Of()),
                 InventoryEntryUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetReorderPoint(
+            Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReorderPointActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReorderPointActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReorderPointActionQueryBuilderDsl.Of()),
+                InventoryEntryUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetReservationExpirationInMinutes(
+            Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetReservationExpirationInMinutesActionQueryBuilderDsl.Of()),
+                InventoryEntryUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetRestockableInDays(
             Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetRestockableInDaysActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetRestockableInDaysActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetRestockableInDaysActionQueryBuilderDsl.Of()),
+                InventoryEntryUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetSafetyStock(
+            Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetSafetyStockActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetSafetyStockActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntrySetSafetyStockActionQueryBuilderDsl.Of()),
                 InventoryEntryUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> AsSetSupplyChannel(

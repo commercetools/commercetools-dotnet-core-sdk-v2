@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyResourceIdentifier))]
     public partial interface IRecurrencePolicyResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

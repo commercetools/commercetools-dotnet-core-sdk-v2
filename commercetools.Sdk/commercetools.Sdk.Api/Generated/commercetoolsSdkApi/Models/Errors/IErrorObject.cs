@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
+    [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
@@ -33,6 +34,9 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ExpiredCustomerEmailToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerEmailTokenError))]
     [SubTypeDiscriminator("ExpiredCustomerPasswordToken", typeof(commercetools.Sdk.Api.Models.Errors.ExpiredCustomerPasswordTokenError))]
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
+    [SubTypeDiscriminator("ExtensionChainTooDeep", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionChainTooDeepError))]
+    [SubTypeDiscriminator("ExtensionChainTooWide", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError))]
+    [SubTypeDiscriminator("ExtensionDependencyExists", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionDependencyExistsError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError))]
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError))]
     [SubTypeDiscriminator("ExtensionUpdateActionsFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionUpdateActionsFailedError))]
@@ -51,12 +55,15 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("InvalidOperation", typeof(commercetools.Sdk.Api.Models.Errors.InvalidOperationError))]
     [SubTypeDiscriminator("InvalidSubject", typeof(commercetools.Sdk.Api.Models.Errors.InvalidSubjectError))]
     [SubTypeDiscriminator("LanguageUsedInStores", typeof(commercetools.Sdk.Api.Models.Errors.LanguageUsedInStoresError))]
+    [SubTypeDiscriminator("LineItemQuantityAboveLimit", typeof(commercetools.Sdk.Api.Models.Errors.LineItemQuantityAboveLimitError))]
+    [SubTypeDiscriminator("LineItemQuantityBelowLimit", typeof(commercetools.Sdk.Api.Models.Errors.LineItemQuantityBelowLimitError))]
     [SubTypeDiscriminator("LockedField", typeof(commercetools.Sdk.Api.Models.Errors.LockedFieldError))]
     [SubTypeDiscriminator("MatchingPriceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.MatchingPriceNotFoundError))]
     [SubTypeDiscriminator("MaxCartDiscountsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxCartDiscountsReachedError))]
     [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError))]
+    [SubTypeDiscriminator("MissingDependency", typeof(commercetools.Sdk.Api.Models.Errors.MissingDependencyError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
@@ -127,6 +134,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.BadGatewayError BadGateway(Action<commercetools.Sdk.Api.Models.Errors.BadGatewayError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.BadGatewayError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.CircularDependencyError CircularDependency(Action<commercetools.Sdk.Api.Models.Errors.CircularDependencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.CircularDependencyError();
             init?.Invoke(t);
             return t;
         }
@@ -262,6 +275,24 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.ExtensionChainTooDeepError ExtensionChainTooDeep(Action<commercetools.Sdk.Api.Models.Errors.ExtensionChainTooDeepError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExtensionChainTooDeepError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError ExtensionChainTooWide(Action<commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExtensionDependencyExistsError ExtensionDependencyExists(Action<commercetools.Sdk.Api.Models.Errors.ExtensionDependencyExistsError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExtensionDependencyExistsError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError ExtensionNoResponse(Action<commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError();
@@ -370,6 +401,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.LineItemQuantityAboveLimitError LineItemQuantityAboveLimit(Action<commercetools.Sdk.Api.Models.Errors.LineItemQuantityAboveLimitError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.LineItemQuantityAboveLimitError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.LineItemQuantityBelowLimitError LineItemQuantityBelowLimit(Action<commercetools.Sdk.Api.Models.Errors.LineItemQuantityBelowLimitError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.LineItemQuantityBelowLimitError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.LockedFieldError LockedField(Action<commercetools.Sdk.Api.Models.Errors.LockedFieldError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.LockedFieldError();
@@ -403,6 +446,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError MaxStoreReferencesReached(Action<commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.MissingDependencyError MissingDependency(Action<commercetools.Sdk.Api.Models.Errors.MissingDependencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.MissingDependencyError();
             init?.Invoke(t);
             return t;
         }

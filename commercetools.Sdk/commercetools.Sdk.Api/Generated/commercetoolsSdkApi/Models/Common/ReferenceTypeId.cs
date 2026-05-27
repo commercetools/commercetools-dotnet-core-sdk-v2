@@ -109,6 +109,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("recurring-order")]
         RecurringOrder,
 
+        [Description("reservation")]
+        Reservation,
+
         [Description("review")]
         Review,
 
@@ -265,6 +268,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId RecurringOrder = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.RecurringOrder, JsonName = "recurring-order" };
 
+        public static IReferenceTypeId Reservation = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.Reservation, JsonName = "reservation" };
+
         public static IReferenceTypeId Review = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Review, JsonName = "review" };
 
@@ -337,6 +343,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  QuoteRequest ,
                  RecurrencePolicy ,
                  RecurringOrder ,
+                 Reservation ,
                  Review ,
                  ShippingMethod ,
                  ShoppingList ,

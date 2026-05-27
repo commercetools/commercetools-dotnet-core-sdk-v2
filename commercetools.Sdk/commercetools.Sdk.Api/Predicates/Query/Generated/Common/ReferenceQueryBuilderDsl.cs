@@ -118,6 +118,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupReferenceQueryBuilderDsl.Of()),
                 ReferenceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsExtension(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl.Of()),
+                ReferenceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsInventoryEntry(
             Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryReferenceQueryBuilderDsl>> fn)
         {
@@ -200,6 +206,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderReferenceQueryBuilderDsl.Of()),
+                ReferenceQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsReservation(
+            Func<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ReferenceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl.Of()),
                 ReferenceQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ReferenceQueryBuilderDsl> AsReview(

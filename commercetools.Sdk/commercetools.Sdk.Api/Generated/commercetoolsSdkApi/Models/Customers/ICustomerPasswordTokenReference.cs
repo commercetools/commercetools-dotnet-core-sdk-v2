@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerPasswordTokenReference))]
     public partial interface ICustomerPasswordTokenReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
     }

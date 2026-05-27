@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.AssociateRoles
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.AssociateRoles.AssociateRoleResourceIdentifier))]
     public partial interface IAssociateRoleResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

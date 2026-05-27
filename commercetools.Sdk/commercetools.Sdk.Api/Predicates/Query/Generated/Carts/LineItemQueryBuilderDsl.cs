@@ -214,6 +214,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 LineItemQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<LineItemQueryBuilderDsl> Reservation(
+            Func<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<LineItemQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("reservation"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationReferenceQueryBuilderDsl.Of())),
+                LineItemQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<LineItemQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {

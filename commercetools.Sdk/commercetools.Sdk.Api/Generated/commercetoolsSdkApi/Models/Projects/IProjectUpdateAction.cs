@@ -23,6 +23,8 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("setDiscountsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetDiscountsConfigurationAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
+    [SubTypeDiscriminator("setReleaseExpiredReservations", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetReleaseExpiredReservationsAction))]
+    [SubTypeDiscriminator("setReservationExpirationInMinutes", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetReservationExpirationInMinutesAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
     public partial interface IProjectUpdateAction
     {
@@ -133,6 +135,18 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction SetMyBusinessUnitAssociateRoleOnCreation(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectSetReleaseExpiredReservationsAction SetReleaseExpiredReservations(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetReleaseExpiredReservationsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetReleaseExpiredReservationsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectSetReservationExpirationInMinutesAction SetReservationExpirationInMinutes(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetReservationExpirationInMinutesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetReservationExpirationInMinutesAction();
             init?.Invoke(t);
             return t;
         }

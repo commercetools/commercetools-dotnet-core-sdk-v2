@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Categories
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Categories.CategoryReference))]
     public partial interface ICategoryReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         ICategory Obj { get; set; }
 
         new string Id { get; set; }

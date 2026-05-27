@@ -34,6 +34,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Extensions
             return new CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionChangeTriggersActionQueryBuilderDsl.Of()),
                 ExtensionUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> AsSetAdditionalContext(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetAdditionalContextActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetAdditionalContextActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetAdditionalContextActionQueryBuilderDsl.Of()),
+                ExtensionUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> AsSetDependencies(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetDependenciesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetDependenciesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetDependenciesActionQueryBuilderDsl.Of()),
+                ExtensionUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> AsSetExpansionPaths(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetExpansionPathsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetExpansionPathsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetExpansionPathsActionQueryBuilderDsl.Of()),
+                ExtensionUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ExtensionUpdateActionQueryBuilderDsl> AsSetKey(
             Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionSetKeyActionQueryBuilderDsl>> fn)
         {

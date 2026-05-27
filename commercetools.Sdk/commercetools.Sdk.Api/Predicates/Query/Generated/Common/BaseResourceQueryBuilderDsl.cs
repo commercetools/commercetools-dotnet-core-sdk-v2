@@ -226,6 +226,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsReservation(
+            Func<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Reservations.ReservationQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsReview(
             Func<commercetools.Sdk.Api.Predicates.Query.Reviews.ReviewQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Reviews.ReviewQueryBuilderDsl>> fn)
         {

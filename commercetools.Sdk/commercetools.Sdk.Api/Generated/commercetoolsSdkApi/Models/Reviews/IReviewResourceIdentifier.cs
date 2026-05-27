@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Reviews
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Reviews.ReviewResourceIdentifier))]
     public partial interface IReviewResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

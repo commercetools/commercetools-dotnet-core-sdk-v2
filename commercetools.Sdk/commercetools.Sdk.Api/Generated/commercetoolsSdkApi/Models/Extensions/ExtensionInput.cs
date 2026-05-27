@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
         public IExtensionAction Action { get; set; }
 
         public IReference Resource { get; set; }
+
+        public IReference OldResource { get; set; }
     }
 }

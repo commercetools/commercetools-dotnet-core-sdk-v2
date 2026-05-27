@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.OrderEdits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.OrderEdits.OrderEditResourceIdentifier))]
     public partial interface IOrderEditResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

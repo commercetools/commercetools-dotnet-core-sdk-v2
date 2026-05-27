@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringReference))]
     public partial interface IProductTailoringReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         IProductTailoring Obj { get; set; }

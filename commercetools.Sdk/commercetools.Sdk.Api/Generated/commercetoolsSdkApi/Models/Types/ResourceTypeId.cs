@@ -94,6 +94,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("quote")]
         Quote,
 
+        [Description("reservation")]
+        Reservation,
+
         [Description("review")]
         Review,
 
@@ -229,6 +232,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static IResourceTypeId Quote = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Quote, JsonName = "quote" };
 
+        public static IResourceTypeId Reservation = new ResourceTypeIdWrapper
+        { Value = ResourceTypeId.Reservation, JsonName = "reservation" };
+
         public static IResourceTypeId Review = new ResourceTypeIdWrapper
         { Value = ResourceTypeId.Review, JsonName = "review" };
 
@@ -290,6 +296,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  ProductSelection ,
                  ProductTailoring ,
                  Quote ,
+                 Reservation ,
                  Review ,
                  RecurringOrder ,
                  Shipping ,

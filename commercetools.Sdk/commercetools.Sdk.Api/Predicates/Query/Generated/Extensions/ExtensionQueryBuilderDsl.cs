@@ -91,6 +91,34 @@ namespace commercetools.Sdk.Api.Predicates.Query.Extensions
             p => new CombinationQueryPredicate<ExtensionQueryBuilderDsl>(p, ExtensionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ExtensionQueryBuilderDsl> Dependencies(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("dependencies"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionReferenceQueryBuilderDsl.Of())),
+                ExtensionQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ExtensionQueryBuilderDsl> Dependencies()
+        {
+            return new CollectionPredicateBuilder<ExtensionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("dependencies")),
+                    p => new CombinationQueryPredicate<ExtensionQueryBuilderDsl>(p, ExtensionQueryBuilderDsl.Of));
+        }
+        public IComparableCollectionPredicateBuilder<ExtensionQueryBuilderDsl, string> ExpansionPaths()
+        {
+            return new ComparableCollectionPredicateBuilder<ExtensionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("expansionPaths")),
+            p => new CombinationQueryPredicate<ExtensionQueryBuilderDsl>(p, ExtensionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<ExtensionQueryBuilderDsl> AdditionalContext(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("additionalContext"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextQueryBuilderDsl.Of())),
+                ExtensionQueryBuilderDsl.Of);
+        }
+
 
     }
 }

@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference))]
     public partial interface IRecurrencePolicyReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IRecurrencePolicy Obj { get; set; }
 
         new string Id { get; set; }

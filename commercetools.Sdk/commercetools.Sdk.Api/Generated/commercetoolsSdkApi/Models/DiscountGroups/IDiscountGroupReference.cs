@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.DiscountGroups
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference))]
     public partial interface IDiscountGroupReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         IDiscountGroup Obj { get; set; }

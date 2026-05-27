@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderResourceIdentifier))]
     public partial interface IRecurringOrderResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

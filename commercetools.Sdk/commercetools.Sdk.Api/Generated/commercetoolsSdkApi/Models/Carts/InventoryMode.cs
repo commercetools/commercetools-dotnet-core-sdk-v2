@@ -17,7 +17,10 @@ namespace commercetools.Sdk.Api.Models.Carts
         TrackOnly,
 
         [Description("ReserveOnOrder")]
-        ReserveOnOrder
+        ReserveOnOrder,
+
+        [Description("ReserveOnCart")]
+        ReserveOnCart
     }
 
     public class InventoryModeWrapper : IInventoryMode
@@ -52,6 +55,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public static IInventoryMode ReserveOnOrder = new InventoryModeWrapper
         { Value = InventoryMode.ReserveOnOrder, JsonName = "ReserveOnOrder" };
 
+        public static IInventoryMode ReserveOnCart = new InventoryModeWrapper
+        { Value = InventoryMode.ReserveOnCart, JsonName = "ReserveOnCart" };
+
         InventoryMode? Value { get; }
 
         static IInventoryMode[] Values()
@@ -60,7 +66,8 @@ namespace commercetools.Sdk.Api.Models.Carts
             {
                  None ,
                  TrackOnly ,
-                 ReserveOnOrder
+                 ReserveOnOrder ,
+                 ReserveOnCart
              };
         }
         static IInventoryMode FindEnum(string value)

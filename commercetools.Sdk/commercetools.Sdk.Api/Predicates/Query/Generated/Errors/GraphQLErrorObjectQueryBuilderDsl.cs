@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLBadGatewayErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsCircularDependency(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLCircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLCircularDependencyErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLCircularDependencyErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsConcurrentModification(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLConcurrentModificationErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLConcurrentModificationErrorQueryBuilderDsl>> fn)
         {
@@ -190,6 +196,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionBadResponseErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtensionChainTooDeep(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooDeepErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtensionChainTooWide(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooWideErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooWideErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionChainTooWideErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtensionDependencyExists(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionDependencyExistsErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtensionNoResponse(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionNoResponseErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLExtensionNoResponseErrorQueryBuilderDsl>> fn)
         {
@@ -298,6 +322,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLanguageUsedInStoresErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsLineItemQuantityAboveLimit(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityAboveLimitErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsLineItemQuantityBelowLimit(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLineItemQuantityBelowLimitErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsLockedField(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLockedFieldErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLLockedFieldErrorQueryBuilderDsl>> fn)
         {
@@ -332,6 +368,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingDependency(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMissingDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMissingDependencyErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLMissingDependencyErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingRoleOnChannel(

@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ProductSelections
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductSelections.ProductSelectionResourceIdentifier))]
     public partial interface IProductSelectionResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

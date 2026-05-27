@@ -34,5 +34,7 @@ namespace commercetools.Sdk.ImportApi.Models.StandalonePrices
 
         ICustom Custom { get; set; }
 
+        bool? Active { get; set; }
+
     }
 }

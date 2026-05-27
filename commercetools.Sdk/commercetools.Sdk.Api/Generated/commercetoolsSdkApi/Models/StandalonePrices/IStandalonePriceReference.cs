@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.StandalonePrices
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.StandalonePrices.StandalonePriceReference))]
     public partial interface IStandalonePriceReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IStandalonePrice Obj { get; set; }
 
     }

@@ -13,8 +13,14 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
         [Description("europe-west1.gcp")]
         EuropeWest1Gcp,
 
+        [Description("eu-central-1.aws")]
+        EuCentral1Aws,
+
         [Description("us-central1.gcp")]
         UsCentral1Gcp,
+
+        [Description("us-east-2.aws")]
+        UsEast2Aws,
 
         [Description("australia-southeast1.gcp")]
         AustraliaSoutheast1Gcp
@@ -46,8 +52,14 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
         public static IRegion EuropeWest1Gcp = new RegionWrapper
         { Value = Region.EuropeWest1Gcp, JsonName = "europe-west1.gcp" };
 
+        public static IRegion EuCentral1Aws = new RegionWrapper
+        { Value = Region.EuCentral1Aws, JsonName = "eu-central-1.aws" };
+
         public static IRegion UsCentral1Gcp = new RegionWrapper
         { Value = Region.UsCentral1Gcp, JsonName = "us-central1.gcp" };
+
+        public static IRegion UsEast2Aws = new RegionWrapper
+        { Value = Region.UsEast2Aws, JsonName = "us-east-2.aws" };
 
         public static IRegion AustraliaSoutheast1Gcp = new RegionWrapper
         { Value = Region.AustraliaSoutheast1Gcp, JsonName = "australia-southeast1.gcp" };
@@ -59,7 +71,9 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
             return new[]
             {
                  EuropeWest1Gcp ,
+                 EuCentral1Aws ,
                  UsCentral1Gcp ,
+                 UsEast2Aws ,
                  AustraliaSoutheast1Gcp
              };
         }

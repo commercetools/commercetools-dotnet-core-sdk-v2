@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.CartResourceIdentifier))]
     public partial interface ICartResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

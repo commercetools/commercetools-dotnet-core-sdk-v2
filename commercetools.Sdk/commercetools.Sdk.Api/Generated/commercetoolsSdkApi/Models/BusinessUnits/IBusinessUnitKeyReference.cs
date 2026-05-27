@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.BusinessUnits
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.BusinessUnits.BusinessUnitKeyReference))]
     public partial interface IBusinessUnitKeyReference : IKeyReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Key { get; set; }
 
     }

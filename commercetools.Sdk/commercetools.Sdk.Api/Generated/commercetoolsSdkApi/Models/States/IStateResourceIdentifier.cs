@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.States
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.States.StateResourceIdentifier))]
     public partial interface IStateResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }
