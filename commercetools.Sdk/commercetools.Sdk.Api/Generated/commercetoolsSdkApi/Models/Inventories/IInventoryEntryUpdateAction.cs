@@ -13,7 +13,10 @@ namespace commercetools.Sdk.Api.Models.Inventories
     [SubTypeDiscriminator("setExpectedDelivery", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetExpectedDeliveryAction))]
     [SubTypeDiscriminator("setInventoryLimits", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetInventoryLimitsAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetKeyAction))]
+    [SubTypeDiscriminator("setReorderPoint", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReorderPointAction))]
+    [SubTypeDiscriminator("setReservationExpirationInMinutes", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReservationExpirationInMinutesAction))]
     [SubTypeDiscriminator("setRestockableInDays", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction))]
+    [SubTypeDiscriminator("setSafetyStock", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSafetyStockAction))]
     [SubTypeDiscriminator("setSupplyChannel", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSupplyChannelAction))]
     public partial interface IInventoryEntryUpdateAction
     {
@@ -67,9 +70,27 @@ namespace commercetools.Sdk.Api.Models.Inventories
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReorderPointAction SetReorderPoint(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReorderPointAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReorderPointAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReservationExpirationInMinutesAction SetReservationExpirationInMinutes(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReservationExpirationInMinutesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetReservationExpirationInMinutesAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction SetRestockableInDays(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetRestockableInDaysAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSafetyStockAction SetSafetyStock(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSafetyStockAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntrySetSafetyStockAction();
             init?.Invoke(t);
             return t;
         }

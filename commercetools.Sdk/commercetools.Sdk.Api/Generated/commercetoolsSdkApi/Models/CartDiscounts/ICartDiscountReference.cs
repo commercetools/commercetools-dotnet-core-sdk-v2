@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.CartDiscounts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CartDiscounts.CartDiscountReference))]
     public partial interface ICartDiscountReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         ICartDiscount Obj { get; set; }
 
         new string Id { get; set; }

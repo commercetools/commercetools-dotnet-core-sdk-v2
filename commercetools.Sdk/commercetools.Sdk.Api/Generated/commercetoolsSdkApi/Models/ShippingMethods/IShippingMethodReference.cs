@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference))]
     public partial interface IShippingMethodReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IShippingMethod Obj { get; set; }
 
         new string Id { get; set; }

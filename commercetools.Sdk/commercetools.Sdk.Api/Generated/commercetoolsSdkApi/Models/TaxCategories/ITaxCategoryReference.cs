@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference))]
     public partial interface ITaxCategoryReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         ITaxCategory Obj { get; set; }
 
         new string Id { get; set; }

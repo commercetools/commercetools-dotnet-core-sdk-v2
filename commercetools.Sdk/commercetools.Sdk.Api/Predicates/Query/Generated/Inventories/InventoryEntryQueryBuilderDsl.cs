@@ -114,6 +114,21 @@ namespace commercetools.Sdk.Api.Predicates.Query.Inventories
             p => new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(p, InventoryEntryQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long> ReservationExpirationInMinutes()
+        {
+            return new ComparisonPredicateBuilder<InventoryEntryQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("reservationExpirationInMinutes")),
+            p => new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(p, InventoryEntryQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<InventoryEntryQueryBuilderDsl> StockLevels(
+            Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryStockLevelsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryStockLevelsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<InventoryEntryQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("stockLevels"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryStockLevelsQueryBuilderDsl.Of())),
+                InventoryEntryQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<InventoryEntryQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {

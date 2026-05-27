@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringResourceIdentifier))]
     public partial interface IProductTailoringResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

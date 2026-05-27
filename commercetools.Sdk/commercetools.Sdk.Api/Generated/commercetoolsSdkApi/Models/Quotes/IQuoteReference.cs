@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Quotes.QuoteReference))]
     public partial interface IQuoteReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IQuote Obj { get; set; }
 
     }

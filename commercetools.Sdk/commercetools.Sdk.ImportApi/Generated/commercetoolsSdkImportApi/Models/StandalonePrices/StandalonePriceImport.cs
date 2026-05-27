@@ -32,5 +32,7 @@ namespace commercetools.Sdk.ImportApi.Models.StandalonePrices
         public IDiscountedPrice Discounted { get; set; }
 
         public ICustom Custom { get; set; }
+
+        public bool? Active { get; set; }
     }
 }

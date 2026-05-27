@@ -820,10 +820,34 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryDeletedMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntryOutOfStock(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryOutOfStockMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryOutOfStockMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryOutOfStockMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntryQuantitySet(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryQuantitySetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryQuantitySetMessageQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryQuantitySetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntryReorderPoint(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReorderPointMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReorderPointMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReorderPointMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntryReservationExpirationInMinutesSet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReservationExpirationInMinutesSetMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReservationExpirationInMinutesSetMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntryReservationExpirationInMinutesSetMessageQueryBuilderDsl.Of()),
+                MessageQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<MessageQueryBuilderDsl> AsInventoryEntrySafetyStock(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntrySafetyStockMessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntrySafetyStockMessageQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<MessageQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.InventoryEntrySafetyStockMessageQueryBuilderDsl.Of()),
                 MessageQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<MessageQueryBuilderDsl> AsOrderMessage(

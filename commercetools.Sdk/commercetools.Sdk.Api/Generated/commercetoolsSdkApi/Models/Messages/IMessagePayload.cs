@@ -136,7 +136,11 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("DiscountGroupSortOrderSet", typeof(commercetools.Sdk.Api.Models.Messages.DiscountGroupSortOrderSetMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryCreated", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryCreatedMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryDeleted", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryDeletedMessagePayload))]
+    [SubTypeDiscriminator("InventoryEntryOutOfStock", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryOutOfStockMessagePayload))]
     [SubTypeDiscriminator("InventoryEntryQuantitySet", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload))]
+    [SubTypeDiscriminator("InventoryEntryReorderPoint", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryReorderPointMessagePayload))]
+    [SubTypeDiscriminator("InventoryEntryReservationExpirationInMinutesSet", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntryReservationExpirationInMinutesSetMessagePayload))]
+    [SubTypeDiscriminator("InventoryEntrySafetyStock", typeof(commercetools.Sdk.Api.Models.Messages.InventoryEntrySafetyStockMessagePayload))]
     [SubTypeDiscriminator("LineItemStateTransition", typeof(commercetools.Sdk.Api.Models.Messages.LineItemStateTransitionMessagePayload))]
     [SubTypeDiscriminator("OrderBillingAddressSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderBillingAddressSetMessagePayload))]
     [SubTypeDiscriminator("OrderBusinessUnitSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderBusinessUnitSetMessagePayload))]
@@ -1108,9 +1112,33 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryOutOfStockMessagePayload InventoryEntryOutOfStock(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryOutOfStockMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryOutOfStockMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload InventoryEntryQuantitySet(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryQuantitySetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryReorderPointMessagePayload InventoryEntryReorderPoint(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryReorderPointMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryReorderPointMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntryReservationExpirationInMinutesSetMessagePayload InventoryEntryReservationExpirationInMinutesSet(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntryReservationExpirationInMinutesSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntryReservationExpirationInMinutesSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.InventoryEntrySafetyStockMessagePayload InventoryEntrySafetyStock(Action<commercetools.Sdk.Api.Models.Messages.InventoryEntrySafetyStockMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.InventoryEntrySafetyStockMessagePayload();
             init?.Invoke(t);
             return t;
         }

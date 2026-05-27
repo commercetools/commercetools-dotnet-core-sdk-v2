@@ -14,6 +14,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTypes;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariants;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductSelections;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTailorings;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
@@ -109,6 +110,11 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyProductSelectionsRequestBuilder ProductSelections()
         {
             return new ByProjectKeyProductSelectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyProductTailoringsRequestBuilder ProductTailorings()
+        {
+            return new ByProjectKeyProductTailoringsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyOrdersRequestBuilder Orders()

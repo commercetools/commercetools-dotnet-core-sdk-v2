@@ -31,5 +31,15 @@ namespace commercetools.Sdk.Api.Models.Extensions
 
         int? TimeoutInMs { get; set; }
 
+        IList<IExtensionReference> Dependencies { get; set; }
+
+        IEnumerable<IExtensionReference> DependenciesEnumerable { set => Dependencies = value.ToList(); }
+
+        IList<string> ExpansionPaths { get; set; }
+
+        IEnumerable<string> ExpansionPathsEnumerable { set => ExpansionPaths = value.ToList(); }
+
+        IExtensionAdditionalContext AdditionalContext { get; set; }
+
     }
 }

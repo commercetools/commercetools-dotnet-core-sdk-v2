@@ -8,7 +8,6 @@ namespace commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations
     [SubTypeDiscriminator("setAutomatedReversalConfiguration", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationUpdateAction))]
     [SubTypeDiscriminator("setAutomatedReversalConfigurationPredicate", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationPredicateUpdateAction))]
     [SubTypeDiscriminator("setAutomatedReversalConfigurationStatus", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationStatusUpdateAction))]
-    [SubTypeDiscriminator("setConnectorDeployment", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetConnectorDeploymentUpdateAction))]
     [SubTypeDiscriminator("setDisplayInfo", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetDisplayInfoUpdateAction))]
     [SubTypeDiscriminator("setDisplayInfoDescription", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetDisplayInfoDescriptionUpdateAction))]
     [SubTypeDiscriminator("setDisplayInfoLabel", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetDisplayInfoLabelUpdateAction))]
@@ -39,12 +38,6 @@ namespace commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations
         static commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationStatusUpdateAction SetAutomatedReversalConfigurationStatus(Action<commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationStatusUpdateAction> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetAutomatedReversalConfigurationStatusUpdateAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetConnectorDeploymentUpdateAction SetConnectorDeployment(Action<commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetConnectorDeploymentUpdateAction> init = null)
-        {
-            var t = new commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.SetConnectorDeploymentUpdateAction();
             init?.Invoke(t);
             return t;
         }

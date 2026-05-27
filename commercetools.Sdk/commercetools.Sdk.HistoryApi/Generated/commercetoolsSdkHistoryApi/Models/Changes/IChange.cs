@@ -335,6 +335,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetTitleChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTitleChange))]
     [SubTypeDiscriminator("SetTransactionCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionCustomFieldChange))]
     [SubTypeDiscriminator("SetTransactionCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionCustomTypeChange))]
+    [SubTypeDiscriminator("SetTransactionInterfaceIdChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionInterfaceIdChange))]
     [SubTypeDiscriminator("SetTransitionsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetTransitionsChange))]
     [SubTypeDiscriminator("SetUnitTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetUnitTypeChange))]
     [SubTypeDiscriminator("SetValidFromAndUntilChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetValidFromAndUntilChange))]
@@ -2361,6 +2362,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionCustomTypeChange SetTransactionCustomTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionCustomTypeChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionCustomTypeChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionInterfaceIdChange SetTransactionInterfaceIdChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionInterfaceIdChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetTransactionInterfaceIdChange();
             init?.Invoke(t);
             return t;
         }

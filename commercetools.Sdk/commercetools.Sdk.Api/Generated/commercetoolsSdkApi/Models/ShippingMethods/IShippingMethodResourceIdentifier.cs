@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodResourceIdentifier))]
     public partial interface IShippingMethodResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

@@ -19,6 +19,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("direct-discount", typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountReference))]
     [SubTypeDiscriminator("discount-code", typeof(commercetools.Sdk.Api.Models.DiscountCodes.DiscountCodeReference))]
     [SubTypeDiscriminator("discount-group", typeof(commercetools.Sdk.Api.Models.DiscountGroups.DiscountGroupReference))]
+    [SubTypeDiscriminator("extension", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionReference))]
     [SubTypeDiscriminator("inventory-entry", typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference))]
     [SubTypeDiscriminator("key-value-document", typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference))]
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.Api.Models.Orders.OrderReference))]
@@ -34,6 +35,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("quote-request", typeof(commercetools.Sdk.Api.Models.QuoteRequests.QuoteRequestReference))]
     [SubTypeDiscriminator("recurrence-policy", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyReference))]
     [SubTypeDiscriminator("recurring-order", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference))]
+    [SubTypeDiscriminator("reservation", typeof(commercetools.Sdk.Api.Models.Reservations.ReservationReference))]
     [SubTypeDiscriminator("review", typeof(commercetools.Sdk.Api.Models.Reviews.ReviewReference))]
     [SubTypeDiscriminator("shipping-method", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodReference))]
     [SubTypeDiscriminator("shopping-list", typeof(commercetools.Sdk.Api.Models.ShoppingLists.ShoppingListReference))]
@@ -134,6 +136,12 @@ namespace commercetools.Sdk.Api.Models.Common
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionReference Extension(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionReference();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference InventoryEntry(Action<commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference();
@@ -221,6 +229,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference RecurringOrder(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Reservations.ReservationReference Reservation(Action<commercetools.Sdk.Api.Models.Reservations.ReservationReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Reservations.ReservationReference();
             init?.Invoke(t);
             return t;
         }

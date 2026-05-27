@@ -18,6 +18,8 @@ namespace commercetools.Sdk.ImportApi.Models.Inventories
 
         DateTime? ExpectedDelivery { get; set; }
 
+        int? ReservationExpirationInMinutes { get; set; }
+
         IChannelKeyReference SupplyChannel { get; set; }
 
         ICustom Custom { get; set; }

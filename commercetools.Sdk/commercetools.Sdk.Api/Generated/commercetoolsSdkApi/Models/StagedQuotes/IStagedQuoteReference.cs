@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.StagedQuotes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.StagedQuotes.StagedQuoteReference))]
     public partial interface IStagedQuoteReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IStagedQuote Obj { get; set; }
 
     }

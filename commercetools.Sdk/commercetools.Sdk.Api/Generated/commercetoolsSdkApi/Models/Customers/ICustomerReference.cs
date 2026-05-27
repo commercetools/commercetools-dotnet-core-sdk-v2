@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerReference))]
     public partial interface ICustomerReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         ICustomer Obj { get; set; }
 
         new string Id { get; set; }

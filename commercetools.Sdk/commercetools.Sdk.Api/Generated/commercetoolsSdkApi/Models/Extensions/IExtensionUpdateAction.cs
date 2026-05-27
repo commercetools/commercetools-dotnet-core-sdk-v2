@@ -7,6 +7,9 @@ namespace commercetools.Sdk.Api.Models.Extensions
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionUpdateAction))]
     [SubTypeDiscriminator("changeDestination", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionChangeDestinationAction))]
     [SubTypeDiscriminator("changeTriggers", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction))]
+    [SubTypeDiscriminator("setAdditionalContext", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetAdditionalContextAction))]
+    [SubTypeDiscriminator("setDependencies", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetDependenciesAction))]
+    [SubTypeDiscriminator("setExpansionPaths", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetExpansionPathsAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetKeyAction))]
     [SubTypeDiscriminator("setTimeoutInMs", typeof(commercetools.Sdk.Api.Models.Extensions.ExtensionSetTimeoutInMsAction))]
     public partial interface IExtensionUpdateAction
@@ -22,6 +25,24 @@ namespace commercetools.Sdk.Api.Models.Extensions
         static commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction ChangeTriggers(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionChangeTriggersAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionSetAdditionalContextAction SetAdditionalContext(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionSetAdditionalContextAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionSetAdditionalContextAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionSetDependenciesAction SetDependencies(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionSetDependenciesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionSetDependenciesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Extensions.ExtensionSetExpansionPathsAction SetExpansionPaths(Action<commercetools.Sdk.Api.Models.Extensions.ExtensionSetExpansionPathsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Extensions.ExtensionSetExpansionPathsAction();
             init?.Invoke(t);
             return t;
         }

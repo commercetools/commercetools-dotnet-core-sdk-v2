@@ -126,6 +126,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
                 ProjectQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ProjectQueryBuilderDsl> Inventory(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.InventoryConfigurationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.InventoryConfigurationQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("inventory"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.InventoryConfigurationQueryBuilderDsl.Of())),
+                ProjectQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<ProjectQueryBuilderDsl> Discounts(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.DiscountsConfigurationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.DiscountsConfigurationQueryBuilderDsl>> fn)
         {

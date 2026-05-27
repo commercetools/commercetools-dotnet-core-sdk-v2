@@ -5,6 +5,7 @@ using commercetools.Sdk.Api.Models.CustomerGroups;
 using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
+using commercetools.Sdk.Api.Models.Warnings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -123,5 +124,9 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ILastModifiedBy LastModifiedBy { get; set; }
 
         public ICreatedBy CreatedBy { get; set; }
+
+        public IList<IWarningObject> Warnings { get; set; }
+
+        public IEnumerable<IWarningObject> WarningsEnumerable { set => Warnings = value.ToList(); }
     }
 }

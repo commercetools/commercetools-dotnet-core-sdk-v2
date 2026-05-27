@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Zones
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Zones.ZoneResourceIdentifier))]
     public partial interface IZoneResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

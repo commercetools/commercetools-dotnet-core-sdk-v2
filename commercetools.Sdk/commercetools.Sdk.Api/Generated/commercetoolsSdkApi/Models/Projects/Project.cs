@@ -44,6 +44,8 @@ namespace commercetools.Sdk.Api.Models.Projects
 
         public IBusinessUnitConfiguration BusinessUnits { get; set; }
 
+        public IInventoryConfiguration Inventory { get; set; }
+
         public IDiscountsConfiguration Discounts { get; set; }
     }
 }

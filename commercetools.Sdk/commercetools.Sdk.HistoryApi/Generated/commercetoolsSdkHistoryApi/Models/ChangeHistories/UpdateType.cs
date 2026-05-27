@@ -847,6 +847,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         [Description("setRestockableInDays")]
         SetRestockableInDays,
 
+        [Description("setReservationExpirationInMinutes")]
+        SetReservationExpirationInMinutes,
+
         [Description("setReturnInfo")]
         SetReturnInfo,
 
@@ -1888,6 +1891,9 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static IUpdateType SetRestockableInDays = new UpdateTypeWrapper
         { Value = UpdateType.SetRestockableInDays, JsonName = "setRestockableInDays" };
 
+        public static IUpdateType SetReservationExpirationInMinutes = new UpdateTypeWrapper
+        { Value = UpdateType.SetReservationExpirationInMinutes, JsonName = "setReservationExpirationInMinutes" };
+
         public static IUpdateType SetReturnInfo = new UpdateTypeWrapper
         { Value = UpdateType.SetReturnInfo, JsonName = "setReturnInfo" };
 
@@ -2353,6 +2359,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
                  SetReferences ,
                  SetReservations ,
                  SetRestockableInDays ,
+                 SetReservationExpirationInMinutes ,
                  SetReturnInfo ,
                  SetReturnItemCustomField ,
                  SetReturnItemCustomType ,

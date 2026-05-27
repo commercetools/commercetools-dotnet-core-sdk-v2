@@ -70,6 +70,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemTotalPrice", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTotalPriceAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction))]
     [SubTypeDiscriminator("setPurchaseOrderNumber", typeof(commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction))]
+    [SubTypeDiscriminator("setReservationExpirationInMinutes", typeof(commercetools.Sdk.Api.Models.Carts.CartSetReservationExpirationInMinutesAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomTypeAction))]
@@ -473,6 +474,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction SetPurchaseOrderNumber(Action<commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetReservationExpirationInMinutesAction SetReservationExpirationInMinutes(Action<commercetools.Sdk.Api.Models.Carts.CartSetReservationExpirationInMinutesAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetReservationExpirationInMinutesAction();
             init?.Invoke(t);
             return t;
         }

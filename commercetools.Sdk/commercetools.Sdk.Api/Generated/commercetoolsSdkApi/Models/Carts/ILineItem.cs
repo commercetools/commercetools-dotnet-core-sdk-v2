@@ -4,6 +4,7 @@ using commercetools.Sdk.Api.Models.Orders;
 using commercetools.Sdk.Api.Models.ProductTypes;
 using commercetools.Sdk.Api.Models.Products;
 using commercetools.Sdk.Api.Models.RecurringOrders;
+using commercetools.Sdk.Api.Models.Reservations;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -69,6 +70,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         IInventoryMode InventoryMode { get; set; }
 
         IItemShippingDetails ShippingDetails { get; set; }
+
+        IReservationReference Reservation { get; set; }
 
         ICustomFields Custom { get; set; }
 

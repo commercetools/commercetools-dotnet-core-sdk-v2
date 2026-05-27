@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Inventories
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Inventories.InventoryEntryReference))]
     public partial interface IInventoryEntryReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IInventoryEntry Obj { get; set; }
 
         new string Id { get; set; }

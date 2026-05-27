@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.CustomerGroups
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomerGroups.CustomerGroupResourceIdentifier))]
     public partial interface ICustomerGroupResourceIdentifier : IResourceIdentifier
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
         new string Key { get; set; }

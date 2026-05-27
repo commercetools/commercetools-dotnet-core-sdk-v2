@@ -49,6 +49,34 @@ namespace commercetools.Sdk.Api.Predicates.Query.Extensions
             p => new CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl>(p, ExtensionDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl> Dependencies(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("dependencies"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl.Of())),
+                ExtensionDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl> Dependencies()
+        {
+            return new CollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("dependencies")),
+                    p => new CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl>(p, ExtensionDraftQueryBuilderDsl.Of));
+        }
+        public IComparableCollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl, string> ExpansionPaths()
+        {
+            return new ComparableCollectionPredicateBuilder<ExtensionDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("expansionPaths")),
+            p => new CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl>(p, ExtensionDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl> AdditionalContext(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("additionalContext"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionAdditionalContextDraftQueryBuilderDsl.Of())),
+                ExtensionDraftQueryBuilderDsl.Of);
+        }
+
 
     }
 }

@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Customers
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Customers.CustomerEmailTokenReference))]
     public partial interface ICustomerEmailTokenReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
     }

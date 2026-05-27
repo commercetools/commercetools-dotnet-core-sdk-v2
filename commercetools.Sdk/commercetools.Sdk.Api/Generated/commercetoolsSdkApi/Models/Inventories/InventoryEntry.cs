@@ -38,6 +38,10 @@ namespace commercetools.Sdk.Api.Models.Inventories
 
         public DateTime? ExpectedDelivery { get; set; }
 
+        public int? ReservationExpirationInMinutes { get; set; }
+
+        public IInventoryEntryStockLevels StockLevels { get; set; }
+
         public ICustomFields Custom { get; set; }
     }
 }

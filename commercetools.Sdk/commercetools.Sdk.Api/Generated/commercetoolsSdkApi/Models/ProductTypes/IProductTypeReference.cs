@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeReference))]
     public partial interface IProductTypeReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IProductType Obj { get; set; }
 
         new string Id { get; set; }

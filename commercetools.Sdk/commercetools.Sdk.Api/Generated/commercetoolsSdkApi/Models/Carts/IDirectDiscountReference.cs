@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Carts.DirectDiscountReference))]
     public partial interface IDirectDiscountReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         new string Id { get; set; }
 
     }

@@ -30,6 +30,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Extensions
                 ExtensionInputQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ExtensionInputQueryBuilderDsl> OldResource(
+            Func<commercetools.Sdk.Api.Predicates.Query.Common.ReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.ReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ExtensionInputQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("oldResource"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Common.ReferenceQueryBuilderDsl.Of())),
+                ExtensionInputQueryBuilderDsl.Of);
+        }
+
 
     }
 }

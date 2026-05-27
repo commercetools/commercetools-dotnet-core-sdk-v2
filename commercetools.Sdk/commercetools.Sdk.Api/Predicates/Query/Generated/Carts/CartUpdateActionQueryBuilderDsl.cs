@@ -412,6 +412,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetPurchaseOrderNumberActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetReservationExpirationInMinutes(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetReservationExpirationInMinutesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetReservationExpirationInMinutesActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetShippingAddress(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetShippingAddressActionQueryBuilderDsl>> fn)
         {

@@ -100,6 +100,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.DiscountGroups.DiscountGroupResourceIdentifierQueryBuilderDsl.Of()),
                 ResourceIdentifierQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsExtension(
+            Func<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Extensions.ExtensionResourceIdentifierQueryBuilderDsl.Of()),
+                ResourceIdentifierQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsInventoryEntry(
             Func<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryResourceIdentifierQueryBuilderDsl>> fn)
         {

@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.AttributeGroups
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.AttributeGroups.AttributeGroupReference))]
     public partial interface IAttributeGroupReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IAttributeGroup Obj { get; set; }
 
         new string Id { get; set; }

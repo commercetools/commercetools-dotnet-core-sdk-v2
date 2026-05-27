@@ -130,6 +130,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetExternalOAuthActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetReleaseExpiredReservations(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetReservationExpirationInMinutes(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReservationExpirationInMinutesActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetShippingRateInputType(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetShippingRateInputTypeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetShippingRateInputTypeActionQueryBuilderDsl>> fn)
         {

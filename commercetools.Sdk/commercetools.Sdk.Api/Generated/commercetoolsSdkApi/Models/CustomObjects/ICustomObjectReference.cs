@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.CustomObjects
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.CustomObjects.CustomObjectReference))]
     public partial interface ICustomObjectReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         ICustomObject Obj { get; set; }
 
         new string Id { get; set; }

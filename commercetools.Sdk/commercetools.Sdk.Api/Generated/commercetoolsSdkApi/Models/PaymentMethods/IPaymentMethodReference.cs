@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.PaymentMethods
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.PaymentMethods.PaymentMethodReference))]
     public partial interface IPaymentMethodReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IPaymentMethod Obj { get; set; }
 
         new string Id { get; set; }

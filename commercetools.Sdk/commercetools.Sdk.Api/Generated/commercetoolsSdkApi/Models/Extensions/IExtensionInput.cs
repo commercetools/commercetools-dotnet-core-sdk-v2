@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Extensions
 
         IReference Resource { get; set; }
 
+        IReference OldResource { get; set; }
+
     }
 }

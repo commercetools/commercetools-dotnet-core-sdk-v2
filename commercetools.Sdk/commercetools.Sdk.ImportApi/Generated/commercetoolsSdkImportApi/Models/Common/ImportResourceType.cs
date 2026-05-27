@@ -43,6 +43,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("product-selection")]
         ProductSelection,
 
+        [Description("product-tailoring")]
+        ProductTailoring,
+
         [Description("product-type")]
         ProductType,
 
@@ -115,6 +118,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType ProductSelection = new ImportResourceTypeWrapper
         { Value = ImportResourceType.ProductSelection, JsonName = "product-selection" };
 
+        public static IImportResourceType ProductTailoring = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.ProductTailoring, JsonName = "product-tailoring" };
+
         public static IImportResourceType ProductType = new ImportResourceTypeWrapper
         { Value = ImportResourceType.ProductType, JsonName = "product-type" };
 
@@ -147,6 +153,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  Product ,
                  ProductDraft ,
                  ProductSelection ,
+                 ProductTailoring ,
                  ProductType ,
                  ProductVariant ,
                  ProductVariantPatch ,
