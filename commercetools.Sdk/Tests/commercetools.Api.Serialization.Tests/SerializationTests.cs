@@ -36,7 +36,7 @@ namespace commercetools.Api.Serialization.Tests
             var dateTimeSerialized = serializerService.Serialize(dateTime);
             Assert.Equal("\"2020-06-04T11:27:55.344Z\"", dateTimeSerialized);
         }
-        
+
         [Fact]
         public void SerializeDate()
         {

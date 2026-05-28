@@ -1,7 +1,4 @@
 using System;
-using commercetools.Base.Models;
-using commercetools.Sdk.ImportApi.Models.Common;
-using commercetools.Sdk.ImportApi.Models.Customers;
 using commercetools.Sdk.ImportApi.Models.DiscountCodes;
 using commercetools.Sdk.ImportApi.Serialization;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +16,7 @@ public class DiscountCodeTests
 
         var p = s.BuildServiceProvider();
         var serializerService = p.GetService<IImportSerializerService>();
-        
+
         var discountCodeImport = new DiscountCodeImport
         {
             ValidFrom = DateTime.Parse("2026-01-01T12:00:00.230+01:00"),
