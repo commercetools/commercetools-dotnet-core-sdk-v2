@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variantselectiontype_0',['VariantSelectionType',['../d8/d16/namespacecommercetools_1_1_sdk_1_1_import_api_1_1_models_1_1_product_selections.html#ad6fcc5087ace4c5548cdb4d2bd63fda9',1,'commercetools::Sdk::ImportApi::Models::ProductSelections']]]
+  ['updatetype_0',['UpdateType',['../d7/d51/namespacecommercetools_1_1_sdk_1_1_history_api_1_1_models_1_1_change_histories.html#afe97b17fffd607b3ae09651f9a58e33c',1,'commercetools::Sdk::HistoryApi::Models::ChangeHistories']]]
 ];
