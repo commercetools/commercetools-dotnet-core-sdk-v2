@@ -77,6 +77,17 @@ namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.BusinessUnits
                    .BusinessUnits()
                    .WithId("test_ID")
                    .Delete()
+                   .WithDataErasure(true)
+                   .Build(),
+                   "Delete",
+                   "/test_projectKey/business-units/test_ID?dataErasure=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .BusinessUnits()
+                   .WithId("test_ID")
+                   .Delete()
                    .WithVersion(2)
                    .Build(),
                    "Delete",

@@ -10,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
 {
 
-    public partial class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete, commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>
+    public partial class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete : ApiMethod<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, IApiMethod<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete, commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete>
     {
 
 
@@ -34,6 +34,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/business-units/key={Key}";
         }
 
+        public List<string> GetDataErasure()
+        {
+            return this.GetQueryParam("dataErasure");
+        }
+
         public List<string> GetVersion()
         {
             return this.GetQueryParam("version");
@@ -42,6 +47,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete WithDataErasure(bool dataErasure)
+        {
+            return this.AddQueryParam("dataErasure", dataErasure.ToString());
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyDelete WithVersion(long version)
