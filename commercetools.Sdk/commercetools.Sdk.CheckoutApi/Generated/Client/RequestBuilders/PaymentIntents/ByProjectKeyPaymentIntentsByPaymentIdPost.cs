@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +10,7 @@ using commercetools.Base.Serialization;
 namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents
 {
 
-    public partial class ByProjectKeyPaymentIntentsByPaymentIdPost : ApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost>, IApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost, Object>, commercetools.Sdk.CheckoutApi.Client.ISecured_by_manage_paymentsTrait<ByProjectKeyPaymentIntentsByPaymentIdPost>
+    public partial class ByProjectKeyPaymentIntentsByPaymentIdPost : ApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost>, IApiMethod<ByProjectKeyPaymentIntentsByPaymentIdPost, commercetools.Sdk.CheckoutApi.Models.PaymentIntents.IPaymentIntentResponse>, commercetools.Sdk.CheckoutApi.Client.ISecured_by_manage_paymentsTrait<ByProjectKeyPaymentIntentsByPaymentIdPost>
     {
 
 
@@ -40,11 +39,11 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents
 
 
 
-        public async Task<Object> ExecuteAsync(CancellationToken cancellationToken = default)
+        public async Task<commercetools.Sdk.CheckoutApi.Models.PaymentIntents.IPaymentIntentResponse> ExecuteAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.ExecuteAsync<Object>(requestMessage, cancellationToken);
+            return await ApiHttpClient.ExecuteAsync<commercetools.Sdk.CheckoutApi.Models.PaymentIntents.IPaymentIntentResponse>(requestMessage, cancellationToken);
 
         }
 
@@ -54,11 +53,11 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents
             return await ApiHttpClient.ExecuteAsJsonAsync(requestMessage, cancellationToken);
         }
 
-        public async Task<IApiResponse<Object>> SendAsync(CancellationToken cancellationToken = default)
+        public async Task<IApiResponse<commercetools.Sdk.CheckoutApi.Models.PaymentIntents.IPaymentIntentResponse>> SendAsync(CancellationToken cancellationToken = default)
         {
 
             var requestMessage = Build();
-            return await ApiHttpClient.SendAsync<Object>(requestMessage, cancellationToken);
+            return await ApiHttpClient.SendAsync<commercetools.Sdk.CheckoutApi.Models.PaymentIntents.IPaymentIntentResponse>(requestMessage, cancellationToken);
 
         }
 
