@@ -1068,6 +1068,18 @@
     "LicenseType": "MS-EULA"
   },
   {
+    "PackageName": "NewRelic.Agent",
+    "PackageVersion": "10.18.0",
+    "PackageUrl": "https://github.com/newrelic/newrelic-dotnet-agent",
+    "Copyright": "",
+    "Authors": [
+      "New Relic"
+    ],
+    "Description": "Make sure you go to New Relic first to sign up and get your license key at https://newrelic.com. Performance monitoring will never be the same after you do!  \r\n            The package is available through your NuGet package manager and on the web at https://nuget.org/packages/NewRelic.Agent\r\n\r\n            Run: Install-Package NewRelic.Agent\r\n\r\n            Note: If you want to instrument more than one project in your solution, simply change the \"Default project\" in the package manager console and install the package.\r\n\r\n            Visit https://one.newrelic.com after your package deploy is complete to see your performance metrics.",
+    "LicenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "LicenseType": "Apache-2.0"
+  },
+  {
     "PackageName": "Newtonsoft.Json",
     "PackageVersion": "13.0.1",
     "PackageUrl": "https://www.newtonsoft.com/json",
@@ -1294,6 +1306,18 @@
       "Microsoft"
     ],
     "Description": "Provides classes that define older non-generic collections of objects, such as lists, queues, hash tables and dictionaries. Developers should prefer the generic collections in the System.Collections package.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.ArrayList\r\nSystem.Collections.Hashtable\r\nSystem.Collections.CollectionBase\r\nSystem.Collections.ReadOnlyCollectionBase\r\nSystem.Collections.Stack\r\nSystem.Collections.SortedList\r\nSystem.Collections.DictionaryBase\r\nSystem.Collections.Queue\r\nSystem.Collections.Comparer\r\nSystem.Collections.CaseInsensitiveComparer\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
+    "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "LicenseType": "MS-EULA"
+  },
+  {
+    "PackageName": "System.Collections.Specialized",
+    "PackageVersion": "4.3.0",
+    "PackageUrl": "https://dot.net/",
+    "Copyright": "© Microsoft Corporation.  All rights reserved.",
+    "Authors": [
+      "Microsoft"
+    ],
+    "Description": "Provides older specialized non-generic collections; for example, a linked list dictionary, a bit vector, and collections that contain only strings.\r\n\r\nCommonly Used Types:\r\nSystem.Collections.Specialized.NameValueCollection\r\nSystem.Collections.Specialized.NameObjectCollectionBase\r\nSystem.Collections.Specialized.StringCollection\r\nSystem.Collections.Specialized.IOrderedDictionary\r\nSystem.Collections.Specialized.HybridDictionary\r\nSystem.Collections.Specialized.OrderedDictionary\r\nSystem.Collections.Specialized.ListDictionary\r\nSystem.Collections.Specialized.StringDictionary\r\nSystem.Collections.Specialized.BitVector32\r\n \r\nWhen using NuGet 3.x this package requires at least version 3.4.",
     "LicenseUrl": "http://go.microsoft.com/fwlink/?LinkId=329770",
     "LicenseType": "MS-EULA"
   },
