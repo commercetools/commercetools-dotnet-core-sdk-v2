@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.TaxCategories;
 using commercetools.Sdk.Api.Models.Types;
 using System;
@@ -46,5 +47,9 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         public string Predicate { get; set; }
 
         public ICustomFields Custom { get; set; }
+
+        public IList<IStoreKeyReference> Stores { get; set; }
+
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
     }
 }

@@ -100,6 +100,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
                 ShippingMethodDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl> Stores(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("stores"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreResourceIdentifierQueryBuilderDsl.Of())),
+                ShippingMethodDraftQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> Stores()
+        {
+            return new CollectionPredicateBuilder<ShippingMethodDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
+                    p => new CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl>(p, ShippingMethodDraftQueryBuilderDsl.Of));
+        }
 
     }
 }

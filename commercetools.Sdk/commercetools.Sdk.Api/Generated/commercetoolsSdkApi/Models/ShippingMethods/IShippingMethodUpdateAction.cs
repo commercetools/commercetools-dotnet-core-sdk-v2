@@ -6,12 +6,14 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodUpdateAction))]
     [SubTypeDiscriminator("addShippingRate", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction))]
+    [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddStoreAction))]
     [SubTypeDiscriminator("addZone", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddZoneAction))]
     [SubTypeDiscriminator("changeActive", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeActiveAction))]
     [SubTypeDiscriminator("changeIsDefault", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeIsDefaultAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeNameAction))]
     [SubTypeDiscriminator("changeTaxCategory", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodChangeTaxCategoryAction))]
     [SubTypeDiscriminator("removeShippingRate", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveShippingRateAction))]
+    [SubTypeDiscriminator("removeStore", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveStoreAction))]
     [SubTypeDiscriminator("removeZone", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveZoneAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetCustomTypeAction))]
@@ -20,6 +22,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
     [SubTypeDiscriminator("setLocalizedDescription", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetLocalizedDescriptionAction))]
     [SubTypeDiscriminator("setLocalizedName", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetLocalizedNameAction))]
     [SubTypeDiscriminator("setPredicate", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction))]
+    [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetStoresAction))]
     public partial interface IShippingMethodUpdateAction
     {
         string Action { get; set; }
@@ -27,6 +30,12 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction AddShippingRate(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddShippingRateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddStoreAction AddStore(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodAddStoreAction();
             init?.Invoke(t);
             return t;
         }
@@ -63,6 +72,12 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveShippingRateAction RemoveShippingRate(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveShippingRateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveShippingRateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveStoreAction RemoveStore(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveStoreAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodRemoveStoreAction();
             init?.Invoke(t);
             return t;
         }
@@ -111,6 +126,12 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
         static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction SetPredicate(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetPredicateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetStoresAction SetStores(Action<commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetStoresAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ShippingMethods.ShippingMethodSetStoresAction();
             init?.Invoke(t);
             return t;
         }
