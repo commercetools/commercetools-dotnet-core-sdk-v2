@@ -10,7 +10,7 @@ using commercetools.Base.Client;
 namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
 {
 
-    public partial class ByProjectKeyBusinessUnitsByIDDelete : ApiMethod<ByProjectKeyBusinessUnitsByIDDelete>, IApiMethod<ByProjectKeyBusinessUnitsByIDDelete, commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyBusinessUnitsByIDDelete>
+    public partial class ByProjectKeyBusinessUnitsByIDDelete : ApiMethod<ByProjectKeyBusinessUnitsByIDDelete>, IApiMethod<ByProjectKeyBusinessUnitsByIDDelete, commercetools.Sdk.Api.Models.BusinessUnits.IBusinessUnit>, commercetools.Sdk.Api.Client.IDataerasureTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IVersionedTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IConflictingTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IExpandableTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyBusinessUnitsByIDDelete>, commercetools.Sdk.Api.Client.IDeprecatable200Trait<ByProjectKeyBusinessUnitsByIDDelete>
     {
 
 
@@ -31,6 +31,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             this.RequestUrl = $"/{ProjectKey}/business-units/{ID}";
         }
 
+        public List<string> GetDataErasure()
+        {
+            return this.GetQueryParam("dataErasure");
+        }
+
         public List<string> GetVersion()
         {
             return this.GetQueryParam("version");
@@ -39,6 +44,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
         public List<string> GetExpand()
         {
             return this.GetQueryParam("expand");
+        }
+
+        public ByProjectKeyBusinessUnitsByIDDelete WithDataErasure(bool dataErasure)
+        {
+            return this.AddQueryParam("dataErasure", dataErasure.ToString());
         }
 
         public ByProjectKeyBusinessUnitsByIDDelete WithVersion(long version)

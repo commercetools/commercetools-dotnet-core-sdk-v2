@@ -71,8 +71,10 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage))]
     [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage))]
     [SubTypeDiscriminator("CartFrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartFrozenMessage))]
+    [SubTypeDiscriminator("CartLocked", typeof(commercetools.Sdk.Api.Models.Messages.CartLockedMessage))]
     [SubTypeDiscriminator("CartPurchaseOrderNumberSet", typeof(commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage))]
     [SubTypeDiscriminator("CartUnfrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage))]
+    [SubTypeDiscriminator("CartUnlocked", typeof(commercetools.Sdk.Api.Models.Messages.CartUnlockedMessage))]
     [SubTypeDiscriminator("CategoryCreated", typeof(commercetools.Sdk.Api.Models.Messages.CategoryCreatedMessage))]
     [SubTypeDiscriminator("CategorySlugChanged", typeof(commercetools.Sdk.Api.Models.Messages.CategorySlugChangedMessage))]
     [SubTypeDiscriminator("CustomerAddressAdded", typeof(commercetools.Sdk.Api.Models.Messages.CustomerAddressAddedMessage))]
@@ -736,6 +738,12 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.CartLockedMessage CartLocked(Action<commercetools.Sdk.Api.Models.Messages.CartLockedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartLockedMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage CartPurchaseOrderNumberSet(Action<commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage();
@@ -745,6 +753,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage CartUnfrozen(Action<commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartUnfrozenMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartUnlockedMessage CartUnlocked(Action<commercetools.Sdk.Api.Models.Messages.CartUnlockedMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartUnlockedMessage();
             init?.Invoke(t);
             return t;
         }

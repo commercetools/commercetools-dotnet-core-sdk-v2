@@ -28,6 +28,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddShippingRateActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsAddStore(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddStoreActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddStoreActionQueryBuilderDsl.Of()),
+                ShippingMethodUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsAddZone(
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddZoneActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodAddZoneActionQueryBuilderDsl>> fn)
         {
@@ -62,6 +68,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveShippingRateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveShippingRateActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveShippingRateActionQueryBuilderDsl.Of()),
+                ShippingMethodUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsRemoveStore(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveStoreActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveStoreActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsRemoveZone(
@@ -110,6 +122,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetPredicateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetPredicateActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetPredicateActionQueryBuilderDsl.Of()),
+                ShippingMethodUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsSetStores(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetStoresActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetStoresActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
     }
