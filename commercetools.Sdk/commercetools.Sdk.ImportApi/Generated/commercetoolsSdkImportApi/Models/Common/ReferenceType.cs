@@ -61,6 +61,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("product-variant")]
         ProductVariant,
 
+        [Description("variant")]
+        Variant,
+
         [Description("shipping-method")]
         ShippingMethod,
 
@@ -151,6 +154,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IReferenceType ProductVariant = new ReferenceTypeWrapper
         { Value = ReferenceType.ProductVariant, JsonName = "product-variant" };
 
+        public static IReferenceType Variant = new ReferenceTypeWrapper
+        { Value = ReferenceType.Variant, JsonName = "variant" };
+
         public static IReferenceType ShippingMethod = new ReferenceTypeWrapper
         { Value = ReferenceType.ShippingMethod, JsonName = "shipping-method" };
 
@@ -189,6 +195,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductDiscount ,
                  ProductType ,
                  ProductVariant ,
+                 Variant ,
                  ShippingMethod ,
                  State ,
                  Store ,

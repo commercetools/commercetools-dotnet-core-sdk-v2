@@ -232,6 +232,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeResourceIdentifierQueryBuilderDsl.Of()),
                 ResourceIdentifierQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsVariant(
+            Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantResourceIdentifierQueryBuilderDsl.Of()),
+                ResourceIdentifierQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> AsZone(
             Func<commercetools.Sdk.Api.Predicates.Query.Zones.ZoneResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Zones.ZoneResourceIdentifierQueryBuilderDsl>> fn)
         {

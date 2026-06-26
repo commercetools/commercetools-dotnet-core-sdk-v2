@@ -37,6 +37,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.States;
 using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
 using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Types;
+using commercetools.Sdk.Api.Client.RequestBuilders.VariantProjections;
+using commercetools.Sdk.Api.Client.RequestBuilders.Variants;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Client.RequestBuilders.Me;
 using commercetools.Sdk.Api.Client.RequestBuilders.Extensions;
@@ -266,6 +268,16 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyTypesRequestBuilder Types()
         {
             return new ByProjectKeyTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyVariantProjectionsRequestBuilder VariantProjections()
+        {
+            return new ByProjectKeyVariantProjectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyVariantsRequestBuilder Variants()
+        {
+            return new ByProjectKeyVariantsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyZonesRequestBuilder Zones()

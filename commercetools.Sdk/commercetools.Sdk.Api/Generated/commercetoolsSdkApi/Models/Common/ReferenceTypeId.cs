@@ -142,6 +142,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("type")]
         Type,
 
+        [Description("variant")]
+        Variant,
+
         [Description("zone")]
         Zone
     }
@@ -301,6 +304,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId Type = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Type, JsonName = "type" };
 
+        public static IReferenceTypeId Variant = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.Variant, JsonName = "variant" };
+
         public static IReferenceTypeId Zone = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Zone, JsonName = "zone" };
 
@@ -354,6 +360,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  Subscription ,
                  TaxCategory ,
                  Type ,
+                 Variant ,
                  Zone
              };
         }

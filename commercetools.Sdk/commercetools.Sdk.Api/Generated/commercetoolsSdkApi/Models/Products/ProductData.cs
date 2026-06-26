@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Variants;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -37,5 +38,7 @@ namespace commercetools.Sdk.Api.Models.Products
         public IList<IAttribute> Attributes { get; set; }
 
         public IEnumerable<IAttribute> AttributesEnumerable { set => Attributes = value.ToList(); }
+
+        public IVariantReference DefaultVariant { get; set; }
     }
 }

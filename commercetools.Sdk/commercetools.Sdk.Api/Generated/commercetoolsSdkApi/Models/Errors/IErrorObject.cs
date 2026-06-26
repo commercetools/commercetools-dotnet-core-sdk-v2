@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
+    [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError))]
     [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
@@ -134,6 +135,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.BadGatewayError BadGateway(Action<commercetools.Sdk.Api.Models.Errors.BadGatewayError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.BadGatewayError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError();
             init?.Invoke(t);
             return t;
         }

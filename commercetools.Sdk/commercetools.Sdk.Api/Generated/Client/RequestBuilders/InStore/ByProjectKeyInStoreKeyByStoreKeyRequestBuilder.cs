@@ -101,6 +101,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder VariantProjections()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder Login()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);

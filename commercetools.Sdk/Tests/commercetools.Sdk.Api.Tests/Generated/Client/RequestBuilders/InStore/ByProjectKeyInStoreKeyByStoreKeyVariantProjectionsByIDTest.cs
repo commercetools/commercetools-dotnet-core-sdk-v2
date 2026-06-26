@@ -1,0 +1,251 @@
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using Xunit;
+
+// ReSharper disable CheckNamespace
+namespace commercetools.Sdk.Api.Tests.Client.RequestBuilders.InStore
+{
+    public class ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsByIDTest : RequestBuilderParentTests
+    {
+        [Theory]
+        [MemberData(nameof(GetData))]
+        public void WithMethods(HttpRequestMessage request, string httpMethod, string uri)
+        {
+            Assert.Equal(httpMethod.ToLower(), request.Method.Method.ToLower());
+            Assert.Equal(uri.ToLower(), request.RequestUri.ToString().ToLower());
+        }
+
+        public static IEnumerable<object[]> GetData()
+        {
+            return new List<object[]> {
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithStaged(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?staged=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceCurrency("priceCurrency")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCurrency=priceCurrency",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceCountry("priceCountry")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCountry=priceCountry",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceCustomerGroup("priceCustomerGroup")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCustomerGroup=priceCustomerGroup",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceChannel("priceChannel")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithPriceRecurrencePolicy("priceRecurrencePolicy")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceRecurrencePolicy=priceRecurrencePolicy",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithLocaleProjection("localeProjection")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?localeProjection=localeProjection",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithFilterAttributes("filter[attributes]")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?filter[attributes]=filter%5Battributes%5D",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .WithExpand("expand")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?expand=expand",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Get()
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithStaged(true)
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?staged=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithPriceCurrency("priceCurrency")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCurrency=priceCurrency",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithPriceCountry("priceCountry")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCountry=priceCountry",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithPriceCustomerGroup("priceCustomerGroup")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceCustomerGroup=priceCustomerGroup",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithPriceChannel("priceChannel")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?priceChannel=priceChannel",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithLocaleProjection("localeProjection")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?localeProjection=localeProjection",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .WithFilterAttributes("filter[attributes]")
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID?filter[attributes]=filter%5Battributes%5D",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKey("test_projectKey")
+                   .InStoreKeyWithStoreKeyValue("test_storeKey")
+                   .VariantProjections()
+                   .WithId("test_ID")
+                   .Head()
+                   .Build(),
+                   "Head",
+                   "/test_projectKey/in-store/key=test_storeKey/variant-projections/test_ID",
+               }
+       };
+        }
+    }
+}

@@ -324,6 +324,15 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StoreNameSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreNameSetMessagePayload))]
     [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessagePayload))]
     [SubTypeDiscriminator("StoreSupplyChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload))]
+    [SubTypeDiscriminator("VariantCreated", typeof(commercetools.Sdk.Api.Models.Messages.VariantCreatedMessagePayload))]
+    [SubTypeDiscriminator("VariantDeleted", typeof(commercetools.Sdk.Api.Models.Messages.VariantDeletedMessagePayload))]
+    [SubTypeDiscriminator("VariantImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.VariantImageAddedMessagePayload))]
+    [SubTypeDiscriminator("VariantImagesSet", typeof(commercetools.Sdk.Api.Models.Messages.VariantImagesSetMessagePayload))]
+    [SubTypeDiscriminator("VariantKeySet", typeof(commercetools.Sdk.Api.Models.Messages.VariantKeySetMessagePayload))]
+    [SubTypeDiscriminator("VariantPublished", typeof(commercetools.Sdk.Api.Models.Messages.VariantPublishedMessagePayload))]
+    [SubTypeDiscriminator("VariantSkuSet", typeof(commercetools.Sdk.Api.Models.Messages.VariantSkuSetMessagePayload))]
+    [SubTypeDiscriminator("VariantStagedChangesRemoved", typeof(commercetools.Sdk.Api.Models.Messages.VariantStagedChangesRemovedMessagePayload))]
+    [SubTypeDiscriminator("VariantUnpublished", typeof(commercetools.Sdk.Api.Models.Messages.VariantUnpublishedMessagePayload))]
     public partial interface IMessagePayload
     {
         string Type { get; set; }
@@ -2239,6 +2248,60 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload StoreSupplyChannelsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantCreatedMessagePayload VariantCreated(Action<commercetools.Sdk.Api.Models.Messages.VariantCreatedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantCreatedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantDeletedMessagePayload VariantDeleted(Action<commercetools.Sdk.Api.Models.Messages.VariantDeletedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantDeletedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantImageAddedMessagePayload VariantImageAdded(Action<commercetools.Sdk.Api.Models.Messages.VariantImageAddedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantImageAddedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantImagesSetMessagePayload VariantImagesSet(Action<commercetools.Sdk.Api.Models.Messages.VariantImagesSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantImagesSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantKeySetMessagePayload VariantKeySet(Action<commercetools.Sdk.Api.Models.Messages.VariantKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantKeySetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantPublishedMessagePayload VariantPublished(Action<commercetools.Sdk.Api.Models.Messages.VariantPublishedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantPublishedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantSkuSetMessagePayload VariantSkuSet(Action<commercetools.Sdk.Api.Models.Messages.VariantSkuSetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantSkuSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantStagedChangesRemovedMessagePayload VariantStagedChangesRemoved(Action<commercetools.Sdk.Api.Models.Messages.VariantStagedChangesRemovedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantStagedChangesRemovedMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.VariantUnpublishedMessagePayload VariantUnpublished(Action<commercetools.Sdk.Api.Models.Messages.VariantUnpublishedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.VariantUnpublishedMessagePayload();
             init?.Invoke(t);
             return t;
         }

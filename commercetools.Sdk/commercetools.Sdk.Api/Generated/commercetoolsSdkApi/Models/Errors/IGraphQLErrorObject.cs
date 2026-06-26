@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
+    [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError))]
     [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
@@ -132,6 +133,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError BadGateway(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError();
             init?.Invoke(t);
             return t;
         }
