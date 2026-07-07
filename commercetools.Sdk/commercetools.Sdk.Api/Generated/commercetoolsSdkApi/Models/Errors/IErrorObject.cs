@@ -72,6 +72,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.OutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.OverCapacityError))]
+    [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError))]
     [SubTypeDiscriminator("OverlappingStandalonePriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError))]
     [SubTypeDiscriminator("PendingOperation", typeof(commercetools.Sdk.Api.Models.Errors.PendingOperationError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.PriceChangedError))]
@@ -501,6 +502,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.OverCapacityError OverCapacity(Action<commercetools.Sdk.Api.Models.Errors.OverCapacityError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.OverCapacityError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError OverlappingPriceValidity(Action<commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError();
             init?.Invoke(t);
             return t;
         }

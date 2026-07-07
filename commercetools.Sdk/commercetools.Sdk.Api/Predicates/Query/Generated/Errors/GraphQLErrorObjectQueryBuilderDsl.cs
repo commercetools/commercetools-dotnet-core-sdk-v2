@@ -424,6 +424,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverCapacityErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsOverlappingPriceValidity(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsOverlappingStandalonePriceValidity(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverlappingStandalonePriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLOverlappingStandalonePriceValidityErrorQueryBuilderDsl>> fn)
         {

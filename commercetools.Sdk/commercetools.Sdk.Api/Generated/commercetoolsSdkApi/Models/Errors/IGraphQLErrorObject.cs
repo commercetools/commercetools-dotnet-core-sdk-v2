@@ -72,6 +72,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError))]
+    [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError))]
     [SubTypeDiscriminator("OverlappingStandalonePriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingStandalonePriceValidityError))]
     [SubTypeDiscriminator("PendingOperation", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLPendingOperationError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLPriceChangedError))]
@@ -499,6 +500,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError OverCapacity(Action<commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError OverlappingPriceValidity(Action<commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError();
             init?.Invoke(t);
             return t;
         }
