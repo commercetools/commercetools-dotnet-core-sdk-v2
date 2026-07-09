@@ -104,7 +104,10 @@
 - added resource `/{projectKey}/variants/bulk`
 - added resource `/{projectKey}/variants/key={key}`
 - added resource `/{projectKey}/variants/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes`
 - added resource `/{projectKey}/in-store/key={storeKey}/variant-projections`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/{ID}`
 - added resource `/{projectKey}/in-store/key={storeKey}/product-projections/key={key}/variant-attributes`
 - added resource `/{projectKey}/in-store/key={storeKey}/product-projections/{ID}/variant-attributes`
 - added resource `/{projectKey}/in-store/key={storeKey}/variant-projections/key={key}`
@@ -115,6 +118,7 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `stores` to type `DiscountCode`
 - added property `defaultVariant` to type `ProductData`
 - added property `productCatalogModel` to type `Project`
 - added property `stores` to type `ShippingMethod`
@@ -145,8 +149,14 @@
 - added method `apiRoot.withProjectKey().variants().withId().head()`
 - added method `apiRoot.withProjectKey().variants().withId().post()`
 - added method `apiRoot.withProjectKey().variants().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().head()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().get()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().head()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withKey().variantAttributes().get()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withId().variantAttributes().get()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withKey().get()`

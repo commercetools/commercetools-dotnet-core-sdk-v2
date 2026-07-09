@@ -100,6 +100,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.DiscountCodes
             return new CollectionPredicateBuilder<DiscountCodeQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("cartDiscounts")),
                     p => new CombinationQueryPredicate<DiscountCodeQueryBuilderDsl>(p, DiscountCodeQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<DiscountCodeQueryBuilderDsl> Stores(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<DiscountCodeQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("stores"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreKeyReferenceQueryBuilderDsl.Of())),
+                DiscountCodeQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<DiscountCodeQueryBuilderDsl> Stores()
+        {
+            return new CollectionPredicateBuilder<DiscountCodeQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
+                    p => new CombinationQueryPredicate<DiscountCodeQueryBuilderDsl>(p, DiscountCodeQueryBuilderDsl.Of));
+        }
         public IComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl, string> CartPredicate()
         {
             return new ComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("cartPredicate")),

@@ -1,5 +1,6 @@
 using commercetools.Sdk.Api.Models.CartDiscounts;
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,10 @@ namespace commercetools.Sdk.Api.Models.DiscountCodes
         public IList<ICartDiscountReference> CartDiscounts { get; set; }
 
         public IEnumerable<ICartDiscountReference> CartDiscountsEnumerable { set => CartDiscounts = value.ToList(); }
+
+        public IList<IStoreKeyReference> Stores { get; set; }
+
+        public IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
         public string CartPredicate { get; set; }
 
