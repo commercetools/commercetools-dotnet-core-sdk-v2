@@ -119,6 +119,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
             return this.GetQueryParam("expand");
         }
 
+        public List<string> GetWithTotal()
+        {
+            return this.GetQueryParam("withTotal");
+        }
+
         public ByProjectKeyGet WithResourceTypes(IChangeHistoryResourceType resourceTypes)
         {
             return this.AddQueryParam("resourceTypes", resourceTypes.ToString());
@@ -207,6 +212,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
         public ByProjectKeyGet WithExpand(bool expand)
         {
             return this.AddQueryParam("expand", expand.ToString());
+        }
+
+        public ByProjectKeyGet WithWithTotal(bool withTotal)
+        {
+            return this.AddQueryParam("withTotal", withTotal.ToString());
         }
 
 

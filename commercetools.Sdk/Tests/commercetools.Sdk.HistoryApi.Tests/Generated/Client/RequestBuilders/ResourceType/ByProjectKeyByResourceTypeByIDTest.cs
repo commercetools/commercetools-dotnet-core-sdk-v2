@@ -190,6 +190,17 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.ResourceType
                    .WithResourceTypeValue("test_resourceType")
                    .WithIDValue("test_ID")
                    .Get()
+                   .WithWithTotal(true)
+                   .Build(),
+                   "Get",
+                   "/test_projectKey/test_resourceType/test_ID?withTotal=true",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .WithResourceTypeValue("test_resourceType")
+                   .WithIDValue("test_ID")
+                   .Get()
                    .Build(),
                    "Get",
                    "/test_projectKey/test_resourceType/test_ID",
