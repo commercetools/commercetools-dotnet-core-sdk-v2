@@ -170,6 +170,8 @@
 <summary>Added Enum(s)</summary>
 
 - added enum `variant` to type `ReferenceTypeId`
+- added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `variant` to type `CustomFieldReferenceValue`
 </details>
 
 **Import changes**
