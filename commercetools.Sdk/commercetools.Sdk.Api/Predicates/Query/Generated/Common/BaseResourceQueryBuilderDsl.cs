@@ -136,6 +136,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsMcpServer(
+            Func<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsMessage(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.MessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.MessageQueryBuilderDsl>> fn)
         {

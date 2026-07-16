@@ -48,6 +48,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
+using commercetools.Sdk.Api.Client.RequestBuilders.McpServers;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
@@ -323,6 +324,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyAttributeGroupsRequestBuilder AttributeGroups()
         {
             return new ByProjectKeyAttributeGroupsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMcpServersRequestBuilder McpServers()
+        {
+            return new ByProjectKeyMcpServersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

@@ -1,12 +1,113 @@
 **Api changes**
 
 <details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `dataErasure` to method `delete /{projectKey}/business-units/key={key}`
+- added query parameter `dataErasure` to method `delete /{projectKey}/business-units/{ID}`
+- added query parameter `dataErasure` to method `delete /{projectKey}/in-store/key={storeKey}/business-units/key={key}`
+- added query parameter `dataErasure` to method `delete /{projectKey}/in-store/key={storeKey}/business-units/{ID}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().variantProjections().get()`
+- added method `apiRoot.withProjectKey().variantProjections().head()`
+- added method `apiRoot.withProjectKey().variants().get()`
+- added method `apiRoot.withProjectKey().variants().post()`
+- added method `apiRoot.withProjectKey().variants().head()`
+- added method `apiRoot.withProjectKey().mcpServers().get()`
+- added method `apiRoot.withProjectKey().mcpServers().post()`
+- added method `apiRoot.withProjectKey().productProjections().withKey().variantAttributes().get()`
+- added method `apiRoot.withProjectKey().productProjections().withId().variantAttributes().get()`
+- added method `apiRoot.withProjectKey().variantProjections().withKey().get()`
+- added method `apiRoot.withProjectKey().variantProjections().withKey().head()`
+- added method `apiRoot.withProjectKey().variantProjections().withId().get()`
+- added method `apiRoot.withProjectKey().variantProjections().withId().head()`
+- added method `apiRoot.withProjectKey().variants().bulk().post()`
+- added method `apiRoot.withProjectKey().variants().withKey().get()`
+- added method `apiRoot.withProjectKey().variants().withKey().head()`
+- added method `apiRoot.withProjectKey().variants().withKey().post()`
+- added method `apiRoot.withProjectKey().variants().withKey().delete()`
+- added method `apiRoot.withProjectKey().variants().withId().get()`
+- added method `apiRoot.withProjectKey().variants().withId().head()`
+- added method `apiRoot.withProjectKey().variants().withId().post()`
+- added method `apiRoot.withProjectKey().variants().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withKey().variantAttributes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withId().variantAttributes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withId().head()`
+- added method `apiRoot.withProjectKey().mcpServers().types().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withKey().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().get()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().post()`
+- added method `apiRoot.withProjectKey().mcpServers().withId().delete()`
+- added method `apiRoot.withProjectKey().mcpServers().types().withMcpServerType().get()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `stores` to type `DiscountCode`
+- added property `defaultVariant` to type `ProductData`
+- added property `productCatalogModel` to type `Project`
+- added property `stores` to type `ShippingMethod`
+- added property `stores` to type `ShippingMethodDraft`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `BulkOperationMaxItemsExceededError`
 - added type `OverlappingPriceValidityError`
 - added type `GraphQLBulkOperationMaxItemsExceededError`
 - added type `GraphQLOverlappingPriceValidityError`
+- added type `CommerceMcpServerConfig`
+- added type `CommerceMcpServerConfigDraft`
+- added type `McpServer`
+- added type `McpServerConfig`
+- added type `McpServerConfigDraft`
+- added type `McpServerDraft`
+- added type `McpServerJsonOutputFiltering`
+- added type `McpServerJsonOutputFilteringMatcher`
+- added type `McpServerPagedQueryResponse`
+- added type `McpServerState`
+- added type `McpServerTool`
+- added type `McpServerToolOutputFormatting`
+- added type `McpServerType`
+- added type `McpServerTypeTool`
+- added type `McpServerUpdate`
+- added type `McpServerUpdateAction`
+- added type `ParameterOverride`
+- added type `RemoveToolCustomizationTarget`
+- added type `ToolCustomization`
+- added type `McpServerAddToolAction`
+- added type `McpServerAddToolCustomizationAction`
+- added type `McpServerRemoveToolAction`
+- added type `McpServerRemoveToolCustomizationAction`
+- added type `McpServerSetDescriptionAction`
+- added type `McpServerSetJsonOutputFilteringAction`
+- added type `McpServerSetNameAction`
+- added type `McpServerSetStateAction`
+- added type `McpServerSetToolCustomizationsAction`
+- added type `McpServerSetToolOutputFormattingAction`
+- added type `McpServerSetToolsAction`
 - added type `CartLockedMessage`
 - added type `CartUnlockedMessage`
 - added type `VariantCreatedMessage`
@@ -83,12 +184,11 @@
 
 
 <details>
-<summary>Added QueryParameter(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added query parameter `dataErasure` to method `delete /{projectKey}/business-units/key={key}`
-- added query parameter `dataErasure` to method `delete /{projectKey}/business-units/{ID}`
-- added query parameter `dataErasure` to method `delete /{projectKey}/in-store/key={storeKey}/business-units/key={key}`
-- added query parameter `dataErasure` to method `delete /{projectKey}/in-store/key={storeKey}/business-units/{ID}`
+- added enum `variant` to type `ReferenceTypeId`
+- added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `variant` to type `CustomFieldReferenceValue`
 </details>
 
 
@@ -97,6 +197,7 @@
 
 - added resource `/{projectKey}/variant-projections`
 - added resource `/{projectKey}/variants`
+- added resource `/{projectKey}/mcp-servers`
 - added resource `/{projectKey}/product-projections/key={key}/variant-attributes`
 - added resource `/{projectKey}/product-projections/{ID}/variant-attributes`
 - added resource `/{projectKey}/variant-projections/key={key}`
@@ -112,75 +213,34 @@
 - added resource `/{projectKey}/in-store/key={storeKey}/product-projections/{ID}/variant-attributes`
 - added resource `/{projectKey}/in-store/key={storeKey}/variant-projections/key={key}`
 - added resource `/{projectKey}/in-store/key={storeKey}/variant-projections/{ID}`
+- added resource `/{projectKey}/mcp-servers/types`
+- added resource `/{projectKey}/mcp-servers/key={key}`
+- added resource `/{projectKey}/mcp-servers/{ID}`
+- added resource `/{projectKey}/mcp-servers/types/{mcpServerType}`
 </details>
 
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `stores` to type `DiscountCode`
-- added property `defaultVariant` to type `ProductData`
-- added property `productCatalogModel` to type `Project`
-- added property `stores` to type `ShippingMethod`
-- added property `stores` to type `ShippingMethodDraft`
-</details>
-
+**Import changes**
 
 <details>
 <summary>Added Method(s)</summary>
 
-- added method `apiRoot.withProjectKey().variantProjections().get()`
-- added method `apiRoot.withProjectKey().variantProjections().head()`
-- added method `apiRoot.withProjectKey().variants().get()`
-- added method `apiRoot.withProjectKey().variants().post()`
-- added method `apiRoot.withProjectKey().variants().head()`
-- added method `apiRoot.withProjectKey().productProjections().withKey().variantAttributes().get()`
-- added method `apiRoot.withProjectKey().productProjections().withId().variantAttributes().get()`
-- added method `apiRoot.withProjectKey().variantProjections().withKey().get()`
-- added method `apiRoot.withProjectKey().variantProjections().withKey().head()`
-- added method `apiRoot.withProjectKey().variantProjections().withId().get()`
-- added method `apiRoot.withProjectKey().variantProjections().withId().head()`
-- added method `apiRoot.withProjectKey().variants().bulk().post()`
-- added method `apiRoot.withProjectKey().variants().withKey().get()`
-- added method `apiRoot.withProjectKey().variants().withKey().head()`
-- added method `apiRoot.withProjectKey().variants().withKey().post()`
-- added method `apiRoot.withProjectKey().variants().withKey().delete()`
-- added method `apiRoot.withProjectKey().variants().withId().get()`
-- added method `apiRoot.withProjectKey().variants().withId().head()`
-- added method `apiRoot.withProjectKey().variants().withId().post()`
-- added method `apiRoot.withProjectKey().variants().withId().delete()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().discountCodes().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withKey().variantAttributes().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withId().variantAttributes().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withKey().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withId().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().variantProjections().withId().head()`
+- added method `apiRoot.withProjectKeyValue().variants().importContainers().withImportContainerKeyValue().post()`
 </details>
 
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `variant` to type `ReferenceTypeId`
-- added enum `variant` to type `AttributeReferenceTypeId`
-- added enum `variant` to type `CustomFieldReferenceValue`
-</details>
-
-**Import changes**
 
 <details>
 <summary>Added Type(s)</summary>
 
 - added type `VariantImportRequest`
 - added type `VariantImport`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `variant` to type `ImportResourceType`
+- added enum `variant` to type `ReferenceType`
 </details>
 
 
@@ -192,29 +252,7 @@
 - added resource `/{projectKey}/variants/import-containers/{importContainerKey}`
 </details>
 
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKeyValue().variants().importContainers().withImportContainerKeyValue().post()`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `variant` to type `ImportResourceType`
-- added enum `variant` to type `ReferenceType`
-</details>
-
 **History changes**
-
-<details>
-<summary>Required Property(s)</summary>
-
-- changed property `total` of type `RecordPagedQueryResponse` to be optional
-</details>
-
 
 <details>
 <summary>Added QueryParameter(s)</summary>
@@ -222,6 +260,13 @@
 - added query parameter `withTotal` to method `get /{projectKey}`
 - added query parameter `withTotal` to method `get /{projectKey}/{resourceType}`
 - added query parameter `withTotal` to method `get /{projectKey}/{resourceType}/{ID}`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `total` of type `RecordPagedQueryResponse` to be optional
 </details>
 
 **Checkout changes**
