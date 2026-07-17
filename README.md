@@ -11,6 +11,7 @@ This repository contains the .NET SDKs generated from the Composable Commerce AP
 | HTTP API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.Api?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.Api)|
 | Import API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)|
 | Change History API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)|
+| Checkout API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.CheckoutApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.CheckoutApi)|
 
 ## Example and Training material
 Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API.
@@ -24,18 +25,20 @@ Feel free to explore these examples using this SDK for calling the Composable Co
 | [HTTP API](https://www.nuget.org/packages/commercetools.Sdk.Api) | ```dotnet add package commercetools.Sdk.Api```            |
 | [Import API](https://www.nuget.org/packages/commercetools.Sdk.ImportApi)        | ```dotnet add package commercetools.Sdk.ImportApi```      |
 | [Change History API](https://www.nuget.org/packages/commercetools.Sdk.HistoryApi)      | ```dotnet add package commercetools.Sdk.HistoryApi```     |
+| [Checkout API](https://www.nuget.org/packages/commercetools.Sdk.CheckoutApi)      | ```dotnet add package commercetools.Sdk.CheckoutApi```     |
 
 ## Technical Overview
 
 The SDK consists of the following projects:
 * `commercetools.Base.Abstractions`: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.
-* `commercetools.Base.Client`: Contains CtpClient which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.
+* `commercetools.Base.Client`: Contains `CtpClient` which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens, middleware, and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
 * `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
-* `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
-* `commercetools.Sdk.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/import-api/).
+* `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/api).
+* `commercetools.Sdk.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/api/import-export/overview).
 * `commercetools.Sdk.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
-* `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/http-api.html).
+* `commercetools.Sdk.CheckoutApi`: Contains all generated models and request builders to communicate with the [Checkout API](https://docs.commercetools.com/checkout/general-concepts).
+* `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/api).
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -331,4 +334,5 @@ To migrate from the 1.x to the 2.x, there is a guideline below:
 
 ### Documentation
 
-* [Documentation](https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html)
+* Official documentation, a getting started guide, and usage examples for the .NET SDK can be found [here](https://docs.commercetools.com/dev-tooling/dotnet-sdk)
+* The complete type documentation, function and class specifications can also be found [here](https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html)
