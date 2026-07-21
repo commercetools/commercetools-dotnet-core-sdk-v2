@@ -96,6 +96,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
+    [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.UnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError))]
     public partial interface IErrorObject
     {
@@ -646,6 +647,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.SyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.UnauthorizedError Unauthorized(Action<commercetools.Sdk.Api.Models.Errors.UnauthorizedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.UnauthorizedError();
             init?.Invoke(t);
             return t;
         }

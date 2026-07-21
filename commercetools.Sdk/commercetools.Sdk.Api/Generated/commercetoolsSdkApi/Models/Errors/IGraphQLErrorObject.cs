@@ -96,6 +96,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
+    [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError))]
     public partial interface IGraphQLErrorObject
     {
@@ -644,6 +645,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError Unauthorized(Action<commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError();
             init?.Invoke(t);
             return t;
         }

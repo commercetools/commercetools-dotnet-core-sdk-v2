@@ -76,8 +76,10 @@
 
 - added type `BulkOperationMaxItemsExceededError`
 - added type `OverlappingPriceValidityError`
+- added type `UnauthorizedError`
 - added type `GraphQLBulkOperationMaxItemsExceededError`
 - added type `GraphQLOverlappingPriceValidityError`
+- added type `GraphQLUnauthorizedError`
 - added type `CommerceMcpServerConfig`
 - added type `CommerceMcpServerConfigDraft`
 - added type `McpServer`
