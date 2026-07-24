@@ -148,6 +148,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTailorings
             return new CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetImageLabelActionQueryBuilderDsl.Of()),
                 ProductTailoringUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> AsSetKey(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetKeyActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetKeyActionQueryBuilderDsl.Of()),
+                ProductTailoringUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> AsSetMetaAttributes(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetMetaAttributesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTailorings.ProductTailoringSetMetaAttributesActionQueryBuilderDsl>> fn)
         {

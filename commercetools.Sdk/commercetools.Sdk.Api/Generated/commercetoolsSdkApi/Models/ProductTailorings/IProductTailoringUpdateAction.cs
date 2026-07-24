@@ -26,6 +26,7 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetDescriptionAction))]
     [SubTypeDiscriminator("setImageLabel", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetImageLabelAction))]
     [SubTypeDiscriminator("setImages", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetExternalImagesAction))]
+    [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetKeyAction))]
     [SubTypeDiscriminator("setMetaAttributes", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetMetaAttributesAction))]
     [SubTypeDiscriminator("setMetaDescription", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetMetaDescriptionAction))]
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetMetaKeywordsAction))]
@@ -161,6 +162,12 @@ namespace commercetools.Sdk.Api.Models.ProductTailorings
         static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetExternalImagesAction SetImages(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetExternalImagesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetExternalImagesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetKeyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTailorings.ProductTailoringSetKeyAction();
             init?.Invoke(t);
             return t;
         }

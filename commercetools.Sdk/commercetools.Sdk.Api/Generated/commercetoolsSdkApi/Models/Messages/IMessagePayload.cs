@@ -253,6 +253,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("ProductTailoringDescriptionSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringDescriptionSetMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringImageAddedMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringImagesSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload))]
+    [SubTypeDiscriminator("ProductTailoringKeySet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringKeySetMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringNameSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringNameSetMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringPublished", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringPublishedMessagePayload))]
     [SubTypeDiscriminator("ProductTailoringSlugSet", typeof(commercetools.Sdk.Api.Models.Messages.ProductTailoringSlugSetMessagePayload))]
@@ -1822,6 +1823,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload ProductTailoringImagesSet(Action<commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.ProductTailoringImagesSetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.ProductTailoringKeySetMessagePayload ProductTailoringKeySet(Action<commercetools.Sdk.Api.Models.Messages.ProductTailoringKeySetMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.ProductTailoringKeySetMessagePayload();
             init?.Invoke(t);
             return t;
         }
