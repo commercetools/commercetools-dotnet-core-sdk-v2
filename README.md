@@ -1,8 +1,8 @@
-# Composable Commerce .NET SDK
+# commercetools .NET SDK
 
 ## Introduction
 
-This repository contains the .NET SDKs generated from the Composable Commerce API reference. 
+This repository contains the .NET SDKs generated from the commercetools API reference. 
 
 ## Packages
 
@@ -14,7 +14,7 @@ This repository contains the .NET SDKs generated from the Composable Commerce AP
 | Checkout API | [![NuGet Version and Downloads count](https://buildstats.info/nuget/commercetools.Sdk.CheckoutApi?includePreReleases=true)](https://www.nuget.org/packages/commercetools.Sdk.CheckoutApi)|
 
 ## Example and Training material
-Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API.
+Feel free to explore these examples using this SDK for calling the commercetools HTTP API, and Import API.
 [.NET Core SDK Training for V2 SDK](https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2)
 
 ## Installation
@@ -31,14 +31,14 @@ Feel free to explore these examples using this SDK for calling the Composable Co
 
 The SDK consists of the following projects:
 * `commercetools.Base.Abstractions`: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.
-* `commercetools.Base.Client`: Contains `CtpClient` which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens, middleware, and handlers.
+* `commercetools.Base.Client`: Contains `CtpClient` which communicate with commercetools to execute requests. It contains also the classes related to the client like tokens, middleware, and handlers.
 * `commercetools.Base.Registration`: Helper classes for things like types retriever.
-* `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.
-* `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/api).
+* `commercetools.Base.Serialization`: Serialization and deserialization services for responses and requests to the [HTTP API](https://docs.commercetools.com/api) using System.Text.Json.
+* `commercetools.Sdk.Api`: Contains all generated models and request builders to communicate with the [HTTP API](https://docs.commercetools.com/api).
 * `commercetools.Sdk.ImportApi`: Contains all generated models and request builders to communicate with the [Import API](https://docs.commercetools.com/api/import-export/overview).
 * `commercetools.Sdk.HistoryApi`: Contains all generated models and request builders to communicate with the [Change History API](https://docs.commercetools.com/api/history/change-history).
 * `commercetools.Sdk.CheckoutApi`: Contains all generated models and request builders to communicate with the [Checkout API](https://docs.commercetools.com/checkout/general-concepts).
-* `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [Composable Commerce HTTP API](https://docs.commercetools.com/api).
+* `commercetools.Sdk.GraphQL.Api`: Contains a type safe GraphQL client to communicate with [GraphQL API](https://docs.commercetools.com/api/graphql).
 
 In addition, the SDK has the following directories:
 * `/IntegrationTests`: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.
@@ -75,7 +75,7 @@ At a high level, to make a basic call to the API, do the following:
 
  In the ConfigureServices method of Startup.cs add the following:
 
-* `Composable Commerce HTTP API`:
+* `HTTP API`:
 ```csharp
 services.UseCommercetoolsApi(this.configuration, "Client"); // replace with your instance of IConfiguration
 ```
@@ -106,7 +106,7 @@ The client configuration needs to be added to appsettings.json in order for the 
 
 ##### Getting instance of ApiRoot
 you can use the instance inside the injected client or use ApiFactory to create a new instance.
-* `Composable Commerce HTTP API`:
+* `HTTP API`:
 ```csharp
 var root1 = client.WithApi();
 var root2 = ApiFactory.Create(client);
@@ -128,7 +128,7 @@ The ProjectApiRoot is scoped to the projectKey in order to not have to provide t
 for building requests. You can use the instance inside the injected client or use ApiFactory
 to create a new instance.
 
-* `Composable Commerce HTTP API`:
+* `HTTP API`:
 ```csharp
 ProjectApiRoot root1 = client.WithProject(projectKey);
 ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);
