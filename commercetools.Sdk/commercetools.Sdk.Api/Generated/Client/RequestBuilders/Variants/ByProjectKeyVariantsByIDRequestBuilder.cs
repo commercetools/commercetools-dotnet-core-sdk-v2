@@ -44,5 +44,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             return new ByProjectKeyVariantsByIDDelete(ApiHttpClient, ProjectKey, ID);
         }
 
+
+        public ByProjectKeyVariantsByIDImagesRequestBuilder Images()
+        {
+            return new ByProjectKeyVariantsByIDImagesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
     }
 }

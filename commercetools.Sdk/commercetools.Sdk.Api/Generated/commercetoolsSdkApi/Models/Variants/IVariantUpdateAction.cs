@@ -9,6 +9,7 @@ namespace commercetools.Sdk.Api.Models.Variants
     [SubTypeDiscriminator("addExternalImage", typeof(commercetools.Sdk.Api.Models.Variants.VariantAddExternalImageAction))]
     [SubTypeDiscriminator("changeAssetName", typeof(commercetools.Sdk.Api.Models.Variants.VariantChangeAssetNameAction))]
     [SubTypeDiscriminator("changeAssetOrder", typeof(commercetools.Sdk.Api.Models.Variants.VariantChangeAssetOrderAction))]
+    [SubTypeDiscriminator("moveImageToPosition", typeof(commercetools.Sdk.Api.Models.Variants.VariantMoveImageToPositionAction))]
     [SubTypeDiscriminator("publish", typeof(commercetools.Sdk.Api.Models.Variants.VariantPublishAction))]
     [SubTypeDiscriminator("removeAsset", typeof(commercetools.Sdk.Api.Models.Variants.VariantRemoveAssetAction))]
     [SubTypeDiscriminator("removeImage", typeof(commercetools.Sdk.Api.Models.Variants.VariantRemoveImageAction))]
@@ -22,6 +23,7 @@ namespace commercetools.Sdk.Api.Models.Variants
     [SubTypeDiscriminator("setAssetTags", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetAssetTagsAction))]
     [SubTypeDiscriminator("setAttribute", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetAttributeAction))]
     [SubTypeDiscriminator("setAttributes", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetAttributesAction))]
+    [SubTypeDiscriminator("setImageLabel", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetImageLabelAction))]
     [SubTypeDiscriminator("setImages", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetImagesAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetKeyAction))]
     [SubTypeDiscriminator("setSku", typeof(commercetools.Sdk.Api.Models.Variants.VariantSetSkuAction))]
@@ -51,6 +53,12 @@ namespace commercetools.Sdk.Api.Models.Variants
         static commercetools.Sdk.Api.Models.Variants.VariantChangeAssetOrderAction ChangeAssetOrder(Action<commercetools.Sdk.Api.Models.Variants.VariantChangeAssetOrderAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Variants.VariantChangeAssetOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Variants.VariantMoveImageToPositionAction MoveImageToPosition(Action<commercetools.Sdk.Api.Models.Variants.VariantMoveImageToPositionAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Variants.VariantMoveImageToPositionAction();
             init?.Invoke(t);
             return t;
         }
@@ -129,6 +137,12 @@ namespace commercetools.Sdk.Api.Models.Variants
         static commercetools.Sdk.Api.Models.Variants.VariantSetAttributesAction SetAttributes(Action<commercetools.Sdk.Api.Models.Variants.VariantSetAttributesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Variants.VariantSetAttributesAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Variants.VariantSetImageLabelAction SetImageLabel(Action<commercetools.Sdk.Api.Models.Variants.VariantSetImageLabelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Variants.VariantSetImageLabelAction();
             init?.Invoke(t);
             return t;
         }

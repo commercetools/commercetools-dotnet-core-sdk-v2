@@ -1,6 +1,9 @@
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
+using commercetools.Sdk.Api.Models.Warnings;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace commercetools.Sdk.Api.Models.Variants
 {
@@ -30,5 +33,9 @@ namespace commercetools.Sdk.Api.Models.Variants
         public IVariantData Current { get; set; }
 
         public IVariantData Staged { get; set; }
+
+        public IList<IWarningObject> Warnings { get; set; }
+
+        public IEnumerable<IWarningObject> WarningsEnumerable { set => Warnings = value.ToList(); }
     }
 }

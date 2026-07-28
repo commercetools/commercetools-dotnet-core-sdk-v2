@@ -46,6 +46,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Variants
             return new CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantChangeAssetOrderActionQueryBuilderDsl.Of()),
                 VariantUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> AsMoveImageToPosition(
+            Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantMoveImageToPositionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantMoveImageToPositionActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantMoveImageToPositionActionQueryBuilderDsl.Of()),
+                VariantUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> AsPublish(
             Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantPublishActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantPublishActionQueryBuilderDsl>> fn)
         {
@@ -122,6 +128,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Variants
             Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetAttributesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetAttributesActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetAttributesActionQueryBuilderDsl.Of()),
+                VariantUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> AsSetImageLabel(
+            Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetImageLabelActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetImageLabelActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantSetImageLabelActionQueryBuilderDsl.Of()),
                 VariantUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> AsSetImages(
