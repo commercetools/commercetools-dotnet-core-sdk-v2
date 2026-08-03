@@ -81,6 +81,28 @@ namespace commercetools.Sdk.Api.Predicates.Query.Variants
                 VariantProjectionQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<VariantProjectionQueryBuilderDsl> Categories(
+            Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantProjectionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("categories"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategoryReferenceQueryBuilderDsl.Of())),
+                VariantProjectionQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<VariantProjectionQueryBuilderDsl> Categories()
+        {
+            return new CollectionPredicateBuilder<VariantProjectionQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("categories")),
+                    p => new CombinationQueryPredicate<VariantProjectionQueryBuilderDsl>(p, VariantProjectionQueryBuilderDsl.Of));
+        }
+        public CombinationQueryPredicate<VariantProjectionQueryBuilderDsl> CategoryOrderHints(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.CategoryOrderHintsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.CategoryOrderHintsQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantProjectionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("categoryOrderHints"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.CategoryOrderHintsQueryBuilderDsl.Of())),
+                VariantProjectionQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<VariantProjectionQueryBuilderDsl, string> Key()
         {
             return new ComparisonPredicateBuilder<VariantProjectionQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),

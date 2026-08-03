@@ -1,3 +1,4 @@
+using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.Products;
 using System;
@@ -27,6 +28,12 @@ namespace commercetools.Sdk.Api.Models.Variants
         ILocalizedString Slug { get; set; }
 
         ILocalizedString Description { get; set; }
+
+        IList<ICategoryReference> Categories { get; set; }
+
+        IEnumerable<ICategoryReference> CategoriesEnumerable { set => Categories = value.ToList(); }
+
+        ICategoryOrderHints CategoryOrderHints { get; set; }
 
         string Key { get; set; }
 
