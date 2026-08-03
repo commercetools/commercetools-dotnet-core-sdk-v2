@@ -1,4 +1,14 @@
 
+# 15.4.0 (2026-08-03)
+
+## What's Changed
+* Update docs links by @industrian in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/560
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/559
+* Remove Composable Commerce branding by @industrian in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/561
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.3.1...15.4.0
+
 # 15.3.1 (2026-07-06)
 
 ## What's Changed
