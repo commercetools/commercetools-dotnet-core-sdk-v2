@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>commercetools.Sdk: Composable Commerce .NET SDK</title>
+<title>commercetools.Sdk: commercetools .NET SDK</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,13 +72,13 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Composable Commerce .NET SDK </div></div>
+  <div class="headertitle"><div class="title">commercetools .NET SDK </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> </p>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Introduction</h1>
-<p>This repository contains the .NET SDKs generated from the Composable Commerce API reference.</p>
+<p>This repository contains the .NET SDKs generated from the commercetools API reference.</p>
 <h1><a class="anchor" id="autotoc_md11"></a>
 Packages</h1>
 <table class="markdownTable">
@@ -89,11 +89,13 @@ Packages</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Import API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.ImportApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.ImportApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Change History API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>   </td></tr>
+<td class="markdownTableBodyNone">Change History API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.HistoryApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Checkout API   </td><td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.CheckoutApi"><img src="https://buildstats.info/nuget/commercetools.Sdk.CheckoutApi?includePreReleases=true" alt="NuGet Version and Downloads count" class="inline"/></a>   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md12"></a>
 Example and Training material</h1>
-<p>Feel free to explore these examples using this SDK for calling the Composable Commerce HTTP API, and Import API. <a href="https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2">.NET Core SDK Training for V2 SDK</a></p>
+<p>Feel free to explore these examples using this SDK for calling the commercetools HTTP API, and Import API. <a href="https://github.com/commercetools/commercetools-dotnet-sdk-training/tree/Training-SDKV2">.NET Core SDK Training for V2 SDK</a></p>
 <h1><a class="anchor" id="autotoc_md13"></a>
 Installation</h1>
 <h3><a class="anchor" id="autotoc_md14"></a>
@@ -106,19 +108,22 @@ Download from &lt;a href="https://www.nuget.org/profiles/commercetools" &gt;Nuge
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.ImportApi">Import API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi">Change History API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>   </td></tr>
+<td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.HistoryApi">Change History API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package <a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://www.nuget.org/packages/commercetools.Sdk.CheckoutApi">Checkout API</a>   </td><td class="markdownTableBodyNone"><code>dotnet add package commercetools.Sdk.CheckoutApi</code>   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md15"></a>
 Technical Overview</h1>
 <p>The SDK consists of the following projects:</p><ul>
 <li><code>commercetools.Base.Abstractions</code>: Contains common classes and interfaces that can be used in other SDK projects like IClient and ISerializerService.</li>
-<li><code><a class="el" href="d4/d7f/namespacecommercetools_1_1_base_1_1_client.html">commercetools.Base.Client</a></code>: Contains CtpClient which communicate with Composable Commerce to execute requests, it contains also the classes related to the client like tokens,middlewares and handlers.</li>
+<li><code><a class="el" href="d4/d7f/namespacecommercetools_1_1_base_1_1_client.html">commercetools.Base.Client</a></code>: Contains <code>CtpClient</code> which communicate with commercetools to execute requests. It contains also the classes related to the client like tokens, middleware, and handlers.</li>
 <li><code><a class="el" href="d7/d99/namespacecommercetools_1_1_base_1_1_registration.html">commercetools.Base.Registration</a></code>: Helper classes for things like types retriever.</li>
-<li><code><a class="el" href="d8/d12/namespacecommercetools_1_1_base_1_1_serialization.html">commercetools.Base.Serialization</a></code>: Serialization and deserialization services for responses and requests to the HTTP API using System.Text.Json.</li>
-<li><code><a class="el" href="d0/d46/namespacecommercetools_1_1_sdk_1_1_api.html">commercetools.Sdk.Api</a></code>: Contains all generated models and request builders to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
-<li><code><a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/import-api/">Import API</a>.</li>
+<li><code><a class="el" href="d8/d12/namespacecommercetools_1_1_base_1_1_serialization.html">commercetools.Base.Serialization</a></code>: Serialization and deserialization services for responses and requests to the <a href="https://docs.commercetools.com/api">HTTP API</a> using System.Text.Json.</li>
+<li><code><a class="el" href="d0/d46/namespacecommercetools_1_1_sdk_1_1_api.html">commercetools.Sdk.Api</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api">HTTP API</a>.</li>
+<li><code><a class="el" href="d7/d6f/namespacecommercetools_1_1_sdk_1_1_import_api.html">commercetools.Sdk.ImportApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/import-export/overview">Import API</a>.</li>
 <li><code><a class="el" href="d8/da4/namespacecommercetools_1_1_sdk_1_1_history_api.html">commercetools.Sdk.HistoryApi</a></code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/api/history/change-history">Change History API</a>.</li>
-<li><code>commercetools.Sdk.GraphQL.Api</code>: Contains a type safe GraphQL client to communicate with <a href="https://docs.commercetools.com/http-api.html">Composable Commerce HTTP API</a>.</li>
+<li><code>commercetools.Sdk.CheckoutApi</code>: Contains all generated models and request builders to communicate with the <a href="https://docs.commercetools.com/checkout/general-concepts">Checkout API</a>.</li>
+<li><code>commercetools.Sdk.GraphQL.Api</code>: Contains a type safe GraphQL client to communicate with <a href="https://docs.commercetools.com/api/graphql">GraphQL API</a>.</li>
 </ul>
 <p>In addition, the SDK has the following directories:</p><ul>
 <li><code>/IntegrationTests</code>: Integration tests for the SDK. A good way for anyone using the .NET SDK to understand it further.</li>
@@ -150,7 +155,7 @@ Basic Workflow</h2>
 Dependency Injection Setup</h3>
 <p>In the ConfigureServices method of Startup.cs add the following:</p>
 <ul>
-<li><code>Composable Commerce HTTP API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsApi(this.configuration, <span class="stringliteral">&quot;Client&quot;</span>); <span class="comment">// replace with your instance of IConfiguration</span></div>
+<li><code>HTTP API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsApi(this.configuration, <span class="stringliteral">&quot;Client&quot;</span>); <span class="comment">// replace with your instance of IConfiguration</span></div>
 </div><!-- fragment --></li>
 <li><code>Import API</code>: <div class="fragment"><div class="line">services.UseCommercetoolsImportApi(this.configuration, <span class="stringliteral">&quot;ImportClient&quot;</span>);</div>
 </div><!-- fragment --></li>
@@ -173,7 +178,7 @@ Configuration</h4>
 </div><!-- fragment --><h4><a class="anchor" id="autotoc_md21"></a>
 Getting instance of ApiRoot</h4>
 <p>you can use the instance inside the injected client or use ApiFactory to create a new instance.</p><ul>
-<li><code>Composable Commerce HTTP API</code>: <div class="fragment"><div class="line">var root1 = client.WithApi();</div>
+<li><code>HTTP API</code>: <div class="fragment"><div class="line">var root1 = client.WithApi();</div>
 <div class="line">var root2 = ApiFactory.Create(client);</div>
 </div><!-- fragment --></li>
 <li><code>Import API</code>: <div class="fragment"><div class="line">var root1 = client.WithImportApi();</div>
@@ -187,7 +192,7 @@ Getting instance of ApiRoot</h4>
 Getting instance of ProjectApiRoot</h4>
 <p>The ProjectApiRoot is scoped to the projectKey in order to not have to provide the project for building requests. You can use the instance inside the injected client or use ApiFactory to create a new instance.</p>
 <ul>
-<li><code>Composable Commerce HTTP API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithProject(projectKey);</div>
+<li><code>HTTP API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithProject(projectKey);</div>
 <div class="line">ProjectApiRoot root2 = ApiFactory.Create(client, projectKey);</div>
 </div><!-- fragment --></li>
 <li><code>Import API</code>: <div class="fragment"><div class="line">ProjectApiRoot root1 = client.WithImportApi(projectKey);</div>
@@ -367,7 +372,8 @@ Migration Guidelines</h2>
 <h2><a class="anchor" id="autotoc_md29"></a>
 Documentation</h2>
 <ul>
-<li><a href="https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html">Documentation</a> </li>
+<li>Official documentation, a getting started guide, and usage examples for the .NET SDK can be found <a href="https://docs.commercetools.com/dev-tooling/dotnet-sdk">here</a></li>
+<li>The complete type documentation, function and class specifications can also be found <a href="https://commercetools.github.io/commercetools-dotnet-core-sdk-v2/docs/html/index.html">here</a> </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
