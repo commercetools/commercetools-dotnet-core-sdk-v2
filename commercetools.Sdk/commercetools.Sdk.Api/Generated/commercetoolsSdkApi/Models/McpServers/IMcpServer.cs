@@ -25,6 +25,8 @@ namespace commercetools.Sdk.Api.Models.McpServers
 
         ILocalizedString Description { get; set; }
 
+        IMcpServerAuthenticationMode AuthenticationMode { get; set; }
+
         IMcpServerState State { get; set; }
 
         IMcpServerConfig McpServer { get; set; }

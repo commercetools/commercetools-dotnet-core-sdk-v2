@@ -46,6 +46,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.McpServers
             return new CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerRemoveToolCustomizationActionQueryBuilderDsl.Of()),
                 McpServerUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl> AsSetAuthenticationMode(
+            Func<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerSetAuthenticationModeActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerSetAuthenticationModeActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerSetAuthenticationModeActionQueryBuilderDsl.Of()),
+                McpServerUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl> AsSetDescription(
             Func<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerSetDescriptionActionQueryBuilderDsl>> fn)
         {

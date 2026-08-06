@@ -81,6 +81,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.McpServers
                 McpServerQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<McpServerQueryBuilderDsl, string> AuthenticationMode()
+        {
+            return new ComparisonPredicateBuilder<McpServerQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("authenticationMode")),
+            p => new CombinationQueryPredicate<McpServerQueryBuilderDsl>(p, McpServerQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<McpServerQueryBuilderDsl, string> State()
         {
             return new ComparisonPredicateBuilder<McpServerQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("state")),

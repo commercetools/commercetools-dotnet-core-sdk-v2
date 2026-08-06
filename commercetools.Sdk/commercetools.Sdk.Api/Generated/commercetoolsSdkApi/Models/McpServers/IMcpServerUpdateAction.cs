@@ -9,6 +9,7 @@ namespace commercetools.Sdk.Api.Models.McpServers
     [SubTypeDiscriminator("addToolCustomization", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerAddToolCustomizationAction))]
     [SubTypeDiscriminator("removeTool", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerRemoveToolAction))]
     [SubTypeDiscriminator("removeToolCustomization", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerRemoveToolCustomizationAction))]
+    [SubTypeDiscriminator("setAuthenticationMode", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerSetAuthenticationModeAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerSetDescriptionAction))]
     [SubTypeDiscriminator("setJsonOutputFiltering", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerSetJsonOutputFilteringAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.McpServers.McpServerSetNameAction))]
@@ -41,6 +42,12 @@ namespace commercetools.Sdk.Api.Models.McpServers
         static commercetools.Sdk.Api.Models.McpServers.McpServerRemoveToolCustomizationAction RemoveToolCustomization(Action<commercetools.Sdk.Api.Models.McpServers.McpServerRemoveToolCustomizationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.McpServers.McpServerRemoveToolCustomizationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.McpServers.McpServerSetAuthenticationModeAction SetAuthenticationMode(Action<commercetools.Sdk.Api.Models.McpServers.McpServerSetAuthenticationModeAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.McpServers.McpServerSetAuthenticationModeAction();
             init?.Invoke(t);
             return t;
         }
