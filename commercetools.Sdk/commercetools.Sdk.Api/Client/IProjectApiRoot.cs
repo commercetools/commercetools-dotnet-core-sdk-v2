@@ -19,6 +19,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Sdk.Api.Client.RequestBuilders.Inventory;
 using commercetools.Sdk.Api.Client.RequestBuilders.Login;
+using commercetools.Sdk.Api.Client.RequestBuilders.McpServers;
 using commercetools.Sdk.Api.Client.RequestBuilders.Me;
 using commercetools.Sdk.Api.Client.RequestBuilders.Messages;
 using commercetools.Sdk.Api.Client.RequestBuilders.Orders;
@@ -45,6 +46,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Stores;
 using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
 using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Types;
+using commercetools.Sdk.Api.Client.RequestBuilders.VariantProjections;
+using commercetools.Sdk.Api.Client.RequestBuilders.Variants;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 
@@ -106,4 +109,7 @@ public interface IProjectApiRoot
     ByProjectKeyPaymentMethodsRequestBuilder PaymentMethods();
     ByProjectKeyRecurringOrdersRequestBuilder RecurringOrders();
     ByProjectKeyRecurrencePoliciesRequestBuilder RecurrencePolicies();
+    ByProjectKeyVariantProjectionsRequestBuilder VariantProjections();
+    ByProjectKeyVariantsRequestBuilder Variants();
+    ByProjectKeyMcpServersRequestBuilder McpServers();
 }
