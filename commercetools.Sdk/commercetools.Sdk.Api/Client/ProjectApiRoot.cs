@@ -321,12 +321,12 @@ namespace commercetools.Sdk.Api.Client
         {
             return With().RecurrencePolicies();
         }
-        
+
         public ByProjectKeyVariantProjectionsRequestBuilder VariantProjections()
         {
             return With().VariantProjections();
         }
-        
+
         public ByProjectKeyVariantsRequestBuilder Variants()
         {
             return With().Variants();
