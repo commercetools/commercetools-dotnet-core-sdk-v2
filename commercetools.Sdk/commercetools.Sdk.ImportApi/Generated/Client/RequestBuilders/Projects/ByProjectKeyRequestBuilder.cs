@@ -18,6 +18,7 @@ using commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTailorings;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Orders;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices;
+using commercetools.Sdk.ImportApi.Client.RequestBuilders.Variants;
 using commercetools.Sdk.ImportApi.Client.RequestBuilders.Types;
 
 // ReSharper disable CheckNamespace
@@ -130,6 +131,11 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Projects
         public ByProjectKeyStandalonePricesRequestBuilder StandalonePrices()
         {
             return new ByProjectKeyStandalonePricesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyVariantsRequestBuilder Variants()
+        {
+            return new ByProjectKeyVariantsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyTypesRequestBuilder Types()

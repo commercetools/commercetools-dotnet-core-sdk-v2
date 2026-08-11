@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
+    [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError))]
     [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
@@ -71,6 +72,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError))]
+    [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError))]
     [SubTypeDiscriminator("OverlappingStandalonePriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingStandalonePriceValidityError))]
     [SubTypeDiscriminator("PendingOperation", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLPendingOperationError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLPriceChangedError))]
@@ -94,6 +96,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
+    [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError))]
     public partial interface IGraphQLErrorObject
     {
@@ -132,6 +135,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError BadGateway(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError();
             init?.Invoke(t);
             return t;
         }
@@ -495,6 +504,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError OverlappingPriceValidity(Action<commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingStandalonePriceValidityError OverlappingStandalonePriceValidity(Action<commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingStandalonePriceValidityError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingStandalonePriceValidityError();
@@ -630,6 +645,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError Unauthorized(Action<commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError();
             init?.Invoke(t);
             return t;
         }

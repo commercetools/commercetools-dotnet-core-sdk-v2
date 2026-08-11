@@ -45,6 +45,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("store", typeof(commercetools.Sdk.Api.Models.Stores.StoreReference))]
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryReference))]
     [SubTypeDiscriminator("type", typeof(commercetools.Sdk.Api.Models.Types.TypeReference))]
+    [SubTypeDiscriminator("variant", typeof(commercetools.Sdk.Api.Models.Variants.VariantReference))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Sdk.Api.Models.Zones.ZoneReference))]
     public partial interface IReference
     {
@@ -289,6 +290,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.Types.TypeReference Type(Action<commercetools.Sdk.Api.Models.Types.TypeReference> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Types.TypeReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Variants.VariantReference Variant(Action<commercetools.Sdk.Api.Models.Variants.VariantReference> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Variants.VariantReference();
             init?.Invoke(t);
             return t;
         }

@@ -55,6 +55,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         [Description("state")]
         State,
 
+        [Description("variant")]
+        Variant,
+
         [Description("zone")]
         Zone
     }
@@ -127,6 +130,9 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         public static IAttributeReferenceTypeId State = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.State, JsonName = "state" };
 
+        public static IAttributeReferenceTypeId Variant = new AttributeReferenceTypeIdWrapper
+        { Value = AttributeReferenceTypeId.Variant, JsonName = "variant" };
+
         public static IAttributeReferenceTypeId Zone = new AttributeReferenceTypeIdWrapper
         { Value = AttributeReferenceTypeId.Zone, JsonName = "zone" };
 
@@ -151,6 +157,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
                  Review ,
                  ShippingMethod ,
                  State ,
+                 Variant ,
                  Zone
              };
         }

@@ -10,7 +10,7 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public int Count { get; set; }
 
-        public int Total { get; set; }
+        public int? Total { get; set; }
 
         public int Offset { get; set; }
 

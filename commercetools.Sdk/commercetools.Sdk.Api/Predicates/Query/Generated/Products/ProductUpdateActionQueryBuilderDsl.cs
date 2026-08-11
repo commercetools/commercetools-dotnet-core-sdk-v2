@@ -196,6 +196,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             return new CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductSetCategoryOrderHintActionQueryBuilderDsl.Of()),
                 ProductUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> AsSetDefaultVariant(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductSetDefaultVariantActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductSetDefaultVariantActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductSetDefaultVariantActionQueryBuilderDsl.Of()),
+                ProductUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> AsSetDescription(
             Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductSetDescriptionActionQueryBuilderDsl>> fn)
         {

@@ -58,6 +58,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         [Description("standalone-price")]
         StandalonePrice,
 
+        [Description("variant")]
+        Variant,
+
         [Description("type")]
         Type
     }
@@ -133,6 +136,9 @@ namespace commercetools.Sdk.ImportApi.Models.Common
         public static IImportResourceType StandalonePrice = new ImportResourceTypeWrapper
         { Value = ImportResourceType.StandalonePrice, JsonName = "standalone-price" };
 
+        public static IImportResourceType Variant = new ImportResourceTypeWrapper
+        { Value = ImportResourceType.Variant, JsonName = "variant" };
+
         public static IImportResourceType Type = new ImportResourceTypeWrapper
         { Value = ImportResourceType.Type, JsonName = "type" };
 
@@ -158,6 +164,7 @@ namespace commercetools.Sdk.ImportApi.Models.Common
                  ProductVariant ,
                  ProductVariantPatch ,
                  StandalonePrice ,
+                 Variant ,
                  Type
              };
         }

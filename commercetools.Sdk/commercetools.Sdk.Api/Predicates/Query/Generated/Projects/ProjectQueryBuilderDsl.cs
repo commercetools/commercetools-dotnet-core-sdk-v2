@@ -144,6 +144,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
                 ProjectQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<ProjectQueryBuilderDsl, string> ProductCatalogModel()
+        {
+            return new ComparisonPredicateBuilder<ProjectQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("productCatalogModel")),
+            p => new CombinationQueryPredicate<ProjectQueryBuilderDsl>(p, ProjectQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

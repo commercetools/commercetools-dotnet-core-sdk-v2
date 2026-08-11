@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeDefinitionTypeConflict", typeof(commercetools.Sdk.Api.Models.Errors.AttributeDefinitionTypeConflictError))]
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
+    [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError))]
     [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
@@ -71,6 +72,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.OutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.OverCapacityError))]
+    [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError))]
     [SubTypeDiscriminator("OverlappingStandalonePriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError))]
     [SubTypeDiscriminator("PendingOperation", typeof(commercetools.Sdk.Api.Models.Errors.PendingOperationError))]
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.PriceChangedError))]
@@ -94,6 +96,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
+    [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.UnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError))]
     public partial interface IErrorObject
     {
@@ -134,6 +137,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.BadGatewayError BadGateway(Action<commercetools.Sdk.Api.Models.Errors.BadGatewayError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.BadGatewayError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError();
             init?.Invoke(t);
             return t;
         }
@@ -497,6 +506,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError OverlappingPriceValidity(Action<commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError OverlappingStandalonePriceValidity(Action<commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.OverlappingStandalonePriceValidityError();
@@ -632,6 +647,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.SyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.UnauthorizedError Unauthorized(Action<commercetools.Sdk.Api.Models.Errors.UnauthorizedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.UnauthorizedError();
             init?.Invoke(t);
             return t;
         }

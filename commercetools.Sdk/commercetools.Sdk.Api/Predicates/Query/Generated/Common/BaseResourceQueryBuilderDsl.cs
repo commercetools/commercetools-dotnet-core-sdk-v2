@@ -136,6 +136,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Inventories.InventoryEntryQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsMcpServer(
+            Func<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.McpServers.McpServerQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsMessage(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.MessageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.MessageQueryBuilderDsl>> fn)
         {
@@ -290,6 +296,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             Func<commercetools.Sdk.Api.Predicates.Query.Types.TypeQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.TypeQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeQueryBuilderDsl.Of()),
+                BaseResourceQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsVariant(
+            Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<BaseResourceQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantQueryBuilderDsl.Of()),
                 BaseResourceQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> AsZone(

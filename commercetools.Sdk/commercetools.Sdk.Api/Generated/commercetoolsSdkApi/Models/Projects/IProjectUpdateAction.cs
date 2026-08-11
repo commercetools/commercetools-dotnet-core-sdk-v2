@@ -23,6 +23,7 @@ namespace commercetools.Sdk.Api.Models.Projects
     [SubTypeDiscriminator("setDiscountsConfiguration", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetDiscountsConfigurationAction))]
     [SubTypeDiscriminator("setExternalOAuth", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetExternalOAuthAction))]
     [SubTypeDiscriminator("setMyBusinessUnitAssociateRoleOnCreation", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction))]
+    [SubTypeDiscriminator("setProductCatalogModel", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetProductCatalogModelAction))]
     [SubTypeDiscriminator("setReleaseExpiredReservations", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetReleaseExpiredReservationsAction))]
     [SubTypeDiscriminator("setReservationExpirationInMinutes", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetReservationExpirationInMinutesAction))]
     [SubTypeDiscriminator("setShippingRateInputType", typeof(commercetools.Sdk.Api.Models.Projects.ProjectSetShippingRateInputTypeAction))]
@@ -135,6 +136,12 @@ namespace commercetools.Sdk.Api.Models.Projects
         static commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction SetMyBusinessUnitAssociateRoleOnCreation(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetBusinessUnitAssociateRoleOnCreationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Projects.ProjectSetProductCatalogModelAction SetProductCatalogModel(Action<commercetools.Sdk.Api.Models.Projects.ProjectSetProductCatalogModelAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Projects.ProjectSetProductCatalogModelAction();
             init?.Invoke(t);
             return t;
         }

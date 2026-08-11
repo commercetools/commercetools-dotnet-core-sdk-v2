@@ -49,5 +49,7 @@ namespace commercetools.Sdk.Api.Models.Projects
 
         IDiscountsConfiguration Discounts { get; set; }
 
+        IProductCatalogModel ProductCatalogModel { get; set; }
+
     }
 }

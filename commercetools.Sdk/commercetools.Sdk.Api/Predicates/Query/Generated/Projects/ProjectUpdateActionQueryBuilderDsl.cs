@@ -130,6 +130,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Projects
             return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetExternalOAuthActionQueryBuilderDsl.Of()),
                 ProjectUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetProductCatalogModel(
+            Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetProductCatalogModelActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetProductCatalogModelActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetProductCatalogModelActionQueryBuilderDsl.Of()),
+                ProjectUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> AsSetReleaseExpiredReservations(
             Func<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Projects.ProjectSetReleaseExpiredReservationsActionQueryBuilderDsl>> fn)
         {

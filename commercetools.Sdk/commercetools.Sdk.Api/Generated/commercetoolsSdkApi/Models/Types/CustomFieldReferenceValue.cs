@@ -61,6 +61,9 @@ namespace commercetools.Sdk.Api.Models.Types
         [Description("shipping-method")]
         ShippingMethod,
 
+        [Description("variant")]
+        Variant,
+
         [Description("zone")]
         Zone
     }
@@ -139,6 +142,9 @@ namespace commercetools.Sdk.Api.Models.Types
         public static ICustomFieldReferenceValue ShippingMethod = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.ShippingMethod, JsonName = "shipping-method" };
 
+        public static ICustomFieldReferenceValue Variant = new CustomFieldReferenceValueWrapper
+        { Value = CustomFieldReferenceValue.Variant, JsonName = "variant" };
+
         public static ICustomFieldReferenceValue Zone = new CustomFieldReferenceValueWrapper
         { Value = CustomFieldReferenceValue.Zone, JsonName = "zone" };
 
@@ -165,6 +171,7 @@ namespace commercetools.Sdk.Api.Models.Types
                  Review ,
                  State ,
                  ShippingMethod ,
+                 Variant ,
                  Zone
              };
         }

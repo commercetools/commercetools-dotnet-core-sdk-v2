@@ -135,6 +135,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Products
             return new CollectionPredicateBuilder<ProductDataQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("attributes")),
                     p => new CombinationQueryPredicate<ProductDataQueryBuilderDsl>(p, ProductDataQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<ProductDataQueryBuilderDsl> DefaultVariant(
+            Func<commercetools.Sdk.Api.Predicates.Query.Variants.VariantReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Variants.VariantReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductDataQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("defaultVariant"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Variants.VariantReferenceQueryBuilderDsl.Of())),
+                ProductDataQueryBuilderDsl.Of);
+        }
+
 
     }
 }

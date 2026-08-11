@@ -46,6 +46,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder DiscountCodes()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder Me()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
@@ -99,6 +104,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
         public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder StagedQuotes()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
+        public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder VariantProjections()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
         public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder Login()

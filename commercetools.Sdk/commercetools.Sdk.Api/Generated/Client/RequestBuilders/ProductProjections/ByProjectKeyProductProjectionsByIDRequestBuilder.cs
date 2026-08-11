@@ -34,5 +34,10 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             return new ByProjectKeyProductProjectionsByIDHead(ApiHttpClient, ProjectKey, ID);
         }
 
+
+        public ByProjectKeyProductProjectionsByIDVariantAttributesRequestBuilder VariantAttributes()
+        {
+            return new ByProjectKeyProductProjectionsByIDVariantAttributesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, ID);
+        }
     }
 }

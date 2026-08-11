@@ -37,6 +37,8 @@ using commercetools.Sdk.Api.Client.RequestBuilders.States;
 using commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions;
 using commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories;
 using commercetools.Sdk.Api.Client.RequestBuilders.Types;
+using commercetools.Sdk.Api.Client.RequestBuilders.VariantProjections;
+using commercetools.Sdk.Api.Client.RequestBuilders.Variants;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Client.RequestBuilders.Me;
 using commercetools.Sdk.Api.Client.RequestBuilders.Extensions;
@@ -46,6 +48,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.InStore;
 using commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
 using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
+using commercetools.Sdk.Api.Client.RequestBuilders.McpServers;
 
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
@@ -268,6 +271,16 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
             return new ByProjectKeyTypesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
+        public ByProjectKeyVariantProjectionsRequestBuilder VariantProjections()
+        {
+            return new ByProjectKeyVariantProjectionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyVariantsRequestBuilder Variants()
+        {
+            return new ByProjectKeyVariantsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
         public ByProjectKeyZonesRequestBuilder Zones()
         {
             return new ByProjectKeyZonesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
@@ -311,6 +324,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
         public ByProjectKeyAttributeGroupsRequestBuilder AttributeGroups()
         {
             return new ByProjectKeyAttributeGroupsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyMcpServersRequestBuilder McpServers()
+        {
+            return new ByProjectKeyMcpServersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
     }
 }

@@ -38,6 +38,7 @@ namespace commercetools.Sdk.Api.Models.Common
     [SubTypeDiscriminator("store", typeof(commercetools.Sdk.Api.Models.Stores.StoreResourceIdentifier))]
     [SubTypeDiscriminator("tax-category", typeof(commercetools.Sdk.Api.Models.TaxCategories.TaxCategoryResourceIdentifier))]
     [SubTypeDiscriminator("type", typeof(commercetools.Sdk.Api.Models.Types.TypeResourceIdentifier))]
+    [SubTypeDiscriminator("variant", typeof(commercetools.Sdk.Api.Models.Variants.VariantResourceIdentifier))]
     [SubTypeDiscriminator("zone", typeof(commercetools.Sdk.Api.Models.Zones.ZoneResourceIdentifier))]
     public partial interface IResourceIdentifier
     {
@@ -242,6 +243,12 @@ namespace commercetools.Sdk.Api.Models.Common
         static commercetools.Sdk.Api.Models.Types.TypeResourceIdentifier Type(Action<commercetools.Sdk.Api.Models.Types.TypeResourceIdentifier> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Types.TypeResourceIdentifier();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Variants.VariantResourceIdentifier Variant(Action<commercetools.Sdk.Api.Models.Variants.VariantResourceIdentifier> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Variants.VariantResourceIdentifier();
             init?.Invoke(t);
             return t;
         }

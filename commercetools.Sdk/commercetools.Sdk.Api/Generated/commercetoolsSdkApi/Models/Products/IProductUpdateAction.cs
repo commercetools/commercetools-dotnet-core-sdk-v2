@@ -34,6 +34,7 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("setAttribute", typeof(commercetools.Sdk.Api.Models.Products.ProductSetAttributeAction))]
     [SubTypeDiscriminator("setAttributeInAllVariants", typeof(commercetools.Sdk.Api.Models.Products.ProductSetAttributeInAllVariantsAction))]
     [SubTypeDiscriminator("setCategoryOrderHint", typeof(commercetools.Sdk.Api.Models.Products.ProductSetCategoryOrderHintAction))]
+    [SubTypeDiscriminator("setDefaultVariant", typeof(commercetools.Sdk.Api.Models.Products.ProductSetDefaultVariantAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Products.ProductSetDescriptionAction))]
     [SubTypeDiscriminator("setDiscountedPrice", typeof(commercetools.Sdk.Api.Models.Products.ProductSetDiscountedPriceAction))]
     [SubTypeDiscriminator("setImageLabel", typeof(commercetools.Sdk.Api.Models.Products.ProductSetImageLabelAction))]
@@ -228,6 +229,12 @@ namespace commercetools.Sdk.Api.Models.Products
         static commercetools.Sdk.Api.Models.Products.ProductSetCategoryOrderHintAction SetCategoryOrderHint(Action<commercetools.Sdk.Api.Models.Products.ProductSetCategoryOrderHintAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Products.ProductSetCategoryOrderHintAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Products.ProductSetDefaultVariantAction SetDefaultVariant(Action<commercetools.Sdk.Api.Models.Products.ProductSetDefaultVariantAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Products.ProductSetDefaultVariantAction();
             init?.Invoke(t);
             return t;
         }
