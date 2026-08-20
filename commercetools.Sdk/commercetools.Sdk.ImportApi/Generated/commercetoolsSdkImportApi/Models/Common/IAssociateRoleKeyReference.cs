@@ -5,6 +5,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.AssociateRoleKeyReference))]
     public partial interface IAssociateRoleKeyReference : IKeyReference
     {
+        new IReferenceType TypeId { get; set; }
+
         new string Key { get; set; }
 
     }

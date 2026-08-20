@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Variants
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Variants.VariantReference))]
     public partial interface IVariantReference : IReference
     {
+        new IReferenceTypeId TypeId { get; set; }
+
         IVariant Obj { get; set; }
 
         new string Id { get; set; }

@@ -5,6 +5,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.TaxCategoryKeyReference))]
     public partial interface ITaxCategoryKeyReference : IKeyReference
     {
+        new IReferenceType TypeId { get; set; }
+
         new string Key { get; set; }
 
     }
