@@ -11,6 +11,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
 
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
+
+        public IEstimatedDelivery EstimatedDelivery { get; set; }
         public CartSetShippingMethodAction()
         {
             this.Action = "setShippingMethod";

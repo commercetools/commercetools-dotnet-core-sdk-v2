@@ -31,5 +31,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IDiscountedLineItemPrice DiscountedPrice { get; set; }
 
         public IShippingMethodState ShippingMethodState { get; set; }
+
+        public IEstimatedDelivery EstimatedDelivery { get; set; }
     }
 }

@@ -103,6 +103,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<ShippingInfoQueryBuilderDsl>(p, ShippingInfoQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<ShippingInfoQueryBuilderDsl> EstimatedDelivery(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingInfoQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("estimatedDelivery"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl.Of())),
+                ShippingInfoQueryBuilderDsl.Of);
+        }
+
 
     }
 }

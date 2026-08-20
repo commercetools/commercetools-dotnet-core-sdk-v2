@@ -27,6 +27,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IEnumerable<IDeliveryDraft> DeliveriesEnumerable { set => Deliveries = value.ToList(); }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IEstimatedDelivery EstimatedDelivery { get; set; }
         public CartAddShippingMethodAction()
         {
             this.Action = "addShippingMethod";

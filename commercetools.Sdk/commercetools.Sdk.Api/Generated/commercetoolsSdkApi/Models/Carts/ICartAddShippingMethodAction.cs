@@ -27,5 +27,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICustomFieldsDraft Custom { get; set; }
 
+        IEstimatedDelivery EstimatedDelivery { get; set; }
+
     }
 }

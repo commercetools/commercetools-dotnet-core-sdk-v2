@@ -48,5 +48,7 @@ namespace commercetools.Sdk.Api.Models.Stores
         public IEnumerable<IProductSelectionSetting> ProductSelectionsEnumerable { set => ProductSelections = value.ToList(); }
 
         public ICustomFields Custom { get; set; }
+
+        public IStorefront Storefront { get; set; }
     }
 }

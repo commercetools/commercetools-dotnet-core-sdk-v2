@@ -113,6 +113,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CollectionPredicateBuilder<ShippingMethodDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
                     p => new CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl>(p, ShippingMethodDraftQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl, string> Carrier()
+        {
+            return new ComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("carrier")),
+            p => new CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl>(p, ShippingMethodDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

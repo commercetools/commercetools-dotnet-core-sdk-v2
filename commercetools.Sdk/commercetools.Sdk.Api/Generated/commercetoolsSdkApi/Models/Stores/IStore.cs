@@ -50,5 +50,7 @@ namespace commercetools.Sdk.Api.Models.Stores
 
         ICustomFields Custom { get; set; }
 
+        IStorefront Storefront { get; set; }
+
     }
 }

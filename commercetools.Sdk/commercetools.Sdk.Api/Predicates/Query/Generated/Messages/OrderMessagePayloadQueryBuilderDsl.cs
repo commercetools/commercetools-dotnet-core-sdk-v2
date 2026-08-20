@@ -214,6 +214,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderEditAppliedMessagePayloadQueryBuilderDsl.Of()),
                 OrderMessagePayloadQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsOrderEstimatedDeliverySet(
+            Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Messages.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl.Of()),
+                OrderMessagePayloadQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> AsOrderImported(
             Func<commercetools.Sdk.Api.Predicates.Query.Messages.OrderImportedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Messages.OrderImportedMessagePayloadQueryBuilderDsl>> fn)
         {

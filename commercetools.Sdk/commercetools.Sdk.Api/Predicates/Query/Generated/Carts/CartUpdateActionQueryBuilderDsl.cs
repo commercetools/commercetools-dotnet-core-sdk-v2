@@ -316,6 +316,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetEstimatedDelivery(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetEstimatedDeliveryActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetEstimatedDeliveryActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetItemShippingAddressCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn)
         {
