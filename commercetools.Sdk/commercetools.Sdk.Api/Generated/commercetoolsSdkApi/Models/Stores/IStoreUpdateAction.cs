@@ -14,14 +14,24 @@ namespace commercetools.Sdk.Api.Models.Stores
     [SubTypeDiscriminator("removeDistributionChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveDistributionChannelAction))]
     [SubTypeDiscriminator("removeProductSelection", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveProductSelectionAction))]
     [SubTypeDiscriminator("removeSupplyChannel", typeof(commercetools.Sdk.Api.Models.Stores.StoreRemoveSupplyChannelAction))]
+    [SubTypeDiscriminator("setCheckoutUrlTemplate", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCheckoutUrlTemplateAction))]
+    [SubTypeDiscriminator("setContactUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetContactUrlAction))]
+    [SubTypeDiscriminator("setCookiePolicyUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCookiePolicyUrlAction))]
     [SubTypeDiscriminator("setCountries", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetCustomTypeAction))]
     [SubTypeDiscriminator("setDistributionChannels", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetDistributionChannelsAction))]
+    [SubTypeDiscriminator("setFaqUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetFaqUrlAction))]
+    [SubTypeDiscriminator("setImprintUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetImprintUrlAction))]
     [SubTypeDiscriminator("setLanguages", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetLanguagesAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetNameAction))]
+    [SubTypeDiscriminator("setOrderUrlTemplate", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetOrderUrlTemplateAction))]
+    [SubTypeDiscriminator("setPrivacyPolicyUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetPrivacyPolicyUrlAction))]
     [SubTypeDiscriminator("setProductSelections", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetProductSelectionsAction))]
+    [SubTypeDiscriminator("setRefundPolicyUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetRefundPolicyUrlAction))]
+    [SubTypeDiscriminator("setShippingPolicyUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetShippingPolicyUrlAction))]
     [SubTypeDiscriminator("setSupplyChannels", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction))]
+    [SubTypeDiscriminator("setTermsOfServiceUrl", typeof(commercetools.Sdk.Api.Models.Stores.StoreSetTermsOfServiceUrlAction))]
     public partial interface IStoreUpdateAction
     {
         string Action { get; set; }
@@ -80,6 +90,24 @@ namespace commercetools.Sdk.Api.Models.Stores
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetCheckoutUrlTemplateAction SetCheckoutUrlTemplate(Action<commercetools.Sdk.Api.Models.Stores.StoreSetCheckoutUrlTemplateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetCheckoutUrlTemplateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetContactUrlAction SetContactUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetContactUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetContactUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetCookiePolicyUrlAction SetCookiePolicyUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetCookiePolicyUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetCookiePolicyUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction SetCountries(Action<commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreSetCountriesAction();
@@ -104,6 +132,18 @@ namespace commercetools.Sdk.Api.Models.Stores
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetFaqUrlAction SetFaqUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetFaqUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetFaqUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetImprintUrlAction SetImprintUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetImprintUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetImprintUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreSetLanguagesAction SetLanguages(Action<commercetools.Sdk.Api.Models.Stores.StoreSetLanguagesAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreSetLanguagesAction();
@@ -116,15 +156,45 @@ namespace commercetools.Sdk.Api.Models.Stores
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetOrderUrlTemplateAction SetOrderUrlTemplate(Action<commercetools.Sdk.Api.Models.Stores.StoreSetOrderUrlTemplateAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetOrderUrlTemplateAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetPrivacyPolicyUrlAction SetPrivacyPolicyUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetPrivacyPolicyUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetPrivacyPolicyUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreSetProductSelectionsAction SetProductSelections(Action<commercetools.Sdk.Api.Models.Stores.StoreSetProductSelectionsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreSetProductSelectionsAction();
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetRefundPolicyUrlAction SetRefundPolicyUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetRefundPolicyUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetRefundPolicyUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetShippingPolicyUrlAction SetShippingPolicyUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetShippingPolicyUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetShippingPolicyUrlAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction SetSupplyChannels(Action<commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Stores.StoreSetSupplyChannelsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Stores.StoreSetTermsOfServiceUrlAction SetTermsOfServiceUrl(Action<commercetools.Sdk.Api.Models.Stores.StoreSetTermsOfServiceUrlAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Stores.StoreSetTermsOfServiceUrlAction();
             init?.Invoke(t);
             return t;
         }

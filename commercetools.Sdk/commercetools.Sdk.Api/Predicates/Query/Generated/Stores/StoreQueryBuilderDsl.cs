@@ -139,6 +139,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Stores
                 StoreQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<StoreQueryBuilderDsl> Storefront(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StorefrontQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StorefrontQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("storefront"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StorefrontQueryBuilderDsl.Of())),
+                StoreQueryBuilderDsl.Of);
+        }
+
 
     }
 }

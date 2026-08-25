@@ -33,5 +33,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IShippingMethodState ShippingMethodState { get; set; }
 
+        IEstimatedDelivery EstimatedDelivery { get; set; }
+
     }
 }

@@ -76,6 +76,24 @@ namespace commercetools.Sdk.Api.Predicates.Query.Stores
             return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreRemoveSupplyChannelActionQueryBuilderDsl.Of()),
                 StoreUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetCheckoutUrlTemplate(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCheckoutUrlTemplateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCheckoutUrlTemplateActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCheckoutUrlTemplateActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetContactUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetContactUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetContactUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetContactUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetCookiePolicyUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCookiePolicyUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCookiePolicyUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCookiePolicyUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetCountries(
             Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCountriesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetCountriesActionQueryBuilderDsl>> fn)
         {
@@ -100,6 +118,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Stores
             return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetDistributionChannelsActionQueryBuilderDsl.Of()),
                 StoreUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetFaqUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetFaqUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetFaqUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetFaqUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetImprintUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetImprintUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetImprintUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetImprintUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetLanguages(
             Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetLanguagesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetLanguagesActionQueryBuilderDsl>> fn)
         {
@@ -112,16 +142,46 @@ namespace commercetools.Sdk.Api.Predicates.Query.Stores
             return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetNameActionQueryBuilderDsl.Of()),
                 StoreUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetOrderUrlTemplate(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetOrderUrlTemplateActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetOrderUrlTemplateActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetOrderUrlTemplateActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetPrivacyPolicyUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetPrivacyPolicyUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetPrivacyPolicyUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetPrivacyPolicyUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetProductSelections(
             Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetProductSelectionsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetProductSelectionsActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetProductSelectionsActionQueryBuilderDsl.Of()),
                 StoreUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetRefundPolicyUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetRefundPolicyUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetRefundPolicyUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetRefundPolicyUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetShippingPolicyUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetShippingPolicyUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetShippingPolicyUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetShippingPolicyUrlActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetSupplyChannels(
             Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetSupplyChannelsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetSupplyChannelsActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetSupplyChannelsActionQueryBuilderDsl.Of()),
+                StoreUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl> AsSetTermsOfServiceUrl(
+            Func<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetTermsOfServiceUrlActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetTermsOfServiceUrlActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StoreUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Stores.StoreSetTermsOfServiceUrlActionQueryBuilderDsl.Of()),
                 StoreUpdateActionQueryBuilderDsl.Of);
         }
     }

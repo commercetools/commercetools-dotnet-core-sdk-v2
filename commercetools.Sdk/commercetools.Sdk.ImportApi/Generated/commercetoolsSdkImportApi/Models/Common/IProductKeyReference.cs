@@ -5,6 +5,8 @@ namespace commercetools.Sdk.ImportApi.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.ImportApi.Models.Common.ProductKeyReference))]
     public partial interface IProductKeyReference : IKeyReference
     {
+        new IReferenceType TypeId { get; set; }
+
         new string Key { get; set; }
 
     }

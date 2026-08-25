@@ -19,6 +19,8 @@ namespace commercetools.Sdk.Api.Models.Carts
         public IExternalTaxRateDraft ExternalTaxRate { get; set; }
 
         public ICustomFieldsDraft Custom { get; set; }
+
+        public IEstimatedDelivery EstimatedDelivery { get; set; }
         public CartSetCustomShippingMethodAction()
         {
             this.Action = "setCustomShippingMethod";

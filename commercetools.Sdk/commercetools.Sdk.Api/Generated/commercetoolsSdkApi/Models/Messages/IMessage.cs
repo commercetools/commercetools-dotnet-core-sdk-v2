@@ -70,6 +70,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("CartDiscountStoreAdded", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreAddedMessage))]
     [SubTypeDiscriminator("CartDiscountStoreRemoved", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoreRemovedMessage))]
     [SubTypeDiscriminator("CartDiscountStoresSet", typeof(commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage))]
+    [SubTypeDiscriminator("CartEstimatedDeliverySet", typeof(commercetools.Sdk.Api.Models.Messages.CartEstimatedDeliverySetMessage))]
     [SubTypeDiscriminator("CartFrozen", typeof(commercetools.Sdk.Api.Models.Messages.CartFrozenMessage))]
     [SubTypeDiscriminator("CartLocked", typeof(commercetools.Sdk.Api.Models.Messages.CartLockedMessage))]
     [SubTypeDiscriminator("CartPurchaseOrderNumberSet", typeof(commercetools.Sdk.Api.Models.Messages.CartPurchaseOrderNumberSetMessage))]
@@ -166,6 +167,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("OrderDiscountCodeRemoved", typeof(commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeRemovedMessage))]
     [SubTypeDiscriminator("OrderDiscountCodeStateSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderDiscountCodeStateSetMessage))]
     [SubTypeDiscriminator("OrderEditApplied", typeof(commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage))]
+    [SubTypeDiscriminator("OrderEstimatedDeliverySet", typeof(commercetools.Sdk.Api.Models.Messages.OrderEstimatedDeliverySetMessage))]
     [SubTypeDiscriminator("OrderImported", typeof(commercetools.Sdk.Api.Models.Messages.OrderImportedMessage))]
     [SubTypeDiscriminator("OrderLineItemAdded", typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemAddedMessage))]
     [SubTypeDiscriminator("OrderLineItemDiscountSet", typeof(commercetools.Sdk.Api.Models.Messages.OrderLineItemDiscountSetMessage))]
@@ -317,14 +319,24 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("StandalonePriceValidFromSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidFromSetMessage))]
     [SubTypeDiscriminator("StandalonePriceValidUntilSet", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValidUntilSetMessage))]
     [SubTypeDiscriminator("StandalonePriceValueChanged", typeof(commercetools.Sdk.Api.Models.Messages.StandalonePriceValueChangedMessage))]
+    [SubTypeDiscriminator("StoreCheckoutUrlTemplateSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreCheckoutUrlTemplateSetMessage))]
+    [SubTypeDiscriminator("StoreContactUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreContactUrlSetMessage))]
+    [SubTypeDiscriminator("StoreCookiePolicyUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreCookiePolicyUrlSetMessage))]
     [SubTypeDiscriminator("StoreCountriesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessage))]
     [SubTypeDiscriminator("StoreCreated", typeof(commercetools.Sdk.Api.Models.Messages.StoreCreatedMessage))]
     [SubTypeDiscriminator("StoreDeleted", typeof(commercetools.Sdk.Api.Models.Messages.StoreDeletedMessage))]
     [SubTypeDiscriminator("StoreDistributionChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreDistributionChannelsChangedMessage))]
+    [SubTypeDiscriminator("StoreFaqUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreFaqUrlSetMessage))]
+    [SubTypeDiscriminator("StoreImprintUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreImprintUrlSetMessage))]
     [SubTypeDiscriminator("StoreLanguagesChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage))]
     [SubTypeDiscriminator("StoreNameSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreNameSetMessage))]
+    [SubTypeDiscriminator("StoreOrderUrlTemplateSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreOrderUrlTemplateSetMessage))]
+    [SubTypeDiscriminator("StorePrivacyPolicyUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StorePrivacyPolicyUrlSetMessage))]
     [SubTypeDiscriminator("StoreProductSelectionsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage))]
+    [SubTypeDiscriminator("StoreRefundPolicyUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreRefundPolicyUrlSetMessage))]
+    [SubTypeDiscriminator("StoreShippingPolicyUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreShippingPolicyUrlSetMessage))]
     [SubTypeDiscriminator("StoreSupplyChannelsChanged", typeof(commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessage))]
+    [SubTypeDiscriminator("StoreTermsOfServiceUrlSet", typeof(commercetools.Sdk.Api.Models.Messages.StoreTermsOfServiceUrlSetMessage))]
     [SubTypeDiscriminator("VariantCreated", typeof(commercetools.Sdk.Api.Models.Messages.VariantCreatedMessage))]
     [SubTypeDiscriminator("VariantDeleted", typeof(commercetools.Sdk.Api.Models.Messages.VariantDeletedMessage))]
     [SubTypeDiscriminator("VariantImageAdded", typeof(commercetools.Sdk.Api.Models.Messages.VariantImageAddedMessage))]
@@ -739,6 +751,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage CartDiscountStoresSet(Action<commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.CartDiscountStoresSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.CartEstimatedDeliverySetMessage CartEstimatedDeliverySet(Action<commercetools.Sdk.Api.Models.Messages.CartEstimatedDeliverySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.CartEstimatedDeliverySetMessage();
             init?.Invoke(t);
             return t;
         }
@@ -1315,6 +1333,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage OrderEditApplied(Action<commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.OrderEditAppliedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.OrderEstimatedDeliverySetMessage OrderEstimatedDeliverySet(Action<commercetools.Sdk.Api.Models.Messages.OrderEstimatedDeliverySetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.OrderEstimatedDeliverySetMessage();
             init?.Invoke(t);
             return t;
         }
@@ -2224,6 +2248,24 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StoreCheckoutUrlTemplateSetMessage StoreCheckoutUrlTemplateSet(Action<commercetools.Sdk.Api.Models.Messages.StoreCheckoutUrlTemplateSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreCheckoutUrlTemplateSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreContactUrlSetMessage StoreContactUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreContactUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreContactUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreCookiePolicyUrlSetMessage StoreCookiePolicyUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreCookiePolicyUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreCookiePolicyUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessage StoreCountriesChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreCountriesChangedMessage();
@@ -2248,6 +2290,18 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StoreFaqUrlSetMessage StoreFaqUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreFaqUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreFaqUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreImprintUrlSetMessage StoreImprintUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreImprintUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreImprintUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage StoreLanguagesChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreLanguagesChangedMessage();
@@ -2260,15 +2314,45 @@ namespace commercetools.Sdk.Api.Models.Messages
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StoreOrderUrlTemplateSetMessage StoreOrderUrlTemplateSet(Action<commercetools.Sdk.Api.Models.Messages.StoreOrderUrlTemplateSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreOrderUrlTemplateSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StorePrivacyPolicyUrlSetMessage StorePrivacyPolicyUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StorePrivacyPolicyUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StorePrivacyPolicyUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage StoreProductSelectionsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreProductSelectionsChangedMessage();
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Messages.StoreRefundPolicyUrlSetMessage StoreRefundPolicyUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreRefundPolicyUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreRefundPolicyUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreShippingPolicyUrlSetMessage StoreShippingPolicyUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreShippingPolicyUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreShippingPolicyUrlSetMessage();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessage StoreSupplyChannelsChanged(Action<commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessage> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.StoreSupplyChannelsChangedMessage();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.StoreTermsOfServiceUrlSetMessage StoreTermsOfServiceUrlSet(Action<commercetools.Sdk.Api.Models.Messages.StoreTermsOfServiceUrlSetMessage> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.StoreTermsOfServiceUrlSetMessage();
             init?.Invoke(t);
             return t;
         }

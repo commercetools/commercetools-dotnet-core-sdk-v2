@@ -208,6 +208,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetDeliveryItemsActionQueryBuilderDsl.Of()),
                 OrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetEstimatedDelivery(
+            Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetEstimatedDeliveryActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetEstimatedDeliveryActionQueryBuilderDsl.Of()),
+                OrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> AsSetItemShippingAddressCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Orders.OrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn)
         {

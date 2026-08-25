@@ -63,6 +63,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartSetCustomShippingMethodActionQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartSetCustomShippingMethodActionQueryBuilderDsl> EstimatedDelivery(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartSetCustomShippingMethodActionQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("estimatedDelivery"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.EstimatedDeliveryQueryBuilderDsl.Of())),
+                CartSetCustomShippingMethodActionQueryBuilderDsl.Of);
+        }
+
 
     }
 }

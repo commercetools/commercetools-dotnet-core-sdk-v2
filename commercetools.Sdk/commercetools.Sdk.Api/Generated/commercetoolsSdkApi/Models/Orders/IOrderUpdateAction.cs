@@ -36,6 +36,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setDeliveryCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryCustomFieldAction))]
     [SubTypeDiscriminator("setDeliveryCustomType", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryCustomTypeAction))]
     [SubTypeDiscriminator("setDeliveryItems", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryItemsAction))]
+    [SubTypeDiscriminator("setEstimatedDelivery", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetEstimatedDeliveryAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetItemShippingAddressCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.Orders.OrderSetLineItemCustomFieldAction))]
@@ -252,6 +253,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryItemsAction SetDeliveryItems(Action<commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryItemsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Orders.OrderSetDeliveryItemsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Orders.OrderSetEstimatedDeliveryAction SetEstimatedDelivery(Action<commercetools.Sdk.Api.Models.Orders.OrderSetEstimatedDeliveryAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Orders.OrderSetEstimatedDeliveryAction();
             init?.Invoke(t);
             return t;
         }

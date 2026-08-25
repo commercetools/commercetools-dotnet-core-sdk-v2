@@ -41,5 +41,7 @@ namespace commercetools.Sdk.Api.Models.ShippingMethods
 
         IEnumerable<IStoreResourceIdentifier> StoresEnumerable { set => Stores = value.ToList(); }
 
+        string Carrier { get; set; }
+
     }
 }

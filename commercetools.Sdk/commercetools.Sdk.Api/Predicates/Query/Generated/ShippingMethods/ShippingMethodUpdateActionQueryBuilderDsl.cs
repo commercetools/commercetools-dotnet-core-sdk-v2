@@ -82,6 +82,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ShippingMethods
             return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodRemoveZoneActionQueryBuilderDsl.Of()),
                 ShippingMethodUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsSetCarrier(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCarrierActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCarrierActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCarrierActionQueryBuilderDsl.Of()),
+                ShippingMethodUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShippingMethods.ShippingMethodSetCustomFieldActionQueryBuilderDsl>> fn)
         {
