@@ -11,7 +11,7 @@ namespace commercetools.Base.Serialization.JsonConverters
     public sealed class EnumAsInterfaceConverterFactory
         : JsonConverterFactory
     {
-        protected static readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
+        private readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         public EnumAsInterfaceConverterFactory(
             JsonNamingPolicy namingPolicy,

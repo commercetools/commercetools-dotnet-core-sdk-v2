@@ -11,7 +11,7 @@ namespace commercetools.Base.Serialization.JsonConverters
     public sealed class DeserializeAsConverterFactory
         : JsonConverterFactory
     {
-        protected readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
+        private readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         public DeserializeAsConverterFactory(
             JsonNamingPolicy namingPolicy,

@@ -11,11 +11,11 @@ namespace commercetools.Base.Serialization.JsonConverters
     public sealed class TypeDiscriminatorConverterFactory
         : JsonConverterFactory
     {
-        protected JsonNamingPolicy NamingPolicy { get; }
+        private JsonNamingPolicy NamingPolicy { get; }
 
-        protected JsonSerializerOptions JsonSerializerOptions { get; }
+        private JsonSerializerOptions JsonSerializerOptions { get; }
 
-        protected static readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
+        private readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         /// <summary>
         /// Initializes a new <see cref="AbstractClassConverterFactory"/>
