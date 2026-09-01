@@ -8,7 +8,7 @@ using commercetools.Base.Registration;
 
 namespace commercetools.Base.Serialization.JsonConverters
 {
-    public class DeserializeAsConverterFactory
+    public sealed class DeserializeAsConverterFactory
         : JsonConverterFactory
     {
         protected readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
@@ -37,7 +37,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         }
 
         /// <inheritdoc/>
-        public sealed override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+        public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
         {
             if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {

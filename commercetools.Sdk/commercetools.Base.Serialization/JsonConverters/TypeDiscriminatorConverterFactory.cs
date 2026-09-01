@@ -8,7 +8,7 @@ using commercetools.Base.Registration;
 
 namespace commercetools.Base.Serialization.JsonConverters
 {
-    public class TypeDiscriminatorConverterFactory
+    public sealed class TypeDiscriminatorConverterFactory
         : JsonConverterFactory
     {
         protected JsonNamingPolicy NamingPolicy { get; }
@@ -41,7 +41,7 @@ namespace commercetools.Base.Serialization.JsonConverters
                     && typeToConvert.IsDefined(typeof(TypeDiscriminatorAttribute));
         }
 
-        public sealed override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+        public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
         {
             if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {
