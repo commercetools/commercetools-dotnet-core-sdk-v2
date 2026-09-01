@@ -26,9 +26,9 @@ namespace commercetools.Base.Serialization.JsonConverters
             }
         }
 
-        protected JsonNamingPolicy NamingPolicy { get; }
+        private JsonNamingPolicy NamingPolicy { get; }
 
-        protected JsonSerializerOptions JsonSerializerOptions { get; }
+        private JsonSerializerOptions JsonSerializerOptions { get; }
 
         public override bool CanConvert(Type typeToConvert)
         {
