@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 using commercetools.Sdk.Api.Models.Categories;
 using commercetools.Sdk.Api.Models.Common;
 using commercetools.Sdk.Api.Models.CustomerGroups;
@@ -132,6 +134,49 @@ namespace commercetools.Api.Serialization.Tests
 
             Assert.Equal("Unknown", state.Type.JsonName);
             Assert.Null(state.Type.Value);
+        }
+        
+        [Fact]
+        public async Task DeserializeEnumConcurrently()
+        {
+            ISerializerService serializerService = this.serializationFixture.SerializerService;
+
+            const string orderTaxMode = @"
+                {
+                    ""taxMode"": ""Unknown""
+                }
+            ";
+            const string orderRoundingMode = @"
+                {
+                    ""taxRoundingMode"": ""Unknown""
+                }
+            ";
+
+            var tasks = new List<Func<Task>>()
+            {
+                Task1,
+                Task2
+            };
+            await Task.WhenAll(tasks.AsParallel().Select(async task => await task()));
+            return;
+
+            Task Task2()
+            {
+                return Task.Run(() =>
+                {
+                    var order2 = serializerService.Deserialize<Order>(orderRoundingMode);
+                    Assert.Equal("Unknown", order2.TaxRoundingMode.JsonName);
+                });
+            }
+
+            Task Task1()
+            {
+                return Task.Run(() =>
+                {
+                    var order1 = serializerService.Deserialize<Order>(orderTaxMode);
+                    Assert.Equal("Unknown", order1.TaxMode.JsonName);
+                });
+            }
         }
 
         [Fact]

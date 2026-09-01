@@ -14,19 +14,20 @@ namespace commercetools.Base.Serialization.JsonConverters
 
         protected JsonSerializerOptions JsonSerializerOptions { get; }
 
+        protected EnumInterfaceCreatorAttribute EnumInterfaceCreator { get; }
 
         public EnumAsInterfaceConverter(JsonNamingPolicy namingPolicy, JsonSerializerOptions jsonSerializerOptions)
         {
             this.NamingPolicy = namingPolicy;
             this.JsonSerializerOptions = jsonSerializerOptions;
+
+            var enumInterfaceCreatorAttribute = typeof(T).GetCustomAttribute<EnumInterfaceCreatorAttribute>();
+            EnumInterfaceCreator = enumInterfaceCreatorAttribute ?? throw new NullReferenceException($"Failed to find the required '{nameof(EnumInterfaceCreatorAttribute)}'");
         }
 
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            var attr = typeof(T).GetCustomAttribute<EnumInterfaceCreatorAttribute>();
-            if (attr == null)
-                throw new NullReferenceException($"Failed to find the required '{nameof(EnumInterfaceCreatorAttribute)}'");
-            var attrDelegate = attr.Creator();
+            var attrDelegate = EnumInterfaceCreator.Creator();
             return (T)attrDelegate.DynamicInvoke(reader.GetString());
         }
 

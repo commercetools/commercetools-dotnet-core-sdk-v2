@@ -4,13 +4,14 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using commercetools.Base.CustomAttributes;
+using commercetools.Base.Registration;
 
 namespace commercetools.Base.Serialization.JsonConverters
 {
     public class DeserializeAsConverterFactory
         : JsonConverterFactory
     {
-        protected ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
+        protected readonly ConcurrentDictionary<Type, JsonConverter> Converters = new ConcurrentDictionary<Type, JsonConverter>();
 
         public DeserializeAsConverterFactory(
             JsonNamingPolicy namingPolicy,
@@ -18,6 +19,11 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             this.JsonSerializerOptions = jsonSerializerOptions;
             this.NamingPolicy = namingPolicy;
+            
+            foreach (var type in typeof(DeserializeAsAttribute).GetMarkedTypes())
+            {
+                CreateConverter(type, jsonSerializerOptions);
+            }
         }
 
         protected JsonNamingPolicy NamingPolicy { get; }
@@ -31,7 +37,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         }
 
         /// <inheritdoc/>
-        public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+        public sealed override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
         {
             if (!Converters.TryGetValue(typeToConvert, out JsonConverter converter))
             {

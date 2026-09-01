@@ -76,16 +76,11 @@ namespace commercetools.Base.Registration
         /// <returns>All types that have this custom attribute</returns>
         public static IEnumerable<Type> GetMarkedTypes(this Type currentType)
         {
-            Assembly assembly = Assembly.GetAssembly(currentType);
-            List<Type> types = new List<Type>();
-            foreach (Type type in assembly.GetTypes())
-            {
-                if (type.GetCustomAttributes(currentType).Any())
-                {
-                    types.Add(type);
-                }
-            }
-
+            var types =
+                from a in AppDomain.CurrentDomain.GetAssemblies()
+                from t in a.GetTypes()
+                where t.GetCustomAttributes(currentType).Any()
+                select t;
             return types;
         }
     }
