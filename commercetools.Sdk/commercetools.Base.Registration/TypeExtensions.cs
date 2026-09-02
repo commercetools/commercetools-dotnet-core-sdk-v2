@@ -76,17 +76,52 @@ namespace commercetools.Base.Registration
         /// <returns>All types that have this custom attribute</returns>
         public static IEnumerable<Type> GetMarkedTypes(this Type currentType)
         {
-            Assembly assembly = Assembly.GetAssembly(currentType);
-            List<Type> types = new List<Type>();
-            foreach (Type type in assembly.GetTypes())
+            if (currentType == null)
             {
-                if (type.GetCustomAttributes(currentType).Any())
-                {
-                    types.Add(type);
-                }
+                throw new ArgumentNullException(nameof(currentType));
+            }
+            var declaringAssemblyName = currentType.Assembly.GetName().Name;
+            var types =
+                from a in AppDomain.CurrentDomain.GetAssemblies()
+                where a.CanContainMarkedTypes(declaringAssemblyName) 
+                from t in a.GetLoadableTypes()
+                where t.GetCustomAttributes(currentType).Any()
+                select t;
+            return types;
+        }
+
+        private static bool CanContainMarkedTypes(this Assembly assembly, string declaringAssemblyName)
+        {
+            if (assembly.IsDynamic) 
+                return false;
+            if (string.Equals(assembly.GetName().Name, declaringAssemblyName, StringComparison.Ordinal))
+            {
+                return true;
             }
 
-            return types;
+            try
+            {
+                return assembly.GetReferencedAssemblies().Any(reference =>
+                    string.Equals(reference.Name, declaringAssemblyName, StringComparison.Ordinal));
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+        }
+
+        private static IEnumerable<Type> GetLoadableTypes(this Assembly assembly)
+        {
+            try
+            {
+                return assembly.GetTypes();
+            } catch (ReflectionTypeLoadException e)
+            {
+                return e.Types.Where(t => t != null);
+            } catch (Exception)
+            {
+                return Enumerable.Empty<Type>();
+            }
         }
     }
 }
