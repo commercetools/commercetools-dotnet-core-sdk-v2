@@ -2274,40 +2274,31 @@ type Mutation {
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
-  createVariant(draft: VariantDraft!): Variant
+createVariant(draft: VariantDraft!): Variant
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
-  updateVariant(
-    """
+updateVariant("""
     Queries with specified ID
     """
-    id: String
-    """
+    id: String, """
     Queries with specified key
     """
-    key: String
-    actions: [VariantUpdateAction!]!
-    version: Long!
-  ): Variant
+    key: String, actions: [VariantUpdateAction!]!, version: Long!): Variant
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
-  deleteVariant(
-    """
+deleteVariant("""
     Queries with specified ID
     """
-    id: String
-    """
+    id: String, """
     Queries with specified key
     """
-    key: String
-    version: Long!
-  ): VariantDeletionResult
+    key: String, version: Long!): VariantDeletionResult
     """
   BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
   """
-  bulkUpdateVariants(input: BulkUpdateVariantsInput!): BulkUpdateVariantsResponse!
+bulkUpdateVariants(input: BulkUpdateVariantsInput!): BulkUpdateVariantsResponse!
 }
 
 type McpServer {
@@ -2414,6 +2405,13 @@ type UcpShopperMcpServerConfig implements McpServerConfig {
     distributionChannel: ChannelReference!
     supplyChannel: ChannelReference!
     currencyCode: CurrencyCode!
+    """
+  When true, search_catalog requires actual on-hand stock in the resolved
+  supply channel, instead of merely a carried inventory entry.
+  lookup_catalog/get_product are unaffected either way. Defaults to false.
+  """
+  requireStockForChannel: Boolean!
+    inventoryMode: InventoryMode
 }
 
 """
@@ -5442,6 +5440,17 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
     key: String
   ): ShoppingList
     shoppingLists(where: String, sort: [String!], limit: Int, offset: Int): ShoppingListQueryResult!
+    productSelection(
+    """
+    Queries with specified ID
+    """
+    id: String
+    """
+    Queries with specified key
+    """
+    key: String
+  ): ProductSelection
+    productSelections(where: String, sort: [String!], limit: Int, offset: Int): ProductSelectionQueryResult!
     productSelectionAssignments(where: String, sort: [String!], limit: Int, offset: Int): ProductAssignmentQueryResult!
     productTailoring(
     """
@@ -11789,7 +11798,11 @@ interface ShippingRatePriceTier {
 enum AttributionSource {
   Export
   Import
+  IntakeAgent
   ManagedCommerceMCP
+  ProductEnrichmentAgent
+  PromotionsAgent
+  StarterAgent
 }
 enum McpServerType {
   CommerceMCP
@@ -11805,6 +11818,27 @@ enum McpServerState {
 }
 enum McpServerToolOutputFormatting {
   JsonToTabular
+}
+enum InventoryMode {
+  """
+  No inventory checks or modifications when adding items or ordering. Default
+  for a new cart.
+  """
+  None
+  """
+  Orders decrement the available quantity on the matching inventory entry;
+  ordering fails only when no inventory entry exists for a line item.
+  """
+  TrackOnly
+  """
+  Line items are reserved only for the duration of the ordering transaction;
+  creating an order fails when an unavailable line item exists.
+  """
+  ReserveOnOrder
+  """
+  Items are reserved when added to the cart. Not supported by this service.
+  """
+  ReserveOnCart
 }
 enum McpToolOperationType {
   read
@@ -12043,31 +12077,6 @@ enum CustomLineItemPriceMode {
   This is the default mode.
   """
   Standard
-}
-enum InventoryMode {
-  """
-  Adding items to cart and ordering is independent of inventory. No inventory checks or modifications.
-  This is the default mode for a new cart.
-  """
-  None
-  """
-  Items are reserved when added to the Cart or when the quantity is increased. The reservation is held until
-  the expiration time is reached or the Cart is converted to an Order. The reservation is released if the Cart
-  is deleted, the line item is removed, or the quantity is reduced.
-  """
-  ReserveOnCart
-  """
-  Creating an order will fail with an OutOfStock error if an unavailable line item exists. Line items in the cart
-  are only reserved for the duration of the ordering transaction.
-  """
-  ReserveOnOrder
-  """
-  Orders are tracked on inventory. That means, ordering a LineItem will decrement the available quantity on the
-  respective InventoryEntry. Creating an order will succeed even if the line item’s available quantity is zero or
-  negative. But creating an order will fail with an OutOfStock error if no matching inventory entry exists for a
-  line item.
-  """
-  TrackOnly
 }
 enum ChannelRole {
   """
@@ -12693,6 +12702,11 @@ input UcpShopperMcpServerConfigDraft {
     distributionChannel: ChannelReferenceInput!
     supplyChannel: ChannelReferenceInput!
     currencyCode: CurrencyCode!
+    """
+  Defaults to false when omitted.
+  """
+  requireStockForChannel: Boolean
+    inventoryMode: InventoryMode
 }
 
 """
@@ -12748,6 +12762,8 @@ input McpServerUpdateAction {
     setDistributionChannel: SetMcpServerDistributionChannel
     setSupplyChannel: SetMcpServerSupplyChannel
     setCurrencyCode: SetMcpServerCurrencyCode
+    setRequireStockForChannel: SetMcpServerRequireStockForChannel
+    setInventoryMode: SetMcpServerInventoryMode
 }
 
 input SetMcpServerTools {
@@ -12832,6 +12848,14 @@ input SetMcpServerSupplyChannel {
 
 input SetMcpServerCurrencyCode {
     currencyCode: CurrencyCode!
+}
+
+input SetMcpServerRequireStockForChannel {
+    requireStockForChannel: Boolean!
+}
+
+input SetMcpServerInventoryMode {
+    inventoryMode: InventoryMode!
 }
 
 input ProductSearchFacetCountExpressionInput {
@@ -14986,6 +15010,7 @@ input CustomLineItemImportDraft {
     custom: CustomFieldsDraft
     shippingDetails: ItemShippingDetailsDraft
     priceMode: CustomLineItemPriceMode
+    taxedPrice: TaxedPriceDraft
 }
 
 input CustomLineItemRecurrenceInfoInputDraft {
@@ -15706,6 +15731,7 @@ input LineItemImportDraft {
     state: [ItemStateDraftType!]
     custom: CustomFieldsDraft
     shippingDetails: ItemShippingDetailsDraft
+    taxedPrice: TaxedPriceDraft
 }
 
 input LineItemRecurrenceInfoInputDraft {
@@ -20059,6 +20085,7 @@ input ShippingInfoImportDraft {
     deliveries: [DeliveryDraft!]! = []
     shippingMethod: ResourceIdentifierInput
     discountedPrice: DiscountedLineItemPriceDraft
+    taxedPrice: TaxedPriceDraft
     shippingMethodState: ShippingMethodState! = MatchesCart
 }
 
