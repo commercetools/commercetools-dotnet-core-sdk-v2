@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     public partial class VariantImagesSetMessagePayload : IVariantImagesSetMessagePayload
     {
         public string Type { get; set; }
+
+        public IProductReference Product { get; set; }
 
         public IList<IImage> Images { get; set; }
 

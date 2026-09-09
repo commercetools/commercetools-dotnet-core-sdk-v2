@@ -1,5 +1,6 @@
 using commercetools.Base.Client;
 using commercetools.Base.Serialization;
+using commercetools.Sdk.Api.Client.RequestBuilders.Agents;
 using commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate;
 using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
 using commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits;
@@ -85,6 +86,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Projects
             return new ByProjectKeyPost(ApiHttpClient, SerializerService, ProjectKey, projectUpdate);
         }
 
+
+        public ByProjectKeyAgentsRequestBuilder Agents()
+        {
+            return new ByProjectKeyAgentsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
 
         public ByProjectKeyAsAssociateRequestBuilder AsAssociate()
         {

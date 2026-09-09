@@ -1,8 +1,8 @@
-
+using System;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class FacetRange : IFacetRange
     {
         public decimal From { get; set; }

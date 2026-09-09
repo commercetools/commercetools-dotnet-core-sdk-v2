@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Products;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -8,6 +9,8 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.VariantImagesSetMessagePayload))]
     public partial interface IVariantImagesSetMessagePayload : IMessagePayload
     {
+        IProductReference Product { get; set; }
+
         IList<IImage> Images { get; set; }
 
         IEnumerable<IImage> ImagesEnumerable { set => Images = value.ToList(); }

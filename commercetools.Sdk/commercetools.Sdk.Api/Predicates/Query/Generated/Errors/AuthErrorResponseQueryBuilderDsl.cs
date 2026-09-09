@@ -53,5 +53,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<AuthErrorResponseQueryBuilderDsl> AsAgentResponsesAuthError(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesAuthErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesAuthErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<AuthErrorResponseQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesAuthErrorQueryBuilderDsl.Of()),
+                AuthErrorResponseQueryBuilderDsl.Of);
+        }
     }
 }

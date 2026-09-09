@@ -135,7 +135,7 @@ namespace commercetools.Api.Serialization.Tests
             Assert.Equal("Unknown", state.Type.JsonName);
             Assert.Null(state.Type.Value);
         }
-        
+
         [Fact]
         public async Task DeserializeEnumConcurrently()
         {

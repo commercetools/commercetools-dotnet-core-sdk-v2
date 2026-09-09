@@ -60,6 +60,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
                 CustomLineItemImportDraftQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> TaxedPrice(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.TaxedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.TaxedPriceDraftQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("taxedPrice"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.TaxedPriceDraftQueryBuilderDsl.Of())),
+                CustomLineItemImportDraftQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> TaxCategory(
             Func<commercetools.Sdk.Api.Predicates.Query.TaxCategories.TaxCategoryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.TaxCategories.TaxCategoryResourceIdentifierQueryBuilderDsl>> fn)
         {

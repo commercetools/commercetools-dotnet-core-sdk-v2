@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
 
-        public string ProductId { get; set; }
+        public IProductReference Product { get; set; }
 
         public int VariantId { get; set; }
 

@@ -32,6 +32,7 @@ using commercetools.Sdk.Api.Client.RequestBuilders.Types;
 using commercetools.Sdk.Api.Client.RequestBuilders.Zones;
 using commercetools.Sdk.Api.Models.Projects;
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client.RequestBuilders.Agents;
 using commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups;
 using commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits;
 using commercetools.Sdk.Api.Client.RequestBuilders.InBusiness;
@@ -335,6 +336,11 @@ namespace commercetools.Sdk.Api.Client
         public ByProjectKeyMcpServersRequestBuilder McpServers()
         {
             return With().McpServers();
+        }
+
+        public ByProjectKeyAgentsRequestBuilder Agents()
+        {
+            return With().Agents();
         }
     }
 }

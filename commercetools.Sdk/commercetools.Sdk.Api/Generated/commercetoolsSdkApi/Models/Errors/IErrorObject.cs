@@ -12,6 +12,9 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.AttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.BadGatewayError))]
     [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError))]
+    [SubTypeDiscriminator("BusinessUnitAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitAmbiguousError))]
+    [SubTypeDiscriminator("BusinessUnitLimitExceeded", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitLimitExceededError))]
+    [SubTypeDiscriminator("BusinessUnitUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError))]
     [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
@@ -42,6 +45,8 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError))]
     [SubTypeDiscriminator("ExtensionUpdateActionsFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionUpdateActionsFailedError))]
     [SubTypeDiscriminator("ExternalOAuthFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExternalOAuthFailedError))]
+    [SubTypeDiscriminator("ExtractionFailed", typeof(commercetools.Sdk.Api.Models.Agents.AgentExtractionFailedError))]
+    [SubTypeDiscriminator("FeatureDisabled", typeof(commercetools.Sdk.Api.Models.Agents.AgentFeatureDisabledError))]
     [SubTypeDiscriminator("FeatureRemoved", typeof(commercetools.Sdk.Api.Models.Errors.FeatureRemovedError))]
     [SubTypeDiscriminator("General", typeof(commercetools.Sdk.Api.Models.Errors.GeneralError))]
     [SubTypeDiscriminator("insufficient_scope", typeof(commercetools.Sdk.Api.Models.Errors.InsufficientScopeError))]
@@ -64,12 +69,17 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.MaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError))]
+    [SubTypeDiscriminator("MissingCountry", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingCountryError))]
+    [SubTypeDiscriminator("MissingCustomerEmail", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError))]
     [SubTypeDiscriminator("MissingDependency", typeof(commercetools.Sdk.Api.Models.Errors.MissingDependencyError))]
+    [SubTypeDiscriminator("MissingEntityType", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
+    [SubTypeDiscriminator("NoLineItemsExtracted", typeof(commercetools.Sdk.Api.Models.Agents.AgentNoLineItemsExtractedError))]
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError))]
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError))]
+    [SubTypeDiscriminator("OutOfScope", typeof(commercetools.Sdk.Api.Models.Agents.AgentOutOfScopeError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.OutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.OverCapacityError))]
     [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.OverlappingPriceValidityError))]
@@ -78,9 +88,12 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.PriceChangedError))]
     [SubTypeDiscriminator("ProductAssignmentMissing", typeof(commercetools.Sdk.Api.Models.Errors.ProductAssignmentMissingError))]
     [SubTypeDiscriminator("ProductPresentWithDifferentVariantSelection", typeof(commercetools.Sdk.Api.Models.Errors.ProductPresentWithDifferentVariantSelectionError))]
+    [SubTypeDiscriminator("ProductSearchNotEnabled", typeof(commercetools.Sdk.Api.Models.Agents.AgentProductSearchNotEnabledError))]
+    [SubTypeDiscriminator("ProductsNotFound", typeof(commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundError))]
     [SubTypeDiscriminator("ProjectNotConfiguredForLanguages", typeof(commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError))]
     [SubTypeDiscriminator("QueryComplexityLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.QueryComplexityLimitExceededError))]
     [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Sdk.Api.Models.Errors.QueryTimedOutError))]
+    [SubTypeDiscriminator("QuoteRequestCreationFailed", typeof(commercetools.Sdk.Api.Models.Agents.AgentQuoteRequestCreationFailedError))]
     [SubTypeDiscriminator("RecurringOrderFailure", typeof(commercetools.Sdk.Api.Models.Errors.RecurringOrderFailureError))]
     [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.ReferencedResourceNotFoundError))]
     [SubTypeDiscriminator("ReferenceExists", typeof(commercetools.Sdk.Api.Models.Errors.ReferenceExistsError))]
@@ -94,7 +107,10 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchNotReady", typeof(commercetools.Sdk.Api.Models.Errors.SearchNotReadyError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.SemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("StoreAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreAmbiguousError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
+    [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError))]
+    [SubTypeDiscriminator("StoreUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreUnresolvedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
     [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.UnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError))]
@@ -143,6 +159,24 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.BulkOperationMaxItemsExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitAmbiguousError BusinessUnitAmbiguous(Action<commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitAmbiguousError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitAmbiguousError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitLimitExceededError BusinessUnitLimitExceeded(Action<commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitLimitExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitLimitExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError BusinessUnitUnresolved(Action<commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError();
             init?.Invoke(t);
             return t;
         }
@@ -326,6 +360,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentExtractionFailedError ExtractionFailed(Action<commercetools.Sdk.Api.Models.Agents.AgentExtractionFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentExtractionFailedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentFeatureDisabledError FeatureDisabled(Action<commercetools.Sdk.Api.Models.Agents.AgentFeatureDisabledError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentFeatureDisabledError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.FeatureRemovedError FeatureRemoved(Action<commercetools.Sdk.Api.Models.Errors.FeatureRemovedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.FeatureRemovedError();
@@ -458,9 +504,27 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentMissingCountryError MissingCountry(Action<commercetools.Sdk.Api.Models.Agents.AgentMissingCountryError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentMissingCountryError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError MissingCustomerEmail(Action<commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.MissingDependencyError MissingDependency(Action<commercetools.Sdk.Api.Models.Errors.MissingDependencyError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MissingDependencyError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError MissingEntityType(Action<commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError();
             init?.Invoke(t);
             return t;
         }
@@ -482,6 +546,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentNoLineItemsExtractedError NoLineItemsExtracted(Action<commercetools.Sdk.Api.Models.Agents.AgentNoLineItemsExtractedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentNoLineItemsExtractedError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError NoMatchingProductDiscountFound(Action<commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.NoMatchingProductDiscountFoundError();
@@ -491,6 +561,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError ObjectNotFound(Action<commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ObjectNotFoundError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentOutOfScopeError OutOfScope(Action<commercetools.Sdk.Api.Models.Agents.AgentOutOfScopeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentOutOfScopeError();
             init?.Invoke(t);
             return t;
         }
@@ -542,6 +618,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentProductSearchNotEnabledError ProductSearchNotEnabled(Action<commercetools.Sdk.Api.Models.Agents.AgentProductSearchNotEnabledError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentProductSearchNotEnabledError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundError ProductsNotFound(Action<commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError ProjectNotConfiguredForLanguages(Action<commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ProjectNotConfiguredForLanguagesError();
@@ -557,6 +645,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.QueryTimedOutError QueryTimedOut(Action<commercetools.Sdk.Api.Models.Errors.QueryTimedOutError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.QueryTimedOutError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentQuoteRequestCreationFailedError QuoteRequestCreationFailed(Action<commercetools.Sdk.Api.Models.Agents.AgentQuoteRequestCreationFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentQuoteRequestCreationFailedError();
             init?.Invoke(t);
             return t;
         }
@@ -638,9 +732,27 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentStoreAmbiguousError StoreAmbiguous(Action<commercetools.Sdk.Api.Models.Agents.AgentStoreAmbiguousError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentStoreAmbiguousError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError StoreCartDiscountsLimitReached(Action<commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError StoreDistributionChannelsUnsupported(Action<commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentStoreUnresolvedError StoreUnresolved(Action<commercetools.Sdk.Api.Models.Agents.AgentStoreUnresolvedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentStoreUnresolvedError();
             init?.Invoke(t);
             return t;
         }
