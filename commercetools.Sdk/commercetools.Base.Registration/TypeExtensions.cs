@@ -83,7 +83,7 @@ namespace commercetools.Base.Registration
             var declaringAssemblyName = currentType.Assembly.GetName().Name;
             var types =
                 from a in AppDomain.CurrentDomain.GetAssemblies()
-                where a.CanContainMarkedTypes(declaringAssemblyName) 
+                where a.CanContainMarkedTypes(declaringAssemblyName)
                 from t in a.GetLoadableTypes()
                 where t.GetCustomAttributes(currentType).Any()
                 select t;
@@ -92,7 +92,7 @@ namespace commercetools.Base.Registration
 
         private static bool CanContainMarkedTypes(this Assembly assembly, string declaringAssemblyName)
         {
-            if (assembly.IsDynamic) 
+            if (assembly.IsDynamic)
                 return false;
             if (string.Equals(assembly.GetName().Name, declaringAssemblyName, StringComparison.Ordinal))
             {
@@ -115,10 +115,12 @@ namespace commercetools.Base.Registration
             try
             {
                 return assembly.GetTypes();
-            } catch (ReflectionTypeLoadException e)
+            }
+            catch (ReflectionTypeLoadException e)
             {
                 return e.Types.Where(t => t != null);
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 return Enumerable.Empty<Type>();
             }

@@ -21,6 +21,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl>(p, VariantImagesSetMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl> Product(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("product"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
+                VariantImagesSetMessagePayloadQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl> Images(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.ImageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.ImageQueryBuilderDsl>> fn)
         {

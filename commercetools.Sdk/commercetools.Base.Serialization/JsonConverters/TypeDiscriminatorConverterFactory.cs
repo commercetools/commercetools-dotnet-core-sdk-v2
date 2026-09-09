@@ -28,7 +28,7 @@ namespace commercetools.Base.Serialization.JsonConverters
         {
             this.JsonSerializerOptions = jsonSerializerOptions;
             this.NamingPolicy = namingPolicy;
-            
+
             foreach (var type in typeof(TypeDiscriminatorAttribute).GetMarkedTypes())
             {
                 CreateConverter(type, jsonSerializerOptions);

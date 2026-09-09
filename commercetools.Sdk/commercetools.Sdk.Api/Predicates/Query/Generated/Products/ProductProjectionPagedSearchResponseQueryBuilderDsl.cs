@@ -4,6 +4,7 @@ using System;
 namespace commercetools.Sdk.Api.Predicates.Query.Products
 {
 
+    [Obsolete]
     public partial class ProductProjectionPagedSearchResponseQueryBuilderDsl
     {
         public ProductProjectionPagedSearchResponseQueryBuilderDsl()

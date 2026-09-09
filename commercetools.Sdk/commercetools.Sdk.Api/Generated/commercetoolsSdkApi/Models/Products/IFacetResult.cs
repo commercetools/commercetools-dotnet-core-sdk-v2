@@ -1,5 +1,5 @@
-using commercetools.Base.CustomAttributes;
 using System;
+using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Products
 {
@@ -10,6 +10,7 @@ namespace commercetools.Sdk.Api.Models.Products
     [SubTypeDiscriminator("terms", typeof(commercetools.Sdk.Api.Models.Products.TermFacetResult))]
     public partial interface IFacetResult
     {
+        [ObsoleteAttribute("This property is obsolete", false)]
         IFacetTypes Type { get; set; }
 
         static commercetools.Sdk.Api.Models.Products.FilteredFacetResult Filter(Action<commercetools.Sdk.Api.Models.Products.FilteredFacetResult> init = null)

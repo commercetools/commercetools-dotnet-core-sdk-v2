@@ -74,7 +74,10 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         StandalonePrice,
 
         [Description("store")]
-        Store
+        Store,
+
+        [Description("variant")]
+        Variant
     }
 
     public class MessageSubscriptionResourceTypeIdWrapper : IMessageSubscriptionResourceTypeId
@@ -166,6 +169,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IMessageSubscriptionResourceTypeId Store = new MessageSubscriptionResourceTypeIdWrapper
         { Value = MessageSubscriptionResourceTypeId.Store, JsonName = "store" };
 
+        public static IMessageSubscriptionResourceTypeId Variant = new MessageSubscriptionResourceTypeIdWrapper
+        { Value = MessageSubscriptionResourceTypeId.Variant, JsonName = "variant" };
+
         MessageSubscriptionResourceTypeId? Value { get; }
 
         static IMessageSubscriptionResourceTypeId[] Values()
@@ -193,7 +199,8 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  ShoppingList ,
                  StagedQuote ,
                  StandalonePrice ,
-                 Store
+                 Store ,
+                 Variant
              };
         }
         static IMessageSubscriptionResourceTypeId FindEnum(string value)

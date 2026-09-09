@@ -8,7 +8,9 @@ namespace commercetools.Sdk.Api.Models.Warnings
     [SubTypeDiscriminator("CannotChangeReservationExpiry", typeof(commercetools.Sdk.Api.Models.Warnings.CannotChangeReservationExpiryWarning))]
     [SubTypeDiscriminator("CannotCreateReservation", typeof(commercetools.Sdk.Api.Models.Warnings.CannotCreateReservationWarning))]
     [SubTypeDiscriminator("CannotUpdateReservation", typeof(commercetools.Sdk.Api.Models.Warnings.CannotUpdateReservationWarning))]
+    [SubTypeDiscriminator("FileNotProcessed", typeof(commercetools.Sdk.Api.Models.Agents.AgentFileNotProcessedWarning))]
     [SubTypeDiscriminator("ImageProcessingOngoing", typeof(commercetools.Sdk.Api.Models.Warnings.ImageProcessingOngoingWarning))]
+    [SubTypeDiscriminator("ProductsNotFound", typeof(commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning))]
     public partial interface IWarningObject
     {
         string Code { get; set; }
@@ -33,9 +35,21 @@ namespace commercetools.Sdk.Api.Models.Warnings
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentFileNotProcessedWarning FileNotProcessed(Action<commercetools.Sdk.Api.Models.Agents.AgentFileNotProcessedWarning> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentFileNotProcessedWarning();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Warnings.ImageProcessingOngoingWarning ImageProcessingOngoing(Action<commercetools.Sdk.Api.Models.Warnings.ImageProcessingOngoingWarning> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Warnings.ImageProcessingOngoingWarning();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning ProductsNotFound(Action<commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning();
             init?.Invoke(t);
             return t;
         }

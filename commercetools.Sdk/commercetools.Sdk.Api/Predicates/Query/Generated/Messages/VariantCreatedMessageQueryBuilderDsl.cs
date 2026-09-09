@@ -93,12 +93,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 VariantCreatedMessageQueryBuilderDsl.Of);
         }
 
-        public IComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl, string> ProductId()
+        public CombinationQueryPredicate<VariantCreatedMessageQueryBuilderDsl> Product(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
         {
-            return new ComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("productId")),
-            p => new CombinationQueryPredicate<VariantCreatedMessageQueryBuilderDsl>(p, VariantCreatedMessageQueryBuilderDsl.Of),
-            PredicateFormatter.Format);
+            return new CombinationQueryPredicate<VariantCreatedMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("product"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
+                VariantCreatedMessageQueryBuilderDsl.Of);
         }
+
         public IComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl, long> VariantId()
         {
             return new ComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("variantId")),

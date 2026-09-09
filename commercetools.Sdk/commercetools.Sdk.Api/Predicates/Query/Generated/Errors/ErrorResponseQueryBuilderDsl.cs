@@ -41,6 +41,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
                     p => new CombinationQueryPredicate<ErrorResponseQueryBuilderDsl>(p, ErrorResponseQueryBuilderDsl.Of));
         }
 
+        public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> AsAgentResponsesErrorResponse(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesErrorResponseQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesErrorResponseQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorResponseQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesErrorResponseQueryBuilderDsl.Of()),
+                ErrorResponseQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> AsAuthErrorResponse(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.AuthErrorResponseQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.AuthErrorResponseQueryBuilderDsl>> fn)
         {

@@ -1,3 +1,5 @@
+using System;
+
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Predicates.Query.Messages
 {
@@ -19,6 +21,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<VariantKeySetMessagePayloadQueryBuilderDsl>(p, VariantKeySetMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public CombinationQueryPredicate<VariantKeySetMessagePayloadQueryBuilderDsl> Product(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantKeySetMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("product"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
+                VariantKeySetMessagePayloadQueryBuilderDsl.Of);
+        }
+
         public IComparisonPredicateBuilder<VariantKeySetMessagePayloadQueryBuilderDsl, string> Key()
         {
             return new ComparisonPredicateBuilder<VariantKeySetMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),

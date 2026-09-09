@@ -28,6 +28,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Warnings
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> AsFileNotProcessed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentFileNotProcessedWarningQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentFileNotProcessedWarningQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<WarningObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentFileNotProcessedWarningQueryBuilderDsl.Of()),
+                WarningObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> AsProductsNotFound(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentProductsNotFoundWarningQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentProductsNotFoundWarningQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<WarningObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentProductsNotFoundWarningQueryBuilderDsl.Of()),
+                WarningObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> AsCannotChangeReservationExpiry(
             Func<commercetools.Sdk.Api.Predicates.Query.Warnings.CannotChangeReservationExpiryWarningQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Warnings.CannotChangeReservationExpiryWarningQueryBuilderDsl>> fn)
         {

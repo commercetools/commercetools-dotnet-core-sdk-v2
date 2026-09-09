@@ -94,10 +94,22 @@ namespace commercetools.Sdk.Api.Predicates.Query.Types
             return new CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeChangeNameActionQueryBuilderDsl.Of()),
                 TypeUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> AsRemoveEnumValues(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveEnumValuesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveEnumValuesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveEnumValuesActionQueryBuilderDsl.Of()),
+                TypeUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> AsRemoveFieldDefinition(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveFieldDefinitionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveFieldDefinitionActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveFieldDefinitionActionQueryBuilderDsl.Of()),
+                TypeUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> AsRemoveLocalizedEnumValues(
+            Func<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Types.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl.Of()),
                 TypeUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> AsSetDescription(

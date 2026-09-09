@@ -130,6 +130,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         [Description("type")]
         Type,
 
+        [Description("variant")]
+        Variant,
+
         [Description("zone")]
         Zone
     }
@@ -277,6 +280,9 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
         public static IChangeSubscriptionResourceTypeId Type = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.Type, JsonName = "type" };
 
+        public static IChangeSubscriptionResourceTypeId Variant = new ChangeSubscriptionResourceTypeIdWrapper
+        { Value = ChangeSubscriptionResourceTypeId.Variant, JsonName = "variant" };
+
         public static IChangeSubscriptionResourceTypeId Zone = new ChangeSubscriptionResourceTypeIdWrapper
         { Value = ChangeSubscriptionResourceTypeId.Zone, JsonName = "zone" };
 
@@ -326,6 +332,7 @@ namespace commercetools.Sdk.Api.Models.Subscriptions
                  Subscription ,
                  TaxCategory ,
                  Type ,
+                 Variant ,
                  Zone
              };
         }

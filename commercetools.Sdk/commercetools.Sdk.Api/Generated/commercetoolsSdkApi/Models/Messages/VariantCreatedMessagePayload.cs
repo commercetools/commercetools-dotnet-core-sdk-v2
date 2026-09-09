@@ -10,9 +10,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         public string Type { get; set; }
 
-        public string Id { get; set; }
+        public IProductReference Product { get; set; }
 
-        public string ProductId { get; set; }
+        public string Id { get; set; }
 
         public int VariantId { get; set; }
 

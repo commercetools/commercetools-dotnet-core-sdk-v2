@@ -93,6 +93,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 VariantStagedChangesRemovedMessageQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<VariantStagedChangesRemovedMessageQueryBuilderDsl> Product(
+            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<VariantStagedChangesRemovedMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("product"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
+                VariantStagedChangesRemovedMessageQueryBuilderDsl.Of);
+        }
+
 
     }
 }
