@@ -1,4 +1,5 @@
 using commercetools.Base.Client;
+using commercetools.Sdk.Api.Client.RequestBuilders.Agents;
 using commercetools.Sdk.Api.Client.RequestBuilders.ApiClients;
 using commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate;
 using commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles;
@@ -112,4 +113,5 @@ public interface IProjectApiRoot
     ByProjectKeyVariantProjectionsRequestBuilder VariantProjections();
     ByProjectKeyVariantsRequestBuilder Variants();
     ByProjectKeyMcpServersRequestBuilder McpServers();
+    ByProjectKeyAgentsRequestBuilder Agents();
 }
