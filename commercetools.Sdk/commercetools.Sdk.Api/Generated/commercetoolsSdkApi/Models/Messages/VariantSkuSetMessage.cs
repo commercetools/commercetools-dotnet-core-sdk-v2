@@ -1,5 +1,4 @@
 using commercetools.Sdk.Api.Models.Common;
-using commercetools.Sdk.Api.Models.Products;
 using System;
 
 namespace commercetools.Sdk.Api.Models.Messages
@@ -28,8 +27,6 @@ namespace commercetools.Sdk.Api.Models.Messages
         public string Type { get; set; }
 
         public IUserProvidedIdentifiers ResourceUserProvidedIdentifiers { get; set; }
-
-        public IProductReference Product { get; set; }
 
         public string Sku { get; set; }
 

@@ -19,8 +19,6 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         ITaxRate TaxRate { get; set; }
 
-        ITaxedPriceDraft TaxedPrice { get; set; }
-
         ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         IShippingMethodResourceIdentifier ShippingMethod { get; set; }

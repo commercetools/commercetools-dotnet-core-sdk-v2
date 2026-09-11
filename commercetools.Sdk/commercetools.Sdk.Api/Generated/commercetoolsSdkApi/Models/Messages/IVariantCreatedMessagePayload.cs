@@ -9,9 +9,9 @@ namespace commercetools.Sdk.Api.Models.Messages
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Messages.VariantCreatedMessagePayload))]
     public partial interface IVariantCreatedMessagePayload : IMessagePayload
     {
-        IProductReference Product { get; set; }
-
         string Id { get; set; }
+
+        string ProductId { get; set; }
 
         int VariantId { get; set; }
 

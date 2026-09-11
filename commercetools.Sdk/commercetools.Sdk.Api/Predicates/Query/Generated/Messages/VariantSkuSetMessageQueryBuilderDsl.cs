@@ -93,15 +93,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 VariantSkuSetMessageQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<VariantSkuSetMessageQueryBuilderDsl> Product(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<VariantSkuSetMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("product"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
-                VariantSkuSetMessageQueryBuilderDsl.Of);
-        }
-
         public IComparisonPredicateBuilder<VariantSkuSetMessageQueryBuilderDsl, string> Sku()
         {
             return new ComparisonPredicateBuilder<VariantSkuSetMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("sku")),

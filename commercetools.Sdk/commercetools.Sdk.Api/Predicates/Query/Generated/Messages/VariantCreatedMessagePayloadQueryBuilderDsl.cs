@@ -21,18 +21,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
             p => new CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl>(p, VariantCreatedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl> Product(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("product"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
-                VariantCreatedMessagePayloadQueryBuilderDsl.Of);
-        }
-
         public IComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl, string> Id()
         {
             return new ComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("id")),
+            p => new CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl>(p, VariantCreatedMessagePayloadQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
+        public IComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl, string> ProductId()
+        {
+            return new ComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("productId")),
             p => new CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl>(p, VariantCreatedMessagePayloadQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }

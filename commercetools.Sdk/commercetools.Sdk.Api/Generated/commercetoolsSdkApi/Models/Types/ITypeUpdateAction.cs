@@ -17,9 +17,7 @@ namespace commercetools.Sdk.Api.Models.Types
     [SubTypeDiscriminator("changeLocalizedEnumValueLabel", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueLabelAction))]
     [SubTypeDiscriminator("changeLocalizedEnumValueOrder", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeLocalizedEnumValueOrderAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Types.TypeChangeNameAction))]
-    [SubTypeDiscriminator("removeEnumValues", typeof(commercetools.Sdk.Api.Models.Types.TypeRemoveEnumValuesAction))]
     [SubTypeDiscriminator("removeFieldDefinition", typeof(commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction))]
-    [SubTypeDiscriminator("removeLocalizedEnumValues", typeof(commercetools.Sdk.Api.Models.Types.TypeRemoveLocalizedEnumValuesAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.Types.TypeSetDescriptionAction))]
     public partial interface ITypeUpdateAction
     {
@@ -97,21 +95,9 @@ namespace commercetools.Sdk.Api.Models.Types
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.Types.TypeRemoveEnumValuesAction RemoveEnumValues(Action<commercetools.Sdk.Api.Models.Types.TypeRemoveEnumValuesAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Types.TypeRemoveEnumValuesAction();
-            init?.Invoke(t);
-            return t;
-        }
         static commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction RemoveFieldDefinition(Action<commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Types.TypeRemoveFieldDefinitionAction();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Types.TypeRemoveLocalizedEnumValuesAction RemoveLocalizedEnumValues(Action<commercetools.Sdk.Api.Models.Types.TypeRemoveLocalizedEnumValuesAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Types.TypeRemoveLocalizedEnumValuesAction();
             init?.Invoke(t);
             return t;
         }

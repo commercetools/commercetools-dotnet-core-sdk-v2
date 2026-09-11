@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using commercetools.Base.CustomAttributes;
@@ -20,7 +19,6 @@ namespace commercetools.Sdk.Api.Models.Products
 
         IEnumerable<IProductProjection> ResultsEnumerable { set => Results = value.ToList(); }
 
-        [ObsoleteAttribute("This property is obsolete", false)]
         IFacetResults Facets { get; set; }
 
     }

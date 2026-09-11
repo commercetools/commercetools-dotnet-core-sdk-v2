@@ -93,15 +93,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 VariantKeySetMessageQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<VariantKeySetMessageQueryBuilderDsl> Product(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<VariantKeySetMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("product"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
-                VariantKeySetMessageQueryBuilderDsl.Of);
-        }
-
         public IComparisonPredicateBuilder<VariantKeySetMessageQueryBuilderDsl, string> Key()
         {
             return new ComparisonPredicateBuilder<VariantKeySetMessageQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("key")),

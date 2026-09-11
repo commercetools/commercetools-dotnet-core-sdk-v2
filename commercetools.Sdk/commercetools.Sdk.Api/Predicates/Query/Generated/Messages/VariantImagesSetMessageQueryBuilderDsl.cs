@@ -93,15 +93,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 VariantImagesSetMessageQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<VariantImagesSetMessageQueryBuilderDsl> Product(
-            Func<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<VariantImagesSetMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("product"))
-                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Products.ProductReferenceQueryBuilderDsl.Of())),
-                VariantImagesSetMessageQueryBuilderDsl.Of);
-        }
-
         public CombinationQueryPredicate<VariantImagesSetMessageQueryBuilderDsl> Images(
             Func<commercetools.Sdk.Api.Predicates.Query.Common.ImageQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Common.ImageQueryBuilderDsl>> fn)
         {

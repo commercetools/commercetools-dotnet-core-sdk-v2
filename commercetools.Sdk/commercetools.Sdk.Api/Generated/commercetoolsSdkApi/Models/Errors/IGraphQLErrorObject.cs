@@ -12,6 +12,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
     [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError))]
+    [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCountryNotConfiguredInStoreError))]
@@ -36,7 +37,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionBadResponseError))]
     [SubTypeDiscriminator("ExtensionChainTooDeep", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionChainTooDeepError))]
     [SubTypeDiscriminator("ExtensionChainTooWide", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionChainTooWideError))]
-    [SubTypeDiscriminator("ExtensionCircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionCircularDependencyError))]
     [SubTypeDiscriminator("ExtensionDependencyExists", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionDependencyExistsError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionNoResponseError))]
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionPredicateEvaluationFailedError))]
@@ -64,6 +64,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError))]
+    [SubTypeDiscriminator("MissingDependency", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingDependencyError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMoneyOverflowError))]
@@ -140,6 +141,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError CircularDependency(Action<commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLCircularDependencyError();
             init?.Invoke(t);
             return t;
         }
@@ -284,12 +291,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLExtensionChainTooWideError ExtensionChainTooWide(Action<commercetools.Sdk.Api.Models.Errors.GraphQLExtensionChainTooWideError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLExtensionChainTooWideError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.GraphQLExtensionCircularDependencyError ExtensionCircularDependency(Action<commercetools.Sdk.Api.Models.Errors.GraphQLExtensionCircularDependencyError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLExtensionCircularDependencyError();
             init?.Invoke(t);
             return t;
         }
@@ -452,6 +453,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError MaxStoreReferencesReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLMissingDependencyError MissingDependency(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMissingDependencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMissingDependencyError();
             init?.Invoke(t);
             return t;
         }

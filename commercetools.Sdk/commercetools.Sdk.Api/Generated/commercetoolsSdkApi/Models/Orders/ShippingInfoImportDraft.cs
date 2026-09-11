@@ -18,8 +18,6 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public ITaxRate TaxRate { get; set; }
 
-        public ITaxedPriceDraft TaxedPrice { get; set; }
-
         public ITaxCategoryResourceIdentifier TaxCategory { get; set; }
 
         public IShippingMethodResourceIdentifier ShippingMethod { get; set; }
