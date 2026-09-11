@@ -1,13 +1,16 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace commercetools.Sdk.Api.Models.Products
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class TermFacetResult : ITermFacetResult
     {
+        [ObsoleteAttribute("This property is obsolete", false)]
         public IFacetTypes Type { get; set; }
 
+        [ObsoleteAttribute("This property is obsolete", false)]
         public ITermFacetResultType DataType { get; set; }
 
         public long Missing { get; set; }

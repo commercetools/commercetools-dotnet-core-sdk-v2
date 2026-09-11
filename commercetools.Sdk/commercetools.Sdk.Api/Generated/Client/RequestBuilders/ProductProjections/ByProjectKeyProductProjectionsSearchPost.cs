@@ -12,7 +12,7 @@ using commercetools.Base.Serialization;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
 {
-
+    [Obsolete("usage of this endpoint has been deprecated.", false)]
     public partial class ByProjectKeyProductProjectionsSearchPost : ApiMethod<ByProjectKeyProductProjectionsSearchPost>, IApiMethod<ByProjectKeyProductProjectionsSearchPost, commercetools.Sdk.Api.Models.Products.IProductProjectionPagedSearchResponse>, commercetools.Sdk.Api.Client.IErrorableTrait<ByProjectKeyProductProjectionsSearchPost>
     {
 
