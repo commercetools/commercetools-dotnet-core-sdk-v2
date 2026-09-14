@@ -13,6 +13,22 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `GraphQLAgentBusinessUnitAmbiguousError`
+- added type `GraphQLAgentBusinessUnitLimitExceededError`
+- added type `GraphQLAgentBusinessUnitUnresolvedError`
+- added type `GraphQLAgentExtractionFailedError`
+- added type `GraphQLAgentFeatureDisabledError`
+- added type `GraphQLAgentMissingCountryError`
+- added type `GraphQLAgentMissingCustomerEmailError`
+- added type `GraphQLAgentMissingEntityTypeError`
+- added type `GraphQLAgentNoLineItemsExtractedError`
+- added type `GraphQLAgentOutOfScopeError`
+- added type `GraphQLAgentProductSearchNotEnabledError`
+- added type `GraphQLAgentProductsNotFoundError`
+- added type `GraphQLAgentQuoteRequestCreationFailedError`
+- added type `GraphQLAgentStoreAmbiguousError`
+- added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
+- added type `GraphQLAgentStoreUnresolvedError`
 - added type `ExtensionCircularDependencyError`
 - added type `GraphQLExtensionCircularDependencyError`
 </details>

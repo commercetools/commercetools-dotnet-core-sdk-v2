@@ -22,6 +22,102 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsBusinessUnitAmbiguous(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsBusinessUnitLimitExceeded(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsBusinessUnitUnresolved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsExtractionFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentExtractionFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentExtractionFailedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentExtractionFailedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsFeatureDisabled(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingCountry(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCountryErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCountryErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCountryErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingCustomerEmail(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingEntityType(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsNoLineItemsExtracted(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsOutOfScope(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentOutOfScopeErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentOutOfScopeErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentOutOfScopeErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsProductSearchNotEnabled(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsProductsNotFound(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsQuoteRequestCreationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsStoreAmbiguous(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsStoreDistributionChannelsUnsupported(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsStoreUnresolved(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsAnonymousIdAlreadyInUse(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl>> fn)
         {

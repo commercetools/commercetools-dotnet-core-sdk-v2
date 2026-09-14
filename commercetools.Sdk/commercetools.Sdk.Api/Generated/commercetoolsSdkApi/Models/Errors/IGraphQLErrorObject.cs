@@ -12,6 +12,9 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("AttributeNameDoesNotExist", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLAttributeNameDoesNotExistError))]
     [SubTypeDiscriminator("BadGateway", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBadGatewayError))]
     [SubTypeDiscriminator("BulkOperationMaxItemsExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError))]
+    [SubTypeDiscriminator("BusinessUnitAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitAmbiguousError))]
+    [SubTypeDiscriminator("BusinessUnitLimitExceeded", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitLimitExceededError))]
+    [SubTypeDiscriminator("BusinessUnitUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitUnresolvedError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLCountryNotConfiguredInStoreError))]
@@ -42,6 +45,8 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionPredicateEvaluationFailedError))]
     [SubTypeDiscriminator("ExtensionUpdateActionsFailed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExtensionUpdateActionsFailedError))]
     [SubTypeDiscriminator("ExternalOAuthFailed", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLExternalOAuthFailedError))]
+    [SubTypeDiscriminator("ExtractionFailed", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentExtractionFailedError))]
+    [SubTypeDiscriminator("FeatureDisabled", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentFeatureDisabledError))]
     [SubTypeDiscriminator("FeatureRemoved", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLFeatureRemovedError))]
     [SubTypeDiscriminator("General", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLGeneralError))]
     [SubTypeDiscriminator("insufficient_scope", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLInsufficientScopeError))]
@@ -64,11 +69,16 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxDiscountGroupsReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxDiscountGroupsReachedError))]
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError))]
+    [SubTypeDiscriminator("MissingCountry", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCountryError))]
+    [SubTypeDiscriminator("MissingCustomerEmail", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError))]
+    [SubTypeDiscriminator("MissingEntityType", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingEntityTypeError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMoneyOverflowError))]
+    [SubTypeDiscriminator("NoLineItemsExtracted", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentNoLineItemsExtractedError))]
     [SubTypeDiscriminator("NoMatchingProductDiscountFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError))]
     [SubTypeDiscriminator("ObjectNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError))]
+    [SubTypeDiscriminator("OutOfScope", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentOutOfScopeError))]
     [SubTypeDiscriminator("OutOfStock", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOutOfStockError))]
     [SubTypeDiscriminator("OverCapacity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverCapacityError))]
     [SubTypeDiscriminator("OverlappingPriceValidity", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLOverlappingPriceValidityError))]
@@ -77,9 +87,12 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("PriceChanged", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLPriceChangedError))]
     [SubTypeDiscriminator("ProductAssignmentMissing", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLProductAssignmentMissingError))]
     [SubTypeDiscriminator("ProductPresentWithDifferentVariantSelection", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLProductPresentWithDifferentVariantSelectionError))]
+    [SubTypeDiscriminator("ProductSearchNotEnabled", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductSearchNotEnabledError))]
+    [SubTypeDiscriminator("ProductsNotFound", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductsNotFoundError))]
     [SubTypeDiscriminator("ProjectNotConfiguredForLanguages", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLProjectNotConfiguredForLanguagesError))]
     [SubTypeDiscriminator("QueryComplexityLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLQueryComplexityLimitExceededError))]
     [SubTypeDiscriminator("QueryTimedOut", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError))]
+    [SubTypeDiscriminator("QuoteRequestCreationFailed", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentQuoteRequestCreationFailedError))]
     [SubTypeDiscriminator("RecurringOrderFailure", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLRecurringOrderFailureError))]
     [SubTypeDiscriminator("ReferencedResourceNotFound", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLReferencedResourceNotFoundError))]
     [SubTypeDiscriminator("ReferenceExists", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLReferenceExistsError))]
@@ -93,7 +106,10 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchNotReady", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSearchNotReadyError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("StoreAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreAmbiguousError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
+    [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError))]
+    [SubTypeDiscriminator("StoreUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreUnresolvedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
     [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError))]
@@ -140,6 +156,24 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError BulkOperationMaxItemsExceeded(Action<commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLBulkOperationMaxItemsExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitAmbiguousError BusinessUnitAmbiguous(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitAmbiguousError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitAmbiguousError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitLimitExceededError BusinessUnitLimitExceeded(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitLimitExceededError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitLimitExceededError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitUnresolvedError BusinessUnitUnresolved(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitUnresolvedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentBusinessUnitUnresolvedError();
             init?.Invoke(t);
             return t;
         }
@@ -323,6 +357,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentExtractionFailedError ExtractionFailed(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentExtractionFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentExtractionFailedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentFeatureDisabledError FeatureDisabled(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentFeatureDisabledError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentFeatureDisabledError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLFeatureRemovedError FeatureRemoved(Action<commercetools.Sdk.Api.Models.Errors.GraphQLFeatureRemovedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLFeatureRemovedError();
@@ -455,6 +501,24 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCountryError MissingCountry(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCountryError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCountryError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError MissingCustomerEmail(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingEntityTypeError MissingEntityType(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingEntityTypeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingEntityTypeError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError MissingRoleOnChannel(Action<commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError();
@@ -473,6 +537,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentNoLineItemsExtractedError NoLineItemsExtracted(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentNoLineItemsExtractedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentNoLineItemsExtractedError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError NoMatchingProductDiscountFound(Action<commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLNoMatchingProductDiscountFoundError();
@@ -482,6 +552,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError ObjectNotFound(Action<commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLObjectNotFoundError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentOutOfScopeError OutOfScope(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentOutOfScopeError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentOutOfScopeError();
             init?.Invoke(t);
             return t;
         }
@@ -533,6 +609,18 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductSearchNotEnabledError ProductSearchNotEnabled(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductSearchNotEnabledError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductSearchNotEnabledError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductsNotFoundError ProductsNotFound(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductsNotFoundError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentProductsNotFoundError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLProjectNotConfiguredForLanguagesError ProjectNotConfiguredForLanguages(Action<commercetools.Sdk.Api.Models.Errors.GraphQLProjectNotConfiguredForLanguagesError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLProjectNotConfiguredForLanguagesError();
@@ -548,6 +636,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError QueryTimedOut(Action<commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLQueryTimedOutError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentQuoteRequestCreationFailedError QuoteRequestCreationFailed(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentQuoteRequestCreationFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentQuoteRequestCreationFailedError();
             init?.Invoke(t);
             return t;
         }
@@ -629,9 +723,27 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreAmbiguousError StoreAmbiguous(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreAmbiguousError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreAmbiguousError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError StoreCartDiscountsLimitReached(Action<commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError StoreDistributionChannelsUnsupported(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreUnresolvedError StoreUnresolved(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreUnresolvedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreUnresolvedError();
             init?.Invoke(t);
             return t;
         }
