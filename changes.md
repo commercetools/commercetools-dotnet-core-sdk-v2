@@ -33,3 +33,10 @@
 - added type `GraphQLExtensionCircularDependencyError`
 </details>
 
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `mcp-server` to type `ReferenceTypeId`
+</details>
+
