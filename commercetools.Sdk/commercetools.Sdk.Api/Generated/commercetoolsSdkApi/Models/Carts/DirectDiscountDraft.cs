@@ -9,5 +9,7 @@ namespace commercetools.Sdk.Api.Models.Carts
         public ICartDiscountValueDraft Value { get; set; }
 
         public ICartDiscountTarget Target { get; set; }
+
+        public bool? ParticipateInBestDealSelection { get; set; }
     }
 }

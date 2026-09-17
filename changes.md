@@ -29,8 +29,24 @@
 - added type `GraphQLAgentStoreAmbiguousError`
 - added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
 - added type `GraphQLAgentStoreUnresolvedError`
+- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
 - added type `ExtensionCircularDependencyError`
 - added type `GraphQLExtensionCircularDependencyError`
+- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
+- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
+- added property `participateInBestDealSelection` to type `DirectDiscount`
+- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
+- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
 </details>
 
 

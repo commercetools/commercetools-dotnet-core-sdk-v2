@@ -90,6 +90,8 @@ namespace commercetools.Sdk.Api.Models.Quotes
 
         public IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
+        public bool? DirectDiscountsIgnoreCartDiscounts { get; set; }
+
         public ICustomFields Custom { get; set; }
 
         public IQuoteState QuoteState { get; set; }

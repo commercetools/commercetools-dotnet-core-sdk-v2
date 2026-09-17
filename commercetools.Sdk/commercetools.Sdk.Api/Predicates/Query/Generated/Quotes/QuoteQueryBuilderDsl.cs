@@ -277,6 +277,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Quotes
             return new CollectionPredicateBuilder<QuoteQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscounts")),
                     p => new CombinationQueryPredicate<QuoteQueryBuilderDsl>(p, QuoteQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<QuoteQueryBuilderDsl, bool> DirectDiscountsIgnoreCartDiscounts()
+        {
+            return new ComparisonPredicateBuilder<QuoteQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p => new CombinationQueryPredicate<QuoteQueryBuilderDsl>(p, QuoteQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<QuoteQueryBuilderDsl> Custom(
             Func<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Types.CustomFieldsQueryBuilderDsl>> fn)
         {
