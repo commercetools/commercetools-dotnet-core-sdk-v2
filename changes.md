@@ -54,5 +54,6 @@
 <summary>Added Enum(s)</summary>
 
 - added enum `mcp-server` to type `ReferenceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
 </details>
 
