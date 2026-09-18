@@ -15,7 +15,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("BusinessUnitAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitAmbiguousError))]
     [SubTypeDiscriminator("BusinessUnitLimitExceeded", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitLimitExceededError))]
     [SubTypeDiscriminator("BusinessUnitUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError))]
-    [SubTypeDiscriminator("CircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.Api.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ContentTooLarge", typeof(commercetools.Sdk.Api.Models.Errors.ContentTooLargeError))]
     [SubTypeDiscriminator("CountryNotConfiguredInStore", typeof(commercetools.Sdk.Api.Models.Errors.CountryNotConfiguredInStoreError))]
@@ -40,6 +39,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("ExtensionBadResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionBadResponseError))]
     [SubTypeDiscriminator("ExtensionChainTooDeep", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionChainTooDeepError))]
     [SubTypeDiscriminator("ExtensionChainTooWide", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError))]
+    [SubTypeDiscriminator("ExtensionCircularDependency", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionCircularDependencyError))]
     [SubTypeDiscriminator("ExtensionDependencyExists", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionDependencyExistsError))]
     [SubTypeDiscriminator("ExtensionNoResponse", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionNoResponseError))]
     [SubTypeDiscriminator("ExtensionPredicateEvaluationFailed", typeof(commercetools.Sdk.Api.Models.Errors.ExtensionPredicateEvaluationFailedError))]
@@ -71,7 +71,6 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.MaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingCountry", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingCountryError))]
     [SubTypeDiscriminator("MissingCustomerEmail", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError))]
-    [SubTypeDiscriminator("MissingDependency", typeof(commercetools.Sdk.Api.Models.Errors.MissingDependencyError))]
     [SubTypeDiscriminator("MissingEntityType", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
@@ -177,12 +176,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError BusinessUnitUnresolved(Action<commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.AgentBusinessUnitUnresolvedError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.CircularDependencyError CircularDependency(Action<commercetools.Sdk.Api.Models.Errors.CircularDependencyError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.CircularDependencyError();
             init?.Invoke(t);
             return t;
         }
@@ -327,6 +320,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError ExtensionChainTooWide(Action<commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ExtensionChainTooWideError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.ExtensionCircularDependencyError ExtensionCircularDependency(Action<commercetools.Sdk.Api.Models.Errors.ExtensionCircularDependencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.ExtensionCircularDependencyError();
             init?.Invoke(t);
             return t;
         }
@@ -513,12 +512,6 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError MissingCustomerEmail(Action<commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError();
-            init?.Invoke(t);
-            return t;
-        }
-        static commercetools.Sdk.Api.Models.Errors.MissingDependencyError MissingDependency(Action<commercetools.Sdk.Api.Models.Errors.MissingDependencyError> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.Errors.MissingDependencyError();
             init?.Invoke(t);
             return t;
         }

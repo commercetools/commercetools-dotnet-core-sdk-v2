@@ -54,6 +54,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetCustomTypeAction))]
     [SubTypeDiscriminator("setDeleteDaysAfterLastModification", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDeleteDaysAfterLastModificationAction))]
     [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction))]
+    [SubTypeDiscriminator("setDirectDiscountsIgnoreCartDiscounts", typeof(commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsIgnoreCartDiscountsAction))]
     [SubTypeDiscriminator("setEstimatedDelivery", typeof(commercetools.Sdk.Api.Models.Carts.CartSetEstimatedDeliveryAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.Carts.CartSetItemShippingAddressCustomTypeAction))]
@@ -379,6 +380,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction SetDirectDiscounts(Action<commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsIgnoreCartDiscountsAction SetDirectDiscountsIgnoreCartDiscounts(Action<commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsIgnoreCartDiscountsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetDirectDiscountsIgnoreCartDiscountsAction();
             init?.Invoke(t);
             return t;
         }

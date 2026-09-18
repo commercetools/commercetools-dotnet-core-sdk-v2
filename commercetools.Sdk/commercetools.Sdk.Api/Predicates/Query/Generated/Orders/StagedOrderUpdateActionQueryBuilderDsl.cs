@@ -328,6 +328,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Orders
             return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsActionQueryBuilderDsl.Of()),
                 StagedOrderUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetDirectDiscountsIgnoreCartDiscounts(
+            Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl.Of()),
+                StagedOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> AsSetItemShippingAddressCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn)
         {
