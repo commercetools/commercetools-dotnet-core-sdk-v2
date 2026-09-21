@@ -23,5 +23,7 @@ namespace commercetools.Sdk.Api.Models.TaxCategories
 
         string Key { get; set; }
 
+        ITaxRoundingTarget TaxRoundingTarget { get; set; }
+
     }
 }
