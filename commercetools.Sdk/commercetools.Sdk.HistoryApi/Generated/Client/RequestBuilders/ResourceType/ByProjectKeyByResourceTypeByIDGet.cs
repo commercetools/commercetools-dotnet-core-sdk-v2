@@ -60,6 +60,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             return this.GetQueryParam("userId");
         }
 
+        public List<string> GetUserIds()
+        {
+            return this.GetQueryParam("userIds");
+        }
+
         public List<string> GetClientId()
         {
             return this.GetQueryParam("clientId");
@@ -138,6 +143,11 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
         public ByProjectKeyByResourceTypeByIDGet WithUserId(string userId)
         {
             return this.AddQueryParam("userId", userId);
+        }
+
+        public ByProjectKeyByResourceTypeByIDGet WithUserIds(string userIds)
+        {
+            return this.AddQueryParam("userIds", userIds);
         }
 
         public ByProjectKeyByResourceTypeByIDGet WithClientId(string clientId)
