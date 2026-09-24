@@ -22,5 +22,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IEnumerable<ISubRate> SubRatesEnumerable { set => SubRates = value.ToList(); }
 
+        ITaxRoundingTarget TaxRoundingTarget { get; set; }
+
     }
 }

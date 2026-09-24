@@ -75,6 +75,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         IEnumerable<string> DiscountCodesEnumerable { set => DiscountCodes = value.ToList(); }
 
+        bool? DirectDiscountsIgnoreCartDiscounts { get; set; }
+
         string Country { get; set; }
 
         string Locale { get; set; }

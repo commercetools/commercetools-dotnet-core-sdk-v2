@@ -2,8 +2,8 @@ using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
 namespace commercetools.Sdk.Api.Models.Errors
 {
-    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.CircularDependencyError))]
-    public partial interface ICircularDependencyError : IErrorObject
+    [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Errors.ExtensionCircularDependencyError))]
+    public partial interface IExtensionCircularDependencyError : IErrorObject
     {
         new string Code { get; set; }
 

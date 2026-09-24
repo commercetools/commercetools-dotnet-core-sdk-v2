@@ -10,5 +10,7 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICartDiscountTarget Target { get; set; }
 
+        bool? ParticipateInBestDealSelection { get; set; }
+
     }
 }

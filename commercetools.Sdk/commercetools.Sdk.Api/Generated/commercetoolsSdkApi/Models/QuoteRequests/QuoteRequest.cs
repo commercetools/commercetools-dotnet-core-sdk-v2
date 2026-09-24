@@ -82,6 +82,8 @@ namespace commercetools.Sdk.Api.Models.QuoteRequests
 
         public IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
+        public bool? DirectDiscountsIgnoreCartDiscounts { get; set; }
+
         public ICustomFields Custom { get; set; }
 
         public IStateReference State { get; set; }

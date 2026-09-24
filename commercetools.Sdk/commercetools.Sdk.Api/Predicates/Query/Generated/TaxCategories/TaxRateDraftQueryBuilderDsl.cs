@@ -64,6 +64,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.TaxCategories
             p => new CombinationQueryPredicate<TaxRateDraftQueryBuilderDsl>(p, TaxRateDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<TaxRateDraftQueryBuilderDsl, string> TaxRoundingTarget()
+        {
+            return new ComparisonPredicateBuilder<TaxRateDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingTarget")),
+            p => new CombinationQueryPredicate<TaxRateDraftQueryBuilderDsl>(p, TaxRateDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

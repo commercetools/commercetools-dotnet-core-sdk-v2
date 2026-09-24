@@ -166,12 +166,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.BulkOperationMaxItemsExceededErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsCircularDependency(
-            Func<commercetools.Sdk.Api.Predicates.Query.Errors.CircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.CircularDependencyErrorQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.CircularDependencyErrorQueryBuilderDsl.Of()),
-                ErrorObjectQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsConcurrentModification(
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ConcurrentModificationErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ConcurrentModificationErrorQueryBuilderDsl>> fn)
         {
@@ -314,6 +308,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionChainTooWideErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionChainTooWideErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionChainTooWideErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExtensionCircularDependency(
+            Func<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionCircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionCircularDependencyErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.ExtensionCircularDependencyErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsExtensionDependencyExists(
@@ -476,12 +476,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Errors.MaxStoreReferencesReachedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.MaxStoreReferencesReachedErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.MaxStoreReferencesReachedErrorQueryBuilderDsl.Of()),
-                ErrorObjectQueryBuilderDsl.Of);
-        }
-        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsMissingDependency(
-            Func<commercetools.Sdk.Api.Predicates.Query.Errors.MissingDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Errors.MissingDependencyErrorQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Errors.MissingDependencyErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsMissingRoleOnChannel(
