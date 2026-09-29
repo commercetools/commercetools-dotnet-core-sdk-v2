@@ -7,6 +7,8 @@ namespace commercetools.Sdk.Api.Models.VariantAttributes
     {
         public bool? IsOnStock { get; set; }
 
+        public long? RestockableInDays { get; set; }
+
         public long? AvailableQuantity { get; set; }
 
         public IVariantAttributesChannelAvailabilityMap Channels { get; set; }
