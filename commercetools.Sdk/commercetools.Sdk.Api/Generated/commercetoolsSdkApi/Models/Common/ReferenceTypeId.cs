@@ -67,6 +67,9 @@ namespace commercetools.Sdk.Api.Models.Common
         [Description("key-value-document")]
         KeyValueDocument,
 
+        [Description("mcp-server")]
+        McpServer,
+
         [Description("order")]
         Order,
 
@@ -229,6 +232,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IReferenceTypeId KeyValueDocument = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.KeyValueDocument, JsonName = "key-value-document" };
 
+        public static IReferenceTypeId McpServer = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.McpServer, JsonName = "mcp-server" };
+
         public static IReferenceTypeId Order = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Order, JsonName = "order" };
 
@@ -335,6 +341,7 @@ namespace commercetools.Sdk.Api.Models.Common
                  Extension ,
                  InventoryEntry ,
                  KeyValueDocument ,
+                 McpServer ,
                  Order ,
                  OrderEdit ,
                  PaymentMethod ,

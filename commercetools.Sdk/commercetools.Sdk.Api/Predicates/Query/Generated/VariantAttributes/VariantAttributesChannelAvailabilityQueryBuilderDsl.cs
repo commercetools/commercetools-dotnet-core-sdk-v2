@@ -19,6 +19,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.VariantAttributes
             p => new CombinationQueryPredicate<VariantAttributesChannelAvailabilityQueryBuilderDsl>(p, VariantAttributesChannelAvailabilityQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl, long> RestockableInDays()
+        {
+            return new ComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("restockableInDays")),
+            p => new CombinationQueryPredicate<VariantAttributesChannelAvailabilityQueryBuilderDsl>(p, VariantAttributesChannelAvailabilityQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl, long> AvailableQuantity()
         {
             return new ComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("availableQuantity")),

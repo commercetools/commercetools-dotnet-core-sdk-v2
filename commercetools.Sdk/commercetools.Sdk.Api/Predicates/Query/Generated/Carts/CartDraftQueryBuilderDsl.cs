@@ -224,6 +224,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             p => new CombinationQueryPredicate<CartDraftQueryBuilderDsl>(p, CartDraftQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<CartDraftQueryBuilderDsl, bool> DirectDiscountsIgnoreCartDiscounts()
+        {
+            return new ComparisonPredicateBuilder<CartDraftQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p => new CombinationQueryPredicate<CartDraftQueryBuilderDsl>(p, CartDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<CartDraftQueryBuilderDsl, string> Country()
         {
             return new ComparisonPredicateBuilder<CartDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("country")),

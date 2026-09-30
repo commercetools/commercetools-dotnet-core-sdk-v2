@@ -309,6 +309,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CollectionPredicateBuilder<CartQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscounts")),
                     p => new CombinationQueryPredicate<CartQueryBuilderDsl>(p, CartQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<CartQueryBuilderDsl, bool> DirectDiscountsIgnoreCartDiscounts()
+        {
+            return new ComparisonPredicateBuilder<CartQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p => new CombinationQueryPredicate<CartQueryBuilderDsl>(p, CartQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public CombinationQueryPredicate<CartQueryBuilderDsl> RefusedGifts(
             Func<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.CartDiscounts.CartDiscountReferenceQueryBuilderDsl>> fn)
         {

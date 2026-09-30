@@ -53,5 +53,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Agents
             return new CombinationQueryPredicate<AgentResponsesSuccessQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesQuoteRequestSuccessQueryBuilderDsl.Of()),
                 AgentResponsesSuccessQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<AgentResponsesSuccessQueryBuilderDsl> AsShoppingList(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesShoppingListSuccessQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesShoppingListSuccessQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<AgentResponsesSuccessQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentResponsesShoppingListSuccessQueryBuilderDsl.Of()),
+                AgentResponsesSuccessQueryBuilderDsl.Of);
+        }
     }
 }

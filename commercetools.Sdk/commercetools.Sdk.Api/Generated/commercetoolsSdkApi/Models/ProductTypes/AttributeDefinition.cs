@@ -23,5 +23,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         public ITextInputHint InputHint { get; set; }
 
         public bool IsSearchable { get; set; }
+
+        public bool SavedToLineItem { get; set; }
     }
 }

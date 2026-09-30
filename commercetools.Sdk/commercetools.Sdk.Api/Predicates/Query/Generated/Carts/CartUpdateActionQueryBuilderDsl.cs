@@ -316,6 +316,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetDirectDiscountsIgnoreCartDiscounts(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetEstimatedDelivery(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetEstimatedDeliveryActionQueryBuilderDsl>> fn)
         {

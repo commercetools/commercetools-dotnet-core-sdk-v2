@@ -14,7 +14,10 @@ namespace commercetools.Sdk.Api.Models.Agents
         Cart,
 
         [Description("QuoteRequest")]
-        QuoteRequest
+        QuoteRequest,
+
+        [Description("ShoppingList")]
+        ShoppingList
     }
 
     public class AgentResponsesOutputTypeWrapper : IAgentResponsesOutputType
@@ -46,6 +49,9 @@ namespace commercetools.Sdk.Api.Models.Agents
         public static IAgentResponsesOutputType QuoteRequest = new AgentResponsesOutputTypeWrapper
         { Value = AgentResponsesOutputType.QuoteRequest, JsonName = "QuoteRequest" };
 
+        public static IAgentResponsesOutputType ShoppingList = new AgentResponsesOutputTypeWrapper
+        { Value = AgentResponsesOutputType.ShoppingList, JsonName = "ShoppingList" };
+
         AgentResponsesOutputType? Value { get; }
 
         static IAgentResponsesOutputType[] Values()
@@ -53,7 +59,8 @@ namespace commercetools.Sdk.Api.Models.Agents
             return new[]
             {
                  Cart ,
-                 QuoteRequest
+                 QuoteRequest ,
+                 ShoppingList
              };
         }
         static IAgentResponsesOutputType FindEnum(string value)
