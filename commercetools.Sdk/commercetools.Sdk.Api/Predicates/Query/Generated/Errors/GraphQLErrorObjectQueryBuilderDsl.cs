@@ -70,6 +70,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsMissingShoppingListName(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsNoLineItemsExtracted(
             Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn)
         {
@@ -98,6 +104,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl.Of()),
+                GraphQLErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsShoppingListCreationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl.Of()),
                 GraphQLErrorObjectQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> AsStoreAmbiguous(

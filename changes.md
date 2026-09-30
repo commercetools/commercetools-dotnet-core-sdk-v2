@@ -13,6 +13,9 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `AgentMissingShoppingListNameError`
+- added type `AgentResponsesShoppingListSuccess`
+- added type `AgentShoppingListCreationFailedError`
 - added type `GraphQLAgentBusinessUnitAmbiguousError`
 - added type `GraphQLAgentBusinessUnitLimitExceededError`
 - added type `GraphQLAgentBusinessUnitUnresolvedError`
@@ -21,11 +24,13 @@
 - added type `GraphQLAgentMissingCountryError`
 - added type `GraphQLAgentMissingCustomerEmailError`
 - added type `GraphQLAgentMissingEntityTypeError`
+- added type `GraphQLAgentMissingShoppingListNameError`
 - added type `GraphQLAgentNoLineItemsExtractedError`
 - added type `GraphQLAgentOutOfScopeError`
 - added type `GraphQLAgentProductSearchNotEnabledError`
 - added type `GraphQLAgentProductsNotFoundError`
 - added type `GraphQLAgentQuoteRequestCreationFailedError`
+- added type `GraphQLAgentShoppingListCreationFailedError`
 - added type `GraphQLAgentStoreAmbiguousError`
 - added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
 - added type `GraphQLAgentStoreUnresolvedError`
@@ -73,6 +78,7 @@
 <details>
 <summary>Added Enum(s)</summary>
 
+- added enum `ShoppingList` to type `AgentResponsesOutputType`
 - added enum `IntakeAgent` to type `AttributionSource`
 - added enum `PromotionsAgent` to type `AttributionSource`
 - added enum `ManagedCommerceMCP` to type `AttributionSource`

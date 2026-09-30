@@ -76,6 +76,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentMissingEntityTypeErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsMissingShoppingListName(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentMissingShoppingListNameErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentMissingShoppingListNameErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentMissingShoppingListNameErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsNoLineItemsExtracted(
             Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn)
         {
@@ -104,6 +110,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Errors
             Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl.Of()),
+                ErrorObjectQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsShoppingListCreationFailed(
+            Func<commercetools.Sdk.Api.Predicates.Query.Agents.AgentShoppingListCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Agents.AgentShoppingListCreationFailedErrorQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ErrorObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Agents.AgentShoppingListCreationFailedErrorQueryBuilderDsl.Of()),
                 ErrorObjectQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> AsStoreAmbiguous(

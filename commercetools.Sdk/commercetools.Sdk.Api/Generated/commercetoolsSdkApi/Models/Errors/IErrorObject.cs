@@ -73,6 +73,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MissingCustomerEmail", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingCustomerEmailError))]
     [SubTypeDiscriminator("MissingEntityType", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingEntityTypeError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.MissingRoleOnChannelError))]
+    [SubTypeDiscriminator("MissingShoppingListName", typeof(commercetools.Sdk.Api.Models.Agents.AgentMissingShoppingListNameError))]
     [SubTypeDiscriminator("MissingTaxRateForCountry", typeof(commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError))]
     [SubTypeDiscriminator("MoneyOverflow", typeof(commercetools.Sdk.Api.Models.Errors.MoneyOverflowError))]
     [SubTypeDiscriminator("NoLineItemsExtracted", typeof(commercetools.Sdk.Api.Models.Agents.AgentNoLineItemsExtractedError))]
@@ -106,6 +107,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SearchNotReady", typeof(commercetools.Sdk.Api.Models.Errors.SearchNotReadyError))]
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.SemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError))]
+    [SubTypeDiscriminator("ShoppingListCreationFailed", typeof(commercetools.Sdk.Api.Models.Agents.AgentShoppingListCreationFailedError))]
     [SubTypeDiscriminator("StoreAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreAmbiguousError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.StoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError))]
@@ -527,6 +529,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.AgentMissingShoppingListNameError MissingShoppingListName(Action<commercetools.Sdk.Api.Models.Agents.AgentMissingShoppingListNameError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentMissingShoppingListNameError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError MissingTaxRateForCountry(Action<commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.MissingTaxRateForCountryError();
@@ -722,6 +730,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError ShippingMethodDoesNotMatchCart(Action<commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.ShippingMethodDoesNotMatchCartError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentShoppingListCreationFailedError ShoppingListCreationFailed(Action<commercetools.Sdk.Api.Models.Agents.AgentShoppingListCreationFailedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentShoppingListCreationFailedError();
             init?.Invoke(t);
             return t;
         }

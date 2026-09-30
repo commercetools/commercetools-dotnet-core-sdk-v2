@@ -10,6 +10,7 @@ namespace commercetools.Sdk.Api.Models.Agents
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Agents.AgentResponsesSuccess))]
     [SubTypeDiscriminator("Cart", typeof(commercetools.Sdk.Api.Models.Agents.AgentResponsesCartSuccess))]
     [SubTypeDiscriminator("QuoteRequest", typeof(commercetools.Sdk.Api.Models.Agents.AgentResponsesQuoteRequestSuccess))]
+    [SubTypeDiscriminator("ShoppingList", typeof(commercetools.Sdk.Api.Models.Agents.AgentResponsesShoppingListSuccess))]
     public partial interface IAgentResponsesSuccess
     {
         IAgentResponsesOutputType EntityType { get; set; }
@@ -29,6 +30,12 @@ namespace commercetools.Sdk.Api.Models.Agents
         static commercetools.Sdk.Api.Models.Agents.AgentResponsesQuoteRequestSuccess QuoteRequest(Action<commercetools.Sdk.Api.Models.Agents.AgentResponsesQuoteRequestSuccess> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.AgentResponsesQuoteRequestSuccess();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.AgentResponsesShoppingListSuccess ShoppingList(Action<commercetools.Sdk.Api.Models.Agents.AgentResponsesShoppingListSuccess> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.AgentResponsesShoppingListSuccess();
             init?.Invoke(t);
             return t;
         }
