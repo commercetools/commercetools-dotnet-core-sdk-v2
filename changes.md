@@ -30,6 +30,9 @@
 - added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
 - added type `GraphQLAgentStoreUnresolvedError`
 - added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `CategoryAddStoreAction`
+- added type `CategoryRemoveStoreAction`
+- added type `CategorySetStoresAction`
 - added type `ExtensionCircularDependencyError`
 - added type `GraphQLExtensionCircularDependencyError`
 - added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
@@ -45,6 +48,8 @@
 - added property `participateInBestDealSelection` to type `DirectDiscount`
 - added property `participateInBestDealSelection` to type `DirectDiscountDraft`
 - added property `taxRoundingTarget` to type `ExternalTaxRateDraft`
+- added property `stores` to type `Category`
+- added property `stores` to type `CategoryDraft`
 - added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
 - added property `directDiscountsIgnoreCartDiscounts` to type `Order`
 - added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
@@ -57,6 +62,15 @@
 
 
 <details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/categories`
+- added resource `/{projectKey}/in-store/key={storeKey}/categories/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/categories/{ID}`
+</details>
+
+
+<details>
 <summary>Added Enum(s)</summary>
 
 - added enum `IntakeAgent` to type `AttributionSource`
@@ -65,6 +79,23 @@
 - added enum `mcp-server` to type `ReferenceTypeId`
 - added enum `product` to type `ExtensionResourceTypeId`
 - added enum `InMigration` to type `ProductCatalogModel`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().delete()`
 </details>
 
 **History changes**

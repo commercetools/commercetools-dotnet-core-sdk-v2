@@ -41,6 +41,11 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             return new ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
         }
 
+        public ByProjectKeyInStoreKeyByStoreKeyCategoriesRequestBuilder Categories()
+        {
+            return new ByProjectKeyInStoreKeyByStoreKeyCategoriesRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);
+        }
+
         public ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder Customers()
         {
             return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(ApiHttpClient, SerializerService, ProjectKey, StoreKey);

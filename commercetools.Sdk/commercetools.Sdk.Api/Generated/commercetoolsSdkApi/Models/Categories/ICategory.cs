@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.Common;
+using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Sdk.Api.Models.Types;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,10 @@ namespace commercetools.Sdk.Api.Models.Categories
         IEnumerable<IAsset> AssetsEnumerable { set => Assets = value.ToList(); }
 
         string Key { get; set; }
+
+        IList<IStoreKeyReference> Stores { get; set; }
+
+        IEnumerable<IStoreKeyReference> StoresEnumerable { set => Stores = value.ToList(); }
 
     }
 }
