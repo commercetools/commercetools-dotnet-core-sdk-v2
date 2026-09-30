@@ -41,6 +41,7 @@
 - added type `ExtensionCircularDependencyError`
 - added type `GraphQLExtensionCircularDependencyError`
 - added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
+- added type `ProductTypeChangeSavedToLineItemAction`
 - added type `TaxRoundingTarget`
 </details>
 
@@ -57,6 +58,8 @@
 - added property `stores` to type `CategoryDraft`
 - added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
 - added property `directDiscountsIgnoreCartDiscounts` to type `Order`
+- added property `savedToLineItem` to type `AttributeDefinition`
+- added property `savedToLineItem` to type `AttributeDefinitionDraft`
 - added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
 - added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
 - added property `taxRoundingTarget` to type `TaxRate`

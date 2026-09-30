@@ -78,6 +78,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTypes
             p => new CombinationQueryPredicate<AttributeDefinitionQueryBuilderDsl>(p, AttributeDefinitionQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
+        public IComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, bool> SavedToLineItem()
+        {
+            return new ComparisonPredicateBuilder<AttributeDefinitionQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("savedToLineItem")),
+            p => new CombinationQueryPredicate<AttributeDefinitionQueryBuilderDsl>(p, AttributeDefinitionQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

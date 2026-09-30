@@ -21,6 +21,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeNameAction))]
     [SubTypeDiscriminator("changePlainEnumValueLabel", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueLabelAction))]
     [SubTypeDiscriminator("changePlainEnumValueOrder", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueOrderAction))]
+    [SubTypeDiscriminator("changeSavedToLineItem", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction))]
     [SubTypeDiscriminator("removeAttributeDefinition", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveAttributeDefinitionAction))]
     [SubTypeDiscriminator("removeEnumValues", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveEnumValuesAction))]
     [SubTypeDiscriminator("setInputTip", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetInputTipAction))]
@@ -122,6 +123,12 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueOrderAction ChangePlainEnumValueOrder(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueOrderAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueOrderAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction ChangeSavedToLineItem(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction();
             init?.Invoke(t);
             return t;
         }
