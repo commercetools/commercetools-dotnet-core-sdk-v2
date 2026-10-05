@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CollectionPredicateBuilder<ExternalTaxRateDraftQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("subRates")),
                     p => new CombinationQueryPredicate<ExternalTaxRateDraftQueryBuilderDsl>(p, ExternalTaxRateDraftQueryBuilderDsl.Of));
         }
+        public IComparisonPredicateBuilder<ExternalTaxRateDraftQueryBuilderDsl, string> TaxRoundingTarget()
+        {
+            return new ComparisonPredicateBuilder<ExternalTaxRateDraftQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("taxRoundingTarget")),
+            p => new CombinationQueryPredicate<ExternalTaxRateDraftQueryBuilderDsl>(p, ExternalTaxRateDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

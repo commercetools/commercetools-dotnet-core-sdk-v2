@@ -56,6 +56,7 @@ namespace commercetools.Sdk.Api.Models.Orders
     [SubTypeDiscriminator("setDeliveryCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDeliveryCustomTypeAction))]
     [SubTypeDiscriminator("setDeliveryItems", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDeliveryItemsAction))]
     [SubTypeDiscriminator("setDirectDiscounts", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction))]
+    [SubTypeDiscriminator("setDirectDiscountsIgnoreCartDiscounts", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomFieldAction))]
     [SubTypeDiscriminator("setItemShippingAddressCustomType", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetItemShippingAddressCustomTypeAction))]
     [SubTypeDiscriminator("setLineItemCustomField", typeof(commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetLineItemCustomFieldAction))]
@@ -404,6 +405,12 @@ namespace commercetools.Sdk.Api.Models.Orders
         static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction SetDirectDiscounts(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction SetDirectDiscountsIgnoreCartDiscounts(Action<commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.OrderEdits.StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction();
             init?.Invoke(t);
             return t;
         }

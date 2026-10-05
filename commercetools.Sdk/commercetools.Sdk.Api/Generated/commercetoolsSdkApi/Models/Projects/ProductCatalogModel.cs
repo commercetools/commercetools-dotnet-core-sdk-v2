@@ -13,6 +13,9 @@ namespace commercetools.Sdk.Api.Models.Projects
         [Description("Classic")]
         Classic,
 
+        [Description("InMigration")]
+        InMigration,
+
         [Description("Modular")]
         Modular
     }
@@ -43,6 +46,9 @@ namespace commercetools.Sdk.Api.Models.Projects
         public static IProductCatalogModel Classic = new ProductCatalogModelWrapper
         { Value = ProductCatalogModel.Classic, JsonName = "Classic" };
 
+        public static IProductCatalogModel InMigration = new ProductCatalogModelWrapper
+        { Value = ProductCatalogModel.InMigration, JsonName = "InMigration" };
+
         public static IProductCatalogModel Modular = new ProductCatalogModelWrapper
         { Value = ProductCatalogModel.Modular, JsonName = "Modular" };
 
@@ -53,6 +59,7 @@ namespace commercetools.Sdk.Api.Models.Projects
             return new[]
             {
                  Classic ,
+                 InMigration ,
                  Modular
              };
         }

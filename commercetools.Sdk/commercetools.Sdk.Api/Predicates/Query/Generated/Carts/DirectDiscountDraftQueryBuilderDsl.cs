@@ -33,6 +33,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 DirectDiscountDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<DirectDiscountDraftQueryBuilderDsl, bool> ParticipateInBestDealSelection()
+        {
+            return new ComparisonPredicateBuilder<DirectDiscountDraftQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("participateInBestDealSelection")),
+            p => new CombinationQueryPredicate<DirectDiscountDraftQueryBuilderDsl>(p, DirectDiscountDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }

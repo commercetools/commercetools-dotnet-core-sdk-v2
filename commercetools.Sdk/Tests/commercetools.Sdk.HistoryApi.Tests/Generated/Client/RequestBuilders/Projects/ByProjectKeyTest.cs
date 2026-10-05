@@ -77,6 +77,15 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    ApiRoot
                    .WithProjectKeyValue("test_projectKey")
                    .Get()
+                   .WithUserIds("userIds")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?userIds=userIds",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
                    .WithClientId("clientId")
                    .Build(),
                    "Get",
@@ -126,6 +135,15 @@ namespace commercetools.Sdk.HistoryApi.Tests.Client.RequestBuilders.Projects
                    .Build(),
                    "Get",
                    "/test_projectKey?resourceId=resourceId",
+               },
+               new Object[] {
+                   ApiRoot
+                   .WithProjectKeyValue("test_projectKey")
+                   .Get()
+                   .WithResourceIds("resourceIds")
+                   .Build(),
+                   "Get",
+                   "/test_projectKey?resourceIds=resourceIds",
                },
                new Object[] {
                    ApiRoot

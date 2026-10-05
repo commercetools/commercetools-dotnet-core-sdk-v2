@@ -97,6 +97,8 @@ namespace commercetools.Sdk.Api.Models.Orders
 
         public IEnumerable<IDirectDiscount> DirectDiscountsEnumerable { set => DirectDiscounts = value.ToList(); }
 
+        public bool? DirectDiscountsIgnoreCartDiscounts { get; set; }
+
         public IList<ICartDiscountReference> RefusedGifts { get; set; }
 
         public IEnumerable<ICartDiscountReference> RefusedGiftsEnumerable { set => RefusedGifts = value.ToList(); }

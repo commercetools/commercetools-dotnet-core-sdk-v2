@@ -24,5 +24,7 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
 
         bool IsSearchable { get; set; }
 
+        bool SavedToLineItem { get; set; }
+
     }
 }
