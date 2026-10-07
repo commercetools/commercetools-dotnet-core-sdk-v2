@@ -1,4 +1,19 @@
 
+# 16.0.0 (2026-10-07)
+
+## BREAKING CHANGE
+
+The request builders now URL-encode every path parameter, such as project key, ID and key.
+
+Impact: If you passed pre-encoded values or path fragments containing / as path parameters, they will now be encoded a second time or treated as a single segment. Pass raw values and let the SDK encode them. Values with only letters, digits, -, _, . and ~, such as UUIDs and typical keys, are unaffected.
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/570
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/572
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.6.0...16.0.0
+
 # 15.6.0 (2026-10-06)
 
 ## What's Changed
