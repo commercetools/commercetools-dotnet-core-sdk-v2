@@ -21,11 +21,11 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeNameAction))]
     [SubTypeDiscriminator("changePlainEnumValueLabel", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueLabelAction))]
     [SubTypeDiscriminator("changePlainEnumValueOrder", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangePlainEnumValueOrderAction))]
-    [SubTypeDiscriminator("changeSavedToLineItem", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction))]
     [SubTypeDiscriminator("removeAttributeDefinition", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveAttributeDefinitionAction))]
     [SubTypeDiscriminator("removeEnumValues", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveEnumValuesAction))]
     [SubTypeDiscriminator("setInputTip", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetInputTipAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction))]
+    [SubTypeDiscriminator("setSavedToLineItem", typeof(commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetSavedToLineItemAction))]
     public partial interface IProductTypeUpdateAction
     {
         string Action { get; set; }
@@ -126,12 +126,6 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
             init?.Invoke(t);
             return t;
         }
-        static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction ChangeSavedToLineItem(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction> init = null)
-        {
-            var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeChangeSavedToLineItemAction();
-            init?.Invoke(t);
-            return t;
-        }
         static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveAttributeDefinitionAction RemoveAttributeDefinition(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveAttributeDefinitionAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeRemoveAttributeDefinitionAction();
@@ -153,6 +147,12 @@ namespace commercetools.Sdk.Api.Models.ProductTypes
         static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetSavedToLineItemAction SetSavedToLineItem(Action<commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetSavedToLineItemAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.ProductTypes.ProductTypeSetSavedToLineItemAction();
             init?.Invoke(t);
             return t;
         }

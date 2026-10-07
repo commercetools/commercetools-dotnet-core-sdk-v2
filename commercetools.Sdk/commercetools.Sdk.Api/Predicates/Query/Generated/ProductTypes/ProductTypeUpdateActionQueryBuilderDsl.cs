@@ -118,12 +118,6 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTypes
             return new CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeChangePlainEnumValueOrderActionQueryBuilderDsl.Of()),
                 ProductTypeUpdateActionQueryBuilderDsl.Of);
         }
-        public CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl> AsChangeSavedToLineItem(
-            Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeChangeSavedToLineItemActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeChangeSavedToLineItemActionQueryBuilderDsl>> fn)
-        {
-            return new CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeChangeSavedToLineItemActionQueryBuilderDsl.Of()),
-                ProductTypeUpdateActionQueryBuilderDsl.Of);
-        }
         public CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl> AsRemoveAttributeDefinition(
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeRemoveAttributeDefinitionActionQueryBuilderDsl>> fn)
         {
@@ -146,6 +140,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.ProductTypes
             Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetKeyActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetKeyActionQueryBuilderDsl.Of()),
+                ProductTypeUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl> AsSetSavedToLineItem(
+            Func<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetSavedToLineItemActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetSavedToLineItemActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ProductTypes.ProductTypeSetSavedToLineItemActionQueryBuilderDsl.Of()),
                 ProductTypeUpdateActionQueryBuilderDsl.Of);
         }
     }
