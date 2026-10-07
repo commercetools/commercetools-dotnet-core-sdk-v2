@@ -2,6 +2,8 @@ using commercetools.Base.Client;
 using commercetools.Base.Serialization;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Transactions;
+using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.RecurringPayment;
+using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.RecurringPayments;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegrations;
 using commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications;
 
@@ -35,6 +37,16 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Projects
         public ByProjectKeyTransactionsRequestBuilder Transactions()
         {
             return new ByProjectKeyTransactionsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyRecurringPaymentJobsRequestBuilder RecurringPaymentJobs()
+        {
+            return new ByProjectKeyRecurringPaymentJobsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
+        }
+
+        public ByProjectKeyRecurringPaymentsRequestBuilder RecurringPayments()
+        {
+            return new ByProjectKeyRecurringPaymentsRequestBuilder(ApiHttpClient, SerializerService, ProjectKey);
         }
 
         public ByProjectKeyPaymentIntegrationsRequestBuilder PaymentIntegrations()

@@ -10,6 +10,9 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
     [SubTypeDiscriminator("order", typeof(commercetools.Sdk.CheckoutApi.Models.Carts.OrderReference))]
     [SubTypeDiscriminator("payment", typeof(commercetools.Sdk.CheckoutApi.Models.Payments.PaymentReference))]
     [SubTypeDiscriminator("payment-integration", typeof(commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.PaymentIntegrationReference))]
+    [SubTypeDiscriminator("payment-method", typeof(commercetools.Sdk.CheckoutApi.Models.Common.PaymentMethodReference))]
+    [SubTypeDiscriminator("recurring-order", typeof(commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringOrderReference))]
+    [SubTypeDiscriminator("recurring-payment", typeof(commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringPaymentReference))]
     public partial interface IReference
     {
         IReferenceTypeId TypeId { get; set; }
@@ -43,6 +46,24 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
         static commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.PaymentIntegrationReference PaymentIntegration(Action<commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.PaymentIntegrationReference> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.PaymentIntegrations.PaymentIntegrationReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Common.PaymentMethodReference PaymentMethod(Action<commercetools.Sdk.CheckoutApi.Models.Common.PaymentMethodReference> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Common.PaymentMethodReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringOrderReference RecurringOrder(Action<commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringOrderReference> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringOrderReference();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringPaymentReference RecurringPayment(Action<commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringPaymentReference> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.RecurringPayments.RecurringPaymentReference();
             init?.Invoke(t);
             return t;
         }
