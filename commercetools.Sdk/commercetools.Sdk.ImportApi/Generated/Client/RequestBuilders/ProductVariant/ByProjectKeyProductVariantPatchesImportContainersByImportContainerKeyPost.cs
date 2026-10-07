@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductVariant
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.ProductVariantPatchRequest = productVariantPatchRequest;
-            this.RequestUrl = $"/{ProjectKey}/product-variant-patches/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-variant-patches/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
         }
 
 

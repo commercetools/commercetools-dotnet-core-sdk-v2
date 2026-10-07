@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -26,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/product-discounts/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-discounts/key={Uri.EscapeDataString(Key)}";
         }
 
 

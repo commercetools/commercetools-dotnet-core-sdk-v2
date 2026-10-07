@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/standalone-prices/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetVersion()

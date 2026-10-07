@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ProjectKey = projectKey;
             this.Container = container;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/custom-objects/{Container}/{Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/custom-objects/{Uri.EscapeDataString(Container)}/{Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetVersion()

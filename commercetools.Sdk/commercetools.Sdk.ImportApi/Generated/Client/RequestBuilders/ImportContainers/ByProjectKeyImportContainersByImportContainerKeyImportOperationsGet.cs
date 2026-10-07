@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
-            this.RequestUrl = $"/{ProjectKey}/import-containers/{ImportContainerKey}/import-operations";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/import-containers/{Uri.EscapeDataString(ImportContainerKey)}/import-operations";
         }
 
         public List<string> GetLimit()

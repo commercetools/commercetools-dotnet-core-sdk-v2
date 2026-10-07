@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -35,7 +36,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.ProjectKey = projectKey;
             this.ID = id;
             this.Stream = stream;
-            this.RequestUrl = $"/{ProjectKey}/variants/{ID}/images";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/variants/{Uri.EscapeDataString(ID)}/images";
         }
 
         public List<string> GetFilename()

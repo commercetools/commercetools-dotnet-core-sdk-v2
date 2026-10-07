@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -26,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/associate-roles/{Uri.EscapeDataString(ID)}";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Graphql
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.GraphQLRequest = graphQLRequest;
-            this.RequestUrl = $"/{ProjectKey}/graphql";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/graphql";
         }
 
 

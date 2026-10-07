@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ReviewDraft = reviewDraft;
-            this.RequestUrl = $"/{ProjectKey}/reviews";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/reviews";
         }
 
         public List<string> GetExpand()

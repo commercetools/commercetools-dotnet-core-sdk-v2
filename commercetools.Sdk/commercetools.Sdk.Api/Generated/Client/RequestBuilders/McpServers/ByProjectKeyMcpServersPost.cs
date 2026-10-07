@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.McpServerDraft = mcpServerDraft;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetVersion()

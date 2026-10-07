@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/product-projections/{ID}/variant-attributes";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-projections/{Uri.EscapeDataString(ID)}/variant-attributes";
         }
 
         public List<string> GetStaged()

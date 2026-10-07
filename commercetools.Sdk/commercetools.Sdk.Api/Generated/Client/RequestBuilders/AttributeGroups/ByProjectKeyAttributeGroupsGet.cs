@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -25,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/attribute-groups";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/attribute-groups";
         }
 
         public List<string> GetExpand()

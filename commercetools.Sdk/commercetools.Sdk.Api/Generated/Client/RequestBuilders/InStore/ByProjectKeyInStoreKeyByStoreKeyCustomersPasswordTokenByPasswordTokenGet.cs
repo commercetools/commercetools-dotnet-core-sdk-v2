@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.PasswordToken = passwordToken;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/password-token={PasswordToken}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/in-store/key={Uri.EscapeDataString(StoreKey)}/customers/password-token={Uri.EscapeDataString(PasswordToken)}";
         }
 
         public List<string> GetExpand()

@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductSelections
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.ProductSelectionImportRequest = productSelectionImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/product-selections/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-selections/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
         }
 
 

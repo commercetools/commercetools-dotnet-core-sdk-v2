@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -34,7 +35,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.ProjectKey = projectKey;
             this.Key = key;
             this.CartUpdate = cartUpdate;
-            this.RequestUrl = $"/{ProjectKey}/carts/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/carts/key={Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetExpand()

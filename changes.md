@@ -47,6 +47,28 @@
 
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `ShoppingList` to type `AgentResponsesOutputType`
+- added enum `IntakeAgent` to type `AttributionSource`
+- added enum `PromotionsAgent` to type `AttributionSource`
+- added enum `ManagedCommerceMCP` to type `AttributionSource`
+- added enum `mcp-server` to type `ReferenceTypeId`
+- added enum `product` to type `ExtensionResourceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/categories`
+- added resource `/{projectKey}/in-store/key={storeKey}/categories/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/categories/{ID}`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
@@ -66,28 +88,6 @@
 - added property `taxRoundingTarget` to type `TaxRateDraft`
 - added property `restockableInDays` to type `VariantAttributesAvailability`
 - added property `restockableInDays` to type `VariantAttributesChannelAvailability`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/in-store/key={storeKey}/categories`
-- added resource `/{projectKey}/in-store/key={storeKey}/categories/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/categories/{ID}`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `ShoppingList` to type `AgentResponsesOutputType`
-- added enum `IntakeAgent` to type `AttributionSource`
-- added enum `PromotionsAgent` to type `AttributionSource`
-- added enum `ManagedCommerceMCP` to type `AttributionSource`
-- added enum `mcp-server` to type `ReferenceTypeId`
-- added enum `product` to type `ExtensionResourceTypeId`
-- added enum `InMigration` to type `ProductCatalogModel`
 </details>
 
 

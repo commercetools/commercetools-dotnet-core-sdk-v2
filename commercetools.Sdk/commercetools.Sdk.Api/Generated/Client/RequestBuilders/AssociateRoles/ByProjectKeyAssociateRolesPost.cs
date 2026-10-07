@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.AssociateRoleDraft = associateRoleDraft;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/associate-roles";
         }
 
         public List<string> GetExpand()

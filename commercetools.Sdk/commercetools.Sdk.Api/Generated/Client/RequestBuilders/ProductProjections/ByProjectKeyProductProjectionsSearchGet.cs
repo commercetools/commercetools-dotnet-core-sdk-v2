@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/product-projections/search";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-projections/search";
         }
 
         public List<string> GetMarkMatchingVariants()

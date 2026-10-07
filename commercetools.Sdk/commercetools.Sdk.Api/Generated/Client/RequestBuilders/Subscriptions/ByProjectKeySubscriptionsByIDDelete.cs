@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/subscriptions/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetVersion()
