@@ -58,6 +58,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartAddPaymentActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsAddRecurringPaymentAllocation(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartAddRecurringPaymentAllocationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartAddRecurringPaymentAllocationActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartAddRecurringPaymentAllocationActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsAddShippingMethod(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartAddShippingMethodActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartAddShippingMethodActionQueryBuilderDsl>> fn)
         {
@@ -182,6 +188,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartRemovePaymentActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartRemovePaymentActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartRemovePaymentActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsRemoveRecurringPaymentAllocation(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartRemoveRecurringPaymentAllocationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartRemoveRecurringPaymentAllocationActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartRemoveRecurringPaymentAllocationActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsRemoveShippingMethod(
@@ -422,6 +434,18 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetPurchaseOrderNumberActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetPurchaseOrderNumberActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetPurchaseOrderNumberActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetRecurringPaymentConfiguration(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentConfigurationActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentConfigurationActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentConfigurationActionQueryBuilderDsl.Of()),
+                CartUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetRecurringPaymentStrategy(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentStrategyActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentStrategyActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.CartSetRecurringPaymentStrategyActionQueryBuilderDsl.Of()),
                 CartUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> AsSetReservationExpirationInMinutes(

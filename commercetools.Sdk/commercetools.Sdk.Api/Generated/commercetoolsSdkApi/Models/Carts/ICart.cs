@@ -112,6 +112,8 @@ namespace commercetools.Sdk.Api.Models.Carts
 
         ICustomFields Custom { get; set; }
 
+        IRecurringPaymentConfiguration RecurringPaymentConfiguration { get; set; }
+
         IDiscountTypeCombination DiscountTypeCombination { get; set; }
 
         ICartLock Lock { get; set; }

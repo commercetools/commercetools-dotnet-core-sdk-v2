@@ -364,6 +364,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Carts
                 CartQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<CartQueryBuilderDsl> RecurringPaymentConfiguration(
+            Func<commercetools.Sdk.Api.Predicates.Query.Carts.RecurringPaymentConfigurationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.RecurringPaymentConfigurationQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CartQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("recurringPaymentConfiguration"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Carts.RecurringPaymentConfigurationQueryBuilderDsl.Of())),
+                CartQueryBuilderDsl.Of);
+        }
+
         public CombinationQueryPredicate<CartQueryBuilderDsl> DiscountTypeCombination(
             Func<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountTypeCombinationQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Carts.DiscountTypeCombinationQueryBuilderDsl>> fn)
         {

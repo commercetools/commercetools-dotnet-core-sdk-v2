@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("addItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartAddItemShippingAddressAction))]
     [SubTypeDiscriminator("addLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartAddLineItemAction))]
     [SubTypeDiscriminator("addPayment", typeof(commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction))]
+    [SubTypeDiscriminator("addRecurringPaymentAllocation", typeof(commercetools.Sdk.Api.Models.Carts.CartAddRecurringPaymentAllocationAction))]
     [SubTypeDiscriminator("addShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartAddShippingMethodAction))]
     [SubTypeDiscriminator("addShoppingList", typeof(commercetools.Sdk.Api.Models.Carts.CartAddShoppingListAction))]
     [SubTypeDiscriminator("applyDeltaToCustomLineItemShippingDetailsTargets", typeof(commercetools.Sdk.Api.Models.Carts.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction))]
@@ -32,6 +33,7 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("removeItemShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveItemShippingAddressAction))]
     [SubTypeDiscriminator("removeLineItem", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveLineItemAction))]
     [SubTypeDiscriminator("removePayment", typeof(commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction))]
+    [SubTypeDiscriminator("removeRecurringPaymentAllocation", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveRecurringPaymentAllocationAction))]
     [SubTypeDiscriminator("removeShippingMethod", typeof(commercetools.Sdk.Api.Models.Carts.CartRemoveShippingMethodAction))]
     [SubTypeDiscriminator("setAnonymousId", typeof(commercetools.Sdk.Api.Models.Carts.CartSetAnonymousIdAction))]
     [SubTypeDiscriminator("setBillingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetBillingAddressAction))]
@@ -72,6 +74,8 @@ namespace commercetools.Sdk.Api.Models.Carts
     [SubTypeDiscriminator("setLineItemTotalPrice", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLineItemTotalPriceAction))]
     [SubTypeDiscriminator("setLocale", typeof(commercetools.Sdk.Api.Models.Carts.CartSetLocaleAction))]
     [SubTypeDiscriminator("setPurchaseOrderNumber", typeof(commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction))]
+    [SubTypeDiscriminator("setRecurringPaymentConfiguration", typeof(commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentConfigurationAction))]
+    [SubTypeDiscriminator("setRecurringPaymentStrategy", typeof(commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentStrategyAction))]
     [SubTypeDiscriminator("setReservationExpirationInMinutes", typeof(commercetools.Sdk.Api.Models.Carts.CartSetReservationExpirationInMinutesAction))]
     [SubTypeDiscriminator("setShippingAddress", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressAction))]
     [SubTypeDiscriminator("setShippingAddressCustomField", typeof(commercetools.Sdk.Api.Models.Carts.CartSetShippingAddressCustomFieldAction))]
@@ -122,6 +126,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction AddPayment(Action<commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartAddPaymentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartAddRecurringPaymentAllocationAction AddRecurringPaymentAllocation(Action<commercetools.Sdk.Api.Models.Carts.CartAddRecurringPaymentAllocationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartAddRecurringPaymentAllocationAction();
             init?.Invoke(t);
             return t;
         }
@@ -248,6 +258,12 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction RemovePayment(Action<commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartRemovePaymentAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartRemoveRecurringPaymentAllocationAction RemoveRecurringPaymentAllocation(Action<commercetools.Sdk.Api.Models.Carts.CartRemoveRecurringPaymentAllocationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartRemoveRecurringPaymentAllocationAction();
             init?.Invoke(t);
             return t;
         }
@@ -488,6 +504,18 @@ namespace commercetools.Sdk.Api.Models.Carts
         static commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction SetPurchaseOrderNumber(Action<commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Carts.CartSetPurchaseOrderNumberAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentConfigurationAction SetRecurringPaymentConfiguration(Action<commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentConfigurationAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentConfigurationAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentStrategyAction SetRecurringPaymentStrategy(Action<commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentStrategyAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Carts.CartSetRecurringPaymentStrategyAction();
             init?.Invoke(t);
             return t;
         }
