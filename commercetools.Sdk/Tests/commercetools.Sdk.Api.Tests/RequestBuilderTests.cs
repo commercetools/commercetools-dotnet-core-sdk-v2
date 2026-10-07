@@ -228,5 +228,23 @@ namespace commercetools.Sdk.Api.Tests
             var content = request.Content.ReadAsStringAsync().Result;
             Assert.NotNull(content);
         }
+
+        [Fact]
+        public void TestPathTraverseRequest()
+        {
+            //arrange
+            var projectKey = "test";
+
+            //act
+            var request = GetClient().WithApi()
+                .WithProjectKey(projectKey)
+                .Carts()
+                .WithId("../categories")
+                .Get()
+                .Build();
+
+            //assert
+            Assert.Equal($"/{projectKey}/carts/..%2Fcategories", request.RequestUri.ToString());
+        }
     }
 }
