@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -25,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers";
         }
 
         public List<string> GetSort()

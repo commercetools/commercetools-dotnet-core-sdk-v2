@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.TaxCategoryDraft = taxCategoryDraft;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/tax-categories";
         }
 
         public List<string> GetExpand()

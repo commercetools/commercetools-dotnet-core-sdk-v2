@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -23,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/business-units/search";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/business-units/search";
         }
 
 

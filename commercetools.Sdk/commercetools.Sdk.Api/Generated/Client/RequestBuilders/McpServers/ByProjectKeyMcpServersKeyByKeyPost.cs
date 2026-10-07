@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ProjectKey = projectKey;
             this.Key = key;
             this.McpServerUpdate = mcpServerUpdate;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers/key={Uri.EscapeDataString(Key)}";
         }
 
 

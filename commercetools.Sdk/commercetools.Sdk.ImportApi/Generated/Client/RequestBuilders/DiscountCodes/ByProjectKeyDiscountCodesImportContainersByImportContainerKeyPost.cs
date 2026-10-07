@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.DiscountCodes
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.DiscountCodeImportRequest = discountCodeImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/discount-codes/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
         }
 
 

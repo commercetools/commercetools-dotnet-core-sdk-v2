@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -25,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/recurrence-policies";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurrence-policies";
         }
 
         public List<string> GetExpand()

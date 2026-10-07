@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -25,7 +26,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/applications";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/applications";
         }
 
         public List<string> GetSort()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.VariantProjections
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/variant-projections";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/variant-projections";
         }
 
         public List<string> GetWhere()

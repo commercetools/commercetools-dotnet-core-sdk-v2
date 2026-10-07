@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ExtensionUpdate = extensionUpdate;
-            this.RequestUrl = $"/{ProjectKey}/extensions/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/extensions/{Uri.EscapeDataString(ID)}";
         }
 
 

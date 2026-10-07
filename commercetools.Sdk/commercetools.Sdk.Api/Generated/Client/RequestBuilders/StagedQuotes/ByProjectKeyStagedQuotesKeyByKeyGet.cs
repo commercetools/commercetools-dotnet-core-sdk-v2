@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/staged-quotes/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/staged-quotes/key={Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetExpand()

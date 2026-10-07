@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InBusiness
             this.ProjectKey = projectKey;
             this.BusinessUnitKey = businessUnitKey;
             this.MyBusinessUnitAssociateDraft = myBusinessUnitAssociateDraft;
-            this.RequestUrl = $"/{ProjectKey}/in-business-unit/key={BusinessUnitKey}/me/customers";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/in-business-unit/key={Uri.EscapeDataString(BusinessUnitKey)}/me/customers";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -34,7 +35,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             this.ProjectKey = projectKey;
             this.ID = id;
             this.DiscountCodeUpdate = discountCodeUpdate;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/discount-codes/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetExpand()

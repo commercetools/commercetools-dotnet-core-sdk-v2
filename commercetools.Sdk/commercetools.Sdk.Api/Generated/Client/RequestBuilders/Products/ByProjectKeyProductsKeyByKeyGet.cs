@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/products/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/products/key={Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetPriceCurrency()

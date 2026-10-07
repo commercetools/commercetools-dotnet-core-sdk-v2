@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -26,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.CustomerId = customerId;
-            this.RequestUrl = $"/{ProjectKey}/carts/customer-id={CustomerId}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/carts/customer-id={Uri.EscapeDataString(CustomerId)}";
         }
 
 

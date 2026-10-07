@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ProjectKey = projectKey;
             this.ID = id;
             this.SubscriptionUpdate = subscriptionUpdate;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/subscriptions/{Uri.EscapeDataString(ID)}";
         }
 
 

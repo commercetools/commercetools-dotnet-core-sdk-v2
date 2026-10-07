@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ProductDraft = productDraft;
-            this.RequestUrl = $"/{ProjectKey}/products";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/products";
         }
 
         public List<string> GetPriceCurrency()

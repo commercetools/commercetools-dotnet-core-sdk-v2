@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/discount-codes/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetDataErasure()

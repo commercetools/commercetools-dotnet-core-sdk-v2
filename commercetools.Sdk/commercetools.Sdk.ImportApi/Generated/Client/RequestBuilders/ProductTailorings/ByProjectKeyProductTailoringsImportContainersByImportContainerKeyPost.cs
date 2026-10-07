@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ProductTailorings
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.ProductTailoringImportRequest = productTailoringImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/product-tailorings/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-tailorings/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
         }
 
 

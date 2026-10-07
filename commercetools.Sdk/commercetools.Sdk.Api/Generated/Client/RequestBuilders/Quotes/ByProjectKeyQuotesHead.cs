@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Quotes
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/quotes";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/quotes";
         }
 
         public List<string> GetWhere()

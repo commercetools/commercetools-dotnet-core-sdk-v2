@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CategoryDraft = categoryDraft;
-            this.RequestUrl = $"/{ProjectKey}/categories";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/categories";
         }
 
         public List<string> GetExpand()

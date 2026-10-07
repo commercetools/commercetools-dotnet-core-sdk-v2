@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.ProjectKey = projectKey;
             this.ID = id;
             this.OrderEditApply = orderEditApply;
-            this.RequestUrl = $"/{ProjectKey}/orders/edits/{ID}/apply";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/orders/edits/{Uri.EscapeDataString(ID)}/apply";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -34,7 +35,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             this.ProjectKey = projectKey;
             this.ID = id;
             this.AssociateRoleUpdate = associateRoleUpdate;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/associate-roles/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetExpand()
