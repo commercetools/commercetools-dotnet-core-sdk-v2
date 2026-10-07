@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/channels/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/channels/key={Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetVersion()

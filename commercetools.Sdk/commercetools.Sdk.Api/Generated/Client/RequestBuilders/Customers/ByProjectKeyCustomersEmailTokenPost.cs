@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CustomerCreateEmailToken = customerCreateEmailToken;
-            this.RequestUrl = $"/{ProjectKey}/customers/email-token";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/customers/email-token";
         }
 
 

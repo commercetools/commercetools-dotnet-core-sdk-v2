@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -26,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/payment-methods/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-methods/{Uri.EscapeDataString(ID)}";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -28,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CartDiscounts
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/cart-discounts/key={Key}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/cart-discounts/key={Uri.EscapeDataString(Key)}";
         }
 
         public List<string> GetVersion()

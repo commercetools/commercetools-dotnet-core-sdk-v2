@@ -1,3 +1,4 @@
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -26,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions/{ID}/health";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/subscriptions/{Uri.EscapeDataString(ID)}/health";
         }
 
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.StandalonePriceDraft = standalonePriceDraft;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/standalone-prices";
         }
 
         public List<string> GetExpand()

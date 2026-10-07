@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories/{ID}";
+            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/tax-categories/{Uri.EscapeDataString(ID)}";
         }
 
         public List<string> GetExpand()
