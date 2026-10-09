@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -25,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-projections";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/product-projections";
         }
 
         public List<string> GetWhere()

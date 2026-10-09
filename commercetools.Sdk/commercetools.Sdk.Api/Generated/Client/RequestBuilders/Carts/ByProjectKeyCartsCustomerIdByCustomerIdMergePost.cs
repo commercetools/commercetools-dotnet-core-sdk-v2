@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.ProjectKey = projectKey;
             this.CustomerId = customerId;
             this.MergeCartDraft = mergeCartDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/carts/customer-id={Uri.EscapeDataString(CustomerId)}/merge";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/carts/customer-id={EscapePathParameter(CustomerId)}/merge";
         }
 
 

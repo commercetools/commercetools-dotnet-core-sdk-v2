@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Quotes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/quotes/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/quotes/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetDataErasure()

@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -25,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers/types";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/mcp-servers/types";
         }
 
 

@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -26,7 +25,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.RecurringPayments
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurring-payments";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurring-payments";
         }
 
         public List<string> GetSort()

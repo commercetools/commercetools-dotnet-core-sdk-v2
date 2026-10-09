@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ImportContainerDraft = importContainerDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/import-containers";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/import-containers";
         }
 
 

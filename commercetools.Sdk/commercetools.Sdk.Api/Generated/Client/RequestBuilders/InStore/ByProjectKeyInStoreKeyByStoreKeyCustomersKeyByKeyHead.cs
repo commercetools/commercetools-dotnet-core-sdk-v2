@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -30,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.Key = key;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/in-store/key={Uri.EscapeDataString(StoreKey)}/customers/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/in-store/key={EscapePathParameter(StoreKey)}/customers/key={EscapePathParameter(Key)}";
         }
 
 

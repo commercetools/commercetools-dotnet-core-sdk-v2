@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -28,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.McpServerType = mcpServerType;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/mcp-servers/types/{Uri.EscapeDataString(McpServerType)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/mcp-servers/types/{EscapePathParameter(McpServerType)}";
         }
 
         public List<string> GetMajorVersion()

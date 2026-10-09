@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ZoneDraft = zoneDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/zones";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/zones";
         }
 
         public List<string> GetExpand()

@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this._formParams = formParams ?? new List<KeyValuePair<string, string>>();
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/product-projections/search";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/product-projections/search";
         }
 
 

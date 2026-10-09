@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/inventory/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/inventory/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetVersion()

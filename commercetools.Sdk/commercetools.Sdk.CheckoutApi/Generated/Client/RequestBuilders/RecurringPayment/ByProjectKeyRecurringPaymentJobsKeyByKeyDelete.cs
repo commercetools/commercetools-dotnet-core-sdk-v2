@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.RecurringPayment
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurring-payment-jobs/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurring-payment-jobs/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetVersion()

@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-integrations/{Uri.EscapeDataString(Id)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/payment-integrations/{EscapePathParameter(Id)}";
         }
 
         public List<string> GetVersion()

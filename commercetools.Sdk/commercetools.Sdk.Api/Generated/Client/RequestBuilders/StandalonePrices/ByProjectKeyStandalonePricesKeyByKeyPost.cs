@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             this.ProjectKey = projectKey;
             this.Key = key;
             this.StandalonePriceUpdate = standalonePriceUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/standalone-prices/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/standalone-prices/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()

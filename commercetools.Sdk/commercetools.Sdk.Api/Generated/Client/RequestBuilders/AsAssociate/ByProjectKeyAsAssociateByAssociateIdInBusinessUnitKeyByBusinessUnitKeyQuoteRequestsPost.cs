@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -38,7 +37,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.AssociateId = associateId;
             this.BusinessUnitKey = businessUnitKey;
             this.QuoteRequestDraft = quoteRequestDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/as-associate/{Uri.EscapeDataString(AssociateId)}/in-business-unit/key={Uri.EscapeDataString(BusinessUnitKey)}/quote-requests";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/as-associate/{EscapePathParameter(AssociateId)}/in-business-unit/key={EscapePathParameter(BusinessUnitKey)}/quote-requests";
         }
 
         public List<string> GetExpand()

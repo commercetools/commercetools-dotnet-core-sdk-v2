@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.OrderPatches
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.OrderPatchImportRequest = orderPatchImportRequest;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/order-patches/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/order-patches/import-containers/{EscapePathParameter(ImportContainerKey)}";
         }
 
 

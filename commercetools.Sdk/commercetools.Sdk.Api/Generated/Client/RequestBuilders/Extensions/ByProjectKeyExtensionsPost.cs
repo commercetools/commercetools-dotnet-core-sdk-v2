@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ExtensionDraft = extensionDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/extensions";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/extensions";
         }
 
 

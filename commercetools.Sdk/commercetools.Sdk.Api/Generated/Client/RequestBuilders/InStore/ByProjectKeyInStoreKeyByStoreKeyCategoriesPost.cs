@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.CategoryDraft = categoryDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/in-store/key={Uri.EscapeDataString(StoreKey)}/categories";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/in-store/key={EscapePathParameter(StoreKey)}/categories";
         }
 
         public List<string> GetExpand()

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.OrderFromCartDraft = orderFromCartDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/orders";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/orders";
         }
 
         public List<string> GetExpand()

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ShippingMethodUpdate = shippingMethodUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/shipping-methods/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/shipping-methods/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()

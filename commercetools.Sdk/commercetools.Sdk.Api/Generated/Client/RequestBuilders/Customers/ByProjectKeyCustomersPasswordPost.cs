@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CustomerChangePassword = customerChangePassword;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/customers/password";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/customers/password";
         }
 
 

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.States
             this.ProjectKey = projectKey;
             this.ID = id;
             this.StateUpdate = stateUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/states/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/states/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetExpand()

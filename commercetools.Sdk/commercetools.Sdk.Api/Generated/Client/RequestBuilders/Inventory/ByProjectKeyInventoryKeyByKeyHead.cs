@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -27,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/inventory/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/inventory/key={EscapePathParameter(Key)}";
         }
 
 

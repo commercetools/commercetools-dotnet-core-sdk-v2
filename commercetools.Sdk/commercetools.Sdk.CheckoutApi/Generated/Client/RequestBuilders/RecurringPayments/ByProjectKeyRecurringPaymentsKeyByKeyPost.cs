@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.RecurringPayments
             this.ProjectKey = projectKey;
             this.Key = key;
             this.RecurringPaymentUpdateActions = recurringPaymentUpdateActions;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurring-payments/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurring-payments/key={EscapePathParameter(Key)}";
         }
 
 

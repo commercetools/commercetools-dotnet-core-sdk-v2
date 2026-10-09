@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.RecurrencePolicyDraft = recurrencePolicyDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurrence-policies";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurrence-policies";
         }
 
         public List<string> GetExpand()

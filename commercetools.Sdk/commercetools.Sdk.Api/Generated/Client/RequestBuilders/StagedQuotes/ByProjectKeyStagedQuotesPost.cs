@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.StagedQuoteDraft = stagedQuoteDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/staged-quotes";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/staged-quotes";
         }
 
         public List<string> GetExpand()

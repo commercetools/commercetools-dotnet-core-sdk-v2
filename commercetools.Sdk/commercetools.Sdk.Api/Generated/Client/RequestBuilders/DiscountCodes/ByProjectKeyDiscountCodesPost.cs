@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.DiscountCodeDraft = discountCodeDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/discount-codes";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/discount-codes";
         }
 
         public List<string> GetExpand()

@@ -32,7 +32,7 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             this.ProjectKey = projectKey;
             this.ResourceType = resourceType;
             this.ID = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/{Uri.EscapeDataString(ResourceType)}/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/{EscapePathParameter(ResourceType)}/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetDateFrom()

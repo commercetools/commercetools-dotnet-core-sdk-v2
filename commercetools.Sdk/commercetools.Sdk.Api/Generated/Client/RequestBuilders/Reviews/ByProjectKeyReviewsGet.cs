@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -26,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/reviews";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/reviews";
         }
 
         public List<string> GetExpand()

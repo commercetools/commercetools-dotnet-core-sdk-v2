@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -27,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurrence-policies/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurrence-policies/{EscapePathParameter(ID)}";
         }
 
 

@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.OrderSearchRequest = orderSearchRequest;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/orders/search";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/orders/search";
         }
 
 

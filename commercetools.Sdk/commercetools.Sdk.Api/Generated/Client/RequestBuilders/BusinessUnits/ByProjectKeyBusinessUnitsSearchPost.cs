@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.BusinessUnitSearchRequest = businessUnitSearchRequest;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/business-units/search";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/business-units/search";
         }
 
 

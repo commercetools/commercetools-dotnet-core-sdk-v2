@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents
             this.ProjectKey = projectKey;
             this.PaymentId = paymentId;
             this.PaymentIntent = paymentIntent;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-intents/{Uri.EscapeDataString(PaymentId)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/payment-intents/{EscapePathParameter(PaymentId)}";
         }
 
 

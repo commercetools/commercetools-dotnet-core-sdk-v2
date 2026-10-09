@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.AttributeGroupDraft = attributeGroupDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/attribute-groups";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/attribute-groups";
         }
 
         public List<string> GetExpand()

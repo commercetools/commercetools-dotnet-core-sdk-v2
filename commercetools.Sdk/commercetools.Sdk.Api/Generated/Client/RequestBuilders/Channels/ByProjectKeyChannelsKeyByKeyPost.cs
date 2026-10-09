@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ChannelUpdate = channelUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/channels/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/channels/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()
