@@ -69,7 +69,7 @@ public class CheckoutIntegrationTests
                 },
                 TransactionItems = new List<ITransactionItemDraft>()
                 {
-                    new TransactionItemDraft()
+                    new TransactionItemPaymentIntegrationDraft()
                     {
                         Amount = new Amount() { CentAmount = 100, CurrencyCode = "EUR" },
                         PaymentIntegration = new PaymentIntegrationResourceIdentifier()
