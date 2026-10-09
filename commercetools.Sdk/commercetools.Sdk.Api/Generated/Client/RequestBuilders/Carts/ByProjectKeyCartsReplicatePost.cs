@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ReplicaCartDraft = replicaCartDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/carts/replicate";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/carts/replicate";
         }
 
 

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ProjectKey = projectKey;
             this.Container = container;
             this.Key = key;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/custom-objects/{Uri.EscapeDataString(Container)}/{Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/custom-objects/{EscapePathParameter(Container)}/{EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()

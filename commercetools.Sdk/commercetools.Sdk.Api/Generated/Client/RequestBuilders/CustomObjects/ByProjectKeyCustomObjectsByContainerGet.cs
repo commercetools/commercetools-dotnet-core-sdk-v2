@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Container = container;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/custom-objects/{Uri.EscapeDataString(Container)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/custom-objects/{EscapePathParameter(Container)}";
         }
 
         public List<string> GetSort()

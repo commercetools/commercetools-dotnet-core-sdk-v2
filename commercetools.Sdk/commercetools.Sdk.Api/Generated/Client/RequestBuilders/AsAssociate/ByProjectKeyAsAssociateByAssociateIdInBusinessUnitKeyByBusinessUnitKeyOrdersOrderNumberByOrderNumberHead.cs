@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -33,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.AssociateId = associateId;
             this.BusinessUnitKey = businessUnitKey;
             this.OrderNumber = orderNumber;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/as-associate/{Uri.EscapeDataString(AssociateId)}/in-business-unit/key={Uri.EscapeDataString(BusinessUnitKey)}/orders/order-number={Uri.EscapeDataString(OrderNumber)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/as-associate/{EscapePathParameter(AssociateId)}/in-business-unit/key={EscapePathParameter(BusinessUnitKey)}/orders/order-number={EscapePathParameter(OrderNumber)}";
         }
 
 

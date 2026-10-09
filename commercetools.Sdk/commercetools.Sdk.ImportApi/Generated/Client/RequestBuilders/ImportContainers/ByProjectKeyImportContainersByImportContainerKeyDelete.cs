@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Threading;
@@ -27,7 +26,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/import-containers/{Uri.EscapeDataString(ImportContainerKey)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/import-containers/{EscapePathParameter(ImportContainerKey)}";
         }
 
 

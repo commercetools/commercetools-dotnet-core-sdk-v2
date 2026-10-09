@@ -26,7 +26,7 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.Projects
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}";
         }
 
         public List<string> GetResourceTypes()

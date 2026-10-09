@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests
             this.ProjectKey = projectKey;
             this.ID = id;
             this.QuoteRequestUpdate = quoteRequestUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/quote-requests/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/quote-requests/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetExpand()

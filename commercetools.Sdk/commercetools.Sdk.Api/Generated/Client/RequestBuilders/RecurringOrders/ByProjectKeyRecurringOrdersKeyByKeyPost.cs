@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders
             this.ProjectKey = projectKey;
             this.Key = key;
             this.RecurringOrderUpdate = recurringOrderUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/recurring-orders/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/recurring-orders/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()

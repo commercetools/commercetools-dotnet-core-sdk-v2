@@ -79,6 +79,24 @@ namespace commercetools.Base.Client
             return request;
         }
 
+        /// <summary>
+        /// Escapes a value so that it can be used as a single path segment (or part of one).
+        /// <see cref="Uri.EscapeDataString"/> does not escape dots, and <see cref="Uri"/> removes "." and ".."
+        /// segments even if they are percent-encoded, so these values are rejected.
+        /// </summary>
+        /// <param name="value">the path parameter value</param>
+        /// <returns>the escaped value</returns>
+        /// <exception cref="ArgumentException">if the value is "." or ".."</exception>
+        public static string EscapePathParameter(string value)
+        {
+            if (value == "." || value == "..")
+            {
+                throw new ArgumentException($"The path parameter value '{value}' is not allowed.", nameof(value));
+            }
+
+            return Uri.EscapeDataString(value);
+        }
+
         private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
         {
             var keyValuePairs = queryParams.ToList();

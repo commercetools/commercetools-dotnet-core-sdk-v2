@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             this.ProjectKey = projectKey;
             this.Id = id;
             this.ApplicationUpdateActions = applicationUpdateActions;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/applications/{Uri.EscapeDataString(Id)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/applications/{EscapePathParameter(Id)}";
         }
 
 

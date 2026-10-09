@@ -26,7 +26,16 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
         PaymentIntegration,
 
         [Description("deployment")]
-        Deployment
+        Deployment,
+
+        [Description("payment-method")]
+        PaymentMethod,
+
+        [Description("recurring-payment")]
+        RecurringPayment,
+
+        [Description("recurring-order")]
+        RecurringOrder
     }
 
     public class ReferenceTypeIdWrapper : IReferenceTypeId
@@ -70,6 +79,15 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
         public static IReferenceTypeId Deployment = new ReferenceTypeIdWrapper
         { Value = ReferenceTypeId.Deployment, JsonName = "deployment" };
 
+        public static IReferenceTypeId PaymentMethod = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.PaymentMethod, JsonName = "payment-method" };
+
+        public static IReferenceTypeId RecurringPayment = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.RecurringPayment, JsonName = "recurring-payment" };
+
+        public static IReferenceTypeId RecurringOrder = new ReferenceTypeIdWrapper
+        { Value = ReferenceTypeId.RecurringOrder, JsonName = "recurring-order" };
+
         ReferenceTypeId? Value { get; }
 
         static IReferenceTypeId[] Values()
@@ -81,7 +99,10 @@ namespace commercetools.Sdk.CheckoutApi.Models.Common
                  Payment ,
                  Application ,
                  PaymentIntegration ,
-                 Deployment
+                 Deployment ,
+                 PaymentMethod ,
+                 RecurringPayment ,
+                 RecurringOrder
              };
         }
         static IReferenceTypeId FindEnum(string value)

@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Agents
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.AgentResponsesRequest = agentResponsesRequest;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/agents/intake/v1/responses";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/agents/intake/v1/responses";
         }
 
 

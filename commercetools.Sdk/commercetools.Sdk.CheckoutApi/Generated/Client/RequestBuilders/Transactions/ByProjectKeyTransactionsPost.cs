@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Transactions
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.TransactionDraft = transactionDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/transactions";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/transactions";
         }
 
 

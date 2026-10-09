@@ -7,8 +7,10 @@ namespace commercetools.Sdk.CheckoutApi.Models.Errors
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.CheckoutApi.Models.Errors.ErrorObject))]
     [SubTypeDiscriminator("ConcurrentModification", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.ConcurrentModificationError))]
     [SubTypeDiscriminator("ConnectorFailed", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.ConnectorFailedError))]
+    [SubTypeDiscriminator("ConnectorTimeout", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.ConnectorTimeoutError))]
     [SubTypeDiscriminator("DuplicateFieldWithConflictingResource", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.DuplicateFieldWithConflictingResourceError))]
     [SubTypeDiscriminator("General", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.GeneralError))]
+    [SubTypeDiscriminator("InternalConstraintViolated", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.InternalConstraintViolatedError))]
     [SubTypeDiscriminator("InvalidField", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.InvalidFieldError))]
     [SubTypeDiscriminator("InvalidInput", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.InvalidInputError))]
     [SubTypeDiscriminator("InvalidJsonInput", typeof(commercetools.Sdk.CheckoutApi.Models.Errors.InvalidJsonInputError))]
@@ -40,6 +42,12 @@ namespace commercetools.Sdk.CheckoutApi.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.CheckoutApi.Models.Errors.ConnectorTimeoutError ConnectorTimeout(Action<commercetools.Sdk.CheckoutApi.Models.Errors.ConnectorTimeoutError> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Errors.ConnectorTimeoutError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.CheckoutApi.Models.Errors.DuplicateFieldWithConflictingResourceError DuplicateFieldWithConflictingResource(Action<commercetools.Sdk.CheckoutApi.Models.Errors.DuplicateFieldWithConflictingResourceError> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.Errors.DuplicateFieldWithConflictingResourceError();
@@ -49,6 +57,12 @@ namespace commercetools.Sdk.CheckoutApi.Models.Errors
         static commercetools.Sdk.CheckoutApi.Models.Errors.GeneralError General(Action<commercetools.Sdk.CheckoutApi.Models.Errors.GeneralError> init = null)
         {
             var t = new commercetools.Sdk.CheckoutApi.Models.Errors.GeneralError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.CheckoutApi.Models.Errors.InternalConstraintViolatedError InternalConstraintViolated(Action<commercetools.Sdk.CheckoutApi.Models.Errors.InternalConstraintViolatedError> init = null)
+        {
+            var t = new commercetools.Sdk.CheckoutApi.Models.Errors.InternalConstraintViolatedError();
             init?.Invoke(t);
             return t;
         }

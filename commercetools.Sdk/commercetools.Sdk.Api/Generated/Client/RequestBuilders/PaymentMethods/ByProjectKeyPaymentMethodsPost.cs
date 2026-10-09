@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -32,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.PaymentMethodDraft = paymentMethodDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-methods";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/payment-methods";
         }
 
         public List<string> GetExpand()

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ProductUpdate = productUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/products/{Uri.EscapeDataString(ID)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/products/{EscapePathParameter(ID)}";
         }
 
         public List<string> GetPriceCurrency()

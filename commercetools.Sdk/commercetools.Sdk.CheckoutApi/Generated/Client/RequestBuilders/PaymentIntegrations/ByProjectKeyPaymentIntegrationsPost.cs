@@ -1,4 +1,3 @@
-using System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +30,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.PaymentIntegrationDraft = paymentIntegrationDraft;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-integrations";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/payment-integrations";
         }
 
 

@@ -3,119 +3,131 @@
 <details>
 <summary>Removed Type(s)</summary>
 
-- :warning: removed type `CircularDependencyError`
-- :warning: removed type `MissingDependencyError`
-- :warning: removed type `GraphQLCircularDependencyError`
-- :warning: removed type `GraphQLMissingDependencyError`
+- :warning: removed type `ProductTypeChangeSavedToLineItemAction`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `AgentMissingShoppingListNameError`
-- added type `AgentResponsesShoppingListSuccess`
-- added type `AgentShoppingListCreationFailedError`
-- added type `GraphQLAgentBusinessUnitAmbiguousError`
-- added type `GraphQLAgentBusinessUnitLimitExceededError`
-- added type `GraphQLAgentBusinessUnitUnresolvedError`
-- added type `GraphQLAgentExtractionFailedError`
-- added type `GraphQLAgentFeatureDisabledError`
-- added type `GraphQLAgentMissingCountryError`
-- added type `GraphQLAgentMissingCustomerEmailError`
-- added type `GraphQLAgentMissingEntityTypeError`
-- added type `GraphQLAgentMissingShoppingListNameError`
-- added type `GraphQLAgentNoLineItemsExtractedError`
-- added type `GraphQLAgentOutOfScopeError`
-- added type `GraphQLAgentProductSearchNotEnabledError`
-- added type `GraphQLAgentProductsNotFoundError`
-- added type `GraphQLAgentQuoteRequestCreationFailedError`
-- added type `GraphQLAgentShoppingListCreationFailedError`
-- added type `GraphQLAgentStoreAmbiguousError`
-- added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
-- added type `GraphQLAgentStoreUnresolvedError`
-- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
-- added type `CategoryAddStoreAction`
-- added type `CategoryRemoveStoreAction`
-- added type `CategorySetStoresAction`
-- added type `ExtensionCircularDependencyError`
-- added type `GraphQLExtensionCircularDependencyError`
-- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
-- added type `ProductTypeChangeSavedToLineItemAction`
-- added type `TaxRoundingTarget`
+- added type `AbsoluteAllocation`
+- added type `AbsoluteAllocationDraft`
+- added type `Allocation`
+- added type `AllocationDraft`
+- added type `PaymentAllocationDraft`
+- added type `PaymentStrategy`
+- added type `RecurringPaymentAllocation`
+- added type `RecurringPaymentConfiguration`
+- added type `RecurringPaymentConfigurationDraft`
+- added type `RelativeAllocation`
+- added type `RelativeAllocationDraft`
+- added type `CartAddRecurringPaymentAllocationAction`
+- added type `CartRemoveRecurringPaymentAllocationAction`
+- added type `CartSetRecurringPaymentConfigurationAction`
+- added type `CartSetRecurringPaymentStrategyAction`
+- added type `ProductTypeSetSavedToLineItemAction`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
-- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
-- added property `participateInBestDealSelection` to type `DirectDiscount`
-- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
-- added property `taxRoundingTarget` to type `ExternalTaxRateDraft`
-- added property `stores` to type `Category`
-- added property `stores` to type `CategoryDraft`
-- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
-- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
-- added property `savedToLineItem` to type `AttributeDefinition`
-- added property `savedToLineItem` to type `AttributeDefinitionDraft`
-- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
-- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
-- added property `taxRoundingTarget` to type `TaxRate`
-- added property `taxRoundingTarget` to type `TaxRateDraft`
-- added property `restockableInDays` to type `VariantAttributesAvailability`
-- added property `restockableInDays` to type `VariantAttributesChannelAvailability`
+- added property `recurringPaymentConfiguration` to type `Cart`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `PaymentMethodReference`
+- added type `ConnectorTimeoutError`
+- added type `InternalConstraintViolatedError`
+- added type `PaginatedRecurringPaymentJob`
+- added type `RecurringPaymentJob`
+- added type `RecurringPaymentJobDraft`
+- added type `RecurringPaymentJobError`
+- added type `RecurringPaymentJobState`
+- added type `RecurringPaymentJobStatus`
+- added type `PaginatedRecurringPayment`
+- added type `PaymentMethodConfiguration`
+- added type `RecurringOrderReference`
+- added type `RecurringPayment`
+- added type `RecurringPaymentDraft`
+- added type `RecurringPaymentReference`
+- added type `RecurringPaymentAddPaymentMethodConfigurationUpdateAction`
+- added type `RecurringPaymentSetKeyUpdateAction`
+- added type `RecurringPaymentSetPaymentMethodConfigurationUpdateAction`
+- added type `RecurringPaymentSetRecurringOrderUpdateAction`
+- added type `RecurringPaymentUpdateAction`
+- added type `RecurringPaymentUpdateActions`
+- added type `TransactionItemPaymentIntegration`
+- added type `TransactionItemPaymentIntegrationDraft`
+- added type `TransactionItemRecurring`
+- added type `TransactionItemRecurringDraft`
 </details>
 
 
 <details>
-<summary>Added Resource(s)</summary>
+<summary>Removed Property(s)</summary>
 
-- added resource `/{projectKey}/in-store/key={storeKey}/categories`
-- added resource `/{projectKey}/in-store/key={storeKey}/categories/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/categories/{ID}`
+- :warning: removed property `paymentIntegration` from type `TransactionItem`
+- :warning: removed property `paymentIntegration` from type `TransactionItemDraft`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `type` to type `TransactionItem`
+- added property `type` to type `TransactionItemDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `cart` of type `Transaction` to be required
 </details>
 
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `ShoppingList` to type `AgentResponsesOutputType`
-- added enum `IntakeAgent` to type `AttributionSource`
-- added enum `PromotionsAgent` to type `AttributionSource`
-- added enum `ManagedCommerceMCP` to type `AttributionSource`
-- added enum `mcp-server` to type `ReferenceTypeId`
-- added enum `product` to type `ExtensionResourceTypeId`
-- added enum `InMigration` to type `ProductCatalogModel`
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `recurring-payment` to type `ReferenceTypeId`
+- added enum `recurring-order` to type `ReferenceTypeId`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/recurring-payment-jobs`
+- added resource `/{projectKey}/recurring-payments`
+- added resource `/{projectKey}/recurring-payment-jobs/{id}`
+- added resource `/{projectKey}/recurring-payment-jobs/key={key}`
+- added resource `/{projectKey}/recurring-payments/{id}`
+- added resource `/{projectKey}/recurring-payments/key={key}`
 </details>
 
 
 <details>
 <summary>Added Method(s)</summary>
 
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().post()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().post()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withKey().delete()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().get()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().post()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().categories().withId().delete()`
-</details>
-
-**History changes**
-
-<details>
-<summary>Added QueryParameter(s)</summary>
-
-- added query parameter `userIds` to method `get /{projectKey}`
-- added query parameter `resourceIds` to method `get /{projectKey}`
-- added query parameter `userIds` to method `get /{projectKey}/{resourceType}`
-- added query parameter `resourceIds` to method `get /{projectKey}/{resourceType}`
-- added query parameter `userIds` to method `get /{projectKey}/{resourceType}/{ID}`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().post()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().delete()`
 </details>
 

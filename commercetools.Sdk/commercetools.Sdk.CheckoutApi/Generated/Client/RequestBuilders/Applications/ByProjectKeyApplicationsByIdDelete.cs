@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/applications/{Uri.EscapeDataString(Id)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/applications/{EscapePathParameter(Id)}";
         }
 
         public List<string> GetVersion()

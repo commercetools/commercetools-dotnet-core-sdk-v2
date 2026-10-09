@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -35,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods
             this.ProjectKey = projectKey;
             this.Key = key;
             this.PaymentMethodUpdate = paymentMethodUpdate;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/payment-methods/key={Uri.EscapeDataString(Key)}";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/payment-methods/key={EscapePathParameter(Key)}";
         }
 
         public List<string> GetExpand()

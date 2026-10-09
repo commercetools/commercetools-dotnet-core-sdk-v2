@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
@@ -40,7 +39,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
             this.ProductID = productId;
             this.Stream = stream;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/in-store/key={Uri.EscapeDataString(StoreKey)}/products/{Uri.EscapeDataString(ProductID)}/product-tailoring/images";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/in-store/key={EscapePathParameter(StoreKey)}/products/{EscapePathParameter(ProductID)}/product-tailoring/images";
         }
 
         public List<string> GetFilename()

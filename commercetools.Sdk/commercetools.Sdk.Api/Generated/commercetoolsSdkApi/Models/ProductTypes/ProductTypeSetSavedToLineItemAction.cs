@@ -3,16 +3,16 @@
 namespace commercetools.Sdk.Api.Models.ProductTypes
 {
 
-    public partial class ProductTypeChangeSavedToLineItemAction : IProductTypeChangeSavedToLineItemAction
+    public partial class ProductTypeSetSavedToLineItemAction : IProductTypeSetSavedToLineItemAction
     {
         public string Action { get; set; }
 
         public string AttributeName { get; set; }
 
         public bool SavedToLineItem { get; set; }
-        public ProductTypeChangeSavedToLineItemAction()
+        public ProductTypeSetSavedToLineItemAction()
         {
-            this.Action = "changeSavedToLineItem";
+            this.Action = "setSavedToLineItem";
         }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -29,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{Uri.EscapeDataString(ProjectKey)}/products/key={Uri.EscapeDataString(Key)}/product-selections";
+            this.RequestUrl = $"/{EscapePathParameter(ProjectKey)}/products/key={EscapePathParameter(Key)}/product-selections";
         }
 
         public List<string> GetWithTotal()
