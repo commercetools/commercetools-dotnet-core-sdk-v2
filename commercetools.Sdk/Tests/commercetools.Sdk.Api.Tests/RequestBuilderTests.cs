@@ -1,4 +1,6 @@
+using System;
 using Xunit;
+using commercetools.Sdk.Api.Client.RequestBuilders.Carts;
 using System.Net.Http;
 using System.Collections.Generic;
 using commercetools.Sdk.Api.Models.Categories;
@@ -245,6 +247,28 @@ namespace commercetools.Sdk.Api.Tests
 
             //assert
             Assert.Equal($"/{projectKey}/carts/..%2Fcategories", request.RequestUri.ToString());
+        }
+
+        [Theory]
+        [InlineData("..")]
+        [InlineData(".")]
+        public void EscapePathParameterRejectsDotSegments(string value)
+        {
+            Assert.Throws<ArgumentException>(() =>
+                ApiMethod<ByProjectKeyCartsByIDGet>.EscapePathParameter(value));
+        }
+
+        [Theory]
+        [InlineData("../categories", "..%2Fcategories")]
+        [InlineData("/evil.example", "%2Fevil.example")]
+        [InlineData("a?limit=500#", "a%3Flimit%3D500%23")]
+        [InlineData("a\\b", "a%5Cb")]
+        [InlineData("%2e%2e", "%252e%252e")]
+        [InlineData("...", "...")]
+        [InlineData("my-key_1", "my-key_1")]
+        public void EscapePathParameterEncodesReservedCharacters(string value, string expected)
+        {
+            Assert.Equal(expected, ApiMethod<ByProjectKeyCartsByIDGet>.EscapePathParameter(value));
         }
     }
 }
