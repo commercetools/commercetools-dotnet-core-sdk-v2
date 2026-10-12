@@ -31,5 +31,6 @@ var searchData=
   ['lockedfielderror_28',['LockedFieldError',['../d8/d3c/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_errors_1_1_locked_field_error.html',1,'commercetools::Sdk::Api::Models::Errors']]],
   ['loggerhandler_29',['LoggerHandler',['../d1/d2c/classcommercetools_1_1_base_1_1_client_1_1_logger_handler.html',1,'commercetools::Base::Client']]],
   ['loggerhandlerfactory_30',['LoggerHandlerFactory',['../d0/d1f/classcommercetools_1_1_base_1_1_client_1_1_logger_handler_factory.html',1,'commercetools::Base::Client']]],
-  ['longattribute_31',['LongAttribute',['../dc/d21/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_long_attribute.html',1,'commercetools::Sdk::Api::Models::Products']]]
+  ['loggerhandleroptions_31',['LoggerHandlerOptions',['../d8/dd1/classcommercetools_1_1_base_1_1_client_1_1_logger_handler_options.html',1,'commercetools::Base::Client']]],
+  ['longattribute_32',['LongAttribute',['../dc/d21/classcommercetools_1_1_sdk_1_1_api_1_1_models_1_1_products_1_1_long_attribute.html',1,'commercetools::Sdk::Api::Models::Products']]]
 ];
