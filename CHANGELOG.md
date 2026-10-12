@@ -1,4 +1,10 @@
 
+# 13.1.1 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/13.1.0...13.1.1
+
 # 12.13.1 (2026-10-12)
 
 - request builders throw on path traversal
