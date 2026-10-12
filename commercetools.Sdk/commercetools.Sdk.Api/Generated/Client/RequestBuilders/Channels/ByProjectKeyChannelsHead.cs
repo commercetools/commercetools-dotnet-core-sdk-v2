@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/channels";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/channels";
         }
 
         public List<string> GetWhere()

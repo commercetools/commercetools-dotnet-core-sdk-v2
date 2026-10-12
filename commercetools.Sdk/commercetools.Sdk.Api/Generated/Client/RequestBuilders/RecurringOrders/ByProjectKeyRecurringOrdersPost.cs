@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.RecurringOrderDraft = recurringOrderDraft;
-            this.RequestUrl = $"/{ProjectKey}/recurring-orders";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurring-orders";
         }
 
         public List<string> GetExpand()

@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders
             this.ProjectKey = projectKey;
             this.ID = id;
             this.RecurringOrderUpdate = recurringOrderUpdate;
-            this.RequestUrl = $"/{ProjectKey}/recurring-orders/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurring-orders/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ZoneDraft = zoneDraft;
-            this.RequestUrl = $"/{ProjectKey}/zones";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/zones";
         }
 
         public List<string> GetExpand()

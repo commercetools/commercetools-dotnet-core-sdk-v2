@@ -26,7 +26,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Transactions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{ProjectKey}/transactions/{Id}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/transactions/{CheckPathParam(Id)}";
         }
 
 

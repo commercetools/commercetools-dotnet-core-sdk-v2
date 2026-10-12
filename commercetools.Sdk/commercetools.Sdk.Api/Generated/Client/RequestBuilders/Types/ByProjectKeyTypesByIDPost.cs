@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Types
             this.ProjectKey = projectKey;
             this.ID = id;
             this.TypeUpdate = typeUpdate;
-            this.RequestUrl = $"/{ProjectKey}/types/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/types/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

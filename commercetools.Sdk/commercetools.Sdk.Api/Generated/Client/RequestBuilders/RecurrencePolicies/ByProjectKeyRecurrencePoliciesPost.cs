@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.RecurrencePolicyDraft = recurrencePolicyDraft;
-            this.RequestUrl = $"/{ProjectKey}/recurrence-policies";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurrence-policies";
         }
 
         public List<string> GetExpand()

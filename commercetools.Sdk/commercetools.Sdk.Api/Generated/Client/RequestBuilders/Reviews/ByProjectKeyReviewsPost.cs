@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ReviewDraft = reviewDraft;
-            this.RequestUrl = $"/{ProjectKey}/reviews";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/reviews";
         }
 
         public List<string> GetExpand()

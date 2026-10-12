@@ -29,7 +29,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.ProjectKey = projectKey;
             this.AssociateId = associateId;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/as-associate/{AssociateId}/business-units/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/as-associate/{CheckPathParam(AssociateId)}/business-units/{CheckPathParam(ID)}";
         }
 
 

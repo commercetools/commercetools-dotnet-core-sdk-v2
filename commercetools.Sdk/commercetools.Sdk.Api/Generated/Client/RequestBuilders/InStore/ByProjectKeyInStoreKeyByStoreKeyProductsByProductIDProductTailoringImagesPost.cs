@@ -39,7 +39,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
             this.ProductID = productId;
             this.Stream = stream;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/products/{ProductID}/product-tailoring/images";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/products/{CheckPathParam(ProductID)}/product-tailoring/images";
         }
 
         public List<string> GetFilename()

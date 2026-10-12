@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ChannelDraft = channelDraft;
-            this.RequestUrl = $"/{ProjectKey}/channels";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/channels";
         }
 
         public List<string> GetExpand()

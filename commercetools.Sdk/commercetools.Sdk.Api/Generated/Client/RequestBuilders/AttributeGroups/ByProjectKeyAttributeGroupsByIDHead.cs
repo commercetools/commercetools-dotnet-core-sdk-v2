@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/attribute-groups/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/attribute-groups/{CheckPathParam(ID)}";
         }
 
 

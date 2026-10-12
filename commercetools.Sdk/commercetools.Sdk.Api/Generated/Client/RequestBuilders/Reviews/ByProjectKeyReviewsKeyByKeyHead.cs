@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/reviews/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/reviews/key={CheckPathParam(Key)}";
         }
 
 

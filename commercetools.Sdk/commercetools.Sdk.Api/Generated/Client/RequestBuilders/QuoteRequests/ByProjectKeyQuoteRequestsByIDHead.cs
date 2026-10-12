@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/quote-requests/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/quote-requests/{CheckPathParam(ID)}";
         }
 
 

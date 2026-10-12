@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.BusinessUnitSearchRequest = businessUnitSearchRequest;
-            this.RequestUrl = $"/{ProjectKey}/business-units/search";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/business-units/search";
         }
 
 

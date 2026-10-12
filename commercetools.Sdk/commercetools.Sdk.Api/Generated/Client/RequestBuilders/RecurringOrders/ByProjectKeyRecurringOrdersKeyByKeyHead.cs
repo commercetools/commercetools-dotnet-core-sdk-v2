@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurringOrders
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/recurring-orders/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurring-orders/key={CheckPathParam(Key)}";
         }
 
 

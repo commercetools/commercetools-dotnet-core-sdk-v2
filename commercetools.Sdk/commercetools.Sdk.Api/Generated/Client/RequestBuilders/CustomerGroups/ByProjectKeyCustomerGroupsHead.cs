@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/customer-groups";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customer-groups";
         }
 
         public List<string> GetWhere()

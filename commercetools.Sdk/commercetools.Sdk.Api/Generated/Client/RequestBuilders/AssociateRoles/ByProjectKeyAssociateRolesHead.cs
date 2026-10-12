@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/associate-roles";
         }
 
         public List<string> GetWhere()

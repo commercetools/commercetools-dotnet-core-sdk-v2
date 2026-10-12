@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.ReplicaCartDraft = replicaCartDraft;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/carts/replicate";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/carts/replicate";
         }
 
 

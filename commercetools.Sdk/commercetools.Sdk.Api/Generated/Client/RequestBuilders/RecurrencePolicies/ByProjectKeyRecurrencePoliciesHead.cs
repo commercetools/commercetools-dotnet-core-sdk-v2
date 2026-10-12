@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/recurrence-policies";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurrence-policies";
         }
 
         public List<string> GetWhere()

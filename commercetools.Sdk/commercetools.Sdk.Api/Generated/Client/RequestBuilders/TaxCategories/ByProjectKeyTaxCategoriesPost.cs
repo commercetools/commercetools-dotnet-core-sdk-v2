@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.TaxCategoryDraft = taxCategoryDraft;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/tax-categories";
         }
 
         public List<string> GetExpand()

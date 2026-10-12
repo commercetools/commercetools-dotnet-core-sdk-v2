@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/carts/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/carts/{CheckPathParam(ID)}";
         }
 
 

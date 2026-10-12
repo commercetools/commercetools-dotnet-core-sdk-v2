@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/business-units/search";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/business-units/search";
         }
 
 

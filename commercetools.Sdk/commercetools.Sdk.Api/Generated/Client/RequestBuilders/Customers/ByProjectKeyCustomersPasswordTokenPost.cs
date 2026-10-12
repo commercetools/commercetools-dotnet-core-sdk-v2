@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CustomerCreatePasswordResetToken = customerCreatePasswordResetToken;
-            this.RequestUrl = $"/{ProjectKey}/customers/password-token";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customers/password-token";
         }
 
 

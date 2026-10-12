@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             this.ProjectKey = projectKey;
             this.ID = id;
             this.StandalonePriceUpdate = standalonePriceUpdate;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/standalone-prices/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()
