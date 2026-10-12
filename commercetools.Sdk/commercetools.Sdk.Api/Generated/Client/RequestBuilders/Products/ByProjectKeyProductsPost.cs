@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ProductDraft = productDraft;
-            this.RequestUrl = $"/{ProjectKey}/products";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/products";
         }
 
         public List<string> GetPriceCurrency()

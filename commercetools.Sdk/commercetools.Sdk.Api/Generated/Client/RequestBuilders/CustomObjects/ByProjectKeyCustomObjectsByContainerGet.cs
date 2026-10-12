@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Container = container;
-            this.RequestUrl = $"/{ProjectKey}/custom-objects/{Container}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/custom-objects/{CheckPathParam(Container)}";
         }
 
         public List<string> GetSort()

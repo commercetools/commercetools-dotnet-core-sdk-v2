@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ReviewUpdate = reviewUpdate;
-            this.RequestUrl = $"/{ProjectKey}/reviews/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/reviews/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

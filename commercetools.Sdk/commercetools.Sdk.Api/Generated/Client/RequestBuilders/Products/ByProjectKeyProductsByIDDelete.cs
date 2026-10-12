@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Products
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/products/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/products/{CheckPathParam(ID)}";
         }
 
         public List<string> GetPriceCurrency()

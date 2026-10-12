@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InBusiness
             this.ProjectKey = projectKey;
             this.BusinessUnitKey = businessUnitKey;
             this.MyBusinessUnitAssociateDraft = myBusinessUnitAssociateDraft;
-            this.RequestUrl = $"/{ProjectKey}/in-business-unit/key={BusinessUnitKey}/me/customers";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-business-unit/key={CheckPathParam(BusinessUnitKey)}/me/customers";
         }
 
 

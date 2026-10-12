@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.MyBusinessUnitDraft = myBusinessUnitDraft;
-            this.RequestUrl = $"/{ProjectKey}/me/business-units";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/me/business-units";
         }
 
         public List<string> GetExpand()

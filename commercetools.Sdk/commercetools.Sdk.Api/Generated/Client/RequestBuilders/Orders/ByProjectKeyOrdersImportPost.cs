@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.OrderImportDraft = orderImportDraft;
-            this.RequestUrl = $"/{ProjectKey}/orders/import";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/orders/import";
         }
 
 

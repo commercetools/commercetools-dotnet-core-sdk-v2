@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/product-discounts/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-discounts/{CheckPathParam(ID)}";
         }
 
         public List<string> GetVersion()

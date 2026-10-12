@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
             this.ProjectKey = projectKey;
             this.ID = id;
             this.CustomerGroupUpdate = customerGroupUpdate;
-            this.RequestUrl = $"/{ProjectKey}/customer-groups/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customer-groups/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

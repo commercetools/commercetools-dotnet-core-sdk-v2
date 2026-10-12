@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/channels/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/channels/{CheckPathParam(ID)}";
         }
 
         public List<string> GetVersion()

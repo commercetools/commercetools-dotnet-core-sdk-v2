@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/inventory/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/inventory/key={CheckPathParam(Key)}";
         }
 
 

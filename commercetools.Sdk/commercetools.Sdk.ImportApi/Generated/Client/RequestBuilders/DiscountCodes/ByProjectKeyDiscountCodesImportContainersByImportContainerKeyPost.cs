@@ -33,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.DiscountCodes
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.DiscountCodeImportRequest = discountCodeImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-codes/import-containers/{CheckPathParam(ImportContainerKey)}";
         }
 
 

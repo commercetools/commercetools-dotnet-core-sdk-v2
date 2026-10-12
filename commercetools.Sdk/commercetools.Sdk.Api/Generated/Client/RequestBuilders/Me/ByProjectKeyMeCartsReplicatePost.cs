@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ReplicaMyCartDraft = replicaMyCartDraft;
-            this.RequestUrl = $"/{ProjectKey}/me/carts/replicate";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/me/carts/replicate";
         }
 
 

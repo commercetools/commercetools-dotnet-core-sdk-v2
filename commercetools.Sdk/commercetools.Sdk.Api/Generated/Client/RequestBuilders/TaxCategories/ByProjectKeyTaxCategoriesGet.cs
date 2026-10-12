@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/tax-categories";
         }
 
         public List<string> GetExpand()

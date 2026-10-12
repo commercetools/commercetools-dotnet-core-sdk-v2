@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Payments
             this.ProjectKey = projectKey;
             this.ID = id;
             this.PaymentUpdate = paymentUpdate;
-            this.RequestUrl = $"/{ProjectKey}/payments/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payments/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

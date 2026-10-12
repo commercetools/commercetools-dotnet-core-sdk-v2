@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/product-tailoring/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-tailoring/{CheckPathParam(ID)}";
         }
 
         public List<string> GetVersion()

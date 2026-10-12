@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ZoneUpdate = zoneUpdate;
-            this.RequestUrl = $"/{ProjectKey}/zones/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/zones/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

@@ -81,6 +81,22 @@ namespace commercetools.Base.Client
             return request;
         }
 
+        /// <summary>
+        /// Checks that a path parameter value cannot be used to traverse to another path.
+        /// </summary>
+        /// <param name="value">the path parameter value</param>
+        /// <returns>the unchanged value</returns>
+        /// <exception cref="ArgumentException">if the value contains "../"</exception>
+        public static string CheckPathParam(string value)
+        {
+            if (value != null && (value.Contains("../") || value == ".." || value.EndsWith("/..")))
+            {
+                throw new ArgumentException($"The path parameter value '{value}' is not allowed.", nameof(value));
+            }
+
+            return value;
+        }
+
         private static string ToQueryString(IEnumerable<KeyValuePair<string, string>> queryParams)
         {
             var keyValuePairs = queryParams.ToList();

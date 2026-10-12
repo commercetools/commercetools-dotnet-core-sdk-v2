@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductDiscounts
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ProductDiscountMatchQuery = productDiscountMatchQuery;
-            this.RequestUrl = $"/{ProjectKey}/product-discounts/matching";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-discounts/matching";
         }
 
 

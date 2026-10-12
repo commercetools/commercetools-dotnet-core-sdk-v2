@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
             this.ProjectKey = projectKey;
             this.Key = key;
             this.CategoryUpdate = categoryUpdate;
-            this.RequestUrl = $"/{ProjectKey}/categories/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/categories/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()
