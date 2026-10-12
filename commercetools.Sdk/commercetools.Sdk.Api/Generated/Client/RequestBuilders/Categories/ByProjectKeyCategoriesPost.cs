@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Categories
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CategoryDraft = categoryDraft;
-            this.RequestUrl = $"/{ProjectKey}/categories";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/categories";
         }
 
         public List<string> GetExpand()

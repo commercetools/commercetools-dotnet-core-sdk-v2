@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/shipping-methods/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/shipping-methods/{CheckPathParam(ID)}";
         }
 
 

@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/custom-objects";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/custom-objects";
         }
 
         public List<string> GetWhere()

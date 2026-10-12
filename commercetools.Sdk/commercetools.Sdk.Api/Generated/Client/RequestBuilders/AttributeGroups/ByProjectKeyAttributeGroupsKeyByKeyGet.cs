@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/attribute-groups/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/attribute-groups/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

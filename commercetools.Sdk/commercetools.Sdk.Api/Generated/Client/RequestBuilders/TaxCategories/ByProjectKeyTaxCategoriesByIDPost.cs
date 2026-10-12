@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             this.ProjectKey = projectKey;
             this.ID = id;
             this.TaxCategoryUpdate = taxCategoryUpdate;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/tax-categories/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

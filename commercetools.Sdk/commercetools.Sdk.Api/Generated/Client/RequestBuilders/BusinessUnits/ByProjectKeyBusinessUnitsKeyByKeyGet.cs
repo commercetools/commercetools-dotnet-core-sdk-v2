@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.BusinessUnits
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/business-units/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/business-units/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

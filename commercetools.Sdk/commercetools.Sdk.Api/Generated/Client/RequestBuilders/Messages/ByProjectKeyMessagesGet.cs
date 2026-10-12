@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Messages
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/messages";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/messages";
         }
 
         public List<string> GetExpand()

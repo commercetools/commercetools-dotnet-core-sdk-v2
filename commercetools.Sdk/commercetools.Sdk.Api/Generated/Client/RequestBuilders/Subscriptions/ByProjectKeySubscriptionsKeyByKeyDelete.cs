@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/subscriptions/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetVersion()

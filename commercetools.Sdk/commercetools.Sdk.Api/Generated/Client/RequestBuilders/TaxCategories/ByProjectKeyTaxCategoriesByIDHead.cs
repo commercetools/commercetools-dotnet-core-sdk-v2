@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.TaxCategories
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/tax-categories/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/tax-categories/{CheckPathParam(ID)}";
         }
 
 

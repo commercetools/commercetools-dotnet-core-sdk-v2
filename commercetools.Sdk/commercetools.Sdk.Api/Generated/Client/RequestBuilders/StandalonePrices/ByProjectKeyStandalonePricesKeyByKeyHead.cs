@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/standalone-prices/key={CheckPathParam(Key)}";
         }
 
 

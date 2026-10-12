@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/extensions";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/extensions";
         }
 
         public List<string> GetSort()

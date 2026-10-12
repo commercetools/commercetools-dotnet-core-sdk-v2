@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/zones";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/zones";
         }
 
         public List<string> GetWhere()

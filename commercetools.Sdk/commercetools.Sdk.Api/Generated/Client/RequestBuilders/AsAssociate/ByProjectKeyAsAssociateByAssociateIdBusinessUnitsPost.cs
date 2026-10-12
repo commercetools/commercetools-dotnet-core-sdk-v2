@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.ProjectKey = projectKey;
             this.AssociateId = associateId;
             this.BusinessUnitDraft = businessUnitDraft;
-            this.RequestUrl = $"/{ProjectKey}/as-associate/{AssociateId}/business-units";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/as-associate/{CheckPathParam(AssociateId)}/business-units";
         }
 
         public List<string> GetExpand()

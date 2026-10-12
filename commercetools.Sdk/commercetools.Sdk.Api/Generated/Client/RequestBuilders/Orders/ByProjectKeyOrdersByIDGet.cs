@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/orders/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/orders/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

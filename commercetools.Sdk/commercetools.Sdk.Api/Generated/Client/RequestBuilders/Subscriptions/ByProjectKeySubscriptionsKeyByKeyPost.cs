@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.ProjectKey = projectKey;
             this.Key = key;
             this.SubscriptionUpdate = subscriptionUpdate;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/subscriptions/key={CheckPathParam(Key)}";
         }
 
 

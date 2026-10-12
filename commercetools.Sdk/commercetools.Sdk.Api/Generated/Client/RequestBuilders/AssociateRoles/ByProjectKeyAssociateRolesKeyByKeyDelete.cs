@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/associate-roles/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetVersion()

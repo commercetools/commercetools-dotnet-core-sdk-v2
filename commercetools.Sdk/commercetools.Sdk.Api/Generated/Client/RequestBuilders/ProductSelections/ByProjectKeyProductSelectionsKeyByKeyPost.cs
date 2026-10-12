@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductSelections
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ProductSelectionUpdate = productSelectionUpdate;
-            this.RequestUrl = $"/{ProjectKey}/product-selections/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-selections/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

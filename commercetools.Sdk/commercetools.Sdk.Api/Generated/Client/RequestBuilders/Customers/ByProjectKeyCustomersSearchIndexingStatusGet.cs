@@ -23,7 +23,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/customers/search/indexing-status";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customers/search/indexing-status";
         }
 
 

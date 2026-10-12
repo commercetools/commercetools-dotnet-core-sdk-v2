@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ProductTailoringUpdate = productTailoringUpdate;
-            this.RequestUrl = $"/{ProjectKey}/product-tailoring/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-tailoring/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

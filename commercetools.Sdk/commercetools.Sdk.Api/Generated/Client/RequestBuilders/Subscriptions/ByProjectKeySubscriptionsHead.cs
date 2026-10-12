@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/subscriptions";
         }
 
         public List<string> GetWhere()

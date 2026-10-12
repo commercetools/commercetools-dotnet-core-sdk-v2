@@ -33,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.StandalonePrices
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.StandalonePriceImportRequest = standalonePriceImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/standalone-prices/import-containers/{CheckPathParam(ImportContainerKey)}";
         }
 
 

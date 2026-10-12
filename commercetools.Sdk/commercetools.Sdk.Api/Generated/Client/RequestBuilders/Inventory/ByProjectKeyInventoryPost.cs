@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.InventoryEntryDraft = inventoryEntryDraft;
-            this.RequestUrl = $"/{ProjectKey}/inventory";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/inventory";
         }
 
         public List<string> GetExpand()

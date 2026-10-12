@@ -28,7 +28,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
-            this.RequestUrl = $"/{ProjectKey}/import-containers/{ImportContainerKey}/import-operations";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/import-containers/{CheckPathParam(ImportContainerKey)}/import-operations";
         }
 
         public List<string> GetLimit()

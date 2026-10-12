@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.ProductID = productId;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/products/{ProductID}/product-tailoring";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/products/{CheckPathParam(ProductID)}/product-tailoring";
         }
 
         public List<string> GetExpand()

@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Channels
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ChannelUpdate = channelUpdate;
-            this.RequestUrl = $"/{ProjectKey}/channels/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/channels/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()
