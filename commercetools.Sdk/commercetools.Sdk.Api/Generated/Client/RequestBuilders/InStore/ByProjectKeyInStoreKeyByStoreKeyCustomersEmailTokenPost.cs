@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.CustomerCreateEmailToken = customerCreateEmailToken;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/customers/email-token";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/customers/email-token";
         }
 
 

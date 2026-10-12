@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.CustomObjectDraft = customObjectDraft;
-            this.RequestUrl = $"/{ProjectKey}/custom-objects";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/custom-objects";
         }
 
         public List<string> GetExpand()

@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Reviews
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/reviews/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/reviews/{CheckPathParam(ID)}";
         }
 
         public List<string> GetDataErasure()

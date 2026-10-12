@@ -40,7 +40,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.BusinessUnitKey = businessUnitKey;
             this.ID = id;
             this.OrderUpdate = orderUpdate;
-            this.RequestUrl = $"/{ProjectKey}/as-associate/{AssociateId}/in-business-unit/key={BusinessUnitKey}/orders/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/as-associate/{CheckPathParam(AssociateId)}/in-business-unit/key={CheckPathParam(BusinessUnitKey)}/orders/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

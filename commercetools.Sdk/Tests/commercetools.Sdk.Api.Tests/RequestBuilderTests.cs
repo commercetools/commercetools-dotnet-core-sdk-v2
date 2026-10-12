@@ -228,5 +228,25 @@ namespace commercetools.Sdk.Api.Tests
             var content = request.Content.ReadAsStringAsync().Result;
             Assert.NotNull(content);
         }
+
+        [Theory]
+        [InlineData("../categories")]
+        [InlineData("a/../b")]
+        [InlineData("..")]
+        [InlineData("a/..")]
+        public void CheckPathParamRejectsPathTraversal(string value)
+        {
+            Assert.Throws<System.ArgumentException>(() =>
+                commercetools.Base.Client.ApiMethod<commercetools.Sdk.Api.Client.RequestBuilders.Carts.ByProjectKeyCartsByIDGet>.CheckPathParam(value));
+        }
+
+        [Theory]
+        [InlineData("my-key_1")]
+        [InlineData("...")]
+        [InlineData("a..b")]
+        public void CheckPathParamAllowsRegularValues(string value)
+        {
+            Assert.Equal(value, commercetools.Base.Client.ApiMethod<commercetools.Sdk.Api.Client.RequestBuilders.Carts.ByProjectKeyCartsByIDGet>.CheckPathParam(value));
+        }
     }
 }

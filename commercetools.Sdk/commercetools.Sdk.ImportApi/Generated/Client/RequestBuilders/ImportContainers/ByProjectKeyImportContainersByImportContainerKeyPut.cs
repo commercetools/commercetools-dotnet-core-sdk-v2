@@ -28,7 +28,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.ImportContainerUpdateDraft = importContainerUpdateDraft;
-            this.RequestUrl = $"/{ProjectKey}/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/import-containers/{CheckPathParam(ImportContainerKey)}";
         }
 
 

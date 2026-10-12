@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.DiscountGroupDraft = discountGroupDraft;
-            this.RequestUrl = $"/{ProjectKey}/discount-groups";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-groups";
         }
 
         public List<string> GetExpand()

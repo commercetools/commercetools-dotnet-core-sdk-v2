@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AttributeGroups
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.AttributeGroupDraft = attributeGroupDraft;
-            this.RequestUrl = $"/{ProjectKey}/attribute-groups";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/attribute-groups";
         }
 
         public List<string> GetExpand()

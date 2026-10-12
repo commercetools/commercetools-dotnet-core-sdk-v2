@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Customers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/customers/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customers/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

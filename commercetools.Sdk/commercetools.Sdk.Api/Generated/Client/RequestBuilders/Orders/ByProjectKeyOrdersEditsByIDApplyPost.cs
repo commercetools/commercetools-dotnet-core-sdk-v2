@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Orders
             this.ProjectKey = projectKey;
             this.ID = id;
             this.OrderEditApply = orderEditApply;
-            this.RequestUrl = $"/{ProjectKey}/orders/edits/{ID}/apply";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/orders/edits/{CheckPathParam(ID)}/apply";
         }
 
 

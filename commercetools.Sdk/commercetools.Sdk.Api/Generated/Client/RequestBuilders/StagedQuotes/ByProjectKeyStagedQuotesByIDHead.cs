@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/staged-quotes/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/staged-quotes/{CheckPathParam(ID)}";
         }
 
 

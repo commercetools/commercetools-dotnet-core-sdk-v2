@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-codes/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

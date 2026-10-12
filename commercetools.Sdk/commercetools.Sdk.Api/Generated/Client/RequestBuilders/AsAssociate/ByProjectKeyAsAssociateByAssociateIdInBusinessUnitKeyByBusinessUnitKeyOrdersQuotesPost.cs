@@ -36,7 +36,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.AssociateId = associateId;
             this.BusinessUnitKey = businessUnitKey;
             this.OrderFromQuoteDraft = orderFromQuoteDraft;
-            this.RequestUrl = $"/{ProjectKey}/as-associate/{AssociateId}/in-business-unit/key={BusinessUnitKey}/orders/quotes";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/as-associate/{CheckPathParam(AssociateId)}/in-business-unit/key={CheckPathParam(BusinessUnitKey)}/orders/quotes";
         }
 
 

@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Quotes
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/quotes/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/quotes/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

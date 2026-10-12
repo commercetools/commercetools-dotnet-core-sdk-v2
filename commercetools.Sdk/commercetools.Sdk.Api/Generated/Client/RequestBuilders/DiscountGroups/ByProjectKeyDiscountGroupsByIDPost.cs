@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups
             this.ProjectKey = projectKey;
             this.ID = id;
             this.DiscountGroupUpdate = discountGroupUpdate;
-            this.RequestUrl = $"/{ProjectKey}/discount-groups/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-groups/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

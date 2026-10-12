@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTypes
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/product-types";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-types";
         }
 
         public List<string> GetWhere()

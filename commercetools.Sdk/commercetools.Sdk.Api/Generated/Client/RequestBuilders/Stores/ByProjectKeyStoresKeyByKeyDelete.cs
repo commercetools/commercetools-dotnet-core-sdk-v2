@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Stores
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/stores/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/stores/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetVersion()

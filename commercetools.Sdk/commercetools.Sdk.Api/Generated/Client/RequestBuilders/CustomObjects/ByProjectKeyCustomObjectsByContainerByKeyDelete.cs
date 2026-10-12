@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomObjects
             this.ProjectKey = projectKey;
             this.Container = container;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/custom-objects/{Container}/{Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/custom-objects/{CheckPathParam(Container)}/{CheckPathParam(Key)}";
         }
 
         public List<string> GetVersion()

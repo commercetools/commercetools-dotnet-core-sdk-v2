@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StandalonePrices
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/standalone-prices";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/standalone-prices";
         }
 
         public List<string> GetExpand()

@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AsAssociate
             this.AssociateId = associateId;
             this.BusinessUnitKey = businessUnitKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/as-associate/{AssociateId}/in-business-unit/key={BusinessUnitKey}/carts/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/as-associate/{CheckPathParam(AssociateId)}/in-business-unit/key={CheckPathParam(BusinessUnitKey)}/carts/{CheckPathParam(ID)}";
         }
 
         public List<string> GetDataErasure()

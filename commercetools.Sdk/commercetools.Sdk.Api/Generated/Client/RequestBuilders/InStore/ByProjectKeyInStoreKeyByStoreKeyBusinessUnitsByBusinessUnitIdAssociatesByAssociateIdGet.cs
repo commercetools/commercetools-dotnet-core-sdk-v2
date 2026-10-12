@@ -32,7 +32,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
             this.BusinessUnitId = businessUnitId;
             this.AssociateId = associateId;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/business-units/{BusinessUnitId}/associates/{AssociateId}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/business-units/{CheckPathParam(BusinessUnitId)}/associates/{CheckPathParam(AssociateId)}";
         }
 
 
