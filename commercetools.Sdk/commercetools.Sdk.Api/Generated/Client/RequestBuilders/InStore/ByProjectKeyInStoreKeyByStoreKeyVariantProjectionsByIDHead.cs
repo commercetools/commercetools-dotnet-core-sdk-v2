@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/variant-projections/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/variant-projections/{CheckPathParam(ID)}";
         }
 
         public List<string> GetStaged()

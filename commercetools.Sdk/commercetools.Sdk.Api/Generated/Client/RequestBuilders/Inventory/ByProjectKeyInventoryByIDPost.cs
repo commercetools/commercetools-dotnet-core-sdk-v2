@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Inventory
             this.ProjectKey = projectKey;
             this.ID = id;
             this.InventoryEntryUpdate = inventoryEntryUpdate;
-            this.RequestUrl = $"/{ProjectKey}/inventory/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/inventory/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

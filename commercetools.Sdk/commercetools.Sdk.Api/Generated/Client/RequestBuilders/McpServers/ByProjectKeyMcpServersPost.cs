@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.McpServerDraft = mcpServerDraft;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers";
         }
 
 

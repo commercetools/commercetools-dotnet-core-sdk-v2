@@ -36,7 +36,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.StoreKey = storeKey;
             this.CustomerId = customerId;
             this.MergeCartDraft = mergeCartDraft;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/carts/customer-id={CustomerId}/merge";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/carts/customer-id={CheckPathParam(CustomerId)}/merge";
         }
 
 

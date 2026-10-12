@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/shipping-methods/matching-location";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/shipping-methods/matching-location";
         }
 
         public List<string> GetCountry()

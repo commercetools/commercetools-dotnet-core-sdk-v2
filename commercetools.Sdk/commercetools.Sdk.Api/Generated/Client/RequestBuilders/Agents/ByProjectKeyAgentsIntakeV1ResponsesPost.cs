@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Agents
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.AgentResponsesRequest = agentResponsesRequest;
-            this.RequestUrl = $"/{ProjectKey}/agents/intake/v1/responses";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/agents/intake/v1/responses";
         }
 
 

@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers/key={CheckPathParam(Key)}";
         }
 
 

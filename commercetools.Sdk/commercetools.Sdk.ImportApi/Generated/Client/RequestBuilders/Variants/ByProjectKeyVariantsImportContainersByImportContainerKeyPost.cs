@@ -33,7 +33,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.Variants
             this.ProjectKey = projectKey;
             this.ImportContainerKey = importContainerKey;
             this.VariantImportRequest = variantImportRequest;
-            this.RequestUrl = $"/{ProjectKey}/variants/import-containers/{ImportContainerKey}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants/import-containers/{CheckPathParam(ImportContainerKey)}";
         }
 
 

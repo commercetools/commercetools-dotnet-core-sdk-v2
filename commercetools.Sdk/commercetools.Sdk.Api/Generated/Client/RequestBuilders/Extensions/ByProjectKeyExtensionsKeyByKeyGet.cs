@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/extensions/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/extensions/key={CheckPathParam(Key)}";
         }
 
 

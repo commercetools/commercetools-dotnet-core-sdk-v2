@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountCodes
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/discount-codes";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-codes";
         }
 
         public List<string> GetWhere()

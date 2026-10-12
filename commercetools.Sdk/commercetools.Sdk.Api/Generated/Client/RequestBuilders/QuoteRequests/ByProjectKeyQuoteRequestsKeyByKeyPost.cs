@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.QuoteRequests
             this.ProjectKey = projectKey;
             this.Key = key;
             this.QuoteRequestUpdate = quoteRequestUpdate;
-            this.RequestUrl = $"/{ProjectKey}/quote-requests/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/quote-requests/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

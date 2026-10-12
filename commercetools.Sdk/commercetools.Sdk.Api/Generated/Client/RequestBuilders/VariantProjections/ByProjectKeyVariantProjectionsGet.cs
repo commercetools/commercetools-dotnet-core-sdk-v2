@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.VariantProjections
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/variant-projections";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variant-projections";
         }
 
         public List<string> GetStaged()

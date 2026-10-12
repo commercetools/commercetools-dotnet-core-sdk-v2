@@ -33,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntents
             this.ProjectKey = projectKey;
             this.PaymentId = paymentId;
             this.PaymentIntent = paymentIntent;
-            this.RequestUrl = $"/{ProjectKey}/payment-intents/{PaymentId}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payment-intents/{CheckPathParam(PaymentId)}";
         }
 
 

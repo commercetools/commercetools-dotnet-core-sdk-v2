@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.DiscountGroups
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/discount-groups/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/discount-groups/{CheckPathParam(ID)}";
         }
 
 

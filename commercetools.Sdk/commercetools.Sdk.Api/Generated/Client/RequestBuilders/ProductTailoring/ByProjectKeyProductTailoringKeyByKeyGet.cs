@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductTailoring
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/product-tailoring/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-tailoring/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

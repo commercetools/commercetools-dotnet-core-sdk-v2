@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.AssociateRoles
             this.ProjectKey = projectKey;
             this.ID = id;
             this.AssociateRoleUpdate = associateRoleUpdate;
-            this.RequestUrl = $"/{ProjectKey}/associate-roles/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/associate-roles/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

@@ -33,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             this.ProjectKey = projectKey;
             this.Key = key;
             this.PaymentIntegrationUpdateActions = paymentIntegrationUpdateActions;
-            this.RequestUrl = $"/{ProjectKey}/payment-integrations/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payment-integrations/key={CheckPathParam(Key)}";
         }
 
 

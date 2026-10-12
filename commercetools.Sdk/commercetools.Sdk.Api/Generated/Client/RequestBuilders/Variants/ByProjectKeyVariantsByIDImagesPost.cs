@@ -35,7 +35,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.ProjectKey = projectKey;
             this.ID = id;
             this.Stream = stream;
-            this.RequestUrl = $"/{ProjectKey}/variants/{ID}/images";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants/{CheckPathParam(ID)}/images";
         }
 
         public List<string> GetFilename()

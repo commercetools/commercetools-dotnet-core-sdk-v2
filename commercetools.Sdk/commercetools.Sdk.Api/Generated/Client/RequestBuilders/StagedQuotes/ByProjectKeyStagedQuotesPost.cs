@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.StagedQuoteDraft = stagedQuoteDraft;
-            this.RequestUrl = $"/{ProjectKey}/staged-quotes";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/staged-quotes";
         }
 
         public List<string> GetExpand()

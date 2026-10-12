@@ -30,7 +30,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.PaymentIntegrationDraft = paymentIntegrationDraft;
-            this.RequestUrl = $"/{ProjectKey}/payment-integrations";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payment-integrations";
         }
 
 

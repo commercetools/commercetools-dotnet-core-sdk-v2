@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Subscriptions
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.SubscriptionDraft = subscriptionDraft;
-            this.RequestUrl = $"/{ProjectKey}/subscriptions";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/subscriptions";
         }
 
 

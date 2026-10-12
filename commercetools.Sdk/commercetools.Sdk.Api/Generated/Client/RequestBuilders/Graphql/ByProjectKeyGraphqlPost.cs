@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Graphql
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.GraphQLRequest = graphQLRequest;
-            this.RequestUrl = $"/{ProjectKey}/graphql";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/graphql";
         }
 
 

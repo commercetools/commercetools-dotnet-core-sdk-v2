@@ -30,7 +30,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ApplicationDraft = applicationDraft;
-            this.RequestUrl = $"/{ProjectKey}/applications";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/applications";
         }
 
 

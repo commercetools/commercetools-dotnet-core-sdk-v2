@@ -26,7 +26,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportOperations
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{ProjectKey}/import-operations/{Id}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/import-operations/{CheckPathParam(Id)}";
         }
 
 

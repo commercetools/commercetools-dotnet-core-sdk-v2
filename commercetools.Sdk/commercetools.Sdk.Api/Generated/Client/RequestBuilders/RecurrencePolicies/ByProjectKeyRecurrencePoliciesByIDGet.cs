@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.RecurrencePolicies
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ID = id;
-            this.RequestUrl = $"/{ProjectKey}/recurrence-policies/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/recurrence-policies/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

@@ -29,7 +29,7 @@ namespace commercetools.Sdk.HistoryApi.Client.RequestBuilders.ResourceType
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.ResourceType = resourceType;
-            this.RequestUrl = $"/{ProjectKey}/{ResourceType}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/{CheckPathParam(ResourceType)}";
         }
 
         public List<string> GetDateFrom()

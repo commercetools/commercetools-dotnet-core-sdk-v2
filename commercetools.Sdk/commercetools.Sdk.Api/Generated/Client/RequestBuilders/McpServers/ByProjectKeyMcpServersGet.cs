@@ -25,7 +25,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers";
         }
 
         public List<string> GetSort()

@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Extensions
             this.ProjectKey = projectKey;
             this.ID = id;
             this.ExtensionUpdate = extensionUpdate;
-            this.RequestUrl = $"/{ProjectKey}/extensions/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/extensions/{CheckPathParam(ID)}";
         }
 
 

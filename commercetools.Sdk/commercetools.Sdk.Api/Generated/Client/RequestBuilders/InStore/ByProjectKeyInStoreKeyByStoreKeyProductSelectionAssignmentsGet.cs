@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/product-selection-assignments";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/product-selection-assignments";
         }
 
         public List<string> GetLimit()

@@ -33,7 +33,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ApplicationUpdateActions = applicationUpdateActions;
-            this.RequestUrl = $"/{ProjectKey}/applications/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/applications/key={CheckPathParam(Key)}";
         }
 
 

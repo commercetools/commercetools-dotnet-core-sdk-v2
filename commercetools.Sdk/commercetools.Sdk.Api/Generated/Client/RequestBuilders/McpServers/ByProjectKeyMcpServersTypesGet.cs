@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/types";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers/types";
         }
 
 

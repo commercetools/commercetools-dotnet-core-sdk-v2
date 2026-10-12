@@ -30,7 +30,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Me
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.MyCustomerUpdate = myCustomerUpdate;
-            this.RequestUrl = $"/{ProjectKey}/me";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/me";
         }
 
 

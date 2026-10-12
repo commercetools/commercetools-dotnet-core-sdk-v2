@@ -28,7 +28,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.Applications
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{ProjectKey}/applications/{Id}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/applications/{CheckPathParam(Id)}";
         }
 
         public List<string> GetVersion()

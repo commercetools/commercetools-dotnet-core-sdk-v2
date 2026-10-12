@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.ProjectKey = projectKey;
             this.ID = id;
             this.VariantUpdate = variantUpdate;
-            this.RequestUrl = $"/{ProjectKey}/variants/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants/{CheckPathParam(ID)}";
         }
 
         public List<string> GetExpand()

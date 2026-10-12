@@ -26,7 +26,7 @@ namespace commercetools.Sdk.CheckoutApi.Client.RequestBuilders.PaymentIntegratio
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Id = id;
-            this.RequestUrl = $"/{ProjectKey}/payment-integrations/{Id}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payment-integrations/{CheckPathParam(Id)}";
         }
 
 

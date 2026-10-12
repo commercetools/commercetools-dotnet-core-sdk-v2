@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Carts
             this.ProjectKey = projectKey;
             this.CustomerId = customerId;
             this.MergeCartDraft = mergeCartDraft;
-            this.RequestUrl = $"/{ProjectKey}/carts/customer-id={CustomerId}/merge";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/carts/customer-id={CheckPathParam(CustomerId)}/merge";
         }
 
 

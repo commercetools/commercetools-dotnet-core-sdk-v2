@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ShippingMethods
             this.ProjectKey = projectKey;
             this.Key = key;
             this.ShippingMethodUpdate = shippingMethodUpdate;
-            this.RequestUrl = $"/{ProjectKey}/shipping-methods/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/shipping-methods/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/variants/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants/key={CheckPathParam(Key)}";
         }
 
 

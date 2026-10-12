@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.InStore
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.StoreKey = storeKey;
-            this.RequestUrl = $"/{ProjectKey}/in-store/key={StoreKey}/shipping-methods/matching-cart";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/in-store/key={CheckPathParam(StoreKey)}/shipping-methods/matching-cart";
         }
 
         public List<string> GetCartId()

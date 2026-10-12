@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Zones
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/zones/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/zones/key={CheckPathParam(Key)}";
         }
 
 

@@ -24,7 +24,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/variants";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants";
         }
 
         public List<string> GetWhere()

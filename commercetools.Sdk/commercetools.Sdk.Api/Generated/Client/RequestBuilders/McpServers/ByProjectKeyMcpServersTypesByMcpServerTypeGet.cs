@@ -27,7 +27,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.McpServerType = mcpServerType;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/types/{McpServerType}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers/types/{CheckPathParam(McpServerType)}";
         }
 
         public List<string> GetMajorVersion()

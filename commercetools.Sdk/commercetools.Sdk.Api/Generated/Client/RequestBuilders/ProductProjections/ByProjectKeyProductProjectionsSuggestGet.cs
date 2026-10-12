@@ -26,7 +26,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.ProductProjections
         {
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
-            this.RequestUrl = $"/{ProjectKey}/product-projections/suggest";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/product-projections/suggest";
         }
 
         public List<string> GetLimit()

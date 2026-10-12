@@ -34,7 +34,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.StagedQuotes
             this.ProjectKey = projectKey;
             this.Key = key;
             this.StagedQuoteUpdate = stagedQuoteUpdate;
-            this.RequestUrl = $"/{ProjectKey}/staged-quotes/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/staged-quotes/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetExpand()

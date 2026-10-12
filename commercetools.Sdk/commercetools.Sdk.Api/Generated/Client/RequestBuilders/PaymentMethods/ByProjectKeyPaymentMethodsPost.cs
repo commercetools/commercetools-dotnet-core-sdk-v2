@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.PaymentMethods
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.PaymentMethodDraft = paymentMethodDraft;
-            this.RequestUrl = $"/{ProjectKey}/payment-methods";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/payment-methods";
         }
 
         public List<string> GetExpand()

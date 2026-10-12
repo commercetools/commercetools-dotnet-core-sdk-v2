@@ -33,7 +33,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.McpServers
             this.ProjectKey = projectKey;
             this.ID = id;
             this.McpServerUpdate = mcpServerUpdate;
-            this.RequestUrl = $"/{ProjectKey}/mcp-servers/{ID}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/mcp-servers/{CheckPathParam(ID)}";
         }
 
 

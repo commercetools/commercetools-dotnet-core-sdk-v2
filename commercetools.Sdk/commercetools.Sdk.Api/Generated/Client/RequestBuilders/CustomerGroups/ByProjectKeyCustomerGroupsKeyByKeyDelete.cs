@@ -28,7 +28,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.CustomerGroups
             this.ApiHttpClient = apiHttpClient;
             this.ProjectKey = projectKey;
             this.Key = key;
-            this.RequestUrl = $"/{ProjectKey}/customer-groups/key={Key}";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/customer-groups/key={CheckPathParam(Key)}";
         }
 
         public List<string> GetVersion()

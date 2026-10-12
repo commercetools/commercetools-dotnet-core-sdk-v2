@@ -30,7 +30,7 @@ namespace commercetools.Sdk.ImportApi.Client.RequestBuilders.ImportContainers
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.ImportContainerDraft = importContainerDraft;
-            this.RequestUrl = $"/{ProjectKey}/import-containers";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/import-containers";
         }
 
 

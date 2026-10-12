@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.VariantDraft = variantDraft;
-            this.RequestUrl = $"/{ProjectKey}/variants";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants";
         }
 
         public List<string> GetExpand()

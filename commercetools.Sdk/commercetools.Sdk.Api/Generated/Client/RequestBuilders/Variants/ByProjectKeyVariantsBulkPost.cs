@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Client.RequestBuilders.Variants
             this.SerializerService = serializerService;
             this.ProjectKey = projectKey;
             this.VariantBulkUpdate = variantBulkUpdate;
-            this.RequestUrl = $"/{ProjectKey}/variants/bulk";
+            this.RequestUrl = $"/{CheckPathParam(ProjectKey)}/variants/bulk";
         }
 
         public List<string> GetVersionControl()
