@@ -1,4 +1,176 @@
 
+# 15.6.1 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.6.0...15.6.1
+
+# 14.3.2 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.3.1...14.3.2
+
+# 13.1.1 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/13.1.0...13.1.1
+
+# 12.13.1 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.13.0...12.13.1
+
+# 11.14.1 (2026-10-12)
+
+- request builders throw on path traversal
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.14.0...11.14.1
+
+# 16.0.1 (2026-10-09)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/573
+* add test for path parameter encoding by @jenschude in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/574
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/pull/575
+
+**Api changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ProductTypeChangeSavedToLineItemAction`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AbsoluteAllocation`
+- added type `AbsoluteAllocationDraft`
+- added type `Allocation`
+- added type `AllocationDraft`
+- added type `PaymentAllocationDraft`
+- added type `PaymentStrategy`
+- added type `RecurringPaymentAllocation`
+- added type `RecurringPaymentConfiguration`
+- added type `RecurringPaymentConfigurationDraft`
+- added type `RelativeAllocation`
+- added type `RelativeAllocationDraft`
+- added type `CartAddRecurringPaymentAllocationAction`
+- added type `CartRemoveRecurringPaymentAllocationAction`
+- added type `CartSetRecurringPaymentConfigurationAction`
+- added type `CartSetRecurringPaymentStrategyAction`
+- added type `ProductTypeSetSavedToLineItemAction`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `recurringPaymentConfiguration` to type `Cart`
+</details>
+
+**Checkout changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `PaymentMethodReference`
+- added type `ConnectorTimeoutError`
+- added type `InternalConstraintViolatedError`
+- added type `PaginatedRecurringPaymentJob`
+- added type `RecurringPaymentJob`
+- added type `RecurringPaymentJobDraft`
+- added type `RecurringPaymentJobError`
+- added type `RecurringPaymentJobState`
+- added type `RecurringPaymentJobStatus`
+- added type `PaginatedRecurringPayment`
+- added type `PaymentMethodConfiguration`
+- added type `RecurringOrderReference`
+- added type `RecurringPayment`
+- added type `RecurringPaymentDraft`
+- added type `RecurringPaymentReference`
+- added type `RecurringPaymentAddPaymentMethodConfigurationUpdateAction`
+- added type `RecurringPaymentSetKeyUpdateAction`
+- added type `RecurringPaymentSetPaymentMethodConfigurationUpdateAction`
+- added type `RecurringPaymentSetRecurringOrderUpdateAction`
+- added type `RecurringPaymentUpdateAction`
+- added type `RecurringPaymentUpdateActions`
+- added type `TransactionItemPaymentIntegration`
+- added type `TransactionItemPaymentIntegrationDraft`
+- added type `TransactionItemRecurring`
+- added type `TransactionItemRecurringDraft`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `paymentIntegration` from type `TransactionItem`
+- :warning: removed property `paymentIntegration` from type `TransactionItemDraft`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `type` to type `TransactionItem`
+- added property `type` to type `TransactionItemDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `cart` of type `Transaction` to be required
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `payment-method` to type `ReferenceTypeId`
+- added enum `recurring-payment` to type `ReferenceTypeId`
+- added enum `recurring-order` to type `ReferenceTypeId`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/recurring-payment-jobs`
+- added resource `/{projectKey}/recurring-payments`
+- added resource `/{projectKey}/recurring-payment-jobs/{id}`
+- added resource `/{projectKey}/recurring-payment-jobs/key={key}`
+- added resource `/{projectKey}/recurring-payments/{id}`
+- added resource `/{projectKey}/recurring-payments/key={key}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().post()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().withId().delete()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().get()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().post()`
+- added method `apiRoot.withProjectKey().recurringPayments().withKey().delete()`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/16.0.0...16.0.1
+
 # 16.0.0 (2026-10-07)
 
 ## BREAKING CHANGE
