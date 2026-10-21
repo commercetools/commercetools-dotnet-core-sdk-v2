@@ -286,6 +286,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     [SubTypeDiscriminator("RecurringOrderExpiresAtSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderExpiresAtSetMessagePayload))]
     [SubTypeDiscriminator("RecurringOrderFailed", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderFailedMessagePayload))]
     [SubTypeDiscriminator("RecurringOrderKeySet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessagePayload))]
+    [SubTypeDiscriminator("RecurringOrderNowRequested", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderNowRequestedMessagePayload))]
     [SubTypeDiscriminator("RecurringOrderScheduleSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderScheduleSetMessagePayload))]
     [SubTypeDiscriminator("RecurringOrderStartsAtSet", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStartsAtSetMessagePayload))]
     [SubTypeDiscriminator("RecurringOrderStateChanged", typeof(commercetools.Sdk.Api.Models.Messages.RecurringOrderStateChangedMessagePayload))]
@@ -2033,6 +2034,12 @@ namespace commercetools.Sdk.Api.Models.Messages
         static commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessagePayload RecurringOrderKeySet(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessagePayload> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderKeySetMessagePayload();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Messages.RecurringOrderNowRequestedMessagePayload RecurringOrderNowRequested(Action<commercetools.Sdk.Api.Models.Messages.RecurringOrderNowRequestedMessagePayload> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Messages.RecurringOrderNowRequestedMessagePayload();
             init?.Invoke(t);
             return t;
         }

@@ -22,6 +22,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurringOrders
             PredicateFormatter.Format);
         }
 
+        public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> AsRequestOrderNow(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderRequestOrderNowActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderRequestOrderNowActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderRequestOrderNowActionQueryBuilderDsl.Of()),
+                RecurringOrderUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> AsSetCustomField(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurringOrders.RecurringOrderSetCustomFieldActionQueryBuilderDsl>> fn)
         {
