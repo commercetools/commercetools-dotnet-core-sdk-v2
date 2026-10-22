@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Categories
             return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategoryAddStoreActionQueryBuilderDsl.Of()),
                 CategoryUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> AsAddStoreWithDescendants(
+            Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryAddStoreWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryAddStoreWithDescendantsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategoryAddStoreWithDescendantsActionQueryBuilderDsl.Of()),
+                CategoryUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> AsChangeAssetName(
             Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryChangeAssetNameActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryChangeAssetNameActionQueryBuilderDsl>> fn)
         {
@@ -80,6 +86,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Categories
             Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreActionQueryBuilderDsl.Of()),
+                CategoryUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> AsRemoveStoreWithDescendants(
+            Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategoryRemoveStoreWithDescendantsActionQueryBuilderDsl.Of()),
                 CategoryUpdateActionQueryBuilderDsl.Of);
         }
         public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> AsSetAssetCustomField(
@@ -170,6 +182,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Categories
             Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresActionQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresActionQueryBuilderDsl.Of()),
+                CategoryUpdateActionQueryBuilderDsl.Of);
+        }
+        public CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl> AsSetStoresWithDescendants(
+            Func<commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresWithDescendantsActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresWithDescendantsActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CategoryUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Categories.CategorySetStoresWithDescendantsActionQueryBuilderDsl.Of()),
                 CategoryUpdateActionQueryBuilderDsl.Of);
         }
     }
