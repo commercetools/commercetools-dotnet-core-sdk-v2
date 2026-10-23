@@ -11,6 +11,7 @@ namespace commercetools.Sdk.Api.Models.Warnings
     [SubTypeDiscriminator("FileNotProcessed", typeof(commercetools.Sdk.Api.Models.Agents.AgentFileNotProcessedWarning))]
     [SubTypeDiscriminator("ImageProcessingOngoing", typeof(commercetools.Sdk.Api.Models.Warnings.ImageProcessingOngoingWarning))]
     [SubTypeDiscriminator("ProductsNotFound", typeof(commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning))]
+    [SubTypeDiscriminator("StoreSettingOngoing", typeof(commercetools.Sdk.Api.Models.Warnings.StoreSettingOngoingWarning))]
     public partial interface IWarningObject
     {
         string Code { get; set; }
@@ -50,6 +51,12 @@ namespace commercetools.Sdk.Api.Models.Warnings
         static commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning ProductsNotFound(Action<commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.AgentProductsNotFoundWarning();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Warnings.StoreSettingOngoingWarning StoreSettingOngoing(Action<commercetools.Sdk.Api.Models.Warnings.StoreSettingOngoingWarning> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Warnings.StoreSettingOngoingWarning();
             init?.Invoke(t);
             return t;
         }

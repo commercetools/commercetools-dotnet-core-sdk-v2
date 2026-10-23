@@ -14,5 +14,7 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
 
         IRecurrencePolicyScheduleDraft Schedule { get; set; }
 
+        int? MinDaysBetweenOrders { get; set; }
+
     }
 }

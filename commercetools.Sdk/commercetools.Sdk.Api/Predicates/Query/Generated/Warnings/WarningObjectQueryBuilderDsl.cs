@@ -64,5 +64,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Warnings
             return new CombinationQueryPredicate<WarningObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Warnings.ImageProcessingOngoingWarningQueryBuilderDsl.Of()),
                 WarningObjectQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> AsStoreSettingOngoing(
+            Func<commercetools.Sdk.Api.Predicates.Query.Warnings.StoreSettingOngoingWarningQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Warnings.StoreSettingOngoingWarningQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<WarningObjectQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Warnings.StoreSettingOngoingWarningQueryBuilderDsl.Of()),
+                WarningObjectQueryBuilderDsl.Of);
+        }
     }
 }
