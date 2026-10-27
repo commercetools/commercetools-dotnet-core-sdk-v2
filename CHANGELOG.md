@@ -1,4 +1,20 @@
 
+# 16.0.2 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+- 16.0.1 was not published to NuGet; its changes are part of this release
+
+`Token.CreationDate` and `Token.ExpirationDate` are now UTC instead of local time. A `CreationDate` with `DateTimeKind.Unspecified` is treated as UTC.
+
+Impact: If you use a custom token store, save and load these dates as UTC. Tokens saved in local time by an older SDK version may be refreshed early, or kept a little longer, once after the upgrade.
+
+API changes from 16.0.1:
+- `ProductTypeChangeSavedToLineItemAction` was renamed to `ProductTypeSetSavedToLineItemAction`
+- Checkout: `paymentIntegration` was removed from `TransactionItem` and `TransactionItemDraft`; use `type` instead
+- Checkout: `cart` of `Transaction` is now required
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/16.0.0...16.0.2
+
 # 15.6.1 (2026-10-12)
 
 - request builders throw on path traversal
