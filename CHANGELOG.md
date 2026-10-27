@@ -15,6 +15,36 @@ API changes from 16.0.1:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/16.0.0...16.0.2
 
+# 15.6.2 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/15.6.1...15.6.2
+
+# 14.3.3 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/14.3.2...14.3.3
+
+# 13.1.2 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/13.1.1...13.1.2
+
+# 12.13.2 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/12.13.1...12.13.2
+
+# 11.14.2 (2026-10-27)
+
+- token expiration is calculated in UTC, fixing `401 invalid_token` errors after a daylight saving time change (#580)
+
+**Full Changelog**: https://github.com/commercetools/commercetools-dotnet-core-sdk-v2/compare/11.14.1...11.14.2
+
 # 15.6.1 (2026-10-12)
 
 - request builders throw on path traversal
