@@ -107,9 +107,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a63cde2064c7a23a5ab08f6f7c18ec4f5" id="r_a63cde2064c7a23a5ab08f6f7c18ec4f5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a63cde2064c7a23a5ab08f6f7c18ec4f5">CheckPathParam</a> (string value)</td></tr>
-<tr class="memdesc:a63cde2064c7a23a5ab08f6f7c18ec4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks that a path parameter value cannot be used to traverse to another path.  <br /></td></tr>
-<tr class="separator:a63cde2064c7a23a5ab08f6f7c18ec4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9460da1b1c1d9716cac24ff3a716db80" id="r_a9460da1b1c1d9716cac24ff3a716db80"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html#a9460da1b1c1d9716cac24ff3a716db80">EscapePathParameter</a> (string value)</td></tr>
+<tr class="memdesc:a9460da1b1c1d9716cac24ff3a716db80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escapes a value so that it can be used as a single path segment (or part of one). Uri.EscapeDataString does not escape dots, and Uri removes "." and ".." segments even if they are percent-encoded, so these values are rejected.  <br /></td></tr>
+<tr class="separator:a9460da1b1c1d9716cac24ff3a716db80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -246,8 +246,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="a63cde2064c7a23a5ab08f6f7c18ec4f5" name="a63cde2064c7a23a5ab08f6f7c18ec4f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63cde2064c7a23a5ab08f6f7c18ec4f5">&#9670;&#160;</a></span>CheckPathParam()</h2>
+<a id="a9460da1b1c1d9716cac24ff3a716db80" name="a9460da1b1c1d9716cac24ff3a716db80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9460da1b1c1d9716cac24ff3a716db80">&#9670;&#160;</a></span>EscapePathParameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +256,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static string <a class="el" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html">commercetools.Base.Client.ApiMethod</a>&lt; T &gt;.CheckPathParam </td>
+          <td class="memname">static string <a class="el" href="../../d7/dad/classcommercetools_1_1_base_1_1_client_1_1_api_method.html">commercetools.Base.Client.ApiMethod</a>&lt; T &gt;.EscapePathParameter </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -270,17 +270,17 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks that a path parameter value cannot be used to traverse to another path. </p>
+<p>Escapes a value so that it can be used as a single path segment (or part of one). Uri.EscapeDataString does not escape dots, and Uri removes "." and ".." segments even if they are percent-encoded, so these values are rejected. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>the path parameter value</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the unchanged value</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the escaped value</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">ArgumentException</td><td>if the value contains "../"</td></tr>
+    <tr><td class="paramname">ArgumentException</td><td>if the value is "." or ".."</td></tr>
   </table>
   </dd>
 </dl>
