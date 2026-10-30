@@ -19,6 +19,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public Object PreviousValue { get; set; }
 
         public Object NextValue { get; set; }
+
+        public string ShippingKey { get; set; }
         public SetParcelCustomFieldChange()
         {
             this.Type = "SetParcelCustomFieldChange";

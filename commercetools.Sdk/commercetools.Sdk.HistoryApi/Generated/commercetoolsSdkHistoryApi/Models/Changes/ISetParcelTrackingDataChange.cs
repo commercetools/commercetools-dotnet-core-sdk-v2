@@ -17,5 +17,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IParcelChangeValue Parcel { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }

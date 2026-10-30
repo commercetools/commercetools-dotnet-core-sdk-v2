@@ -113,6 +113,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreDistributionChannelsUnsupportedError))]
     [SubTypeDiscriminator("StoreUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.AgentStoreUnresolvedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.SyntaxErrorError))]
+    [SubTypeDiscriminator("TooManyRequests", typeof(commercetools.Sdk.Api.Models.Errors.TooManyRequestsError))]
     [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.UnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.ValidityLockConflictError))]
     public partial interface IErrorObject
@@ -766,6 +767,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.SyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.SyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.SyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.TooManyRequestsError TooManyRequests(Action<commercetools.Sdk.Api.Models.Errors.TooManyRequestsError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.TooManyRequestsError();
             init?.Invoke(t);
             return t;
         }

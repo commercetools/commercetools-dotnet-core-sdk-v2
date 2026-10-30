@@ -98,6 +98,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("ChangeQuoteStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeQuoteStateChange))]
     [SubTypeDiscriminator("ChangeRequiresDiscountCodeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeRequiresDiscountCodeChange))]
     [SubTypeDiscriminator("ChangeReviewRatingStatisticsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeReviewRatingStatisticsChange))]
+    [SubTypeDiscriminator("ChangeSavedToLineItemChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeSavedToLineItemChange))]
     [SubTypeDiscriminator("ChangeShipmentStateChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeShipmentStateChange))]
     [SubTypeDiscriminator("ChangeShoppingListLineItemQuantityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeShoppingListLineItemQuantityChange))]
     [SubTypeDiscriminator("ChangeShoppingListLineItemsOrderChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.ChangeShoppingListLineItemsOrderChange))]
@@ -255,9 +256,13 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
     [SubTypeDiscriminator("SetMetaDescriptionChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMetaDescriptionChange))]
     [SubTypeDiscriminator("SetMetaKeywordsChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMetaKeywordsChange))]
     [SubTypeDiscriminator("SetMetaTitleChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMetaTitleChange))]
+    [SubTypeDiscriminator("SetMethodInfoCustomFieldChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomFieldChange))]
+    [SubTypeDiscriminator("SetMethodInfoCustomTypeChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomTypeChange))]
+    [SubTypeDiscriminator("SetMethodInfoInterfaceAccountChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceAccountChange))]
     [SubTypeDiscriminator("SetMethodInfoInterfaceChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceChange))]
     [SubTypeDiscriminator("SetMethodInfoMethodChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoMethodChange))]
     [SubTypeDiscriminator("SetMethodInfoNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoNameChange))]
+    [SubTypeDiscriminator("SetMethodInfoTokenChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoTokenChange))]
     [SubTypeDiscriminator("SetMiddleNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMiddleNameChange))]
     [SubTypeDiscriminator("SetMinCartQuantityChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetMinCartQuantityChange))]
     [SubTypeDiscriminator("SetNameChange", typeof(commercetools.Sdk.HistoryApi.Models.Changes.SetNameChange))]
@@ -940,6 +945,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.ChangeReviewRatingStatisticsChange ChangeReviewRatingStatisticsChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeReviewRatingStatisticsChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeReviewRatingStatisticsChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.ChangeSavedToLineItemChange ChangeSavedToLineItemChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.ChangeSavedToLineItemChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.ChangeSavedToLineItemChange();
             init?.Invoke(t);
             return t;
         }
@@ -1885,6 +1896,24 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomFieldChange SetMethodInfoCustomFieldChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomFieldChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomFieldChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomTypeChange SetMethodInfoCustomTypeChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomTypeChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoCustomTypeChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceAccountChange SetMethodInfoInterfaceAccountChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceAccountChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceAccountChange();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceChange SetMethodInfoInterfaceChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoInterfaceChange();
@@ -1900,6 +1929,12 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoNameChange SetMethodInfoNameChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoNameChange> init = null)
         {
             var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoNameChange();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoTokenChange SetMethodInfoTokenChange(Action<commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoTokenChange> init = null)
+        {
+            var t = new commercetools.Sdk.HistoryApi.Models.Changes.SetMethodInfoTokenChange();
             init?.Invoke(t);
             return t;
         }

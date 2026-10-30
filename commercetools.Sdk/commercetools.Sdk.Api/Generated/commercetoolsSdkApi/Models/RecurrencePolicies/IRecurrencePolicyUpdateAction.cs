@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicyUpdateAction))]
     [SubTypeDiscriminator("setDescription", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetDescriptionAction))]
     [SubTypeDiscriminator("setKey", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetKeyAction))]
+    [SubTypeDiscriminator("setMinDaysBetweenOrders", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersAction))]
     [SubTypeDiscriminator("setName", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetNameAction))]
     [SubTypeDiscriminator("setSchedule", typeof(commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetScheduleAction))]
     public partial interface IRecurrencePolicyUpdateAction
@@ -22,6 +23,12 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
         static commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetKeyAction SetKey(Action<commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetKeyAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetKeyAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersAction SetMinDaysBetweenOrders(Action<commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersAction();
             init?.Invoke(t);
             return t;
         }

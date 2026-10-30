@@ -1,133 +1,62 @@
 **Api changes**
 
 <details>
-<summary>Removed Type(s)</summary>
-
-- :warning: removed type `ProductTypeChangeSavedToLineItemAction`
-</details>
-
-
-<details>
 <summary>Added Type(s)</summary>
 
-- added type `AbsoluteAllocation`
-- added type `AbsoluteAllocationDraft`
-- added type `Allocation`
-- added type `AllocationDraft`
-- added type `PaymentAllocationDraft`
-- added type `PaymentStrategy`
-- added type `RecurringPaymentAllocation`
-- added type `RecurringPaymentConfiguration`
-- added type `RecurringPaymentConfigurationDraft`
-- added type `RelativeAllocation`
-- added type `RelativeAllocationDraft`
-- added type `CartAddRecurringPaymentAllocationAction`
-- added type `CartRemoveRecurringPaymentAllocationAction`
-- added type `CartSetRecurringPaymentConfigurationAction`
-- added type `CartSetRecurringPaymentStrategyAction`
-- added type `ProductTypeSetSavedToLineItemAction`
+- added type `CategoryAddStoreWithDescendantsAction`
+- added type `CategoryRemoveStoreWithDescendantsAction`
+- added type `CategorySetStoresWithDescendantsAction`
+- added type `TooManyRequestsError`
+- added type `GraphQLTooManyRequestsError`
+- added type `RecurringOrderNowRequestedMessage`
+- added type `RecurringOrderNowRequestedMessagePayload`
+- added type `RecurrencePolicySetMinDaysBetweenOrdersAction`
+- added type `RecurringOrderRequestOrderNowAction`
+- added type `StoreSettingOngoingWarning`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `recurringPaymentConfiguration` to type `Cart`
+- added property `warnings` to type `Category`
+- added property `isPlatformClient` to type `ClientLogging`
+- added property `isPlatformClient` to type `CreatedBy`
+- added property `isPlatformClient` to type `LastModifiedBy`
+- added property `minDaysBetweenOrders` to type `RecurrencePolicy`
+- added property `minDaysBetweenOrders` to type `RecurrencePolicyDraft`
 </details>
 
-**Checkout changes**
+**History changes**
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `PaymentMethodReference`
-- added type `ConnectorTimeoutError`
-- added type `InternalConstraintViolatedError`
-- added type `PaginatedRecurringPaymentJob`
-- added type `RecurringPaymentJob`
-- added type `RecurringPaymentJobDraft`
-- added type `RecurringPaymentJobError`
-- added type `RecurringPaymentJobState`
-- added type `RecurringPaymentJobStatus`
-- added type `PaginatedRecurringPayment`
-- added type `PaymentMethodConfiguration`
-- added type `RecurringOrderReference`
-- added type `RecurringPayment`
-- added type `RecurringPaymentDraft`
-- added type `RecurringPaymentReference`
-- added type `RecurringPaymentAddPaymentMethodConfigurationUpdateAction`
-- added type `RecurringPaymentSetKeyUpdateAction`
-- added type `RecurringPaymentSetPaymentMethodConfigurationUpdateAction`
-- added type `RecurringPaymentSetRecurringOrderUpdateAction`
-- added type `RecurringPaymentUpdateAction`
-- added type `RecurringPaymentUpdateActions`
-- added type `TransactionItemPaymentIntegration`
-- added type `TransactionItemPaymentIntegrationDraft`
-- added type `TransactionItemRecurring`
-- added type `TransactionItemRecurringDraft`
-</details>
-
-
-<details>
-<summary>Removed Property(s)</summary>
-
-- :warning: removed property `paymentIntegration` from type `TransactionItem`
-- :warning: removed property `paymentIntegration` from type `TransactionItemDraft`
+- added type `ChangeSavedToLineItemChange`
+- added type `SetMethodInfoCustomFieldChange`
+- added type `SetMethodInfoCustomTypeChange`
+- added type `SetMethodInfoInterfaceAccountChange`
+- added type `SetMethodInfoTokenChange`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `type` to type `TransactionItem`
-- added property `type` to type `TransactionItemDraft`
-</details>
-
-
-<details>
-<summary>Required Property(s)</summary>
-
-- :warning: changed property `cart` of type `Transaction` to be required
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `payment-method` to type `ReferenceTypeId`
-- added enum `recurring-payment` to type `ReferenceTypeId`
-- added enum `recurring-order` to type `ReferenceTypeId`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/recurring-payment-jobs`
-- added resource `/{projectKey}/recurring-payments`
-- added resource `/{projectKey}/recurring-payment-jobs/{id}`
-- added resource `/{projectKey}/recurring-payment-jobs/key={key}`
-- added resource `/{projectKey}/recurring-payments/{id}`
-- added resource `/{projectKey}/recurring-payments/key={key}`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().get()`
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().post()`
-- added method `apiRoot.withProjectKey().recurringPayments().get()`
-- added method `apiRoot.withProjectKey().recurringPayments().post()`
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().get()`
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().withId().delete()`
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().get()`
-- added method `apiRoot.withProjectKey().recurringPaymentJobs().withKey().delete()`
-- added method `apiRoot.withProjectKey().recurringPayments().withId().get()`
-- added method `apiRoot.withProjectKey().recurringPayments().withId().post()`
-- added method `apiRoot.withProjectKey().recurringPayments().withId().delete()`
-- added method `apiRoot.withProjectKey().recurringPayments().withKey().get()`
-- added method `apiRoot.withProjectKey().recurringPayments().withKey().post()`
-- added method `apiRoot.withProjectKey().recurringPayments().withKey().delete()`
+- added property `shippingKey` to type `AddDeliveryChange`
+- added property `shippingKey` to type `AddParcelToDeliveryChange`
+- added property `shippingKey` to type `RemoveDeliveryItemsChange`
+- added property `shippingKey` to type `RemoveParcelFromDeliveryChange`
+- added property `shippingKey` to type `SetDeliveryAddressChange`
+- added property `shippingKey` to type `SetDeliveryItemsChange`
+- added property `shippingKey` to type `SetParcelItemsChange`
+- added property `shippingKey` to type `SetParcelMeasurementsChange`
+- added property `shippingKey` to type `SetParcelTrackingDataChange`
+- added property `shippingKey` to type `SetDeliveryAddressCustomFieldChange`
+- added property `shippingKey` to type `SetDeliveryAddressCustomTypeChange`
+- added property `shippingKey` to type `SetDeliveryCustomFieldChange`
+- added property `shippingKey` to type `SetDeliveryCustomTypeChange`
+- added property `shippingKey` to type `SetParcelCustomFieldChange`
+- added property `shippingKey` to type `SetParcelCustomTypeChange`
 </details>
 

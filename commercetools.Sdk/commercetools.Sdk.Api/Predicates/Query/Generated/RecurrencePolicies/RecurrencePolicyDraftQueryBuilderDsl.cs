@@ -48,6 +48,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies
                 RecurrencePolicyDraftQueryBuilderDsl.Of);
         }
 
+        public IComparisonPredicateBuilder<RecurrencePolicyDraftQueryBuilderDsl, long> MinDaysBetweenOrders()
+        {
+            return new ComparisonPredicateBuilder<RecurrencePolicyDraftQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("minDaysBetweenOrders")),
+            p => new CombinationQueryPredicate<RecurrencePolicyDraftQueryBuilderDsl>(p, RecurrencePolicyDraftQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
 
     }
 }
