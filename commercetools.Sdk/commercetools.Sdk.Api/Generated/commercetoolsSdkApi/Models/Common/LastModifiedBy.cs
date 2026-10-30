@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Common
 
     public partial class LastModifiedBy : ILastModifiedBy
     {
+        public bool? IsPlatformClient { get; set; }
+
         public string ClientId { get; set; }
 
         public string ExternalUserId { get; set; }
