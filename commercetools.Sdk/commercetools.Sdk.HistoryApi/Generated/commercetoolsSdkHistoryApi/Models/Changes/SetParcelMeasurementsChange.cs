@@ -16,6 +16,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IParcelMeasurements NextValue { get; set; }
 
         public IParcelChangeValue Parcel { get; set; }
+
+        public string ShippingKey { get; set; }
         public SetParcelMeasurementsChange()
         {
             this.Type = "SetParcelMeasurementsChange";

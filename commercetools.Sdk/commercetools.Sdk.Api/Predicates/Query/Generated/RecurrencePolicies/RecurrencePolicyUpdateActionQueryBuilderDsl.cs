@@ -34,6 +34,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies
             return new CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetKeyActionQueryBuilderDsl.Of()),
                 RecurrencePolicyUpdateActionQueryBuilderDsl.Of);
         }
+        public CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl> AsSetMinDaysBetweenOrders(
+            Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl>(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl.Of()),
+                RecurrencePolicyUpdateActionQueryBuilderDsl.Of);
+        }
         public CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl> AsSetName(
             Func<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetNameActionQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.RecurrencePolicies.RecurrencePolicySetNameActionQueryBuilderDsl>> fn)
         {

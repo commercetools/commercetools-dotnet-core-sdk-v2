@@ -13,5 +13,7 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
         public ILocalizedString Description { get; set; }
 
         public IRecurrencePolicyScheduleDraft Schedule { get; set; }
+
+        public int? MinDaysBetweenOrders { get; set; }
     }
 }

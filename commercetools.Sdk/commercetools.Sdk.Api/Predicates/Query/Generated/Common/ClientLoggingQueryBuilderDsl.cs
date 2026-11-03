@@ -15,6 +15,12 @@ namespace commercetools.Sdk.Api.Predicates.Query.Common
             return new ClientLoggingQueryBuilderDsl();
         }
 
+        public IComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl, bool> IsPlatformClient()
+        {
+            return new ComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl, bool>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("isPlatformClient")),
+            p => new CombinationQueryPredicate<ClientLoggingQueryBuilderDsl>(p, ClientLoggingQueryBuilderDsl.Of),
+            PredicateFormatter.Format);
+        }
         public IComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl, string> ClientId()
         {
             return new ComparisonPredicateBuilder<ClientLoggingQueryBuilderDsl, string>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("clientId")),

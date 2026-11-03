@@ -20,6 +20,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IEnumerable<IDeliveryItem> NextValueEnumerable { set => NextValue = value.ToList(); }
 
         public string DeliveryId { get; set; }
+
+        public string ShippingKey { get; set; }
         public SetDeliveryItemsChange()
         {
             this.Type = "SetDeliveryItemsChange";

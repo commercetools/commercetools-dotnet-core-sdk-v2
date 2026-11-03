@@ -17,6 +17,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public ICustomFields PreviousValue { get; set; }
 
         public ICustomFields NextValue { get; set; }
+
+        public string ShippingKey { get; set; }
         public SetDeliveryAddressCustomTypeChange()
         {
             this.Type = "SetDeliveryAddressCustomTypeChange";

@@ -22,6 +22,8 @@ namespace commercetools.Sdk.Api.Models.RecurrencePolicies
 
         public IRecurrencePolicySchedule Schedule { get; set; }
 
+        public int? MinDaysBetweenOrders { get; set; }
+
         public ICreatedBy CreatedBy { get; set; }
 
         public ILastModifiedBy LastModifiedBy { get; set; }

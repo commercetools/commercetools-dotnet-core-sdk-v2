@@ -113,6 +113,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError))]
     [SubTypeDiscriminator("StoreUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreUnresolvedError))]
     [SubTypeDiscriminator("SyntaxError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError))]
+    [SubTypeDiscriminator("TooManyRequests", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLTooManyRequestsError))]
     [SubTypeDiscriminator("Unauthorized", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLUnauthorizedError))]
     [SubTypeDiscriminator("ValidityLockConflict", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLValidityLockConflictError))]
     public partial interface IGraphQLErrorObject
@@ -764,6 +765,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError SyntaxError(Action<commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Errors.GraphQLSyntaxErrorError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Errors.GraphQLTooManyRequestsError TooManyRequests(Action<commercetools.Sdk.Api.Models.Errors.GraphQLTooManyRequestsError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Errors.GraphQLTooManyRequestsError();
             init?.Invoke(t);
             return t;
         }

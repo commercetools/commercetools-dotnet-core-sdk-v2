@@ -13,6 +13,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public IDeliveryChangeValue PreviousValue { get; set; }
 
         public IDeliveryChangeValue NextValue { get; set; }
+
+        public string ShippingKey { get; set; }
         public AddDeliveryChange()
         {
             this.Type = "AddDeliveryChange";

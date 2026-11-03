@@ -5,6 +5,7 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
 {
     [TypeDiscriminator(nameof(Action))]
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderUpdateAction))]
+    [SubTypeDiscriminator("requestOrderNow", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderRequestOrderNowAction))]
     [SubTypeDiscriminator("setCustomField", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomFieldAction))]
     [SubTypeDiscriminator("setCustomType", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomTypeAction))]
     [SubTypeDiscriminator("setExpiresAt", typeof(commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetExpiresAtAction))]
@@ -18,6 +19,12 @@ namespace commercetools.Sdk.Api.Models.RecurringOrders
     {
         string Action { get; set; }
 
+        static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderRequestOrderNowAction RequestOrderNow(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderRequestOrderNowAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderRequestOrderNowAction();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomFieldAction SetCustomField(Action<commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomFieldAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.RecurringOrders.RecurringOrderSetCustomFieldAction();

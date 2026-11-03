@@ -186,6 +186,19 @@ namespace commercetools.Sdk.Api.Predicates.Query.Categories
             return new CollectionPredicateBuilder<CategoryQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("stores")),
                     p => new CombinationQueryPredicate<CategoryQueryBuilderDsl>(p, CategoryQueryBuilderDsl.Of));
         }
+        public CombinationQueryPredicate<CategoryQueryBuilderDsl> Warnings(
+            Func<commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<CategoryQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("warnings"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.Warnings.WarningObjectQueryBuilderDsl.Of())),
+                CategoryQueryBuilderDsl.Of);
+        }
+        public ICollectionPredicateBuilder<CategoryQueryBuilderDsl> Warnings()
+        {
+            return new CollectionPredicateBuilder<CategoryQueryBuilderDsl>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("warnings")),
+                    p => new CombinationQueryPredicate<CategoryQueryBuilderDsl>(p, CategoryQueryBuilderDsl.Of));
+        }
 
     }
 }

@@ -6,6 +6,8 @@ namespace commercetools.Sdk.Api.Models.Common
     [DeserializeAs(typeof(commercetools.Sdk.Api.Models.Common.ClientLogging))]
     public partial interface IClientLogging
     {
+        bool? IsPlatformClient { get; set; }
+
         string ClientId { get; set; }
 
         string ExternalUserId { get; set; }

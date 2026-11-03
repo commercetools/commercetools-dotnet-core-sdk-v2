@@ -7,6 +7,7 @@ namespace commercetools.Sdk.Api.Models.Categories
     [DefaultTypeDiscriminator(typeof(commercetools.Sdk.Api.Models.Categories.CategoryUpdateAction))]
     [SubTypeDiscriminator("addAsset", typeof(commercetools.Sdk.Api.Models.Categories.CategoryAddAssetAction))]
     [SubTypeDiscriminator("addStore", typeof(commercetools.Sdk.Api.Models.Categories.CategoryAddStoreAction))]
+    [SubTypeDiscriminator("addStoreWithDescendants", typeof(commercetools.Sdk.Api.Models.Categories.CategoryAddStoreWithDescendantsAction))]
     [SubTypeDiscriminator("changeAssetName", typeof(commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetNameAction))]
     [SubTypeDiscriminator("changeAssetOrder", typeof(commercetools.Sdk.Api.Models.Categories.CategoryChangeAssetOrderAction))]
     [SubTypeDiscriminator("changeName", typeof(commercetools.Sdk.Api.Models.Categories.CategoryChangeNameAction))]
@@ -15,6 +16,7 @@ namespace commercetools.Sdk.Api.Models.Categories
     [SubTypeDiscriminator("changeSlug", typeof(commercetools.Sdk.Api.Models.Categories.CategoryChangeSlugAction))]
     [SubTypeDiscriminator("removeAsset", typeof(commercetools.Sdk.Api.Models.Categories.CategoryRemoveAssetAction))]
     [SubTypeDiscriminator("removeStore", typeof(commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreAction))]
+    [SubTypeDiscriminator("removeStoreWithDescendants", typeof(commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreWithDescendantsAction))]
     [SubTypeDiscriminator("setAssetCustomField", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomFieldAction))]
     [SubTypeDiscriminator("setAssetCustomType", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetCustomTypeAction))]
     [SubTypeDiscriminator("setAssetDescription", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetAssetDescriptionAction))]
@@ -30,6 +32,7 @@ namespace commercetools.Sdk.Api.Models.Categories
     [SubTypeDiscriminator("setMetaKeywords", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaKeywordsAction))]
     [SubTypeDiscriminator("setMetaTitle", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetMetaTitleAction))]
     [SubTypeDiscriminator("setStores", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetStoresAction))]
+    [SubTypeDiscriminator("setStoresWithDescendants", typeof(commercetools.Sdk.Api.Models.Categories.CategorySetStoresWithDescendantsAction))]
     public partial interface ICategoryUpdateAction
     {
         string Action { get; set; }
@@ -43,6 +46,12 @@ namespace commercetools.Sdk.Api.Models.Categories
         static commercetools.Sdk.Api.Models.Categories.CategoryAddStoreAction AddStore(Action<commercetools.Sdk.Api.Models.Categories.CategoryAddStoreAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Categories.CategoryAddStoreAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryAddStoreWithDescendantsAction AddStoreWithDescendants(Action<commercetools.Sdk.Api.Models.Categories.CategoryAddStoreWithDescendantsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryAddStoreWithDescendantsAction();
             init?.Invoke(t);
             return t;
         }
@@ -91,6 +100,12 @@ namespace commercetools.Sdk.Api.Models.Categories
         static commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreAction RemoveStore(Action<commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreWithDescendantsAction RemoveStoreWithDescendants(Action<commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreWithDescendantsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategoryRemoveStoreWithDescendantsAction();
             init?.Invoke(t);
             return t;
         }
@@ -181,6 +196,12 @@ namespace commercetools.Sdk.Api.Models.Categories
         static commercetools.Sdk.Api.Models.Categories.CategorySetStoresAction SetStores(Action<commercetools.Sdk.Api.Models.Categories.CategorySetStoresAction> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Categories.CategorySetStoresAction();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Categories.CategorySetStoresWithDescendantsAction SetStoresWithDescendants(Action<commercetools.Sdk.Api.Models.Categories.CategorySetStoresWithDescendantsAction> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Categories.CategorySetStoresWithDescendantsAction();
             init?.Invoke(t);
             return t;
         }

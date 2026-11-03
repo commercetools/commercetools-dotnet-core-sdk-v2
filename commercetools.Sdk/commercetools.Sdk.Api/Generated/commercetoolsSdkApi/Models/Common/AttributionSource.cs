@@ -23,7 +23,10 @@ namespace commercetools.Sdk.Api.Models.Common
         PromotionsAgent,
 
         [Description("ManagedCommerceMCP")]
-        ManagedCommerceMcp
+        ManagedCommerceMcp,
+
+        [Description("ProductEnrichmentAgent")]
+        ProductEnrichmentAgent
     }
 
     public class AttributionSourceWrapper : IAttributionSource
@@ -64,6 +67,9 @@ namespace commercetools.Sdk.Api.Models.Common
         public static IAttributionSource ManagedCommerceMcp = new AttributionSourceWrapper
         { Value = AttributionSource.ManagedCommerceMcp, JsonName = "ManagedCommerceMCP" };
 
+        public static IAttributionSource ProductEnrichmentAgent = new AttributionSourceWrapper
+        { Value = AttributionSource.ProductEnrichmentAgent, JsonName = "ProductEnrichmentAgent" };
+
         AttributionSource? Value { get; }
 
         static IAttributionSource[] Values()
@@ -74,7 +80,8 @@ namespace commercetools.Sdk.Api.Models.Common
                  Export ,
                  IntakeAgent ,
                  PromotionsAgent ,
-                 ManagedCommerceMcp
+                 ManagedCommerceMcp ,
+                 ProductEnrichmentAgent
              };
         }
         static IAttributionSource FindEnum(string value)

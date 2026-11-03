@@ -11,6 +11,8 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
         public string Change { get; set; }
 
         public IDeliveryChangeValue PreviousValue { get; set; }
+
+        public string ShippingKey { get; set; }
         public RemoveDeliveryItemsChange()
         {
             this.Type = "RemoveDeliveryItemsChange";

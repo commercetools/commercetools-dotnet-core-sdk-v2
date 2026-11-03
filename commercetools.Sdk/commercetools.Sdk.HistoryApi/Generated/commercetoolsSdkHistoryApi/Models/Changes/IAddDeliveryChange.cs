@@ -14,5 +14,7 @@ namespace commercetools.Sdk.HistoryApi.Models.Changes
 
         IDeliveryChangeValue NextValue { get; set; }
 
+        string ShippingKey { get; set; }
+
     }
 }
