@@ -51,6 +51,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Agents
                 AgentResponsesPayloadQueryBuilderDsl.Of);
         }
 
+        public CombinationQueryPredicate<AgentResponsesPayloadQueryBuilderDsl> ShoppingList(
+            Func<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListResourceIdentifierQueryBuilderDsl>> fn)
+        {
+            return new CombinationQueryPredicate<AgentResponsesPayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
+                .Parent(ConstantQueryPredicate.Of().Constant("shoppingList"))
+                .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.ShoppingLists.ShoppingListResourceIdentifierQueryBuilderDsl.Of())),
+                AgentResponsesPayloadQueryBuilderDsl.Of);
+        }
+
 
     }
 }

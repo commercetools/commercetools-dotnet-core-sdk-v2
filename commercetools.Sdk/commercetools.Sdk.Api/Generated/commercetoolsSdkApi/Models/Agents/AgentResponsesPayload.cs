@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.BusinessUnits;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Sdk.Api.Models.Stores;
 
 
@@ -16,5 +17,7 @@ namespace commercetools.Sdk.Api.Models.Agents
         public IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
         public IStoreResourceIdentifier Store { get; set; }
+
+        public IShoppingListResourceIdentifier ShoppingList { get; set; }
     }
 }
