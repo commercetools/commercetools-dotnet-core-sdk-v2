@@ -1,4 +1,5 @@
 using commercetools.Sdk.Api.Models.BusinessUnits;
+using commercetools.Sdk.Api.Models.ShoppingLists;
 using commercetools.Sdk.Api.Models.Stores;
 using commercetools.Base.CustomAttributes;
 // ReSharper disable CheckNamespace
@@ -16,6 +17,8 @@ namespace commercetools.Sdk.Api.Models.Agents
         IBusinessUnitResourceIdentifier BusinessUnit { get; set; }
 
         IStoreResourceIdentifier Store { get; set; }
+
+        IShoppingListResourceIdentifier ShoppingList { get; set; }
 
     }
 }
