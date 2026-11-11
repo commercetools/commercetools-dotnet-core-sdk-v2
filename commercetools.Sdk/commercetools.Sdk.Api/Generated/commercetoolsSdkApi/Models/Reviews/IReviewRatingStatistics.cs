@@ -8,11 +8,11 @@ namespace commercetools.Sdk.Api.Models.Reviews
     {
         decimal AverageRating { get; set; }
 
-        decimal HighestRating { get; set; }
+        int HighestRating { get; set; }
 
-        decimal LowestRating { get; set; }
+        int LowestRating { get; set; }
 
-        int Count { get; set; }
+        long Count { get; set; }
 
         Object RatingsDistribution { get; set; }
 

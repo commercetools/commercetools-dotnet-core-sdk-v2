@@ -19,15 +19,15 @@ namespace commercetools.Sdk.Api.Predicates.Query.Reviews
             p => new CombinationQueryPredicate<ReviewRatingStatisticsQueryBuilderDsl>(p, ReviewRatingStatisticsQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, decimal> HighestRating()
+        public IComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, long> HighestRating()
         {
-            return new ComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, decimal>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("highestRating")),
+            return new ComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("highestRating")),
             p => new CombinationQueryPredicate<ReviewRatingStatisticsQueryBuilderDsl>(p, ReviewRatingStatisticsQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
-        public IComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, decimal> LowestRating()
+        public IComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, long> LowestRating()
         {
-            return new ComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, decimal>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lowestRating")),
+            return new ComparisonPredicateBuilder<ReviewRatingStatisticsQueryBuilderDsl, long>(BinaryQueryPredicate.Of().Left(new ConstantQueryPredicate("lowestRating")),
             p => new CombinationQueryPredicate<ReviewRatingStatisticsQueryBuilderDsl>(p, ReviewRatingStatisticsQueryBuilderDsl.Of),
             PredicateFormatter.Format);
         }
