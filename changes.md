@@ -59,6 +59,8 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `Attribution`
+- added type `AttributionSource`
 - added type `ChangeSavedToLineItemChange`
 - added type `SetMethodInfoCustomFieldChange`
 - added type `SetMethodInfoCustomTypeChange`
@@ -68,8 +70,22 @@
 
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Import` to type `Source`
+- added enum `Export` to type `Source`
+- added enum `IntakeAgent` to type `Source`
+- added enum `PromotionsAgent` to type `Source`
+- added enum `ManagedCommerceMCP` to type `Source`
+- added enum `ProductEnrichmentAgent` to type `Source`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
+- added property `externalUserId` to type `ModifiedBy`
+- added property `attributedTo` to type `ModifiedBy`
 - added property `shippingKey` to type `AddDeliveryChange`
 - added property `shippingKey` to type `AddParcelToDeliveryChange`
 - added property `shippingKey` to type `RemoveDeliveryItemsChange`
