@@ -30,11 +30,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 OrderBusinessUnitSetMessagePayloadQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<OrderBusinessUnitSetMessagePayloadQueryBuilderDsl> OldbusinessUnit(
+        public CombinationQueryPredicate<OrderBusinessUnitSetMessagePayloadQueryBuilderDsl> OldBusinessUnit(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderBusinessUnitSetMessagePayloadQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("oldbusinessUnit"))
+                .Parent(ConstantQueryPredicate.Of().Constant("oldBusinessUnit"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl.Of())),
                 OrderBusinessUnitSetMessagePayloadQueryBuilderDsl.Of);
         }

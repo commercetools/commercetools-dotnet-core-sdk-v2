@@ -31,7 +31,7 @@ namespace commercetools.Sdk.Api.Models.Messages
 
         public IBusinessUnitKeyReference BusinessUnit { get; set; }
 
-        public IBusinessUnitKeyReference OldbusinessUnit { get; set; }
+        public IBusinessUnitKeyReference OldBusinessUnit { get; set; }
         public OrderBusinessUnitSetMessage()
         {
             this.Type = "OrderBusinessUnitSet";

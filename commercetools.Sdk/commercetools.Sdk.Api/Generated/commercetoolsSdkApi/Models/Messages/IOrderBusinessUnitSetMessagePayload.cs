@@ -8,7 +8,7 @@ namespace commercetools.Sdk.Api.Models.Messages
     {
         IBusinessUnitKeyReference BusinessUnit { get; set; }
 
-        IBusinessUnitKeyReference OldbusinessUnit { get; set; }
+        IBusinessUnitKeyReference OldBusinessUnit { get; set; }
 
     }
 }
