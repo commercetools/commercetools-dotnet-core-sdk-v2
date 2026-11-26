@@ -102,11 +102,11 @@ namespace commercetools.Sdk.Api.Predicates.Query.Messages
                 OrderBusinessUnitSetMessageQueryBuilderDsl.Of);
         }
 
-        public CombinationQueryPredicate<OrderBusinessUnitSetMessageQueryBuilderDsl> OldbusinessUnit(
+        public CombinationQueryPredicate<OrderBusinessUnitSetMessageQueryBuilderDsl> OldBusinessUnit(
             Func<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl>> fn)
         {
             return new CombinationQueryPredicate<OrderBusinessUnitSetMessageQueryBuilderDsl>(ContainerQueryPredicate.Of()
-                .Parent(ConstantQueryPredicate.Of().Constant("oldbusinessUnit"))
+                .Parent(ConstantQueryPredicate.Of().Constant("oldBusinessUnit"))
                 .Inner(fn.Invoke(commercetools.Sdk.Api.Predicates.Query.BusinessUnits.BusinessUnitKeyReferenceQueryBuilderDsl.Of())),
                 OrderBusinessUnitSetMessageQueryBuilderDsl.Of);
         }

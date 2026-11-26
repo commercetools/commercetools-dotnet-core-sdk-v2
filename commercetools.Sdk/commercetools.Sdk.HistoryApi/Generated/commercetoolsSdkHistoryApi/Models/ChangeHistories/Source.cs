@@ -17,7 +17,25 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         ImpEx,
 
         [Description("ApiClient")]
-        ApiClient
+        ApiClient,
+
+        [Description("Import")]
+        Import,
+
+        [Description("Export")]
+        Export,
+
+        [Description("IntakeAgent")]
+        IntakeAgent,
+
+        [Description("PromotionsAgent")]
+        PromotionsAgent,
+
+        [Description("ManagedCommerceMCP")]
+        ManagedCommerceMcp,
+
+        [Description("ProductEnrichmentAgent")]
+        ProductEnrichmentAgent
     }
 
     public class SourceWrapper : ISource
@@ -52,6 +70,24 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
         public static ISource ApiClient = new SourceWrapper
         { Value = Source.ApiClient, JsonName = "ApiClient" };
 
+        public static ISource Import = new SourceWrapper
+        { Value = Source.Import, JsonName = "Import" };
+
+        public static ISource Export = new SourceWrapper
+        { Value = Source.Export, JsonName = "Export" };
+
+        public static ISource IntakeAgent = new SourceWrapper
+        { Value = Source.IntakeAgent, JsonName = "IntakeAgent" };
+
+        public static ISource PromotionsAgent = new SourceWrapper
+        { Value = Source.PromotionsAgent, JsonName = "PromotionsAgent" };
+
+        public static ISource ManagedCommerceMcp = new SourceWrapper
+        { Value = Source.ManagedCommerceMcp, JsonName = "ManagedCommerceMCP" };
+
+        public static ISource ProductEnrichmentAgent = new SourceWrapper
+        { Value = Source.ProductEnrichmentAgent, JsonName = "ProductEnrichmentAgent" };
+
         Source? Value { get; }
 
         static ISource[] Values()
@@ -60,7 +96,13 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
             {
                  MerchantCenter ,
                  ImpEx ,
-                 ApiClient
+                 ApiClient ,
+                 Import ,
+                 Export ,
+                 IntakeAgent ,
+                 PromotionsAgent ,
+                 ManagedCommerceMcp ,
+                 ProductEnrichmentAgent
              };
         }
         static ISource FindEnum(string value)

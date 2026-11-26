@@ -70,6 +70,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("MaxResourceLimitExceeded", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxResourceLimitExceededError))]
     [SubTypeDiscriminator("MaxStoreReferencesReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMaxStoreReferencesReachedError))]
     [SubTypeDiscriminator("MissingCountry", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCountryError))]
+    [SubTypeDiscriminator("MissingCurrency", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCurrencyError))]
     [SubTypeDiscriminator("MissingCustomerEmail", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError))]
     [SubTypeDiscriminator("MissingEntityType", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingEntityTypeError))]
     [SubTypeDiscriminator("MissingRoleOnChannel", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLMissingRoleOnChannelError))]
@@ -108,6 +109,7 @@ namespace commercetools.Sdk.Api.Models.Errors
     [SubTypeDiscriminator("SemanticError", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLSemanticErrorError))]
     [SubTypeDiscriminator("ShippingMethodDoesNotMatchCart", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLShippingMethodDoesNotMatchCartError))]
     [SubTypeDiscriminator("ShoppingListCreationFailed", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListCreationFailedError))]
+    [SubTypeDiscriminator("ShoppingListUnresolved", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListUnresolvedError))]
     [SubTypeDiscriminator("StoreAmbiguous", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreAmbiguousError))]
     [SubTypeDiscriminator("StoreCartDiscountsLimitReached", typeof(commercetools.Sdk.Api.Models.Errors.GraphQLStoreCartDiscountsLimitReachedError))]
     [SubTypeDiscriminator("StoreDistributionChannelsUnsupported", typeof(commercetools.Sdk.Api.Models.Agents.GraphQLAgentStoreDistributionChannelsUnsupportedError))]
@@ -510,6 +512,12 @@ namespace commercetools.Sdk.Api.Models.Errors
             init?.Invoke(t);
             return t;
         }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCurrencyError MissingCurrency(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCurrencyError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCurrencyError();
+            init?.Invoke(t);
+            return t;
+        }
         static commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError MissingCustomerEmail(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentMissingCustomerEmailError();
@@ -735,6 +743,12 @@ namespace commercetools.Sdk.Api.Models.Errors
         static commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListCreationFailedError ShoppingListCreationFailed(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListCreationFailedError> init = null)
         {
             var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListCreationFailedError();
+            init?.Invoke(t);
+            return t;
+        }
+        static commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListUnresolvedError ShoppingListUnresolved(Action<commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListUnresolvedError> init = null)
+        {
+            var t = new commercetools.Sdk.Api.Models.Agents.GraphQLAgentShoppingListUnresolvedError();
             init?.Invoke(t);
             return t;
         }

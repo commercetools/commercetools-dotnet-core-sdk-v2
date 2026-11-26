@@ -14,10 +14,14 @@ namespace commercetools.Sdk.HistoryApi.Models.ChangeHistories
 
         public string ClientId { get; set; }
 
+        public string ExternalUserId { get; set; }
+
         public string AnonymousId { get; set; }
 
         public IReference Customer { get; set; }
 
         public IReference Associate { get; set; }
+
+        public IAttribution AttributedTo { get; set; }
     }
 }
