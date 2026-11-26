@@ -50,6 +50,7 @@ jobs:
     needs: [unittests]
     permissions:
       packages: write
+      id-token: write  # enable GitHub OIDC token issuance for this job
     steps:
       - uses: actions/checkout@v3
       # Authenticates packages to push to GPR
@@ -65,6 +66,12 @@ jobs:
           source-url: https://nuget.pkg.github.com/commercetools/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Get a short-lived NuGet API key
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }}
       - name: Retrieve branch name
         id: branch_name
         run: echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
@@ -91,7 +98,7 @@ jobs:
           name: commercetools.Sdkv2.${{ steps.branch_name.outputs.SOURCE_TAG }}
           path: pack
       - name: Push generated package to NuGet
-        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
+        run: dotnet nuget push "pack/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
   update_ref:
     runs-on: ubuntu-latest
 
